@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<!DOCTYPE plug-in [
+<!ENTITY Population '
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>10</base>
+		</population>
+'>
+]>
+<plug-in>
+	<title>農家とビニールハウス</title>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	<author>477さん</author>
+	
+	<contribution type="picture" id="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}">
+		<picture src="vinylhouse.bmp" />
+	</contribution>
+	
+	<contribution type="land" id="{66B81CAD-8B41-416C-8624-137C2D8110F2}">
+		<group>ビニールハウス</group>
+		<class name="freetrain.world.land.vinylhouse.XVinylHouseBuilder"
+			codebase="bin/Debug/FreeTrain.VinylHouse.dll"/>
+		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="0" />
+		<price>20</price>
+		<population>
+			<class name="freetrain.contributions.population.AgriculturalPopulation"/>
+			<base>5</base>
+		</population>
+	</contribution>
+	
+	<contribution type="land" id="{4F97D7DD-749E-4B65-BF13-5733B10D8570}">
+		<group>ビニールハウス</group>
+		<class name="freetrain.world.land.vinylhouse.YVinylHouseBuilder"
+			codebase="bin/Debug/FreeTrain.VinylHouse.dll"/>
+		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="32" />
+		<price>20</price>
+		<population>
+			<class name="freetrain.contributions.population.AgriculturalPopulation"/>
+			<base>5</base>
+		</population>
+	</contribution>
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{BBDB4BE4-FAFE-490B-916F-4B11DCFB8182}">
+		<picture src="farmhouse01.bmp" >
+			<override when="winter" src="farmhouse01.WIN.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="commercial" id="{7775E0B1-AF3E-46A4-A0E6-06AF87989A7E}">
+		<name>農家(大)</name>
+		<price>100</price>
+		<size>2,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="16">
+			<picture ref="{BBDB4BE4-FAFE-490B-916F-4B11DCFB8182}"  />
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{B7C82C4E-015A-407D-9F10-5D198384B702}">
+		<name>農家(大)</name>
+		<price>100</price>
+		<size>2,2</size>
+		<height>1</height>
+		<sprite origin="64,0" offset="16">
+			<picture ref="{BBDB4BE4-FAFE-490B-916F-4B11DCFB8182}"  />
+		</sprite>
+		&Population;
+	</contribution>
+	
+	
+	
+	
+	<contribution type="picture" id="{29ECCBC4-BCCB-4E72-AF90-7325A811194E}">
+		<picture src="farmhouse02.bmp" >
+			<override when="winter" src="farmhouse02.WIN.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="commercial" id="{01799382-3860-4BF6-BE11-F2E40DA093E7}">
+		<name>農家(大)</name>
+		<price>100</price>
+		<size>2,2</size>
+		<height>1</height>
+		<sprite origin=" 0,0" offset="16">
+			<picture ref="{29ECCBC4-BCCB-4E72-AF90-7325A811194E}" />
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{F7043E4A-402D-43D1-8732-C30F52979B08}">
+		<name>農家(大)</name>
+		<price>100</price>
+		<size>2,2</size>
+		<height>1</height>
+		<sprite origin="64,0" offset="16">
+			<picture ref="{29ECCBC4-BCCB-4E72-AF90-7325A811194E}" />
+		</sprite>
+		&Population;
+	</contribution>
+	
+	
+	
+	
+	<contribution type="picture" id="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}">
+		<picture src="farmhouse03.bmp">
+			<override when="winter" src="farmhouse03.WIN.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="commercial" id="{95F5EF63-1B4D-4EE3-8BF3-4BD5B7AC5311}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>2,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="32">
+			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{D6454FB2-A717-4862-A1B2-1A5113D686E0}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>1,2</size>
+		<height>2</height>
+		<sprite origin="48,0" offset="24">
+			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{238A1579-28EB-45FF-ADEC-71D65C067435}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>2,1</size>
+		<height>2</height>
+		<sprite origin="96,0" offset="32">
+			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{1D84E1CA-E46A-4E1D-952E-071DB6AAFD39}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>1,2</size>
+		<height>2</height>
+		<sprite origin="144,0" offset="24">
+			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+	
+	
+	
+	<contribution type="picture" id="{8A2DF9AA-92CA-4760-8064-7973A52AF760}">
+		<picture src="farmhouse04.bmp" >
+			<override when="winter" src="farmhouse04.WIN.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="commercial" id="{D730EC7C-97BD-471D-A4C1-BB2CCD17EAE7}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>2,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="32">
+			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{DC418AA8-1D26-4B85-92DD-22938607D708}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>1,2</size>
+		<height>2</height>
+		<sprite origin="48,0" offset="24">
+			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{28548323-07D9-476F-8B91-99F033FE117F}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>2,1</size>
+		<height>2</height>
+		<sprite origin="96,0" offset="32">
+			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+	<contribution type="commercial" id="{8D849B40-605F-4807-AB0C-5708CFA8D682}">
+		<name>農家(中)</name>
+		<price>100</price>
+		<size>1,2</size>
+		<height>2</height>
+		<sprite origin="144,0" offset="24">
+			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
+		</sprite>
+		&Population;
+	</contribution>
+	
+</plug-in>

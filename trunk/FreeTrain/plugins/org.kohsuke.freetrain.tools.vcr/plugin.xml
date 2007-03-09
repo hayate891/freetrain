@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>ビデオレコーダ</title>
+	<author>川口耕介</author>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	
+	<contribution type="dockingContent" id="{144A583C-3D64-4076-BAE7-FFDBBEC79B17}">
+		<name>ビデオレコーダ</name>
+		<multiple/>
+		<menu name="ビデオレコーダ" location="view" />
+		<class name="freetrain.tools.vcr.VCRConsole"
+			codebase="bin/Debug/FreeTrain.VCR.dll" />
+	</contribution>
+</plug-in>

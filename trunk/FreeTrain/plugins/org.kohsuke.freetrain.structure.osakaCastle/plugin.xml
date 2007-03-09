@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>大阪城</title>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	<author>477さん</author>
+	
+	<contribution type="picture" id="{4F129DD1-CCCF-4C2C-B317-0874AD9F77B7}">
+		<picture src="osaka_castle.bmp">
+			<override when="night" src="osaka_castle_n.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="commercial" id="{12CA8CE9-7D92-44CA-BB96-47C4A60A8316}">
+		<group>大阪城</group>
+		<name>天守閣1</name>
+		<price>5000</price>
+		<size>2,2</size>
+		<height>4</height>
+		<sprite origin="0,0" offset="64">
+			<picture ref="{4F129DD1-CCCF-4C2C-B317-0874AD9F77B7}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+	
+	<contribution type="commercial" id="{6432EFFB-3B00-4E00-B4AD-F3DBBB3DD2B6}">
+		<group>大阪城</group>
+		<name>天守閣2</name>
+		<price>5000</price>
+		<size>2,2</size>
+		<height>4</height>
+		<sprite origin="64,0" offset="64">
+			<picture ref="{4F129DD1-CCCF-4C2C-B317-0874AD9F77B7}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+</plug-in>

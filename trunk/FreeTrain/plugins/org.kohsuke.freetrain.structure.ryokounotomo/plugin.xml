@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>建物セット</title>
+	<author>旅行の友さん</author>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	
+	<contribution type="commercial" id="{8361A9CC-DC1D-4432-8E21-7FB3564FA5CF}">
+		<name>分譲マンション</name>
+		<price>3000</price><!-- 750*4 -->
+		<size>2,2</size>
+		<height>3</height>
+		<sprite origin="0,0" offset="56">
+			<picture src="s_hm01x.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>150</base>
+		</population>
+	</contribution>
+	
+	<contribution type="commercial" id="{9DEDC549-A1A8-4a14-A7A5-D18F388BE975}">
+		<name>公園</name>
+		<price>1000</price>
+		<size>2,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="11">
+			<picture src="s_c-kouen01x.bmp" />
+		</sprite>
+	</contribution>
+</plug-in>
