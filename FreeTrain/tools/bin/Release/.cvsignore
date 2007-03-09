@@ -1,0 +1,6 @@
+*.dll
+*.pdb
+*.options
+DirectDraw.AlphaBlend.*
+FreeTrain.exe
+layout.config
