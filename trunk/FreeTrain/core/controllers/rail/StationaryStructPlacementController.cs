@@ -10,7 +10,7 @@ using freetrain.world.rail;
 namespace freetrain.controllers.rail
 {
 	/// <summary>
-	/// StationaryStructPlacementController ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// StationaryStructPlacementController ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class StationaryStructPlacementController : FixedSizeStructController
 	{

@@ -14,8 +14,10 @@ namespace freetrain.contributions.others
 		public EmptyNewGameContributionImpl( XmlElement e ) : base(e) {}
 
 		public override string author { get { return "-"; } }
-		public override string name { get { return "‹óƒ}ƒbƒv"; } }
-		public override string description { get { return "‰½‚à‚È‚¢‹ó‚Ìƒ}ƒbƒv‚ğì¬‚µ‚Ü‚·"; } }
+		public override string name { get { return "Empty map"; } }
+		//! public override string name { get { return "ç©ºãƒãƒƒãƒ—"; } }
+		public override string description { get { return "Create a completely empty map"; } }
+		//! public override string description { get { return "ä½•ã‚‚ãªã„ç©ºã®ãƒãƒƒãƒ—ã‚’ä½œæˆã—ã¾ã™"; } }
 		
 		public override World createNewGame() {
 			using( NewWorldDialog dialog = new NewWorldDialog() ) {

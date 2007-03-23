@@ -46,7 +46,7 @@ namespace freetrain.controllers.rail
 		private Bitmap stationPreviewBitmap;
 
 		public PlatformController() {
-			// ‚±‚ÌŒÄ‚Ño‚µ‚Í Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi‚Å•K—v‚Å‚·B
+			// ã“ã®å‘¼ã³å‡ºã—ã¯ Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠã§å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
 
 			dirN.Tag = Direction.NORTH;
@@ -134,8 +134,8 @@ namespace freetrain.controllers.rail
 		private System.ComponentModel.IContainer components = null;
 
 		/// <summary>
-		/// Designer ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·BƒR[ƒh ƒGƒfƒBƒ^‚Å
-		/// ‚±‚Ìƒƒ\ƒbƒh‚ÌƒRƒ“ƒeƒ“ƒc‚ğ•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// Designer ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§
+		/// ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -167,7 +167,8 @@ namespace freetrain.controllers.rail
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
 			this.buttonRemove.TabIndex = 1;
-			this.buttonRemove.Text = "“P‹";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "æ’¤å»";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonPlace
@@ -179,7 +180,8 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
 			this.buttonPlace.TabIndex = 0;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "İ’u";
+			this.buttonPlace.Text = "Build";
+			//! this.buttonPlace.Text = "è¨­ç½®";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// stationPage
@@ -192,7 +194,8 @@ namespace freetrain.controllers.rail
 			this.stationPage.Name = "stationPage";
 			this.stationPage.Size = new System.Drawing.Size(128, 167);
 			this.stationPage.TabIndex = 1;
-			this.stationPage.Text = "‰wÉ";
+			this.stationPage.Text = "Station";
+			//! this.stationPage.Text = "é§…èˆ";
 			// 
 			// stationType
 			// 
@@ -228,7 +231,8 @@ namespace freetrain.controllers.rail
 			this.platformPage.Name = "platformPage";
 			this.platformPage.Size = new System.Drawing.Size(128, 167);
 			this.platformPage.TabIndex = 0;
-			this.platformPage.Text = "ƒz[ƒ€";
+			this.platformPage.Text = "Platform";
+			//! this.platformPage.Text = "ãƒ›ãƒ¼ãƒ ";
 			// 
 			// checkSlim
 			// 
@@ -236,7 +240,8 @@ namespace freetrain.controllers.rail
 			this.checkSlim.Name = "checkSlim";
 			this.checkSlim.Size = new System.Drawing.Size(104, 16);
 			this.checkSlim.TabIndex = 7;
-			this.checkSlim.Text = "ƒXƒŠƒ€‚Èƒz[ƒ€";
+			this.checkSlim.Text = "Slim platform";
+			//!this.checkSlim.Text = "ã‚¹ãƒªãƒ ãªãƒ›ãƒ¼ãƒ ";
 			this.checkSlim.CheckedChanged += new System.EventHandler(this.onModeChanged);
 			// 
 			// dirS
@@ -278,7 +283,8 @@ namespace freetrain.controllers.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(56, 24);
 			this.label1.TabIndex = 2;
-			this.label1.Text = "’·‚³(&L)F";
+			this.label1.Text = "&Lengthï¼š";
+			//! this.label1.Text = "é•·ã•(&L)ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// lengthBox
@@ -339,7 +345,8 @@ namespace freetrain.controllers.rail
 																		  this.buttonPlace,
 																		  this.buttonRemove});
 			this.Name = "PlatformController";
-			this.Text = "‰wH–";
+			this.Text = "Station construction";
+			//! this.Text = "é§…å·¥äº‹";
 			this.stationPage.ResumeLayout(false);
 			this.platformPage.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.lengthBox)).EndInit();
@@ -428,7 +435,8 @@ namespace freetrain.controllers.rail
 			case Mode.Station:
 				if( isPlacing ) {
 					if(!selectedStation.canBeBuilt(loc)) {
-						MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+						MainWindow.showError("Can not build");
+						//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 					} else {
 						selectedStation.create(loc,true);
 					}
@@ -441,7 +449,8 @@ namespace freetrain.controllers.rail
 			case Mode.FatPlatform:
 				if( isPlacing ) {
 					if(!FatPlatform.canBeBuilt(loc,direction,length)) {
-						MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+						MainWindow.showError("Can not build");
+						//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 						return;
 					}
 					new FatPlatform(loc,direction,length);
@@ -451,7 +460,8 @@ namespace freetrain.controllers.rail
 						if(p.canRemove)
 							p.remove();
 						else
-							MainWindow.showError("“P‹‚Å‚«‚Ü‚¹‚ñ");
+							MainWindow.showError("Can not remove");
+							//! MainWindow.showError("æ’¤å»ã§ãã¾ã›ã‚“");
 					}
 				}
 				return;
@@ -459,7 +469,7 @@ namespace freetrain.controllers.rail
 			case Mode.ThinPlatform:
 				if( isPlacing ) {
 					if(!ThinPlatform.canBeBuilt(loc,direction,length)) {
-						MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+						MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 						return;
 					}
 					new ThinPlatform(loc,direction,length);
@@ -469,7 +479,8 @@ namespace freetrain.controllers.rail
 						if(p.canRemove)
 							p.remove();
 						else
-							MainWindow.showError("“P‹‚Å‚«‚Ü‚¹‚ñ");
+							MainWindow.showError("Can not remove");
+							//! MainWindow.showError("æ’¤å»ã§ãã¾ã›ã‚“");
 					}
 				}
 				return;

@@ -60,7 +60,8 @@ namespace freetrain.framework
 						bgm.run();
 					} catch( Exception e ) {
 						MessageBox.Show( MainWindow.mainWindow,
-							"Ä¶‚Å‚«‚Ü‚¹‚ñ\n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
+							"Can not play backÂ¥n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
+							//! "å†ç”Ÿã§ãã¾ã›ã‚“Â¥n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
 					}
 				}
 			}
@@ -81,7 +82,8 @@ namespace freetrain.framework
 				this.contrib = contrib;
 				this.owner = owner;
 				if( contrib==null)
-					this.Text = "‚È‚µ";
+					this.Text = "Nothing";
+					//! this.Text = "ãªã—";
 				else
 					this.Text = contrib.name;
 			}
@@ -104,7 +106,8 @@ namespace freetrain.framework
 			public SelectMenuItem() : base() {}	// for some reason Windows Forms need this constructor
 			internal SelectMenuItem( BGMManager owner ) {
 				this.owner = owner;
-				this.Text = "ƒtƒ@ƒCƒ‹‚©‚ç‘I‘ğ(&S)...";
+				this.Text = "&Select file...";
+				//! this.Text = "ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰é¸æŠ(&S)...";
 			}
 
 			protected override void OnClick(EventArgs e) {

@@ -45,8 +45,8 @@ namespace freetrain.controllers
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -62,7 +62,8 @@ namespace freetrain.controllers
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
 			this.buttonRemove.TabIndex = 7;
-			this.buttonRemove.Text = "“P‹";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "æ’¤å»";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonRemove.CheckedChanged += new System.EventHandler(this.modeChanged);
 			// 
@@ -75,7 +76,8 @@ namespace freetrain.controllers
 			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
 			this.buttonPlace.TabIndex = 6;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "•~İ";
+			this.buttonPlace.Text = "Place";
+			//! this.buttonPlace.Text = "æ•·è¨­";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonPlace.CheckedChanged += new System.EventHandler(this.modeChanged);
 			// 
@@ -99,7 +101,8 @@ namespace freetrain.controllers
 																		  this.buttonPlace,
 																		  this.picture});
 			this.Name = "RoadController";
-			this.Text = "“¹˜HH–";
+			this.Text = "Road construction";
+			//! this.Text = "é“è·¯å·¥äº‹";
 			this.ResumeLayout(false);
 
 		}

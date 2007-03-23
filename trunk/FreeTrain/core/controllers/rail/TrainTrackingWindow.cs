@@ -41,7 +41,7 @@ namespace freetrain.controllers.rail
 		private System.Windows.Forms.Button buttonTrack;
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -50,13 +50,13 @@ namespace freetrain.controllers.rail
 		}
 
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -76,7 +76,8 @@ namespace freetrain.controllers.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(56, 16);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "—ñÔ–¼F";
+			this.label1.Text = "Train name:";
+			//! this.label1.Text = "åˆ—è»Šåï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label2
@@ -85,7 +86,8 @@ namespace freetrain.controllers.rail
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 16);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "ó‘ÔF";
+			this.label2.Text = "Condition:";
+			//! this.label2.Text = "çŠ¶æ…‹ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// stateBox
@@ -114,7 +116,8 @@ namespace freetrain.controllers.rail
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(56, 16);
 			this.label5.TabIndex = 4;
-			this.label5.Text = "æ‹q”F";
+			this.label5.Text = "Number of passengers:";
+			//! this.label5.Text = "ä¹—å®¢æ•°ï¼š";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// buttonTrack
@@ -126,7 +129,8 @@ namespace freetrain.controllers.rail
 			this.buttonTrack.Name = "buttonTrack";
 			this.buttonTrack.Size = new System.Drawing.Size(64, 24);
 			this.buttonTrack.TabIndex = 6;
-			this.buttonTrack.Text = "ˆÚ“®(&M)";
+			this.buttonTrack.Text = "&Move";
+			//! this.buttonTrack.Text = "ç§»å‹•(&M)";
 			// 
 			// nameBox
 			// 
@@ -168,7 +172,8 @@ namespace freetrain.controllers.rail
 			this.MinimizeBox = false;
 			this.MinimumSize = new System.Drawing.Size(136, 136);
 			this.Name = "TrainTrackingWindow";
-			this.Text = "—ñÔ‚Ìî•ñ";
+			this.Text = "Train information";
+			//! this.Text = "åˆ—è»Šã®æƒ…å ±";
 			this.ResumeLayout(false);
 
 		}

@@ -115,7 +115,8 @@ namespace freetrain.controllers.land
 																		  this.groupBox,
 																		  this.preview});
 			this.Name = "LandController";
-			this.Text = "地表";
+			this.Text = "Land view";
+			//! this.Text = "地表";
 			this.ResumeLayout(false);
 
 		}

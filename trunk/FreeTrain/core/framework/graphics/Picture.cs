@@ -79,7 +79,8 @@ namespace freetrain.framework.graphics
 				case "fall":	specifiedLoaders[2,0] = overrideLoader; break;
 				case "winter":	specifiedLoaders[3,0] = overrideLoader; break;
 				default:
-					throw new FormatException("when='"+when+"'‚Í–¢’m‚ÌƒI[ƒo[ƒ‰ƒCƒhŒ`®‚Å‚·");
+					throw new FormatException("when='"+when+"' is an unknown override format");
+					//! throw new FormatException("when='"+when+"'ã¯æœªçŸ¥ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰å½¢å¼ã§ã™");
 				}
 			}
 

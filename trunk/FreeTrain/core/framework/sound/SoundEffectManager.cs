@@ -23,7 +23,8 @@ namespace freetrain.framework.sound
 				this.performance = new Performance(owner);
 				available = true;
 			} catch( Exception e ) {
-				MessageBox.Show( owner, e.StackTrace, "DirectAudio‚ª‰Šú‰»‚Å‚«‚Ü‚¹‚ñBƒTƒEƒ“ƒh‚Í–³Œø‚Å‚·B",
+				MessageBox.Show( owner, e.StackTrace, "DirectAudio can not be initialized. Sound is disabled.",
+				//! MessageBox.Show( owner, e.StackTrace, "DirectAudioãŒåˆæœŸåŒ–ã§ãã¾ã›ã‚“ã€‚ã‚µã‚¦ãƒ³ãƒ‰ã¯ç„¡åŠ¹ã§ã™ã€‚",
 					MessageBoxButtons.OK, MessageBoxIcon.Stop );
 				available = false;
 				Core.options.enableSoundEffect = false;

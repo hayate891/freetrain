@@ -92,7 +92,8 @@ namespace freetrain.framework.plugin
 			
 			// locate plugins
 			foreach( string dir in dirs ) {
-				progressHandler("ƒvƒ‰ƒOƒCƒ“‚ğŒŸõ’† "+dir);
+				progressHandler("Searching for plugins "+dir);
+				//! progressHandler("ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’æ¤œç´¢ä¸­ "+dir);
 				
 				if( !File.Exists(Path.Combine(dir,"plugin.xml")) )
 					continue;	// this directory doesn't have the plugin.xml file.
@@ -103,20 +104,24 @@ namespace freetrain.framework.plugin
 					if( pluginMap.Contains(p.name) ) {
 						// loaded more than once
 						throw new Exception( string.Format(
-							"ƒvƒ‰ƒOƒCƒ“u{0}v‚Í{1}‚Æ{2}‚Ì“ñ‰ÓŠ‚©‚çƒ[ƒh‚³‚ê‚Ä‚¢‚Ü‚·",
+							"Plugin ã€Œ{0}ã€ is loaded from more than one place ({1} and {2})",
+							//! "ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã€Œ{0}ã€ã¯{1}ã¨{2}ã®äºŒç®‡æ‰€ã‹ã‚‰ãƒ­ãƒ¼ãƒ‰ã•ã‚Œã¦ã„ã¾ã™",
 							p.name, p.dirName, ((Plugin)pluginMap[p.name]).dirName) );
 					}
 					pluginMap.Add( p.name, p );
 				} catch( Exception e ) {
 					if( errCount++ <= 5 )
 						MessageBox.Show(e.ToString(),
-							"ƒvƒ‰ƒOƒCƒ“"+Path.GetFileName(dir)+"‚ªƒ[ƒh‚Å‚«‚Ü‚¹‚ñ");
+							"ãƒ—ãƒ©ã‚°ã‚¤ãƒ³"+Path.GetFileName(dir)+"ãŒãƒ­ãƒ¼ãƒ‰ã§ãã¾ã›ã‚“");
+							//! "Plugin "+Path.GetFileName(dir)+" can not be loaded");
 					if( errCount==5 )
-						MessageBox.Show("ƒvƒ‰ƒOƒCƒ“‚Ìƒ[ƒhƒGƒ‰[‚ª‘½‚·‚¬‚Ü‚·");
+						MessageBox.Show("There are too many plugin loading errors");
+						//! MessageBox.Show("ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒ­ãƒ¼ãƒ‰ã‚¨ãƒ©ãƒ¼ãŒå¤šã™ãã¾ã™");
 				}
 			}
 
-			progressHandler("ˆË‘¶ŠÖŒW‚ğ®—’†");
+			progressHandler("Sorting dependencies");
+			//! progressHandler("ä¾å­˜é–¢ä¿‚ã‚’æ•´ç†ä¸­");
 			{// convert it to an array by sorting them in the order of dependency
 				this.plugins = new Plugin[pluginSet.count];
 				int ptr=0;
@@ -138,9 +143,11 @@ namespace freetrain.framework.plugin
 					} catch( Exception e ) {
 						if( errCount++ <= 5 )
 							MessageBox.Show(e.ToString(),
-								"ƒvƒ‰ƒOƒCƒ“"+p.name+"‚ªƒ[ƒh‚Å‚«‚Ü‚¹‚ñ");
+								"Plugin "+p.name+" can not be loaded");
+								//! "ãƒ—ãƒ©ã‚°ã‚¤ãƒ³"+p.name+"ãŒãƒ­ãƒ¼ãƒ‰ã§ãã¾ã›ã‚“");
 						if( errCount==5 )
-							MessageBox.Show("ƒvƒ‰ƒOƒCƒ“‚Ìƒ[ƒhƒGƒ‰[‚ª‘½‚·‚¬‚Ü‚·");
+							MessageBox.Show("There are too many plugin loading errors");
+							//! MessageBox.Show("ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒ­ãƒ¼ãƒ‰ã‚¨ãƒ©ãƒ¼ãŒå¤šã™ãã¾ã™");
 					}
 
 					pluginSet.remove(p);
@@ -149,26 +156,31 @@ namespace freetrain.framework.plugin
 			}
 
 			//	 load all the contributions
-			progressHandler("ƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚ğƒ[ƒh’†");
+			progressHandler("Loading contributions");
+			//! progressHandler("ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ãƒ­ãƒ¼ãƒ‰ä¸­");
 			foreach( Plugin p in plugins ) {
 				try {
 					p.loadContributions();
 				} catch( Exception e ) {
 					if( errCount++ <= 5 )
 						ErrorMessageBox.show( null, 
-							"ƒvƒ‰ƒOƒCƒ“"+p.name+"‚ªƒ[ƒh‚Å‚«‚Ü‚¹‚ñ",e);
+							"Plugin "+p.name+" can not be loaded",e);
+							//! "ãƒ—ãƒ©ã‚°ã‚¤ãƒ³"+p.name+"ãŒãƒ­ãƒ¼ãƒ‰ã§ãã¾ã›ã‚“",e);
 					if( errCount==5 )
-						MessageBox.Show("ƒvƒ‰ƒOƒCƒ“‚Ìƒ[ƒhƒGƒ‰[‚ª‘½‚·‚¬‚Ü‚·");
+						MessageBox.Show("There are too many plugin loading errors");
+						//! MessageBox.Show("ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒ­ãƒ¼ãƒ‰ã‚¨ãƒ©ãƒ¼ãŒå¤šã™ãã¾ã™");
 				}
 			}
 
 			// initialize contributions
-			progressHandler("ƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚ğ‰Šú‰»’†");
+			progressHandler("Initializing contributions");
+			//! progressHandler("ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã‚’åˆæœŸåŒ–ä¸­");
 			foreach( Contribution contrib in contributions ) {
 				try {
 					contrib.onInitComplete();
 				} catch( Exception e ) {
-					ErrorMessageBox.show(null,"ƒvƒ‰ƒOƒCƒ“"+contrib.parent.name+"“à‚ÌƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“"+contrib.id+"‚ª‰Šú‰»‚Å‚«‚Ü‚¹‚ñ",e);
+					ErrorMessageBox.show(null,"Contribution "+contrib.id+" that is contained in plugin "+contrib.parent.name+" can not be initialized",e);
+					//! ErrorMessageBox.show(null,"ãƒ—ãƒ©ã‚°ã‚¤ãƒ³"+contrib.parent.name+"å†…ã®ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³"+contrib.id+"ãŒåˆæœŸåŒ–ã§ãã¾ã›ã‚“",e);
 					errCount++;
 					break;	// abort
 				}
@@ -178,7 +190,8 @@ namespace freetrain.framework.plugin
 				IDictionary dic = new Hashtable();
 				foreach( Contribution contrib in contributions ) {
 					if( dic[contrib.id]!=null ) {
-						throw new FormatException("ID:"+contrib.id+"‚ªˆêˆÓ‚Å‚Í‚ ‚è‚Ü‚¹‚ñ");
+						throw new FormatException("ID:"+contrib.id+" is not unique");
+						//! throw new FormatException("ID:"+contrib.id+"ãŒä¸€æ„ã§ã¯ã‚ã‚Šã¾ã›ã‚“");
 					}
 					dic[contrib.id] = contrib;
 				}
@@ -198,7 +211,7 @@ namespace freetrain.framework.plugin
 		public static string getDefaultPluginDirectory() {
 			// try the IDE directory first
 			string pluginDir = Path.GetFullPath(Path.Combine(
-				Core.installationDirectory, @"..\..\plugins" ));
+				Core.installationDirectory, @"..Â¥..Â¥plugins" ));
 			if(Directory.Exists(pluginDir))
 				return pluginDir;
 
@@ -220,7 +233,7 @@ namespace freetrain.framework.plugin
 		public void addContributionFactory( string name, ContributionFactory factory ) {
 			if( contributionFactories.Contains(name) )
 				throw new Exception(string.Format(
-					"contribution type \"{0}\" is already registered.",name));
+					"contribution type Â¥"{0}Â¥" is already registered.",name));
 
 			contributionFactories.Add(name,factory);
 		}
@@ -230,7 +243,8 @@ namespace freetrain.framework.plugin
 				contributionFactories[name];
 
 			if(factory==null)
-				throw new Exception(name+"‚Í–¢’m‚ÌƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚Å‚·");
+				throw new Exception(name+" is an unknown contribution");
+				//! throw new Exception(name+"ã¯æœªçŸ¥ã®ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã§ã™");
 			else
 				return factory;
 		}
