@@ -49,7 +49,7 @@ namespace freetrain.controllers.rail
 
 
 		public TrainPlacementController() {
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
 
 			controllerCombo.DataSource = World.world.trainControllers;
@@ -112,7 +112,7 @@ namespace freetrain.controllers.rail
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -137,8 +137,8 @@ namespace freetrain.controllers.rail
 		private System.ComponentModel.IContainer components;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -171,7 +171,8 @@ namespace freetrain.controllers.rail
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
 			this.buttonRemove.TabIndex = 5;
-			this.buttonRemove.Text = "“P‹";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "æ’¤å»";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonRemove.CheckedChanged += new System.EventHandler(this.onModeChange);
 			// 
@@ -185,7 +186,8 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "”z’u";
+			this.buttonPlace.Text = "Place";
+			//! this.buttonPlace.Text = "é…ç½®";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonPlace.CheckedChanged += new System.EventHandler(this.onModeChange);
 			// 
@@ -214,7 +216,8 @@ namespace freetrain.controllers.rail
 			// miAddGroup
 			// 
 			this.miAddGroup.Index = 0;
-			this.miAddGroup.Text = "V‚µ‚¢ƒOƒ‹[ƒv‚Ì’Ç‰Á(&A)";
+			this.miAddGroup.Text = "&Add new group";
+			//! this.miAddGroup.Text = "æ–°ã—ã„ã‚°ãƒ«ãƒ¼ãƒ—ã®è¿½åŠ (&A)";
 			// 
 			// imageList
 			// 
@@ -255,7 +258,8 @@ namespace freetrain.controllers.rail
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(56, 20);
 			this.label3.TabIndex = 12;
-			this.label3.Text = "í—Ş(&T)F";
+			this.label3.Text = "&Type:";
+			//! this.label3.Text = "ç¨®é¡(&T)ï¼š";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// controllerCombo
@@ -274,7 +278,8 @@ namespace freetrain.controllers.rail
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 20);
 			this.label2.TabIndex = 10;
-			this.label2.Text = "ƒ_ƒCƒ„(&T)F";
+			this.label2.Text = "Diagram (&T):";
+			//! this.label2.Text = "ãƒ€ã‚¤ãƒ¤(&T)ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// nameBox
@@ -293,7 +298,8 @@ namespace freetrain.controllers.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(56, 20);
 			this.label1.TabIndex = 8;
-			this.label1.Text = "–¼‘O(&N)F";
+			this.label1.Text = "&Name:";
+			//! this.label1.Text = "åå‰(&N)ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// panel1
@@ -308,7 +314,8 @@ namespace freetrain.controllers.rail
 			// miSell
 			// 
 			this.miSell.Index = 1;
-			this.miSell.Text = "”„‹p(&S)...";
+			this.miSell.Text = "&Sell...";
+			//! this.miSell.Text = "å£²å´(&S)...";
 			// 
 			// TrainPlacementController
 			// 
@@ -319,7 +326,8 @@ namespace freetrain.controllers.rail
 																		  this.panel2});
 			this.MinimumSize = new System.Drawing.Size(416, 180);
 			this.Name = "TrainPlacementController";
-			this.Text = "Ô—¼‚Ì”z’u";
+			this.Text = "Place car";
+			//! this.Text = "è»Šä¸¡ã®é…ç½®";
 			this.panel2.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -385,19 +393,22 @@ namespace freetrain.controllers.rail
 						resetArrowLocation();
 						return;
 					} else {
-						MainWindow.showError("”z’uÏ‚İ‚Å‚·");
+						MainWindow.showError("Placement completed");
+						//; MainWindow.showError("é…ç½®æ¸ˆã¿ã§ã™");
 						return;
 					}
 				}
 
 				RailRoad rr = RailRoad.get(loc);
 				if(rr==null) {
-					MainWindow.showError("ü˜H‚Ì‚È‚¢‚Æ‚±‚ë‚É‚Í”z’u‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not place without tracks");
+					//; MainWindow.showError("ç·šè·¯ã®ãªã„ã¨ã“ã‚ã«ã¯é…ç½®ã§ãã¾ã›ã‚“");
 					return;
 				}
 
 				if(!tr.place(loc)) {
-					MainWindow.showError("”z’u‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not place");
+					//! MainWindow.showError("é…ç½®ã§ãã¾ã›ã‚“");
 				} else
 					playSound();
 
@@ -405,11 +416,13 @@ namespace freetrain.controllers.rail
 				// remove
 				RailRoad rr = RailRoad.get(loc);
 				if(rr==null) {
-					MainWindow.showError("ü˜H‚ª‚ ‚è‚Ü‚¹‚ñ");
+					MainWindow.showError("There are no tracks");
+					//! MainWindow.showError("ç·šè·¯ãŒã‚ã‚Šã¾ã›ã‚“");
 					return;
 				}
 				if(!(rr.voxel.car is Train.TrainCar)) {
-					MainWindow.showError("Ô—¼‚ª‚ ‚è‚Ü‚¹‚ñ");
+					MainWindow.showError("There are no cars");
+					MainWindow.showError("è»Šä¸¡ãŒã‚ã‚Šã¾ã›ã‚“");
 					return;
 				}
 				((Train.TrainCar)rr.voxel.car).parent.remove();
@@ -568,7 +581,8 @@ namespace freetrain.controllers.rail
 		}
 
 		private void executeSell() {
-			if( MessageBox.Show(this,"”„‹p‚µ‚Ü‚·‚©H",Application.ProductName,
+			if( MessageBox.Show(this,"Do you want to sell?",Application.ProductName,
+			//! if( MessageBox.Show(this,"å£²å´ã—ã¾ã™ã‹ï¼Ÿ",Application.ProductName,
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Question) == DialogResult.Yes) {
 

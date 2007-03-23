@@ -136,7 +136,8 @@ namespace freetrain.framework.plugin
 				object o = Core.plugins.getContribution(id);
 				if(o==null)
 					throw new SerializationException(
-						"コントリビューション\""+id+"\"を含むプラグインが見つかりません");
+						"繧ｳ繝ｳ繝医Μ繝薙Η繝ｼ繧ｷ繝ｧ繝ｳﾂ･""+id+"ﾂ･"繧貞性繧繝励Λ繧ｰ繧､繝ｳ縺瑚ｦ九▽縺九ｊ縺ｾ縺帙ｓ");
+						//! "Plugin that contains Contributionﾂ･""+id+"ﾂ･" could not be found");
 				return o;
 			}
 		}

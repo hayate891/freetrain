@@ -67,7 +67,8 @@ namespace freetrain.framework
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(40, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "çÏé“ÅF";
+			this.label1.Text = "Author:";
+			//! this.label1.Text = "‰ΩúËÄÖÔºö";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label2
@@ -76,7 +77,8 @@ namespace freetrain.framework
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(40, 16);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "âê‡ÅF";
+			this.label2.Text = "Description:";
+			//! this.label2.Text = "Ëß£Ë™¨Ôºö";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// author
@@ -117,7 +119,8 @@ namespace freetrain.framework
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(88, 24);
 			this.cancelButton.TabIndex = 6;
-			this.cancelButton.Text = "∑¨›æŸ(&C)";
+			this.cancelButton.Text = "&Cancel";
+			//! this.cancelButton.Text = "ÔΩ∑ÔΩ¨ÔæùÔΩæÔæô(&C)";
 			// 
 			// list
 			// 
@@ -146,7 +149,8 @@ namespace freetrain.framework
 			this.MinimizeBox = false;
 			this.Name = "NewWorldDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "êVÇµÇ¢ÉQÅ[ÉÄ";
+			this.Text = "New game";
+			//! this.Text = "Êñ∞„Åó„ÅÑ„Ç≤„Éº„É†";
 			this.ResumeLayout(false);
 
 		}

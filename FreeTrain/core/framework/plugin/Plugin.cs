@@ -102,7 +102,8 @@ namespace freetrain.framework.plugin
 				Plugin p = PluginManager.theInstance.getPlugin(name);
 				if(p==null)
 					throw new Exception(String.Format(
-						"プラグイン{0}に必要なプラグイン{1}がみつかりません",this.name,name));
+						"Plugin {1} that is needed for plugin {0} could not be found",this.name,name));
+						//! "プラグイン{0}に必要なプラグイン{1}がみつかりません",this.name,name));
 				a.Add(p);
 			}
 			return (Plugin[])a.ToArray(typeof(Plugin));

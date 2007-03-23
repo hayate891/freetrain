@@ -51,11 +51,16 @@ namespace freetrain.contributions.train
 		public string speedDisplayName {
 			get {
 				switch(minutesPerVoxel) {
-				case 1:	return "’´‚‘¬";
-				case 2:	return "‚‘¬";
-				case 3: return "’†‘¬";
-				case 4: return "’á‘¬";
-				default:	return "’´’á‘¬";
+				case 1:	return "Highest speed";
+				case 2:	return "High speed";
+				case 3: return "Medium speed";
+				case 4: return "Low speed";
+				default:	return "Lowest speed";
+				//! case 1:	return "è¶…é«˜é€Ÿ";
+				//! case 2:	return "é«˜é€Ÿ";
+				//! case 3: return "ä¸­é€Ÿ";
+				//! case 4: return "ä½é€Ÿ";
+				//! default:	return "è¶…ä½é€Ÿ";
 				}
 			}
 		}
@@ -70,7 +75,7 @@ namespace freetrain.contributions.train
 
 			// build up rail like
 			//
-			//     /~~~~~
+			//     /â€¾â€¾â€¾â€¾â€¾
 			//    /
 			for( int x=-10; x<0; x++ )
 				pd.draw( RailPattern.get( Direction.WEST, Direction.EAST ), x, 0 );

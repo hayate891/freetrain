@@ -325,8 +325,8 @@ namespace freetrain.framework
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -427,14 +427,16 @@ namespace freetrain.framework
 			this.statusBar_Controller.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Contents;
 			this.statusBar_Controller.MinWidth = 0;
 			this.statusBar_Controller.Text = "-";
-			this.statusBar_Controller.ToolTipText = "Œ»İ‚Ìƒ‚[ƒh";
+			this.statusBar_Controller.ToolTipText = "Current mode";
+			//! this.statusBar_Controller.ToolTipText = "ç¾åœ¨ã®ãƒ¢ãƒ¼ãƒ‰";
 			this.statusBar_Controller.Width = 21;
 			// 
 			// statusBar_Time
 			// 
 			this.statusBar_Time.Alignment = System.Windows.Forms.HorizontalAlignment.Center;
 			this.statusBar_Time.Text = "date/time";
-			this.statusBar_Time.ToolTipText = "Œ»İ‚Ì";
+			this.statusBar_Time.ToolTipText = "Current time";
+			//! this.statusBar_Time.ToolTipText = "ç¾åœ¨ã®æ™‚åˆ»";
 			this.statusBar_Time.Width = 160;
 			// 
 			// MainMenu
@@ -461,22 +463,26 @@ namespace freetrain.framework
 																						  this.mruMenuItem,
 																						  this.menuItem1,
 																						  this.menuQuit});
-			this.menuItem_file.Text = "ƒtƒ@ƒCƒ‹(&F)";
+			this.menuItem_file.Text = "&File";
+			//! this.menuItem_file.Text = "ãƒ•ã‚¡ã‚¤ãƒ«(&F)";
 			// 
 			// menuItem_File_New
 			// 
 			this.menuItem_File_New.Index = 0;
-			this.menuItem_File_New.Text = "V‹Kì¬&(N)...";
+			this.menuItem_File_New.Text = "&New...";
+			//! this.menuItem_File_New.Text = "æ–°è¦ä½œæˆ&(N)...";
 			// 
 			// MenuItem_File_Open
 			// 
 			this.MenuItem_File_Open.Index = 1;
-			this.MenuItem_File_Open.Text = "ŠJ‚­(&O)...";
+			this.MenuItem_File_Open.Text = "&Open...";
+			//! this.MenuItem_File_Open.Text = "é–‹ã(&O)...";
 			// 
 			// MenuItem_File_Save
 			// 
 			this.MenuItem_File_Save.Index = 2;
-			this.MenuItem_File_Save.Text = "•Û‘¶(&S)...";
+			this.MenuItem_File_Save.Text = "&Save...";
+			//! this.MenuItem_File_Save.Text = "ä¿å­˜(&S)...";
 			// 
 			// menuItem2
 			// 
@@ -486,7 +492,8 @@ namespace freetrain.framework
 			// menuItem_listPlugins
 			// 
 			this.menuItem_listPlugins.Index = 4;
-			this.menuItem_listPlugins.Text = "ƒvƒ‰ƒOƒCƒ“ˆê——(&P)...";
+			this.menuItem_listPlugins.Text = "&Plugin list...";
+			//! this.menuItem_listPlugins.Text = "ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ä¸€è¦§(&P)...";
 			// 
 			// menuItem3
 			// 
@@ -496,7 +503,8 @@ namespace freetrain.framework
 			// mruMenuItem
 			// 
 			this.mruMenuItem.Index = 6;
-			this.mruMenuItem.Text = "(Å‹ßg‚í‚ê‚½ƒtƒ@ƒCƒ‹)";
+			this.mruMenuItem.Text = "(Recently used files)";
+			//! this.mruMenuItem.Text = "(æœ€è¿‘ä½¿ã‚ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«)";
 			// 
 			// menuItem1
 			// 
@@ -507,7 +515,8 @@ namespace freetrain.framework
 			// 
 			this.menuQuit.Index = 8;
 			this.menuQuit.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
-			this.menuQuit.Text = "I—¹(&Q)";
+			this.menuQuit.Text = "&Quit";
+			//! this.menuQuit.Text = "çµ‚äº†(&Q)";
 			// 
 			// menuItem_view
 			// 
@@ -517,19 +526,22 @@ namespace freetrain.framework
 																						  this.menuItem_balanceSheet});
 			this.menuItem_view.MergeOrder = 1;
 			this.menuItem_view.MergeType = System.Windows.Forms.MenuMerge.MergeItems;
-			this.menuItem_view.Text = "•\¦(&V)";
+			this.menuItem_view.Text = "&View";
+			//! this.menuItem_view.Text = "è¡¨ç¤º(&V)";
 			// 
 			// MenuItem_OpenMap
 			// 
 			this.MenuItem_OpenMap.Index = 0;
 			this.MenuItem_OpenMap.Shortcut = System.Windows.Forms.Shortcut.CtrlM;
-			this.MenuItem_OpenMap.Text = "ƒ}ƒbƒv(&M)";
+			this.MenuItem_OpenMap.Text = "&Map";
+			//! this.MenuItem_OpenMap.Text = "ãƒãƒƒãƒ—(&M)";
 			this.MenuItem_OpenMap.Click += new System.EventHandler(this.MenuItem_OpenMap_Click);
 			// 
 			// menuItem_balanceSheet
 			// 
 			this.menuItem_balanceSheet.Index = 1;
-			this.menuItem_balanceSheet.Text = "ƒoƒ‰ƒ“ƒXƒV[ƒg(&B)";
+			this.menuItem_balanceSheet.Text = "&Balance sheet";
+			//! this.menuItem_balanceSheet.Text = "ãƒãƒ©ãƒ³ã‚¹ã‚·ãƒ¼ãƒˆ(&B)";
 			// 
 			// menuItem_rail
 			// 
@@ -545,32 +557,38 @@ namespace freetrain.framework
 																						  this.menuItem_TrainTrading,
 																						  this.menuItem4});
 			this.menuItem_rail.MergeOrder = 2;
-			this.menuItem_rail.Text = "“S“¹(&R)";
+			this.menuItem_rail.Text = "&Rails";
+			//! this.menuItem_rail.Text = "é‰„é“(&R)";
 			// 
 			// menuItem_RailRoadConstruction
 			// 
 			this.menuItem_RailRoadConstruction.Index = 0;
-			this.menuItem_RailRoadConstruction.Text = "ü˜HH–(&R)...";
+			this.menuItem_RailRoadConstruction.Text = "&Rail construction...";
+			//! this.menuItem_RailRoadConstruction.Text = "ç·šè·¯å·¥äº‹(&R)...";
 			// 
 			// menuItem_SlopeRailRoad
 			// 
 			this.menuItem_SlopeRailRoad.Index = 1;
-			this.menuItem_SlopeRailRoad.Text = "Œù”zH–(&S)...";
+			this.menuItem_SlopeRailRoad.Text = "&Sloping rail construction...";
+			//! this.menuItem_SlopeRailRoad.Text = "å‹¾é…å·¥äº‹(&S)...";
 			// 
 			// menuItem_Platform
 			// 
 			this.menuItem_Platform.Index = 2;
-			this.menuItem_Platform.Text = "‰wH–(&A)...";
+			this.menuItem_Platform.Text = "é§…å·¥äº‹(&A)...";
+			//! this.menuItem_Platform.Text = "St&ation construction...";
 			// 
 			// menuItem_stationPassageway
 			// 
 			this.menuItem_stationPassageway.Index = 3;
-			this.menuItem_stationPassageway.Text = "Œ×ü‹´(&P)...";
+			this.menuItem_stationPassageway.Text = "Over&pass...";
+			//! this.menuItem_stationPassageway.Text = "è·¨ç·šæ©‹(&P)...";
 			// 
 			// menuItem_railStationary
 			// 
 			this.menuItem_railStationary.Index = 4;
-			this.menuItem_railStationary.Text = "ƒAƒNƒZƒTƒŠ(&C)...";
+			this.menuItem_railStationary.Text = "A&ccessories...";
+			//! this.menuItem_railStationary.Text = "ã‚¢ã‚¯ã‚»ã‚µãƒª(&C)...";
 			// 
 			// menuItem5
 			// 
@@ -580,12 +598,14 @@ namespace freetrain.framework
 			// menuItem_TrainPlacement
 			// 
 			this.menuItem_TrainPlacement.Index = 6;
-			this.menuItem_TrainPlacement.Text = "Ô—¼”z’u(&T)...";
+			this.menuItem_TrainPlacement.Text = "&Train placement...";
+			//! this.menuItem_TrainPlacement.Text = "è»Šä¸¡é…ç½®(&T)...";
 			// 
 			// menuItem_TrainTrading
 			// 
 			this.menuItem_TrainTrading.Index = 7;
-			this.menuItem_TrainTrading.Text = "Ô—¼w“ü(&B)...";
+			this.menuItem_TrainTrading.Text = "&Buy trains...";
+			//! this.menuItem_TrainTrading.Text = "è»Šä¸¡è³¼å…¥(&B)...";
 			// 
 			// menuItem4
 			// 
@@ -596,7 +616,8 @@ namespace freetrain.framework
 			// 
 			this.menuItem_road.Index = 3;
 			this.menuItem_road.MergeOrder = 3;
-			this.menuItem_road.Text = "“¹˜H(&O)";
+			this.menuItem_road.Text = "R&oad";
+			//! this.menuItem_road.Text = "é“è·¯(&O)";
 			// 
 			// menuItem_construction
 			// 
@@ -608,32 +629,38 @@ namespace freetrain.framework
 																								  this.menuItem_land,
 																								  this.menuItem_landProperty});
 			this.menuItem_construction.MergeOrder = 4;
-			this.menuItem_construction.Text = "H–(&C)";
+			this.menuItem_construction.Text = "&Construction";
+			//! this.menuItem_construction.Text = "å·¥äº‹(&C)";
 			// 
 			// menuItem_struct
 			// 
 			this.menuItem_struct.Index = 0;
-			this.menuItem_struct.Text = "Œš•¨‚ÌH–(‰¼)...";
+			this.menuItem_struct.Text = "Building construction (tentative)...";
+			//! this.menuItem_struct.Text = "å»ºç‰©ã®å·¥äº‹(ä»®)...";
 			// 
 			// menuItem_terrain
 			// 
 			this.menuItem_terrain.Index = 1;
-			this.menuItem_terrain.Text = "®’n(‰¼)(&M)...";
+			this.menuItem_terrain.Text = "Level terrain (tentative)(&M)...";
+			//! this.menuItem_terrain.Text = "æ•´åœ°(ä»®)(&M)...";
 			// 
 			// menuItem_varHeightBldg
 			// 
 			this.menuItem_varHeightBldg.Index = 2;
-			this.menuItem_varHeightBldg.Text = "‘İ‚µƒrƒ‹(&B)...";
+			this.menuItem_varHeightBldg.Text = "Rent &building...";
+			//! this.menuItem_varHeightBldg.Text = "è²¸ã—ãƒ“ãƒ«(&B)...";
 			// 
 			// menuItem_land
 			// 
 			this.menuItem_land.Index = 3;
-			this.menuItem_land.Text = "’n•\(&S)...";
+			this.menuItem_land.Text = "&Surface...";
+			//! this.menuItem_land.Text = "åœ°è¡¨(&S)...";
 			// 
 			// menuItem_landProperty
 			// 
 			this.menuItem_landProperty.Index = 4;
-			this.menuItem_landProperty.Text = "“y’n”„”ƒ(&L)...";
+			this.menuItem_landProperty.Text = "Trade &land...";
+			//! this.menuItem_landProperty.Text = "åœŸåœ°å£²è²·(&L)...";
 			// 
 			// menuItem_config
 			// 
@@ -643,12 +670,14 @@ namespace freetrain.framework
 																							this.menuItem_soundEffect,
 																							this.menuItem_option});
 			this.menuItem_config.MergeOrder = 5;
-			this.menuItem_config.Text = "İ’è(&C)";
+			this.menuItem_config.Text = "&Configure";
+			//! this.menuItem_config.Text = "è¨­å®š(&C)";
 			// 
 			// menuItem_music
 			// 
 			this.menuItem_music.Index = 0;
-			this.menuItem_music.Text = "‰¹Šy(&M)";
+			this.menuItem_music.Text = "&Music";
+			//! this.menuItem_music.Text = "éŸ³æ¥½(&M)";
 			// 
 			// menuItem_soundEffect
 			// 
@@ -656,23 +685,27 @@ namespace freetrain.framework
 			this.menuItem_soundEffect.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																								 this.menuItem_enableSoundEffect,
 																								 this.menuItem_disableSoundEffect});
-			this.menuItem_soundEffect.Text = "Œø‰Ê‰¹(&S)";
+			this.menuItem_soundEffect.Text = "&Sound effects";
+			//!this.menuItem_soundEffect.Text = "åŠ¹æœéŸ³(&S)";
 			this.menuItem_soundEffect.Popup += new System.EventHandler(this.onMenuPopup);
 			// 
 			// menuItem_enableSoundEffect
 			// 
 			this.menuItem_enableSoundEffect.Index = 0;
-			this.menuItem_enableSoundEffect.Text = "‚ ‚è(&N)";
+			this.menuItem_enableSoundEffect.Text = "E&nable";
+			//! this.menuItem_enableSoundEffect.Text = "ã‚ã‚Š(&N)";
 			// 
 			// menuItem_disableSoundEffect
 			// 
 			this.menuItem_disableSoundEffect.Index = 1;
-			this.menuItem_disableSoundEffect.Text = "‚È‚µ(&F)";
+			this.menuItem_disableSoundEffect.Text = "Disable(&F)";
+			//! this.menuItem_disableSoundEffect.Text = "ãªã—(&F)";
 			// 
 			// menuItem_option
 			// 
 			this.menuItem_option.Index = 2;
-			this.menuItem_option.Text = "ƒIƒvƒVƒ‡ƒ“(&O)...";
+			this.menuItem_option.Text = "&Options...";
+			//! this.menuItem_option.Text = "ã‚ªãƒ—ã‚·ãƒ§ãƒ³(&O)...";
 			// 
 			// menuItem_help
 			// 
@@ -681,17 +714,20 @@ namespace freetrain.framework
 																						  this.menuItem_onlineHelp,
 																						  this.menuItem_About});
 			this.menuItem_help.MergeOrder = 6;
-			this.menuItem_help.Text = "ƒwƒ‹ƒv(&H)";
+			this.menuItem_help.Text = "&Help";
+			//! this.menuItem_help.Text = "ãƒ˜ãƒ«ãƒ—(&H)";
 			// 
 			// menuItem_onlineHelp
 			// 
 			this.menuItem_onlineHelp.Index = 0;
-			this.menuItem_onlineHelp.Text = "ƒIƒ“ƒ‰ƒCƒ“ƒwƒ‹ƒv(&O)";
+			this.menuItem_onlineHelp.Text = "&Online help";
+			//! this.menuItem_onlineHelp.Text = "ã‚ªãƒ³ãƒ©ã‚¤ãƒ³ãƒ˜ãƒ«ãƒ—(&O)";
 			// 
 			// menuItem_About
 			// 
 			this.menuItem_About.Index = 1;
-			this.menuItem_About.Text = "FreeTrain‚É‚Â‚¢‚Ä(&A)...";
+			this.menuItem_About.Text = "&About FreeTrain...";
+			//! this.menuItem_About.Text = "FreeTrainã«ã¤ã„ã¦(&A)...";
 			// 
 			// toolBar1
 			// 
@@ -720,7 +756,8 @@ namespace freetrain.framework
 			// 
 			this.tbTimer.DropDownMenu = this.clockMenu;
 			this.tbTimer.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton;
-			this.tbTimer.Text = "ŠÔ";
+			this.tbTimer.Text = "Timer";
+			//! this.tbTimer.Text = "æ™‚é–“";
 			// 
 			// clockMenu
 			// 
@@ -734,31 +771,36 @@ namespace freetrain.framework
 			// menuItem_ClockStop
 			// 
 			this.menuItem_ClockStop.Index = 0;
-			this.menuItem_ClockStop.Text = "ˆê’â~(&S)";
+			this.menuItem_ClockStop.Text = "&Stop";
+			//! this.menuItem_ClockStop.Text = "ä¸€æ™‚åœæ­¢(&S)";
 			this.menuItem_ClockStop.Click += new System.EventHandler(this.menuItem_ClockStop_Click);
 			// 
 			// menuItem_ClockGo1
 			// 
 			this.menuItem_ClockGo1.Index = 1;
-			this.menuItem_ClockGo1.Text = "‚ä‚Á‚­‚è(&S)";
+			this.menuItem_ClockGo1.Text = "&Slow";
+			//! this.menuItem_ClockGo1.Text = "ã‚†ã£ãã‚Š(&S)";
 			this.menuItem_ClockGo1.Click += new System.EventHandler(this.menuItem_ClockGo1_Click);
 			// 
 			// menuItem_ClockGo2
 			// 
 			this.menuItem_ClockGo2.Index = 2;
-			this.menuItem_ClockGo2.Text = "•’Ê(&N)";
+			this.menuItem_ClockGo2.Text = "&Normal";
+			//! this.menuItem_ClockGo2.Text = "æ™®é€š(&N)";
 			this.menuItem_ClockGo2.Click += new System.EventHandler(this.menuItem_ClockGo2_Click);
 			// 
 			// menuItem_ClockGo3
 			// 
 			this.menuItem_ClockGo3.Index = 3;
-			this.menuItem_ClockGo3.Text = "‚‘¬(&F)";
+			this.menuItem_ClockGo3.Text = "&Fast";
+			//! this.menuItem_ClockGo3.Text = "é«˜é€Ÿ(&F)";
 			this.menuItem_ClockGo3.Click += new System.EventHandler(this.menuItem_ClockGo3_Click);
 			// 
 			// menuItem_ClockGo4
 			// 
 			this.menuItem_ClockGo4.Index = 4;
-			this.menuItem_ClockGo4.Text = "Å‚‘¬(&U)";
+			this.menuItem_ClockGo4.Text = "&Ultra";
+			//! this.menuItem_ClockGo4.Text = "æœ€é«˜é€Ÿ(&U)";
 			this.menuItem_ClockGo4.Click += new System.EventHandler(this.menuItem_ClockGo4_Click);
 			// 
 			// tbRailRoad
@@ -833,7 +875,7 @@ namespace freetrain.framework
 		#endregion
 
 		/// <summary>
-		/// ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÌƒƒCƒ“ ƒGƒ“ƒgƒŠ ƒ|ƒCƒ“ƒg‚Å‚·B
+		/// ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ãƒ¡ã‚¤ãƒ³ ã‚¨ãƒ³ãƒˆãƒª ãƒã‚¤ãƒ³ãƒˆã§ã™ã€‚
 		/// </summary>
 		[STAThread]
 		static void Main() {
@@ -1009,7 +1051,8 @@ namespace freetrain.framework
 		/// <returns>true if the current world can be safely destroyed.</returns>
 		public bool saveIfNecessary() {
 			if(World.world!=null) {
-				switch(MessageBox.Show(this,"Œ»İ‚ÌƒQ[ƒ€‚ğ•Û‘¶‚µ‚Ü‚·‚©H","FreeTrain",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question )) {
+				switch(MessageBox.Show(this,"Do you want to save the current game?","FreeTrain",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question )) {
+				//! switch(MessageBox.Show(this,"ç¾åœ¨ã®ã‚²ãƒ¼ãƒ ã‚’ä¿å­˜ã—ã¾ã™ã‹ï¼Ÿ","FreeTrain",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question )) {
 				case DialogResult.Yes:
 					if(saveGame()!=DialogResult.OK)
 						return false;	// if the user didn't save the game, abort.
@@ -1024,7 +1067,8 @@ namespace freetrain.framework
 			return true;	// OK to proceed
 		}
 
-		private const string filterString = "ƒQ[ƒ€ƒf[ƒ^ (*.ftgd)|*.ftgd|ƒQ[ƒ€ƒf[ƒ^(ŒİŠ·Œ`®) (*.ftgt)|*.ftgt";
+		private const string filterString = "Game data (*.ftgd)|*.ftgd|Game data (compatibility format) (*.ftgt)|*.ftgt";
+		//! private const string filterString = "ã‚²ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿ (*.ftgd)|*.ftgd|ã‚²ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿(äº’æ›å½¢å¼) (*.ftgt)|*.ftgt";
 		/// <summary>
 		/// Saves the current game.
 		/// </summary>
@@ -1112,7 +1156,8 @@ namespace freetrain.framework
 				setWorld( World.load(f,stream) );
 				stream.Close();
 			} catch( Exception e ) {
-				ErrorMessageBox.show(this,"ƒ[ƒhƒGƒ‰[",e);
+				ErrorMessageBox.show(this,"Loading error",e);
+				//! ErrorMessageBox.show(this,"ãƒ­ãƒ¼ãƒ‰ã‚¨ãƒ©ãƒ¼",e);
 			}
 			stream.Close();
 		}
@@ -1290,12 +1335,12 @@ namespace freetrain.framework
 			// we have to specify executing module directory
 			ProcessStartInfo info = new ProcessStartInfo();
 			// get default browser (exe) path
-			RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
+			RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"httpÂ¥shellÂ¥openÂ¥command");
 			String val = rkey.GetValue("").ToString();
 			Debug.WriteLine(val);
-			if(val.StartsWith("\""))
+			if(val.StartsWith("Â¥""))
 			{
-				int n = val.IndexOf("\"",1);
+				int n = val.IndexOf("Â¥"",1);
 				info.FileName = val.Substring(1,n-1);
 				info.Arguments = val.Substring(n+1);
 			}
@@ -1339,7 +1384,8 @@ namespace freetrain.framework
 				return;
 			}
 
-			DialogResult res = MessageBox.Show(this,"ƒQ[ƒ€‚ğ•Û‘¶‚µ‚È‚¢‚ÅI—¹‚µ‚Ü‚·‚©H",
+			DialogResult res = MessageBox.Show(this,"Do you want to save the game and quit?",
+			//! DialogResult res = MessageBox.Show(this,"ã‚²ãƒ¼ãƒ ã‚’ä¿å­˜ã—ãªã„ã§çµ‚äº†ã—ã¾ã™ã‹ï¼Ÿ",
 						Application.ProductName,
 						MessageBoxButtons.YesNo,
 						MessageBoxIcon.Question,
