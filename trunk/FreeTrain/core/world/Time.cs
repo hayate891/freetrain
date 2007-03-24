@@ -32,7 +32,8 @@ namespace freetrain.world
 		/// <summary> Returns a string formatter for the display. </summary>
 		public string displayString {
 			get {
-				return string.Format("{0}”N{1}Œ{2}“ú({3}) {4,2:d}{5,1:d}0•ª",
+				return string.Format("{0}-{1}-{2} ({3}) {4,2:d}:{5,1:d}0",
+				//! return string.Format("{0}å¹´{1}æœˆ{2}æ—¥({3}) {4,2:d}æ™‚{5,1:d}0åˆ†",
 					year, month, day,
 					dayOfWeekChar(dayOfWeek),
 					hour, minutes/10 );
@@ -124,7 +125,8 @@ namespace freetrain.world
 
 
 		public static char dayOfWeekChar( int dow ) {
-			return "“úŒ‰Î…–Ø‹à“y"[dow];
+			return "Mon Tue Wed Thu Fri Sat Sun"[dow];
+			//! return "æ—¥æœˆç«æ°´æœ¨é‡‘åœŸ"[dow];
 		}
 
 		public static TimeLength operator - ( Time ta, Time tb ) {

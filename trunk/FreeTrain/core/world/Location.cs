@@ -9,7 +9,7 @@ using freetrain.framework;
 namespace freetrain.world
 {
 	/// <summary>
-	/// ¢ŠE‚Å‚ÌˆÊ’u‚ğ¦‚·ƒIƒuƒWƒFƒNƒg
+	/// ä¸–ç•Œã§ã®ä½ç½®ã‚’ç¤ºã™ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	/// </summary>
 	[Serializable]
 	public struct Location
@@ -141,13 +141,13 @@ namespace freetrain.world
 		}
 
 		/// <summary>
-		/// ˆÊ’u‚ğ‚½‚È‚¢‚±‚Æ‚ğ¦‚·“Áê‚È’l
+		/// ä½ç½®ã‚’æŒãŸãªã„ã“ã¨ã‚’ç¤ºã™ç‰¹æ®Šãªå€¤
 		/// </summary>
 		public static readonly Location UNPLACED = new Location( int.MinValue, int.MinValue, int.MinValue );
 	}
 
 	/// <summary>
-	/// Location“¯m‚Ì·•ª
+	/// LocationåŒå£«ã®å·®åˆ†
 	/// </summary>
 	[Serializable]
 	public struct Distance

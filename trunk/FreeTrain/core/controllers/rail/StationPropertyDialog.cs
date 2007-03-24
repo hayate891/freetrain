@@ -56,8 +56,8 @@ namespace freetrain.world.rail
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(88, 24);
 			this.cancelButton.TabIndex = 5;
-			this.cancelButton.Text = "キャンセル(&C)";
-			//! this.cancelButton.Text = "&Cancel";
+			this.cancelButton.Text = "&Cancel";
+			//! this.cancelButton.Text = "キャンセル(&C)";
 			// 
 			// OKbutton
 			// 

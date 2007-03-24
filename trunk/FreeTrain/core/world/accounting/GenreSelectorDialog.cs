@@ -74,7 +74,8 @@ namespace freetrain.world.accounting
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(96, 24);
 			this.cancelButton.TabIndex = 9;
-			this.cancelButton.Text = "·¬İ¾Ù(&C)";
+			this.cancelButton.Text = "&Cancel";
+			//! this.cancelButton.Text = "ï½·ï½¬ï¾ï½¾ï¾™(&C)";
 			// 
 			// selector
 			// 
@@ -86,8 +87,10 @@ namespace freetrain.world.accounting
 			this.selector.Name = "selector";
 			this.selector.Size = new System.Drawing.Size(408, 192);
 			this.selector.TabIndex = 1;
-			this.selector.title1 = "‘I‘ğ‰Â”\€–Ú(&A)F";
-			this.selector.title2 = "‘I‘ğ€–Ú(&S)F";
+			this.selector.title1 = "é¸æŠå¯èƒ½é …ç›®(&A)ï¼š";
+			this.selector.title2 = "é¸æŠé …ç›®(&S)ï¼š";
+			//! this.selector.title1 = "&Accessible items:";
+			//! this.selector.title2 = "&Selected items:";
 			// 
 			// GenreSelectorDialog
 			// 
@@ -104,7 +107,8 @@ namespace freetrain.world.accounting
 			this.MinimizeBox = false;
 			this.Name = "GenreSelectorDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "•\¦€–Ú‚Ìİ’è";
+			this.Text = "Display settings";
+			//! this.Text = "è¡¨ç¤ºé …ç›®ã®è¨­å®š";
 			this.TopMost = true;
 			this.ResumeLayout(false);
 

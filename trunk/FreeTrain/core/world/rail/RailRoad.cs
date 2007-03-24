@@ -9,7 +9,7 @@ using freetrain.framework;
 namespace freetrain.world.rail
 {
 	/// <summary>
-	/// ü˜H
+	/// ç·šè·¯
 	/// </summary>
 	[Serializable]
 	public abstract class RailRoad
@@ -21,12 +21,12 @@ namespace freetrain.world.rail
 		}
 
 		/// <summary>
-		/// ‚±‚Ìü˜H‚ªè‚ß‚éVoxel
+		/// ã“ã®ç·šè·¯ãŒå ã‚ã‚‹Voxel
 		/// </summary>
 		public readonly TrafficVoxel voxel;
 
 		/// <summary>
-		/// ‚±‚Ìü˜H‚ÌˆÊ’u
+		/// ã“ã®ç·šè·¯ã®ä½ç½®
 		/// </summary>
 		public Location location { get { return voxel.location; } }
 
@@ -103,7 +103,7 @@ namespace freetrain.world.rail
 		public abstract void detach( Direction d1, Direction d2 );
 
 		/// <summary>
-		/// hasRail(x)==true‚Æ‚È‚é‚æ‚¤‚È‰½‚ç‚©‚Ìx‚ğ•Ô‚·
+		/// hasRail(x)==trueã¨ãªã‚‹ã‚ˆã†ãªä½•ã‚‰ã‹ã®xã‚’è¿”ã™
 		/// </summary>
 		public Direction dir1 { get {
 			for( int i=0; ; i++ )
@@ -111,8 +111,8 @@ namespace freetrain.world.rail
 		}}
 
 		/// <summary>
-		/// hasRail(x)==true‚Æ‚È‚é‚æ‚¤‚Èx‚Ì‚¤‚¿Adir1!=x‚Æ‚È‚é‚æ‚¤‚È
-		/// ‰½‚ç‚©‚Ìx‚ğ•Ô‚·
+		/// hasRail(x)==trueã¨ãªã‚‹ã‚ˆã†ãªxã®ã†ã¡ã€dir1!=xã¨ãªã‚‹ã‚ˆã†ãª
+		/// ä½•ã‚‰ã‹ã®xã‚’è¿”ã™
 		/// </summary>
 		public Direction dir2 { get {
 			for( int i=7; ; i-- )
@@ -123,7 +123,7 @@ namespace freetrain.world.rail
 		public RailPattern getPattern() { return pattern; }
 
 		/// <summary>
-		/// ‚Ç‚Ì•ûŒü‚ÉƒŒ[ƒ‹‚ªL‚Ñ‚Ä‚¢‚é‚©Btrue‚È‚çL‚Ñ‚Ä‚¢‚é
+		/// ã©ã®æ–¹å‘ã«ãƒ¬ãƒ¼ãƒ«ãŒä¼¸ã³ã¦ã„ã‚‹ã‹ã€‚trueãªã‚‰ä¼¸ã³ã¦ã„ã‚‹
 		/// </summary>
 		public bool hasRail( Direction d ) {
 			return pattern.hasRail(d);

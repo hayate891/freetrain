@@ -5,7 +5,7 @@ using org.kohsuke.directdraw;
 namespace freetrain.views
 {
 	/// <summary>
-	/// NullWeatherOverlay ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// NullWeatherOverlay ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public sealed class NullWeatherOverlay : WeatherOverlay
 	{

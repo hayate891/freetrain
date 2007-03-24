@@ -75,7 +75,7 @@ namespace freetrain.world.rail
 		public string displayName { get { return name; } }
 
 		/// <summary>
-		/// ‚±‚Ì•Ò¬‚ğ\¬‚·‚éÔ—¼
+		/// ã“ã®ç·¨æˆã‚’æ§‹æˆã™ã‚‹è»Šä¸¡
 		/// </summary>
 		private readonly TrainCar[] cars;
 
@@ -136,7 +136,7 @@ namespace freetrain.world.rail
 		}
 
 		/// <summary>
-		/// ”z’uÏ‚İ‚Ì—ñÔ‚ğ“P‹‚·‚é
+		/// é…ç½®æ¸ˆã¿ã®åˆ—è»Šã‚’æ’¤å»ã™ã‚‹
 		/// </summary>
 		public void remove() {
 			Debug.Assert(isPlaced);
@@ -199,11 +199,16 @@ namespace freetrain.world.rail
 		public string stateDisplayText {
 			get {
 				switch(state) {
-				case State.Unplaced:			return "–¢”z’u";
-				case State.Moving:				return "is’†";
-				case State.StoppingAtStation:	return "”­ÔŠÔ‘Ò";
-				case State.StoppingAtSignal:	return "’â~’†";
-				case State.EmergencyStopping:	return "‹Ù‹}’â~";
+				case State.Unplaced:			return "Unplaced";
+				case State.Moving:				return "Moving";
+				case State.StoppingAtStation:	return "Stopping at station";
+				case State.StoppingAtSignal:	return "Stopping at signal";
+				case State.EmergencyStopping:	return "Emergency stop";
+				//! case State.Unplaced:			return "æœªé…ç½®";
+				//! case State.Moving:				return "é€²è¡Œä¸­";
+				//! case State.StoppingAtStation:	return "ç™ºè»Šæ™‚é–“å¾…";
+				//! case State.StoppingAtSignal:	return "åœæ­¢ä¸­";
+				//! case State.EmergencyStopping:	return "ç·Šæ€¥åœæ­¢";
 				default:	Debug.Fail("undefined state"); return null;
 				}
 			}
@@ -282,7 +287,7 @@ namespace freetrain.world.rail
 		private int moveCount = 0;	// used to compute the cost of a train
 
 		/// <summary>
-		/// 1voxel“®‚©‚·
+		/// 1voxelå‹•ã‹ã™
 		/// </summary>
 		public void move( CarState next ) {
 			
@@ -580,7 +585,7 @@ namespace freetrain.world.rail
 
 
 		/// <summary>
-		/// ˆê—¼‚Ì“dÔ
+		/// ä¸€ä¸¡ã®é›»è»Š
 		/// </summary>
 		[Serializable]
 		public class TrainCar : Car
@@ -591,7 +596,7 @@ namespace freetrain.world.rail
 				this.index = idx;
 			}
 
-			/// <summary> ‚±‚Ì“dÔ‚ğŠÜ‚Ş•Ò¬ </summary>
+			/// <summary> ã“ã®é›»è»Šã‚’å«ã‚€ç·¨æˆ </summary>
 			public readonly Train parent;
 
 			/// <summary> Type of this car. </summary>

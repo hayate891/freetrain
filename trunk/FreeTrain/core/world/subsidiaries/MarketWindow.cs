@@ -182,13 +182,15 @@ namespace freetrain.world.subsidiaries
 			// 
 			this.tbModeSell.ImageIndex = 0;
 			this.tbModeSell.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeSell.Text = "©Ğ";
+			this.tbModeSell.Text = "Your company";
+			//! this.tbModeSell.Text = "è‡ªç¤¾";
 			// 
 			// tbModeBuy
 			// 
 			this.tbModeBuy.ImageIndex = 0;
 			this.tbModeBuy.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeBuy.Text = "‘¼Ğ";
+			this.tbModeBuy.Text = "Another company";
+			//! this.tbModeBuy.Text = "ä»–ç¤¾";
 			// 
 			// tbSeparator
 			// 
@@ -197,7 +199,8 @@ namespace freetrain.world.subsidiaries
 			// tbGo
 			// 
 			this.tbGo.ImageIndex = 2;
-			this.tbGo.Text = "ˆÚ“®";
+			this.tbGo.Text = "Move";
+			//! this.tbGo.Text = "ç§»å‹•";
 			// 
 			// imageList
 			// 
@@ -223,34 +226,40 @@ namespace freetrain.world.subsidiaries
 			// 
 			// columnHeader1
 			// 
-			this.columnHeader1.Text = "–¼‘O";
+			this.columnHeader1.Text = "Name";
+			//! this.columnHeader1.Text = "åå‰";
 			this.columnHeader1.Width = 200;
 			// 
 			// columnHeader2
 			// 
-			this.columnHeader2.Text = "•]‰¿Šz";
+			this.columnHeader2.Text = "Valuation";
+			//! this.columnHeader2.Text = "è©•ä¾¡é¡";
 			this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.columnHeader2.Width = 100;
 			// 
 			// columnHeader3
 			// 
-			this.columnHeader3.Text = "ûx";
+			this.columnHeader3.Text = "Balance";
+			//! this.columnHeader3.Text = "åæ”¯";
 			this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// columnHeader4
 			// 
-			this.columnHeader4.Text = "”„ã";
+			this.columnHeader4.Text = "Sales";
+			//! this.columnHeader4.Text = "å£²ä¸Š";
 			this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// columnHeader5
 			// 
-			this.columnHeader5.Text = "Œo”ï";
+			this.columnHeader5.Text = "Expenses";
+			//! this.columnHeader5.Text = "çµŒè²»";
 			this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// tbOK
 			// 
 			this.tbOK.ImageIndex = 1;
-			this.tbOK.Text = "w“ü";
+			this.tbOK.Text = "Buy";
+			//! this.tbOK.Text = "è³¼å…¥";
 			// 
 			// MarketWindow
 			// 
@@ -261,7 +270,8 @@ namespace freetrain.world.subsidiaries
 																		  this.toolBar});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "MarketWindow";
-			this.Text = "q‰ïĞæˆø";
+			this.Text = "Subsidiary business";
+			//! this.Text = "å­ä¼šç¤¾å–å¼•";
 			this.ResumeLayout(false);
 
 		}
@@ -281,7 +291,8 @@ namespace freetrain.world.subsidiaries
 		}
 		private void updateOKButton( Command cmd ) {
 			cmd.Enabled = (selectedProperty!=null);
-			cmd.Text = isBuying?"w“ü":"”„‹p";
+			cmd.Text = isBuying?"Buy":"Sell";
+			//! cmd.Text = isBuying?"è³¼å…¥":"å£²å´";
 		}
 
 		private void onButtonClick(object sender, ToolBarButtonClickEventArgs e) {

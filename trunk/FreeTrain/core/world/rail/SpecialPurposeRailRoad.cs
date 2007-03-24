@@ -26,7 +26,7 @@ namespace freetrain.world.rail
 			// can't be detached
 		}
 
-		// �|�C���g����𔺂�Ȃ��̂ŒP���ȃ��W�b�N�Ōv�Z�ł���
+		// ポイント分岐を伴わないので単純なロジックで計算できる
 		public override Direction guide() {
 			Direction d = voxel.car.state.asInside().direction;
 			// we have straight rails only, so the direction must stay the same
