@@ -18,19 +18,19 @@ using org.kohsuke.directdraw;
 namespace freetrain.world
 {
 	/// <summary>
-	/// ƒQ[ƒ€ƒf[ƒ^‚Ìƒ‹[ƒg
+	/// ã‚²ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿ã®ãƒ«ãƒ¼ãƒˆ
 	/// </summary>
 	[Serializable]
 	public sealed class World : IDeserializationCallback
 	{
 		/// <summary>
-		/// Œ»İƒQ[ƒ€’†‚Ì¢ŠE
+		/// ç¾åœ¨ã‚²ãƒ¼ãƒ ä¸­ã®ä¸–ç•Œ
 		/// </summary>
 		public static World world;
 
 
 		/// <summary>
-		/// ¢ŠE‚Ì‘å‚«‚³ (H,V,D)
+		/// ä¸–ç•Œã®å¤§ãã• (H,V,D)
 		/// </summary>
 		public readonly Distance size;
 
@@ -40,11 +40,12 @@ namespace freetrain.world
 		public static event EventHandler onNewWorld;
 
 		/// <summary>
-		/// ‹ó‚Ì¢ŠE‚ğì¬
+		/// ç©ºã®ä¸–ç•Œã‚’ä½œæˆ
 		/// </summary>
-		/// <param name="sz">¢ŠE‚Ì‘å‚«‚³ (H,V,D)</param>
+		/// <param name="sz">ä¸–ç•Œã®å¤§ãã• (H,V,D)</param>
 		public World(Distance sz, int waterLevel) {
-			name = "‚È‚È‚µ‚³‚ñ";
+			name = "Nanashi-san";
+			//! name = "ãªãªã—ã•ã‚“";
 			this.size = sz;
 			this.waterLevel = (byte)waterLevel;
 			voxels = new SparseVoxelArray(sz.x,sz.y,sz.z);
@@ -62,13 +63,16 @@ namespace freetrain.world
 				TimeLength.fromHours(1) );
 
 			// for test
-			new Train( rootTrainGroup, "‚R—¼‚‘¬•Ò¬",3,
+			new Train( rootTrainGroup, "ï¼“ cars high-speed formation",3,
+			//! new Train( rootTrainGroup, "ï¼“ä¸¡é«˜é€Ÿç·¨æˆ",3,
 				(TrainContribution)Core.plugins.getContribution("{3983B298-ADB1-4905-94E5-03B7AAE5A221}"),
 				SimpleTrainControllerImpl.theInstance );
-			new Train( rootTrainGroup, "‚T—¼’†‘¬•Ò¬",5,
+			new Train( rootTrainGroup, "ï¼• cars medium-speed formation",5,
+			//! new Train( rootTrainGroup, "ï¼•ä¸¡ä¸­é€Ÿç·¨æˆ",5,
 				(TrainContribution)Core.plugins.getContribution("{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}"),
 				SimpleTrainControllerImpl.theInstance );
-			new Train( rootTrainGroup, "‚V—¼’á‘¬•Ò¬",7,
+			new Train( rootTrainGroup, "ï¼— cars low-speed formation",7,
+			//! new Train( rootTrainGroup, "ï¼—ä¸¡ä½é€Ÿç·¨æˆ",7,
 				(TrainContribution)Core.plugins.getContribution("{F7134C8E-6B63-4780-AF16-90D33131CD07}"),
 				SimpleTrainControllerImpl.theInstance );
 
@@ -79,7 +83,7 @@ namespace freetrain.world
 			landValue = new development.LandValue(this);
 		}
 
-		/// <summary>ƒQ[ƒ€‚Ì–¼‘O</summary>
+		/// <summary>ã‚²ãƒ¼ãƒ ã®åå‰</summary>
 		public string name;
 
 		/// <summary>Clock object that controls the time of this world.</summary>
@@ -189,11 +193,11 @@ namespace freetrain.world
 
 
 		/// <summary>
-		/// w’è‚³‚ê‚½ˆÊ’u‚É‚ ‚éVoxel‚ğæ“¾
+		/// æŒ‡å®šã•ã‚ŒãŸä½ç½®ã«ã‚ã‚‹Voxelã‚’å–å¾—
 		/// </summary>
 		public Voxel this [ int x, int y, int z ] {
 			get {
-				int xx = x-(size.y-1)/2; // x‚ÌŠî€²‚ğˆÚ“®
+				int xx = x-(size.y-1)/2; // xã®åŸºæº–è»¸ã‚’ç§»å‹•
 				int h = (xx+y)>>1;
 				int v = y-xx;
 
@@ -350,7 +354,7 @@ namespace freetrain.world
 
 		// deprecated?
 		public void remove( int x, int y, int z ) {
-			int xx = x-(size.y-1)/2; // x‚ÌŠî€²‚ğˆÚ“®
+			int xx = x-(size.y-1)/2; // xã®åŸºæº–è»¸ã‚’ç§»å‹•
 			int h = (xx+y)/2;
 			int v = y-xx;
 
@@ -362,7 +366,7 @@ namespace freetrain.world
 		}
 
 		/// <summary>
-		/// w’è‚³‚ê‚½ˆÊ’u‚É‚ ‚éVoxel‚ğæ“¾
+		/// æŒ‡å®šã•ã‚ŒãŸä½ç½®ã«ã‚ã‚‹Voxelã‚’å–å¾—
 		/// </summary>
 		public Voxel this[ Location loc ] {
 			get {
@@ -374,7 +378,7 @@ namespace freetrain.world
 		}
 
 		/// <summary>
-		/// HVD’PˆÊŒn‚Å‚ÌVoxel‚ğæ“¾
+		/// HVDå˜ä½ç³»ã§ã®Voxelã‚’å–å¾—
 		/// </summary>
 		public Voxel voxelHVD( int h, int v, int d ) {
 			return voxels[h,v,d];
@@ -429,7 +433,8 @@ namespace freetrain.world
 
 
 		/// <summary> Root train group that holds all the trains in its descendants. </summary>
-		public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"•Û—L‚·‚é—ñÔ");
+		public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"Trains to hold");
+		//! public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"ä¿æœ‰ã™ã‚‹åˆ—è»Š");
 
 		
 		[Serializable]
@@ -478,7 +483,7 @@ namespace freetrain.world
 			voxelOutlookListeners = new ArrayList();
 		}
 
-		// w’è‚³‚ê‚½ƒXƒgƒŠ[ƒ€‚©‚ç¢ŠE‚ğ•œŒ³
+		// æŒ‡å®šã•ã‚ŒãŸã‚¹ãƒˆãƒªãƒ¼ãƒ ã‹ã‚‰ä¸–ç•Œã‚’å¾©å…ƒ
 		public static World load( IFormatter f, Stream stream ) {
 			using( new util.LongTask() ) {
 //				SoapFormatter f = new SoapFormatter();
@@ -489,7 +494,7 @@ namespace freetrain.world
 			}
 		}
 
-		// w’è‚³‚ê‚½ƒXƒgƒŠ[ƒ€‚É©•ª©g‚ğ‘‚«‚Ş
+		// æŒ‡å®šã•ã‚ŒãŸã‚¹ãƒˆãƒªãƒ¼ãƒ ã«è‡ªåˆ†è‡ªèº«ã‚’æ›¸ãè¾¼ã‚€
 		public void save( IFormatter f, Stream stream ) {
 			using( new util.LongTask() ) {
 				// currentBGM can be null, so serialize as an array

@@ -130,9 +130,11 @@ namespace freetrain.world.rail
 
 
 
-		public override string name { get { return "ガード高架"; } }
+		public override string name { get { return "Girder viaduct"; } }
+		//! public override string name { get { return "繧ｬ繝ｼ繝蛾ｫ俶楔"; } }
 
-		public override string oneLineDescription { get { return "スチールで強化された高架"; } }
+		public override string oneLineDescription { get { return "Steel reinforced viaduct"; } }
+		//! public override string oneLineDescription { get { return "繧ｹ繝√�ｼ繝ｫ縺ｧ蠑ｷ蛹悶＆繧後◆鬮俶楔"; } }
 
 		public override DirectionMode directionMode { get { return DirectionMode.EightWay; } }
 

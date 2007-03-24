@@ -10,9 +10,9 @@ namespace freetrain.world
 	public delegate void TrafficVoxelHandler( TrafficVoxel v );
 
 	/// <summary>
-	/// ���H�⓹�H�Ȃǂɂ���Đ�L����Ă���u���b�N
+	/// 線路や道路などによって占有されているブロック
 	/// </summary>
-	/// TrafficOccupant�ɂ͐��H�E���H�E����юԁi�d�Ԃ������͎����ԁj�������
+	/// TrafficOccupantには線路・道路・および車（電車もしくは自動車）が入れる
 	[Serializable]
 	public sealed class TrafficVoxel : AbstractVoxelImpl, Entity
 	{

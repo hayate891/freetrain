@@ -167,13 +167,14 @@ namespace freetrain.world.accounting
 		#endregion
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
 			System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-																																								new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "“S“¹", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)))),
+																																								new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Rail", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)))),
+//! "é‰„é“"
 																																								new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "TODO")}, -1);
 			this.label1 = new System.Windows.Forms.Label();
 			this.contextMenu = new System.Windows.Forms.ContextMenu();
@@ -203,7 +204,8 @@ namespace freetrain.world.accounting
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(56, 24);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "‘‹àF";
+			this.label1.Text = "Funds:";
+			//! this.label1.Text = "è³‡é‡‘ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// contextMenu
@@ -218,19 +220,22 @@ namespace freetrain.world.accounting
 			// menuItem1
 			// 
 			this.menuItem1.Index = 0;
-			this.menuItem1.Text = "ƒtƒHƒ“ƒg‚Ì•ÏX(&F)...";
+			this.menuItem1.Text = "Change &font...";
+			//! this.menuItem1.Text = "ãƒ•ã‚©ãƒ³ãƒˆã®å¤‰æ›´(&F)...";
 			this.menuItem1.Click += new System.EventHandler(this.onChangeFont);
 			// 
 			// menuItem2
 			// 
 			this.menuItem2.Index = 1;
-			this.menuItem2.Text = "•\¦€–Ú‚Ì•ÒW(&E)...";
+			this.menuItem2.Text = "&Edit displayed items...";
+			//! this.menuItem2.Text = "è¡¨ç¤ºé …ç›®ã®ç·¨é›†(&E)...";
 			this.menuItem2.Click += new System.EventHandler(this.onCustomizeGenres);
 			// 
 			// menuItem_Graph
 			// 
 			this.menuItem_Graph.Index = 2;
-			this.menuItem_Graph.Text = "ƒOƒ‰ƒt‚Ì•\¦(&G)";
+			this.menuItem_Graph.Text = "Display &graph";
+			//! this.menuItem_Graph.Text = "ã‚°ãƒ©ãƒ•ã®è¡¨ç¤º(&G)";
 			// 
 			// menuItem4
 			// 
@@ -240,7 +245,8 @@ namespace freetrain.world.accounting
 			// menuItem3
 			// 
 			this.menuItem3.Index = 4;
-			this.menuItem3.Text = "•Â‚¶‚é(&C)";
+			this.menuItem3.Text = "&Close";
+			//! this.menuItem3.Text = "é–‰ã˜ã‚‹(&C)";
 			// 
 			// liquidAsset
 			// 
@@ -259,7 +265,8 @@ namespace freetrain.world.accounting
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 24);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "Ø“üF";
+			this.label2.Text = "Rent:";
+			//! this.label2.Text = "å€Ÿå…¥ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// debts
@@ -297,24 +304,28 @@ namespace freetrain.world.accounting
 			// 
 			// colCategory
 			// 
-			this.colCategory.Text = "•ª—Ş";
+			this.colCategory.Text = "Category";
+			//! this.colCategory.Text = "åˆ†é¡";
 			this.colCategory.Width = 80;
 			// 
 			// colSales
 			// 
-			this.colSales.Text = "”„ã";
+			this.colSales.Text = "Sales";
+			//! this.colSales.Text = "å£²ä¸Š";
 			this.colSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.colSales.Width = 84;
 			// 
 			// colCost
 			// 
-			this.colCost.Text = "Œo”ï";
+			this.colCost.Text = "Cost";
+			//! this.colCost.Text = "çµŒè²»";
 			this.colCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.colCost.Width = 84;
 			// 
 			// colBalance
 			// 
-			this.colBalance.Text = "ûx";
+			this.colBalance.Text = "Balance";
+			//! this.colBalance.Text = "åæ”¯";
 			this.colBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.colBalance.Width = 84;
 			// 
@@ -341,7 +352,8 @@ namespace freetrain.world.accounting
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Size = new System.Drawing.Size(322, 0);
 			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Title = "¡“ú";
+			this.tabPage1.Title = "Today";
+			//! this.tabPage1.Title = "ä»Šæ—¥";
 			// 
 			// tabPage2
 			// 
@@ -349,7 +361,8 @@ namespace freetrain.world.accounting
 			this.tabPage2.Selected = false;
 			this.tabPage2.Size = new System.Drawing.Size(322, 0);
 			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Title = "¡Œ";
+			this.tabPage2.Title = "This month";
+			//! this.tabPage2.Title = "ä»Šæœˆ";
 			// 
 			// tabPage3
 			// 
@@ -357,7 +370,8 @@ namespace freetrain.world.accounting
 			this.tabPage3.Selected = false;
 			this.tabPage3.Size = new System.Drawing.Size(322, 0);
 			this.tabPage3.TabIndex = 2;
-			this.tabPage3.Title = "¡”N";
+			this.tabPage3.Title = "This year";
+			//! this.tabPage3.Title = "ä»Šå¹´";
 			// 
 			// AccountSummaryWindow
 			// 
@@ -375,7 +389,8 @@ namespace freetrain.world.accounting
 			this.Name = "AccountSummaryWindow";
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-			this.Text = "”„ãƒŒƒ|[ƒg";
+			this.Text = "Sales report";
+			//! this.Text = "å£²ä¸Šãƒ¬ãƒãƒ¼ãƒˆ";
 			this.ResumeLayout(false);
 
 		}

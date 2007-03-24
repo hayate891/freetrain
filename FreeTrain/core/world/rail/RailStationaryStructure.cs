@@ -7,7 +7,7 @@ using freetrain.framework.plugin;
 namespace freetrain.world.rail
 {
 	/// <summary>
-	/// RailStationaryStructure ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// RailStationaryStructure ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class RailStationaryStructure : PThreeDimStructure

@@ -186,9 +186,11 @@ namespace freetrain.world.rail
 
 
 
-		public override string name { get { return "“S‹´"; } }
+		public override string name { get { return "Bridge"; } }
+		//! public override string name { get { return "é‰„æ©‹"; } }
 
-		public override string oneLineDescription { get { return "“S‹Ø‚Ì“S‹´"; } }
+		public override string oneLineDescription { get { return "Reinforced bridge"; } }
+		//! public override string oneLineDescription { get { return "é‰„ç­‹ã®é‰„æ©‹"; } }
 
 		public override Bitmap previewBitmap {
 			get {

@@ -8,13 +8,13 @@ using freetrain.framework;
 namespace freetrain.world
 {
 	/// <summary>
-	/// •ûŒüi‚W•ûŒüB‘¬“x‚ğ”º‚í‚È‚¢j
+	/// æ–¹å‘ï¼ˆï¼˜æ–¹å‘ã€‚é€Ÿåº¦ã‚’ä¼´ã‚ãªã„ï¼‰
 	/// </summary>
 	[Serializable]
 	public sealed class Direction : ISerializable
 	{
 		/// <summary>
-		/// •ûŒüƒxƒNƒgƒ‹‚©‚çƒIƒuƒWƒFƒNƒg‚ğ“¾‚é
+		/// æ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«ã‹ã‚‰ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¾—ã‚‹
 		/// </summary>
 		public static Direction get( int x, int y ) {
 			for( int i=0; i<directions.Length; i++ )
@@ -26,7 +26,7 @@ namespace freetrain.world
 		}
 
 		/// <summary>
-		/// ƒCƒ“ƒfƒbƒNƒX‚©‚çƒIƒuƒWƒFƒNƒg‚ğ“¾‚é
+		/// ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‹ã‚‰ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¾—ã‚‹
 		/// </summary>
 		public static Direction get( int idx ) {
 			return directions[idx];
@@ -43,12 +43,12 @@ namespace freetrain.world
 		
 
 		/// <summary>
-		/// ƒIƒtƒZƒbƒg
+		/// ã‚ªãƒ•ã‚»ãƒƒãƒˆ
 		/// </summary>
 		public readonly int offsetX,offsetY;
 
 		/// <summary>
-		/// •\¦—p‚Ì–¼Ì
+		/// è¡¨ç¤ºç”¨ã®åç§°
 		/// </summary>
 		public readonly string displayName;
 
@@ -68,18 +68,18 @@ namespace freetrain.world
 		public bool isParallelToY { get { return (index%4)==0; } }
 
 		/// <summary>
-		/// [0,8)‚ÌƒCƒ“ƒfƒbƒNƒXB
+		/// [0,8)ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€‚
 		/// </summary>
 		public readonly int index;
 
 		/// <summary>
-		/// ”½Œv‰ñ‚è‚É‚S‚T“x‰ñ“]‚µ‚½Direction‚ğ“¾‚é
+		/// åæ™‚è¨ˆå›ã‚Šã«ï¼”ï¼•åº¦å›è»¢ã—ãŸDirectionã‚’å¾—ã‚‹
 		/// </summary>
 		public Direction left { get { return directions[(index+7)%8]; } }
 		public Direction left90 { get { return directions[(index+6)%8]; } }
 
 		/// <summary>
-		/// Œv‰ñ‚è‚É‚S‚T“x‰ñ“]‚µ‚½Direction‚ğ“¾‚é
+		/// æ™‚è¨ˆå›ã‚Šã«ï¼”ï¼•åº¦å›è»¢ã—ãŸDirectionã‚’å¾—ã‚‹
 		/// </summary>
 		public Direction right { get { return directions[(index+1)%8]; } }
 		public Direction right90 { get { return directions[(index+2)%8]; } }
@@ -88,8 +88,8 @@ namespace freetrain.world
 		public Direction opposite { get { return directions[(index+4)%8]; } }
 
 		/// <summary>
-		/// ‚Q‚Â‚ÌDirection‚ÌŒğ·Šp‚ğ‚S‚T“x‚Ì”{”‚Å“¾‚éB
-		/// –ß‚è’l‚Í[0,4]B1‚È‚ç‚S‚T“x‚ÅŒğ·B
+		/// ï¼’ã¤ã®Directionã®äº¤å·®è§’ã‚’ï¼”ï¼•åº¦ã®å€æ•°ã§å¾—ã‚‹ã€‚
+		/// æˆ»ã‚Šå€¤ã¯[0,4]ã€‚1ãªã‚‰ï¼”ï¼•åº¦ã§äº¤å·®ã€‚
 		/// </summary>
 		public static int angle( Direction a, Direction b ) {
 			int d = a.index - b.index;
@@ -137,17 +137,25 @@ namespace freetrain.world
 		}
 
 		/// <summary>
-		/// ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒgB–k‚©‚çŒv‰ñ‚è
+		/// å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚åŒ—ã‹ã‚‰æ™‚è¨ˆå›ã‚Š
 		/// </summary>
 		public static readonly Direction[] directions = {
-			new Direction( 0,-1,"–k"  ,0),
-			new Direction( 1,-1,"–k“Œ",1),
-			new Direction( 1, 0,  "“Œ",2),
-			new Direction( 1, 1,"“ì“Œ",3),
-			new Direction( 0, 1,"“ì"  ,4),
-			new Direction(-1, 1,"“ì¼",5),
-			new Direction(-1, 0,  "¼",6),
-			new Direction(-1,-1,"–k¼",7) };
+			new Direction( 0,-1,"North"  ,0),
+			new Direction( 1,-1,"Northeast",1),
+			new Direction( 1, 0,  "East",2),
+			new Direction( 1, 1,"Southeast",3),
+			new Direction( 0, 1,"South"  ,4),
+			new Direction(-1, 1,"Southwest",5),
+			new Direction(-1, 0,  "West",6),
+			new Direction(-1,-1,"Northwest",7) };
+			//! new Direction( 0,-1,"åŒ—"  ,0),
+			//! new Direction( 1,-1,"åŒ—æ±",1),
+			//! new Direction( 1, 0,  "æ±",2),
+			//! new Direction( 1, 1,"å—æ±",3),
+			//! new Direction( 0, 1,"å—"  ,4),
+			//! new Direction(-1, 1,"å—è¥¿",5),
+			//! new Direction(-1, 0,  "è¥¿",6),
+			//! new Direction(-1,-1,"åŒ—è¥¿",7) };
 
 
 

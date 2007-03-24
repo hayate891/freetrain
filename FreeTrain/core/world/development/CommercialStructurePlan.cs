@@ -5,7 +5,7 @@ using freetrain.world.structs;
 namespace freetrain.world.development
 {
 	/// <summary>
-	/// CommercialStructurePlan ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// CommercialStructurePlan ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	class CommercialStructurePlan : Plan
 	{

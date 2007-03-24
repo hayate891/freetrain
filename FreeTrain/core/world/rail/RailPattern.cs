@@ -11,7 +11,7 @@ using org.kohsuke.directdraw;
 namespace freetrain.world.rail
 {
 	/// <summary>
-	/// ƒŒ[ƒ‹‚ÌŒ`ó‚Ìƒpƒ^[ƒ“‚ÉŠÖ‚·‚éî•ñ‚ğ•\Œ»‚·‚éƒIƒuƒWƒFƒNƒg
+	/// ãƒ¬ãƒ¼ãƒ«ã®å½¢çŠ¶ã®ãƒ‘ã‚¿ãƒ¼ãƒ³ã«é–¢ã™ã‚‹æƒ…å ±ã‚’è¡¨ç¾ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	/// </summary>
 	[Serializable]	// serialization by reference
 	public sealed class RailPattern : SimpleSprite, ISerializable {
@@ -96,10 +96,10 @@ namespace freetrain.world.rail
 
 
 		/// <summary>
-		/// w’è‚³‚ê‚½ƒAƒ“ƒOƒ‹‚ğ‚Â”ñ•ªŠòƒŒ[ƒ‹ƒpƒ^[ƒ“‚ğ•Ô‚·
+		/// æŒ‡å®šã•ã‚ŒãŸã‚¢ãƒ³ã‚°ãƒ«ã‚’æŒã¤éåˆ†å²ãƒ¬ãƒ¼ãƒ«ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’è¿”ã™
 		/// </summary>
 		public static RailPattern get( Direction a, Direction b ) {
-			// ü˜H‚Í‹}‚É‚Í‚Ü‚ª‚ê‚È‚¢
+			// ç·šè·¯ã¯æ€¥ã«ã¯ã¾ãŒã‚Œãªã„
 			Debug.Assert( Direction.angle(a,b)>=3 );
 
 			foreach( RailPattern rp in singlePatterns ) {
@@ -107,7 +107,7 @@ namespace freetrain.world.rail
 					return rp;
 			}
 
-			Debug.Assert(false);	// ‘S‚Ä‚Ìƒpƒ^[ƒ“‚ªƒe[ƒuƒ‹’†‚É‘¶İ‚·‚é‚Í‚¸
+			Debug.Assert(false);	// å…¨ã¦ã®ãƒ‘ã‚¿ãƒ¼ãƒ³ãŒãƒ†ãƒ¼ãƒ–ãƒ«ä¸­ã«å­˜åœ¨ã™ã‚‹ã¯ãš
 			return null;
 		}
 
@@ -178,7 +178,7 @@ namespace freetrain.world.rail
 
 
 		/// <summary>
-		/// ‚Ç‚Ì•ûŒü‚ÉƒŒ[ƒ‹‚ªL‚Ñ‚Ä‚¢‚é‚©Btrue‚È‚çL‚Ñ‚Ä‚¢‚é
+		/// ã©ã®æ–¹å‘ã«ãƒ¬ãƒ¼ãƒ«ãŒä¼¸ã³ã¦ã„ã‚‹ã‹ã€‚trueãªã‚‰ä¼¸ã³ã¦ã„ã‚‹
 		/// </summary>
 		private readonly bool[] dir = new bool[8];
 
