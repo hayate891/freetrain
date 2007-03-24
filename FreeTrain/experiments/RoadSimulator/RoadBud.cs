@@ -3,18 +3,18 @@ using System;
 namespace RoadSimulator
 {
 	/// <summary>
-	/// “¹˜H‚Ì‰è
+	/// é“è·¯ã®èŠ½
 	/// </summary>
 	internal class RoadBud
 	{
 		private int _level;
 		private int _sleep;
-		// ‹x–°’†‚Ì‰èH
+		// ä¼‘çœ ä¸­ã®èŠ½ï¼Ÿ
 		public bool sleeping{ get { return (_sleep>0); }}
 		public int level { get { return _level; }}
 
 		internal int[] lastBranch;
-		// ‰è‚«Ï‚İH
+		// èŠ½å¹ãæ¸ˆã¿ï¼Ÿ
 		internal bool sprouted;
 
 		public RoadBud(int level)

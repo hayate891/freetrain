@@ -35,7 +35,7 @@ namespace nft.core
 		{
 		}
 
-		#region IHasNameAndID ƒƒ“ƒo
+		#region IHasNameAndID ãƒ¡ãƒ³ãƒ
 
 		public string ID 
 		{
@@ -104,7 +104,7 @@ namespace nft.core
 		}
 		protected int[,] districtMap;
 
-		#region IEnumerable ƒƒ“ƒo
+		#region IEnumerable ãƒ¡ãƒ³ãƒ
 
 		public IEnumerator GetEnumerator()
 		{

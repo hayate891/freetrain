@@ -263,7 +263,7 @@ namespace nft.core.geometry
 			return y_table[(int)dir];
 		}		
 		#endregion
-		#region ISerializable ƒƒ“ƒo
+		#region ISerializable ãƒ¡ãƒ³ãƒ
 
 		public void GetObjectData( SerializationInfo info, StreamingContext context) 
 		{

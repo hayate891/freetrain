@@ -10,7 +10,7 @@ using nft.util;
 namespace nft.contributions.ui
 {
 	/// <summary>
-	/// CommandEntityContributuion ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// CommandEntityContributuion ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class CommandEntityContributuion : Contribution
 	{

@@ -53,8 +53,8 @@ namespace freetrain.controls
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -71,7 +71,8 @@ namespace freetrain.controls
 			this.labelTextBox.Name = "labelTextBox";
 			this.labelTextBox.Size = new System.Drawing.Size(36, 16);
 			this.labelTextBox.TabIndex = 0;
-			this.labelTextBox.Text = "”ï—pF";
+			this.labelTextBox.Text = "Cost:";
+			//! this.labelTextBox.Text = "è²»ç”¨ï¼š";
 			this.labelTextBox.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// costTextBox

@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace nft.win32util
 {
 	/// <summary>
-	/// ConfigureService ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// ConfigureService ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class Win32Version
 	{
@@ -51,13 +51,13 @@ namespace nft.win32util
 			short *subBlock = null;
 			uint len = 0;
 			// Get the locale info from the version info:
-			if (!VerQueryValue (buffer, @"\VarFileInfo\Translation", out subBlock, out len))
+			if (!VerQueryValue (buffer, @"Â¥VarFileInfoÂ¥Translation", out subBlock, out len))
 			{
 				Debug.WriteLine("Failed to query version information.");
 				return "N/A";
 			}
  
-			string spv = @"\StringFileInfo\" + subBlock[0].ToString("X4") + subBlock[1].ToString("X4") + @"\ProductVersion";
+			string spv = @"Â¥StringFileInfoÂ¥" + subBlock[0].ToString("X4") + subBlock[1].ToString("X4") + @"Â¥ProductVersion";
  
 			byte *pVersion = null;
 			// Get the ProductVersion value for this program:

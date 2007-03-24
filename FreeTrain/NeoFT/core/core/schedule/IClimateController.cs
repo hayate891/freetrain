@@ -9,7 +9,7 @@ namespace nft.core.schedule
 	public delegate void DayNightEventHandler( DayNight newDayNight );
 
 	/// <summary>
-	/// IOverrideTimeTable ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// IOverrideTimeTable ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public interface IClimateController : IHasNameAndID
 	{		

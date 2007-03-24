@@ -5,7 +5,7 @@ using System.Collections;
 namespace nft.core.geometry
 {
 	/// <summary>
-	/// Rect3D ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// Rect3D ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public struct Rect3D : IEnumerable
 	{
@@ -320,7 +320,7 @@ namespace nft.core.geometry
 
 			public LocEnumerator(Rect3D owner)	{ rect = owner; }
 
-			#region IEnumerator ƒƒ“ƒo
+			#region IEnumerator ãƒ¡ãƒ³ãƒ
 
 			public void Reset()
 			{

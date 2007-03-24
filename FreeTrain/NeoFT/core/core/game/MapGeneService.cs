@@ -5,7 +5,7 @@ using nft.contributions.game;
 namespace nft.core.game
 {
 	/// <summary>
-	/// MapGeneratorUtil ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// MapGeneratorUtil ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class MapGeneService
 	{

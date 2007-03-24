@@ -10,14 +10,14 @@ namespace RoadSimulator
 	/// </summary>
 	internal class RoadExtender
 	{		
-		//ƒfƒtƒHƒ‹ƒg‚Ì“¹˜H‚Ì•(lv0`5
+		//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®é“è·¯ã®å¹…(lv0ã€œ5
 		static protected int[] def_width =new int[] {  3,  2, 2, 1, 1, 1};
-		//“¯‚¶ƒŒƒxƒ‹‚Ì•½s‚·‚é“¹˜H‚Æ‚ÌÅ¬ŠÔŠu(lv0`5
+		//åŒã˜ãƒ¬ãƒ™ãƒ«ã®å¹³è¡Œã™ã‚‹é“è·¯ã¨ã®æœ€å°é–“éš”(lv0ã€œ5
 		static protected short[] min_length=new short[] { 24, 16,12, 8, 4, 2};
-		//“¯‚¶ƒŒƒxƒ‹‚Ì•½s‚·‚é“¹˜H‚Æ‚ÌÅ‘åŠÔŠu(lv0`5
+		//åŒã˜ãƒ¬ãƒ™ãƒ«ã®å¹³è¡Œã™ã‚‹é“è·¯ã¨ã®æœ€å¤§é–“éš”(lv0ã€œ5
 		static protected short[] max_length=new short[] {200,100,40,20,15,10};
 
-		//Å‰‚Éİ’u‚³‚ê‚½ƒŒƒxƒ‹–ˆ‚Ì(“¹˜HˆÊ’u€“¹˜H‚ÌÅ‘åŠÔŠu)
+		//æœ€åˆã«è¨­ç½®ã•ã‚ŒãŸãƒ¬ãƒ™ãƒ«æ¯ã®(é“è·¯ä½ç½®Ã·é“è·¯ã®æœ€å¤§é–“éš”)
 		protected short[] modH; 
 		protected short[] modV; 
 		protected Hashtable buds = new Hashtable();
@@ -70,13 +70,13 @@ namespace RoadSimulator
 		}
 
 
-		// Ÿ‚ÌŠg’£‚ği‚ß‚é
+		// æ¬¡ã®æ‹¡å¼µã‚’é€²ã‚ã‚‹
 		public void extendStep()
 		{
 			if(setEnumerator())
 				while(extend((vector)ienum.Current));
 		}
-		// ˆê„‚·‚é‚Ü‚ÅŠg’£‚ği‚ß‚é
+		// ä¸€å·¡ã™ã‚‹ã¾ã§æ‹¡å¼µã‚’é€²ã‚ã‚‹
 		public void extendPhase()
 		{
 			if(setEnumerator())
@@ -695,8 +695,8 @@ namespace RoadSimulator
 				this.dir = d;
 			}
 
-			// hashtable‚ÌƒL[‚Æ‚·‚é‚½‚ßAEquals‚ÆGetHashCode‚ğƒI[ƒo[ƒ‰ƒCƒh‚·‚éB
-			// À•W‚Æ•ûŒü‚ª‘S‚Ä“¯‚¶‚È‚çA“™‚µ‚¢‚ÆŒ©‚È‚·B
+			// hashtableã®ã‚­ãƒ¼ã¨ã™ã‚‹ãŸã‚ã€Equalsã¨GetHashCodeã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã™ã‚‹ã€‚
+			// åº§æ¨™ã¨æ–¹å‘ãŒå…¨ã¦åŒã˜ãªã‚‰ã€ç­‰ã—ã„ã¨è¦‹ãªã™ã€‚
 			public override bool Equals(Object o) 
 			{
 				if( o is vector ) 
@@ -708,8 +708,8 @@ namespace RoadSimulator
 					return false;
 			}
 
-			// ƒL[‚Í@x(15bit)+ y(15bit)+ dir(2bit) = 32bit 
-			// ‚±‚Ìd‘g‚İ‚Ì‚½‚ßX,Y‚ÌÅ‘å’l‚Í2^14-1(=–ñ16–œ)
+			// ã‚­ãƒ¼ã¯ã€€x(15bit)+ y(15bit)+ dir(2bit) = 32bit 
+			// ã“ã®ä»•çµ„ã¿ã®ãŸã‚X,Yã®æœ€å¤§å€¤ã¯2^14-1(=ç´„16ä¸‡)
 			public override int GetHashCode()
 			{
 				Int32 key = (x<<17)+(y<<2)+(Int16)dir;

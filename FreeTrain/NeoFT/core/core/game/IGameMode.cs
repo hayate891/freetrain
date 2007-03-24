@@ -6,7 +6,7 @@ namespace nft.core.game
 	public enum PlayerMode { FreeBuild, Government, LocalAuthority, Company, Other };
 	public enum Ownership { None, Government, LocalAuthority, PlayerCompany, NonPlayerCompany, Private };
 	/// <summary>
-	/// IGameMode ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// IGameMode ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public interface IGameMode : IHasNameAndID
 	{

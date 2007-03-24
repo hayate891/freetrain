@@ -4,7 +4,7 @@ using DxVBLibA;
 namespace org.kohsuke.directaudio
 {
 	/// <summary>
-	/// AudioPath ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// AudioPath ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class AudioPath : IDisposable
 	{

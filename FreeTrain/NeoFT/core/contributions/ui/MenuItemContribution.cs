@@ -8,7 +8,7 @@ using nft.ui.mainframe;
 namespace nft.contributions.ui
 {
 	/// <summary>
-	/// MenuItemContribution ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// MenuItemContribution ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class MenuItemContribution : Contribution
 	{

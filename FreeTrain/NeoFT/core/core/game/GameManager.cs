@@ -100,7 +100,8 @@ namespace nft.core.game
 			return b;
 		}
 
-		private const string filterString = "ƒQ[ƒ€ƒf[ƒ^ (*.ftgd)|*.ftgd|ƒQ[ƒ€ƒf[ƒ^(ŒİŠ·Œ`®) (*.ftgt)|*.ftgt";
+		private const string filterString = "Game data (*.ftgd)|*.ftgd|Game data (compatibility format) (*.ftgt)|*.ftgt";
+		//! private const string filterString = "ã‚²ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿ (*.ftgd)|*.ftgd|ã‚²ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿(äº’æ›å½¢å¼) (*.ftgt)|*.ftgt";
 		/// <summary>
 		/// Saves the current game.
 		/// </summary>

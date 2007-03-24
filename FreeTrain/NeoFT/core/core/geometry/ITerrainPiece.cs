@@ -3,7 +3,7 @@ using System;
 namespace nft.core.geometry
 {
 	/// <summary>
-	/// TerrainPiece ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// TerrainPiece ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public interface ITerrainPiece 
 	{

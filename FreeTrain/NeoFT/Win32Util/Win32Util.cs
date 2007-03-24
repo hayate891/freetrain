@@ -3,7 +3,7 @@ using System;
 namespace nft.win32util
 {
 	/// <summary>
-	/// GenericUtil ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// GenericUtil ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class Win32Util
 	{

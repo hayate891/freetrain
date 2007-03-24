@@ -9,7 +9,7 @@ namespace nft.controls
 	public enum NonLinearUpDownStyle { ZeroCorrectedLinearStep, GeometricStep, FirstDigitStep };
 
 	/// <summary>
-	/// NonLinierUpDownControl ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// NonLinierUpDownControl ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class NonLinearUpDownControl : NumericUpDown
 	{

@@ -19,7 +19,7 @@ namespace freetrain.world.rail
 		public static readonly TrainController theInstance = new DelegationTrainControllerImpl();
 
 		private DelegationTrainControllerImpl() {
-			name = "Use the diagram settings from the new group";
+			name = "Use diagram settings from the new group";
 			//! name = "親グループのダイヤ設定を利用";
 		}
 

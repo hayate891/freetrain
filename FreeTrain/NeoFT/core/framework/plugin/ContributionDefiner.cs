@@ -13,7 +13,7 @@ namespace nft.framework.plugin
 		{
 		}
 
-		#region IUserExtension ƒƒ“ƒo
+		#region IUserExtension ãƒ¡ãƒ³ãƒ
 
 		public override bool UserAvailable
 		{

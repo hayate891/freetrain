@@ -3,7 +3,7 @@ using System;
 namespace nft.core.geometry
 {
 	/// <summary>
-	/// TerrainUtil ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// TerrainUtil ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class TerrainUtil
 	{
@@ -12,13 +12,13 @@ namespace nft.core.geometry
 		static int[] idx = new int[4];
 
 		/// <summary>
-		/// ƒ{ƒNƒZƒ‹‚Ì’¸“_‚ğ‹K’èƒpƒ^[ƒ“‚É‡‚¤‚æ‚¤‚É•â³‚·‚é		/// 
+		/// ãƒœã‚¯ã‚»ãƒ«ã®é ‚ç‚¹ã‚’è¦å®šãƒ‘ã‚¿ãƒ¼ãƒ³ã«åˆã†ã‚ˆã†ã«è£œæ­£ã™ã‚‹		/// 
 		/// </summary>
 		/// <param name="vertices"></param>
-		/// <returns>’¸“_‚ÌÅ¬’l‚ğ•Ô‚·</returns>
+		/// <returns>é ‚ç‚¹ã®æœ€å°å€¤ã‚’è¿”ã™</returns>
 		static public int CorrectVoxelVertices(ref int[] vertices)
 		{
-			// MEMO:min‚Ü‚½‚Ímax‚ÆˆÙ‚È‚é’l‚ÍA‘S‚Ämed’†ŠÔ’l‚Æ‚·‚é‚×‚µ
+			// MEMO:minã¾ãŸã¯maxã¨ç•°ãªã‚‹å€¤ã¯ã€å…¨ã¦medä¸­é–“å€¤ã¨ã™ã‚‹ã¹ã—
 			vertices.CopyTo(workarray,0);
 			for( int i=0; i<4; i++)
 				idx[i] = i;
@@ -29,44 +29,44 @@ namespace nft.core.geometry
 				vertices[i]-=minimum;
 			}
 
-			// ‘S‚Ä‚Ì–Ê‚ª“™‚µ‚¢
+			// å…¨ã¦ã®é¢ãŒç­‰ã—ã„
 			if(workarray[0]==workarray[3])
 				return minimum;
-			// Å‘å’l‚ÆÅ¬’l‚Ì·
+			// æœ€å¤§å€¤ã¨æœ€å°å€¤ã®å·®
 			int gap = workarray[3]-workarray[0];
-			// Å‘å’l‚ÆÅ¬’l‚Ì·‚ğ0,1,2,4,8‚Ì‚¢‚¸‚ê‚©‚Ék¬•â³
+			// æœ€å¤§å€¤ã¨æœ€å°å€¤ã®å·®ã‚’0,1,2,4,8ã®ã„ãšã‚Œã‹ã«ç¸®å°è£œæ­£
 			if(gap>8) gap = 8;
 			else gap = vtx_step[gap];
 
 			int tmp;
-			// O“_‚ªÅ¬’l
+			// ä¸‰ç‚¹ãŒæœ€å°å€¤
 			if(workarray[0]==workarray[2])
 			{
 				vertices[idx[3]]=workarray[0]+gap;
 				return minimum;
 			}
-			// O“_‚ªÅ‘å’l
+			// ä¸‰ç‚¹ãŒæœ€å¤§å€¤
 			if(workarray[1]==workarray[3])
 			{
 				vertices[idx[0]]=workarray[3]-gap;
 				return minimum;
 			}
-			// “ñ“_‚ªÅ¬’l
+			// äºŒç‚¹ãŒæœ€å°å€¤
 			if(workarray[0]==workarray[1])
 			{
-				// “ñ“_‚ªÅ¬’l‚©‚Â“ñ“_‚ªÅ‘å’l
+				// äºŒç‚¹ãŒæœ€å°å€¤ã‹ã¤äºŒç‚¹ãŒæœ€å¤§å€¤
 				if(workarray[2]==workarray[3])
 				{
-					// ‚‚³‚Ì’†“_‚ğŠî€‚É‚·‚é
+					// é«˜ã•ã®ä¸­ç‚¹ã‚’åŸºæº–ã«ã™ã‚‹
 					int org = (workarray[1]+workarray[2]-gap)>>1;
 					vertices[idx[0]]=vertices[idx[1]]=org;
 					vertices[idx[2]]=vertices[idx[3]]=org+gap;
 					return minimum;
 				}
-				// “ñ“_‚ªÅ¬’l‚©‚Âˆê“_‚Ì‚İ‚ªÅ‘å’l
+				// äºŒç‚¹ãŒæœ€å°å€¤ã‹ã¤ä¸€ç‚¹ã®ã¿ãŒæœ€å¤§å€¤
 				else
 				{
-					// Å¬’l‚ğŠî€‚É‚·‚é	
+					// æœ€å°å€¤ã‚’åŸºæº–ã«ã™ã‚‹	
 					tmp = workarray[0]+gap;
 					vertices[idx[3]] = tmp;
 					if( tmp < workarray[2] )
@@ -76,10 +76,10 @@ namespace nft.core.geometry
 					return minimum;
 				}
 			}
-			// “ñ“_‚ªÅ‘å’l‚©‚Âˆê“_‚Ì‚İ‚ªÅ¬’l
+			// äºŒç‚¹ãŒæœ€å¤§å€¤ã‹ã¤ä¸€ç‚¹ã®ã¿ãŒæœ€å°å€¤
 			if(workarray[2]==workarray[3])
 			{
-				// Å‘å’l‚ğŠî€‚É‚·‚é
+				// æœ€å¤§å€¤ã‚’åŸºæº–ã«ã™ã‚‹
 				tmp =workarray[3]-gap;
 				vertices[idx[0]] = tmp;
 				if( workarray[1] < tmp )
@@ -90,8 +90,8 @@ namespace nft.core.geometry
 			}
 			else 
 			{
-				// Å‘å’l‚ÆÅ¬’l‚ªŠeˆê“_‚Ã‚Â
-				// ‚‚³‚Ì’†“_‚ğŠî€‚É‚·‚é
+				// æœ€å¤§å€¤ã¨æœ€å°å€¤ãŒå„ä¸€ç‚¹ã¥ã¤
+				// é«˜ã•ã®ä¸­ç‚¹ã‚’åŸºæº–ã«ã™ã‚‹
 				int org = (workarray[0]+workarray[3]-gap)>>1;
 				vertices[idx[0]]=org;
 				vertices[idx[3]]=org+gap;
