@@ -5,7 +5,7 @@ using nft.core.geometry;
 namespace nft.core.structure
 {
 	/// <summary>
-	/// IStructure1 ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// IStructure1 ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public interface IStructureTemplate : IHasNameAndID
 	{

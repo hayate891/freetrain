@@ -69,7 +69,7 @@ namespace nft.framework.plugin
 			this._baseUri = _baseUri;
 		}
 
-		#region IUserExtension ƒƒ“ƒo
+		#region IUserExtension ãƒ¡ãƒ³ãƒ
 		/// <summary>
 		/// Name of this contribution.
 		/// </summary>
@@ -192,7 +192,8 @@ namespace nft.framework.plugin
 				object o = Core.plugins.getContribution(id);
 				if(o==null)
 					throw new SerializationException(
-						"ƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“\""+id+"\"‚ğŠÜ‚Şƒvƒ‰ƒOƒCƒ“‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
+						"Plugin that contains ContributionÂ¥""+id+"Â¥" could not be found");
+						//! "ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³Â¥""+id+"Â¥"ã‚’å«ã‚€ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“");
 				return o;
 			}
 		}

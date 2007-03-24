@@ -13,7 +13,7 @@ using nft.ui.mainframe;
 namespace nft.debug
 {
 	/// <summary>
-	/// TestGame ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// TestGame ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class TestGame : ICommandEntity
 	{
@@ -40,7 +40,7 @@ namespace nft.debug
 			GameManager.initManager((MainFrame)Main.mainFrame);
 			theGame = new GameImpl();
 		}
-		#region ICommandEntity ƒƒ“ƒo
+		#region ICommandEntity ãƒ¡ãƒ³ãƒ
 
 		public void CommandExecuted(CommandUI cmdUI, object sender)
 		{

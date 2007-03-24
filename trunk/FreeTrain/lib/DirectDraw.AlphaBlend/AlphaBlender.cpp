@@ -1,4 +1,4 @@
-// AlphaBlender.cpp : CAlphaBlender ‚ÌÀ‘•
+// AlphaBlender.cpp : CAlphaBlender ã®å®Ÿè£…
 
 #include "stdafx.h"
 #include "AlphaBlender.h"

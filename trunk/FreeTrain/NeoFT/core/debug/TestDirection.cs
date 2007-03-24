@@ -8,7 +8,7 @@ using nft.ui.command;
 namespace nft.debug
 {
 	/// <summary>
-	/// TestDirection ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// TestDirection ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class TestDirection : ICommandEntity
 	{

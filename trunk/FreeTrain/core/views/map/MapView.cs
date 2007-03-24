@@ -168,8 +168,8 @@ namespace freetrain.views.map
 																					  this.menuItem_heightCutWnd});
 			this.menuItem1.MergeOrder = 1;
 			this.menuItem1.MergeType = System.Windows.Forms.MenuMerge.MergeItems;
-			this.menuItem1.Text = "表示(&V)";
-			//! this.menuItem1.Text = "&View";
+			this.menuItem1.Text = "&View";
+			//! this.menuItem1.Text = "表示(&V)";
 			// 
 			// menuItem4
 			// 
@@ -417,7 +417,8 @@ namespace freetrain.views.map
 					//! this.Text = "なし";
 				} else {
 					int h = height - World.world.waterLevel;
-					if( h==0 )		this.Text = "地表";
+					if( h==0 )		this.Text = "Land";
+					//! if( h==0 )		this.Text = "地表";
 					else			this.Text = h.ToString();
 				}
 			}

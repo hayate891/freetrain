@@ -6,7 +6,7 @@ using nft.util;
 namespace nft.core
 {
 	/// <summary>
-	/// Core ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// Core ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class Core
 	{

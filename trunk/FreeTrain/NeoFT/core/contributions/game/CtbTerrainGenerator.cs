@@ -14,7 +14,7 @@ using nft.util;
 namespace nft.contributions.game
 {
 	/// <summary>
-	/// CommandEntityContributuion ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// CommandEntityContributuion ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public abstract class CtbTerrainGenerator : Contribution
 	{
@@ -36,7 +36,7 @@ namespace nft.contributions.game
 		public CtbFlatTerrainGenerator( XmlElement contrib ) : base(contrib) {}		
 		public override ITerrainGenerator Generator { get {	return this; } }
 
-		#region ITerrainGenerator ƒƒ“ƒo
+		#region ITerrainGenerator ãƒ¡ãƒ³ãƒ
 		protected ParamSet param;
 		protected ProgressMonitor monitor = new ProgressMonitor(2);
 
@@ -76,7 +76,7 @@ namespace nft.contributions.game
 			this.groundLv = groundLevel;
 		}
 
-		#region ITerrainMap ƒƒ“ƒo
+		#region ITerrainMap ãƒ¡ãƒ³ãƒ
 		public Size Size { get { return size; } }
         protected Size size;
 

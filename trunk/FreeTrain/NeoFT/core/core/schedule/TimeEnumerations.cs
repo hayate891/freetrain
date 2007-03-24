@@ -12,7 +12,7 @@ namespace nft.core.schedule
 
 	// Daily time zone.
 	public enum DayNight : byte 
-	{@Daybreak,Morning,Afternoon,Evening,EarlyNight,Midnight }
+	{ã€€Daybreak,Morning,Afternoon,Evening,EarlyNight,Midnight }
 
 	// Weather types
 	// Cloudy is an intermediate state, so assign low level of fine as Cloudy.
@@ -23,49 +23,49 @@ namespace nft.core.schedule
 	public enum MajorBiome : byte
 	{ Tropical, Monsoon, Warm, Dessert, Savanna, Prairie, Mediterranean, Taiga, Tundra, Alpine }
 /*
-	‚P Antarctica “ì‹Éˆæ 
-	‚Q Main Taiga å—vƒ^ƒCƒK 
-	‚R Cool Conifer —â‘Ñj—t÷—Ñ 
-	‚S Cool Mixed —â‘Ñ¬‡—Ñ 
-	‚T Warm deciduous ‰·‘Ñ——t÷—Ñ 
-	‚U Warm mixed ‰·‘Ñ¬‡—Ñ 
-	‚V Warm conifer ‰·‘Ñj—t÷—Ñ 
-	‚W Tropical Montane ”M‘ÑR’n—Ñ 
-	‚X Tropical Seasonal ”M‘Ñ‹Gß—Ñ 
-	‚P‚O Equatorial Evergreen Ô“¹í—Î÷—Ñ 
-	‚P‚P Cool Crops —â‘Ñ’‘q’n‘Ñ 
-	‚P‚Q Warm Crops ‰·‘Ñ’‘q’n‘Ñ 
-	‚P‚R Tropical Dry Forest ”M‘ÑŠ£‘‡—Ñ 
-	‚P‚S Paddylands ˆîì’n 
-	‚P‚T Warm Irrigated ‰·‘ÑŠÁŸò’n 
-	‚P‚U Cool Irrigated —â‘ÑŠÁŸò’n 
-	‚P‚V Cold Irrigated Š¦‘ÑŠÁŸò’n 
-	‚P‚W Cool Grass/Shrub —â‘Ñ‘’n^’á–Ø’n 
-	‚P‚X Warm Grass/Shrub ‰·‘Ñ‘’n^’á–Ø’n 
-	‚Q‚O Highland Shrub ‚’n’á–Ø’n 
-	‚Q‚P Med. Grazing H•ú–q’n 
-	‚Q‚Q Semiarid Woods ”¼Š£‘‡—Ñ’n 
-	‚Q‚R Siberian Parks ƒVƒxƒŠƒAŒö‰€’nH 
-	‚Q‚S Heaths, Moors ƒq[ƒXAr–ì 
-	‚Q‚T Succulent Thorns ‘½‰t‚¢‚Î‚ç—Ñ 
-	‚Q‚U Northern Taiga –kƒ^ƒCƒK 
-	‚Q‚V Tropical Savanna ”M‘ÑƒTƒoƒ“ƒi 
-	‚Q‚W Cool Field/Woods —â‘Ñ•½Œ´^—Ñ’n 
-	‚Q‚X Warm Field/Woods ‰·‘Ñ•½Œ´^—Ñ’n 
-	‚R‚O Warm Forest/Field ‰·‘ÑX—Ñ^—Ñ’n 
-	‚R‚P Cool Forest/Field —â‘ÑX—Ñ^—Ñ’n 
-	‚R‚Q Southern Taiga “ìƒ^ƒCƒK 
-	‚R‚R EasternH Southern Taiga “Œ“ìƒ^ƒCƒKH 
-	‚R‚S Tropical Montane ”M‘ÑR’n—ÑH 
-	‚R‚T Marsh, Swamp ¼’nAÀ’n 
-	‚R‚U Mangroves ƒ}ƒ“ƒOƒ[ƒu—Ñ 
-	‚R‚V Low Scrub ’áG–Ø 
-	‚R‚W Bogs, Bog Woods ÀAÀ’n—Ñ 
-	‚R‚X Hot Desert ‚‰·»”™ 
-	‚S‚O Cool Desert —â‘Ñ»”™ 
-	‚S‚P Wooded Tundra —Ñ’nƒcƒ“ƒhƒ‰ 
-	‚S‚Q Tundra ƒcƒ“ƒhƒ‰ 
-	‚S‚R Sand Desert »”™ 
-	‚S‚S Polar Desert ‹Éˆæ»”™ 
+	ï¼‘ Antarctica å—æ¥µåŸŸ 
+	ï¼’ Main Taiga ä¸»è¦ã‚¿ã‚¤ã‚¬ 
+	ï¼“ Cool Conifer å†·å¸¯é‡è‘‰æ¨¹æ— 
+	ï¼” Cool Mixed å†·å¸¯æ··åˆæ— 
+	ï¼• Warm deciduous æ¸©å¸¯è½è‘‰æ¨¹æ— 
+	ï¼– Warm mixed æ¸©å¸¯æ··åˆæ— 
+	ï¼— Warm conifer æ¸©å¸¯é‡è‘‰æ¨¹æ— 
+	ï¼˜ Tropical Montane ç†±å¸¯å±±åœ°æ— 
+	ï¼™ Tropical Seasonal ç†±å¸¯å­£ç¯€æ— 
+	ï¼‘ï¼ Equatorial Evergreen èµ¤é“å¸¸ç·‘æ¨¹æ— 
+	ï¼‘ï¼‘ Cool Crops å†·å¸¯ç©€å€‰åœ°å¸¯ 
+	ï¼‘ï¼’ Warm Crops æ¸©å¸¯ç©€å€‰åœ°å¸¯ 
+	ï¼‘ï¼“ Tropical Dry Forest ç†±å¸¯ä¹¾ç‡¥æ— 
+	ï¼‘ï¼” Paddylands ç¨²ä½œåœ° 
+	ï¼‘ï¼• Warm Irrigated æ¸©å¸¯æ½…æ¼‘åœ° 
+	ï¼‘ï¼– Cool Irrigated å†·å¸¯æ½…æ¼‘åœ° 
+	ï¼‘ï¼— Cold Irrigated å¯’å¸¯æ½…æ¼‘åœ° 
+	ï¼‘ï¼˜ Cool Grass/Shrub å†·å¸¯è‰åœ°ï¼ä½æœ¨åœ° 
+	ï¼‘ï¼™ Warm Grass/Shrub æ¸©å¸¯è‰åœ°ï¼ä½æœ¨åœ° 
+	ï¼’ï¼ Highland Shrub é«˜åœ°ä½æœ¨åœ° 
+	ï¼’ï¼‘ Med. Grazing ï¼Ÿæ”¾ç‰§åœ° 
+	ï¼’ï¼’ Semiarid Woods åŠä¹¾ç‡¥æ—åœ° 
+	ï¼’ï¼“ Siberian Parks ã‚·ãƒ™ãƒªã‚¢å…¬åœ’åœ°ï¼Ÿ 
+	ï¼’ï¼” Heaths, Moors ãƒ’ãƒ¼ã‚¹ã€è’é‡ 
+	ï¼’ï¼• Succulent Thorns å¤šæ¶²ã„ã°ã‚‰æ— 
+	ï¼’ï¼– Northern Taiga åŒ—ã‚¿ã‚¤ã‚¬ 
+	ï¼’ï¼— Tropical Savanna ç†±å¸¯ã‚µãƒãƒ³ãƒŠ 
+	ï¼’ï¼˜ Cool Field/Woods å†·å¸¯å¹³åŸï¼æ—åœ° 
+	ï¼’ï¼™ Warm Field/Woods æ¸©å¸¯å¹³åŸï¼æ—åœ° 
+	ï¼“ï¼ Warm Forest/Field æ¸©å¸¯æ£®æ—ï¼æ—åœ° 
+	ï¼“ï¼‘ Cool Forest/Field å†·å¸¯æ£®æ—ï¼æ—åœ° 
+	ï¼“ï¼’ Southern Taiga å—ã‚¿ã‚¤ã‚¬ 
+	ï¼“ï¼“ Easternï¼Ÿ Southern Taiga æ±å—ã‚¿ã‚¤ã‚¬ï¼Ÿ 
+	ï¼“ï¼” Tropical Montane ç†±å¸¯å±±åœ°æ—ï¼Ÿ 
+	ï¼“ï¼• Marsh, Swamp æ¹¿åœ°ã€æ²¼åœ° 
+	ï¼“ï¼– Mangroves ãƒãƒ³ã‚°ãƒ­ãƒ¼ãƒ–æ— 
+	ï¼“ï¼— Low Scrub ä½é›‘æœ¨ 
+	ï¼“ï¼˜ Bogs, Bog Woods æ²¼ã€æ²¼åœ°æ— 
+	ï¼“ï¼™ Hot Desert é«˜æ¸©ç ‚æ¼  
+	ï¼”ï¼ Cool Desert å†·å¸¯ç ‚æ¼  
+	ï¼”ï¼‘ Wooded Tundra æ—åœ°ãƒ„ãƒ³ãƒ‰ãƒ© 
+	ï¼”ï¼’ Tundra ãƒ„ãƒ³ãƒ‰ãƒ© 
+	ï¼”ï¼“ Sand Desert ç ‚æ¼  
+	ï¼”ï¼” Polar Desert æ¥µåŸŸç ‚æ¼  
 */
 }

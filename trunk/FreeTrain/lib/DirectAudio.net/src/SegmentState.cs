@@ -4,7 +4,7 @@ using DxVBLibA;
 namespace org.kohsuke.directaudio
 {
 	/// <summary>
-	/// SegmentState ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// SegmentState ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class SegmentState
 	{

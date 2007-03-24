@@ -4,7 +4,7 @@ using Microsoft.Win32;
 namespace nft.win32util
 {
 	/// <summary>
-	/// RegistryHelper ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// RegistryHelper ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class RegistryHelper
 	{
@@ -15,7 +15,7 @@ namespace nft.win32util
 		// Read data string of specified key and value from system registry.
 		public static string ReadKey(string key,string valname)
 		{
-			int n = key.IndexOf('\\');
+			int n = key.IndexOf('Â¥Â¥');
 			string baseKey = key.Substring(5,n-5);
 			string subKey = key.Substring(n+1);
 			RegistryKey rKey;

@@ -9,7 +9,7 @@ namespace nft.framework
 	public delegate void DownloadMonitor( long readedBytes, long totalBytes );
 	public delegate void DownloadCompleteHandler( FileInfo info );
 	/// <summary>
-	/// WebLoader ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// WebLoader ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class WebLoader
 	{

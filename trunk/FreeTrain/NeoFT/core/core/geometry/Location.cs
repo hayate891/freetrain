@@ -131,13 +131,13 @@ namespace nft.core.geometry
 		}
 
 		/// <summary>
-		/// ˆÊ’u‚ğ‚½‚È‚¢‚±‚Æ‚ğ¦‚·“Áê‚È’l
+		/// ä½ç½®ã‚’æŒãŸãªã„ã“ã¨ã‚’ç¤ºã™ç‰¹æ®Šãªå€¤
 		/// </summary>
 		public static readonly Location UNPLACED = new Location( short.MinValue, short.MinValue, short.MinValue );
 	}
 
 	/// <summary>
-	/// Location“¯m‚Ì·•ª
+	/// LocationåŒå£«ã®å·®åˆ†
 	/// </summary>
 	[Serializable]
 	public struct Distance
