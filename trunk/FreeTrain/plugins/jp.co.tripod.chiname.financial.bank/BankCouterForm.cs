@@ -12,7 +12,7 @@ using freetrain.controllers;
 namespace freetrain.views.bank
 {
 	/// <summary>
-	/// Form1 ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// Form1 ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class BankCounterForm : AbstractControllerImpl
 	{
@@ -82,7 +82,7 @@ namespace freetrain.views.bank
 		private System.Windows.Forms.Label mlabel1;
 		private System.Windows.Forms.Label mlabel7;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		#endregion
 		private System.ComponentModel.Container components = null;
@@ -113,7 +113,8 @@ namespace freetrain.views.bank
 				createForm();
 			else
 			{
-				MainWindow.showError("‰c‹ÆŠJn‚Ü‚Å‚¨‘Ò‚¿‚­‚¾‚³‚¢");
+				MainWindow.showError("You have to wait until business hours");
+				//! MainWindow.showError("å–¶æ¥­é–‹å§‹ã¾ã§ãŠå¾…ã¡ãã ã•ã„");
 				if( creator == null ) {
 					creator = new ClockHandler(createForm);
 					clock.registerOneShot(creator,span);
@@ -131,7 +132,7 @@ namespace freetrain.views.bank
 		public BankCounterForm()
 		{
 			//
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			//
 			InitializeComponent();
 
@@ -142,7 +143,7 @@ namespace freetrain.views.bank
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -165,8 +166,8 @@ namespace freetrain.views.bank
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -291,7 +292,8 @@ namespace freetrain.views.bank
 			this.pgLoan.Name = "pgLoan";
 			this.pgLoan.Size = new System.Drawing.Size(352, 247);
 			this.pgLoan.TabIndex = 0;
-			this.pgLoan.Text = "Ø“ü";
+			this.pgLoan.Text = "Loan";
+			//! this.pgLoan.Text = "å€Ÿå…¥";
 			// 
 			// list_loan
 			// 
@@ -316,7 +318,8 @@ namespace freetrain.views.bank
 			this.btn_loan_set.Name = "btn_loan_set";
 			this.btn_loan_set.Size = new System.Drawing.Size(40, 24);
 			this.btn_loan_set.TabIndex = 8;
-			this.btn_loan_set.Text = "Œˆ’è";
+			this.btn_loan_set.Text = "Decide";
+			//! this.btn_loan_set.Text = "æ±ºå®š";
 			this.btn_loan_set.Click += new System.EventHandler(this.btn_loan_set_Click);
 			// 
 			// btn_loan_max
@@ -340,7 +343,8 @@ namespace freetrain.views.bank
 			this.rb_loan1.Size = new System.Drawing.Size(40, 20);
 			this.rb_loan1.TabIndex = 3;
 			this.rb_loan1.TabStop = true;
-			this.rb_loan1.Text = "‚P”N";
+			this.rb_loan1.Text = "1 year";
+			//! this.rb_loan1.Text = "ï¼‘å¹´";
 			this.rb_loan1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.rb_loan1.CheckedChanged += new System.EventHandler(this.CheckedChanged);
 			// 
@@ -372,7 +376,8 @@ namespace freetrain.views.bank
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(64, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "Ø“ü—˜—¦F";
+			this.label1.Text = "Loan interest rate:";
+			//! this.label1.Text = "å€Ÿå…¥åˆ©ç‡ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label3
@@ -381,7 +386,8 @@ namespace freetrain.views.bank
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(48, 16);
 			this.label3.TabIndex = 1;
-			this.label3.Text = "ŒÀ“xŠzF";
+			this.label3.Text = "Limit:";
+			//! this.label3.Text = "é™åº¦é¡ï¼š";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// tl_loan_max
@@ -403,7 +409,8 @@ namespace freetrain.views.bank
 			this.mlabel2.Name = "mlabel2";
 			this.mlabel2.Size = new System.Drawing.Size(44, 16);
 			this.mlabel2.TabIndex = 1;
-			this.mlabel2.Text = "ç‰~";
+			this.mlabel2.Text = "thousand yen";
+			//! this.mlabel2.Text = "åƒå††";
 			this.mlabel2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// mlabel3
@@ -413,7 +420,8 @@ namespace freetrain.views.bank
 			this.mlabel3.Name = "mlabel3";
 			this.mlabel3.Size = new System.Drawing.Size(44, 16);
 			this.mlabel3.TabIndex = 1;
-			this.mlabel3.Text = "ç‰~";
+			this.mlabel3.Text = "thousand yen";
+			//! this.mlabel3.Text = "åƒå††";
 			this.mlabel3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label8
@@ -422,7 +430,8 @@ namespace freetrain.views.bank
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(48, 16);
 			this.label8.TabIndex = 1;
-			this.label8.Text = "Ø“üŠzF";
+			this.label8.Text = "Loan:";
+			//! this.label8.Text = "å€Ÿå…¥é¡ï¼š";
 			this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label11
@@ -431,7 +440,8 @@ namespace freetrain.views.bank
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(18, 16);
 			this.label11.TabIndex = 1;
-			this.label11.Text = "“";
+			this.label11.Text = "%";
+			//! this.label11.Text = "ï¼…";
 			this.label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label15
@@ -440,7 +450,8 @@ namespace freetrain.views.bank
 			this.label15.Name = "label15";
 			this.label15.Size = new System.Drawing.Size(18, 16);
 			this.label15.TabIndex = 1;
-			this.label15.Text = "“";
+			this.label15.Text = "%";
+			//! this.label15.Text = "ï¼…";
 			this.label15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// tl_loan3
@@ -459,7 +470,8 @@ namespace freetrain.views.bank
 			this.label17.Name = "label17";
 			this.label17.Size = new System.Drawing.Size(18, 16);
 			this.label17.TabIndex = 1;
-			this.label17.Text = "“";
+			this.label17.Text = "%";
+			//! this.label17.Text = "ï¼…";
 			this.label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// tl_loan5
@@ -478,7 +490,8 @@ namespace freetrain.views.bank
 			this.label22.Name = "label22";
 			this.label22.Size = new System.Drawing.Size(40, 16);
 			this.label22.TabIndex = 1;
-			this.label22.Text = "ŠúŒÀF";
+			this.label22.Text = "Maturity:";
+			//! this.label22.Text = "æœŸé™ï¼š";
 			this.label22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// rb_loan3
@@ -488,7 +501,8 @@ namespace freetrain.views.bank
 			this.rb_loan3.Name = "rb_loan3";
 			this.rb_loan3.Size = new System.Drawing.Size(40, 20);
 			this.rb_loan3.TabIndex = 4;
-			this.rb_loan3.Text = "‚R”N";
+			this.rb_loan3.Text = "3 years";
+			//! this.rb_loan3.Text = "ï¼“å¹´";
 			this.rb_loan3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.rb_loan3.CheckedChanged += new System.EventHandler(this.CheckedChanged);
 			// 
@@ -499,7 +513,8 @@ namespace freetrain.views.bank
 			this.rb_loan5.Name = "rb_loan5";
 			this.rb_loan5.Size = new System.Drawing.Size(40, 20);
 			this.rb_loan5.TabIndex = 5;
-			this.rb_loan5.Text = "‚T”N";
+			this.rb_loan5.Text = "5 years";
+			//! this.rb_loan5.Text = "ï¼•å¹´";
 			this.rb_loan5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.rb_loan5.CheckedChanged += new System.EventHandler(this.CheckedChanged);
 			// 
@@ -516,7 +531,8 @@ namespace freetrain.views.bank
 			this.pgRepay.Name = "pgRepay";
 			this.pgRepay.Size = new System.Drawing.Size(352, 247);
 			this.pgRepay.TabIndex = 3;
-			this.pgRepay.Text = "•ÔÏ";
+			this.pgRepay.Text = "Repay";
+			//! this.pgRepay.Text = "è¿”æ¸ˆ";
 			// 
 			// list_repay
 			// 
@@ -542,7 +558,8 @@ namespace freetrain.views.bank
 			this.btn_repay_set.Name = "btn_repay_set";
 			this.btn_repay_set.Size = new System.Drawing.Size(40, 24);
 			this.btn_repay_set.TabIndex = 12;
-			this.btn_repay_set.Text = "Œˆ’è";
+			this.btn_repay_set.Text = "Decide";
+			//! this.btn_repay_set.Text = "æ±ºå®š";
 			this.btn_repay_set.Click += new System.EventHandler(this.btn_repay_set_Click);
 			// 
 			// btn_repay_max
@@ -576,7 +593,8 @@ namespace freetrain.views.bank
 			this.mlabel4.Name = "mlabel4";
 			this.mlabel4.Size = new System.Drawing.Size(44, 16);
 			this.mlabel4.TabIndex = 6;
-			this.mlabel4.Text = "ç‰~";
+			this.mlabel4.Text = "thousand yen";
+			//! this.mlabel4.Text = "åƒå††";
 			this.mlabel4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label20
@@ -585,7 +603,8 @@ namespace freetrain.views.bank
 			this.label20.Name = "label20";
 			this.label20.Size = new System.Drawing.Size(48, 16);
 			this.label20.TabIndex = 7;
-			this.label20.Text = "•ÔÏŠzF";
+			this.label20.Text = "Repayment:";
+			//! this.label20.Text = "è¿”æ¸ˆé¡ï¼š";
 			this.label20.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// pgDeposit
@@ -616,7 +635,8 @@ namespace freetrain.views.bank
 			this.pgDeposit.Name = "pgDeposit";
 			this.pgDeposit.Size = new System.Drawing.Size(352, 247);
 			this.pgDeposit.TabIndex = 2;
-			this.pgDeposit.Text = "’èŠú—a‹à";
+			this.pgDeposit.Text = "Time deposit";
+			//! this.pgDeposit.Text = "å®šæœŸé é‡‘";
 			// 
 			// list_deposit
 			// 
@@ -641,7 +661,8 @@ namespace freetrain.views.bank
 			this.btn_deposit_set.Name = "btn_deposit_set";
 			this.btn_deposit_set.Size = new System.Drawing.Size(40, 24);
 			this.btn_deposit_set.TabIndex = 22;
-			this.btn_deposit_set.Text = "Œˆ’è";
+			this.btn_deposit_set.Text = "Decide";
+			//! this.btn_deposit_set.Text = "æ±ºå®š";
 			this.btn_deposit_set.Click += new System.EventHandler(this.btn_deposit_set_Click);
 			// 
 			// btn_deposit95
@@ -674,7 +695,8 @@ namespace freetrain.views.bank
 			this.mlabel5.Name = "mlabel5";
 			this.mlabel5.Size = new System.Drawing.Size(44, 16);
 			this.mlabel5.TabIndex = 16;
-			this.mlabel5.Text = "ç‰~";
+			this.mlabel5.Text = "thousand yen";
+			//! this.mlabel5.Text = "åƒå††";
 			this.mlabel5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label31
@@ -683,7 +705,8 @@ namespace freetrain.views.bank
 			this.label31.Name = "label31";
 			this.label31.Size = new System.Drawing.Size(48, 16);
 			this.label31.TabIndex = 17;
-			this.label31.Text = "—a“üŠzF";
+			this.label31.Text = "Savings:";
+			//! this.label31.Text = "é å…¥é¡ï¼š";
 			this.label31.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// rb_deposit1
@@ -696,7 +719,8 @@ namespace freetrain.views.bank
 			this.rb_deposit1.Size = new System.Drawing.Size(40, 20);
 			this.rb_deposit1.TabIndex = 14;
 			this.rb_deposit1.TabStop = true;
-			this.rb_deposit1.Text = "‚P”N";
+			this.rb_deposit1.Text = "1 year";
+			//! this.rb_deposit1.Text = "ï¼‘å¹´";
 			this.rb_deposit1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.rb_deposit1.CheckedChanged += new System.EventHandler(this.CheckedChanged);
 			// 
@@ -716,7 +740,8 @@ namespace freetrain.views.bank
 			this.label23.Name = "label23";
 			this.label23.Size = new System.Drawing.Size(64, 16);
 			this.label23.TabIndex = 9;
-			this.label23.Text = "—a‹à—˜—¦F";
+			this.label23.Text = "Savings interest rate:";
+			//! this.label23.Text = "é é‡‘åˆ©ç‡ï¼š";
 			this.label23.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label24
@@ -725,7 +750,8 @@ namespace freetrain.views.bank
 			this.label24.Name = "label24";
 			this.label24.Size = new System.Drawing.Size(18, 16);
 			this.label24.TabIndex = 5;
-			this.label24.Text = "“";
+			this.label24.Text = "%";
+			//! this.label24.Text = "ï¼…";
 			this.label24.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label25
@@ -734,7 +760,8 @@ namespace freetrain.views.bank
 			this.label25.Name = "label25";
 			this.label25.Size = new System.Drawing.Size(18, 16);
 			this.label25.TabIndex = 6;
-			this.label25.Text = "“";
+			this.label25.Text = "%";
+			//! this.label25.Text = "ï¼…";
 			this.label25.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// tl_deposit3
@@ -753,7 +780,8 @@ namespace freetrain.views.bank
 			this.label27.Name = "label27";
 			this.label27.Size = new System.Drawing.Size(18, 16);
 			this.label27.TabIndex = 7;
-			this.label27.Text = "“";
+			this.label27.Text = "%";
+			//! this.label27.Text = "ï¼…";
 			this.label27.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// tl_deposit5
@@ -772,7 +800,8 @@ namespace freetrain.views.bank
 			this.label29.Name = "label29";
 			this.label29.Size = new System.Drawing.Size(40, 16);
 			this.label29.TabIndex = 8;
-			this.label29.Text = "–ŠúF";
+			this.label29.Text = "Maturity:";
+			//! this.label29.Text = "æº€æœŸï¼š";
 			this.label29.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// rb_deposit3
@@ -782,7 +811,8 @@ namespace freetrain.views.bank
 			this.rb_deposit3.Name = "rb_deposit3";
 			this.rb_deposit3.Size = new System.Drawing.Size(40, 20);
 			this.rb_deposit3.TabIndex = 15;
-			this.rb_deposit3.Text = "‚R”N";
+			this.rb_deposit3.Text = "3 years";
+			//! this.rb_deposit3.Text = "ï¼“å¹´";
 			this.rb_deposit3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.rb_deposit3.CheckedChanged += new System.EventHandler(this.CheckedChanged);
 			// 
@@ -793,7 +823,8 @@ namespace freetrain.views.bank
 			this.rb_deposit5.Name = "rb_deposit5";
 			this.rb_deposit5.Size = new System.Drawing.Size(40, 20);
 			this.rb_deposit5.TabIndex = 16;
-			this.rb_deposit5.Text = "‚T”N";
+			this.rb_deposit5.Text = "5 years";
+			//! this.rb_deposit5.Text = "ï¼•å¹´";
 			this.rb_deposit5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.rb_deposit5.CheckedChanged += new System.EventHandler(this.CheckedChanged);
 			// 
@@ -804,7 +835,9 @@ namespace freetrain.views.bank
 			this.label32.Name = "label32";
 			this.label32.Size = new System.Drawing.Size(48, 16);
 			this.label32.TabIndex = 17;
-			this.label32.Text = "‘Î‘‹à";
+			this.label32.Text = "Equal funds";
+			//! this.label32.Text = "å¯¾è³‡é‡‘";
+			//! Translator's comment: not sure about this expression
 			this.label32.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// btn_deposit75
@@ -856,7 +889,8 @@ namespace freetrain.views.bank
 			this.pgCancel.Name = "pgCancel";
 			this.pgCancel.Size = new System.Drawing.Size(352, 247);
 			this.pgCancel.TabIndex = 4;
-			this.pgCancel.Text = "’èŠú‰ğ–ñ";
+			this.pgCancel.Text = "Cancel";
+			//! this.pgCancel.Text = "å®šæœŸè§£ç´„";
 			// 
 			// btn_cancel_maturity
 			// 
@@ -866,7 +900,8 @@ namespace freetrain.views.bank
 			this.btn_cancel_maturity.Name = "btn_cancel_maturity";
 			this.btn_cancel_maturity.Size = new System.Drawing.Size(80, 24);
 			this.btn_cancel_maturity.TabIndex = 25;
-			this.btn_cancel_maturity.Text = "–Šú“ú‰ğ–ñ";
+			this.btn_cancel_maturity.Text = "Cancel maturity";
+			//! this.btn_cancel_maturity.Text = "æº€æœŸæ—¥è§£ç´„";
 			this.btn_cancel_maturity.Click += new System.EventHandler(this.btn_cancel_maturity_Click);
 			// 
 			// btn_cancel_now
@@ -878,7 +913,8 @@ namespace freetrain.views.bank
 			this.btn_cancel_now.Name = "btn_cancel_now";
 			this.btn_cancel_now.Size = new System.Drawing.Size(80, 24);
 			this.btn_cancel_now.TabIndex = 24;
-			this.btn_cancel_now.Text = "‘¦“ú‰ğ–ñ";
+			this.btn_cancel_now.Text = "Cancel now";
+			//! this.btn_cancel_now.Text = "å³æ—¥è§£ç´„";
 			this.btn_cancel_now.Click += new System.EventHandler(this.btn_cancel_now_Click);
 			// 
 			// label33
@@ -887,7 +923,8 @@ namespace freetrain.views.bank
 			this.label33.Name = "label33";
 			this.label33.Size = new System.Drawing.Size(72, 16);
 			this.label33.TabIndex = 22;
-			this.label33.Text = "Œ»İ—˜‘§F";
+			this.label33.Text = "Current interest:";
+			//! this.label33.Text = "ç¾åœ¨åˆ©æ¯ï¼š";
 			this.label33.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// tl_intr_now
@@ -909,7 +946,8 @@ namespace freetrain.views.bank
 			this.mlabel6.Name = "mlabel6";
 			this.mlabel6.Size = new System.Drawing.Size(44, 16);
 			this.mlabel6.TabIndex = 21;
-			this.mlabel6.Text = "ç‰~";
+			this.mlabel6.Text = "thousand yen";
+			//! this.mlabel6.Text = "åƒå††";
 			this.mlabel6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// list_cancel
@@ -934,7 +972,8 @@ namespace freetrain.views.bank
 			this.mlabel7.Name = "mlabel7";
 			this.mlabel7.Size = new System.Drawing.Size(44, 16);
 			this.mlabel7.TabIndex = 21;
-			this.mlabel7.Text = "ç‰~";
+			this.mlabel7.Text = "åƒå††";
+			//! this.mlabel7.Text = "åƒå††";
 			this.mlabel7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// tl_intr_mature
@@ -955,7 +994,8 @@ namespace freetrain.views.bank
 			this.label38.Name = "label38";
 			this.label38.Size = new System.Drawing.Size(72, 16);
 			this.label38.TabIndex = 22;
-			this.label38.Text = "–Šú“ú—˜‘§F";
+			this.label38.Text = "Maturity interest:";
+			//! this.label38.Text = "æº€æœŸæ—¥åˆ©æ¯ï¼š";
 			this.label38.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// label5
@@ -964,7 +1004,8 @@ namespace freetrain.views.bank
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(64, 16);
 			this.label5.TabIndex = 8;
-			this.label5.Text = "‘‹à‘ŠzF";
+			this.label5.Text = "Total funds:";
+			//! this.label5.Text = "è³‡é‡‘ç·é¡ï¼š";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// tl_tot_capital
@@ -986,7 +1027,8 @@ namespace freetrain.views.bank
 			this.mlabel1.Name = "mlabel1";
 			this.mlabel1.Size = new System.Drawing.Size(48, 16);
 			this.mlabel1.TabIndex = 7;
-			this.mlabel1.Text = "ç‰~";
+			this.mlabel1.Text = "thousand yen";
+			//! this.mlabel1.Text = "åƒå††";
 			this.mlabel1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label2
@@ -995,7 +1037,8 @@ namespace freetrain.views.bank
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(64, 16);
 			this.label2.TabIndex = 11;
-			this.label2.Text = "•‰Â‘ŠzF";
+			this.label2.Text = "Total debt:";
+			//! this.label2.Text = "è² å‚µç·é¡ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// tl_tot_debt
@@ -1017,7 +1060,8 @@ namespace freetrain.views.bank
 			this.mlabel8.Name = "mlabel8";
 			this.mlabel8.Size = new System.Drawing.Size(48, 16);
 			this.mlabel8.TabIndex = 10;
-			this.mlabel8.Text = "ç‰~";
+			this.mlabel8.Text = "thousand yen";
+			//! this.mlabel8.Text = "åƒå††";
 			this.mlabel8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// pictureBox1
@@ -1051,7 +1095,8 @@ namespace freetrain.views.bank
 			this.Name = "BankCounterForm";
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-			this.Text = "‹âs‘‹Œû";
+			this.Text = "Bank teller";
+			//! this.Text = "éŠ€è¡Œçª“å£";
 			this.tab_main.ResumeLayout(false);
 			this.pgLoan.ResumeLayout(false);
 			this.pgRepay.ResumeLayout(false);
@@ -1064,7 +1109,8 @@ namespace freetrain.views.bank
 
 		private void InitializeComponent2()
 		{
-			String unit = "‰~";
+			String unit = "yen";
+			//! String unit = "å††";
 			mlabel1.Text=unit;
 			mlabel2.Text=unit;
 			mlabel3.Text=unit;
@@ -1154,7 +1200,8 @@ namespace freetrain.views.bank
 		private void btn_loan_set_Click(object sender, System.EventArgs e) {
 			long v = long.Parse(tb_loan.Text);
 			if( v>bank.getDebtLimit() ) {
-				MainWindow.showError("ŒÀ“xŠzˆê”t‚Ü‚ÅØ‚è“ü‚ê‚Ü‚·");
+				MainWindow.showError("You have borrowed up to the current limit");
+				//! MainWindow.showError("é™åº¦é¡ä¸€æ¯ã¾ã§å€Ÿã‚Šå…¥ã‚Œã¾ã™");
 				v = bank.getDebtLimit();
 			}
 			if( v>0 ) bank.borrow(v,loanSpan);
@@ -1166,7 +1213,7 @@ namespace freetrain.views.bank
 		private void numelicEdit_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e) {
 			char key = e.KeyChar;
 			if( '0' <= key && '9' >= key ) return;
-			if( '\b' == key ) return;
+			if( 'Â¥b' == key ) return;
 			e.Handled = true;														   
 		}
 
@@ -1177,13 +1224,15 @@ namespace freetrain.views.bank
 		private void btn_repay_set_Click(object sender, System.EventArgs e)
 		{
 			if( list_repay.SelectedItems.Count == 0 ) {
-				MainWindow.showError("‘ÎÛƒŠƒXƒgs‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢");
+				MainWindow.showError("Select a row in the target list");
+				//! MainWindow.showError("å¯¾è±¡ãƒªã‚¹ãƒˆè¡Œã‚’é¸æŠã—ã¦ãã ã•ã„");
 				return;
 			}
 			IEnumerator en = list_repay.SelectedItems.GetEnumerator();
 			long amount = long.Parse(tb_repay.Text);
 			if( amount>maxRepay ) {
-				MainWindow.showError("•ÔÏŠzˆÈã‚ÌŠz‚Íx•¥‚í‚ê‚Ü‚¹‚ñ");
+				MainWindow.showError("Will not pay back more than the repayment sum");
+				//! MainWindow.showError("è¿”æ¸ˆé¡ä»¥ä¸Šã®é¡ã¯æ”¯æ‰•ã‚ã‚Œã¾ã›ã‚“");
 				amount = maxRepay;
 			}
 			while(en.MoveNext())
@@ -1232,7 +1281,8 @@ namespace freetrain.views.bank
 		{
 			long v = long.Parse(tb_deposit.Text);
 			if( v>manager.liquidAssets ) {
-				MainWindow.showError("‘S‘‹à‚ğ—a‹à‚µ‚Ü‚·");
+				MainWindow.showError("Deposited all your funds");
+				//! MainWindow.showError("å…¨è³‡é‡‘ã‚’é é‡‘ã—ã¾ã™");
 				v = manager.liquidAssets;
 			}
 			if( v>0 ) bank.deposit(v,depositSpan);
@@ -1242,7 +1292,8 @@ namespace freetrain.views.bank
 		{
 			if( list_cancel.SelectedItems.Count == 0 ) 
 			{
-				MainWindow.showError("‘ÎÛƒŠƒXƒgs‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢");
+				MainWindow.showError("Select a row in the target list");
+				//! MainWindow.showError("å¯¾è±¡ãƒªã‚¹ãƒˆè¡Œã‚’é¸æŠã—ã¦ãã ã•ã„");
 				return;
 			}
 			IEnumerator en = list_cancel.SelectedItems.GetEnumerator();
@@ -1256,7 +1307,8 @@ namespace freetrain.views.bank
 		private void btn_cancel_maturity_Click(object sender, System.EventArgs e)
 		{
 			if( list_cancel.SelectedItems.Count == 0 ) {
-				MainWindow.showError("‘ÎÛƒŠƒXƒgs‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢");
+				MainWindow.showError("Select a row in the target list");
+				//! MainWindow.showError("å¯¾è±¡ãƒªã‚¹ãƒˆè¡Œã‚’é¸æŠã—ã¦ãã ã•ã„");
 				return;
 			}
 			IEnumerator en = list_cancel.SelectedItems.GetEnumerator();

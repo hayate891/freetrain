@@ -22,7 +22,8 @@ namespace freetrain.views.bank
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "‹âs";
+			item.Text = "Bank";
+			//! item.Text = "éŠ€è¡Œ";
 			item.Click += new System.EventHandler(onClick);
 
 			containerMenu.MenuItems[1].MenuItems.Add(item);
