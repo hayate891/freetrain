@@ -62,7 +62,8 @@ namespace freetrain.views.bank
 		{
 			// _corpuse is zero if the asset is already canceled.
 			if( !canceled )
-				MainWindow.showError("Ø“ü‹à‚Ì•ÔÏŠúŒÀ‚ª‹ß‚Ã‚¢‚Ä‚¢‚Ü‚·B");
+				MainWindow.showError("Loan repayment due soon.");
+				//! MainWindow.showError("å€Ÿå…¥é‡‘ã®è¿”æ¸ˆæœŸé™ãŒè¿‘ã¥ã„ã¦ã„ã¾ã™ã€‚");
 		}
 
 		public override void onDue() 

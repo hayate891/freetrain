@@ -9,7 +9,7 @@ using freetrain.world.accounting;
 namespace freetrain.views.bank
 {
 	/// <summary>
-	/// BankCounterForm ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// BankCounterForm ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class BankbookWindow : Form
 	{
@@ -21,7 +21,7 @@ namespace freetrain.views.bank
 		private System.Windows.Forms.ListView list_loan;
 		private System.Windows.Forms.ListView list_cancel;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		#endregion
 		private System.ComponentModel.Container components = null;
@@ -57,19 +57,22 @@ namespace freetrain.views.bank
 			switch( BankModule.theInstance.status ) 
 			{
 				case BankStatus.HOLIDAY:
-					tl_status.Text = "‹x“ú";
+					tl_status.Text = "Holiday";
+					//! tl_status.Text = "ä¼‘æ—¥";
 					break;
 				case BankStatus.OPEN:
-					tl_status.Text = "‰c‹Æ";
+					tl_status.Text = "Open";
+					//! tl_status.Text = "å–¶æ¥­";
 					break;
 				case BankStatus.CLOSE:
-					tl_status.Text = "•Â“X";
+					tl_status.Text = "Closed";
+					//! tl_status.Text = "é–‰åº—";
 					break;
 			}
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -89,8 +92,8 @@ namespace freetrain.views.bank
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -108,7 +111,8 @@ namespace freetrain.views.bank
 			// 
 			// cb_status
 			// 
-			this.cb_status.AccessibleDescription = "‘‹ŒûŒÄ‚Ño‚µ";
+			this.cb_status.AccessibleDescription = "Bring up the teller";
+			//! this.cb_status.AccessibleDescription = "çª“å£å‘¼ã³å‡ºã—";
 			this.cb_status.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
 			this.cb_status.Appearance = System.Windows.Forms.Appearance.Button;
 			this.cb_status.BackColor = System.Drawing.SystemColors.Control;
@@ -116,7 +120,8 @@ namespace freetrain.views.bank
 			this.cb_status.Name = "cb_status";
 			this.cb_status.Size = new System.Drawing.Size(64, 21);
 			this.cb_status.TabIndex = 2;
-			this.cb_status.Text = "‹âs‘‹Œû";
+			this.cb_status.Text = "Bank teller";
+			//! this.cb_status.Text = "éŠ€è¡Œçª“å£";
 			this.cb_status.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.cb_status.CheckedChanged += new System.EventHandler(this.cb_status_CheckedChanged);
 			// 
@@ -142,7 +147,8 @@ namespace freetrain.views.bank
 			this.pgLoan.Name = "pgLoan";
 			this.pgLoan.Size = new System.Drawing.Size(464, 95);
 			this.pgLoan.TabIndex = 0;
-			this.pgLoan.Text = "Ø“ü‹à";
+			this.pgLoan.Text = "Loan";
+			//! this.pgLoan.Text = "å€Ÿå…¥é‡‘";
 			// 
 			// list_loan
 			// 
@@ -163,7 +169,8 @@ namespace freetrain.views.bank
 			this.pgDeposit.Name = "pgDeposit";
 			this.pgDeposit.Size = new System.Drawing.Size(464, 95);
 			this.pgDeposit.TabIndex = 1;
-			this.pgDeposit.Text = "’èŠú—a‹à";
+			this.pgDeposit.Text = "Time deposit";
+			//! this.pgDeposit.Text = "å®šæœŸé é‡‘";
 			// 
 			// list_cancel
 			// 
@@ -184,7 +191,8 @@ namespace freetrain.views.bank
 			this.tl_status.Name = "tl_status";
 			this.tl_status.Size = new System.Drawing.Size(40, 22);
 			this.tl_status.TabIndex = 4;
-			this.tl_status.Text = "‰c‹Æ";
+			this.tl_status.Text = "Open";
+			//! this.tl_status.Text = "å–¶æ¥­";
 			this.tl_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// BankbookWindow
@@ -197,7 +205,8 @@ namespace freetrain.views.bank
 																		  this.tabControl1});
 			this.MinimumSize = new System.Drawing.Size(248, 104);
 			this.Name = "BankbookWindow";
-			this.Text = "•‰Â‚Æ—a‹à";
+			this.Text = "Debt and savings";
+			//! this.Text = "è² å‚µã¨é é‡‘";
 			this.tabControl1.ResumeLayout(false);
 			this.pgLoan.ResumeLayout(false);
 			this.pgDeposit.ResumeLayout(false);

@@ -33,18 +33,26 @@ namespace freetrain.views.bank
 			int width = _list.ClientSize.Width;
 			Debug.Write(width);
 
+			//! Translator's note: Not being familiar with banking/financial terms,
+			//! I have probably gotten many of these strings wrong.
+
 			_list.Clear();
 			_list.Columns.AddRange( new ColumnHeader[]
 					{column0,column1,column2,column3,column4,column5 } );
 			column0.Text = "ID";
-			column1.Text = "•ÔÏŠú“ú";
-			column2.Text = "Ø“üŠz";
+			column1.Text = "Repayment terms";
+			//! column1.Text = "è¿”æ¸ˆæœŸæ—¥";
+			column2.Text = "Loan";
+			//! column2.Text = "å€Ÿå…¥é¡";
 			column2.TextAlign=HorizontalAlignment.Right;
-			column3.Text = "—˜—¦";
+			column3.Text = "Interest rate";
+			//! column3.Text = "åˆ©ç‡";
 			column3.TextAlign=HorizontalAlignment.Right;
-			column4.Text = "–Šú—˜‘§";
+			column4.Text = "Expiration interest";
+			//! column4.Text = "æº€æœŸåˆ©æ¯";
 			column4.TextAlign=HorizontalAlignment.Right;
-			column5.Text = "Ø“ü“ú";
+			column5.Text = "Date of loan";
+			//! column5.Text = "å€Ÿå…¥æ—¥";
 			column0.Width = 0;
 			if( width < 400 ) 
 			{
@@ -81,13 +89,18 @@ namespace freetrain.views.bank
 			_list.Columns.AddRange( new ColumnHeader[]
 					{column0,column1,column2,column3,column4,column5 } );
 			column0.Text = "ID";
-			column1.Text = "–Šú“ú";
-			column2.Text = "—a‹àŠz";
+			column1.Text = "Maturity date";
+			//! column1.Text = "æº€æœŸæ—¥";
+			column2.Text = "Credit";
+			//! column2.Text = "é é‡‘é¡";
 			column2.TextAlign=HorizontalAlignment.Right;
-			column3.Text = "—˜—¦";
+			column3.Text = "Interest rate";
+			//! column3.Text = "åˆ©ç‡";
 			column3.TextAlign=HorizontalAlignment.Right;
-			column4.Text = "—a“ü“ú";
-			column5.Text = "”õl";
+			column4.Text = "Date of credit";
+			//! column4.Text = "é å…¥æ—¥";
+			column5.Text = "Remarks";
+			//! column5.Text = "å‚™è€ƒ";
 			column0.Width = 0;
 			if( width < 400 ) 
 			{
@@ -169,7 +182,9 @@ namespace freetrain.views.bank
 												   asset.corpus.ToString(),
 												   formatRate(asset.interestRate),
 												   formatDate(asset.begining),
-												   ((FixedDeposit)asset).isContinue?"Œ³—˜Œp‘±":"–Šú“ú‰ğ–ñ"});
+												   ((FixedDeposit)asset).isContinue?"Continue interest":"Cancel maturity"});
+//! ((FixedDeposit)asset).isContinue?"å…ƒåˆ©ç¶™ç¶š":"æº€æœŸæ—¥è§£ç´„"});
+//! Translator's note: I have most probably gotten these two wrong!
 		}
 		#endregion
 

@@ -7,7 +7,7 @@ namespace freetrain.views.bank
 {
 	public delegate void AssetChangeListener(FloatingAsset sender, AssetStatus status, long param);
 	/// <summary>
-	/// FloatingAssets ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// FloatingAssets ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public abstract class FloatingAsset //: Debt
