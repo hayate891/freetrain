@@ -45,16 +45,16 @@ namespace freetrain.finance.stock
 			//! column1.Text = "銘柄";
 			column2.Text = "Category";
 			//! column2.Text = "業種";
-			column3.Text = "Current stock price";
+			column3.Text = "Current share price";
 			//! column3.Text = "現在株価";
 			column3.TextAlign=HorizontalAlignment.Right;
 			column3x.Text = "Change since yesterday";
 			//! column3x.Text = "前日比";
 			column3x.TextAlign=HorizontalAlignment.Right;
-			column4.Text = "Stock on the market";
+			column4.Text = "Shares on the market";
 			//! column4.Text = "市場株数";
 			column4.TextAlign=HorizontalAlignment.Right;
-			column5.Text = "Issued stock";
+			column5.Text = "Issued shares";
 			//! column5.Text = "発行株数";
 			column5.TextAlign=HorizontalAlignment.Right;
 			column6.Text = "Dividend yield";
@@ -63,7 +63,7 @@ namespace freetrain.finance.stock
 			column7.Text = "1 share dividend";
 			//! column7.Text = "１株配当";
 			column7.TextAlign=HorizontalAlignment.Right;
-			column8.Text = "Held stock";
+			column8.Text = "Held shares";
 			//! column8.Text = "保有株数";
 			column8.TextAlign=HorizontalAlignment.Right;
 			column0.Width = 0;
@@ -95,7 +95,7 @@ namespace freetrain.finance.stock
 				//! column12.Text = "利益";
 				column13.Text = "Future score";
 				//! column13.Text = "将来スコア";
-				column14.Text = "Fair stock price";
+				column14.Text = "Fair share price";
 				//! column14.Text = "適正株価";
 				column10.TextAlign=HorizontalAlignment.Right;
 				column11.TextAlign=HorizontalAlignment.Right;
@@ -136,7 +136,7 @@ namespace freetrain.finance.stock
 			//! column1.Text = "銘柄";
 			column2.Text = "Category";
 			//! column2.Text = "業種";
-			column3.Text = "Current stock price";
+			column3.Text = "Current share price";
 			//! column3.Text = "現在株価";
 			column3.TextAlign=HorizontalAlignment.Right;
 			column3x.Text = "Change since yesterday";
@@ -151,7 +151,7 @@ namespace freetrain.finance.stock
 			column6.Text = "1 share dividend";
 			//! column6.Text = "１株配当";
 			column6.TextAlign=HorizontalAlignment.Right;
-			column7.Text = "Held stock";
+			column7.Text = "Held shares";
 			//! column7.Text = "保有株数";
 			column7.TextAlign=HorizontalAlignment.Right;
 			column8.Text = "Appraised value of assets";

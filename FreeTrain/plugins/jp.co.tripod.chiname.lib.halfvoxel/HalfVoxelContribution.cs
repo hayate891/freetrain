@@ -16,7 +16,7 @@ namespace freetrain.world.structs.hv
 	public enum PlaceSide : int {Fore,Back};
 	public enum SideStored : int {None,Fore,Back,Both};
 	/// <summary>
-	/// Class1 ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// Class1 ã®æ¦‚è¦ã®èª¬æ˜Žã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class HalfVoxelContribution : StructureContribution
@@ -289,7 +289,8 @@ namespace freetrain.world.structs.hv
 			else
 			{
 				if(!v.owner.add(reffer))
-					MainWindow.showError("Ý’uƒXƒy[ƒX‚ª–³‚¢‚©Aˆê’v‚µ‚Ü‚¹‚ñ");
+					MainWindow.showError("Not enough space or no fit");
+					//! MainWindow.showError("è¨­ç½®ã‚¹ãƒšãƒ¼ã‚¹ãŒç„¡ã„ã‹ã€ä¸€è‡´ã—ã¾ã›ã‚“");
 				return v.owner;
 			}
 		}

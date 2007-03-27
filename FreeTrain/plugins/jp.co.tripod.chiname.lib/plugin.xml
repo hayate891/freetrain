@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>横断歩道</title>
-	<title>駐車場</title>
-	<author>C477@2両目</author>
+	<title>Pedestrian crossing</title>
+	<title>Parking area</title>
+	<!--//!<title>讓ｪ譁ｭ豁ｩ驕�</title>
+	<title>鬧占ｻ雁ｴ</title>-->
+	<author>C477@2荳｡逶ｮ</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
 		
 	<contribution type="contribution" id="{782BAFD9-2698-4C0E-C477-FFEA0F7D1B8A}">

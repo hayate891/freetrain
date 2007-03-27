@@ -15,7 +15,8 @@ namespace freetrain.world.road.dummycar
 
 		public override void mergeMenu( MainMenu containerMenu ) 
 		{
-			MenuItem item = new MenuItem("Ž©“®ŽÔ(&A)...");
+			MenuItem item = new MenuItem("&Automobiles...");
+			//! MenuItem item = new MenuItem("è‡ªå‹•è»Š(&A)...");
 			item.Click += new System.EventHandler(onClick);
 
 			containerMenu.MenuItems[3].MenuItems.Add(item);

@@ -33,14 +33,16 @@ namespace freetrain.world.road.dummycar
 						TrafficVoxel.get(loc).accessory = null;
 				}
 				else
-					MainWindow.showError("“P‹‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not remove");
+					//! MainWindow.showError("æ’¤å»ã§ãã¾ã›ã‚“");
 			}
 			else
 			{
 				if( contribution.canBeBuilt(loc) )
 					contribution.create(loc);
 				else
-					MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not place");
+					//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 			}
 		}
 

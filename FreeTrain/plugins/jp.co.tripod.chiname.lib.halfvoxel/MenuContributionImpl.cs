@@ -7,7 +7,7 @@ using freetrain.contributions.others;
 namespace freetrain.world.structs.hv
 {
 	/// <summary>
-	/// Adds "automobile" menu to the main window
+	/// Adds "half voxel" menu to the main window
 	/// </summary>
 	public class MenuContributionImpl : MenuContribution
 	{
@@ -15,7 +15,8 @@ namespace freetrain.world.structs.hv
 
 		public override void mergeMenu( MainMenu containerMenu ) 
 		{
-			MenuItem item = new MenuItem("”¼ƒ{ƒNƒZƒ‹Œš’z(&H)...");
+			MenuItem item = new MenuItem("&Half voxel construction...");
+			//! MenuItem item = new MenuItem("åŠãƒœã‚¯ã‚»ãƒ«å»ºç¯‰(&H)...");
 			item.Click += new System.EventHandler(onClick);
 
 			containerMenu.MenuItems[4].MenuItems.Add(item);

@@ -124,7 +124,8 @@ namespace freetrain.world.structs.hv
 			this.preview.Size = new System.Drawing.Size(80, 112);
 			this.preview.TabIndex = 1;
 			this.preview.TabStop = false;
-			this.toolTip1.SetToolTip(this.preview, "ƒNƒŠƒbƒN‚·‚é‚Æ•Ê‚Ìƒ‰ƒ“ƒ_ƒ€ƒpƒ^[ƒ“‚ğ¶¬‚µ‚Ü‚·");
+			this.toolTip1.SetToolTip(this.preview, "Click to create another random pattern");
+			//! this.toolTip1.SetToolTip(this.preview, "ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨åˆ¥ã®ãƒ©ãƒ³ãƒ€ãƒ ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’ç”Ÿæˆã—ã¾ã™");
 			this.preview.Click += new System.EventHandler(this.onPreviewClick);
 			// 
 			// btnRemove
@@ -135,7 +136,8 @@ namespace freetrain.world.structs.hv
 			this.btnRemove.Name = "btnRemove";
 			this.btnRemove.Size = new System.Drawing.Size(48, 24);
 			this.btnRemove.TabIndex = 8;
-			this.btnRemove.Text = "“P‹";
+			this.btnRemove.Text = "Remove";
+			//! this.btnRemove.Text = "æ’¤å»";
 			this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.btnRemove.Click += new System.EventHandler(this.onButtonClicked);
 			// 
@@ -149,7 +151,8 @@ namespace freetrain.world.structs.hv
 			this.btnPlace.Size = new System.Drawing.Size(48, 24);
 			this.btnPlace.TabIndex = 7;
 			this.btnPlace.TabStop = true;
-			this.btnPlace.Text = "İ’u";
+			this.btnPlace.Text = "Place";
+			//! this.btnPlace.Text = "è¨­ç½®";
 			this.btnPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.btnPlace.Click += new System.EventHandler(this.onButtonClicked);
 			// 
@@ -171,7 +174,8 @@ namespace freetrain.world.structs.hv
 			this.group.Size = new System.Drawing.Size(136, 176);
 			this.group.TabIndex = 1;
 			this.group.TabStop = false;
-			this.toolTip1.SetToolTip(this.group, "¶‘¤‚ÌŒš•¨‘I‘ğ");
+			this.toolTip1.SetToolTip(this.group, "Select a building to the left");
+			//! this.toolTip1.SetToolTip(this.group, "å·¦å´ã®å»ºç‰©é¸æŠ");
 			// 
 			// namelabel
 			// 
@@ -217,7 +221,8 @@ namespace freetrain.world.structs.hv
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(56, 16);
 			this.label1.TabIndex = 12;
-			this.label1.Text = "ƒfƒUƒCƒ“F";
+			this.label1.Text = "Design:";
+			//! this.label1.Text = "ãƒ‡ã‚¶ã‚¤ãƒ³ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// typeBox
@@ -230,7 +235,8 @@ namespace freetrain.world.structs.hv
 			this.typeBox.Size = new System.Drawing.Size(130, 20);
 			this.typeBox.Sorted = true;
 			this.typeBox.TabIndex = 1;
-			this.toolTip1.SetToolTip(this.typeBox, "¶‘¤‚ÌŒš•¨‘I‘ğ");
+			this.toolTip1.SetToolTip(this.typeBox, "Select a building to the left");
+			//! this.toolTip1.SetToolTip(this.typeBox, "å·¦å´ã®å»ºç‰©é¸æŠ");
 			this.typeBox.SelectedIndexChanged += new System.EventHandler(this.onTypeChanged);
 			// 
 			// label3
@@ -240,7 +246,8 @@ namespace freetrain.world.structs.hv
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(56, 16);
 			this.label3.TabIndex = 12;
-			this.label3.Text = "ƒJƒ‰[F";
+			this.label3.Text = "Color:";
+			//! this.label3.Text = "ã‚«ãƒ©ãƒ¼ï¼š";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// cbRndColor
@@ -251,7 +258,8 @@ namespace freetrain.world.structs.hv
 			this.cbRndColor.Name = "cbRndColor";
 			this.cbRndColor.Size = new System.Drawing.Size(64, 16);
 			this.cbRndColor.TabIndex = 7;
-			this.cbRndColor.Text = "ƒ‰ƒ“ƒ_ƒ€";
+			this.cbRndColor.Text = "Random";
+			//! this.cbRndColor.Text = "ãƒ©ãƒ³ãƒ€ãƒ ";
 			this.cbRndColor.CheckedChanged += new System.EventHandler(this.onCheckBoxChanged);
 			// 
 			// cbRndDesign
@@ -262,7 +270,8 @@ namespace freetrain.world.structs.hv
 			this.cbRndDesign.Name = "cbRndDesign";
 			this.cbRndDesign.Size = new System.Drawing.Size(64, 16);
 			this.cbRndDesign.TabIndex = 3;
-			this.cbRndDesign.Text = "ƒ‰ƒ“ƒ_ƒ€";
+			this.cbRndDesign.Text = "Random";
+			//! this.cbRndDesign.Text = "ãƒ©ãƒ³ãƒ€ãƒ ";
 			this.cbRndDesign.CheckedChanged += new System.EventHandler(this.onCheckBoxChanged);
 			// 
 			// label2
@@ -272,7 +281,8 @@ namespace freetrain.world.structs.hv
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 16);
 			this.label2.TabIndex = 12;
-			this.label2.Text = "ƒJƒ‰[2F";
+			this.label2.Text = "Color 2:";
+			//! this.label2.Text = "ã‚«ãƒ©ãƒ¼2ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// cbRndColor2
@@ -283,7 +293,8 @@ namespace freetrain.world.structs.hv
 			this.cbRndColor2.Name = "cbRndColor2";
 			this.cbRndColor2.Size = new System.Drawing.Size(64, 16);
 			this.cbRndColor2.TabIndex = 7;
-			this.cbRndColor2.Text = "ƒ‰ƒ“ƒ_ƒ€";
+			this.cbRndColor2.Text = "ãƒ©ãƒ³ãƒ€ãƒ ";
+			//! this.cbRndColor2.Text = "Random";
 			this.cbRndColor2.CheckedChanged += new System.EventHandler(this.onCheckBoxChanged);
 			// 
 			// idxColor2
@@ -303,12 +314,14 @@ namespace freetrain.world.structs.hv
 			// 
 			this.price.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
 			this.price.cost = 0;
-			this.price.label = "”ï—pF";
+			this.price.label = "Cost:";
+			//! this.price.label = "è²»ç”¨ï¼š";
 			this.price.Location = new System.Drawing.Point(152, 120);
 			this.price.Name = "price";
 			this.price.Size = new System.Drawing.Size(80, 32);
 			this.price.TabIndex = 14;
-			this.toolTip1.SetToolTip(this.price, "İ’u”ï—pi¶‰E‡Œvj");
+			this.toolTip1.SetToolTip(this.price, "Building cost (total)");
+			//! this.toolTip1.SetToolTip(this.price, "è¨­ç½®è²»ç”¨ï¼ˆå·¦å³åˆè¨ˆï¼‰");
 			// 
 			// ControllerForm
 			// 
@@ -321,7 +334,8 @@ namespace freetrain.world.structs.hv
 																		  this.preview,
 																		  this.price});
 			this.Name = "ControllerForm";
-			this.Text = "”¼ƒ{ƒNƒZƒ‹Œš’z";
+			this.Text = "Construct a half voxel";
+			//! this.Text = "åŠãƒœã‚¯ã‚»ãƒ«å»ºç¯‰";
 			this.group.ResumeLayout(false);
 			this.ResumeLayout(false);
 

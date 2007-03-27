@@ -84,7 +84,8 @@ namespace freetrain.world.road.accessory
 			// costBox
 			// 
 			this.costBox.cost = 0;
-			this.costBox.label = "îÔópÅF";
+			this.costBox.label = "Cost:";
+			//! this.costBox.label = "Ë≤ªÁî®Ôºö";
 			this.costBox.Location = new System.Drawing.Point(8, 128);
 			this.costBox.Name = "costBox";
 			this.costBox.Size = new System.Drawing.Size(112, 32);
@@ -97,7 +98,8 @@ namespace freetrain.world.road.accessory
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
 			this.buttonRemove.TabIndex = 9;
-			this.buttonRemove.Text = "ìPãé";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "Êí§Âéª";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonRemove.CheckedChanged += new System.EventHandler(this.onTypeChanged);
 			// 
@@ -110,7 +112,8 @@ namespace freetrain.world.road.accessory
 			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
 			this.buttonPlace.TabIndex = 8;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "ê›íu";
+			this.buttonPlace.Text = "Ë®≠ÁΩÆ";
+			//! this.buttonPlace.Text = "Ë®≠ÁΩÆ";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonPlace.CheckedChanged += new System.EventHandler(this.onTypeChanged);
 			// 
@@ -125,7 +128,8 @@ namespace freetrain.world.road.accessory
 																		  this.typeBox,
 																		  this.preview});
 			this.Name = "ControllerForm";
-			this.Text = "ìπòHÉAÉNÉZÉTÉä";
+			this.Text = "Road accessory";
+			//! this.Text = "ÈÅìË∑Ø„Ç¢„ÇØ„Çª„Çµ„É™";
 			this.ResumeLayout(false);
 
 		}
