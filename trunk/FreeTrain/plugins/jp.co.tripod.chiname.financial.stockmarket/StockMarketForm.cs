@@ -204,7 +204,7 @@ namespace freetrain.finance.stock
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(88, 16);
 			this.label11.TabIndex = 14;
-			this.label11.Text = "Size of purchase (in hundred shared)";
+			this.label11.Text = "Size of purchase (in hundred shares)";
 			//! this.label11.Text = "購入数(百株)：";
 			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 

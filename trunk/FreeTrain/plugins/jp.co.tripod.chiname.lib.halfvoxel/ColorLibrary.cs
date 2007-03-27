@@ -8,7 +8,7 @@ using freetrain.framework.plugin;
 namespace freetrain.world.structs.hv
 {	
 	/// <summary>
-	/// ColorLibrary ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// ColorLibrary ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class ColorLibrary :Contribution
 	{
