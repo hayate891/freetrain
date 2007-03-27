@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
 	<title>Banking module</title>
 	<author>C477@2両目</author>
-	<homepage>http://www.rocket.ne.jp/‾nao/</homepage>
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="dockingContent" id="{8254AA45-A93B-4989-C477-3D3BD31F7A8D}">
 		<name>List of debts and savings</name>
 		<menu name="List of debts and savings" location="view" />

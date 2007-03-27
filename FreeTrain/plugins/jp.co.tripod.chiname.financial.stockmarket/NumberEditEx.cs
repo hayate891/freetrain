@@ -9,7 +9,7 @@ namespace freetrain.finance.stock
 {
 	public delegate void NumberChangeListener();
 	/// <summary>
-	/// NumberEditEx ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// NumberEditEx ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class NumberEditEx : System.Windows.Forms.UserControl
 	{
@@ -27,17 +27,17 @@ namespace freetrain.finance.stock
 		private System.Windows.Forms.Button btn_max;
 		private System.Windows.Forms.Button btn_zero;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 		public NumberChangeListener onNumberChanged;
 
 		public NumberEditEx()
 		{
-			// ‚±‚ÌŒÄ‚Ño‚µ‚ÍAWindows.Forms ƒtƒH[ƒ€ ƒfƒUƒCƒi‚Å•K—v‚Å‚·B
+			// ã“ã®å‘¼ã³å‡ºã—ã¯ã€Windows.Forms ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠã§å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
 
-			// TODO: InitForm ‚ğŒÄ‚Ño‚µ‚ÌŒã‚É‰Šú‰»ˆ—‚ğ’Ç‰Á‚µ‚Ü‚·B
+			// TODO: InitForm ã‚’å‘¼ã³å‡ºã—ã®å¾Œã«åˆæœŸåŒ–å‡¦ç†ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 
 		}
 
@@ -50,7 +50,7 @@ namespace freetrain.finance.stock
 		public int numberMax = 100000;
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -66,8 +66,8 @@ namespace freetrain.finance.stock
 
 		#region Component Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -104,7 +104,7 @@ namespace freetrain.finance.stock
 			this.plus1.Size = new System.Drawing.Size(16, 16);
 			this.plus1.TabIndex = 14;
 			this.plus1.TabStop = false;
-			this.plus1.Text = "{";
+			this.plus1.Text = "ï¼‹";
 			this.plus1.Click += new System.EventHandler(this.plus_Click);
 			// 
 			// minus1
@@ -114,7 +114,7 @@ namespace freetrain.finance.stock
 			this.minus1.Size = new System.Drawing.Size(16, 16);
 			this.minus1.TabIndex = 13;
 			this.minus1.TabStop = false;
-			this.minus1.Text = "|";
+			this.minus1.Text = "âˆ’";
 			this.minus1.Click += new System.EventHandler(this.minus_Click);
 			// 
 			// plus10
@@ -124,7 +124,7 @@ namespace freetrain.finance.stock
 			this.plus10.Size = new System.Drawing.Size(16, 16);
 			this.plus10.TabIndex = 15;
 			this.plus10.TabStop = false;
-			this.plus10.Text = "{";
+			this.plus10.Text = "ï¼‹";
 			this.plus10.Click += new System.EventHandler(this.plus_Click);
 			// 
 			// minus10
@@ -134,7 +134,7 @@ namespace freetrain.finance.stock
 			this.minus10.Size = new System.Drawing.Size(16, 16);
 			this.minus10.TabIndex = 17;
 			this.minus10.TabStop = false;
-			this.minus10.Text = "|";
+			this.minus10.Text = "âˆ’";
 			this.minus10.Click += new System.EventHandler(this.minus_Click);
 			// 
 			// minus100
@@ -144,7 +144,7 @@ namespace freetrain.finance.stock
 			this.minus100.Size = new System.Drawing.Size(16, 16);
 			this.minus100.TabIndex = 16;
 			this.minus100.TabStop = false;
-			this.minus100.Text = "|";
+			this.minus100.Text = "âˆ’";
 			this.minus100.Click += new System.EventHandler(this.minus_Click);
 			// 
 			// plus100
@@ -154,7 +154,7 @@ namespace freetrain.finance.stock
 			this.plus100.Size = new System.Drawing.Size(16, 16);
 			this.plus100.TabIndex = 12;
 			this.plus100.TabStop = false;
-			this.plus100.Text = "{";
+			this.plus100.Text = "ï¼‹";
 			this.plus100.Click += new System.EventHandler(this.plus_Click);
 			// 
 			// plus1000
@@ -164,7 +164,7 @@ namespace freetrain.finance.stock
 			this.plus1000.Size = new System.Drawing.Size(16, 16);
 			this.plus1000.TabIndex = 8;
 			this.plus1000.TabStop = false;
-			this.plus1000.Text = "{";
+			this.plus1000.Text = "ï¼‹";
 			this.plus1000.Click += new System.EventHandler(this.plus_Click);
 			// 
 			// minus1000
@@ -174,7 +174,7 @@ namespace freetrain.finance.stock
 			this.minus1000.Size = new System.Drawing.Size(16, 16);
 			this.minus1000.TabIndex = 7;
 			this.minus1000.TabStop = false;
-			this.minus1000.Text = "|";
+			this.minus1000.Text = "âˆ’";
 			this.minus1000.Click += new System.EventHandler(this.minus_Click);
 			// 
 			// plus10000
@@ -184,7 +184,7 @@ namespace freetrain.finance.stock
 			this.plus10000.Size = new System.Drawing.Size(16, 16);
 			this.plus10000.TabIndex = 6;
 			this.plus10000.TabStop = false;
-			this.plus10000.Text = "{";
+			this.plus10000.Text = "ï¼‹";
 			this.plus10000.Click += new System.EventHandler(this.plus_Click);
 			// 
 			// minus10000
@@ -194,7 +194,7 @@ namespace freetrain.finance.stock
 			this.minus10000.Size = new System.Drawing.Size(16, 16);
 			this.minus10000.TabIndex = 11;
 			this.minus10000.TabStop = false;
-			this.minus10000.Text = "|";
+			this.minus10000.Text = "âˆ’";
 			this.minus10000.Click += new System.EventHandler(this.minus_Click);
 			// 
 			// btn_max
@@ -248,7 +248,7 @@ namespace freetrain.finance.stock
 		{
 			char key = e.KeyChar;
 			if( '0' <= key && '9' >= key ) return;
-			if( '\b' == key ) return;
+			if( 'Â¥b' == key ) return;
 			e.Handled = true;		
 		}
 

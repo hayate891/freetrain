@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace freetrain.finance.stock
 {
 	/// <summary>
-	/// TimeVariedChart ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// TimeVariedChart ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class TimeVariedChart : System.Windows.Forms.UserControl
 	{		
@@ -21,13 +21,13 @@ namespace freetrain.finance.stock
 		private System.Windows.Forms.Button btnMinus;
 		private System.Windows.Forms.Button btnPlus;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		public TimeVariedChart()
 		{
-			// ‚±‚ÌŒÄ‚Ño‚µ‚ÍAWindows.Forms ƒtƒH[ƒ€ ƒfƒUƒCƒi‚Å•K—v‚Å‚·B
+			// ã“ã®å‘¼ã³å‡ºã—ã¯ã€Windows.Forms ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠã§å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
 			setScaleArray(null);
 			writeLabel();
@@ -46,7 +46,7 @@ namespace freetrain.finance.stock
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -62,8 +62,8 @@ namespace freetrain.finance.stock
 
 		#region Component Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -104,7 +104,8 @@ namespace freetrain.finance.stock
 			this.btnMinus.Name = "btnMinus";
 			this.btnMinus.Size = new System.Drawing.Size(16, 16);
 			this.btnMinus.TabIndex = 3;
-			this.btnMinus.Text = "|";
+			this.btnMinus.Text = "-";
+			//! this.btnMinus.Text = "âˆ’";
 			this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
 			// 
 			// btnPlus
@@ -114,7 +115,8 @@ namespace freetrain.finance.stock
 			this.btnPlus.Name = "btnPlus";
 			this.btnPlus.Size = new System.Drawing.Size(16, 16);
 			this.btnPlus.TabIndex = 3;
-			this.btnPlus.Text = "{";
+			this.btnPlus.Text = "+";
+			//! this.btnPlus.Text = "ï¼‹";
 			this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
 			// 
 			// label1

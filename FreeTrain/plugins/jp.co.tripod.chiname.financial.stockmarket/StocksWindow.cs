@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace freetrain.finance.stock
 {
 	/// <summary>
-	/// StocksWindow ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// StocksWindow ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class StocksWindow : System.Windows.Forms.Form
 	{
@@ -17,7 +17,7 @@ namespace freetrain.finance.stock
 		private System.Windows.Forms.Label tl_status;
 		private freetrain.finance.stock.TimeVariedChart chart;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 		static private StockCompanyModule market { get { return StockCompanyModule.theInstance; } }
@@ -26,7 +26,7 @@ namespace freetrain.finance.stock
 		public StocksWindow()
 		{
 			//
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			//
 			InitializeComponent();
 			StocksListHelper.buildRetainingList( listview );
@@ -40,7 +40,7 @@ namespace freetrain.finance.stock
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -57,8 +57,8 @@ namespace freetrain.finance.stock
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -91,7 +91,8 @@ namespace freetrain.finance.stock
 			this.btn_counter.Name = "btn_counter";
 			this.btn_counter.Size = new System.Drawing.Size(72, 23);
 			this.btn_counter.TabIndex = 5;
-			this.btn_counter.Text = "æˆø‘‹Œû";
+			this.btn_counter.Text = "Business counter";
+			//! this.btn_counter.Text = "å–å¼•çª“å£";
 			this.btn_counter.Click += new System.EventHandler(this.btn_counter_Click);
 			// 
 			// tl_status
@@ -125,7 +126,8 @@ namespace freetrain.finance.stock
 																		  this.listview});
 			this.MinimumSize = new System.Drawing.Size(336, 232);
 			this.Name = "StocksWindow";
-			this.Text = "Š—LŠ”®ˆê——";
+			this.Text = "List of owned stock";
+			//! this.Text = "æ‰€æœ‰æ ªå¼ä¸€è¦§";
 			this.ResumeLayout(false);
 
 		}
@@ -154,13 +156,16 @@ namespace freetrain.finance.stock
 			switch( StockCompanyModule.theInstance.status ) 
 			{
 				case MarketStatus.HOLIDAY:
-					tl_status.Text = "‹x“ú";
+					tl_status.Text = "Holiday";
+					//! tl_status.Text = "ä¼‘æ—¥";
 					break;
 				case MarketStatus.OPEN:
-					tl_status.Text = "‰c‹Æ’†";
+					tl_status.Text = "Open";
+					//! tl_status.Text = "å–¶æ¥­ä¸­";
 					break;
 				case MarketStatus.CLOSE:
-					tl_status.Text = "ŠÔŠO";
+					tl_status.Text = "Closed";
+					//! tl_status.Text = "æ™‚é–“å¤–";
 					break;
 			}
 		}

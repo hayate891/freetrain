@@ -11,7 +11,7 @@ using freetrain.world.accounting;
 namespace freetrain.finance.stock
 {
 	/// <summary>
-	/// StockMarketForm ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// StockMarketForm ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class StockMarketForm : Form
 	{
@@ -47,7 +47,7 @@ namespace freetrain.finance.stock
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private freetrain.finance.stock.TimeVariedChart chart;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		#endregion
 		private System.ComponentModel.Container components = null;
@@ -71,7 +71,7 @@ namespace freetrain.finance.stock
 		public StockMarketForm()
 		{
 			//
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			//
 			InitializeComponent();
 			if( StockMarketConfig.debug )
@@ -94,7 +94,7 @@ namespace freetrain.finance.stock
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{			
@@ -111,8 +111,8 @@ namespace freetrain.finance.stock
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -183,7 +183,8 @@ namespace freetrain.finance.stock
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Size = new System.Drawing.Size(184, 226);
 			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Text = "w“ü";
+			this.tabPage1.Text = "Buy";
+			//! this.tabPage1.Text = "è³¼å…¥";
 			// 
 			// btnBuy
 			// 
@@ -192,7 +193,8 @@ namespace freetrain.finance.stock
 			this.btnBuy.Name = "btnBuy";
 			this.btnBuy.Size = new System.Drawing.Size(80, 23);
 			this.btnBuy.TabIndex = 17;
-			this.btnBuy.Text = "w“ü";
+			this.btnBuy.Text = "Buy";
+			//! this.btnBuy.Text = "è³¼å…¥";
 			this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
 			// 
 			// label11
@@ -202,7 +204,8 @@ namespace freetrain.finance.stock
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(88, 16);
 			this.label11.TabIndex = 14;
-			this.label11.Text = "w“ü”(•SŠ”)F";
+			this.label11.Text = "Size of purchase (in hundred shared)";
+			//! this.label11.Text = "è³¼å…¥æ•°(ç™¾æ ª)ï¼š";
 			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tl_totStockBuy
@@ -229,7 +232,8 @@ namespace freetrain.finance.stock
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(80, 16);
 			this.label13.TabIndex = 16;
-			this.label13.Text = "•Û—LŠ””F";
+			this.label13.Text = "Number of held shares:";
+			//! this.label13.Text = "ä¿æœ‰æ ªæ•°ï¼š";
 			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label14
@@ -239,7 +243,8 @@ namespace freetrain.finance.stock
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(56, 16);
 			this.label14.TabIndex = 15;
-			this.label14.Text = "‘‹àF";
+			this.label14.Text = "Funds:";
+			//! this.label14.Text = "è³‡é‡‘ï¼š";
 			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tl_totCapital
@@ -277,7 +282,8 @@ namespace freetrain.finance.stock
 			this.label18.Name = "label18";
 			this.label18.Size = new System.Drawing.Size(48, 16);
 			this.label18.TabIndex = 11;
-			this.label18.Text = "è”—¿F";
+			this.label18.Text = "Commission:";
+			//! this.label18.Text = "æ‰‹æ•°æ–™ï¼š";
 			this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label19
@@ -287,7 +293,8 @@ namespace freetrain.finance.stock
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(40, 16);
 			this.label19.TabIndex = 10;
-			this.label19.Text = "x•¥F";
+			this.label19.Text = "Payment:";
+			//! this.label19.Text = "æ”¯æ‰•ï¼š";
 			this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tabPage2
@@ -310,7 +317,8 @@ namespace freetrain.finance.stock
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Size = new System.Drawing.Size(184, 226);
 			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "”„‹p";
+			this.tabPage2.Text = "Sell";
+			//! this.tabPage2.Text = "å£²å´";
 			// 
 			// tl_totIncom
 			// 
@@ -328,7 +336,8 @@ namespace freetrain.finance.stock
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(48, 16);
 			this.label2.TabIndex = 17;
-			this.label2.Text = "û“üF";
+			this.label2.Text = "Income:";
+			//! this.label2.Text = "åå…¥ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label6
@@ -338,7 +347,8 @@ namespace freetrain.finance.stock
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(88, 16);
 			this.label6.TabIndex = 16;
-			this.label6.Text = "”„‹p”(•SŠ”)F";
+			this.label6.Text = "Size of sale (in hundred shares)";
+			//! this.label6.Text = "å£²å´æ•°(ç™¾æ ª)ï¼š";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// numberSell
@@ -356,7 +366,8 @@ namespace freetrain.finance.stock
 			this.btnSell.Name = "btnSell";
 			this.btnSell.Size = new System.Drawing.Size(80, 23);
 			this.btnSell.TabIndex = 6;
-			this.btnSell.Text = "”„‹p";
+			this.btnSell.Text = "Sell";
+			//! this.btnSell.Text = "å£²å´";
 			this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
 			// 
 			// tl_totStockSell
@@ -375,7 +386,8 @@ namespace freetrain.finance.stock
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(80, 16);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "•Û—LŠ””F";
+			this.label3.Text = "Number of held shares:";
+			//! this.label3.Text = "ä¿æœ‰æ ªæ•°ï¼š";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label4
@@ -385,7 +397,8 @@ namespace freetrain.finance.stock
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(80, 16);
 			this.label4.TabIndex = 5;
-			this.label4.Text = "w“üŠz^Š”F";
+			this.label4.Text = "Purchase price per share";
+			//! this.label4.Text = "è³¼å…¥é¡ï¼æ ªï¼š";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tl_priceBought
@@ -422,7 +435,8 @@ namespace freetrain.finance.stock
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(56, 16);
 			this.label9.TabIndex = 5;
-			this.label9.Text = "è”—¿F";
+			this.label9.Text = "Commission:";
+			//! this.label9.Text = "æ‰‹æ•°æ–™ï¼š";
 			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label10
@@ -432,7 +446,8 @@ namespace freetrain.finance.stock
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(64, 16);
 			this.label10.TabIndex = 5;
-			this.label10.Text = "—˜‰v^Š”F";
+			this.label10.Text = "Profit per share:";
+			//! this.label10.Text = "åˆ©ç›Šï¼æ ªï¼š";
 			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// listview
@@ -485,7 +500,8 @@ namespace freetrain.finance.stock
 			this.MinimumSize = new System.Drawing.Size(344, 400);
 			this.Name = "StockMarketForm";
 			this.ShowInTaskbar = false;
-			this.Text = "Š”®sê";
+			this.Text = "Stock market";
+			//! this.Text = "æ ªå¼å¸‚å ´";
 			this.VisibleChanged += new System.EventHandler(this.StockMarketForm_VisibleChanged);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);

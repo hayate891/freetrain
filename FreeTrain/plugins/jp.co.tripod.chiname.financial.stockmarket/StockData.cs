@@ -6,7 +6,7 @@ namespace freetrain.finance.stock
 {
 	public enum OwnershipStatus :int { NEW_OWNERSHIP, LOST_OWNERSHIP, UPDATE_OWNERSHIP }
 	/// <summary>
-	/// Stock ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// Stock ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class StockData : IStockDataTable
