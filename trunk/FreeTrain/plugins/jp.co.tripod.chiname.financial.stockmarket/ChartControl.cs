@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace freetrain.finance.stock
 {
 	/// <summary>
-	/// ChartControl ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// ChartControl ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public delegate void DataUpdateListener(int idxStart, int idxEnd);
 	public enum XAxisStyle{ NORMAL, YEARLY, MONTHLY, WEEKLY, DAILY, HOURLY }
@@ -79,7 +79,7 @@ namespace freetrain.finance.stock
 	public class ChartControl : System.Windows.Forms.UserControl
 	{
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 		public YAxisStyle ScaleTypeY;
@@ -92,7 +92,7 @@ namespace freetrain.finance.stock
 
 		public ChartControl()
 		{
-			// ‚±‚ÌŒÄ‚Ño‚µ‚ÍAWindows.Forms ƒtƒH[ƒ€ ƒfƒUƒCƒi‚Å•K—v‚Å‚·B
+			// ã“ã®å‘¼ã³å‡ºã—ã¯ã€Windows.Forms ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠã§å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
 			area = new PlotArea(this,30,15);
 			onSizeChanged(this,null);
@@ -254,7 +254,7 @@ namespace freetrain.finance.stock
 		#endregion
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -270,8 +270,8 @@ namespace freetrain.finance.stock
 
 	#region Component Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -294,7 +294,8 @@ namespace freetrain.finance.stock
 				drawData(e.Graphics,(ChartData)series[i]);
 			using( SolidBrush brush = new SolidBrush(Color.Black))
 			{
-				using( Font fnt = new Font("UI ƒSƒVƒbƒN",7)) 
+				using( Font fnt = new Font("MS UI Gothic",7)) 
+				//! using( Font fnt = new Font("UI ã‚´ã‚·ãƒƒã‚¯",7)) 
 				{
 					area.drawXAxis(e.Graphics,fnt,brush);
 					area.drawYAxis(e.Graphics,fnt,brush);

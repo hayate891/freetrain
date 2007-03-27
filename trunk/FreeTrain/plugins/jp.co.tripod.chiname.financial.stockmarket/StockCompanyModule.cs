@@ -27,7 +27,8 @@ namespace freetrain.finance.stock
 		static private Clock clock { get { return World.world.clock; } }
 
 		static public readonly int numUNIT = 100; 
-		static public readonly string strUNIT = "•SŠ”"; 
+		static public readonly string strUNIT = "hundred shares"; 
+		//! static public readonly string strUNIT = "ç™¾æ ª"; 
 		static private ListedCompanies companies { get { return Economy.Companies; } }
 		[NonSerialized]
 		internal Set retains = new Set(); 

@@ -490,7 +490,7 @@ namespace freetrain.views.bank
 			this.label22.Name = "label22";
 			this.label22.Size = new System.Drawing.Size(40, 16);
 			this.label22.TabIndex = 1;
-			this.label22.Text = "Maturity:";
+			this.label22.Text = "Deadline:";
 			//! this.label22.Text = "期限：";
 			this.label22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -972,7 +972,7 @@ namespace freetrain.views.bank
 			this.mlabel7.Name = "mlabel7";
 			this.mlabel7.Size = new System.Drawing.Size(44, 16);
 			this.mlabel7.TabIndex = 21;
-			this.mlabel7.Text = "千円";
+			this.mlabel7.Text = "thousand yen";
 			//! this.mlabel7.Text = "千円";
 			this.mlabel7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 

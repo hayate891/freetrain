@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="Shift_JIS" ?>
 <!--
-���̃t�@�C���̓C�x���g���`���܂��B
-�L�q��F
-	<comment>�C�x���g�̃G���g���L�q��</comment>
+このファイルはイベントを定義します。
+記述例：
+	<comment>イベントのエントリ記述例</comment>
 	<define type="event" id="011">
-		<comment>frequency(0-6)�̓C�x���g�̔������₷���B0���ƁA���̃C�x���g�_�@�ł����������Ȃ��B</comment>
-		<comment>1��300�N�Ɉ�x�A2��30�N�Ɉ�x�A3��3�N�Ɉ�x�A4��250���Ɉ�x�A5��50���Ɉ�x�A6��10���Ɉ�x�A7��3���Ɉ�x�����B</comment>
+		<comment>frequency(0-6)はイベントの発生しやすさ。0だと、他のイベント契機でしか発生しない。</comment>
+		<comment>1は300年に一度、2は30年に一度、3は3年に一度、4は250日に一度、5は50日に一度、6は10日に一度、7は3日に一度発生。</comment>
 		<frequency>3</frequency>
 		
-		<comment>randomize�^�O�́Abranch�^�O����action(target��effect�̃Z�b�g)����I�ԁB(�������L��)</comment>
-		<comment>�g�b�v���x����randomize�͕K��type=action</comment>
+		<comment>randomizeタグは、branchタグからaction(targetとeffectのセット)を一つ選ぶ。(複数併記可)</comment>
+		<comment>トップレベルのrandomizeは必ずtype=action</comment>
 		<randomize type="action">
-			<comment>branch�^�O��weight�͕Ώd�x�B�傫���قǑI�΂��m���������B</comment>
+			<comment>branchタグのweightは偏重度。大きいほど選ばれる確率が高い。</comment>
 			<branch weight="3">
 				<action>
-					<comment>description�^�O���ɂ́A�\���p�̃C�x���g���b�Z�[�W���L�q</comment>
-					<description>�i�C�͂��㏸��</description>
-					<comment>target�^�O�ŁA�C�x���g�̉e�����󂯂�Ώۂ��w��B(�������L��)</comment>
-					<comment>type="economy"�͑S�̂̌i�C�ɑ΂��ĉe����^����B</comment>
+					<comment>descriptionタグ内には、表示用のイベントメッセージを記述</comment>
+					<description>景気はやや上昇中</description>
+					<comment>targetタグで、イベントの影響を受ける対象を指定。(複数併記可)</comment>
+					<comment>type="economy"は全体の景気に対して影響を与える。</comment>
 					<target type="economy"/>
-					<comment>trend�ɑ΂��Ĕ䗦��1.2(�}0.1)�̏C�����s���B(50���ŖڕW���x�����B�B)</comment>
+					<comment>trendに対して比率で1.2(±0.1)の修正を行う。(50日で目標レベル到達。)</comment>
 					<effect on="trend" by="ratio" value="1.2" dispersion="0.1" days="50"/>
 				</action>
 			</branch>
 			<branch weight="2">
 				<action>
-					<comment>type=target�́A�X��branch�^�O��target�̃G���g���ł��邱�Ƃ�����</comment>
+					<comment>type=targetは、個々のbranchタグがtargetのエントリであることを示す</comment>
 					<randomize type="target">
 						<branch weight="1">
-							<comment>rid�͋Ǝ��ID���w��Bweight�͕Ώd�x�ŁA�傫������ƑI�΂�₷���B�ȗ������1</comment>
+							<comment>ridは業種のIDを指定。weightは偏重度で、大きくすると選ばれやすい。省略すると1</comment>
 							<target type="business" rid="010"/>
 						</branch>
 						<branch weight="2">
@@ -38,26 +38,26 @@
 							<target type="business" rid="012"/>
 						</branch>
 					</randomize>
-					<comment>effect�^�O�͉e���̓��e���L�q</comment>
-					<comment>trend�ɑ΂��Ĕ䗦��0.8(�}0.1)�̏C�����s���B(7���ŖڕW���x�����B�B)</comment>
+					<comment>effectタグは影響の内容を記述</comment>
+					<comment>trendに対して比率で0.8(±0.1)の修正を行う。(7日で目標レベル到達。)</comment>
 					<effect on="trend" by="ratio" value="0.8" dispersion="0.1" days="7"/>
-					<comment>%target%�̕����ɂ́A�ΏۋƎ�̖��O�����ߍ��܂��B</comment>
-					<description>%target%�ƊE�A�i�C�Ɍ�ފ�</description>
+					<comment>%target%の部分には、対象業種の名前が埋め込まれる。</comment>
+					<description>%target%業界、景気に後退感</description>
 				</action>
 			</branch>
 			<branch weight="1">
 				<randomize type="target" for_each="business">
-					<comment>for_each="business"�͑S�Ă̋Ǝ킩�烉���_���ɂP���I�΂��Bbranch�^�O�͖��������B</comment>
+					<comment>for_each="business"は全ての業種からランダムに１つが選ばれる。branchタグは無視される。</comment>
 				</randomize>
-				<comment>by=absolute�́Amarketscale��2000000(�}200000)���Z�����</comment>
+				<comment>by=absoluteは、marketscaleに2000000(±200000)加算される</comment>
 				<effect on="marketscale" by="absolute" value="2000000" dispersion="200000"/>
-				<description>%target%�ƊE���v�����܂�</description>
+				<description>%target%業界需要たかまる</description>
 			</branch>
 			<branch weight="1">
 				<action>
 					<randomize type="target">
 						<branch weight="1">
-							<comment>type=group�́A�������(�܂��͋Ǝ�)�̏W����\��</comment>
+							<comment>type=groupは、複数企業(または業種)の集合を表す</comment>
 							<target type="group">
 								<target type="company" rid="0020"/>
 								<target type="company" rid="0021"/>
@@ -65,14 +65,14 @@
 							</targe>
 						</branch>
 						<branch weight="1">
-							<comment>ref="g001"�A�O���[�vID"g001"�ŕʂ̏ꏊ�ɒ�`����Ă���</comment>
+							<comment>ref="g001"、グループID"g001"で別の場所に定義されている</comment>
 							<target type="group" ref="g001"/>
 						</branch>
 						<branch weight="1">
 							<target type="company" rid="0001"/>
 						</branch>
 					</randomize>
-					<comment>type=effect�́A���ʂ������_���ɑI���ł���</comment>
+					<comment>type=effectは、効果をランダムに選択できる</comment>
 					<randomize type="effect">
 						<branch weight="1">
 							<effect on="sales" by="ratio" value="2" dispersion="0.5" weight="1"/>
@@ -84,13 +84,13 @@
 				</action>
 			</branch>
 			<branch weight="1">
-				<comment>�قȂ�target��effect�̃y�A�𕡐����L����ɂ�action�^�O���g�p�B</comment>			
+				<comment>異なるtargetとeffectのペアを複数併記するにはactionタグを使用。</comment>			
 				<action>
-					<comment>type=company�Arid�œ���̊�Ƃ�ΏۂƂ���B</comment>
+					<comment>type=company、ridで特定の企業を対象とする。</comment>
 					<target type="company" rid="0002"/>
 					<effect on="brand" by="ratio" value="0.5" dispersion="0"/>
-					<comment>%target%�̕����ɂ́A�Ώۊ�Ƃ̖��O�����ߍ��܂��B</comment>
-					<description>%target%�s�ˎ��ɂ�����҂̐M������</description>
+					<comment>%target%の部分には、対象企業の名前が埋め込まれる。</comment>
+					<description>%target%不祥事により消費者の信頼失う</description>
 				</action>
 				<action>
 					<target type="company" rid="0003"/>
@@ -98,12 +98,12 @@
 				</action>
 			</branch>
 		</randomize>
-		<comment>follow_events�^�O�ɂ́A���̃C�x���g�_�@�Ŕ�������C�x���g�̃e�[�u�����L�q�B</comment>
+		<comment>follow_eventsタグには、このイベント契機で発生するイベントのテーブルを記述。</comment>
 		<follow_events>
 			<randomize type="event">
 				<branch weight="1">
-					<comment>ref�ɂ́A�C�x���gID���w��B</comment>
-					<comment>ref�̑���ɒ���event�̓��e���`���Ă��ǂ��B(���������̃C�x���g�̓��[�J���Ȃ��̂ɂȂ�)</comment>
+					<comment>refには、イベントIDを指定。</comment>
+					<comment>refの代わりに直接eventの内容を定義しても良い。(ただしそのイベントはローカルなものになる)</comment>
 					<event ref="e012"/>
 				</branch>
 				<branch weight="2">
@@ -113,66 +113,70 @@
 					<event ref="e014"/>
 				</branch>
 				<branch weight="5">
-					<comment>���branch�́A��p�C�x���g�Ȃ��B</comment>
+					<comment>空のbranchは、後継イベントなし。</comment>
 				</branch>
 			</randomize>
 		</follow_events>
 	</define>
 	
-	==========���l==========
-	��target type="economy"�Ŏw��\��effect on�Ώ�
-		�Etrend
-	��target type="business"�Ŏw��\��effect on�Ώ�
-		�Etrend
-		�Emarketscale
-	��target type="company"�Ŏw��\��effect on�Ώ�
-		�Etrend
-		�Ecapital
-		�Esales
-		�Ebrand
-		�Emarketing
-		�Equality
-		�Erationality
-		�Edevelopment
-		�Estocktotal
-		�Estockshare
+	==========備考==========
+	◆target type="economy"で指定可能なeffect on対象
+		・trend
+	◆target type="business"で指定可能なeffect on対象
+		・trend
+		・marketscale
+	◆target type="company"で指定可能なeffect on対象
+		・trend
+		・capital
+		・sales
+		・brand
+		・marketing
+		・quality
+		・rationality
+		・development
+		・stocktotal
+		・stockshare
 	======================
 -->
 <events>
 	<define type="event" id="s001">
-		<!--�傫�ȍD�i�C-->
+		<!--大きな好景気-->
 		<frequency>1</frequency>
 		<action>
 			<target type="economy" />
 			<effect on="trend" by="ratio" value="2.0" dispersion="0.5" days="180" />
-			<description>�D�i�C�̔g</description>
+			<description>A wave of prosperity</description>
+			<!--//!好景気の波-->
 		</action>
 	</define>
 	<define type="event" id="s002">
-		<!--�傫�ȕs�i�C-->
+		<!--大きな不景気-->
 		<frequency>1</frequency>
 		<action>
 			<target type="economy" />
 			<effect on="trend" by="ratio" value="0.2" dispersion="0.1" days="15" />
-			<description>�s�i�C�̔g</description>
+			<description>A wave of depression</description>
+			<!--//!不景気の波-->
 		</action>
 	</define>
 	<define type="event" id="s003">
-		<!--���K�͂Ȍi�C�ϓ�-->
+		<!--小規模な景気変動-->
 		<frequency>4</frequency>
 		<action>
 			<target type="economy" />
 			<effect on="trend" by="ratio" value="1.2" dispersion="0.8" days="10" />
-			<description>%target%���ϓ�</description>
+			<description>%target% has minor fluctuations</description>
+			<!--//! %target%微変動-->
 		</action>
 	</define>
 	<define type="event" id="s004">
-		<!--�傫�ȍD�i�C(����ƊEx3)-->
+		<!--大きな好景気(特定業界x3)-->
 		<frequency>3</frequency>
 		<action>
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="2.0" dispersion="0.5" days="30" />
-			<description>%target%�D��</description>
+			<description>%target% is off a flying start</description>
+			<!--//!%target%好調-->
 		</action>
 		<action>
 			<randomize type="target" for_each="business" />
@@ -184,12 +188,13 @@
 		</action>
 	</define>
 	<define type="event" id="s005">
-		<!--�傫�ȕs�i�C(����ƊEx3)-->
+		<!--大きな不景気(特定業界x3)-->
 		<frequency>3</frequency>
 		<action>
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="0.2" dispersion="0.1" days="15" />
-			<description>%target%�s�U</description>
+			<description>%target% is in a slump</description>
+			<!--//!%target%不振-->
 		</action>
 		<action>
 			<randomize type="target" for_each="business" />
@@ -201,25 +206,27 @@
 		</action>
 	</define>
 	<define type="event" id="s006">
-		<!--���K�͂Ȍi�C�ϓ�(����ƊE)-->
+		<!--小規模な景気変動(特定業界)-->
 		<frequency>6</frequency>
 		<action>
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="1.0" dispersion="0.5" days="7" />
-			<description>%target%�����l����</description>
+			<description>%target% has limited price movements</description>
+			<!--//!%target%小幅値動き-->
 		</action>
 	</define>
 	<define type="event" id="s007">
-		<!--����ƊE�̎s��ϓ�-->
+		<!--特定業界の市場変動-->
 		<frequency>6</frequency>
 		<action>
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="1.0" dispersion="0.2" days="7"/>
-			<description>%target%����</description>
+			<description>%target% has minor fluctuation</description>
+			<!--//!%target%微動-->
 		</action>
 	</define>
 	<define type="event" id="s008">
-		<!--�����Ƃ̕]���㏸-->
+		<!--特定企業の評価上昇-->
 		<frequency>5</frequency>
 		<action>
 			<randomize type="target" for_each="company" />
@@ -241,11 +248,12 @@
 					<effect on="rationality" by="absolute" value="1" dispersion="1" />
 				</branch>
 			</randomize>
-			<description>%target%�̎Г����v</description>
+			<description>%target% is going through an internal reform</description>
+			<!--//!%target%の社内改革-->
 		</action>
 	</define>
 	<define type="event" id="s009">
-		<!--�����Ƃ̕]�����~-->
+		<!--特定企業の評価下降-->
 		<frequency>5</frequency>
 		<action>
 			<randomize type="target" for_each="company" />
@@ -267,7 +275,8 @@
 					<effect on="rationality" by="absolute" value="-2" dispersion="1" />
 				</branch>
 			</randomize>
-			<description>%target%�̎��́E�X��</description>
+			<description>%target% is going through a scandal</description>
+			<!--//!%target%の事故・醜聞-->
 		</action>
 	</define>
 </events>

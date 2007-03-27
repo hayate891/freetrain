@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
-Ç±ÇÃÉtÉ@ÉCÉãÇÕÅAC477éÅÇÃçÏê¨ÇµÇΩÉtÉ@ÉCÉãÇå≥Ç…ÅAÉWÉÉÉKÉCÉÇÇ™çÏê¨ÇµÇ‹ÇµÇΩÅB
-è⁄ÇµÇ¢èÓïÒÇÕâ∫ãLÇÃURLÇ÷ÅB
+„Åì„ÅÆ„Éï„Ç°„Ç§„É´„ÅØ„ÄÅC477Ê∞è„ÅÆ‰ΩúÊàê„Åó„Åü„Éï„Ç°„Ç§„É´„ÇíÂÖÉ„Å´„ÄÅ„Ç∏„É£„Ç¨„Ç§„É¢„Åå‰ΩúÊàê„Åó„Åæ„Åó„Åü„ÄÇ
+Ë©≥„Åó„ÅÑÊÉÖÂ†±„ÅØ‰∏ãË®ò„ÅÆURL„Å∏„ÄÇ
 http://homepage1.nifty.com/jagaimo/west_necom/
 -->
 <!-- 
-Ç±ÇÃÉtÉ@ÉCÉãÇÕã∆éÌÇíËã`ÇµÇ‹Ç∑ÅB
-ãLèqó·ÅF
-	<business id="000" name="ã∆éÌñº">
+„Åì„ÅÆ„Éï„Ç°„Ç§„É´„ÅØÊ•≠Á®Æ„ÇíÂÆöÁæ©„Åó„Åæ„Åô„ÄÇ
+Ë®òËø∞‰æãÔºö
+	<business id="000" name="Ê•≠Á®ÆÂêç">
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="5" marketing="4" quality="3" />
 	</business>
 
-	idÅFcompanyÉ^ÉOÇÃtypeëÆê´Ç©ÇÁéQè∆Ç≥ÇÍÇÈï∂éöóÒ
-	nameÅFã∆éÌñº
-	fixed:îÑè„ãKñÕÇ…ëŒÇ∑ÇÈå≈íËåoîÔó¶
-	scaleÅFésèÍãKñÕ(â~â›)Å|ìØã∆éÌÇ≈îÑè„Ç∞Çï™îzÇµÇ‹Ç∑
-	cycleÅFã∆éÌå≈óLÇÃåiãCé¸ä˙(ì˙)
-	amplitureÅFã∆éÌå≈óLÇÃåiãCêUïù(0-10)
-	ex_dependencyÅFåiãCâeãøìx(0-10)Å|ëSëÃÇÃåiãCéwêîÇ…ÇÊÇÈâeãøÇÃéÛÇØà¿Ç≥
-	progressivityÅFã∆äEÇÃêiï‡ê´(0-10)Å|ã∆äEÇÃâhåÕê∑êäÇÃåÉÇµÇ≥
-	brandÅFÉuÉâÉìÉhÇÃèdóvê´(0-10)Å|ã£ëàÇ…Ç®Ç¢ÇƒÉuÉâÉìÉhóÕÇ™êËÇﬂÇÈâeãøìx
-	marketingÅFîÃîÑóÕÇÃèdóvê´(0-10)Å|ã£ëàÇ…Ç®Ç¢ÇƒîÃîÑóÕÇ™êËÇﬂÇÈâeãøìx
-	qualityÅFïiéøÇÃèdóvê´(0-10)Å|ã£ëàÇ…Ç®Ç¢ÇƒäÈã∆Ç‹ÇΩÇÕêªïiÇÃïiéøÇ™êËÇﬂÇÈâeãøìx
+	idÔºöcompany„Çø„Ç∞„ÅÆtypeÂ±ûÊÄß„Åã„ÇâÂèÇÁÖß„Åï„Çå„ÇãÊñáÂ≠óÂàó
+	nameÔºöÊ•≠Á®ÆÂêç
+	fixed:Â£≤‰∏äË¶èÊ®°„Å´ÂØæ„Åô„ÇãÂõ∫ÂÆöÁµåË≤ªÁéá
+	scaleÔºöÂ∏ÇÂ†¥Ë¶èÊ®°(ÂÜÜË≤®)‚àíÂêåÊ•≠Á®Æ„ÅßÂ£≤‰∏ä„Åí„ÇíÂàÜÈÖç„Åó„Åæ„Åô
+	cycleÔºöÊ•≠Á®ÆÂõ∫Êúâ„ÅÆÊôØÊ∞óÂë®Êúü(Êó•)
+	amplitureÔºöÊ•≠Á®ÆÂõ∫Êúâ„ÅÆÊôØÊ∞óÊåØÂπÖ(0-10)
+	ex_dependencyÔºöÊôØÊ∞óÂΩ±ÈüøÂ∫¶(0-10)‚àíÂÖ®‰Ωì„ÅÆÊôØÊ∞óÊåáÊï∞„Å´„Çà„ÇãÂΩ±Èüø„ÅÆÂèó„ÅëÂÆâ„Åï
+	progressivityÔºöÊ•≠Áïå„ÅÆÈÄ≤Ê≠©ÊÄß(0-10)‚àíÊ•≠Áïå„ÅÆÊ†ÑÊûØÁõõË°∞„ÅÆÊøÄ„Åó„Åï
+	brandÔºö„Éñ„É©„É≥„Éâ„ÅÆÈáçË¶ÅÊÄß(0-10)‚àíÁ´∂‰∫â„Å´„Åä„ÅÑ„Å¶„Éñ„É©„É≥„ÉâÂäõ„ÅåÂç†„ÇÅ„ÇãÂΩ±ÈüøÂ∫¶
+	marketingÔºöË≤©Â£≤Âäõ„ÅÆÈáçË¶ÅÊÄß(0-10)‚àíÁ´∂‰∫â„Å´„Åä„ÅÑ„Å¶Ë≤©Â£≤Âäõ„ÅåÂç†„ÇÅ„ÇãÂΩ±ÈüøÂ∫¶
+	qualityÔºöÂìÅË≥™„ÅÆÈáçË¶ÅÊÄß(0-10)‚àíÁ´∂‰∫â„Å´„Åä„ÅÑ„Å¶‰ºÅÊ•≠„Åæ„Åü„ÅØË£ΩÂìÅ„ÅÆÂìÅË≥™„ÅåÂç†„ÇÅ„ÇãÂΩ±ÈüøÂ∫¶
 -->
 <companies>
 	<!-- business tag descripts a 'business type' -->
-	<business id="010" name="êÖéYÅEó—ã∆">
+	<business id="010" name="Fishery and Forestry"> <!--//! Ê∞¥Áî£„ÉªÊûóÊ•≠-->
 		<!-- fixed:the ratio of fixed account against ideal sales amount-->
 		<account fixed="0.30"/>
 		<!-- scale:initial market scale of the business total-->
@@ -41,192 +41,192 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 		<!-- quality:business waight of quality of the service or production (0-10) -->
 		<weight brand="5" marketing="4" quality="3" />
 	</business>
-	<business id="011" name="î_ã∆">
+	<business id="011" name="Agriculture"> <!--//!Ëæ≤Ê•≠-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="365" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="5" marketing="4" quality="3" />
 	</business>
-	<business id="012" name="çzã∆">
+	<business id="012" name="Mining"> <!--//!Èâ±Ê•≠-->
 		<account fixed="0.40"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="5" marketing="2" quality="2" />
 	</business>
-	<business id="020" name="åöê›">
+	<business id="020" name="Construction"> <!--//!Âª∫Ë®≠-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="60" amplitude="5" ex_dependency="3" progressivity="3" />
 		<weight brand="5" marketing="5" quality="5" />
 	</business>
-	<business id="021" name="êHïi">
+	<business id="021" name="Food"> <!--//! È£üÂìÅ-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="3" progressivity="3" />
 		<weight brand="8" marketing="7" quality="5" />
 	</business>
-	<business id="022" name="ë@à€">
+	<business id="022" name="Textile"> <!--//!ÁπäÁ∂≠-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="4" progressivity="4" />
 		<weight brand="8" marketing="6" quality="6" />
 	</business>
-	<business id="023" name="ÉpÉãÉvÅEéÜ">
+	<business id="023" name="Pulp & Paper"> <!--//!„Éë„É´„Éó„ÉªÁ¥ô-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="3" marketing="5" quality="5" />
 	</business>
-	<business id="030" name="âªäw">
+	<business id="030" name="Chemical"> <!--//!ÂåñÂ≠¶-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="6" />
 		<weight brand="3" marketing="3" quality="9" />
 	</business>
-	<business id="031" name="à„ñÚïi">
+	<business id="031" name="Pharmaceutical"> <!--//!ÂåªËñ¨ÂìÅ-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="8" />
 		<weight brand="6" marketing="5" quality="9" />
 	</business>
-	<business id="032" name="êŒñ˚ÅEêŒíY">
+	<business id="032" name="Oil & Coal"> <!--//!Áü≥Ê≤π„ÉªÁü≥ÁÇ≠-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="4" />
 		<weight brand="3" marketing="3" quality="4" />
 	</business>
-	<business id="033" name="ÉSÉÄ">
+	<business id="033" name="Rubber"> <!--//! „Ç¥„É† -->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="3" />
 		<weight brand="4" marketing="3" quality="5" />
 	</business>
-	<business id="034" name="ÉKÉâÉX">
+	<business id="034" name="Glass"> <!--//! „Ç¨„É©„Çπ -->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="2" marketing="3" quality="4" />
 	</business>
-	<business id="035" name="óqã∆">
+	<business id="035" name="Ceramic"> <!--//! Á™ØÊ•≠-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="2" marketing="3" quality="4" />
 	</business>
-	<business id="036" name="ìSç|">
+	<business id="036" name="Steel"> <!-- //! ÈâÑÈãº -->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="3" marketing="3" quality="6" />
 	</business>
-	<business id="037" name="îÒìS">
+	<business id="037" name="Nonferrous"> <!-- //! ÈùûÈâÑ -->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="3" />
 		<weight brand="3" marketing="3" quality="6" />
 	</business>
-	<business id="038" name="ã‡ëÆêªïi">
+	<business id="038" name="Hardware"> <!--//! ÈáëÂ±ûË£ΩÂìÅ-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="4" />
 		<weight brand="5" marketing="4" quality="7" />
 	</business>
-	<business id="040" name="ã@äB">
+	<business id="040" name="Machinery"> <!--//! Ê©üÊ¢∞-->
 		<account fixed="0.35"/>
 		<market scale="50000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="5" />
 		<weight brand="6" marketing="5" quality="8" />
 	</business>
-	<business id="041" name="ìdãCã@äÌ">
+	<business id="041" name="Electronic equipment"> <!--//! ÈõªÊ∞óÊ©üÂô®-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="7" />
 		<weight brand="8" marketing="7" quality="8" />
 	</business>
-	<business id="042" name="é©ìÆé‘">
+	<business id="042" name="Automobiles"> <!--//! Ëá™ÂãïËªä-->
 		<account fixed="0.35"/>
 		<market scale="10000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="9" marketing="6" quality="9" />
 	</business>
-	<business id="043" name="ë¢ëD">
+	<business id="043" name="Shipyard"> <!--//! ÈÄ†Ëàπ-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="7" marketing="3" quality="8" />
 	</business>
-	<business id="044" name="çqãÛã@">
+	<business id="044" name="Aeronautics"> <!--//! Ëà™Á©∫Ê©ü-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="9" marketing="3" quality="9" />
 	</business>
-	<business id="045" name="óAëóópã@äÌ">
+	<business id="045" name="Shipping equipment"> <!--//! Ëº∏ÈÄÅÁî®Ê©üÂô®-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="7" marketing="3" quality="8" />
 	</business>
-	<business id="046" name="ê∏ñßã@äÌ">
+	<business id="046" name="Precision equipment"> <!--//!Á≤æÂØÜÊ©üÂô®-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="8" />
 		<weight brand="8" marketing="4" quality="9" />
 	</business>
-	<business id="047" name="àÛç¸">
+	<business id="047" name="Publishing"> <!--//!Âç∞Âà∑-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="8" />
 		<weight brand="8" marketing="4" quality="9" />
 	</business>
-	<business id="048" name="ÇªÇÃëºêªë¢">
+	<business id="048" name="Other manufacturing"> <!--//!„Åù„ÅÆ‰ªñË£ΩÈÄ†-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="5" marketing="5" quality="5" />
 	</business>
-	<business id="050" name="ìdóÕÅEÉKÉX">
+	<business id="050" name="Electricity & Gas"> <!--//!ÈõªÂäõ„Éª„Ç¨„Çπ-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="2" progressivity="1" />
 		<weight brand="3" marketing="3" quality="3" />
 	</business>
-	<business id="061" name="ó§â^">
+	<business id="061" name="Transportation"> <!--//!Èô∏ÈÅã-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="3" marketing="7" quality="5" />
 	</business>
-	<business id="062" name="äCâ^">
+	<business id="062" name="Shipping"> <!--//! Êµ∑ÈÅã-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="4" marketing="5" quality="6" />
 	</business>
-	<business id="063" name="ãÛâ^">
+	<business id="063" name="Aeoronautics"> <!--//! Á©∫ÈÅã-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="4" marketing="5" quality="6" />
 	</business>
-	<business id="064" name="ïsìÆéY">
+	<business id="064" name="Real estate"> <!--//! ‰∏çÂãïÁî£-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
 		<weight brand="3" marketing="6" quality="5" />
 	</business>
-	<business id="065" name="ëqå…ÅEâ^óA">
+	<business id="065" name="Logistics & Storage"> <!--//!ÂÄâÂ∫´„ÉªÈÅãËº∏-->
 		<account fixed="0.25"/>
 		<market scale="50000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
 		<weight brand="3" marketing="6" quality="5" />
 	</business>
-	<business id="070" name="èÓïÒÅEí êM">
+	<business id="070" name="Media & Communication"> <!--//!ÊÉÖÂ†±„ÉªÈÄö‰ø°-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="3" progressivity="4" />
 		<weight brand="4" marketing="6" quality="6" />
 	</business>
-	<business id="071" name="è§ã∆ÅiâµîÑÅj">
+	<business id="071" name="Commerce (Wholesale)"> <!--//! ÂïÜÊ•≠ÔºàÂç∏Â£≤Ôºâ-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
 		<weight brand="3" marketing="2" quality="3" />
 	</business>
-	<business id="072" name="è§ã∆Åiè¨îÑÅj">
+	<business id="072" name="Commerce (Retail)"> <!--//! ÂïÜÊ•≠ÔºàÂ∞èÂ£≤Ôºâ-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
 		<weight brand="5" marketing="7" quality="5" />
 	</business>
-	<business id="080" name="ã‡óZÅiã‚çsÅj">
+	<business id="080" name="Financial (Banking)"> <!--//!ÈáëËûçÔºàÈäÄË°åÔºâ-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
 		<weight brand="9" marketing="8" quality="4" />
 	</business>
-	<business id="081" name="ã‡óZÅièÿåîÅj">
+	<business id="081" name="Financial (Securities)"> <!--//!ÈáëËûçÔºàË®ºÂà∏Ôºâ-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
 		<weight brand="8" marketing="9" quality="4" />
 	</business>
-	<business id="082" name="ã‡óZÅiï€åØÅj">
+	<business id="082" name="Financial (Insurance)"> <!--//! ÈáëËûçÔºà‰øùÈô∫Ôºâ-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="9" marketing="9" quality="5" />
 	</business>
-	<business id="083" name="ã‡óZÅiÇªÇÃëºÅj">
+	<business id="083" name="Financial (Other)"> <!--//!ÈáëËûçÔºà„Åù„ÅÆ‰ªñÔºâ-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="2" />
 		<weight brand="7" marketing="8" quality="5" />
 	</business>
-	<business id="091" name="ÉTÅ[ÉrÉX">
+	<business id="091" name="Services"> <!--//!„Çµ„Éº„Éì„Çπ-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="3" />
 		<weight brand="4" marketing="6" quality="6" />

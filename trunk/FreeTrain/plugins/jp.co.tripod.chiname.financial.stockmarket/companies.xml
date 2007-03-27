@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="Shift_JIS" ?>
 <!--
-Ç±ÇÃÉtÉ@ÉCÉãÇÕÅAC477éÅÇÃçÏê¨ÇµÇΩÉtÉ@ÉCÉãÇå≥Ç…ÅAÉWÉÉÉKÉCÉÇÇ™çÏê¨ÇµÇ‹ÇµÇΩÅB
-è⁄ÇµÇ¢èÓïÒÇÕâ∫ãLÇÃURLÇ÷ÅB
+„Åì„ÅÆ„Éï„Ç°„Ç§„É´„ÅØ„ÄÅC477Ê∞è„ÅÆ‰ΩúÊàê„Åó„Åü„Éï„Ç°„Ç§„É´„ÇíÂÖÉ„Å´„ÄÅ„Ç∏„É£„Ç¨„Ç§„É¢„Åå‰ΩúÊàê„Åó„Åæ„Åó„Åü„ÄÇ
+Ë©≥„Åó„ÅÑÊÉÖÂ†±„ÅØ‰∏ãË®ò„ÅÆURL„Å∏„ÄÇ
 http://homepage1.nifty.com/jagaimo/west_necom/
 -->
 <!-- 
-Ç±ÇÃÉtÉ@ÉCÉãÇÕè„èÍäÈã∆ÇíËã`ÇµÇ‹Ç∑ÅB
-ãLèqó·ÅF
-	<company id="0000" name="âÔé–ñº" type="000">
+„Åì„ÅÆ„Éï„Ç°„Ç§„É´„ÅØ‰∏äÂ†¥‰ºÅÊ•≠„ÇíÂÆöÁæ©„Åó„Åæ„Åô„ÄÇ
+Ë®òËø∞‰æãÔºö
+	<company id="0000" name="‰ºöÁ§æÂêç" type="000">
 		<performance capital="10000000" sales="1000000" />
 		<capacity brand="5" marketing="5" quality="5" rationality="5" development="5" />
 		<stock total="100000" share="50000" />
 	</company>
 
-	idÅFäÈã∆ÉRÅ[Éh(ñ¢égóp)
-	nameÅFâÔé–ñºÅÅñ¡ïø
-	typeÅFì¡íËÇÃbusinessÉ^ÉOÇéwÇ∑idï∂éöóÒ
-	capitalÅFéëñ{ã‡[ñúâ~]Å|âÔé–ÇÃãKñÕÇí[ìIÇ…ï\ÇµÇ‹Ç∑
-	salesÅFîÑè„Ç∞[ïSâ~]Å|ÉâÉCÉoÉãÇ™Ç¢Ç»Ç¢èÍçáÇ…ìûíBâ¬î\Ç»îÑè„Ç∞
+	idÔºö‰ºÅÊ•≠„Ç≥„Éº„Éâ(Êú™‰ΩøÁî®)
+	nameÔºö‰ºöÁ§æÂêçÔºùÈäòÊüÑ
+	typeÔºöÁâπÂÆö„ÅÆbusiness„Çø„Ç∞„ÇíÊåá„ÅôidÊñáÂ≠óÂàó
+	capitalÔºöË≥áÊú¨Èáë[‰∏áÂÜÜ]‚àí‰ºöÁ§æ„ÅÆË¶èÊ®°„ÇíÁ´ØÁöÑ„Å´Ë°®„Åó„Åæ„Åô
+	salesÔºöÂ£≤‰∏ä„Åí[ÁôæÂÜÜ]‚àí„É©„Ç§„Éê„É´„Åå„ÅÑ„Å™„ÅÑÂ†¥Âêà„Å´Âà∞ÈÅîÂèØËÉΩ„Å™Â£≤‰∏ä„Åí
 	
-	brandÅFÉuÉâÉìÉhóÕ(0-10)Å|ímñºìxÅAçDä¥ìxÅAêlãC
-	marketingÅFîÃîÑóÕ(0-10)Å|ä˘ìæîÃîÑÉãÅ[ÉgÅAâcã∆óÕÇ»Ç«
-	qualityÅFïiéø(0-10)Å|ÉTÅ[ÉrÉXÇ‹ÇΩÇÕêªïiÇÃïiéø
-	rationalityÅFçáóùâªìx(0-10)Å|îÑè„Ç∞ÇÃâΩÅìÇ™óòâvÇ…Ç»ÇÈÇ©
-				(ÇΩÇæÇµÅAç≈èIóòâvÇÕÇ±Ç±Ç©ÇÁdevelopmentìäéëï™Ç™è¡îÔÇ≥ÇÍÇΩÇ‡ÇÃ)
-	developmentÅFî≠ìWê´(0-10)Å|è„ãLÇSî\óÕÇÃè„è∏ÇµÇ‚Ç∑Ç≥
+	brandÔºö„Éñ„É©„É≥„ÉâÂäõ(0-10)‚àíÁü•ÂêçÂ∫¶„ÄÅÂ•ΩÊÑüÂ∫¶„ÄÅ‰∫∫Ê∞ó
+	marketingÔºöË≤©Â£≤Âäõ(0-10)‚àíÊó¢ÂæóË≤©Â£≤„É´„Éº„Éà„ÄÅÂñ∂Ê•≠Âäõ„Å™„Å©
+	qualityÔºöÂìÅË≥™(0-10)‚àí„Çµ„Éº„Éì„Çπ„Åæ„Åü„ÅØË£ΩÂìÅ„ÅÆÂìÅË≥™
+	rationalityÔºöÂêàÁêÜÂåñÂ∫¶(0-10)‚àíÂ£≤‰∏ä„Åí„ÅÆ‰ΩïÔºÖ„ÅåÂà©Áõä„Å´„Å™„Çã„Åã
+				(„Åü„Å†„Åó„ÄÅÊúÄÁµÇÂà©Áõä„ÅØ„Åì„Åì„Åã„ÇâdevelopmentÊäïË≥áÂàÜ„ÅåÊ∂àË≤ª„Åï„Çå„Åü„ÇÇ„ÅÆ)
+	developmentÔºöÁô∫Â±ïÊÄß(0-10)‚àí‰∏äË®òÔºîËÉΩÂäõ„ÅÆ‰∏äÊòá„Åó„ÇÑ„Åô„Åï
 	
-	totalÅFëçî≠çsäîêî[ñúäî]
-	shareÅFé©é–äîï€óLêî[ñúäî]Å|îºâiãvìIÇ…îÑÇÈãCÇÃÇ»Ç¢äîéÂÇÃéùÇøï™Ç‡ä‹ÇﬂÇÈ
+	totalÔºöÁ∑èÁô∫Ë°åÊ†™Êï∞[‰∏áÊ†™]
+	shareÔºöËá™Á§æÊ†™‰øùÊúâÊï∞[‰∏áÊ†™]‚àíÂçäÊ∞∏‰πÖÁöÑ„Å´Â£≤„ÇãÊ∞ó„ÅÆ„Å™„ÅÑÊ†™‰∏ª„ÅÆÊåÅ„Å°ÂàÜ„ÇÇÂê´„ÇÅ„Çã
 -->
 <!--
-ÉRÉsÉyóp
+„Ç≥„Éî„ÉöÁî®
 	<company id="" name="" type="">
 		<performance capital="" sales="" />
 		<capacity brand="" marketing="" quality="" rationality="" development="" />
@@ -39,247 +39,247 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 -->
 <companies>
 	
-	<!--010Å@êÖéYÅEó—ã∆-->
-	<!--011Å@î_ã∆-->
-	<!--012Å@çzã∆-->
+	<!--010„ÄÄÊ∞¥Áî£„ÉªÊûóÊ•≠-->
+	<!--011„ÄÄËæ≤Ê•≠-->
+	<!--012„ÄÄÈâ±Ê•≠-->
 	
-	<!--020Å@åöê›ã∆-->
+	<!--020„ÄÄÂª∫Ë®≠Ê•≠-->
 	
-	<company id="1801" name="ëÂêªåöê›" type="020">
+	<company id="1801" name="Daisei Construction" type="020">
 		<performance capital="10000000" sales="16000000000" />
 		<capacity brand="9" marketing="5" quality="7" rationality="3" development="3" />
 		<stock total="1100000" share="200000" />
 	</company>
-	<company id="1802" name="óYó—ëg" type="020">
+	<company id="1802" name="Obayashi Group" type="020">
 		<performance capital="6000000" sales="2500000000" />
 		<capacity brand="9" marketing="5" quality="8" rationality="3" development="3" />
 		<stock total="120000" share="50000" />
 	</company>
-	<company id="1942" name="êºìdçH" type="020">
+	<company id="1942" name="Nishi Electrics" type="020">
 		<performance capital="1000000" sales="4500000000" />
 		<capacity brand="8" marketing="6" quality="7" rationality="4" development="3" />
 		<stock total="200000" share="100000" />
 	</company>
 	
-	<!--021Å@êHïi-->
+	<!--021„ÄÄÈ£üÂìÅ-->
 	
-	<company id="2002" name="ì˙êiêªï≤ÉOÉãÅ[Év" type="021">
+	<company id="2002" name="Nisshin Seifun Group" type="021">
 		<performance capital="350000" sales="45000000" />
 		<capacity brand="8" marketing="4" quality="6" rationality="1" development="2" />
 		<stock total="20000" share="5600" />
 	</company>
-	<company id="2503" name="óãê_îûé" type="021">
+	<company id="2503" name="Raijin Breweries" type="021">
 		<performance capital="100000000" sales="900000000" />
 		<capacity brand="5" marketing="6" quality="7" rationality="3" development="1" />
 		<stock total="300000" share="30000" />
 	</company>
 	
-	<!--022Å@ë@à€-->
+	<!--022„ÄÄÁπäÁ∂≠-->
 	
-	<company id="3103" name="ÉÜÉjÉjÉJ" type="022">
+	<company id="3103" name="Yuninica" type="022">
 		<performance capital="200000" sales="700000000" />
 		<capacity brand="6" marketing="6" quality="5" rationality="3" development="4" />
 		<stock total="5000000" share="3000000" />
 	</company>
-	<company id="3402" name="ëÂÉå" type="022">
+	<company id="3402" name="Dai-re" type="022">
 		<performance capital="800000" sales="80000000" />
 		<capacity brand="7" marketing="3" quality="7" rationality="4" development="2" />
 		<stock total="200000" share="100000" />
 	</company>
 	
-	<!--023Å@ÉpÉãÉvÅEéÜ-->
+	<!--023„ÄÄ„Éë„É´„Éó„ÉªÁ¥ô-->
 	
-	<company id="3861" name="‡F‡VêªéÜ" type="023">
+	<company id="3861" name="Shibusawa Manufacturing" type="023">
 		<performance capital="1000000" sales="550000000" />
 		<capacity brand="8" marketing="4" quality="5" rationality="5" development="4" />
 		<stock total="1000000" share="500000" />
 	</company>
-	<company id="3872" name="å‹ïHêªéÜ" type="023">
+	<company id="3872" name="Itsubishi Manufacturing" type="023">
 		<performance capital="800000" sales="35000000" />
 		<capacity brand="2" marketing="6" quality="6" rationality="3" development="3" />
 		<stock total="250000" share="30000" />
 	</company>
 	
-	<!--030Å@âªäw-->
+	<!--030„ÄÄÂåñÂ≠¶-->
 	
-	<company id="4023" name="ïÈâHâªäw" type="030">
+	<company id="4023" name="Kureha Chemical" type="030">
 		<performance capital="4500000" sales="700000000" />
 		<capacity brand="3" marketing="4" quality="5" rationality="6" development="1" />
 		<stock total="200000" share="100000" />
 	</company>
-	<company id="4208" name="âFïîçzéY" type="030">
+	<company id="4208" name="Ube Mining" type="030">
 		<performance capital="8000000" sales="300000000" />
 		<capacity brand="7" marketing="5" quality="6" rationality="4" development="2" />
 		<stock total="520000" share="40000" />
 	</company>
 	
-	<!--031Å@à„ñÚïi-->
+	<!--031„ÄÄÂåªËñ¨ÂìÅ-->
 	
-	<company id="4503" name="‡_îVì‡êªñÚ" type="031">
+	<company id="4503" name="Hamanouchi Pharmaceutical" type="031">
 		<performance capital="2800000" sales="700000000" />
 		<capacity brand="7" marketing="5" quality="6" rationality="3" development="2" />
 		<stock total="30000" share="10000" />
 	</company>
-	<company id="4535" name="ëÂè‹êªñÚ" type="031">
+	<company id="4535" name="Daisho Pharmaceutical" type="031">
 		<performance capital="2000000" sales="400000000" />
 		<capacity brand="5" marketing="9" quality="5" rationality="4" development="4" />
 		<stock total="50000" share="10000" />
 	</company>
 	
-	<!--032Å@êŒñ˚ÅEêŒíY-->
+	<!--032„ÄÄÁü≥Ê≤π„ÉªÁü≥ÁÇ≠-->
 	
-	<company id="5001" name="Ç…Ç¡Ç€ÇÒêŒñ˚" type="032">
+	<company id="5001" name="Japan Oil" type="032">
 		<performance capital="6400000" sales="5000000000" />
 		<capacity brand="5" marketing="8" quality="6" rationality="3" development="6" />
 		<stock total="300000" share="40000" />
 	</company>
-	<company id="5002" name="àÆêŒñ˚" type="032">
+	<company id="5002" name="Asahi Oil" type="032">
 		<performance capital="5300000" sales="5000000000" />
 		<capacity brand="6" marketing="2" quality="9" rationality="4" development="3" />
 		<stock total="200000" share="55000" />
 	</company>
 	
-	<!--033Å@ÉSÉÄ-->
+	<!--033„ÄÄ„Ç¥„É†-->
 	
-	<company id="5108" name="ÉuÉäÉaÉGÉXÉg" type="033">
+	<company id="5108" name="Predgest" type="033">
 		<performance capital="1200000" sales="350000000" />
 		<capacity brand="8" marketing="3" quality="6" rationality="3" development="5" />
 		<stock total="200000" share="100000" />
 	</company>
 	
-	<!--034Å@ÉKÉâÉX-->
+	<!--034„ÄÄ„Ç¨„É©„Çπ-->
 	
-	<company id="5201" name="í©ì˙ÉOÉâÉX" type="034">
+	<company id="5201" name="Asahi Glass" type="034">
 		<performance capital="2500000" sales="5000000000" />
 		<capacity brand="8" marketing="3" quality="3" rationality="6" development="6" />
 		<stock total="1300000" share="300000" />
 	</company>
 	
-	<!--035Å@óqã∆-->
+	<!--035„ÄÄÁ™ØÊ•≠-->
 	
-	<company id="5232" name="ê¥óFä÷êºÉZÉÅÉìÉg" type="035">
+	<company id="5232" name="Sumidomo Kansei Cement" type="035">
 		<performance capital="8000000" sales="1600000000" />
 		<capacity brand="4" marketing="6" quality="4" rationality="3" development="5" />
 		<stock total="3200000" share="2200000" />
 	</company>
-	<company id="5233" name="ëæómÉZÉÅÉìÉg" type="035">
+	<company id="5233" name="Taiyo Cement" type="035">
 		<performance capital="10000000" sales="150000000" />
 		<capacity brand="8" marketing="3" quality="2" rationality="6" development="2" />
 		<stock total="200000" share="150000" />
 	</company>
 	
-	<!--036Å@ìSç|-->
+	<!--036„ÄÄÈâÑÈãº-->
 	
-	<company id="5405" name="ê¥óFã‡ëÆçHã∆" type="036">
+	<company id="5405" name="Sumidomo Metalworking" type="036">
 		<performance capital="1500000" sales="1000000000" />
 		<capacity brand="5" marketing="5" quality="5" rationality="3" development="3" />
 		<stock total="5000000" share="3000000" />
 	</company>
-	<company id="5406" name="ç„ê_êªç|" type="036">
+	<company id="5406" name="Hanshin Steel" type="036">
 		<performance capital="1000000" sales="480000000" />
 		<capacity brand="8" marketing="3" quality="9" rationality="3" development="6" />
 		<stock total="3000000" share="2000000" />
 	</company>
 	
-	<!--037Å@îÒìS-->
+	<!--037„ÄÄÈùûÈâÑ-->
 	
-	<company id="5711" name="å‹ïHÉ}ÉeÉäÉAÉã" type="037">
+	<company id="5711" name="Itsubishi Material" type="037">
 		<performance capital="5000000" sales="2600000000" />
 		<capacity brand="8" marketing="3" quality="6" rationality="3" development="5" />
 		<stock total="3000000" share="1000000" />
 	</company>
-	<company id="5713" name="ê¥óFã‡ëÆçzéR" type="037">
+	<company id="5713" name="Sumidomo Mining" type="037">
 		<performance capital="3000000" sales="1000000000" />
 		<capacity brand="5" marketing="8" quality="8" rationality="2" development="3" />
 		<stock total="500000" share="250000" />
 	</company>
 	
-	<!--038Å@ã‡ëÆêªïi-->
+	<!--038„ÄÄÈáëÂ±ûË£ΩÂìÅ-->
 	
-	<!--040Å@ã@äB-->
+	<!--040„ÄÄÊ©üÊ¢∞-->
 	
-	<company id="5631" name="ëÂòaêªç|èä" type="040">
+	<company id="5631" name="Daiwa Steel Works" type="040">
 		<performance capital="15000000" sales="45000000000" />
 		<capacity brand="5" marketing="6" quality="5" rationality="1" development="6" />
 		<stock total="350000" share="250000" />
 	</company>
-	<company id="7011" name="å‹ïHèdçHã∆" type="040">
+	<company id="7011" name="Itsubishi Heavy Industries" type="040">
 		<performance capital="30000000" sales="600000000000" />
 		<capacity brand="8" marketing="6" quality="8" rationality="4" development="3" />
 		<stock total="8000000" share="5000000" />
 	</company>
-	<company id="7013" name="êXìáîdñÅèdçHã∆" type="040">
+	<company id="7013" name="Morishima Hama Heavy Industries" type="040">
 		<performance capital="50000000" sales="400000000000" />
 		<capacity brand="9" marketing="8" quality="7" rationality="3" development="5" />
 		<stock total="3100000" share="1800000" />
 	</company>
 	
-	<!--041Å@ìdãCã@äÌ-->
+	<!--041„ÄÄÈõªÊ∞óÊ©üÂô®-->
 	
-	<company id="6501" name="èÌó§êªçÏèä" type="041">
+	<company id="6501" name="Hidachi Manufacturing" type="041">
 		<performance capital="28000000" sales="350000000000" />
 		<capacity brand="8" marketing="3" quality="9" rationality="2" development="3" />
 		<stock total="100000" share="67000" />
 	</company>
-	<company id="6502" name="é≈ìd" type="041">
+	<company id="6502" name="Shiba Electric" type="041">
 		<performance capital="30000000" sales="300000000000" />
 		<capacity brand="7" marketing="4" quality="6" rationality="2" development="5" />
 		<stock total="100000" share="70000" />
 	</company>
-	<company id="6742" name="ãûé^êªçÏèä" type="041">
+	<company id="6742" name="Kyosan Manufacturing" type="041">
 		<performance capital="620000" sales="6000000000" />
 		<capacity brand="8" marketing="7" quality="8" rationality="5" development="8" />
 		<stock total="6300" share="4" />
 	</company>
-	<company id="6752" name="èºé≠ìdäÌéYã∆" type="041">
+	<company id="6752" name="Matsushika Electric Industrial" type="041">
 		<performance capital="26000000" sales="100000000000" />
 		<capacity brand="9" marketing="8" quality="7" rationality="2" development="6" />
 		<stock total="24000" share="8000" />
 	</company>
-	<company id="6758" name="É\Éi" type="041">
+	<company id="6758" name="Sona" type="041">
 		<performance capital="50000000" sales="400000000000" />
 		<capacity brand="10" marketing="10" quality="5" rationality="10" development="8" />
 		<stock total="35000" share="2600" />
 	</company>
 	
-	<!--045Å@óAëóópã@äÌ-->
+	<!--045„ÄÄËº∏ÈÄÅÁî®Ê©üÂô®-->
 	
-	<!--042Å@é©ìÆé‘-->
+	<!--042„ÄÄËá™ÂãïËªä-->
 	
-	<company id="7201" name="ì˙éQé©ìÆé‘" type="042">
+	<company id="7201" name="Nisan Motors" type="042">
 		<performance capital="6000000" sales="6000000000" />
 		<capacity brand="8" marketing="5" quality="9" rationality="9" development="9" />
 		<stock total="60000" share="15000" />
 	</company>
-	<company id="7203" name="ÉgÉàÉgé©ìÆé‘" type="042">
+	<company id="7203" name="Toyoto Motors" type="042">
 		<performance capital="4000000" sales="30000000000" />
 		<capacity brand="10" marketing="9" quality="6" rationality="8" development="5" />
 		<stock total="100000" share="54000" />
 	</company>
-	<company id="7267" name="îºìcãZå§çHã∆" type="042">
+	<company id="7267" name="Handa Industries" type="042">
 		<performance capital="1000000" sales="25000000000" />
 		<capacity brand="6" marketing="7" quality="7" rationality="9" development="5" />
 		<stock total="36000" share="24000" />
 	</company>
 	
-	<!--043Å@ë¢ëD-->
+	<!--043„ÄÄÈÄ†Ëàπ-->
 	
-	<company id="7004" name="èÌó§ë¢ëD" type="043">
+	<company id="7004" name="Hidachi Shipyard" type="043">
 		<performance capital="3000000" sales="60000000000" />
 		<capacity brand="5" marketing="1" quality="6" rationality="3" development="6" />
 		<stock total="1000000" share="200000" />
 	</company>
-	<company id="7003" name="åıà‰ë¢ëD" type="043">
+	<company id="7003" name="Mitui Shipyard" type="043">
 		<performance capital="5000000" sales="80000000000" />
 		<capacity brand="8" marketing="8" quality="8" rationality="6" development="2" />
 		<stock total="2500000" share="150000" />
 	</company>
 	
-	<!--044Å@çqãÛã@-->
+	<!--044„ÄÄËà™Á©∫Ê©ü-->
 	
-	<!--046Å@ê∏ñßã@äÌ-->
+	<!--046„ÄÄÁ≤æÂØÜÊ©üÂô®-->
 	
-	<company id="7701" name="é»í√êªçÏèä" type="046">
+	<company id="7701" name="Shimadzu Manufacturing" type="046">
 		<performance capital="8500000" sales="10000000000" />
 		<capacity brand="8" marketing="4" quality="6" rationality="3" development="8" />
 		<stock total="2000000" share="500000" />
@@ -290,216 +290,216 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 		<stock total="12000" share="4000" />
 	</company>
 	
-	<!--047Å@àÛç¸-->
+	<!--047„ÄÄÂç∞Âà∑-->
 	
-	<company id="7911" name="ì˙ñ{ì î≈" type="047">
+	<company id="7911" name="Nihon Printing" type="047">
 		<performance capital="5700000" sales="60000000" />
 		<capacity brand="6" marketing="5" quality="6" rationality="2" development="1" />
 		<stock total="82000" share="42000" />
 	</company>
-	<company id="7914" name="çáìØàÛç¸" type="047">
+	<company id="7914" name="Gohdoh Printing" type="047">
 		<performance capital="2800000" sales="90000000" />
 		<capacity brand="5" marketing="3" quality="5" rationality="2" development="3" />
 		<stock total="380000" share="300000" />
 	</company>
 	
-	<!--048Å@ÇªÇÃëºêªë¢-->
+	<!--048„ÄÄ„Åù„ÅÆ‰ªñË£ΩÈÄ†-->
 	
-	<company id="7951" name="ÉÑÉ}Éo" type="048">
+	<company id="7951" name="Yamaba" type="048">
 		<performance capital="35000000" sales="3000000000" />
 		<capacity brand="8" marketing="7" quality="6" rationality="3" development="4" />
 		<stock total="300000" share="25000" />
 	</company>
-	<company id="7964" name="ÉTÉK" type="048">
+	<company id="7964" name="Saga" type="048">
 		<performance capital="200000" sales="2000000000" />
 		<capacity brand="5" marketing="2" quality="8" rationality="1" development="3" />
 		<stock total="180000" share="80000" />
 	</company>
 	
-	<!--071Å@è§ã∆ÅiâµîÑÅj-->
+	<!--071„ÄÄÂïÜÊ•≠ÔºàÂç∏Â£≤Ôºâ-->
 	
-	<company id="8002" name="íâçg" type="071">
+	<company id="8002" name="Tada Cosmetics" type="071">
 		<performance capital="300000000" sales="200000000000" />
 		<capacity brand="8" marketing="4" quality="3" rationality="6" development="1" />
 		<stock total="300000" share="100000" />
 	</company>
-	<company id="8058" name="å‹ïHè§éñ" type="071">
+	<company id="8058" name="Itsubishi Trading" type="071">
 		<performance capital="240000000" sales="1200000000000" />
 		<capacity brand="8" marketing="6" quality="8" rationality="2" development="3" />
 		<stock total="520000" share="87000" />
 	</company>
 	
-	<!--072Å@è§ã∆Åiè¨îÑÅj-->
+	<!--072„ÄÄÂïÜÊ•≠ÔºàÂ∞èÂ£≤Ôºâ-->
 	
-	<company id="8233" name="ëÈìáâÆ" type="072">
+	<company id="8233" name="Takashima-ya" type="072">
 		<performance capital="50000000" sales="5000000000" />
 		<capacity brand="8" marketing="5" quality="8" rationality="3" development="2" />
 		<stock total="380000" share="54000" />
 	</company>
-	<company id="8251" name="ÉpÉãÉN" type="072">
+	<company id="8251" name="Park" type="072">
 		<performance capital="31000000" sales="10000000000" />
 		<capacity brand="6" marketing="5" quality="7" rationality="4" development="3" />
 		<stock total="980000" share="34000" />
 	</company>
-	<company id="9831" name="ÉÑÉnÉ_ìdã@" type="072">
+	<company id="9831" name="Yahada Electric" type="072">
 		<performance capital="1000000" sales="500000000" />
 		<capacity brand="6" marketing="8" quality="1" rationality="6" development="1" />
 		<stock total="6000" share="3000" />
 	</company>
 	
-	<!--080Å@ã‡óZÅiã‚çsÅj-->
+	<!--080„ÄÄÈáëËûçÔºàÈäÄË°åÔºâ-->
 	
-	<company id="8307" name="GFJÉzÅ[ÉãÉfÉBÉìÉOÉX" type="080">
+	<company id="8307" name="GFJ Holdings" type="080">
 		<performance capital="20000000" sales="100000000000" />
 		<capacity brand="7" marketing="7" quality="5" rationality="2" development="2" />
 		<stock total="30000" share="10000" />
 	</company>
-	<company id="8308" name="ÇËÇªÇ§ÉzÅ[ÉãÉfÉBÉìÉOÉX" type="080">
+	<company id="8308" name="Risoh Holdings" type="080">
 		<performance capital="80000000" sales="90000000000" />
 		<capacity brand="6" marketing="8" quality="6" rationality="3" development="3" />
 		<stock total="850000" share="200000" />
 	</company>
-	<company id="8411" name="ÇﬁÇ≥ÇµÉtÉBÉiÉìÉVÉÉÉãÉOÉãÅ[Év" type="080">
+	<company id="8411" name="Musashi Financial Group" type="080">
 		<performance capital="43000000" sales="2000000000000" />
 		<capacity brand="6" marketing="5" quality="7" rationality="4" development="1" />
 		<stock total="780000" share="400000" />
 	</company>
 	
-	<!--081Å@ã‡óZÅièÿåîÅj-->
+	<!--081„ÄÄÈáëËûçÔºàË®ºÂà∏Ôºâ-->
 	
-	<company id="8403" name="ê¥óFêMëıã‚çs" type="081">
+	<company id="8403" name="Sumidomo Trust & Banking" type="081">
 		<performance capital="2000000" sales="550000000" />
 		<capacity brand="6" marketing="3" quality="6" rationality="3" development="4" />
 		<stock total="380000" share="20000" />
 	</company>
-	<company id="8604" name="îTâYÉzÅ[ÉãÉfÉBÉìÉOÉX" type="081">
+	<company id="8604" name="Noura Holdings" type="081">
 		<performance capital="1300000" sales="700000000" />
 		<capacity brand="5" marketing="8" quality="4" rationality="5" development="2" />
 		<stock total="190000" share="100000" />
 	</company>
 	
-	<!--082Å@ã‡óZÅiï€åØÅj-->
+	<!--082„ÄÄÈáëËûçÔºà‰øùÈô∫Ôºâ-->
 	
-	<company id="8752" name="åıà‰ê¥óFäCè„âŒç–ï€åØ" type="082">
+	<company id="8752" name="Mitui-Sumidomo Marine Insurance" type="082">
 		<performance capital="5000000" sales="800000000" />
 		<capacity brand="8" marketing="5" quality="6" rationality="3" development="2" />
 		<stock total="100000" share="25000" />
 	</company>
-	<company id="8761" name="Ç†Ç®Ç¢ëπäQï€åØ" type="082">
+	<company id="8761" name="Aoi Accident Insurance" type="082">
 		<performance capital="8100000" sales="3500000000" />
 		<capacity brand="7" marketing="8" quality="4" rationality="3" development="2" />
 		<stock total="860000" share="500000" />
 	</company>
 	
-	<!--083Å@ã‡óZÅiÇªÇÃëºÅj-->
+	<!--083„ÄÄÈáëËûçÔºà„Åù„ÅÆ‰ªñÔºâ-->
 	
-	<company id="8574" name="ÉvÉçÉ~ÉlÉìÉX" type="083">
+	<company id="8574" name="Prominence" type="083">
 		<performance capital="5600000" sales="9500000000" />
 		<capacity brand="8" marketing="6" quality="3" rationality="8" development="3" />
 		<stock total="60000" share="7000" />
 	</company>
-	<company id="8591" name="ÉIÉäÉGÉìÉ^Éã" type="083">
+	<company id="8591" name="Oriental" type="083">
 		<performance capital="3000000" sales="26000000000" />
 		<capacity brand="5" marketing="6" quality="2" rationality="6" development="5" />
 		<stock total="50000" share="33000" />
 	</company>
 	
-	<!--064Å@ïsìÆéY-->
+	<!--064„ÄÄ‰∏çÂãïÁî£-->
 	
-	<company id="8801" name="åıà‰ïsìÆéY" type="064">
+	<company id="8801" name="Mitui Real Estate" type="064">
 		<performance capital="16000000" sales="12000000000" />
 		<capacity brand="8" marketing="6" quality="3" rationality="6" development="2" />
 		<stock total="350000" share="200000" />
 	</company>
-	<company id="8804" name="ì˙ñ{åöï®" type="064">
+	<company id="8804" name="Nihon Construction" type="064">
 		<performance capital="50000000" sales="15000000000" />
 		<capacity brand="3" marketing="4" quality="7" rationality="3" development="3" />
 		<stock total="1800000" share="800000" />
 	</company>
 	
-	<!--061Å@ó§â^-->
+	<!--061„ÄÄÈô∏ÈÅã-->
 	
-	<company id="9062" name="ëSì˙ñ{í â^" type="061">
+	<company id="9062" name="All Japan Shipping" type="061">
 		<performance capital="20000000" sales="400000000" />
 		<capacity brand="5" marketing="5" quality="6" rationality="3" development="3" />
 		<stock total="200000" share="50000" />
 	</company>
-	<company id="9064" name="ÉÑÉ}ÉlÉRâ^óA" type="061">
+	<company id="9064" name="Yamaneko Express" type="061">
 		<performance capital="30000000" sales="300000000" />
 		<capacity brand="9" marketing="9" quality="8" rationality="5" development="4" />
 		<stock total="85000" share="30000" />
 	</company>
 	
-	<!--062Å@äCâ^-->
+	<!--062„ÄÄÊµ∑ÈÅã-->
 	
-	<company id="9101" name="ì˙ñ{ãDëD" type="062">
+	<company id="9101" name="Nippon Shipping" type="062">
 		<performance capital="3100000" sales="280000000" />
 		<capacity brand="8" marketing="6" quality="5" rationality="4" development="3" />
 		<stock total="500000" share="100000" />
 	</company>
-	<company id="9104" name="è§ëDåıà‰" type="062">
+	<company id="9104" name="Mitui Shipping" type="062">
 		<performance capital="7000000" sales="160000000" />
 		<capacity brand="3" marketing="3" quality="6" rationality="3" development="3" />
 		<stock total="300000" share="20000" />
 	</company>
 	
-	<!--063Å@ãÛâ^-->
+	<!--063„ÄÄÁ©∫ÈÅã-->
 	
-	<company id="9202" name="ëSì˙çq" type="063">
+	<company id="9202" name="All Japan Airways" type="063">
 		<performance capital="3000000" sales="50000000" />
 		<capacity brand="5" marketing="5" quality="4" rationality="3" development="1" />
 		<stock total="1000000" share="200000" />
 	</company>
-	<company id="9205" name="ì˙ñ{ãÛâ^" type="063">
+	<company id="9205" name="JAT" type="063">
 		<performance capital="1000000" sales="10000000" />
 		<capacity brand="9" marketing="9" quality="5" rationality="2" development="1" />
 		<stock total="400000" share="200000" />
 	</company>
 	
-	<!--065Å@ëqå…ÅEâ^óAä÷òA-->
+	<!--065„ÄÄÂÄâÂ∫´„ÉªÈÅãËº∏Èñ¢ÈÄ£-->
 	
-	<company id="9301" name="å‹ïHëqå…" type="065">
+	<company id="9301" name="Itsubishi Logistics" type="065">
 		<performance capital="500000" sales="300000000" />
 		<capacity brand="5" marketing="6" quality="8" rationality="3" development="4" />
 		<stock total="350000" share="180000" />
 	</company>
-	<company id="9303" name="ê¥óFëqå…" type="065">
+	<company id="9303" name="Sumidomo Logistics" type="065">
 		<performance capital="1400000" sales="800000000" />
 		<capacity brand="8" marketing="7" quality="6" rationality="5" development="2" />
 		<stock total="3500000" share="900000" />
 	</company>
 	
-	<!--070Å@èÓïÒÅEí êM-->
+	<!--070„ÄÄÊÉÖÂ†±„ÉªÈÄö‰ø°-->
 	
-	<company id="9404" name="Ç…Ç¡Ç€ÇÒÉeÉåÉr" type="070">
+	<company id="9404" name="Nippon TV" type="070">
 		<performance capital="25000000" sales="300000000000" />
 		<capacity brand="3" marketing="5" quality="4" rationality="3" development="2" />
 		<stock total="40000" share="5600" />
 	</company>
-	<company id="9432" name="	ÇmÇmÇs" type="070">
+	<company id="9432" name="NNT" type="070">
 		<performance capital="8500000" sales="5000000000" />
 		<capacity brand="8" marketing="4" quality="5" rationality="6" development="2" />
 		<stock total="6000" share="3500" />
 	</company>
 	
-	<!--050Å@ìdãCÅEÉKÉX-->
+	<!--050„ÄÄÈõªÊ∞ó„Éª„Ç¨„Çπ-->
 	
-	<company id="9501" name="ìåì˙ñ{ìdóÕ" type="050">
+	<company id="9501" name="East Japan Power" type="050">
 		<performance capital="33000000" sales="220000000000" />
 		<capacity brand="6" marketing="5" quality="8" rationality="4" development="2" />
 		<stock total="280000" share="100000" />
 	</company>
-	<company id="9502" name="íÜâõìdóÕ" type="050">
+	<company id="9502" name="Chuo Power" type="050">
 		<performance capital="20000000" sales="50000000000" />
 		<capacity brand="3" marketing="8" quality="5" rationality="3" development="1" />
 		<stock total="65000" share="30000" />
 	</company>
-	<company id="9503" name="ç„ê_ìdóÕ" type="050">
+	<company id="9503" name="Hanshin Power" type="050">
 		<performance capital="10000000" sales="30000000000" />
 		<capacity brand="7" marketing="3" quality="6" rationality="2" development="3" />
 		<stock total="48000" share="20000" />
 	</company>
 	
-	<!--091Å@ÉTÅ[ÉrÉX-->
+	<!--091„ÄÄ„Çµ„Éº„Éì„Çπ-->
 	
 </companies>

@@ -23,7 +23,8 @@ namespace freetrain.finance.stock
 		public static Economy theInstance { get { return _theInstance; 	} }
 
 		#region ITrendTarget
-		public string name { get{ return "ŒoÏ"; }}
+		public string name { get{ return "Economy"; }}
+		//! public string name { get{ return "çµŒæ¸ˆ"; }}
 		public Trend trend { get{ return businessTrend;}}
 		#endregion
 

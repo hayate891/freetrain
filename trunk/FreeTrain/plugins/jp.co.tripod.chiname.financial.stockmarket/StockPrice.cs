@@ -90,7 +90,7 @@ namespace freetrain.finance.stock
 	}
 
 	/// <summary>
-	/// StockPriceLogger ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// StockPriceLogger ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class StockPriceLogger

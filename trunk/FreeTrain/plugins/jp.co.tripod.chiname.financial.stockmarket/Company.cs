@@ -86,7 +86,7 @@ namespace freetrain.finance.stock
 	}
 
 	/// <summary>
-	/// Company ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// Company ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class Company : ITrendTarget
@@ -127,7 +127,8 @@ namespace freetrain.finance.stock
 		private Company()
 		{
 			id = "";
-			_name = "–³Œø";
+			_name = "Invalid";
+			//! _name = "ç„¡åŠ¹";
 			_type = "";
 			_capital = _benefit = _salesIdeal = _salesReal =0;
 			_scoreNormal = 0;
