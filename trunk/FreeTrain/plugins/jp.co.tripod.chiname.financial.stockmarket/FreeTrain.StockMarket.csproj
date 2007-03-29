@@ -1,251 +1,118 @@
-<VisualStudioProject>
-    <CSHARP
-        ProjectType = "Local"
-        ProductVersion = "7.10.3077"
-        SchemaVersion = "2.0"
-        ProjectGuid = "{9213F69B-447F-4B92-A046-BE7506871F47}"
-    >
-        <Build>
-            <Settings
-                ApplicationIcon = ""
-                AssemblyKeyContainerName = ""
-                AssemblyName = "StockMarket"
-                AssemblyOriginatorKeyFile = ""
-                DefaultClientScript = "JScript"
-                DefaultHTMLPageLayout = "Grid"
-                DefaultTargetSchema = "IE50"
-                DelaySign = "false"
-                OutputType = "Library"
-                PreBuildEvent = ""
-                PostBuildEvent = ""
-                RootNamespace = "freetrain.finance.stock"
-                RunPostBuildEvent = "OnBuildSuccess"
-                StartupObject = ""
-            >
-                <Config
-                    Name = "Debug"
-                    AllowUnsafeBlocks = "false"
-                    BaseAddress = "285212672"
-                    CheckForOverflowUnderflow = "false"
-                    ConfigurationOverrideFile = ""
-                    DefineConstants = "DEBUG;TRACE"
-                    DocumentationFile = ""
-                    DebugSymbols = "true"
-                    FileAlignment = "4096"
-                    IncrementalBuild = "true"
-                    NoStdLib = "false"
-                    NoWarn = ""
-                    Optimize = "false"
-                    OutputPath = "bin\Debug\"
-                    RegisterForComInterop = "false"
-                    RemoveIntegerChecks = "false"
-                    TreatWarningsAsErrors = "false"
-                    WarningLevel = "4"
-                />
-                <Config
-                    Name = "Release"
-                    AllowUnsafeBlocks = "false"
-                    BaseAddress = "285212672"
-                    CheckForOverflowUnderflow = "false"
-                    ConfigurationOverrideFile = ""
-                    DefineConstants = "TRACE"
-                    DocumentationFile = ""
-                    DebugSymbols = "false"
-                    FileAlignment = "4096"
-                    IncrementalBuild = "false"
-                    NoStdLib = "false"
-                    NoWarn = ""
-                    Optimize = "true"
-                    OutputPath = "bin\Release\"
-                    RegisterForComInterop = "false"
-                    RemoveIntegerChecks = "false"
-                    TreatWarningsAsErrors = "false"
-                    WarningLevel = "4"
-                />
-            </Settings>
-            <References>
-                <Reference
-                    Name = "FreeTrain.Controls"
-                    Project = "{D3B86CCE-530E-4472-AE8E-3FA5F903C206}"
-                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
-                    Private = "False"
-                />
-                <Reference
-                    Name = "FreeTrain.Core"
-                    Project = "{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}"
-                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
-                    Private = "False"
-                />
-                <Reference
-                    Name = "System"
-                    AssemblyName = "System"
-                    HintPath = "D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.dll"
-                />
-                <Reference
-                    Name = "System.Data"
-                    AssemblyName = "System.Data"
-                    HintPath = "D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Data.dll"
-                />
-                <Reference
-                    Name = "System.Drawing"
-                    AssemblyName = "System.Drawing"
-                    HintPath = "D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll"
-                />
-                <Reference
-                    Name = "System.Windows.Forms"
-                    AssemblyName = "System.Windows.Forms"
-                    HintPath = "D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll"
-                />
-                <Reference
-                    Name = "System.XML"
-                    AssemblyName = "System.Xml"
-                    HintPath = "D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
-                />
-            </References>
-        </Build>
-        <Files>
-            <Include>
-                <File
-                    RelPath = "AssemblyInfo.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "BusinessType.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "ChartControl.cs"
-                    SubType = "UserControl"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "ChartControl.resx"
-                    DependentUpon = "ChartControl.cs"
-                    BuildAction = "EmbeddedResource"
-                />
-                <File
-                    RelPath = "companies.xml"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "Company.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "EconomicalEvent.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Economy.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "EventManager.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "events.xml"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "NumberEditEx.cs"
-                    SubType = "UserControl"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "NumberEditEx.resx"
-                    DependentUpon = "NumberEditEx.cs"
-                    BuildAction = "EmbeddedResource"
-                />
-                <File
-                    RelPath = "plugin.xml"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "sample.xml"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "SEC_icon.bmp"
-                    BuildAction = "EmbeddedResource"
-                />
-                <File
-                    RelPath = "StockCompanyModule.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StockData.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StockMarketConfig.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StockMarketForm.cs"
-                    SubType = "Form"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StockMarketForm.resx"
-                    DependentUpon = "StockMarketForm.cs"
-                    BuildAction = "EmbeddedResource"
-                />
-                <File
-                    RelPath = "StockMarketPlugIn.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StockPrice.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StocksListHelper.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StocksWindow.cs"
-                    SubType = "Form"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "StocksWindow.resx"
-                    DependentUpon = "StocksWindow.cs"
-                    BuildAction = "EmbeddedResource"
-                />
-                <File
-                    RelPath = "TimeVariedChart.cs"
-                    SubType = "UserControl"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "TimeVariedChart.resx"
-                    DependentUpon = "TimeVariedChart.cs"
-                    BuildAction = "EmbeddedResource"
-                />
-                <File
-                    RelPath = "Trend.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "typelist.xml"
-                    BuildAction = "Content"
-                />
-            </Include>
-        </Files>
-    </CSHARP>
-</VisualStudioProject>
-
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:Conversion="urn:Conversion">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9213F69B-447F-4B92-A046-BE7506871F47}</ProjectGuid>
+    <RootNamespace>freetrain.finance.stock</RootNamespace>
+    <AssemblyName>StockMarket</AssemblyName>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon />
+    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <StartupObject />
+    <NoConfig>false</NoConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn />
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>bin\Debug\</OutputPath>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn />
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>bin\Release\</OutputPath>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Data.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.XML.dll</HintPath>
+      <Private />
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BusinessType.cs" />
+    <Compile Include="ChartControl.cs" />
+    <EmbeddedResource Include="ChartControl.resx">
+      <DependentUpon>ChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="companies.xml" />
+    <Compile Include="Company.cs" />
+    <Compile Include="EconomicalEvent.cs" />
+    <Compile Include="Economy.cs" />
+    <Compile Include="EventManager.cs" />
+    <Content Include="events.xml" />
+    <Compile Include="NumberEditEx.cs" />
+    <EmbeddedResource Include="NumberEditEx.resx">
+      <DependentUpon>NumberEditEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="plugin.xml" />
+    <Content Include="sample.xml" />
+    <EmbeddedResource Include="SEC_icon.bmp" />
+    <Compile Include="StockCompanyModule.cs" />
+    <Compile Include="StockData.cs" />
+    <Compile Include="StockMarketConfig.cs" />
+    <Compile Include="StockMarketForm.cs" />
+    <EmbeddedResource Include="StockMarketForm.resx">
+      <DependentUpon>StockMarketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="StockMarketPlugIn.cs" />
+    <Compile Include="StockPrice.cs" />
+    <Compile Include="StocksListHelper.cs" />
+    <Compile Include="StocksWindow.cs" />
+    <EmbeddedResource Include="StocksWindow.resx">
+      <DependentUpon>StocksWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="TimeVariedChart.cs" />
+    <EmbeddedResource Include="TimeVariedChart.resx">
+      <DependentUpon>TimeVariedChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Trend.cs" />
+    <Content Include="typelist.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Projects\FreeTrain\lib\Controls\FreeTrain.Controls.csproj">
+      <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
+      <Name>FreeTrain.Controls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\FreeTrain\core\FreeTrain.Core.csproj">
+      <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
+      <Name>FreeTrain.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>
