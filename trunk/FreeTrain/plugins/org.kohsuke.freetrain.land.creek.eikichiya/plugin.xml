@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>¬ì</title>
+	<title>Creek</title>
+	<!--!<title>å°å·</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
-	<author>‰i‹g‰®‰w‘O“X‚³‚ñ</author>
+	<author>æ°¸å‰å±‹é§…å‰åº—ã•ã‚“</author>
 	
 	<contribution type="land" id="{25AA2C3E-2014-4134-A4FB-DAD90FDBC758}">
-		<group>‰Íì</group>
-		<name>¬ì</name>
+		<group>River</group>
+		<!--!<group>æ²³å·</group>-->
+		<name>Creek</name>
+		<!--!<name>å°å·</name>-->
 		<class name="freetrain.world.land.creek.eikichiya.CreekBuilder"
 			codebase="bin/Debug/FreeTrain.Creek.Eikichiya.dll"/>
 		<picture src="creek.bmp">

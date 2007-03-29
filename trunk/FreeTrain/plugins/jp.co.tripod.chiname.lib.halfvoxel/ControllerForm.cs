@@ -293,8 +293,8 @@ namespace freetrain.world.structs.hv
 			this.cbRndColor2.Name = "cbRndColor2";
 			this.cbRndColor2.Size = new System.Drawing.Size(64, 16);
 			this.cbRndColor2.TabIndex = 7;
-			this.cbRndColor2.Text = "ランダム";
-			//! this.cbRndColor2.Text = "Random";
+			this.cbRndColor2.Text = "Random";
+			//! this.cbRndColor2.Text = "ランダム";
 			this.cbRndColor2.CheckedChanged += new System.EventHandler(this.onCheckBoxChanged);
 			// 
 			// idxColor2

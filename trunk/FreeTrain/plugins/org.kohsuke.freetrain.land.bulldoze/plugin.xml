@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>地表の整地</title>
+	<title>Level the ground</title>
+	<!--!<title>蝨ｰ陦ｨ縺ｮ謨ｴ蝨ｰ</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
-	<author>川口耕介</author>
+	<author>蟾晏哨閠穂ｻ�</author>
 	
 	
 	
 	<contribution type="land" id="{AE43E6DB-39F0-49FE-BE18-EE3FAC248FDE}">
-		<group>ブルドーザー</group>
+		<group>Bulldozer</group>
+		<!--!<group>繝悶Ν繝峨�ｼ繧ｶ繝ｼ</group>-->
 		<class name="freetrain.contributions.land.Bulldozer" />
 		<price>0</price>
 		<computerCannotBuild />

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>X—Ñ</title>
+	<title>Forest</title>
+	<!--!<title>æ£®æ—</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
-	<author>477‚³‚ñ</author>
+	<author>477ã•ã‚“</author>
 	
 	<depend on="org.kohsuke.freetrain.land.farmland" />
 	
@@ -19,8 +20,10 @@
 	</contribution>
 	
 	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}">
-		<group>X—Ñ</group>
-		<name>™</name>
+		<group>Forest</group>
+		<name>Cedar</name>
+		<!--!<group>æ£®æ—</group>
+		<name>æ‰</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -36,8 +39,10 @@
 	
 	
 	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}">
-		<group>X—Ñ</group>
-		<name>¼</name>
+		<group>Forest</group>
+		<name>Pine</name>
+		<!--!<group>æ£®æ—</group>
+		<name>æ¾</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -53,8 +58,10 @@
 	
 	
 	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}">
-		<group>X—Ñ</group>
-		<name>“í</name>
+		<group>Forest</group>
+		<name>Camphor</name>
+		<!--!<group>æ£®æ—</group>
+		<name>æ¥ </name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -70,8 +77,10 @@
 	
 	
 	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}">
-		<group>X—Ñ</group>
-		<name>•–</name>
+		<group>Forest</group>
+		<name>Maple</name>
+		<!--!<group>æ£®æ—</group>
+		<name>æ¥“</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -88,8 +97,10 @@
 	
 	
 	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}">
-		<group>X—Ñ</group>
-		<name>‹âˆÇ</name>
+		<group>Forest</group>
+		<name>Ginkgo</name>
+		<!--!<group>æ£®æ—</group>
+		<name>éŠ€æ</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -106,8 +117,10 @@
 	
 	
 	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}">
-		<group>X—Ñ</group>
-		<name>ƒuƒi</name>
+		<group>Forest</group>
+		<name>Beech</name>
+		<!--!<group>æ£®æ—</group>
+		<name>ãƒ–ãƒŠ</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -124,8 +137,10 @@
 	</contribution>
 
 	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-m">
-		<group>X—Ñ(R”§)</group>
-		<name>™</name>
+		<group>Forest (mountain)</group>
+		<name>Cedar</name>
+		<!--!<group>æ£®æ—(å±±è‚Œ)</group>
+		<name>æ‰</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -144,8 +159,10 @@
 	
 	
 	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-m">
-		<group>X—Ñ(R”§)</group>
-		<name>¼</name>
+		<group>Forest (mountain)</group>
+		<name>Pine</name>
+		<!--!<group>æ£®æ—(å±±è‚Œ)</group>
+		<name>æ¾</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -165,8 +182,10 @@
 	
 	
 	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}-m">
-		<group>X—Ñ(R”§)</group>
-		<name>“í</name>
+		<group>Forest (mountain)</group>
+		<name>Camphor</name>
+		<!--!<group>æ£®æ—(å±±è‚Œ)</group>
+		<name>æ¥ </name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -186,8 +205,10 @@
 	
 	
 	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}-m">
-		<group>X—Ñ(R”§)</group>
-		<name>•–</name>
+		<group>Forest (mountain)</group>
+		<name>Maple</name>
+		<!--!<group>æ£®æ—(å±±è‚Œ)</group>
+		<name>æ¥“</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -208,8 +229,10 @@
 	
 	
 	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}-m">
-		<group>X—Ñ(R”§)</group>
-		<name>‹âˆÇ</name>
+		<group>Forest (mountain)</group>
+		<name>Ginkgo</name>
+		<!--!<group>æ£®æ—(å±±è‚Œ)</group>
+		<name>éŠ€æ</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -230,8 +253,10 @@
 	
 	
 	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}-m">
-		<group>X—Ñ(R”§)</group>
-		<name>ƒuƒi</name>
+		<group>Forest (mountain)</group>
+		<name>Beech</name>
+		<!--!<group>æ£®æ—(å±±è‚Œ)</group>
+		<name>ãƒ–ãƒŠ</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -252,8 +277,10 @@
 	</contribution>
 
 	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-g">
-		<group>X—Ñ(‘Œ´)</group>
-		<name>™</name>
+		<group>Forest (grassland)</group>
+		<name>Cedar</name>
+		<!--!<group>æ£®æ—(è‰åŸ)</group>
+		<name>æ‰</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -272,8 +299,10 @@
 	
 	
 	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-g">
-		<group>X—Ñ(‘Œ´)</group>
-		<name>¼</name>
+		<group>Forest (grassland)</group>
+		<name>Pine</name>
+		<!--!<group>æ£®æ—(è‰åŸ)</group>
+		<name>æ¾</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -293,8 +322,10 @@
 	
 	
 	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}-g">
-		<group>X—Ñ(‘Œ´)</group>
-		<name>“í</name>
+		<group>Forest (grassland)</group>
+		<name>Camphor</name>
+		<!--!<group>æ£®æ—(è‰åŸ)</group>
+		<name>æ¥ </name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -314,8 +345,10 @@
 	
 	
 	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}-g">
-		<group>X—Ñ(‘Œ´)</group>
-		<name>•–</name>
+		<group>Forest (grassland)</group>
+		<name>Maple</name>
+		<!--!<group>æ£®æ—(è‰åŸ)</group>
+		<name>æ¥“</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -336,8 +369,10 @@
 	
 	
 	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}-g">
-		<group>X—Ñ(‘Œ´)</group>
-		<name>‹âˆÇ</name>
+		<group>Forest (grassland)</group>
+		<name>Ginkgo</name>
+		<!--!<group>æ£®æ—(è‰åŸ)</group>
+		<name>éŠ€æ</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -358,8 +393,10 @@
 	
 	
 	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}-g">
-		<group>X—Ñ(‘Œ´)</group>
-		<name>ƒuƒi</name>
+		<group>Forest (grassland)</group>
+		<name>Beech</name>
+		<!--!<group>æ£®æ—(è‰åŸ)</group>
+		<name>ãƒ–ãƒŠ</name>-->
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
