@@ -1,23 +1,27 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Šî–{‚a‚f‚lƒZƒbƒg</title>
+	<title>Basic ï¼¢ï¼§ï¼­ set</title>
+	<!--!<title>åŸºæœ¬ï¼¢ï¼§ï¼­ã‚»ãƒƒãƒˆ</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="bgm" id="{4DFF42D2-FD4A-4d45-A18A-F2882D936C73}">
-		<name>ŠJ‘ñ</name>
-		<author>Œã‰‡Ò‚`‚³‚ñ</author>
+		<name>Pioneering</name>
+		<!--!<name>é–‹æ‹“</name>-->
+		<author>å¾Œæ´è€…ï¼¡ã•ã‚“</author>
 		<href>map.mid</href>
 	</contribution>
 	
 	<contribution type="bgm" id="{32A3B9EB-8E86-4F4A-A314-891115B97A9F}">
-		<name>V‹»Z‘î’n</name>
-		<author>915‚³‚ñ</author>
+		<name>Housing boom</name>
+		<!--!<name>æ–°èˆˆä½å®…åœ°</name>-->
+		<author>915ã•ã‚“</author>
 		<href>S_JUTAKU.mid</href>
 	</contribution>
 	
 	<contribution type="bgm" id="{4435A2E7-8B1D-4342-BA93-F2750EF48C41}">
-		<name>“ss</name>
-		<author>915‚³‚ñ</author>
+		<name>City</name>
+		<!--!<name>éƒ½å¸‚</name>-->
+		<author>915ã•ã‚“</author>
 		<href>TOSHI.mid</href>
 	</contribution>
 </plug-in>

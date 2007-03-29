@@ -21,18 +21,27 @@ namespace freetrain.plugin.a4membgm
 				a4path = (string)Registry.LocalMachine.OpenSubKey("SOFTWARE").
 					OpenSubKey("ARTDINK").OpenSubKey("ATrainM").OpenSubKey("a4").GetValue("InstallPath");
 
-				a4path = Path.Combine(a4path,@"..\res");
+				a4path = Path.Combine(a4path,@"..Â¥res");
 
 				return new BGMContribution[]{
-					create("BLS.mid","î•ñ‚Ìƒe[ƒ}"),
-					create("FLK.mid","Œk’J"),
-					create("FNK.mid","ƒWƒIƒtƒƒ“ƒg"),
-					create("FOG.mid","–¶‰Jƒe[ƒ}"),
-					create("OLD.mid","—ûKƒe[ƒ}"),
-					create("RGG.mid","ŠÔ‘t‹È"),
-					create("WHT.mid","ƒnƒCƒeƒN“ss"),
-					create("OP_RIN.mid","‰J‚ÌƒI[ƒvƒjƒ“ƒO"),
-					create("OP_SNW.mid","á‚ÌƒI[ƒvƒjƒ“ƒO")
+					create("BLS.mid","æƒ…å ±ã®ãƒ†ãƒ¼ãƒ"),
+					create("FLK.mid","æ¸“è°·"),
+					create("FNK.mid","ã‚¸ã‚ªãƒ•ãƒ­ãƒ³ãƒˆ"),
+					create("FOG.mid","éœ§é›¨ãƒ†ãƒ¼ãƒ"),
+					create("OLD.mid","ç·´ç¿’ãƒ†ãƒ¼ãƒ"),
+					create("RGG.mid","é–“å¥æ›²"),
+					create("WHT.mid","ãƒã‚¤ãƒ†ã‚¯éƒ½å¸‚"),
+					create("OP_RIN.mid","é›¨ã®ã‚ªãƒ¼ãƒ—ãƒ‹ãƒ³ã‚°"),
+					create("OP_SNW.mid","é›ªã®ã‚ªãƒ¼ãƒ—ãƒ‹ãƒ³ã‚°")
+					//! create("BLS.mid","Information Theme"),
+					//! create("FLK.mid","The Ravine"),
+					//! create("FNK.mid","Geofront"),
+					//! create("FOG.mid","Drizzle Theme"),
+					//! create("OLD.mid","Practice Theme"),
+					//! create("RGG.mid","Interlude"),
+					//! create("WHT.mid","High-tech City"),
+					//! create("OP_RIN.mid","The Opening of Rain"),
+					//! create("OP_SNW.mid","The Opening of Snow")
 				};
 			} catch( Exception e ) {
 				Debug.WriteLine("A4m is not installed");
@@ -47,7 +56,8 @@ namespace freetrain.plugin.a4membgm
 
 		public override string title {
 			get {
-				return "‚`‚Sƒƒ‚ƒŠƒAƒ‹ƒpƒbƒN";
+				return "A4 Memorial Pack";
+				//! return "ï¼¡ï¼”ãƒ¡ãƒ¢ãƒªã‚¢ãƒ«ãƒ‘ãƒƒã‚¯";
 			}
 		}
 	}

@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>‚`‚Sƒƒ‚ƒŠƒAƒ‹ƒpƒbƒN‚a‚f‚l</title>
-	<author>ìŒûk‰î</author>
+	<title>A4 memorial pack BGM</title>
+	<!--!<title>ï¼¡ï¼”ãƒ¡ãƒ¢ãƒªã‚¢ãƒ«ãƒ‘ãƒƒã‚¯ï¼¢ï¼§ï¼­</title>-->
+	<author>å·å£è€•ä»‹</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	<description>
-		ƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚é‚`‚Sƒƒ‚ƒŠƒAƒ‹ƒpƒbƒN‚Ì‰¹Šy‚ğ—¬—p‚µ‚Ü‚·
+		Loads BGM from installed A4 memorial pack
 	</description>
+		<!--!ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ã„ã‚‹ï¼¡ï¼”ãƒ¡ãƒ¢ãƒªã‚¢ãƒ«ãƒ‘ãƒƒã‚¯ã®éŸ³æ¥½ã‚’æµç”¨ã—ã¾ã™-->
 	
 	<contribution type="bgmFactory" id="{28BCAA46-42C1-4da0-BD7B-348CBAA9DB9F}">
 		<class name="freetrain.plugin.a4membgm.FactoryImpl"

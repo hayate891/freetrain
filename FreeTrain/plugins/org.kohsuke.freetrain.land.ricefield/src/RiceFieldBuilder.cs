@@ -14,7 +14,7 @@ using freetrain.views;
 namespace freetrain.world.land.rice
 {
 	/// <summary>
-	/// RiceFieldBuilder ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// RiceFieldBuilder ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class RiceFieldBuilder : LandBuilderContribution
