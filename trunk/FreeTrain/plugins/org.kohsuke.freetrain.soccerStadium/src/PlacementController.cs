@@ -8,7 +8,7 @@ using freetrain.views.map;
 namespace freetrain.world.soccerstadium
 {
 	/// <summary>
-	/// PlacementController ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// PlacementController ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class PlacementController : FixedSizeStructController
 	{

@@ -76,7 +76,8 @@ namespace freetrain.world.rail.signal
 			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "ê›íu";
+			this.buttonPlace.Text = "Place";
+			//! this.buttonPlace.Text = "Ë®≠ÁΩÆ";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonRemove
@@ -86,7 +87,8 @@ namespace freetrain.world.rail.signal
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
 			this.buttonRemove.TabIndex = 5;
-			this.buttonRemove.Text = "ìPãé";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "Êí§Âéª";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// dirSelector
@@ -122,7 +124,8 @@ namespace freetrain.world.rail.signal
 																		  this.preview});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "SignalRailController";
-			this.Text = "êMçÜ";
+			this.Text = "Signal";
+			//! this.Text = "‰ø°Âè∑";
 			this.ResumeLayout(false);
 
 		}
@@ -213,14 +216,16 @@ namespace freetrain.world.rail.signal
 			if(isPlacing) {
 				TrafficVoxel tv = TrafficVoxel.getOrCreate(loc);
 				if(tv==null) {
-					MainWindow.showError("è·äQï®Ç™Ç†ÇËÇ‹Ç∑");
+					MainWindow.showError("There are obstacles");
+					//! MainWindow.showError("ÈöúÂÆ≥Áâ©„Åå„ÅÇ„Çä„Åæ„Åô");
 					return;
 				}
 
 				if(tv.railRoad==null || tv.railRoad is SingleRailRoad)
 					new SignalRailRoad(tv,currentType,currentDirection);
 				else
-					MainWindow.showError("ê›íuÇ≈Ç´Ç»Ç¢ê¸òHÇ≈Ç∑");
+					MainWindow.showError("Can not place on this rail");
+					//! MainWindow.showError("Ë®≠ÁΩÆ„Åß„Åç„Å™„ÅÑÁ∑öË∑Ø„Åß„Åô");
 			} else {
 				SignalRailRoad srr = RailRoad.get(loc) as SignalRailRoad;
 				if(srr!=null)

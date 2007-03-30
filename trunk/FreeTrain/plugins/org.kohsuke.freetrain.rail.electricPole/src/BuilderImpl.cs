@@ -23,7 +23,8 @@ namespace freetrain.world.rail.pole
 			if( contribution.canBeBuilt(loc) )
 				contribution.create(loc);
 			else
-				MainWindow.showError("ê›íuÇ≈Ç´Ç‹ÇπÇÒ");
+				MainWindow.showError("Can not place");
+				//! MainWindow.showError("Ë®≠ÁΩÆ„Åß„Åç„Åæ„Åõ„Çì");
 		}
 
 		public override void drawVoxel( QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt) {

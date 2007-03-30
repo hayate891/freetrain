@@ -11,11 +11,13 @@ namespace freetrain.world.soccerstadium
 		public ContributionImpl( XmlElement e ) : base(e) {
 		}
 
-		public override string name { get { return "ƒTƒbƒJ[ƒXƒ^ƒWƒAƒ€"; } }
+		public override string name { get { return "ã‚µãƒƒã‚«ãƒ¼ã‚¹ã‚¿ã‚¸ã‚¢ãƒ "; } }
+		//! public override string name { get { return "Soccer Stadium"; } }
 
 		public override string oneLineDescription {
 			get {
-				return "ƒTƒbƒJ[ƒXƒ^ƒWƒAƒ€‚ğŒšİ‚µ‚Äƒ`[ƒ€‚ğŒo‰c‚µ‚Ü‚·";
+				return "Build a soccer stadium and manage a team";
+				//! return "ã‚µãƒƒã‚«ãƒ¼ã‚¹ã‚¿ã‚¸ã‚¢ãƒ ã‚’å»ºè¨­ã—ã¦ãƒãƒ¼ãƒ ã‚’çµŒå–¶ã—ã¾ã™";
 			}
 		}
 
