@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>機関庫</title>
-	<author>477さん</author>
+	<title>Train garage</title>
+	<!--!<title>讖滄未蠎ｫ</title>-->
+	<author>477縺輔ｓ</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="specialRail" id="{93481807-D998-46d7-B1BE-CB2B5D086D67}">

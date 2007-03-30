@@ -145,9 +145,11 @@ namespace freetrain.world.rail.garage
 
 
 
-		public override string name { get { return "‹@ŠÖŒÉ"; } }
+		public override string name { get { return "Train garage"; } }
+		//! public override string name { get { return "æ©Ÿé–¢åº«"; } }
 
-		public override string oneLineDescription { get { return "—ñÔ‚ğ•ÛŠÇE®”õE“_ŒŸ‚·‚é{İB‚½‚¾‚Ìü‚è"; } }
+		public override string oneLineDescription { get { return "A facility to store, maintain, and service trains. Simply a decoration."; } }
+		//! public override string oneLineDescription { get { return "åˆ—è»Šã‚’ä¿ç®¡ãƒ»æ•´å‚™ãƒ»ç‚¹æ¤œã™ã‚‹æ–½è¨­ã€‚ãŸã ã®é£¾ã‚Š"; } }
 	
 		public override Bitmap previewBitmap {
 			get {

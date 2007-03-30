@@ -14,7 +14,8 @@ namespace freetrain.world.rail.signal
 		public MenuContributionImpl( XmlElement e ) : base(e) {}
 
 		public override void mergeMenu( MainMenu containerMenu ) {
-			MenuItem item = new MenuItem("M†(&G)...");
+			MenuItem item = new MenuItem("Si&gnals...");
+			//! MenuItem item = new MenuItem("ä¿¡å·(&G)...");
 			item.Click += new System.EventHandler(onClick);
 
 			containerMenu.MenuItems[2].MenuItems.Add(5,item);

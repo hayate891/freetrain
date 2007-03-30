@@ -19,17 +19,28 @@ namespace freetrain.world.soccerstadium
 		}
 
 		public static readonly OpponentTeam[] OPPONENTS = new OpponentTeam[]{
-			new OpponentTeam("ƒTƒKƒ“’¹|",0),
-			new OpponentTeam("ƒz[ƒŠ[ƒzƒbƒNOŒË",10),
-			new OpponentTeam("Ã–kƒxƒ‹ƒ}[ƒŒ",20),
-			new OpponentTeam("ƒRƒ“ƒTƒh[ƒŒ—ç–y",30),
-			new OpponentTeam("ƒ”ƒBƒbƒZƒ‹åŒË",40),
-			new OpponentTeam("ƒWƒ…ƒsƒ”ÖŒû",50),
-			new OpponentTeam("­’¹ƒAƒ“ƒgƒ‰[ƒY",60),
-			new OpponentTeam("‘©‹ƒxƒ‹ƒfƒB",70),
-			new OpponentTeam("–Ø”’ƒŒƒCƒ\ƒ‹",80),
-			new OpponentTeam("‰Y˜aƒuƒ‹[ƒX",90),
-			new OpponentTeam("´…ƒGƒXƒvƒŠƒY",100)
+			new OpponentTeam("Sagan Tosaku",0),
+			new OpponentTeam("Hollyhock Santo",10),
+			new OpponentTeam("Shohoku Bellmare",20),
+			new OpponentTeam("Consadole Iyahoro",30),
+			new OpponentTeam("Vissel Sakagibe",40),
+			new OpponentTeam("Jubilo Iwakuchi",50),
+			new OpponentTeam("Katori Antlers",60),
+			new OpponentTeam("Tokyo Verdi",70),
+			new OpponentTeam("Kijira Reysol",80),
+			new OpponentTeam("Urawa Blues",90),
+			new OpponentTeam("Shimizu Espirits",100)
+			//! new OpponentTeam("ã‚µã‚¬ãƒ³é³¥é…¢",0),
+			//! new OpponentTeam("ãƒ›ãƒ¼ãƒªãƒ¼ãƒ›ãƒƒã‚¯ä¸‰æˆ¸",10),
+			//! new OpponentTeam("æ¹˜åŒ—ãƒ™ãƒ«ãƒãƒ¼ãƒ¬",20),
+			//! new OpponentTeam("ã‚³ãƒ³ã‚µãƒ‰ãƒ¼ãƒ¬ç¤¼å¹Œ",30),
+			//! new OpponentTeam("ãƒ´ã‚£ãƒƒã‚»ãƒ«æ¦Šæˆ¸",40),
+			//! new OpponentTeam("ã‚¸ãƒ¥ãƒ”ãƒ­ç£å£",50),
+			//! new OpponentTeam("é¹¿é³¥ã‚¢ãƒ³ãƒˆãƒ©ãƒ¼ã‚º",60),
+			//! new OpponentTeam("æŸäº¬ãƒ™ãƒ«ãƒ‡ã‚£",70),
+			//! new OpponentTeam("æœ¨ç™½ãƒ¬ã‚¤ã‚½ãƒ«",80),
+			//! new OpponentTeam("æµ¦å’Œãƒ–ãƒ«ãƒ¼ã‚¹",90),
+			//! new OpponentTeam("æ¸…æ°´ã‚¨ã‚¹ãƒ—ãƒªã‚º",100)
 		};
 
 

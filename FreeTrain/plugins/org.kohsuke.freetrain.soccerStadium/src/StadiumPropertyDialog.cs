@@ -15,8 +15,8 @@ namespace freetrain.world.soccerstadium
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -48,7 +48,8 @@ namespace freetrain.world.soccerstadium
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(88, 16);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "ƒXƒ^ƒWƒAƒ€–¼(&N):";
+			this.label1.Text = "Stadium &name:";
+			//! this.label1.Text = "ã‚¹ã‚¿ã‚¸ã‚¢ãƒ å(&N):";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// stadiumName
@@ -65,7 +66,8 @@ namespace freetrain.world.soccerstadium
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(88, 16);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "ƒ`[ƒ€–¼(&T):";
+			this.label2.Text = "&Team name:";
+			//! this.label2.Text = "ãƒãƒ¼ãƒ å(&T):";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// teamName
@@ -94,7 +96,8 @@ namespace freetrain.world.soccerstadium
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(80, 24);
 			this.cancelButton.TabIndex = 5;
-			this.cancelButton.Text = "·¬İ¾Ù(&C)";
+			this.cancelButton.Text = "&Cancel";
+			//! this.cancelButton.Text = "ï½·ï½¬ï¾ï½¾ï¾™(&C)";
 			// 
 			// label3
 			// 
@@ -102,7 +105,8 @@ namespace freetrain.world.soccerstadium
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(96, 16);
 			this.label3.TabIndex = 6;
-			this.label3.Text = "Å‹ß‚Ì‘Îí¬Ñ:";
+			this.label3.Text = "Latest match results:";
+			//! this.label3.Text = "æœ€è¿‘ã®å¯¾æˆ¦æˆç¸¾:";
 			// 
 			// pastGameView
 			// 
@@ -121,21 +125,25 @@ namespace freetrain.world.soccerstadium
 			// 
 			// columnHeader4
 			// 
-			this.columnHeader4.Text = "“ú•t";
+			this.columnHeader4.Text = "Date";
+			//! this.columnHeader4.Text = "æ—¥ä»˜";
 			// 
 			// columnHeader1
 			// 
-			this.columnHeader1.Text = "‘Îí‘Šè";
+			this.columnHeader1.Text = "Match opponent";
+			//! this.columnHeader1.Text = "å¯¾æˆ¦ç›¸æ‰‹";
 			this.columnHeader1.Width = 100;
 			// 
 			// columnHeader2
 			// 
-			this.columnHeader2.Text = "ƒXƒRƒA";
+			this.columnHeader2.Text = "Score";
+			//! this.columnHeader2.Text = "ã‚¹ã‚³ã‚¢";
 			this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// columnHeader3
 			// 
-			this.columnHeader3.Text = "ŠÏ‹q“®ˆõ”";
+			this.columnHeader3.Text = "Number of spectators";
+			//! this.columnHeader3.Text = "è¦³å®¢å‹•å“¡æ•°";
 			this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.columnHeader3.Width = 80;
 			// 
@@ -145,7 +153,8 @@ namespace freetrain.world.soccerstadium
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(96, 16);
 			this.label4.TabIndex = 8;
-			this.label4.Text = "¡Œã‚Ì‘Îí—\’è:";
+			this.label4.Text = "Upcoming matches:";
+			//! this.label4.Text = "ä»Šå¾Œã®å¯¾æˆ¦äºˆå®š:";
 			// 
 			// upcomingGameView
 			// 
@@ -162,11 +171,13 @@ namespace freetrain.world.soccerstadium
 			// 
 			// columnHeader5
 			// 
-			this.columnHeader5.Text = "“ú•t";
+			this.columnHeader5.Text = "Date";
+			//! this.columnHeader5.Text = "æ—¥ä»˜";
 			// 
 			// columnHeader6
 			// 
-			this.columnHeader6.Text = "‘Îí‘Šè";
+			this.columnHeader6.Text = "Match opponent";
+			//! this.columnHeader6.Text = "å¯¾æˆ¦ç›¸æ‰‹";
 			this.columnHeader6.Width = 131;
 			// 
 			// groupBox1
@@ -179,7 +190,8 @@ namespace freetrain.world.soccerstadium
 			this.groupBox1.Size = new System.Drawing.Size(336, 80);
 			this.groupBox1.TabIndex = 10;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "ƒ`[ƒ€‰^‰c";
+			this.groupBox1.Text = "Team management";
+			//! this.groupBox1.Text = "ãƒãƒ¼ãƒ é‹å–¶";
 			// 
 			// button1
 			// 
@@ -188,7 +200,8 @@ namespace freetrain.world.soccerstadium
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(320, 24);
 			this.button1.TabIndex = 1;
-			this.button1.Text = "ƒ`[ƒ€PR‹­‰» (100,000)";
+			this.button1.Text = "Increase PR spending (100,000)";
+			//! this.button1.Text = "ãƒãƒ¼ãƒ PRå¼·åŒ– (100,000)";
 			this.button1.Click += new System.EventHandler(this.doPR);
 			// 
 			// advertise
@@ -198,7 +211,8 @@ namespace freetrain.world.soccerstadium
 			this.advertise.Name = "advertise";
 			this.advertise.Size = new System.Drawing.Size(320, 24);
 			this.advertise.TabIndex = 0;
-			this.advertise.Text = "ƒ`[ƒ€í—Í•â‹­ (100,000)";
+			this.advertise.Text = "Increase team strength (100,000)";
+			//! this.advertise.Text = "ãƒãƒ¼ãƒ æˆ¦åŠ›è£œå¼· (100,000)";
 			this.advertise.Click += new System.EventHandler(this.reinforce);
 			// 
 			// StadiumPropertyDialog
@@ -224,7 +238,8 @@ namespace freetrain.world.soccerstadium
 			this.MinimizeBox = false;
 			this.Name = "StadiumPropertyDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "ƒTƒbƒJ[ƒXƒ^ƒWƒAƒ€";
+			this.Text = "Soccer stadium";
+			//! this.Text = "ã‚µãƒƒã‚«ãƒ¼ã‚¹ã‚¿ã‚¸ã‚¢ãƒ ";
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

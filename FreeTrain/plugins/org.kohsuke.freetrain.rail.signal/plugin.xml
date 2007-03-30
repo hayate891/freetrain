@@ -1,32 +1,35 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>“S“¹—pM†‹@</title>
-	<author>ìŒûk‰î</author>
+	<title>Rail signals</title>
+	<!--!<title>é‰„é“ç”¨ä¿¡å·æ©Ÿ</title>-->
+	<author>å·å£è€•ä»‹</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
-	<!-- M†‚Ì‰æ‘œ‚ğŠO•”‚©‚ç’Ç‰Á‚·‚é‚½‚ß‚ÌƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚ğ’è‹` -->
+	<!-- ä¿¡å·ã®ç”»åƒã‚’å¤–éƒ¨ã‹ã‚‰è¿½åŠ ã™ã‚‹ãŸã‚ã®ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å®šç¾© -->
 	<contribution type="contribution" id="{59465CA9-C45E-4D11-8D57-95088E16E0F1}">
 		<name>railSignal</name>
 		<class name="freetrain.world.rail.signal.RailSignalContributionFactory"
 			codebase="bin/Debug/FreeTrain.RailSignal.dll" />
 	</contribution>
 	
-	<!-- “S“¹ƒƒjƒ…[‚ÉuM†v‚ğ’Ç‰Á -->
+	<!-- é‰„é“ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«ã€Œä¿¡å·ã€ã‚’è¿½åŠ  -->
 	<contribution type="menu" id="{DFB5CC3B-B0B0-4421-80DC-4E9D1E39A1E8}">
 		<class name="freetrain.world.rail.signal.MenuContributionImpl"
 			codebase="bin/Debug/FreeTrain.RailSignal.dll" />
 	</contribution>
 	
-	<!-- ƒfƒBƒtƒHƒ‹ƒg‚ÌM†‹@ -->
+	<!-- ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆã®ä¿¡å·æ©Ÿ -->
 	<contribution type="railSignal" id="{5349DE2A-DF3E-49B4-87A0-973105B7E6A4}">
-		<name>O“”®</name>
+		<name>Three-aspect signal</name>
+		<!--!<name>ä¸‰ç¯å¼</name>-->
 		<side>left</side>
 		<picture src="RailSignal.bmp"/>
 	</contribution>
 	
-	<!-- “ü‚ê‘Ö‚¦M†‹@ -->
+	<!-- å…¥ã‚Œæ›¿ãˆä¿¡å·æ©Ÿ -->
 	<contribution type="railSignal" id="{6FA55842-E693-414f-A120-0A3D0C613B21}">
-		<name>“ü‘ÖM†</name>
+		<name>Change signal</name>
+		<!--!<name>å…¥æ›¿ä¿¡å·</name>-->
 		<side>right</side>
 		<picture src="RailSignal2.bmp"/>
 	</contribution>

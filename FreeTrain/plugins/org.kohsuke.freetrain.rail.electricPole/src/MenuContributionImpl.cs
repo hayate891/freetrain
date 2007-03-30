@@ -14,7 +14,8 @@ namespace freetrain.world.rail.pole
 		public MenuContributionImpl( XmlElement e ) : base(e) {}
 
 		public override void mergeMenu( MainMenu containerMenu ) {
-			MenuItem mi = new MenuItem("‰Ëü’Œ...",new EventHandler(onClick));
+			MenuItem mi = new MenuItem("Utility poles...",new EventHandler(onClick));
+			//! MenuItem mi = new MenuItem("æ¶ç·šæŸ±...",new EventHandler(onClick));
 			containerMenu.MenuItems[2].MenuItems.Add(mi);
 		}
 
