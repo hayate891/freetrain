@@ -15,7 +15,7 @@ namespace nft.win32util
 		// Read data string of specified key and value from system registry.
 		public static string ReadKey(string key,string valname)
 		{
-			int n = key.IndexOf('¥¥');
+			int n = key.IndexOf('\\');
 			string baseKey = key.Substring(5,n-5);
 			string subKey = key.Substring(n+1);
 			RegistryKey rKey;

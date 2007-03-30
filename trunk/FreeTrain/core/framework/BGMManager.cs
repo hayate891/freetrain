@@ -60,7 +60,7 @@ namespace freetrain.framework
 						bgm.run();
 					} catch( Exception e ) {
 						MessageBox.Show( MainWindow.mainWindow,
-							"Can not play back¥n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
+							"Can not play back\n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
 							//! "再生できません¥n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
 					}
 				}

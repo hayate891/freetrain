@@ -1335,12 +1335,12 @@ namespace freetrain.framework
 			// we have to specify executing module directory
 			ProcessStartInfo info = new ProcessStartInfo();
 			// get default browser (exe) path
-			RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http¥shell¥open¥command");
+			RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
 			String val = rkey.GetValue("").ToString();
 			Debug.WriteLine(val);
-			if(val.StartsWith("¥""))
+			if(val.StartsWith("\""))
 			{
-				int n = val.IndexOf("¥"",1);
+				int n = val.IndexOf("\"",1);
 				info.FileName = val.Substring(1,n-1);
 				info.Arguments = val.Substring(n+1);
 			}

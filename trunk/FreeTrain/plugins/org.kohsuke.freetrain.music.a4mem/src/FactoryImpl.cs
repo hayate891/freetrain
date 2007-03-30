@@ -21,7 +21,7 @@ namespace freetrain.plugin.a4membgm
 				a4path = (string)Registry.LocalMachine.OpenSubKey("SOFTWARE").
 					OpenSubKey("ARTDINK").OpenSubKey("ATrainM").OpenSubKey("a4").GetValue("InstallPath");
 
-				a4path = Path.Combine(a4path,@"..¥res");
+				a4path = Path.Combine(a4path,@"..\res");
 
 				return new BGMContribution[]{
 					create("BLS.mid","情報のテーマ"),
