@@ -451,6 +451,14 @@
       <Name>FreeTrain.Controls</Name>
       <Private />
     </ProjectReference>
+    <COMReference Include="DxVBLib">
+      <Guid>{E1211242-8E94-11D1-8808-00C04FC2C602}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
