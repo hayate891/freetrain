@@ -35,7 +35,7 @@ namespace freetrain.world.accounting
 
 
 		private System.ComponentModel.Container components = null;
-		private WebBrowser webBrowser;
+		private freetrain.controls.WebBrowser webBrowser;
 
 		private BalanceSheetForm() {
 //			this.MdiParent = MainWindow.mainWindow;
