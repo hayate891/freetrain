@@ -1213,7 +1213,7 @@ namespace freetrain.views.bank
 		private void numelicEdit_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e) {
 			char key = e.KeyChar;
 			if( '0' <= key && '9' >= key ) return;
-			if( '¥b' == key ) return;
+			if( '\b' == key ) return;
 			e.Handled = true;														   
 		}
 

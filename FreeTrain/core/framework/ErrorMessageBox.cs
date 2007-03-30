@@ -37,13 +37,13 @@ namespace freetrain.framework
 			base.Icon =  SystemIcons.Error;
 			icon.Image = SystemIcons.Error.ToBitmap();
 
-			detail.Text = e.Message + "¥n" + e.StackTrace;
+			detail.Text = e.Message + "\n" + e.StackTrace;
 
 			while(true) {
 				e = e.InnerException;
 				if(e==null)		break;
 
-				detail.Text = detail.Text + "¥n" + e.Message + "¥n" + e.StackTrace;
+				detail.Text = detail.Text + "\n" + e.Message + "\n" + e.StackTrace;
 			}
 
 			detail.Select(0,0);

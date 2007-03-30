@@ -162,7 +162,7 @@ namespace Heat
 		private const int ZOOM = 4;
 
 		private void writeSnapshot(object sender, System.EventArgs e) {
-			FileStream o = new FileStream(@"c:¥heat.txt",FileMode.Create);
+			FileStream o = new FileStream(@"c:\heat.txt",FileMode.Create);
 			TextWriter w = new StreamWriter(o);
 			for(int i=0;i<100;i++)
 				w.WriteLine(m.temp[i,50]);

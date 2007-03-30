@@ -192,7 +192,7 @@ namespace nft.framework.plugin
 				object o = Core.plugins.getContribution(id);
 				if(o==null)
 					throw new SerializationException(
-						"Plugin that contains Contribution¥""+id+"¥" could not be found");
+						"Plugin that contains Contribution\""+id+"\" could not be found");
 						//! "コントリビューション¥""+id+"¥"を含むプラグインが見つかりません");
 				return o;
 			}

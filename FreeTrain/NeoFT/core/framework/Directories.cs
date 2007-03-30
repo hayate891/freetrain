@@ -35,20 +35,20 @@ namespace nft.framework
 			baseDir = getPath(args,"-B","-BASEDIR", current);
 			//baseDir = Assembly.GetAssembly(Type.GetType("nft.framework.Directories")).Location;
 
-			serviceDir = baseDir+@"extservices¥";
+			serviceDir = baseDir+@"extservices\";
 			GetOrCreate(serviceDir,false);
-			resDir = baseDir+@"res¥";
+			resDir = baseDir+@"res\";
 			GetOrCreate(resDir,false);			
-			dataDir = baseDir+@"data¥";
+			dataDir = baseDir+@"data\";
 			curGameDir = dataDir;
 			GetOrCreate(dataDir,false);
-			defaultSaveDir = dataDir+@"savedata¥";
+			defaultSaveDir = dataDir+@"savedata\";
 			GetOrCreate(defaultSaveDir,false);
-			workDir1 = baseDir+@"work¥";
+			workDir1 = baseDir+@"work\";
 			workDir2 = workDir1;
 			GetOrCreate(workDir2,false);
-			settingDir = getPath(args,"-S","-SETTINGDIR", dataDir+@"settings¥");
-			pluginDir = getPath(args,"-P","-PLUGINDIR",baseDir+@"plugins¥");
+			settingDir = getPath(args,"-S","-SETTINGDIR", dataDir+@"settings\");
+			pluginDir = getPath(args,"-P","-PLUGINDIR",baseDir+@"plugins\");
 		}
 
 		static private string getPath(Hashtable args, string key1, string key2, string defaultPath)
