@@ -233,7 +233,7 @@ namespace freetrain.framework.plugin
 		public void addContributionFactory( string name, ContributionFactory factory ) {
 			if( contributionFactories.Contains(name) )
 				throw new Exception(string.Format(
-					"contribution type ¥"{0}¥" is already registered.",name));
+					"contribution type \"{0}\" is already registered.",name));
 
 			contributionFactories.Add(name,factory);
 		}

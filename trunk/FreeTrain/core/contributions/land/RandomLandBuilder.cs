@@ -20,7 +20,7 @@ namespace freetrain.contributions.land
 	{
 		public RandomLandBuilder( XmlElement e ) : base(e) {
 			ArrayList array = new ArrayList();
-			string[] guids = XmlUtil.selectSingleNode( e, "lands" ).InnerText.Split(' ','¥t','¥r','¥n');
+			string[] guids = XmlUtil.selectSingleNode( e, "lands" ).InnerText.Split(' ','\t','\r','\n');
 			for( int i=0; i<guids.Length; i++ ) {
 				if(guids[i].Length!=0)
 					array.Add(guids[i]);
