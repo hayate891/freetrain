@@ -19,7 +19,8 @@ namespace freetrain.world.rail.tattc
 			this.controller = controller;
 			InitializeComponent();
 
-			this.Text = string.Format("ƒ_ƒCƒ„İ’èu{0}v",controller.name);
+			this.Text = string.Format("Diagram settings \"{0}\"",controller.name);
+			//! this.Text = string.Format("ãƒ€ã‚¤ãƒ¤è¨­å®šã€Œ{0}ã€",controller.name);
 
 			label1.Text = string.Format("{0}\n\n{1}",controller.name, label1.Text );
 			Show();
@@ -112,8 +113,8 @@ namespace freetrain.world.rail.tattc
 		private System.Windows.Forms.Button buttonOK;
 
 		/// <summary>
-		/// Designer ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·BƒR[ƒh ƒGƒfƒBƒ^‚Å
-		/// ‚±‚Ìƒƒ\ƒbƒh‚ÌƒRƒ“ƒeƒ“ƒc‚ğ•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// Designer ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§
+		/// ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent() {
 			this.label1 = new System.Windows.Forms.Label();
@@ -126,7 +127,8 @@ namespace freetrain.world.rail.tattc
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(104, 64);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "ƒ|ƒCƒ“ƒgAƒz[ƒ€A‰w‚ğƒNƒŠƒbƒN‚µ‚Äƒ_ƒCƒ„‚ğİ’è‚µ‚Ä‚­‚¾‚³‚¢";
+			this.label1.Text = "Click on a point, platform, or station to set diagram settings";
+			//! this.label1.Text = "ãƒã‚¤ãƒ³ãƒˆã€ãƒ›ãƒ¼ãƒ ã€é§…ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãƒ€ã‚¤ãƒ¤ã‚’è¨­å®šã—ã¦ãã ã•ã„";
 			// 
 			// buttonOK
 			// 
@@ -134,7 +136,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonOK.Name = "buttonOK";
 			this.buttonOK.Size = new System.Drawing.Size(72, 24);
 			this.buttonOK.TabIndex = 1;
-			this.buttonOK.Text = "•Â‚¶‚é(&C)";
+			this.buttonOK.Text = "&Close";
+			//! this.buttonOK.Text = "é–‰ã˜ã‚‹(&C)";
 			this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
 			// 
 			// TATModalController
@@ -145,7 +148,8 @@ namespace freetrain.world.rail.tattc
 																		  this.buttonOK,
 																		  this.label1});
 			this.Name = "TATModalController";
-			this.Text = "ƒ_ƒCƒ„İ’è";
+			this.Text = "Diagram settings";
+			//! this.Text = "ãƒ€ã‚¤ãƒ¤è¨­å®š";
 			this.ResumeLayout(false);
 		}
 		#endregion

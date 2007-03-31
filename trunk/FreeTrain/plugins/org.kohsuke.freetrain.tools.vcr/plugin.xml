@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>ビデオレコーダ</title>
-	<author>川口耕介</author>
+	<title>Video recorder</title>
+	<!--!<title>繝薙ョ繧ｪ繝ｬ繧ｳ繝ｼ繝</title>-->
+	<author>蟾晏哨閠穂ｻ�</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="dockingContent" id="{144A583C-3D64-4076-BAE7-FFDBBEC79B17}">
-		<name>ビデオレコーダ</name>
+		<name>Video recorder</name>
+		<!--!<name>繝薙ョ繧ｪ繝ｬ繧ｳ繝ｼ繝</name>-->
 		<multiple/>
-		<menu name="ビデオレコーダ" location="view" />
+		<menu name="Video recorder" location="view" />
+		<!--!<menu name="繝薙ョ繧ｪ繝ｬ繧ｳ繝ｼ繝" location="view" />-->
 		<class name="freetrain.tools.vcr.VCRConsole"
 			codebase="bin/Debug/FreeTrain.VCR.dll" />
 	</contribution>

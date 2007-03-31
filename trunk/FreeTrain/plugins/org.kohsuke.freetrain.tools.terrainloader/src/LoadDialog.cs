@@ -51,8 +51,8 @@ namespace freetrain.tools.terrainloader
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -79,7 +79,8 @@ namespace freetrain.tools.terrainloader
 			// openFileDialog
 			// 
 			this.openFileDialog.DefaultExt = "bmp";
-			this.openFileDialog.Filter = "‘S‚Ä‚Ì‰æ‘œ (*.bmp;*.gif;*.png;*.jpg)|*.bmp;*.gif;*.png;*.jpg";
+			this.openFileDialog.Filter = "All images (*.bmp;*.gif;*.png;*.jpg)|*.bmp;*.gif;*.png;*.jpg";
+			//! this.openFileDialog.Filter = "å…¨ã¦ã®ç”»åƒ (*.bmp;*.gif;*.png;*.jpg)|*.bmp;*.gif;*.png;*.jpg";
 			this.openFileDialog.RestoreDirectory = true;
 			// 
 			// label1
@@ -88,7 +89,8 @@ namespace freetrain.tools.terrainloader
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(72, 16);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "ƒtƒ@ƒCƒ‹–¼(&F)F";
+			this.label1.Text = "&File name:";
+			//! this.label1.Text = "ãƒ•ã‚¡ã‚¤ãƒ«å(&F)ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// fileName
@@ -107,7 +109,8 @@ namespace freetrain.tools.terrainloader
 			this.buttonSelectFile.Name = "buttonSelectFile";
 			this.buttonSelectFile.Size = new System.Drawing.Size(64, 20);
 			this.buttonSelectFile.TabIndex = 2;
-			this.buttonSelectFile.Text = "‘I‘ğ(&S)...";
+			this.buttonSelectFile.Text = "&Select...";
+			//! this.buttonSelectFile.Text = "é¸æŠ(&S)...";
 			this.buttonSelectFile.Click += new System.EventHandler(this.onSelectFile);
 			// 
 			// label2
@@ -116,7 +119,8 @@ namespace freetrain.tools.terrainloader
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(72, 16);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "ƒvƒŒƒrƒ…[F";
+			this.label2.Text = "Preview:";
+			//! this.label2.Text = "ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// previewBox
@@ -147,7 +151,8 @@ namespace freetrain.tools.terrainloader
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.Size = new System.Drawing.Size(80, 24);
 			this.buttonCancel.TabIndex = 6;
-			this.buttonCancel.Text = "·¬İ¾Ù(&C)";
+			this.buttonCancel.Text = "&Cancel";
+			//! this.buttonCancel.Text = "ï½·ï½¬ï¾ï½¾ï¾™(&C)";
 			// 
 			// groupBox1
 			// 
@@ -165,7 +170,8 @@ namespace freetrain.tools.terrainloader
 			this.groupBox1.Size = new System.Drawing.Size(168, 152);
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "‘å‚«‚³";
+			this.groupBox1.Text = "Size";
+			//! this.groupBox1.Text = "å¤§ãã•";
 			// 
 			// water
 			// 
@@ -181,7 +187,8 @@ namespace freetrain.tools.terrainloader
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(64, 16);
 			this.label6.TabIndex = 6;
-			this.label6.Text = "…–Ê‚(&A)F";
+			this.label6.Text = "W&ater level:";
+			//! this.label6.Text = "æ°´é¢é«˜(&A)ï¼š";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// sizeZ
@@ -198,7 +205,8 @@ namespace freetrain.tools.terrainloader
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(64, 16);
 			this.label5.TabIndex = 4;
-			this.label5.Text = "‚‚³(&H)F";
+			this.label5.Text = "&Height";
+			//! this.label5.Text = "é«˜ã•(&H)ï¼š";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// sizeY
@@ -215,7 +223,8 @@ namespace freetrain.tools.terrainloader
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(64, 16);
 			this.label4.TabIndex = 2;
-			this.label4.Text = "‰œs(&D)F";
+			this.label4.Text = "&Depth";
+			//! this.label4.Text = "å¥¥è¡Œ(&D)ï¼š";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// sizeX
@@ -232,7 +241,8 @@ namespace freetrain.tools.terrainloader
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(64, 16);
 			this.label3.TabIndex = 0;
-			this.label3.Text = "•(&W)F";
+			this.label3.Text = "å¹…(&W)ï¼š";
+			//! this.label3.Text = "&Width";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// LoadDialog
@@ -255,7 +265,8 @@ namespace freetrain.tools.terrainloader
 			this.MinimizeBox = false;
 			this.Name = "LoadDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "’nŒ`‚Ì“Ç‚İ‚İ";
+			this.Text = "Loading terrain";
+			//! this.Text = "åœ°å½¢ã®èª­ã¿è¾¼ã¿";
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

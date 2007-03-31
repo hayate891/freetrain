@@ -17,7 +17,8 @@ namespace freetrain.world.terrain.terrace
 			MountainVoxel mv = World.world[loc] as MountainVoxel;
 			
 			if(mv==null) {
-				MainWindow.showError("R”§‚µ‚©H–‚Å‚«‚Ü‚¹‚ñ");
+				MainWindow.showError("Can only be placed on mountainsides");
+				//! MainWindow.showError("å±±è‚Œã—ã‹å·¥äº‹ã§ãã¾ã›ã‚“");
 				return;
 			}
 
@@ -25,7 +26,8 @@ namespace freetrain.world.terrain.terrace
 
 			for( int i=0; i<4; i++ ) {
 				if( World.world.getGroundLevel(loc+Direction.get(i*2)) > h ) {
-					MainWindow.showError("İ’uˆÊ’u‚ª•s“KØ‚Å‚·");
+					MainWindow.showError("This location is inappropriate");
+					//! MainWindow.showError("è¨­ç½®ä½ç½®ãŒä¸é©åˆ‡ã§ã™");
 					return;
 				}
 			}

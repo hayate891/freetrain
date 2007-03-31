@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plug-in [
 <!ENTITY colorMapTest '
 	<spriteType name="colorMapped">
@@ -51,7 +51,8 @@
 	</population>
 '>
 <!ENTITY SinjukuMitsuiParam '
-	<group>VhOˆäƒrƒ‹</group>
+	<group>Shinjuku Mitsui Building</group>
+	<!--!<group>æ–°å®¿ä¸‰äº•ãƒ“ãƒ«</group>-->
 	<price>39000</price>
 	<minHeight>3</minHeight>
 	<maxHeight>10</maxHeight>
@@ -68,7 +69,8 @@
 	</population>
 '>
 <!ENTITY SinjukuSumitomoParam '
-	<group>VhZ—Fƒrƒ‹</group>
+	<group>Shinjuku Sumitomo Building</group>
+	<!--!<group>æ–°å®¿ä½å‹ãƒ“ãƒ«</group>-->
 	<price>30000</price>
 	<size>5,5</size>
 	<minHeight>3</minHeight>
@@ -104,13 +106,16 @@
 
 
 <plug-in>
-	<title>Œš•¨ƒZƒbƒg</title>
-	<author>477‚³‚ñ</author>
-	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
+	<title>Building set</title>
+	<!--!<title>å»ºç‰©ã‚»ãƒƒãƒˆ</title>-->
+	<author>477ã•ã‚“</author>
+	<homepage>http://www.rocket.ne.jp/â€¾nao/</homepage>
 	
 	<contribution type="commercial" id="{BC43CE38-601A-42c7-992A-6049CCD29B94}">
-		<group>ƒRƒ“ƒrƒj</group>
-		<name>ƒZƒuƒ“ƒCƒŒƒuƒ“</name>
+		<group>Convenience store</group>
+		<!--!<group>ã‚³ãƒ³ãƒ“ãƒ‹</group>-->
+		<name>7-Eleven</name>
+		<!--!<name>ã‚»ãƒ–ãƒ³ã‚¤ãƒ¬ãƒ–ãƒ³</name>-->
 		<price>200</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -126,7 +131,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{2C3ED0DA-FBA1-4586-9691-67DC93B851C9}">
-		<name>˜V•Ü•S‰İ“X</name>
+		<name>Shinise Department Store</name>
+		<!--!<name>è€èˆ—ç™¾è²¨åº—</name>-->
 		<price>2800</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -142,7 +148,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{9F3E82AD-2A49-4aef-954C-E872F535B3D8}">
-		<name>•ª÷ƒ}ƒ“ƒVƒ‡ƒ“</name>
+		<name>Condo</name>
+		<!--!<name>åˆ†è­²ãƒãƒ³ã‚·ãƒ§ãƒ³</name>-->
 		<price>2400</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -158,7 +165,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{27D6D0C0-2B1A-4494-9257-14C208168075}">
-		<name>•ª÷Z‘îˆêŒËŒš‚Ä</name>
+		<name>Single condo</name>
+		<!--!<name>åˆ†è­²ä½å®…ä¸€æˆ¸å»ºã¦</name>-->
 		<price>110</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -179,7 +187,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-0">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -194,7 +203,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-1">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -209,7 +219,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-2">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -224,7 +235,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-3">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -239,7 +251,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-4">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -254,7 +267,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-5">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -269,7 +283,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-6">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -284,7 +299,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-7">
-		<name>’†‘wG‹ƒIƒtƒBƒXƒrƒ‹</name>
+		<name>Medium-rise office building</name>
+		<!--!<name>ä¸­å±¤é›‘å±…ã‚ªãƒ•ã‚£ã‚¹ãƒ“ãƒ«</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>3</height>
@@ -304,7 +320,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{442C7E12-A3BA-4c25-9129-C3803EA760BC}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>3,2</size>
 		<minHeight>2</minHeight>
@@ -329,7 +346,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{8495D468-B2EF-4816-9C2A-67D8D68FCBDA}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>2,3</size>
 		<minHeight>2</minHeight>
@@ -353,7 +371,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{1E3FC997-DD98-4b47-82E0-D1C5914B9537}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>3,2</size>
 		<minHeight>2</minHeight>
@@ -377,7 +396,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{615FF4AA-898E-466f-8004-1855F82C1B5B}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>2,3</size>
 		<minHeight>2</minHeight>
@@ -416,7 +436,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{9BF4DD25-050A-4633-BC8B-0B8B226FC5E8}">
-		<group>‘İ‚µƒrƒ‹(ƒwƒŠƒ|[ƒg•t)</group>
+		<group>Building for rent (with heliport)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(ãƒ˜ãƒªãƒãƒ¼ãƒˆä»˜)</group>-->
 		<price>4800</price>
 		<size>3,2</size>
 		<minHeight>3</minHeight>
@@ -437,7 +458,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{5E12C371-F928-40f4-B661-FFC2DC71750E}">
-		<group>‘İ‚µƒrƒ‹(ƒwƒŠƒ|[ƒg•t)</group>
+		<group>Building for rent (with heliport)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(ãƒ˜ãƒªãƒãƒ¼ãƒˆä»˜)</group>-->
 		<price>4800</price>
 		<size>2,3</size>
 		<minHeight>3</minHeight>
@@ -775,7 +797,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{1F81CA6C-4D44-418B-A242-A9E4104648D3}">
-		<name>¬‹K–ÍG‹ƒrƒ‹</name>
+		<name>Small scale office building</name>
+		<!--!<name>å°è¦æ¨¡é›‘å±…ãƒ“ãƒ«</name>-->
 		<price>250</price>
 		<size>1,1</size>
 		<minHeight>2</minHeight>
@@ -795,7 +818,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{5FACC378-154D-4FAE-8BDE-3C2DA1BAB635}">
-		<name>¬‹K–ÍG‹ƒrƒ‹</name>
+		<name>Small scale office building</name>
+		<!--!<name>å°è¦æ¨¡é›‘å±…ãƒ“ãƒ«</name>-->
 		<price>250</price>
 		<size>1,1</size>
 		<minHeight>2</minHeight>
@@ -824,7 +848,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{736F1D68-3796-43F7-8495-11AE63F86F8E}">
-		<name>¬‹K–ÍG‹ƒrƒ‹</name>
+		<name>Small scale office building</name>
+		<!--!<name>å°è¦æ¨¡é›‘å±…ãƒ“ãƒ«</name>-->
 		<price>250</price>
 		<size>1,1</size>
 		<minHeight>2</minHeight>
@@ -844,7 +869,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{813736D4-63A5-44DE-884C-7B10CFAEA582}">
-		<name>¬‹K–ÍG‹ƒrƒ‹</name>
+		<name>Small scale office building</name>
+		<!--!<name>å°è¦æ¨¡é›‘å±…ãƒ“ãƒ«</name>-->
 		<price>250</price>
 		<size>1,1</size>
 		<minHeight>2</minHeight>
@@ -875,7 +901,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{542C633F-5F59-495E-9CF2-9BB46980F9EA}">
-		<name>¬‹K–ÍG‹ƒrƒ‹</name>
+		<name>Small scale office building</name>
+		<!--!<name>å°è¦æ¨¡é›‘å±…ãƒ“ãƒ«</name>-->
 		<price>250</price>
 		<size>1,1</size>
 		<minHeight>2</minHeight>
@@ -895,7 +922,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{346B2781-75A7-4EE3-BF36-9C8B212DD678}">
-		<name>¬‹K–ÍG‹ƒrƒ‹</name>
+		<name>Small scale office building</name>
+		<!--!<name>å°è¦æ¨¡é›‘å±…ãƒ“ãƒ«</name>-->
 		<price>250</price>
 		<size>1,1</size>
 		<minHeight>2</minHeight>
@@ -920,9 +948,10 @@
 	
 	
 	
-	<!-- F‘Ö‚¦‚ÌÀŒ± -->
+	<!-- è‰²æ›¿ãˆã®å®Ÿé¨“ -->
 	<contribution type="varHeightBuilding" id="{40CBC11A-36B2-40BB-9A2D-EAA48973C478}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>3,2</size>
 		<minHeight>2</minHeight>
@@ -945,7 +974,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{8495D468-B2EF-4816-9C2A-67D8D68F0002}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>2,3</size>
 		<minHeight>2</minHeight>
@@ -969,7 +999,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{1E3FC997-DD98-4b47-82E0-D1C5914B0002}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>3,2</size>
 		<minHeight>2</minHeight>
@@ -993,7 +1024,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{615FF4AA-898E-466f-8004-1855F82C0002}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>2,3</size>
 		<minHeight>2</minHeight>
@@ -1017,7 +1049,8 @@
 
 
 	<contribution type="varHeightBuilding" id="{40CBC11A-36B2-40BB-C477-EAA48973C478}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>3,2</size>
 		<minHeight>2</minHeight>
@@ -1040,7 +1073,8 @@
 	</contribution>
 	
 	<contribution type="varHeightBuilding" id="{8495D468-B2EF-4816-C477-67D8D68F0002}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>2,3</size>
 		<minHeight>2</minHeight>
@@ -1064,7 +1098,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{1E3FC997-DD98-4b47-C477-D1C5914B0002}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>3,2</size>
 		<minHeight>2</minHeight>
@@ -1088,7 +1123,8 @@
 	
 	
 	<contribution type="varHeightBuilding" id="{615FF4AA-898E-466f-C477-1855F82C0002}">
-		<group>‘İ‚µƒrƒ‹(A)</group>
+		<group>Building for rent (A)</group>
+		<!--!<group>è²¸ã—ãƒ“ãƒ«(A)</group>-->
 		<price>3900</price>
 		<size>2,3</size>
 		<minHeight>2</minHeight>

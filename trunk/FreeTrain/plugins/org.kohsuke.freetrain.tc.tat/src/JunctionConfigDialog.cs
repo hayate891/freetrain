@@ -25,7 +25,7 @@ namespace freetrain.world.rail.tattc
 
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -43,8 +43,8 @@ namespace freetrain.world.rail.tattc
 		private System.ComponentModel.IContainer components;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -82,7 +82,8 @@ namespace freetrain.world.rail.tattc
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(88, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "is•ûŒü(&D)F";
+			this.label1.Text = "&Direction of movement:";
+			//! this.label1.Text = "é€²è¡Œæ–¹å‘(&D)ï¼š";
 			// 
 			// buttonOk
 			// 
@@ -109,7 +110,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonAdvanced.Name = "buttonAdvanced";
 			this.buttonAdvanced.Size = new System.Drawing.Size(72, 24);
 			this.buttonAdvanced.TabIndex = 2;
-			this.buttonAdvanced.Text = "Ú×(&A)...";
+			this.buttonAdvanced.Text = "&Advanced...";
+			//! this.buttonAdvanced.Text = "è©³ç´°(&A)...";
 			this.buttonAdvanced.Click += new System.EventHandler(this.buttonAdvanced_Click);
 			// 
 			// JunctionConfigDialog
@@ -126,7 +128,8 @@ namespace freetrain.world.rail.tattc
 																		  this.buttonDirection});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Name = "JunctionConfigDialog";
-			this.Text = "ƒ|ƒCƒ“ƒg‚Ìİ’è";
+			this.Text = "Point settings";
+			//! this.Text = "ãƒã‚¤ãƒ³ãƒˆã®è¨­å®š";
 			this.ResumeLayout(false);
 
 		}

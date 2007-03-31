@@ -82,12 +82,16 @@ namespace freetrain.world.rail.manualtc
 
 		public override void config( IWin32Window owner ) {
 			MessageBox.Show(owner,
-				"ƒ|ƒCƒ“ƒg’Ê‰ß‚É¶–îˆó‚Ü‚½‚Í‰E–îˆó‚ğ‰Ÿ‚µ‚Ä‚¢‚é‚Æ•ªŠò‚µ‚Ü‚·\n"+
-				"‰w‚É·‚µŠ|‚©‚Á‚½‚Æ‚«‚ÉSHIFT‚ğ‰Ÿ‚µ‚Ä‚¢‚é‚Æ’Ê‰ß‚µ‚Ü‚·\n"+
-				"‰w‚É’âÔ‚µ‚½‚çAã–îˆó‚ğ‰Ÿ‚·‚Æ”­Ô‚µA‰º–îˆó‚ÅÜ‚è•Ô‚µ‚Ü‚·\n",
-				"‘€ì•û–@",
+				"When you pass a junction, press left or right arrow to turn\n"+
+				"When you reach a station, press shift to pass it\n"+
+				"If you stop at a station, press up arrow to leave or down arrow to turn back\n",
+				"How to control",
 				MessageBoxButtons.OK,
 				MessageBoxIcon.Information );
+				//! "ãƒã‚¤ãƒ³ãƒˆé€šéæ™‚ã«å·¦çŸ¢å°ã¾ãŸã¯å³çŸ¢å°ã‚’æŠ¼ã—ã¦ã„ã‚‹ã¨åˆ†å²ã—ã¾ã™Â¥n"+
+				//! "é§…ã«å·®ã—æ›ã‹ã£ãŸã¨ãã«SHIFTã‚’æŠ¼ã—ã¦ã„ã‚‹ã¨é€šéã—ã¾ã™Â¥n"+
+				//! "é§…ã«åœè»Šã—ãŸã‚‰ã€ä¸ŠçŸ¢å°ã‚’æŠ¼ã™ã¨ç™ºè»Šã—ã€ä¸‹çŸ¢å°ã§æŠ˜ã‚Šè¿”ã—ã¾ã™Â¥n",
+				//! "æ“ä½œæ–¹æ³•",
 		}
 	}
 }

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>ƒŒƒ“ƒK‹´‹r</title>
-	<author>915‚³‚ñ</author>
+	<title>Brick piers</title>
+	<!--!<title>ãƒ¬ãƒ³ã‚¬æ©‹è„š</title>-->
+	<author>915ã•ã‚“</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	
@@ -11,7 +12,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{6EFAC132-DEAF-4989-BDE4-5865B1669986}">
-		<group>ƒŒƒ“ƒK‹´‹r</group>
+		<group>Brick pier</group>
+		<!--!<group>ãƒ¬ãƒ³ã‚¬æ©‹è„š</group>-->
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -21,7 +23,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{FB233435-5BA0-4699-8CB8-F6D0E435BF4F}">
-		<group>ƒŒƒ“ƒK‹´‹r</group>
+		<group>Brick pier</group>
+		<!--!<group>ãƒ¬ãƒ³ã‚¬æ©‹è„š</group>-->
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -38,7 +41,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{3DCA36FF-F475-44f8-A33F-4AD032BE3F69}">
-		<group>“Œ‹‰w</group>
+		<group>Tokyo Station</group>
+		<!--!<group>æ±äº¬é§…</group>-->
 		<price>18000</price>
 		<size>9,2</size>
 		<height>2</height>
@@ -49,7 +53,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{000B7EA8-D97B-4BD0-899F-B3808E7339AF}">
-		<group>“Œ‹‰w</group>
+		<group>Tokyo Station</group>
+		<!--!<group>æ±äº¬é§…</group>-->
 		<price>18000</price>
 		<size>2,9</size>
 		<height>2</height>

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace freetrain.tools.vcr
 {
 	/// <summary>
-	/// ConfigDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// ConfigDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class ConfigDialog : System.Windows.Forms.Form
 	{
@@ -77,7 +77,8 @@ namespace freetrain.tools.vcr
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(80, 24);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "ˆ³k•û®(&C)F";
+			this.label1.Text = "&Compression method";
+			//! this.label1.Text = "åœ§ç¸®æ–¹å¼(&C)ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// compressors
@@ -95,7 +96,8 @@ namespace freetrain.tools.vcr
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(80, 24);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "˜IoŠÔŠu(&E)F";
+			this.label2.Text = "&Exposure interval";
+			//! this.label2.Text = "éœ²å‡ºé–“éš”(&E)ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label3
@@ -104,7 +106,8 @@ namespace freetrain.tools.vcr
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(72, 24);
 			this.label3.TabIndex = 4;
-			this.label3.Text = "•ª‚ÉˆêƒRƒ}";
+			this.label3.Text = "One frame a minute";
+			//! this.label3.Text = "åˆ†ã«ä¸€ã‚³ãƒ";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label4
@@ -113,7 +116,8 @@ namespace freetrain.tools.vcr
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(80, 24);
 			this.label4.TabIndex = 5;
-			this.label4.Text = "ÌÚ°ÑÚ°Ä(&F)F";
+			this.label4.Text = "&Framerate:";
+			//! this.label4.Text = "ï¾Œï¾šï½°ï¾‘ï¾šï½°ï¾„(&F)ï¼š";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// fps
@@ -163,7 +167,8 @@ namespace freetrain.tools.vcr
 			this.helpPanel.Name = "helpPanel";
 			this.helpPanel.Size = new System.Drawing.Size(248, 32);
 			this.helpPanel.TabIndex = 10;
-			this.helpPanel.Text = "ƒrƒfƒI‚P•b‚ÌŠÔ‚ÉƒQ[ƒ€ŠÔ‚Í6ŠÔi‚İ‚Ü‚·";
+			this.helpPanel.Text = "For each second of the video, 6 game hour passes";
+			//! this.helpPanel.Text = "ãƒ“ãƒ‡ã‚ªï¼‘ç§’ã®é–“ã«ã‚²ãƒ¼ãƒ æ™‚é–“ã¯6æ™‚é–“é€²ã¿ã¾ã™";
 			// 
 			// btnOK
 			// 
@@ -183,7 +188,8 @@ namespace freetrain.tools.vcr
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(80, 24);
 			this.btnCancel.TabIndex = 12;
-			this.btnCancel.Text = "·¬İ¾Ù(&C)";
+			this.btnCancel.Text = "&Cancel";
+			//! this.btnCancel.Text = "ï½·ï½¬ï¾ï½¾ï¾™(&C)";
 			// 
 			// ConfigDialog
 			// 
@@ -208,7 +214,8 @@ namespace freetrain.tools.vcr
 			this.MinimizeBox = false;
 			this.Name = "ConfigDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "˜^‰æ‚Ìİ’è";
+			this.Text = "Recording settings";
+			//! this.Text = "éŒ²ç”»ã®è¨­å®š";
 			((System.ComponentModel.ISupportInitialize)(this.fps)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.period)).EndInit();
 			this.ResumeLayout(false);
@@ -233,7 +240,8 @@ namespace freetrain.tools.vcr
 
 		private void updateHelp(object sender, EventArgs e) {
 			long GMperVS = (long)(period.Value/fps.Value);	// Game minutes per video second
-			string[] units = new string[]{"•ª","ŠÔ","“ú","Œ","”N"};
+			string[] units = new string[]{"mins","hrs","days","mons","years"};
+			//! string[] units = new string[]{"åˆ†","æ™‚é–“","æ—¥","æœˆ","å¹´"};
 			int[]  sizes = new int[]     {60,24,30,12};
 
 			long v=GMperVS;
@@ -247,8 +255,10 @@ namespace freetrain.tools.vcr
 			}
 			
 			helpPanel.Text = string.Format(
-				"ƒrƒfƒI‚P•b‚ÌŠÔ‚ÉƒQ[ƒ€ŠÔ‚Í{0}{1}{2}i‚İ‚Ü‚·",
-				exact?"":"–ñ",
+				"For each second of the video, {0}{1}{2} of game time passes",
+				//! "ãƒ“ãƒ‡ã‚ªï¼‘ç§’ã®é–“ã«ã‚²ãƒ¼ãƒ æ™‚é–“ã¯{0}{1}{2}é€²ã¿ã¾ã™",
+				exact?"":"ca",
+				//! exact?"":"ç´„",
 				v,
 				units[idx] );
 		}

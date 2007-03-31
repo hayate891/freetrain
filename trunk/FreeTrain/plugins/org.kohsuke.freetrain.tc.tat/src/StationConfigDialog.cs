@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace freetrain.world.rail.tattc
 {
 	/// <summary>
-	/// StationConfigDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// StationConfigDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	internal class StationConfigDialog : System.Windows.Forms.Form
 	{
@@ -66,13 +66,13 @@ namespace freetrain.world.rail.tattc
 		private System.Windows.Forms.NumericUpDown minBox;
 		private System.Windows.Forms.RadioButton radioPass;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -102,7 +102,8 @@ namespace freetrain.world.rail.tattc
 			this.radioFixedDuration.Name = "radioFixedDuration";
 			this.radioFixedDuration.Size = new System.Drawing.Size(128, 16);
 			this.radioFixedDuration.TabIndex = 2;
-			this.radioFixedDuration.Text = "ˆê’èŠÔ’âÔ(&N)";
+			this.radioFixedDuration.Text = "Pla&nned halt";
+			//! this.radioFixedDuration.Text = "ä¸€å®šæ™‚é–“åœè»Š(&N)";
 			this.radioFixedDuration.CheckedChanged += new System.EventHandler(this.onRadioChanged);
 			// 
 			// radioSimple
@@ -111,7 +112,8 @@ namespace freetrain.world.rail.tattc
 			this.radioSimple.Name = "radioSimple";
 			this.radioSimple.Size = new System.Drawing.Size(128, 16);
 			this.radioSimple.TabIndex = 3;
-			this.radioSimple.Text = "w’è”­Ô(&S)";
+			this.radioSimple.Text = "&Scheduled departure";
+			//! this.radioSimple.Text = "æŒ‡å®šæ™‚åˆ»ç™ºè»Š(&S)";
 			this.radioSimple.CheckedChanged += new System.EventHandler(this.onRadioChanged);
 			// 
 			// hourBox
@@ -134,7 +136,8 @@ namespace freetrain.world.rail.tattc
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(24, 16);
 			this.label1.TabIndex = 5;
-			this.label1.Text = "";
+			this.label1.Text = "Hour";
+			//! this.label1.Text = "æ™‚";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// minBox
@@ -162,7 +165,8 @@ namespace freetrain.world.rail.tattc
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(24, 16);
 			this.label2.TabIndex = 7;
-			this.label2.Text = "•ª";
+			this.label2.Text = "Minute";
+			//! this.label2.Text = "åˆ†";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// radioAdvanced
@@ -180,7 +184,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonAdvanced.Name = "buttonAdvanced";
 			this.buttonAdvanced.Size = new System.Drawing.Size(120, 24);
 			this.buttonAdvanced.TabIndex = 9;
-			this.buttonAdvanced.Text = "‚“x‚Èİ’è(&A)...";
+			this.buttonAdvanced.Text = "&Altitude settings...";
+			//! this.buttonAdvanced.Text = "é«˜åº¦ãªè¨­å®š(&A)...";
 			this.buttonAdvanced.Click += new System.EventHandler(this.buttonAdvanced_Click);
 			// 
 			// groupBox1
@@ -208,7 +213,8 @@ namespace freetrain.world.rail.tattc
 			this.radioPass.Name = "radioPass";
 			this.radioPass.Size = new System.Drawing.Size(128, 16);
 			this.radioPass.TabIndex = 1;
-			this.radioPass.Text = "’Ê‰ß(&P)";
+			this.radioPass.Text = "&Pass";
+			//! this.radioPass.Text = "é€šé(&P)";
 			this.radioPass.CheckedChanged += new System.EventHandler(this.onRadioChanged);
 			// 
 			// checkTurn2
@@ -217,7 +223,8 @@ namespace freetrain.world.rail.tattc
 			this.checkTurn2.Name = "checkTurn2";
 			this.checkTurn2.Size = new System.Drawing.Size(144, 16);
 			this.checkTurn2.TabIndex = 11;
-			this.checkTurn2.Text = "Ü‚è•Ô‚·(&T)";
+			this.checkTurn2.Text = "&Turn back";
+			//! this.checkTurn2.Text = "æŠ˜ã‚Šè¿”ã™(&T)";
 			// 
 			// checkTurn1
 			// 
@@ -225,7 +232,8 @@ namespace freetrain.world.rail.tattc
 			this.checkTurn1.Name = "checkTurn1";
 			this.checkTurn1.Size = new System.Drawing.Size(144, 16);
 			this.checkTurn1.TabIndex = 14;
-			this.checkTurn1.Text = "Ü‚è•Ô‚·(&T)";
+			this.checkTurn1.Text = "&Turn back";
+			//! this.checkTurn1.Text = "æŠ˜ã‚Šè¿”ã™(&T)";
 			// 
 			// label3
 			// 
@@ -233,7 +241,8 @@ namespace freetrain.world.rail.tattc
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(32, 16);
 			this.label3.TabIndex = 13;
-			this.label3.Text = "•ªŠÔ";
+			this.label3.Text = "Inclination";
+			//! this.label3.Text = "åˆ†é–“";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// durationBox
@@ -290,7 +299,8 @@ namespace freetrain.world.rail.tattc
 			this.MinimizeBox = false;
 			this.Name = "StationConfigDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "”­Ô‚Ìİ’è";
+			this.Text = "Departure time settings";
+			//! this.Text = "ç™ºè»Šæ™‚åˆ»ã®è¨­å®š";
 			((System.ComponentModel.ISupportInitialize)(this.hourBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.minBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.durationBox)).EndInit();

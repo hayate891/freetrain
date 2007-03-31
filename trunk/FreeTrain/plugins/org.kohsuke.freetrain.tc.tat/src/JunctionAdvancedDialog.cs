@@ -122,7 +122,8 @@ namespace freetrain.world.rail.tattc
 			this.groupBox1.Size = new System.Drawing.Size(360, 80);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "条件";
+			this.groupBox1.Text = "Requirement";
+			//! this.groupBox1.Text = "条件";
 			// 
 			// radioCurve
 			// 
@@ -130,7 +131,8 @@ namespace freetrain.world.rail.tattc
 			this.radioCurve.Name = "radioCurve";
 			this.radioCurve.Size = new System.Drawing.Size(64, 24);
 			this.radioCurve.TabIndex = 9;
-			this.radioCurve.Text = "分岐";
+			this.radioCurve.Text = "Junction";
+			//! this.radioCurve.Text = "分岐";
 			this.radioCurve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// radioStraight
@@ -141,7 +143,8 @@ namespace freetrain.world.rail.tattc
 			this.radioStraight.Size = new System.Drawing.Size(64, 24);
 			this.radioStraight.TabIndex = 8;
 			this.radioStraight.TabStop = true;
-			this.radioStraight.Text = "直進";
+			this.radioStraight.Text = "Straight";
+			//! this.radioStraight.Text = "直進";
 			// 
 			// buttonReplace
 			// 
@@ -150,7 +153,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonReplace.Name = "buttonReplace";
 			this.buttonReplace.Size = new System.Drawing.Size(64, 24);
 			this.buttonReplace.TabIndex = 11;
-			this.buttonReplace.Text = "置換(&R)";
+			this.buttonReplace.Text = "&Replace";
+			//! this.buttonReplace.Text = "置換(&R)";
 			this.buttonReplace.Click += new System.EventHandler(this.buttonReplace_Click);
 			// 
 			// label4
@@ -159,7 +163,8 @@ namespace freetrain.world.rail.tattc
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(20, 20);
 			this.label4.TabIndex = 7;
-			this.label4.Text = "時";
+			this.label4.Text = "o'clock";
+			//! this.label4.Text = "時";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// hourBox
@@ -203,7 +208,8 @@ namespace freetrain.world.rail.tattc
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(32, 20);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "曜日";
+			this.label3.Text = "day";
+			//! this.label3.Text = "曜日";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayOfWeekBox
@@ -211,13 +217,20 @@ namespace freetrain.world.rail.tattc
 			this.dayOfWeekBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.dayOfWeekBox.Items.AddRange(new object[] {
 															  "*",
-															  "日",
-															  "月",
-															  "火",
-															  "水",
-															  "木",
-															  "金",
-															  "土"});
+															  "Sun",
+															  "Mon",
+															  "Tues",
+															  "Wednes",
+															  "Thurs",
+															  "Fri",
+															  "Satur"});
+															  //!"日",
+															  //!"月",
+															  //!"火",
+															  //!"水",
+															  //!"木",
+															  //!"金",
+															  //!"土"});
 			this.dayOfWeekBox.Location = new System.Drawing.Point(176, 16);
 			this.dayOfWeekBox.MaxDropDownItems = 13;
 			this.dayOfWeekBox.Name = "dayOfWeekBox";
@@ -230,7 +243,8 @@ namespace freetrain.world.rail.tattc
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(16, 20);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "日";
+			this.label2.Text = "th";
+			//! this.label2.Text = "日";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayBox
@@ -281,7 +295,8 @@ namespace freetrain.world.rail.tattc
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(16, 20);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "月";
+			this.label1.Text = "month";
+			//! this.label1.Text = "月";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// monthBox
@@ -314,7 +329,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonAdd.Name = "buttonAdd";
 			this.buttonAdd.Size = new System.Drawing.Size(64, 24);
 			this.buttonAdd.TabIndex = 10;
-			this.buttonAdd.Text = "追加(&A)";
+			this.buttonAdd.Text = "&Add";
+			//! this.buttonAdd.Text = "追加(&A)";
 			this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
 			// 
 			// buttonUp
@@ -344,7 +360,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(64, 24);
 			this.buttonRemove.TabIndex = 15;
-			this.buttonRemove.Text = "削除";
+			this.buttonRemove.Text = "Delete";
+			//! this.buttonRemove.Text = "削除";
 			this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
 			// 
 			// buttonOk
@@ -383,27 +400,32 @@ namespace freetrain.world.rail.tattc
 			// 
 			// columnHeader1
 			// 
-			this.columnHeader1.Text = "月";
+			this.columnHeader1.Text = "Month";
+			//! this.columnHeader1.Text = "月";
 			this.columnHeader1.Width = 55;
 			// 
 			// columnHeader2
 			// 
-			this.columnHeader2.Text = "日";
+			this.columnHeader2.Text = "Date";
+			//! this.columnHeader2.Text = "日";
 			this.columnHeader2.Width = 55;
 			// 
 			// columnHeader3
 			// 
-			this.columnHeader3.Text = "曜日";
+			this.columnHeader3.Text = "Day";
+			//! this.columnHeader3.Text = "曜日";
 			this.columnHeader3.Width = 55;
 			// 
 			// columnHeader4
 			// 
-			this.columnHeader4.Text = "時";
+			this.columnHeader4.Text = "Time";
+			//! this.columnHeader4.Text = "時";
 			this.columnHeader4.Width = 55;
 			// 
 			// columnHeader5
 			// 
-			this.columnHeader5.Text = "方向";
+			this.columnHeader5.Text = "Direction";
+			//! this.columnHeader5.Text = "方向";
 			this.columnHeader5.Width = 55;
 			// 
 			// JunctionAdvancedDialog
@@ -424,7 +446,8 @@ namespace freetrain.world.rail.tattc
 			this.MinimumSize = new System.Drawing.Size(384, 298);
 			this.Name = "JunctionAdvancedDialog";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-			this.Text = "ポイントの詳細設定";
+			this.Text = "Advanced point settings";
+			//! this.Text = "ポイントの詳細設定";
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -536,7 +559,8 @@ namespace freetrain.world.rail.tattc
 				lvi.SubItems.Add(""+Clock.dayOfWeekChar(rule.dayOfWeek));
 			lvi.SubItems.Add(numberToString(rule.hour));
 
-			lvi.SubItems.Add( rule.route==JunctionRoute.Straight?"直進":"分岐" );
+			lvi.SubItems.Add( rule.route==JunctionRoute.Straight?"Straight":"Junction" );
+			//! lvi.SubItems.Add( rule.route==JunctionRoute.Straight?"直進":"分岐" );
 		}
 
 		private string numberToString( sbyte i ) {

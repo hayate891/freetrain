@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plug-in [
 	<!ENTITY localStation "
-		<group>ƒ[ƒJƒ‹‰wÉ</group>
+		<group>Local station</group>
+		<!--!<group>ãƒ­ãƒ¼ã‚«ãƒ«é§…èˆ</group>-->
 		<price>1800</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -9,7 +10,8 @@
 	">
 	
 	<!ENTITY cityStation "
-		<group>“s‰ïŒ^‰wÉ</group>
+		<group>City station</group>
+		<!--!<group>éƒ½ä¼šå‹é§…èˆ</group>-->
 		<price>6000</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -17,19 +19,21 @@
 	">
 	
 	<!ENTITY lowerDeckStation "
-		<group>‚‰Ë‰º‰wÉ</group>
+		<group>Lower deck station</group>
+		<!--!<group>é«˜æ¶ä¸‹é§…èˆ</group>-->
 		<price>6000</price>
 		<height>1</height>
 		<operationCost>210</operationCost>
 	">
 ]>
 <plug-in>
-	<title>Šî–{‰wÉƒLƒbƒg</title>
-	<author>ŠGtŒ©K‚¢</author>
+	<title>Standard station kit</title>
+	<!--!<title>åŸºæœ¬é§…èˆã‚­ãƒƒãƒˆ</title>-->
+	<author>çµµå¸«è¦‹ç¿’ã„</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="station" id="{E1C41DF8-6C9B-465d-A798-2624551AC4FD}">
-		<name>ƒ[ƒJƒ‹‰wÉ1(L)</name>
+		<name>ãƒ­ãƒ¼ã‚«ãƒ«é§…èˆ1(L)</name>
 		&localStation;
 		<sprite origin="0,0" offset="16">
 			<picture src="local1-02.bmp" />
@@ -37,7 +41,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{1F332AE9-97B7-42eb-A434-03F4F952081A}">
-		<name>ƒ[ƒJƒ‹‰wÉ1(R)</name>
+		<name>Local station 1 (R)</name>
+		<!--!<name>ãƒ­ãƒ¼ã‚«ãƒ«é§…èˆ1(R)</name>-->
 		&localStation;
 		<sprite origin="0,0" offset="16">
 			<picture src="local1-02r.bmp" />
@@ -45,7 +50,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{723092AA-BC86-4fca-BA98-42B60B7D4151}">
-		<name>ƒ[ƒJƒ‹‰wÉ2(L)</name>
+		<name>Local station 2 (L)</name>
+		<!--!<name>ãƒ­ãƒ¼ã‚«ãƒ«é§…èˆ2(L)</name>-->
 		&localStation;
 		<sprite origin="0,0" offset="16">
 			<picture src="local2-01.bmp" />
@@ -53,7 +59,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{6F5B56E6-F21E-41ba-89FC-B037E5EB0BE7}">
-		<name>ƒ[ƒJƒ‹‰wÉ2(R)</name>
+		<name>Local station 2 (R)</name>
+		<!--!<name>ãƒ­ãƒ¼ã‚«ãƒ«é§…èˆ2(R)</name>-->
 		&localStation;
 		<sprite origin="0,0" offset="16">
 			<picture src="local2-01r.bmp" />
@@ -61,7 +68,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{DFF22973-08DB-4064-8CD6-26BAB537C0F0}">
-		<name>“s‰ïŒ^‰wÉ(L)</name>
+		<name>City station (L)</name>
+		<!--!<name>éƒ½ä¼šå‹é§…èˆ(L)</name>-->
 		&cityStation;
 		<sprite origin="0,0" offset="32">
 			<picture src="city1-02.bmp" />
@@ -69,7 +77,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{F9508B52-B25C-439e-811C-82B5A259676A}">
-		<name>“s‰ïŒ^‰wÉ(R)</name>
+		<name>City station (R)</name>
+		<!--!<name>éƒ½ä¼šå‹é§…èˆ(R)</name>-->
 		&cityStation;
 		<sprite origin="0,0" offset="32">
 			<picture src="city1-02r.bmp" />
@@ -77,7 +86,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{351D49DD-8682-4c4a-8BC3-1B8560CD7FE9}">
-		<name>‚‰Ë‰º‰wÉ(L)</name>
+		<name>Lower deck station (L)</name>
+		<!--!<name>é«˜æ¶ä¸‹é§…èˆ(L)</name>-->
 		<size>1,2</size>
 		&lowerDeckStation;
 		<sprite origin="0,0" offset="7">
@@ -86,7 +96,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{A8392557-3054-4017-8948-F3FC22A71D0E}">
-		<name>‚‰Ë‰º‰wÉ(R)</name>
+		<name>Lower deck station (R)</name>
+		<!--!<name>é«˜æ¶ä¸‹é§…èˆ(R)</name>-->
 		<size>2,1</size>
 		&lowerDeckStation;
 		<sprite origin="0,0" offset="15">
@@ -95,7 +106,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{3D64E31D-0579-4d37-920A-5A5201A8C984}">
-		<name>”ŸŠÙ‰w</name>
+		<name>Hakodate Station</name>
+		<!--!<name>å‡½é¤¨é§…</name>-->
 		<price>6000</price>
 		<size>1,2</size>
 		<height>2</height>

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>信号所</title>
-	<author>暇さん</author>
+	<title>Signal cabin</title>
+	<!--!<title>菫｡蜿ｷ謇</title>-->
+	<author>證�縺輔ｓ</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	
@@ -11,7 +12,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{DF1FC459-80D0-4A83-8F6E-63255E7ACA17}">
-		<group>信号所</group>
+		<group>Signal cabin</group>
+		<!--!<group>菫｡蜿ｷ謇</group>-->
 		<price>30</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -21,7 +23,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{FCD0126A-4B66-48D4-824A-936EB06FC44B}">
-		<group>信号所</group>
+		<group>Signal cabin</group>
+		<!--!<group>菫｡蜿ｷ謇</group>-->
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>

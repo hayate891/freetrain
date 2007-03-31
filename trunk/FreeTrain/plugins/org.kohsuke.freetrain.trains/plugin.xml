@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Šî–{Ô—¼ƒLƒbƒg</title>
-	<author>477‚³‚ñ</author>
+	<title>Basic train kit</title>
+	<!--!<title>åŸºæœ¬è»Šä¸¡ã‚­ãƒƒãƒˆ</title>-->
+	<author>477ã•ã‚“</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	
 	
 	
-	<!-- ƒfƒBƒtƒHƒ‹ƒgFTŒ^—p‚Ì’†ŠÔÔ—¼ -->
+	<!-- ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆFTå‹ç”¨ã®ä¸­é–“è»Šä¸¡ -->
 	<contribution type="trainCar" id="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -17,13 +18,15 @@
 	</contribution>
 	
 	<contribution type="train" id="{F3604C61-D0D5-4c9c-ADD6-405610FA6250}">
-		<name>‚e‚s‚PŒ^</name>
+		<name>FT1 model</name>
+		<!--!<name>ï¼¦ï¼´ï¼‘å‹</name>-->
 		<price>1800</price>
 		<speed>fast</speed>
-		<author>ìŒûk‰î</author>
+		<author>å·å£è€•ä»‹</author>
 		<type>FT</type>
 		<company>FreeTrain</company>
-		<description>‰Ë‹ó‚Ì—ñÔ‚Å‚·</description>
+		<description>A fictional train</description>
+		<!--!<description>æ¶ç©ºã®åˆ—è»Šã§ã™</description>-->
 		
 		<composition>
 			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
@@ -31,13 +34,15 @@
 	</contribution>
 	
 	<contribution type="train" id="{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}">
-		<name>‚e‚s‚QŒ^</name>
+		<name>FT2 model</name>
+		<!--!<name>ï¼¦ï¼´ï¼’å‹</name>-->
 		<price>1000</price>
 		<speed>medium</speed>
-		<author>ìŒûk‰î</author>
+		<author>å·å£è€•ä»‹</author>
 		<type>FT</type>
 		<company>FreeTrain</company>
-		<description>‰Ë‹ó‚Ì—ñÔ‚Å‚·</description>
+		<description>A fictional train</description>
+		<!--!<description>æ¶ç©ºã®åˆ—è»Šã§ã™</description>-->
 		
 		<composition>
 			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
@@ -45,13 +50,15 @@
 	</contribution>
 	
 	<contribution type="train" id="{F7134C8E-6B63-4780-AF16-90D33131CD07}">
-		<name>‚e‚s‚RŒ^</name>
+		<name>FT3 model</name>
+		<!--!<name>ï¼¦ï¼´ï¼“å‹</name>-->
 		<price>500</price>
 		<speed>slow</speed>
-		<author>ìŒûk‰î</author>
+		<author>å·å£è€•ä»‹</author>
 		<type>FT</type>
 		<company>FreeTrain</company>
-		<description>‰Ë‹ó‚Ì—ñÔ‚Å‚·</description>
+		<description>A fictional train</description>
+		<!--!<description>æ¶ç©ºã®åˆ—è»Šã§ã™</description>-->
 		
 		<composition>
 			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
@@ -62,7 +69,7 @@
 	
 	
 	
-	<!-- 485Œnæ“ªÔ—¼ -->
+	<!-- 485ç³»å…ˆé ­è»Šä¸¡ -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -71,7 +78,7 @@
 		<capacity>65</capacity>
 	</contribution>
 	
-	<!-- 485Œn’†ŠÔÔ—¼ -->
+	<!-- 485ç³»ä¸­é–“è»Šä¸¡ -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -80,26 +87,30 @@
 		<capacity>70</capacity>
 	</contribution>
 	
-	<!-- 485ŒnŒã”öÔ—¼ -->
+	<!-- 485ç³»å¾Œå°¾è»Šä¸¡ -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-t">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h"/>
 	</contribution>
 	
 	<contribution type="train" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}">
-		<name>—‹’¹</name>
+		<name>Raicho</name>
+		<!--!<name>é›·é³¥</name>-->
 		<price>1</price>
 		<speed>fast</speed>
 		<author>477</author>
-		<type>485Œn</type>
-		<company>JR“Œ“ú–{</company>
-		<description>à–¾•åW’†</description>
+		<type>485 type</type>
+		<!--!<type>485ç³»</type>-->
+		<company>JR East</company>
+		<!--!<company>JRæ±æ—¥æœ¬</company>-->
+		<description>Description wanted</description>
+		<!--!<description>èª¬æ˜å‹Ÿé›†ä¸­</description>-->
 		
 		<composition>
-			<!-- æ“ªÔ—¼‚ª‘¼‚Æˆê‚È‚çhead‚ÍÈ—ª‰Â”\ -->
+			<!-- å…ˆé ­è»Šä¸¡ãŒä»–ã¨ä¸€ç·’ãªã‚‰headã¯çœç•¥å¯èƒ½ -->
 			<head carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h"/>
 			<body carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m"/>
-			<!-- Œã”öÔ—¼‚ª‘¼‚Æˆê‚È‚çhead‚ÍÈ—ª‰Â”\ -->
+			<!-- å¾Œå°¾è»Šä¸¡ãŒä»–ã¨ä¸€ç·’ãªã‚‰headã¯çœç•¥å¯èƒ½ -->
 			<tail carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-t"/>
 		</composition>
 	</contribution>
@@ -112,7 +123,7 @@
 	
 	
 	
-	<!-- E3Œnæ“ªÔ—¼ -->
+	<!-- E3ç³»å…ˆé ­è»Šä¸¡ -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -121,7 +132,7 @@
 		<capacity>56</capacity>
 	</contribution>
 	
-	<!-- E3Œn’†ŠÔÔ—¼ -->
+	<!-- E3ç³»ä¸­é–“è»Šä¸¡ -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-m">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -130,20 +141,24 @@
 		<capacity>64</capacity>
 	</contribution>
 	
-	<!-- E3ŒnŒã”öÔ—¼ -->
+	<!-- E3ç³»å¾Œå°¾è»Šä¸¡ -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-t">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h"/>
 	</contribution>
 	
 	<contribution type="train" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}">
-		<name>‚±‚Ü‚¿</name>
+		<name>Komachi</name>
+		<!--!<name>ã“ã¾ã¡</name>-->
 		<price>100</price>
 		<speed>superb</speed>
 		<author>477</author>
-		<type>E3Œn</type>
-		<company>JR“Œ“ú–{</company>
-		<description>à–¾•åW’†</description>
+		<type>E3 type</type>
+		<!--!<type>E3ç³»</type>-->
+		<company>JR East</company>
+		<!--!<company>JRæ±æ—¥æœ¬</company>-->
+		<description>Description wanted</description>
+		<!--!<description>èª¬æ˜å‹Ÿé›†ä¸­</description>-->
 		
 		<composition>
 			<head carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h"/>

@@ -8,14 +8,14 @@ using System.Windows.Forms;
 namespace freetrain.world.rail.tattc
 {
 	/// <summary>
-	/// JunctionAdvancedDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// JunctionAdvancedDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	internal class StationAdvancedDialog : Form
 	{
 		internal StationAdvancedDialog( AdvancedStationHandler handler ) {
 			this.station = handler;
 			//
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			//
 			InitializeComponent();
 
@@ -36,7 +36,7 @@ namespace freetrain.world.rail.tattc
 		private readonly AdvancedStationHandler station;
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -72,13 +72,13 @@ namespace freetrain.world.rail.tattc
 		private System.Windows.Forms.Button buttonReplace;
 		private System.Windows.Forms.ListView triggerList;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -137,7 +137,8 @@ namespace freetrain.world.rail.tattc
 			this.groupBox1.Size = new System.Drawing.Size(432, 80);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "ğŒ";
+			this.groupBox1.Text = "Requirements";
+			//! this.groupBox1.Text = "æ¡ä»¶";
 			// 
 			// label5
 			// 
@@ -145,7 +146,8 @@ namespace freetrain.world.rail.tattc
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(20, 20);
 			this.label5.TabIndex = 14;
-			this.label5.Text = "•ª";
+			this.label5.Text = "min";
+			//! this.label5.Text = "åˆ†";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// minBox
@@ -171,7 +173,8 @@ namespace freetrain.world.rail.tattc
 			this.radioGo.Name = "radioGo";
 			this.radioGo.Size = new System.Drawing.Size(48, 24);
 			this.radioGo.TabIndex = 12;
-			this.radioGo.Text = "”­Ô";
+			this.radioGo.Text = "Go";
+			//! this.radioGo.Text = "ç™ºè»Š";
 			this.radioGo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// radioStop
@@ -180,7 +183,8 @@ namespace freetrain.world.rail.tattc
 			this.radioStop.Name = "radioStop";
 			this.radioStop.Size = new System.Drawing.Size(48, 24);
 			this.radioStop.TabIndex = 9;
-			this.radioStop.Text = "’âÔ";
+			this.radioStop.Text = "Stop";
+			//! this.radioStop.Text = "åœè»Š";
 			this.radioStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// radioPass
@@ -191,7 +195,8 @@ namespace freetrain.world.rail.tattc
 			this.radioPass.Size = new System.Drawing.Size(48, 24);
 			this.radioPass.TabIndex = 8;
 			this.radioPass.TabStop = true;
-			this.radioPass.Text = "’Ê‰ß";
+			this.radioPass.Text = "Pass";
+			//! this.radioPass.Text = "é€šé";
 			// 
 			// buttonReplace
 			// 
@@ -200,7 +205,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonReplace.Name = "buttonReplace";
 			this.buttonReplace.Size = new System.Drawing.Size(64, 24);
 			this.buttonReplace.TabIndex = 11;
-			this.buttonReplace.Text = "’uŠ·(&R)";
+			this.buttonReplace.Text = "&Replace";
+			//! this.buttonReplace.Text = "ç½®æ›(&R)";
 			this.buttonReplace.Click += new System.EventHandler(this.buttonReplace_Click);
 			// 
 			// label4
@@ -209,7 +215,8 @@ namespace freetrain.world.rail.tattc
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(20, 20);
 			this.label4.TabIndex = 7;
-			this.label4.Text = "";
+			this.label4.Text = "o'clock";
+			//! this.label4.Text = "æ™‚";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// hourBox
@@ -253,7 +260,8 @@ namespace freetrain.world.rail.tattc
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(32, 20);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "—j“ú";
+			this.label3.Text = "day";
+			//! this.label3.Text = "æ›œæ—¥";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayOfWeekBox
@@ -261,13 +269,14 @@ namespace freetrain.world.rail.tattc
 			this.dayOfWeekBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.dayOfWeekBox.Items.AddRange(new object[] {
 															  "*",
-															  "“ú",
-															  "Œ",
-															  "‰Î",
-															  "…",
-															  "–Ø",
-															  "‹à",
-															  "“y"});
+															  "Sun",
+															  "Mon",
+															  "Tue",
+															  "Wednes",
+															  "Thurs",
+															  "Fri",
+															  "Satur"});
+															  //! "æ—¥","æœˆ","ç«","æ°´","æœ¨","é‡‘","åœŸ"});
 			this.dayOfWeekBox.Location = new System.Drawing.Point(176, 16);
 			this.dayOfWeekBox.MaxDropDownItems = 13;
 			this.dayOfWeekBox.Name = "dayOfWeekBox";
@@ -280,7 +289,8 @@ namespace freetrain.world.rail.tattc
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(16, 20);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "“ú";
+			this.label2.Text = "th";
+			//! this.label2.Text = "æ—¥";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayBox
@@ -331,7 +341,8 @@ namespace freetrain.world.rail.tattc
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(16, 20);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "Œ";
+			this.label1.Text = "month";
+			//! this.label1.Text = "æœˆ";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// monthBox
@@ -364,7 +375,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonAdd.Name = "buttonAdd";
 			this.buttonAdd.Size = new System.Drawing.Size(64, 24);
 			this.buttonAdd.TabIndex = 10;
-			this.buttonAdd.Text = "’Ç‰Á(&A)";
+			this.buttonAdd.Text = "&Add";
+			//! this.buttonAdd.Text = "è¿½åŠ (&A)";
 			this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
 			// 
 			// buttonUp
@@ -374,7 +386,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonUp.Name = "buttonUp";
 			this.buttonUp.Size = new System.Drawing.Size(64, 24);
 			this.buttonUp.TabIndex = 13;
-			this.buttonUp.Text = "ª";
+			this.buttonUp.Text = "â†‘";
 			this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
 			// 
 			// buttonDown
@@ -384,7 +396,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonDown.Name = "buttonDown";
 			this.buttonDown.Size = new System.Drawing.Size(64, 24);
 			this.buttonDown.TabIndex = 14;
-			this.buttonDown.Text = "«";
+			this.buttonDown.Text = "â†“";
 			this.buttonDown.Click += new System.EventHandler(this.buttonDown_Click);
 			// 
 			// buttonRemove
@@ -394,7 +406,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(64, 24);
 			this.buttonRemove.TabIndex = 15;
-			this.buttonRemove.Text = "íœ";
+			this.buttonRemove.Text = "Delete";
+			//! this.buttonRemove.Text = "å‰Šé™¤";
 			this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
 			// 
 			// buttonOk
@@ -434,27 +447,33 @@ namespace freetrain.world.rail.tattc
 			// 
 			// columnHeader1
 			// 
-			this.columnHeader1.Text = "Œ";
+			this.columnHeader1.Text = "Month";
+			//! this.columnHeader1.Text = "æœˆ";
 			// 
 			// columnHeader2
 			// 
-			this.columnHeader2.Text = "“ú";
+			this.columnHeader2.Text = "Date";
+			//! this.columnHeader2.Text = "æ—¥";
 			// 
 			// columnHeader3
 			// 
-			this.columnHeader3.Text = "—j“ú";
+			this.columnHeader3.Text = "Day";
+			//! this.columnHeader3.Text = "æ›œæ—¥";
 			// 
 			// columnHeader4
 			// 
-			this.columnHeader4.Text = "";
+			this.columnHeader4.Text = "Hour";
+			//! this.columnHeader4.Text = "æ™‚";
 			// 
 			// columnHeader5
 			// 
-			this.columnHeader5.Text = "•ª";
+			this.columnHeader5.Text = "Minute";
+			//! this.columnHeader5.Text = "åˆ†";
 			// 
 			// columnHeader6
 			// 
-			this.columnHeader6.Text = "“®ì";
+			this.columnHeader6.Text = "Action";
+			//! this.columnHeader6.Text = "å‹•ä½œ";
 			// 
 			// radioReverse
 			// 
@@ -462,7 +481,8 @@ namespace freetrain.world.rail.tattc
 			this.radioReverse.Name = "radioReverse";
 			this.radioReverse.Size = new System.Drawing.Size(72, 24);
 			this.radioReverse.TabIndex = 15;
-			this.radioReverse.Text = "Ü•Ô”­Ô";
+			this.radioReverse.Text = "Reverse";
+			//! this.radioReverse.Text = "æŠ˜è¿”ç™ºè»Š";
 			this.radioReverse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// StationAdvancedDialog
@@ -484,7 +504,8 @@ namespace freetrain.world.rail.tattc
 			this.Name = "StationAdvancedDialog";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "”­Ô‚ÌÚ×İ’è";
+			this.Text = "Advanced departure time settings";
+			//! this.Text = "ç™ºè»Šæ™‚åˆ»ã®è©³ç´°è¨­å®š";
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -608,10 +629,14 @@ namespace freetrain.world.rail.tattc
 
 		private string displayName( StationAction a ) {
 			switch(a) {
-			case StationAction.go:		return "”­Ô";
-			case StationAction.pass:	return "’Ê‰ß";
-			case StationAction.stop:	return "’âÔ";
-			case StationAction.reverse:	return "Ü•Ô”­Ô";
+			case StationAction.go:		return "Go";
+			//! case StationAction.go:		return "ç™ºè»Š";
+			case StationAction.pass:	return "Pass";
+			//! case StationAction.pass:	return "é€šé";
+			case StationAction.stop:	return "Stop";
+			//! case StationAction.stop:	return "åœè»Š";
+			case StationAction.reverse:	return "Reverse";
+			//! case StationAction.reverse:	return "æŠ˜è¿”ç™ºè»Š";
 			default:
 				Debug.Assert(false);
 				return null;

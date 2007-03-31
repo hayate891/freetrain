@@ -25,7 +25,7 @@ namespace freetrain.views.debug
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -39,8 +39,8 @@ namespace freetrain.views.debug
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -66,7 +66,8 @@ namespace freetrain.views.debug
 			this.MinimizeBox = false;
 			this.Name = "TraceWindow";
 			this.ShowInTaskbar = false;
-			this.Text = "ƒfƒoƒbƒOƒEƒBƒ“ƒhƒE";
+			this.Text = "Debug window";
+			//! this.Text = "ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦";
 			this.ResumeLayout(false);
 
 		}
@@ -84,7 +85,7 @@ namespace freetrain.views.debug
 			
 			public override void WriteLine( string str ) {
 				text.AppendText(str);
-				text.AppendText("\n");
+				text.AppendText("Â¥n");
 			}
 		}
 	}

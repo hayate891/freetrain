@@ -21,11 +21,13 @@ namespace freetrain.world.terrain.terrace
 			TerraceVoxel tv = World.world[loc] as TerraceVoxel;
 			
 			if(tv==null) {
-				MainWindow.showError("—’d‚Å‚Í‚ ‚è‚Ü‚¹‚ñ");
+				MainWindow.showError("This is not a terrace");
+				//! MainWindow.showError("é››å£‡ã§ã¯ã‚ã‚Šã¾ã›ã‚“");
 				return;
 			}
 			if( World.world[loc.x,loc.y,loc.z+1]!=null ) {
-				MainWindow.showError("ã‚ÉáŠQ•¨‚ªæ‚Á‚Ä‚¢‚Ü‚·");
+				MainWindow.showError("There are obstacles uphill");
+				//! MainWindow.showError("ä¸Šã«éšœå®³ç‰©ãŒä¹—ã£ã¦ã„ã¾ã™");
 				return;
 			}
 

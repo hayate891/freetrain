@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plug-in [
 <!ENTITY smallBuildingParam '
-	<group>‘İ‚µƒrƒ‹(B)</group>
+	<group>Building for rent (B)</group>
+	<!--!<group>è²¸ã—ãƒ“ãƒ«(B)</group>-->
 	<price>350</price>
 	<size>1,1</size>
 	<minHeight>2</minHeight>
@@ -12,7 +13,8 @@
 	</population>
 '>
 <!ENTITY building2x2Param '
-	<group>‘İ‚µƒrƒ‹(2x2)</group>
+	<group>Building for rent (2x2)</group>
+	<!--!<group>è²¸ã—ãƒ“ãƒ«(2x2)</group>-->
 	<price>3000</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -24,12 +26,14 @@
 '>
 ]>
 <plug-in>
-	<title>‚¨›</title>
-	<author>915‚³‚ñ</author>
+	<title>Temple</title>
+	<!--!<title>ãŠå¯º</title>-->
+	<author>915ã•ã‚“</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{628C6F59-9B1A-48a8-8815-48AC0D15765E}">
-		<name>‚¨›</name>
+		<name>Temple</name>
+		<!--!<name>ãŠå¯º</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>1</height>
@@ -50,7 +54,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{DD8340A1-BD1A-4E2E-B42D-F162D6D6CE65}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -64,7 +69,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{22532C5A-CE0B-4C4D-9DC8-C7FC7C5A3FE5}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -78,7 +84,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{15D9C4FA-0F6E-4915-B19F-CDBB19C29AB4}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -92,7 +99,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FA1FDEDE-6E4E-48F2-A45C-DFEA3979D1D3}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -106,7 +114,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{0C468024-EB7E-44BE-8026-326FC3F09539}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -120,7 +129,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{924FBFF1-69E4-49C6-9067-86D915638A9A}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -134,7 +144,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{26601128-3116-4EFA-AB8E-233BC566D031}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -148,7 +159,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{91857E01-6499-40CE-8825-6D52247F80C9}">
-		<name>–¯‰Æ(¬)</name>
+		<name>Private house (small)</name>
+		<!--!<name>æ°‘å®¶(å°)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>

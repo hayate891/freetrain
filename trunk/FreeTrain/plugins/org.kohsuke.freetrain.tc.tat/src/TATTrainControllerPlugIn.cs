@@ -8,7 +8,7 @@ using freetrain.framework.plugin;
 namespace freetrain.world.rail.tattc
 {
 	/// <summary>
-	/// TATTrainControllerPlugIn ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// TATTrainControllerPlugIn ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class TATTrainControllerPlugIn : TrainControllerContribution
@@ -19,11 +19,13 @@ namespace freetrain.world.rail.tattc
 
 		internal static TATTrainControllerPlugIn theInstance;
 
-		public override string name { get { return "u‚`—ñÔ‚Ås‚±‚¤v®ƒ_ƒCƒ„ƒOƒ‰ƒ€"; } }
+		public override string name { get { return "A-Train style train controller"; } }
+		//! public override string name { get { return "ã€Œï¼¡åˆ—è»Šã§è¡Œã“ã†ã€å¼ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ "; } }
 
 		public override string description {
 			get {
-				return "Še‰w‚Ì”­Ô‚ÆŠeƒ|ƒCƒ“ƒg‚Å‚Ìis•ûŒü‚ğİ’è‚·‚é‚±‚Æ‚É‚æ‚Á‚Äƒ_ƒCƒ„‚ğİ’è‚µ‚Ü‚·";
+				return "Create diagrams that control departure times for each station and directions at each point";
+				//! return "å„é§…ã®ç™ºè»Šæ™‚åˆ»ã¨å„ãƒã‚¤ãƒ³ãƒˆã§ã®é€²è¡Œæ–¹å‘ã‚’è¨­å®šã™ã‚‹ã“ã¨ã«ã‚ˆã£ã¦ãƒ€ã‚¤ãƒ¤ã‚’è¨­å®šã—ã¾ã™";
 			}
 		}
 

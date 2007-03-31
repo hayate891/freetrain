@@ -8,7 +8,7 @@ using freetrain.contributions.train;
 namespace freetrain.world.rail.cttrain
 {
 	/// <summary>
-	/// ColorConfigDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// ColorConfigDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class ColorConfigDialog : Form
 	{
@@ -50,8 +50,8 @@ namespace freetrain.world.rail.cttrain
 		private System.Windows.Forms.ComboBox comboType;
 		private System.ComponentModel.Container components = null;
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -79,7 +79,8 @@ namespace freetrain.world.rail.cttrain
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 24);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Ô‘ÌFF";
+			this.label1.Text = "Body color:";
+			//! this.label1.Text = "è»Šä½“è‰²ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// boxBase
@@ -98,7 +99,8 @@ namespace freetrain.world.rail.cttrain
 			this.buttonBase.Name = "buttonBase";
 			this.buttonBase.Size = new System.Drawing.Size(64, 24);
 			this.buttonBase.TabIndex = 2;
-			this.buttonBase.Text = "İ’è(&B)";
+			this.buttonBase.Text = "&Base";
+			//! this.buttonBase.Text = "è¨­å®š(&B)";
 			this.buttonBase.Click += new System.EventHandler(this.buttonBase_Click);
 			// 
 			// buttonLine1
@@ -108,7 +110,8 @@ namespace freetrain.world.rail.cttrain
 			this.buttonLine1.Name = "buttonLine1";
 			this.buttonLine1.Size = new System.Drawing.Size(64, 24);
 			this.buttonLine1.TabIndex = 5;
-			this.buttonLine1.Text = "İ’è(&1)";
+			this.buttonLine1.Text = "Set (&1)";
+			//! this.buttonLine1.Text = "è¨­å®š(&1)";
 			this.buttonLine1.Click += new System.EventHandler(this.buttonLine1_Click);
 			// 
 			// boxLine1
@@ -126,7 +129,8 @@ namespace freetrain.world.rail.cttrain
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(48, 24);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "‘ÑF1F";
+			this.label2.Text = "Belt color 1:";
+			//! this.label2.Text = "å¸¯è‰²1ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// buttonLine2
@@ -136,7 +140,8 @@ namespace freetrain.world.rail.cttrain
 			this.buttonLine2.Name = "buttonLine2";
 			this.buttonLine2.Size = new System.Drawing.Size(64, 24);
 			this.buttonLine2.TabIndex = 8;
-			this.buttonLine2.Text = "İ’è(&2)";
+			this.buttonLine2.Text = "Set (&2)";
+			//! this.buttonLine2.Text = "è¨­å®š(&2)";
 			this.buttonLine2.Click += new System.EventHandler(this.buttonLine2_Click);
 			// 
 			// boxLine2
@@ -154,7 +159,8 @@ namespace freetrain.world.rail.cttrain
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(48, 24);
 			this.label3.TabIndex = 6;
-			this.label3.Text = "‘ÑF2F";
+			this.label3.Text = "Belt color 2:";
+			//! this.label3.Text = "å¸¯è‰²2ï¼š";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// buttonCopy
@@ -164,7 +170,8 @@ namespace freetrain.world.rail.cttrain
 			this.buttonCopy.Name = "buttonCopy";
 			this.buttonCopy.Size = new System.Drawing.Size(168, 24);
 			this.buttonCopy.TabIndex = 9;
-			this.buttonCopy.Text = "ƒNƒŠƒbƒvƒ{[ƒh‚ÉFİ’è‚ğƒRƒs[";
+			this.buttonCopy.Text = "Copy color setting to clipboard";
+			//! this.buttonCopy.Text = "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«è‰²è¨­å®šã‚’ã‚³ãƒ”ãƒ¼";
 			this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
 			// 
 			// colorDialog
@@ -179,7 +186,8 @@ namespace freetrain.world.rail.cttrain
 			this.buttonLine3.Name = "buttonLine3";
 			this.buttonLine3.Size = new System.Drawing.Size(64, 24);
 			this.buttonLine3.TabIndex = 12;
-			this.buttonLine3.Text = "İ’è(&3)";
+			this.buttonLine3.Text = "Set (&3)";
+			//! this.buttonLine3.Text = "è¨­å®š(&3)";
 			this.buttonLine3.Click += new System.EventHandler(this.buttonLine3_Click);
 			// 
 			// boxLine3
@@ -197,7 +205,8 @@ namespace freetrain.world.rail.cttrain
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(48, 24);
 			this.label4.TabIndex = 10;
-			this.label4.Text = "‘ÑF3F";
+			this.label4.Text = "Belt color 3:";
+			//! this.label4.Text = "å¸¯è‰²3ï¼š";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// comboType
@@ -215,7 +224,8 @@ namespace freetrain.world.rail.cttrain
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(48, 24);
 			this.label5.TabIndex = 14;
-			this.label5.Text = "‰æ‘œF";
+			this.label5.Text = "Image:";
+			//! this.label5.Text = "ç”»åƒï¼š";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// ColorConfigDialog
@@ -243,7 +253,8 @@ namespace freetrain.world.rail.cttrain
 			this.MinimizeBox = false;
 			this.Name = "ColorConfigDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "FŒ±—ñÔ‚Ìİ’è";
+			this.Text = "Color test train settings";
+			//! this.Text = "è‰²è©¦é¨“åˆ—è»Šã®è¨­å®š";
 			this.ResumeLayout(false);
 
 		}
