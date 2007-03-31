@@ -8,7 +8,7 @@ using freetrain.framework.plugin;
 namespace freetrain.world.rail.tattc
 {
 	/// <summary>
-	/// TATTrainController ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// TATTrainController ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	internal class TATTrainController : TrainController

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>‘åãé</title>
+	<title>Osaka Castle</title>
+	<!--!<title>å¤§é˜ªåŸ</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
-	<author>477‚³‚ñ</author>
+	<author>477ã•ã‚“</author>
 	
 	<contribution type="picture" id="{4F129DD1-CCCF-4C2C-B317-0874AD9F77B7}">
 		<picture src="osaka_castle.bmp">
@@ -11,8 +12,10 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{12CA8CE9-7D92-44CA-BB96-47C4A60A8316}">
-		<group>‘åãé</group>
-		<name>“VçŠt1</name>
+		<group>Osaka Castle</group>
+		<!--!<group>å¤§é˜ªåŸ</group>-->
+		<name>Castle tower 1</name>
+		<!--!<name>å¤©å®ˆé–£1</name>-->
 		<price>5000</price>
 		<size>2,2</size>
 		<height>4</height>
@@ -23,8 +26,10 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{6432EFFB-3B00-4E00-B4AD-F3DBBB3DD2B6}">
-		<group>‘åãé</group>
-		<name>“VçŠt2</name>
+		<group>Osaka Castle</group>
+		<!--!<group>å¤§é˜ªåŸ</group>-->
+		<name>Castle tower 2</name>
+		<!--!<name>å¤©å®ˆé–£2</name>-->
 		<price>5000</price>
 		<size>2,2</size>
 		<height>4</height>

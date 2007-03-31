@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>ƒfƒoƒbƒOî•ñƒEƒBƒ“ƒhƒE</title>
-	<author>ìŒûk‰î</author>
+	<title>Debug info window</title>
+	<!--!<title>ãƒ‡ãƒãƒƒã‚°æƒ…å ±ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦</title>-->
+	<author>å·å£è€•ä»‹</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="dockingContent" id="{4B81E56F-3F64-420C-9CB6-CF7DDB0EACF3}">
-		<name>ƒfƒoƒbƒOî•ñ</name>
-		<menu name="ƒfƒoƒbƒOî•ñ" location="view" />
+		<name>Debug info</name>
+		<menu name="Debug info" location="view" />
+		<!--!<name>ãƒ‡ãƒãƒƒã‚°æƒ…å ±</name>
+		<menu name="ãƒ‡ãƒãƒƒã‚°æƒ…å ±" location="view" />-->
 		<class name="freetrain.views.debug.TraceWindow"
 			codebase="bin/Debug/FreeTrain.DebugWindow.dll" />
 	</contribution>

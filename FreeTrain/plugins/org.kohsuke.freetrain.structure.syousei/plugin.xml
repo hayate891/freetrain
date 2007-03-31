@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>民家</title>
+	<title>Private house</title>
+	<!--!<title>豌大ｮｶ</title>-->
 	<author>syousei</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{D6DE0AED-AECF-4d7f-8455-488016997FFF}">
-		<name>民家(小)</name>
+		<name>Private house (S)</name>
+		<!--!<name>豌大ｮｶ(蟆�)</name>-->
 		<price>150</price>
 		<size>1,1</size>
 		<height>1</height>

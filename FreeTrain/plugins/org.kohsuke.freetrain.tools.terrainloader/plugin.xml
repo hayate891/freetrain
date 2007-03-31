@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>’nŒ`ƒ[ƒ_[</title>
-	<author>ìŒûk‰î</author>
+	<title>Terrain loader</title>
+	<!--!<title>åœ°å½¢ãƒ­ãƒ¼ãƒ€ãƒ¼</title>-->
+	<author>å·å£è€•ä»‹</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="newGame" id="{9CC6E93F-06D0-4d98-8F8C-7B3CE481F62E}">
-		<!-- ”CˆÓ‚Ì‰æ‘œ‚ğƒ[ƒh‚µ‚ÄƒQ[ƒ€‚ğn‚ß‚ç‚ê‚é‚æ‚¤‚É -->
+		<!-- ä»»æ„ã®ç”»åƒã‚’ãƒ­ãƒ¼ãƒ‰ã—ã¦ã‚²ãƒ¼ãƒ ã‚’å§‹ã‚ã‚‰ã‚Œã‚‹ã‚ˆã†ã« -->
 		<class name="freetrain.tools.terrainloader.PluginImpl"
 			codebase="bin/Debug/FreeTrain.TerrainLoader.dll" />
 	</contribution>
@@ -13,8 +14,8 @@
 	
 	<contribution type="contribution" id="{973B89C6-D7C5-4977-AEEE-70EC1DEF5BDB}">
 		<!--
-			‰æ‘œEƒTƒCƒY‚È‚Ç‚ğŒÅ’è‚µ‚ÄV‹KƒQ[ƒ€‚Æ‚µ‚Ä’Ç‰Á‚Å‚«‚é‚æ‚¤‚É
-			V‚µ‚¢ƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“Œ^‚ğ’è‹`
+			ç”»åƒãƒ»ã‚µã‚¤ã‚ºãªã©ã‚’å›ºå®šã—ã¦æ–°è¦ã‚²ãƒ¼ãƒ ã¨ã—ã¦è¿½åŠ ã§ãã‚‹ã‚ˆã†ã«
+			æ–°ã—ã„ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³å‹ã‚’å®šç¾©
 		-->
 		<name>terrainOnlyNewGame</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>

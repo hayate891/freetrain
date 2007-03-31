@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plug-in [
 	<!ENTITY WoodenStation "
-		<group>’nã‰wŽÉ</group>
+		<group>Overground station</group>
+		<!--!<group>åœ°ä¸Šé§…èˆŽ</group>-->
 		<price>1200</price>
 		<height>1</height>
 		<operationCost>100</operationCost>
 	">
 <!ENTITY PRStation "
-		<group>’nã‰wŽÉ</group>
+		<group>Overground station</group>
+		<group>åœ°ä¸Šé§…èˆŽ</group>
 		<price>1500</price>
 		<height>1</height>
 		<operationCost>120</operationCost>
@@ -49,7 +51,8 @@
 '>
 ]>
 <plug-in>
-	<title>‰wŽÉ</title>
+	<title>Station</title>
+	<!--!<title>é§…èˆŽ</title>-->
 	<author>qra_ra</author>
 	<homepage></homepage>
 		
@@ -58,7 +61,8 @@
 	</contribution>
 
 	<contribution type="station" id="{372D89DD-0A01-554B-8BC3-8B8567CA7F59}">
-		<name>–Ø‘¢‰wŽÉi“üŒû‘¤jL</name>
+		<name>Wooden station (entrance) L</name>
+		<!--!<name>æœ¨é€ é§…èˆŽï¼ˆå…¥å£å´ï¼‰L</name>-->
 		<size>1,2</size>
                 &WoodenStation;
 		<sprite origin="0, 0" offset="8">
@@ -67,7 +71,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{372D89DD-0A02-554B-8BC3-8B8567CA7F59}">
-		<name>–Ø‘¢‰wŽÉi“üŒû‘¤jR</name>
+		<name>Wooden station (entrance) R</name>
+		<!--!<name>æœ¨é€ é§…èˆŽï¼ˆå…¥å£å´ï¼‰R</name>-->
 		<size>2,1</size>
                 &WoodenStation;
 		<sprite origin="48,0" offset="16">
@@ -76,7 +81,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{372D89DD-0A03-554B-8BC3-8B8567CA7F59}">
-		<name>–Ø‘¢‰wŽÉi‰üŽDŒû‘¤jL</name>
+		<name>Wooden station (ticket gate) L</name>
+		<!--!<name>æœ¨é€ é§…èˆŽï¼ˆæ”¹æœ­å£å´ï¼‰L</name>-->
 		<size>1,2</size>
                 &WoodenStation;
 		<sprite origin="96,0" offset="8">
@@ -85,7 +91,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{372D89DD-0A04-554B-8BC3-8B8567CA7F59}">
-		<name>–Ø‘¢‰wŽÉi‰üŽDŒû‘¤jR</name>
+		<name>Wooden station (ticket gate) R</name>
+		<!--!<name>æœ¨é€ é§…èˆŽï¼ˆæ”¹æœ­å£å´ï¼‰R</name>-->
 		<size>2,1</size>
                 &WoodenStation;
 		<sprite origin="144,0" offset="16">
@@ -96,7 +103,8 @@
 
 
 	<contribution type="station" id="{372D89DD-0B01-554B-8BC3-8B8567CA7F59}">
-		<name>Ž„“S‰wŽÉi“üŒû‘¤jL</name>
+		<name>Private station (entrance) L</name>
+		<!--!<name>ç§é‰„é§…èˆŽï¼ˆå…¥å£å´ï¼‰L</name>-->
 		<size>1,2</size>
                 &PRStation;
 		<sprite origin="0, 0" offset="8">
@@ -106,7 +114,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{372D89DD-0B02-554B-8BC3-8B8567CA7F59}">
-		<name>Ž„“S‰wŽÉi“üŒû‘¤jR</name>
+		<name>Private station (entrance) R</name>
+		<!--!<name>ç§é‰„é§…èˆŽï¼ˆå…¥å£å´ï¼‰R</name>-->
 		<size>2,1</size>
                 &PRStation;
 		<sprite origin="48,0" offset="16">
@@ -116,7 +125,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{372D89DD-0B03-554B-8BC3-8B8567CA7F59}">
-		<name>Ž„“S‰wŽÉi‰üŽDŒû‘¤jL</name>
+		<name>Private station (ticket gate) L</name>
+		<!--!<name>ç§é‰„é§…èˆŽï¼ˆæ”¹æœ­å£å´ï¼‰L</name>-->
 		<size>1,2</size>
                 &PRStation;
 		<sprite origin="96,0" offset="8">
@@ -126,7 +136,8 @@
 	</contribution>
 	
 	<contribution type="station" id="{372D89DD-0B04-554B-8BC3-8B8567CA7F59}">
-		<name>Ž„“S‰wŽÉi‰üŽDŒû‘¤jR</name>
+		<name>Private station (ticket gate) R</name>
+		<!--!<name>ç§é‰„é§…èˆŽï¼ˆæ”¹æœ­å£å´ï¼‰R</name>-->
 		<size>2,1</size>
                 &PRStation;
 		<sprite origin="144,0" offset="16">

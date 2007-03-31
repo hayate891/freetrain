@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>手動運転ダイヤグラム</title>
-	<author>川口耕介</author>
+	<title>Manually-operated diagram</title>
+	<!--!<title>謇句虚驕玖ｻ｢繝繧､繝､繧ｰ繝ｩ繝</title>-->
+	<author>蟾晏哨閠穂ｻ�</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="trainController" id="{5567FE11-FC2C-4a1d-836F-722EF9DC957C}">

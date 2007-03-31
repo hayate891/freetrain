@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Œš•¨ƒZƒbƒg</title>
-	<author>—·s‚Ì—F‚³‚ñ</author>
+	<title>Building set</title>
+	<!--!<title>å»ºç‰©ã‚»ãƒƒãƒˆ</title>-->
+	<author>æ—…è¡Œã®å‹ã•ã‚“</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{8361A9CC-DC1D-4432-8E21-7FB3564FA5CF}">
-		<name>•ª÷ƒ}ƒ“ƒVƒ‡ƒ“</name>
+		<name>Condo</name>
+		<!--!<name>åˆ†è­²ãƒãƒ³ã‚·ãƒ§ãƒ³</name>-->
 		<price>3000</price><!-- 750*4 -->
 		<size>2,2</size>
 		<height>3</height>
@@ -19,7 +21,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{9DEDC549-A1A8-4a14-A7A5-D18F388BE975}">
-		<name>Œö‰€</name>
+		<name>Park</name>
+		<!--!<name>å…¬åœ’</name>-->
 		<price>1000</price>
 		<size>2,2</size>
 		<height>1</height>

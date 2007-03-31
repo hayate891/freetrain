@@ -14,8 +14,10 @@ namespace freetrain.tools.terrainloader
 		public PluginImpl( XmlElement e ) : base(e) {}
 
 		public override string author { get { return "-"; } }
-		public override string name { get { return "’nŒ`ƒ[ƒ_["; } }
-		public override string description { get { return "‰æ‘œ‚©‚ç’nŒ`ƒf[ƒ^‚Ì‚İ‚ğƒ[ƒh‚µ‚Ü‚·"; } }
+		public override string name { get { return "Terrain loader"; } }
+		//! public override string name { get { return "åœ°å½¢ãƒ­ãƒ¼ãƒ€ãƒ¼"; } }
+		public override string description { get { return "Load terrain data only from an image"; } }
+		//! public override string description { get { return "ç”»åƒã‹ã‚‰åœ°å½¢ãƒ‡ãƒ¼ã‚¿ã®ã¿ã‚’ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™"; } }
 
 		public override World createNewGame() {
 			using(LoadDialog dialog = new LoadDialog()) {

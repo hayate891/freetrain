@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Œš•¨ƒZƒbƒg</title>
-	<author>‰É‚³‚ñ</author>
+	<title>Building set</title>
+	<!--!<title>å»ºç‰©ã‚»ãƒƒãƒˆ</title>-->
+	<author>æš‡ã•ã‚“</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	
@@ -12,7 +13,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{3D8FA264-BE4A-4a4f-97E6-950779C89599}">
-		<group>ˆêŒËŒš‚Ä</group>
+		<group>Single house</group>
+		<!--!<group>ä¸€æˆ¸å»ºã¦</group>-->
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -26,7 +28,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{8B0106A0-64A4-4680-B258-232B1A5E0B0E}">
-		<group>ˆêŒËŒš‚Ä</group>
+		<group>Single house</group>
+		<!--!<group>ä¸€æˆ¸å»ºã¦</group>-->
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -40,7 +43,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{982E924F-BA22-4ace-A71C-4523719A8444}">
-		<group>ˆêŒËŒš‚Ä</group>
+		<group>Single house</group>
+		<!--!<group>ä¸€æˆ¸å»ºã¦</group>-->
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -54,7 +58,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{F193C000-DFEB-4588-B658-D11CD80C39D5}">
-		<group>ˆêŒËŒš‚Ä</group>
+		<group>Single house</group>
+		<!--!<group>ä¸€æˆ¸å»ºã¦</group>-->
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>

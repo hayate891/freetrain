@@ -164,7 +164,7 @@ namespace freetrain.tools.vcr
 																		  this.btnConfig});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "VCRConsole";
-			this.Text = "ƒrƒfƒIƒŒƒR[ƒ_";
+			this.Text = "ãƒ“ãƒ‡ã‚ªãƒ¬ã‚³ãƒ¼ãƒ€";
 			this.ResumeLayout(false);
 
 		}
@@ -219,16 +219,21 @@ namespace freetrain.tools.vcr
 			// update the help panel
 			string str;
 			if( controller!=null ) {
-				str = "¶ƒNƒŠƒbƒN‚Å‹éŒ`İ’èŠJnB‰EƒNƒŠƒbƒN‚Ü‚½‚Í˜^‰æ”ÍˆÍİ’èƒ{ƒ^ƒ“‚Åİ’èŠ®—¹B"+
-					"‹«ŠE‚ğƒNƒŠƒbƒN‚µ‚ÄƒTƒCƒY•ÏX";
+				str = "Left click to begin rectangle setting. Right click or use the recording range button to finish"+
+					"Click the border to change size";
+				//! str = "å·¦ã‚¯ãƒªãƒƒã‚¯ã§çŸ©å½¢è¨­å®šé–‹å§‹ã€‚å³ã‚¯ãƒªãƒƒã‚¯ã¾ãŸã¯éŒ²ç”»ç¯„å›²è¨­å®šãƒœã‚¿ãƒ³ã§è¨­å®šå®Œäº†ã€‚"+
+				//! 	"å¢ƒç•Œã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ã‚µã‚¤ã‚ºå¤‰æ›´";
 			} else
 			if( btnStop.Checked ) {
-				str = "¶‚©‚ç‡‚Éu˜^‰ævu’†’fvu’â~vu˜^‰æ”ÍˆÍw’èvuİ’èv";
+				str = "In order from the left: record, pause, stop, recording range, settings";
+				//! str = "å·¦ã‹ã‚‰é †ã«ã€ŒéŒ²ç”»ã€ã€Œä¸­æ–­ã€ã€Œåœæ­¢ã€ã€ŒéŒ²ç”»ç¯„å›²æŒ‡å®šã€ã€Œè¨­å®šã€";
 			} else
 			if( btnPause.Checked ) {
-				str = "˜^‰æ‚Í’†’f’†‚Å‚·";
+				str = "Recording is paused";
+				//! str = "éŒ²ç”»ã¯ä¸­æ–­ä¸­ã§ã™";
 			} else {
-				str = "˜^‰æ’†‚Å‚·";
+				str = "Recording";
+				//! str = "éŒ²ç”»ä¸­ã§ã™";
 			}
 
 			helpPanel.Text = str;

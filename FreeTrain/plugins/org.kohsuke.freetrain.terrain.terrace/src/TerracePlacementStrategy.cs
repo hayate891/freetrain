@@ -17,7 +17,8 @@ namespace freetrain.world.terrain.terrace
 			MountainVoxel mv = World.world[loc] as MountainVoxel;
 			
 			if(mv==null) {
-				MainWindow.showError("R”§‚É‚µ‚©İ’u‚Å‚«‚Ü‚¹‚ñ");
+				MainWindow.showError("Can only be placed on mountainsides");
+				//! MainWindow.showError("å±±è‚Œã«ã—ã‹è¨­ç½®ã§ãã¾ã›ã‚“");
 				return;
 			}
 

@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <plug-in>
-	<title>ƒVƒXƒeƒ€</title>
-	<author>ìŒûk‰î</author>
+	<title>System</title>
+	<!--!<title>ã‚·ã‚¹ãƒ†ãƒ </title>-->
+	<author>å·å£è€•ä»‹</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 <!--
-	ƒVƒXƒeƒ€‚Ì‹@”\‚à‚Ù‚Æ‚ñ‚Ç‚ªƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚Æ‚µ‚Ä’è‹`‚³‚ê‚Ä‚¢‚Ü‚·B
-	‚±‚Ìƒtƒ@ƒCƒ‹‚Å‚ÍAƒVƒXƒeƒ€‘g‚İ‚İ‚ÌƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚ğ’è‹`‚µ‚Ü‚·B
+	ã‚·ã‚¹ãƒ†ãƒ ã®æ©Ÿèƒ½ã‚‚ã»ã¨ã‚“ã©ãŒã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã¨ã—ã¦å®šç¾©ã•ã‚Œã¦ã„ã¾ã™ã€‚
+	ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã§ã¯ã€ã‚·ã‚¹ãƒ†ãƒ çµ„ã¿è¾¼ã¿ã®ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å®šç¾©ã—ã¾ã™ã€‚
 -->
 	
 	
@@ -16,99 +17,99 @@
 	
 	
 	
-<!-- ƒVƒXƒeƒ€‘g‚İ‚İ‚Ì•W€ƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“Œ^ -->
+<!-- ã‚·ã‚¹ãƒ†ãƒ çµ„ã¿è¾¼ã¿ã®æ¨™æº–ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³å‹ -->
 	
 	<contribution type="contribution" id="{312E3101-E7A6-4276-8AC9-617FA6D7ADEA}">
-		<!-- ‚a‚f‚l -->
+		<!-- ï¼¢ï¼§ï¼­ -->
 		<name>bgm</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.contributions.sound.BGMContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{5E0E178B-835A-4987-8ECC-B9E7A70EB39A}">
-		<!-- ‚a‚f‚l‚Ìƒtƒ@ƒNƒgƒŠ -->
+		<!-- ï¼¢ï¼§ï¼­ã®ãƒ•ã‚¡ã‚¯ãƒˆãƒª -->
 		<name>bgmFactory</name>
 		<class name="freetrain.contributions.sound.BGMFactoryContributionFactory"/>
 	</contribution>
 	
 	<contribution type="contribution" id="{32A5AFB2-B676-4A4E-A06E-917AF760FFB6}">
-		<!-- ‰w -->
+		<!-- é§… -->
 		<name>station</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.contributions.rail.StationContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{636703FB-D70F-4AF8-9254-FBDA1DAB4344}">
-		<!-- ’n•\ -->
+		<!-- åœ°è¡¨ -->
 		<name>land</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
 		<implementation name="freetrain.contributions.land.LandBuilderContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{6D1F34DC-F3E0-4CA8-B705-028C2F4D2F39}">
-		<!-- ƒƒjƒ…[€–Ú -->
+		<!-- ãƒ¡ãƒ‹ãƒ¥ãƒ¼é …ç›® -->
 		<name>menu</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
 		<implementation name="freetrain.contributions.others.MenuContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{12975FE4-93CB-41D5-9947-59FF28A8C961}">
-		<!-- —ñÔiˆê•Ò¬j -->
+		<!-- åˆ—è»Šï¼ˆä¸€ç·¨æˆï¼‰ -->
 		<name>train</name>
 		<class name="freetrain.contributions.train.TrainContributionFactory"/>
 	</contribution>
 	
 	<contribution type="contribution" id="{A18E14FD-1EC5-4C78-A721-42C91A864084}">
-		<!-- —ñÔiˆê—¼j -->
+		<!-- åˆ—è»Šï¼ˆä¸€ä¸¡ï¼‰ -->
 		<name>trainCar</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
 		<implementation name="freetrain.contributions.train.TrainCarContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{A53A5080-8F66-4CA3-A88F-8B4D5D7EC0AC}">
-		<!-- —ñÔ§ŒäƒAƒ‹ƒSƒŠƒYƒ€ -->
+		<!-- åˆ—è»Šåˆ¶å¾¡ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ  -->
 		<name>trainController</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
 		<implementation name="freetrain.contributions.rail.TrainControllerContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{9D6AC382-8A79-4CCF-BE16-15AAA5EBD5F3}">
-		<!-- “S‹´Eƒgƒ“ƒlƒ‹‚È‚Ç‚Ì“Áê‚Èü˜H -->
+		<!-- é‰„æ©‹ãƒ»ãƒˆãƒ³ãƒãƒ«ãªã©ã®ç‰¹æ®Šãªç·šè·¯ -->
 		<name>specialRail</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
 		<implementation name="freetrain.contributions.rail.SpecialRailContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{DE8F9D81-67D0-4F8E-810D-E53D2251E64B}">
-		<!-- ‹ó`‚È‚Ç‚Ì“Áê‚ÈuƒvƒƒWƒFƒNƒgvŒš•¨ -->
+		<!-- ç©ºæ¸¯ãªã©ã®ç‰¹æ®Šãªã€Œãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã€å»ºç‰© -->
 		<name>specialStructure</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
 		<implementation name="freetrain.contributions.structs.SpecialStructureContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{C9E8E541-FD55-47DB-B2D9-222E941DDB63}">
-		<!-- Œš•¨ -->
+		<!-- å»ºç‰© -->
 		<name>commercial</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.contributions.structs.CommercialStructureContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{94B9070E-DEEA-4C70-AEF2-7E795312FEC3}">
-		<!-- “¹˜H -->
+		<!-- é“è·¯ -->
 		<name>road</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
 		<implementation name="freetrain.contributions.road.RoadContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{BFA3A8EA-05B0-4910-907F-4F617528B7CD}">
-		<!-- “S“¹—p¬•¨ƒAƒNƒZƒTƒŠ -->
+		<!-- é‰„é“ç”¨å°ç‰©ã‚¢ã‚¯ã‚»ã‚µãƒª -->
 		<name>railStationary</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.contributions.rail.RailStationaryContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{8D79D146-21F9-4E9E-ACAB-5B43A003F032}">
-		<!-- ‚‚³‰Â•Ï‚ÌŒš•¨ -->
+		<!-- é«˜ã•å¯å¤‰ã®å»ºç‰© -->
 		<name>varHeightBuilding</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.contributions.structs.VarHeightBuildingContribution" />
@@ -116,7 +117,7 @@
 	
 	
 	
-<!-- ‰ïŒv•ª—Ş -->
+<!-- ä¼šè¨ˆåˆ†é¡ -->
 	
 	<contribution type="contribution" id="{630D0CFF-FCCA-44CE-AF24-E26EFA54352B}">
 		<name>accountGenre</name>
@@ -125,19 +126,23 @@
 	</contribution>
 	
 	<contribution type="accountGenre" id="{AC30BB0B-044C-4784-A83D-FCB1F60B3CF2}">
-		<name>“S“¹</name>
+		<name>Rail</name>
+		<!--!<name>é‰„é“</name>-->
 	</contribution>
 	
 	<contribution type="accountGenre" id="{CC00A6D1-D078-4D3C-AFB2-EDC6CB9F4CB3}">
-		<name>ƒoƒX</name>
+		<name>Bus</name>
+		<!--!<name>ãƒã‚¹</name>-->
 	</contribution>
 	
 	<contribution type="accountGenre" id="{2A666F1A-9F40-4F67-98F4-DEAC1E55296D}">
-		<name>q‰ïĞ</name>
+		<name>Subsidiary</name>
+		<!--!<name>å­ä¼šç¤¾</name>-->
 	</contribution>
 	
 	<contribution type="accountGenre" id="{C0A9ABA5-801F-4AA6-93EA-6FF563C2B407}">
-		<name>‚»‚Ì‘¼</name>
+		<name>Other</name>
+		<!--!<name>ãã®ä»–</name>-->
 	</contribution>
 	
 	<!-- TODO: more coming -->
@@ -145,7 +150,7 @@
 	
 	
 	
-<!-- —ñÔ‚Ì”­Ôƒxƒ‹ -->
+<!-- åˆ—è»Šã®ç™ºè»Šãƒ™ãƒ« -->
 	
 	<contribution type="contribution" id="{821FC629-4180-48a4-8B47-ECE2817D2106}">
 		<name>trainDepartureBell</name>
@@ -154,12 +159,14 @@
 	</contribution>
 	
 	<contribution type="trainDepartureBell" id="{9B087AEA-6E9C-48cd-A1F3-1B774500752E}">
-		<name>ƒvƒ‹ƒ‹ƒ‹</name>
+		<name>Departure bell</name>
+		<!--!<name>ãƒ—ãƒ«ãƒ«ãƒ«</name>-->
 		<sound href="station.wav" />
 	</contribution>
 	
 	<contribution type="trainDepartureBell" id="{87B1BA1B-C18F-4E39-AD50-245255F34388}">
-		<name>–³‰¹</name>
+		<name>Silence</name>
+		<!--!<name>ç„¡éŸ³</name>-->
 		<sound href="otonasi.wav" />
 	</contribution>
 	
@@ -169,7 +176,7 @@
 	
 	
 	
-<!-- ƒhƒbƒLƒ“ƒOƒEƒBƒ“ƒhƒE -->
+<!-- ãƒ‰ãƒƒã‚­ãƒ³ã‚°ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ -->
 	<contribution type="contribution" id="{B348329E-6D3B-4545-88A6-B8B368E11EED}">
 		<name>dockingContent</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
@@ -177,37 +184,45 @@
 	</contribution>
 	
 	<contribution type="dockingContent" id="{12DB2C30-14B2-426D-B324-639BE17268C5}">
-		<name>”„ãî•ñ</name>
-		<menu name="”„ãî•ñ(&amp;S)" location="view" />
+		<name>Sales info</name>
+		<menu name="&amp;Sales info" location="view" />
+		<!--!<name>å£²ä¸Šæƒ…å ±</name>
+		<menu name="å£²ä¸Šæƒ…å ±(&amp;S)" location="view" />-->
 		<class name="freetrain.world.accounting.AccountSummaryWindow"/>
 	</contribution>
 	
 	<contribution type="dockingContent" id="{7A5AE360-0974-4e6a-A7BB-70A3906C406E}">
-		<name>q‰ïĞ”„”ƒ</name>
-		<menu name="q‰ïĞ”„”ƒ(&amp;U)" location="view" />
+		<name>Subsidiary market</name>
+		<menu name="S&amp;ubsidiary market" location="view" />
+		<!--!<name>å­ä¼šç¤¾å£²è²·</name>
+		<menu name="å­ä¼šç¤¾å£²è²·(&amp;U)" location="view" />-->
 		<class name="freetrain.world.subsidiaries.MarketWindow"/>
 	</contribution>
 	
 	<contribution type="dockingContent" id="{CBB96A74-1201-4A26-82ED-B7A8C71EC5AD}">
-		<name>ƒ_ƒCƒ„İ’è</name>
-		<menu name="ƒ_ƒCƒ„İ’è(&amp;I)" location="rail" position="8" />
+		<name>Diagram settings</name>
+		<menu name="D&amp;iagram settings" location="rail" position="8" />
+		<!--!<name>ãƒ€ã‚¤ãƒ¤è¨­å®š</name>
+		<menu name="ãƒ€ã‚¤ãƒ¤è¨­å®š(&amp;I)" location="rail" position="8" />-->
 		<class name="freetrain.controllers.rail.TrainControllerDialog"/>
 	</contribution>
 	
 	<contribution type="dockingContent" id="{533F5EF1-2E97-46aa-A231-49BB0D2A724D}">
-		<name>—ñÔî•ñ</name>
+		<name>Train info</name>
+		<!--!<name>åˆ—è»Šæƒ…å ±</name>-->
 		<multiple/>	<!-- multiple instances are allowed -->
-		<menu name="—ñÔî•ñ(&amp;T)" location="view" />
+		<menu name="&amp;Train info" location="view" />
+		<!--!<menu name="åˆ—è»Šæƒ…å ±(&amp;T)" location="view" />-->
 		<class name="freetrain.controllers.rail.TrainTrackingWindow"/>
 	</contribution>
 	
 	
 	
 	
-<!-- ƒXƒvƒ‰ƒCƒgƒtƒ@ƒNƒgƒŠ -->
+<!-- ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆãƒ•ã‚¡ã‚¯ãƒˆãƒª -->
 	
 	<!--
-		ƒsƒNƒ`ƒƒ‚ğ•`‰æ‚·‚é•û–@‚ğƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚Ü‚·
+		ãƒ”ã‚¯ãƒãƒ£ã‚’æç”»ã™ã‚‹æ–¹æ³•ã‚’ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã¾ã™
 	-->
 	<contribution type="contribution" id="{DC051871-BA74-45ED-B122-247BC7EA0BFA}">
 		<name>spriteFactory</name>
@@ -216,24 +231,24 @@
 	</contribution>
 	
 	
-	<!-- ƒfƒBƒtƒHƒ‹ƒg‚ÌƒXƒvƒ‰ƒCƒgƒtƒ@ƒNƒgƒŠBƒpƒ‰ƒ[ƒ^‚È‚µ -->
+	<!-- ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆã®ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆãƒ•ã‚¡ã‚¯ãƒˆãƒªã€‚ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãªã— -->
 	<contribution type="spriteFactory" id="spriteFactory:default">
 		<class name="freetrain.framework.graphics.SimpleSpriteFactoryContributionImpl"/>
 	</contribution>
 	
-	<!-- Fƒ}ƒbƒv‚ğ‚·‚éƒXƒvƒ‰ƒCƒgƒtƒ@ƒNƒgƒŠB
+	<!-- è‰²ãƒãƒƒãƒ—ã‚’ã™ã‚‹ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆãƒ•ã‚¡ã‚¯ãƒˆãƒªã€‚
 		<map from="100,50,200" to="30,80,90" />
 		...
 		
-		‚Ìƒpƒ‰ƒ[ƒ^‚ğ‚Æ‚é
+		ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã¨ã‚‹
 	-->
 	<contribution type="spriteFactory" id="spriteFactory:colorMapped">
 		<class name="freetrain.framework.graphics.ColorMappedSpriteFactoryContributionImpl"/>
 	</contribution>
 	
-	<!-- F‘Š‚É‚æ‚éFƒ}ƒbƒv‚ğ‚·‚éƒXƒvƒ‰ƒCƒgƒtƒ@ƒNƒgƒŠ
+	<!-- è‰²ç›¸ã«ã‚ˆã‚‹è‰²ãƒãƒƒãƒ—ã‚’ã™ã‚‹ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆãƒ•ã‚¡ã‚¯ãƒˆãƒª
 		<map from="100,*,100" to="50,30,20" />
-		‚Ìƒpƒ‰ƒ[ƒ^‚ğ‚Æ‚é
+		ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã¨ã‚‹
 	-->
 	<contribution type="spriteFactory" id="spriteFactory:hueTransform">
 		<class name="freetrain.framework.graphics.HueTransformSpriteFactoryContributionImpl"/>
@@ -243,7 +258,7 @@
 	
 	
 	
-<!-- ƒXƒvƒ‰ƒCƒgƒ[ƒ_B‰æ‘œ‚©‚ç‚Ç‚¤ƒXƒvƒ‰ƒCƒg‚ğØ‚èo‚·‚©‚ğ‰B•Á‚·‚é -->
+<!-- ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆãƒ­ãƒ¼ãƒ€ã€‚ç”»åƒã‹ã‚‰ã©ã†ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆã‚’åˆ‡ã‚Šå‡ºã™ã‹ã‚’éš è”½ã™ã‚‹ -->
 	<contribution type="contribution" id="{5733A3EA-7A2D-4602-B702-D63D55A0FAB9}">
 		<name>spriteLoader</name>
 		<class name="freetrain.framework.plugin.DynamicContributionFactory"/>
@@ -251,7 +266,7 @@
 	</contribution>
 	
 	<!--
-		ƒfƒBƒtƒHƒ‹ƒg‚ÌÀ‘•
+		ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆã®å®Ÿè£…
 		
 		0D: <sprite origin="..." offset="..." size="..." picture="..." />
 		2D: <sprite origin="..." offset="..." picture="..." />
@@ -267,7 +282,7 @@
 	
 	
 	
-<!-- “½–¼ƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“ -->
+<!-- åŒ¿åã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ -->
 	
 	<contribution type="contribution" id="{8AD27BD7-FF9E-401b-B309-53BB0DFAD2C4}">
 		<name>anonymous</name>
@@ -281,7 +296,7 @@
 	
 	
 	
-<!-- ‰æ‘œ‚ÌƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“BID‚ğg‚Á‚Ä‰æ‘œ‚ÉƒAƒNƒZƒX‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚· -->
+<!-- ç”»åƒã®ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã€‚IDã‚’ä½¿ã£ã¦ç”»åƒã«ã‚¢ã‚¯ã‚»ã‚¹ã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã™ -->
 	<contribution type="contribution" id="{A51C49BF-7C30-40B3-B371-ECDE6A7C9C0C}">
 		<name>picture</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
@@ -289,16 +304,16 @@
 	</contribution>
 	
 	
-	<!-- ƒVƒXƒeƒ€‘g‚İ‚İ‰æ‘œ -->
+	<!-- ã‚·ã‚¹ãƒ†ãƒ çµ„ã¿è¾¼ã¿ç”»åƒ -->
 	<contribution type="picture" id="{3FF9F902-6B2A-44A4-9C5F-DE8D82CFD37D}">
-		<!-- ‰w‚Ì‰æ‘œ -->
+		<!-- é§…ã®ç”»åƒ -->
 		<picture src="ThinPlatform.bmp">
 			<override when="night" src="ThinPlatform.n.bmp" />
 		</picture>
 	</contribution>
 	
 	<contribution type="picture" id="{3197A63A-89DC-4237-8C9B-045F41F31CDB}">
-		<!-- Œ×ü‹´ -->
+		<!-- è·¨ç·šæ©‹ -->
 		<picture src="renraku02.bmp">
 			<override when="night" src="renraku02.n.bmp" />
 		</picture>
@@ -309,7 +324,7 @@
 	
 	
 	
-<!-- F‘Ö‚¦—ñÔ—p‚Ì‰æ‘œƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“ -->
+<!-- è‰²æ›¿ãˆåˆ—è»Šç”¨ã®ç”»åƒã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ -->
 	<contribution type="contribution" id="{669FE39E-0F2B-42C1-B618-49832461448A}">
 		<name>colorMapTrainPicture</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
@@ -317,44 +332,44 @@
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-1">
-		<name>”Ä—pOF×‘Ñ</name>
-		<author>477‚³‚ñ</author>
+		<name>æ±ç”¨ä¸‰è‰²ç´°å¸¯</name>
+		<author>477ã•ã‚“</author>
 		<picture src="UncoloredTrain01.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-2">
-		<name>”Ä—plF‘¾‘Ñ</name>
-		<author>477‚³‚ñ</author>
+		<name>æ±ç”¨å››è‰²å¤ªå¸¯</name>
+		<author>477ã•ã‚“</author>
 		<picture src="UncoloredTrain02.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-3">
-		<name>”Ä—plF×‘Ñ</name>
-		<author>477‚³‚ñ</author>
+		<name>æ±ç”¨å››è‰²ç´°å¸¯</name>
+		<author>477ã•ã‚“</author>
 		<picture src="UncoloredTrain03.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-4">
-		<name>103Œn•—</name>
-		<author>477‚³‚ñ</author>
+		<name>103ç³»é¢¨</name>
+		<author>477ã•ã‚“</author>
 		<picture src="UncoloredTrain04.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-5">
-		<name>205Œn•—</name>
-		<author>477‚³‚ñ</author>
+		<name>205ç³»é¢¨</name>
+		<author>477ã•ã‚“</author>
 		<picture src="UncoloredTrain05.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-6">
-		<name>211Œn•—</name>
-		<author>477‚³‚ñ</author>
+		<name>211ç³»é¢¨</name>
+		<author>477ã•ã‚“</author>
 		<picture src="UncoloredTrain06.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-7">
-		<name>E231Œn•—</name>
-		<author>477‚³‚ñ</author>
+		<name>E231ç³»é¢¨</name>
+		<author>477ã•ã‚“</author>
 		<picture src="UncoloredTrain07.bmp" />
 	</contribution>
 	
@@ -362,10 +377,10 @@
 	
 	
 <!--
-	V‹KƒQ[ƒ€
+	æ–°è¦ã‚²ãƒ¼ãƒ 
 	
-	V‹KƒQ[ƒ€ƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚Å’è‹`‚³‚ê‚½‚à‚Ì‚ªuV‚µ‚¢ƒQ[ƒ€v
-	ƒ_ƒCƒAƒƒO‚É•\¦‚³‚ê‚Ü‚·
+	æ–°è¦ã‚²ãƒ¼ãƒ ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã§å®šç¾©ã•ã‚ŒãŸã‚‚ã®ãŒã€Œæ–°ã—ã„ã‚²ãƒ¼ãƒ ã€
+	ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã«è¡¨ç¤ºã•ã‚Œã¾ã™
 -->
 	<contribution type="contribution" id="{9AB5DFE3-B13A-485c-956D-996E27FDCD9F}">
 		<name>newGame</name>
@@ -381,14 +396,14 @@
 	
 	
 	
-<!-- ‚»‚Ì‚Ù‚©‚ÌƒVƒXƒeƒ€’è‹`‰æ‘œ -->
+<!-- ãã®ã»ã‹ã®ã‚·ã‚¹ãƒ†ãƒ å®šç¾©ç”»åƒ -->
 	<contribution type="picture" id="{F4380415-A2F2-41d8-8FCD-ED25A470A84D}">
-		<!-- “¥‚İØ‚è -->
+		<!-- è¸ã¿åˆ‡ã‚Š -->
 		<picture src="crossing.bmp" />
 	</contribution>
 	
 	<contribution type="picture" id="{0E7A9F09-4482-4b78-8A8D-F59F02574B1B}">
-		<!-- „—L’n -->
+		<!-- ç§æœ‰åœ° -->
 		<picture src="LandProperty.bmp" />
 	</contribution>
 	

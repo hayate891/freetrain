@@ -64,7 +64,8 @@ namespace freetrain.world.terrain.terrace
 			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "ê›íu";
+			this.buttonPlace.Text = "Place";
+			//! this.buttonPlace.Text = "Ë®≠ÁΩÆ";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonPlace.CheckedChanged += new System.EventHandler(this.onStrategyChanged);
 			// 
@@ -75,7 +76,8 @@ namespace freetrain.world.terrain.terrace
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
 			this.buttonRemove.TabIndex = 5;
-			this.buttonRemove.Text = "ìPãé";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "Êí§Âéª";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonRemove.CheckedChanged += new System.EventHandler(this.onStrategyChanged);
 			// 
@@ -99,7 +101,8 @@ namespace freetrain.world.terrain.terrace
 			this.terrace.Size = new System.Drawing.Size(48, 24);
 			this.terrace.TabIndex = 6;
 			this.terrace.TabStop = true;
-			this.terrace.Text = "êóíd";
+			this.terrace.Text = "Terrace";
+			//! this.terrace.Text = "ÈõõÂ£á";
 			this.terrace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.terrace.CheckedChanged += new System.EventHandler(this.onStrategyChanged);
 			// 
@@ -110,7 +113,8 @@ namespace freetrain.world.terrain.terrace
 			this.cut.Name = "cut";
 			this.cut.Size = new System.Drawing.Size(48, 24);
 			this.cut.TabIndex = 7;
-			this.cut.Text = "êÿí ";
+			this.cut.Text = "Cut";
+			//! this.cut.Text = "ÂàáÈÄö";
 			this.cut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.cut.CheckedChanged += new System.EventHandler(this.onStrategyChanged);
 			// 
@@ -134,7 +138,8 @@ namespace freetrain.world.terrain.terrace
 																		  this.preview});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "TerraceController";
-			this.Text = "êóídÇ∆êÿÇËí Çµ";
+			this.Text = "Terraces & Cuts";
+			//! this.Text = "ÈõõÂ£á„Å®Âàá„ÇäÈÄö„Åó";
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

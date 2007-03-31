@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Œš•¨ƒZƒbƒg</title>
-	<author>‚»‚Ì‘¼‚Ì–¼–³‚µ‚³‚ñ</author>
+	<title>Building set</title>
+	<!--!<title>å»ºç‰©ã‚»ãƒƒãƒˆ</title>-->
+	<author>ãã®ä»–ã®åç„¡ã—ã•ã‚“</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{B83A15E9-9284-4569-A1BF-266DF9B1560A}">
-		<name>‚Ù‚Á‚©‚Ù‚Á‚©’à</name>
+		<name>Hokka Hokka Tei</name>
+		<!--!<name>ã»ã£ã‹ã»ã£ã‹äº­</name>-->
 		<price>210</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -20,7 +22,8 @@
 	
 	
 	<contribution type="commercial" id="{8CE18936-7C28-4a91-8B40-9CCED1F48968}">
-		<name>‚‹‰ƒ}ƒ“ƒVƒ‡ƒ“</name>
+		<name>Luxury apartment house</name>
+		<!--!<name>é«˜ç´šãƒãƒ³ã‚·ãƒ§ãƒ³</name>-->
 		<price>4000</price>
 		<size>4,2</size>
 		<height>3</height>

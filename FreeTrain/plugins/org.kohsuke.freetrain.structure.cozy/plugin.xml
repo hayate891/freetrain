@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Œš•¨ƒZƒbƒg</title>
-	<author>cozy@E.G.R.‚³‚ñ</author>
+	<title>Building set</title>
+	<!--!<title>å»ºç‰©ã‚»ãƒƒãƒˆ</title>-->
+	<author>cozy@E.G.R.ã•ã‚“</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{487900B6-EBCA-4c98-9E28-194050E9706D}">
-		<group>ƒRƒ“ƒrƒj</group>
-		<name>ƒtƒ@ƒ~ƒŠ[ƒ}[ƒg</name>
+		<group>Convenience store</group>
+		<name>Family Mart</name>
+		<!--!<group>ã‚³ãƒ³ãƒ“ãƒ‹</group>
+		<name>ãƒ•ã‚¡ãƒŸãƒªãƒ¼ãƒãƒ¼ãƒˆ</name>-->
 		<price>200</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -20,7 +23,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{D6DED1EF-FA6F-4734-A4CA-46D217A1EC1F}">
-		<name>ƒ„ƒ}ƒ_“d‹@</name>
+		<name>Yamada Denki</name>
+		<!--!<name>ãƒ¤ãƒãƒ€é›»æ©Ÿ</name>-->
 		<price>1600</price>
 		<size>2,2</size>
 		<height>2</height>

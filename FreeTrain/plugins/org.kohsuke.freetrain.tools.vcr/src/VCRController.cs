@@ -52,7 +52,8 @@ namespace freetrain.tools.vcr
 		}
 
 		public string name {
-			get { return "�^��͈͂̐ݒ�"; }
+			get { return "Recording range settings"; }
+			//! get { return "録画範囲の設定"; }
 		}
 
 		public MapOverlay overlay { get { return this; } }

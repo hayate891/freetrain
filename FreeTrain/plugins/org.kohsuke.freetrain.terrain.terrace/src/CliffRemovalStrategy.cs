@@ -15,7 +15,8 @@ namespace freetrain.world.terrain.terrace
 
 		public void onClick( MapViewWindow view, Location loc, Point ab ) {
 			if( World.world[loc]!=null ) {
-				MainWindow.showError("áŠQ•¨‚ª‚ ‚è‚Ü‚·");
+				MainWindow.showError("There are obstacles");
+				//! MainWindow.showError("éšœå®³ç‰©ãŒã‚ã‚Šã¾ã™");
 				return;
 			}
 			// TODO: remove reclaimable voxels automatically

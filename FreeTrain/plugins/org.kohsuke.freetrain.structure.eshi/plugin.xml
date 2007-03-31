@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>建物セット</title>
-	<author>絵師見習いさん</author>
+	<title>Building set</title>
+	<!--!<title>蟒ｺ迚ｩ繧ｻ繝�繝�</title>-->
+	<author>邨ｵ蟶ｫ隕狗ｿ偵＞縺輔ｓ</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{DD1224B9-2F1A-4c25-9E65-4E604F3342C7}">
-		<group>吉野家</group>
+		<group>Yoshinoya</group>
+		<!--!<group>蜷蛾㍽螳ｶ</group>-->
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -19,7 +21,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{19F42929-9606-4cfb-A2F0-EFE323487DC6}">
-		<group>吉野家</group>
+		<group>Yoshinoya</group>
+		<!--!<group>蜷蛾㍽螳ｶ</group>-->
 		<price>400</price>
 		<size>1,2</size>
 		<height>1</height>

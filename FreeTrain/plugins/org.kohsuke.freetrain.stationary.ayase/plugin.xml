@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>‚à‚Á‚Æ‹´‹r</title>
-	<author>ˆ»£‚³‚ñ</author>
+	<title>More piers</title>
+	<!--!<title>ã‚‚ã£ã¨æ©‹è„š</title>-->
+	<author>ç¶¾ç€¬ã•ã‚“</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
 	
@@ -11,7 +12,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-0165ADC2C849}">
-		<group>ƒŒƒ“ƒK‹´‹r</group>
+		<group>Brick pier</group>
+		<!--!<group>ãƒ¬ãƒ³ã‚¬æ©‹è„š</group>-->
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -21,7 +23,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{556E9EC4-5751-43DA-8F08-A1484E233811}">
-		<group>ƒŒƒ“ƒK‹´‹r</group>
+		<group>Brick pier</group>
+		<!--!<group>ãƒ¬ãƒ³ã‚¬æ©‹è„š</group>-->
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -31,7 +34,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-43292512BBD3}">
-		<group>ƒRƒ“ƒNƒŠ[ƒg‹´‹r</group>
+		<group>Concrete pier</group>
+		<!--!<group>ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆæ©‹è„š</group>-->
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -41,7 +45,8 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{CBCF4E66-6BA3-4A06-95A0-161E6C95F7EB}">
-		<group>ƒRƒ“ƒNƒŠ[ƒg‹´‹r</group>
+		<group>Concrete pier</group>
+		<!--!<group>ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆæ©‹è„š</group>-->
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>

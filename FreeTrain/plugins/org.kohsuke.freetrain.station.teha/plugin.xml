@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plug-in [
 	<!ENTITY unmannedStation "
-		<group>–³l‰w</group>
+		<group>Unmanned station</group>
+		<!--!<group>ç„¡äººé§…</group>-->
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -9,8 +10,9 @@
 	">
 ]>
 <plug-in>
-	<title>–³l‰w</title>
-	<author>‚Ä‚Í(ƒwƒ{ƒhƒbƒ^</author>
+	<title>Unmanned station</title>
+	<!--!<title>ç„¡äººé§…</title>-->
+	<author>ã¦ã¯(ãƒ˜ãƒœãƒ‰ãƒƒã‚¿</author>
 	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
 	
 	

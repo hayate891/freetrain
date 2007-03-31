@@ -18,7 +18,8 @@ namespace freetrain.world.rail.cttrain
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "Œ±—ñÔ‚ÌFİ’è";
+			item.Text = "Test train color settings";
+			//! item.Text = "è©¦é¨“åˆ—è»Šã®è‰²è¨­å®š";
 			item.Click += new System.EventHandler(onClick);
 
 			containerMenu.MenuItems[1].MenuItems.Add(item);

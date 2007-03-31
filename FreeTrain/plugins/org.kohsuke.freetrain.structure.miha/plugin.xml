@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plug-in [
-<!-- 1x1 ƒ}ƒ“ƒVƒ‡ƒ“‚Ìƒpƒ‰ƒ[ƒ^ -->
+<!-- 1x1 ãƒãƒ³ã‚·ãƒ§ãƒ³ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ -->
 <!ENTITY smallMansion '
-		<group>ƒ}ƒ“ƒVƒ‡ƒ“(¬)</group>
+		<group>Apartment house (S)</group>
+		<!--!<group>ãƒãƒ³ã‚·ãƒ§ãƒ³(å°)</group>-->
 		<price>250</price>
 		<size>1,1</size>
 		<minHeight>2</minHeight>
@@ -12,9 +13,10 @@
 			<base>120</base>
 		</population>
 '>
-<!-- 2x2 ƒ}ƒ“ƒVƒ‡ƒ“‚Ìƒpƒ‰ƒ[ƒ^ -->
+<!-- 2x2 ãƒãƒ³ã‚·ãƒ§ãƒ³ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ -->
 <!ENTITY middleMansion '
-		<group>ƒ}ƒ“ƒVƒ‡ƒ“(’†)</group>
+		<group>Apartment house (M)</group>
+		<!--!<group>ãƒãƒ³ã‚·ãƒ§ãƒ³(ä¸­)</group>-->
 		<price>2900</price>
 		<size>2,2</size>
 		<minHeight>3</minHeight>
@@ -24,9 +26,10 @@
 			<base>500</base>
 		</population>
 '>
-<!-- ‘åŒ^‚Ìƒpƒ‰ƒ[ƒ^ -->
+<!-- å¤§å‹ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ -->
 <!ENTITY largeMansion '
-		<group>ƒ}ƒ“ƒVƒ‡ƒ“(‘å)</group>
+		<group>Apartment house (L)</group>
+		<!--!<group>ãƒãƒ³ã‚·ãƒ§ãƒ³(å¤§)</group>-->
 		<price>6200</price>
 		<minHeight>2</minHeight>
 		<maxHeight>8</maxHeight>
@@ -37,12 +40,14 @@
 '>
 ]>
 <plug-in>
-	<title>Œš•¨ƒZƒbƒg</title>
-	<author>ƒ~ƒn‚³‚ñ</author>
-	<homepage>http://www5.ocn.ne.jp/~mihata/</homepage>
+	<title>Building set</title>
+	<!--!<title>å»ºç‰©ã‚»ãƒƒãƒˆ</title>-->
+	<author>ãƒŸãƒã•ã‚“</author>
+	<homepage>http://www5.ocn.ne.jp/â€¾mihata/</homepage>
 	
 	<contribution type="commercial" id="{551BB418-4604-4fca-88AC-5F71068FE04A}">
-		<name>ƒ}ƒNƒVƒXƒ^ƒ[</name>
+		<name>Maxis Tower</name>
+		<!--!<name>ãƒã‚¯ã‚·ã‚¹ã‚¿ãƒ¯ãƒ¼</name>-->
 		<price>2400</price>
 		<size>1,3</size>
 		<height>4</height>
@@ -56,7 +61,8 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{8BC1629A-BD98-462c-985A-CCD03F1B8C22}">
-		<name>”ª‰¤qÄŠJ”­ƒrƒ‹</name>
+		<name>View Tower Hachioji</name>
+		<!--!<name>å…«ç‹å­å†é–‹ç™ºãƒ“ãƒ«</name>-->
 		<price>2720</price><!--680*4-->
 		<size>2,2</size>
 		<height>6</height>

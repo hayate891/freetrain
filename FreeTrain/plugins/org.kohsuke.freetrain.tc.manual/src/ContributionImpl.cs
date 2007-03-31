@@ -16,11 +16,13 @@ namespace freetrain.world.rail.manualtc
 		public TrainConrollerContributionImpl( XmlElement e ) : base(e) {}
 
 
-		public override string name { get { return "è“®‰^“]ƒ_ƒCƒ„ƒOƒ‰ƒ€"; } }
+		public override string name { get { return "Manually-operated diagram"; } }
+		//! public override string name { get { return "æ‰‹å‹•é‹è»¢ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ "; } }
 
 		public override string description {
 			get {
-				return "ƒL[ƒ{[ƒh‚©‚ç—ñÔ‚ğè“®‚Å‰^“]‚Å‚«‚é‚æ‚¤‚É‚µ‚Ü‚·";
+				return "Allows you to control the train manually with the keyboard";
+				//! return "ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‹ã‚‰åˆ—è»Šã‚’æ‰‹å‹•ã§é‹è»¢ã§ãã‚‹ã‚ˆã†ã«ã—ã¾ã™";
 			}
 		}
 

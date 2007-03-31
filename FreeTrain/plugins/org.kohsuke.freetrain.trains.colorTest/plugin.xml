@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>FŒ±—ñÔ</title>
-	<author>ìŒûk‰î</author>
+	<title>Color Test Train</title>
+	<!--!<title>è‰²è©¦é¨“åˆ—è»Š</title>-->
+	<author>å·å£è€•ä»‹</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="menu" id="{8CA8F000-4DC6-4441-8F53-A628C952BD9F}">
@@ -9,7 +10,7 @@
 			codebase="bin/Debug/FreeTrain.ColorTestTrain.dll" />
 	</contribution>
 	
-	<!-- Œ±—ñÔ -->
+	<!-- è©¦é¨“åˆ—è»Š -->
 	<contribution type="trainCar" id="{6E5E12DD-69CB-4DF2-B4F0-2BCDA703CBB0}">
 		<class
 			name="freetrain.world.rail.cttrain.ColorTestTrainCar"
@@ -17,13 +18,15 @@
 	</contribution>
 	
 	<contribution type="train" id="{719F0922-EA74-409C-B829-C4950201C226}">
-		<name>Fİ’è‚ÌŒ±—ñÔ</name>
+		<name>Test train with modified colors</name>
+		<!--!<name>è‰²è¨­å®šã®è©¦é¨“åˆ—è»Š</name>-->
 		<price>1</price>
 		<speed>medium</speed>
-		<author>å‚É477‚³‚ñ</author>
+		<author>ä¸»ã«477ã•ã‚“</author>
 		<type>FTct</type>
 		<company>FreeTrain</company>
-		<description>V‚µ‚¢—ñÔ‚ğİŒv‚·‚é‚Ì‚Ég‚¦‚Ü‚·</description>
+		<description>Used when designing new trains</description>
+		<!--!<description>æ–°ã—ã„åˆ—è»Šã‚’è¨­è¨ˆã™ã‚‹ã®ã«ä½¿ãˆã¾ã™</description>-->
 		
 		<composition>
 			<body carRef="{6E5E12DD-69CB-4DF2-B4F0-2BCDA703CBB0}" />

@@ -17,11 +17,13 @@ namespace freetrain.world.terrain.terrace
 
 		internal static TerraceContributionImpl theInstance;
 
-		public override string name { get { return "—’d‚ÆØ‚è’Ê‚µ"; } }
+		public override string name { get { return "Terraces & cuts"; } }
+		//! public override string name { get { return "é››å£‡ã¨åˆ‡ã‚Šé€šã—"; } }
 
 		public override string oneLineDescription {
 			get {
-				return "R• ‚É•½’n‚ğ·‚èã‚°‚½‚èí‚Á‚½‚è‚µ‚Ä•½’n‚ğØ‚èŠJ‚«‚Ü‚·";
+				return "Creating a flat surface on a mountainside by raising and lowering land";
+				//! return "å±±è…¹ã«å¹³åœ°ã‚’ç››ã‚Šä¸Šã’ãŸã‚Šå‰Šã£ãŸã‚Šã—ã¦å¹³åœ°ã‚’åˆ‡ã‚Šé–‹ãã¾ã™";
 			}
 		}
 
