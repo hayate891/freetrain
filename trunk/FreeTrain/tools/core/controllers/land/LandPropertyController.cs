@@ -88,7 +88,8 @@ namespace freetrain.controllers.land
 			// costBox
 			// 
 			this.costBox.cost = 0;
-			this.costBox.label = "îÔópÅF";
+			this.costBox.label = "Cost:";
+			//! this.costBox.label = "Ë≤ªÁî®Ôºö";
 			this.costBox.Location = new System.Drawing.Point(8, 88);
 			this.costBox.Name = "costBox";
 			this.costBox.Size = new System.Drawing.Size(96, 32);
@@ -101,7 +102,8 @@ namespace freetrain.controllers.land
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
 			this.buttonRemove.TabIndex = 6;
-			this.buttonRemove.Text = "îÑãp";
+			this.buttonRemove.Text = "Sell";
+			//! this.buttonRemove.Text = "Â£≤Âç¥";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonPlace
@@ -113,7 +115,8 @@ namespace freetrain.controllers.land
 			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
 			this.buttonPlace.TabIndex = 5;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "çwì¸";
+			this.buttonPlace.Text = "Buy";
+			//! this.buttonPlace.Text = "Ë≥ºÂÖ•";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// LandPropertyController
@@ -126,7 +129,8 @@ namespace freetrain.controllers.land
 																		  this.buttonPlace,
 																		  this.preview});
 			this.Name = "LandPropertyController";
-			this.Text = "ìyínîÑîÉ";
+			this.Text = "Real estate market";
+			//! this.Text = "ÂúüÂú∞Â£≤Ë≤∑";
 			this.ResumeLayout(false);
 
 		}

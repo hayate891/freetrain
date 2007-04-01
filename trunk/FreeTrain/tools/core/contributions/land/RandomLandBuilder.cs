@@ -13,14 +13,14 @@ using freetrain.world.land;
 namespace freetrain.contributions.land
 {
 	/// <summary>
-	/// RandomLandBuilder ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// RandomLandBuilder ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	[Serializable]
 	public class RandomLandBuilder : LandBuilderContribution
 	{
 		public RandomLandBuilder( XmlElement e ) : base(e) {
 			ArrayList array = new ArrayList();
-			string[] guids = XmlUtil.selectSingleNode( e, "lands" ).InnerText.Split(' ','\t','\r','\n');
+			string[] guids = XmlUtil.selectSingleNode( e, "lands" ).InnerText.Split(' ','Â¥t','Â¥r','Â¥n');
 			for( int i=0; i<guids.Length; i++ ) {
 				if(guids[i].Length!=0)
 					array.Add(guids[i]);

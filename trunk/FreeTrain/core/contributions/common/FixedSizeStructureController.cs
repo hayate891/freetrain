@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using freetrain.controllers;
@@ -80,7 +80,7 @@ namespace freetrain.contributions.common
 		protected override void onSelected( Cube cube ) {
 			PThreeDimStructure s = World.world.getEntityAt(cube.corner) as PThreeDimStructure;
 			if( s==null || s.type!=contrib ) {
-				MainWindow.showError("The type is different");
+				MainWindow.showError("Wrong type");
 				//! MainWindow.showError("種類が違います");
 				return;
 			}

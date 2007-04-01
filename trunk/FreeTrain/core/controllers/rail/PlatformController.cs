@@ -469,7 +469,8 @@ namespace freetrain.controllers.rail
 			case Mode.ThinPlatform:
 				if( isPlacing ) {
 					if(!ThinPlatform.canBeBuilt(loc,direction,length)) {
-						MainWindow.showError("設置できません");
+						MainWindow.showError("Can not build");
+						//! MainWindow.showError("設置できません");
 						return;
 					}
 					new ThinPlatform(loc,direction,length);
