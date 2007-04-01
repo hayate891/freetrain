@@ -34,7 +34,7 @@ namespace freetrain.contributions.train
 			carTailType = getCarType(composition,"tail");
 
 			if(carBodyType==null)
-				throw new FormatException("<body>Part was not specified");
+				throw new FormatException("<body> part was not specified");
 				//! throw new FormatException("<body>要素が指定されませんでした");
 
 			composition = null;
@@ -45,7 +45,7 @@ namespace freetrain.contributions.train
 			if(e==null)		return null;
 
 			string idref = e.Attributes["carRef"].Value;
-			if(id==null)	throw new FormatException("carReflacks attribute");
+			if(id==null)	throw new FormatException("carRef lacks attribute");
 			//! if(id==null)	throw new FormatException("carRef属性がありません");
 
 			TrainCarContribution contrib = (TrainCarContribution)Core.plugins.getContribution(idref);

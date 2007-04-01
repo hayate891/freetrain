@@ -75,7 +75,7 @@ namespace freetrain.contributions.train
 
 			// build up rail like
 			//
-			//     /‾‾‾‾‾
+			//     /~~~~~
 			//    /
 			for( int x=-10; x<0; x++ )
 				pd.draw( RailPattern.get( Direction.WEST, Direction.EAST ), x, 0 );

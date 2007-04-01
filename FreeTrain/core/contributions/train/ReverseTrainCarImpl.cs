@@ -29,7 +29,7 @@ namespace freetrain.contributions.train
 		protected internal override void onInitComplete() {
 			core = Core.plugins.getContribution(baseId) as TrainCarContribution;
 			if(core==null)
-				throw new FormatException("'"+id+"' refers to TrainCar contribution'"+baseId+"' that could not be found");
+				throw new FormatException("'"+id+"' refers to TrainCar contribution '"+baseId+"' that could not be found");
 				//! throw new FormatException("'"+id+"'が参照するTrainCarコントリビューション'"+baseId+"'が見つかりません");
 			this._capacity = core.capacity;
 		}

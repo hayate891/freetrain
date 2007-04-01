@@ -17,7 +17,7 @@ namespace freetrain.contributions.others
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing ) {
@@ -30,7 +30,7 @@ namespace freetrain.contributions.others
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
@@ -46,8 +46,8 @@ namespace freetrain.contributions.others
 		private System.Windows.Forms.Button cancelButton;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -69,7 +69,8 @@ namespace freetrain.contributions.others
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 16);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "–¼‘O(&N):";
+			this.label1.Text = "&Name:";
+			//! this.label1.Text = "åå‰(&N):";
 			// 
 			// name
 			// 
@@ -85,7 +86,8 @@ namespace freetrain.contributions.others
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 16);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "ƒTƒCƒY(&S):";
+			this.label2.Text = "&Size:";
+			//! this.label2.Text = "ã‚µã‚¤ã‚º(&S):";
 			// 
 			// sizeX
 			// 
@@ -132,7 +134,8 @@ namespace freetrain.contributions.others
 			this.cancelButton.Location = new System.Drawing.Point(224, 64);
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.TabIndex = 7;
-			this.cancelButton.Text = "·¬İ¾Ù(&C)";
+			this.cancelButton.Text = "&Cancel";
+			//! this.cancelButton.Text = "ï½·ï½¬ï¾ï½¾ï¾™(&C)";
 			// 
 			// label4
 			// 
@@ -172,7 +175,8 @@ namespace freetrain.contributions.others
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "NewWorldDialog";
-			this.Text = "V‚µ‚¢ƒQ[ƒ€‚Ìì¬";
+			this.Text = "Create a new game";
+			//! this.Text = "æ–°ã—ã„ã‚²ãƒ¼ãƒ ã®ä½œæˆ";
 			this.ResumeLayout(false);
 
 		}
@@ -202,7 +206,8 @@ namespace freetrain.contributions.others
 			World w = new World( new Distance(x,y+z*2,z),  z/4 );
 			w.name = this.name.Text;
 			if(w.name==null || w.name.Length==0)
-				w.name = "‚È‚È‚µ‚³‚ñ";
+				w.name = "Nanashi-san";
+				//! w.name = "ãªãªã—ã•ã‚“";
 			return w;
 			// TODO: Z dimension
 		}
