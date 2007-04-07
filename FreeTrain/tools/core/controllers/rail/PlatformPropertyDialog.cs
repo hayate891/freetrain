@@ -10,7 +10,7 @@ using freetrain.framework;
 namespace freetrain.world.rail
 {
 	/// <summary>
-	/// PlatformPropertyDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// PlatformPropertyDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class PlatformPropertyDialog : Form
 	{
@@ -48,7 +48,7 @@ namespace freetrain.world.rail
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -71,13 +71,13 @@ namespace freetrain.world.rail
 		private System.Windows.Forms.ComboBox hostList;
 		private System.Windows.Forms.TextBox nameBox;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -105,7 +105,8 @@ namespace freetrain.world.rail
 			this.left.Name = "left";
 			this.left.Size = new System.Drawing.Size(96, 24);
 			this.left.TabIndex = 7;
-			this.left.Text = "¶‚ÉÚ‘±(&L)";
+			this.left.Text = "&Left connect";
+			//! this.left.Text = "å·¦ã«æ¥ç¶š(&L)";
 			this.left.Click += new System.EventHandler(this.onLeft);
 			// 
 			// right
@@ -115,7 +116,8 @@ namespace freetrain.world.rail
 			this.right.Name = "right";
 			this.right.Size = new System.Drawing.Size(96, 24);
 			this.right.TabIndex = 8;
-			this.right.Text = "‰E‚ÉÚ‘±(&R)";
+			this.right.Text = "&Right connect";
+			//! this.right.Text = "å³ã«æ¥ç¶š(&R)";
 			this.right.Click += new System.EventHandler(this.onRight);
 			// 
 			// label1
@@ -124,7 +126,8 @@ namespace freetrain.world.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "–¼‘O(&N):";
+			this.label1.Text = "&Name:";
+			//! this.label1.Text = "åå‰(&N):";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// nameBox
@@ -145,7 +148,8 @@ namespace freetrain.world.rail
 			this.groupFat.Size = new System.Drawing.Size(280, 48);
 			this.groupFat.TabIndex = 999;
 			this.groupFat.TabStop = false;
-			this.groupFat.Text = "ü˜H‚Æ‚ÌÚ‘±H–";
+			this.groupFat.Text = "Connect tracks";
+			//! this.groupFat.Text = "ç·šè·¯ã¨ã®æ¥ç¶šå·¥äº‹";
 			// 
 			// OKbutton
 			// 
@@ -166,7 +170,8 @@ namespace freetrain.world.rail
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(88, 24);
 			this.cancelButton.TabIndex = 11;
-			this.cancelButton.Text = "ƒLƒƒƒ“ƒZƒ‹(&C)";
+			this.cancelButton.Text = "&Cancel";
+			//! this.cancelButton.Text = "ã‚­ãƒ£ãƒ³ã‚»ãƒ«(&C)";
 			// 
 			// label2
 			// 
@@ -174,7 +179,8 @@ namespace freetrain.world.rail
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(40, 16);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "‰w(&S):";
+			this.label2.Text = "&Station:";
+			//! this.label2.Text = "é§…(&S):";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// hostList
@@ -192,7 +198,8 @@ namespace freetrain.world.rail
 			this.remove.Name = "remove";
 			this.remove.Size = new System.Drawing.Size(88, 24);
 			this.remove.TabIndex = 9;
-			this.remove.Text = "“P‹(&E)";
+			this.remove.Text = "R&emove";
+			//! this.remove.Text = "æ’¤å»(&E)";
 			this.remove.Click += new System.EventHandler(this.onRemove);
 			// 
 			// warning
@@ -218,7 +225,8 @@ namespace freetrain.world.rail
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(48, 16);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "ƒxƒ‹(&B):";
+			this.label3.Text = "&Bell:";
+			//! this.label3.Text = "ãƒ™ãƒ«(&B):";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// PlatformPropertyDialog
@@ -245,7 +253,8 @@ namespace freetrain.world.rail
 			this.MinimizeBox = false;
 			this.Name = "PlatformPropertyDialog";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "ƒz[ƒ€‚ÌƒvƒƒpƒeƒB";
+			this.Text = "Platform properties";
+			//! this.Text = "ãƒ›ãƒ¼ãƒ ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£";
 			this.groupFat.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -256,10 +265,14 @@ namespace freetrain.world.rail
 		private void updateDialog() {
 			if( platform is FatPlatform ) {
 				FatPlatform fp = (FatPlatform)platform;
-				if(!fp.hasLane(lIdx))	left.Text = "¶‚ÉÚ‘±";
-				else					left.Text = "¶‚ğ‰ğ•ú";
-				if(!fp.hasLane(rIdx))	right.Text = "‰E‚ÉÚ‘±";
-				else					right.Text = "‰E‚ğ‰ğ•ú";
+				if(!fp.hasLane(lIdx))	left.Text = "Left connect";
+				//! if(!fp.hasLane(lIdx))	left.Text = "å·¦ã«æ¥ç¶š";
+				else					left.Text = "Left release";
+				//! else					left.Text = "å·¦ã‚’è§£æ”¾";
+				if(!fp.hasLane(rIdx))	right.Text = "Right connect";
+				//! if(!fp.hasLane(rIdx))	right.Text = "å³ã«æ¥ç¶š";
+				else					right.Text = "Right release";
+				//! else					right.Text = "å³ã‚’è§£æ”¾";
 			}
 
 			if( platform.host!=null )	warning.Hide();
@@ -277,12 +290,14 @@ namespace freetrain.world.rail
 				if(fp.canRemoveLane(index))
 					fp.removeLane(index);
 				else
-					MainWindow.showError("áŠQ•¨‚ª‚ ‚Á‚Ä‰ğ•ú‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Could not be released due to an obstacle");
+					//! MainWindow.showError("éšœå®³ç‰©ãŒã‚ã£ã¦è§£æ”¾ã§ãã¾ã›ã‚“");
 			} else {
 				if(fp.canAddLane(index))
 					fp.addLane(index);
 				else
-					MainWindow.showError("áŠQ•¨‚ª‚ ‚Á‚ÄÚ‘±‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Could not be connected due to an obstacle");
+					//! MainWindow.showError("éšœå®³ç‰©ãŒã‚ã£ã¦æ¥ç¶šã§ãã¾ã›ã‚“");
 			}
 			updateDialog();
 		}
@@ -294,7 +309,8 @@ namespace freetrain.world.rail
 		}
 
 		private void onRemove(object sender, System.EventArgs e) {
-			if(MessageBox.Show(this,"‚±‚Ìƒz[ƒ€‚ğ“P‹‚µ‚Ü‚·‚©H","ƒz[ƒ€‚Ì“P‹",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
+			if(MessageBox.Show(this,"Do you want to remove this station?","Remove station",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
+			//! if(MessageBox.Show(this,"ã“ã®ãƒ›ãƒ¼ãƒ ã‚’æ’¤å»ã—ã¾ã™ã‹ï¼Ÿ","ãƒ›ãƒ¼ãƒ ã®æ’¤å»",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
 			== DialogResult.Yes) {
 				platform.remove();
 				Close();	// close the dialog

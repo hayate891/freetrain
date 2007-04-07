@@ -54,8 +54,8 @@ namespace freetrain.controllers.structs
 		private System.ComponentModel.IContainer components = null;
 		
 		/// <summary>
-		/// Designer ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·BƒR[ƒh ƒGƒfƒBƒ^‚Å
-		/// ‚±‚Ìƒƒ\ƒbƒh‚ÌƒRƒ“ƒeƒ“ƒc‚ğ•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// Designer ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§
+		/// ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -70,7 +70,8 @@ namespace freetrain.controllers.structs
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 16);
 			this.label1.TabIndex = 3;
-			this.label1.Text = "‚‚³(&H)F";
+			this.label1.Text = "&Height";
+			//! this.label1.Text = "é«˜ã•(&H)ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// heightBox
@@ -111,7 +112,8 @@ namespace freetrain.controllers.structs
 																		  this.heightBox,
 																		  this.label1});
 			this.Name = "VarHeightBuildingController";
-			this.Text = "Œš•¨‚ÌH–(‰¼)";
+			this.Text = "Building construction (temporary)";
+			//! this.Text = "å»ºç‰©ã®å·¥äº‹(ä»®)";
 			((System.ComponentModel.ISupportInitialize)(this.heightBox)).EndInit();
 			this.ResumeLayout(false);
 
@@ -127,7 +129,8 @@ namespace freetrain.controllers.structs
 		public override void onClick(MapViewWindow view, Location loc, Point ab ) {
 			if( isPlacing ) {
 				if(!selectedType.canBeBuilt(loc,height)) {
-					MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not build");
+					//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 				} else {
 					CompletionHandler handler = new CompletionHandler(selectedType,loc,height,true);
 					new ConstructionSite( loc, new EventHandler(handler.handle),

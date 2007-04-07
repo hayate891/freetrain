@@ -64,7 +64,8 @@ namespace freetrain.controllers.rail
 		/// </summary>
 		private void updateDialog() {
 			message.Text = anchor!=UNPLACED?
-				"I“_‚ğ‘I‚ñ‚Å‚­‚¾‚³‚¢":"n“_‚ğ‘I‚ñ‚Å‚­‚¾‚³‚¢";
+				"Select terminal point":"Select starting point";
+				//! "çµ‚ç‚¹ã‚’é¸ã‚“ã§ãã ã•ã„":"å§‹ç‚¹ã‚’é¸ã‚“ã§ãã ã•ã„";
 		}
 
 		/// <summary>
@@ -113,7 +114,8 @@ namespace freetrain.controllers.rail
 			this.message.Name = "message";
 			this.message.Size = new System.Drawing.Size(96, 24);
 			this.message.TabIndex = 1;
-			this.message.Text = "ƒ}ƒbƒv‚Ì‚Q“_‚ğƒNƒŠƒbƒN‚µ‚Ä•~İ";
+			this.message.Text = "Click on two points on the map to place tracks";
+			//! this.message.Text = "ãƒãƒƒãƒ—ã®ï¼’ç‚¹ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦æ•·è¨­";
 			// 
 			// buttonPlace
 			// 
@@ -124,7 +126,8 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
 			this.buttonPlace.TabIndex = 2;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "•~İ";
+			this.buttonPlace.Text = "Place";
+			//! this.buttonPlace.Text = "æ•·è¨­";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonPlace.CheckedChanged += new System.EventHandler(this.modeChanged);
 			// 
@@ -135,14 +138,16 @@ namespace freetrain.controllers.rail
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
 			this.buttonRemove.TabIndex = 3;
-			this.buttonRemove.Text = "“P‹";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "æ’¤å»";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonRemove.CheckedChanged += new System.EventHandler(this.modeChanged);
 			// 
 			// costBox
 			// 
 			this.costBox.cost = 0;
-			this.costBox.label = "”ï—pF";
+			this.costBox.label = "Cost:";
+			//! this.costBox.label = "è²»ç”¨ï¼š";
 			this.costBox.Location = new System.Drawing.Point(8, 112);
 			this.costBox.Name = "costBox";
 			this.costBox.Size = new System.Drawing.Size(96, 32);
@@ -159,7 +164,8 @@ namespace freetrain.controllers.rail
 																		  this.message,
 																		  this.picture});
 			this.Name = "RailRoadController";
-			this.Text = "ü˜HH–";
+			this.Text = "Track construction";
+			//! this.Text = "ç·šè·¯å·¥äº‹";
 			this.ResumeLayout(false);
 
 		}
@@ -175,7 +181,8 @@ namespace freetrain.controllers.rail
 					if(isPlacing) {
 						// build new railroads.
 						if(!SingleRailRoad.build( anchor, loc ))
-							MainWindow.showError("áŠQ•¨‚ª‚ ‚è‚Ü‚·");
+							MainWindow.showError("There are obstacles");
+							//! MainWindow.showError("éšœå®³ç‰©ãŒã‚ã‚Šã¾ã™");
 					} else
 						// remove existing ones
 						SingleRailRoad.remove( anchor, loc );

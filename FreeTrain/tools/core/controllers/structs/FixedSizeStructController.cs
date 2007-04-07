@@ -14,7 +14,7 @@ using freetrain.world.structs;
 namespace freetrain.controllers.structs
 {
 	/// <summary>
-	/// FixedSizeStructController ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// FixedSizeStructController ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public abstract class FixedSizeStructController : StructPlacementController
 	{
@@ -33,7 +33,8 @@ namespace freetrain.controllers.structs
 		public override void onClick(MapViewWindow view, Location loc, Point ab ) {
 			if( isPlacing ) {
 				if(!selectedType.canBeBuilt(loc)) {
-					MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not build");
+					//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 				} else {
 					CompletionHandler handler = new CompletionHandler(selectedType,loc,true);
 					new ConstructionSite( loc, new EventHandler(handler.handle), selectedType.size );

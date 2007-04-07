@@ -20,13 +20,13 @@ namespace freetrain.world.rail
 		private System.Windows.Forms.TextBox nameBox;
 		private System.Windows.Forms.Label label1;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -44,7 +44,8 @@ namespace freetrain.world.rail
 			this.remove.Name = "remove";
 			this.remove.Size = new System.Drawing.Size(88, 24);
 			this.remove.TabIndex = 3;
-			this.remove.Text = "“P‹(&E)";
+			this.remove.Text = "R&emove";
+			//! this.remove.Text = "æ’¤å»(&E)";
 			this.remove.Click += new System.EventHandler(this.remove_Click);
 			// 
 			// cancelButton
@@ -55,7 +56,8 @@ namespace freetrain.world.rail
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(88, 24);
 			this.cancelButton.TabIndex = 5;
-			this.cancelButton.Text = "ƒLƒƒƒ“ƒZƒ‹(&C)";
+			this.cancelButton.Text = "&Cancel";
+			//! this.cancelButton.Text = "ã‚­ãƒ£ãƒ³ã‚»ãƒ«(&C)";
 			// 
 			// OKbutton
 			// 
@@ -82,7 +84,8 @@ namespace freetrain.world.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "–¼‘O(&N):";
+			this.label1.Text = "&Name:";
+			//! this.label1.Text = "åå‰(&N):";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// StationPropertyDialog
@@ -103,7 +106,8 @@ namespace freetrain.world.rail
 			this.MinimizeBox = false;
 			this.Name = "StationPropertyDialog";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "‰w‚ÌƒvƒƒpƒeƒB";
+			this.Text = "Station properties";
+			//! this.Text = "é§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£";
 			this.TopMost = true;
 			this.ResumeLayout(false);
 
@@ -123,7 +127,7 @@ namespace freetrain.world.rail
 		private readonly Station station;
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -133,7 +137,8 @@ namespace freetrain.world.rail
 
 
 		private void remove_Click(object sender, EventArgs e) {
-			if(MessageBox.Show(this,"‚±‚Ì‰wÉ‚ğ“P‹‚µ‚Ü‚·‚©H","‰wÉ‚Ì“P‹",
+			if(MessageBox.Show(this,"Do you want to remove this station?","Remove station",
+			//! if(MessageBox.Show(this,"ã“ã®é§…èˆã‚’æ’¤å»ã—ã¾ã™ã‹ï¼Ÿ","é§…èˆã®æ’¤å»",
 					MessageBoxButtons.YesNo,MessageBoxIcon.Question) != DialogResult.Yes)
 				return;
 

@@ -65,7 +65,7 @@ namespace freetrain.world.rail
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -99,13 +99,13 @@ namespace freetrain.world.rail
 		private System.Windows.Forms.Label name;
 		private System.Windows.Forms.PictureBox preview;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 		
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -142,7 +142,8 @@ namespace freetrain.world.rail
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(64, 20);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "Ô—¼”(&L)F";
+			this.label2.Text = "&Length";
+			//! this.label2.Text = "è»Šä¸¡æ•°(&L)ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// length
@@ -170,7 +171,7 @@ namespace freetrain.world.rail
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(16, 20);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "~";
+			this.label3.Text = "Ã—";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// count
@@ -201,7 +202,8 @@ namespace freetrain.world.rail
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(32, 20);
 			this.label4.TabIndex = 7;
-			this.label4.Text = "•Ò¬";
+			this.label4.Text = "Formation";
+			//! this.label4.Text = "ç·¨æˆ";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// buttonOK
@@ -211,7 +213,8 @@ namespace freetrain.world.rail
 			this.buttonOK.Name = "buttonOK";
 			this.buttonOK.Size = new System.Drawing.Size(80, 24);
 			this.buttonOK.TabIndex = 8;
-			this.buttonOK.Text = "w“ü(&O)";
+			this.buttonOK.Text = "Buy (&O)";
+			//! this.buttonOK.Text = "è³¼å…¥(&O)";
 			this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
 			// 
 			// buttonCancel
@@ -222,7 +225,8 @@ namespace freetrain.world.rail
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.Size = new System.Drawing.Size(80, 24);
 			this.buttonCancel.TabIndex = 9;
-			this.buttonCancel.Text = "•Â‚¶‚é(&C)";
+			this.buttonCancel.Text = "&Close";
+			//! this.buttonCancel.Text = "é–‰ã˜ã‚‹(&C)";
 			// 
 			// label5
 			// 
@@ -230,7 +234,8 @@ namespace freetrain.world.rail
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(64, 16);
 			this.label5.TabIndex = 10;
-			this.label5.Text = "‘¬“xF";
+			this.label5.Text = "Speed:";
+			//! this.label5.Text = "é€Ÿåº¦ï¼š";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// speed
@@ -239,7 +244,8 @@ namespace freetrain.world.rail
 			this.speed.Name = "speed";
 			this.speed.Size = new System.Drawing.Size(184, 16);
 			this.speed.TabIndex = 11;
-			this.speed.Text = "‚‘¬";
+			this.speed.Text = "Rapid";
+			//! this.speed.Text = "é«˜é€Ÿ";
 			this.speed.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// totalPrice
@@ -257,7 +263,8 @@ namespace freetrain.world.rail
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(64, 16);
 			this.label8.TabIndex = 15;
-			this.label8.Text = "‘”ï—pF";
+			this.label8.Text = "Total cost:";
+			//! this.label8.Text = "ç·è²»ç”¨ï¼š";
 			this.label8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// passenger
@@ -275,7 +282,8 @@ namespace freetrain.world.rail
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(64, 16);
 			this.label9.TabIndex = 16;
-			this.label9.Text = "’èˆõF";
+			this.label9.Text = "Capacity:";
+			//! this.label9.Text = "å®šå“¡ï¼š";
 			this.label9.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// typeTree
@@ -294,7 +302,8 @@ namespace freetrain.world.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(64, 16);
 			this.label1.TabIndex = 19;
-			this.label1.Text = "ìÒF";
+			this.label1.Text = "Author:";
+			//! this.label1.Text = "ä½œè€…ï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// label6
@@ -303,7 +312,8 @@ namespace freetrain.world.rail
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(64, 16);
 			this.label6.TabIndex = 20;
-			this.label6.Text = "à–¾F";
+			this.label6.Text = "Description:";
+			//! this.label6.Text = "èª¬æ˜ï¼š";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// description
@@ -325,7 +335,8 @@ namespace freetrain.world.rail
 			this.author.Name = "author";
 			this.author.Size = new System.Drawing.Size(184, 16);
 			this.author.TabIndex = 22;
-			this.author.Text = "477‚³‚ñ";
+			this.author.Text = "477-san";
+			//! this.author.Text = "477ã•ã‚“";
 			this.author.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label7
@@ -334,7 +345,8 @@ namespace freetrain.world.rail
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(16, 20);
 			this.label7.TabIndex = 23;
-			this.label7.Text = "—¼";
+			this.label7.Text = "Car";
+			//! this.label7.Text = "ä¸¡";
 			this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label10
@@ -343,7 +355,8 @@ namespace freetrain.world.rail
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(64, 16);
 			this.label10.TabIndex = 24;
-			this.label10.Text = "–¼ÌF";
+			this.label10.Text = "Name:";
+			//! this.label10.Text = "åç§°ï¼š";
 			this.label10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// name
@@ -352,7 +365,8 @@ namespace freetrain.world.rail
 			this.name.Name = "name";
 			this.name.Size = new System.Drawing.Size(184, 16);
 			this.name.TabIndex = 25;
-			this.name.Text = "123Œn ABCDEF";
+			this.name.Text = "123 system ABCDEF";
+			//! this.name.Text = "123ç³» ABCDEF";
 			this.name.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// preview
@@ -398,7 +412,8 @@ namespace freetrain.world.rail
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "TrainTradingDialog";
-			this.Text = "Ô—¼‚Ìw“ü";
+			this.Text = "Buy trains";
+			//! this.Text = "è»Šä¸¡ã®è³¼å…¥";
 			((System.ComponentModel.ISupportInitialize)(this.length)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
 			this.ResumeLayout(false);
@@ -460,7 +475,8 @@ namespace freetrain.world.rail
 					foreach( TrainCarContribution car in cars )
 						p += car.capacity;
 
-					passenger.Text = p.ToString()+" l/•Ò¬";
+					passenger.Text = p.ToString()+" Passenger/Formation";
+					//! passenger.Text = p.ToString()+" äºº/ç·¨æˆ";
 					return;
 				}
 			}

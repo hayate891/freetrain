@@ -94,7 +94,8 @@ namespace freetrain.controllers.rail
 			this.rename.Name = "rename";
 			this.rename.Size = new System.Drawing.Size(88, 24);
 			this.rename.TabIndex = 5;
-			this.rename.Text = "ñºëOïœçX(&R)";
+			this.rename.Text = "&Rename";
+			//! this.rename.Text = "ÂêçÂâçÂ§âÊõ¥(&R)";
 			this.rename.Click += new System.EventHandler(this.rename_Click);
 			// 
 			// buttonDelete
@@ -104,7 +105,8 @@ namespace freetrain.controllers.rail
 			this.buttonDelete.Name = "buttonDelete";
 			this.buttonDelete.Size = new System.Drawing.Size(88, 24);
 			this.buttonDelete.TabIndex = 4;
-			this.buttonDelete.Text = "çÌèú(&D)";
+			this.buttonDelete.Text = "&Delete";
+			//! this.buttonDelete.Text = "ÂâäÈô§(&D)";
 			this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
 			// 
 			// buttonConfig
@@ -114,7 +116,8 @@ namespace freetrain.controllers.rail
 			this.buttonConfig.Name = "buttonConfig";
 			this.buttonConfig.Size = new System.Drawing.Size(88, 24);
 			this.buttonConfig.TabIndex = 3;
-			this.buttonConfig.Text = "ê›íË(&C)";
+			this.buttonConfig.Text = "&Configure";
+			//! this.buttonConfig.Text = "Ë®≠ÂÆö(&C)";
 			this.buttonConfig.Click += new System.EventHandler(this.buttonConfig_Click);
 			// 
 			// buttonNew
@@ -124,7 +127,8 @@ namespace freetrain.controllers.rail
 			this.buttonNew.Name = "buttonNew";
 			this.buttonNew.Size = new System.Drawing.Size(88, 24);
 			this.buttonNew.TabIndex = 2;
-			this.buttonNew.Text = "êVãK(&N)...";
+			this.buttonNew.Text = "&New...";
+			//! this.buttonNew.Text = "Êñ∞Ë¶è(&N)...";
 			this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
 			// 
 			// list
@@ -147,12 +151,14 @@ namespace freetrain.controllers.rail
 			// 
 			// columnName
 			// 
-			this.columnName.Text = "ñºëO";
+			this.columnName.Text = "Name";
+			//! this.columnName.Text = "ÂêçÂâç";
 			this.columnName.Width = 200;
 			// 
 			// columnType
 			// 
-			this.columnType.Text = "éÌóﬁ";
+			this.columnType.Text = "Type";
+			//! this.columnType.Text = "Á®ÆÈ°û";
 			// 
 			// TrainControllerDialog
 			// 
@@ -165,7 +171,8 @@ namespace freetrain.controllers.rail
 			this.MinimumSize = new System.Drawing.Size(376, 160);
 			this.Name = "TrainControllerDialog";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-			this.Text = "É_ÉCÉÑÉOÉâÉÄ";
+			this.Text = "Diagram";
+			//! this.Text = "„ÉÄ„Ç§„É§„Ç∞„É©„É†";
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -217,7 +224,8 @@ namespace freetrain.controllers.rail
 		private void createNewTrainController( TrainControllerContribution contrib ) {
 			// update data structure
 			TrainController tc =  contrib.newController(
-				string.Format("êVÇµÇ¢É_ÉCÉÑÉOÉâÉÄ{0}",iota++));
+				string.Format("New diagram {0}",iota++));
+				//! string.Format("Êñ∞„Åó„ÅÑ„ÉÄ„Ç§„É§„Ç∞„É©„É†{0}",iota++));
 			World.world.trainControllers.add(tc);
 
 			// update GUI
