@@ -60,8 +60,8 @@ namespace freetrain.controllers.structs
 
 		#region Designer generated code
 		/// <summary>
-		/// Designer ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·BƒR[ƒh ƒGƒfƒBƒ^‚Å
-		/// ‚±‚Ìƒƒ\ƒbƒh‚ÌƒRƒ“ƒeƒ“ƒc‚ğ•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// Designer ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§
+		/// ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -98,7 +98,8 @@ namespace freetrain.controllers.structs
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
 			this.buttonRemove.TabIndex = 1;
-			this.buttonRemove.Text = "“P‹";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "æ’¤å»";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonPlace
@@ -110,7 +111,8 @@ namespace freetrain.controllers.structs
 			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
 			this.buttonPlace.TabIndex = 0;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "İ’u";
+			this.buttonPlace.Text = "Build";
+			//! this.buttonPlace.Text = "è¨­ç½®";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// indexSelector
@@ -135,7 +137,8 @@ namespace freetrain.controllers.structs
 																		  this.structType,
 																		  this.preview});
 			this.Name = "StructPlacementController";
-			this.Text = "Œš•¨‚ÌH–(‰¼)";
+			this.Text = "Building construction (temporary)";
+			//! this.Text = "å»ºç‰©ã®å·¥äº‹(ä»®)";
 			this.ResumeLayout(false);
 
 		}

@@ -13,7 +13,7 @@ using freetrain.world.rail;
 namespace freetrain.controllers.rail
 {
 	/// <summary>
-	/// StationBridgeController ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// StationBridgeController ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class StationPassagewayController : AbstractControllerImpl, MapOverlay, LocationDisambiguator
 	{
@@ -39,8 +39,10 @@ namespace freetrain.controllers.rail
 		private StationPassagewayController() {
 			InitializeComponent();
 
-			typeCombo.Items.Add("ƒRƒ“ƒNƒŠ[ƒg");
-			typeCombo.Items.Add("—ùŠ¢");
+			typeCombo.Items.Add("Concrete");
+			//! typeCombo.Items.Add("ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆ");
+			typeCombo.Items.Add("Brick");
+			//! typeCombo.Items.Add("ç…‰ç“¦");
 		}
 
 
@@ -60,8 +62,8 @@ namespace freetrain.controllers.rail
 		private System.Windows.Forms.RadioButton buttonRemove;
 		private System.ComponentModel.Container components = null;
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -83,7 +85,8 @@ namespace freetrain.controllers.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(120, 144);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "”–‚¢ƒz[ƒ€ê—p‚Å‚·B’Ê˜H‚ğƒz[ƒ€‚Æ’¼Šp‚Éİ’u‚µ‚Ä‚©‚çŠK’i‚ğİ’u‚µ‚Ä‚­‚¾‚³‚¢B";
+			this.label1.Text = "Only for thin platforms. If a passageway and a platform are connected at right angles, please build a staircase.";
+			//! this.label1.Text = "è–„ã„ãƒ›ãƒ¼ãƒ å°‚ç”¨ã§ã™ã€‚é€šè·¯ã‚’ãƒ›ãƒ¼ãƒ ã¨ç›´è§’ã«è¨­ç½®ã—ã¦ã‹ã‚‰éšæ®µã‚’è¨­ç½®ã—ã¦ãã ã•ã„ã€‚";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonPlace
@@ -95,7 +98,8 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
 			this.buttonPlace.TabIndex = 1;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "İ’u";
+			this.buttonPlace.Text = "Build";
+			//! this.buttonPlace.Text = "è¨­ç½®";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonRemove
@@ -105,7 +109,8 @@ namespace freetrain.controllers.rail
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
 			this.buttonRemove.TabIndex = 2;
-			this.buttonRemove.Text = "“P‹";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "æ’¤å»";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// typeCombo
@@ -126,7 +131,8 @@ namespace freetrain.controllers.rail
 			this.groupBox1.Size = new System.Drawing.Size(104, 64);
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "•”•i";
+			this.groupBox1.Text = "Section";
+			//! this.groupBox1.Text = "éƒ¨å“";
 			// 
 			// radioStair
 			// 
@@ -134,7 +140,8 @@ namespace freetrain.controllers.rail
 			this.radioStair.Name = "radioStair";
 			this.radioStair.Size = new System.Drawing.Size(88, 16);
 			this.radioStair.TabIndex = 1;
-			this.radioStair.Text = "ŠK’i";
+			this.radioStair.Text = "Staircase";
+			//! this.radioStair.Text = "éšæ®µ";
 			// 
 			// radioPassage
 			// 
@@ -144,7 +151,8 @@ namespace freetrain.controllers.rail
 			this.radioPassage.Size = new System.Drawing.Size(88, 16);
 			this.radioPassage.TabIndex = 0;
 			this.radioPassage.TabStop = true;
-			this.radioPassage.Text = "’Ê˜H";
+			this.radioPassage.Text = "Passageway";
+			//! this.radioPassage.Text = "é€šè·¯";
 			// 
 			// StationBridgeController
 			// 
@@ -158,7 +166,8 @@ namespace freetrain.controllers.rail
 																		  this.buttonRemove});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "StationBridgeController";
-			this.Text = "‰w˜A—’Ê˜H";
+			this.Text = "Station connecting passageway";
+			//! this.Text = "é§…é€£çµ¡é€šè·¯";
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -207,7 +216,8 @@ namespace freetrain.controllers.rail
 			if(isStair) {
 				if( isPlacing ) {
 					if( !createStair(loc,false) )
-						MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+						MainWindow.showError("Can not build");
+						//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 				} else
 					removeStair(loc);
 			} else {
@@ -221,7 +231,8 @@ namespace freetrain.controllers.rail
 						if( canBuildPassageway( anchor, loc ) )
 							buildPassageway( anchor, loc );
 						else
-							MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+							MainWindow.showError("Can not build");
+							//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 					} else {
 						removePassageway( anchor, loc );
 					}

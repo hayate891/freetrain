@@ -137,7 +137,7 @@ namespace freetrain.controllers.structs
 																		  this.structType,
 																		  this.preview});
 			this.Name = "StructPlacementController";
-			this.Text = "Building construction (tentative) ";
+			this.Text = "Building construction (temporary) ";
 			//! this.Text = "建物の工事(仮)";
 			this.ResumeLayout(false);
 

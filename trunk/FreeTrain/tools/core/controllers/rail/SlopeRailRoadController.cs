@@ -42,7 +42,7 @@ namespace freetrain.controllers.rail
 
 
 		public SlopeRailRoadController() {
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
 
 			pictureN.Tag = Direction.get(0);
@@ -107,13 +107,13 @@ namespace freetrain.controllers.rail
 		private System.Windows.Forms.RadioButton buttonPlace;
 		private System.Windows.Forms.RadioButton buttonRemove;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -175,7 +175,8 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "•~İ";
+			this.buttonPlace.Text = "Place";
+			//! this.buttonPlace.Text = "æ•·è¨­";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonRemove
@@ -185,13 +186,15 @@ namespace freetrain.controllers.rail
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
 			this.buttonRemove.TabIndex = 5;
-			this.buttonRemove.Text = "“P‹";
+			this.buttonRemove.Text = "Remove";
+			//! this.buttonRemove.Text = "æ’¤å»";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// costBox
 			// 
 			this.costBox.cost = 0;
-			this.costBox.label = "”ï—pF";
+			this.costBox.label = "Cost:";
+			//! this.costBox.label = "è²»ç”¨ï¼š";
 			this.costBox.Location = new System.Drawing.Point(8, 224);
 			this.costBox.Name = "costBox";
 			this.costBox.Size = new System.Drawing.Size(96, 32);
@@ -210,7 +213,8 @@ namespace freetrain.controllers.rail
 																		  this.pictureE,
 																		  this.pictureN});
 			this.Name = "SlopeRailRoadController";
-			this.Text = "Œù”zü˜H";
+			this.Text = "Slope tracks";
+			//! this.Text = "å‹¾é…ç·šè·¯";
 			this.ResumeLayout(false);
 
 		}
@@ -248,7 +252,8 @@ namespace freetrain.controllers.rail
 				if(SlopeRailRoad.canCreateSlope(loc,direction))
 					SlopeRailRoad.createSlope(loc,direction);
 				else
-					MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not place");
+					//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 			} else {
 				SlopeRailRoad srr = SlopeRailRoad.get(loc);
 				if(srr==null) {
@@ -266,7 +271,8 @@ namespace freetrain.controllers.rail
 						return;
 					}
 				}
-				MainWindow.showError("“P‹‚Å‚«‚Ü‚¹‚ñ");
+				MainWindow.showError("Can not remove");
+				//! MainWindow.showError("æ’¤å»ã§ãã¾ã›ã‚“");
 			}
 		}
 

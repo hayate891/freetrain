@@ -9,7 +9,7 @@ using freetrain.world.structs;
 namespace freetrain.controllers.structs
 {
 	/// <summary>
-	/// CommercialStructPlacementController ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// CommercialStructPlacementController ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class CommercialStructPlacementController : FixedSizeStructController
 	{
@@ -53,7 +53,8 @@ namespace freetrain.controllers.structs
 				if(c.isOwned)
 					c.remove();
 				else
-					MainWindow.showError("“P‹‚Å‚«‚Ü‚¹‚ñ");
+					MainWindow.showError("Can not remove");
+					//! MainWindow.showError("æ’¤å»ã§ãã¾ã›ã‚“");
 			}
 		}
 

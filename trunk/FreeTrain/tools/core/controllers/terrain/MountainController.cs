@@ -51,8 +51,8 @@ namespace freetrain.controllers.terrain
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -70,7 +70,8 @@ namespace freetrain.controllers.terrain
 			this.buttonUp.Size = new System.Drawing.Size(56, 24);
 			this.buttonUp.TabIndex = 2;
 			this.buttonUp.TabStop = true;
-			this.buttonUp.Text = "—²‹N";
+			this.buttonUp.Text = "Raise";
+			//! this.buttonUp.Text = "éš†èµ·";
 			this.buttonUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// buttonDown
@@ -80,7 +81,8 @@ namespace freetrain.controllers.terrain
 			this.buttonDown.Name = "buttonDown";
 			this.buttonDown.Size = new System.Drawing.Size(56, 24);
 			this.buttonDown.TabIndex = 4;
-			this.buttonDown.Text = "Œ@í";
+			this.buttonDown.Text = "Lower";
+			//! this.buttonDown.Text = "æ˜å‰Š";
 			this.buttonDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// preview
@@ -101,7 +103,8 @@ namespace freetrain.controllers.terrain
 																		  this.buttonDown,
 																		  this.preview});
 			this.Name = "MountainController";
-			this.Text = "’nŒ`‘€ì";
+			this.Text = "Manipulate topography";
+			//! this.Text = "åœ°å½¢æ“ä½œ";
 			this.ResumeLayout(false);
 
 		}

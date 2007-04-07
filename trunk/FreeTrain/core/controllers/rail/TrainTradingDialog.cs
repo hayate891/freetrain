@@ -244,7 +244,7 @@ namespace freetrain.world.rail
 			this.speed.Name = "speed";
 			this.speed.Size = new System.Drawing.Size(184, 16);
 			this.speed.TabIndex = 11;
-			this.speed.Text = "Speed";
+			this.speed.Text = "Rapid";
 			// this.speed.Text = "高速";
 			this.speed.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -365,7 +365,7 @@ namespace freetrain.world.rail
 			this.name.Name = "name";
 			this.name.Size = new System.Drawing.Size(184, 16);
 			this.name.TabIndex = 25;
-			this.name.Text = "123-kei ABCDEF";
+			this.name.Text = "123 system ABCDEF";
 			//! this.name.Text = "123系 ABCDEF";
 			this.name.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 

@@ -10,7 +10,7 @@ using org.kohsuke.directdraw;
 namespace freetrain.framework
 {
 	/// <summary>
-	/// AboutDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// AboutDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class AboutDialog : System.Windows.Forms.Form
 	{
@@ -59,8 +59,8 @@ namespace freetrain.framework
 		private System.Windows.Forms.Panel panel1;
 		private System.ComponentModel.Container components = null;
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -92,7 +92,8 @@ namespace freetrain.framework
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(96, 16);
 			this.label3.TabIndex = 4;
-			this.label3.Text = "VRAM‹ó‚«—e—ÊF";
+			this.label3.Text = "Available VRAM:";
+			//! this.label3.Text = "VRAMç©ºãå®¹é‡ï¼š";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// okButton
@@ -120,7 +121,8 @@ namespace freetrain.framework
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(96, 16);
 			this.label4.TabIndex = 7;
-			this.label4.Text = "‰æ–Êƒ‚[ƒhF";
+			this.label4.Text = "Display mode:";
+			//! this.label4.Text = "ç”»é¢ãƒ¢ãƒ¼ãƒ‰ï¼š";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// displayMode
@@ -169,7 +171,8 @@ namespace freetrain.framework
 			this.MinimizeBox = false;
 			this.Name = "AboutDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "FreeTrain‚É‚Â‚¢‚Ä";
+			this.Text = "About FreeTrain";
+			//! this.Text = "FreeTrainã«ã¤ã„ã¦";
 			((System.ComponentModel.ISupportInitialize)(this.browser)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);

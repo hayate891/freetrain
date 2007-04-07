@@ -309,7 +309,7 @@ namespace freetrain.world.rail
 		}
 
 		private void onRemove(object sender, System.EventArgs e) {
-			if(MessageBox.Show(this,"Will you remove this station?","Remove station",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
+			if(MessageBox.Show(this,"Do you want to remove this station?","Remove station",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
 			//! if(MessageBox.Show(this,"このホームを撤去しますか？","ホームの撤去",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
 			== DialogResult.Yes) {
 				platform.remove();
