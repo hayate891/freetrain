@@ -37,13 +37,13 @@ namespace freetrain.framework
 			base.Icon =  SystemIcons.Error;
 			icon.Image = SystemIcons.Error.ToBitmap();
 
-			detail.Text = e.Message + "_n" + e.StackTrace;
+			detail.Text = e.Message + "\n" + e.StackTrace;
 
 			while(true) {
 				e = e.InnerException;
 				if(e==null)		break;
 
-				detail.Text = detail.Text + "_n" + e.Message + "_n" + e.StackTrace;
+				detail.Text = detail.Text + "\n" + e.Message + "\n" + e.StackTrace;
 			}
 
 			detail.Select(0,0);
@@ -112,7 +112,8 @@ namespace freetrain.framework
 			this.msg.Name = "msg";
 			this.msg.Size = new System.Drawing.Size(312, 16);
 			this.msg.TabIndex = 1;
-			this.msg.Text = "ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½";
+			this.msg.Text = "An error has occurred";
+			//! this.msg.Text = "ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸ";
 			// 
 			// linkLabel1
 			// 
@@ -125,7 +126,8 @@ namespace freetrain.framework
 			this.linkLabel1.TabStop = true;
 			this.linkLabel1.TargetUrl = "http://www.kohsuke.org/freetrain/wiki/pukiwiki.php?%A5%D0%A5%B0%CA%F3%B9%F0%A4%CE" +
 				"%BC%EA%BD%E7";
-			this.linkLabel1.Text = "ƒoƒO‚ğ•ñ‚·‚é";
+			this.linkLabel1.Text = "Report a bug";
+			//! this.linkLabel1.Text = "ãƒã‚°ã‚’å ±å‘Šã™ã‚‹";
 			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// ErrorMessageBox
@@ -141,7 +143,8 @@ namespace freetrain.framework
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "ErrorMessageBox";
-			this.Text = "ƒGƒ‰[";
+			this.Text = "Error";
+			//! this.Text = "ã‚¨ãƒ©ãƒ¼";
 			this.ResumeLayout(false);
 
 		}

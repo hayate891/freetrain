@@ -179,7 +179,7 @@ namespace freetrain.views.map
 			// menuItem_heightCut
 			// 
 			this.menuItem_heightCut.Index = 1;
-			this.menuItem_heightCut.Text = "&Height cut";
+			this.menuItem_heightCut.Text = "&Height cutting";
 			//! this.menuItem_heightCut.Text = "ヘイトカット(&H)";
 			this.menuItem_heightCut.Popup += new System.EventHandler(this.menuItem_heightCut_Popup);
 			// 
@@ -417,7 +417,7 @@ namespace freetrain.views.map
 					//! this.Text = "なし";
 				} else {
 					int h = height - World.world.waterLevel;
-					if( h==0 )		this.Text = "Land";
+					if( h==0 )		this.Text = "Water level";
 					//! if( h==0 )		this.Text = "地表";
 					else			this.Text = h.ToString();
 				}

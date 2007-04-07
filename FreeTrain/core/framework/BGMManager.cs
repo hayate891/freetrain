@@ -106,7 +106,7 @@ namespace freetrain.framework
 			public SelectMenuItem() : base() {}	// for some reason Windows Forms need this constructor
 			internal SelectMenuItem( BGMManager owner ) {
 				this.owner = owner;
-				this.Text = "&Select file...";
+				this.Text = "&Select from file...";
 				//! this.Text = "ファイルから選択(&S)...";
 			}
 

@@ -51,7 +51,7 @@ namespace freetrain.world
 		public CarState state { get { return _state; } }
 
 		/// <summary>
-		/// Ô—¼‚ğ”z’u‚·‚é
+		/// è»Šä¸¡ã‚’é…ç½®ã™ã‚‹
 		/// </summary>
 		public void place( Location loc, Direction dir ) {
 			Debug.Assert(state.isUnplaced);
@@ -59,7 +59,7 @@ namespace freetrain.world
 		}
 
 		/// <summary>
-		/// Ô—¼‚ğŒ»İˆÊ’u‚©‚ç“P‹‚·‚é
+		/// è»Šä¸¡ã‚’ç¾åœ¨ä½ç½®ã‹ã‚‰æ’¤å»ã™ã‚‹
 		/// </summary>
 		public void remove() {
 			Debug.Assert(!state.isUnplaced);

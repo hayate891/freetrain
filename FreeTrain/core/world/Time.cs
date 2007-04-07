@@ -32,7 +32,7 @@ namespace freetrain.world
 		/// <summary> Returns a string formatter for the display. </summary>
 		public string displayString {
 			get {
-				return string.Format("{0}-{1}-{2} ({3}) {4,2:d}:{5,1:d}0",
+				return string.Format("Year {0} Month {1} Day {2} ({3}) {4,2:d}:{5,1:d}0",
 				//! return string.Format("{0}年{1}月{2}日({3}) {4,2:d}時{5,1:d}0分",
 					year, month, day,
 					dayOfWeekChar(dayOfWeek),

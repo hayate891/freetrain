@@ -31,8 +31,8 @@ namespace freetrain.util.controls
 		}
 		
 		private ContextMenu createMenu() {
-			menuItems[0] = new MenuItem( "Dock to the left", new EventHandler(dockLeft) );
-			menuItems[1] = new MenuItem( "Dock to the right", new EventHandler(dockRight) );
+			menuItems[0] = new MenuItem( "Dock left", new EventHandler(dockLeft) );
+			menuItems[1] = new MenuItem( "Dock right", new EventHandler(dockRight) );
 			menuItems[2] = new MenuItem( "Dock up", new EventHandler(dockTop) );
 			menuItems[3] = new MenuItem( "Dock down", new EventHandler(dockBottom) );
 			//! menuItems[0] = new MenuItem( "左にドッキング", new EventHandler(dockLeft) );

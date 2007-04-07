@@ -199,7 +199,7 @@ namespace freetrain.world.subsidiaries
 			// tbGo
 			// 
 			this.tbGo.ImageIndex = 2;
-			this.tbGo.Text = "Move";
+			this.tbGo.Text = "Go";
 			//! this.tbGo.Text = "移動";
 			// 
 			// imageList
@@ -232,7 +232,7 @@ namespace freetrain.world.subsidiaries
 			// 
 			// columnHeader2
 			// 
-			this.columnHeader2.Text = "Valuation";
+			this.columnHeader2.Text = "Value";
 			//! this.columnHeader2.Text = "評価額";
 			this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.columnHeader2.Width = 100;

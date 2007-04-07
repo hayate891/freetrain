@@ -5,7 +5,7 @@ using freetrain.world.structs;
 namespace freetrain.world.development
 {
 	/// <summary>
-	/// VarHeightBuildingPlan ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// VarHeightBuildingPlan ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	class VarHeightBuildingPlan : Plan {
 		private readonly VarHeightBuildingContribution contrib;

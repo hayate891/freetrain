@@ -4,7 +4,7 @@ using Crownwood.Magic.Docking;
 namespace freetrain.util.docking
 {
 	/// <summary>
-	/// ContentEx ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// ContentEx ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class ContentEx : Content
 	{

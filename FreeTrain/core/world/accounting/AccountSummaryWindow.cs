@@ -265,7 +265,7 @@ namespace freetrain.world.accounting
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 24);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "Rent:";
+			this.label2.Text = "Loans:";
 			//! this.label2.Text = "借入：";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
