@@ -19,7 +19,8 @@ namespace freetrain.world.rail
 		public static readonly TrainController theInstance = new DelegationTrainControllerImpl();
 
 		private DelegationTrainControllerImpl() {
-			name = "�e�O���[�v�̃_�C���ݒ�𗘗p";
+			name = "Use diagram settings from the new group";
+			//! name = "親グループのダイヤ設定を利用";
 		}
 
 		public override JunctionRoute onJunction( Train train, JunctionRailRoad rr ) {
@@ -44,7 +45,8 @@ namespace freetrain.world.rail
 		}
 
 		public override void config( IWin32Window owner ) {
-			MessageBox.Show( owner, "���̃_�C���ɂ͐ݒ荀�ڂ͂���܂���", Application.ProductName,
+			MessageBox.Show( owner, "There is no setting item for this diagram", Application.ProductName,
+			//! MessageBox.Show( owner, "このダイヤには設定項目はありません", Application.ProductName,
 				MessageBoxButtons.OK, MessageBoxIcon.Information );
 		}
 

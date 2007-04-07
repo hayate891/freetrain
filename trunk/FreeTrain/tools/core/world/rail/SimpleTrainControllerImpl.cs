@@ -17,7 +17,8 @@ namespace freetrain.world.rail
 		public static readonly TrainController theInstance = new SimpleTrainControllerImpl();
 
 		private SimpleTrainControllerImpl() {
-			name = "�f�B�t�H���g�_�C���O����";
+			name = "Default diagram";
+			//! name = "ディフォルトダイヤグラム";
 		}
 
 		public override JunctionRoute onJunction( Train train, JunctionRailRoad rr ) {
@@ -33,7 +34,8 @@ namespace freetrain.world.rail
 		}
 
 		public override void config( IWin32Window owner ) {
-			MessageBox.Show( owner, "���̃_�C���ɂ͐ݒ荀�ڂ͂���܂���", Application.ProductName,
+			MessageBox.Show( owner, "This diagram has no setting item", Application.ProductName,
+			//! MessageBox.Show( owner, "このダイヤには設定項目はありません", Application.ProductName,
 				MessageBoxButtons.OK, MessageBoxIcon.Information );
 		}
 

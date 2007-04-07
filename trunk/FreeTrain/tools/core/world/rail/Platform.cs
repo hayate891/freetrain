@@ -19,7 +19,8 @@ namespace freetrain.world.rail
 			this.location = loc;
 			this.direction = d;
 			this.length = len;
-			this.name = string.Format("ÉzÅ[ÉÄ{0,2:d}",iota++);
+			this.name = string.Format("Platform {0,2:d}",iota++);
+			//! this.name = string.Format("„Éõ„Éº„É†{0,2:d}",iota++);
 			this.bellSound = DepartureBellContribution.DEFAULT;
 			World.world.clock.registerRepeated( new ClockHandler(onClockPerDay), TimeLength.ONEDAY );
 			

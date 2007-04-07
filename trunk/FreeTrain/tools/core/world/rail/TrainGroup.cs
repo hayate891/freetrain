@@ -10,7 +10,8 @@ namespace freetrain.world.rail
 	public class TrainGroup : TrainItem
 	{
 		public TrainGroup(TrainGroup group,string name) : base(group,name) {}
-		public TrainGroup(TrainGroup group) : this(group,string.Format("ÉOÉãÅ[Év{0}",iota++)) {
+		public TrainGroup(TrainGroup group) : this(group,string.Format("Group {0}",iota++)) {
+		//! public TrainGroup(TrainGroup group) : this(group,string.Format("„Ç∞„É´„Éº„Éó{0}",iota++)) {
 			controller = DelegationTrainControllerImpl.theInstance;
 		}
 		private static int iota=1;

@@ -65,7 +65,8 @@ namespace freetrain.world.structs
 		// don't react to a mouse click
 		public override bool onClick() { return false; }
 
-		public override string name { get { return "ŒšİŒ»ê"; } }
+		public override string name { get { return "Construction site"; } }
+		//! public override string name { get { return "å»ºè¨­ç¾å ´"; } }
 
 		private void onFinished() {
 			// construction is finished

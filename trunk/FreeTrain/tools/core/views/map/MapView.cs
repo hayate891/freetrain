@@ -141,8 +141,8 @@ namespace freetrain.views.map
 		private System.ComponentModel.IContainer components;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -168,7 +168,8 @@ namespace freetrain.views.map
 																					  this.menuItem_heightCutWnd});
 			this.menuItem1.MergeOrder = 1;
 			this.menuItem1.MergeType = System.Windows.Forms.MenuMerge.MergeItems;
-			this.menuItem1.Text = "•\¦(&V)";
+			this.menuItem1.Text = "&View";
+			//! this.menuItem1.Text = "è¡¨ç¤º(&V)";
 			// 
 			// menuItem4
 			// 
@@ -178,13 +179,15 @@ namespace freetrain.views.map
 			// menuItem_heightCut
 			// 
 			this.menuItem_heightCut.Index = 1;
-			this.menuItem_heightCut.Text = "ƒwƒCƒgƒJƒbƒg(&H)";
+			this.menuItem_heightCut.Text = "&Height cut";
+			//! this.menuItem_heightCut.Text = "ãƒ˜ã‚¤ãƒˆã‚«ãƒƒãƒˆ(&H)";
 			this.menuItem_heightCut.Popup += new System.EventHandler(this.menuItem_heightCut_Popup);
 			// 
 			// menuItem_heightCutWnd
 			// 
 			this.menuItem_heightCutWnd.Index = 2;
-			this.menuItem_heightCutWnd.Text = "ƒwƒCƒgƒJƒbƒgƒEƒBƒ“ƒhƒE";
+			this.menuItem_heightCutWnd.Text = "Height cut window";
+			//! this.menuItem_heightCutWnd.Text = "ãƒ˜ã‚¤ãƒˆã‚«ãƒƒãƒˆã‚¦ã‚£ãƒ³ãƒ‰ã‚¦";
 			this.menuItem_heightCutWnd.Click += new System.EventHandler(this.menuItem_heightCutWnd_Click);
 			// 
 			// weatherTimer
@@ -198,7 +201,8 @@ namespace freetrain.views.map
 			this.ClientSize = new System.Drawing.Size(432, 427);
 			this.Menu = this.mainMenu;
 			this.Name = "MapViewWindow";
-			this.Text = "ƒ}ƒbƒv";
+			this.Text = "Map";
+			//! this.Text = "ãƒãƒƒãƒ—";
 
 		}
 		#endregion
@@ -409,10 +413,12 @@ namespace freetrain.views.map
 //				this.Checked = ( height==owner.drawer.heightCutHeight );
 
 				if( height==World.world.size.z-1 ) {
-					this.Text = "‚È‚µ";
+					this.Text = "None";
+					//! this.Text = "ãªã—";
 				} else {
 					int h = height - World.world.waterLevel;
-					if( h==0 )		this.Text = "’n•\";
+					if( h==0 )		this.Text = "Water level";
+					//! if( h==0 )		this.Text = "åœ°è¡¨";
 					else			this.Text = h.ToString();
 				}
 			}

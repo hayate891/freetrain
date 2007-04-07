@@ -9,7 +9,7 @@ using org.kohsuke.directdraw;
 namespace freetrain.framework
 {
 	/// <summary>
-	/// ConfigDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// ConfigDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class ConfigDialog : System.Windows.Forms.Form
 	{
@@ -55,8 +55,8 @@ namespace freetrain.framework
 		#region Windows Form Designer generated code
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -96,7 +96,8 @@ namespace freetrain.framework
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.Size = new System.Drawing.Size(80, 24);
 			this.buttonCancel.TabIndex = 1;
-			this.buttonCancel.Text = "·¬İ¾Ù(&C)";
+			this.buttonCancel.Text = "&Cancel";
+			//! this.buttonCancel.Text = "ï½·ï½¬ï¾ï½¾ï¾™(&C)";
 			// 
 			// groupBox1
 			// 
@@ -109,7 +110,8 @@ namespace freetrain.framework
 			this.groupBox1.Size = new System.Drawing.Size(392, 80);
 			this.groupBox1.TabIndex = 2;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "ƒGƒ‰[ƒƒbƒZ[ƒW‚Ì•\¦";
+			this.groupBox1.Text = "Display error messages";
+			//! this.groupBox1.Text = "ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®è¡¨ç¤º";
 			// 
 			// label1
 			// 
@@ -117,7 +119,8 @@ namespace freetrain.framework
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(96, 16);
 			this.label1.TabIndex = 3;
-			this.label1.Text = "•\¦ŠÔF";
+			this.label1.Text = "Display time:";
+			//! this.label1.Text = "è¡¨ç¤ºæ™‚é–“ï¼š";
 			// 
 			// msgStatusLength
 			// 
@@ -135,7 +138,8 @@ namespace freetrain.framework
 			this.radioStatus.Name = "radioStatus";
 			this.radioStatus.Size = new System.Drawing.Size(144, 16);
 			this.radioStatus.TabIndex = 1;
-			this.radioStatus.Text = "ƒXƒe[ƒ^ƒXƒo[‚É•\¦";
+			this.radioStatus.Text = "Display in status bar";
+			//! this.radioStatus.Text = "ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼ã«è¡¨ç¤º";
 			this.radioStatus.CheckedChanged += new System.EventHandler(this.onRadioMsgStyle);
 			// 
 			// radioMsgBox
@@ -145,7 +149,8 @@ namespace freetrain.framework
 			this.radioMsgBox.Name = "radioMsgBox";
 			this.radioMsgBox.Size = new System.Drawing.Size(144, 16);
 			this.radioMsgBox.TabIndex = 0;
-			this.radioMsgBox.Text = "ƒƒbƒZ[ƒWƒ{ƒbƒNƒX‚ğ•\¦";
+			this.radioMsgBox.Text = "Display message box";
+			//! this.radioMsgBox.Text = "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹ã‚’è¡¨ç¤º";
 			this.radioMsgBox.CheckedChanged += new System.EventHandler(this.onRadioMsgStyle);
 			// 
 			// drawStationNames
@@ -155,7 +160,8 @@ namespace freetrain.framework
 			this.drawStationNames.Name = "drawStationNames";
 			this.drawStationNames.Size = new System.Drawing.Size(168, 16);
 			this.drawStationNames.TabIndex = 3;
-			this.drawStationNames.Text = "‰w‚Ì–¼‘O‚ğ‰æ–Ê‚É•\¦";
+			this.drawStationNames.Text = "Display station names";
+			//! this.drawStationNames.Text = "é§…ã®åå‰ã‚’ç”»é¢ã«è¡¨ç¤º";
 			// 
 			// showBoundingBox
 			// 
@@ -164,7 +170,8 @@ namespace freetrain.framework
 			this.showBoundingBox.Name = "showBoundingBox";
 			this.showBoundingBox.Size = new System.Drawing.Size(168, 16);
 			this.showBoundingBox.TabIndex = 4;
-			this.showBoundingBox.Text = "•`‰æ”ÍˆÍ‚ğ•\¦(ƒfƒoƒbƒO)";
+			this.showBoundingBox.Text = "Display drawing range (debug)";
+			//! this.showBoundingBox.Text = "æç”»ç¯„å›²ã‚’è¡¨ç¤º(ãƒ‡ãƒãƒƒã‚°)";
 			// 
 			// hideTrees
 			// 
@@ -173,20 +180,25 @@ namespace freetrain.framework
 			this.hideTrees.Name = "hideTrees";
 			this.hideTrees.Size = new System.Drawing.Size(168, 16);
 			this.hideTrees.TabIndex = 4;
-			this.hideTrees.Text = "÷–Ø‚Ì•`‰æ‚ğÈ—ª";
+			this.hideTrees.Text = "Do not display trees";
+			//! this.hideTrees.Text = "æ¨¹æœ¨ã®æç”»ã‚’çœç•¥";
 			// 
 			// comboSurfaceAlloc
 			// 
 			this.comboSurfaceAlloc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboSurfaceAlloc.Items.AddRange(new object[] {
-																   "©“®“I‚É”»’f‚·‚é",
-																   "ƒrƒfƒIƒƒ‚ƒŠ‚ÉŒÀ’è‚·‚é",
-																   "ƒVƒXƒeƒ€ƒƒ‚ƒŠ‚ÉŒÀ’è‚·‚é"});
+																   "Decide automatically",
+																   "Limit to VRAM",
+																   "Limit to system RAM"});
+			//! "è‡ªå‹•çš„ã«åˆ¤æ–­ã™ã‚‹",
+			//! "ãƒ“ãƒ‡ã‚ªãƒ¡ãƒ¢ãƒªã«é™å®šã™ã‚‹",
+			//! "ã‚·ã‚¹ãƒ†ãƒ ãƒ¡ãƒ¢ãƒªã«é™å®šã™ã‚‹"});
 			this.comboSurfaceAlloc.Location = new System.Drawing.Point(184, 182);
 			this.comboSurfaceAlloc.Name = "comboSurfaceAlloc";
 			this.comboSurfaceAlloc.Size = new System.Drawing.Size(200, 20);
 			this.comboSurfaceAlloc.TabIndex = 5;
-			this.toolTip.SetToolTip(this.comboSurfaceAlloc, "•`‰æ‚ª’x‚©‚Á‚½‚èƒGƒ‰[‚ª‚Å‚é‚æ‚¤‚È‚ç•ÏX‚µ‚Ä‚­‚¾‚³‚¢B");
+			this.toolTip.SetToolTip(this.comboSurfaceAlloc, "Change if drawing is slow and causing errors.");
+			//! this.toolTip.SetToolTip(this.comboSurfaceAlloc, "æç”»ãŒé…ã‹ã£ãŸã‚Šã‚¨ãƒ©ãƒ¼ãŒã§ã‚‹ã‚ˆã†ãªã‚‰å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚");
 			// 
 			// label2
 			// 
@@ -194,9 +206,11 @@ namespace freetrain.framework
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(160, 16);
 			this.label2.TabIndex = 6;
-			this.label2.Text = "ƒIƒtƒXƒNƒŠ[ƒ“ƒT[ƒtƒFƒX‚ÌŠm•ÛF";
+			this.label2.Text = "Cache offscreen surfaces";
+			//! this.label2.Text = "ã‚ªãƒ•ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚µãƒ¼ãƒ•ã‚§ã‚¹ã®ç¢ºä¿ï¼š";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.toolTip.SetToolTip(this.label2, "•`‰æ‚ª’x‚©‚Á‚½‚èƒGƒ‰[‚ª‚Å‚é‚æ‚¤‚È‚ç•ÏX‚µ‚Ä‚­‚¾‚³‚¢B");
+			this.toolTip.SetToolTip(this.label2, "Change if drawing is slow and causing errors.");
+			//! this.toolTip.SetToolTip(this.label2, "æç”»ãŒé…ã‹ã£ãŸã‚Šã‚¨ãƒ©ãƒ¼ãŒã§ã‚‹ã‚ˆã†ãªã‚‰å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚");
 			// 
 			// ConfigDialog
 			// 
@@ -218,7 +232,8 @@ namespace freetrain.framework
 			this.Name = "ConfigDialog";
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "FreeTrain‚Ìİ’è";
+			this.Text = "FreeTrain settings";
+			//! this.Text = "FreeTrainã®è¨­å®š";
 			this.groupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.msgStatusLength)).EndInit();
 			this.ResumeLayout(false);

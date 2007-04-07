@@ -12,7 +12,8 @@ namespace freetrain.world.development
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "’n‰¿‚ÌŒŸ¸";
+			item.Text = "Inspect land value";
+			//! item.Text = "åœ°ä¾¡ã®æ¤œæŸ»";
 			item.Click += new System.EventHandler(onClick);
 
 			containerMenu.MenuItems[1].MenuItems.Add(item);

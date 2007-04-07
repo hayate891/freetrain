@@ -6,7 +6,7 @@ using freetrain.framework;
 namespace freetrain.views
 {
 	/// <summary>
-	/// Viewからコンテナに対するインターフェース
+	/// View縺九ｉ繧ｳ繝ｳ繝�繝翫↓蟇ｾ縺吶ｋ繧､繝ｳ繧ｿ繝ｼ繝輔ぉ繝ｼ繧ｹ
 	/// </summary>
 	public interface IView
 	{

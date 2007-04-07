@@ -468,7 +468,8 @@ namespace freetrain.views
 
 		private static Color waterSurfaceDayColor = Color.FromArgb(0,114,188);
 
-		private static Font drawFont = new Font("‚l‚r ‚oƒSƒVƒbƒN", 10);
+		private static Font drawFont = new Font("MS PGothic", 10);
+		//! private static Font drawFont = new Font("ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", 10);
 		private static SolidBrush drawBrush1 = new SolidBrush(Color.Black);   
 		private static SolidBrush drawBrush2 = new SolidBrush(Color.White);   
 		

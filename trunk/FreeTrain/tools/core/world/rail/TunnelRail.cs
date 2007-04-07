@@ -196,9 +196,11 @@ namespace freetrain.world.rail
 
 
 
-		public override string name { get { return "トンネル"; } }
+		public override string name { get { return "Tunnel"; } }
+		//! public override string name { get { return "繝医Φ繝阪Ν"; } }
 
-		public override string oneLineDescription { get { return "山肌を突き抜けるためのトンネル"; } }
+		public override string oneLineDescription { get { return "Tunnel leading out of a mountainside"; } }
+		//! public override string oneLineDescription { get { return "螻ｱ閧後ｒ遯√″謚懊￠繧九◆繧√�ｮ繝医Φ繝阪Ν"; } }
 	
 		public override Bitmap previewBitmap {
 			get {

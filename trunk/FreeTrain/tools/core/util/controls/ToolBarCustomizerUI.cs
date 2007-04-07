@@ -31,10 +31,14 @@ namespace freetrain.util.controls
 		}
 		
 		private ContextMenu createMenu() {
-			menuItems[0] = new MenuItem( "左にドッキング", new EventHandler(dockLeft) );
-			menuItems[1] = new MenuItem( "右にドッキング", new EventHandler(dockRight) );
-			menuItems[2] = new MenuItem( "上にドッキング", new EventHandler(dockTop) );
-			menuItems[3] = new MenuItem( "下にドッキング", new EventHandler(dockBottom) );
+			menuItems[0] = new MenuItem( "Dock left", new EventHandler(dockLeft) );
+			menuItems[1] = new MenuItem( "Dock right", new EventHandler(dockRight) );
+			menuItems[2] = new MenuItem( "Dock up", new EventHandler(dockTop) );
+			menuItems[3] = new MenuItem( "Dock down", new EventHandler(dockBottom) );
+			//! menuItems[0] = new MenuItem( "蟾ｦ縺ｫ繝峨ャ繧ｭ繝ｳ繧ｰ", new EventHandler(dockLeft) );
+			//! menuItems[1] = new MenuItem( "蜿ｳ縺ｫ繝峨ャ繧ｭ繝ｳ繧ｰ", new EventHandler(dockRight) );
+			//! menuItems[2] = new MenuItem( "荳翫↓繝峨ャ繧ｭ繝ｳ繧ｰ", new EventHandler(dockTop) );
+			//! menuItems[3] = new MenuItem( "荳九↓繝峨ャ繧ｭ繝ｳ繧ｰ", new EventHandler(dockBottom) );
 			
 			foreach( MenuItem mi in menuItems )
 				mi.RadioCheck = true;

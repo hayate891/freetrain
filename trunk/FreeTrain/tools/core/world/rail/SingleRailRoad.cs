@@ -5,17 +5,17 @@ using System.Diagnostics;
 namespace freetrain.world.rail
 {
 	/// <summary>
-	/// ƒ|ƒCƒ“ƒg•ªŠò‚ğ”º‚í‚È‚¢ü˜H
+	/// ãƒã‚¤ãƒ³ãƒˆåˆ†å²ã‚’ä¼´ã‚ãªã„ç·šè·¯
 	/// </summary>
 	[Serializable]
 	public class SingleRailRoad : RailRoad
 	{
 		public SingleRailRoad( TrafficVoxel tv, RailPattern p ) : base(tv,p) {}
 
-		// ƒ|ƒCƒ“ƒg•ªŠò‚ğ”º‚í‚È‚¢‚Ì‚Å’Pƒ‚ÈƒƒWƒbƒN‚ÅŒvZ‚Å‚«‚é
+		// ãƒã‚¤ãƒ³ãƒˆåˆ†å²ã‚’ä¼´ã‚ãªã„ã®ã§å˜ç´”ãªãƒ­ã‚¸ãƒƒã‚¯ã§è¨ˆç®—ã§ãã‚‹
 		public override Direction guide() {
 			Direction d = voxel.car.state.asInside().direction;
-			if(hasRail(d))	return d;	// i˜H•ÏX‚È‚µ
+			if(hasRail(d))	return d;	// é€²è·¯å¤‰æ›´ãªã—
 
 			Direction l = d.left;
 			if(hasRail(l))	return l;

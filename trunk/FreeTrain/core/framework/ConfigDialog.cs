@@ -197,7 +197,7 @@ namespace freetrain.framework
 			this.comboSurfaceAlloc.Name = "comboSurfaceAlloc";
 			this.comboSurfaceAlloc.Size = new System.Drawing.Size(200, 20);
 			this.comboSurfaceAlloc.TabIndex = 5;
-			this.toolTip.SetToolTip(this.comboSurfaceAlloc, "Refresh if drawing is slow and about to cause errors.");
+			this.toolTip.SetToolTip(this.comboSurfaceAlloc, "Change if drawing is slow and causing errors.");
 			//! this.toolTip.SetToolTip(this.comboSurfaceAlloc, "描画が遅かったりエラーがでるようなら変更してください。");
 			// 
 			// label2
@@ -206,10 +206,10 @@ namespace freetrain.framework
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(160, 16);
 			this.label2.TabIndex = 6;
-			this.label2.Text = "Save offscreen surfaces:";
+			this.label2.Text = "Cache offscreen surfaces:";
 			//! this.label2.Text = "オフスクリーンサーフェスの確保：";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.toolTip.SetToolTip(this.label2, "Refresh if drawing is slow and about to cause errors.");
+			this.toolTip.SetToolTip(this.label2, "Change if drawing is slow and causing errors.");
 			//! this.toolTip.SetToolTip(this.label2, "描画が遅かったりエラーがでるようなら変更してください。");
 			// 
 			// ConfigDialog

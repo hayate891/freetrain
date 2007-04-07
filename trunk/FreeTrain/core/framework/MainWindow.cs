@@ -557,26 +557,26 @@ namespace freetrain.framework
 																						  this.menuItem_TrainTrading,
 																						  this.menuItem4});
 			this.menuItem_rail.MergeOrder = 2;
-			this.menuItem_rail.Text = "&Rails";
+			this.menuItem_rail.Text = "&Rail";
 			//! this.menuItem_rail.Text = "鉄道(&R)";
 			// 
 			// menuItem_RailRoadConstruction
 			// 
 			this.menuItem_RailRoadConstruction.Index = 0;
-			this.menuItem_RailRoadConstruction.Text = "&Rail construction...";
+			this.menuItem_RailRoadConstruction.Text = "Lay &rail...";
 			//! this.menuItem_RailRoadConstruction.Text = "線路工事(&R)...";
 			// 
 			// menuItem_SlopeRailRoad
 			// 
 			this.menuItem_SlopeRailRoad.Index = 1;
-			this.menuItem_SlopeRailRoad.Text = "&Sloping rail construction...";
+			this.menuItem_SlopeRailRoad.Text = "Lay &slope...";
 			//! this.menuItem_SlopeRailRoad.Text = "勾配工事(&S)...";
 			// 
 			// menuItem_Platform
 			// 
 			this.menuItem_Platform.Index = 2;
-			this.menuItem_Platform.Text = "駅工事(&A)...";
-			//! this.menuItem_Platform.Text = "St&ation construction...";
+			this.menuItem_Platform.Text = "Build st&ation...";
+			//! this.menuItem_Platform.Text = "駅工事(&A)...";
 			// 
 			// menuItem_stationPassageway
 			// 
@@ -598,7 +598,7 @@ namespace freetrain.framework
 			// menuItem_TrainPlacement
 			// 
 			this.menuItem_TrainPlacement.Index = 6;
-			this.menuItem_TrainPlacement.Text = "&Train placement...";
+			this.menuItem_TrainPlacement.Text = "Place &train...";
 			//! this.menuItem_TrainPlacement.Text = "車両配置(&T)...";
 			// 
 			// menuItem_TrainTrading
@@ -635,25 +635,25 @@ namespace freetrain.framework
 			// menuItem_struct
 			// 
 			this.menuItem_struct.Index = 0;
-			this.menuItem_struct.Text = "Building construction (tentative)...";
+			this.menuItem_struct.Text = "Building construction...";
 			//! this.menuItem_struct.Text = "建物の工事(仮)...";
 			// 
 			// menuItem_terrain
 			// 
 			this.menuItem_terrain.Index = 1;
-			this.menuItem_terrain.Text = "Level terrain (tentative)(&M)...";
+			this.menuItem_terrain.Text = "&Modify terrain...";
 			//! this.menuItem_terrain.Text = "整地(仮)(&M)...";
 			// 
 			// menuItem_varHeightBldg
 			// 
 			this.menuItem_varHeightBldg.Index = 2;
-			this.menuItem_varHeightBldg.Text = "Rent &building...";
+			this.menuItem_varHeightBldg.Text = "Rental &building...";
 			//! this.menuItem_varHeightBldg.Text = "貸しビル(&B)...";
 			// 
 			// menuItem_land
 			// 
 			this.menuItem_land.Index = 3;
-			this.menuItem_land.Text = "&Surface...";
+			this.menuItem_land.Text = "Terrain object&s...";
 			//! this.menuItem_land.Text = "地表(&S)...";
 			// 
 			// menuItem_landProperty
@@ -692,13 +692,13 @@ namespace freetrain.framework
 			// menuItem_enableSoundEffect
 			// 
 			this.menuItem_enableSoundEffect.Index = 0;
-			this.menuItem_enableSoundEffect.Text = "E&nable";
+			this.menuItem_enableSoundEffect.Text = "O&n";
 			//! this.menuItem_enableSoundEffect.Text = "あり(&N)";
 			// 
 			// menuItem_disableSoundEffect
 			// 
 			this.menuItem_disableSoundEffect.Index = 1;
-			this.menuItem_disableSoundEffect.Text = "Disable(&F)";
+			this.menuItem_disableSoundEffect.Text = "O&ff";
 			//! this.menuItem_disableSoundEffect.Text = "なし(&F)";
 			// 
 			// menuItem_option
@@ -771,7 +771,7 @@ namespace freetrain.framework
 			// menuItem_ClockStop
 			// 
 			this.menuItem_ClockStop.Index = 0;
-			this.menuItem_ClockStop.Text = "&Stop";
+			this.menuItem_ClockStop.Text = "&Pause";
 			//! this.menuItem_ClockStop.Text = "一時停止(&S)";
 			this.menuItem_ClockStop.Click += new System.EventHandler(this.menuItem_ClockStop_Click);
 			// 
@@ -1384,7 +1384,7 @@ namespace freetrain.framework
 				return;
 			}
 
-			DialogResult res = MessageBox.Show(this,"Do you want to save the game and quit?",
+			DialogResult res = MessageBox.Show(this,"Do you want to quit without saving?",
 			//! DialogResult res = MessageBox.Show(this,"ゲームを保存しないで終了しますか？",
 						Application.ProductName,
 						MessageBoxButtons.YesNo,

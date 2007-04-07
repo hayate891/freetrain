@@ -29,7 +29,8 @@ namespace freetrain.world.development
 
 
 		public override void onMouseMove( MapViewWindow view, Location loc, Point ab ) {
-			MainWindow.mainWindow.statusText = "’n‰¿F" + World.world.landValue[loc];
+			MainWindow.mainWindow.statusText = "Land value:" + World.world.landValue[loc];
+			//! MainWindow.mainWindow.statusText = "åœ°ä¾¡ï¼š" + World.world.landValue[loc];
 		}
 
 		//
@@ -53,8 +54,8 @@ namespace freetrain.world.development
 		private System.Windows.Forms.Label label1;
 
 		/// <summary>
-		/// Designer ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·BƒR[ƒh ƒGƒfƒBƒ^‚Å
-		/// ‚±‚Ìƒƒ\ƒbƒh‚ÌƒRƒ“ƒeƒ“ƒc‚ğ•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// Designer ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§
+		/// ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent() {
 			this.label1 = new System.Windows.Forms.Label();
@@ -66,7 +67,8 @@ namespace freetrain.world.development
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(104, 64);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "ƒJ[ƒ\ƒ‹‚ğˆÚ“®‚µ‚Ä’n‰¿‚ğ•\¦";
+			this.label1.Text = "Move the cursor to display land value";
+			//! this.label1.Text = "ã‚«ãƒ¼ã‚½ãƒ«ã‚’ç§»å‹•ã—ã¦åœ°ä¾¡ã‚’è¡¨ç¤º";
 			// 
 			// LandValueInspector
 			// 
@@ -75,7 +77,8 @@ namespace freetrain.world.development
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.label1});
 			this.Name = "LandValueInspector";
-			this.Text = "’n‰¿‚ÌŒŸ¸";
+			this.Text = "Inspect land value";
+			//! this.Text = "åœ°ä¾¡ã®æ¤œæŸ»";
 			this.ResumeLayout(false);
 
 		}
