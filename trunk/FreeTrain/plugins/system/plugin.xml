@@ -192,8 +192,8 @@
 	</contribution>
 	
 	<contribution type="dockingContent" id="{7A5AE360-0974-4e6a-A7BB-70A3906C406E}">
-		<name>Subsidiary market</name>
-		<menu name="S&amp;ubsidiary market" location="view" />
+		<name>Subsidiary business</name>
+		<menu name="S&amp;ubsidiary business" location="view" />
 		<!--!<name>子会社売買</name>
 		<menu name="子会社売買(&amp;U)" location="view" />-->
 		<class name="freetrain.world.subsidiaries.MarketWindow"/>
@@ -332,43 +332,50 @@
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-1">
-		<name>汎用三色細帯</name>
+		<name>General-purpose three-color thin stripe</name>
+		<!--!<name>汎用三色細帯</name>-->
 		<author>477さん</author>
 		<picture src="UncoloredTrain01.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-2">
-		<name>汎用四色太帯</name>
+		<name>General-purpose four-color thick stripe</name>
+		<!--!<name>汎用四色太帯</name>-->
 		<author>477さん</author>
 		<picture src="UncoloredTrain02.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-3">
-		<name>汎用四色細帯</name>
+		<name>Genral-purpose four-color thin stripe</name>
+		<!--!<name>汎用四色細帯</name>-->
 		<author>477さん</author>
 		<picture src="UncoloredTrain03.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-4">
-		<name>103系風</name>
+		<name>103 series style</name>
+		<!--!<name>103系風</name>-->
 		<author>477さん</author>
 		<picture src="UncoloredTrain04.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-5">
-		<name>205系風</name>
+		<name>205 series style</name>
+		<!--!<name>205系風</name>-->
 		<author>477さん</author>
 		<picture src="UncoloredTrain05.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-6">
-		<name>211系風</name>
+		<name>211 series style</name>
+		<!--!<name>211系風</name>-->
 		<author>477さん</author>
 		<picture src="UncoloredTrain06.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-7">
-		<name>E231系風</name>
+		<name>E231 series style</name>
+		<!--!<name>E231系風</name>-->
 		<author>477さん</author>
 		<picture src="UncoloredTrain07.bmp" />
 	</contribution>

@@ -41,7 +41,7 @@ namespace XmlCombiner
 				root.AppendChild( dom.ImportNode( plugin.DocumentElement, true ) );
 			}
 
-			Console.WriteLine("<?xml version='1.0' encoding='Shift_JIS'?>");
+			Console.WriteLine("<?xml version='1.0' encoding='UTF-8'?>");
 			XmlTextWriter writer = new XmlTextWriter(Console.Out);
 			writer.Formatting = Formatting.Indented;
 			dom.WriteContentTo( writer );

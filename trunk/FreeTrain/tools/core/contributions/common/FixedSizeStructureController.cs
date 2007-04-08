@@ -30,7 +30,7 @@ namespace freetrain.contributions.common
 		protected override void onSelected( Cube cube ) {
 			if( contrib.canBeBuilt(cube.corner) ) {
 				MainWindow.showError("Can not place");
-				//! MainWindow.showError("İ’u‚Å‚«‚Ü‚¹‚ñ");
+				//! MainWindow.showError("è¨­ç½®ã§ãã¾ã›ã‚“");
 			} else {
 				CompletionHandler handler = new CompletionHandler(contrib,cube.corner,true);
 				new ConstructionSite( cube.corner, new EventHandler(handler.handle), contrib.size );
@@ -81,7 +81,7 @@ namespace freetrain.contributions.common
 			PThreeDimStructure s = World.world.getEntityAt(cube.corner) as PThreeDimStructure;
 			if( s==null || s.type!=contrib ) {
 				MainWindow.showError("Wrong type");
-				//! MainWindow.showError("í—Ş‚ªˆá‚¢‚Ü‚·");
+				//! MainWindow.showError("ç¨®é¡ãŒé•ã„ã¾ã™");
 				return;
 			}
 			s.remove();

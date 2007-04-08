@@ -171,7 +171,8 @@ namespace freetrain.world.rail
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(16, 20);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "×";
+			this.label3.Text = "x";
+			//! this.label3.Text = "×";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// count
@@ -365,7 +366,7 @@ namespace freetrain.world.rail
 			this.name.Name = "name";
 			this.name.Size = new System.Drawing.Size(184, 16);
 			this.name.TabIndex = 25;
-			this.name.Text = "123 system ABCDEF";
+			this.name.Text = "123 series ABCDEF";
 			//! this.name.Text = "123系 ABCDEF";
 			this.name.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 

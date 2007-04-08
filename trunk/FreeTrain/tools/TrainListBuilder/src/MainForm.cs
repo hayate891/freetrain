@@ -73,7 +73,8 @@ namespace TrainListBuilder.src
 			this.buttonOK.Name = "buttonOK";
 			this.buttonOK.Size = new System.Drawing.Size(96, 24);
 			this.buttonOK.TabIndex = 0;
-			this.buttonOK.Text = "ì¬";
+			this.buttonOK.Text = "Create";
+			//! this.buttonOK.Text = "ä½œæˆ";
 			this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
 			// 
 			// progressBar
@@ -89,7 +90,8 @@ namespace TrainListBuilder.src
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(56, 16);
 			this.label1.TabIndex = 2;
-			this.label1.Text = "o—ÍæF";
+			this.label1.Text = "Output directory:";
+			//! this.label1.Text = "å‡ºåŠ›å…ˆï¼š";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// output
@@ -125,7 +127,8 @@ namespace TrainListBuilder.src
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "MainForm";
-			this.Text = "—ñÔˆê——HTMLì¬ƒc[ƒ‹";
+			this.Text = "A tool to create HTML lists of trains";
+			//! this.Text = "åˆ—è»Šä¸€è¦§HTMLä½œæˆãƒ„ãƒ¼ãƒ«";
 			this.ResumeLayout(false);
 
 		}
@@ -141,7 +144,8 @@ namespace TrainListBuilder.src
 			string dir = output.Text;
 
 			if( !Directory.Exists(dir) ) {
-				MessageBox.Show(this,"w’è‚³‚ê‚½o—Íæ‚Í‘¶İ‚µ‚Ü‚¹‚ñ");
+				MessageBox.Show(this,"The chosen output directory does not exist");
+				//! MessageBox.Show(this,"æŒ‡å®šã•ã‚ŒãŸå‡ºåŠ›å…ˆã¯å­˜åœ¨ã—ã¾ã›ã‚“");
 				return;
 			}
 
@@ -218,9 +222,12 @@ namespace TrainListBuilder.src
 					continue;
 				}
 				MessageBox.Show(
-					"g—p•û–@F\n"+
-					"  -output o—ÍƒfƒBƒŒƒNƒgƒŠ\n"+
-					"  -plugin ƒGƒNƒXƒgƒ‰ƒvƒ‰ƒOƒCƒ“ƒfƒBƒŒƒNƒgƒŠ" );
+					"Usage:\n"+
+					"  -output output directory\n"+
+					"  -plugin extra plugin directory" );
+					//! "ä½¿ç”¨æ–¹æ³•ï¼š\n"+
+					//! "  -output å‡ºåŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª\n"+
+					//! "  -plugin ã‚¨ã‚¯ã‚¹ãƒˆãƒ©ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª" );
 				return;
 			}
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
 このファイルは、C477氏の作成したファイルを元に、ジャガイモが作成しました。
 詳しい情報は下記のURLへ。
@@ -46,16 +46,19 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--020　建設業-->
 	
 	<company id="1801" name="Daisei Construction" type="020">
+	<!--!<company id="1801" name="大製建設" type="020">-->
 		<performance capital="10000000" sales="16000000000" />
 		<capacity brand="9" marketing="5" quality="7" rationality="3" development="3" />
 		<stock total="1100000" share="200000" />
 	</company>
 	<company id="1802" name="Obayashi Group" type="020">
+	<!--!<company id="1802" name="雄林組" type="020">-->
 		<performance capital="6000000" sales="2500000000" />
 		<capacity brand="9" marketing="5" quality="8" rationality="3" development="3" />
 		<stock total="120000" share="50000" />
 	</company>
 	<company id="1942" name="Nishi Electrics" type="020">
+	<!--!<company id="1942" name="西電工" type="020">-->
 		<performance capital="1000000" sales="4500000000" />
 		<capacity brand="8" marketing="6" quality="7" rationality="4" development="3" />
 		<stock total="200000" share="100000" />
@@ -64,11 +67,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--021　食品-->
 	
 	<company id="2002" name="Nisshin Seifun Group" type="021">
+	<!--!<company id="2002" name="日進製粉グループ" type="021">-->
 		<performance capital="350000" sales="45000000" />
 		<capacity brand="8" marketing="4" quality="6" rationality="1" development="2" />
 		<stock total="20000" share="5600" />
 	</company>
 	<company id="2503" name="Raijin Breweries" type="021">
+	<!--!<company id="2503" name="雷神麦酒" type="021">-->
 		<performance capital="100000000" sales="900000000" />
 		<capacity brand="5" marketing="6" quality="7" rationality="3" development="1" />
 		<stock total="300000" share="30000" />
@@ -77,11 +82,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--022　繊維-->
 	
 	<company id="3103" name="Yuninica" type="022">
+	<!--!<company id="3103" name="ユニニカ" type="022">-->
 		<performance capital="200000" sales="700000000" />
 		<capacity brand="6" marketing="6" quality="5" rationality="3" development="4" />
 		<stock total="5000000" share="3000000" />
 	</company>
 	<company id="3402" name="Dai-re" type="022">
+	<!--!<company id="3402" name="大レ" type="022">-->
 		<performance capital="800000" sales="80000000" />
 		<capacity brand="7" marketing="3" quality="7" rationality="4" development="2" />
 		<stock total="200000" share="100000" />
@@ -90,11 +97,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--023　パルプ・紙-->
 	
 	<company id="3861" name="Shibusawa Manufacturing" type="023">
+	<!--!<company id="3861" name="澁澤製紙" type="023">-->
 		<performance capital="1000000" sales="550000000" />
 		<capacity brand="8" marketing="4" quality="5" rationality="5" development="4" />
 		<stock total="1000000" share="500000" />
 	</company>
 	<company id="3872" name="Itsubishi Manufacturing" type="023">
+	<!--!<company id="3872" name="五菱製紙" type="023">-->
 		<performance capital="800000" sales="35000000" />
 		<capacity brand="2" marketing="6" quality="6" rationality="3" development="3" />
 		<stock total="250000" share="30000" />
@@ -103,11 +112,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--030　化学-->
 	
 	<company id="4023" name="Kureha Chemical" type="030">
+	<!--!<company id="4023" name="暮羽化学" type="030">-->
 		<performance capital="4500000" sales="700000000" />
 		<capacity brand="3" marketing="4" quality="5" rationality="6" development="1" />
 		<stock total="200000" share="100000" />
 	</company>
 	<company id="4208" name="Ube Mining" type="030">
+	<!--!<company id="4208" name="宇部鉱産" type="030">-->
 		<performance capital="8000000" sales="300000000" />
 		<capacity brand="7" marketing="5" quality="6" rationality="4" development="2" />
 		<stock total="520000" share="40000" />
@@ -116,11 +127,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--031　医薬品-->
 	
 	<company id="4503" name="Hamanouchi Pharmaceutical" type="031">
+	<!--!<company id="4503" name="濱之内製薬" type="031">-->
 		<performance capital="2800000" sales="700000000" />
 		<capacity brand="7" marketing="5" quality="6" rationality="3" development="2" />
 		<stock total="30000" share="10000" />
 	</company>
 	<company id="4535" name="Daisho Pharmaceutical" type="031">
+	<!--!<company id="4535" name="大賞製薬" type="031">-->
 		<performance capital="2000000" sales="400000000" />
 		<capacity brand="5" marketing="9" quality="5" rationality="4" development="4" />
 		<stock total="50000" share="10000" />
@@ -129,11 +142,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--032　石油・石炭-->
 	
 	<company id="5001" name="Japan Oil" type="032">
+	<!--!<company id="5001" name="にっぽん石油" type="032">-->
 		<performance capital="6400000" sales="5000000000" />
 		<capacity brand="5" marketing="8" quality="6" rationality="3" development="6" />
 		<stock total="300000" share="40000" />
 	</company>
 	<company id="5002" name="Asahi Oil" type="032">
+	<!--!<company id="5002" name="旭石油" type="032">-->
 		<performance capital="5300000" sales="5000000000" />
 		<capacity brand="6" marketing="2" quality="9" rationality="4" development="3" />
 		<stock total="200000" share="55000" />
@@ -141,7 +156,8 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	
 	<!--033　ゴム-->
 	
-	<company id="5108" name="Predgest" type="033">
+	<company id="5108" name="Pregiest" type="033">
+	<!--!<company id="5108" name="ブリヂエスト" type="033">-->
 		<performance capital="1200000" sales="350000000" />
 		<capacity brand="8" marketing="3" quality="6" rationality="3" development="5" />
 		<stock total="200000" share="100000" />
@@ -150,6 +166,7 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--034　ガラス-->
 	
 	<company id="5201" name="Asahi Glass" type="034">
+	<!--!<company id="5201" name="朝日グラス" type="034">-->
 		<performance capital="2500000" sales="5000000000" />
 		<capacity brand="8" marketing="3" quality="3" rationality="6" development="6" />
 		<stock total="1300000" share="300000" />
@@ -157,12 +174,14 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	
 	<!--035　窯業-->
 	
-	<company id="5232" name="Sumidomo Kansei Cement" type="035">
+	<company id="5232" name="Sumidomo Kansai Cement" type="035">
+	<!--!<company id="5232" name="清友関西セメント" type="035">-->
 		<performance capital="8000000" sales="1600000000" />
 		<capacity brand="4" marketing="6" quality="4" rationality="3" development="5" />
 		<stock total="3200000" share="2200000" />
 	</company>
 	<company id="5233" name="Taiyo Cement" type="035">
+	<!--!<company id="5233" name="太洋セメント" type="035">-->
 		<performance capital="10000000" sales="150000000" />
 		<capacity brand="8" marketing="3" quality="2" rationality="6" development="2" />
 		<stock total="200000" share="150000" />
@@ -171,11 +190,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--036　鉄鋼-->
 	
 	<company id="5405" name="Sumidomo Metalworking" type="036">
+	<!--!<company id="5405" name="清友金属工業" type="036">-->
 		<performance capital="1500000" sales="1000000000" />
 		<capacity brand="5" marketing="5" quality="5" rationality="3" development="3" />
 		<stock total="5000000" share="3000000" />
 	</company>
 	<company id="5406" name="Hanshin Steel" type="036">
+	<!--!<company id="5406" name="阪神製鋼" type="036">-->
 		<performance capital="1000000" sales="480000000" />
 		<capacity brand="8" marketing="3" quality="9" rationality="3" development="6" />
 		<stock total="3000000" share="2000000" />
@@ -184,11 +205,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--037　非鉄-->
 	
 	<company id="5711" name="Itsubishi Material" type="037">
+	<!--!<company id="5711" name="五菱マテリアル" type="037">-->
 		<performance capital="5000000" sales="2600000000" />
 		<capacity brand="8" marketing="3" quality="6" rationality="3" development="5" />
 		<stock total="3000000" share="1000000" />
 	</company>
 	<company id="5713" name="Sumidomo Mining" type="037">
+	<!--!<company id="5713" name="清友金属鉱山" type="037">-->
 		<performance capital="3000000" sales="1000000000" />
 		<capacity brand="5" marketing="8" quality="8" rationality="2" development="3" />
 		<stock total="500000" share="250000" />
@@ -199,16 +222,19 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--040　機械-->
 	
 	<company id="5631" name="Daiwa Steel Works" type="040">
+	<!--!<company id="5631" name="大和製鋼所" type="040">-->
 		<performance capital="15000000" sales="45000000000" />
 		<capacity brand="5" marketing="6" quality="5" rationality="1" development="6" />
 		<stock total="350000" share="250000" />
 	</company>
 	<company id="7011" name="Itsubishi Heavy Industries" type="040">
+	<!--!<company id="7011" name="五菱重工業" type="040">-->
 		<performance capital="30000000" sales="600000000000" />
 		<capacity brand="8" marketing="6" quality="8" rationality="4" development="3" />
 		<stock total="8000000" share="5000000" />
 	</company>
 	<company id="7013" name="Morishima Hama Heavy Industries" type="040">
+	<!--!<company id="7013" name="森島播磨重工業" type="040">-->
 		<performance capital="50000000" sales="400000000000" />
 		<capacity brand="9" marketing="8" quality="7" rationality="3" development="5" />
 		<stock total="3100000" share="1800000" />
@@ -217,26 +243,31 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--041　電気機器-->
 	
 	<company id="6501" name="Hidachi Manufacturing" type="041">
+	<!--!<company id="6501" name="常陸製作所" type="041">-->
 		<performance capital="28000000" sales="350000000000" />
 		<capacity brand="8" marketing="3" quality="9" rationality="2" development="3" />
 		<stock total="100000" share="67000" />
 	</company>
 	<company id="6502" name="Shiba Electric" type="041">
+	<!--!<company id="6502" name="芝電" type="041">-->
 		<performance capital="30000000" sales="300000000000" />
 		<capacity brand="7" marketing="4" quality="6" rationality="2" development="5" />
 		<stock total="100000" share="70000" />
 	</company>
 	<company id="6742" name="Kyosan Manufacturing" type="041">
+	<!--!<company id="6742" name="京賛製作所" type="041">-->
 		<performance capital="620000" sales="6000000000" />
 		<capacity brand="8" marketing="7" quality="8" rationality="5" development="8" />
 		<stock total="6300" share="4" />
 	</company>
 	<company id="6752" name="Matsushika Electric Industrial" type="041">
+	<!--!<company id="6752" name="松鹿電器産業" type="041">-->
 		<performance capital="26000000" sales="100000000000" />
 		<capacity brand="9" marketing="8" quality="7" rationality="2" development="6" />
 		<stock total="24000" share="8000" />
 	</company>
-	<company id="6758" name="Sona" type="041">
+	<company id="6758" name="SONA" type="041">
+	<!--!<company id="6758" name="ソナ" type="041">-->
 		<performance capital="50000000" sales="400000000000" />
 		<capacity brand="10" marketing="10" quality="5" rationality="10" development="8" />
 		<stock total="35000" share="2600" />
@@ -247,16 +278,19 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--042　自動車-->
 	
 	<company id="7201" name="Nisan Motors" type="042">
+	<!--!<company id="7201" name="日参自動車" type="042">-->
 		<performance capital="6000000" sales="6000000000" />
 		<capacity brand="8" marketing="5" quality="9" rationality="9" development="9" />
 		<stock total="60000" share="15000" />
 	</company>
 	<company id="7203" name="Toyoto Motors" type="042">
+	<!--!<company id="7203" name="トヨト自動車" type="042">-->
 		<performance capital="4000000" sales="30000000000" />
 		<capacity brand="10" marketing="9" quality="6" rationality="8" development="5" />
 		<stock total="100000" share="54000" />
 	</company>
 	<company id="7267" name="Handa Industries" type="042">
+	<!--!<company id="7267" name="半田技研工業" type="042">-->
 		<performance capital="1000000" sales="25000000000" />
 		<capacity brand="6" marketing="7" quality="7" rationality="9" development="5" />
 		<stock total="36000" share="24000" />
@@ -265,11 +299,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--043　造船-->
 	
 	<company id="7004" name="Hidachi Shipyard" type="043">
+	<!--!<company id="7004" name="常陸造船" type="043">-->
 		<performance capital="3000000" sales="60000000000" />
 		<capacity brand="5" marketing="1" quality="6" rationality="3" development="6" />
 		<stock total="1000000" share="200000" />
 	</company>
-	<company id="7003" name="Mitui Shipyard" type="043">
+	<company id="7003" name="Hikarii Shipyard" type="043">
+	<!--!<company id="7003" name="光井造船" type="043">-->
 		<performance capital="5000000" sales="80000000000" />
 		<capacity brand="8" marketing="8" quality="8" rationality="6" development="2" />
 		<stock total="2500000" share="150000" />
@@ -280,6 +316,7 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--046　精密機器-->
 	
 	<company id="7701" name="Shimadzu Manufacturing" type="046">
+	<!--!<company id="7701" name="縞津製作所" type="046">-->
 		<performance capital="8500000" sales="10000000000" />
 		<capacity brand="8" marketing="4" quality="6" rationality="3" development="8" />
 		<stock total="2000000" share="500000" />
@@ -293,11 +330,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--047　印刷-->
 	
 	<company id="7911" name="Nihon Printing" type="047">
+	<!--!<company id="7911" name="日本凸版" type="047">-->
 		<performance capital="5700000" sales="60000000" />
 		<capacity brand="6" marketing="5" quality="6" rationality="2" development="1" />
 		<stock total="82000" share="42000" />
 	</company>
 	<company id="7914" name="Gohdoh Printing" type="047">
+	<!--!<company id="7914" name="合同印刷" type="047">-->
 		<performance capital="2800000" sales="90000000" />
 		<capacity brand="5" marketing="3" quality="5" rationality="2" development="3" />
 		<stock total="380000" share="300000" />
@@ -306,11 +345,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--048　その他製造-->
 	
 	<company id="7951" name="Yamaba" type="048">
+	<!--!<company id="7951" name="ヤマバ" type="048">-->
 		<performance capital="35000000" sales="3000000000" />
 		<capacity brand="8" marketing="7" quality="6" rationality="3" development="4" />
 		<stock total="300000" share="25000" />
 	</company>
-	<company id="7964" name="Saga" type="048">
+	<company id="7964" name="SAGA" type="048">
+	<!--!<company id="7964" name="サガ" type="048">-->
 		<performance capital="200000" sales="2000000000" />
 		<capacity brand="5" marketing="2" quality="8" rationality="1" development="3" />
 		<stock total="180000" share="80000" />
@@ -319,11 +360,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--071　商業（卸売）-->
 	
 	<company id="8002" name="Tada Cosmetics" type="071">
+	<!--!<company id="8002" name="忠紅" type="071">-->
 		<performance capital="300000000" sales="200000000000" />
 		<capacity brand="8" marketing="4" quality="3" rationality="6" development="1" />
 		<stock total="300000" share="100000" />
 	</company>
-	<company id="8058" name="Itsubishi Trading" type="071">
+	<company id="8058" name="Itsubishi Wholesale" type="071">
+	<!--!<company id="8058" name="五菱商事" type="071">-->
 		<performance capital="240000000" sales="1200000000000" />
 		<capacity brand="8" marketing="6" quality="8" rationality="2" development="3" />
 		<stock total="520000" share="87000" />
@@ -332,16 +375,19 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--072　商業（小売）-->
 	
 	<company id="8233" name="Takashima-ya" type="072">
+	<!--!<company id="8233" name="鷹島屋" type="072">-->
 		<performance capital="50000000" sales="5000000000" />
 		<capacity brand="8" marketing="5" quality="8" rationality="3" development="2" />
 		<stock total="380000" share="54000" />
 	</company>
 	<company id="8251" name="Park" type="072">
+	<!--!<company id="8251" name="パルク" type="072">-->
 		<performance capital="31000000" sales="10000000000" />
 		<capacity brand="6" marketing="5" quality="7" rationality="4" development="3" />
 		<stock total="980000" share="34000" />
 	</company>
 	<company id="9831" name="Yahada Electric" type="072">
+	<!--!<company id="9831" name="ヤハダ電機" type="072">-->
 		<performance capital="1000000" sales="500000000" />
 		<capacity brand="6" marketing="8" quality="1" rationality="6" development="1" />
 		<stock total="6000" share="3000" />
@@ -350,16 +396,19 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--080　金融（銀行）-->
 	
 	<company id="8307" name="GFJ Holdings" type="080">
+	<!--!<company id="8307" name="GFJホールディングス" type="080">-->
 		<performance capital="20000000" sales="100000000000" />
 		<capacity brand="7" marketing="7" quality="5" rationality="2" development="2" />
 		<stock total="30000" share="10000" />
 	</company>
 	<company id="8308" name="Risoh Holdings" type="080">
+	<!--!<company id="8308" name="りそうホールディングス" type="080">-->
 		<performance capital="80000000" sales="90000000000" />
 		<capacity brand="6" marketing="8" quality="6" rationality="3" development="3" />
 		<stock total="850000" share="200000" />
 	</company>
 	<company id="8411" name="Musashi Financial Group" type="080">
+	<!--!<company id="8411" name="むさしフィナンシャルグループ" type="080">-->
 		<performance capital="43000000" sales="2000000000000" />
 		<capacity brand="6" marketing="5" quality="7" rationality="4" development="1" />
 		<stock total="780000" share="400000" />
@@ -368,11 +417,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--081　金融（証券）-->
 	
 	<company id="8403" name="Sumidomo Trust & Banking" type="081">
+	<!--!<company id="8403" name="清友信託銀行" type="081">-->
 		<performance capital="2000000" sales="550000000" />
 		<capacity brand="6" marketing="3" quality="6" rationality="3" development="4" />
 		<stock total="380000" share="20000" />
 	</company>
 	<company id="8604" name="Noura Holdings" type="081">
+	<!--!<company id="8604" name="乃浦ホールディングス" type="081">-->
 		<performance capital="1300000" sales="700000000" />
 		<capacity brand="5" marketing="8" quality="4" rationality="5" development="2" />
 		<stock total="190000" share="100000" />
@@ -380,12 +431,14 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	
 	<!--082　金融（保険）-->
 	
-	<company id="8752" name="Mitui-Sumidomo Marine Insurance" type="082">
+	<company id="8752" name="Hikarii-Sumidomo Marine Insurance" type="082">
+	<!--!<company id="8752" name="光井清友海上火災保険" type="082">-->
 		<performance capital="5000000" sales="800000000" />
 		<capacity brand="8" marketing="5" quality="6" rationality="3" development="2" />
 		<stock total="100000" share="25000" />
 	</company>
 	<company id="8761" name="Aoi Accident Insurance" type="082">
+	<!--!<company id="8761" name="あおい損害保険" type="082">-->
 		<performance capital="8100000" sales="3500000000" />
 		<capacity brand="7" marketing="8" quality="4" rationality="3" development="2" />
 		<stock total="860000" share="500000" />
@@ -394,11 +447,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--083　金融（その他）-->
 	
 	<company id="8574" name="Prominence" type="083">
+	<!--!<company id="8574" name="プロミネンス" type="083">-->
 		<performance capital="5600000" sales="9500000000" />
 		<capacity brand="8" marketing="6" quality="3" rationality="8" development="3" />
 		<stock total="60000" share="7000" />
 	</company>
 	<company id="8591" name="Oriental" type="083">
+	<!--!<company id="8591" name="オリエンタル" type="083">-->
 		<performance capital="3000000" sales="26000000000" />
 		<capacity brand="5" marketing="6" quality="2" rationality="6" development="5" />
 		<stock total="50000" share="33000" />
@@ -406,12 +461,14 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	
 	<!--064　不動産-->
 	
-	<company id="8801" name="Mitui Real Estate" type="064">
+	<company id="8801" name="Hikarii Real Estate" type="064">
+	<!--!<company id="8801" name="光井不動産" type="064">-->
 		<performance capital="16000000" sales="12000000000" />
 		<capacity brand="8" marketing="6" quality="3" rationality="6" development="2" />
 		<stock total="350000" share="200000" />
 	</company>
 	<company id="8804" name="Nihon Construction" type="064">
+	<!--!<company id="8804" name="日本建物" type="064">-->
 		<performance capital="50000000" sales="15000000000" />
 		<capacity brand="3" marketing="4" quality="7" rationality="3" development="3" />
 		<stock total="1800000" share="800000" />
@@ -420,11 +477,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--061　陸運-->
 	
 	<company id="9062" name="All Japan Shipping" type="061">
+	<!--!<company id="9062" name="全日本通運" type="061">-->
 		<performance capital="20000000" sales="400000000" />
 		<capacity brand="5" marketing="5" quality="6" rationality="3" development="3" />
 		<stock total="200000" share="50000" />
 	</company>
 	<company id="9064" name="Yamaneko Express" type="061">
+	<!--!<company id="9064" name="ヤマネコ運輸" type="061">-->
 		<performance capital="30000000" sales="300000000" />
 		<capacity brand="9" marketing="9" quality="8" rationality="5" development="4" />
 		<stock total="85000" share="30000" />
@@ -432,12 +491,14 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	
 	<!--062　海運-->
 	
-	<company id="9101" name="Nippon Shipping" type="062">
+	<company id="9101" name="Nihon Shipping" type="062">
+	<!--!<company id="9101" name="日本汽船" type="062">-->
 		<performance capital="3100000" sales="280000000" />
 		<capacity brand="8" marketing="6" quality="5" rationality="4" development="3" />
 		<stock total="500000" share="100000" />
 	</company>
-	<company id="9104" name="Mitui Shipping" type="062">
+	<company id="9104" name="Hikarii Shipping" type="062">
+	<!--!<company id="9104" name="商船光井" type="062">-->
 		<performance capital="7000000" sales="160000000" />
 		<capacity brand="3" marketing="3" quality="6" rationality="3" development="3" />
 		<stock total="300000" share="20000" />
@@ -446,11 +507,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--063　空運-->
 	
 	<company id="9202" name="All Japan Airways" type="063">
+	<!--!<company id="9202" name="全日航" type="063">-->
 		<performance capital="3000000" sales="50000000" />
 		<capacity brand="5" marketing="5" quality="4" rationality="3" development="1" />
 		<stock total="1000000" share="200000" />
 	</company>
 	<company id="9205" name="JAT" type="063">
+	<!--!<company id="9205" name="日本空運" type="063">-->
 		<performance capital="1000000" sales="10000000" />
 		<capacity brand="9" marketing="9" quality="5" rationality="2" development="1" />
 		<stock total="400000" share="200000" />
@@ -459,11 +522,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--065　倉庫・運輸関連-->
 	
 	<company id="9301" name="Itsubishi Logistics" type="065">
+	<!--!<company id="9301" name="五菱倉庫" type="065">-->
 		<performance capital="500000" sales="300000000" />
 		<capacity brand="5" marketing="6" quality="8" rationality="3" development="4" />
 		<stock total="350000" share="180000" />
 	</company>
 	<company id="9303" name="Sumidomo Logistics" type="065">
+	<!--!<company id="9303" name="清友倉庫" type="065">-->
 		<performance capital="1400000" sales="800000000" />
 		<capacity brand="8" marketing="7" quality="6" rationality="5" development="2" />
 		<stock total="3500000" share="900000" />
@@ -472,11 +537,13 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--070　情報・通信-->
 	
 	<company id="9404" name="Nippon TV" type="070">
+	<!--!<company id="9404" name="にっぽんテレビ" type="070">-->
 		<performance capital="25000000" sales="300000000000" />
 		<capacity brand="3" marketing="5" quality="4" rationality="3" development="2" />
 		<stock total="40000" share="5600" />
 	</company>
 	<company id="9432" name="NNT" type="070">
+	<!--!<company id="9432" name="	ＮＮＴ" type="070">-->
 		<performance capital="8500000" sales="5000000000" />
 		<capacity brand="8" marketing="4" quality="5" rationality="6" development="2" />
 		<stock total="6000" share="3500" />
@@ -485,16 +552,19 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	<!--050　電気・ガス-->
 	
 	<company id="9501" name="East Japan Power" type="050">
+	<!--!<company id="9501" name="東日本電力" type="050">-->
 		<performance capital="33000000" sales="220000000000" />
 		<capacity brand="6" marketing="5" quality="8" rationality="4" development="2" />
 		<stock total="280000" share="100000" />
 	</company>
 	<company id="9502" name="Chuo Power" type="050">
+	<!--!<company id="9502" name="中央電力" type="050">-->
 		<performance capital="20000000" sales="50000000000" />
 		<capacity brand="3" marketing="8" quality="5" rationality="3" development="1" />
 		<stock total="65000" share="30000" />
 	</company>
 	<company id="9503" name="Hanshin Power" type="050">
+	<!--!<company id="9503" name="阪神電力" type="050">-->
 		<performance capital="10000000" sales="30000000000" />
 		<capacity brand="7" marketing="3" quality="6" rationality="2" development="3" />
 		<stock total="48000" share="20000" />
