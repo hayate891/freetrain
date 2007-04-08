@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding = "shift_jis"?>
+<?xml version="1.0" encoding = "UTF-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="7.00"
@@ -29,13 +29,13 @@
 				Name="VCMIDLTool"/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				Description="“o˜^‚µ‚Ä‚¢‚Ü‚·B"
+				Description="ç™»éŒ²ã—ã¦ã„ã¾ã™ã€‚"
 				CommandLine="regsvr32 /s /c &quot;$(TargetPath)&quot;"/>
 			<Tool
 				Name="VCPreBuildEventTool"
-				Description="—v‹‚³‚ê‚½ƒtƒ@ƒCƒ‹‚ð’²‚×‚Ä‚¢‚Ü‚·B"
+				Description="è¦æ±‚ã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª¿ã¹ã¦ã„ã¾ã™ã€‚"
 				CommandLine="if exist dlldata.c goto :END
-echo ƒGƒ‰[ : MIDL ‚ÍAŽå—v‚ÈƒvƒƒWƒFƒNƒg‚ÉƒCƒ“ƒ^[ƒtƒFƒCƒX‚ð­‚È‚­‚Æ‚à 1 ‚ÂŽ‚Á‚Ä‚¢‚È‚¢ŒÀ‚è DLLDATA.C ‚ð¶¬‚µ‚Ü‚¹‚ñB
+echo ã‚¨ãƒ©ãƒ¼ : MIDL ã¯ã€ä¸»è¦ãªãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’å°‘ãªãã¨ã‚‚ 1 ã¤æŒã£ã¦ã„ãªã„é™ã‚Š DLLDATA.C ã‚’ç”Ÿæˆã—ã¾ã›ã‚“ã€‚
 Exit 1
 :END
 "/>
@@ -70,13 +70,13 @@ Exit 1
 				Name="VCMIDLTool"/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				Description="“o˜^‚µ‚Ä‚¢‚Ü‚·B"
+				Description="ç™»éŒ²ã—ã¦ã„ã¾ã™ã€‚"
 				CommandLine="regsvr32 /s /c &quot;$(TargetPath)&quot;"/>
 			<Tool
 				Name="VCPreBuildEventTool"
-				Description="—v‹‚³‚ê‚½ƒtƒ@ƒCƒ‹‚ð’²‚×‚Ä‚¢‚Ü‚·B"
+				Description="è¦æ±‚ã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª¿ã¹ã¦ã„ã¾ã™ã€‚"
 				CommandLine="if exist dlldata.c goto :END
-echo ƒGƒ‰[ : MIDL ‚ÍAŽå—v‚ÈƒvƒƒWƒFƒNƒg‚ÉƒCƒ“ƒ^[ƒtƒFƒCƒX‚ð­‚È‚­‚Æ‚à 1 ‚ÂŽ‚Á‚Ä‚¢‚È‚¢ŒÀ‚è DLLDATA.C ‚ð¶¬‚µ‚Ü‚¹‚ñB
+echo ã‚¨ãƒ©ãƒ¼ : MIDL ã¯ã€ä¸»è¦ãªãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’å°‘ãªãã¨ã‚‚ 1 ã¤æŒã£ã¦ã„ãªã„é™ã‚Š DLLDATA.C ã‚’ç”Ÿæˆã—ã¾ã›ã‚“ã€‚
 Exit 1
 :END
 "/>
@@ -92,14 +92,14 @@ Exit 1
 	</Configurations>
 	<Files>
 		<Filter
-			Name="ƒ\[ƒX ƒtƒ@ƒCƒ‹"
+			Name="ã‚½ãƒ¼ã‚¹ ãƒ•ã‚¡ã‚¤ãƒ«"
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm">
 			<File
 				RelativePath="DirectDraw.AlphaBlendps.def">
 			</File>
 		</Filter>
 		<Filter
-			Name="¶¬‚³‚ê‚½ƒtƒ@ƒCƒ‹"
+			Name="ç”Ÿæˆã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«"
 			SourceControlFiles="FALSE">
 			<File
 				RelativePath="DirectDraw.AlphaBlend_i.c">

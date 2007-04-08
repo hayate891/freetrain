@@ -29,19 +29,19 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 
 1 TEXTINCLUDE 
 BEGIN
-    "resource.h¥0"
+    "resource.h\0"
 END
 
 2 TEXTINCLUDE 
 BEGIN
-    "#include ""winres.h""¥r¥n"
-    "¥0"
+    "#include ""winres.h""\r\n"
+    "\0"
 END
 
 3 TEXTINCLUDE 
 BEGIN
-    "1 TYPELIB ""DirectDraw.AlphaBlend.tlb""¥r¥n"
-    "¥0"
+    "1 TYPELIB ""DirectDraw.AlphaBlend.tlb""\r\n"
+    "\0"
 END
 
 #endif    // APSTUDIO_INVOKED

@@ -3,20 +3,20 @@ using System;
 namespace RoadSimulator
 {
 	/// <summary>
-	/// ŠÂ‹«İ’è
+	/// ç’°å¢ƒè¨­å®š
 	/// </summary>
 	public class Configure
 	{
-		//“¹˜H‚ÌƒŒƒxƒ‹B‚½‚¾‚µA0‚ªˆê”Ô‘¾‚¢“¹˜HB
+		//é“è·¯ã®ãƒ¬ãƒ™ãƒ«ã€‚ãŸã ã—ã€0ãŒä¸€ç•ªå¤ªã„é“è·¯ã€‚
 		static public readonly int RoadLevelMax = 4;
-		//‰w‘O“¹˜H‚Ì‰w‚©‚ç‚Ì•½‹Ï‹——£B
+		//é§…å‰é“è·¯ã®é§…ã‹ã‚‰ã®å¹³å‡è·é›¢ã€‚
 		static public readonly int MeanDistanceFromStation = 4;
-		//˜A‘±Às‚ÌƒEƒFƒCƒgB
+		//é€£ç¶šå®Ÿè¡Œã®ã‚¦ã‚§ã‚¤ãƒˆã€‚
 		static public readonly int TimerInterval = 4;
-		//}‚ğ‚Â‚­‚éÅ‘å“¹˜HƒŒƒxƒ‹(‚±‚êˆÈ~‚ÌƒŒƒxƒ‹‚Ì“¹˜H‚Í}•ªŠò‚ğ‚µ‚È‚¢)
+		//æã‚’ã¤ãã‚‹æœ€å¤§é“è·¯ãƒ¬ãƒ™ãƒ«(ã“ã‚Œä»¥é™ã®ãƒ¬ãƒ™ãƒ«ã®é“è·¯ã¯æåˆ†å²ã‚’ã—ãªã„)
 		static public readonly int noTrunkLevel = 4;
 
-		//‰w‚ÌƒŒƒxƒ‹‰w‚Ì³–Ê‚É‚Å‚«‚é“¹˜H‚ÌƒŒƒxƒ‹B
+		//é§…ã®ãƒ¬ãƒ™ãƒ«ï¼é§…ã®æ­£é¢ã«ã§ãã‚‹é“è·¯ã®ãƒ¬ãƒ™ãƒ«ã€‚
 		static private int stationLv = 1;
 		static public int stationLevel 
 		{
@@ -27,7 +27,7 @@ namespace RoadSimulator
 		private Configure()
 		{
 			// 
-			// TODO: ƒRƒ“ƒXƒgƒ‰ƒNƒ^ ƒƒWƒbƒN‚ğ‚±‚±‚É’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢B
+			// TODO: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ ãƒ­ã‚¸ãƒƒã‚¯ã‚’ã“ã“ã«è¿½åŠ ã—ã¦ãã ã•ã„ã€‚
 			//
 		}
 	}

@@ -44,29 +44,29 @@ using namespace ATL;
 using namespace std;
 
 
-#import <dx7vb.dll> ¥
-	rename("GetClassName","_GetClassName"), ¥
-	rename("CreateEvent","_CreateEvent"), ¥
-	rename("DrawText","_DrawText"), ¥
-	rename("SetPort","_SetPort"), ¥
-	rename("max","_max"), ¥
-	rename("min","_min"), ¥
-	rename("E_PENDING","_E_PENDING"), ¥
-	rename("PC_EXPLICIT","_PC_EXPLICIT"), ¥
-	rename("PC_RESERVED","_PC_RESERVED"), ¥
-	rename("PC_NOCOLLAPSE","_PC_NOCOLLAPSE"), ¥
-	rename("WAVE_FORMAT_1M08","_WAVE_FORMAT_1M08"), ¥
-	rename("WAVE_FORMAT_1M16","_WAVE_FORMAT_1M16"), ¥
-	rename("WAVE_FORMAT_1S08","_WAVE_FORMAT_1S08"), ¥
-	rename("WAVE_FORMAT_1S16","_WAVE_FORMAT_1S16"), ¥
-	rename("WAVE_FORMAT_2M08","_WAVE_FORMAT_2M08"), ¥
-	rename("WAVE_FORMAT_2M16","_WAVE_FORMAT_2M16"), ¥
-	rename("WAVE_FORMAT_2S08","_WAVE_FORMAT_2S08"), ¥
-	rename("WAVE_FORMAT_2S16","_WAVE_FORMAT_2S16"), ¥
-	rename("WAVE_FORMAT_4M08","_WAVE_FORMAT_4M08"), ¥
-	rename("WAVE_FORMAT_4M16","_WAVE_FORMAT_4M16"), ¥
-	rename("WAVE_FORMAT_4S08","_WAVE_FORMAT_4S08"), ¥
-	rename("WAVE_FORMAT_4S16","_WAVE_FORMAT_4S16"), ¥
+#import <dx7vb.dll> \
+	rename("GetClassName","_GetClassName"), \
+	rename("CreateEvent","_CreateEvent"), \
+	rename("DrawText","_DrawText"), \
+	rename("SetPort","_SetPort"), \
+	rename("max","_max"), \
+	rename("min","_min"), \
+	rename("E_PENDING","_E_PENDING"), \
+	rename("PC_EXPLICIT","_PC_EXPLICIT"), \
+	rename("PC_RESERVED","_PC_RESERVED"), \
+	rename("PC_NOCOLLAPSE","_PC_NOCOLLAPSE"), \
+	rename("WAVE_FORMAT_1M08","_WAVE_FORMAT_1M08"), \
+	rename("WAVE_FORMAT_1M16","_WAVE_FORMAT_1M16"), \
+	rename("WAVE_FORMAT_1S08","_WAVE_FORMAT_1S08"), \
+	rename("WAVE_FORMAT_1S16","_WAVE_FORMAT_1S16"), \
+	rename("WAVE_FORMAT_2M08","_WAVE_FORMAT_2M08"), \
+	rename("WAVE_FORMAT_2M16","_WAVE_FORMAT_2M16"), \
+	rename("WAVE_FORMAT_2S08","_WAVE_FORMAT_2S08"), \
+	rename("WAVE_FORMAT_2S16","_WAVE_FORMAT_2S16"), \
+	rename("WAVE_FORMAT_4M08","_WAVE_FORMAT_4M08"), \
+	rename("WAVE_FORMAT_4M16","_WAVE_FORMAT_4M16"), \
+	rename("WAVE_FORMAT_4S08","_WAVE_FORMAT_4S08"), \
+	rename("WAVE_FORMAT_4S16","_WAVE_FORMAT_4S16"), \
 	rename("WAVE_FORMAT_PCM" ,"_WAVE_FORMAT_PCM")
 
 using namespace DxVBLib;

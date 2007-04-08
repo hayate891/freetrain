@@ -8,7 +8,7 @@ using System.Data;
 namespace RoadSimulator
 {
 	/// <summary>
-	/// Form1 ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// Form1 ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class Form1 : System.Windows.Forms.Form
 	{
@@ -39,7 +39,7 @@ namespace RoadSimulator
 		public Form1()
 		{
 			//
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			//
 			InitializeComponent();
 			mapView.boxMode = cbBoxMod.Checked;
@@ -50,7 +50,7 @@ namespace RoadSimulator
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -66,8 +66,8 @@ namespace RoadSimulator
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -103,7 +103,7 @@ namespace RoadSimulator
 			this.btnStep.Name = "btnStep";
 			this.btnStep.Size = new System.Drawing.Size(40, 23);
 			this.btnStep.TabIndex = 1;
-			this.btnStep.Text = "„|";
+			this.btnStep.Text = "ï¼|";
 			this.toolTip1.SetToolTip(this.btnStep, "NEXT STEP");
 			this.btnStep.Click += new System.EventHandler(this.btnStep_Click);
 			// 
@@ -126,9 +126,11 @@ namespace RoadSimulator
 			this.rb_HStation.Name = "rb_HStation";
 			this.rb_HStation.Size = new System.Drawing.Size(40, 24);
 			this.rb_HStation.TabIndex = 5;
-			this.rb_HStation.Text = "‰w|";
+			this.rb_HStation.Text = "Station âˆ’";
+			//! this.rb_HStation.Text = "é§…âˆ’";
 			this.rb_HStation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.toolTip1.SetToolTip(this.rb_HStation, "‰w(‰¡)İ’u");
+			this.toolTip1.SetToolTip(this.rb_HStation, "Place station (horizontally)");
+			//! this.toolTip1.SetToolTip(this.rb_HStation, "é§…(æ¨ª)è¨­ç½®");
 			this.rb_HStation.CheckedChanged += new System.EventHandler(this.rb_HStation_CheckedChanged);
 			// 
 			// rb_VStation
@@ -139,9 +141,11 @@ namespace RoadSimulator
 			this.rb_VStation.Name = "rb_VStation";
 			this.rb_VStation.Size = new System.Drawing.Size(40, 24);
 			this.rb_VStation.TabIndex = 5;
-			this.rb_VStation.Text = "‰wb";
+			this.rb_VStation.Text = "Station |";
+			//! this.rb_VStation.Text = "é§…ï½œ";
 			this.rb_VStation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.toolTip1.SetToolTip(this.rb_VStation, "‰w(c)İ’u");
+			this.toolTip1.SetToolTip(this.rb_VStation, "Place station (vertically)");
+			//! this.toolTip1.SetToolTip(this.rb_VStation, "é§…(ç¸¦)è¨­ç½®");
 			this.rb_VStation.CheckedChanged += new System.EventHandler(this.rb_VStation_CheckedChanged);
 			// 
 			// rb_Remover
@@ -152,9 +156,11 @@ namespace RoadSimulator
 			this.rb_Remover.Name = "rb_Remover";
 			this.rb_Remover.Size = new System.Drawing.Size(40, 24);
 			this.rb_Remover.TabIndex = 5;
-			this.rb_Remover.Text = "“P‹";
+			this.rb_Remover.Text = "Remove";
+			//! this.rb_Remover.Text = "æ’¤å»";
 			this.rb_Remover.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.toolTip1.SetToolTip(this.rb_Remover, "“P‹ƒ‚[ƒh");
+			this.toolTip1.SetToolTip(this.rb_Remover, "Remove mode");
+			//! this.toolTip1.SetToolTip(this.rb_Remover, "æ’¤å»ãƒ¢ãƒ¼ãƒ‰");
 			this.rb_Remover.CheckedChanged += new System.EventHandler(this.rb_Remover_CheckedChanged);
 			// 
 			// rd_Barrier
@@ -165,9 +171,11 @@ namespace RoadSimulator
 			this.rd_Barrier.Name = "rd_Barrier";
 			this.rd_Barrier.Size = new System.Drawing.Size(40, 24);
 			this.rd_Barrier.TabIndex = 5;
-			this.rd_Barrier.Text = "á•Ç";
+			this.rd_Barrier.Text = "Obstacle";
+			//! this.rd_Barrier.Text = "éšœå£";
 			this.rd_Barrier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.toolTip1.SetToolTip(this.rd_Barrier, "áŠQ•¨İ’u");
+			this.toolTip1.SetToolTip(this.rd_Barrier, "Place obstacle");
+			//! this.toolTip1.SetToolTip(this.rd_Barrier, "éšœå®³ç‰©è¨­ç½®");
 			this.rd_Barrier.CheckedChanged += new System.EventHandler(this.rd_Barrier_CheckedChanged);
 			// 
 			// rb_Road
@@ -178,9 +186,11 @@ namespace RoadSimulator
 			this.rb_Road.Name = "rb_Road";
 			this.rb_Road.Size = new System.Drawing.Size(40, 24);
 			this.rb_Road.TabIndex = 5;
-			this.rb_Road.Text = "“¹˜H";
+			this.rb_Road.Text = "Road";
+			//! this.rb_Road.Text = "é“è·¯";
 			this.rb_Road.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.toolTip1.SetToolTip(this.rb_Road, "“¹˜Hİ’u");
+			this.toolTip1.SetToolTip(this.rb_Road, "Lay road");
+			//! this.toolTip1.SetToolTip(this.rb_Road, "é“è·¯è¨­ç½®");
 			this.rb_Road.CheckedChanged += new System.EventHandler(this.rb_Road_CheckedChanged);
 			// 
 			// btnConfig
@@ -191,8 +201,10 @@ namespace RoadSimulator
 			this.btnConfig.Name = "btnConfig";
 			this.btnConfig.Size = new System.Drawing.Size(72, 24);
 			this.btnConfig.TabIndex = 4;
-			this.btnConfig.Text = "ŠÂ‹«İ’è";
-			this.toolTip1.SetToolTip(this.btnConfig, "ŠÂ‹«İ’è");
+			this.btnConfig.Text = "Environment settings";
+			//! this.btnConfig.Text = "ç’°å¢ƒè¨­å®š";
+			this.toolTip1.SetToolTip(this.btnConfig, "Environment settings");
+			//! this.toolTip1.SetToolTip(this.btnConfig, "ç’°å¢ƒè¨­å®š");
 			// 
 			// cbBoxMod
 			// 
@@ -201,7 +213,8 @@ namespace RoadSimulator
 			this.cbBoxMod.Size = new System.Drawing.Size(80, 24);
 			this.cbBoxMod.TabIndex = 6;
 			this.cbBoxMod.Text = "box mode";
-			this.toolTip1.SetToolTip(this.cbBoxMod, "‹éŒ`İ’uƒ‚[ƒh");
+			this.toolTip1.SetToolTip(this.cbBoxMod, "Box place mode");
+			//! this.toolTip1.SetToolTip(this.cbBoxMod, "çŸ©å½¢è¨­ç½®ãƒ¢ãƒ¼ãƒ‰");
 			this.cbBoxMod.CheckedChanged += new System.EventHandler(this.cbBoxMod_CheckedChanged);
 			// 
 			// btnPlay
@@ -212,7 +225,7 @@ namespace RoadSimulator
 			this.btnPlay.Name = "btnPlay";
 			this.btnPlay.Size = new System.Drawing.Size(40, 24);
 			this.btnPlay.TabIndex = 5;
-			this.btnPlay.Text = "„";
+			this.btnPlay.Text = "ï¼";
 			this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.toolTip1.SetToolTip(this.btnPlay, "PLAY");
 			this.btnPlay.CheckedChanged += new System.EventHandler(this.btnPlay_CheckedChanged);
@@ -225,7 +238,7 @@ namespace RoadSimulator
 			this.btnStop.Name = "btnStop";
 			this.btnStop.Size = new System.Drawing.Size(40, 24);
 			this.btnStop.TabIndex = 5;
-			this.btnStop.Text = "¡";
+			this.btnStop.Text = "â– ";
 			this.btnStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.toolTip1.SetToolTip(this.btnStop, "STOP");
 			this.btnStop.CheckedChanged += new System.EventHandler(this.btnStop_CheckedChanged);
@@ -238,7 +251,8 @@ namespace RoadSimulator
 			this.label1.TabIndex = 8;
 			this.label1.Text = "level:";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-			this.toolTip1.SetToolTip(this.label1, "‰w‚â“¹˜H‚Ì‹K–Í(¬‚³‚¢’l‚Ù‚Ç‹K–Í‘å)");
+			this.toolTip1.SetToolTip(this.label1, "Station and road scale (lower value means larger scale)");
+			//! this.toolTip1.SetToolTip(this.label1, "é§…ã‚„é“è·¯ã®è¦æ¨¡(å°ã•ã„å€¤ã»ã©è¦æ¨¡å¤§)");
 			// 
 			// numLevel
 			// 
@@ -251,7 +265,8 @@ namespace RoadSimulator
 			this.numLevel.Name = "numLevel";
 			this.numLevel.Size = new System.Drawing.Size(32, 19);
 			this.numLevel.TabIndex = 7;
-			this.toolTip1.SetToolTip(this.numLevel, "‰w‚â“¹˜H‚Ì‹K–Í(¬‚³‚¢’l‚Ù‚Ç‹K–Í‘å)");
+			this.toolTip1.SetToolTip(this.numLevel, "Station and road scale (lower value means larger scale)");
+			//! this.toolTip1.SetToolTip(this.numLevel, "é§…ã‚„é“è·¯ã®è¦æ¨¡(å°ã•ã„å€¤ã»ã©è¦æ¨¡å¤§)");
 			this.numLevel.ValueChanged += new System.EventHandler(this.numLevel_ValueChanged);
 			// 
 			// btnReset
@@ -261,8 +276,10 @@ namespace RoadSimulator
 			this.btnReset.Name = "btnReset";
 			this.btnReset.Size = new System.Drawing.Size(72, 24);
 			this.btnReset.TabIndex = 4;
-			this.btnReset.Text = "ƒŠƒZƒbƒg";
-			this.toolTip1.SetToolTip(this.btnReset, "ƒ}ƒbƒv‚ğƒŠƒZƒbƒg");
+			this.btnReset.Text = "Reset";
+			//! this.btnReset.Text = "ãƒªã‚»ãƒƒãƒˆ";
+			this.toolTip1.SetToolTip(this.btnReset, "Reset map");
+			//! this.toolTip1.SetToolTip(this.btnReset, "ãƒãƒƒãƒ—ã‚’ãƒªã‚»ãƒƒãƒˆ");
 			this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
 			// 
 			// groupBox1
@@ -283,7 +300,8 @@ namespace RoadSimulator
 			this.groupBox1.Size = new System.Drawing.Size(440, 48);
 			this.groupBox1.TabIndex = 6;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "ƒc[ƒ‹";
+			this.groupBox1.Text = "Tool";
+			//! this.groupBox1.Text = "ãƒ„ãƒ¼ãƒ«";
 			// 
 			// groupBox2
 			// 
@@ -298,7 +316,8 @@ namespace RoadSimulator
 			this.groupBox2.Size = new System.Drawing.Size(200, 48);
 			this.groupBox2.TabIndex = 7;
 			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "ƒRƒ“ƒgƒ[ƒ‹";
+			this.groupBox2.Text = "Control";
+			//! this.groupBox2.Text = "ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«";
 			// 
 			// btnClose
 			// 
@@ -307,7 +326,8 @@ namespace RoadSimulator
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(72, 24);
 			this.btnClose.TabIndex = 4;
-			this.btnClose.Text = "I—¹";
+			this.btnClose.Text = "Quit";
+			//! this.btnClose.Text = "çµ‚äº†";
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
 			// mapView
@@ -345,7 +365,7 @@ namespace RoadSimulator
 		#endregion
 
 		/// <summary>
-		/// ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÌƒƒCƒ“ ƒGƒ“ƒgƒŠ ƒ|ƒCƒ“ƒg‚Å‚·B
+		/// ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ãƒ¡ã‚¤ãƒ³ ã‚¨ãƒ³ãƒˆãƒª ãƒã‚¤ãƒ³ãƒˆã§ã™ã€‚
 		/// </summary>
 		[STAThread]
 		static void Main() 

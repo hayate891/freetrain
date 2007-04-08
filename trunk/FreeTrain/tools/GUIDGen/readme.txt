@@ -1,13 +1,13 @@
 
-FreeTrain�ł͑S�Ă�contribution�̓��j�[�N��ID�����K�v������܂��B
-GUIDGen.exe�͂��̂��߂�ID�𐶐�����c�[���ł��B.NET���s�����K�v
-�ł��BFreeTrain�����삵�Ă���Ώ\���Ȃ͂��ł��B
+FreeTrainでは全てのcontributionはユニークなIDを持つ必要があります。
+GUIDGen.exeはこのためのIDを生成するツールです。.NET実行環境が必要
+です。FreeTrainが動作していれば十分なはずです。
 
-�N�����ꂽ���_�ŐV����ID���쐬����N���b�v�{�[�h�ɃR�s�[����܂��B
-ID���P�����v��Ȃ��Ȃ�A�R�s�[�{�^���������K�v�͂���܂���B
+起動された時点で新しいIDが作成されクリップボードにコピーされます。
+IDが１つしか要らないなら、コピーボタンを押す必要はありません。
 
-�v���O���~���O�����Ă���l�Ȃ�킩��Ǝv���܂����A���̃c�[���͒P��
-GUID���쐬���Ă��邾���ł��B
+プログラミングをしている人ならわかると思いますが、このツールは単に
+GUIDを作成しているだけです。
 
 
 

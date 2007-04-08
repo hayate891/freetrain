@@ -1,7 +1,7 @@
-// AlphaBlender.h : CAlphaBlender ‚ÌéŒ¾
+// AlphaBlender.h : CAlphaBlender ã®å®£è¨€
 
 #pragma once
-#include "resource.h"       // ƒƒCƒ“ ƒVƒ“ƒ{ƒ‹
+#include "resource.h"       // ãƒ¡ã‚¤ãƒ³ ã‚·ãƒ³ãƒœãƒ«
 
 #include "DirectDraw.AlphaBlend.h"
 

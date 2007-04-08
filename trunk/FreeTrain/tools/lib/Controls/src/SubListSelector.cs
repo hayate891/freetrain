@@ -98,8 +98,8 @@ namespace freetrain.controls
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -184,7 +184,8 @@ namespace freetrain.controls
 			this.titleAvailables.Name = "titleAvailables";
 			this.titleAvailables.Size = new System.Drawing.Size(136, 16);
 			this.titleAvailables.TabIndex = 1;
-			this.titleAvailables.Text = "‘I‘ğ‰Â”\€–ÚF";
+			this.titleAvailables.Text = "Available items:";
+			//! this.titleAvailables.Text = "é¸æŠå¯èƒ½é …ç›®ï¼š";
 			// 
 			// titleSelected
 			// 
@@ -192,7 +193,8 @@ namespace freetrain.controls
 			this.titleSelected.Name = "titleSelected";
 			this.titleSelected.Size = new System.Drawing.Size(136, 16);
 			this.titleSelected.TabIndex = 5;
-			this.titleSelected.Text = "‘I‘ğ€–ÚF";
+			this.titleSelected.Text = "Selected items:";
+			//! this.titleSelected.Text = "é¸æŠé …ç›®ï¼š";
 			// 
 			// SubListSelector
 			// 

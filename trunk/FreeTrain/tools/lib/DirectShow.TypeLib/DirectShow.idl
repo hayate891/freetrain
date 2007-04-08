@@ -5,7 +5,7 @@ import "objidl.idl";	// for IPersist (IFilter's root)
 [
 	uuid(24BC6711-3881-420f-8299-34DA1026D31E),
 	version(1.0),
-	helpstring("IDLTest 1.0 À²Ìß ×²ÌÞ×Ø")
+	helpstring("IDLTest 1.0 ï¾€ï½²ï¾Œï¾Ÿ ï¾—ï½²ï¾Œï¾žï¾—ï¾˜")
 ]
 library DirectShowLib
 {

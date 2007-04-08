@@ -25,7 +25,7 @@ namespace RoadSimulator
 		public World()
 		{
 			// 
-			// TODO: ƒRƒ“ƒXƒgƒ‰ƒNƒ^ ƒƒWƒbƒN‚ğ‚±‚±‚É’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢B
+			// TODO: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ ãƒ­ã‚¸ãƒƒã‚¯ã‚’ã“ã“ã«è¿½åŠ ã—ã¦ãã ã•ã„ã€‚
 			//
 			createField(800,800);
 			extender = new RoadExtender(this);
@@ -96,19 +96,19 @@ namespace RoadSimulator
 		#region setting station
 		public void setStationV(int level, int x, int y)
 		{
-			//“¹˜H‚Ì‰è‚ğ‰w‚Ì¶‰E‚Éİ’è
+			//é“è·¯ã®èŠ½ã‚’é§…ã®å·¦å³ã«è¨­å®š
 			extender.addBud((short)(x-1),(short)y,Configure.stationLevel,Direction.WEST);
 			extender.addBud((short)(x+1),(short)y,Configure.stationLevel,Direction.EAST);
 			//onPlayerSetRoad(Configure.stationLevel,x-1,y,2,Direction.EAST);
 
-			//‰wİ’u–{•¶
+			//é§…è¨­ç½®æœ¬æ–‡
 			for(int iy=y-2; iy<=y+2; iy++)
 				v[x,iy].buildStation(level);
 			onVoxelUpdated(new Rectangle(x,y-2,x+1,y+2));
 
 			if( Configure.stationLevel >= Configure.noTrunkLevel )
 				return;
-			//‰w‘O“¹˜H‚ÌˆÊ’u‚ğŒˆ’è
+			//é§…å‰é“è·¯ã®ä½ç½®ã‚’æ±ºå®š
 			Object b1=this[x-1,y].structure;
 			Object b2=this[x+1,y].structure;
 			int n;
@@ -123,7 +123,7 @@ namespace RoadSimulator
 			else
 				n=1;
 			n *= Configure.MeanDistanceFromStation;
-			//‰w‘O“¹˜H(‚Ì‰è)‚Ìİ’u
+			//é§…å‰é“è·¯(ã®èŠ½)ã®è¨­ç½®
 			int sleep = randEx(Configure.MeanDistanceFromStation,Configure.MeanDistanceFromStation);
 			extender.addBud((short)(x+n),(short)y,Configure.stationLevel,Direction.NORTH,sleep);
 			extender.addBud((short)(x+n),(short)y,Configure.stationLevel,Direction.SOUTH,sleep);
@@ -132,19 +132,19 @@ namespace RoadSimulator
 
 		public void setStationH(int level, int x, int y)
 		{
-			//“¹˜H‚Ì‰è‚ğ‰w‚Ìã‰º‚Éİ’è
+			//é“è·¯ã®èŠ½ã‚’é§…ã®ä¸Šä¸‹ã«è¨­å®š
 			extender.addBud((short)x,(short)(y-1),Configure.stationLevel,Direction.NORTH);
 			extender.addBud((short)x,(short)(y+1),Configure.stationLevel,Direction.SOUTH);
 			//onPlayerSetRoad(Configure.stationLevel,x,y-1,2,Direction.SOUTH);
 
-			//‰wİ’u–{•¶
+			//é§…è¨­ç½®æœ¬æ–‡
 			for(int ix=x-2; ix<=x+2; ix++)
 				v[ix,y].buildStation(level);
 			onVoxelUpdated(new Rectangle(x-2,y,x+2,y+1));
 
 			if( Configure.stationLevel >= Configure.noTrunkLevel )
 				return;
-			//‰w‘O•½s“¹˜H‚ÌˆÊ’u‚ğŒˆ’è
+			//é§…å‰å¹³è¡Œé“è·¯ã®ä½ç½®ã‚’æ±ºå®š
 			Object b1=this[x,y-1].structure;
 			Object b2=this[x,y+1].structure;
 			int n;
@@ -159,7 +159,7 @@ namespace RoadSimulator
 			else
 				n=1;
 			n *= Configure.MeanDistanceFromStation;
-			//‰w‘O“¹˜H(‚Ì‰è)‚Ìİ’u
+			//é§…å‰é“è·¯(ã®èŠ½)ã®è¨­ç½®
 			int sleep = randEx(Configure.MeanDistanceFromStation,Configure.MeanDistanceFromStation);
 			extender.addBud((short)x,(short)(y+n),Configure.stationLevel,Direction.EAST,sleep);
 			extender.addBud((short)x,(short)(y+n),Configure.stationLevel,Direction.WEST,sleep);

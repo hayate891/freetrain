@@ -5,28 +5,28 @@ datatypeLibrary = "http://www.w3.org/2001/XMLSchema-datatypes";
 ##
 dockingContentContrib =
 	attribute type {"dockingContent"},
-	# ƒEƒBƒ“ƒhƒEƒ^ƒu‚É•\¦‚³‚ê‚é’Z‚¢–¼‘O
+	# ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚¿ãƒ–ã«è¡¨ç¤ºã•ã‚Œã‚‹çŸ­ã„åå‰
 	element shortName {text},
 	element menu {
-		# ƒƒjƒ…[‚Ég—p‚³‚ê‚é–¼‘O
+		# ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«ä½¿ç”¨ã•ã‚Œã‚‹åå‰
 		attribute name {text},
-		# ”z’u‚·‚éƒƒjƒ…[€–Ú
+		# é…ç½®ã™ã‚‹ãƒ¡ãƒ‹ãƒ¥ãƒ¼é …ç›®
 		attribute location {menuLocation},
-		# •\¦ˆÊ’u
+		# è¡¨ç¤ºä½ç½®
 		attribute pos{integer}?
 	},
-	# •\¦‚³‚ê‚éƒEƒBƒ“ƒhƒE‚ÌŒ^
+	# è¡¨ç¤ºã•ã‚Œã‚‹ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®å‹
 	element class {class}
 
 
 ##
-## ƒNƒ‰ƒXî•ñ
+## ã‚¯ãƒ©ã‚¹æƒ…å ±
 ##
 ##
 class =
-	# Œ^–¼
+	# å‹å
 	attribute name {text},
-	# •û‚ğŠÜ‚ŞƒAƒZƒ“ƒuƒŠBÈ—ª‚ÍFreeTrain.Core.dll
+	# æ–¹ã‚’å«ã‚€ã‚¢ã‚»ãƒ³ãƒ–ãƒªã€‚çœç•¥æ™‚ã¯FreeTrain.Core.dll
 	attribute codebase {text}?
 
 

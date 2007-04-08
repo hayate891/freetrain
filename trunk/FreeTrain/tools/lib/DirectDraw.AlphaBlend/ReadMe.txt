@@ -1,40 +1,40 @@
 ========================================================================
-    �A�N�e�B�u �e���v���[�g ���C�u���� : DirectDraw.AlphaBlend �v���W�F�N�g�̊T�v
+    アクティブ テンプレート ライブラリ : DirectDraw.AlphaBlend プロジェクトの概要
 ========================================================================
 
-AppWizard ���쐬�������� DirectDraw.AlphaBlend �A�v���P�[�V�����ɂ́A
-�_�C�i�~�b�N �����N ���C�u���� (DLL) �̊�{�I�Ȏg������������Ă��܂��B�A�v���P�[�V�����쐬�̂ЂȌ^�Ƃ��Ă��g�����������B
+AppWizard が作成したこの DirectDraw.AlphaBlend アプリケーションには、
+ダイナミック リンク ライブラリ (DLL) の基本的な使い方が示されています。アプリケーション作成のひな型としてお使いください。
 
-���̃t�@�C���ɂ̓v���W�F�N�g���\�����Ă���e�t�@�C����
-�T�v�������܂܂�Ă��܂��B
+このファイルにはプロジェクトを構成している各ファイルの
+概要説明が含まれています。
 
 DirectDraw.AlphaBlend.vcproj
-    ����̓A�v���P�[�V���� �E�B�U�[�h�Ő������ꂽ VC++ �v���W�F�N�g�̃��C�� �v���W�F�N�g �t�@�C���ł��B
-    �t�@�C�����������ꂽ Visual C++ �̃o�[�W������񂪊܂܂�Ă��܂��B 
-    �܂��A�A�v���P�[�V���� �E�B�U�[�h�őI�������v���b�g�t�H�[���A�\������уv���W�F�N�g�@�\�Ɋւ���
-    �����܂܂�Ă��܂��B
+    これはアプリケーション ウィザードで生成された VC++ プロジェクトのメイン プロジェクト ファイルです。
+    ファイルが生成された Visual C++ のバージョン情報が含まれています。 
+    また、アプリケーション ウィザードで選択したプラットフォーム、構成およびプロジェクト機能に関する
+    情報も含まれています。
 
 DirectDrawAlphaBlend.idl
-    ���̃t�@�C���̓^�C�v ���C�u������ IDL ��`�A�v���W�F�N�g�Œ�`���ꂽ�C���^�[�t�F�C�X�A
-    ����уR�N���X���܂�ł��܂��B
-    ���̃t�@�C���� MIDL �R���p�C���ɂ���ď�������A�ȉ��̃t�@�C���𐶐����܂� :
-        C++ �C���^�[�t�F�C�X��`����� GUID �錾 (DirectDraw.AlphaBlend.h)
-        GUID �錾                                (DirectDraw.AlphaBlend_i.c)
-        �^�C�v ���C�u����                                  (DirectDrawAlphaBlend.tlb)
-        �}�[�V�������O �R�[�h                                 (DirectDraw.AlphaBlend_p.c and dlldata.c)
+    このファイルはタイプ ライブラリの IDL 定義、プロジェクトで定義されたインターフェイス、
+    およびコクラスを含んでいます。
+    このファイルは MIDL コンパイラによって処理され、以下のファイルを生成します :
+        C++ インターフェイス定義および GUID 宣言 (DirectDraw.AlphaBlend.h)
+        GUID 宣言                                (DirectDraw.AlphaBlend_i.c)
+        タイプ ライブラリ                                  (DirectDrawAlphaBlend.tlb)
+        マーシャリング コード                                 (DirectDraw.AlphaBlend_p.c and dlldata.c)
 
 DirectDraw.AlphaBlend.h
-    ���̃t�@�C���� DirectDrawAlphaBlend.idl �Œ�`���ꂽ���ڂ� C++ �C���^�[�t�F�C�X��`����� GUID �錾
-    ���܂�ł��܂��B���̃t�@�C���� MIDL �ɂ���ăR���p�C�����ɍĐ�������܂��B
+    このファイルは DirectDrawAlphaBlend.idl で定義された項目の C++ インターフェイス定義および GUID 宣言
+    を含んでいます。このファイルは MIDL によってコンパイラ時に再生成されます。
 DirectDraw.AlphaBlend.cpp
-    ���̃t�@�C���̓I�u�W�F�N�g �}�b�v����� DLL �G�N�X�|�[�g�̎������܂�ł��܂��B
+    このファイルはオブジェクト マップおよび DLL エクスポートの実装を含んでいます。
 DirectDraw.AlphaBlend.rc
-    ����̓v���O�������g�p���� Microsoft Windows �̃��\�[�X��
-    �ꗗ�t�@�C���ł��B
+    これはプログラムが使用する Microsoft Windows のリソースの
+    一覧ファイルです。
 
 DirectDraw.AlphaBlend.def
-    ���̃��W���[����`�t�@�C���́ADLL �ŕK�v�ȃG�N�X�|�[�g�Ɋւ�����ւ̃����J��񋟂��A
-    ���̃G�N�X�|�[�g�����܂�ł��܂� :
+    このモジュール定義ファイルは、DLL で必要なエクスポートに関する情報へのリンカを提供し、
+    次のエクスポート情報を含んでいます :
         DllGetClassObject  
         DllCanUnloadNow    
         GetProxyDllInfo    
@@ -42,26 +42,26 @@ DirectDraw.AlphaBlend.def
         DllUnregisterServer
 
 /////////////////////////////////////////////////////////////////////////////
-���̑��̕W���t�@�C�� :
+その他の標準ファイル :
 
 StdAfx.h, StdAfx.cpp
-    �����̃t�@�C���̓v���R���p�C���ς� (PCH) �w�b�_�[ �t�@�C�� DirectDraw.AlphaBlend.pch�A
-    ����уv���R���p�C�����ꂽ�^�̃t�@�C�� StdAfx.obj ���r���h���邽�߂Ɏg���܂��B
+    これらのファイルはプリコンパイル済み (PCH) ヘッダー ファイル DirectDraw.AlphaBlend.pch、
+    およびプリコンパイルされた型のファイル StdAfx.obj をビルドするために使われます。
 
 Resource.h
-    ���̃t�@�C���̓��\�[�X ID ���`����W���w�b�_�[ �t�@�C���ł��B
+    このファイルはリソース ID を定義する標準ヘッダー ファイルです。
 
 /////////////////////////////////////////////////////////////////////////////
-�v���L�V/�X�^�u DLL �v���W�F�N�g����у��W���[����`�t�@�C�� :
+プロキシ/スタブ DLL プロジェクトおよびモジュール定義ファイル :
 
 DirectDraw.AlphaBlendps.vcproj
-    ���̃t�@�C���͕K�v�ɉ����ăv���L�V/�X�^�u�̃r���h�Ɏg�p�����v���W�F�N�g �t�@�C���ł��B
-	��ȃv���W�F�N�g�� IDL �t�@�C���ɂ͏��Ȃ��Ƃ��C���^�[�t�F�C�X�� 1 �܂݁A
-	�v���L�V/�X�^�u DLL ���r���h����O�� IDL �t�@�C�����R���p�C������K�v������܂��B	���̉ߒ���
-\�v���L�V/�X�^�u DLL ���r���h����̂ɕK�v�� tdlldata.c�ADirectDraw.AlphaBlend_i.c ����� DirectDraw.AlphaBlend_p.c ��
-	��������܂��B
+    このファイルは必要に応じてプロキシ/スタブのビルドに使用されるプロジェクト ファイルです。
+	主なプロジェクトの IDL ファイルには少なくともインターフェイスを 1 つ含み、
+	プロキシ/スタブ DLL をビルドする前に IDL ファイルをコンパイルする必要があります。	この過程で
+\プロキシ/スタブ DLL をビルドするのに必要な tdlldata.c、DirectDraw.AlphaBlend_i.c および DirectDraw.AlphaBlend_p.c が
+	生成されます。
 
 DirectDraw.AlphaBlendps.def
-    ���̃��W���[����`�t�@�C���́A�v���L�V/�X�^�u�ŕK�v�ȃG�N�X�|�[�g�Ɋւ���
-    ���ւ̃����J��񋟂��܂��B
+    このモジュール定義ファイルは、プロキシ/スタブで必要なエクスポートに関する
+    情報へのリンカを提供します。
 /////////////////////////////////////////////////////////////////////////////

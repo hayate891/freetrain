@@ -6,24 +6,23 @@
                                     by Kohsuke Kawaguchi (kk@kohsuke.org)
 
 
-FreeTrain is an 'A4' style game (A4 is the fourth game in the A-Train
-series by Artdink.) When you run FreeTrain.exe, a game (?) will start.
-For details about the runtime environment, refer to
+FreeTrain is a game in "A-Train 4" style. When you run FreeTrain.exe, a 
+game (?) will start. For details about the runtime environment, refer to
 http://www.kohsuke.org/freetrain/
 
 
 
-$ Acknowledgments
+* Acknowledgments
 
 This game was created by the members of the "A-Train" community at 2ch.
-Starting with 477-san, Hima-san, 915-san, Eshiminarai-san,
-Ryokonotomo-san, Shosei-san, Koensha A-san, Miha-san, ima-san, Min-san,
-and Ayase-san, I extend my thanks to all artist, musicians and everybody
-who submitted suggestions.
+First I'd like to thank 477-san, Hima-san, 915-san, Esiminarai-san,
+Ryokounotomo-san, Syosei-san, Kouensya A-san, Miha-san, ima-san, Min-san,
+and Ayase-san. Also, a big thanks to our artist, musicians, and all other
+contributors.
 
 
 
-$ License
+* License
 
 FreeTrain itself is licensed under the LGPL. All use and redistribution are
 subject to this license. Individual plugins may have different licensing

@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// “ú–{Œê resources
+// æ—¥æœ¬èªž resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 #ifdef _WIN32
@@ -69,13 +69,13 @@ BEGIN
     BEGIN
         BLOCK "041104B0"
         BEGIN
-            VALUE "CompanyName", "TODO: <‰ïŽÐ–¼>"
-            VALUE "FileDescription", "TODO: <ƒtƒ@ƒCƒ‹‚Ìà–¾>"
+            VALUE "CompanyName", "TODO: <ä¼šç¤¾å>"
+            VALUE "FileDescription", "TODO: <ãƒ•ã‚¡ã‚¤ãƒ«ã®èª¬æ˜Ž>"
             VALUE "FileVersion", "1.0.0.1"
-            VALUE "LegalCopyright", "TODO: (C) <‰ïŽÐ–¼>.  All rights reserved."
+            VALUE "LegalCopyright", "TODO: (C) <ä¼šç¤¾å>.  All rights reserved."
             VALUE "InternalName", "DirectDraw.AlphaBlend.dll"
             VALUE "OriginalFilename", "DirectDraw.AlphaBlend.dll"
-            VALUE "ProductName", "TODO: <»•i–¼>"
+            VALUE "ProductName", "TODO: <è£½å“å>"
             VALUE "ProductVersion", "1.0.0.1"
         END
     END
@@ -104,7 +104,7 @@ BEGIN
     IDS_PROJNAME            "DirectDraw.AlphaBlend"
 END
 
-#endif    // “ú–{Œê resources
+#endif    // æ—¥æœ¬èªž resources
 /////////////////////////////////////////////////////////////////////////////
 
 

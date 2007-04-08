@@ -1,8 +1,8 @@
-// DirectDraw.AlphaBlend.idl : DirectDraw.AlphaBlend ‚Ì IDL ƒ\[ƒX
+// DirectDraw.AlphaBlend.idl : DirectDraw.AlphaBlend ã® IDL ã‚½ãƒ¼ã‚¹
 //
 
-// ‚±‚Ìƒtƒ@ƒCƒ‹‚ÍAƒ^ƒCƒv ƒ‰ƒCƒuƒ‰ƒŠ (DirectDraw.AlphaBlend.tlb) ‚¨‚æ‚Ñƒ}[ƒVƒƒƒŠƒ“ƒO ƒR[ƒh‚ğ
-// ì¬‚·‚é‚½‚ß‚É MIDL ƒc[ƒ‹‚É‚æ‚Á‚Äˆ—‚³‚ê‚Ü‚·B
+// ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€ã‚¿ã‚¤ãƒ— ãƒ©ã‚¤ãƒ–ãƒ©ãƒª (DirectDraw.AlphaBlend.tlb) ãŠã‚ˆã³ãƒãƒ¼ã‚·ãƒ£ãƒªãƒ³ã‚° ã‚³ãƒ¼ãƒ‰ã‚’
+// ä½œæˆã™ã‚‹ãŸã‚ã« MIDL ãƒ„ãƒ¼ãƒ«ã«ã‚ˆã£ã¦å‡¦ç†ã•ã‚Œã¾ã™ã€‚
 
 import "oaidl.idl";
 import "ocidl.idl";
@@ -11,7 +11,7 @@ import "ocidl.idl";
 [
 	uuid(EF1510AF-E75F-4974-BE7A-A2F4E88EBFB4),
 	version(1.0),
-	helpstring("DirectDrawAlphaBlend 1.0 ƒ^ƒCƒv ƒ‰ƒCƒuƒ‰ƒŠ")
+	helpstring("DirectDrawAlphaBlend 1.0 ã‚¿ã‚¤ãƒ— ãƒ©ã‚¤ãƒ–ãƒ©ãƒª")
 ]
 library DirectDrawAlphaBlendLib
 {
@@ -28,7 +28,7 @@ library DirectDrawAlphaBlendLib
 		uuid(2D16CEE2-F54C-425F-84A7-61692CF1D82C),
 		dual,
 		nonextensible,
-		helpstring("IAlphaBlender ƒCƒ“ƒ^[ƒtƒFƒCƒX"),
+		helpstring("IAlphaBlender ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹"),
 		pointer_default(unique)
 	]
 	interface IAlphaBlender : IDispatch{

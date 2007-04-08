@@ -50,8 +50,8 @@ namespace Heat
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -93,8 +93,8 @@ namespace Heat
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.statusBar});
 			this.Menu = this.mainMenu1;
-			this.Name = "Heat";
-			this.Text = "”M“`“±ÀŒ±";
+			this.Name = "Heat";			this.Text = "Heat propagation experiment";
+			//! this.Text = "ç†±ä¼å°å®Ÿé¨“";
 			this.ResumeLayout(false);
 
 		}
@@ -128,7 +128,8 @@ namespace Heat
 		private void timer_Tick(object sender, System.EventArgs e) {
 			for( int i=0; i<8; i++ )	m.next();
 			float r = m.next();
-			this.Text = "”M“`“±ƒ‚ƒfƒ‹ "+(++tick)+":"+r;
+			this.Text = "Heat propagation model "+(++tick)+":"+r;
+			//! this.Text = "ç†±ä¼å°ãƒ¢ãƒ‡ãƒ« "+(++tick)+":"+r;
 			for( int x=99; x>=0; x-- )
 				for( int y=99; y>=0; y-- ) {
 					int t = Math.Max(0,Math.Min((int)f(m.temp[x,y]),255));
@@ -160,7 +161,7 @@ namespace Heat
 		private const int ZOOM = 4;
 
 		private void writeSnapshot(object sender, System.EventArgs e) {
-			FileStream o = new FileStream(@"c:\heat.txt",FileMode.Create);
+			FileStream o = new FileStream(@"c:Â¥heat.txt",FileMode.Create);
 			TextWriter w = new StreamWriter(o);
 			for(int i=0;i<100;i++)
 				w.WriteLine(m.temp[i,50]);
