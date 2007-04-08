@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:saxon="http://icl.com/saxon"
 	extension-element-prefixes="saxon">
 	
-	<xsl:output method="html" encoding="Shift_JIS" />
+	<xsl:output method="html" encoding="UTF-8" />
 	
 	<xsl:template match="/">
 		<saxon:output href="toc.html" method="html">
@@ -25,17 +25,19 @@
 								<small>
 									<xsl:text> (</xsl:text>
 									<xsl:value-of select="count($trains)"/>
-									<xsl:text>ƒR)</xsl:text>
+									<xsl:text>ã‚³)</xsl:text>
 								</small>
 							</li>
 							<saxon:output href="{generate-id(.)}.html" method="html">
 								<html>
 									<head>
-										<title><xsl:value-of select="." />Ô—¼ƒŠƒXƒg</title>
+										<title><xsl:value-of select="." />Train list</title>
+										<!--!<title><xsl:value-of select="." />è»Šä¸¡ãƒªã‚¹ãƒˆ</title>-->
 										<xsl:call-template name="css"/>
 									</head>
 									<body>
-										<h1><xsl:value-of select="." />Ô—¼ƒŠƒXƒg</h1>
+										<h1><xsl:value-of select="." />Train list</h1>
+										<!--!<h1><xsl:value-of select="." />è»Šä¸¡ãƒªã‚¹ãƒˆ</h1>-->
 										<xsl:apply-templates select="$trains">
 											<xsl:sort select="name"/>
 										</xsl:apply-templates>
@@ -44,14 +46,16 @@
 							</saxon:output>
 						</xsl:for-each>
 					</ul>
-					<p>‘S<xsl:value-of select="count(//train)"/>ŒÂ</p>
+					<p>Total number: <xsl:value-of select="count(//train)"/></p>
+					<!--!<p>å…¨<xsl:value-of select="count(//train)"/>å€‹</p>-->
 				</body>
 			</html>
 		</saxon:output>
 		<saxon:output href="index.html" method="html">
 			<html>
 				<head>
-					<title>FreeTrainÔ—¼ƒŠƒXƒg</title>
+					<title>FreeTrain train list</title>
+					<!--!<title>FreeTrainè»Šä¸¡ãƒªã‚¹ãƒˆ</title>-->
 				</head>
 				<frameset cols="250,*">
 					<frame src="toc.html" />
@@ -65,9 +69,11 @@
 					<xsl:call-template name="css"/>
 				</head>
 				<body>
-					<h1>FreeTrainÔ—¼ƒŠƒXƒg</h1>
+					<h1>FreeTrain train list</h1>
+					<!--!<h1>FreeTrainè»Šä¸¡ãƒªã‚¹ãƒˆ</h1>-->
 					<p>
-						„‚Ì’m‚é”ÍˆÍ‚ÅŒöŠJ‚³‚ê‚Ä‚¢‚éFreeTrain—p‚ÌÔ—¼‚ğW‚ß‚Ä‚İ‚Ü‚µ‚½B‚±‚ÌHTML‚ğì‚éƒvƒƒOƒ‰ƒ€©‘Ì‚É‹»–¡‚Ì‚ ‚él‚Í„‚Ü‚Å‚Ç‚¤‚¼B
+						A collection of all published FreeTrain trains. Feel free to drop me a line if you are interested in the program that created this HTML file.
+						<!--!ç§ã®çŸ¥ã‚‹ç¯„å›²ã§å…¬é–‹ã•ã‚Œã¦ã„ã‚‹FreeTrainç”¨ã®è»Šä¸¡ã‚’é›†ã‚ã¦ã¿ã¾ã—ãŸã€‚ã“ã®HTMLã‚’ä½œã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ è‡ªä½“ã«èˆˆå‘³ã®ã‚ã‚‹äººã¯ç§ã¾ã§ã©ã†ãã€‚-->
 					</p>
 				</body>
 			</html>
@@ -81,19 +87,22 @@
 				<td rowspan="3">
 					<img src="{@id}.png"/>
 				</td>
-				<td><nobr>ìÒF</nobr></td>
+				<td><nobr>Author:</nobr></td>
+				<!--!<td><nobr>ä½œè€…ï¼š</nobr></td>-->
 				<td>
 					<xsl:value-of select="author"/>
 				</td>
 			</tr>
 			<tr>
-				<td><nobr>‘¬“xF</nobr></td>
+				<td><nobr>Speed:</nobr></td>
+				<!--!<td><nobr>é€Ÿåº¦ï¼š</nobr></td>-->
 				<td>
 					<xsl:value-of select="speed"/>
 				</td>
 			</tr>
 			<tr>
-				<td><nobr>à–¾F</nobr></td>
+				<td><nobr>Description:</nobr></td>
+				<!--!<td><nobr>èª¬æ˜ï¼š</nobr></td>-->
 				<td>
 					<xsl:value-of select="description"/>
 				</td>

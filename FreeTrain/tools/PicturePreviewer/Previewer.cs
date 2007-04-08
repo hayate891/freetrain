@@ -180,19 +180,22 @@ namespace PicturePreviewer
 			this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																					  this.menuItem2,
 																					  this.menuItem3});
-			this.menuItem1.Text = "ÉtÉ@ÉCÉã(&F)";
+			this.menuItem1.Text = "&File";
+			//! this.menuItem1.Text = "„Éï„Ç°„Ç§„É´(&F)";
 			// 
 			// menuItem2
 			// 
 			this.menuItem2.Index = 0;
-			this.menuItem2.Text = "äJÇ≠(&O)...";
+			this.menuItem2.Text = "&Open...";
+			//! this.menuItem2.Text = "Èñã„Åè(&O)...";
 			this.menuItem2.Click += new System.EventHandler(this.open);
 			// 
 			// menuItem3
 			// 
 			this.menuItem3.Index = 1;
 			this.menuItem3.Shortcut = System.Windows.Forms.Shortcut.F4;
-			this.menuItem3.Text = "çƒì«Ç›çûÇ›(&R)";
+			this.menuItem3.Text = "&Reload";
+			//! this.menuItem3.Text = "ÂÜçË™≠„ÅøËæº„Åø(&R)";
 			this.menuItem3.Click += new System.EventHandler(this.reload);
 			// 
 			// menuItem4
@@ -206,19 +209,22 @@ namespace PicturePreviewer
 																					  this.miSummer,
 																					  this.miFall,
 																					  this.miWinter});
-			this.menuItem4.Text = "éûä‘(&T)";
+			this.menuItem4.Text = "&Timer";
+			//! this.menuItem4.Text = "ÊôÇÈñì(&T)";
 			// 
 			// miDay
 			// 
 			this.miDay.Index = 0;
 			this.miDay.RadioCheck = true;
-			this.miDay.Text = "íã(&D)";
+			this.miDay.Text = "&Day";
+			//! this.miDay.Text = "Êòº(&D)";
 			// 
 			// miNight
 			// 
 			this.miNight.Index = 1;
 			this.miNight.RadioCheck = true;
-			this.miNight.Text = "ñÈ(&N)";
+			this.miNight.Text = "&Night";
+			//! this.miNight.Text = "Â§ú(&N)";
 			// 
 			// menuItem7
 			// 
@@ -230,25 +236,29 @@ namespace PicturePreviewer
 			// 
 			this.miSpring.Index = 3;
 			this.miSpring.RadioCheck = true;
-			this.miSpring.Text = "èt(&S)";
+			this.miSpring.Text = "&Spring";
+			//! this.miSpring.Text = "Êò•(&S)";
 			// 
 			// miSummer
 			// 
 			this.miSummer.Index = 4;
 			this.miSummer.RadioCheck = true;
-			this.miSummer.Text = "âƒ(&U)";
+			this.miSummer.Text = "S&ummer";
+			//! this.miSummer.Text = "Â§è(&U)";
 			// 
 			// miFall
 			// 
 			this.miFall.Index = 5;
 			this.miFall.RadioCheck = true;
-			this.miFall.Text = "èH(&F)";
+			this.miFall.Text = "&Fall";
+			//! this.miFall.Text = "Áßã(&F)";
 			// 
 			// miWinter
 			// 
 			this.miWinter.Index = 6;
 			this.miWinter.RadioCheck = true;
-			this.miWinter.Text = "ì~(&W)";
+			this.miWinter.Text = "&Winter";
+			//! this.miWinter.Text = "ÂÜ¨(&W)";
 			// 
 			// menuItem12
 			// 
@@ -260,7 +270,8 @@ namespace PicturePreviewer
 																					   this.miZoom8,
 																					   this.miZoom16,
 																					   this.miZoom32});
-			this.menuItem12.Text = "ägëÂ(&Z)";
+			this.menuItem12.Text = "&Zoom";
+			//! this.menuItem12.Text = "Êã°Â§ß(&Z)";
 			// 
 			// miZoom1
 			// 
@@ -315,7 +326,8 @@ namespace PicturePreviewer
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(472, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "ÉXÉvÉâÉCÉgÅF";
+			this.label1.Text = "Sprite:";
+			//! this.label1.Text = "„Çπ„Éó„É©„Ç§„ÉàÔºö";
 			// 
 			// splitter1
 			// 
@@ -345,7 +357,8 @@ namespace PicturePreviewer
 			this.xmlSpriteType.Name = "xmlSpriteType";
 			this.xmlSpriteType.Size = new System.Drawing.Size(472, 120);
 			this.xmlSpriteType.TabIndex = 2;
-			this.xmlSpriteType.Text = "<spriteType>É^ÉOÇì¸óÕÇµÇƒÇ≠ÇæÇ≥Ç¢";
+			this.xmlSpriteType.Text = "Input the <spriteType> tag";
+			//! this.xmlSpriteType.Text = "<spriteType>„Çø„Ç∞„ÇíÂÖ•Âäõ„Åó„Å¶„Åè„Å†„Åï„ÅÑ";
 			this.xmlSpriteType.TextChanged += new System.EventHandler(this.onSpriteXmlChanged);
 			// 
 			// Previewer
@@ -360,7 +373,8 @@ namespace PicturePreviewer
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Menu = this.mainMenu1;
 			this.Name = "Previewer";
-			this.Text = "FreeTrain âÊëúÉvÉåÉrÉÖÅ[ÉA";
+			this.Text = "FreeTrain picture previewer";
+			//! this.Text = "FreeTrain ÁîªÂÉè„Éó„É¨„Éì„É•„Éº„Ç¢";
 			this.spritePanel.ResumeLayout(false);
 			this.ResumeLayout(false);
 

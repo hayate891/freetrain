@@ -112,7 +112,7 @@ namespace freetrain.controllers.structs
 																		  this.heightBox,
 																		  this.label1});
 			this.Name = "VarHeightBuildingController";
-			this.Text = "Building construction (temporary)";
+			this.Text = "Building construction";
 			//! this.Text = "建物の工事(仮)";
 			((System.ComponentModel.ISupportInitialize)(this.heightBox)).EndInit();
 			this.ResumeLayout(false);

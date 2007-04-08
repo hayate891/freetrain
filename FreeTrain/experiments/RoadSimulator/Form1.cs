@@ -103,7 +103,8 @@ namespace RoadSimulator
 			this.btnStep.Name = "btnStep";
 			this.btnStep.Size = new System.Drawing.Size(40, 23);
 			this.btnStep.TabIndex = 1;
-			this.btnStep.Text = "＞|";
+			this.btnStep.Text = ">|";
+			//! this.btnStep.Text = "＞|";
 			this.toolTip1.SetToolTip(this.btnStep, "NEXT STEP");
 			this.btnStep.Click += new System.EventHandler(this.btnStep_Click);
 			// 
@@ -225,7 +226,8 @@ namespace RoadSimulator
 			this.btnPlay.Name = "btnPlay";
 			this.btnPlay.Size = new System.Drawing.Size(40, 24);
 			this.btnPlay.TabIndex = 5;
-			this.btnPlay.Text = "＞";
+			this.btnPlay.Text = ">";
+			//! this.btnPlay.Text = "＞";
 			this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.toolTip1.SetToolTip(this.btnPlay, "PLAY");
 			this.btnPlay.CheckedChanged += new System.EventHandler(this.btnPlay_CheckedChanged);
