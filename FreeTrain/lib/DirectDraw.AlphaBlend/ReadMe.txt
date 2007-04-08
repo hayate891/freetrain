@@ -58,7 +58,7 @@ DirectDraw.AlphaBlendps.vcproj
     このファイルは必要に応じてプロキシ/スタブのビルドに使用されるプロジェクト ファイルです。
 	主なプロジェクトの IDL ファイルには少なくともインターフェイスを 1 つ含み、
 	プロキシ/スタブ DLL をビルドする前に IDL ファイルをコンパイルする必要があります。	この過程で
-¥プロキシ/スタブ DLL をビルドするのに必要な tdlldata.c、DirectDraw.AlphaBlend_i.c および DirectDraw.AlphaBlend_p.c が
+\プロキシ/スタブ DLL をビルドするのに必要な tdlldata.c、DirectDraw.AlphaBlend_i.c および DirectDraw.AlphaBlend_p.c が
 	生成されます。
 
 DirectDraw.AlphaBlendps.def

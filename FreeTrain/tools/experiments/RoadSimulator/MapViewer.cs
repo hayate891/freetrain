@@ -10,7 +10,7 @@ namespace RoadSimulator
 {
 	public enum EditMode : int {None,Erase,Road,Barrier,StationV,StationH};
 	/// <summary>
-	/// MapViewer ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// MapViewer ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	public class MapViewer : System.Windows.Forms.PictureBox
 	{
@@ -19,7 +19,7 @@ namespace RoadSimulator
 		Color.Blue,Color.Red,Color.DarkGreen,Color.White,Color.Green	
 											 };
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 		private World world;
@@ -28,16 +28,16 @@ namespace RoadSimulator
 		public bool boxMode = false;
 
 		public MapViewer(){
-			// ‚±‚ÌŒÄ‚Ño‚µ‚ÍAWindows.Forms ƒtƒH[ƒ€ ƒfƒUƒCƒi‚Å•K—v‚Å‚·B
+			// ã“ã®å‘¼ã³å‡ºã—ã¯ã€Windows.Forms ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠã§å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
 		}
 
 		public MapViewer(World w)
 		{
 			setWorld(w);
-			// ‚±‚ÌŒÄ‚Ño‚µ‚ÍAWindows.Forms ƒtƒH[ƒ€ ƒfƒUƒCƒi‚Å•K—v‚Å‚·B
+			// ã“ã®å‘¼ã³å‡ºã—ã¯ã€Windows.Forms ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠã§å¿…è¦ã§ã™ã€‚
 			InitializeComponent();
-			// TODO: InitForm ‚ğŒÄ‚Ño‚µ‚ÌŒã‚É‰Šú‰»ˆ—‚ğ’Ç‰Á‚µ‚Ü‚·B
+			// TODO: InitForm ã‚’å‘¼ã³å‡ºã—ã®å¾Œã«åˆæœŸåŒ–å‡¦ç†ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 		}
 
 		public void setWorld(World w)
@@ -50,7 +50,7 @@ namespace RoadSimulator
 		}
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing )
 		{
@@ -66,8 +66,8 @@ namespace RoadSimulator
 
 		#region Component Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{

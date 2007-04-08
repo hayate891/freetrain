@@ -27,8 +27,8 @@ namespace GUIDGen
 
 		#region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -50,7 +50,8 @@ namespace GUIDGen
 			this.buttonNew.Name = "buttonNew";
 			this.buttonNew.Size = new System.Drawing.Size(128, 24);
 			this.buttonNew.TabIndex = 2;
-			this.buttonNew.Text = "V‚µ‚¢ID•ƒRƒs[(&N)";
+			this.buttonNew.Text = "&New ID and copy";
+			//! this.buttonNew.Text = "æ–°ã—ã„IDï¼†ã‚³ãƒ”ãƒ¼(&N)";
 			this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
 			// 
 			// buttonCopy
@@ -59,7 +60,8 @@ namespace GUIDGen
 			this.buttonCopy.Name = "buttonCopy";
 			this.buttonCopy.Size = new System.Drawing.Size(80, 24);
 			this.buttonCopy.TabIndex = 1;
-			this.buttonCopy.Text = "ƒRƒs[(&C)";
+			this.buttonCopy.Text = "&Copy";
+			//! this.buttonCopy.Text = "ã‚³ãƒ”ãƒ¼(&C)";
 			this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
 			// 
 			// GUIDGen
@@ -74,14 +76,15 @@ namespace GUIDGen
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "GUIDGen";
-			this.Text = "ID‚Ìì¬";
+			this.Text = "Create ID";
+			//! this.Text = "IDã®ä½œæˆ";
 			this.ResumeLayout(false);
 
 		}
 		#endregion
 
 		/// <summary>
-		/// ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÌƒƒCƒ“ ƒGƒ“ƒgƒŠ ƒ|ƒCƒ“ƒg‚Å‚·B
+		/// ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ãƒ¡ã‚¤ãƒ³ ã‚¨ãƒ³ãƒˆãƒª ãƒã‚¤ãƒ³ãƒˆã§ã™ã€‚
 		/// </summary>
 		[STAThread]
 		static void Main()  {

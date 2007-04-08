@@ -1,4 +1,4 @@
-// DirectDraw.AlphaBlend.cpp : DLL ƒGƒNƒXƒ|[ƒg‚ÌÀ‘•‚Å‚·B
+// DirectDraw.AlphaBlend.cpp : DLL ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã®å®Ÿè£…ã§ã™ã€‚
 
 #include "stdafx.h"
 #include "resource.h"
@@ -14,7 +14,7 @@ public :
 CDirectDrawAlphaBlendModule _AtlModule;
 
 
-// DLL ƒGƒ“ƒgƒŠ ƒ|ƒCƒ“ƒg
+// DLL ã‚¨ãƒ³ãƒˆãƒª ãƒã‚¤ãƒ³ãƒˆ
 extern "C" BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 {
 	hInstance;
@@ -22,30 +22,30 @@ extern "C" BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpRes
 }
 
 
-// DLL ‚ğ OLE ‚É‚æ‚Á‚ÄƒAƒ“ƒ[ƒh‚Å‚«‚é‚æ‚¤‚É‚·‚é‚©‚Ç‚¤‚©‚ğw’è‚µ‚Ü‚·B
+// DLL ã‚’ OLE ã«ã‚ˆã£ã¦ã‚¢ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã‚‹ã‚ˆã†ã«ã™ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®šã—ã¾ã™ã€‚
 STDAPI DllCanUnloadNow(void)
 {
     return _AtlModule.DllCanUnloadNow();
 }
 
 
-// —v‹‚³‚ê‚½Œ^‚ÌƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚éƒNƒ‰ƒX ƒtƒ@ƒNƒgƒŠ‚ğ•Ô‚µ‚Ü‚·B
+// è¦æ±‚ã•ã‚ŒãŸå‹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹ã‚¯ãƒ©ã‚¹ ãƒ•ã‚¡ã‚¯ãƒˆãƒªã‚’è¿”ã—ã¾ã™ã€‚
 STDAPI DllGetClassObject(REFCLSID rclsid, REFIID riid, LPVOID* ppv)
 {
     return _AtlModule.DllGetClassObject(rclsid, riid, ppv);
 }
 
 
-// DllRegisterServer - ƒGƒ“ƒgƒŠ‚ğƒVƒXƒeƒ€ ƒŒƒWƒXƒgƒŠ‚É’Ç‰Á‚µ‚Ü‚·B
+// DllRegisterServer - ã‚¨ãƒ³ãƒˆãƒªã‚’ã‚·ã‚¹ãƒ†ãƒ  ãƒ¬ã‚¸ã‚¹ãƒˆãƒªã«è¿½åŠ ã—ã¾ã™ã€‚
 STDAPI DllRegisterServer(void)
 {
-    // ƒIƒuƒWƒFƒNƒgAƒ^ƒCƒv ƒ‰ƒCƒuƒ‰ƒŠ‚¨‚æ‚Ñƒ^ƒCƒv ƒ‰ƒCƒuƒ‰ƒŠ“à‚Ì‘S‚Ä‚ÌƒCƒ“ƒ^[ƒtƒFƒCƒX‚ğ“o˜^‚µ‚Ü‚·
+    // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€ã‚¿ã‚¤ãƒ— ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãŠã‚ˆã³ã‚¿ã‚¤ãƒ— ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå†…ã®å…¨ã¦ã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’ç™»éŒ²ã—ã¾ã™
     HRESULT hr = _AtlModule.DllRegisterServer();
 	return hr;
 }
 
 
-// DllUnregisterServer - ƒGƒ“ƒgƒŠ‚ğƒŒƒWƒXƒgƒŠ‚©‚çíœ‚µ‚Ü‚·B
+// DllUnregisterServer - ã‚¨ãƒ³ãƒˆãƒªã‚’ãƒ¬ã‚¸ã‚¹ãƒˆãƒªã‹ã‚‰å‰Šé™¤ã—ã¾ã™ã€‚
 //
 STDAPI DllUnregisterServer(void)
 {

@@ -25,7 +25,8 @@ namespace Driver
 				try {
 					run(args);
 				} catch( Exception e ) {
-					ErrorMessageBox.show(null,"ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½",e);
+					ErrorMessageBox.show(null,"An error has occurred",e);
+					//! ErrorMessageBox.show(null,"ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸ",e);
 				}
 		}
 

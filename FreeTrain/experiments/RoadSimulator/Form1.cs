@@ -126,7 +126,7 @@ namespace RoadSimulator
 			this.rb_HStation.Name = "rb_HStation";
 			this.rb_HStation.Size = new System.Drawing.Size(40, 24);
 			this.rb_HStation.TabIndex = 5;
-			this.rb_HStation.Text = "Station-";
+			this.rb_HStation.Text = "Station -";
 			//! this.rb_HStation.Text = "駅 −";
 			this.rb_HStation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.toolTip1.SetToolTip(this.rb_HStation, "Place station (horizontally)");;
@@ -159,7 +159,7 @@ namespace RoadSimulator
 			this.rb_Remover.Text = "Remove";
 			//! this.rb_Remover.Text = "撤去";
 			this.rb_Remover.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.toolTip1.SetToolTip(this.rb_Remover, "Remover mode");
+			this.toolTip1.SetToolTip(this.rb_Remover, "Remove mode");
 			//! this.toolTip1.SetToolTip(this.rb_Remover, "撤去モード");
 			this.rb_Remover.CheckedChanged += new System.EventHandler(this.rb_Remover_CheckedChanged);
 			// 
@@ -251,7 +251,7 @@ namespace RoadSimulator
 			this.label1.TabIndex = 8;
 			this.label1.Text = "level:";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-			this.toolTip1.SetToolTip(this.label1, "Station and road scale (higher value means larger scale)");
+			this.toolTip1.SetToolTip(this.label1, "Station and road scale (lower value means larger scale)");
 			//! this.toolTip1.SetToolTip(this.label1, "駅や道路の規模(小さい値ほど規模大)");
 			// 
 			// numLevel
@@ -265,7 +265,7 @@ namespace RoadSimulator
 			this.numLevel.Name = "numLevel";
 			this.numLevel.Size = new System.Drawing.Size(32, 19);
 			this.numLevel.TabIndex = 7;
-			this.toolTip1.SetToolTip(this.numLevel, "Station and road scale (higher value means larger scale)");
+			this.toolTip1.SetToolTip(this.numLevel, "Station and road scale (lower value means larger scale)");
 			//! this.toolTip1.SetToolTip(this.numLevel, "駅や道路の規模(小さい値ほど規模大)");
 			this.numLevel.ValueChanged += new System.EventHandler(this.numLevel_ValueChanged);
 			// 

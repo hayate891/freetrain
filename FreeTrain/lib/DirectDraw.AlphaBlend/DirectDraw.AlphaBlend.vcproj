@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="shift_jis"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="7.10"
@@ -12,7 +12,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="..¥..¥bin¥Debug"
+			OutputDirectory="..\..\bin\Debug"
 			IntermediateDirectory="Debug"
 			ConfigurationType="2"
 			UseOfMFC="0"
@@ -37,7 +37,7 @@
 				IgnoreImportLibrary="TRUE"
 				OutputFile="$(OutDir)/DirectDraw.AlphaBlend.dll"
 				LinkIncremental="2"
-				ModuleDefinitionFile=".¥DirectDraw.AlphaBlend.def"
+				ModuleDefinitionFile=".\DirectDraw.AlphaBlend.def"
 				GenerateDebugInformation="TRUE"
 				SubSystem="2"
 				ImportLibrary="$(OutDir)/DirectDraw.AlphaBlend.lib"
@@ -79,7 +79,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..¥..¥bin¥Release"
+			OutputDirectory="..\..\bin\Release"
 			IntermediateDirectory="Release"
 			ConfigurationType="2"
 			UseOfMFC="0"
@@ -106,7 +106,7 @@
 				IgnoreImportLibrary="TRUE"
 				OutputFile="$(OutDir)/DirectDraw.AlphaBlend.dll"
 				LinkIncremental="1"
-				ModuleDefinitionFile=".¥DirectDraw.AlphaBlend.def"
+				ModuleDefinitionFile=".\DirectDraw.AlphaBlend.def"
 				GenerateDebugInformation="TRUE"
 				SubSystem="2"
 				OptimizeReferences="2"

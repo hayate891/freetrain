@@ -647,7 +647,7 @@ namespace freetrain.framework
 			// menuItem_varHeightBldg
 			// 
 			this.menuItem_varHeightBldg.Index = 2;
-			this.menuItem_varHeightBldg.Text = "Rental &building...";
+			this.menuItem_varHeightBldg.Text = "Rental &buildings...";
 			//! this.menuItem_varHeightBldg.Text = "貸しビル(&B)...";
 			// 
 			// menuItem_land
