@@ -112,7 +112,7 @@ namespace freetrain.world.road.accessory
 			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
 			this.buttonPlace.TabIndex = 8;
 			this.buttonPlace.TabStop = true;
-			this.buttonPlace.Text = "設置";
+			this.buttonPlace.Text = "Build";
 			//! this.buttonPlace.Text = "設置";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonPlace.CheckedChanged += new System.EventHandler(this.onTypeChanged);
@@ -128,7 +128,7 @@ namespace freetrain.world.road.accessory
 																		  this.typeBox,
 																		  this.preview});
 			this.Name = "ControllerForm";
-			this.Text = "Road accessory";
+			this.Text = "Road accessories";
 			//! this.Text = "道路アクセサリ";
 			this.ResumeLayout(false);
 
