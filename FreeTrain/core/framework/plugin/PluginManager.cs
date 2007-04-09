@@ -112,8 +112,8 @@ namespace freetrain.framework.plugin
 				} catch( Exception e ) {
 					if( errCount++ <= 5 )
 						MessageBox.Show(e.ToString(),
-							"プラグイン"+Path.GetFileName(dir)+"がロードできません");
-							//! "Plugin "+Path.GetFileName(dir)+" can not be loaded");
+							"Plugin "+Path.GetFileName(dir)+" can not be loaded");
+							//! "プラグイン"+Path.GetFileName(dir)+"がロードできません");
 					if( errCount==5 )
 						MessageBox.Show("There are too many plugin loading errors");
 						//! MessageBox.Show("プラグインのロードエラーが多すぎます");
@@ -211,7 +211,7 @@ namespace freetrain.framework.plugin
 		public static string getDefaultPluginDirectory() {
 			// try the IDE directory first
 			string pluginDir = Path.GetFullPath(Path.Combine(
-				Core.installationDirectory, @"..¥..¥plugins" ));
+				Core.installationDirectory, @"..\..\plugins" ));
 			if(Directory.Exists(pluginDir))
 				return pluginDir;
 

@@ -25,7 +25,8 @@
 								<small>
 									<xsl:text> (</xsl:text>
 									<xsl:value-of select="count($trains)"/>
-									<xsl:text>コ)</xsl:text>
+									<xsl:text> trains)</xsl:text>
+									<!--!<xsl:text>コ)</xsl:text>-->
 								</small>
 							</li>
 							<saxon:output href="{generate-id(.)}.html" method="html">
@@ -46,7 +47,7 @@
 							</saxon:output>
 						</xsl:for-each>
 					</ul>
-					<p>Total number: <xsl:value-of select="count(//train)"/></p>
+					<p>Total number of trains: <xsl:value-of select="count(//train)"/></p>
 					<!--!<p>全<xsl:value-of select="count(//train)"/>個</p>-->
 				</body>
 			</html>
