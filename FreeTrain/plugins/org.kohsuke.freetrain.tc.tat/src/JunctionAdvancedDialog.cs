@@ -7,14 +7,14 @@ using System.Windows.Forms;
 namespace freetrain.world.rail.tattc
 {
 	/// <summary>
-	/// JunctionAdvancedDialog ‚ÌŠT—v‚Ìà–¾‚Å‚·B
+	/// JunctionAdvancedDialog ã®æ¦‚è¦ã®èª¬æ˜ã§ã™ã€‚
 	/// </summary>
 	internal class JunctionAdvancedDialog : System.Windows.Forms.Form
 	{
 		internal JunctionAdvancedDialog( Junction junction ) {
 			this.junction = junction;
 			//
-			// Windows ƒtƒH[ƒ€ ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Å‚·B
+			// Windows ãƒ•ã‚©ãƒ¼ãƒ  ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ã§ã™ã€‚
 			//
 			InitializeComponent();
 
@@ -36,7 +36,7 @@ namespace freetrain.world.rail.tattc
 		private readonly Junction junction;
 
 		/// <summary>
-		/// g—p‚³‚ê‚Ä‚¢‚éƒŠƒ\[ƒX‚ÉŒãˆ—‚ğÀs‚µ‚Ü‚·B
+		/// ä½¿ç”¨ã•ã‚Œã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ã«å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 		/// </summary>
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -66,13 +66,13 @@ namespace freetrain.world.rail.tattc
 		private System.Windows.Forms.Button buttonReplace;
 		private System.Windows.Forms.ListView triggerList;
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠå¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
 		/// <summary>
-		/// ƒfƒUƒCƒi ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -123,7 +123,7 @@ namespace freetrain.world.rail.tattc
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Requirement";
-			//! this.groupBox1.Text = "ğŒ";
+			//! this.groupBox1.Text = "æ¡ä»¶";
 			// 
 			// radioCurve
 			// 
@@ -132,7 +132,7 @@ namespace freetrain.world.rail.tattc
 			this.radioCurve.Size = new System.Drawing.Size(64, 24);
 			this.radioCurve.TabIndex = 9;
 			this.radioCurve.Text = "Junction";
-			//! this.radioCurve.Text = "•ªŠò";
+			//! this.radioCurve.Text = "åˆ†å²";
 			this.radioCurve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// radioStraight
@@ -144,7 +144,7 @@ namespace freetrain.world.rail.tattc
 			this.radioStraight.TabIndex = 8;
 			this.radioStraight.TabStop = true;
 			this.radioStraight.Text = "Straight";
-			//! this.radioStraight.Text = "’¼i";
+			//! this.radioStraight.Text = "ç›´é€²";
 			// 
 			// buttonReplace
 			// 
@@ -154,7 +154,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonReplace.Size = new System.Drawing.Size(64, 24);
 			this.buttonReplace.TabIndex = 11;
 			this.buttonReplace.Text = "&Replace";
-			//! this.buttonReplace.Text = "’uŠ·(&R)";
+			//! this.buttonReplace.Text = "ç½®æ›(&R)";
 			this.buttonReplace.Click += new System.EventHandler(this.buttonReplace_Click);
 			// 
 			// label4
@@ -164,7 +164,7 @@ namespace freetrain.world.rail.tattc
 			this.label4.Size = new System.Drawing.Size(20, 20);
 			this.label4.TabIndex = 7;
 			this.label4.Text = "o'clock";
-			//! this.label4.Text = "";
+			//! this.label4.Text = "æ™‚";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// hourBox
@@ -209,7 +209,7 @@ namespace freetrain.world.rail.tattc
 			this.label3.Size = new System.Drawing.Size(32, 20);
 			this.label3.TabIndex = 5;
 			this.label3.Text = "day";
-			//! this.label3.Text = "—j“ú";
+			//! this.label3.Text = "æ›œæ—¥";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayOfWeekBox
@@ -224,13 +224,13 @@ namespace freetrain.world.rail.tattc
 															  "Thurs",
 															  "Fri",
 															  "Satur"});
-															  //!"“ú",
-															  //!"Œ",
-															  //!"‰Î",
-															  //!"…",
-															  //!"–Ø",
-															  //!"‹à",
-															  //!"“y"});
+															  //!"æ—¥",
+															  //!"æœˆ",
+															  //!"ç«",
+															  //!"æ°´",
+															  //!"æœ¨",
+															  //!"é‡‘",
+															  //!"åœŸ"});
 			this.dayOfWeekBox.Location = new System.Drawing.Point(176, 16);
 			this.dayOfWeekBox.MaxDropDownItems = 13;
 			this.dayOfWeekBox.Name = "dayOfWeekBox";
@@ -244,7 +244,7 @@ namespace freetrain.world.rail.tattc
 			this.label2.Size = new System.Drawing.Size(16, 20);
 			this.label2.TabIndex = 3;
 			this.label2.Text = "th";
-			//! this.label2.Text = "“ú";
+			//! this.label2.Text = "æ—¥";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayBox
@@ -296,7 +296,7 @@ namespace freetrain.world.rail.tattc
 			this.label1.Size = new System.Drawing.Size(16, 20);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "month";
-			//! this.label1.Text = "Œ";
+			//! this.label1.Text = "æœˆ";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// monthBox
@@ -330,7 +330,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonAdd.Size = new System.Drawing.Size(64, 24);
 			this.buttonAdd.TabIndex = 10;
 			this.buttonAdd.Text = "&Add";
-			//! this.buttonAdd.Text = "’Ç‰Á(&A)";
+			//! this.buttonAdd.Text = "è¿½åŠ (&A)";
 			this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
 			// 
 			// buttonUp
@@ -340,7 +340,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonUp.Name = "buttonUp";
 			this.buttonUp.Size = new System.Drawing.Size(64, 24);
 			this.buttonUp.TabIndex = 13;
-			this.buttonUp.Text = "ª";
+			this.buttonUp.Text = "â†‘";
 			this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
 			// 
 			// buttonDown
@@ -350,7 +350,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonDown.Name = "buttonDown";
 			this.buttonDown.Size = new System.Drawing.Size(64, 24);
 			this.buttonDown.TabIndex = 14;
-			this.buttonDown.Text = "«";
+			this.buttonDown.Text = "â†“";
 			this.buttonDown.Click += new System.EventHandler(this.buttonDown_Click);
 			// 
 			// buttonRemove
@@ -361,7 +361,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonRemove.Size = new System.Drawing.Size(64, 24);
 			this.buttonRemove.TabIndex = 15;
 			this.buttonRemove.Text = "Delete";
-			//! this.buttonRemove.Text = "íœ";
+			//! this.buttonRemove.Text = "å‰Šé™¤";
 			this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
 			// 
 			// buttonOk
@@ -401,31 +401,31 @@ namespace freetrain.world.rail.tattc
 			// columnHeader1
 			// 
 			this.columnHeader1.Text = "Month";
-			//! this.columnHeader1.Text = "Œ";
+			//! this.columnHeader1.Text = "æœˆ";
 			this.columnHeader1.Width = 55;
 			// 
 			// columnHeader2
 			// 
 			this.columnHeader2.Text = "Date";
-			//! this.columnHeader2.Text = "“ú";
+			//! this.columnHeader2.Text = "æ—¥";
 			this.columnHeader2.Width = 55;
 			// 
 			// columnHeader3
 			// 
 			this.columnHeader3.Text = "Day";
-			//! this.columnHeader3.Text = "—j“ú";
+			//! this.columnHeader3.Text = "æ›œæ—¥";
 			this.columnHeader3.Width = 55;
 			// 
 			// columnHeader4
 			// 
 			this.columnHeader4.Text = "Time";
-			//! this.columnHeader4.Text = "";
+			//! this.columnHeader4.Text = "æ™‚";
 			this.columnHeader4.Width = 55;
 			// 
 			// columnHeader5
 			// 
 			this.columnHeader5.Text = "Direction";
-			//! this.columnHeader5.Text = "•ûŒü";
+			//! this.columnHeader5.Text = "æ–¹å‘";
 			this.columnHeader5.Width = 55;
 			// 
 			// JunctionAdvancedDialog
@@ -447,7 +447,7 @@ namespace freetrain.world.rail.tattc
 			this.Name = "JunctionAdvancedDialog";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.Text = "Advanced point settings";
-			//! this.Text = "ƒ|ƒCƒ“ƒg‚ÌÚ×İ’è";
+			//! this.Text = "ãƒã‚¤ãƒ³ãƒˆã®è©³ç´°è¨­å®š";
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -560,7 +560,7 @@ namespace freetrain.world.rail.tattc
 			lvi.SubItems.Add(numberToString(rule.hour));
 
 			lvi.SubItems.Add( rule.route==JunctionRoute.Straight?"Straight":"Junction" );
-			//! lvi.SubItems.Add( rule.route==JunctionRoute.Straight?"’¼i":"•ªŠò" );
+			//! lvi.SubItems.Add( rule.route==JunctionRoute.Straight?"ç›´é€²":"åˆ†å²" );
 		}
 
 		private string numberToString( sbyte i ) {

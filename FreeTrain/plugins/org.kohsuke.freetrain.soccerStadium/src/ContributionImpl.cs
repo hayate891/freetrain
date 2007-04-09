@@ -11,8 +11,8 @@ namespace freetrain.world.soccerstadium
 		public ContributionImpl( XmlElement e ) : base(e) {
 		}
 
-		public override string name { get { return "サッカースタジアム"; } }
-		//! public override string name { get { return "Soccer Stadium"; } }
+		public override string name { get { return "Soccer Stadium"; } }
+		//! public override string name { get { return "サッカースタジアム"; } }
 
 		public override string oneLineDescription {
 			get {

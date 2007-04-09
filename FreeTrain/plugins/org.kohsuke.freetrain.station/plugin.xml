@@ -33,7 +33,8 @@
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="station" id="{E1C41DF8-6C9B-465d-A798-2624551AC4FD}">
-		<name>ローカル駅舎1(L)</name>
+		<name>Local station 1 (L)</name>
+		<!--!<name>ローカル駅舎1(L)</name>-->
 		&localStation;
 		<sprite origin="0,0" offset="16">
 			<picture src="local1-02.bmp" />
