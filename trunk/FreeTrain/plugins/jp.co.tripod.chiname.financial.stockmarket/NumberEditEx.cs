@@ -248,7 +248,7 @@ namespace freetrain.finance.stock
 		{
 			char key = e.KeyChar;
 			if( '0' <= key && '9' >= key ) return;
-			if( '¥b' == key ) return;
+			if( '\b' == key ) return;
 			e.Handled = true;		
 		}
 
