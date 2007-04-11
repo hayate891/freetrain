@@ -125,7 +125,11 @@ namespace freetrain.world
 
 
 		public static char dayOfWeekChar( int dow ) {
-			return "Mon Tue Wed Thu Fri Sat Sun"[dow];
+			return "7123456"[dow];
+			//! Translator's comment: The string above is a temporary
+			//! solution, since the weekday can only be one character
+			//! long in the current solution.
+			//! return "SunMonTueWedThuFriSat "[dow];
 			//! return "日月火水木金土"[dow];
 		}
 
