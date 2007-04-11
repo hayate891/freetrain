@@ -241,8 +241,8 @@ namespace freetrain.tools.terrainloader
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(64, 16);
 			this.label3.TabIndex = 0;
-			this.label3.Text = "幅(&W)：";
-			//! this.label3.Text = "&Width";
+            this.label3.Text = "&Width";
+            //! this.label3.Text = "幅(&W)：";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// LoadDialog
