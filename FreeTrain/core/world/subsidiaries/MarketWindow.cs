@@ -182,14 +182,14 @@ namespace freetrain.world.subsidiaries
 			// 
 			this.tbModeSell.ImageIndex = 0;
 			this.tbModeSell.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeSell.Text = "Your company";
+			this.tbModeSell.Text = "My company";
 			//! this.tbModeSell.Text = "自社";
 			// 
 			// tbModeBuy
 			// 
 			this.tbModeBuy.ImageIndex = 0;
 			this.tbModeBuy.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeBuy.Text = "Another company";
+			this.tbModeBuy.Text = "Other companies";
 			//! this.tbModeBuy.Text = "他社";
 			// 
 			// tbSeparator
