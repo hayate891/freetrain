@@ -64,12 +64,16 @@
     <Compile Include="AssemblyInfo.cs" />
     <EmbeddedResource Include="bank_icon.bmp" />
     <Compile Include="BankbookListHelper.cs" />
-    <Compile Include="BankbookWindow.cs" />
+    <Compile Include="BankbookWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="BankbookWindow.resx">
       <DependentUpon>BankbookWindow.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="BankConfig.cs" />
-    <Compile Include="BankCouterForm.cs" />
+    <Compile Include="BankCouterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="BankCouterForm.resx">
       <DependentUpon>BankCouterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,7 +85,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Name>FreeTrain.Core</Name>
       <Private>False</Private>

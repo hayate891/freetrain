@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="BusinessType.cs" />
-    <Compile Include="ChartControl.cs" />
+    <Compile Include="ChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="ChartControl.resx">
       <DependentUpon>ChartControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,7 +75,9 @@
     <Compile Include="Economy.cs" />
     <Compile Include="EventManager.cs" />
     <Content Include="events.xml" />
-    <Compile Include="NumberEditEx.cs" />
+    <Compile Include="NumberEditEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="NumberEditEx.resx">
       <DependentUpon>NumberEditEx.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,18 +87,24 @@
     <Compile Include="StockCompanyModule.cs" />
     <Compile Include="StockData.cs" />
     <Compile Include="StockMarketConfig.cs" />
-    <Compile Include="StockMarketForm.cs" />
+    <Compile Include="StockMarketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="StockMarketForm.resx">
       <DependentUpon>StockMarketForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="StockMarketPlugIn.cs" />
     <Compile Include="StockPrice.cs" />
     <Compile Include="StocksListHelper.cs" />
-    <Compile Include="StocksWindow.cs" />
+    <Compile Include="StocksWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="StocksWindow.resx">
       <DependentUpon>StocksWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="TimeVariedChart.cs" />
+    <Compile Include="TimeVariedChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="TimeVariedChart.resx">
       <DependentUpon>TimeVariedChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,12 +113,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\Controls\FreeTrain.Controls.csproj">
+    <ProjectReference Include="..\..\lib\Controls\FreeTrain.Controls.csproj">
       <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
       <Name>FreeTrain.Controls</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\FreeTrain\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Name>FreeTrain.Core</Name>
       <Private>False</Private>

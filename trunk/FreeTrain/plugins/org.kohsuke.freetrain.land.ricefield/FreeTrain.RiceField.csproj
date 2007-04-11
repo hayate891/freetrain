@@ -52,12 +52,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\DirectDraw.net\DirectDraw.net.csproj">
+    <ProjectReference Include="..\..\lib\DirectDraw.net\DirectDraw.net.csproj">
       <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
       <Name>DirectDraw.net</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\FreeTrain\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Name>FreeTrain.Core</Name>
       <Private>False</Private>

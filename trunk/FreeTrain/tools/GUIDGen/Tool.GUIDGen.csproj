@@ -48,7 +48,9 @@
   <ItemGroup>
     <Content Include="App.ico" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="GUIDGen.cs" />
+    <Compile Include="GUIDGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="GUIDGen.resx">
       <DependentUpon>GUIDGen.cs</DependentUpon>
     </EmbeddedResource>
