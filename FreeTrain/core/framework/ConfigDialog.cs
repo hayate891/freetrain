@@ -170,7 +170,7 @@ namespace freetrain.framework
 			this.showBoundingBox.Name = "showBoundingBox";
 			this.showBoundingBox.Size = new System.Drawing.Size(168, 16);
 			this.showBoundingBox.TabIndex = 4;
-			this.showBoundingBox.Text = "Display drawing range (debugging)";
+			this.showBoundingBox.Text = "Display drawing range (debug)";
 			//! this.showBoundingBox.Text = "描画範囲を表示(デバッグ)";
 			// 
 			// hideTrees
@@ -187,12 +187,12 @@ namespace freetrain.framework
 			// 
 			this.comboSurfaceAlloc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboSurfaceAlloc.Items.AddRange(new object[] {
-																   "自動的に判断する",
-																   "ビデオメモリに限定する",
-																   "システムメモリに限定する"});
-																   //! "Decide automatically",
-																   //! "Limit to VRAM",
-																   //! "Limit to system RAM"});
+																   "Automatically",
+																   "Limit to VRAM",
+																   "Limit to system RAM"});
+																   //! "自動的に判断する",
+																   //! "ビデオメモリに限定する",
+																   //! "システムメモリに限定する"});
 			this.comboSurfaceAlloc.Location = new System.Drawing.Point(184, 182);
 			this.comboSurfaceAlloc.Name = "comboSurfaceAlloc";
 			this.comboSurfaceAlloc.Size = new System.Drawing.Size(200, 20);
