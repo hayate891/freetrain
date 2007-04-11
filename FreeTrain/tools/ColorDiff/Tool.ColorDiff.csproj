@@ -48,14 +48,16 @@
   <ItemGroup>
     <Content Include="src\App.ico" />
     <Compile Include="src\AssemblyInfo.cs" />
-    <Compile Include="src\MainForm.cs" />
+    <Compile Include="src\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="src\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\Controls\FreeTrain.Controls.csproj">
+    <ProjectReference Include="..\..\lib\Controls\FreeTrain.Controls.csproj">
       <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
       <Name>FreeTrain.Controls</Name>
       <Private>False</Private>

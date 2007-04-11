@@ -3,7 +3,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7264D32E-75DB-4C13-9EE4-E6263FD5B652}</ProjectGuid>
+    <ProjectGuid>{3883DFAC-52BF-4C95-BCB4-D260E75F6F74}</ProjectGuid>
     <RootNamespace>DummyCars</RootNamespace>
     <AssemblyName>DummyCars</AssemblyName>
     <OutputType>Library</OutputType>
@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ControllerForm.cs" />
+    <Compile Include="ControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="ControllerForm.resx">
       <DependentUpon>ControllerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,17 +75,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\Controls\FreeTrain.Controls.csproj">
+    <ProjectReference Include="..\..\..\..\lib\Controls\FreeTrain.Controls.csproj">
       <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
       <Name>FreeTrain.Controls</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\FreeTrain\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\..\..\core\FreeTrain.Core.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Name>FreeTrain.Core</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\DirectDraw.net\DirectDraw.net.csproj">
+    <ProjectReference Include="..\..\..\..\lib\DirectDraw.net\DirectDraw.net.csproj">
       <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
       <Name>DirectDraw.net</Name>
       <Private>False</Private>

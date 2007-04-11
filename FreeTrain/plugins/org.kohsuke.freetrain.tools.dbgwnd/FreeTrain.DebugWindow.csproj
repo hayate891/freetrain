@@ -48,14 +48,16 @@
   <ItemGroup>
     <Compile Include="src\AssemblyInfo.cs" />
     <Compile Include="src\DebugWindowPlugIn.cs" />
-    <Compile Include="src\TraceWindow.cs" />
+    <Compile Include="src\TraceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="src\TraceWindow.resx">
       <DependentUpon>TraceWindow.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Name>FreeTrain.Core</Name>
       <Private>False</Private>

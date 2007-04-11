@@ -51,9 +51,13 @@
     <Compile Include="src\ContributionImpl.cs" />
     <Compile Include="src\Game.cs" />
     <Compile Include="src\OpponentTeam.cs" />
-    <Compile Include="src\PlacementController.cs" />
+    <Compile Include="src\PlacementController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="src\PopulationImpl.cs" />
-    <Compile Include="src\StadiumPropertyDialog.cs" />
+    <Compile Include="src\StadiumPropertyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="src\StadiumPropertyDialog.resx">
       <DependentUpon>StadiumPropertyDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -62,7 +66,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Name>FreeTrain.Core</Name>
       <Private>False</Private>

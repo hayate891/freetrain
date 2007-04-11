@@ -55,24 +55,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\AssemblyInfo.cs" />
-    <Compile Include="src\CostBox.cs" />
+    <Compile Include="src\CostBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="src\CostBox.resx">
       <DependentUpon>CostBox.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="src\DocHostUIHandlerImpl.cs" />
     <Compile Include="src\FileDropHandler.cs" />
-    <Compile Include="src\IndexSelector.cs" />
+    <Compile Include="src\IndexSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="src\IndexSelector.resx">
       <DependentUpon>IndexSelector.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="src\MruMenu.cs" />
-    <Compile Include="src\SubListSelector.cs" />
+    <Compile Include="src\SubListSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="src\SubListSelector.resx">
       <DependentUpon>SubListSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="src\TrackBarEx.cs" />
-    <Compile Include="src\UrlLinkLabel.cs" />
-    <Compile Include="src\WebBrowser.cs" />
+    <Compile Include="src\TrackBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UrlLinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\WebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

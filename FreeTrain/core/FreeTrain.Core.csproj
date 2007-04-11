@@ -90,7 +90,9 @@
     <Compile Include="contributions\others\EmptyNewGameContributionImpl.cs" />
     <Compile Include="contributions\others\MenuContribution.cs" />
     <Compile Include="contributions\others\NewGameContribution.cs" />
-    <Compile Include="contributions\others\NewWorldDialog.cs" />
+    <Compile Include="contributions\others\NewWorldDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="contributions\others\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,19 +132,27 @@
     <Compile Include="contributions\train\TrainCarContribution.cs" />
     <Compile Include="contributions\train\TrainContribution.cs" />
     <Compile Include="contributions\train\TrainContributionFactory.cs" />
-    <Compile Include="controllers\AbstractControllerForm.cs" />
+    <Compile Include="controllers\AbstractControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\AbstractControllerForm.resx">
       <DependentUpon>AbstractControllerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\AbstractControllerImpl.cs" />
+    <Compile Include="controllers\AbstractControllerImpl.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\AbstractControllerImpl.resx">
       <DependentUpon>AbstractControllerImpl.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\AbstractLineController.cs" />
+    <Compile Include="controllers\AbstractLineController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\AbstractLineController.resx">
       <DependentUpon>AbstractLineController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\ControllerHostForm.cs" />
+    <Compile Include="controllers\ControllerHostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\ControllerHostForm.resx">
       <DependentUpon>ControllerHostForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,105 +164,157 @@
     <Compile Include="controllers\ModalController.cs" />
     <Compile Include="controllers\PointSelectorController.cs" />
     <Compile Include="controllers\RectSelectorController.cs" />
-    <Compile Include="controllers\land\LandController.cs" />
+    <Compile Include="controllers\land\LandController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\land\LandController.resx">
       <DependentUpon>LandController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\land\LandPropertyController.cs" />
+    <Compile Include="controllers\land\LandPropertyController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\land\LandPropertyController.resx">
       <DependentUpon>LandPropertyController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\PlatformController.cs" />
+    <Compile Include="controllers\rail\PlatformController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\PlatformController.resx">
       <DependentUpon>PlatformController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\PlatformPropertyDialog.cs" />
+    <Compile Include="controllers\rail\PlatformPropertyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\PlatformPropertyDialog.resx">
       <DependentUpon>PlatformPropertyDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\RailRoadController.cs" />
+    <Compile Include="controllers\rail\RailRoadController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\RailRoadController.resx">
       <DependentUpon>RailRoadController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\SlopeRailRoadController.cs" />
+    <Compile Include="controllers\rail\SlopeRailRoadController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\SlopeRailRoadController.resx">
       <DependentUpon>SlopeRailRoadController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\SpecialPurposeRailController.cs" />
-    <Compile Include="controllers\rail\StationaryStructPlacementController.cs" />
-    <Compile Include="controllers\rail\StationPassagewayController.cs" />
+    <Compile Include="controllers\rail\SpecialPurposeRailController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controllers\rail\StationaryStructPlacementController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controllers\rail\StationPassagewayController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\StationPassagewayController.resx">
       <DependentUpon>StationPassagewayController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\StationPropertyDialog.cs" />
+    <Compile Include="controllers\rail\StationPropertyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\StationPropertyDialog.resx">
       <DependentUpon>StationPropertyDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\TrainControllerDialog.cs" />
+    <Compile Include="controllers\rail\TrainControllerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\TrainControllerDialog.resx">
       <DependentUpon>TrainControllerDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\TrainPlacementController.cs" />
+    <Compile Include="controllers\rail\TrainPlacementController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\TrainPlacementController.resx">
       <DependentUpon>TrainPlacementController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\TrainTrackingWindow.cs" />
+    <Compile Include="controllers\rail\TrainTrackingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\TrainTrackingWindow.resx">
       <DependentUpon>TrainTrackingWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\rail\TrainTradingDialog.cs" />
+    <Compile Include="controllers\rail\TrainTradingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\rail\TrainTradingDialog.resx">
       <DependentUpon>TrainTradingDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\road\RoadController.cs" />
+    <Compile Include="controllers\road\RoadController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\road\RoadController.resx">
       <DependentUpon>RoadController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\structs\CommercialStructPlacementController.cs" />
-    <Compile Include="controllers\structs\FixedSizeStructController.cs" />
+    <Compile Include="controllers\structs\CommercialStructPlacementController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controllers\structs\FixedSizeStructController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\structs\FixedSizeStructController.resx">
       <DependentUpon>FixedSizeStructController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\structs\StructPlacementController.cs" />
+    <Compile Include="controllers\structs\StructPlacementController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\structs\StructPlacementController.resx">
       <DependentUpon>StructPlacementController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\structs\VarHeightBuildingController.cs" />
+    <Compile Include="controllers\structs\VarHeightBuildingController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\structs\VarHeightBuildingController.resx">
       <DependentUpon>VarHeightBuildingController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="controllers\terrain\MountainController.cs" />
+    <Compile Include="controllers\terrain\MountainController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="controllers\terrain\MountainController.resx">
       <DependentUpon>MountainController.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="framework\AboutDialog.cs" />
+    <Compile Include="framework\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="framework\AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="framework\BGMManager.cs" />
-    <Compile Include="framework\ConfigDialog.cs" />
+    <Compile Include="framework\ConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="framework\ConfigDialog.resx">
       <DependentUpon>ConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="framework\Core.cs" />
-    <Compile Include="framework\ErrorMessageBox.cs" />
+    <Compile Include="framework\ErrorMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="framework\ErrorMessageBox.resx">
       <DependentUpon>ErrorMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="framework\GlobalOptions.cs" />
-    <Compile Include="framework\MainWindow.cs" />
+    <Compile Include="framework\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="framework\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="framework\MenuItemConstants.cs" />
     <Compile Include="framework\MruHelper.cs" />
-    <Compile Include="framework\NewWorldDialog.cs" />
+    <Compile Include="framework\NewWorldDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="framework\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="framework\PersistentOptions.cs" />
     <Compile Include="framework\ResourceUtil.cs" />
-    <Compile Include="framework\Splash.cs" />
+    <Compile Include="framework\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="framework\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,7 +341,9 @@
     <Compile Include="framework\plugin\DynamicContributionFactory.cs" />
     <Compile Include="framework\plugin\FixedClassContributionFactory.cs" />
     <Compile Include="framework\plugin\Plugin.cs" />
-    <Compile Include="framework\plugin\PluginListDialog.cs" />
+    <Compile Include="framework\plugin\PluginListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="framework\plugin\PluginListDialog.resx">
       <DependentUpon>PluginListDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,11 +376,15 @@
     <Compile Include="util\WindowState.cs" />
     <Compile Include="util\command\Command.cs" />
     <Compile Include="util\command\CommandExecutor.cs" />
-    <Compile Include="util\command\CommandManager.cs" />
+    <Compile Include="util\command\CommandManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="util\command\CommandManager.resx">
       <DependentUpon>CommandManager.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="util\controls\DDTreeView.cs" />
+    <Compile Include="util\controls\DDTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="util\controls\ToolBarCustomizerUI.cs" />
     <Compile Include="util\docking\ContentEx.cs" />
     <Compile Include="util\docking\DockingManagerEx.cs" />
@@ -329,11 +397,15 @@
     <Compile Include="views\WeatherOverlay.cs" />
     <Compile Include="views\WeatherOverlayImpl.cs" />
     <Compile Include="views\WeatherOverlaySpriteSet.cs" />
-    <Compile Include="views\map\HeightCutWindow.cs" />
+    <Compile Include="views\map\HeightCutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="views\map\HeightCutWindow.resx">
       <DependentUpon>HeightCutWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="views\map\MapView.cs" />
+    <Compile Include="views\map\MapView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="views\map\MapView.resx">
       <DependentUpon>MapView.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,16 +430,22 @@
     <Compile Include="world\World.cs" />
     <Compile Include="world\accounting\AccountGenre.cs" />
     <Compile Include="world\accounting\AccountManager.cs" />
-    <Compile Include="world\accounting\AccountSummaryWindow.cs" />
+    <Compile Include="world\accounting\AccountSummaryWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="world\accounting\AccountSummaryWindow.resx">
       <DependentUpon>AccountSummaryWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="world\accounting\BalanceSheetForm.cs" />
+    <Compile Include="world\accounting\BalanceSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="world\accounting\BalanceSheetForm.resx">
       <DependentUpon>BalanceSheetForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="world\accounting\Debt.cs" />
-    <Compile Include="world\accounting\GenreSelectorDialog.cs" />
+    <Compile Include="world\accounting\GenreSelectorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="world\accounting\GenreSelectorDialog.resx">
       <DependentUpon>GenreSelectorDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,7 +454,9 @@
     <Compile Include="world\development\DevelopmentAlgorithm.cs" />
     <Compile Include="world\development\LandPlan.cs" />
     <Compile Include="world\development\LandValue.cs" />
-    <Compile Include="world\development\LandValueInspector.cs" />
+    <Compile Include="world\development\LandValueInspector.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="world\development\LandValueInspector.resx">
       <DependentUpon>LandValueInspector.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,7 +504,9 @@
     <Compile Include="world\structs\StationListenerImpl.cs" />
     <Compile Include="world\structs\Structure.cs" />
     <Compile Include="world\structs\VarHeightBuilding.cs" />
-    <Compile Include="world\subsidiaries\MarketWindow.cs" />
+    <Compile Include="world\subsidiaries\MarketWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="world\subsidiaries\MarketWindow.resx">
       <DependentUpon>MarketWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,17 +518,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\DirectDraw.net\DirectDraw.net.csproj">
+    <ProjectReference Include="..\lib\DirectDraw.net\DirectDraw.net.csproj">
       <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
       <Name>DirectDraw.net</Name>
       <Private />
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\DirectAudio.net\DirectAudio.net.csproj">
+    <ProjectReference Include="..\lib\DirectAudio.net\DirectAudio.net.csproj">
       <Project>{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}</Project>
       <Name>DirectAudio.net</Name>
       <Private />
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\FreeTrain\lib\Controls\FreeTrain.Controls.csproj">
+    <ProjectReference Include="..\lib\Controls\FreeTrain.Controls.csproj">
       <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
       <Name>FreeTrain.Controls</Name>
       <Private />
