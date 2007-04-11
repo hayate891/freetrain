@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!--
 このファイルは、C477氏の作成したファイルを元に、ジャガイモが作成しました。
 詳しい情報は下記のURLへ。
@@ -416,7 +416,7 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	
 	<!--081　金融（証券）-->
 	
-	<company id="8403" name="Sumidomo Trust & Banking" type="081">
+	<company id="8403" name="Sumidomo Trust &amp; Banking" type="081">
 	<!--!<company id="8403" name="清友信託銀行" type="081">-->
 		<performance capital="2000000" sales="550000000" />
 		<capacity brand="6" marketing="3" quality="6" rationality="3" development="4" />
