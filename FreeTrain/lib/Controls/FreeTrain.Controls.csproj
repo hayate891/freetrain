@@ -8,7 +8,6 @@
     <AssemblyName>FreeTrain.Controls</AssemblyName>
     <OutputType>Library</OutputType>
     <ApplicationIcon />
-    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <PreBuildEvent />
     <PostBuildEvent />
     <StartupObject />

@@ -314,26 +314,6 @@
 			Name="Output"
 			SourceControlFiles="false"
 			>
-			<File
-				RelativePath="DirectDraw.AlphaBlend_i.c"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-					/>
-				</FileConfiguration>
-			</File>
 		</Filter>
 		<File
 			RelativePath="ReadMe.txt"

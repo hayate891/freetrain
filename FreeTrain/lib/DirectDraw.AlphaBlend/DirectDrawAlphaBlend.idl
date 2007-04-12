@@ -11,7 +11,7 @@ import "ocidl.idl";
 [
 	uuid(EF1510AF-E75F-4974-BE7A-A2F4E88EBFB4),
 	version(1.0),
-	helpstring("DirectDrawAlphaBlend 1.0 タイプ ライブラリ")
+	helpstring("DirectDrawAlphaBlend 1.0 Type Library")
 ]
 library DirectDrawAlphaBlendLib
 {
@@ -28,7 +28,7 @@ library DirectDrawAlphaBlendLib
 		uuid(2D16CEE2-F54C-425F-84A7-61692CF1D82C),
 		dual,
 		nonextensible,
-		helpstring("IAlphaBlender インターフェイス"),
+		helpstring("IAlphaBlender Interface"),
 		pointer_default(unique)
 	]
 	interface IAlphaBlender : IDispatch{

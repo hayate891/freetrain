@@ -8,7 +8,6 @@
     <AssemblyName>PicturePreviewer</AssemblyName>
     <OutputType>WinExe</OutputType>
     <ApplicationIcon>App.ico</ApplicationIcon>
-    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <PreBuildEvent />
     <PostBuildEvent />
     <StartupObject />

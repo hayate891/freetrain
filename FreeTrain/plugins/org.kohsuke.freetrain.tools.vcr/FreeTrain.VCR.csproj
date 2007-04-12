@@ -8,7 +8,6 @@
     <AssemblyName>FreeTrain.VCR</AssemblyName>
     <OutputType>Library</OutputType>
     <ApplicationIcon />
-    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <PreBuildEvent />
     <PostBuildEvent>xcopy $(SolutionDir)lib\DirectShow.VideoRecorder\Debug\*.dll $(OutDir) /D /E /I /Q /Y</PostBuildEvent>
     <StartupObject />
