@@ -163,8 +163,9 @@ namespace freetrain.tools.vcr
 																		  this.btnRecord,
 																		  this.btnConfig});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Name = "VCRConsole";
-			this.Text = "ビデオレコーダ";
+            this.Name = "VCRConsole";
+            this.Text = "Video recorder";
+            //! this.Text = "ビデオレコーダ";
 			this.ResumeLayout(false);
 
 		}

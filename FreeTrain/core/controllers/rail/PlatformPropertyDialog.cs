@@ -226,7 +226,7 @@ namespace freetrain.world.rail
 			this.label3.Size = new System.Drawing.Size(48, 16);
 			this.label3.TabIndex = 5;
 			this.label3.Text = "&Bell:";
-			this.label3.Text = "ベル(&B):";
+			//! this.label3.Text = "ベル(&B):";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// PlatformPropertyDialog
