@@ -8,7 +8,6 @@
     <AssemblyName>XmlCombiner</AssemblyName>
     <OutputType>Exe</OutputType>
     <ApplicationIcon>App.ico</ApplicationIcon>
-    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <PreBuildEvent />
     <PostBuildEvent />
     <StartupObject />

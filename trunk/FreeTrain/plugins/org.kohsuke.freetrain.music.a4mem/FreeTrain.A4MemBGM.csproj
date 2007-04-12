@@ -8,7 +8,6 @@
     <AssemblyName>FreeTrain.A4MemBGM</AssemblyName>
     <OutputType>Library</OutputType>
     <ApplicationIcon />
-    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <PreBuildEvent />
     <PostBuildEvent />
     <StartupObject />

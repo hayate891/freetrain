@@ -8,7 +8,6 @@
     <AssemblyName>ColorDiff</AssemblyName>
     <OutputType>WinExe</OutputType>
     <ApplicationIcon />
-    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <PreBuildEvent />
     <PostBuildEvent />
     <StartupObject />

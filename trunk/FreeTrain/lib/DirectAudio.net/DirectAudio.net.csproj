@@ -8,7 +8,6 @@
     <AssemblyName>DirectAudio.net</AssemblyName>
     <OutputType>Library</OutputType>
     <ApplicationIcon />
-    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <PreBuildEvent />
     <PostBuildEvent />
     <StartupObject />
