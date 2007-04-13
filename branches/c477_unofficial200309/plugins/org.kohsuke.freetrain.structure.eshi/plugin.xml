@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>建物セット</title>
+	<author>絵師見習いさん</author>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	
+	<contribution type="commercial" id="{DD1224B9-2F1A-4c25-9E65-4E604F3342C7}">
+		<group>吉野家</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="21">
+			<picture src="yoshinoya1.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+	
+	<contribution type="commercial" id="{19F42929-9606-4cfb-A2F0-EFE323487DC6}">
+		<group>吉野家</group>
+		<price>400</price>
+		<size>1,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="16">
+			<picture src="yosinoya2.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>70</base>
+		</population>
+	</contribution>
+	
+	
+</plug-in>

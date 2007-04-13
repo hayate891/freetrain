@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<!--
+このファイルは、C477氏の作成したファイルを元に、ジャガイモが作成しました。
+詳しい情報は下記のURLへ。
+http://homepage1.nifty.com/jagaimo/west_necom/
+-->
+<!-- 
+このファイルは業種を定義します。
+記述例：
+	<business id="000" name="業種名">
+		<account fixed="0.25"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
+		<weight brand="5" marketing="4" quality="3" />
+	</business>
+
+	id：companyタグのtype属性から参照される文字列
+	name：業種名
+	fixed:売上規模に対する固定経費率
+	scale：市場規模(円貨)－同業種で売上げを分配します
+	cycle：業種固有の景気周期(日)
+	ampliture：業種固有の景気振幅(0-10)
+	ex_dependency：景気影響度(0-10)－全体の景気指数による影響の受け安さ
+	progressivity：業界の進歩性(0-10)－業界の栄枯盛衰の激しさ
+	brand：ブランドの重要性(0-10)－競争においてブランド力が占める影響度
+	marketing：販売力の重要性(0-10)－競争において販売力が占める影響度
+	quality：品質の重要性(0-10)－競争において企業または製品の品質が占める影響度
+-->
+<companies>
+	<!-- business tag descripts a 'business type' -->
+	<business id="010" name="水産・林業">
+		<!-- fixed:the ratio of fixed account against ideal sales amount-->
+		<account fixed="0.30"/>
+		<!-- scale:initial market scale of the business total-->
+		<!-- cycle:proper business cycle (days) -->
+		<!-- amplitude:proper business amplitude (0-10) -->
+		<!-- ex_dependency:business dependency to the economy (0-10) -->
+		<!-- progressivity:progressivity or competitive rate of the business (0-10) -->
+		<market scale="5000000000000" cycle="365" amplitude="5" ex_dependency="5" progressivity="1" />
+		<!-- brand:business waight of brand image (0-10) -->
+		<!-- marketing:business waight of marketing ability (0-10) -->
+		<!-- quality:business waight of quality of the service or production (0-10) -->
+		<weight brand="5" marketing="4" quality="3" />
+	</business>
+	<business id="011" name="農業">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="365" amplitude="5" ex_dependency="5" progressivity="1" />
+		<weight brand="5" marketing="4" quality="3" />
+	</business>
+	<business id="012" name="鉱業">
+		<account fixed="0.40"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
+		<weight brand="5" marketing="2" quality="2" />
+	</business>
+	<business id="020" name="建設">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="60" amplitude="5" ex_dependency="3" progressivity="3" />
+		<weight brand="5" marketing="5" quality="5" />
+	</business>
+	<business id="021" name="食品">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="3" progressivity="3" />
+		<weight brand="8" marketing="7" quality="5" />
+	</business>
+	<business id="022" name="繊維">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="4" progressivity="4" />
+		<weight brand="8" marketing="6" quality="6" />
+	</business>
+	<business id="023" name="パルプ・紙">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
+		<weight brand="3" marketing="5" quality="5" />
+	</business>
+	<business id="030" name="化学">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="6" />
+		<weight brand="3" marketing="3" quality="9" />
+	</business>
+	<business id="031" name="医薬品">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="8" />
+		<weight brand="6" marketing="5" quality="9" />
+	</business>
+	<business id="032" name="石油・石炭">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="4" />
+		<weight brand="3" marketing="3" quality="4" />
+	</business>
+	<business id="033" name="ゴム">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="3" />
+		<weight brand="4" marketing="3" quality="5" />
+	</business>
+	<business id="034" name="ガラス">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
+		<weight brand="2" marketing="3" quality="4" />
+	</business>
+	<business id="035" name="窯業">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
+		<weight brand="2" marketing="3" quality="4" />
+	</business>
+	<business id="036" name="鉄鋼">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
+		<weight brand="3" marketing="3" quality="6" />
+	</business>
+	<business id="037" name="非鉄">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="3" />
+		<weight brand="3" marketing="3" quality="6" />
+	</business>
+	<business id="038" name="金属製品">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="4" />
+		<weight brand="5" marketing="4" quality="7" />
+	</business>
+	<business id="040" name="機械">
+		<account fixed="0.35"/>
+		<market scale="50000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="5" />
+		<weight brand="6" marketing="5" quality="8" />
+	</business>
+	<business id="041" name="電気機器">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="7" />
+		<weight brand="8" marketing="7" quality="8" />
+	</business>
+	<business id="042" name="自動車">
+		<account fixed="0.35"/>
+		<market scale="10000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
+		<weight brand="9" marketing="6" quality="9" />
+	</business>
+	<business id="043" name="造船">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
+		<weight brand="7" marketing="3" quality="8" />
+	</business>
+	<business id="044" name="航空機">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
+		<weight brand="9" marketing="3" quality="9" />
+	</business>
+	<business id="045" name="輸送用機器">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
+		<weight brand="7" marketing="3" quality="8" />
+	</business>
+	<business id="046" name="精密機器">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="8" />
+		<weight brand="8" marketing="4" quality="9" />
+	</business>
+	<business id="047" name="印刷">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="8" />
+		<weight brand="8" marketing="4" quality="9" />
+	</business>
+	<business id="048" name="その他製造">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
+		<weight brand="5" marketing="5" quality="5" />
+	</business>
+	<business id="050" name="電力・ガス">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="2" progressivity="1" />
+		<weight brand="3" marketing="3" quality="3" />
+	</business>
+	<business id="061" name="陸運">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
+		<weight brand="3" marketing="7" quality="5" />
+	</business>
+	<business id="062" name="海運">
+		<account fixed="0.35"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
+		<weight brand="4" marketing="5" quality="6" />
+	</business>
+	<business id="063" name="空運">
+		<account fixed="0.25"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
+		<weight brand="4" marketing="5" quality="6" />
+	</business>
+	<business id="064" name="不動産">
+		<account fixed="0.15"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
+		<weight brand="3" marketing="6" quality="5" />
+	</business>
+	<business id="065" name="倉庫・運輸">
+		<account fixed="0.25"/>
+		<market scale="50000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
+		<weight brand="3" marketing="6" quality="5" />
+	</business>
+	<business id="070" name="情報・通信">
+		<account fixed="0.30"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="3" progressivity="4" />
+		<weight brand="4" marketing="6" quality="6" />
+	</business>
+	<business id="071" name="商業（卸売）">
+		<account fixed="0.25"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
+		<weight brand="3" marketing="2" quality="3" />
+	</business>
+	<business id="072" name="商業（小売）">
+		<account fixed="0.25"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
+		<weight brand="5" marketing="7" quality="5" />
+	</business>
+	<business id="080" name="金融（銀行）">
+		<account fixed="0.15"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
+		<weight brand="9" marketing="8" quality="4" />
+	</business>
+	<business id="081" name="金融（証券）">
+		<account fixed="0.15"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
+		<weight brand="8" marketing="9" quality="4" />
+	</business>
+	<business id="082" name="金融（保険）">
+		<account fixed="0.15"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
+		<weight brand="9" marketing="9" quality="5" />
+	</business>
+	<business id="083" name="金融（その他）">
+		<account fixed="0.25"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="2" />
+		<weight brand="7" marketing="8" quality="5" />
+	</business>
+	<business id="091" name="サービス">
+		<account fixed="0.25"/>
+		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="3" />
+		<weight brand="4" marketing="6" quality="6" />
+	</business>
+</companies>

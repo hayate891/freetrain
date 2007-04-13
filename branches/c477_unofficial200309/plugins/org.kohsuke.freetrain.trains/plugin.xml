@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>基本車両キット</title>
+	<author>477さん</author>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	
+	
+	
+	
+	<!-- ディフォルトFT型用の中間車両 -->
+	<contribution type="trainCar" id="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="train.bmp" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+	<contribution type="train" id="{F3604C61-D0D5-4c9c-ADD6-405610FA6250}">
+		<name>ＦＴ１型</name>
+		<price>1800</price>
+		<speed>fast</speed>
+		<author>川口耕介</author>
+		<type>FT</type>
+		<company>FreeTrain</company>
+		<description>架空の列車です</description>
+		
+		<composition>
+			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
+		</composition>
+	</contribution>
+	
+	<contribution type="train" id="{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}">
+		<name>ＦＴ２型</name>
+		<price>1000</price>
+		<speed>medium</speed>
+		<author>川口耕介</author>
+		<type>FT</type>
+		<company>FreeTrain</company>
+		<description>架空の列車です</description>
+		
+		<composition>
+			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
+		</composition>
+	</contribution>
+	
+	<contribution type="train" id="{F7134C8E-6B63-4780-AF16-90D33131CD07}">
+		<name>ＦＴ３型</name>
+		<price>500</price>
+		<speed>slow</speed>
+		<author>川口耕介</author>
+		<type>FT</type>
+		<company>FreeTrain</company>
+		<description>架空の列車です</description>
+		
+		<composition>
+			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
+		</composition>
+	</contribution>
+	
+	
+	
+	
+	
+	<!-- 485系先頭車両 -->
+	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="train485a.bmp" />
+		</sprite>
+		<capacity>65</capacity>
+	</contribution>
+	
+	<!-- 485系中間車両 -->
+	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="train485b.bmp" />
+		</sprite>
+		<capacity>70</capacity>
+	</contribution>
+	
+	<!-- 485系後尾車両 -->
+	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-t">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h"/>
+	</contribution>
+	
+	<contribution type="train" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}">
+		<name>雷鳥</name>
+		<price>1</price>
+		<speed>fast</speed>
+		<author>477</author>
+		<type>485系</type>
+		<company>JR東日本</company>
+		<description>説明募集中</description>
+		
+		<composition>
+			<!-- 先頭車両が他と一緒ならheadは省略可能 -->
+			<head carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h"/>
+			<body carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m"/>
+			<!-- 後尾車両が他と一緒ならheadは省略可能 -->
+			<tail carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-t"/>
+		</composition>
+	</contribution>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- E3系先頭車両 -->
+	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="trainE3a.bmp" />
+		</sprite>
+		<capacity>56</capacity>
+	</contribution>
+	
+	<!-- E3系中間車両 -->
+	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-m">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="trainE3b.bmp" />
+		</sprite>
+		<capacity>64</capacity>
+	</contribution>
+	
+	<!-- E3系後尾車両 -->
+	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-t">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h"/>
+	</contribution>
+	
+	<contribution type="train" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}">
+		<name>こまち</name>
+		<price>100</price>
+		<speed>superb</speed>
+		<author>477</author>
+		<type>E3系</type>
+		<company>JR東日本</company>
+		<description>説明募集中</description>
+		
+		<composition>
+			<head carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h"/>
+			<body carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-m"/>
+			<tail carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-t"/>
+		</composition>
+	</contribution>
+	
+</plug-in>

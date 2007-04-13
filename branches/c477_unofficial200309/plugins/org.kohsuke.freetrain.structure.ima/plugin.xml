@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>建物セット</title>
+	<author>imaさん</author>
+	<homepage>mailto:ima@imaden.bizland.com</homepage>
+	
+	<contribution type="commercial" id="{594D6A74-2678-4a35-9FE6-E2FFA90C207A}">
+		<name>マクドナルド</name>
+		<price>190</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="McDonals.bmp" />
+		</sprite>
+	</contribution>
+</plug-in>

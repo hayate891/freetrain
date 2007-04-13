@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>建物セット</title>
+	<author>cozy@E.G.R.さん</author>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	
+	<contribution type="commercial" id="{487900B6-EBCA-4c98-9E28-194050E9706D}">
+		<group>コンビニ</group>
+		<name>ファミリーマート</name>
+		<price>200</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="10">
+			<picture src="FAMIMA01.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+	
+	<contribution type="commercial" id="{D6DED1EF-FA6F-4734-A4CA-46D217A1EC1F}">
+		<name>ヤマダ電機</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="35">
+			<picture src="YAMADA01.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>160</base>
+		</population>
+	</contribution>
+	
+</plug-in>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<!DOCTYPE plug-in [
+<!-- 1x1 マンションのパラメータ -->
+<!ENTITY smallMansion '
+		<group>マンション(小)</group>
+		<price>250</price>
+		<size>1,1</size>
+		<minHeight>2</minHeight>
+		<maxHeight>5</maxHeight>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>120</base>
+		</population>
+'>
+<!-- 2x2 マンションのパラメータ -->
+<!ENTITY middleMansion '
+		<group>マンション(中)</group>
+		<price>2900</price>
+		<size>2,2</size>
+		<minHeight>3</minHeight>
+		<maxHeight>10</maxHeight>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>500</base>
+		</population>
+'>
+<!-- 大型のパラメータ -->
+<!ENTITY largeMansion '
+		<group>マンション(大)</group>
+		<price>6200</price>
+		<minHeight>2</minHeight>
+		<maxHeight>8</maxHeight>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>1100</base>
+		</population>
+'>
+]>
+<plug-in>
+	<title>建物セット</title>
+	<author>ミハさん</author>
+	<homepage>http://www5.ocn.ne.jp/~mihata/</homepage>
+	
+	<contribution type="commercial" id="{551BB418-4604-4fca-88AC-5F71068FE04A}">
+		<name>マクシスタワー</name>
+		<price>2400</price>
+		<size>1,3</size>
+		<height>4</height>
+		<sprite origin="0,0" offset="65">
+			<picture src="makushisu.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>250</base>
+		</population>
+	</contribution>
+	
+	<contribution type="commercial" id="{8BC1629A-BD98-462c-985A-CCD03F1B8C22}">
+		<name>八王子再開発ビル</name>
+		<price>2720</price><!--680*4-->
+		<size>2,2</size>
+		<height>6</height>
+		<sprite origin="1,0" offset="104">
+			<picture src="saikaihatu.bmp"/>
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>250</base>
+		</population>
+	</contribution>
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{E70630D2-4649-4336-BBE8-842E0664326A}">
+		<picture src="mansyon.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{C7536844-7CD0-49e0-8982-2819F5792B32}">
+		&smallMansion;
+		<pictures>
+			<top    origin="  0,  0" offset="13">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</top>
+			<middle origin="  0, 38" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</middle>
+			<bottom origin="  0, 70" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{9716E5F8-E2CB-40f9-A9C8-5B599895F32D}">
+		&smallMansion;
+		<pictures>
+			<top    origin=" 36,  0" offset="13">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</top>
+			<middle origin=" 36, 38" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</middle>
+			<bottom origin=" 36, 70" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{74915C78-348C-4696-8C19-75B9098FB79C}">
+		&smallMansion;
+		<pictures>
+			<top    origin=" 72,  0" offset="13">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</top>
+			<middle origin=" 72, 38" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</middle>
+			<bottom origin=" 72, 70" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{9E4F3766-CC02-4854-89E9-9DAE9020CDBF}">
+		&smallMansion;
+		<pictures>
+			<top    origin="108,  0" offset="13">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</top>
+			<middle origin="108, 38" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</middle>
+			<bottom origin="108, 70" offset=" 7">
+				<picture ref="{E70630D2-4649-4336-BBE8-842E0664326A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{FF966461-7818-4BE7-BDBC-CC23A38B0B96}">
+		<picture src="mansyon2.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{985CAC71-11BD-44b7-917E-D6D455CE0143}">
+		&middleMansion;
+		<pictures>
+			<top    origin="  0,  0" offset="34">
+				<picture ref="{FF966461-7818-4BE7-BDBC-CC23A38B0B96}"/>
+			</top>
+			<middle origin="  0, 57" offset=" 9">
+				<picture ref="{FF966461-7818-4BE7-BDBC-CC23A38B0B96}"/>
+			</middle>
+			<bottom origin="  0, 89" offset=" 9">
+				<picture ref="{FF966461-7818-4BE7-BDBC-CC23A38B0B96}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{4B6D764D-9DB3-490b-B969-CD2CC1B41893}">
+		&middleMansion;
+		<pictures>
+			<top    origin=" 65,  0" offset="34">
+				<picture ref="{FF966461-7818-4BE7-BDBC-CC23A38B0B96}"/>
+			</top>
+			<middle origin=" 65, 57" offset=" 9">
+				<picture ref="{FF966461-7818-4BE7-BDBC-CC23A38B0B96}"/>
+			</middle>
+			<bottom origin=" 65, 89" offset=" 9">
+				<picture ref="{FF966461-7818-4BE7-BDBC-CC23A38B0B96}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{EBCCE888-BCC7-4C65-8AEF-A6521C616DBD}">
+		<picture src="mansyon3.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{712E0D9A-1A79-4fd5-A1A5-B08B3336F047}">
+		&largeMansion;
+		<size>3,2</size>
+		<pictures>
+			<top    origin="  0,  0" offset="39">
+				<picture ref="{EBCCE888-BCC7-4C65-8AEF-A6521C616DBD}"/>
+			</top>
+			<middle origin="  0, 52" offset="18">
+				<picture ref="{EBCCE888-BCC7-4C65-8AEF-A6521C616DBD}"/>
+			</middle>
+			<bottom origin="  0, 84" offset="18">
+				<picture ref="{EBCCE888-BCC7-4C65-8AEF-A6521C616DBD}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{C1BFC436-71D9-48ab-B43B-9F56D2D0777E}">
+		&largeMansion;
+		<size>2,3</size>
+		<pictures>
+			<top    origin=" 81,  0" offset="28">
+				<picture ref="{EBCCE888-BCC7-4C65-8AEF-A6521C616DBD}"/>
+			</top>
+			<middle origin=" 81, 52" offset="10">
+				<picture ref="{EBCCE888-BCC7-4C65-8AEF-A6521C616DBD}"/>
+			</middle>
+			<bottom origin=" 81, 84" offset="10">
+				<picture ref="{EBCCE888-BCC7-4C65-8AEF-A6521C616DBD}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+</plug-in>

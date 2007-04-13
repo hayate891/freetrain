@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<!--IDは階層が一つ深くなるごとに二桁増える。最後の二桁以外は親のIDに一致させること。-->
+<tree>
+	<category id="01">
+		<icon src="icons.bmp" index="1"/>
+		<name>住宅</name>
+		<category id="0101">
+			<icon src="icons_sp.bmp" index="0"/>
+			<name>一戸建て</name>					
+		</category>
+		<category id="0102">
+			<name>賃貸集合住宅</name>					
+			<category id="010201">
+				<name>賃貸アパート</name>					
+			</category>
+		</category>
+		<category id="0103">
+			<name>寮</name>					
+			<category id="010301">
+				<name>学生寮</name>					
+			</category>
+			<category id="010302">
+				<name>社員寮</name>					
+			</category>
+		</category>
+		<category id="0104">
+			<name>分譲集合住宅</name>					
+			<icon src="icons_sp.bmp" index="1"/>
+			<category id="010401">
+				<name>分譲マンション</name>					
+			</category>
+		</category>
+		
+	</category>
+	<category id="10">
+		<icon src="icons.bmp" index="2"/>
+		<name>店舗</name>
+		<category id="1001">
+			<name>個人日用品店</name>					
+		</category>
+		<category id="1002">
+			<name>個人専門店</name>					
+		</category>
+		<category id="1003">
+			<name>その他小売店</name>					
+			<category id="100301">
+				<name>家電店</name>					
+			</category>
+			<category id="100302">
+				<name>自動車販売店</name>					
+			</category>
+		</category>
+		<category id="1010">
+			<name>地域チェーン日用品店</name>					
+			<category id="101001">
+				<name>ディスカウントショップ</name>					
+			</category>
+			<category id="101002">
+				<name>コンビニ</name>					
+			</category>
+		</category>
+		<category id="1012">
+			<name>チェーン専門店</name>					
+		</category>
+		<category id="1020">
+			<name>スーパー</name>					
+		</category>
+		<category id="1022">
+			<name>デパート</name>					
+		</category>
+		<category id="1030">
+			<name>都市型量販店</name>					
+		</category>
+		<category id="1031">
+			<name>郊外型量販店</name>					
+		</category>
+		<category id="1050">
+			<name>ショッピングモール</name>					
+		</category>
+		<category id="1060">
+			<name>旅客向け小売店</name>					
+			<category id="106001">
+				<name>土産物屋</name>
+			</category>
+		</category>
+		<category id="1070">
+			<icon src="icons_sp.bmp" index="20"/>
+			<name>展示場</name>					
+		</category>
+		<category id="1080">
+			<icon src="icons_sp.bmp" index="20"/>
+			<name>サービス窓口</name>					
+		</category>
+		<category id="1081">
+			<icon src="icons_sp.bmp" index="20"/>
+			<name>地域サービス店</name>					
+		</category>
+	</category>
+	<category id="11">
+		<icon src="icons.bmp" index="3"/>
+		<name>オフィス</name>
+		<category id="1101">
+			<name>貸事務所</name>					
+		</category>
+		<category id="1102">
+			<name>企業事務所</name>					
+		</category>
+		<category id="1103">
+			<name>個人事務所</name>					
+		</category>
+		<category id="1110">
+			<name>銀行</name>					
+		</category>
+		<category id="1120">
+			<name>商業向けサービス</name>					
+		</category>
+		<category id="1170">
+			<name>官公庁</name>					
+		</category>
+		<category id="1190">
+			<icon src="icons_sp.bmp" index="2"/>
+			<name>放送メディア</name>					
+		</category>
+	</category>
+	<category id="20">
+		<icon src="icons.bmp" index="4"/>
+		<name>研究施設</name>
+		<category id="2001">
+			<name>企業一般研究所</name>					
+		</category>
+		<category id="2009">
+			<name>企業特殊研究所</name>					
+		</category>
+		<category id="2011">
+			<name>公立一般研究所</name>					
+			<category id="201101">
+				<name>工業試験場</name>					
+			</category>
+		</category>
+		<category id="2014">
+			<name>農林水産試験場</name>					
+		</category>
+		<category id="2019">
+			<name>公立特殊研究所</name>					
+		</category>
+		<category id="2030">
+			<name>量子研究所</name>					
+		</category>
+		<category id="2090">
+			<name>観測所</name>					
+			<category id="209001">
+				<name>気象観測所</name>					
+			</category>
+			<category id="209002">
+				<name>天体観測所</name>					
+			</category>
+		</category>
+	</category>
+	<category id="21">
+		<icon src="icons.bmp" index="5"/>
+		<name>工場</name>
+		<category id="2101">
+			<name>工場用パーツ</name>					
+		</category>
+		<category id="2102">
+			<name>食品工場</name>					
+		</category>
+		<category id="2106">
+			<name>一般製品工場</name>					
+			<category id="210601">
+				<name>製薬工場</name>					
+			</category>
+		</category>
+		<category id="2112">
+			<name>民生機械工場</name>					
+			<category id="211201">
+				<name>家電工場</name>					
+			</category>
+		</category>
+		<category id="2120">
+			<name>自動車工場</name>					
+		</category>
+		<category id="2129">
+			<name>造船所</name>					
+		</category>
+		<category id="2130">
+			<name>工業機械工場</name>					
+			<category id="213001">
+				<name>町工場</name>					
+			</category>
+		</category>
+		<category id="2136">
+			<name>精機工場</name>					
+		</category>
+		<category id="2140">
+			<name>資材工場</name>					
+			<category id="214001">
+				<name>製鉄所</name>					
+			</category>
+			<category id="214002">
+				<name>製材所</name>					
+			</category>
+		</category>
+		<category id="2145">
+			<name>軽工業工場</name>					
+		</category>
+		<category id="2150">
+			<name>化学工場</name>					
+			<category id="2151">
+				<name>製油所</name>					
+			</category>
+		</category>
+		<category id="2170">
+			<name>ハイテク工場</name>					
+			<category id="217002">
+				<name>半導体工場</name>					
+			</category>
+			<category id="217004">
+				<name>ナノテク工場</name>					
+			</category>
+			<category id="217006">
+				<name>バイオ工場</name>					
+			</category>
+		</category>
+		<category id="2179">
+			<name>その他工業製品工場</name>					
+		</category>
+		<category id="2180">
+			<icon src="icons_sp.bmp" index="3"/>
+			<name>燃料貯蔵所</name>					
+			<category id="218001">
+				<name>石油タンク</name>					
+			</category>
+			<category id="218002">
+				<name>ガスタンク</name>					
+			</category>
+		</category>
+		<category id="2190">
+			<icon src="icons_sp.bmp" index="4"/>
+			<name>一般発電所</name>					
+			<category id="219001">
+				<name>火力発電所</name>					
+			</category>
+			<category id="219002">
+				<name>太陽光発電所</name>					
+			</category>
+			<category id="219003">
+				<name>風力発電所</name>					
+			</category>
+		</category>
+		<category id="2192">
+			<icon src="icons_sp.bmp" index="4"/>
+			<name>原子力発電所</name>					
+		</category>
+		<category id="2194">
+			<icon src="icons_sp.bmp" index="4"/>
+			<name>特殊発電所</name>					
+			<category id="219401">
+				<name>水力発電所</name>					
+			</category>
+			<category id="219402">
+				<name>地熱発電所</name>					
+			</category>
+			<category id="219403">
+				<name>潮力発電所</name>					
+			</category>
+		</category>
+		<category id="2199">
+			<icon src="icons_sp.bmp" index="4"/>
+			<name>その他電力通信施設</name>					
+			<category id="219902">
+				<name>変電所</name>					
+			</category>
+			<category id="219904">
+				<name>送電線鉄塔</name>					
+			</category>
+		</category>
+	</category>
+	<category id="27">
+		<icon src="icons_sp.bmp" index="5"/>
+		<name>航空機関連施設</name>					
+		<category id="2701">
+			<icon src="icons_sp.bmp" index="5"/>
+			<name>空港</name>					
+			<category id="270110">
+				<icon src="icons_sp.bmp" index="5"/>
+				<name>貨物ターミナル</name>					
+			</category>
+			<category id="270120">
+				<icon src="icons_sp.bmp" index="5"/>
+				<name>旅客ターミナル</name>					
+			</category>
+			<category id="270130">
+				<icon src="icons_sp.bmp" index="5"/>
+				<name>管制指令施設</name>					
+			</category>
+			<category id="270170">
+				<icon src="icons_sp.bmp" index="5"/>
+				<name>格納庫</name>					
+			</category>
+			<category id="270180">
+				<icon src="icons_sp.bmp" index="5"/>
+				<name>滑走路</name>					
+			</category>
+			<category id="270190">
+				<icon src="icons_sp.bmp" index="5"/>
+				<name>その他空港設備</name>					
+			</category>
+		</category>
+	</category>
+	<category id="28">
+		<icon src="icons_sp.bmp" index="6"/>
+		<name>船舶関連施設</name>					
+		<category id="2801">
+			<icon src="icons_sp.bmp" index="6"/>
+			<name>港湾</name>	
+			<category id="280110">
+				<icon src="icons_sp.bmp" index="6"/>
+				<name>貨物埠頭</name>					
+			</category>
+			<category id="280120">
+				<icon src="icons_sp.bmp" index="6"/>
+				<name>旅客埠頭</name>					
+			</category>
+			<category id="280190">
+				<icon src="icons_sp.bmp" index="6"/>
+				<name>その他港湾設備</name>					
+			</category>
+		</category>
+		<category id="2802">
+			<icon src="icons_sp.bmp" index="6"/>
+			<name>ドック</name>					
+		</category>
+		<category id="2890">
+			<icon src="icons_sp.bmp" index="6"/>
+			<name>灯台</name>					
+		</category>
+	</category>
+	
+	<category id="29">
+		<icon src="icons.bmp" index="6"/>
+		<name>物流</name>
+		<category id="2901">
+			<name>倉庫</name>					
+		</category>
+		<category id="2904">
+			<name>集配所</name>					
+		</category>
+	</category>
+	<category id="30">
+		<icon src="icons.bmp" index="7"/>
+		<name>食料産地</name>
+		<category id="3001">
+			<icon src="icons_sp.bmp" index="7"/>
+			<name>食料農場</name>					
+			<category id="300101">
+				<name>水田</name>					
+			</category>
+			<category id="300102">
+				<name>野菜畑</name>					
+			</category>
+			<category id="300104">
+				<name>果樹園</name>					
+			</category>
+		</category>
+		<category id="3002">
+			<name>畜産場</name>					
+		</category>
+		<category id="3010">
+			<name>漁港</name>					
+		</category>
+		<category id="3012">
+			<name>養殖場</name>					
+		</category>
+	</category>
+	<category id="31">
+		<icon src="icons.bmp" index="8"/>
+		<name>原材料産地</name>
+		<category id="3101">
+			<icon src="icons_sp.bmp" index="13"/>
+			<name>天然素材産地</name>					
+			<category id="310101">
+				<name>伐採場</name>					
+			</category>
+		</category>
+		<category id="3102">
+			<icon src="icons_sp.bmp" index="8"/>
+			<name>農園</name>					
+		</category>
+		<category id="3103">
+			<icon src="icons_sp.bmp" index="8"/>
+			<name>一般牧場</name>					
+		</category>
+		<category id="3150">
+			<name>一般鉱山</name>					
+			<category id="315001">
+				<name>炭坑</name>					
+			</category>
+			<category id="315003">
+				<name>採石場</name>					
+			</category>
+			<category id="315080">
+				<name>貴金属鉱山</name>					
+			</category>
+		</category>
+		<category id="3170">
+			<name>油田</name>					
+		</category>
+	</category>
+	<category id="40">
+		<icon src="icons.bmp" index="9"/>
+		<name>飲食</name>
+		<category id="4001">
+			<name>一般飲食店</name>					
+		</category>
+		<category id="4011">
+			<name>チェーン飲食店</name>					
+			<category id="401101">
+				<name>ファーストフード</name>					
+			</category>
+			<category id="401102">
+				<name>ファミレス</name>					
+			</category>
+		</category>
+		<category id="4070">
+			<name>高級飲食店</name>					
+		</category>
+		<category id="4090">
+			<name>有名飲食店</name>					
+		</category>
+	</category>
+	<category id="41">
+		<icon src="icons.bmp" index="10"/>
+		<name>宿泊</name>
+		<category id="4101">
+			<name>一般宿泊施設</name>					
+			<category id="410101">
+				<name>民宿</name>					
+			</category>
+			<category id="410120">
+				<name>旅館</name>					
+			</category>
+			<category id="410140">
+				<name>ビジネスホテル</name>					
+			</category>
+			<category id="410150">
+				<name>観光ホテル</name>					
+			</category>
+		</category>
+		<category id="4110">
+			<name>有名宿泊施設</name>					
+			<category id="411001">
+				<name>高級ホテル</name>					
+			</category>
+		</category>
+		<category id="4120">
+			<name>特殊宿泊施設</name>					
+			<category id="412010">
+				<name>温泉旅館</name>					
+			</category>
+			<category id="412020">
+				<name>キャンプ場</name>					
+			</category>
+		</category>
+		<category id="412090">
+			<name>別荘</name>					
+		</category>
+	</category>
+	<category id="50">
+		<icon src="icons.bmp" index="11"/>
+		<name>娯楽</name>
+		<category id="5001">
+			<icon src="icons_sp.bmp" index="10"/>
+			<name>遊技場</name>					
+			<category id="500101">
+				<name>ゲームセンター</name>					
+			</category>
+		</category>
+		<category id="5008">
+			<icon src="icons_sp.bmp" index="10"/>
+			<name>民営賭博場</name>					
+			<category id="500810">
+				<name>パチンコ店</name>					
+			</category>
+			<category id="500820">
+				<name>雀荘</name>					
+			</category>
+		</category>
+		<category id="5009">
+			<icon src="icons_sp.bmp" index="10"/>
+			<name>公営賭博場</name>					
+			<category id="500901">
+				<name>競馬場</name>					
+			</category>
+		</category>
+		<category id="5010">
+			<icon src="icons_sp.bmp" index="9"/>
+			<name>スポーツ観戦施設</name>					
+			<category id="501001">
+				<name>プロ野球場</name>					
+			</category>
+			<category id="501002">
+				<name>プロサッカー場</name>					
+			</category>
+		</category>
+		<category id="5011">
+			<icon src="icons_sp.bmp" index="9"/>
+			<name>スポーツ競技施設</name>					
+			<category id="501101">
+				<name>陸上競技場</name>					
+			</category>
+			<category id="501110">
+				<name>テニスコート</name>					
+			</category>
+			<category id="501120">
+				<name>一般球技場</name>					
+			</category>
+		</category>
+		<category id="5012">
+			<icon src="icons_sp.bmp" index="9"/>
+			<name>一般スポーツ遊技施設</name>					
+			<category id="501280">
+				<name>屋外プール</name>					
+			</category>
+		</category>
+		<category id="5018">
+			<icon src="icons_sp.bmp" index="9"/>
+			<name>特定スポーツ遊技施設</name>					
+			<category id="501810">
+				<name>ゴルフ場</name>					
+			</category>
+			<category id="501820">
+				<name>スキー場</name>					
+			</category>
+			<category id="501880">
+				<icon src="icons_sp.bmp" index="21"/>
+				<name>マリーナ</name>					
+			</category>
+			<category id="501890">
+				<icon src="icons_sp.bmp" index="21"/>
+				<name>野外遊泳場</name>					
+			</category>
+		</category>
+		<category id="5020">
+			<icon src="icons_sp.bmp" index="11"/>
+			<name>観覧施設</name>					
+			<category id="502010">
+				<name>劇場</name>					
+			</category>
+			<category id="502020">
+				<name>映画館</name>					
+			</category>
+		</category>
+		<category id="5021">
+			<icon src="icons_sp.bmp" index="12"/>
+			<name>教養施設</name>					
+			<category id="502101">
+				<name>美術館</name>					
+			</category>
+			<category id="502111">
+				<name>博物館</name>					
+			</category>
+			<category id="502121">
+				<name>歴史資料館</name>					
+			</category>
+			<category id="502131">
+				<name>図書館</name>					
+			</category>
+			<category id="502141">
+				<name>動植物園</name>					
+			</category>
+			<category id="502150">
+				<name>水族館</name>					
+			</category>
+		</category>
+		<category id="5030">
+			<name>児童公園</name>					
+		</category>
+		<category id="5031">
+			<icon src="icons_sp.bmp" index="15"/>
+			<name>遊園地</name>					
+		</category>
+		<category id="5032">
+			<name>複合レジャー施設</name>					
+			<category id="503201">
+				<name>スパリゾート</name>					
+			</category>
+		</category>
+		<category id="5035">
+			<name>イベント会場</name>					
+		</category>
+		<category id="5040">
+			<icon src="icons_sp.bmp" index="13"/>
+			<name>緑地</name>					
+		</category>
+		<category id="5042">
+			<icon src="icons_sp.bmp" index="13"/>
+			<name>自然公園</name>					
+		</category>
+		<category id="5045">
+			<icon src="icons_sp.bmp" index="13"/>
+			<name>収穫場</name>
+		</category>
+		<category id="5090">
+			<icon src="icons_sp.bmp" index="14"/>
+			<name>酒場</name>					
+		</category>
+		<category id="5091">
+			<icon src="icons_sp.bmp" index="14"/>
+			<name>ナイトクラブ</name>					
+		</category>
+		<category id="5099">
+			<icon src="icons_sp.bmp" index="14"/>
+			<name>性風俗</name>					
+		</category>
+	</category>
+	<category id="59">
+		<icon src="icons.bmp" index="12"/>
+		<name>観光</name>
+		<category id="5901">
+			<name>史跡</name>					
+			<category id="590101">
+				<name>有名寺社</name>					
+			</category>
+			<category id="590111">
+				<name>城郭</name>					
+			</category>
+		</category>
+		<category id="5910">
+			<icon src="icons_sp.bmp" index="13"/>
+			<name>景勝地</name>					
+			<category id="591001">
+				<name>国定公園</name>					
+			</category>
+		</category>
+		<category id="5920">
+			<name>天然温泉</name>					
+		</category>
+		<category id="5980">
+			<icon src="icons_sp.bmp" index="16"/>
+			<name>ランドマーク</name>					
+		</category>
+	</category>
+	<category id="70">
+		<icon src="icons.bmp" index="13"/>
+		<name>公共施設</name>
+		<category id="7001">
+			<name>養育施設</name>					
+			<category id="700101">
+				<name>保育園</name>					
+			</category>
+			<category id="700104">
+				<name>幼稚園</name>					
+			</category>
+		</category>
+		<category id="7002">
+			<icon src="icons_sp.bmp" index="17"/>
+			<name>公立教育施設</name>					
+			<category id="700201">
+				<name>公立小中学校</name>					
+			</category>
+			<category id="700210">
+				<name>公立高校</name>					
+			</category>
+			<category id="700240">
+				<name>公立大学</name>					
+			</category>
+			<category id="700270">
+				<name>公立文化センター</name>					
+			</category>
+		</category>
+		<category id="7004">
+			<icon src="icons_sp.bmp" index="17"/>
+			<name>私立教育施設</name>					
+			<category id="700401">
+				<name>私立小中学校</name>					
+			</category>
+			<category id="700410">
+				<name>私立高校</name>					
+			</category>
+			<category id="700440">
+				<name>私立大学</name>					
+			</category>
+			<category id="700470">
+				<name>私立専門学校</name>					
+			</category>
+			<category id="700490">
+				<name>学習塾</name>					
+			</category>
+		</category>
+		<category id="7020">
+			<icon src="icons_sp.bmp" index="18"/>
+			<name>病院</name>					
+		</category>
+		<category id="7030">
+			<name>集会所</name>					
+		</category>
+		<category id="7040">
+			<name>その他福祉施設</name>					
+		</category>
+		<category id="7045">
+			<name>結婚式場</name>					
+		</category>
+		<category id="7050">
+			<name>宗教施設</name>					
+		</category>
+		<category id="7060">
+			<name>役所</name>					
+		</category>
+		<category id="7065">
+			<name>郵便局</name>					
+		</category>
+		<category id="7066">
+			<name>警察署</name>					
+		</category>
+		<category id="7068">
+			<name>消防署</name>					
+		</category>
+		<category id="7080">
+			<name>上水施設</name>					
+			<category id="708001">
+				<name>浄水場</name>					
+			</category>
+			<category id="708002">
+				<name>給水塔</name>					
+			</category>
+		</category>
+	</category>
+	<category id="80">
+		<icon src="icons.bmp" index="14"/>
+		<name>鉄道付属物</name>
+		<category id="8001">
+			<name>一般鉄道付属物</name>					
+		</category>
+	</category>
+	<category id="81">
+		<icon src="icons.bmp" index="14"/>
+		<name>道路関連物</name>
+		<category id="8101">
+			<icon src="icons_sp.bmp" index="19"/>
+			<name>駐車場</name>					
+		</category>
+		<category id="8102">
+			<icon src="icons_sp.bmp" index="19"/>
+			<name>パーキングエリア</name>					
+		</category>
+		<category id="8110">
+			<name>料金所</name>					
+		</category>
+	</category>
+	<category id="82">
+		<icon src="icons.bmp" index="15"/>
+		<name>土木</name>
+		<category id="8210">
+			<name>治水防波設備</name>					
+		</category>
+		<category id="8230">
+			<name>治山設備</name>					
+		</category>
+	</category>
+	<category id="85">
+		<icon src="icons_sp.bmp" index="13"/>
+		<name>自然物</name>
+		<category id="8510">
+			<name>地表</name>			
+			<category id="851010">
+				<name>森林</name>			
+			</category>
+			<category id="851020">
+				<name>草原</name>			
+			</category>
+			<category id="851030">
+				<name>不毛地</name>			
+			</category>
+		</category>
+		<category id="8520">
+			<icon src="icons_sp.bmp" index="21"/>
+			<name>水辺</name>					
+			<category id="852010">
+				<name>海浜</name>					
+			</category>
+			<category id="852020">
+				<name>河川</name>					
+			</category>
+		</category>
+		<category id="8550">
+			<name>自然構造物</name>					
+		</category>
+	</category>
+	<category id="99">
+		<icon src="icons.bmp" index="16"/>
+		<name>特殊</name>
+		<category id="9910">
+			<name>軍事施設</name>					
+		</category>
+		<category id="9920">
+			<name>核施設</name>					
+		</category>
+		<category id="9930">
+			<name>下水処理場</name>					
+		</category>
+		<category id="9932">
+			<name>処理処分場</name>					
+			<category id="993201">
+				<name>ゴミ処理場</name>					
+			</category>
+			<category id="993202">
+				<name>埋め立て地</name>					
+			</category>
+		</category>
+		<category id="9934">
+			<name>産業廃棄物処理場</name>					
+		</category>
+		<category id="9940">
+			<name>墓地斎場</name>					
+		</category>
+		<category id="9950">
+			<name>刑務所</name>					
+		</category>
+		<category id="9990">
+			<name>忌避物件</name>					
+			<category id="999010">
+				<name>カルト宗教施設</name>					
+			</category>
+			<category id="999020">
+				<name>暴力団事務所</name>					
+			</category>
+			<category id="999040">
+				<name>廃墟</name>					
+			</category>
+			<category id="999050">
+				<name>汚染地区</name>					
+			</category>
+		</category>
+	</category>
+</tree>
