@@ -1,0 +1,8 @@
++MagicLibrary.DLL 
+	DotNet Magic UI Library 
+	By Phil Wright 
+	http://www.dotnetmagic.com/
++UtilityLibrary.dll
+	VSNetToolbar (flat toolbar with embedded combo boxes)
+	By Carlos H. Perez 
+	http://www.codeproject.com/cs/menu/vsnettoolbar.asp

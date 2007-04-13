@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<plug-in>
+	<title>森林</title>
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
+	<author>477@２両目</author>
+	
+	<depend on="org.kohsuke.freetrain.land.farmland" />
+	<!--depend on="jp.popkmart.heuer.freetrain.land.seaside" /-->
+	
+	<!--contribution type="picture" id="{C08FF7F4-B891-4AAD-BD45-74800F62CA80}">
+		<picture src="ricefield_SUM.bmp" />
+	</contribution-->
+	<!--contribution type="land" id="{E81D9B88-B0E9-4DE0-C477-338FC07E80F6}">
+		<group>ブルドーザーEx</group>
+		<class name="freetrain.world.land.forest.BulldozerEx"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		<price>0</price>
+		<computerCannotBuild />
+	</contribution-->
+	
+	<contribution type="picture" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-G">	
+		<picture src="ground_spring.bmp">
+			<override when="summer" src="ground_summer.bmp" />
+			<override when="autumn" src="ground_autumn.bmp" />
+			<override when="winter" src="ground_winter.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}">
+		<group>森林</group>
+		<name>杉</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_sugi.bmp">
+			<override when="winter" src="trees_sugi.WIN.bmp" />
+		</picture>
+		<size>288,42</size>
+		<count>9</count>		
+		<density>3</density>
+		<price>100</price>
+		<computerCannotBuild/><!-- forest don't come as a result of "development" -->
+	</contribution>
+	
+	
+	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}">
+		<group>森林</group>
+		<name>松</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_matsu.bmp">
+			<override when="winter" src="trees_matsu.WIN.bmp" />
+		</picture>
+		<size>192,41</size>
+		<count>6</count>
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}">
+		<group>森林</group>
+		<name>楠</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_kusu.bmp">
+			<override when="winter" src="trees_kusu.WIN.bmp" />
+		</picture>
+		<size>288,26</size>
+		<count>9</count>
+		<density>1</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}">
+		<group>森林</group>
+		<name>楓</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_kaede.bmp">
+			<override when="autumn" src="trees_kaede.AUT.bmp" />
+			<override when="winter" src="trees_kaede.WIN.bmp" />
+		</picture>
+		<size>96,25</size>
+		<count>3</count>
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}">
+		<group>森林</group>
+		<name>銀杏</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_icho.bmp">
+			<override when="autumn" src="trees_icho.AUT.bmp" />
+			<override when="winter" src="trees_icho.WIN.bmp" />
+		</picture>
+		<size>160,43</size>
+		<count>5</count>
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}">
+		<group>森林</group>
+		<name>ブナ</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_buna.bmp">
+			<override when="summer" src="trees_buna.SUM.bmp" />
+			<override when="autumn" src="trees_buna.AUT.bmp" />
+			<override when="winter" src="trees_buna.WIN.bmp" />
+		</picture>
+		<size>192,40</size>
+		<count>6</count>
+		<density>3</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-m">
+		<group>森林(山肌)</group>
+		<name>杉</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_sugi.bmp">
+			<override when="winter" src="trees_sugi.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{FBD0CD06-016A-4037-AB15-02040218CBAA}-G" origin="0,0"/>	
+		</ground>
+		<size>288,42</size>
+		<count>9</count>		
+		<density>3</density>
+		<price>100</price>
+		<computerCannotBuild/><!-- forest don't come as a result of "development" -->
+	</contribution>
+	
+	
+	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-m">
+		<group>森林(山肌)</group>
+		<name>松</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_matsu.bmp">
+			<override when="winter" src="trees_matsu.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{FBD0CD06-016A-4037-AB15-02040218CBAA}-G" origin="0,0"/>	
+		</ground>
+		<size>192,41</size>
+		<count>6</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}-m">
+		<group>森林(山肌)</group>
+		<name>楠</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_kusu.bmp">
+			<override when="winter" src="trees_kusu.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{FBD0CD06-016A-4037-AB15-02040218CBAA}-G" origin="0,0"/>	
+		</ground>
+		<size>288,26</size>
+		<count>9</count>
+		
+		<density>1</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}-m">
+		<group>森林(山肌)</group>
+		<name>楓</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_kaede.bmp">
+			<override when="autumn" src="trees_kaede.AUT.bmp" />
+			<override when="winter" src="trees_kaede.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{FBD0CD06-016A-4037-AB15-02040218CBAA}-G" origin="0,0"/>	
+		</ground>
+		<size>96,25</size>
+		<count>3</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}-m">
+		<group>森林(山肌)</group>
+		<name>銀杏</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_icho.bmp">
+			<override when="autumn" src="trees_icho.AUT.bmp" />
+			<override when="winter" src="trees_icho.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{FBD0CD06-016A-4037-AB15-02040218CBAA}-G" origin="0,0"/>	
+		</ground>
+		<size>160,43</size>
+		<count>5</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}-m">
+		<group>森林(山肌)</group>
+		<name>ブナ</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_buna.bmp">
+			<override when="summer" src="trees_buna.SUM.bmp" />
+			<override when="autumn" src="trees_buna.AUT.bmp" />
+			<override when="winter" src="trees_buna.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{FBD0CD06-016A-4037-AB15-02040218CBAA}-G" origin="0,0"/>	
+		</ground>
+		<size>192,40</size>
+		<count>6</count>
+		
+		<density>3</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-g">
+		<group>森林(草原)</group>
+		<name>杉</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_sugi.bmp">
+			<override when="winter" src="trees_sugi.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{1AA12290-AC57-4388-AC62-323B813D0CAC}" origin="64,0"/>	
+		</ground>
+		<size>288,42</size>
+		<count>9</count>		
+		<density>3</density>
+		<price>100</price>
+		<computerCannotBuild/><!-- forest don't come as a result of "development" -->
+	</contribution>
+	
+	
+	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-g">
+		<group>森林(草原)</group>
+		<name>松</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_matsu.bmp">
+			<override when="winter" src="trees_matsu.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{1AA12290-AC57-4388-AC62-323B813D0CAC}" origin="64,0"/>	
+		</ground>
+		<size>192,41</size>
+		<count>6</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}-g">
+		<group>森林(草原)</group>
+		<name>楠</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_kusu.bmp">
+			<override when="winter" src="trees_kusu.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{1AA12290-AC57-4388-AC62-323B813D0CAC}" origin="64,0"/>	
+		</ground>
+		<size>288,26</size>
+		<count>9</count>
+		
+		<density>1</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}-g">
+		<group>森林(草原)</group>
+		<name>楓</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_kaede.bmp">
+			<override when="autumn" src="trees_kaede.AUT.bmp" />
+			<override when="winter" src="trees_kaede.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{1AA12290-AC57-4388-AC62-323B813D0CAC}" origin="64,0"/>	
+		</ground>
+		<size>96,25</size>
+		<count>3</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}-g">
+		<group>森林(草原)</group>
+		<name>銀杏</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_icho.bmp">
+			<override when="autumn" src="trees_icho.AUT.bmp" />
+			<override when="winter" src="trees_icho.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{1AA12290-AC57-4388-AC62-323B813D0CAC}" origin="64,0"/>	
+		</ground>
+		<size>160,43</size>
+		<count>5</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+	
+	
+	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}-g">
+		<group>森林(草原)</group>
+		<name>ブナ</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_buna.bmp">
+			<override when="summer" src="trees_buna.SUM.bmp" />
+			<override when="autumn" src="trees_buna.AUT.bmp" />
+			<override when="winter" src="trees_buna.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{1AA12290-AC57-4388-AC62-323B813D0CAC}" origin="64,0"/>	
+		</ground>
+		<size>192,40</size>
+		<count>6</count>
+		
+		<density>3</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution>
+
+	<!--contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-s">
+		<group>松林(砂浜)</group>
+		<name>浜の松林</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_matsu.bmp">
+			<override when="winter" src="trees_matsu.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{LAND0001-8058-11D7-BB78-0090FE1AB959}" origin="0,48"/>	
+		</ground>
+		<size>192,41</size>
+		<count>6</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution-->
+</plug-in>

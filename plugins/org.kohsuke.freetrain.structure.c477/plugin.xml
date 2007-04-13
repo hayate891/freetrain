@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<!DOCTYPE plug-in [
+<!ENTITY colorMapTest '
+	<spriteType name="colorMapped">
+		<map from="213,205,186" to="196,202,216" />
+		<map from="188,175,150" to="165,175,193" />
+		<map from="188,174,144" to="160,170,192" />
+		<map from="170,159,134" to="150,158,177" />
+		<map from="166,149,116" to="135,148,172" />
+		<map from="162,148,121" to="140,150,170" />
+		<map from="143,127, 97" to="119,130,152" />
+		<map from="103, 91, 79" to="102,111,119" />
+		<map from=" 91, 78, 64" to=" 88, 97,108" />
+	</spriteType>
+'>
+<!ENTITY crKhaki '
+	<spriteType name="hueTransform">
+		<map from="*,0,0" to="188,174,144"/>
+	</spriteType>
+'>
+<!ENTITY crLtBlue '
+	<spriteType name="hueTransform">
+		<map from="*,0,0" to="144,158,188"/>
+	</spriteType>
+'>
+<!ENTITY crSilver '
+	<spriteType name="hueTransform">
+		<map from="*,0,0" to="190,190,190"/>
+	</spriteType>
+'>
+<!ENTITY crCyan '
+	<spriteType name="hueTransform">
+		<map from="*,0,0" to="166,189,203"/>
+	</spriteType>
+'>
+<!ENTITY crDkGray '
+	<spriteType name="hueTransform">
+		<map from="*,0,0" to="90,90,90"/>
+	</spriteType>
+'>
+<!ENTITY crBrown '
+	<spriteType name="hueTransform">
+		<map from="*,0,0" to="127,74,57"/>
+	</spriteType>
+'>
+
+<!ENTITY smallBuildingPopulation '
+	<population>
+		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<base>35</base>
+	</population>
+'>
+<!ENTITY SinjukuMitsuiParam '
+	<group>新宿三井ビル</group>
+	<price>39000</price>
+	<minHeight>3</minHeight>
+	<maxHeight>10</maxHeight>
+	<population>
+		<class name="freetrain.contributions.population.CombinationPopulation"/>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>1200</base>
+		</population>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>300</base>
+		</population>
+	</population>
+'>
+<!ENTITY SinjukuSumitomoParam '
+	<group>新宿住友ビル</group>
+	<price>30000</price>
+	<size>5,5</size>
+	<minHeight>3</minHeight>
+	<maxHeight>10</maxHeight>
+	<population>
+		<class name="freetrain.contributions.population.CombinationPopulation"/>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>1000</base>
+		</population>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>200</base>
+		</population>
+	</population>
+'>
+<!ENTITY officeBuildingAPopulation '
+	<population>
+		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<base>200</base>
+	</population>
+'>
+<!ENTITY officeBuildingWithHeliportPopulation '
+	<population>
+		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<base>250</base>
+	</population>
+'>
+
+]>
+
+
+
+
+<plug-in>
+	<title>建物セット</title>
+	<author>C477@ニ両目</author>
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
+	
+	<contribution type="commercial" id="{BC43CE38-601A-42c7-992A-6049CCD29B94}">
+		<group>コンビニ</group>
+		<name>セブンイレブン</name>
+		<price>200</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>35</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="store_s01.bmp" >
+				<override when="night" src="store_s01_n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{2C3ED0DA-FBA1-4586-9691-67DC93B851C9}">
+		<name>老舗百貨店</name>
+		<price>2800</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>600</base>
+		</population>
+		<sprite origin="0,0" offset="49">
+			<picture src="store_m01.bmp">
+				<override when="night" src="store_m01_n.bmp"/>
+			</picture>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{9F3E82AD-2A49-4aef-954C-E872F535B3D8}">
+		<name>分譲マンション</name>
+		<price>2400</price>
+		<size>2,2</size>
+		<height>3</height>
+		<sprite origin="0,0" offset="40">
+			<picture src="mansn_m01.bmp">
+				<override when="night" src="mansn_m01_n.bmp"/>
+			</picture>
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>200</base>
+		</population>
+	</contribution>
+	
+	<contribution type="commercial" id="{27D6D0C0-2B1A-4494-9257-14C208168075}">
+		<name>分譲住宅一戸建て</name>
+		<price>110</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="16">
+			<picture src="house_s01.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>10</base>
+		</population>
+	</contribution>
+	
+	<contribution type="picture" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}">
+		&crSilver;
+		<picture src="bldg_m01.bmp">
+			<override when="night" src="bldg_m01_n.bmp"/>
+		</picture>
+	</contribution>
+
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-0">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="0,0" offset="48">
+			&crSilver;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-1">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="64,0" offset="48">
+			&crSilver;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-2">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="0,0" offset="48">
+			&crCyan;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-3">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="64,0" offset="48">
+			&crCyan;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-4">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="0,0" offset="48">
+			&crDkGray;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-5">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="64,0" offset="48">
+			&crDkGray;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-6">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="0,0" offset="48">
+			&crBrown;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="commercial" id="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}-7">
+		<name>中層雑居オフィスビル</name>
+		<price>1600</price>
+		<size>2,2</size>
+		<height>3</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>300</base>
+		</population>
+		<sprite origin="64,0" offset="48">
+			&crBrown;
+			<picture ref="{B99FA2F7-F138-46a1-99F7-34AE23A157F6}"/>
+		</sprite>
+	</contribution>
+		
+	
+	<contribution type="picture" id="{2E8E24AC-4242-4801-A4DD-2947A0800794}">
+		<picture src="bldgVH01.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{442C7E12-A3BA-4c25-9129-C3803EA760BC}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>3,2</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			
+			<top    origin=" 0,  0" offset="24">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin=" 0, 48" offset="24">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin=" 0, 96" offset="24">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{8495D468-B2EF-4816-9C2A-67D8D68FCBDA}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>2,3</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="80,  0" offset="16">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="80, 48" offset="16">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="80, 96" offset="16">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{1E3FC997-DD98-4b47-82E0-D1C5914B9537}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>3,2</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="160,  0" offset="24">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="160, 48" offset="24">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="160, 96" offset="24">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{615FF4AA-898E-466f-8004-1855F82C1B5B}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>2,3</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="240,  0" offset="16">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="240, 48" offset="16">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="240, 96" offset="16">
+				&crKhaki;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{16D97ECA-5387-4D2C-B51D-E54663B21B2B}">
+		<picture src="bldgVH02.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{9BF4DD25-050A-4633-BC8B-0B8B226FC5E8}">
+		<group>貸しビル(ヘリポート付)</group>
+		<price>4800</price>
+		<size>3,2</size>
+		<minHeight>3</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingWithHeliportPopulation;
+		<pictures>
+			<top    origin="  0,  0" offset="24">
+				<picture ref="{16D97ECA-5387-4D2C-B51D-E54663B21B2B}"/>
+			</top>
+			<middle origin="  0, 48" offset="24">
+				<picture ref="{16D97ECA-5387-4D2C-B51D-E54663B21B2B}"/>
+			</middle>
+			<bottom origin="  0, 96" offset="24">
+				<picture ref="{16D97ECA-5387-4D2C-B51D-E54663B21B2B}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{5E12C371-F928-40f4-B661-FFC2DC71750E}">
+		<group>貸しビル(ヘリポート付)</group>
+		<price>4800</price>
+		<size>2,3</size>
+		<minHeight>3</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingWithHeliportPopulation;
+		<pictures>
+			<top    origin=" 80,  0" offset="16">
+				<picture ref="{16D97ECA-5387-4D2C-B51D-E54663B21B2B}"/>
+			</top>
+			<middle origin=" 80, 48" offset="16">
+				<picture ref="{16D97ECA-5387-4D2C-B51D-E54663B21B2B}"/>
+			</middle>
+			<bottom origin=" 80, 96" offset="16">
+				<picture ref="{16D97ECA-5387-4D2C-B51D-E54663B21B2B}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{98D10236-1A52-455B-8D86-7FD3B9B26994}">
+		<picture src="bldgVH03.bmp">
+			<override when="night" src="bldgVH03_n.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{D57200E0-8E73-4899-8EEC-0E9AC95C3D40}">
+		&SinjukuMitsuiParam;
+		<size>5,6</size>
+		<pictures>
+			<top    origin="-32,  0" offset="24">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</top>
+			<middle origin="-32, 88" offset=" 8">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</middle>
+			<bottom origin="  0,264" offset="32">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{200CC5B5-6F63-4A49-99FF-537DC8EE3DC2}">
+		&SinjukuMitsuiParam;
+		<size>5,6</size>
+		<pictures>
+			<top    origin="  0,  0" offset="40" height="88">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</top>
+			<middle origin="  0, 88" offset="24">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</middle>
+			<bottom origin="  0,168" offset="32">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{6E3D2FBA-4A74-426C-88E3-4787E3946543}">
+		&SinjukuMitsuiParam;
+		<size>6,5</size>
+		<pictures>
+			<top    origin="176,  0" offset="48" height="88">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</top>
+			<middle origin="176, 88" offset="32">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</middle>
+			<bottom origin="176,168" offset="40">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{488D9D06-46B1-45EA-8DCE-61B1041254A2}">
+		&SinjukuMitsuiParam;
+		<size>6,5</size>
+		<pictures>
+			<top    origin="208,  0" offset="32">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</top>
+			<middle origin="208, 88" offset="16">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</middle>
+			<bottom origin="176,264" offset="40">
+				<picture ref="{98D10236-1A52-455B-8D86-7FD3B9B26994}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}">
+		<picture src="bldgVH04.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{C35B9F7A-7D69-4D1B-9B92-D05CBF4C20D7}">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="  0, 88" offset="40">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="  0,272" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="  0,448" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{A9E3F58D-5DB9-4CEF-8BC1-26DDBDD356C1}">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="  0,  8" offset="40" height="80">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="  0,192" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="  0,368" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{5BD744B4-195B-4609-91A0-42B69A747349}">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="160, 88" offset="40">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="160,272" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="160,448" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{409ECEB5-C9A9-4516-B96C-C87FB2B93F32}">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="160,  8" offset="40">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="160,192" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="160,368" offset="32">
+				&crKhaki;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+
+	<contribution type="varHeightBuilding" id="{C35B9F7A-7D69-4D1B-9B92-D05CBF4C20D7}-a">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="  0, 88" offset="40">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="  0,272" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="  0,448" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{A9E3F58D-5DB9-4CEF-8BC1-26DDBDD356C1}-a">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="  0,  8" offset="40" height="80">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="  0,192" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="  0,368" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{5BD744B4-195B-4609-91A0-42B69A747349}-a">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="160, 88" offset="40">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="160,272" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="160,448" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{409ECEB5-C9A9-4516-B96C-C87FB2B93F32}-a">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="160,  8" offset="40">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="160,192" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="160,368" offset="32">
+				&crSilver;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{C35B9F7A-7D69-4D1B-9B92-D05CBF4C20D7}-b">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="  0, 88" offset="40">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="  0,272" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="  0,448" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{A9E3F58D-5DB9-4CEF-8BC1-26DDBDD356C1}-b">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="  0,  8" offset="40" height="80">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="  0,192" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="  0,368" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{5BD744B4-195B-4609-91A0-42B69A747349}-b">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="160, 88" offset="40">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="160,272" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="160,448" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{409ECEB5-C9A9-4516-B96C-C87FB2B93F32}-b">
+		&SinjukuSumitomoParam;
+		<pictures>
+			<top    origin="160,  8" offset="40">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</top>
+			<middle origin="160,192" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</middle>
+			<bottom origin="160,368" offset="32">
+				&crCyan;
+				<picture ref="{6D2631CB-336E-4DD4-AEF7-B915EC5D8B25}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{0E9D085D-056B-4057-8C64-74952C003256}">
+		<picture src="bldg_s01.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{1F81CA6C-4D44-418B-A242-A9E4104648D3}">
+		<name>小規模雑居ビル</name>
+		<price>250</price>
+		<size>1,1</size>
+		<minHeight>2</minHeight>
+		<maxHeight>3</maxHeight>
+		&smallBuildingPopulation;
+		<pictures>
+			<top    origin=" 0, 14" offset="2">
+				<picture ref="{0E9D085D-056B-4057-8C64-74952C003256}"/>
+			</top>
+			<middle origin=" 0, 40" offset="8">
+				<picture ref="{0E9D085D-056B-4057-8C64-74952C003256}"/>
+			</middle>
+			<bottom origin=" 0, 72" offset="8">
+				<picture ref="{0E9D085D-056B-4057-8C64-74952C003256}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{5FACC378-154D-4FAE-8BDE-3C2DA1BAB635}">
+		<name>小規模雑居ビル</name>
+		<price>250</price>
+		<size>1,1</size>
+		<minHeight>2</minHeight>
+		<maxHeight>3</maxHeight>
+		&smallBuildingPopulation;
+		<pictures>
+			<top    origin="32, 14" offset="2">
+				<picture ref="{0E9D085D-056B-4057-8C64-74952C003256}"/>
+			</top>
+			<middle origin="32, 40" offset="8">
+				<picture ref="{0E9D085D-056B-4057-8C64-74952C003256}"/>
+			</middle>
+			<bottom origin="32, 72" offset="8">
+				<picture ref="{0E9D085D-056B-4057-8C64-74952C003256}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{FE37C123-F23E-448A-872A-E05F0E82B070}">
+		<picture src="bldg_s02.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{736F1D68-3796-43F7-8495-11AE63F86F8E}">
+		<name>小規模雑居ビル</name>
+		<price>250</price>
+		<size>1,1</size>
+		<minHeight>2</minHeight>
+		<maxHeight>3</maxHeight>
+		&smallBuildingPopulation;
+		<pictures>
+			<top    origin=" 0, 14" offset="2">
+				<picture ref="{FE37C123-F23E-448A-872A-E05F0E82B070}"/>
+			</top>
+			<middle origin=" 0, 40" offset="8">
+				<picture ref="{FE37C123-F23E-448A-872A-E05F0E82B070}"/>
+			</middle>
+			<bottom origin=" 0, 72" offset="8">
+				<picture ref="{FE37C123-F23E-448A-872A-E05F0E82B070}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{813736D4-63A5-44DE-884C-7B10CFAEA582}">
+		<name>小規模雑居ビル</name>
+		<price>250</price>
+		<size>1,1</size>
+		<minHeight>2</minHeight>
+		<maxHeight>3</maxHeight>
+		&smallBuildingPopulation;
+		<pictures>
+			<top    origin="32, 14" offset="2">
+				<picture ref="{FE37C123-F23E-448A-872A-E05F0E82B070}"/>
+			</top>
+			<middle origin="32, 40" offset="8">
+				<picture ref="{FE37C123-F23E-448A-872A-E05F0E82B070}"/>
+			</middle>
+			<bottom origin="32, 72" offset="8">
+				<picture ref="{FE37C123-F23E-448A-872A-E05F0E82B070}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	
+	<contribution type="picture" id="{0E9F632F-78F8-4B61-8B5B-450D85856D92}">
+		<picture src="bldg_s03.bmp">
+			<override when="night" src="bldg_s03.n.bmp" />
+		</picture>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{542C633F-5F59-495E-9CF2-9BB46980F9EA}">
+		<name>小規模雑居ビル</name>
+		<price>250</price>
+		<size>1,1</size>
+		<minHeight>2</minHeight>
+		<maxHeight>3</maxHeight>
+		&smallBuildingPopulation;
+		<pictures>
+			<top    origin=" 0, 14" offset="2">
+				<picture ref="{0E9F632F-78F8-4B61-8B5B-450D85856D92}"/>
+			</top>
+			<middle origin=" 0, 40" offset="8">
+				<picture ref="{0E9F632F-78F8-4B61-8B5B-450D85856D92}"/>
+			</middle>
+			<bottom origin=" 0, 72" offset="8">
+				<picture ref="{0E9F632F-78F8-4B61-8B5B-450D85856D92}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{346B2781-75A7-4EE3-BF36-9C8B212DD678}">
+		<name>小規模雑居ビル</name>
+		<price>250</price>
+		<size>1,1</size>
+		<minHeight>2</minHeight>
+		<maxHeight>3</maxHeight>
+		&smallBuildingPopulation;
+		<pictures>
+			<top    origin="32, 14" offset="2">
+				<picture ref="{0E9F632F-78F8-4B61-8B5B-450D85856D92}"/>
+			</top>
+			<middle origin="32, 40" offset="8">
+				<picture ref="{0E9F632F-78F8-4B61-8B5B-450D85856D92}"/>
+			</middle>
+			<bottom origin="32, 72" offset="8">
+				<picture ref="{0E9F632F-78F8-4B61-8B5B-450D85856D92}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	
+	
+	
+	
+	<!-- 色替えの実験 -->
+	<contribution type="varHeightBuilding" id="{40CBC11A-36B2-40BB-9A2D-EAA48973C478}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>3,2</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin=" 0,  0" offset="24">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin=" 0, 48" offset="24">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin=" 0, 96" offset="24">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{8495D468-B2EF-4816-9C2A-67D8D68F0002}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>2,3</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="80,  0" offset="16">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="80, 48" offset="16">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="80, 96" offset="16">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{1E3FC997-DD98-4b47-82E0-D1C5914B0002}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>3,2</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="160,  0" offset="24">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="160, 48" offset="24">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="160, 96" offset="24">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{615FF4AA-898E-466f-8004-1855F82C0002}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>2,3</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="240,  0" offset="16">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="240, 48" offset="16">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="240, 96" offset="16">
+				&crLtBlue;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+
+	<contribution type="varHeightBuilding" id="{40CBC11A-36B2-40BB-C477-EAA48973C478}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>3,2</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin=" 0,  0" offset="24">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin=" 0, 48" offset="24">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin=" 0, 96" offset="24">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{8495D468-B2EF-4816-C477-67D8D68F0002}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>2,3</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="80,  0" offset="16">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="80, 48" offset="16">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="80, 96" offset="16">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{1E3FC997-DD98-4b47-C477-D1C5914B0002}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>3,2</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="160,  0" offset="24">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="160, 48" offset="24">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="160, 96" offset="24">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	<contribution type="varHeightBuilding" id="{615FF4AA-898E-466f-C477-1855F82C0002}">
+		<group>貸しビル(A)</group>
+		<price>3900</price>
+		<size>2,3</size>
+		<minHeight>2</minHeight>
+		<maxHeight>10</maxHeight>
+		&officeBuildingAPopulation;
+		<pictures>
+			<top    origin="240,  0" offset="16">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</top>
+			<middle origin="240, 48" offset="16">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</middle>
+			<bottom origin="240, 96" offset="16">
+				&crSilver;
+				<picture ref="{2E8E24AC-4242-4801-A4DD-2947A0800794}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+</plug-in>

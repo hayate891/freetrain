@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--エラーメッセージは、改行やタブがそのまま使用されるので、ご注意ください。-->
+<properties name="framework">
+	<properties name="directories">
+		<property name="create_dir_prompt" type="string" readonly="true">{0}は存在しません。
+	作成しますか？</property>
+		<property name="errormsg_on_dir_creation" type="string" readonly="true">{0}は作成できませんでした。
+	標準の設定を使用します。</property>
+	</properties>
+	<properties name="plugin">
+		<property name="too_many_errors" type="string" readonly="true">プラグインロードエラーが多すぎます。以降のエラーは省略します。
+	エラーの発生したプラグインを確認するには、プラグイン一覧をご覧下さい。</property>
+		<property name="dependency_not_found" type="string" readonly="true">プラグイン{0}に必要な
+	プラグイン{1}が見つかりません。</property>
+		<property name="contrib_load_error" type="string" readonly="true">ファイル{0}
+からのコントリビューション[{1}]のロードに失敗しました。
+	ID={2}</property>
+		<property name="plugin_load_error" type="string" readonly="true">プラグイン{0}がロードできませんでした。</property>
+		<property name="contrib_init_error" type="string" readonly="true">プラグイン{0}内のコントリビューション[{1}]が初期化できませんでした。
+	ID={2}</property>
+		<property name="invalid_command_entity" type="string" readonly="true">コマンドコントリビューションを初期化できません。
+	Type={0}
+	Class={1}
+	Method={2}</property>
+	</properties>
+	<properties name="pluginlist">
+		<property name="normal_message" type="string" readonly="true">コンピューターに使わせたくないプラグインは、
+チェックを外して下さい。</property>
+		<property name="error_message" type="string" readonly="true">このコントリビューションは無効化できません。</property>
+	</properties>
+	<properties name="xml">
+		<property name="attribute_not_found" type="string" readonly="true">XMLノード[{0}]には[{1}]属性が必要です。
+		ソース:{1}</property>	
+		<property name="class_load_error" type="string" readonly="true">指定されたクラス[{0}]のインスタンス作成に失敗しました。
+		ソース:{1}</property>	
+		<property name="class_cast_error" type="string" readonly="true">クラス[{0}]は[{1}]を実装していません。
+		ソース:{2}</property>	
+	</properties>
+	<properties name="global_modules">
+		<property name="load_error" type="string" readonly="true">コア・モジュール読み込みエラー</property>	
+	</properties>
+	<properties name="webloader">
+		<property name="web_exception" type="string" readonly="true">ファイルのダウンロードに失敗しました。
+	URL:{0}
+	{1}	state={2}</property>
+		<property name="other_exception" type="string" readonly="true">ダウンロード中に例外が発生しました。
+	URL:{0}</property>
+	</properties>
+	<properties name="command">
+		<property name="exception@execute" type="string" readonly="true">コマンド[ID={0}]の実行中に例外が発生しました。</property>
+	</properties>
+	<properties name="game">
+		<property name="close_game_warning" type="string" readonly="true">セーブしていないゲームデータは破棄されます。
+	よろしいですか？</property>
+		<property name="game_load_error" type="string" readonly="true">ファイル{0}からのゲームのロードに失敗しました。</property>
+		<property name="game_create_error" type="string" readonly="true">新規ゲームの作成に失敗しました。</property>
+	</properties>
+	<properties name="directxview">
+		<property name="exception@OnLoad" type="string" readonly="true">DirectXサーフェイスの初期化に失敗しました。</property>
+		<property name="exception@RecreateDrawBuffer" type="string" readonly="true">オフスクリーンサーフェイスの生成に失敗しました。</property>
+		<property name="exception@updateView" type="string" readonly="true">オフスクリーンサーフェイスの生成に失敗しました。</property>
+		<property name="exception@overrideMethod" type="string" readonly="true">描画オーバーライドメソッド{0}が例外を発生しました。</property>
+	</properties>
+	<properties name="mainframe">
+		<property name="long_title" type="string" readonly="true">Neo Free Train</property>
+		<property name="short_title" type="string" readonly="true">NeoFT</property>
+	</properties>
+
+</properties>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<plug-in>
+	<title>システム</title>
+	<author>C477</author>
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
+
+<!-- システム組み込みの標準コントリビューション型 -->
+	<contribution type="contribution" id="MenuItems">
+		<class name="nft.framework.plugin.FixedClassContributionFactory"/>
+		<implementation name="nft.contributions.ui.CtbMenuItem"/>
+		<name>MenuItems</name>
+	</contribution>
+	<contribution type="contribution" id="ToolButtons">
+		<class name="nft.framework.plugin.FixedClassContributionFactory"/>
+		<implementation name="nft.contributions.ui.CtbToolButton"/>
+		<name>ToolButtons</name>
+	</contribution>
+	<contribution type="contribution" id="Command">
+		<class name="nft.framework.plugin.FixedClassContributionFactory"/>
+		<implementation name="nft.contributions.ui.CtbCommandEntity"/>
+		<name>Command</name>
+	</contribution>
+	<contribution type="contribution" id="TerrainGenerator">
+		<class name="nft.framework.plugin.InheritableContributionFactory"/>
+		<interface name="nft.contributions.game.CtbTerrainGenerator" codebase=".Core"/>
+		<name>TerrainGenerator</name>
+	</contribution>
+	<contribution type="contribution" id="WorldDivider">
+		<class name="nft.framework.plugin.InheritableContributionFactory"/>
+		<interface name="nft.contributions.game.CtbWorldDivider" codebase=".Core"/>
+		<name>WorldDivider</name>
+	</contribution>
+	
+	
+	<contribution type="MenuItems" id="BaseMenu">
+	<name>システム基本メニュー</name>
+	<parent>ROOT</parent>
+	<entries>
+		<item mid="FILE" caption="ファイル(&amp;F)">
+			<item mid="GAME|NEWMAP" caption="新規マップ(&amp;N)">新しいマップを生成します。</item>
+			<item mid="OPTION|PLUGINLIST" caption="プラグイン一覧(&amp;P)"/>
+			<item mid="EXIT|EXIT" caption="終了(&amp;X)">ゲームを終了します。</item>
+		</item>
+		<item mid="VIEW" caption="表示(&amp;V)">
+		</item>
+		<item mid="HELP" caption="ヘルプ(&amp;H)">
+			<item mid="DEBUG|DDRAWTEST" caption="DirectXコントロールテスト"/>
+			<item mid="DEBUG|EXCEPTION" caption="例外発生テスト"/>
+			<item mid="ABOUT|ABOUT" caption="NeoFreeTrainについて(&amp;A)">NeoFreeTrainに関する情報を表示します。</item>
+			<item mid="ABOUT|SYSTEM" caption="システム情報(&amp;S)">現在の実行環境に関する情報を表示します。</item>
+		</item>
+	</entries>
+	</contribution>
+
+	<contribution type="ToolButtons" id="DefaultButtons">
+	<name>システム基本ボタン</name>
+	<bar name="MAIN">
+		<button bid="A|AAA" image="../../res/plugin_icons.bmp" index="0" >テスト１</button>
+		<button bid="B|BBB" image="../../res/plugin_icons.bmp" index="1" >テスト２</button>
+		<button bid="A|CCC" image="../../res/plugin_icons.bmp" index="3" >テスト３</button>
+		<button bid="A|DDD" image="../../res/plugin_icons.bmp" index="3" >テスト４</button>
+		<button bid="E|EEE" image="../../res/plugin_icons.bmp" index="3" >テスト５</button>
+	</bar>
+	</contribution>
+
+	<contribution type="ToolButtons" id="TestButtons">
+	<name>テストボタン</name>
+	<bar name="TEST">
+		<button bid="X|XXX" image="../../res/plugin_icons.bmp" index="3" >テスト６</button>
+	</bar>
+	<bar name="MAIN" after="A|AAA" before="A|CCC">
+		<button bid="A|FFF" image="../../res/plugin_icons.bmp" index="4" >テスト７</button>
+	</bar>
+	</contribution>
+
+	<contribution type="Command" id="C_AboutNFT">
+	<name>NeoFTについて</name>
+	<class name="nft.ui.system.AboutDialog" codebase=".UI"/>
+	<command type="ModalForm" menupath="HELP\ABOUT|ABOUT"/>
+	</contribution>
+
+	<contribution type="Command" id="C_SystemInfo">
+	<name>システム情報</name>
+	<class name="nft.ui.system.SystemInfoForm" codebase=".UI"/>
+	<command type="ModalForm" menupath="HELP\ABOUT|SYSTEM" />
+	</contribution>
+
+	<contribution type="Command" id="C_ShowPluginList">
+	<name>プラグイン一覧コマンド</name>
+	<class name="nft.ui.system.PluginListDialog" codebase=".UI"/>
+	<command type="ModalForm" menupath="FILE\OPTION|PLUGINLIST" />
+	</contribution>
+
+	<contribution type="Command" id="C_TestDDrawControl">
+	<name>DDrawコントロールテスト</name>
+	<class name="nft.debug.ddraw.TestFormDDraw"/>
+	<command type="ModelessForm" menupath="HELP\DEBUG|DDRAWTEST" />
+	</contribution>
+
+	<contribution type="Command" id="C_ThrowException">
+	<name>例外発生テスト</name>
+	<class name="nft.debug.TestErrorMessage"/>
+	<command menupath="HELP\DEBUG|EXCEPTION" />
+	</contribution>
+
+	<!--contribution type="Command" id="C_TestLocation">
+	<name>TestLocation</name>
+	<class name="nft.debug.TestLocation" codebase=".Core"/>
+	<command menupath="HELP\DEBUG|TEST" />
+	</contribution-->
+	<!--contribution type="Command" id="C_TestGameStart">
+	<name>TestGame Start</name>
+	<class name="nft.debug.TestGame" codebase=".Core"/>
+	<method name="GetCommandEntity" static="true"/>
+	<command menupath="HELP\DEBUG|TEST" />
+	</contribution>
+	<contribution type="Command" id="C_TestGameSave">
+	<name>TestGame Save</name>
+	<class name="nft.debug.TestGame" codebase=".Core"/>
+	<method name="GetCommandEntity" static="true"/>
+	<command menupath="HELP\DEBUG|TEST" />
+	</contribution>
+	<contribution type="Command" id="C_TestGameLoad">
+	<name>TestGame Load</name>
+	<class name="nft.debug.TestGame" codebase=".Core"/>
+	<method name="GetCommandEntity" static="true"/>
+	<command menupath="HELP\DEBUG|TEST" />
+	</contribution>
+	<contribution type="Command" id="C_PrepareQueue">
+	<name>Que in events</name>
+	<class name="nft.debug.TestClockEvent" codebase="..\..\TestSerialize"/>
+	<command menupath="HELP\DEBUG|TEST" />
+	</contribution-->
+
+	<contribution type="Command" id="C_CreateNewMap">
+	<name>新規マップ作成</name>
+	<class name="nft.ui.core.CreateMapForm" codebase=".UI"/>
+	<command type="ModalForm" menupath="FILE\GAME|NEWMAP" />
+	</contribution>
+
+	<contribution type="TerrainGenerator" id="FlatTerrainGenerator">
+	<name>シンプル平坦マップ</name>
+	<description>真っ平らな地形を生成します</description>
+	<class name="nft.contributions.game.CtbFlatTerrainGenerator" codebase=".Core"/>
+	</contribution>
+	<contribution type="WorldDivider" id="SimpleDivider">
+	<name>シンプル格子分割</name>
+	<description>等サイズの格子状に分割します</description>
+	<class name="nft.contributions.game.CtbSimpleDivider" codebase=".Core"/>
+	</contribution>
+	
+</plug-in>
