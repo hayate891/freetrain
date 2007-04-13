@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -193,7 +193,7 @@ namespace freetrain.controllers.rail
 			// costBox
 			// 
 			this.costBox.cost = 0;
-			this.costBox.label = "Cost：";
+			this.costBox.label = "Cost:";
 			//!this.costBox.label = "費用：";
 			this.costBox.Location = new System.Drawing.Point(8, 224);
 			this.costBox.Name = "costBox";

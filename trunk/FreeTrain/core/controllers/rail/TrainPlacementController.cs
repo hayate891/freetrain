@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -422,7 +422,7 @@ namespace freetrain.controllers.rail
 				}
 				if(!(rr.voxel.car is Train.TrainCar)) {
 					MainWindow.showError("There are no cars");
-					MainWindow.showError("車両がありません");
+					//! MainWindow.showError("車両がありません");
 					return;
 				}
 				((Train.TrainCar)rr.voxel.car).parent.remove();

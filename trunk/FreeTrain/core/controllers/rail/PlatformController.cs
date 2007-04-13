@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
@@ -283,7 +283,7 @@ namespace freetrain.controllers.rail
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(56, 24);
 			this.label1.TabIndex = 2;
-			this.label1.Text = "&Length：";
+			this.label1.Text = "&Length:";
 			//! this.label1.Text = "長さ(&L)：";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
