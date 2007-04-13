@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -142,7 +142,7 @@ namespace freetrain.world.rail
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(64, 20);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "&Lenght (number of cars):";
+			this.label2.Text = "&Length (number of cars):";
 			//! this.label2.Text = "車両数(&L)：";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 

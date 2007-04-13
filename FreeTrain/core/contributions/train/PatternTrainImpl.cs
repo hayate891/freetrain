@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Xml;
 using freetrain.framework;
@@ -53,11 +53,13 @@ namespace freetrain.contributions.train
 
 		private TrainCarContribution getCarType( XmlElement e ) {
 			string idref = e.Attributes["ref"].Value;
-			if(idref==null)	throw new FormatException("ref‘®«‚ª‚ ‚è‚Ü‚¹‚ñ");
+			if(idref==null)	throw new FormatException("ref attribute is missing");
+			//! if(idref==null)	throw new FormatException("refå±æ€§ãŒã‚ã‚Šã¾ã›ã‚“");
 
 			TrainCarContribution contrib = (TrainCarContribution)Core.plugins.getContribution(idref);
 			if(contrib==null)	throw new FormatException(
-				string.Format( "id='{0}'‚ÌTrainCarƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚ª‚ ‚è‚Ü‚¹‚ñ", idref ));
+				string.Format( "id='{0}' is missing TrainCar contribution", idref ));
+                //! string.Format( "id='{0}'ã®TrainCarã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ãŒã‚ã‚Šã¾ã›ã‚“", idref ));
 
 			return contrib;
 		}
@@ -76,7 +78,8 @@ namespace freetrain.contributions.train
 				// otherwise look up a table
 				TrainCarContribution car = (TrainCarContribution)cars[head];
 				if(car==null)
-					throw new FormatException("Ÿ‚Ì•¶š‚Í’è‹`‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ:"+head);
+					throw new FormatException("The following characters are undefined: "+head);
+					//! throw new FormatException("æ¬¡ã®æ–‡å­—ã¯å®šç¾©ã•ã‚Œã¦ã„ã¾ã›ã‚“:"+head);
 				a.Add(car);
 			}
 

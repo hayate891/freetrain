@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Xml;
 using freetrain.framework;
 using freetrain.framework.plugin;
@@ -45,12 +45,12 @@ namespace freetrain.contributions.train
 			if(e==null)		return null;
 
 			string idref = e.Attributes["carRef"].Value;
-			if(id==null)	throw new FormatException("carRef lacks attribute");
+			if(id==null)	throw new FormatException("carRef attribute is missing");
 			//! if(id==null)	throw new FormatException("carRef属性がありません");
 
 			TrainCarContribution contrib = (TrainCarContribution)Core.plugins.getContribution(idref);
 			if(contrib==null)	throw new FormatException(
-				string.Format( "id='{0}' lacks TrainCar contribution", idref ));
+				string.Format( "id='{0}' is missing TrainCar contribution", idref ));
 				//! string.Format( "id='{0}'のTrainCarコントリビューションがありません", idref ));
 
 			return contrib;

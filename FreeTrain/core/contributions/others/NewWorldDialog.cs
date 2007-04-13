@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -206,7 +206,7 @@ namespace freetrain.contributions.others
 			World w = new World( new Distance(x,y+z*2,z),  z/4 );
 			w.name = this.name.Text;
 			if(w.name==null || w.name.Length==0)
-				w.name = "Nanashi-san";
+				w.name = "Terra Incognita";
 				//! w.name = "ななしさん";
 			return w;
 			// TODO: Z dimension
