@@ -22,18 +22,8 @@ namespace freetrain.contributions.land
 		public StaticLandBuilder( XmlElement e ) : base(e) {
 			// picture
 			XmlElement spr = (XmlElement)XmlUtil.selectSingleNode(e,"sprite");
-			sprite = PluginUtil.getSpriteLoader(spr).load2D( spr, 1,1 )[0,0];
-
-			// population
-			XmlElement pop = (XmlElement)e.SelectSingleNode("population");
-			if(pop!=null)
-				population = new PersistentPopulation(
-					Population.load(pop),
-					new PopulationReferenceImpl(this.id));			}
-
-
-		/// <summary> Population of this structure, or null if this structure is not populated. </summary>
-		public readonly Population population;
+			sprite = PluginUtil.getSpriteLoader(spr).load2D( spr, 1,1,0)[0,0];
+		}
 
 		/// <summary> Sprite of this land contribution. </summary>
 		public readonly Sprite sprite;
@@ -42,12 +32,12 @@ namespace freetrain.contributions.land
 		/// <summary>
 		/// Gets the land that should be used to fill (x,y) within [x1,y1]-[x2,y2] (inclusive).
 		/// </summary>
-		public override void create( int x1, int y1, int x2, int y2, int z ) {
+		public override void create( int x1, int y1, int x2, int y2, int z, bool owned ) {
 			for( int x=x1; x<=x2; x++ ) {
 				for( int y=y1; y<=y2; y++ ) {
 					Location loc = new Location(x,y,z);
 					if( LandVoxel.canBeBuilt(loc) )
-						new StaticLandVoxel( loc, this );
+						new StaticLandVoxel( loc, this ).isOwned = owned;
 				}
 			}
 		}
@@ -73,21 +63,6 @@ namespace freetrain.contributions.land
 
 		private Sprite getSprite() {
 			return sprite;
-		}
-
-
-
-	
-		/// <summary>
-		/// Used to resolve references to the population object.
-		/// </summary>
-		[Serializable]
-		internal sealed class PopulationReferenceImpl : IObjectReference {
-			internal PopulationReferenceImpl( string id ) { this.id=id; }
-			private string id;
-			public object GetRealObject(StreamingContext context) {
-				return ((StaticLandBuilder)PluginManager.theInstance.getContribution(id)).population;
-			}
 		}
 	}
 }

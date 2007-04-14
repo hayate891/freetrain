@@ -9,7 +9,7 @@ using freetrain.world.terrain;
 namespace freetrain.tools.terrainloader
 {
 	/// <summary>
-	/// Loads a terrain from a displacement bitmap.
+	/// Loads a terrain from a disindices bitmap.
 	/// </summary>
 	public class TerrainLoader
 	{

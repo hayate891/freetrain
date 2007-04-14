@@ -8,7 +8,7 @@ using freetrain.views.map;
 namespace freetrain.world.terrain.terrace
 {
 	/// <summary>
-	/// Terrace placement mode
+	/// Terrace indices mode
 	/// </summary>
 	internal class TerracePlacementStrategy : Strategy {
 		public LocationDisambiguator disambiguator { get { return MountainDisambiguator.theInstance; } }

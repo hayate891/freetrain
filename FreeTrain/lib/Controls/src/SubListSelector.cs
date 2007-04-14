@@ -184,7 +184,7 @@ namespace freetrain.controls
 			this.titleAvailables.Name = "titleAvailables";
 			this.titleAvailables.Size = new System.Drawing.Size(136, 16);
 			this.titleAvailables.TabIndex = 1;
-			this.titleAvailables.Text = "Available items:";
+			this.titleAvailables.Text = "Available Items:";
 			//! this.titleAvailables.Text = "選択可能項目：";
 			// 
 			// titleSelected
@@ -193,7 +193,7 @@ namespace freetrain.controls
 			this.titleSelected.Name = "titleSelected";
 			this.titleSelected.Size = new System.Drawing.Size(136, 16);
 			this.titleSelected.TabIndex = 5;
-			this.titleSelected.Text = "Selected items:";
+			this.titleSelected.Text = "Selected Items:";
 			//! this.titleSelected.Text = "選択項目：";
 			// 
 			// SubListSelector

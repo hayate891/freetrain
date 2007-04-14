@@ -3,6 +3,7 @@ using System.Drawing;
 using freetrain.contributions.structs;
 using freetrain.contributions.population;
 using freetrain.framework;
+using freetrain.framework.graphics;
 using freetrain.framework.plugin;
 using freetrain.world.subsidiaries;
 
@@ -14,7 +15,7 @@ namespace freetrain.world.structs
 	[Serializable]
 	public class VarHeightBuilding : Structure, SubsidiaryEntity
 	{
-		public VarHeightBuilding( VarHeightBuildingContribution _type, Location loc,
+		public VarHeightBuilding( VarHeightBuildingContribution _type, WorldLocator wloc,
 			int _height, bool initiallyOwned ) {
 			
 			this.type = _type;
@@ -23,22 +24,21 @@ namespace freetrain.world.structs
 			int Y = type.size.y;
 			int X = type.size.x;
 			int Z = height;
+			this.baseLocation = wloc.location;
 
 			voxels = new VoxelImpl[X,Y,Z];
 			for( int z=0; z<Z; z++ )
 				for( int y=0; y<Y; y++ )
 					for( int x=0; x<X; x++ ) {
-						Location l = loc;
-						l.x+=x; l.y+=y; l.z+=z;
-						voxels[x,y,z] = new VoxelImpl( this, (byte)x,(byte)y,(byte)z, l );
+						WorldLocator wl = new WorldLocator(wloc.world, baseLocation+new Distance(x,y,z));
+						voxels[x,y,z] = new VoxelImpl( this, (byte)x,(byte)y,(byte)z, wl );
 					}
-			this.baseLocation = loc;
-
-			this.subsidiary = new SubsidiaryCompany(this,initiallyOwned);
+			if(wloc.world==World.world)
+				this.subsidiary = new SubsidiaryCompany(this,initiallyOwned);
 			
 			if( type.population!=null )
 				stationListener = new StationListenerImpl(
-					new MultiplierPopulation( height, type.population ), loc );
+					new MultiplierPopulation( height, type.population ), baseLocation );
 		}
 
 		/// <summary> Voxels that form this structure </summary>
@@ -126,8 +126,8 @@ namespace freetrain.world.structs
 		/// </summary>
 		[Serializable]
 		protected internal class VoxelImpl : StructureVoxel {
-			protected internal VoxelImpl( VarHeightBuilding _owner, byte _x, byte _y, byte _z, Location _loc )
-				: base(_owner,_loc) {
+			protected internal VoxelImpl( VarHeightBuilding _owner, byte _x, byte _y, byte _z, WorldLocator wloc )
+				: base(_owner,wloc) {
 
 				this.x=_x;
 				this.y=_y;
@@ -142,10 +142,13 @@ namespace freetrain.world.structs
 			public override void draw( DrawContext display, Point pt, int heightCutDiff  ) {
 				VarHeightBuilding o = owner;
 
-				if( heightCutDiff<0 )
-					o.type.getSprite(x,y,z,o.height).draw(display.surface,pt);
+				if( heightCutDiff<0 ) {
+					Sprite[] sps = o.type.getSprites(x,y,z,o.height);
+					for(int i=0; i<sps.Length; i++)
+						sps[i].draw(display.surface,pt);
+				}
 				else
-				if( z==0 )
+					if( z==0 )
 					ResourceUtil.emptyChip.drawShape(display.surface,pt, o.heightCutColor );
 			}
 		}

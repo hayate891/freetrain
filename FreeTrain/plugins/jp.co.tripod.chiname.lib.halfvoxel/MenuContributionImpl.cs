@@ -15,7 +15,7 @@ namespace freetrain.world.structs.hv
 
 		public override void mergeMenu( MainMenu containerMenu ) 
 		{
-			MenuItem item = new MenuItem("&Half voxel construction...");
+			MenuItem item = new MenuItem("&Half Voxels...");
 			//! MenuItem item = new MenuItem("半ボクセル建築(&H)...");
 			item.Click += new System.EventHandler(onClick);
 

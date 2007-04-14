@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using freetrain.framework;
 using freetrain.util;
+using freetrain.world.terrain;
 using org.kohsuke.directdraw;
 
 namespace freetrain.world.structs
@@ -38,7 +39,6 @@ namespace freetrain.world.structs
 		/// </summary>
 		public abstract string name { get; }
 
-
 		/// <summary>
 		/// Returns true if there is enough space in the spcified location
 		/// to built a structure of a given size.
@@ -46,11 +46,26 @@ namespace freetrain.world.structs
 		/// Usually, derived classes override this method and add necessary
 		/// checks specific to that structure.
 		/// </summary>
-		public static bool canBeBuilt( Location loc, Distance sz ) {
-			foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
-				if( !v.entity.isSilentlyReclaimable )
-					return false;
-			return true;
+//		public static bool canBeBuilt( Location loc, Distance sz ) 
+//		{
+//			return canBeBuilt(loc,sz,ControlMode.player);
+//		}
+		public static bool canBeBuilt( Location loc, Distance sz, ControlMode mode ) 
+		{
+			if(mode == ControlMode.com)
+			{
+				foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
+					if( !v.entity.isOwned )
+						return false;
+				return true;
+			}
+			else
+			{
+				foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
+					if( !v.entity.isSilentlyReclaimable )
+						return false;
+				return true;
+			}
 		}
 
 		/// <summary>
@@ -61,9 +76,12 @@ namespace freetrain.world.structs
 		/// <returns></returns>
 		public static bool isOnTheGround( Location loc, Distance sz ) {
 			for( int y=0; y<sz.y; y++ )
-				for( int x=0; x<sz.x; x++ )
+				for( int x=0; x<sz.x; x++ ) {
 					if( World.world.getGroundLevel(loc.x+x,loc.y+y)!=loc.z )
 						return false;
+					if(World.world[loc.x+x,loc.y+y,loc.z] is MountainVoxel)
+						return false;
+				}
 			return true;
 		}
 
@@ -76,6 +94,10 @@ namespace freetrain.world.structs
 		[Serializable]
 		protected internal abstract class StructureVoxel : AbstractVoxelImpl {
 			protected StructureVoxel( Structure _owner, Location _loc ) : base(_loc) {
+				this.owner = _owner;
+			}
+
+			protected StructureVoxel( Structure _owner, WorldLocator wloc ) : base(wloc) {
 				this.owner = _owner;
 			}
 

@@ -55,12 +55,13 @@ namespace freetrain.framework.graphics
 
 		/// <summary> Clears the canvas by tiling empty chips. </summary>
 		public void clear() {
+			Sprite empty = ResourceUtil.getGroundChip(World.world);
 			for( int y=(ptOrigin.Y%8)-16; y<pixelSize.Height; y+=8 ) {
 				int x=(ptOrigin.X%32)-64;
 				if( (((y-ptOrigin.Y)/8)%2)!=0 )	x+= 16;
-
+				
 				for( ; x<pixelSize.Width; x+= 32 )
-					ResourceUtil.emptyChip.draw( surface, new Point(x,y) );
+					empty.draw( surface, new Point(x,y) );
 			}
 		}
 

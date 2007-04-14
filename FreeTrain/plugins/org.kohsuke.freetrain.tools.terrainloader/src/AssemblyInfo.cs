@@ -2,7 +2,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 
 [assembly: AssemblyTitle("FreeTrain terrain loader plug-in")]
-[assembly: AssemblyDescription("Reads terrain from displacement bitmaps")]
+[assembly: AssemblyDescription("Reads terrain from disindices bitmaps")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kohsuke Kawaguchi (kk@kohsuke.org)")]
 [assembly: AssemblyProduct("FreeTrain")]

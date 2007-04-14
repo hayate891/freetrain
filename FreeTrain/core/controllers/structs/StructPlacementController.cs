@@ -36,6 +36,7 @@ namespace freetrain.controllers.structs
 		/// <param name="types">Array of all structure types available to users</param>
 		protected StructPlacementController( StructureGroupGroup groupGroup ) {
 			InitializeComponent();
+			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
 
 			// load station type list
 			structType.DataSource = groupGroup;
@@ -43,6 +44,7 @@ namespace freetrain.controllers.structs
 		}
 
 		protected override void Dispose( bool disposing ) {
+			World.world.viewOptions.OnViewOptionChanged-=new OptionChangedHandler(updatePreview);
 			if( disposing && components != null)
 				components.Dispose();
 			base.Dispose( disposing );
@@ -218,7 +220,13 @@ namespace freetrain.controllers.structs
 		/// Called when a selection of the structure has changed.
 		/// </summary>
 		protected virtual void onTypeChanged(object sender, System.EventArgs e) {
-			using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) ) {
+			updatePreview();
+		}
+
+		public override void updatePreview()
+		{
+			using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) ) 
+			{
 
 				if( previewBitmap!=null )	previewBitmap.Dispose();
 				preview.Image = previewBitmap = drawer.createBitmap();

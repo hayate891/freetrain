@@ -16,11 +16,46 @@ using freetrain.contributions.road;
 
 namespace freetrain.framework.plugin
 {
+	public interface PluginErrorHandler {
+		bool OnNameDuplicated(Plugin p_1st, Plugin p_2nd, Exception e);
+		bool OnPluginLoadError(Plugin p, Exception e);
+		bool OnContributionInitError(Contribution c, Exception e);
+		bool OnContribIDDuplicated(Contribution c_1st, Contribution c_2nd, Exception e);
+		bool OnFinal(IDictionary errorPlugins, int totalErrorCount);
+	}
+
+	public class SilentPluginErrorHandler : PluginErrorHandler {
+		#region PluginErrorHandler o
+		public bool OnNameDuplicated(Plugin p_1st, Plugin p_2nd, Exception e) {
+			return false;
+		}
+
+		public bool OnPluginLoadError(Plugin p, Exception e) {
+			return false;
+		}
+
+		public bool OnContributionInitError(Contribution c, Exception e) {
+			return false;
+		}
+
+		public bool OnContribIDDuplicated(Contribution c_1st, Contribution c_2nd, Exception e) {
+			return false;
+		}
+		
+		public bool OnFinal(IDictionary errorPlugins, int totalErrorCount){
+			return true;
+		}
+		#endregion
+
+	}
+
+
 	/// <summary>
 	/// Loads plug-ins.
 	/// </summary>
 	public class PluginManager
 	{
+		
 		/// <summary> The singleton instance. </summary>
 		public static PluginManager theInstance;
 
@@ -66,7 +101,7 @@ namespace freetrain.framework.plugin
 			if( Core.plugins.plugins==null )	return null;
 
 			// try assemblies of plug-ins
-			foreach( Contribution cont in Core.plugins.contributions ) {
+			foreach( Contribution cont in Core.plugins.publicContributions ) {
 				Assembly asm = cont.assembly;
 
 				if(getModuleName(asm.FullName)==name)
@@ -85,49 +120,66 @@ namespace freetrain.framework.plugin
 		/// for each directory in this collection, its sub-directories
 		/// are scanned for plugin.xml
 		/// </param>
-		public void init( ICollection dirs, ProgressHandler progressHandler ) {
+		public void init( ICollection dirs, ProgressHandler progressHandler, PluginErrorHandler errorHandler ) {
 
 			Set pluginSet = new Set();
-			int errCount=0;
-			
+			Hashtable errorPlugins = new Hashtable();
+			int errCount = 0;
+			int count = 0;
+			float c_max = dirs.Count*4;
+			bool errBreak = false;
+			if(errorHandler==null)
+				errorHandler = new SilentPluginErrorHandler();
+
 			// locate plugins
 			foreach( string dir in dirs ) {
-				progressHandler("Searching for plugins "+dir);
-				//! progressHandler("プラグインを検索中 "+dir);
+				progressHandler("Searching for plugins...\n"+Path.GetFileName(dir),++count/c_max);
+				//! progressHandler("プラグインを検索中\n"+Path.GetFileName(dir),++count/c_max);
 				
 				if( !File.Exists(Path.Combine(dir,"plugin.xml")) )
 					continue;	// this directory doesn't have the plugin.xml file.
-
+				Plugin p = null;
 				try {
-					Plugin p = new Plugin(dir);
-					pluginSet.add( p );
-					if( pluginMap.Contains(p.name) ) {
-						// loaded more than once
-						throw new Exception( string.Format(
-							"Plugin 「{0}」 is loaded from more than one place ({1} and {2})",
-							//! "プラグイン「{0}」は{1}と{2}の二箇所からロードされています",
-							p.name, p.dirName, ((Plugin)pluginMap[p.name]).dirName) );
-					}
-					pluginMap.Add( p.name, p );
+					p = new Plugin(dir);
+					p.loadContributionFactories();
 				} catch( Exception e ) {
-					if( errCount++ <= 5 )
-						MessageBox.Show(e.ToString(),
-							"Plugin "+Path.GetFileName(dir)+" can not be loaded");
-							//! "プラグイン"+Path.GetFileName(dir)+"がロードできません");
-					if( errCount==5 )
-						MessageBox.Show("There are too many plugin loading errors");
-						//! MessageBox.Show("プラグインのロードエラーが多すぎます");
+					errCount++;
+					p = Plugin.loadFailSafe(dir);
+					errorPlugins.Add(p,e);
+					errBreak = errorHandler.OnPluginLoadError(p,e);
+					if(errBreak)
+						break;
+					else
+						continue;
 				}
+				if( pluginMap.Contains(p.name) ) {
+					errCount++;
+					// loaded more than once
+					Exception e = new Exception( string.Format(
+						"Plugin \"{0}\" is loaded from more than one place ({1} and {2})",
+						//! "プラグイン「{0}」は{1}と{2}の二箇所からロードされています",
+						p.name, p.dirName, ((Plugin)pluginMap[p.name]).dirName) );
+					errBreak = errorHandler.OnNameDuplicated(pluginMap[p.name] as Plugin,p,e);
+					errorPlugins.Add(p,e);
+					if(errBreak)
+						break;
+					else
+						continue;
+				}
+				pluginMap.Add( p.name, p );
+				pluginSet.add( p );
 			}
-
-			progressHandler("Sorting dependencies");
-			//! progressHandler("依存関係を整理中");
+			if(errBreak)
+				Environment.Exit(-1);
+			
 			{// convert it to an array by sorting them in the order of dependency
 				this.plugins = new Plugin[pluginSet.count];
 				int ptr=0;
-
+				Plugin p = null;
 				while( !pluginSet.isEmpty ) {
-					Plugin p = (Plugin)pluginSet.getOne();
+					progressHandler("Sorting dependencies...",++count/c_max);
+					//! progressHandler("依存関係を整理中",++count/c_max);
+					p = (Plugin)pluginSet.getOne();
 					try {
 						while(true) {
 							Plugin[] deps = p.getDependencies();
@@ -141,65 +193,83 @@ namespace freetrain.framework.plugin
 								p = deps[i];
 						}
 					} catch( Exception e ) {
-						if( errCount++ <= 5 )
-							MessageBox.Show(e.ToString(),
-								"Plugin "+p.name+" can not be loaded");
-								//! "プラグイン"+p.name+"がロードできません");
-						if( errCount==5 )
-							MessageBox.Show("There are too many plugin loading errors");
-							//! MessageBox.Show("プラグインのロードエラーが多すぎます");
+						errCount++;
+						errBreak = errorHandler.OnPluginLoadError(p,e);
+						if(!errorPlugins.ContainsKey(p))
+							errorPlugins.Add(p,e);
+						if(errBreak)
+							break;
 					}
-
 					pluginSet.remove(p);
 					plugins[ptr++] = p;
 				}
 			}
+			if(errBreak)
+				Environment.Exit(-2);
 
-			//	 load all the contributions
-			progressHandler("Loading contributions");
-			//! progressHandler("コントリビューションをロード中");
+			//	 load all the contributions			
 			foreach( Plugin p in plugins ) {
+				progressHandler("Loading contributions...\n"+Path.GetFileName(p.dirName),++count/c_max);
+				//! progressHandler("コントリビューションをロード中\n"+Path.GetFileName(p.dirName),++count/c_max);
 				try {
 					p.loadContributions();
 				} catch( Exception e ) {
-					if( errCount++ <= 5 )
-						ErrorMessageBox.show( null, 
-							"Plugin "+p.name+" can not be loaded",e);
-							//! "プラグイン"+p.name+"がロードできません",e);
-					if( errCount==5 )
-						MessageBox.Show("There are too many plugin loading errors");
-						//! MessageBox.Show("プラグインのロードエラーが多すぎます");
+					errCount++;
+					errBreak = errorHandler.OnPluginLoadError(p,e);
+					if(!errorPlugins.ContainsKey(p))
+						errorPlugins.Add(p,e);
+					if(errBreak)
+						break;
 				}
 			}
+			if(errBreak)
+				Environment.Exit(-3);
 
 			// initialize contributions
-			progressHandler("Initializing contributions");
-			//! progressHandler("コントリビューションを初期化中");
-			foreach( Contribution contrib in contributions ) {
+			count = (int)c_max;
+			c_max += publicContributions.Length;			
+			foreach( Contribution contrib in publicContributions ) {
+				progressHandler("Initializing contributions...\n"+contrib.baseUri,++count/c_max);
+				//! progressHandler("コントリビューションを初期化中\n"+contrib.baseUri,++count/c_max);
 				try {
 					contrib.onInitComplete();
 				} catch( Exception e ) {
-					ErrorMessageBox.show(null,"Contribution "+contrib.id+" that is contained in plugin "+contrib.parent.name+" can not be initialized",e);
-					//! ErrorMessageBox.show(null,"プラグイン"+contrib.parent.name+"内のコントリビューション"+contrib.id+"が初期化できません",e);
 					errCount++;
-					break;	// abort
+					errBreak = errorHandler.OnContributionInitError(contrib, e);
+					Plugin p = contrib.parent;
+					if(!errorPlugins.ContainsKey(p))
+						errorPlugins.Add(p,e);
+					if(errBreak)
+						break;
 				}
 			}
+			if(errBreak)
+				Environment.Exit(-4);
 
 			{// make sure there's no duplicate id
+				progressHandler("Checking for duplicate IDs...",1.0f);
+				//! progressHandler("重複IDのチェック中",1.0f);
 				IDictionary dic = new Hashtable();
-				foreach( Contribution contrib in contributions ) {
+				foreach( Contribution contrib in publicContributions ) {
 					if( dic[contrib.id]!=null ) {
-						throw new FormatException("ID:"+contrib.id+" is not unique");
-						//! throw new FormatException("ID:"+contrib.id+"が一意ではありません");
-					}
-					dic[contrib.id] = contrib;
+						errCount++;
+						Exception e = new FormatException("ID:"+contrib.id+" is not unique");
+						//! Exception e = new FormatException("ID:"+contrib.id+"が一意ではありません");
+						errBreak = errorHandler.OnContribIDDuplicated(dic[contrib.id] as Contribution, contrib, e);
+						Plugin p = contrib.parent;
+						if(!errorPlugins.ContainsKey(p))
+							errorPlugins.Add(p,e);
+						if(errBreak)
+							break;							
+					} else
+						dic[contrib.id] = contrib;
 				}
-			}
-
-			if( errCount!=0 ) {
-				// error during the initialization
-				Environment.Exit(errCount);
+			}			
+			if(errBreak)
+				Environment.Exit(-5);
+			if(errCount>0){
+				if(errorHandler.OnFinal(errorPlugins,errCount))
+					Environment.Exit(errCount);
 			}
 		}
 
@@ -390,15 +460,27 @@ namespace freetrain.framework.plugin
 
 
 		/// <summary>
-		/// Gets all contributions.
+		/// Gets all contributions. except for runtime generated ones.
 		/// </summary>
-		public Contribution[] contributions {
+		public Contribution[] publicContributions {
 			get {
 				ArrayList list = new ArrayList();
 				foreach( Plugin p in plugins )
 					foreach( Contribution contrib in p.contributions )
 						list.Add(contrib);
 
+				return (Contribution[])list.ToArray(typeof(Contribution));
+			}
+		}
+
+		/// <summary>
+		/// Gets all contributions including runtime generat.
+		/// </summary>
+		public Contribution[] allContributions {
+			get {
+				ArrayList list = new ArrayList();
+				foreach( Contribution contrib in contributionMap.Values )
+					list.Add(contrib);
 				return (Contribution[])list.ToArray(typeof(Contribution));
 			}
 		}
@@ -421,4 +503,5 @@ namespace freetrain.framework.plugin
 			return (Plugin)pluginMap[name];
 		}
 	}
+
 }

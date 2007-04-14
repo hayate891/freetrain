@@ -47,7 +47,6 @@ namespace freetrain.world
 						e.remove();
 				}
 				Debug.Assert( b[ h%BLOCK_H, v%BLOCK_V ]==null );
-
 				b[ h%BLOCK_H, v%BLOCK_V ] = value;
 			}
 		}

@@ -30,11 +30,13 @@ namespace freetrain.world.structs
 		/// <param name="_type">
 		/// Type of the structure to be built.
 		/// </param>
-		public Commercial( CommercialStructureContribution _type, Location loc, bool initiallyOwned  )
-			: base( _type, loc ) {
+		public Commercial( CommercialStructureContribution _type, WorldLocator wloc, bool initiallyOwned  )
+			: base( _type, wloc ) {
 			
 			this.type = _type;
-			this.subsidiary = new SubsidiaryCompany(this,initiallyOwned);
+			if(wloc.world == World.world) {
+				this.subsidiary = new SubsidiaryCompany(this,initiallyOwned);
+			}
 		}
 
 		#region Entity implementation
@@ -63,8 +65,8 @@ namespace freetrain.world.structs
 
 
 
-		public new static bool canBeBuilt( Location loc, Distance sz ) {
-			return Structure.canBeBuilt(loc,sz) && Structure.isOnTheGround(loc,sz);
+		public new static bool canBeBuilt( Location loc, Distance sz, ControlMode cm ) {
+			return Structure.canBeBuilt(loc,sz,cm) && Structure.isOnTheGround(loc,sz);
 		}
 
 

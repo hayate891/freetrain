@@ -51,6 +51,15 @@ namespace freetrain.framework.graphics
 			this.loaders = init(sl);
 		}
 
+		public Picture( string _id, string dayfileName, string nightfileName ) 
+		{
+			this.id = _id;
+			SurfaceLoader[,] sl = new SurfaceLoader[4,2];
+			sl[0,0] = new BitmapSurfaceLoader(dayfileName);
+			sl[0,1] = new BitmapSurfaceLoader(nightfileName);
+			this.loaders = init(sl);
+		}
+
 		/// <summary>
 		/// Load picture from an XML manifest (&lt;picture> element)
 		/// </summary>
@@ -66,25 +75,49 @@ namespace freetrain.framework.graphics
 			SurfaceLoader[,] specifiedLoaders = new SurfaceLoader[4,2];
 			specifiedLoaders[0,0] = new BitmapSurfaceLoader(baseFileName);
 
+			specifiedLoaders[0,1] = getNightOverride(pic);
 			foreach( XmlElement ovr in pic.SelectNodes("override")) {
 				string when = ovr.Attributes["when"].Value;
-				SurfaceLoader overrideLoader = new BitmapSurfaceLoader(
-					XmlUtil.resolve( ovr, ovr.Attributes["src"].Value ).LocalPath );
 				
+				int s;
 				switch(when) {
-				case "night":	specifiedLoaders[0,1] = overrideLoader; break;
-				case "spring":	specifiedLoaders[0,0] = overrideLoader; break;
-				case "summer":	specifiedLoaders[1,0] = overrideLoader; break;
+				case "spring":	s = 0; break;
+				case "summer":	s = 1; break;
 				case "autumn":
-				case "fall":	specifiedLoaders[2,0] = overrideLoader; break;
-				case "winter":	specifiedLoaders[3,0] = overrideLoader; break;
+				case "fall":	s = 2; break;
+				case "winter":	s = 3; break;
+				case "night": s = -1; break;
 				default:
 					throw new FormatException("when='"+when+"' is an unknown override format");
 					//! throw new FormatException("when='"+when+"'は未知のオーバーライド形式です");
 				}
+				if(s>=0)
+				{
+					XmlAttribute src = ovr.Attributes["src"];
+					if( src!=null )
+					{
+						SurfaceLoader overrideLoader = new BitmapSurfaceLoader(
+							XmlUtil.resolve( ovr, src.Value ).LocalPath );
+						specifiedLoaders[s,0] = overrideLoader; 
+					}
+					specifiedLoaders[s,1] = getNightOverride(ovr);
+				}
 			}
 
 			this.loaders = init(specifiedLoaders);
+		}
+
+		// load nested night override (for each seasons).
+		private SurfaceLoader getNightOverride( XmlElement node )
+		{
+			XmlNode ovr = node.SelectSingleNode("override");
+			if(ovr==null) return null;
+			string when = ovr.Attributes["when"].Value;
+			if( when.Equals("night") )
+				return new BitmapSurfaceLoader(
+				XmlUtil.resolve( ovr, ovr.Attributes["src"].Value ).LocalPath );
+			else
+				return null;
 		}
 
 		/// <summary>
@@ -139,15 +172,15 @@ namespace freetrain.framework.graphics
 		/// Obtains the surface object.
 		/// </summary>
 		public Surface surface {
-			get {
+			get{
 				if(dirty) {
+					World world = World.world;
 					// reload the surface
-					Clock c = World.world.clock;
-					Color key = loaders[(int)c.season,(int)c.dayOrNight].load(ref _surface);
+					Clock c = world.clock;
+					Color key = loaders[(int)c.season,(world.viewOptions.useNightView)?1:0].load(ref _surface);
 					_surface.sourceColorKey = key;
 					dirty = false;
 				}
-
 				return _surface;
 			}
 		}

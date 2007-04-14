@@ -5,6 +5,7 @@ using freetrain.contributions.common;
 using freetrain.contributions.population;
 using freetrain.framework;
 using freetrain.framework.plugin;
+using freetrain.framework.plugin.graphics;
 using freetrain.framework.graphics;
 using freetrain.world;
 using freetrain.world.structs;
@@ -35,7 +36,7 @@ namespace freetrain.world.structs.hv
 			/// <exception cref="XmlException">If the parsing fails</exception>
 		public HalfVoxelContribution( XmlElement e ):base(e)
 		{			
-			price = int.Parse( XmlUtil.selectSingleNode(e,"price").InnerText );			
+			_price = int.Parse( XmlUtil.selectSingleNode(e,"price").InnerText );			
 			height = int.Parse( XmlUtil.selectSingleNode(e,"height").InnerText );
 			subgroup = XmlUtil.selectSingleNode(e,"subgroup").InnerText;
 			XmlElement spr = (XmlElement)XmlUtil.selectSingleNode(e,"sprite");
@@ -232,7 +233,10 @@ namespace freetrain.world.structs.hv
 
 		internal SpriteSet[] sprites;
 		internal SpriteSet[] hilights;
-		public readonly int price;
+		protected readonly int _price;
+		public override int price {	get { return _price; } }
+		public override double pricePerArea { get { return _price<<1; } }
+
 		public readonly int height;
 
 		[NonSerialized]

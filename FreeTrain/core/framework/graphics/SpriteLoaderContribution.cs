@@ -39,12 +39,12 @@ namespace freetrain.framework.graphics
 		/// <summary>
 		/// Load a set of sprites of size (x,y) from the given manifest.
 		/// </summary>
-		public virtual Sprite[,] load2D( XmlElement sprite, int x, int y ) {
+		public virtual Sprite[,] load2D( XmlElement sprite, int x, int y, int height ) {
 			throw new NotImplementedException(this.GetType().FullName+".load2D");
 		}
 
-		public Sprite[,] load2D( XmlElement sprite, Size sz ) {
-			return load2D( sprite, sz.Width, sz.Height );
+		public Sprite[,] load2D( XmlElement sprite, Size sz, int height ) {
+			return load2D( sprite, sz.Width, sz.Height, height );
 		}
 
 		/// <summary>

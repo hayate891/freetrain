@@ -7,6 +7,7 @@ using org.kohsuke.directdraw;
 using freetrain.contributions.population;
 using freetrain.contributions.land;
 using freetrain.controllers;
+using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.framework.plugin;
 using freetrain.world.terrain;
@@ -47,6 +48,7 @@ namespace freetrain.world.land.forest
 				picture = getPicture((XmlElement)node);
 				spriteFactory =SpriteFactory.getSpriteFactory(node);
 				ground = spriteFactory.createSprite( picture, new Point(0,0), origin, new Size(32,16) );
+				if( ground == null ) ground = ResourceUtil.emptyChip;
 			}
 		}
 
@@ -67,7 +69,7 @@ namespace freetrain.world.land.forest
 
 		private static readonly Random rnd = new Random();
 
-		private static new bool canBeBuilt(Location loc) 
+		private static new bool canBeBuilt(Location loc,ControlMode cm) 
 		{
 			if( World.world.getGroundLevel(loc) != loc.z ) 
 			{
@@ -83,12 +85,12 @@ namespace freetrain.world.land.forest
 		/// <summary>
 		/// Gets the land that should be used to fill (x,y) within [x1,y1]-[x2,y2] (inclusive).
 		/// </summary>
-		public override void create( int x1, int y1, int x2, int y2, int z ) {
+		public override void create( int x1, int y1, int x2, int y2, int z, bool owned ) {
 			for( int x=x1; x<=x2; x++ ) {
 				for( int y=y1; y<=y2; y++ ) {
 					Location loc = new Location(x,y,z);
 
-					if( canBeBuilt(loc) ) 
+					if( canBeBuilt(loc, ControlMode.player) ) 
 					{
 						byte[] patterns = createRandomTrees();
 						if( patterns.Length!=0 ) 
@@ -99,6 +101,7 @@ namespace freetrain.world.land.forest
 							else
 								v = new MountainVoxel( loc, 0,0,0,0 );
 							v.setTrees(ground, sprites, patterns,price);
+							v.isOwned = owned;
 							World.world.onVoxelUpdated(loc);
 						}
 					} 
@@ -187,7 +190,7 @@ namespace freetrain.world.land.forest
 		}
 
 		protected override void onRectSelected( Location loc1, Location loc2 ) {
-			contrib.create(loc1,loc2);
+			contrib.create(loc1,loc2,true);
 		}
 
 		public void drawBefore( QuarterViewDrawer view, DrawContextEx surface ) {}

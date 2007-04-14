@@ -6,7 +6,7 @@ using freetrain.framework.plugin;
 namespace freetrain.framework.graphics
 {
 	/// <summary>
-	/// DefaultSpriteLoaderContributionImpl ÇÃäTóvÇÃê‡ñæÇ≈Ç∑ÅB
+	/// DefaultSpriteLoaderContributionImpl „ÅÆÊ¶ÇË¶Å„ÅÆË™¨Êòé„Åß„Åô„ÄÇ
 	/// </summary>
 	public class DefaultSpriteLoaderContributionImpl : SpriteLoaderContribution
 	{
@@ -27,14 +27,17 @@ namespace freetrain.framework.graphics
 
 
 
-		public override Sprite[,] load2D( XmlElement sprite, int X, int Y ) {
+		public override Sprite[,] load2D( XmlElement sprite, int X, int Y, int height ) {
 			Picture picture = getPicture(sprite);
 			SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(sprite);
 
 			Sprite[,] sprites = new Sprite[X,Y];
 
 			Point origin = XmlUtil.parsePoint( sprite.Attributes["origin"].Value );
-			int h = int.Parse( sprite.Attributes["offset"].Value );
+			int h = height;
+			XmlAttribute att = sprite.Attributes["offset"];
+			if( att !=null)
+				h = int.Parse( att.Value );
 			int maxh = int.MaxValue;
 			if( sprite.Attributes["height"]!=null )
 				maxh = int.Parse( sprite.Attributes["height"].Value );
@@ -62,7 +65,10 @@ namespace freetrain.framework.graphics
 			Sprite[,,] sprites = new Sprite[X,Y,Z];
 
 			Point origin = XmlUtil.parsePoint( sprite.Attributes["origin"].Value );
-			int h = int.Parse( sprite.Attributes["offset"].Value );
+			int h = ((Z<<1)+(X-1))<<3; // calculate default offset
+			XmlAttribute att = sprite.Attributes["offset"];
+			if( att !=null)
+                h = int.Parse( att.Value );
 
 			// top-floor
 			for( int y=0; y<Y; y++ ) {

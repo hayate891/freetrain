@@ -12,6 +12,7 @@ namespace freetrain.world
 	public class EmptyVoxel : AbstractVoxelImpl
 	{
 		private readonly Entity _entity;
+		public override bool transparent { get { return true; } }
 
 		public EmptyVoxel( Entity e, int x, int y, int z ) : this( e, new Location(x,y,z) ) {}
 		public EmptyVoxel( Entity e, Location loc ) : base(loc) {

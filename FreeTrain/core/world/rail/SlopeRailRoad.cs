@@ -16,12 +16,31 @@ namespace freetrain.world.rail
 	[Serializable]
 	public class SlopeEntity : Entity
 	{
-		public SlopeEntity() {}
+		private Cube cube;
+		public SlopeEntity(Location start,Direction dir) {
+			Location end = new Location(start.x+dir.offsetX*3,start.y+dir.offsetY*3,start.z+1);
+			cube = Cube.createInclusive(start, end);
+		}
 		public int entityValue { get { return 0; } }
 		public bool isOwned { get { return true; } }
 		public bool isSilentlyReclaimable { get { return false; } }
 		public void remove() {
-			// TODO: not sure what to do. can't be removed for now.
+			foreach(Voxel v in cube.voxels){
+				if(v.entity==this && !(v is BridgePierVoxel))
+					World.world.remove(v);
+				else {
+					TrafficVoxel tv = v as TrafficVoxel;
+					if(tv!=null){
+						SlopeRailRoad srr = tv.railRoad as SlopeRailRoad;
+						if(srr!=null && srr.entity==this)
+							tv.remove();						
+					}
+				}
+//				if(v.location.z==cube.z1)
+//					BridgePierVoxel.teardownBridgeSupport(v.location,this);
+			}
+			if(onEntityRemoved!=null)
+				onEntityRemoved(this,null);
 		}
 		public object queryInterface(Type aspect) { return null; }
 		public event EventHandler onEntityRemoved;
@@ -34,7 +53,11 @@ namespace freetrain.world.rail
 	[Serializable]
 	public class SlopeRailRoad : RailRoad
 	{
-		private SlopeRailRoad(TrafficVoxel v,RailPattern rp) :base(v,rp) {}
+		
+		internal SlopeEntity entity;
+		private SlopeRailRoad(SlopeEntity e,TrafficVoxel v,RailPattern rp) :base(v,rp) {
+			entity = e;
+		}
 
 
 		public override void invalidateVoxel() {
@@ -104,18 +127,40 @@ namespace freetrain.world.rail
 			// charge the cost before we alter something
 			accounting.AccountGenre.RAIL_SERVICE.spend( calcCostOfNewSlope(_base,dir) );
 			
-			SlopeEntity entity = new SlopeEntity();
+			SlopeEntity entity = new SlopeEntity(_base, dir);
 
 			for( int i=0; i<4; i++ ) {
-				new SlopeRailRoad( TrafficVoxel.getOrCreate(
-					_base.x, _base.y, _base.z+(i/2) ),
-					RailPattern.getSlope( dir, i ) );
-				if(i<2) {
-					// space filler
-					new SlopeFillerVoxel( entity, _base.x, _base.y, _base.z+1, i );
-				} else {
-					new SlopeSupportVoxel( entity, _base.x, _base.y, _base.z, i,
+				if( _base.z < World.world.getGroundLevel(_base))
+				{
+					new SlopeRailRoad(entity, TrafficVoxel.getOrCreate(
+						_base.x, _base.y, _base.z+(i/2) ),
+						RailPattern.getUGSlope( dir, i ) );
+					if(i<2) 
+					{
+						// space filler
+						new SlopeFillerVoxel( entity, _base.x, _base.y, _base.z+1, i );
+					} 
+					else 
+					{
+						new SlopeSupportVoxel( entity, _base.x, _base.y, _base.z, i,
+							RailPattern.slopeWalls[ dir.index+i-2 ] );
+					}
+				}
+				else
+				{
+					new SlopeRailRoad(entity, TrafficVoxel.getOrCreate(
+						_base.x, _base.y, _base.z+(i/2) ),
+						RailPattern.getSlope( dir, i ) );
+					if(i<2) 
+					{
+						// space filler
+						new SlopeFillerVoxel( entity, _base.x, _base.y, _base.z+1, i );
+					} 
+					else 
+					{
+						new SlopeSupportVoxel( entity, _base.x, _base.y, _base.z, i,
 							RailPattern.slopeSupports[ dir.index+(i-2) ] );
+					}
 				}
 
 				Type bridgeStyle;
@@ -123,7 +168,7 @@ namespace freetrain.world.rail
 					bridgeStyle = typeof(BridgePierVoxel.DefaultImpl);
 				else
 					bridgeStyle = typeof(BridgePierVoxel.SlopeNEImpl);
-				BridgePierVoxel.electBridgeSupport(_base,bridgeStyle);
+				BridgePierVoxel.electBridgeSupport(_base,bridgeStyle,entity);
 
 				_base += dir;
 			}
@@ -142,6 +187,7 @@ namespace freetrain.world.rail
 				drawSurfaceBelow = !( idx<2 && glevel>=z );
 				drawSurfaceAbove = !(idx>=2 && glevel>=z+1);
 			}
+			
 
 			private readonly bool drawSurfaceAbove;
 			private readonly bool drawSurfaceBelow;
@@ -164,6 +210,7 @@ namespace freetrain.world.rail
 				drawSurfaceAbove = !(idx>=2 && glevel>=z+1);
 				sprite = s;
 			}
+			public override bool transparent { get { return true; } }
 
 			private readonly bool drawSurfaceAbove;
 			private readonly bool drawSurfaceBelow;
@@ -256,14 +303,15 @@ namespace freetrain.world.rail
 			accounting.AccountGenre.RAIL_SERVICE.spend( calcCostOfTearDownSlope(loc,dir) );
 
 			for( int i=0; i<4; i++ ) {
-				TrafficVoxel.get( loc.x, loc.y, loc.z+(i/2) ).railRoad = null;
+				TrafficVoxel v = TrafficVoxel.get( loc.x, loc.y, loc.z+(i/2) );
+				v.railRoad = null;
 				
 				Location l = loc;
 				l.z += -(i/2)+1;
 				Debug.Assert( World.world[l] is EmptyVoxel );
 				World.world.remove(l);
 
-				BridgePierVoxel.teardownBridgeSupport(loc);
+				BridgePierVoxel.teardownBridgeSupport(loc,v);
 
 				loc += dir;
 			}

@@ -149,7 +149,7 @@ namespace freetrain.framework
 			this.MinimizeBox = false;
 			this.Name = "NewWorldDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "New game";
+			this.Text = "New Game";
 			//! this.Text = "新しいゲーム";
 			this.ResumeLayout(false);
 

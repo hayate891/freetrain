@@ -326,7 +326,7 @@ namespace freetrain.controllers.rail
 																		  this.panel2});
 			this.MinimumSize = new System.Drawing.Size(416, 180);
 			this.Name = "TrainPlacementController";
-			this.Text = "Place car";
+			this.Text = "Place Train";
 			//! this.Text = "車両の配置";
 			this.panel2.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
@@ -581,7 +581,7 @@ namespace freetrain.controllers.rail
 		}
 
 		private void executeSell() {
-			if( MessageBox.Show(this,"Do you want to sell?",Application.ProductName,
+			if( MessageBox.Show(this,"Do you want to sell this train?",Application.ProductName,
 			//! if( MessageBox.Show(this,"売却しますか？",Application.ProductName,
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Question) == DialogResult.Yes) {

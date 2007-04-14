@@ -8,6 +8,22 @@ using freetrain.framework;
 
 namespace freetrain.world
 {
+
+	public class WorldLocator{
+		protected World w;
+		protected Location l;
+		public WorldLocator(World world, int _x, int _y, int _z){
+			w = world;
+			l = new Location(_x, _y, _z);
+		}
+		public WorldLocator(World world, Location loc){
+			w = world;
+			l = loc;
+		}
+		public Location location{ get{return l;}}
+		public World world { get{ return w; }}
+	}
+
 	/// <summary>
 	/// 世界での位置を示すオブジェクト
 	/// </summary>
@@ -34,6 +50,8 @@ namespace freetrain.world
 		public int getDistanceTo( Location to ) {
 			return (int)Math.Sqrt( (to.x-x)*(to.x-x) + (to.y-y)*(to.y-y) + (to.z-z)*(to.z-z) );
 		}
+
+		public World world { get{ return World.world; }}
 
 		/// <summary>
 		/// Computes the distance (in Euclidean sense)

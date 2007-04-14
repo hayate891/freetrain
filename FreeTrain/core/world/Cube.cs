@@ -3,12 +3,14 @@ using System.Collections;
 using System.Diagnostics;
 using System.Drawing;
 using freetrain.util;
+using freetrain.world.terrain;
 
 namespace freetrain.world
 {
 	/// <summary>
 	/// Cubic space in the world.
 	/// </summary>
+	[Serializable]
 	public struct Cube
 	{
 		/// <summary>
@@ -103,6 +105,8 @@ namespace freetrain.world
 				for( int x=x1; x<mx; x++ ) {
 					for( int y=y1; y<my; y++ ) {
 						if( World.world.getGroundLevel(x,y)!=z1 )
+							return false;
+						if(World.world[x,y,z1] is MountainVoxel)
 							return false;
 					}
 				}

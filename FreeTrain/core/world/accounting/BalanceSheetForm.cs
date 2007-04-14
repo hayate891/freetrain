@@ -80,7 +80,7 @@ namespace freetrain.world.accounting
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.webBrowser});
 			this.Name = "BalanceSheetForm";
-			this.Text = "Balance sheet";
+			this.Text = "Balance Sheet";
 			//! this.Text = "バランスシート";
 			((System.ComponentModel.ISupportInitialize)(this.webBrowser)).EndInit();
 			this.ResumeLayout(false);

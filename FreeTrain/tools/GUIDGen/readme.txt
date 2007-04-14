@@ -11,5 +11,5 @@ GUIDを作成しているだけです。
 
 
 
-by Kohsuke Kawagcuhi (mailto:kk@kohsuke.org)
+by Kohsuke Kawaguchi (mailto:kk@kohsuke.org)
 2002/08/20

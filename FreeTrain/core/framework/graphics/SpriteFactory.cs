@@ -23,6 +23,8 @@ namespace freetrain.framework.graphics
 		public static SpriteFactory getSpriteFactory( XmlNode sprite ) {
 			XmlElement type = (XmlElement)sprite.SelectSingleNode("spriteType");
 			if(type==null)
+				type = (XmlElement)sprite.SelectSingleNode("colorVariation");
+			if(type==null)
 				// if none is specified, use the default sprite factory
 				return new SimpleSpriteFactory();
 			else {

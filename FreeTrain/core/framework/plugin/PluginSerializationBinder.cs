@@ -20,7 +20,7 @@ namespace freetrain.framework.plugin
 			Trace.WriteLine("binding "+typeName);
 
 			// try assemblies of plug-ins
-			foreach( Contribution cont in Core.plugins.contributions ) {
+			foreach( Contribution cont in Core.plugins.publicContributions ) {
 				 Assembly asm = cont.assembly;
 				if(asm!=null) {
 					t = asm.GetType(typeName);

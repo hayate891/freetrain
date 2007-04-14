@@ -14,7 +14,7 @@ namespace freetrain.tools.terrainloader
 		public PluginImpl( XmlElement e ) : base(e) {}
 
 		public override string author { get { return "-"; } }
-		public override string name { get { return "Terrain loader"; } }
+		public override string name { get { return "Terrain Loader"; } }
 		//! public override string name { get { return "地形ローダー"; } }
 		public override string description { get { return "Load terrain data only from an image"; } }
 		//! public override string description { get { return "画像から地形データのみをロードします"; } }

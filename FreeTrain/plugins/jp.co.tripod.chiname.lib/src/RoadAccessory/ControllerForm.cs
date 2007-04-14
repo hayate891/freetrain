@@ -128,7 +128,7 @@ namespace freetrain.world.road.accessory
 																		  this.typeBox,
 																		  this.preview});
 			this.Name = "ControllerForm";
-			this.Text = "Road accessories";
+			this.Text = "Road Accessories";
 			//! this.Text = "道路アクセサリ";
 			this.ResumeLayout(false);
 

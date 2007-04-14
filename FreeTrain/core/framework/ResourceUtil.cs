@@ -68,6 +68,17 @@ namespace freetrain.framework
 			// otherwise load a new picture
 			return new Picture( id, findSystemResource(name) );
 		}
+		public static Picture loadSystemPicture( string dayname, string nightname ) 
+		{
+			string id = "{8AD4EF28-CBEF-4C73-A8FF-5772B87EF005}:"+dayname;
+
+			// check if it has already been loaded
+			if( PictureManager.contains(id) )
+				return PictureManager.get(id);
+
+			// otherwise load a new picture
+			return new Picture( id, findSystemResource(dayname), findSystemResource(nightname) );
+		}
 
 		public static Surface loadTimeIndependentSystemSurface( string name ) {
 			using(Bitmap bmp=loadSystemBitmap(name))
@@ -81,20 +92,28 @@ namespace freetrain.framework
 		/// </summary>
 		public static readonly DirectDraw directDraw = new DirectDraw();
 
-		private static Picture emptyChips = loadSystemPicture("EmptyChip.bmp");
+		private static Picture emptyChips = loadSystemPicture("EmptyChip.bmp","EmptyChip_n.bmp");
+		private static Picture cursorChips = loadSystemPicture("cursorChip.bmp","cursorChip.bmp");
 
 		public static Sprite emptyChip {
 			get {
-				if( World.world.clock.season!=Season.Winter )	return groundChips[0];
-				else											return groundChips[1];
-
+				return groundChips[0];
 			}
 		}
+		public static Sprite getGroundChip(World w) {
+			if( w.clock.season!=Season.Winter )	
+				return groundChips[0];
+			else											
+				return groundChips[1];
+		}
+
 		private static Sprite[] groundChips = new Sprite[]{
 			new SimpleSprite(emptyChips,new Point(0,0),new Point( 0,0),new Size(32,16)),
 			new SimpleSprite(emptyChips,new Point(0,0),new Point(32,0),new Size(32,16))
 		};
 		
+		public static Sprite removerChip =
+			new SimpleSprite(cursorChips,new Point(0,0),new Point(0,0),new Size(32,16));
 		
 		public static Sprite underWaterChip =
 			new SimpleSprite(emptyChips,new Point(0,0),new Point(64,0),new Size(32,16));

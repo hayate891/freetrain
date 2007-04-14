@@ -94,7 +94,7 @@ namespace Heat
 																		  this.statusBar});
 			this.Menu = this.mainMenu1;
 			this.Name = "Heat";
-			this.Text = "Heat propagation experiment";
+			this.Text = "Heat Propagation Experiment";
 			//! this.Text = "熱伝導実験";
 			this.ResumeLayout(false);
 
@@ -129,7 +129,7 @@ namespace Heat
 		private void timer_Tick(object sender, System.EventArgs e) {
 			for( int i=0; i<8; i++ )	m.next();
 			float r = m.next();
-			this.Text = "Heat propagation model "+(++tick)+":"+r;
+			this.Text = "Heat Propagation Model "+(++tick)+":"+r;
 			//! this.Text = "熱伝導モデル "+(++tick)+":"+r;
 			for( int x=99; x>=0; x-- )
 				for( int y=99; y>=0; y-- ) {

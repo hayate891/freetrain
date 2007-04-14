@@ -19,17 +19,20 @@ namespace freetrain.world.structs
 	[Serializable]
 	public abstract class PThreeDimStructure : Structure
 	{
-		public PThreeDimStructure( FixedSizeStructureContribution type, Location loc ) {
-			this.baseLocation = loc;
+		public PThreeDimStructure( FixedSizeStructureContribution type, WorldLocator wloc ) {
+			this.baseLocation = wloc.location;
 			this.type = type;
 			
 			// build voxels
 			for( int z=0; z<type.size.z; z++ )
 				for( int y=0; y<type.size.y; y++ )
 					for( int x=0; x<type.size.x; x++ )
-						new VoxelImpl( this, loc+new Distance(x,y,z) );
+						CreateVoxel( new WorldLocator(wloc.world,baseLocation+new Distance(x,y,z)));
 		}
 
+		protected virtual StructureVoxel CreateVoxel( WorldLocator loc ){
+			return new VoxelImpl( this, loc ); 
+		}
 
 		public readonly FixedSizeStructureContribution type;
 
@@ -60,12 +63,13 @@ namespace freetrain.world.structs
 
 
 		[Serializable]
-		private class VoxelImpl : StructureVoxel, IDeserializationCallback {
-			internal VoxelImpl( PThreeDimStructure _owner, Location _loc )
-				: base(_owner,_loc) {
+		protected class VoxelImpl : StructureVoxel, IDeserializationCallback {
+			internal VoxelImpl( PThreeDimStructure _owner, WorldLocator wloc )
+				: base(_owner,wloc) {
 				setSprite();
 			}
-			
+			//public override bool transparent { get { return true; } }
+
 			private new PThreeDimStructure owner { get {
 				return (PThreeDimStructure)base.owner;
 			}}
@@ -115,8 +119,8 @@ namespace freetrain.world.structs
 				onEntityRemoved(this,null);
 		}
 
-		public static new bool canBeBuilt( Location loc, Distance size ) {
-			if(!Structure.canBeBuilt(loc,size))
+		public static new bool canBeBuilt( Location loc, Distance size, ControlMode cm) {
+			if(!Structure.canBeBuilt(loc,size, cm))
 				return false;
 
 			// make sure all the voxels are on the ground.

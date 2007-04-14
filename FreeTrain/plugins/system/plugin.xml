@@ -116,6 +116,145 @@
 		<implementation name="freetrain.contributions.structs.VarHeightBuildingContribution" />
 	</contribution>
 	
+<!--J[Cu-->
+	<contribution type="contribution" id="{C6F610B7-5046-4F74-C477-049B238F262D}">
+		<name>ColorLibrary</name>
+		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
+		<implementation name="freetrain.framework.plugin.graphics.ColorLibrary"/>
+	</contribution>
+
+	<contribution type="ColorLibrary" id="{COLORLIB-NULL}">
+		<name>NULL</name>
+	</contribution>
+	
+	<contribution type="ColorLibrary" id="{COLORLIB-RAINBOW}">
+		<name>Rainbow</name>
+		<!--!<name>カラフル</name>-->
+		<element color="230,0,18"/>
+		<element color="235,97,0"/>
+		<element color="245,232,0"/>
+		<element color="143,195,31"/>
+		<element color="0,153,68"/>
+		<element color="0,160,233"/>
+		<element color="40,73,238"/>
+		<element color="160,37,201"/>
+	</contribution>
+
+	<contribution type="ColorLibrary" id="{COLORLIB-STONES}">
+		<name>Stone</name>
+		<!--!<name>石壁</name>-->
+		<element color="149,63,55"/>
+		<element color="129,103,103"/>
+		<element color="210,167,117"/>
+		<element color="231,217,170"/>
+		<element color="210,210,210"/>
+		<element color="129,144,136"/>
+		<element color="149,149,167"/>
+		<element color="80,90,106"/>
+	</contribution>
+
+	<contribution type="ColorLibrary" id="{COLORLIB-WOODS}">
+		<name>Wood</name>
+		<!--!<name>木材</name>-->
+		<element color="207,136,34"/>
+		<element color="241,190,109"/>
+		<element color="197,162,144"/>
+		<element color="95,67,31"/>
+		<element color="138,101,48"/>
+		<element color="190,157,38"/>
+		<element color="218,206,138"/>
+		<element color="98,98,98"/>
+	</contribution>
+
+	<contribution type="ColorLibrary" id="{COLORLIB-METALS}">
+		<name>Metal</name>
+		<!--!<name>金属</name>-->
+		<element color="142,33,33"/>
+		<element color="183,131,131"/>
+		<element color="142,93,33"/>
+		<element color="185,175,85"/>		
+		<element color="134,126,36"/>		
+		<element color="152,171,143"/>		
+		<element color="105,140,84"/>
+		<element color="143,174,193"/>		
+		<element color="109,119,154"/>
+		<element color="220,220,220"/>		
+		<element color="153,153,153"/>
+		<element color="110,110,110"/>
+	</contribution>
+
+	<contribution type="ColorLibrary" id="{COLORLIB-BRICKS}">
+		<name>Brick</name>
+		<!--!<name>レンガ</name>-->
+		<element color="221,99,93"/>
+		<element color="154,31,11"/>
+		<element color="191,112,116"/>
+		<element color="210,108,50"/>
+		<element color="232,193,144"/>
+		<element color="192,123,40"/>
+		<element color="195,178,135"/>
+		<element color="150,144,110"/>
+	</contribution>
+
+	<contribution type="ColorLibrary" id="{COLORLIB-DIRTS}">
+		<name>Earth / Concrete</name>
+		<!--!<name>土・コンクリ</name>-->
+		<element color="153,108,51"/>
+		<element color="176,136,80"/>
+		<element color="175,151,128"/>
+		<element color="220,200,180"/>
+		<element color="170,164,96"/>
+		<element color="210,210,210"/>
+		<element color="150,157,141"/>
+		<element color="84,73,67"/>
+	</contribution>
+
+	<contribution type="ColorLibrary" id="{COLORLIB-PASTEL}">
+		<name>Pastel</name>
+		<!--!<name>パステル</name>-->
+		<element color="230,175,198"/>
+		<element color="225,170,139"/>
+		<element color="225,222,147"/>
+		<element color="200,220,162"/>
+		<element color="172,222,177"/>
+		<element color="190,220,215"/>
+		<element color="191,202,232"/>
+		<element color="217,187,232"/>
+	</contribution>	
+	
+	<contribution type="ColorLibrary" id="{COLORLIB-COLPLATE}">
+		<name>Painted Iron Roof</name>
+		<!--!<name>カラー鉄板屋根</name>-->
+		<element color="164,0,91"/>
+		<element color="248,110,158"/>
+		<element color="188,12,24"/>
+		<element color="90,80,33"/>
+		<element color="35,97,30"/>
+		<element color="154,189,184"/>		
+		<element color="113,223,185"/>		
+		<element color="84,175,210"/>		
+		<element color="92,114,127"/>
+		<element color="61,83,156"/>
+		<element color="210,210,210"/>
+		<element color="98,98,98"/>
+	</contribution>	
+	
+	<contribution type="ColorLibrary" id="{COLORLIB-ROOF}">
+		<name>Tile / Slate</name>
+		<!--!<name>瓦・スレート</name>-->
+		<element color="160,160,160"/>
+		<element color="84,84,84"/>
+		<element color="108,51,65"/>
+		<element color="168,66,0"/>
+		<element color="200,11,26"/>
+		<element color="232,137,36"/>
+		<element color="135,124,96"/>
+		<element color="138,182,44"/>
+		<element color="61,133,59"/>		
+		<element color="113,223,185"/>
+		<element color="68,103,175"/>
+		<element color="142,84,167"/>
+	</contribution>	
 	
 	
 <!-- 会計分類 -->
@@ -255,8 +394,15 @@
 		<class name="freetrain.framework.graphics.HueTransformSpriteFactoryContributionImpl"/>
 	</contribution>
 	
-	
-	
+	<!--  色相による色マップをするスプライトファクトリ
+		<map from="R" to="80,130,220" />
+		<map from="G" to="160,130,40" />
+		<map from="B" to="250,220,20" />
+		の一または複数のパラメータをとる
+	<contribution type="spriteFactory" id="spriteFactory:RGBTransform">
+		<class name="freetrain.framework.graphics.RGBTransformSpriteFactoryContributionImpl"/>
+	</contribution>	
+	-->	
 	
 	
 <!-- スプライトローダ。画像からどうスプライトを切り出すかを隠蔽する -->

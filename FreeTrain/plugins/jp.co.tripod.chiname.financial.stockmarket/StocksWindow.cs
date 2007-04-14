@@ -91,7 +91,7 @@ namespace freetrain.finance.stock
 			this.btn_counter.Name = "btn_counter";
 			this.btn_counter.Size = new System.Drawing.Size(72, 23);
 			this.btn_counter.TabIndex = 5;
-			this.btn_counter.Text = "Business counter";
+			this.btn_counter.Text = "Business Counter";
 			//! this.btn_counter.Text = "取引窓口";
 			this.btn_counter.Click += new System.EventHandler(this.btn_counter_Click);
 			// 
@@ -126,7 +126,7 @@ namespace freetrain.finance.stock
 																		  this.listview});
 			this.MinimumSize = new System.Drawing.Size(336, 232);
 			this.Name = "StocksWindow";
-			this.Text = "Stock portfolio";
+			this.Text = "Stock Portfolio";
 			//! this.Text = "所有株式一覧";
 			this.ResumeLayout(false);
 

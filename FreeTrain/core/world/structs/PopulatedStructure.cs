@@ -14,11 +14,11 @@ namespace freetrain.world.structs
 	[Serializable]
 	public abstract class PopulatedStructure : PThreeDimStructure
 	{
-		public PopulatedStructure( FixedSizeStructureContribution type, Location loc )
-			: base(type,loc) {
+		public PopulatedStructure( FixedSizeStructureContribution type, WorldLocator wloc )
+			: base(type,wloc) {
 
-			if( type.population!=null )
-				stationListener = new StationListenerImpl( type.population, loc );
+			if( type.population!=null && wloc.world==World.world)
+				stationListener = new StationListenerImpl( type.population, wloc.location );
 		}
 
 		/// <summary>

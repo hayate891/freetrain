@@ -27,7 +27,7 @@ namespace freetrain.finance.stock
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "Brokerage firm";
+			item.Text = "Brokerage Firm";
 			//! item.Text = "証券会社";
 			item.Click += new System.EventHandler(onClick);
 

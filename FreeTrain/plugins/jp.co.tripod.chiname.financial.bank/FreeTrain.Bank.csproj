@@ -1,94 +1,145 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:Conversion="urn:Conversion">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4C35BAD5-CAEE-498F-9BA7-8771FBEA4979}</ProjectGuid>
-    <RootNamespace>Bank</RootNamespace>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
     <AssemblyName>Bank</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
-    <ApplicationIcon />
-    <PreBuildEvent />
-    <PostBuildEvent />
-    <StartupObject />
-    <NoConfig>false</NoConfig>
+    <RootNamespace>Bank</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <NoStdLib>false</NoStdLib>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn />
-    <DebugSymbols>true</DebugSymbols>
-    <Optimize>false</Optimize>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <NoStdLib>false</NoStdLib>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn />
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <DefineConstants>TRACE</DefineConstants>
     <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.dll</HintPath>
-      <Private />
+      <Name>System</Name>
     </Reference>
     <Reference Include="System.Data">
-      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Data.dll</HintPath>
-      <Private />
+      <Name>System.Data</Name>
     </Reference>
     <Reference Include="System.Drawing">
-      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll</HintPath>
-      <Private />
+      <Name>System.Drawing</Name>
     </Reference>
     <Reference Include="System.Windows.Forms">
-      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll</HintPath>
-      <Private />
+      <Name>System.Windows.Forms</Name>
     </Reference>
     <Reference Include="System.Xml">
-      <HintPath>D:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.XML.dll</HintPath>
-      <Private />
+      <Name>System.XML</Name>
     </Reference>
+    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
+      <Name>FreeTrain.Core</Name>
+      <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
-    <EmbeddedResource Include="bank_icon.bmp" />
-    <Compile Include="BankbookListHelper.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BankbookListHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="BankbookWindow.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BankCouterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BankPlugIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DebtEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FixedDeposit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FloatingAssets.cs">
+      <SubType>Code</SubType>
     </Compile>
     <EmbeddedResource Include="BankbookWindow.resx">
       <DependentUpon>BankbookWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="BankConfig.cs" />
-    <Compile Include="BankCouterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <EmbeddedResource Include="BankCouterForm.resx">
       <DependentUpon>BankCouterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="BankModule.cs" />
-    <Compile Include="BankPlugIn.cs" />
-    <Compile Include="DebtEx.cs" />
-    <Compile Include="FixedDeposit.cs" />
-    <Compile Include="FloatingAssets.cs" />
+    <EmbeddedResource Include="bank_icon.bmp" />
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
-      <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
-      <Name>FreeTrain.Core</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

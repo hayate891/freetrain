@@ -7,6 +7,7 @@ namespace freetrain.world.development
 	/// <summary>
 	/// CommercialStructurePlan の概要の説明です。
 	/// </summary>
+	[Serializable]
 	class CommercialStructurePlan : Plan
 	{
 		private readonly CommercialStructureContribution contrib;

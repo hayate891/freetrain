@@ -18,7 +18,8 @@ namespace freetrain.world.rail
 		/// <summary>
 		/// Sprite that contains the images of all patterns.
 		/// </summary>
-		private static readonly Picture railChips = ResourceUtil.loadSystemPicture("RailRoads.bmp");
+		private static readonly Picture railChips = ResourceUtil.loadSystemPicture("RailRoads.bmp","RailRoads_n.bmp");
+		private static readonly Picture ugChips = ResourceUtil.loadSystemPicture("ugslope.bmp");
 
 		// single rail road
 		private static readonly RailPattern[] singlePatterns = new RailPattern[] {
@@ -58,40 +59,77 @@ namespace freetrain.world.rail
 
 		// slopes
 		private static readonly RailPattern[] slopePatterns = new RailPattern[] {
-			RailPattern.createSlope( 0,0, 0,0,true),
-			RailPattern.createSlope( 1,0, 1,0,true),
-			RailPattern.createSlope( 2,0,-1,4,false),
-			RailPattern.createSlope( 3,0, 0,0,false),
+			RailPattern.createSlope(railChips, 0,0, 0,0,true),
+			RailPattern.createSlope(railChips, 1,0, 1,0,true),
+			RailPattern.createSlope(railChips, 2,0,-1,4,false),
+			RailPattern.createSlope(railChips, 3,0, 0,0,false),
 
-			RailPattern.createSlope( 4,2, 0,2,true),
-			RailPattern.createSlope( 5,2, 1,2,true),
-			RailPattern.createSlope( 6,2,-1,6,false),
-			RailPattern.createSlope( 7,2, 0,2,false),
+			RailPattern.createSlope(railChips, 4,2, 0,2,true),
+			RailPattern.createSlope(railChips, 5,2, 1,2,true),
+			RailPattern.createSlope(railChips, 6,2,-1,6,false),
+			RailPattern.createSlope(railChips, 7,2, 0,2,false),
 
-			RailPattern.createSlope( 8,4, 0,4,true),
-			RailPattern.createSlope( 9,4, 1,4,true),
-			RailPattern.createSlope(10,4,-1,0,false),
-			RailPattern.createSlope(11,4, 0,4,false),
+			RailPattern.createSlope(railChips, 8,4, 0,4,true),
+			RailPattern.createSlope(railChips, 9,4, 1,4,true),
+			RailPattern.createSlope(railChips,10,4,-1,0,false),
+			RailPattern.createSlope(railChips,11,4, 0,4,false),
 
-			RailPattern.createSlope(12,6, 0,6,true),
-			RailPattern.createSlope(13,6, 1,6,true),
-			RailPattern.createSlope(14,6,-1,2,false),
-			RailPattern.createSlope(15,6, 0,6,false)
+			RailPattern.createSlope(railChips,12,6, 0,6,true),
+			RailPattern.createSlope(railChips,13,6, 1,6,true),
+			RailPattern.createSlope(railChips,14,6,-1,2,false),
+			RailPattern.createSlope(railChips,15,6, 0,6,false)
+		};
+
+		private static readonly RailPattern[] slopeUGPatterns = new RailPattern[] {
+			RailPattern.createUGSlope(ugChips, 0,0, 0,0,true),
+			RailPattern.createUGSlope(ugChips, 1,0, 1,0,true),
+			RailPattern.createUGSlope(ugChips, 2,0,-1,4,false),
+			RailPattern.createUGSlope(ugChips, 3,0, 0,0,false),
+
+			RailPattern.createUGSlope(ugChips, 4,2, 0,2,true),
+			RailPattern.createUGSlope(ugChips, 5,2, 1,2,true),
+			RailPattern.createUGSlope(ugChips, 6,2,-1,6,false),
+			RailPattern.createUGSlope(ugChips, 7,2, 0,2,false),
+
+			RailPattern.createUGSlope(ugChips, 8,4, 0,4,true),
+			RailPattern.createUGSlope(ugChips, 9,4, 1,4,true),
+			RailPattern.createUGSlope(ugChips,10,4,-1,0,false),
+			RailPattern.createUGSlope(ugChips,11,4, 0,4,false),
+
+			RailPattern.createUGSlope(ugChips,12,6, 0,6,true),
+			RailPattern.createUGSlope(ugChips,13,6, 1,6,true),
+			RailPattern.createUGSlope(ugChips,14,6,-1,2,false),
+			RailPattern.createUGSlope(ugChips,15,6, 0,6,false)
+		};
+
+
+		public static readonly Sprite[] slopeWalls = new Sprite[] {
+			RailPattern.createSlopeSupport(ugChips, 2),
+			RailPattern.createSlopeSupport(ugChips, 3),
+
+			RailPattern.createSlopeSupport(ugChips, 6),
+			RailPattern.createSlopeSupport(ugChips, 7),
+
+			RailPattern.createSlopeSupport(ugChips,10),
+			RailPattern.createSlopeSupport(ugChips,11),
+
+			RailPattern.createSlopeSupport(ugChips,14),
+			RailPattern.createSlopeSupport(ugChips,15)
 		};
 
 		// slope support voxels
 		public static readonly Sprite[] slopeSupports = new Sprite[] {
-			RailPattern.createSlopeSupport( 2),
-			RailPattern.createSlopeSupport( 3),
+			RailPattern.createSlopeSupport(railChips, 2),
+			RailPattern.createSlopeSupport(railChips, 3),
 
-			RailPattern.createSlopeSupport( 6),
-			RailPattern.createSlopeSupport( 7),
+			RailPattern.createSlopeSupport(railChips, 6),
+			RailPattern.createSlopeSupport(railChips, 7),
 
-			RailPattern.createSlopeSupport(10),
-			RailPattern.createSlopeSupport(11),
+			RailPattern.createSlopeSupport(railChips,10),
+			RailPattern.createSlopeSupport(railChips,11),
 
-			RailPattern.createSlopeSupport(14),
-			RailPattern.createSlopeSupport(15)
+			RailPattern.createSlopeSupport(railChips,14),
+			RailPattern.createSlopeSupport(railChips,15)
 		};
 
 
@@ -139,6 +177,14 @@ namespace freetrain.world.rail
 			return slopePatterns[climb.index*2+height];
 		}
 
+		public static RailPattern getUGSlope( Direction climb, int height ) 
+		{
+			Debug.Assert( 0<=height && height<4 );
+			Debug.Assert( climb.isSharp );
+
+			return slopeUGPatterns[climb.index*2+height];
+		}
+
 		// for junction rail
 		private static RailPattern createJunction( int imageIndexX, int angle1, int angle2, int angle3offset ) {
 			RailPattern p = new RailPattern(12+imageIndexX, imageIndexX,1,angle1,angle2,new Size(32,16),0);
@@ -150,9 +196,20 @@ namespace freetrain.world.rail
 			return new RailPattern(imageIndexX,imageIndexX,0,angle1,angle2,new Size(32,16),0);
 		}
 		// for angle rail
-		private static RailPattern createSlope( int imageIndexX, int upDir, int zdiff, int zangle, bool isVisible ) {
-			RailPattern p = new RailPattern(
-				28+imageIndexX,
+		private static RailPattern createSlope(Picture pic, int imageIndexX, int upDir, int zdiff, int zangle, bool isVisible ) {
+			return createSlope(pic, 28, imageIndexX, upDir, zdiff, zangle, isVisible );
+		}
+
+		private static RailPattern createUGSlope(Picture pic, int imageIndexX, int upDir, int zdiff, int zangle, bool isVisible ) 
+		{
+			return createSlope(pic, 44, imageIndexX, upDir, zdiff, zangle, isVisible );
+		}
+
+		// for angle rail
+		private static RailPattern createSlope(Picture pic, int baseIndexX, int imageIndexX, int upDir, int zdiff, int zangle, bool isVisible ) 
+		{
+			RailPattern p = new RailPattern(pic,
+				baseIndexX+imageIndexX,
 				isVisible?imageIndexX:12,
 				isVisible?2:0,
 				upDir,(upDir+4)%8,
@@ -161,12 +218,12 @@ namespace freetrain.world.rail
 			p._level = imageIndexX%4;
 
 			p._zdiff = zdiff;
-			p._zangle = Direction.get(zangle);
+			p._zangle = Direction.get(zangle);			
 			return p;
 		}
 
-		private static Sprite createSlopeSupport( int imageIndexX ) {
-			return new SimpleSprite(railChips, new Point(0,16), new Point(imageIndexX*32,32), new Size(32,32) );
+		private static Sprite createSlopeSupport( Picture p, int imageIndexX ) {
+			return new SimpleSprite(p, new Point(0,16), new Point(imageIndexX*32,32), new Size(32,32) );
 		}
 
 		private RailPattern( int id, int imageIndexX, int imageIndexY, int angle1, int angle2, Size sz, int offsetY )
@@ -176,6 +233,13 @@ namespace freetrain.world.rail
 			dir[angle2] = true;
 		}
 
+		private RailPattern(Picture pic, int id, int imageIndexX, int imageIndexY, int angle1, int angle2, Size sz, int offsetY )
+			: base(pic,new Point(0,offsetY),new Point(imageIndexX*32,imageIndexY*16),sz) 
+		{
+			this.id = id;
+			dir[angle1] = true;
+			dir[angle2] = true;
+		}
 
 		/// <summary>
 		/// どの方向にレールが伸びているか。trueなら伸びている
@@ -241,6 +305,8 @@ namespace freetrain.world.rail
 				foreach( RailPattern rp in junctionPatterns )
 					if(rp.id==id)	return rp;
 				foreach( RailPattern rp in slopePatterns )
+					if(rp.id==id)	return rp;
+				foreach( RailPattern rp in slopeUGPatterns )
 					if(rp.id==id)	return rp;
 				
 				Debug.Assert(false);

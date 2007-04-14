@@ -48,7 +48,7 @@ namespace freetrain.world.soccerstadium
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(88, 16);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Stadium &name:";
+			this.label1.Text = "Stadium &Name:";
 			//! this.label1.Text = "スタジアム名(&N):";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
@@ -66,7 +66,7 @@ namespace freetrain.world.soccerstadium
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(88, 16);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "&Team name:";
+			this.label2.Text = "&Team Name:";
 			//! this.label2.Text = "チーム名(&T):";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
@@ -190,7 +190,7 @@ namespace freetrain.world.soccerstadium
 			this.groupBox1.Size = new System.Drawing.Size(336, 80);
 			this.groupBox1.TabIndex = 10;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Team management";
+			this.groupBox1.Text = "Team Management";
 			//! this.groupBox1.Text = "チーム運営";
 			// 
 			// button1

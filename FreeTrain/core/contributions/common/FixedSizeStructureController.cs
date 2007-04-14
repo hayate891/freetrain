@@ -28,7 +28,7 @@ namespace freetrain.contributions.common
 		}
 
 		protected override void onSelected( Cube cube ) {
-			if( contrib.canBeBuilt(cube.corner) ) {
+			if( contrib.canBeBuilt(cube.corner,ControlMode.player) ) {
 				MainWindow.showError("Can not build");
 				//! MainWindow.showError("設置できません");
 			} else {

@@ -135,6 +135,7 @@ namespace freetrain.world.rail.signal
 
 		private SignalRailController() {
 			InitializeComponent();
+			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
 
 			signals = (RailSignalContribution[])
 				PluginManager.theInstance.listContributions(typeof(RailSignalContribution));
@@ -143,6 +144,7 @@ namespace freetrain.world.rail.signal
 		}
 
 		protected override void Dispose( bool disposing ) {
+			World.world.viewOptions.OnViewOptionChanged-=new OptionChangedHandler(updatePreview);
 			if( disposing && components != null)
 					components.Dispose();
 			base.Dispose( disposing );
@@ -157,7 +159,7 @@ namespace freetrain.world.rail.signal
 			updatePreview();
 		}
 
-		private void updatePreview() {
+		public override void updatePreview() {
 			RailPattern rp = RailPattern.get(currentDirection,currentDirection.opposite);
 
 			using( PreviewDrawer drawer = new PreviewDrawer( preview.Size, new Size(1,1), 0 ) ) {

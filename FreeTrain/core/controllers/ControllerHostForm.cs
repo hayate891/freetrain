@@ -4,6 +4,8 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using freetrain.framework;
+using freetrain.views;
+using freetrain.world;
 
 namespace freetrain.controllers
 {
@@ -25,6 +27,7 @@ namespace freetrain.controllers
 
 		public ControllerHostForm() {
 			InitializeComponent();
+			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
 			siteImpl = new ControllerSiteImpl(this);
 		}
 
@@ -45,6 +48,7 @@ namespace freetrain.controllers
 		}
 
 		protected override void Dispose( bool disposing ) {
+			World.world.viewOptions.OnViewOptionChanged-=new OptionChangedHandler(updatePreview);
 			if( disposing && components != null)
 					components.Dispose();
 			base.Dispose( disposing );
@@ -74,6 +78,8 @@ namespace freetrain.controllers
 			this.Left = MainWindow.mainWindow.Left;
 			this.Top  = MainWindow.mainWindow.Top;
 		}
+
+		public virtual void updatePreview(){}
 
 		#region Windows Form Designer generated code
 		private System.ComponentModel.Container components = null;

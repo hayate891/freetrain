@@ -66,7 +66,7 @@ namespace freetrain.views.debug
 			this.MinimizeBox = false;
 			this.Name = "TraceWindow";
 			this.ShowInTaskbar = false;
-			this.Text = "Debug window";
+			this.Text = "Debug Window";
 			//! this.Text = "デバッグウィンドウ";
 			this.ResumeLayout(false);
 
@@ -85,7 +85,7 @@ namespace freetrain.views.debug
 			
 			public override void WriteLine( string str ) {
 				text.AppendText(str);
-				text.AppendText("¥n");
+				text.AppendText("\n");
 			}
 		}
 	}

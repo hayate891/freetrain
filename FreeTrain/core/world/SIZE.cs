@@ -6,6 +6,7 @@ namespace freetrain.world
 	/// <summary>
 	/// Better "Size" class.
 	/// </summary>
+	[Serializable]
 	public struct SIZE
 	{
 		public SIZE( Size sz ) : this( sz.Width, sz.Height ) {

@@ -24,35 +24,29 @@ namespace freetrain.world.land.rice
 			Picture picture = getPicture(e);
 
 			XmlElement pic = (XmlElement)XmlUtil.selectSingleNode(e,"picture");
-			int offset = int.Parse( pic.Attributes["offset"].Value );
-
+			int offset = 0;
+			XmlAttribute attr = null;
+			attr = pic.Attributes["offset"];
+			if(attr != null )
+				offset = int.Parse( attr.Value );
+			Point orig = XmlUtil.parsePoint(pic.Attributes["origin"].Value);
 			SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(e);
 
 			Point pt = new Point(0,0);
-			Size sz = new Size(32,16);
+			Size sz = new Size(32,16+offset);
 
 			sprites = new Sprite[3,3];
-			sprites[0,0] = spriteFactory.createSprite( picture, pt, new Point(  0, 0+offset), sz );
-			sprites[1,0] = spriteFactory.createSprite( picture, pt, new Point(  0,16+offset), sz );
-			sprites[2,0] = spriteFactory.createSprite( picture, pt, new Point( 32, 0+offset), sz );
-			sprites[0,1] = spriteFactory.createSprite( picture, pt, new Point( 32,16+offset), sz );
-			sprites[1,1] = spriteFactory.createSprite( picture, pt, new Point(128,16+offset), sz );
-			sprites[2,1] = spriteFactory.createSprite( picture, pt, new Point( 64,16+offset), sz );
-			sprites[0,2] = spriteFactory.createSprite( picture, pt, new Point( 96, 0+offset), sz );
-			sprites[1,2] = spriteFactory.createSprite( picture, pt, new Point( 96,16+offset), sz );
-			sprites[2,2] = spriteFactory.createSprite( picture, pt, new Point( 64, 0+offset), sz );
+			sprites[0,0] = spriteFactory.createSprite( picture, pt, new Point( orig.X, orig.Y ), sz );
+			sprites[1,0] = spriteFactory.createSprite( picture, pt, new Point( orig.X, orig.Y+16 ), sz );
+			sprites[2,0] = spriteFactory.createSprite( picture, pt, new Point( orig.X+32, orig.Y ), sz );
+			sprites[0,1] = spriteFactory.createSprite( picture, pt, new Point( orig.X+32, orig.Y+16 ), sz );
+			sprites[1,1] = spriteFactory.createSprite( picture, pt, new Point( orig.X+128, orig.Y+16 ), sz );
+			sprites[2,1] = spriteFactory.createSprite( picture, pt, new Point( orig.X+64, orig.Y+16 ), sz );
+			sprites[0,2] = spriteFactory.createSprite( picture, pt, new Point( orig.X+96, orig.Y ), sz );
+			sprites[1,2] = spriteFactory.createSprite( picture, pt, new Point( orig.X+96, orig.Y+16 ), sz );
+			sprites[2,2] = spriteFactory.createSprite( picture, pt, new Point( orig.X+64, orig.Y ), sz );
 
-			// population
-			XmlElement pop = (XmlElement)e.SelectSingleNode("population");
-			if(pop!=null)
-				population = new PersistentPopulation(
-					Population.load(pop),
-					new PopulationReferenceImpl(this.id));
 		}
-
-
-		/// <summary> Population of this structure, or null if this structure is not populated. </summary>
-		public readonly Population population;
 
 		/// <summary> Sprite of this land contribution. </summary>
 		public readonly Sprite[,] sprites;
@@ -62,13 +56,13 @@ namespace freetrain.world.land.rice
 		/// <summary>
 		/// Gets the land that should be used to fill (x,y) within [x1,y1]-[x2,y2] (inclusive).
 		/// </summary>
-		public override void create( int x1, int y1, int x2, int y2, int z ) {
+		public override void create( int x1, int y1, int x2, int y2, int z, bool owned ) {
 			for( int x=x1; x<=x2; x++ ) {
 				for( int y=y1; y<=y2; y++ ) {
 					Location loc = new Location(x,y,z);
 
 					if( RiceFieldVoxel.canBeBuilt(loc) )
-						new RiceFieldVoxel( loc, this, getIndex(x1,x,x2), getIndex(y1,y,y2) );
+						new RiceFieldVoxel( loc, this, getIndex(x1,x,x2), getIndex(y1,y,y2) ).isOwned =owned;
 				}
 			}
 		}
@@ -108,7 +102,7 @@ namespace freetrain.world.land.rice
 			}
 
 			protected override void onRectSelected( Location loc1, Location loc2 ) {
-				contrib.create(loc1,loc2);
+				contrib.create(loc1,loc2,true);
 			}
 
 			public void drawBefore( QuarterViewDrawer view, DrawContextEx surface ) {}
@@ -127,17 +121,5 @@ namespace freetrain.world.land.rice
 			public void drawAfter( QuarterViewDrawer view, DrawContextEx surface ) {}
 		}
 
-	
-		/// <summary>
-		/// Used to resolve references to the population object.
-		/// </summary>
-		[Serializable]
-		internal sealed class PopulationReferenceImpl : IObjectReference {
-			internal PopulationReferenceImpl( string id ) { this.id=id; }
-			private string id;
-			public object GetRealObject(StreamingContext context) {
-				return ((RiceFieldBuilder)PluginManager.theInstance.getContribution(id)).population;
-			}
-		}
 	}
 }

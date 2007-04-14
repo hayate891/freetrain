@@ -15,7 +15,7 @@ namespace freetrain.world.road.accessory
 
 		public override void mergeMenu( MainMenu containerMenu ) 
 		{
-			MenuItem item = new MenuItem("&Accessory...");
+			MenuItem item = new MenuItem("&Accessories...");
 			//! MenuItem item = new MenuItem("アクセサリ(&A)...");
 			item.Click += new System.EventHandler(onClick);
 

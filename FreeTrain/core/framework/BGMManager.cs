@@ -82,7 +82,7 @@ namespace freetrain.framework
 				this.contrib = contrib;
 				this.owner = owner;
 				if( contrib==null)
-					this.Text = "Nothing";
+					this.Text = "Silence";
 					//! this.Text = "なし";
 				else
 					this.Text = contrib.name;

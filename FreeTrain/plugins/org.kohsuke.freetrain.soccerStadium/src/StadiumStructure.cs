@@ -59,7 +59,7 @@ namespace freetrain.world.soccerstadium
 		/// <param name="_type">
 		/// Type of the structure to be built.
 		/// </param>
-		public StadiumStructure( StructureContributionImpl _type, Location loc  ) : base( _type, loc ) {
+		public StadiumStructure( StructureContributionImpl _type, WorldLocator wloc  ) : base( _type, wloc ) {
 //			this.type = _type;
 
 			// register once a month timer for the strength/popularity decay

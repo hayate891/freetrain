@@ -7,6 +7,7 @@ namespace freetrain.world.development
 	/// <summary>
 	/// VarHeightBuildingPlan の概要の説明です。
 	/// </summary>
+	[Serializable]
 	class VarHeightBuildingPlan : Plan {
 		private readonly VarHeightBuildingContribution contrib;
 		private readonly Location loc;

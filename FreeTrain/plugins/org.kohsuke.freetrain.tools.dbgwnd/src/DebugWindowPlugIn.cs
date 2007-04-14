@@ -17,7 +17,7 @@ namespace freetrain.views.debug
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "Debug window";
+			item.Text = "Debug Window";
 			//! item.Text = "デバッグウィンドウ";
 			item.Click += new System.EventHandler(onClick);
 

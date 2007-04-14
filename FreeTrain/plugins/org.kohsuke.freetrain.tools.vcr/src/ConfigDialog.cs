@@ -77,7 +77,7 @@ namespace freetrain.tools.vcr
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(80, 24);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "&Compression method";
+			this.label1.Text = "&Compression Method";
 			//! this.label1.Text = "圧縮方式(&C)：";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
@@ -96,7 +96,7 @@ namespace freetrain.tools.vcr
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(80, 24);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "&Exposure interval";
+			this.label2.Text = "&Exposure Interval";
 			//! this.label2.Text = "露出間隔(&E)：";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
@@ -214,7 +214,7 @@ namespace freetrain.tools.vcr
 			this.MinimizeBox = false;
 			this.Name = "ConfigDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "Recording settings";
+			this.Text = "Recording Settings";
 			//! this.Text = "録画の設定";
 			((System.ComponentModel.ISupportInitialize)(this.fps)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.period)).EndInit();

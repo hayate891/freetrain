@@ -229,6 +229,11 @@ namespace freetrain.world.structs.hv
 		{
 			this.owner = _owner;
 		}
+
+		internal protected HalfDividedVoxel( HVStructure _owner, WorldLocator wloc): base(wloc){
+			this.owner = _owner;
+		}
+
 		/// <summary>
 		/// The structure object to which this voxel belongs.
 		/// </summary>

@@ -29,12 +29,12 @@ namespace freetrain.contributions.rail
 			return PluginManager.theInstance.stationGroup[name];
 		}
 
-		public override Structure create( Location baseLoc, bool initiallyOwned ) {
-			return new Station( this, baseLoc );
+		public override Structure create( WorldLocator wLoc, bool initiallyOwned ) {
+			return new Station( this, wLoc );
 		}
 
-		public override bool canBeBuilt( Location baseLoc ) {
-			return Station.canBeBuilt( baseLoc, size );
+		public override bool canBeBuilt( Location baseLoc, ControlMode cm ) {
+			return Station.canBeBuilt( baseLoc, size, cm );
 		}
 	}
 }

@@ -205,7 +205,7 @@ namespace freetrain.world.rail
 
 					// if this RR is elevated, elect a bridge support.
 //					if((++cycle%2)==0)
-					BridgePierVoxel.electBridgeSupport( here, typeof(BridgePierVoxel.DefaultImpl) );
+					BridgePierVoxel.electBridgeSupport( here, typeof(BridgePierVoxel.DefaultImpl), v );
 				}
 
 				if(here==there)	break;
@@ -267,7 +267,7 @@ namespace freetrain.world.rail
 				if(v!=null && v.railRoad!=null && !v.isOccupied)
 					v.railRoad.detach(d.opposite,dd);
 
-				BridgePierVoxel.teardownBridgeSupport(here);
+				BridgePierVoxel.teardownBridgeSupport(here,v);
 
 				if(here==there)	break;
 

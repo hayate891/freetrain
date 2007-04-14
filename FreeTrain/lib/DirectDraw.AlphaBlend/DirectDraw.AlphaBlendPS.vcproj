@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding = "UTF-8"?>
+<?xml version="1.0" encoding = "utf-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="7.00"
@@ -92,14 +92,14 @@ Exit 1
 	</Configurations>
 	<Files>
 		<Filter
-			Name="ソース ファイル"
+			Name="source"
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm">
 			<File
 				RelativePath="DirectDraw.AlphaBlendps.def">
 			</File>
 		</Filter>
 		<Filter
-			Name="生成されたファイル"
+			Name="output"
 			SourceControlFiles="FALSE">
 			<File
 				RelativePath="DirectDraw.AlphaBlend_i.c">

@@ -12,7 +12,14 @@ namespace freetrain.world.rail
 	[Serializable]
 	public class RailStationaryStructure : PThreeDimStructure
 	{
-		public RailStationaryStructure( RailStationaryContribution type, Location loc ) : base(type,loc) {}
+		public RailStationaryStructure(RailStationaryContribution type, WorldLocator wloc ) : base(type,wloc) {}
+
+		protected override StructureVoxel CreateVoxel(WorldLocator wloc) {
+			if( type.size.x == 1 && type.size.y == 1 )
+				return new StationaryVoxel(this, wloc);
+			else
+				return base.CreateVoxel(wloc);
+		}
 
 		public override bool onClick() { return false; }
 
@@ -35,5 +42,13 @@ namespace freetrain.world.rail
 		internal protected override Color heightCutColor { get { return Color.Gray; } }
 
 		public static RailStationaryStructure get( int x, int y, int z ) { return get(new Location(x,y,z)); }
+
+		[Serializable]
+		protected class StationaryVoxel : VoxelImpl {
+			internal StationaryVoxel( PThreeDimStructure _owner, WorldLocator wloc )
+				: base(_owner,wloc) {}
+
+		public override bool transparent { get { return true; } }
+		}
 	}
 }

@@ -202,7 +202,7 @@ namespace RoadSimulator
 			this.btnConfig.Name = "btnConfig";
 			this.btnConfig.Size = new System.Drawing.Size(72, 24);
 			this.btnConfig.TabIndex = 4;
-			this.btnConfig.Text = "Environment settings";
+			this.btnConfig.Text = "Environment Settings";
 			//! this.btnConfig.Text = "環境設定";
 			this.toolTip1.SetToolTip(this.btnConfig, "Environment settings");
 			//! this.toolTip1.SetToolTip(this.btnConfig, "環境設定");

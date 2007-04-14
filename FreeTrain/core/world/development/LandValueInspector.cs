@@ -77,7 +77,7 @@ namespace freetrain.world.development
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.label1});
 			this.Name = "LandValueInspector";
-			this.Text = "Inspect land value";
+			this.Text = "Inspect Land Value";
 			//! this.Text = "地価の検査";
 			this.ResumeLayout(false);
 

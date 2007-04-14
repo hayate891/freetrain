@@ -9,11 +9,21 @@ namespace freetrain.world.road
 	[Serializable]
 	public abstract class Road
 	{
-		protected Road( TrafficVoxel tv, RoadPattern pattern ) {
+		protected Road( TrafficVoxel tv, RoadPattern pattern, RoadStyle style ) {
+			this._style = style;
 			this.voxel = tv;
 			this._pattern = pattern;
 			voxel.road = this;
+			// voxel.roadを設定してからOnVoxelChangedイベントを投げないと
+			// 地価の係数計算が正しくできない。(477)
+			World.world.fireOnVoxelChanged(tv.location);
 		}
+
+		/// <summary>
+		/// Detailed Attribute of road
+		/// </summary>
+		internal protected RoadStyle _style;
+		public RoadStyle style { get{ return _style; } }
 
 		/// <summary>
 		/// Occupied voxel 

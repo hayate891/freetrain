@@ -194,8 +194,9 @@ namespace freetrain.controllers.structs
 			Sprite[,,] sprites = new Sprite[sz.Width,sz.Height,height];
 			for( int z=0; z<height; z++ )
 				for( int y=0; y<sz.Height; y++ )
-					for( int x=0; x<sz.Width; x++ )
-						sprites[x,y,z] = selectedType.getSprite(x,y,z,height);
+					for( int x=0; x<sz.Width; x++ ) {
+						sprites[x,y,z] = selectedType.getSprites(x,y,z,height)[0];
+					}
 			return new AlphaBlendSpriteSet( sprites );
 		}
 

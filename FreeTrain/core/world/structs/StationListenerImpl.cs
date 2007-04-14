@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Diagnostics;
 using freetrain.contributions.population;
 using freetrain.framework.plugin;
@@ -13,13 +14,14 @@ namespace freetrain.world.structs
 	[Serializable]
 	public class StationListenerImpl : rail.StationListener
 	{
+		public const int MaxStationCount = 4;
 		/// <param name="pop">Population pattern</param>
 		/// <param name="loc">The location used to decide if this object
 		/// can subscribe to a given station.</param>
 		public StationListenerImpl( Population pop, Location loc ) {
 			this.population = pop;
 			this.location = loc;
-
+			stations = new ArrayList(MaxStationCount);
 			if( population!=null )
 				attachToStation();	// attach to the existing station if any
 		}
@@ -27,7 +29,8 @@ namespace freetrain.world.structs
 		/// <summary>
 		/// Station to which this structure sends population to.
 		/// </summary>
-		private Station station;
+		//private Station station;
+		private ArrayList stations;
 
 		private readonly Location location;
 
@@ -39,56 +42,61 @@ namespace freetrain.world.structs
 		/// </summary>
 		public void onRemoved() {
 			// remove from the currently attached station
-			if(station!=null)
+			foreach(Station station in stations)
+			{
 				station.listeners.remove(this);
+			}
+			stations.Clear();
 		}
 
 		public int getPopulation( Station s ) {
-			return population.calcPopulation(World.world.clock);
+			int v = World.world.landValue[location];
+			int p =population.calcPopulation(World.world.clock);
+			p /= stations.Count;
+			return Math.Min(p,v+10);
 		}
 
-		public void advertiseStation( Station s ) {
-			if(station==null) {
-				// attach to it
-				station = s;
-				station.listeners.add(this);
-			} else
-			if( location.distanceTo(s.baseLocation) < location.distanceTo(station.baseLocation) ) {
-				// change to this new station
-				station.listeners.remove(this);
-				station = s;
-				station.listeners.add(this);
-			}
+		public bool advertiseStation( Station s ) {
+			// keep stations within 4
+			if(stations.Count<MaxStationCount)
+				s.listeners.add(this);
+			else	
+			{
+				int dmax = location.distanceTo(s.baseLocation);
+				Station remove = null;
+				foreach(Station station in stations)
+				{
+					int d = location.distanceTo(station.baseLocation);
+					if(d>dmax)
+					{
+						remove = station;
+						dmax = d;
+					}
+				}
+				if(remove!=null)
+				{
+					remove.listeners.remove(this);
+					stations[stations.IndexOf(remove)]=s;
+				}
+				return false;
+			}			
+			stations.Add(s);
+			return true;
 		}
 
 		public void onStationRemoved( Station s ) {
-			Debug.Assert(this.station==s);
-			station = null;
-
-			attachToStation();	// find another station to attach
+			stations.Remove(s);
 		}
 
 		/// <summary>
 		/// Finds the nearest station and attaches to it.
 		/// </summary>
 		private void attachToStation() {
-			Debug.Assert(station==null);
-
-			int dist = int.MaxValue;
 			foreach( Station s in World.world.stations ) {
 				if( !s.withinReach(location) )
 					continue;
-
-				int d = s.baseLocation.distanceTo(location);
-				if( d < dist ) {
-					dist = d;
-					station = s;
-				}
+				advertiseStation(s);					
 			}
-
-			if(station!=null)
-				// register this object as a listener to the station
-				station.listeners.add(this);
 		}
 	}
 }

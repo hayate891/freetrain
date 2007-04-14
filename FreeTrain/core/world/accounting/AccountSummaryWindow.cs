@@ -220,21 +220,21 @@ namespace freetrain.world.accounting
 			// menuItem1
 			// 
 			this.menuItem1.Index = 0;
-			this.menuItem1.Text = "Change &font...";
+			this.menuItem1.Text = "Change &Font...";
 			//! this.menuItem1.Text = "フォントの変更(&F)...";
 			this.menuItem1.Click += new System.EventHandler(this.onChangeFont);
 			// 
 			// menuItem2
 			// 
 			this.menuItem2.Index = 1;
-			this.menuItem2.Text = "&Edit displayed items...";
+			this.menuItem2.Text = "&Edit Displayed Items...";
 			//! this.menuItem2.Text = "表示項目の編集(&E)...";
 			this.menuItem2.Click += new System.EventHandler(this.onCustomizeGenres);
 			// 
 			// menuItem_Graph
 			// 
 			this.menuItem_Graph.Index = 2;
-			this.menuItem_Graph.Text = "Display &graph";
+			this.menuItem_Graph.Text = "Display &Graph";
 			//! this.menuItem_Graph.Text = "グラフの表示(&G)";
 			// 
 			// menuItem4
@@ -389,7 +389,7 @@ namespace freetrain.world.accounting
 			this.Name = "AccountSummaryWindow";
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-			this.Text = "Sales report";
+			this.Text = "Sales Report";
 			//! this.Text = "売上レポート";
 			this.ResumeLayout(false);
 

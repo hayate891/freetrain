@@ -87,8 +87,8 @@ namespace freetrain.world.accounting
 			this.selector.Name = "selector";
 			this.selector.Size = new System.Drawing.Size(408, 192);
 			this.selector.TabIndex = 1;
-			this.selector.title1 = "&Available items:";
-			this.selector.title2 = "&Selected items:";
+			this.selector.title1 = "&Available Items:";
+			this.selector.title2 = "&Selected Items:";
 			//! this.selector.title1 = "選択可能項目(&A)：";
 			//! this.selector.title2 = "選択項目(&S)：";
 			// 
@@ -107,7 +107,7 @@ namespace freetrain.world.accounting
 			this.MinimizeBox = false;
 			this.Name = "GenreSelectorDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "Display settings";
+			this.Text = "Display Settings";
 			//! this.Text = "表示項目の設定";
 			this.TopMost = true;
 			this.ResumeLayout(false);

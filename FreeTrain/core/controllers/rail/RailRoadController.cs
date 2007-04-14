@@ -46,9 +46,16 @@ namespace freetrain.controllers.rail
 
 		private RailRoadController() {
 			InitializeComponent();
-			using( PreviewDrawer drawer = new PreviewDrawer( picture.Size, new Size(1,10), 0 ) ) {
+			updatePreview();
+		}
+
+		public override void updatePreview()
+		{
+			using( PreviewDrawer drawer = new PreviewDrawer( picture.Size, new Size(1,10), 0 ) ) 
+			{
 				for( int i=0; i<10; i++ )
 					drawer.draw( RailPattern.get( Direction.NORTH, Direction.SOUTH ), 0, i );
+				if(picture.Image!=null) picture.Image.Dispose();
 				picture.Image = drawer.createBitmap();
 			}
 		}

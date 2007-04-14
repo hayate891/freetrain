@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Level the ground</title>
+	<title>Terrain Modification</title>
 	<!--!<title>地表の整地</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	<author>Kohsuke Kawaguchi</author>
