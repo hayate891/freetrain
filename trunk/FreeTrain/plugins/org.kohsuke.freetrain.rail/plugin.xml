@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Bridges &amp; Tunnels</title>
 	<!--!<title>鉄橋・トンネル</title>-->
-	<author>477さん</author>
+	<author>477</author>
+	<!--!<author>477さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="specialRail" id="{874B8BFD-1EF4-4828-9C5A-D0EA1049D28D}">

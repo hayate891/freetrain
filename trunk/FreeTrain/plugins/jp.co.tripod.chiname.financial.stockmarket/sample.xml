@@ -50,17 +50,20 @@
 	share：自社株保有数(株)−半永久的に売る気のない株主の持ち分も含める
 -->
 <companies>
-	<company id="9998" name="サンプル水産" type="010">
+	<company id="9998" name="Sample Marine" type="010">
+	<!--!<company id="9998" name="サンプル水産" type="010">-->
 		<performance capital="10000000" sales="1000000" />
 		<capacity brand="5" marketing="5" quality="5" rationality="5" development="5" />
 		<stock total="100000" share="50000" />
 	</company>
-	<business id="999" name="サンプル業種">
+	<business id="999" name="Sample Business Category">
+	<!--!<business id="999" name="サンプル業種">-->
 		<account fixed="0.25"/>
 		<market scale="10000000" cycle="365" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="5" marketing="5" quality="5" />
 	</business>
-	<company id="9999" name="サンプル企業" type="999">
+	<company id="9999" name="Sample Corporation" type="999">
+	<!--!<company id="9999" name="サンプル企業" type="999">-->
 		<performance capital="10000000" sales="1000000" />
 		<capacity brand="5" marketing="5" quality="5" rationality="5" development="5" />
 		<stock total="100000" share="50000" />

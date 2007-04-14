@@ -15,10 +15,9 @@ http://www.kohsuke.org/freetrain/
 * Acknowledgments
 
 This game was created by the members of the "A-Train" community at 2ch.
-First I'd like to thank 477-san, Hima-san, 915-san, Esiminarai-san,
-Ryokounotomo-san, Syosei-san, Kouensya A-san, Miha-san, ima-san, Min-san,
-and Ayase-san. Also, a big thanks to our artist, musicians, and all other
-contributors.
+First I'd like to thank 477, Hima, 915, Eshiminarai, Ryokounotomo, Syosei,
+Kouensya A, Miha, ima, Min, and Ayase. Also, a big thanks to our artist,
+musicians, and everybody else who contributed to the game.
 
 
 

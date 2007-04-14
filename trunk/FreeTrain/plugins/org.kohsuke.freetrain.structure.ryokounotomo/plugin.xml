@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>旅行の友さん</author>
+	<author>Ryokounotomo</author>
+	<!--!<author>旅行の友さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{8361A9CC-DC1D-4432-8E21-7FB3564FA5CF}">

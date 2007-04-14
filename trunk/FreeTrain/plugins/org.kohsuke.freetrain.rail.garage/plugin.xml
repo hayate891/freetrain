@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Train garage</title>
 	<!--!<title>機関庫</title>-->
-	<author>477さん</author>
+	<author>477</author>
+	<!--!<author>477さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="specialRail" id="{93481807-D998-46d7-B1BE-CB2B5D086D67}">

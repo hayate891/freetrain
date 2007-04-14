@@ -3,7 +3,8 @@
 	<title>Two-lane road (15 sprites)</title>
 	<!--!<title>二車線道路(15枚絵)</title>-->
 	<author>romulanWarbird</author>
-	<homepage>通信圏外</homepage>
+	<homepage>N/A</homepage>
+	<!--!<homepage>通信圏外</homepage>-->
 	
 	<contribution type="road" id="{7254CD19-38B1-42DB-84E3-88F9A5C88E42}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />

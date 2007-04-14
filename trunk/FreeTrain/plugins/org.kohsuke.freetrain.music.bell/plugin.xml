@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Departure bell set</title>
 	<!--!<title>発車ベルセット</title>-->
-	<author>915さん</author>
+	<author>915</author>
+	<!--!<author>915さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="trainDepartureBell" id="{607AA03D-4203-459E-A835-F4067A32E4B6}">

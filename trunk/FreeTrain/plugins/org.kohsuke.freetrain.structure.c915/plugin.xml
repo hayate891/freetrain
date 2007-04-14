@@ -28,7 +28,8 @@
 <plug-in>
 	<title>Temple</title>
 	<!--!<title>お寺</title>-->
-	<author>915さん</author>
+	<author>915</author>
+	<!--!<author>915さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{628C6F59-9B1A-48a8-8815-48AC0D15765E}">

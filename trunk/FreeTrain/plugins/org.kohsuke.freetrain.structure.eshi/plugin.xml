@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>絵師見習いさん</author>
+	<author>Eshiminarai</author>
+	<!--!<author>絵師見習いさん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{DD1224B9-2F1A-4c25-9E65-4E604F3342C7}">

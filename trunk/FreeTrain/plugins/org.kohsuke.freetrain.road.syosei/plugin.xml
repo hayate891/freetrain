@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Road</title>
 	<!--!<title>道路</title>-->
-	<author>鐘声さん</author>
+	<author>syosei</author>
+	<!--!<author>鐘声さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="road" id="{FAF0E7F9-3BCA-49B4-9F80-D0216B2D136A}">

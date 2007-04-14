@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Terrain loader</title>
 	<!--!<title>地形ローダー</title>-->
-	<author>川口耕介</author>
+	<author>Kohsuke Kawaguchi</author>
+	<!--!<author>川口耕介</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="newGame" id="{9CC6E93F-06D0-4d98-8F8C-7B3CE481F62E}">

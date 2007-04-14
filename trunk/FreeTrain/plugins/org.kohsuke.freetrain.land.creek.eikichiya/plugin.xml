@@ -3,7 +3,8 @@
 	<title>Creek</title>
 	<!--!<title>小川</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
-	<author>永吉屋駅前店さん</author>
+	<author>Nagayoshiya Ekimaeten</author>
+	<!--!<author>永吉屋駅前店さん</author>-->
 	
 	<contribution type="land" id="{25AA2C3E-2014-4134-A4FB-DAD90FDBC758}">
 		<group>River</group>

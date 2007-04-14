@@ -3,7 +3,8 @@
 	<title>Osaka Castle</title>
 	<!--!<title>大阪城</title>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
-	<author>477さん</author>
+	<author>477</author>
+	<!--!<author>477さん</author>-->
 	
 	<contribution type="picture" id="{4F129DD1-CCCF-4C2C-B317-0874AD9F77B7}">
 		<picture src="osaka_castle.bmp">
