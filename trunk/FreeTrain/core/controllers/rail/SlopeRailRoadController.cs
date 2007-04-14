@@ -51,7 +51,12 @@ namespace freetrain.controllers.rail
 			pictureW.Tag = Direction.get(6);
 
 			update( pictureN, pictureN );	// select N first
+			updatePreview();
+		}
 
+		public override void updatePreview()
+		{
+			
 			PreviewDrawer drawer;
 
 			// TODO: locations of the previews are uttely incorrect. fix them
@@ -62,6 +67,7 @@ namespace freetrain.controllers.rail
 				drawer.draw( RailPattern.getSlope( Direction.NORTH, 2 ), 1, 0 );
 				drawer.draw( RailPattern.getSlope( Direction.NORTH, 1 ), 0, 2 );
 				drawer.draw( RailPattern.getSlope( Direction.NORTH, 0 ), 0, 3 );
+				if(pictureN.Image!=null) pictureN.Image.Dispose();
 				pictureN.Image = drawer.createBitmap();
 			}
 
@@ -71,6 +77,7 @@ namespace freetrain.controllers.rail
 				drawer.draw( RailPattern.getSlope( Direction.SOUTH, 1 ), 0, 1 );
 				drawer.draw( RailPattern.getSlope( Direction.SOUTH, 2 ), 1, 1 );
 				drawer.draw( RailPattern.getSlope( Direction.SOUTH, 3 ), 1, 2 );
+				if(pictureS.Image!=null) pictureS.Image.Dispose();
 				pictureS.Image = drawer.createBitmap();
 			}
 
@@ -80,6 +87,7 @@ namespace freetrain.controllers.rail
 				drawer.draw( RailPattern.getSlope( Direction.EAST, 2 ),  2, 0 );
 				drawer.draw( RailPattern.getSlope( Direction.EAST, 1 ),  0, 1 );
 				drawer.draw( RailPattern.getSlope( Direction.EAST, 0 ), -1, 1 );
+				if(pictureE.Image!=null) pictureE.Image.Dispose();
 				pictureE.Image = drawer.createBitmap();
 			}
 
@@ -89,6 +97,7 @@ namespace freetrain.controllers.rail
 				drawer.draw( RailPattern.getSlope( Direction.WEST, 2 ), 2, 0 );
 				drawer.draw( RailPattern.getSlope( Direction.WEST, 1 ), 2, 1 );
 				drawer.draw( RailPattern.getSlope( Direction.WEST, 0 ), 3, 1 );
+				if(pictureW.Image!=null) pictureW.Image.Dispose();
 				pictureW.Image = drawer.createBitmap();
 			}
 		}

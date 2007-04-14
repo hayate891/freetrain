@@ -318,7 +318,7 @@ namespace freetrain.views.bank
 			this.btn_loan_set.Name = "btn_loan_set";
 			this.btn_loan_set.Size = new System.Drawing.Size(40, 24);
 			this.btn_loan_set.TabIndex = 8;
-			this.btn_loan_set.Text = "Decide";
+			this.btn_loan_set.Text = "OK";
 			//! this.btn_loan_set.Text = "決定";
 			this.btn_loan_set.Click += new System.EventHandler(this.btn_loan_set_Click);
 			// 
@@ -376,7 +376,7 @@ namespace freetrain.views.bank
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(64, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "Loan interest rate:";
+			this.label1.Text = "Interest:";
 			//! this.label1.Text = "借入利率：";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -558,7 +558,7 @@ namespace freetrain.views.bank
 			this.btn_repay_set.Name = "btn_repay_set";
 			this.btn_repay_set.Size = new System.Drawing.Size(40, 24);
 			this.btn_repay_set.TabIndex = 12;
-			this.btn_repay_set.Text = "Decide";
+			this.btn_repay_set.Text = "OK";
 			//! this.btn_repay_set.Text = "決定";
 			this.btn_repay_set.Click += new System.EventHandler(this.btn_repay_set_Click);
 			// 
@@ -661,7 +661,7 @@ namespace freetrain.views.bank
 			this.btn_deposit_set.Name = "btn_deposit_set";
 			this.btn_deposit_set.Size = new System.Drawing.Size(40, 24);
 			this.btn_deposit_set.TabIndex = 22;
-			this.btn_deposit_set.Text = "Decide";
+			this.btn_deposit_set.Text = "OK";
 			//! this.btn_deposit_set.Text = "決定";
 			this.btn_deposit_set.Click += new System.EventHandler(this.btn_deposit_set_Click);
 			// 
@@ -740,7 +740,7 @@ namespace freetrain.views.bank
 			this.label23.Name = "label23";
 			this.label23.Size = new System.Drawing.Size(64, 16);
 			this.label23.TabIndex = 9;
-			this.label23.Text = "Savings interest rate:";
+			this.label23.Text = "Interest:";
 			//! this.label23.Text = "預金利率：";
 			this.label23.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -900,7 +900,7 @@ namespace freetrain.views.bank
 			this.btn_cancel_maturity.Name = "btn_cancel_maturity";
 			this.btn_cancel_maturity.Size = new System.Drawing.Size(80, 24);
 			this.btn_cancel_maturity.TabIndex = 25;
-			this.btn_cancel_maturity.Text = "Cancel maturity";
+			this.btn_cancel_maturity.Text = "Cancel Maturity";
 			//! this.btn_cancel_maturity.Text = "満期日解約";
 			this.btn_cancel_maturity.Click += new System.EventHandler(this.btn_cancel_maturity_Click);
 			// 
@@ -913,7 +913,7 @@ namespace freetrain.views.bank
 			this.btn_cancel_now.Name = "btn_cancel_now";
 			this.btn_cancel_now.Size = new System.Drawing.Size(80, 24);
 			this.btn_cancel_now.TabIndex = 24;
-			this.btn_cancel_now.Text = "Cancel now";
+			this.btn_cancel_now.Text = "Cancel Nnow";
 			//! this.btn_cancel_now.Text = "即日解約";
 			this.btn_cancel_now.Click += new System.EventHandler(this.btn_cancel_now_Click);
 			// 
@@ -923,7 +923,7 @@ namespace freetrain.views.bank
 			this.label33.Name = "label33";
 			this.label33.Size = new System.Drawing.Size(72, 16);
 			this.label33.TabIndex = 22;
-			this.label33.Text = "Current interest:";
+			this.label33.Text = "Current Interest:";
 			//! this.label33.Text = "現在利息：";
 			this.label33.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
@@ -1095,7 +1095,7 @@ namespace freetrain.views.bank
 			this.Name = "BankCounterForm";
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-			this.Text = "Bank teller";
+			this.Text = "Bank Teller";
 			//! this.Text = "銀行窓口";
 			this.tab_main.ResumeLayout(false);
 			this.pgLoan.ResumeLayout(false);

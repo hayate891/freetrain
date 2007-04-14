@@ -46,7 +46,7 @@ namespace freetrain.world.structs.hv
 
 		public ControllerForm() {
 			InitializeComponent();
-			//World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
+			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
 			rnd = new Random();
 			
 			callback = new createCallback(randomize);
@@ -77,7 +77,7 @@ namespace freetrain.world.structs.hv
 		}
 
 		protected override void Dispose( bool disposing ) {
-			//World.world.viewOptions.OnViewOptionChanged-=new OptionChangedHandler(updatePreview);
+			World.world.viewOptions.OnViewOptionChanged-=new OptionChangedHandler(updatePreview);
 			if( disposing && components != null)
 				components.Dispose();
 			base.Dispose( disposing );
@@ -334,7 +334,7 @@ namespace freetrain.world.structs.hv
 																		  this.preview,
 																		  this.price});
 			this.Name = "ControllerForm";
-			this.Text = "Construct a half voxel";
+			this.Text = "Half Voxels";
 			//! this.Text = "半ボクセル建築";
 			this.group.ResumeLayout(false);
 			this.ResumeLayout(false);

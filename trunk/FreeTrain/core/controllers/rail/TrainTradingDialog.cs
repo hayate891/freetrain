@@ -7,6 +7,7 @@ using freetrain.contributions.train;
 using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.framework.plugin;
+using freetrain.views;
 using freetrain.world.accounting;
 
 namespace freetrain.world.rail
@@ -18,7 +19,15 @@ namespace freetrain.world.rail
 	{
 		public TrainTradingDialog() {
 			InitializeComponent();
+			//handler = new OptionChangedHandler(updatePreview);
+			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
+			Bitmap bmp = ResourceUtil.loadSystemBitmap("DayNight.bmp");
+			buttonImages.TransparentColor = bmp.GetPixel(0,0);
+			buttonImages.Images.AddStrip(bmp);
 			
+			tbDay.Pushed=(World.world.viewOptions.nightSpriteMode==NightSpriteMode.AlwaysDay);
+			tbNight.Pushed=(World.world.viewOptions.nightSpriteMode==NightSpriteMode.AlwaysNight);
+
 			// organize trains into a tree
 			IDictionary types = new SortedList();
 			foreach( TrainContribution tc in Core.plugins.trains ) {
@@ -98,10 +107,11 @@ namespace freetrain.world.rail
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label name;
 		private System.Windows.Forms.PictureBox preview;
-		/// <summary>
-		/// 必要なデザイナ変数です。
-		/// </summary>
-		private System.ComponentModel.Container components = null;
+		private System.Windows.Forms.ToolBarButton tbDay;
+		private System.Windows.Forms.ToolBarButton tbNight;
+		private System.Windows.Forms.ImageList buttonImages;
+		private System.Windows.Forms.ToolBar toolBarDayNight;
+		private System.ComponentModel.IContainer components;
 		
 		/// <summary>
 		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を
@@ -109,6 +119,7 @@ namespace freetrain.world.rail
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label2 = new System.Windows.Forms.Label();
 			this.length = new System.Windows.Forms.NumericUpDown();
 			this.label3 = new System.Windows.Forms.Label();
@@ -132,6 +143,10 @@ namespace freetrain.world.rail
 			this.label10 = new System.Windows.Forms.Label();
 			this.name = new System.Windows.Forms.Label();
 			this.preview = new System.Windows.Forms.PictureBox();
+			this.buttonImages = new System.Windows.Forms.ImageList(this.components);
+			this.toolBarDayNight = new System.Windows.Forms.ToolBar();
+			this.tbDay = new System.Windows.Forms.ToolBarButton();
+			this.tbNight = new System.Windows.Forms.ToolBarButton();
 			((System.ComponentModel.ISupportInitialize)(this.length)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.count)).BeginInit();
 			this.SuspendLayout();
@@ -291,6 +306,7 @@ namespace freetrain.world.rail
 			// 
 			this.typeTree.Dock = System.Windows.Forms.DockStyle.Left;
 			this.typeTree.ImageIndex = -1;
+			this.typeTree.Location = new System.Drawing.Point(0, 0);
 			this.typeTree.Name = "typeTree";
 			this.typeTree.SelectedImageIndex = -1;
 			this.typeTree.Size = new System.Drawing.Size(168, 342);
@@ -336,7 +352,7 @@ namespace freetrain.world.rail
 			this.author.Name = "author";
 			this.author.Size = new System.Drawing.Size(184, 16);
 			this.author.TabIndex = 22;
-			this.author.Text = "477-san";
+			this.author.Text = "477";
 			//! this.author.Text = "477さん";
 			this.author.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -379,36 +395,68 @@ namespace freetrain.world.rail
 			this.preview.TabIndex = 26;
 			this.preview.TabStop = false;
 			// 
+			// buttonImages
+			// 
+			this.buttonImages.ImageSize = new System.Drawing.Size(16, 15);
+			this.buttonImages.TransparentColor = System.Drawing.Color.Transparent;
+			// 
+			// toolBarDayNight
+			// 
+			this.toolBarDayNight.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
+																							   this.tbDay,
+																							   this.tbNight});
+			this.toolBarDayNight.Dock = System.Windows.Forms.DockStyle.None;
+			this.toolBarDayNight.DropDownArrows = true;
+			this.toolBarDayNight.ImageList = this.buttonImages;
+			this.toolBarDayNight.Location = new System.Drawing.Point(216, 32);
+			this.toolBarDayNight.Name = "toolBarDayNight";
+			this.toolBarDayNight.ShowToolTips = true;
+			this.toolBarDayNight.Size = new System.Drawing.Size(24, 48);
+			this.toolBarDayNight.TabIndex = 27;
+			this.toolBarDayNight.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
+			// 
+			// tbDay
+			// 
+			this.tbDay.ImageIndex = 1;
+			this.tbDay.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+			this.tbDay.Tag = freetrain.views.NightSpriteMode.AlwaysDay;
+			// 
+			// tbNight
+			// 
+			this.tbNight.ImageIndex = 2;
+			this.tbNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+			this.tbNight.Tag = freetrain.views.NightSpriteMode.AlwaysNight;
+			// 
 			// TrainTradingDialog
 			// 
 			this.AcceptButton = this.buttonOK;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
 			this.CancelButton = this.buttonCancel;
 			this.ClientSize = new System.Drawing.Size(442, 342);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.preview,
-																		  this.name,
-																		  this.label10,
-																		  this.label7,
-																		  this.author,
-																		  this.description,
-																		  this.label6,
-																		  this.label1,
-																		  this.typeTree,
-																		  this.passenger,
-																		  this.label9,
-																		  this.label8,
-																		  this.totalPrice,
-																		  this.speed,
-																		  this.label5,
-																		  this.buttonCancel,
-																		  this.buttonOK,
-																		  this.label4,
-																		  this.groupBox1,
-																		  this.count,
-																		  this.label3,
-																		  this.length,
-																		  this.label2});
+			this.Controls.Add(this.toolBarDayNight);
+			this.Controls.Add(this.preview);
+			this.Controls.Add(this.name);
+			this.Controls.Add(this.label10);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.author);
+			this.Controls.Add(this.description);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.typeTree);
+			this.Controls.Add(this.passenger);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.totalPrice);
+			this.Controls.Add(this.speed);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.buttonCancel);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.count);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.length);
+			this.Controls.Add(this.label2);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -435,6 +483,11 @@ namespace freetrain.world.rail
 		}
 
 		private void onTypeChanged(object sender, System.Windows.Forms.TreeViewEventArgs e) {
+			updatePreview();
+		}
+
+		public void updatePreview() 
+		{
 			length.Enabled = count.Enabled = buttonOK.Enabled = (selectedTrain!=null);
 
 			Image im = preview.Image;
@@ -501,6 +554,29 @@ namespace freetrain.world.rail
 
 			// set count to 0 to avoid accidental purchase
 			count.Value=0;
+		}
+
+		private void toolBar1_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
+		{
+			foreach( ToolBarButton tb in toolBarDayNight.Buttons)
+			{
+				if(e.Button == tb)
+				{
+					if(tb.Pushed)
+						World.world.viewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
+					else
+						World.world.viewOptions.nightSpriteMode = NightSpriteMode.AlignClock;
+				}
+				else
+				{
+					tb.Pushed = false;
+				}
+			}
+		}
+
+		private void TrainTradingDialog_Closed(object sender, System.EventArgs e)
+		{
+			World.world.viewOptions.OnViewOptionChanged-=new OptionChangedHandler(updatePreview);
 		}
 
 

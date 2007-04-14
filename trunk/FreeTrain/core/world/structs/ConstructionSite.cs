@@ -31,10 +31,12 @@ namespace freetrain.world.structs
 			voxels = new VoxelImpl[size.x,size.y,size.z];
 			for( int h=0; h<size.z; h++ )
 				for( int x=0; x<size.x; x++ )
-					for( int y=0; y<size.y; y++ )
-						voxels[x,y,h] = new VoxelImpl(this,
-							new Location(baseLoc.x+x, baseLoc.y+y, baseLoc.z+h),
-							new bool[]{ y!=0, x!=size.x-1, y!=size.y-1, x!=0 } );
+					for( int y=0; y<size.y; y++ ) {
+						Location l = new Location(baseLoc.x+x, baseLoc.y+y, baseLoc.z+h);
+						if( World.world.isInsideWorld(l) )
+							voxels[x,y,h] = new VoxelImpl(this, l,
+								new bool[]{ y!=0, x!=size.x-1, y!=size.y-1, x!=0 } );
+					}
 			
 			uncompletedVoxels = size.volume;
 		}
@@ -42,7 +44,7 @@ namespace freetrain.world.structs
 		/// <summary>
 		/// Handler invoked when the construction finishes.
 		/// </summary>
-		private readonly EventHandler completionHandler;
+		private EventHandler completionHandler;
 
 		/// <summary>
 		/// Voxels
@@ -85,6 +87,11 @@ namespace freetrain.world.structs
 		public override bool isOwned { get { return false; } }
 
 		public override void remove() {
+			// remove all voxels
+			foreach( VoxelImpl v in voxels )
+				World.world.remove(v);
+			// then fire the event
+			completionHandler = null;
 			// TODO: not sure what to do. ConstructionSite is not removable.
 			if(onEntityRemoved!=null)	onEntityRemoved(this,null);
 		}
@@ -118,6 +125,10 @@ namespace freetrain.world.structs
 				registerClockHandler();	// start receiving clocks
 			}
 
+			public override void onRemoved() {
+				state = State.abandoned;
+			}
+
 			/// <summary>
 			/// Connectivity to four adjacent voxels.
 			/// 
@@ -126,7 +137,7 @@ namespace freetrain.world.structs
 			private readonly bool[] connection;
 
 			private enum State {
-				empty=0, bone1=1, bone2=2, bone3=3, walled=4
+				empty=0, bone1=1, bone2=2, bone3=3, walled=4, abandoned=5
 			}
 			/// <summary>
 			/// The current state of the construction.
@@ -282,6 +293,8 @@ namespace freetrain.world.structs
 
 			// registers a next clock handler.
 			private void registerClockHandler() {
+				if( state==State.abandoned )
+					return;
 				if( state==State.walled ) {
 					// this voxel is finished. don't register another handler
 					if( --((ConstructionSite)owner).uncompletedVoxels == 0 ) {

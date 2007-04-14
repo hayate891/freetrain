@@ -294,7 +294,7 @@ namespace freetrain.world.rail
 			if( next.isOutside && next.asOutside().timeLeft==OUTSIDE_COUNTER_INITIAL_VALUE/2 ) {
 				// unload the passengers and reload them
 				unloadPassengers();
-				loadPassengers(Math.Min(100,passengerCapacity));	// TODO: compute the value seriously
+				loadPassengers(null,Math.Min(100,passengerCapacity));	// TODO: compute the value seriously
 			}
 
 			for( int i=0; i<cars.Length; i++ )
@@ -379,7 +379,6 @@ namespace freetrain.world.rail
 		public int unloadPassengers() {
 			int r = _passenger;
 			_passenger = 0;
-
 			if( passengerSourceState!=null ) {
 				// compute the distance between the source state and the current state
 				int dist = passengerSourceState.location.
@@ -401,7 +400,7 @@ namespace freetrain.world.rail
 		/// Loads the passengers from this train.
 		/// This method should be called only by the Station.loadPassengers() method.
 		/// </summary>
-		public void loadPassengers( int n ) {
+		public void loadPassengers(Station from, int n ) {
 			Debug.Assert(_passenger==0);
 			Debug.Assert(n <= passengerCapacity);
 			_passenger = n;

@@ -23,6 +23,7 @@ namespace freetrain.world
 		private Road _road;
 
 		private Accessory _accessory;
+		public override bool transparent { get { return true; } }
 
 		/// <summary>
 		/// Fired when a car enters/leaves this traffic voxel
@@ -183,9 +184,16 @@ namespace freetrain.world
 		public int entityValue { get { return 0; } }
 		
 		public void remove() {
-			World.world.remove(this);
+			if(isOccupied) {
+				if(car is Train.TrainCar)
+					((Train.TrainCar)car).parent.remove();
+				else
+					car.remove();
+			}
+			BridgePierVoxel.teardownBridgeSupport(location,this);
 			if( onEntityRemoved!=null )
 				onEntityRemoved(this,null);
+			World.world.remove(this);
 		}
 
 		public event EventHandler onEntityRemoved;

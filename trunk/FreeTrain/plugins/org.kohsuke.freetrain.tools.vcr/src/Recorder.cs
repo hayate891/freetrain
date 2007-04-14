@@ -47,7 +47,7 @@ namespace freetrain.tools.vcr
 		/// Create a new recorder with the given setting.
 		/// </summary>
 		public Recorder( Rectangle rect, VCROptions config ) {
-			drawer = new QuarterViewDrawer( MainWindow.mainWindow.directDraw, rect );
+			drawer = new QuarterViewDrawer( World.world, MainWindow.mainWindow.directDraw, rect );
 
 			// register timer
 			World.world.clock.registerRepeated( new ClockHandler(capture), TimeLength.fromMinutes(config.period) );

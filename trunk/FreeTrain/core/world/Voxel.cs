@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using org.kohsuke.directdraw;
+using freetrain.framework.graphics;
 
 namespace freetrain.world
 {
@@ -15,6 +16,8 @@ namespace freetrain.world
 	public abstract class Voxel
 	{
 		public abstract Location location { get; }
+		protected bool showFence = true;
+		public virtual bool transparent { get { return false; } }
 
 		/// <summary>
 		/// Draws this voxel
@@ -28,6 +31,28 @@ namespace freetrain.world
 		///	this voxel and the cut height.)
 		/// </param>
 		public abstract void draw( DrawContext display, Point pt, int heightCutDiff );
+
+		public void drawVoxel( DrawContext display, Point pt, int heightCutDiff ) 
+		{
+			if( showFence )
+			{
+				// draw behind fence 
+				drawBehindFence(display, pt);
+				draw( display, pt, heightCutDiff );
+				drawFrontFence(display, pt);
+				//draw front fence 
+			}
+			else
+				draw( display, pt, heightCutDiff );
+		}
+
+		public abstract void setFence( Direction d, Fence f );
+
+		public abstract Fence getFence( Direction d );
+
+		protected abstract void drawFrontFence(DrawContext display, Point pt);
+
+		protected abstract void drawBehindFence(DrawContext display, Point pt);
 
 		/// <summary>
 		/// Processes a mouse click.
@@ -76,17 +101,59 @@ namespace freetrain.world
 	[Serializable]
 	public abstract class AbstractVoxelImpl : Voxel
 	{
-		protected AbstractVoxelImpl( int x, int y, int z ) : this(new Location(x,y,z)) {
+		protected Fence[] fence = new Fence[4];
+
+		protected AbstractVoxelImpl( int x, int y, int z ) : this(new Location(x,y,z)) 
+		{
 		}
 
-		protected AbstractVoxelImpl( Location _loc) {
+		protected AbstractVoxelImpl( Location _loc){
 			this.loc=_loc;
 			World.world[loc] = this;
+		}
+
+		protected AbstractVoxelImpl(WorldLocator wloc) {
+			this.loc=wloc.location;
+			wloc.world[loc] = this;
 		}
 
 		private readonly Location loc;
 
 		public override Location location { get { return loc; } }
+
+		protected override void drawFrontFence(DrawContext display, Point pt) 
+		{
+			Fence f;
+			f =fence[(Direction.SOUTH).index/2];
+			if(f!=null)
+				f.drawFence( display.surface,pt,Direction.SOUTH );
+			f =fence[(Direction.WEST).index/2];
+			if(f!=null)
+				f.drawFence( display.surface,pt,Direction.WEST );
+		}
+
+		protected override void drawBehindFence(DrawContext display, Point pt) 
+		{
+			Fence f;
+			f =fence[(Direction.NORTH).index/2];
+			if(f!=null)
+				f.drawFence( display.surface,pt,Direction.NORTH );
+			f =fence[(Direction.EAST).index/2];
+			if(f!=null)
+				f.drawFence( display.surface,pt,Direction.EAST );
+		}
+
+		public override void setFence( Direction d, Fence f )
+		{
+			fence[d.index/2] = f;
+		}
+
+		public override Fence getFence( Direction d )
+		{
+			return fence[d.index/2];
+		
+		}
+	
 	}
 
 
@@ -107,5 +174,19 @@ namespace freetrain.world
 		/// false if directly below the ground.
 		/// </param>
 		bool drawGround( bool above );
+	}
+
+	/// <summary>
+	/// The interface called when the fence should be drawn.
+	/// </summary>
+	public interface Fence
+	{
+		/// <summary>
+		/// called when the fehce should be drawn.
+		/// </summary>
+		/// <param name="d">one of the 4 directions (N,E,W,S)</param>
+		void drawFence( Surface surface, Point pt, Direction d );
+
+		string fence_id { get; }
 	}
 }

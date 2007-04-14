@@ -96,21 +96,21 @@ namespace freetrain.world.land.creek.eikichiya
 		/// <summary>
 		/// Build creek from (x1,y1) to (x2,y2) (inclusive).
 		/// </summary>
-		public override void create( int x1, int y1, int x2, int y2, int z ) {
+		public override void create( int x1, int y1, int x2, int y2, int z, bool owned ) {
 			foreach( DictionaryEntry e in computeRoute( new Location(x1,y1,z), new Location(x2,y2,z) ) ) {
-				apply( (Location)e.Key, (Dir)e.Value );
+				apply( (Location)e.Key, (Dir)e.Value, owned );
 			}
 		}
 
 		/// <summary>
 		/// Apply the given combination to the current location.
 		/// </summary>
-		private void apply( Location loc, Dir d ) {
+		private void apply( Location loc, Dir d, bool owned ) {
 			if( World.world.isReusable(loc) && loc.z==World.world.getGroundLevel(loc) ) {
 				CreekVoxel current = World.world[loc] as CreekVoxel;
 				if( current!=null )		d |= current.dir;
 
-				new CreekVoxel( loc, this, d );
+				new CreekVoxel( loc, this, d ).isOwned = owned;
 			}
 		}
 
@@ -185,7 +185,7 @@ namespace freetrain.world.land.creek.eikichiya
 
 			protected override void onRectSelected( Location loc1, Location loc2 ) {
 				// don't use normalized loc1/loc2
-				contrib.create(anchor,currentLoc);
+				contrib.create(anchor,currentLoc, true);
 			}
 
 			public void drawBefore( QuarterViewDrawer view, DrawContextEx surface ) {

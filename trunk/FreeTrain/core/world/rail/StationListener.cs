@@ -37,6 +37,8 @@ namespace freetrain.world.rail
 		/// This method is called only when the receiving listener
 		/// is eligible to attach to the new station.
 		/// </remarks>
-		void advertiseStation( Station s );
+		/// <param name="s"></param>
+		/// <returns>true if succesfuly advertised</returns>
+		bool advertiseStation( Station s );
 	}
 }

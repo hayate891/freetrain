@@ -184,17 +184,16 @@ namespace freetrain.finance.stock
 			{
 				throw new XmlException("invalid company definition (in stock tag) : "+id+name,null);
 			}
-            //try 
-            //{
-            //	updateStockPrice();
-            //	trend.setParams(0,5);			
-            //}
-            //catch 
-            //{
-            //	throw new XmlException("invalid company definition (invalid data) : "+id+name,null);
-            //}
-            // FIX ME IMPORTANT
-
+			//try 
+			//{
+			//	updateStockPrice();
+			//	trend.setParams(0,5);			
+			//}
+			//catch 
+			//{
+			//	throw new XmlException("invalid company definition (invalid data) : "+id+name,null);
+			//}
+// FIX ME IMPORTANT
 		}
 		
 		// update stock price;

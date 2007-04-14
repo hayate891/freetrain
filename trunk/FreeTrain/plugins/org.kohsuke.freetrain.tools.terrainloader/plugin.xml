@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Terrain loader</title>
+	<title>Terrain Loader</title>
 	<!--!<title>地形ローダー</title>-->
 	<author>Kohsuke Kawaguchi</author>
 	<!--!<author>川口耕介</author>-->

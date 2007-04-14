@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Data;
-using System.Security.Permissions;
 using Microsoft.Win32;
 using freetrain.contributions.dock;
 using freetrain.contributions.common;
@@ -25,6 +24,7 @@ using freetrain.controllers.terrain;
 using freetrain.controllers.structs;
 using freetrain.framework.plugin;
 using freetrain.framework.sound;
+using freetrain.framework.graphics;
 using freetrain.views;
 using freetrain.views.map;
 using freetrain.world;
@@ -35,7 +35,6 @@ using freetrain.util.command;
 using freetrain.util.docking;
 using org.kohsuke.directdraw;
 using ICSharpCode.SharpZipLib.BZip2;
-
 
 namespace freetrain.framework
 {
@@ -112,7 +111,13 @@ namespace freetrain.framework
 		private System.Windows.Forms.MenuItem menuItem_landProperty;
 		private System.Windows.Forms.MenuItem menuItem_balanceSheet;
 		#endregion
-		
+
+		//なぜか知らないが起動直後にセーブデータを読み込むと、
+		//この画像ファイルがPictureManagerに登録されていないのでエラーになる。
+		//このクラスでは使わないけど、ここで参照すれば、起動時には常に登録される。
+		//"RailRoads.bmp"なんかはそんなことないのに不思議。
+		private static readonly Picture ugChips = ResourceUtil.loadSystemPicture("ugslope.bmp");
+
 		/// <summary> Maintain command-action association. </summary>
 		public readonly CommandManager commands = new CommandManager();
 		
@@ -127,6 +132,13 @@ namespace freetrain.framework
 		/// Should be treated as read-only.
 		/// </summary>
 		public WindowedDirectDraw directDraw;
+		private System.Windows.Forms.ToolBarButton tbBulldoze;
+		private System.Windows.Forms.ToolBar toolBar2;
+		private System.Windows.Forms.ImageList viewButtons;
+		private System.Windows.Forms.ToolBarButton viewDayAndNight;
+		private System.Windows.Forms.ToolBarButton viewAlwaysDay;
+		private System.Windows.Forms.ToolBarButton viewAlwaysNight;
+		private System.Windows.Forms.ToolBarButton separator;
 
 		private readonly MruHelper mruMenu;
 
@@ -145,7 +157,8 @@ namespace freetrain.framework
 			fileDropHandler = new FileDropHandler(this,new FileDropEventHandler(onFileDropped));
 
 			// initialize the form
-			InitializeComponent();			
+			InitializeComponent();
+
 			this.IsMdiContainer = true;
 
 			// set up docking manager
@@ -161,6 +174,10 @@ namespace freetrain.framework
 			Bitmap bmp = ResourceUtil.loadSystemBitmap("Toolbar.bmp");
 			toolBarIcons.TransparentColor = bmp.GetPixel(0,0);
 			toolBarIcons.Images.AddStrip(bmp);
+
+			Bitmap bmp2 = ResourceUtil.loadSystemBitmap("DayNight.bmp");
+			viewButtons.TransparentColor = bmp2.GetPixel(0,0);
+			viewButtons.Images.AddStrip(bmp2);
 
 			errorIcon = new Icon(ResourceUtil.findSystemResource("error.ico"));
 
@@ -230,11 +247,15 @@ namespace freetrain.framework
 			// other
 			new Command( commands )
 				.addExecuteHandler( new CommandHandlerNoArg(CommercialStructPlacementController.create) )
-				.commandInstances.AddAll( menuItem_struct, tbStruct );
+				.commandInstances.AddAll( menuItem_struct/*, tbStruct*/ );
 
 			new Command( commands )
 				.addExecuteHandler( new CommandHandlerNoArg(MountainController.create) )
 				.commandInstances.AddAll( menuItem_terrain, tbTerrain );
+
+			new Command( commands )
+				.addExecuteHandler( new CommandHandlerNoArg(BulldozeController.create) )
+				.commandInstances.AddAll( tbBulldoze );
 
 			new Command( commands )
 				.addExecuteHandler( new CommandHandlerNoArg(VarHeightBuildingController.create) )
@@ -280,6 +301,20 @@ namespace freetrain.framework
 				.addUpdateHandler(new CommandHandler(updateClock))
 				.commandInstances.AddAll( tbTimer );
 
+			// view options tool bar
+			new Command( commands )
+				.addExecuteHandler(new CommandHandler(viewOptionDayNightChanged))
+				.addUpdateHandler(new CommandHandler(viewOptionDayNightUpdate))
+				.commandInstances.Add( viewDayAndNight );
+			new Command( commands )
+				.addExecuteHandler(new CommandHandler(viewOptionDayNightChanged))
+				.addUpdateHandler(new CommandHandler(viewOptionDayNightUpdate))
+				.commandInstances.Add( viewAlwaysDay );
+			new Command( commands )
+				.addExecuteHandler(new CommandHandler(viewOptionDayNightChanged))
+				.addUpdateHandler(new CommandHandler(viewOptionDayNightUpdate))
+				.commandInstances.Add( viewAlwaysNight );
+
 			// status bar
 			new Command( commands )
 				.addUpdateHandler(new CommandHandler(updateDisplayedCurrentTime))
@@ -297,6 +332,54 @@ namespace freetrain.framework
 			mruMenu = new MruHelper(this,mruMenuItem);
 		}
 
+		internal MainWindow(string[] args, ProgressHandler handler){
+			Debug.Assert(mainWindow==null);
+			mainWindow = this;	// set the instance to this field		
+
+			// initialize the form
+			InitializeComponent();
+
+			this.IsMdiContainer = true;
+
+			// set up docking manager
+			this.dockingManager = new DockingManagerEx(this);
+			this.dockingManager.OuterControl = statusBar;
+
+			timer.Tick += new EventHandler(timerHandler);
+
+			// set toolbar bitmap
+			Bitmap bmp = ResourceUtil.loadSystemBitmap("Toolbar.bmp");
+			toolBarIcons.TransparentColor = bmp.GetPixel(0,0);
+			toolBarIcons.Images.AddStrip(bmp);
+
+			Bitmap bmp2 = ResourceUtil.loadSystemBitmap("DayNight.bmp");
+			viewButtons.TransparentColor = bmp2.GetPixel(0,0);
+			viewButtons.Images.AddStrip(bmp2);
+
+			errorIcon = new Icon(ResourceUtil.findSystemResource("error.ico"));
+			
+			Core.init(args,this,menuItem_music,handler,false);
+
+			//mruMenu = new MruHelper(this,mruMenuItem);
+		}
+
+		public void SetToolBarButtonHandler(string barName,int index,CommandHandlerNoArg handler)
+		{
+			foreach( Control c in this.Controls )
+			{
+				ToolBar bar = c as ToolBar;
+				if(bar!=null && bar.Name.Equals(barName))
+				{
+						if( bar.Buttons.Count>index )
+						{
+							new Command( commands )
+								.addExecuteHandler( handler)
+								.commandInstances.AddAll( bar.Buttons[index] );
+						}
+				}
+			}
+		}
+
 		public void setWorld( World w ) {
 			// close all the views attached to the previous world
 			// closing a view will modify the views set, so copy to an array first.
@@ -308,6 +391,7 @@ namespace freetrain.framework
 
 			World.setWorld(w);
 			updateCaption();
+			viewOptionDayNightUpdate(null);
 
 
 			// open a new map view
@@ -394,9 +478,16 @@ namespace freetrain.framework
 			this.tbSeparator = new System.Windows.Forms.ToolBarButton();
 			this.tbTerrain = new System.Windows.Forms.ToolBarButton();
 			this.tbStruct = new System.Windows.Forms.ToolBarButton();
+			this.tbBulldoze = new System.Windows.Forms.ToolBarButton();
 			this.toolBarIcons = new System.Windows.Forms.ImageList(this.components);
 			this.timer = new System.Windows.Forms.Timer(this.components);
 			this.timerStatusBarUpdate = new System.Windows.Forms.Timer(this.components);
+			this.toolBar2 = new System.Windows.Forms.ToolBar();
+			this.viewDayAndNight = new System.Windows.Forms.ToolBarButton();
+			this.viewAlwaysDay = new System.Windows.Forms.ToolBarButton();
+			this.viewAlwaysNight = new System.Windows.Forms.ToolBarButton();
+			this.separator = new System.Windows.Forms.ToolBarButton();
+			this.viewButtons = new System.Windows.Forms.ImageList(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.statusBar_Message)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.statusBar_Controller)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.statusBar_Time)).BeginInit();
@@ -492,7 +583,7 @@ namespace freetrain.framework
 			// menuItem_listPlugins
 			// 
 			this.menuItem_listPlugins.Index = 4;
-			this.menuItem_listPlugins.Text = "&Plugin list...";
+			this.menuItem_listPlugins.Text = "&Plugin List...";
 			//! this.menuItem_listPlugins.Text = "プラグイン一覧(&P)...";
 			// 
 			// menuItem3
@@ -503,7 +594,7 @@ namespace freetrain.framework
 			// mruMenuItem
 			// 
 			this.mruMenuItem.Index = 6;
-			this.mruMenuItem.Text = "(Recently used files)";
+			this.mruMenuItem.Text = "(Recently Used Files)";
 			//! this.mruMenuItem.Text = "(最近使われたファイル)";
 			// 
 			// menuItem1
@@ -540,7 +631,7 @@ namespace freetrain.framework
 			// menuItem_balanceSheet
 			// 
 			this.menuItem_balanceSheet.Index = 1;
-			this.menuItem_balanceSheet.Text = "&Balance sheet";
+			this.menuItem_balanceSheet.Text = "&Balance Sheet";
 			//! this.menuItem_balanceSheet.Text = "バランスシート(&B)";
 			// 
 			// menuItem_rail
@@ -563,19 +654,19 @@ namespace freetrain.framework
 			// menuItem_RailRoadConstruction
 			// 
 			this.menuItem_RailRoadConstruction.Index = 0;
-			this.menuItem_RailRoadConstruction.Text = "Lay &rail...";
+			this.menuItem_RailRoadConstruction.Text = "Lay &Rail...";
 			//! this.menuItem_RailRoadConstruction.Text = "線路工事(&R)...";
 			// 
 			// menuItem_SlopeRailRoad
 			// 
 			this.menuItem_SlopeRailRoad.Index = 1;
-			this.menuItem_SlopeRailRoad.Text = "Lay &slope...";
+			this.menuItem_SlopeRailRoad.Text = "Lay &Slope...";
 			//! this.menuItem_SlopeRailRoad.Text = "勾配工事(&S)...";
 			// 
 			// menuItem_Platform
 			// 
 			this.menuItem_Platform.Index = 2;
-			this.menuItem_Platform.Text = "Build st&ation...";
+			this.menuItem_Platform.Text = "Build St&ation...";
 			//! this.menuItem_Platform.Text = "駅工事(&A)...";
 			// 
 			// menuItem_stationPassageway
@@ -598,13 +689,13 @@ namespace freetrain.framework
 			// menuItem_TrainPlacement
 			// 
 			this.menuItem_TrainPlacement.Index = 6;
-			this.menuItem_TrainPlacement.Text = "Place &train...";
+			this.menuItem_TrainPlacement.Text = "Place &Train...";
 			//! this.menuItem_TrainPlacement.Text = "車両配置(&T)...";
 			// 
 			// menuItem_TrainTrading
 			// 
 			this.menuItem_TrainTrading.Index = 7;
-			this.menuItem_TrainTrading.Text = "&Buy trains...";
+			this.menuItem_TrainTrading.Text = "&Buy Trains...";
 			//! this.menuItem_TrainTrading.Text = "車両購入(&B)...";
 			// 
 			// menuItem4
@@ -635,31 +726,31 @@ namespace freetrain.framework
 			// menuItem_struct
 			// 
 			this.menuItem_struct.Index = 0;
-			this.menuItem_struct.Text = "Building construction...";
+			this.menuItem_struct.Text = "Building Construction...";
 			//! this.menuItem_struct.Text = "建物の工事(仮)...";
 			// 
 			// menuItem_terrain
 			// 
 			this.menuItem_terrain.Index = 1;
-			this.menuItem_terrain.Text = "&Modify terrain...";
+			this.menuItem_terrain.Text = "&Modify Terrain...";
 			//! this.menuItem_terrain.Text = "整地(仮)(&M)...";
 			// 
 			// menuItem_varHeightBldg
 			// 
 			this.menuItem_varHeightBldg.Index = 2;
-			this.menuItem_varHeightBldg.Text = "Rental &buildings...";
+			this.menuItem_varHeightBldg.Text = "Rental &Buildings...";
 			//! this.menuItem_varHeightBldg.Text = "貸しビル(&B)...";
 			// 
 			// menuItem_land
 			// 
 			this.menuItem_land.Index = 3;
-			this.menuItem_land.Text = "Terrain object&s...";
+			this.menuItem_land.Text = "Terrain Object&s...";
 			//! this.menuItem_land.Text = "地表(&S)...";
 			// 
 			// menuItem_landProperty
 			// 
 			this.menuItem_landProperty.Index = 4;
-			this.menuItem_landProperty.Text = "Trade &land...";
+			this.menuItem_landProperty.Text = "Trade &Land...";
 			//! this.menuItem_landProperty.Text = "土地売買(&L)...";
 			// 
 			// menuItem_config
@@ -685,7 +776,7 @@ namespace freetrain.framework
 			this.menuItem_soundEffect.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																								 this.menuItem_enableSoundEffect,
 																								 this.menuItem_disableSoundEffect});
-			this.menuItem_soundEffect.Text = "&Sound effects";
+			this.menuItem_soundEffect.Text = "&Sound Effects";
 			//!this.menuItem_soundEffect.Text = "効果音(&S)";
 			this.menuItem_soundEffect.Popup += new System.EventHandler(this.onMenuPopup);
 			// 
@@ -720,7 +811,7 @@ namespace freetrain.framework
 			// menuItem_onlineHelp
 			// 
 			this.menuItem_onlineHelp.Index = 0;
-			this.menuItem_onlineHelp.Text = "&Online help";
+			this.menuItem_onlineHelp.Text = "&Online Help";
 			//! this.menuItem_onlineHelp.Text = "オンラインヘルプ(&O)";
 			// 
 			// menuItem_About
@@ -743,14 +834,17 @@ namespace freetrain.framework
 																						this.tbTrainDiagram,
 																						this.tbSeparator,
 																						this.tbTerrain,
-																						this.tbStruct});
+																						this.tbStruct,
+																						this.tbBulldoze});
 			this.toolBar1.DropDownArrows = true;
 			this.toolBar1.ImageList = this.toolBarIcons;
+			this.toolBar1.Location = new System.Drawing.Point(0, 0);
 			this.toolBar1.Name = "toolBar1";
 			this.toolBar1.ShowToolTips = true;
-			this.toolBar1.Size = new System.Drawing.Size(544, 24);
+			this.toolBar1.Size = new System.Drawing.Size(544, 27);
 			this.toolBar1.TabIndex = 1;
 			this.toolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
+			this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
 			// 
 			// tbTimer
 			// 
@@ -806,30 +900,44 @@ namespace freetrain.framework
 			// tbRailRoad
 			// 
 			this.tbRailRoad.ImageIndex = 0;
+			this.tbRailRoad.ToolTipText = "Lay rail";
+			//! this.tbRailRoad.ToolTipText = "線路敷設";
 			// 
 			// tbSlope
 			// 
 			this.tbSlope.ImageIndex = 1;
+			this.tbSlope.ToolTipText = "Lay slope";
+			//! this.tbSlope.ToolTipText = "勾配線路敷設";
 			// 
 			// tbStation
 			// 
 			this.tbStation.ImageIndex = 2;
+			this.tbStation.ToolTipText = "Build station";
+			//! this.tbStation.ToolTipText = "駅建設";
 			// 
 			// tbRRAcc
 			// 
 			this.tbRRAcc.ImageIndex = 3;
+			this.tbRRAcc.ToolTipText = "Build rail accessories";
+			//! this.tbRRAcc.ToolTipText = "鉄道アクセサリ設置";
 			// 
 			// tbTrainPlacement
 			// 
 			this.tbTrainPlacement.ImageIndex = 4;
+			this.tbTrainPlacement.ToolTipText = "Place trains";
+			//! this.tbTrainPlacement.ToolTipText = "車両設置";
 			// 
 			// tbTrainTrading
 			// 
 			this.tbTrainTrading.ImageIndex = 5;
+			this.tbTrainTrading.ToolTipText = "Buy or sell trains";
+			//! this.tbTrainTrading.ToolTipText = "車両売買";
 			// 
 			// tbTrainDiagram
 			// 
 			this.tbTrainDiagram.ImageIndex = 6;
+			this.tbTrainDiagram.ToolTipText = "Diagram settings";
+			//! this.tbTrainDiagram.ToolTipText = "ダイアグラム設定";
 			// 
 			// tbSeparator
 			// 
@@ -838,14 +946,23 @@ namespace freetrain.framework
 			// tbTerrain
 			// 
 			this.tbTerrain.ImageIndex = 7;
+			this.tbTerrain.ToolTipText = "Raise or lower terrain";
+			//! this.tbTerrain.ToolTipText = "土地の上下";
 			// 
 			// tbStruct
 			// 
 			this.tbStruct.ImageIndex = 8;
+			this.tbStruct.ToolTipText = "Building construction";
+			//! this.tbStruct.ToolTipText = "建物の設置";
+			// 
+			// tbBulldoze
+			// 
+			this.tbBulldoze.ImageIndex = 9;
+			this.tbBulldoze.ToolTipText = "Bulldozer";
+			//! this.tbBulldoze.ToolTipText = "ブルドーザー";
 			// 
 			// toolBarIcons
 			// 
-			this.toolBarIcons.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
 			this.toolBarIcons.ImageSize = new System.Drawing.Size(16, 15);
 			this.toolBarIcons.TransparentColor = System.Drawing.Color.Transparent;
 			// 
@@ -855,13 +972,64 @@ namespace freetrain.framework
 			this.timerStatusBarUpdate.Interval = 500;
 			this.timerStatusBarUpdate.Tick += new System.EventHandler(this.updateStatusBar);
 			// 
+			// toolBar2
+			// 
+			this.toolBar2.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
+			this.toolBar2.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
+																						this.viewDayAndNight,
+																						this.viewAlwaysDay,
+																						this.viewAlwaysNight,
+																						this.separator});
+			this.toolBar2.ButtonSize = new System.Drawing.Size(16, 15);
+			this.toolBar2.DropDownArrows = true;
+			this.toolBar2.ImageList = this.viewButtons;
+			this.toolBar2.Location = new System.Drawing.Point(0, 27);
+			this.toolBar2.Name = "toolBar2";
+			this.toolBar2.ShowToolTips = true;
+			this.toolBar2.Size = new System.Drawing.Size(544, 27);
+			this.toolBar2.TabIndex = 2;
+			// 
+			// viewDayAndNight
+			// 
+			this.viewDayAndNight.ImageIndex = 0;
+			this.viewDayAndNight.Pushed = true;
+			this.viewDayAndNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+			this.viewDayAndNight.Tag = freetrain.views.NightSpriteMode.AlignClock;
+			this.viewDayAndNight.ToolTipText = "Day and night";
+			//! this.viewDayAndNight.ToolTipText = "昼と夜";
+			// 
+			// viewAlwaysDay
+			// 
+			this.viewAlwaysDay.ImageIndex = 1;
+			this.viewAlwaysDay.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+			this.viewAlwaysDay.Tag = freetrain.views.NightSpriteMode.AlwaysDay;
+			this.viewAlwaysDay.ToolTipText = "Always day";
+			//! this.viewAlwaysDay.ToolTipText = "常に昼";
+			// 
+			// viewAlwaysNight
+			// 
+			this.viewAlwaysNight.ImageIndex = 2;
+			this.viewAlwaysNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+			this.viewAlwaysNight.Tag = freetrain.views.NightSpriteMode.AlwaysNight;
+			this.viewAlwaysNight.ToolTipText = "Always night";
+			//! this.viewAlwaysNight.ToolTipText = "常に夜";
+			// 
+			// separator
+			// 
+			this.separator.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
+			// 
+			// viewButtons
+			// 
+			this.viewButtons.ImageSize = new System.Drawing.Size(16, 15);
+			this.viewButtons.TransparentColor = System.Drawing.Color.Transparent;
+			// 
 			// MainWindow
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
 			this.ClientSize = new System.Drawing.Size(544, 286);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.statusBar,
-																		  this.toolBar1});
+			this.Controls.Add(this.toolBar2);
+			this.Controls.Add(this.statusBar);
+			this.Controls.Add(this.toolBar1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Menu = this.MainMenu;
 			this.Name = "MainWindow";
@@ -1168,7 +1336,7 @@ namespace freetrain.framework
 		}
 		
 		private void updateCaption() {
-			this.Text = "Free Train - "+World.world.name;
+			this.Text = "FreeTrain - "+World.world.name;
 		}
 
 
@@ -1255,6 +1423,26 @@ namespace freetrain.framework
 			tbTimer.Pushed = !timer.Enabled;
 		}
 
+		private void viewOptionDayNightChanged( Command c ) 
+		{
+			ToolBarButton tb = (ToolBarButton)c.commandInstances[0];
+			foreach(ToolBarButton tbb in toolBar2.Buttons)
+				tbb.Pushed = (tbb==tb);
+			
+			World.world.viewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
+		}
+
+		private void viewOptionDayNightUpdate( Command c ) 
+		{
+			try
+			{
+				NightSpriteMode curMode = World.world.viewOptions.nightSpriteMode;
+				foreach(ToolBarButton tbb in toolBar2.Buttons)
+					if(tbb.Tag!=null)
+						tbb.Pushed = ( curMode == (NightSpriteMode)tbb.Tag);			
+			}
+			catch{}
+		}
 
 		protected override void OnLoad(System.EventArgs e) {
 			base.OnLoad(e);
@@ -1281,17 +1469,23 @@ namespace freetrain.framework
 			}
 
 			// add road contributions
-			int idx=0;
-			foreach( RoadContribution contrib in Core.plugins.roads ) {
-				RoadPlacementHandler handler = new RoadPlacementHandler(contrib);
-				menuItem_road.MenuItems.Add(idx++,handler.createMenuItem());
+			if(Core.plugins.roads.Length>0)
+			{
+				RoadPlacementHandler rphandler = new RoadPlacementHandler();
+				menuItem_road.MenuItems.Add(0,rphandler.createMenuItem());
 			}
-			if(idx!=0)
-				// insert a separator
-				menuItem_road.MenuItems.Add( idx, new MenuItem("-") );
+//			int idx=0;
+//			foreach( RoadContribution contrib in Core.plugins.roads ) {
+//				RoadPlacementHandler handler = new RoadPlacementHandler(contrib);
+//				menuItem_road.MenuItems.Add(idx++,handler.createMenuItem());
+//			}
+//			if(idx!=0)
+//				// insert a separator
+//				menuItem_road.MenuItems.Add( idx, new MenuItem("-") );
 
 			// load the screen layout
-			try {
+			try 
+			{
 				dockingManager.LoadConfigFromFile("layout.config");
 			} catch( Exception ex ) {
 				// exception will be thrown if the file doesn't exist.
@@ -1329,38 +1523,8 @@ namespace freetrain.framework
 			commands.updateAll();
 		}
 
-		private void showOnlineHelp() 
-		{
-			// Because shell execuse doesn't work
-			// we have to specify executing module directory
-			ProcessStartInfo info = new ProcessStartInfo();
-			// get default browser (exe) path
-			RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
-			String val = rkey.GetValue("").ToString();
-			Debug.WriteLine(val);
-			if(val.StartsWith("\""))
-			{
-				int n = val.IndexOf("\"",1);
-				info.FileName = val.Substring(1,n-1);
-				info.Arguments = val.Substring(n+1);
-			}
-			else
-			{
-				string[] a = val.Split(new char[]{' '});
-				info.FileName = a[0];
-				info.Arguments = val.Substring(a[0].Length+1);
-			}
-			// Specifies working directory is necessary to run browser successfuly.
-			info.WorkingDirectory = Path.GetDirectoryName(info.FileName);
-			
-			info.Arguments += @"http://www.kohsuke.org/freetrain/wiki/pukiwiki.php?%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB";
-			Debug.WriteLine(info.FileName);
-			Debug.WriteLine(info.WorkingDirectory);
-			Debug.WriteLine(info.Arguments);
-			System.Diagnostics.Process.Start(info);
-
-			// Following code doesn't work. I don't know why...
-			//System.Diagnostics.Process.Start(@"http://www.kohsuke.org/freetrain/wiki/pukiwiki.php?%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB");
+		private void showOnlineHelp() {
+			UrlInvoker.openUrl("http://www.kohsuke.org/freetrain/wiki/pukiwiki.php?%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB");
 		}
 
 		/// <summary> Called when a new file is dropped on this form. </summary>
@@ -1391,6 +1555,11 @@ namespace freetrain.framework
 						MessageBoxIcon.Question,
 						MessageBoxDefaultButton.Button2);
 			e.Cancel = (res != DialogResult.Yes );
+		}
+
+		private void toolBar1_ButtonClick(object sender, System.Windows.Forms.ToolBarButtonClickEventArgs e)
+		{
+		
 		}
 
 
@@ -1430,15 +1599,15 @@ namespace freetrain.framework
 		/// A class that encapsulates an instance of road controller
 		/// </summary>
 		private class RoadPlacementHandler {
-			internal RoadPlacementHandler( RoadContribution _type ) {
-				this.type = _type;
+			internal RoadPlacementHandler() {
 			}
-			private readonly RoadContribution type;
+			private readonly RoadContribution[] contribs;
 			private RoadController controller;
 
 			internal MenuItem createMenuItem() {
 				MenuItem mi = new MenuItem();
-				mi.Text = type.name;
+				mi.Text = "Road Construction";
+				//! mi.Text = "道路工事";
 				mi.Click += new EventHandler(handle);
 				mi.Select += new EventHandler(select);
 				return mi;
@@ -1446,12 +1615,13 @@ namespace freetrain.framework
 
 			private void handle( object sender, EventArgs e ) {
 				if( controller==null || controller.IsDisposed )
-					controller = new RoadController(type);
+					controller = new RoadController();
 				controller.Show();
 			}
 
 			private void select( object sender, EventArgs e ) {
-				MainWindow.mainWindow.statusBar.Text = type.oneLineDescription;
+				MainWindow.mainWindow.statusBar.Text = "Lay roads.";
+				//! MainWindow.mainWindow.statusBar.Text = "道路を敷設します.";
 			}
 		}
 	
@@ -1480,6 +1650,11 @@ namespace freetrain.framework
 			private void select( object sender, EventArgs e ) {
 				MainWindow.mainWindow.statusBar.Text = contrib.oneLineDescription;
 			}
+		}
+
+		private static void run( string[] args ) {
+			// start the game
+			Application.Run(new MainWindow(args,false));
 		}
 	}
 }

@@ -32,7 +32,7 @@ namespace freetrain.controllers.structs
 
 		public override void onClick(MapViewWindow view, Location loc, Point ab ) {
 			if( isPlacing ) {
-				if(!selectedType.canBeBuilt(loc)) {
+				if(!selectedType.canBeBuilt(loc,ControlMode.player)) {
 					MainWindow.showError("Can not build");
 					//! MainWindow.showError("設置できません");
 				} else {

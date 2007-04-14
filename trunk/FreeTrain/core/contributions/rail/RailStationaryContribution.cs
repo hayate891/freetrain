@@ -24,12 +24,12 @@ namespace freetrain.contributions.rail
 			return PluginManager.theInstance.railStationaryGroup[name];
 		}
 
-		public override Structure create( Location baseLoc, bool initiallyOwned ) {
-			return new RailStationaryStructure( this, baseLoc );
+		public override Structure create(WorldLocator wLoc, bool initiallyOwned ) {
+			return new RailStationaryStructure(this, wLoc );
 		}
 
-		public override bool canBeBuilt( Location baseLoc ) {
-			return RailStationaryStructure.canBeBuilt( baseLoc, size );
+		public override bool canBeBuilt( Location baseLoc,ControlMode cm ) {
+			return RailStationaryStructure.canBeBuilt( baseLoc, size, cm );
 		}
 
 	}

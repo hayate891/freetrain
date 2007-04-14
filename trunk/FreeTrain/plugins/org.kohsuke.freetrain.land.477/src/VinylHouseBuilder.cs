@@ -33,16 +33,8 @@ namespace freetrain.world.land.vinylhouse
 			sprites[1] = spriteFactory.createSprite( picture, pt, new Point(offset,24), sz );
 			sprites[2] = spriteFactory.createSprite( picture, pt, new Point(offset,48), sz );
 
-			// population
-			XmlElement pop = (XmlElement)e.SelectSingleNode("population");
-			population = new PersistentPopulation(
-				Population.load(pop),
-				new PopulationReferenceImpl(this.id));
 		}
 
-
-		/// <summary> Population of this structure, or null if this structure is not populated. </summary>
-		public readonly Population population;
 
 		/// <summary> Sprite of this land contribution. </summary>
 		public readonly Sprite[] sprites;
@@ -52,13 +44,13 @@ namespace freetrain.world.land.vinylhouse
 		/// <summary>
 		/// Gets the land that should be used to fill (x,y) within [x1,y1]-[x2,y2] (inclusive).
 		/// </summary>
-		public override void create( int x1, int y1, int x2, int y2, int z ) {
+		public override void create( int x1, int y1, int x2, int y2, int z, bool owned ) {
 			for( int x=x1; x<=x2; x++ ) {
 				for( int y=y1; y<=y2; y++ ) {
 					Location loc = new Location(x,y,z);
 					if( VinylHouseVoxel.canBeBuilt(loc) )
 						new VinylHouseVoxel( loc, this,
-							getSpriteIndex(x,y,x1,y1,x2,y2) );
+							getSpriteIndex(x,y,x1,y1,x2,y2) ).isOwned =owned;
 				}
 			}
 		}
@@ -94,7 +86,7 @@ namespace freetrain.world.land.vinylhouse
 			}
 
 			protected override void onRectSelected( Location loc1, Location loc2 ) {
-				contrib.create(loc1,loc2);
+				contrib.create(loc1,loc2,true);
 			}
 
 			public void drawBefore( QuarterViewDrawer view, DrawContextEx surface ) {}
@@ -111,20 +103,7 @@ namespace freetrain.world.land.vinylhouse
 			}
 
 			public void drawAfter( QuarterViewDrawer view, DrawContextEx surface ) {}
-		}
-
-	
-		/// <summary>
-		/// Used to resolve references to the population object.
-		/// </summary>
-		[Serializable]
-		internal sealed class PopulationReferenceImpl : IObjectReference {
-			internal PopulationReferenceImpl( string id ) { this.id=id; }
-			private string id;
-			public object GetRealObject(StreamingContext context) {
-				return ((VinylHouseBuilder)PluginManager.theInstance.getContribution(id)).population;
-			}
-		}
+		}	
 	}
 
 

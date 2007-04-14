@@ -14,7 +14,7 @@ using freetrain.world.rail;
 using freetrain.views;
 using freetrain.views.map;
 using org.kohsuke.directdraw;
-
+using freetrain.controls;
 
 namespace freetrain.controllers.rail
 {
@@ -32,6 +32,19 @@ namespace freetrain.controllers.rail
 		}
 
 		private freetrain.controls.IndexSelector indexSelector;
+		private System.Windows.Forms.ListView listView1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private freetrain.controls.IndexSelector indexSelector1;
+		private System.Windows.Forms.Label label4;
+		private freetrain.controls.IndexSelector indexSelector2;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.ColumnHeader columnHeader1;
+		private System.Windows.Forms.ColumnHeader columnHeader2;
+		private System.Windows.Forms.ColumnHeader columnHeader3;
+		private System.Windows.Forms.ColumnHeader columnHeader4;
+		private System.Windows.Forms.ColumnHeader columnHeader5;
+		private System.Windows.Forms.ColumnHeader columnHeader6;
 
 		private static PlatformController theInstance;
 
@@ -48,6 +61,17 @@ namespace freetrain.controllers.rail
 		public PlatformController() {
 			// この呼び出しは Windows フォーム デザイナで必要です。
 			InitializeComponent();
+//			colorPickButton1.colorLibraries = new IColorLibrary[]{
+//				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-RAINBOW}"),
+//				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-STONES}")//,
+////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-WOODS}"),
+////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-METALS}"),
+////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-BRICKS}"),
+////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-DIRTS}"),
+////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-PASTEL}"),
+////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-COLPLATE}"),
+////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-ROOF}")
+//			};
 
 			dirN.Tag = Direction.NORTH;
 			dirE.Tag = Direction.EAST;
@@ -142,8 +166,22 @@ namespace freetrain.controllers.rail
 			this.buttonRemove = new System.Windows.Forms.RadioButton();
 			this.buttonPlace = new System.Windows.Forms.RadioButton();
 			this.stationPage = new System.Windows.Forms.TabPage();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.listView1 = new System.Windows.Forms.ListView();
+			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+			this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+			this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+			this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+			this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+			this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+			this.indexSelector = new freetrain.controls.IndexSelector();
 			this.stationType = new System.Windows.Forms.ComboBox();
 			this.stationPicture = new System.Windows.Forms.PictureBox();
+			this.indexSelector1 = new freetrain.controls.IndexSelector();
+			this.label4 = new System.Windows.Forms.Label();
+			this.indexSelector2 = new freetrain.controls.IndexSelector();
+			this.label5 = new System.Windows.Forms.Label();
 			this.platformPage = new System.Windows.Forms.TabPage();
 			this.checkSlim = new System.Windows.Forms.CheckBox();
 			this.dirS = new System.Windows.Forms.PictureBox();
@@ -153,7 +191,6 @@ namespace freetrain.controllers.rail
 			this.lengthBox = new System.Windows.Forms.NumericUpDown();
 			this.dirN = new System.Windows.Forms.PictureBox();
 			this.tabControl = new System.Windows.Forms.TabControl();
-			this.indexSelector = new freetrain.controls.IndexSelector();
 			this.stationPage.SuspendLayout();
 			this.platformPage.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.lengthBox)).BeginInit();
@@ -162,6 +199,7 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonRemove.Location = new System.Drawing.Point(64, 200);
 			this.buttonRemove.Name = "buttonRemove";
@@ -173,6 +211,7 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonPlace
 			// 
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
 			this.buttonPlace.Location = new System.Drawing.Point(8, 200);
@@ -186,50 +225,182 @@ namespace freetrain.controllers.rail
 			// 
 			// stationPage
 			// 
-			this.stationPage.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					  this.indexSelector,
-																					  this.stationType,
-																					  this.stationPicture});
+			this.stationPage.Controls.Add(this.label3);
+			this.stationPage.Controls.Add(this.label2);
+			this.stationPage.Controls.Add(this.listView1);
+			this.stationPage.Controls.Add(this.indexSelector);
+			this.stationPage.Controls.Add(this.stationType);
+			this.stationPage.Controls.Add(this.stationPicture);
+			this.stationPage.Controls.Add(this.indexSelector1);
+			this.stationPage.Controls.Add(this.label4);
+			this.stationPage.Controls.Add(this.indexSelector2);
+			this.stationPage.Controls.Add(this.label5);
 			this.stationPage.Location = new System.Drawing.Point(4, 21);
 			this.stationPage.Name = "stationPage";
-			this.stationPage.Size = new System.Drawing.Size(128, 167);
+			this.stationPage.Size = new System.Drawing.Size(152, 167);
 			this.stationPage.TabIndex = 1;
 			this.stationPage.Text = "Station";
 			//! this.stationPage.Text = "駅舎";
+			// 
+			// label3
+			// 
+			this.label3.Location = new System.Drawing.Point(0, 32);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(56, 16);
+			this.label3.TabIndex = 6;
+			this.label3.Text = "Design:";
+			//! this.label3.Text = "デザイン：";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label2
+			// 
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label2.Location = new System.Drawing.Point(160, 56);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(168, 16);
+			this.label2.TabIndex = 5;
+			this.label2.Text = "label2";
+			// 
+			// listView1
+			// 
+			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+																						this.columnHeader1,
+																						this.columnHeader2,
+																						this.columnHeader3,
+																						this.columnHeader4,
+																						this.columnHeader5,
+																						this.columnHeader6});
+			this.listView1.Location = new System.Drawing.Point(160, 8);
+			this.listView1.Name = "listView1";
+			this.listView1.Size = new System.Drawing.Size(8, 144);
+			this.listView1.TabIndex = 4;
+			this.listView1.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "Name";
+			//! this.columnHeader1.Text = "名前";
+			this.columnHeader1.Width = 120;
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Scale";
+			//! this.columnHeader2.Text = "規模";
+			this.columnHeader2.Width = 54;
+			// 
+			// columnHeader3
+			// 
+			this.columnHeader3.Text = "Material";
+			//! this.columnHeader3.Text = "材質";
+			this.columnHeader3.Width = 54;
+			// 
+			// columnHeader4
+			// 
+			this.columnHeader4.Text = "Size";
+			//! this.columnHeader4.Text = "サイズ";
+			this.columnHeader4.Width = 64;
+			// 
+			// columnHeader5
+			// 
+			this.columnHeader5.Text = "Construction cost";
+			//! this.columnHeader5.Text = "建造費";
+			// 
+			// columnHeader6
+			// 
+			this.columnHeader6.Text = "Maintenance";
+			//! this.columnHeader6.Text = "維持費";
+			// 
+			// indexSelector
+			// 
+			this.indexSelector.count = 10;
+			this.indexSelector.current = 0;
+			this.indexSelector.dataSource = null;
+			this.indexSelector.Location = new System.Drawing.Point(56, 32);
+			this.indexSelector.Name = "indexSelector";
+			this.indexSelector.Size = new System.Drawing.Size(88, 16);
+			this.indexSelector.TabIndex = 3;
+			this.indexSelector.indexChanged += new System.EventHandler(this.onStationChanged);
 			// 
 			// stationType
 			// 
 			this.stationType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.stationType.ItemHeight = 12;
-			this.stationType.Location = new System.Drawing.Point(8, 8);
+			this.stationType.Location = new System.Drawing.Point(0, 8);
 			this.stationType.Name = "stationType";
-			this.stationType.Size = new System.Drawing.Size(112, 20);
+			this.stationType.Size = new System.Drawing.Size(144, 20);
 			this.stationType.Sorted = true;
 			this.stationType.TabIndex = 2;
 			this.stationType.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
 			// 
 			// stationPicture
 			// 
+			this.stationPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.stationPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.stationPicture.Location = new System.Drawing.Point(8, 64);
+			this.stationPicture.Location = new System.Drawing.Point(0, 56);
 			this.stationPicture.Name = "stationPicture";
-			this.stationPicture.Size = new System.Drawing.Size(112, 80);
+			this.stationPicture.Size = new System.Drawing.Size(144, 104);
 			this.stationPicture.TabIndex = 1;
 			this.stationPicture.TabStop = false;
 			// 
+			// indexSelector1
+			// 
+			this.indexSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.indexSelector1.count = 10;
+			this.indexSelector1.current = 0;
+			this.indexSelector1.dataSource = null;
+			this.indexSelector1.Location = new System.Drawing.Point(216, 104);
+			this.indexSelector1.Name = "indexSelector1";
+			this.indexSelector1.Size = new System.Drawing.Size(96, 16);
+			this.indexSelector1.TabIndex = 3;
+			// 
+			// label4
+			// 
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label4.Location = new System.Drawing.Point(160, 104);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(56, 16);
+			this.label4.TabIndex = 6;
+			this.label4.Text = "Direction:";
+			//! this.label4.Text = "方向：";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// indexSelector2
+			// 
+			this.indexSelector2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.indexSelector2.count = 10;
+			this.indexSelector2.current = 0;
+			this.indexSelector2.dataSource = null;
+			this.indexSelector2.Location = new System.Drawing.Point(216, 120);
+			this.indexSelector2.Name = "indexSelector2";
+			this.indexSelector2.Size = new System.Drawing.Size(96, 16);
+			this.indexSelector2.TabIndex = 3;
+			// 
+			// label5
+			// 
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label5.Location = new System.Drawing.Point(160, 120);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(56, 16);
+			this.label5.TabIndex = 6;
+			this.label5.Text = "Color:";
+			//! this.label5.Text = "色：";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// platformPage
 			// 
-			this.platformPage.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					   this.checkSlim,
-																					   this.dirS,
-																					   this.dirW,
-																					   this.dirE,
-																					   this.label1,
-																					   this.lengthBox,
-																					   this.dirN});
+			this.platformPage.Controls.Add(this.checkSlim);
+			this.platformPage.Controls.Add(this.dirS);
+			this.platformPage.Controls.Add(this.dirW);
+			this.platformPage.Controls.Add(this.dirE);
+			this.platformPage.Controls.Add(this.label1);
+			this.platformPage.Controls.Add(this.lengthBox);
+			this.platformPage.Controls.Add(this.dirN);
 			this.platformPage.Location = new System.Drawing.Point(4, 21);
 			this.platformPage.Name = "platformPage";
-			this.platformPage.Size = new System.Drawing.Size(128, 167);
+			this.platformPage.Size = new System.Drawing.Size(152, 167);
 			this.platformPage.TabIndex = 0;
 			this.platformPage.Text = "Platform";
 			//! this.platformPage.Text = "ホーム";
@@ -315,35 +486,26 @@ namespace freetrain.controllers.rail
 			// 
 			// tabControl
 			// 
-			this.tabControl.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					 this.stationPage,
-																					 this.platformPage});
+			this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+				| System.Windows.Forms.AnchorStyles.Left) 
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.tabControl.Controls.Add(this.stationPage);
+			this.tabControl.Controls.Add(this.platformPage);
 			this.tabControl.ItemSize = new System.Drawing.Size(42, 17);
+			this.tabControl.Location = new System.Drawing.Point(0, 0);
 			this.tabControl.Name = "tabControl";
 			this.tabControl.SelectedIndex = 0;
-			this.tabControl.Size = new System.Drawing.Size(136, 192);
+			this.tabControl.Size = new System.Drawing.Size(160, 192);
 			this.tabControl.TabIndex = 0;
 			this.tabControl.SelectedIndexChanged += new System.EventHandler(this.onModeChanged);
-			// 
-			// indexSelector
-			// 
-			this.indexSelector.count = 10;
-			this.indexSelector.current = 0;
-			this.indexSelector.dataSource = null;
-			this.indexSelector.Location = new System.Drawing.Point(8, 36);
-			this.indexSelector.Name = "indexSelector";
-			this.indexSelector.Size = new System.Drawing.Size(112, 20);
-			this.indexSelector.TabIndex = 3;
-			this.indexSelector.indexChanged += new System.EventHandler(this.onStationChanged);
 			// 
 			// PlatformController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(128, 232);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.tabControl,
-																		  this.buttonPlace,
-																		  this.buttonRemove});
+			this.ClientSize = new System.Drawing.Size(162, 227);
+			this.Controls.Add(this.tabControl);
+			this.Controls.Add(this.buttonPlace);
+			this.Controls.Add(this.buttonRemove);
 			this.Name = "PlatformController";
 			this.Text = "Station construction";
 			//! this.Text = "駅工事";
@@ -434,7 +596,7 @@ namespace freetrain.controllers.rail
 			switch( currentMode ) {
 			case Mode.Station:
 				if( isPlacing ) {
-					if(!selectedStation.canBeBuilt(loc)) {
+					if(!selectedStation.canBeBuilt(loc,ControlMode.player)) {
 						MainWindow.showError("Can not build");
 						//! MainWindow.showError("設置できません");
 					} else {
@@ -578,6 +740,12 @@ namespace freetrain.controllers.rail
 			drawer.Dispose();
 
 			updateAlphaSprites();
+		}
+
+		public override void updatePreview()
+		{
+			if( this.currentMode==Mode.Station )
+				onStationChanged(null,null);
 		}
 
 		private StationContribution selectedStation { get { return (StationContribution)indexSelector.currentItem; } }

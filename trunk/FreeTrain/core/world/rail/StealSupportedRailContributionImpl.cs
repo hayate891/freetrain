@@ -95,8 +95,9 @@ namespace freetrain.world.rail
 
 			while(true) {
 				if( RailRoad.get(here)==null ) {
-					new RailImpl( TrafficVoxel.getOrCreate(here), d );
-					BridgePierVoxel.electBridgeSupport( here );
+					TrafficVoxel tv = TrafficVoxel.getOrCreate(here);
+					new RailImpl( tv, d );
+					BridgePierVoxel.electBridgeSupport( here, tv );
 				}
 
 				if( here==to )	return;
@@ -119,7 +120,7 @@ namespace freetrain.world.rail
 					rr.voxel.railRoad = null;
 					// TODO: delete piers
 
-					BridgePierVoxel.teardownBridgeSupport( here );
+					BridgePierVoxel.teardownBridgeSupport( here,TrafficVoxel.get(here) );
 				}
 
 				if(here==to)	return;

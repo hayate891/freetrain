@@ -89,7 +89,7 @@ namespace freetrain.tools.terrainloader
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(72, 16);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "&File name:";
+			this.label1.Text = "&File Name:";
 			//! this.label1.Text = "ファイル名(&F)：";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -187,7 +187,7 @@ namespace freetrain.tools.terrainloader
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(64, 16);
 			this.label6.TabIndex = 6;
-			this.label6.Text = "W&ater level:";
+			this.label6.Text = "W&ater Level:";
 			//! this.label6.Text = "水面高(&A)：";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
@@ -265,7 +265,7 @@ namespace freetrain.tools.terrainloader
 			this.MinimizeBox = false;
 			this.Name = "LoadDialog";
 			this.ShowInTaskbar = false;
-			this.Text = "Loading terrain";
+			this.Text = "Loading terrain...";
 			//! this.Text = "地形の読み込み";
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);

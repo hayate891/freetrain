@@ -41,12 +41,12 @@ namespace freetrain.contributions.land
 		private readonly string[] lands;
 
 
-		public override void create( int x1, int y1, int x2, int y2, int z ) {
+		public override void create( int x1, int y1, int x2, int y2, int z, bool owned ) {
 			for( int x=x1; x<=x2; x++ ) {
 				for( int y=y1; y<=y2; y++ ) {
 					Location loc = new Location(x,y,z);
 					if( LandVoxel.canBeBuilt(loc) )
-						new StaticLandVoxel( loc, getLand() );
+						new StaticLandVoxel( loc, getLand() ).isOwned = owned;
 				}
 			}
 		}

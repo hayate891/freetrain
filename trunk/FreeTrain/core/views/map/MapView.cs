@@ -13,49 +13,11 @@ using org.kohsuke.directdraw;
 
 namespace freetrain.views.map
 {
-	/// <summary>
-	/// View interface implementation of the map view.
-	/// </summary>
-	public class MapView : AbstractView
-	{
-		public MapView() : base(new MapViewWindow()) {
-			form.controller = this;
-		}
-		
-		private new MapViewWindow form { get { return (MapViewWindow)base.form; } }
 
-		public bool IsDisposed {
-			get {
-				return form.IsDisposed;
-			}
-		}
-
-		/// <summary>
-		/// Moves the map window to display the specified location
-		/// </summary>
-		public void moveTo( Location loc ) {
-			form.moveTo(loc);
-		}
-
-		/// <summary>
-		/// If the specified location is visible by one of the map views currently opened,
-		/// return true. Otherwise false.
-		/// </summary>
-		public static bool isVisibleInAny( Location loc ) {
-			foreach( IView view in MainWindow.mainWindow.getAllViews() ) {
-				if( view is MapView && ((MapView)view).form.isVisible(loc) )
-					return true;
-			}
-			return false;
-		}
-	}
-
-	
 	/// <summary>
 	/// Form implementation of the map view.
 	/// </summary>
-	public class MapViewWindow : Form
-	{
+	public class MapViewWindow : Form {
 		private WindowedDirectDraw ddraw;
 
 		/// <summary> Store the MapView object attached to it. </summary>
@@ -109,20 +71,20 @@ namespace freetrain.views.map
 		protected override void OnLoad(EventArgs e) {
 			base.OnLoad(e);
 			ddraw = new WindowedDirectDraw(this);
-			drawer = new QuarterViewDrawer( ddraw,
+			drawer = new QuarterViewDrawer( World.world, ddraw,
 				new Rectangle( this.scrollPos, ClientSize ) );
 			drawer.OnUpdated += new EventHandler(onDrawerUpdated);
 
 			weatherOverlay = NullWeatherOverlay.theInstance;
 			// TODO
 			// TEST: TODO
-//			weatherOverlay = new WeatherOverlayImpl( new WeatherOverlaySpriteSet(
-//				"{9B411B87-07F4-451b-93D0-2922EE62461B}",8,new Size(64,128)));
+			//			weatherOverlay = new WeatherOverlayImpl( new WeatherOverlaySpriteSet(
+			//				"{9B411B87-07F4-451b-93D0-2922EE62461B}",8,new Size(64,128)));
 		}
 
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
-					components.Dispose();
+				components.Dispose();
 			weatherOverlay.Dispose();
 			PictureManager.onSurfaceLost -= new EventHandler(onSurfaceLost);
 			drawer.Dispose();
@@ -144,8 +106,7 @@ namespace freetrain.views.map
 		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を
 		/// コード エディタで変更しないでください。
 		/// </summary>
-		private void InitializeComponent()
-		{
+		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.mainMenu = new System.Windows.Forms.MainMenu();
 			this.menuItem1 = new System.Windows.Forms.MenuItem();
@@ -179,14 +140,14 @@ namespace freetrain.views.map
 			// menuItem_heightCut
 			// 
 			this.menuItem_heightCut.Index = 1;
-			this.menuItem_heightCut.Text = "&Height cutting";
+			this.menuItem_heightCut.Text = "&Height Cutting";
 			//! this.menuItem_heightCut.Text = "ヘイトカット(&H)";
 			this.menuItem_heightCut.Popup += new System.EventHandler(this.menuItem_heightCut_Popup);
 			// 
 			// menuItem_heightCutWnd
 			// 
 			this.menuItem_heightCutWnd.Index = 2;
-			this.menuItem_heightCutWnd.Text = "Height cut window";
+			this.menuItem_heightCutWnd.Text = "Height Cut Window";
 			//! this.menuItem_heightCutWnd.Text = "ヘイトカットウィンドウ";
 			this.menuItem_heightCutWnd.Click += new System.EventHandler(this.menuItem_heightCutWnd_Click);
 			// 
@@ -217,7 +178,7 @@ namespace freetrain.views.map
 			if( ddraw.primarySurface.handle.isLost()!=0 )	// surface is lost
 				PictureManager.onSurfaceLost(this,null);
 
-//			drawer.draw( ddraw.primarySurface, PointToScreen(new Point(0,0)) );
+			//			drawer.draw( ddraw.primarySurface, PointToScreen(new Point(0,0)) );
 			weatherOverlay.draw( drawer, ddraw.primarySurface, PointToScreen(new Point(0,0)) );
 
 			base.OnPaint(pe);
@@ -270,7 +231,7 @@ namespace freetrain.views.map
 		private bool scrollByDrag( MouseEventArgs arg ) {
 			Point curMousePos = getPoint(arg);
 			if( (arg.Button!=MouseButtons.Left && controller==null)
-			||  distance(dragStartMousePos,curMousePos)>5 ) {
+				||  distance(dragStartMousePos,curMousePos)>5 ) {
 				
 				// change the cursor for visual feedback that panning is in progress
 				this.Cursor = Cursors.SizeAll;
@@ -346,8 +307,8 @@ namespace freetrain.views.map
 				if( arg.Button==MouseButtons.Left ) {
 					// dispatch this click event to the appropriate voxel.
 
-					Location loc = drawer.fromClientToXYZ(arg,null);
-					{// print debug information
+					Location loc = drawer.fromClientToXYZ(arg,null); {
+					 // print debug information
 						Debug.WriteLine("mouse clicked on MapViewWindow. (x,y,z)="+loc);
 						int h,v;
 						World.world.toHV( loc.x, loc.y, out h, out v );
@@ -364,11 +325,11 @@ namespace freetrain.views.map
 			}
 		}
 
-//		protected override void OnResize( EventArgs e ) {
-//			base.OnResize(e);
-//			drawer.size = this.ClientSize;
-//		}
-//
+		//		protected override void OnResize( EventArgs e ) {
+		//			base.OnResize(e);
+		//			drawer.size = this.ClientSize;
+		//		}
+		//
 		protected override void OnClosed( EventArgs e ) {
 			if(heightCutWindow!=null)
 				heightCutWindow.Close();
@@ -410,7 +371,7 @@ namespace freetrain.views.map
 				this.owner=owner;
 				this.height=height;
 
-//				this.Checked = ( height==owner.drawer.heightCutHeight );
+				//				this.Checked = ( height==owner.drawer.heightCutHeight );
 
 				if( height==World.world.size.z-1 ) {
 					this.Text = "None";
@@ -455,4 +416,41 @@ namespace freetrain.views.map
 				Invalidate();
 		}
 	}
+
+	/// <summary>
+	/// View interface implementation of the map view.
+	/// </summary>
+	public class MapView : AbstractView {
+		public MapView() : base(new MapViewWindow()) {
+			form.controller = this;
+		}
+		
+		private new MapViewWindow form { get { return (MapViewWindow)base.form; } }
+
+		public bool IsDisposed {
+			get {
+				return form.IsDisposed;
+			}
+		}
+
+		/// <summary>
+		/// Moves the map window to display the specified location
+		/// </summary>
+		public void moveTo( Location loc ) {
+			form.moveTo(loc);
+		}
+
+		/// <summary>
+		/// If the specified location is visible by one of the map views currently opened,
+		/// return true. Otherwise false.
+		/// </summary>
+		public static bool isVisibleInAny( Location loc ) {
+			foreach( IView view in MainWindow.mainWindow.getAllViews() ) {
+				if( view is MapView && ((MapView)view).form.isVisible(loc) )
+					return true;
+			}
+			return false;
+		}
+	}
+
 }

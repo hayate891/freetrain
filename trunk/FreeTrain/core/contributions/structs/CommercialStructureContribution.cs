@@ -22,16 +22,19 @@ namespace freetrain.contributions.structs
 		/// <exception cref="XmlException">If the parsing fails</exception>
 		public CommercialStructureContribution( XmlElement e ) : base(e) {}
 
+		public CommercialStructureContribution( AbstractExStructure master, XmlElement pic, XmlElement main, bool opposite) 
+			: base(master, pic, main,opposite) {}
+
 		protected override StructureGroup getGroup( string name ) {
 			return PluginManager.theInstance.commercialStructureGroup[name];
 		}
 
-		public override Structure create( Location baseLoc, bool initiallyOwned ) {
-			return new Commercial( this, baseLoc, initiallyOwned );
+		public override Structure create( WorldLocator wLoc, bool initiallyOwned ) {
+			return new Commercial( this, wLoc, initiallyOwned );
 		}
 
-		public override bool canBeBuilt( Location baseLoc ) {
-			return Commercial.canBeBuilt( baseLoc, size );
+		public override bool canBeBuilt( Location baseLoc, ControlMode cm ) {
+			return Commercial.canBeBuilt( baseLoc, size, cm );
 		}
 
 		// TODO: additional parameters, like population and attractiveness.

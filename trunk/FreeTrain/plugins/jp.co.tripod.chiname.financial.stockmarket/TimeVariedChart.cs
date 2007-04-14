@@ -104,8 +104,7 @@ namespace freetrain.finance.stock
 			this.btnMinus.Name = "btnMinus";
 			this.btnMinus.Size = new System.Drawing.Size(16, 16);
 			this.btnMinus.TabIndex = 3;
-			this.btnMinus.Text = "-";
-			//! this.btnMinus.Text = "−";
+			this.btnMinus.Text = "−";
 			this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
 			// 
 			// btnPlus
@@ -115,8 +114,7 @@ namespace freetrain.finance.stock
 			this.btnPlus.Name = "btnPlus";
 			this.btnPlus.Size = new System.Drawing.Size(16, 16);
 			this.btnPlus.TabIndex = 3;
-			this.btnPlus.Text = "+";
-			//! this.btnPlus.Text = "＋";
+			this.btnPlus.Text = "＋";
 			this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
 			// 
 			// label1

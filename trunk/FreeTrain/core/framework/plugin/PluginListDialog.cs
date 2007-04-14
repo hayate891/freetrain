@@ -136,7 +136,7 @@ namespace freetrain.framework.plugin
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "PluginListDialog";
-			this.Text = "Installed plugins";
+			this.Text = "Installed Plugins";
 			//! this.Text = "インストールされているプラグイン";
 			this.Load += new System.EventHandler(this.PluginListDialog_Load);
 			this.panel1.ResumeLayout(false);

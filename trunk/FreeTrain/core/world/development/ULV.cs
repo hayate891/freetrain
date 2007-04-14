@@ -13,6 +13,7 @@ namespace freetrain.world.development
 	/// 
 	/// This is an index of how well a space is utilized.
 	/// </summary>
+	[Serializable]
 	public class ULV
 	{
 		public readonly int landValue;

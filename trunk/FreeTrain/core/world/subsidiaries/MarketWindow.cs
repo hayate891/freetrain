@@ -182,14 +182,14 @@ namespace freetrain.world.subsidiaries
 			// 
 			this.tbModeSell.ImageIndex = 0;
 			this.tbModeSell.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeSell.Text = "My company";
+			this.tbModeSell.Text = "My Company";
 			//! this.tbModeSell.Text = "自社";
 			// 
 			// tbModeBuy
 			// 
 			this.tbModeBuy.ImageIndex = 0;
 			this.tbModeBuy.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeBuy.Text = "Other companies";
+			this.tbModeBuy.Text = "Other Companies";
 			//! this.tbModeBuy.Text = "他社";
 			// 
 			// tbSeparator
@@ -270,7 +270,7 @@ namespace freetrain.world.subsidiaries
 																		  this.toolBar});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "MarketWindow";
-			this.Text = "Subsidiary business";
+			this.Text = "Subsidiary Business";
 			//! this.Text = "子会社取引";
 			this.ResumeLayout(false);
 

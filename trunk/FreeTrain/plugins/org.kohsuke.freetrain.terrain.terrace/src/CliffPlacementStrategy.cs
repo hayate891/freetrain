@@ -8,7 +8,7 @@ using freetrain.views.map;
 namespace freetrain.world.terrain.terrace
 {
 	/// <summary>
-	/// Cliff placement mode
+	/// Cliff indices mode
 	/// </summary>
 	internal class CliffPlacementStrategy : Strategy {
 		public LocationDisambiguator disambiguator { get { return MountainDisambiguator.theInstance; } }

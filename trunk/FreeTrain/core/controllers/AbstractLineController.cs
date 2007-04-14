@@ -20,14 +20,22 @@ namespace freetrain.controllers
 	{
 		public AbstractLineController( LineContribution _type ) {
 			InitializeComponent();
-			this.type = _type;
+			this.contrib = _type;
 			this.Text = type.name;
+			updatePreview();
+		}
+
+		public override void updatePreview()
+		{
+			if(this.picture.Image!=null)
+				this.picture.Image.Dispose();
 			Bitmap bmp = type.previewBitmap;
 			this.picture.Image = bmp;
 			this.picture.BackColor = bmp.GetPixel(0,bmp.Size.Height-1);
 		}
 
-		private readonly LineContribution type;
+		private LineContribution contrib;
+		protected virtual LineContribution type{ get{ return contrib; } }
 
 		protected override void Dispose( bool disposing ) {
 			if( disposing && components != null)
@@ -39,20 +47,23 @@ namespace freetrain.controllers
 		}
 
 		#region Windows Form Designer generated code
-		private System.Windows.Forms.RadioButton buttonRemove;
-		private System.Windows.Forms.RadioButton buttonPlace;
+		protected System.Windows.Forms.RadioButton buttonRemove;
+		protected System.Windows.Forms.RadioButton buttonPlace;
 		protected System.Windows.Forms.PictureBox picture;
-		private System.ComponentModel.Container components = null;
+		protected System.Windows.Forms.ToolTip toolTip;		
+		private System.ComponentModel.IContainer components;
 
 		/// <summary>
 		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を
 		/// コード エディタで変更しないでください。
 		/// </summary>
-		private void InitializeComponent()
+		protected virtual void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.buttonRemove = new System.Windows.Forms.RadioButton();
 			this.buttonPlace = new System.Windows.Forms.RadioButton();
 			this.picture = new System.Windows.Forms.PictureBox();
+			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
 			// buttonRemove
@@ -92,15 +103,14 @@ namespace freetrain.controllers
 			this.picture.TabIndex = 4;
 			this.picture.TabStop = false;
 			// 
-			// RoadController
+			// AbstractLineController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
 			this.ClientSize = new System.Drawing.Size(112, 115);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.buttonRemove,
-																		  this.buttonPlace,
-																		  this.picture});
-			this.Name = "RoadController";
+			this.Controls.Add(this.buttonRemove);
+			this.Controls.Add(this.buttonPlace);
+			this.Controls.Add(this.picture);
+			this.Name = "AbstractLineController";
 			this.Text = "Road construction";
 			//! this.Text = "道路工事";
 			this.ResumeLayout(false);

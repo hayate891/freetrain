@@ -25,13 +25,14 @@ namespace freetrain.world.rail
 		/// <param name="_type">
 		/// Type of the station to be built.
 		/// </param>
-		public Station( StationContribution _type, Location loc  ) : base( _type, loc ) {
+		public Station( StationContribution _type, WorldLocator wloc  ) : base( _type, wloc ) {
 			this.type = _type;
 			this._name = string.Format("ST{0,2:d}",iota++);
-			World.world.stations.add(this);
-			World.world.clock.registerRepeated( new ClockHandler(clockHandlerHour), TimeLength.fromHours(1) );
-			World.world.clock.registerRepeated( new ClockHandler(clockHandlerDay),  TimeLength.fromHours(24) );
-			
+			if(wloc.world == World.world){
+				World.world.stations.add(this);
+				World.world.clock.registerRepeated( new ClockHandler(clockHandlerHour), TimeLength.fromHours(1) );
+				World.world.clock.registerRepeated( new ClockHandler(clockHandlerDay),  TimeLength.fromHours(24) );
+			}
 			Distance r = new Distance( REACH_RANGE, REACH_RANGE, REACH_RANGE );
 
 			// advertise listeners in the neighborhood that a new station is available
@@ -216,13 +217,26 @@ namespace freetrain.world.rail
 		const float AVERAGE_PASSENGER_PER_DAY_FACTOR = 24.0f*(1.0f-AVERAGE_PASSENGER_RATIO);
 
 
+		protected TransportLog trains = new TransportLog(); // train numbers arrive and depart today.
+		protected TransportLog import = new TransportLog(); // passengers unloaded today.
+		protected TransportLog export = new TransportLog(); // passengers can be exported today.
+		public double ScoreImported { get { return import.LastWeek; } }
+		public double ScoreExported { get { return export.LastWeek; } }
+		public double ScoreTrains { get { return trains.LastWeek; } }
+		public int UnloadedToday { get { return import.Today; } }
+		public int UnloadedYesterday { get { return import.Yesterday; } }
+		public int TrainsToday { get { return trains.Today; } }
+		public int TrainsYesterday { get { return trains.Yesterday; } }
 
 		public void unloadPassengers( Train tr ) {
 			// TODO: do something with unloaded passengers
 			int r = tr.unloadPassengers();
-
-			World.world.landValue.addQ( location, r );
+			import.AddAmount(r);
+			trains.AddAmount(1);
+			Debug.WriteLine(string.Format("devQ on unload v={0} for {1} passengers.",import.LastWeek/24,r));
+			World.world.landValue.addQ( location, Math.Min((float)(import.LastWeek/24),r) );
 			accumulatedUnloadedPassengers += r;
+			GlobalTrafficMonitor.TheInstance.NotifyPassengerTransport(this,r);
 		}
 
 		/// <summary>
@@ -238,13 +252,15 @@ namespace freetrain.world.rail
 				
 			// one train can't have 100% of available populations. (the number is arbitrarily set to 30%)
 			int pass = Math.Min( tr.passengerCapacity, (int)(avail*0.3f) );
+			export.AddAmount(tr.passengerCapacity-pass);
+			trains.AddAmount(1);
 
 			gonePassengers += pass;
 			accumulatedLoadedPassengers += pass;
 			World.world.landValue.addQ( location, pass );
 			Debug.WriteLine(name+": # of passengers gone (up to) " + gonePassengers );
 
-			tr.loadPassengers(pass);
+			tr.loadPassengers(this, pass);
 		}
 
 		public void clockHandlerHour() {
@@ -260,9 +276,12 @@ namespace freetrain.world.rail
 		public void clockHandlerDay() {
 			// called once a day. charge the operation cost
 			AccountManager.theInstance.spend( type.operationCost, AccountGenre.RAIL_SERVICE );
+			import.DailyReset();
+			export.DailyReset();
+			trains.DailyReset();
 		}
 
-		const int REACH_RANGE = 10;
+		public const int REACH_RANGE = 10;
 
 		/// <summary>
 		/// Returns true if a listener at the given location can use this station.
@@ -284,5 +303,36 @@ namespace freetrain.world.rail
 		}
 
 		public static Station get( int x, int y, int z ) { return get(new Location(x,y,z)); }
+	}
+
+	[Serializable]
+	public class TransportLog {
+		private const double LogFactor = 5;
+
+		private int today = 0;
+		private int yesterday = 0;
+		private double thisweek = 0;
+		private double lastweek = 0;
+		public void AddAmount(int amount){
+			today+=amount;
+		}
+
+		public void DailyReset(){
+			thisweek += Math.Pow(today,1/LogFactor);
+			yesterday = today;
+			today = 0;
+			Clock c = World.world.clock;
+			if(c.dayOfWeek == 6 ) {
+				lastweek = Math.Pow(thisweek/7,LogFactor);
+				thisweek = 0;
+				Debug.WriteLine("report "+lastweek);
+			}
+		}
+		public int Yesterday { get{ return yesterday; }}
+		public int Today { get{ return today; }}
+		public double ThisWeek { 
+			get{ return Math.Pow(thisweek/(World.world.clock.dayOfWeek+1),LogFactor); }
+		}
+		public double LastWeek { get{ return lastweek; }}
 	}
 }

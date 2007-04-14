@@ -39,6 +39,8 @@ namespace freetrain.controls
 			set {
 				_count = value;
 				if( _current >= _count )	_current = _count-1;
+				if( _current < 0 && _count>0 )
+					_current = 0;
 				updateBox();
 			}
 		}

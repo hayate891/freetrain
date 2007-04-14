@@ -11,6 +11,7 @@ namespace freetrain.world.development
 	/// IOW, it has enough information to build itself by the build method
 	/// without any external context information.
 	/// </summary>
+	[Serializable]
 	abstract class Plan
 	{
 		/// <summary>

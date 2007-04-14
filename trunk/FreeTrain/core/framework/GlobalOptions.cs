@@ -38,6 +38,8 @@ namespace freetrain.framework
 			set{ DirectDraw.SurfeceAllocation = value; 
 				 surfaceAlloc = value; }
 		}
+		
+		public double[] devParams = new double[11];
 
 		/// <summary>
 		/// Length of the time (in seconds) 

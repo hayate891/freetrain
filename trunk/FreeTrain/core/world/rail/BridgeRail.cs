@@ -115,11 +115,12 @@ namespace freetrain.world.rail
 
 			while(true) {
 				if( RailRoad.get(here)==null ) {
+					TrafficVoxel v = TrafficVoxel.getOrCreate(here);
 					if(!building) {
 						building = true;
-						create( TrafficVoxel.getOrCreate(here), d, BridgeRailMode.Begin );
+						create( v, d, BridgeRailMode.Begin );
 					} else {
-						create( TrafficVoxel.getOrCreate(here), d,
+						create( v, d,
 							( here==to || RailRoad.get(here+d)!=null )
 							? BridgeRailMode.End : BridgeRailMode.Middle );
 					}
@@ -127,7 +128,7 @@ namespace freetrain.world.rail
 					if( pier ) {
 						BridgePierVoxel.electBridgeSupport( here,
 							d.isParallelToX ? typeof(PierTop1Impl)  : typeof(PierTop2Impl),
-							d.isParallelToX ? typeof(PierBody1Impl) : typeof(PierBody2Impl) );
+							d.isParallelToX ? typeof(PierBody1Impl) : typeof(PierBody2Impl), v );
 					}
 
 					pier = !pier;
@@ -175,7 +176,7 @@ namespace freetrain.world.rail
 					brr.voxel.railRoad = null;
 					// TODO: delete piers
 
-					BridgePierVoxel.teardownBridgeSupport( here );
+					BridgePierVoxel.teardownBridgeSupport( here, TrafficVoxel.get(here) );
 				}
 
 				if(here==to)	return;
@@ -213,23 +214,23 @@ namespace freetrain.world.rail
 
 		[Serializable]
 		public class PierTop1Impl : BridgePierVoxel {
-			public PierTop1Impl( int x, int y, int z ) : base(x,y,z) {}
+			public PierTop1Impl( int x, int y, int z, Entity e ) : base(x,y,z,e) {}
 			protected override Sprite sprite { get { return bridgePierSprites[0,0]; } }
 		}
 		[Serializable]
 		public class PierBody1Impl : BridgePierVoxel {
-			public PierBody1Impl( int x, int y, int z ) : base(x,y,z) {}
+			public PierBody1Impl( int x, int y, int z, Entity e ) : base(x,y,z,e) {}
 			protected override Sprite sprite { get { return bridgePierSprites[0,1]; } }
 		}
 
 		[Serializable]
 		public class PierTop2Impl : BridgePierVoxel {
-			public PierTop2Impl( int x, int y, int z ) : base(x,y,z) {}
+			public PierTop2Impl( int x, int y, int z, Entity e ) : base(x,y,z,e) {}
 			protected override Sprite sprite { get { return bridgePierSprites[1,0]; } }
 		}
 		[Serializable]
 		public class PierBody2Impl : BridgePierVoxel {
-			public PierBody2Impl( int x, int y, int z ) : base(x,y,z) {}
+			public PierBody2Impl( int x, int y, int z, Entity e ) : base(x,y,z,e) {}
 			protected override Sprite sprite { get { return bridgePierSprites[1,1]; } }
 		}
 	}

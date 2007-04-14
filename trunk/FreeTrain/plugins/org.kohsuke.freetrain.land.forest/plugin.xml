@@ -2,14 +2,21 @@
 <plug-in>
 	<title>Forest</title>
 	<!--!<title>森林</title>-->
-	<homepage>http://www.kohsuke.org/freetrain/</homepage>
-	<author>477</author>
-	<!--!<author>477さん</author>-->
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
+	<author>477@Q</author>00
 	
 	<depend on="org.kohsuke.freetrain.land.farmland" />
+	<!--depend on="jp.popkmart.heuer.freetrain.land.seaside" /-->
 	
 	<!--contribution type="picture" id="{C08FF7F4-B891-4AAD-BD45-74800F62CA80}">
 		<picture src="ricefield_SUM.bmp" />
+	</contribution-->
+	<!--contribution type="land" id="{E81D9B88-B0E9-4DE0-C477-338FC07E80F6}">
+		<group>uh[U[Ex</group>
+		<class name="freetrain.world.land.forest.BulldozerEx"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		<price>0</price>
+		<computerCannotBuild />
 	</contribution-->
 	
 	<contribution type="picture" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-G">	
@@ -416,4 +423,26 @@
 		<price>100</price>
 		<computerCannotBuild/>
 	</contribution>
+
+	<!--contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-s">
+		<group>Pine (beach)</group>
+		<name>Pine on beach</name>
+		<group>松林(砂浜)</group>
+		<name>浜の松林</name>
+		<class name="freetrain.world.land.forest.ForestBuilder"
+			codebase="bin/Debug/FreeTrain.Forest.dll"/>
+		
+		<picture src="trees_matsu.bmp">
+			<override when="winter" src="trees_matsu.WIN.bmp" />
+		</picture>
+		<ground>
+			<picture ref = "{LAND0001-8058-11D7-BB78-0090FE1AB959}" origin="0,48"/>	
+		</ground>
+		<size>192,41</size>
+		<count>6</count>
+		
+		<density>2</density>
+		<price>100</price>
+		<computerCannotBuild/>
+	</contribution-->
 </plug-in>

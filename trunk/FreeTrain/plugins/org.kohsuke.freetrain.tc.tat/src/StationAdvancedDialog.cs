@@ -83,21 +83,22 @@ namespace freetrain.world.rail.tattc
 		private void InitializeComponent()
 		{
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label5 = new System.Windows.Forms.Label();
+			this.radioReverse = new System.Windows.Forms.RadioButton();
 			this.minBox = new System.Windows.Forms.ComboBox();
 			this.radioGo = new System.Windows.Forms.RadioButton();
 			this.radioStop = new System.Windows.Forms.RadioButton();
 			this.radioPass = new System.Windows.Forms.RadioButton();
 			this.buttonReplace = new System.Windows.Forms.Button();
-			this.label4 = new System.Windows.Forms.Label();
 			this.hourBox = new System.Windows.Forms.ComboBox();
-			this.label3 = new System.Windows.Forms.Label();
 			this.dayOfWeekBox = new System.Windows.Forms.ComboBox();
-			this.label2 = new System.Windows.Forms.Label();
 			this.dayBox = new System.Windows.Forms.ComboBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.monthBox = new System.Windows.Forms.ComboBox();
 			this.buttonAdd = new System.Windows.Forms.Button();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
 			this.buttonUp = new System.Windows.Forms.Button();
 			this.buttonDown = new System.Windows.Forms.Button();
 			this.buttonRemove = new System.Windows.Forms.Button();
@@ -109,49 +110,51 @@ namespace freetrain.world.rail.tattc
 			this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
 			this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
 			this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-			this.radioReverse = new System.Windows.Forms.RadioButton();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					this.radioReverse,
-																					this.label5,
-																					this.minBox,
-																					this.radioGo,
-																					this.radioStop,
-																					this.radioPass,
-																					this.buttonReplace,
-																					this.label4,
-																					this.hourBox,
-																					this.label3,
-																					this.dayOfWeekBox,
-																					this.label2,
-																					this.dayBox,
-																					this.label1,
-																					this.monthBox,
-																					this.buttonAdd});
-			this.groupBox1.Location = new System.Drawing.Point(8, 8);
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.radioReverse);
+			this.groupBox1.Controls.Add(this.minBox);
+			this.groupBox1.Controls.Add(this.radioGo);
+			this.groupBox1.Controls.Add(this.radioStop);
+			this.groupBox1.Controls.Add(this.radioPass);
+			this.groupBox1.Controls.Add(this.buttonReplace);
+			this.groupBox1.Controls.Add(this.hourBox);
+			this.groupBox1.Controls.Add(this.dayOfWeekBox);
+			this.groupBox1.Controls.Add(this.dayBox);
+			this.groupBox1.Controls.Add(this.monthBox);
+			this.groupBox1.Controls.Add(this.buttonAdd);
+			this.groupBox1.Controls.Add(this.label5);
+			this.groupBox1.Controls.Add(this.label4);
+			this.groupBox1.Controls.Add(this.label3);
+			this.groupBox1.Controls.Add(this.label2);
+			this.groupBox1.Controls.Add(this.label1);
+			this.groupBox1.Location = new System.Drawing.Point(0, 8);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(432, 80);
+			this.groupBox1.Size = new System.Drawing.Size(448, 80);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Requirements";
 			//! this.groupBox1.Text = "条件";
 			// 
-			// label5
+			// radioReverse
 			// 
-			this.label5.Location = new System.Drawing.Point(408, 16);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(20, 20);
-			this.label5.TabIndex = 14;
-			this.label5.Text = "min";
-			//! this.label5.Text = "分";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.radioReverse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.radioReverse.Location = new System.Drawing.Point(160, 48);
+			this.radioReverse.Name = "radioReverse";
+			this.radioReverse.Size = new System.Drawing.Size(72, 24);
+			this.radioReverse.TabIndex = 15;
+			this.radioReverse.Text = "Reversing";
+			//! this.radioReverse.Text = "折返発車";
+			this.radioReverse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// minBox
 			// 
+			this.minBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.minBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.minBox.Items.AddRange(new object[] {
 														"*",
@@ -164,11 +167,12 @@ namespace freetrain.world.rail.tattc
 			this.minBox.Location = new System.Drawing.Point(352, 16);
 			this.minBox.MaxDropDownItems = 13;
 			this.minBox.Name = "minBox";
-			this.minBox.Size = new System.Drawing.Size(48, 20);
+			this.minBox.Size = new System.Drawing.Size(56, 20);
 			this.minBox.TabIndex = 13;
 			// 
 			// radioGo
 			// 
+			this.radioGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.radioGo.Location = new System.Drawing.Point(112, 48);
 			this.radioGo.Name = "radioGo";
 			this.radioGo.Size = new System.Drawing.Size(48, 24);
@@ -179,6 +183,7 @@ namespace freetrain.world.rail.tattc
 			// 
 			// radioStop
 			// 
+			this.radioStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.radioStop.Location = new System.Drawing.Point(64, 48);
 			this.radioStop.Name = "radioStop";
 			this.radioStop.Size = new System.Drawing.Size(48, 24);
@@ -189,6 +194,7 @@ namespace freetrain.world.rail.tattc
 			// 
 			// radioPass
 			// 
+			this.radioPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.radioPass.Checked = true;
 			this.radioPass.Location = new System.Drawing.Point(16, 48);
 			this.radioPass.Name = "radioPass";
@@ -200,8 +206,9 @@ namespace freetrain.world.rail.tattc
 			// 
 			// buttonReplace
 			// 
+			this.buttonReplace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonReplace.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonReplace.Location = new System.Drawing.Point(360, 48);
+			this.buttonReplace.Location = new System.Drawing.Point(376, 48);
 			this.buttonReplace.Name = "buttonReplace";
 			this.buttonReplace.Size = new System.Drawing.Size(64, 24);
 			this.buttonReplace.TabIndex = 11;
@@ -209,18 +216,9 @@ namespace freetrain.world.rail.tattc
 			//! this.buttonReplace.Text = "置換(&R)";
 			this.buttonReplace.Click += new System.EventHandler(this.buttonReplace_Click);
 			// 
-			// label4
-			// 
-			this.label4.Location = new System.Drawing.Point(328, 16);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(20, 20);
-			this.label4.TabIndex = 7;
-			this.label4.Text = "o'clock";
-			//! this.label4.Text = "時";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-			// 
 			// hourBox
 			// 
+			this.hourBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.hourBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.hourBox.Items.AddRange(new object[] {
 														 "*",
@@ -251,50 +249,31 @@ namespace freetrain.world.rail.tattc
 			this.hourBox.Location = new System.Drawing.Point(272, 16);
 			this.hourBox.MaxDropDownItems = 13;
 			this.hourBox.Name = "hourBox";
-			this.hourBox.Size = new System.Drawing.Size(48, 20);
+			this.hourBox.Size = new System.Drawing.Size(56, 20);
 			this.hourBox.TabIndex = 6;
-			// 
-			// label3
-			// 
-			this.label3.Location = new System.Drawing.Point(232, 16);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(32, 20);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "day";
-			//! this.label3.Text = "曜日";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayOfWeekBox
 			// 
+			this.dayOfWeekBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.dayOfWeekBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.dayOfWeekBox.Items.AddRange(new object[] {
 															  "*",
-															  "Sun",
-															  "Mon",
-															  "Tue",
-															  "Wednes",
-															  "Thurs",
-															  "Fri",
-															  "Satur"});
-															  //! "日","月","火","水","木","金","土"});
+															  "",
+															  "",
+															  "",
+															  "",
+															  "",
+															  "",
+															  "y"});
 			this.dayOfWeekBox.Location = new System.Drawing.Point(176, 16);
 			this.dayOfWeekBox.MaxDropDownItems = 13;
 			this.dayOfWeekBox.Name = "dayOfWeekBox";
-			this.dayOfWeekBox.Size = new System.Drawing.Size(48, 20);
+			this.dayOfWeekBox.Size = new System.Drawing.Size(56, 20);
 			this.dayOfWeekBox.TabIndex = 4;
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(152, 16);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(16, 20);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "th";
-			//! this.label2.Text = "日";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// dayBox
 			// 
+			this.dayBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.dayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.dayBox.Items.AddRange(new object[] {
 														"*",
@@ -332,21 +311,12 @@ namespace freetrain.world.rail.tattc
 			this.dayBox.Location = new System.Drawing.Point(96, 16);
 			this.dayBox.MaxDropDownItems = 13;
 			this.dayBox.Name = "dayBox";
-			this.dayBox.Size = new System.Drawing.Size(48, 20);
+			this.dayBox.Size = new System.Drawing.Size(56, 20);
 			this.dayBox.TabIndex = 2;
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(72, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(16, 20);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "month";
-			//! this.label1.Text = "月";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// monthBox
 			// 
+			this.monthBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.monthBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.monthBox.Items.AddRange(new object[] {
 														  "*",
@@ -365,13 +335,14 @@ namespace freetrain.world.rail.tattc
 			this.monthBox.Location = new System.Drawing.Point(16, 16);
 			this.monthBox.MaxDropDownItems = 13;
 			this.monthBox.Name = "monthBox";
-			this.monthBox.Size = new System.Drawing.Size(48, 20);
+			this.monthBox.Size = new System.Drawing.Size(56, 20);
 			this.monthBox.TabIndex = 0;
 			// 
 			// buttonAdd
 			// 
+			this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonAdd.Location = new System.Drawing.Point(288, 48);
+			this.buttonAdd.Location = new System.Drawing.Point(304, 48);
 			this.buttonAdd.Name = "buttonAdd";
 			this.buttonAdd.Size = new System.Drawing.Size(64, 24);
 			this.buttonAdd.TabIndex = 10;
@@ -379,8 +350,67 @@ namespace freetrain.world.rail.tattc
 			//! this.buttonAdd.Text = "追加(&A)";
 			this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
 			// 
+			// label5
+			// 
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label5.BackColor = System.Drawing.Color.Transparent;
+			this.label5.Location = new System.Drawing.Point(416, 16);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(24, 20);
+			this.label5.TabIndex = 14;
+			this.label5.Text = "min";
+			//! this.label5.Text = "分";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// label4
+			// 
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label4.BackColor = System.Drawing.Color.Transparent;
+			this.label4.Location = new System.Drawing.Point(336, 16);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(24, 20);
+			this.label4.TabIndex = 7;
+			this.label4.Text = "hrs";
+			//! this.label4.Text = "時";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// label3
+			// 
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Location = new System.Drawing.Point(240, 16);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(40, 20);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "weekday";
+			//! this.label3.Text = "曜日";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// label2
+			// 
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Location = new System.Drawing.Point(160, 16);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(24, 20);
+			this.label2.TabIndex = 3;
+			this.label2.Text = "";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// label1
+			// 
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Location = new System.Drawing.Point(80, 16);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(24, 20);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
 			// buttonUp
 			// 
+			this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonUp.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.buttonUp.Location = new System.Drawing.Point(376, 96);
 			this.buttonUp.Name = "buttonUp";
@@ -391,6 +421,7 @@ namespace freetrain.world.rail.tattc
 			// 
 			// buttonDown
 			// 
+			this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonDown.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.buttonDown.Location = new System.Drawing.Point(376, 128);
 			this.buttonDown.Name = "buttonDown";
@@ -401,6 +432,7 @@ namespace freetrain.world.rail.tattc
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.buttonRemove.Location = new System.Drawing.Point(376, 160);
 			this.buttonRemove.Name = "buttonRemove";
@@ -412,7 +444,7 @@ namespace freetrain.world.rail.tattc
 			// 
 			// buttonOk
 			// 
-			this.buttonOk.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
+			this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.buttonOk.Location = new System.Drawing.Point(352, 256);
@@ -423,9 +455,9 @@ namespace freetrain.world.rail.tattc
 			// 
 			// triggerList
 			// 
-			this.triggerList.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.triggerList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.triggerList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 																						  this.columnHeader1,
 																						  this.columnHeader2,
@@ -475,34 +507,21 @@ namespace freetrain.world.rail.tattc
 			this.columnHeader6.Text = "Action";
 			//! this.columnHeader6.Text = "動作";
 			// 
-			// radioReverse
-			// 
-			this.radioReverse.Location = new System.Drawing.Point(160, 48);
-			this.radioReverse.Name = "radioReverse";
-			this.radioReverse.Size = new System.Drawing.Size(72, 24);
-			this.radioReverse.TabIndex = 15;
-			this.radioReverse.Text = "Reverse";
-			//! this.radioReverse.Text = "折返発車";
-			this.radioReverse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// StationAdvancedDialog
 			// 
 			this.AcceptButton = this.buttonOk;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(448, 290);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.triggerList,
-																		  this.buttonOk,
-																		  this.buttonRemove,
-																		  this.buttonDown,
-																		  this.buttonUp,
-																		  this.groupBox1});
+			this.ClientSize = new System.Drawing.Size(448, 285);
+			this.Controls.Add(this.triggerList);
+			this.Controls.Add(this.buttonOk);
+			this.Controls.Add(this.buttonRemove);
+			this.Controls.Add(this.buttonDown);
+			this.Controls.Add(this.buttonUp);
+			this.Controls.Add(this.groupBox1);
 			this.MaximizeBox = false;
-			this.MaximumSize = new System.Drawing.Size(456, 800);
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(456, 298);
+			this.MinimumSize = new System.Drawing.Size(456, 312);
 			this.Name = "StationAdvancedDialog";
-			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Advanced departure time settings";
 			//! this.Text = "発車時刻の詳細設定";

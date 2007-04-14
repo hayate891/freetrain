@@ -27,7 +27,7 @@ namespace freetrain.contributions.land
 		}
 
 		protected override void onRectSelected( Location loc1, Location loc2 ) {
-			contrib.create(loc1,loc2);
+			contrib.create(loc1,loc2, true);
 		}
 
 		public void drawBefore( QuarterViewDrawer view, DrawContextEx surface ) {}

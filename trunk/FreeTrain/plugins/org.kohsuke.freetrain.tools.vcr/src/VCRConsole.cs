@@ -164,7 +164,7 @@ namespace freetrain.tools.vcr
 																		  this.btnConfig});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VCRConsole";
-            this.Text = "Video recorder";
+            this.Text = "Video Recorder";
             //! this.Text = "ビデオレコーダ";
 			this.ResumeLayout(false);
 
@@ -233,7 +233,7 @@ namespace freetrain.tools.vcr
 				str = "Recording is paused";
 				//! str = "録画は中断中です";
 			} else {
-				str = "Recording";
+				str = "Recording...";
 				//! str = "録画中です";
 			}
 

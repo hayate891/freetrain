@@ -12,7 +12,7 @@ namespace freetrain.world.development
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "Inspect land value";
+			item.Text = "Inspect Land Value";
 			//! item.Text = "地価の検査";
 			item.Click += new System.EventHandler(onClick);
 

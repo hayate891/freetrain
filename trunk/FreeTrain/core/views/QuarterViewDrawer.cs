@@ -49,7 +49,7 @@ namespace freetrain.views
 		/// Height-cut height. Voxels above this height
 		/// will not be drawn.
 		/// </summary>
-		private int _heightCutHeight = World.world.size.z-1;
+		private int _heightCutHeight;
 
 
 		/// <summary>
@@ -62,16 +62,22 @@ namespace freetrain.views
 		/// </summary>
 		public event EventHandler OnUpdated;
 
+		private World world;
+
 
 		/// <param name="initialView">
 		///		the region that this object draws in the A,B axis.
 		/// </param>
-		public QuarterViewDrawer( DirectDraw directDraw, Rectangle initialView ) {
+		public QuarterViewDrawer( World _world, DirectDraw directDraw, Rectangle initialView ) 
+		{
+			this.world = _world;
+			_heightCutHeight = world.size.z-1;
 			this.directDraw = directDraw;
 			recreateDrawBuffer( initialView.Size, true );
 			topLeft = new Point( initialView.X, initialView.Y );
 
-			World.world.voxelOutlookListeners.Add(this);
+			world.voxelOutlookListeners.Add(this);
+			
 			onUpdateAllVoxels();	// initially all the rects are dirty
 			PictureManager.onSurfaceLost += new EventHandler(onSurfaceLost);
 		}
@@ -79,31 +85,35 @@ namespace freetrain.views
 		/// <summary>
 		/// Size of the view in pixels.
 		/// </summary>
-		public Size size {
-			get {
+		public Size size 
+		{
+			get 
+			{
 				if( offscreenBuffer!=null )		return offscreenBuffer.size;
 				else							return new Size(0,0);
 			}
-			set {
+			set 
+			{
 				recreateDrawBuffer(value,false);
 			}
 		}
-		
-		/// <summary>
-		/// Origin of the view in (A,B) coordinates.
-		/// </summary>
-		public Point origin {
-			get {
+
+		public Point origin 
+		{
+			get 
+			{
 				return topLeft;
 			}
-			set {
+			set 
+			{
 				if( topLeft==value )	return;
 
 				Rectangle shared = Rectangle.Intersect(
 					new Rectangle( topLeft, size ),
 					new Rectangle( value,   size ) );
 				
-				if( shared.Width*shared.Height*2 < size.Height*size.Width ) {
+				if( shared.Width*shared.Height*2 < size.Height*size.Width ) 
+				{
 					// not much area is shared. just update all the voxels
 					topLeft = value;
 					onUpdateAllVoxels();
@@ -121,31 +131,37 @@ namespace freetrain.views
 				topLeft = value;
 
 				// adjust Y
-				if( value.Y < shared.Y ) {	// scroll up
+				if( value.Y < shared.Y ) 
+				{	// scroll up
 					dirtyRect.add( shared.X, value.Y,               shared.Width, size.Height-shared.Height );
-				} else { // scroll down
+				} 
+				else 
+				{ // scroll down
 					dirtyRect.add( shared.X, value.Y+shared.Height, shared.Width, size.Height-shared.Height );
 				}
 				updateScreen();
 
 				// adjust X
-				if( value.X < shared.X ) {	// scroll left
+				if( value.X < shared.X ) 
+				{	// scroll left
 					dirtyRect.add( value.X,              value.Y, size.Width-shared.Width, size.Height );
-				} else { // scroll right
+				} 
+				else 
+				{ // scroll right
 					dirtyRect.add( value.X+shared.Width, value.Y, size.Width-shared.Width, size.Height );
 				}
 				updateScreen();
 			}
 		}
-		
-		/// <summary>
-		/// When true, overlays will be drawn.
-		/// </summary>
-		public bool enableOverlay {
-			get {
+
+		public bool enableOverlay 
+		{
+			get 
+			{
 				return _enableOverlay;
 			}
-			set {
+			set 
+			{
 				if( _enableOverlay==value )	return;
 				_enableOverlay = value;
 				onUpdateAllVoxels();
@@ -155,8 +171,10 @@ namespace freetrain.views
 		/// <summary>
 		/// Obtain the visible rectangle in (A,B) coordinates.
 		/// </summary>
-		private Rectangle visibleRect {
-			get {
+		private Rectangle visibleRect 
+		{
+			get 
+			{
 				return new Rectangle( topLeft, size );
 			}
 		}
@@ -165,21 +183,26 @@ namespace freetrain.views
 		/// Height-cut height. Voxels above this height
 		/// will not be drawn.
 		/// 
-		/// Note that setting <code>World.world.size.z-1</code> will cause
+		/// Note that setting <code>world.size.z-1</code> will cause
 		/// all the voxels to be drawn.
 		/// </summary>
-		public int heightCutHeight {
-			get {
+		public int heightCutHeight 
+		{
+			get 
+			{
 				return _heightCutHeight;
 			}
-			set {
-				if( _heightCutHeight!=value ) {
+			set 
+			{
+				if( _heightCutHeight!=value ) 
+				{
 					_heightCutHeight = value;
 
 					if(OnHeightCutChanged!=null)
-							OnHeightCutChanged(this,null);
+						OnHeightCutChanged(this,null);
 					onUpdateAllVoxels();
-				} else
+				} 
+				else
 					_heightCutHeight = value;
 			}
 		}
@@ -192,8 +215,10 @@ namespace freetrain.views
 		/// This is useful when you absolutely wants a fresh surface
 		/// (such as when the current surface is lost)
 		/// </param>
-		private void recreateDrawBuffer( Size size, bool forceRecreate ) {
-			if(offscreenBuffer!=null ) {
+		private void recreateDrawBuffer( Size size, bool forceRecreate ) 
+		{
+			if(offscreenBuffer!=null ) 
+			{
 				if( size==offscreenBuffer.size && !forceRecreate )
 					return;	// no need for re-allocation
 				drawContext.Dispose();
@@ -202,7 +227,8 @@ namespace freetrain.views
 				offscreenBuffer = null;
 			}
 
-			if(size.Width>0 && size.Height>0) {
+			if(size.Width>0 && size.Height>0) 
+			{
 				offscreenBuffer = directDraw.createOffscreenSurface( size );
 				drawContext = new DrawContextEx(offscreenBuffer);
 			}
@@ -215,33 +241,42 @@ namespace freetrain.views
 		/// <summary>
 		/// Return true if the given voxel is visible.
 		/// </summary>
-		public bool isVisible( Location loc ) {
+		public bool isVisible( Location loc ) 
+		{
 			// find the bounding box in (A,B) axes
 			return World.world.getBoundingBox(loc).IntersectsWith(this.visibleRect);
 		}
 
-		public void Dispose() {
-			World.world.voxelOutlookListeners.Remove(this);
+		public void Dispose() 
+		{
+			if(world != null)
+				world.voxelOutlookListeners.Remove(this);
+			world = null;			
 			PictureManager.onSurfaceLost -= new EventHandler(onSurfaceLost);
-			if(offscreenBuffer!=null) {
+			if(offscreenBuffer!=null) 
+			{
 				offscreenBuffer.Dispose();
 				offscreenBuffer = null;
 			}
 		}
 
 
-		public void onUpdateVoxel( Location loc ) {
-			Rectangle boundingBox = World.world.getBoundingBox(loc);
-			if( boundingBox.IntersectsWith(this.visibleRect) ) {
+		public void onUpdateVoxel( Location loc ) 
+		{
+			Rectangle boundingBox = world.getBoundingBox(loc);
+			if( boundingBox.IntersectsWith(this.visibleRect) ) 
+			{
 				dirtyRect.add(boundingBox);
 				if(OnUpdated!=null)		OnUpdated(this,null);
 			}
 		}
 
-		public void onUpdateVoxel( Cube cube ) {
+		public void onUpdateVoxel( Cube cube ) 
+		{
 			Rectangle r = cube.boundingABRect;
 			r.Intersect(this.visibleRect);	// cut the rect by the visible rect
-			if( !r.IsEmpty ) {
+			if( !r.IsEmpty ) 
+			{
 				dirtyRect.add(r);
 				if(OnUpdated!=null)		OnUpdated(this,null);
 			}
@@ -250,7 +285,8 @@ namespace freetrain.views
 		/// <summary>
 		/// Invalidate the entire visible region.
 		/// </summary>
-		public void onUpdateAllVoxels() {
+		public void onUpdateAllVoxels() 
+		{
 			dirtyRect.add(this.visibleRect);
 			if(OnUpdated!=null)			OnUpdated(this,null);
 		}
@@ -260,18 +296,21 @@ namespace freetrain.views
 
 		
 		/// <summary>
-		/// Checks if we need to draw a ground surface above this voxel
+		/// Checks if we need to draw a ground surface.
 		/// </summary>
-		private bool shouldDrawGround( int h, int v, int z ) {
+		private bool shouldDrawGround( int h, int v, int z ) 
+		{
 			HoleVoxel hva;
-			if(z==0)	hva = null;
-			else		hva = World.world.voxelHVD(h,v,z-1) as HoleVoxel;
+			if(z==world.size.z-1)	hva = null;
+			else		hva = world.voxelHVD(h,v,z) as HoleVoxel;
 			
-			HoleVoxel hvb = World.world.voxelHVD(h,v,z) as HoleVoxel;
+			HoleVoxel hvb;
+			if(z==0)	hvb = null;
+			else		hvb = world.voxelHVD(h,v,z-1) as HoleVoxel;
 
-			if( hva!=null && !hva.drawGround(true) )
+			if( hva!=null && !hva.drawGround(false) )
 				return false;
-			if( hvb!=null && !hvb.drawGround(false) )
+			if( hvb!=null && !hvb.drawGround(true) )
 				return false;
 
 			return true;
@@ -282,16 +321,16 @@ namespace freetrain.views
 		/// Should be used only from the draw() method.
 		/// </summary>
 		/// <param name="updateRect">Rectangle in the (A,B) coordinates.</param>
-		private void draw( Rectangle rectAB, MapOverlay overlay ) {
+		private void draw( Rectangle rectAB, MapOverlay overlay ) 
+		{
 			// the same rectangle in the client coordinates
 			Rectangle rectClient = fromABToClient(rectAB);
 
-			World world = World.world;
 			int waterLevel = world.waterLevel;
 			bool noHeightCut = (heightCutHeight==world.size.z-1);
 
 			Color waterSurfaceColor = waterSurfaceDayColor;
-			if( world.clock.dayOrNight == DayNight.Night )
+			if( world.viewOptions.useNightView )
 				waterSurfaceColor = ColorMap.getNightColor(waterSurfaceColor);
 
 
@@ -299,65 +338,90 @@ namespace freetrain.views
 
 			Rectangle rectHV = fromABToHV(rectAB);	// determine the region to draw
 
-			int Hmax = Math.Min( rectHV.Right, world.size.x );
-			int Hmin = rectHV.Left;
+			int Hmax = Math.Min( rectHV.Right, world.size.x-1 );
 
-			int Zmin = noHeightCut ? (int)waterLevel-1 : 0;	// no need to draw underwater unless in the height cut mode
-			int Zmax = heightCutHeight+1;
-			
-			int Vmax = Math.Min( rectHV.Bottom + Zmax*2, world.size.y );
-			int Vmin = Math.Max( rectHV.Top    + Zmin*2 -1/*?*/, 0 );
-			
-			for( int z=Zmin; z<Zmax; z++, Vmin+=2 ) {
-				bool drawWater = (z==waterLevel && noHeightCut);
-				bool drawUndergroundFloor = (z==Zmax-1);
+			int Zinit = noHeightCut ? (int)waterLevel : 0;	// no need to draw underwater unless in the height cut mode
+			int Z = heightCutHeight;
+			int Vmax = Math.Min( rectHV.Bottom + Z*2, world.size.y-1 );
+			Sprite emptyChip = ResourceUtil.getGroundChip(world);
+			Sprite waterChip = ResourceUtil.underWaterChip;
+			for( int v=Math.Max(0,rectHV.Top); v<=Vmax; v++ ) 
+			{
+				for( int h=rectHV.Left; h<=Hmax; h++ ) 
+				{
 
-				// draw grounds
-				for( int v=Vmin; v<Vmax; v++ ) {
-					for( int h=Hmin; h<Hmax; h++ ) {
-						int groundLevel = world.getGroundLevelFromHV(h,v);
+					int groundLevel = world.getGroundLevelFromHV(h,v);
+
+					int zi = Zinit;
+					if( Zinit<=groundLevel && !shouldDrawGround(h,v,Zinit) )
+						zi = Math.Max(zi-1,0);	// if the surface is being cut, start from one smaller
+					
+					for( int z=zi; z<=Z; z++ ) 
+					{
+						Voxel voxel = world.voxelHVD(h,v,z);
+						//						if(voxel!=null)
+						//							Debug.Assert( voxel.location==world.toXYZ(h,v,z) );
 
 						// point in the client coordinate to draw
 						Point pt = fromHVZToClient(h,v,z);
 
-						if(z==groundLevel) {
-							if( shouldDrawGround(h,v,z) ) {
-								if( waterLevel<=groundLevel )
-									ResourceUtil.emptyChip.draw( drawContext.surface, pt );
-								else
-									ResourceUtil.underWaterChip.draw( drawContext.surface, pt );
+						// draw the surface anyway.
+						if( voxel == null || voxel.transparent )
+						{
+							if(z==groundLevel) 
+							{
+								if( shouldDrawGround(h,v,z)) 
+								{
+									if( waterLevel<=z ) 									
+										emptyChip.draw( drawContext.surface, pt );									
+									else
+										waterChip.draw( drawContext.surface, pt );
+								}
+							} 
+							else
+								if(z==waterLevel && noHeightCut) 
+							{								
+								emptyChip.drawShape( drawContext.surface, pt, waterSurfaceColor );
+							} 
+							else
+								if(z==Z && Z<groundLevel) 
+							{
+								// if the surface voxel is not drawn, draw the "under group" chip
+								if( shouldDrawGround(h,v,z) )
+									ResourceUtil.underGroundChip.draw( drawContext.surface, pt );
 							}
-						} else
-						if(drawWater) {
-							ResourceUtil.emptyChip.drawShape( drawContext.surface, pt, waterSurfaceColor );
-						} else
-						if(drawUndergroundFloor && Zmax<=groundLevel) {
-							// if the surface voxel is not drawn, draw the "underground" chip
-							if( shouldDrawGround(h,v,z) )
-								ResourceUtil.underGroundChip.draw( drawContext.surface, pt );
 						}
-					}
-				}
-
-				// draw voxels
-				for( int v=Vmin; v<Vmax; v++ ) {
-					for( int h=Hmin; h<Hmax; h++ ) {
-						int groundLevel = world.getGroundLevelFromHV(h,v);
-
-						Voxel voxel = world.voxelHVD(h,v,z);
-//						if(voxel!=null)	Debug.Assert( voxel.location==world.toXYZ(h,v,z) );
-
-						Point pt = fromHVZToClient(h,v,z);
+//					}
+//				}
+//			}
+//
+//			for( int v=Math.Max(0,rectHV.Top); v<=Vmax; v++ ) 
+//			{
+//				for( int h=rectHV.Left; h<=Hmax; h++ ) 
+//				{
+//					int groundLevel = world.getGroundLevelFromHV(h,v);
+//
+//					int zi = Zinit;
+//					if( Zinit<=groundLevel && !shouldDrawGround(h,v,Zinit) )
+//						zi = Math.Max(zi-1,0);	// if the surface is being cut, start from one smaller				
+//					for( int z=zi; z<=Z; z++  )
+//					{
+//						Voxel voxel = world.voxelHVD(h,v,z);
+//						//						if(voxel!=null)	Debug.Assert( voxel.location==world.toXYZ(h,v,z) );
+//
+//						if( z<groundLevel && z<heightCutHeight ) continue;
+//						Point pt = fromHVZToClient(h,v,z);
 
 						if(voxel!=null)
-							voxel.draw( drawContext, pt, noHeightCut?-1:(Zmax-z) );
+							voxel.drawVoxel( drawContext, pt, noHeightCut?-1:(Z-z+1) );
 						if(overlay!=null)
 							overlay.drawVoxel( this, drawContext, world.toXYZ(h,v,z),  pt );
 					}
 				}
 			}
-
-			if( Core.options.drawBoundingBox ) {
+			
+			if( Core.options.drawBoundingBox ) 
+			{
 				rectClient.Inflate(-1,-1);
 				offscreenBuffer.drawBox(rectClient);
 			}
@@ -366,7 +430,8 @@ namespace freetrain.views
 		/// <summary>
 		/// Update the surface by redrawing necessary parts.
 		/// </summary>
-		private void updateScreen() {
+		private void updateScreen() 
+		{
 			if( dirtyRect.isEmpty || offscreenBuffer==null)
 				return;	// no need for draw.
 
@@ -390,12 +455,14 @@ namespace freetrain.views
 			if(overlay!=null)
 				overlay.drawAfter( this, drawContext );
 
-			if( Core.options.drawStationNames ) {
+			if( Core.options.drawStationNames ) 
+			{
 				// REVISIT: I don't want these code inside this method.
 				//  it needs to be extensible.
 				Graphics graphics = drawContext.graphics;
 				
-				foreach( freetrain.world.rail.Station st in World.world.stations ) {
+				foreach( freetrain.world.rail.Station st in world.stations ) 
+				{
 					Point pt = fromXYZToClient( st.baseLocation );
 					pt.Y -= 16;	// display the string above the station
 
@@ -415,14 +482,20 @@ namespace freetrain.views
 		/// <summary>
 		/// Draw the view to the specified point of the given surface.
 		/// </summary>
-		public void draw( Surface target, Point pt ) {
-			try {
+		public void draw( Surface target, Point pt ) 
+		{
+			try 
+			{
 				updateScreen();
-			} catch( COMException e ) {
-				if( DirectDraw.isSurfaceLostException(e) ) {
+			} 
+			catch( COMException e ) 
+			{
+				if( DirectDraw.isSurfaceLostException(e) ) 
+				{
 					PictureManager.onSurfaceLost(this,null);
 					updateScreen();	// and retry
-				} else
+				} 
+				else
 					throw e;	// unable to handle this exception
 			}
 
@@ -437,7 +510,8 @@ namespace freetrain.views
 		/// Event handler of the onSurfaceLost event. Reallocate the back buffer
 		/// and force redraw.
 		/// </summary>
-		private void onSurfaceLost( object sender, EventArgs ea ) {
+		private void onSurfaceLost( object sender, EventArgs ea ) 
+		{
 			// reallocate the buffer
 			recreateDrawBuffer( size, true );
 		}
@@ -445,25 +519,26 @@ namespace freetrain.views
 		/// <summary>
 		/// Obtains the image as a bitmap.
 		/// </summary>
-		public Bitmap createBitmap() {
+		public Bitmap createBitmap() 
+		{
 			updateScreen();
 			return drawContext.surface.createBitmap();
 		}
 
-//		/// <summary>
-//		/// Moves the view to display the specified location in the center
-//		/// </summary>
-//		public void moveTo( Location loc ) {
-//			Point pt = World.world.fromXYZToAB(loc);
-//			Size sz = this.size;
-//			sz.Width /= 2;
-//			sz.Height /= 2;
-//			pt -= sz;
-//
-//			this.origin = pt;
-//
-//			if(OnUpdated!=null)		OnUpdated(this,null);
-//		}
+		//		/// <summary>
+		//		/// Moves the view to display the specified location in the center
+		//		/// </summary>
+		//		public void moveTo( Location loc ) {
+		//			Point pt = world.fromXYZToAB(loc);
+		//			Size sz = this.size;
+		//			sz.Width /= 2;
+		//			sz.Height /= 2;
+		//			pt -= sz;
+		//
+		//			this.origin = pt;
+		//
+		//			if(OnUpdated!=null)		OnUpdated(this,null);
+		//		}
 
 
 		private static Color waterSurfaceDayColor = Color.FromArgb(0,114,188);
@@ -478,46 +553,54 @@ namespace freetrain.views
 		/// <summary>
 		/// Convert the client coordinates to the (A,B) coordinates.
 		/// </summary>
-		public Point fromClientToAB( Point pt ) {
+		public Point fromClientToAB( Point pt ) 
+		{
 			return new Point(
 				pt.X + topLeft.X,
 				pt.Y + topLeft.Y );
 		}
 
-		public Point fromABToClient( Point pt ) {
+		public Point fromABToClient( Point pt ) 
+		{
 			return new Point(
 				pt.X - topLeft.X,
 				pt.Y - topLeft.Y );
 		}
 
-		public Rectangle fromABToClient( Rectangle r ) {
+		public Rectangle fromABToClient( Rectangle r ) 
+		{
 			return new Rectangle( fromABToClient(r.X,r.Y), r.Size );
 		}
 
-		public Point fromClientToAB( int x, int y ) {
+		public Point fromClientToAB( int x, int y ) 
+		{
 			return fromClientToAB(new Point(x,y));
 		}
 
-		public Point fromABToClient( int a, int b ) {
+		public Point fromABToClient( int a, int b ) 
+		{
 			return fromABToClient(new Point(a,b));
 		}
 
 		/// <summary>
 		/// Converts the (A,B) coordinates to (X,Y,Z) coordinates.
 		/// </summary>
-		public Location fromABToXYZ( int a, int b, ModalController controller ) {
+		public Location fromABToXYZ( int a, int b, ModalController controller ) 
+		{
 			int t = 2*b-16;
 			
 			int x = (a-t)>>5;
 			int y = (a+t)>>5;
 
-			x += (World.world.size.y-1)/2;
+			x += (world.size.y-1)/2;
 
 			// (x,y,0) is the base location. disambiguate the location.
 			// TODO: use height-cut here to force the specified z-level
-			if(controller!=null) {
+			if(controller!=null) 
+			{
 				LocationDisambiguator disambiguator = controller.disambiguator;
-				for( int z=heightCutHeight; z>=0; z-- ) {
+				for( int z=heightCutHeight; z>=0; z-- ) 
+				{
 					Location loc = new Location(x-z,y+z,z);
 					if( disambiguator.isSelectable(loc) )
 						return loc;
@@ -527,7 +610,8 @@ namespace freetrain.views
 			return new Location( x, y, 0 );
 		}
 
-		public Location fromABToXYZ( Point pt, ModalController controller ) {
+		public Location fromABToXYZ( Point pt, ModalController controller ) 
+		{
 			return fromABToXYZ( pt.X, pt.Y, controller );
 		}
 
@@ -535,29 +619,35 @@ namespace freetrain.views
 		/// Converts the mouse coordinate (which is client coordinate)
 		/// to (X,Y) coordinates.
 		/// </summary>
-		public Location fromClientToXYZ( MouseEventArgs mea, ModalController controller ) {
+		public Location fromClientToXYZ( MouseEventArgs mea, ModalController controller ) 
+		{
 			return fromABToXYZ(fromClientToAB(mea.X,mea.Y),controller);
 		}
-		public Location fromClientToXYZ( int cx, int cy, ModalController controller ) {
+		public Location fromClientToXYZ( int cx, int cy, ModalController controller ) 
+		{
 			return fromABToXYZ(fromClientToAB(cx,cy),controller);
 		}
 
-		public Point fromXYZToClient( int x, int y, int z ) {
-			return fromABToClient( World.world.fromXYZToAB(x,y,z) );
+		public Point fromXYZToClient( int x, int y, int z ) 
+		{
+			return fromABToClient( world.fromXYZToAB(x,y,z) );
 		}
 
-		public Point fromXYZToClient( Location loc ) {
-			return fromABToClient( World.world.fromXYZToAB(loc) );
+		public Point fromXYZToClient( Location loc ) 
+		{
+			return fromABToClient( world.fromXYZToAB(loc) );
 		}
 
 		/// <summary>
 		/// Obtain the bounding rectangle in the (H,V) coordinates
 		/// that completely covers the given rect of the (A,B) coordinates.
+		/// All the corners of the result is inclusive.
 		/// </summary>
-		private Rectangle fromABToHV( Rectangle r ) {
+		private Rectangle fromABToHV( Rectangle r ) 
+		{
 			int h1 = (r.Left-16)/32;
 			int v1 = r.Top   / 8-1;
-			int h2 = (r.Right+31)/32;
+			int h2 = r.Right /32;
 			int v2 = r.Bottom/ 8;
 
 			return new Rectangle( h1, v1, h2-h1, v2-v1 );
@@ -568,7 +658,8 @@ namespace freetrain.views
 		/// </summary>
 		/// <param name="pt"></param>
 		/// <returns></returns>
-		public Point fromHVZToClient( int h, int v, int z ) {
+		public Point fromHVZToClient( int h, int v, int z ) 
+		{
 			v -= z*2;
 			return fromABToClient( 16*( 2*h + (v&1) ), 8*v );
 		}

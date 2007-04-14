@@ -13,10 +13,20 @@ using freetrain.framework;
 using freetrain.framework.plugin;
 using freetrain.world;
 using freetrain.world.rail;
+using freetrain.views;
+using freetrain.world.development;
 using org.kohsuke.directdraw;
 
 namespace freetrain.world
 {
+	/// <summary>
+	/// 世界の操作権限定義
+	/// god = 神：無制限
+	/// player = プレイヤー鉄道会社
+	/// com = コンピュータ（ライバル会社、行政）
+	/// </summary>
+	public enum ControlMode{ god, player, com };
+
 	/// <summary>
 	/// ゲームデータのルート
 	/// </summary>
@@ -34,6 +44,8 @@ namespace freetrain.world
 		/// </summary>
 		public readonly Distance size;
 
+		public DevelopmentAlgorithm devalgo;
+
 		/// <summary>
 		/// Fired after a new world is loaded/created.
 		/// </summary>
@@ -43,9 +55,9 @@ namespace freetrain.world
 		/// 空の世界を作成
 		/// </summary>
 		/// <param name="sz">世界の大きさ (H,V,D)</param>
-		public World(Distance sz, int waterLevel) {
-			name = "Nanashi-san";
-			//! name = "ななしさん";
+		private World(Distance sz, int waterLevel, bool tempolary) {
+			this.name = "Terra Incognita";
+			//! this.name = "ななしさん";
 			this.size = sz;
 			this.waterLevel = (byte)waterLevel;
 			voxels = new SparseVoxelArray(sz.x,sz.y,sz.z);
@@ -54,33 +66,50 @@ namespace freetrain.world
 			for( int y=0; y<sz.y; y++ )
 				for( int x=0; x<sz.x; x++ )
 					groundLevels[x,y] = (byte)waterLevel;
+			
+			if(tempolary) {
+				onVoxelChanged += new VoxelChangeListener(EmptyHandler);
+			}else{
+				// add system-defined controllers to the list
+				trainControllers.add( DelegationTrainControllerImpl.theInstance );
+				trainControllers.add( SimpleTrainControllerImpl.theInstance );
 
-			// add system-defined controllers to the list
-			trainControllers.add( DelegationTrainControllerImpl.theInstance );
-			trainControllers.add( SimpleTrainControllerImpl.theInstance );
+				devalgo = new DevelopmentAlgorithm();
+				clock.registerRepeated( new ClockHandler(devalgo.handleClock),
+					TimeLength.fromHours(1) );
 
-			clock.registerRepeated( new ClockHandler(development.DevelopmentAlgorithm.handleClock),
-				TimeLength.fromHours(1) );
-
-			// for test
-			new Train( rootTrainGroup, "3 car high-speed formation",3,
-			//! new Train( rootTrainGroup, "３両高速編成",3,
-				(TrainContribution)Core.plugins.getContribution("{3983B298-ADB1-4905-94E5-03B7AAE5A221}"),
-				SimpleTrainControllerImpl.theInstance );
-			new Train( rootTrainGroup, "5 car medium-speed formation",5,
-			//! new Train( rootTrainGroup, "５両中速編成",5,
-				(TrainContribution)Core.plugins.getContribution("{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}"),
-				SimpleTrainControllerImpl.theInstance );
-			new Train( rootTrainGroup, "7 car low-speed formation",7,
-			//! new Train( rootTrainGroup, "７両低速編成",7,
-				(TrainContribution)Core.plugins.getContribution("{F7134C8E-6B63-4780-AF16-90D33131CD07}"),
-				SimpleTrainControllerImpl.theInstance );
+				// for test
+				new Train( rootTrainGroup, "3 Car High Speed Formation",3,
+				//! new Train( rootTrainGroup, "３両高速編成",3,
+					(TrainContribution)Core.plugins.getContribution("{3983B298-ADB1-4905-94E5-03B7AAE5A221}"),
+					SimpleTrainControllerImpl.theInstance );
+				new Train( rootTrainGroup, "5 Car Medium Speed Formation",5,
+				//! new Train( rootTrainGroup, "５両中速編成",5,
+					(TrainContribution)Core.plugins.getContribution("{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}"),
+					SimpleTrainControllerImpl.theInstance );
+				new Train( rootTrainGroup, "7 Car Low Speed Formation",7,
+				//! new Train( rootTrainGroup, "７両低速編成",7,
+					(TrainContribution)Core.plugins.getContribution("{F7134C8E-6B63-4780-AF16-90D33131CD07}"),
+					SimpleTrainControllerImpl.theInstance );
 
 			
-			// when a voxel is changed, it should be notified to OutlookListeners automatically
-			onVoxelChanged += new VoxelChangeListener(onVoxelUpdated);
+				// when a voxel is changed, it should be notified to OutlookListeners automatically
+				onVoxelChanged += new VoxelChangeListener(onVoxelUpdated);
 
-			landValue = new development.LandValue(this);
+				landValue = new development.LandValue(this);
+			}
+		}
+
+		public World(Distance sz, int waterLevel):this(sz,waterLevel,false){
+		}
+
+		public static World CreatePreviewWorld(Size minsizePixel, Distance struct_size){
+			int v = struct_size.x+struct_size.y;
+			int h =  struct_size.z;
+			int mx = (minsizePixel.Width+33)>>5;
+			int my = (minsizePixel.Height+9)>>3;
+			Distance sz = new Distance(Math.Max(mx,v/2+2),Math.Max(my,v/2+h*2+4),h+2);
+			return new World(sz,0,true);
 		}
 
 		/// <summary>ゲームの名前</summary>
@@ -110,6 +139,11 @@ namespace freetrain.world
 		/// Responsible for computing/maintaining land values for this world.
 		/// </summary>
 		public readonly development.LandValue landValue;
+
+		/// <summary>
+		/// Other objects associated to this world.
+		/// </summary>
+		public readonly GlobalViewOptions viewOptions = new GlobalViewOptions();
 
 		/// <summary>
 		/// Other objects associated to this world.
@@ -165,7 +199,21 @@ namespace freetrain.world
 
 		#endregion
 
+		public bool isOutsideWorld( Cube cube ) {
+			if(isOutsideWorld(new Location(cube.x1,cube.y1,cube.z1))) return true;
+			if(isOutsideWorld(new Location(cube.x2,cube.y1,cube.z1))) return true;
+			if(isOutsideWorld(new Location(cube.x1,cube.y2,cube.z1))) return true;
+			if(isOutsideWorld(new Location(cube.x2,cube.y2,cube.z1))) return true;
+			if(isOutsideWorld(new Location(cube.x1,cube.y1,cube.z2))) return true;
+			if(isOutsideWorld(new Location(cube.x2,cube.y1,cube.z2))) return true;
+			if(isOutsideWorld(new Location(cube.x1,cube.y2,cube.z2))) return true;
+			if(isOutsideWorld(new Location(cube.x2,cube.y2,cube.z2))) return true;
+			return false;
+		}
 
+		public bool isInsideWorld( Cube cube ) {
+			return !isOutsideWorld( cube );
+		}
 
 
 		/// <summary>
@@ -232,7 +280,7 @@ namespace freetrain.world
 		}
 		
 		public Entity getEntityAt( Location loc ) {
-			Voxel v = World.world[loc];
+			Voxel v = this[loc];
 			if(v==null)	return null;
 			else		return v.entity;
 		}
@@ -331,6 +379,15 @@ namespace freetrain.world
 			#endregion
 
 			public override void draw( DrawContext dc, Point pt, int heightCutDiff ) {}
+
+			protected override void drawFrontFence(DrawContext display, Point pt) {}
+
+			protected override void drawBehindFence(DrawContext display, Point pt) {}
+
+			public override void setFence( Direction d, Fence f ) {}
+
+			public override Fence getFence( Direction d ) { return null; }	
+
 		}
 
 		/// <summary>
@@ -390,6 +447,14 @@ namespace freetrain.world
 		[NonSerialized]
 		public IList voxelOutlookListeners = new ArrayList();
 		
+		/// <summary>
+		/// 地価計算のためにRoadクラスのコンストラクタから呼べるように用意した。(477)
+		/// </summary>
+		/// <param name="loc"></param>
+		internal void fireOnVoxelChanged(Location loc)
+		{
+			onVoxelChanged(loc);
+		}
 
 		/// <summary>
 		/// Notifies the voxel outlook listener, if there is any.
@@ -433,7 +498,7 @@ namespace freetrain.world
 
 
 		/// <summary> Root train group that holds all the trains in its descendants. </summary>
-		public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"Trains to hold");
+		public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"Owned trains");
 		//! public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"保有する列車");
 
 		
@@ -501,6 +566,10 @@ namespace freetrain.world
 				f.Serialize(stream,new BGMContribution[]{Core.bgmManager.currentBGM});
 				f.Serialize(stream,this);
 			}
+		}
+
+		private void EmptyHandler(Location loc) {
+			// do nothins;
 		}
 	}
 

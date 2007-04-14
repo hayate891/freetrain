@@ -17,7 +17,7 @@ namespace freetrain.world.rail
 		public static readonly TrainController theInstance = new SimpleTrainControllerImpl();
 
 		private SimpleTrainControllerImpl() {
-			name = "Default diagram";
+			name = "Default Diagram";
 			//! name = "ディフォルトダイヤグラム";
 		}
 

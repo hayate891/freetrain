@@ -383,6 +383,26 @@ namespace org.kohsuke.directdraw
 			return bmp;
 		}
 
+		public void GDICopyBits(Graphics g, Rectangle dst, Rectangle src){
+			using( GDIGraphics gg = new GDIGraphics(this) ) {
+				IntPtr dstHDC = g.GetHdc();
+				IntPtr srcHDC = gg.graphics.GetHdc();
+				StretchBlt( dstHDC, dst.X,dst.Y,dst.Width,dst.Height, 
+					srcHDC, src.X,src.Y,src.Width,src.Height, 0x00CC0020 );
+				g.ReleaseHdc(dstHDC);
+				gg.graphics.ReleaseHdc(srcHDC);
+			}
+		}
+
+		public void GDICopyBits(Graphics g, Rectangle dst, Point src){
+			using( GDIGraphics gg = new GDIGraphics(this) ) {
+				IntPtr dstHDC = g.GetHdc();
+				IntPtr srcHDC = gg.graphics.GetHdc();
+				BitBlt( dstHDC, dst.X,dst.Y,dst.Width,dst.Height, srcHDC, src.X,src.Y, 0x00CC0020 );
+				g.ReleaseHdc(dstHDC);
+				gg.graphics.ReleaseHdc(srcHDC);
+			}
+		}
 
 		[DllImport("gdi32.dll")]
 		private static extern bool BitBlt(
@@ -396,6 +416,22 @@ namespace org.kohsuke.directdraw
 			int nYSrc,
 			long dwRop
 		);
+
+		[DllImport("gdi32.dll")]
+		private static extern bool StretchBlt(
+			IntPtr hdcDest,      // コピー先のデバイスコンテキストのハンドル
+			int nXOriginDest, // コピー先長方形の左上隅の x 座標
+			int nYOriginDest, // コピー先長方形の左上隅の y 座標
+			int nWidthDest,   // コピー先長方形の幅
+			int nHeightDest,  // コピー先長方形の高さ
+			IntPtr hdcSrc,       // コピー元のデバイスコンテキストのハンドル
+			int nXOriginSrc,  // コピー元長方形の左上隅の x 座標
+			int nYOriginSrc,  // コピー元長方形の左上隅の y 座標
+			int nWidthSrc,    // コピー元長方形の幅
+			int nHeightSrc,   // コピー元長方形の高さ
+			long dwRop       // ラスタオペレーションコード
+		);
+
 	}
 
 	/// <summary>

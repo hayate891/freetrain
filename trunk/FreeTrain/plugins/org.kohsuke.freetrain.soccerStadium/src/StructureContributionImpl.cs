@@ -21,12 +21,12 @@ namespace freetrain.world.soccerstadium
 			return groupGroup[name];
 		}
 
-		public override Structure create( Location baseLoc, bool initiallyOwned ) {
-			return new StadiumStructure(this,baseLoc);
+		public override Structure create( WorldLocator wLoc, bool initiallyOwned ) {
+			return new StadiumStructure(this,wLoc);
 		}
 
-		public override bool canBeBuilt( Location baseLoc ) {
-			return StadiumStructure.canBeBuilt( baseLoc, size );
+		public override bool canBeBuilt( Location baseLoc,ControlMode cm ) {
+			return StadiumStructure.canBeBuilt( baseLoc, size, cm );
 		}
 	}
 }

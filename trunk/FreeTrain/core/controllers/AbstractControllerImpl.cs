@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using System.Diagnostics;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -9,7 +10,7 @@ using freetrain.world;
 
 namespace freetrain.controllers
 {
-	public abstract class AbstractControllerImpl : AbstractControllerForm, ModalController
+	public class AbstractControllerImpl : AbstractControllerForm, ModalController
 	{
 		public AbstractControllerImpl() {
 		}
@@ -17,7 +18,14 @@ namespace freetrain.controllers
 		protected override void OnActivated( EventArgs e ) {
 			base.OnActivated(e);
 			// Attach the control when activated.
-			MainWindow.mainWindow.attachController(this);
+			try
+			{
+				MainWindow.mainWindow.attachController(this);
+			}
+			catch(NullReferenceException nre)
+			{
+				Debug.WriteLine(nre);
+			}
 		}
 
 		/// <summary>
@@ -39,7 +47,7 @@ namespace freetrain.controllers
 
 		public string name { get { return Text; } }
 
-		public abstract LocationDisambiguator disambiguator { get; }
+		public virtual LocationDisambiguator disambiguator { get { return null;}  }
 
 		public virtual MapOverlay overlay { get { return this as MapOverlay; } }
 

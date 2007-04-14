@@ -44,13 +44,20 @@ namespace freetrain.controllers.land
 		protected LandPropertyController() {
 			InitializeComponent();
 			// create preview
-			using( PreviewDrawer drawer = new PreviewDrawer( preview.Size, new Size(3,3), 0 ) ) {
+			updatePreview();
+			this.currentController = new Logic(this);
+		}
+
+		public override void updatePreview()
+		{
+			using( PreviewDrawer drawer = new PreviewDrawer( preview.Size, new Size(3,3), 0 ) ) 
+			{
 				for( int x=0; x<3; x++ )
 					for( int y=0; y<3; y++ )
 						drawer.draw( LandPropertyVoxel.sprite, x, y );
+				if( preview.Image!=null ) preview.Image.Dispose();
 				preview.Image = drawer.createBitmap();
 			}
-			this.currentController = new Logic(this);
 		}
 
 		protected override void Dispose( bool disposing ) {

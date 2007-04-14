@@ -135,10 +135,15 @@ namespace freetrain.controllers.land
 		/// <summary>
 		/// Called when a selection of the structure has changed.
 		/// </summary>
-		protected virtual void onTypeChanged(object sender, System.EventArgs e) {
-			LandBuilderContribution builder = (LandBuilderContribution)indexSelector.currentItem;
+		protected virtual void onTypeChanged(object sender, System.EventArgs e) {			
+			updatePreview();
+		}
 
-			using( PreviewDrawer drawer = builder.createPreview(preview.Size) ) {
+		public override void updatePreview()
+		{
+			LandBuilderContribution builder = (LandBuilderContribution)indexSelector.currentItem;
+			using( PreviewDrawer drawer = builder.createPreview(preview.Size) ) 
+			{
 				if( previewBitmap!=null )	previewBitmap.Dispose();
 				preview.Image = previewBitmap = drawer.createBitmap();
 			}

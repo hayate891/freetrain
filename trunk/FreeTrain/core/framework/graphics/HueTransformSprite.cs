@@ -11,8 +11,7 @@ namespace freetrain.framework.graphics
 	/// Draw an image in the picture with transforming colors by keying a hue.
 	/// </summary>
 	[Serializable]
-	public class HueTransformSprite : SimpleSprite 
-	{
+	public class HueTransformSprite : SimpleSprite {
 		/// <summary>
 		/// Source colors are transformed into a color series of this.
 		/// </summary>
@@ -21,20 +20,18 @@ namespace freetrain.framework.graphics
 		public HueTransformSprite( Picture _pic, Point _offset, Point _origin, Size _size,
 			Color R_target, Color G_target, Color B_target )
 			
-			: base(_pic,_offset,_origin,_size) 
-		{
+			: base(_pic,_offset,_origin,_size) {
 
 			SetColorMap(ColorMask.R, R_target);
 			SetColorMap(ColorMask.G, G_target);
 			SetColorMap(ColorMask.B, B_target);
 		}
 
-		public override void draw( Surface surface, Point pt ) 
-		{
+		public override void draw( Surface surface, Point pt ) {
 			pt.X -= offset.X;
 			pt.Y -= offset.Y;
 
-			int idx	= (int)World.world.clock.dayOrNight;
+			int idx	= (World.world.viewOptions.useNightView)?1:0;
 			
 			surface.bltHueTransform( pt, picture.surface, origin, size,
 				RedTarget, GreenTarget, BlueTarget );
@@ -64,8 +61,7 @@ namespace freetrain.framework.graphics
 		/// <param name="e">
 		/// The parent of a &lt;map> element.
 		/// </param>
-		public HueTransformSpriteFactory( XmlElement e ) 
-		{
+		public HueTransformSpriteFactory( XmlElement e ) {
 			XmlNodeList lst = e.SelectNodes("map");
 			for(int i=0; i<3; i++)
 				targetColors[i] = Color.Transparent;
@@ -93,8 +89,7 @@ namespace freetrain.framework.graphics
 			}
 		}
 
-		public HueTransformSpriteFactory( Color _key, ColorMask _mask, Color _target ) 
-		{
+		public HueTransformSpriteFactory( Color _key, ColorMask _mask, Color _target ) {
 			SetColorMap(_mask, _target);
 			for(int i=0; i<3; i++)
 			{
@@ -103,14 +98,12 @@ namespace freetrain.framework.graphics
 			}
 		}
 
-		private static int safeParse( string value ) 
-		{
+		private static int safeParse( string value ) {
 			if(value.Equals("*"))	return 0;
 			else					return int.Parse(value);
 		}
 
-		public override Sprite createSprite( Picture picture, Point offset, Point origin, Size size ) 
-		{
+		public override Sprite createSprite( Picture picture, Point offset, Point origin, Size size ) {
 			return new HueTransformSprite(picture,offset,origin,size, RedTarget, GreenTarget, BlueTarget);
 		}
 
@@ -126,8 +119,7 @@ namespace freetrain.framework.graphics
 	{
 		public HueTransformSpriteFactoryContributionImpl( XmlElement e ) : base(e) {}
 
-		public override SpriteFactory createSpriteFactory( XmlElement e ) 
-		{
+		public override SpriteFactory createSpriteFactory( XmlElement e ) {
 			return new HueTransformSpriteFactory(e);
 		}
 	}

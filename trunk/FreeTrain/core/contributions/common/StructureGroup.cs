@@ -39,9 +39,9 @@ namespace freetrain.contributions.common
 	{
 		public StructureGroupGroup() {}
 
-		private readonly Hashtable core = new Hashtable();
+		protected readonly Hashtable core = new Hashtable();
 		// used for data-binding
-		private readonly ArrayList list = new ArrayList();
+		protected readonly ArrayList list = new ArrayList();
 
 		public StructureGroup this[ string name ] {
 			get {

@@ -66,7 +66,7 @@ namespace freetrain.world.accounting
 			_liquidAssets -= delta;
 			if( _liquidAssets < 0 ) {
 				// TODO: go bunkrupt
-				MessageBox.Show( MainWindow.mainWindow, "You are bankrupt. Proceeding with more money." );
+				MessageBox.Show( MainWindow.mainWindow, "You are bankrupt. Proceeding with more funds." );
 				//! MessageBox.Show( MainWindow.mainWindow, "破産しました。お金を増やして続行します" );
 				_liquidAssets += 100000000;
 			}

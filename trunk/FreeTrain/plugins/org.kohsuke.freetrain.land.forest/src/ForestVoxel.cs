@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using freetrain.framework;
 using freetrain.world.land;
 using freetrain.world.rail;
 using freetrain.world.structs;
@@ -18,7 +19,6 @@ namespace freetrain.world.land.forest
 			this.contrib = contrib;
 			this.patterns = patterns;
 		}
-
 		private readonly ForestBuilder contrib;
 
 		/// <summary>

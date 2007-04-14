@@ -31,12 +31,12 @@ namespace freetrain.framework.plugin
 			try {
 				object result = Activator.CreateInstance(t,new object[]{contrib});
 				if( result==null )
-					throw new FormatException("Designated class can not be loaded:"+t.FullName);
+					throw new FormatException("Designated class can not be loaded: "+t.FullName);
 					//! throw new FormatException("指定されたクラスはロードできません:"+t.FullName);
 
 				return result;
 			} catch( TargetInvocationException e ) {
-				throw new FormatException("Designated class can not be loaded:"+t.FullName,e);
+				throw new FormatException("Designated class can not be loaded: "+t.FullName,e);
 				//! throw new FormatException("指定されたクラスはロードできません:"+t.FullName,e);
 			}
 		}
@@ -58,7 +58,7 @@ namespace freetrain.framework.plugin
 				Uri codeBase = XmlUtil.resolve( e, e.Attributes["codebase"].Value );
 
 				if( !codeBase.IsFile )
-					throw new FormatException("Designated codebase is not a filename:"+codeBase);
+					throw new FormatException("Designated codebase is not a filename: "+codeBase);
 					//! throw new FormatException("指定されたコードベースはファイル名ではありません:"+codeBase);
 
 				a = Assembly.LoadFrom( codeBase.LocalPath );

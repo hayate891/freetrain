@@ -3,3 +3,6 @@
 .csproj
 \obj
 \src
+.cs
+.cpp
+.resx

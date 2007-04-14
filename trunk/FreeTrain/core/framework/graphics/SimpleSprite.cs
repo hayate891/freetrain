@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
+using freetrain.world;
 using org.kohsuke.directdraw;
 
 namespace freetrain.framework.graphics

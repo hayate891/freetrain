@@ -17,7 +17,7 @@ namespace freetrain.tools.vcr
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "Video recorder";
+			item.Text = "Video Recorder";
 			//! item.Text = "ビデオレコーダ";
 			item.Click += new System.EventHandler(onClick);
 

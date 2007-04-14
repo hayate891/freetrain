@@ -500,7 +500,7 @@ namespace freetrain.finance.stock
 			this.MinimumSize = new System.Drawing.Size(344, 400);
 			this.Name = "StockMarketForm";
 			this.ShowInTaskbar = false;
-			this.Text = "Stock market";
+			this.Text = "Stock Market";
 			//! this.Text = "株式市場";
 			this.VisibleChanged += new System.EventHandler(this.StockMarketForm_VisibleChanged);
 			this.tabControl1.ResumeLayout(false);

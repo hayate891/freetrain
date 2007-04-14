@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using freetrain.controls;
 using org.kohsuke.directdraw;
+using freetrain.util;
 
 namespace freetrain.framework
 {
@@ -79,16 +80,19 @@ namespace freetrain.framework
 			// 
 			// progressBar
 			// 
-			this.progressBar.Location = new System.Drawing.Point(8, 176);
+			this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+				| System.Windows.Forms.AnchorStyles.Right);
+			this.progressBar.Location = new System.Drawing.Point(8, 167);
 			this.progressBar.Maximum = 10000;
 			this.progressBar.Name = "progressBar";
-			this.progressBar.Size = new System.Drawing.Size(296, 16);
+			this.progressBar.Size = new System.Drawing.Size(320, 16);
 			this.progressBar.TabIndex = 3;
 			this.progressBar.Value = 30;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(8, 160);
+			this.label3.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left);
+			this.label3.Location = new System.Drawing.Point(8, 151);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(96, 16);
 			this.label3.TabIndex = 4;
@@ -98,8 +102,9 @@ namespace freetrain.framework
 			// 
 			// okButton
 			// 
+			this.okButton.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.okButton.Location = new System.Drawing.Point(224, 200);
+			this.okButton.Location = new System.Drawing.Point(248, 191);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(80, 24);
 			this.okButton.TabIndex = 5;
@@ -108,16 +113,18 @@ namespace freetrain.framework
 			// 
 			// size
 			// 
-			this.size.Location = new System.Drawing.Point(104, 160);
+			this.size.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left);
+			this.size.Location = new System.Drawing.Point(104, 151);
 			this.size.Name = "size";
-			this.size.Size = new System.Drawing.Size(104, 16);
+			this.size.Size = new System.Drawing.Size(152, 16);
 			this.size.TabIndex = 6;
 			this.size.Text = "100KB/64MB";
-			this.size.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			this.size.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(8, 144);
+			this.label4.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left);
+			this.label4.Location = new System.Drawing.Point(8, 135);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(96, 16);
 			this.label4.TabIndex = 7;
@@ -127,12 +134,13 @@ namespace freetrain.framework
 			// 
 			// displayMode
 			// 
-			this.displayMode.Location = new System.Drawing.Point(104, 144);
+			this.displayMode.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left);
+			this.displayMode.Location = new System.Drawing.Point(104, 135);
 			this.displayMode.Name = "displayMode";
-			this.displayMode.Size = new System.Drawing.Size(104, 16);
+			this.displayMode.Size = new System.Drawing.Size(144, 16);
 			this.displayMode.TabIndex = 8;
 			this.displayMode.Text = "---";
-			this.displayMode.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			this.displayMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// browser
 			// 
@@ -140,23 +148,26 @@ namespace freetrain.framework
 			this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.browser.Enabled = true;
 			this.browser.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("browser.OcxState")));
-			this.browser.Size = new System.Drawing.Size(296, 136);
+			this.browser.Size = new System.Drawing.Size(320, 192);
 			this.browser.TabIndex = 0;
 			// 
 			// panel1
 			// 
+			this.panel1.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+				| System.Windows.Forms.AnchorStyles.Left) 
+				| System.Windows.Forms.AnchorStyles.Right);
 			this.panel1.Controls.AddRange(new System.Windows.Forms.Control[] {
 																				 this.browser});
 			this.panel1.Location = new System.Drawing.Point(8, 8);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(296, 136);
+			this.panel1.Size = new System.Drawing.Size(320, 120);
 			this.panel1.TabIndex = 9;
 			// 
 			// AboutDialog
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(314, 232);
+			this.ClientSize = new System.Drawing.Size(338, 223);
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.panel1,
 																		  this.displayMode,
@@ -185,7 +196,7 @@ namespace freetrain.framework
 		}
 
 		private void linkLabel1_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) {
-			Process.Start( ((LinkLabel)sender).Text );
+			UrlInvoker.openUrl( ((LinkLabel)sender).Text );
 		}
 
 	}

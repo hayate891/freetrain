@@ -1,80 +1,133 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:Conversion="urn:Conversion">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</ProjectGuid>
-    <RootNamespace>freetrain.controls</RootNamespace>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
     <AssemblyName>FreeTrain.Controls</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
-    <ApplicationIcon />
-    <PreBuildEvent />
-    <PostBuildEvent />
-    <StartupObject />
-    <NoConfig>false</NoConfig>
+    <RootNamespace>freetrain.controls</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <NoStdLib>false</NoStdLib>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn />
-    <DebugSymbols>true</DebugSymbols>
-    <Optimize>false</Optimize>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <NoStdLib>false</NoStdLib>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn />
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <DefineConstants>TRACE</DefineConstants>
     <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="MsHtmlHost">
-      <HintPath>..\..\extlib\MsHtmlHost.dll</HintPath>
-      <Private />
-    </Reference>
     <Reference Include="AxSHDocVw">
+      <Name>AxSHDocVw</Name>
       <HintPath>..\..\extlib\AxSHDocVw.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MsHtmlHost">
+      <Name>MsHtmlHost</Name>
+      <HintPath>..\..\extlib\MsHtmlHost.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\ColorPickButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="src\CostBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="src\CostBox.resx">
-      <DependentUpon>CostBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="src\DocHostUIHandlerImpl.cs" />
-    <Compile Include="src\FileDropHandler.cs" />
+    <Compile Include="src\DocHostUIHandlerImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\FileDropHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\IndexSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="src\IndexSelector.resx">
-      <DependentUpon>IndexSelector.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="src\MruMenu.cs" />
+    <Compile Include="src\MruMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\SubListSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="src\SubListSelector.resx">
-      <DependentUpon>SubListSelector.cs</DependentUpon>
-    </EmbeddedResource>
     <Compile Include="src\TrackBarEx.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -84,8 +137,27 @@
     <Compile Include="src\WebBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="src\ColorPickButton.resx">
+      <DependentUpon>ColorPickButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\ColorPicker.resx">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\CostBox.resx">
+      <DependentUpon>CostBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\IndexSelector.resx">
+      <DependentUpon>IndexSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\SubListSelector.resx">
+      <DependentUpon>SubListSelector.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup />
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

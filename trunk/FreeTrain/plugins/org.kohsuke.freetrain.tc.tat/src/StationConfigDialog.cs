@@ -184,7 +184,7 @@ namespace freetrain.world.rail.tattc
 			this.buttonAdvanced.Name = "buttonAdvanced";
 			this.buttonAdvanced.Size = new System.Drawing.Size(120, 24);
 			this.buttonAdvanced.TabIndex = 9;
-			this.buttonAdvanced.Text = "&Altitude settings...";
+			this.buttonAdvanced.Text = "&Altitude Settings...";
 			//! this.buttonAdvanced.Text = "高度な設定(&A)...";
 			this.buttonAdvanced.Click += new System.EventHandler(this.buttonAdvanced_Click);
 			// 

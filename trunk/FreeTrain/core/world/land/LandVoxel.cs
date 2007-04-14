@@ -15,12 +15,14 @@ namespace freetrain.world.land
 			Debug.Assert( loc.z==World.world.getGroundLevel(loc) );
 		}
 
+		public override bool transparent { get { return true; } }
 
 		public override Entity entity { get { return this; } }
 		
 		#region Entity implementation
 		public virtual bool isSilentlyReclaimable { get { return true; } }
-		public bool isOwned { get { return false; } }
+		public bool isOwned { get { return owned; } set{ owned = value; } }
+		protected bool owned = false;
 
 		public abstract int entityValue { get; }
 
