@@ -42,8 +42,9 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>ミハさん</author>
-	<homepage>http://www5.ocn.ne.jp/‾mihata/</homepage>
+	<author>Miha</author>
+	<!--!<author>ミハさん</author>-->
+	<homepage>http://www5.ocn.ne.jp/~mihata/</homepage>
 	
 	<contribution type="commercial" id="{551BB418-4604-4fca-88AC-5F71068FE04A}">
 		<name>Maxis Tower</name>

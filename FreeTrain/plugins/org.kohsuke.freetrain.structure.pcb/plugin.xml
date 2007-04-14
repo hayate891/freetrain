@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>ばんかれさん</author>
+	<author>Bankare</author>
+	<!--!<author>ばんかれさん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="picture" id="{10146B06-4D3C-40E2-BA95-AE51FA611DA5}">

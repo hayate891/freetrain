@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>cozy@E.G.R.さん</author>
+	<author>cozy@E.G.R.</author>
+	<!--!<author>cozy@E.G.R.さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{487900B6-EBCA-4c98-9E28-194050E9706D}">

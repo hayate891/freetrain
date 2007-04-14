@@ -27,7 +27,7 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 -->
 <companies>
 	<!-- business tag descripts a 'business type' -->
-	<business id="010" name="Fishery and Forestry"> <!--//! 水産・林業-->
+	<business id="010" name="Fishery and Forestry"> <!--! 水産・林業-->
 		<!-- fixed:the ratio of fixed account against ideal sales amount-->
 		<account fixed="0.30"/>
 		<!-- scale:initial market scale of the business total-->
@@ -41,62 +41,62 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 		<!-- quality:business waight of quality of the service or production (0-10) -->
 		<weight brand="5" marketing="4" quality="3" />
 	</business>
-	<business id="011" name="Agriculture"> <!--//!農業-->
+	<business id="011" name="Agriculture"> <!--!農業-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="365" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="5" marketing="4" quality="3" />
 	</business>
-	<business id="012" name="Mining"> <!--//!鉱業-->
+	<business id="012" name="Mining"> <!--!鉱業-->
 		<account fixed="0.40"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="5" marketing="2" quality="2" />
 	</business>
-	<business id="020" name="Construction"> <!--//!建設-->
+	<business id="020" name="Construction"> <!--!建設-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="60" amplitude="5" ex_dependency="3" progressivity="3" />
 		<weight brand="5" marketing="5" quality="5" />
 	</business>
-	<business id="021" name="Food"> <!--//! 食品-->
+	<business id="021" name="Food"> <!--! 食品-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="3" progressivity="3" />
 		<weight brand="8" marketing="7" quality="5" />
 	</business>
-	<business id="022" name="Textile"> <!--//!繊維-->
+	<business id="022" name="Textile"> <!--!繊維-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="4" progressivity="4" />
 		<weight brand="8" marketing="6" quality="6" />
 	</business>
-	<business id="023" name="Pulp &amp; Paper"> <!--//!パルプ・紙-->
+	<business id="023" name="Pulp &amp; Paper"> <!--!パルプ・紙-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="3" marketing="5" quality="5" />
 	</business>
-	<business id="030" name="Chemical"> <!--//!化学-->
+	<business id="030" name="Chemical"> <!--!化学-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="6" />
 		<weight brand="3" marketing="3" quality="9" />
 	</business>
-	<business id="031" name="Pharmaceutical"> <!--//!医薬品-->
+	<business id="031" name="Pharmaceutical"> <!--!医薬品-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="8" />
 		<weight brand="6" marketing="5" quality="9" />
 	</business>
-	<business id="032" name="Oil &amp; Coal"> <!--//!石油・石炭-->
+	<business id="032" name="Oil &amp; Coal"> <!--!石油・石炭-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="4" />
 		<weight brand="3" marketing="3" quality="4" />
 	</business>
-	<business id="033" name="Rubber"> <!--//! ゴム -->
+	<business id="033" name="Rubber"> <!--! ゴム -->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="3" />
 		<weight brand="4" marketing="3" quality="5" />
 	</business>
-	<business id="034" name="Glass"> <!--//! ガラス -->
+	<business id="034" name="Glass"> <!--! ガラス -->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="2" marketing="3" quality="4" />
 	</business>
-	<business id="035" name="Ceramic"> <!--//! 窯業-->
+	<business id="035" name="Ceramic"> <!--! 窯業-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="2" marketing="3" quality="4" />
@@ -111,122 +111,122 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="3" />
 		<weight brand="3" marketing="3" quality="6" />
 	</business>
-	<business id="038" name="Hardware"> <!--//! 金属製品-->
+	<business id="038" name="Hardware"> <!--! 金属製品-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="4" />
 		<weight brand="5" marketing="4" quality="7" />
 	</business>
-	<business id="040" name="Machinery"> <!--//! 機械-->
+	<business id="040" name="Machinery"> <!--! 機械-->
 		<account fixed="0.35"/>
 		<market scale="50000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="5" />
 		<weight brand="6" marketing="5" quality="8" />
 	</business>
-	<business id="041" name="Electronic equipment"> <!--//! 電気機器-->
+	<business id="041" name="Electronic equipment"> <!--! 電気機器-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="7" />
 		<weight brand="8" marketing="7" quality="8" />
 	</business>
-	<business id="042" name="Automobiles"> <!--//! 自動車-->
+	<business id="042" name="Automobiles"> <!--! 自動車-->
 		<account fixed="0.35"/>
 		<market scale="10000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="9" marketing="6" quality="9" />
 	</business>
-	<business id="043" name="Shipyard"> <!--//! 造船-->
+	<business id="043" name="Shipyard"> <!--! 造船-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="7" marketing="3" quality="8" />
 	</business>
-	<business id="044" name="Aeronautics"> <!--//! 航空機-->
+	<business id="044" name="Aeronautics"> <!--! 航空機-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="9" marketing="3" quality="9" />
 	</business>
-	<business id="045" name="Shipping equipment"> <!--//! 輸送用機器-->
+	<business id="045" name="Shipping equipment"> <!--! 輸送用機器-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="7" marketing="3" quality="8" />
 	</business>
-	<business id="046" name="Precision equipment"> <!--//!精密機器-->
+	<business id="046" name="Precision equipment"> <!--!精密機器-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="8" />
 		<weight brand="8" marketing="4" quality="9" />
 	</business>
-	<business id="047" name="Publishing"> <!--//!印刷-->
+	<business id="047" name="Publishing"> <!--!印刷-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="8" />
 		<weight brand="8" marketing="4" quality="9" />
 	</business>
-	<business id="048" name="Other manufacturing"> <!--//!その他製造-->
+	<business id="048" name="Other manufacturing"> <!--!その他製造-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="5" />
 		<weight brand="5" marketing="5" quality="5" />
 	</business>
-	<business id="050" name="Electricity &amp; Gas"> <!--//!電力・ガス-->
+	<business id="050" name="Electricity &amp; Gas"> <!--!電力・ガス-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="2" progressivity="1" />
 		<weight brand="3" marketing="3" quality="3" />
 	</business>
-	<business id="061" name="Transportation"> <!--//!陸運-->
+	<business id="061" name="Transportation"> <!--!陸運-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="3" marketing="7" quality="5" />
 	</business>
-	<business id="062" name="Shipping"> <!--//! 海運-->
+	<business id="062" name="Shipping"> <!--! 海運-->
 		<account fixed="0.35"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="4" marketing="5" quality="6" />
 	</business>
-	<business id="063" name="Aeoronautics"> <!--//! 空運-->
+	<business id="063" name="Aeoronautics"> <!--! 空運-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="1" />
 		<weight brand="4" marketing="5" quality="6" />
 	</business>
-	<business id="064" name="Real estate"> <!--//! 不動産-->
+	<business id="064" name="Real estate"> <!--! 不動産-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
 		<weight brand="3" marketing="6" quality="5" />
 	</business>
-	<business id="065" name="Logistics &amp; Storage"> <!--//!倉庫・運輸-->
+	<business id="065" name="Logistics &amp; Storage"> <!--!倉庫・運輸-->
 		<account fixed="0.25"/>
 		<market scale="50000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
 		<weight brand="3" marketing="6" quality="5" />
 	</business>
-	<business id="070" name="Media &amp; Communication"> <!--//!情報・通信-->
+	<business id="070" name="Media &amp; Communication"> <!--!情報・通信-->
 		<account fixed="0.30"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="3" progressivity="4" />
 		<weight brand="4" marketing="6" quality="6" />
 	</business>
-	<business id="071" name="Commerce (Wholesale)"> <!--//! 商業（卸売）-->
+	<business id="071" name="Commerce (Wholesale)"> <!--! 商業（卸売）-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="1" />
 		<weight brand="3" marketing="2" quality="3" />
 	</business>
-	<business id="072" name="Commerce (Retail)"> <!--//! 商業（小売）-->
+	<business id="072" name="Commerce (Retail)"> <!--! 商業（小売）-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
 		<weight brand="5" marketing="7" quality="5" />
 	</business>
-	<business id="080" name="Financial (Banking)"> <!--//!金融（銀行）-->
+	<business id="080" name="Financial (Banking)"> <!--!金融（銀行）-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
 		<weight brand="9" marketing="8" quality="4" />
 	</business>
-	<business id="081" name="Financial (Securities)"> <!--//!金融（証券）-->
+	<business id="081" name="Financial (Securities)"> <!--!金融（証券）-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="1" />
 		<weight brand="8" marketing="9" quality="4" />
 	</business>
-	<business id="082" name="Financial (Insurance)"> <!--//! 金融（保険）-->
+	<business id="082" name="Financial (Insurance)"> <!--! 金融（保険）-->
 		<account fixed="0.15"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="5" progressivity="2" />
 		<weight brand="9" marketing="9" quality="5" />
 	</business>
-	<business id="083" name="Financial (Other)"> <!--//!金融（その他）-->
+	<business id="083" name="Financial (Other)"> <!--!金融（その他）-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="6" progressivity="2" />
 		<weight brand="7" marketing="8" quality="5" />
 	</business>
-	<business id="091" name="Services"> <!--//!サービス-->
+	<business id="091" name="Services"> <!--!サービス-->
 		<account fixed="0.25"/>
 		<market scale="5000000000000" cycle="100" amplitude="5" ex_dependency="7" progressivity="3" />
 		<weight brand="4" marketing="6" quality="6" />

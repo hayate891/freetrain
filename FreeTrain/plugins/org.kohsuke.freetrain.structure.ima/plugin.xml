@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>imaさん</author>
+	<author>ima</author>
+	<!--!<author>imaさん</author>-->
 	<homepage>mailto:ima@imaden.bizland.com</homepage>
 	
 	<contribution type="commercial" id="{594D6A74-2678-4a35-9FE6-E2FFA90C207A}">

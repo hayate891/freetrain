@@ -146,7 +146,7 @@
 			<target type="economy" />
 			<effect on="trend" by="ratio" value="2.0" dispersion="0.5" days="180" />
 			<description>A wave of prosperity</description>
-			<!--//!好景気の波-->
+			<!--!好景気の波-->
 		</action>
 	</define>
 	<define type="event" id="s002">
@@ -156,7 +156,7 @@
 			<target type="economy" />
 			<effect on="trend" by="ratio" value="0.2" dispersion="0.1" days="15" />
 			<description>A wave of depression</description>
-			<!--//!不景気の波-->
+			<!--!不景気の波-->
 		</action>
 	</define>
 	<define type="event" id="s003">
@@ -166,7 +166,7 @@
 			<target type="economy" />
 			<effect on="trend" by="ratio" value="1.2" dispersion="0.8" days="10" />
 			<description>%target% has minor fluctuations</description>
-			<!--//! %target%微変動-->
+			<!--! %target%微変動-->
 		</action>
 	</define>
 	<define type="event" id="s004">
@@ -176,7 +176,7 @@
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="2.0" dispersion="0.5" days="30" />
 			<description>%target% is off a flying start</description>
-			<!--//!%target%好調-->
+			<!--!%target%好調-->
 		</action>
 		<action>
 			<randomize type="target" for_each="business" />
@@ -194,7 +194,7 @@
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="0.2" dispersion="0.1" days="15" />
 			<description>%target% is in a slump</description>
-			<!--//!%target%不振-->
+			<!--!%target%不振-->
 		</action>
 		<action>
 			<randomize type="target" for_each="business" />
@@ -212,7 +212,7 @@
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="1.0" dispersion="0.5" days="7" />
 			<description>%target% has limited price movements</description>
-			<!--//!%target%小幅値動き-->
+			<!--!%target%小幅値動き-->
 		</action>
 	</define>
 	<define type="event" id="s007">
@@ -222,7 +222,7 @@
 			<randomize type="target" for_each="business" />
 			<effect on="trend" by="ratio" value="1.0" dispersion="0.2" days="7"/>
 			<description>%target% has minor fluctuation</description>
-			<!--//!%target%微動-->
+			<!--!%target%微動-->
 		</action>
 	</define>
 	<define type="event" id="s008">
@@ -249,7 +249,7 @@
 				</branch>
 			</randomize>
 			<description>%target% is going through an internal reform</description>
-			<!--//!%target%の社内改革-->
+			<!--!%target%の社内改革-->
 		</action>
 	</define>
 	<define type="event" id="s009">
@@ -276,7 +276,7 @@
 				</branch>
 			</randomize>
 			<description>%target% is going through a scandal</description>
-			<!--//!%target%の事故・醜聞-->
+			<!--!%target%の事故・醜聞-->
 		</action>
 	</define>
 </events>

@@ -2,7 +2,8 @@
 <plug-in>
 	<title>System</title>
 	<!--!<title>システム</title>-->
-	<author>川口耕介</author>
+	<author>Kohsuke Kawaguchi</author>
+	<!--!<author>川口耕介</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 <!--
 	システムの機能もほとんどがコントリビューションとして定義されています。
@@ -184,8 +185,8 @@
 	</contribution>
 	
 	<contribution type="dockingContent" id="{12DB2C30-14B2-426D-B324-639BE17268C5}">
-		<name>Sales info</name>
-		<menu name="&amp;Sales info" location="view" />
+		<name>Sales report</name>
+		<menu name="&amp;Sales report" location="view" />
 		<!--!<name>売上情報</name>
 		<menu name="売上情報(&amp;S)" location="view" />-->
 		<class name="freetrain.world.accounting.AccountSummaryWindow"/>
@@ -208,10 +209,10 @@
 	</contribution>
 	
 	<contribution type="dockingContent" id="{533F5EF1-2E97-46aa-A231-49BB0D2A724D}">
-		<name>Train info</name>
+		<name>Train report</name>
 		<!--!<name>列車情報</name>-->
 		<multiple/>	<!-- multiple instances are allowed -->
-		<menu name="&amp;Train info" location="view" />
+		<menu name="&amp;Train report" location="view" />
 		<!--!<menu name="列車情報(&amp;T)" location="view" />-->
 		<class name="freetrain.controllers.rail.TrainTrackingWindow"/>
 	</contribution>
@@ -334,49 +335,56 @@
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-1">
 		<name>General-purpose three-color thin stripe</name>
 		<!--!<name>汎用三色細帯</name>-->
-		<author>477さん</author>
+		<author>477</author>
+		<!--!<author>477さん</author>-->
 		<picture src="UncoloredTrain01.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-2">
 		<name>General-purpose four-color thick stripe</name>
 		<!--!<name>汎用四色太帯</name>-->
-		<author>477さん</author>
+		<author>477</author>
+		<!--!<author>477さん</author>-->
 		<picture src="UncoloredTrain02.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-3">
 		<name>Genral-purpose four-color thin stripe</name>
 		<!--!<name>汎用四色細帯</name>-->
-		<author>477さん</author>
+		<author>477</author>
+		<!--!<author>477さん</author>-->
 		<picture src="UncoloredTrain03.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-4">
 		<name>103 series style</name>
 		<!--!<name>103系風</name>-->
-		<author>477さん</author>
+		<author>477</author>
+		<!--!<author>477さん</author>-->
 		<picture src="UncoloredTrain04.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-5">
 		<name>205 series style</name>
 		<!--!<name>205系風</name>-->
-		<author>477さん</author>
+		<author>477</author>
+		<!--!<author>477さん</author>-->
 		<picture src="UncoloredTrain05.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-6">
 		<name>211 series style</name>
 		<!--!<name>211系風</name>-->
-		<author>477さん</author>
+		<author>477</author>
+		<!--!<author>477さん</author>-->
 		<picture src="UncoloredTrain06.bmp" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-7">
 		<name>E231 series style</name>
 		<!--!<name>E231系風</name>-->
-		<author>477さん</author>
+		<author>477</author>
+		<!--!<author>477さん</author>-->
 		<picture src="UncoloredTrain07.bmp" />
 	</contribution>
 	

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -205,7 +205,7 @@ namespace freetrain.views.bank
 																		  this.tabControl1});
 			this.MinimumSize = new System.Drawing.Size(248, 104);
 			this.Name = "BankbookWindow";
-			this.Text = "Debt and savings";
+			this.Text = "Bankbook";
 			//! this.Text = "負債と預金";
 			this.tabControl1.ResumeLayout(false);
 			this.pgLoan.ResumeLayout(false);

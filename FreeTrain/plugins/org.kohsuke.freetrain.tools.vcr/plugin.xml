@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Video recorder</title>
 	<!--!<title>ビデオレコーダ</title>-->
-	<author>川口耕介</author>
+	<author>Kohsuke Kawaguchi</author>
+	<!--!<author>川口耕介</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="dockingContent" id="{144A583C-3D64-4076-BAE7-FFDBBEC79B17}">

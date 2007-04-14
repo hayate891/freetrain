@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Xml;
 using System.Collections;
 using System.Diagnostics;
@@ -122,7 +122,8 @@ namespace freetrain.finance.stock
 
 		private BusinessType()
 		{
-			_name = "ÇªÇÃëº";
+			_name = "Other";
+			//! _name = "„Åù„ÅÆ‰ªñ";
 			_mkt_scale = 10000000;
 		}
 		

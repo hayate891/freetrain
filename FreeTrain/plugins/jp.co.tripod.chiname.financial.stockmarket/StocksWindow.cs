@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Diagnostics;
 using System.Collections;
@@ -126,7 +126,7 @@ namespace freetrain.finance.stock
 																		  this.listview});
 			this.MinimumSize = new System.Drawing.Size(336, 232);
 			this.Name = "StocksWindow";
-			this.Text = "List of owned stock";
+			this.Text = "Stock portfolio";
 			//! this.Text = "所有株式一覧";
 			this.ResumeLayout(false);
 

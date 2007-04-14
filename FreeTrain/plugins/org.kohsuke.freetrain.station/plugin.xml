@@ -29,7 +29,8 @@
 <plug-in>
 	<title>Standard station kit</title>
 	<!--!<title>基本駅舎キット</title>-->
-	<author>絵師見習い</author>
+	<author>Eshiminarai</author>
+	<!--!<author>絵師見習い</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="station" id="{E1C41DF8-6C9B-465d-A798-2624551AC4FD}">

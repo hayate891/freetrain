@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Rail signals</title>
 	<!--!<title>鉄道用信号機</title>-->
-	<author>川口耕介</author>
+	<author>Kohsuke Kawaguchi</author>
+	<!--!<author>川口耕介</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<!-- 信号の画像を外部から追加するためのコントリビューションを定義 -->

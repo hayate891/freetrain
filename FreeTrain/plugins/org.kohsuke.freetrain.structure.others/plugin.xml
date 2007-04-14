@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>その他の名無しさん</author>
+	<author>Anonymous contributors</author>
+	<!--!<author>その他の名無しさん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{B83A15E9-9284-4569-A1BF-266DF9B1560A}">

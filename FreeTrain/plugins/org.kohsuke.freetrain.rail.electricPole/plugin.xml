@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Utility poles</title>
 	<!--!<title>架線柱</title>-->
-	<author>綾瀬さん＆川口耕介</author>
+	<author>Ayase &amp; Kohsuke Kawaguchi</author>
+	<!--!<author>綾瀬さん＆川口耕介</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="contribution" id="{6CCE619B-6D03-4784-B3EF-C53577E2C958}">

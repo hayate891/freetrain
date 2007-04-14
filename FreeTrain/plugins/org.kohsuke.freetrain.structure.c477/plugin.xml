@@ -108,8 +108,9 @@
 <plug-in>
 	<title>Building set</title>
 	<!--!<title>建物セット</title>-->
-	<author>477さん</author>
-	<homepage>http://www.rocket.ne.jp/‾nao/</homepage>
+	<author>477</author>
+	<!--!<author>477さん</author>-->
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	
 	<contribution type="commercial" id="{BC43CE38-601A-42c7-992A-6049CCD29B94}">
 		<group>Convenience store</group>

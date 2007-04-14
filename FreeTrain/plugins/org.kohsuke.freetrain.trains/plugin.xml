@@ -2,7 +2,8 @@
 <plug-in>
 	<title>Basic train kit</title>
 	<!--!<title>基本車両キット</title>-->
-	<author>477さん</author>
+	<author>477</author>
+	<!--!<author>477さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	
@@ -22,7 +23,8 @@
 		<!--!<name>ＦＴ１型</name>-->
 		<price>1800</price>
 		<speed>fast</speed>
-		<author>川口耕介</author>
+		<author>Kohsuke Kawaguchi</author>
+		<!--!<author>川口耕介</author>-->
 		<type>FT</type>
 		<company>FreeTrain</company>
 		<description>A fictional train</description>
@@ -38,7 +40,8 @@
 		<!--!<name>ＦＴ２型</name>-->
 		<price>1000</price>
 		<speed>medium</speed>
-		<author>川口耕介</author>
+		<author>Kohsuke Kawaguchi</author>
+		<!--!<author>川口耕介</author>-->
 		<type>FT</type>
 		<company>FreeTrain</company>
 		<description>A fictional train</description>
@@ -54,7 +57,8 @@
 		<!--!<name>ＦＴ３型</name>-->
 		<price>500</price>
 		<speed>slow</speed>
-		<author>川口耕介</author>
+		<author>Kohsuke Kawaguchi</author>
+		<!--!<author>川口耕介</author>-->
 		<type>FT</type>
 		<company>FreeTrain</company>
 		<description>A fictional train</description>
@@ -99,7 +103,7 @@
 		<price>1</price>
 		<speed>fast</speed>
 		<author>477</author>
-		<type>485 type</type>
+		<type>485 series</type>
 		<!--!<type>485系</type>-->
 		<company>JR East</company>
 		<!--!<company>JR東日本</company>-->

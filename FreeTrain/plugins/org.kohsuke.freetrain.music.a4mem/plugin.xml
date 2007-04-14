@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>A4 memorial pack BGM</title>
+	<title>A4 Memorial Pack BGM</title>
 	<!--!<title>Ａ４メモリアルパックＢＧＭ</title>-->
-	<author>川口耕介</author>
+	<author>Kohsuke Kawaguchi</author>
+	<!--!<author>川口耕介</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	<description>
-		Loads BGM from installed A4 memorial pack
+		Loads BGM from installed A4 Memorial Pack
 	</description>
 		<!--!インストールされているＡ４メモリアルパックの音楽を流用します-->
 	
