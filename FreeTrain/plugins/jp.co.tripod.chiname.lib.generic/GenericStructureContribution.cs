@@ -135,7 +135,8 @@ namespace freetrain.framework.plugin.generic
 			try {
 				_design = e.SelectSingleNode("design").InnerText;
 			} catch {
-				_design = "標準";
+                //! _design = "標準";
+                _design = "default";
 			}
 			
 			_unitPrice = int.Parse( XmlUtil.selectSingleNode(e,"price").InnerText );
