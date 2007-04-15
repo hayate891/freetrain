@@ -147,7 +147,8 @@ namespace freetrain.framework.plugin.generic
 		static public StructCategoryTree theInstance {get{ return _theInstance; } }
 		static protected string _baseDir;
 		static public string BaseDir{get{ return _baseDir; } }
-		static private StructCategory hidden = new StructCategory(-1,"--無効--",0);
+        //! static private StructCategory hidden = new StructCategory(-1, "--無効--", 0);
+        static private StructCategory hidden = new StructCategory(-1, "--N/A--", 0);
 
 		protected Hashtable idTbl = new Hashtable();		
 		protected Hashtable nameTbl = new Hashtable();
@@ -178,8 +179,9 @@ namespace freetrain.framework.plugin.generic
 		{			
 			String fn = Path.Combine(BaseDir,"icons.bmp");
 			StructCategory.ImageBaseInt(fn);
-			StructCategory cat = new StructCategory(0,"未分類",0);
-			idTbl.Add(cat.idnum,cat);
+            StructCategory cat = new StructCategory(0, "uncategorized", 0);
+            //! StructCategory cat = new StructCategory(0, "未分類", 0);
+            idTbl.Add(cat.idnum, cat);
 			nameTbl.Add(cat.name,cat);
 		}
 

@@ -48,7 +48,8 @@ namespace freetrain.framework.plugin.generic
 			} 
 			catch 
 			{
-				_design = "標準";
+                //! _design = "標準";
+                _design = "default";
 			}
 			
 			try	{
