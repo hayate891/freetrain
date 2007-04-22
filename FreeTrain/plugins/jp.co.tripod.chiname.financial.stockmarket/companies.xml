@@ -447,7 +447,7 @@ http://homepage1.nifty.com/jagaimo/west_necom/
 	
 	<!--082　金融（保険）-->
 	
-	<company id="8752" name="Hikarii-Sumidomo Insurance" type="082">
+	<company id="8752" name="Mutsui-Sumidomo Insurance" type="082">
 	<!--!<company id="8752" name="睦井清友海上火災保険" type="082">-->
 		<performance capital="5000000" sales="800000000" />
 		<capacity brand="8" marketing="5" quality="6" rationality="3" development="2" />
