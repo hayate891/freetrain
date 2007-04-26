@@ -270,7 +270,7 @@ namespace freetrain.world.subsidiaries
 																		  this.toolBar});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "MarketWindow";
-			this.Text = "Subsidiary Business";
+			this.Text = "Subsidiaries";
 			//! this.Text = "子会社取引";
 			this.ResumeLayout(false);
 

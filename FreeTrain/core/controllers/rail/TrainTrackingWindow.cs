@@ -172,7 +172,7 @@ namespace freetrain.controllers.rail
 			this.MinimizeBox = false;
 			this.MinimumSize = new System.Drawing.Size(136, 136);
 			this.Name = "TrainTrackingWindow";
-			this.Text = "Train information";
+			this.Text = "Train Tracking";
 			//! this.Text = "列車の情報";
 			this.ResumeLayout(false);
 

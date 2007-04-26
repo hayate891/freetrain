@@ -761,7 +761,7 @@ namespace freetrain.framework
 																							this.menuItem_soundEffect,
 																							this.menuItem_option});
 			this.menuItem_config.MergeOrder = 5;
-			this.menuItem_config.Text = "&Configure";
+			this.menuItem_config.Text = "Co&nfigure";
 			//! this.menuItem_config.Text = "設定(&C)";
 			// 
 			// menuItem_music

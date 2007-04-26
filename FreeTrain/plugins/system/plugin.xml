@@ -324,34 +324,34 @@
 	</contribution>
 	
 	<contribution type="dockingContent" id="{12DB2C30-14B2-426D-B324-639BE17268C5}">
-		<name>Sales report</name>
-		<menu name="&amp;Sales report" location="view" />
+		<name>Sales Report</name>
+		<menu name="&amp;Sales Report" location="view" />
 		<!--!<name>売上情報</name>
 		<menu name="売上情報(&amp;S)" location="view" />-->
 		<class name="freetrain.world.accounting.AccountSummaryWindow"/>
 	</contribution>
 	
 	<contribution type="dockingContent" id="{7A5AE360-0974-4e6a-A7BB-70A3906C406E}">
-		<name>Subsidiary business</name>
-		<menu name="S&amp;ubsidiary business" location="view" />
+		<name>Subsidiaries</name>
+		<menu name="S&amp;ubsidiaries" location="view" />
 		<!--!<name>子会社売買</name>
 		<menu name="子会社売買(&amp;U)" location="view" />-->
 		<class name="freetrain.world.subsidiaries.MarketWindow"/>
 	</contribution>
 	
 	<contribution type="dockingContent" id="{CBB96A74-1201-4A26-82ED-B7A8C71EC5AD}">
-		<name>Diagram settings</name>
-		<menu name="D&amp;iagram settings" location="rail" position="8" />
+		<name>Diagram Settings</name>
+		<menu name="D&amp;iagram Settings" location="rail" position="8" />
 		<!--!<name>ダイヤ設定</name>
 		<menu name="ダイヤ設定(&amp;I)" location="rail" position="8" />-->
 		<class name="freetrain.controllers.rail.TrainControllerDialog"/>
 	</contribution>
 	
 	<contribution type="dockingContent" id="{533F5EF1-2E97-46aa-A231-49BB0D2A724D}">
-		<name>Train report</name>
+		<name>Train Tracking</name>
 		<!--!<name>列車情報</name>-->
 		<multiple/>	<!-- multiple instances are allowed -->
-		<menu name="&amp;Train report" location="view" />
+		<menu name="&amp;Train Tracking" location="view" />
 		<!--!<menu name="列車情報(&amp;T)" location="view" />-->
 		<class name="freetrain.controllers.rail.TrainTrackingWindow"/>
 	</contribution>

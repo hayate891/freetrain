@@ -81,7 +81,7 @@ namespace freetrain.framework.plugin.generic
 			get {
 				StructCategory cat = StructCategoryTree.theInstance.getParent(this);
 				if(cat==null)
-					throw new FormatException("no parent for "+name+" : may be id is wrong."+idnum);
+					throw new FormatException("no parent for "+name+" : maybe id is wrong."+idnum);
 				return cat;
 			}
 		}
@@ -179,7 +179,7 @@ namespace freetrain.framework.plugin.generic
 		{			
 			String fn = Path.Combine(BaseDir,"icons.bmp");
 			StructCategory.ImageBaseInt(fn);
-            StructCategory cat = new StructCategory(0, "uncategorized", 0);
+            StructCategory cat = new StructCategory(0, "Uncategorized", 0);
             //! StructCategory cat = new StructCategory(0, "未分類", 0);
             idTbl.Add(cat.idnum, cat);
 			nameTbl.Add(cat.name,cat);

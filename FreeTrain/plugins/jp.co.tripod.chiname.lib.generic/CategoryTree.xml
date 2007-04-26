@@ -17,7 +17,7 @@
 		<category id="0103">
 			<name>Dormitories</name> <!--!寮-->
 			<category id="010301">
-				<name>Student Dormitory</name> <!--!学生寮-->
+				<name>Student Dormitories</name> <!--!学生寮-->
 			</category>
 			<category id="010302">
 				<name>Employee Dormitories</name> <!--!社員寮-->			
@@ -34,7 +34,7 @@
 	</category>
 	<category id="10">
 		<icon src="icons.bmp" index="2"/>
-		<name>Commerce</name> <!--!店舗-->
+		<name>Stores</name> <!--!店舗-->
 		<category id="1001">
 			<name>Private Convenience Stores</name> <!--!個人日用品店-->
 		</category>
@@ -98,7 +98,7 @@
 	</category>
 	<category id="11">
 		<icon src="icons.bmp" index="3"/>
-		<name>Office Buildings</name> <!--!オフィス-->
+		<name>Offices</name> <!--!オフィス-->
 		<category id="1101">
 			<name>Offices for Rent</name> <!--!貸事務所-->
 		</category>
@@ -124,7 +124,7 @@
 	</category>
 	<category id="20">
 		<icon src="icons.bmp" index="4"/>
-		<name>Research Facilities</name> <!--!研究施設-->
+		<name>Research</name> <!--!研究施設-->
     <category id="2001">
 			<name>Corporate Research Facilities</name> <!--!企業一般研究所-->
 		</category>
@@ -190,7 +190,7 @@
 			</category>
 		</category>
 		<category id="2136">
-			<name>Precition Instrument Factory</name> <!--! 精機工場-->
+			<name>Precision Instrument Factory</name> <!--! 精機工場-->
 		</category>
 		<category id="2140">
 			<name>Raw Material Processing</name> <!--! 資材工場-->
@@ -278,7 +278,7 @@
 	</category>
 	<category id="27">
 		<icon src="icons_sp.bmp" index="5"/>
-		<name>Air Traffic Facilities</name>					
+		<name>Air Traffic</name>					
 		<category id="2701">
 			<icon src="icons_sp.bmp" index="5"/>
 			<name>Airports</name> <!--! 空港-->
@@ -310,7 +310,7 @@
 	</category>
 	<category id="28">
 		<icon src="icons_sp.bmp" index="6"/>
-		<name>Shipping Facilities</name> <!--! 船舶関連施設-->
+		<name>Shipping</name> <!--! 船舶関連施設-->
 		<category id="2801">
 			<icon src="icons_sp.bmp" index="6"/>
 			<name>Harbors</name> <!--! 港湾-->
@@ -349,7 +349,7 @@
 	</category>
 	<category id="30">
 		<icon src="icons.bmp" index="7"/>
-		<name>Food Production</name> <!--! 食料産地-->
+		<name>Agriculture</name> <!--! 食料産地-->
 		<category id="3001">
 			<icon src="icons_sp.bmp" index="7"/>
 			<name>Farming</name> <!--! 食料農場-->
@@ -450,7 +450,7 @@
 		<category id="4110">
 			<name>Famous Hotels</name> <!--! 有名宿泊施設-->
 			<category id="411001">
-				<name>高級Luxury Hotels</name> <!--!高級ホテル-->
+				<name>Luxury Hotels</name> <!--!高級ホテル-->
 			</category>
 		</category>
 		<category id="4120">
