@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE plug-in [
 
 ]>
 
 <plugin>
-	<title>”¼ƒ{ƒNƒZƒ‹Œš’z</title>
-	<author>C477@2—¼–Ú</author>
+  <title>Half Voxel Structures</title>
+  <author>C477@2ryome</author>
+  <!--<title>åŠãƒœã‚¯ã‚»ãƒ«å»ºç¯‰</title>
+  <author>C477@2ä¸¡ç›®</author> -->
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	
-	<!--ˆÈ‰º‚ÌƒRƒ“ƒgƒŠƒrƒ…[ƒVƒ‡ƒ“’è‹`‚Í“Ç‚İ‚Ş‡”Ô‚ğ•Ï‚¦‚Ä‚Ís‚¯‚È‚¢-->	
+	<!--ä»¥ä¸‹ã®ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³å®šç¾©ã¯èª­ã¿è¾¼ã‚€é †ç•ªã‚’å¤‰ãˆã¦ã¯è¡Œã‘ãªã„-->	
 	<contribution type="picture" id="{HALF-VOXEL-STRUCTURE-CURSOR-IMAGE}">
 		<picture src="HVCursor.bmp"/>
 	</contribution>
@@ -25,7 +27,8 @@
 	</contribution>
 	-->
 	<contribution type="ColorLibrary" id="{COLORLIB-HIGHLIGHT}">
-		<name>ƒnƒCƒ‰ƒCƒg</name>
+		<name>Highlight</name>
+		<!--!<name>ãƒã‚¤ãƒ©ã‚¤ãƒˆ</name>-->
 		<element color="0,0,0"/>
 	</contribution>
 
@@ -43,6 +46,6 @@
 		<class name="freetrain.world.structs.hv.MenuContributionImpl"
 			codebase="bin/Debug/HalfVoxelStructure.DLL" />
 	</contribution>	
-	<!--‚±‚±‚Ü‚Å‚Ì‡˜‚Í‘åØ-->
+	<!--ã“ã“ã¾ã§ã®é †åºã¯å¤§åˆ‡-->
 	
 </plugin>

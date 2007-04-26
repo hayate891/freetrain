@@ -6,9 +6,9 @@
 	<!--!<author>C477@2両目</author>-->
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="dockingContent" id="{25FBD928-C82D-4EB3-C477-D08AC8A5504F}">
-		<name>Stock market</name>
+		<name>Stock Market</name>
 		<!--!保有株式一覧-->
-		<menu name="Stock market" location="view" />
+		<menu name="Stock Market" location="view" />
 		<!--! name="保有株式一覧" location="view" -->
 		<class name="freetrain.finance.stock.StocksWindow" codebase="bin/Debug/StockMarket.dll" />
 	</contribution>

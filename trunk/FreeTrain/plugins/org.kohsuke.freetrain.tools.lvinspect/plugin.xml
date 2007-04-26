@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Land value inspector window</title>
+	<title>Land Value Inspector Window</title>
 	<!--!<title>地価の検査ウィンドウ</title>-->
 	<author>Kohsuke Kawaguchi</author>
 	<!--!<author>川口耕介</author>-->

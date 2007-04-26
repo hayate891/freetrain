@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Banking module</title>
+	<title>Banking Module</title>
 	<!--!<title>銀行モジュール</title>-->
 	<author>C477@2ryome</author>
 	<!--!<author>C477@2両目</author>-->
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="dockingContent" id="{8254AA45-A93B-4989-C477-3D3BD31F7A8D}">
-		<name>Bank services</name>
-		<menu name="Bank services" location="view" />
+		<name>Bank Services</name>
+		<menu name="Bank Services" location="view" />
 		<!--!<name>借入金・預金一覧</name>
 		<menu name="借入金・預金一覧" location="view" />-->
 		<class name="freetrain.views.bank.BankbookWindow" codebase="bin/Debug/Bank.dll" />

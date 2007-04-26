@@ -278,7 +278,7 @@ namespace freetrain.controllers.rail
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 20);
 			this.label2.TabIndex = 10;
-			this.label2.Text = "Diagram (&T):";
+			this.label2.Text = "&Diagram:";
 			//! this.label2.Text = "ダイヤ(&T)：";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
@@ -393,7 +393,7 @@ namespace freetrain.controllers.rail
 						resetArrowLocation();
 						return;
 					} else {
-						MainWindow.showError("Placement completed");
+						MainWindow.showError("This train is already placed");
 						//; MainWindow.showError("配置済みです");
 						return;
 					}

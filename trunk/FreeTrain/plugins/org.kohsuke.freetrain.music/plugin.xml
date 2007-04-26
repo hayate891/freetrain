@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
-	<title>Standard BGM set</title>
+	<title>Standard BGM Set</title>
 	<!--!<title>基本ＢＧＭセット</title>-->
+	<author>Kouensya A &amp; 915</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="bgm" id="{4DFF42D2-FD4A-4d45-A18A-F2882D936C73}">

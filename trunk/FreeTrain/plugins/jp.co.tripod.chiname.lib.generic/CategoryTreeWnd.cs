@@ -189,7 +189,7 @@ namespace freetrain.framework.plugin.generic
 			this.checkBox1.Name = "checkBox1";
 			this.checkBox1.Size = new System.Drawing.Size(64, 24);
 			this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "show all";
+            this.checkBox1.Text = "Show All";
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
 			// CategoryTreeWnd

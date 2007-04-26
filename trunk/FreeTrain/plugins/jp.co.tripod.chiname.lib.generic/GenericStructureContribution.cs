@@ -275,7 +275,7 @@ namespace freetrain.framework.plugin.generic
 							dirTable[Direction.EAST.index]=refindex;
 							dirTable[Direction.WEST.index]=refindex;
 						}
-						else if(dirs[i].Equals("SOURTH"))
+						else if(dirs[i].Equals("SOUTH"))
 							dirTable[Direction.SOUTH.index]=refindex;
 						else if(dirs[i].Equals("EAST"))
 							dirTable[Direction.EAST.index]=refindex;
