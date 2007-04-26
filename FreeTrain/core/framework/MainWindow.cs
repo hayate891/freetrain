@@ -139,6 +139,7 @@ namespace freetrain.framework
 		private System.Windows.Forms.ToolBarButton viewAlwaysDay;
 		private System.Windows.Forms.ToolBarButton viewAlwaysNight;
 		private System.Windows.Forms.ToolBarButton separator;
+        private MenuItem menuItem6;
 
 		private readonly MruHelper mruMenu;
 
@@ -414,630 +415,605 @@ namespace freetrain.framework
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(MainWindow));
-			this.statusBar = new System.Windows.Forms.StatusBar();
-			this.statusBar_Message = new System.Windows.Forms.StatusBarPanel();
-			this.statusBar_Controller = new System.Windows.Forms.StatusBarPanel();
-			this.statusBar_Time = new System.Windows.Forms.StatusBarPanel();
-			this.MainMenu = new System.Windows.Forms.MainMenu();
-			this.menuItem_file = new System.Windows.Forms.MenuItem();
-			this.menuItem_File_New = new System.Windows.Forms.MenuItem();
-			this.MenuItem_File_Open = new System.Windows.Forms.MenuItem();
-			this.MenuItem_File_Save = new System.Windows.Forms.MenuItem();
-			this.menuItem2 = new System.Windows.Forms.MenuItem();
-			this.menuItem_listPlugins = new System.Windows.Forms.MenuItem();
-			this.menuItem3 = new System.Windows.Forms.MenuItem();
-			this.mruMenuItem = new System.Windows.Forms.MenuItem();
-			this.menuItem1 = new System.Windows.Forms.MenuItem();
-			this.menuQuit = new System.Windows.Forms.MenuItem();
-			this.menuItem_view = new System.Windows.Forms.MenuItem();
-			this.MenuItem_OpenMap = new System.Windows.Forms.MenuItem();
-			this.menuItem_balanceSheet = new System.Windows.Forms.MenuItem();
-			this.menuItem_rail = new System.Windows.Forms.MenuItem();
-			this.menuItem_RailRoadConstruction = new System.Windows.Forms.MenuItem();
-			this.menuItem_SlopeRailRoad = new System.Windows.Forms.MenuItem();
-			this.menuItem_Platform = new System.Windows.Forms.MenuItem();
-			this.menuItem_stationPassageway = new System.Windows.Forms.MenuItem();
-			this.menuItem_railStationary = new System.Windows.Forms.MenuItem();
-			this.menuItem5 = new System.Windows.Forms.MenuItem();
-			this.menuItem_TrainPlacement = new System.Windows.Forms.MenuItem();
-			this.menuItem_TrainTrading = new System.Windows.Forms.MenuItem();
-			this.menuItem4 = new System.Windows.Forms.MenuItem();
-			this.menuItem_road = new System.Windows.Forms.MenuItem();
-			this.menuItem_construction = new System.Windows.Forms.MenuItem();
-			this.menuItem_struct = new System.Windows.Forms.MenuItem();
-			this.menuItem_terrain = new System.Windows.Forms.MenuItem();
-			this.menuItem_varHeightBldg = new System.Windows.Forms.MenuItem();
-			this.menuItem_land = new System.Windows.Forms.MenuItem();
-			this.menuItem_landProperty = new System.Windows.Forms.MenuItem();
-			this.menuItem_config = new System.Windows.Forms.MenuItem();
-			this.menuItem_music = new System.Windows.Forms.MenuItem();
-			this.menuItem_soundEffect = new System.Windows.Forms.MenuItem();
-			this.menuItem_enableSoundEffect = new System.Windows.Forms.MenuItem();
-			this.menuItem_disableSoundEffect = new System.Windows.Forms.MenuItem();
-			this.menuItem_option = new System.Windows.Forms.MenuItem();
-			this.menuItem_help = new System.Windows.Forms.MenuItem();
-			this.menuItem_onlineHelp = new System.Windows.Forms.MenuItem();
-			this.menuItem_About = new System.Windows.Forms.MenuItem();
-			this.toolBar1 = new System.Windows.Forms.ToolBar();
-			this.tbTimer = new System.Windows.Forms.ToolBarButton();
-			this.clockMenu = new System.Windows.Forms.ContextMenu();
-			this.menuItem_ClockStop = new System.Windows.Forms.MenuItem();
-			this.menuItem_ClockGo1 = new System.Windows.Forms.MenuItem();
-			this.menuItem_ClockGo2 = new System.Windows.Forms.MenuItem();
-			this.menuItem_ClockGo3 = new System.Windows.Forms.MenuItem();
-			this.menuItem_ClockGo4 = new System.Windows.Forms.MenuItem();
-			this.tbRailRoad = new System.Windows.Forms.ToolBarButton();
-			this.tbSlope = new System.Windows.Forms.ToolBarButton();
-			this.tbStation = new System.Windows.Forms.ToolBarButton();
-			this.tbRRAcc = new System.Windows.Forms.ToolBarButton();
-			this.tbTrainPlacement = new System.Windows.Forms.ToolBarButton();
-			this.tbTrainTrading = new System.Windows.Forms.ToolBarButton();
-			this.tbTrainDiagram = new System.Windows.Forms.ToolBarButton();
-			this.tbSeparator = new System.Windows.Forms.ToolBarButton();
-			this.tbTerrain = new System.Windows.Forms.ToolBarButton();
-			this.tbStruct = new System.Windows.Forms.ToolBarButton();
-			this.tbBulldoze = new System.Windows.Forms.ToolBarButton();
-			this.toolBarIcons = new System.Windows.Forms.ImageList(this.components);
-			this.timer = new System.Windows.Forms.Timer(this.components);
-			this.timerStatusBarUpdate = new System.Windows.Forms.Timer(this.components);
-			this.toolBar2 = new System.Windows.Forms.ToolBar();
-			this.viewDayAndNight = new System.Windows.Forms.ToolBarButton();
-			this.viewAlwaysDay = new System.Windows.Forms.ToolBarButton();
-			this.viewAlwaysNight = new System.Windows.Forms.ToolBarButton();
-			this.separator = new System.Windows.Forms.ToolBarButton();
-			this.viewButtons = new System.Windows.Forms.ImageList(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.statusBar_Message)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBar_Controller)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBar_Time)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// statusBar
-			// 
-			this.statusBar.Location = new System.Drawing.Point(0, 270);
-			this.statusBar.Name = "statusBar";
-			this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
-																						 this.statusBar_Message,
-																						 this.statusBar_Controller,
-																						 this.statusBar_Time});
-			this.statusBar.ShowPanels = true;
-			this.statusBar.Size = new System.Drawing.Size(544, 16);
-			this.statusBar.TabIndex = 0;
-			// 
-			// statusBar_Message
-			// 
-			this.statusBar_Message.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
-			this.statusBar_Message.BorderStyle = System.Windows.Forms.StatusBarPanelBorderStyle.None;
-			this.statusBar_Message.MinWidth = 40;
-			this.statusBar_Message.Width = 347;
-			// 
-			// statusBar_Controller
-			// 
-			this.statusBar_Controller.Alignment = System.Windows.Forms.HorizontalAlignment.Center;
-			this.statusBar_Controller.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Contents;
-			this.statusBar_Controller.MinWidth = 0;
-			this.statusBar_Controller.Text = "-";
-			this.statusBar_Controller.ToolTipText = "Current mode";
-			//! this.statusBar_Controller.ToolTipText = "現在のモード";
-			this.statusBar_Controller.Width = 21;
-			// 
-			// statusBar_Time
-			// 
-			this.statusBar_Time.Alignment = System.Windows.Forms.HorizontalAlignment.Center;
-			this.statusBar_Time.Text = "date/time";
-			this.statusBar_Time.ToolTipText = "Current time";
-			//! this.statusBar_Time.ToolTipText = "現在の時刻";
-			this.statusBar_Time.Width = 160;
-			// 
-			// MainMenu
-			// 
-			this.MainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																					 this.menuItem_file,
-																					 this.menuItem_view,
-																					 this.menuItem_rail,
-																					 this.menuItem_road,
-																					 this.menuItem_construction,
-																					 this.menuItem_config,
-																					 this.menuItem_help});
-			// 
-			// menuItem_file
-			// 
-			this.menuItem_file.Index = 0;
-			this.menuItem_file.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																						  this.menuItem_File_New,
-																						  this.MenuItem_File_Open,
-																						  this.MenuItem_File_Save,
-																						  this.menuItem2,
-																						  this.menuItem_listPlugins,
-																						  this.menuItem3,
-																						  this.mruMenuItem,
-																						  this.menuItem1,
-																						  this.menuQuit});
-			this.menuItem_file.Text = "&File";
-			//! this.menuItem_file.Text = "ファイル(&F)";
-			// 
-			// menuItem_File_New
-			// 
-			this.menuItem_File_New.Index = 0;
-			this.menuItem_File_New.Text = "&New...";
-			//! this.menuItem_File_New.Text = "新規作成&(N)...";
-			// 
-			// MenuItem_File_Open
-			// 
-			this.MenuItem_File_Open.Index = 1;
-			this.MenuItem_File_Open.Text = "&Open...";
-			//! this.MenuItem_File_Open.Text = "開く(&O)...";
-			// 
-			// MenuItem_File_Save
-			// 
-			this.MenuItem_File_Save.Index = 2;
-			this.MenuItem_File_Save.Text = "&Save...";
-			//! this.MenuItem_File_Save.Text = "保存(&S)...";
-			// 
-			// menuItem2
-			// 
-			this.menuItem2.Index = 3;
-			this.menuItem2.Text = "-";
-			// 
-			// menuItem_listPlugins
-			// 
-			this.menuItem_listPlugins.Index = 4;
-			this.menuItem_listPlugins.Text = "&Plugin List...";
-			//! this.menuItem_listPlugins.Text = "プラグイン一覧(&P)...";
-			// 
-			// menuItem3
-			// 
-			this.menuItem3.Index = 5;
-			this.menuItem3.Text = "-";
-			// 
-			// mruMenuItem
-			// 
-			this.mruMenuItem.Index = 6;
-			this.mruMenuItem.Text = "(Recently Used Files)";
-			//! this.mruMenuItem.Text = "(最近使われたファイル)";
-			// 
-			// menuItem1
-			// 
-			this.menuItem1.Index = 7;
-			this.menuItem1.Text = "-";
-			// 
-			// menuQuit
-			// 
-			this.menuQuit.Index = 8;
-			this.menuQuit.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
-			this.menuQuit.Text = "&Quit";
-			//! this.menuQuit.Text = "終了(&Q)";
-			// 
-			// menuItem_view
-			// 
-			this.menuItem_view.Index = 1;
-			this.menuItem_view.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																						  this.MenuItem_OpenMap,
-																						  this.menuItem_balanceSheet});
-			this.menuItem_view.MergeOrder = 1;
-			this.menuItem_view.MergeType = System.Windows.Forms.MenuMerge.MergeItems;
-			this.menuItem_view.Text = "&View";
-			//! this.menuItem_view.Text = "表示(&V)";
-			// 
-			// MenuItem_OpenMap
-			// 
-			this.MenuItem_OpenMap.Index = 0;
-			this.MenuItem_OpenMap.Shortcut = System.Windows.Forms.Shortcut.CtrlM;
-			this.MenuItem_OpenMap.Text = "&Map";
-			//! this.MenuItem_OpenMap.Text = "マップ(&M)";
-			this.MenuItem_OpenMap.Click += new System.EventHandler(this.MenuItem_OpenMap_Click);
-			// 
-			// menuItem_balanceSheet
-			// 
-			this.menuItem_balanceSheet.Index = 1;
-			this.menuItem_balanceSheet.Text = "&Balance Sheet";
-			//! this.menuItem_balanceSheet.Text = "バランスシート(&B)";
-			// 
-			// menuItem_rail
-			// 
-			this.menuItem_rail.Index = 2;
-			this.menuItem_rail.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																						  this.menuItem_RailRoadConstruction,
-																						  this.menuItem_SlopeRailRoad,
-																						  this.menuItem_Platform,
-																						  this.menuItem_stationPassageway,
-																						  this.menuItem_railStationary,
-																						  this.menuItem5,
-																						  this.menuItem_TrainPlacement,
-																						  this.menuItem_TrainTrading,
-																						  this.menuItem4});
-			this.menuItem_rail.MergeOrder = 2;
-			this.menuItem_rail.Text = "&Rail";
-			//! this.menuItem_rail.Text = "鉄道(&R)";
-			// 
-			// menuItem_RailRoadConstruction
-			// 
-			this.menuItem_RailRoadConstruction.Index = 0;
-			this.menuItem_RailRoadConstruction.Text = "Lay &Rail...";
-			//! this.menuItem_RailRoadConstruction.Text = "線路工事(&R)...";
-			// 
-			// menuItem_SlopeRailRoad
-			// 
-			this.menuItem_SlopeRailRoad.Index = 1;
-			this.menuItem_SlopeRailRoad.Text = "Lay &Slope...";
-			//! this.menuItem_SlopeRailRoad.Text = "勾配工事(&S)...";
-			// 
-			// menuItem_Platform
-			// 
-			this.menuItem_Platform.Index = 2;
-			this.menuItem_Platform.Text = "Build St&ation...";
-			//! this.menuItem_Platform.Text = "駅工事(&A)...";
-			// 
-			// menuItem_stationPassageway
-			// 
-			this.menuItem_stationPassageway.Index = 3;
-			this.menuItem_stationPassageway.Text = "Over&pass...";
-			//! this.menuItem_stationPassageway.Text = "跨線橋(&P)...";
-			// 
-			// menuItem_railStationary
-			// 
-			this.menuItem_railStationary.Index = 4;
-			this.menuItem_railStationary.Text = "A&ccessories...";
-			//! this.menuItem_railStationary.Text = "アクセサリ(&C)...";
-			// 
-			// menuItem5
-			// 
-			this.menuItem5.Index = 5;
-			this.menuItem5.Text = "-";
-			// 
-			// menuItem_TrainPlacement
-			// 
-			this.menuItem_TrainPlacement.Index = 6;
-			this.menuItem_TrainPlacement.Text = "Place &Train...";
-			//! this.menuItem_TrainPlacement.Text = "車両配置(&T)...";
-			// 
-			// menuItem_TrainTrading
-			// 
-			this.menuItem_TrainTrading.Index = 7;
-			this.menuItem_TrainTrading.Text = "&Buy Trains...";
-			//! this.menuItem_TrainTrading.Text = "車両購入(&B)...";
-			// 
-			// menuItem4
-			// 
-			this.menuItem4.Index = 8;
-			this.menuItem4.Text = "-";
-			// 
-			// menuItem_road
-			// 
-			this.menuItem_road.Index = 3;
-			this.menuItem_road.MergeOrder = 3;
-			this.menuItem_road.Text = "R&oad";
-			//! this.menuItem_road.Text = "道路(&O)";
-			// 
-			// menuItem_construction
-			// 
-			this.menuItem_construction.Index = 4;
-			this.menuItem_construction.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																								  this.menuItem_struct,
-																								  this.menuItem_terrain,
-																								  this.menuItem_varHeightBldg,
-																								  this.menuItem_land,
-																								  this.menuItem_landProperty});
-			this.menuItem_construction.MergeOrder = 4;
-			this.menuItem_construction.Text = "&Construction";
-			//! this.menuItem_construction.Text = "工事(&C)";
-			// 
-			// menuItem_struct
-			// 
-			this.menuItem_struct.Index = 0;
-			this.menuItem_struct.Text = "Building Construction...";
-			//! this.menuItem_struct.Text = "建物の工事(仮)...";
-			// 
-			// menuItem_terrain
-			// 
-			this.menuItem_terrain.Index = 1;
-			this.menuItem_terrain.Text = "&Modify Terrain...";
-			//! this.menuItem_terrain.Text = "整地(仮)(&M)...";
-			// 
-			// menuItem_varHeightBldg
-			// 
-			this.menuItem_varHeightBldg.Index = 2;
-			this.menuItem_varHeightBldg.Text = "Rental &Buildings...";
-			//! this.menuItem_varHeightBldg.Text = "貸しビル(&B)...";
-			// 
-			// menuItem_land
-			// 
-			this.menuItem_land.Index = 3;
-			this.menuItem_land.Text = "Terrain Object&s...";
-			//! this.menuItem_land.Text = "地表(&S)...";
-			// 
-			// menuItem_landProperty
-			// 
-			this.menuItem_landProperty.Index = 4;
-			this.menuItem_landProperty.Text = "Trade &Land...";
-			//! this.menuItem_landProperty.Text = "土地売買(&L)...";
-			// 
-			// menuItem_config
-			// 
-			this.menuItem_config.Index = 5;
-			this.menuItem_config.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																							this.menuItem_music,
-																							this.menuItem_soundEffect,
-																							this.menuItem_option});
-			this.menuItem_config.MergeOrder = 5;
-			this.menuItem_config.Text = "Co&nfigure";
-			//! this.menuItem_config.Text = "設定(&C)";
-			// 
-			// menuItem_music
-			// 
-			this.menuItem_music.Index = 0;
-			this.menuItem_music.Text = "&Music";
-			//! this.menuItem_music.Text = "音楽(&M)";
-			// 
-			// menuItem_soundEffect
-			// 
-			this.menuItem_soundEffect.Index = 1;
-			this.menuItem_soundEffect.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																								 this.menuItem_enableSoundEffect,
-																								 this.menuItem_disableSoundEffect});
-			this.menuItem_soundEffect.Text = "&Sound Effects";
-			//!this.menuItem_soundEffect.Text = "効果音(&S)";
-			this.menuItem_soundEffect.Popup += new System.EventHandler(this.onMenuPopup);
-			// 
-			// menuItem_enableSoundEffect
-			// 
-			this.menuItem_enableSoundEffect.Index = 0;
-			this.menuItem_enableSoundEffect.Text = "O&n";
-			//! this.menuItem_enableSoundEffect.Text = "あり(&N)";
-			// 
-			// menuItem_disableSoundEffect
-			// 
-			this.menuItem_disableSoundEffect.Index = 1;
-			this.menuItem_disableSoundEffect.Text = "O&ff";
-			//! this.menuItem_disableSoundEffect.Text = "なし(&F)";
-			// 
-			// menuItem_option
-			// 
-			this.menuItem_option.Index = 2;
-			this.menuItem_option.Text = "&Options...";
-			//! this.menuItem_option.Text = "オプション(&O)...";
-			// 
-			// menuItem_help
-			// 
-			this.menuItem_help.Index = 6;
-			this.menuItem_help.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																						  this.menuItem_onlineHelp,
-																						  this.menuItem_About});
-			this.menuItem_help.MergeOrder = 6;
-			this.menuItem_help.Text = "&Help";
-			//! this.menuItem_help.Text = "ヘルプ(&H)";
-			// 
-			// menuItem_onlineHelp
-			// 
-			this.menuItem_onlineHelp.Index = 0;
-			this.menuItem_onlineHelp.Text = "&Online Help";
-			//! this.menuItem_onlineHelp.Text = "オンラインヘルプ(&O)";
-			// 
-			// menuItem_About
-			// 
-			this.menuItem_About.Index = 1;
-			this.menuItem_About.Text = "&About FreeTrain...";
-			//! this.menuItem_About.Text = "FreeTrainについて(&A)...";
-			// 
-			// toolBar1
-			// 
-			this.toolBar1.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
-			this.toolBar1.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
-																						this.tbTimer,
-																						this.tbRailRoad,
-																						this.tbSlope,
-																						this.tbStation,
-																						this.tbRRAcc,
-																						this.tbTrainPlacement,
-																						this.tbTrainTrading,
-																						this.tbTrainDiagram,
-																						this.tbSeparator,
-																						this.tbTerrain,
-																						this.tbStruct,
-																						this.tbBulldoze});
-			this.toolBar1.DropDownArrows = true;
-			this.toolBar1.ImageList = this.toolBarIcons;
-			this.toolBar1.Location = new System.Drawing.Point(0, 0);
-			this.toolBar1.Name = "toolBar1";
-			this.toolBar1.ShowToolTips = true;
-			this.toolBar1.Size = new System.Drawing.Size(544, 27);
-			this.toolBar1.TabIndex = 1;
-			this.toolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
-			this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
-			// 
-			// tbTimer
-			// 
-			this.tbTimer.DropDownMenu = this.clockMenu;
-			this.tbTimer.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton;
-			this.tbTimer.Text = "Timer";
-			//! this.tbTimer.Text = "時間";
-			// 
-			// clockMenu
-			// 
-			this.clockMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																					  this.menuItem_ClockStop,
-																					  this.menuItem_ClockGo1,
-																					  this.menuItem_ClockGo2,
-																					  this.menuItem_ClockGo3,
-																					  this.menuItem_ClockGo4});
-			// 
-			// menuItem_ClockStop
-			// 
-			this.menuItem_ClockStop.Index = 0;
-			this.menuItem_ClockStop.Text = "&Pause";
-			//! this.menuItem_ClockStop.Text = "一時停止(&S)";
-			this.menuItem_ClockStop.Click += new System.EventHandler(this.menuItem_ClockStop_Click);
-			// 
-			// menuItem_ClockGo1
-			// 
-			this.menuItem_ClockGo1.Index = 1;
-			this.menuItem_ClockGo1.Text = "&Slow";
-			//! this.menuItem_ClockGo1.Text = "ゆっくり(&S)";
-			this.menuItem_ClockGo1.Click += new System.EventHandler(this.menuItem_ClockGo1_Click);
-			// 
-			// menuItem_ClockGo2
-			// 
-			this.menuItem_ClockGo2.Index = 2;
-			this.menuItem_ClockGo2.Text = "&Normal";
-			//! this.menuItem_ClockGo2.Text = "普通(&N)";
-			this.menuItem_ClockGo2.Click += new System.EventHandler(this.menuItem_ClockGo2_Click);
-			// 
-			// menuItem_ClockGo3
-			// 
-			this.menuItem_ClockGo3.Index = 3;
-			this.menuItem_ClockGo3.Text = "&Fast";
-			//! this.menuItem_ClockGo3.Text = "高速(&F)";
-			this.menuItem_ClockGo3.Click += new System.EventHandler(this.menuItem_ClockGo3_Click);
-			// 
-			// menuItem_ClockGo4
-			// 
-			this.menuItem_ClockGo4.Index = 4;
-			this.menuItem_ClockGo4.Text = "&Ultra";
-			//! this.menuItem_ClockGo4.Text = "最高速(&U)";
-			this.menuItem_ClockGo4.Click += new System.EventHandler(this.menuItem_ClockGo4_Click);
-			// 
-			// tbRailRoad
-			// 
-			this.tbRailRoad.ImageIndex = 0;
-			this.tbRailRoad.ToolTipText = "Lay rail";
-			//! this.tbRailRoad.ToolTipText = "線路敷設";
-			// 
-			// tbSlope
-			// 
-			this.tbSlope.ImageIndex = 1;
-			this.tbSlope.ToolTipText = "Lay slope";
-			//! this.tbSlope.ToolTipText = "勾配線路敷設";
-			// 
-			// tbStation
-			// 
-			this.tbStation.ImageIndex = 2;
-			this.tbStation.ToolTipText = "Build station";
-			//! this.tbStation.ToolTipText = "駅建設";
-			// 
-			// tbRRAcc
-			// 
-			this.tbRRAcc.ImageIndex = 3;
-			this.tbRRAcc.ToolTipText = "Build rail accessories";
-			//! this.tbRRAcc.ToolTipText = "鉄道アクセサリ設置";
-			// 
-			// tbTrainPlacement
-			// 
-			this.tbTrainPlacement.ImageIndex = 4;
-			this.tbTrainPlacement.ToolTipText = "Place trains";
-			//! this.tbTrainPlacement.ToolTipText = "車両設置";
-			// 
-			// tbTrainTrading
-			// 
-			this.tbTrainTrading.ImageIndex = 5;
-			this.tbTrainTrading.ToolTipText = "Buy or sell trains";
-			//! this.tbTrainTrading.ToolTipText = "車両売買";
-			// 
-			// tbTrainDiagram
-			// 
-			this.tbTrainDiagram.ImageIndex = 6;
-			this.tbTrainDiagram.ToolTipText = "Diagram settings";
-			//! this.tbTrainDiagram.ToolTipText = "ダイアグラム設定";
-			// 
-			// tbSeparator
-			// 
-			this.tbSeparator.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
-			// 
-			// tbTerrain
-			// 
-			this.tbTerrain.ImageIndex = 7;
-			this.tbTerrain.ToolTipText = "Raise or lower terrain";
-			//! this.tbTerrain.ToolTipText = "土地の上下";
-			// 
-			// tbStruct
-			// 
-			this.tbStruct.ImageIndex = 8;
-			this.tbStruct.ToolTipText = "Building construction";
-			//! this.tbStruct.ToolTipText = "建物の設置";
-			// 
-			// tbBulldoze
-			// 
-			this.tbBulldoze.ImageIndex = 9;
-			this.tbBulldoze.ToolTipText = "Bulldozer";
-			//! this.tbBulldoze.ToolTipText = "ブルドーザー";
-			// 
-			// toolBarIcons
-			// 
-			this.toolBarIcons.ImageSize = new System.Drawing.Size(16, 15);
-			this.toolBarIcons.TransparentColor = System.Drawing.Color.Transparent;
-			// 
-			// timerStatusBarUpdate
-			// 
-			this.timerStatusBarUpdate.Enabled = true;
-			this.timerStatusBarUpdate.Interval = 500;
-			this.timerStatusBarUpdate.Tick += new System.EventHandler(this.updateStatusBar);
-			// 
-			// toolBar2
-			// 
-			this.toolBar2.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
-			this.toolBar2.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
-																						this.viewDayAndNight,
-																						this.viewAlwaysDay,
-																						this.viewAlwaysNight,
-																						this.separator});
-			this.toolBar2.ButtonSize = new System.Drawing.Size(16, 15);
-			this.toolBar2.DropDownArrows = true;
-			this.toolBar2.ImageList = this.viewButtons;
-			this.toolBar2.Location = new System.Drawing.Point(0, 27);
-			this.toolBar2.Name = "toolBar2";
-			this.toolBar2.ShowToolTips = true;
-			this.toolBar2.Size = new System.Drawing.Size(544, 27);
-			this.toolBar2.TabIndex = 2;
-			// 
-			// viewDayAndNight
-			// 
-			this.viewDayAndNight.ImageIndex = 0;
-			this.viewDayAndNight.Pushed = true;
-			this.viewDayAndNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.viewDayAndNight.Tag = freetrain.views.NightSpriteMode.AlignClock;
-			this.viewDayAndNight.ToolTipText = "Day and night";
-			//! this.viewDayAndNight.ToolTipText = "昼と夜";
-			// 
-			// viewAlwaysDay
-			// 
-			this.viewAlwaysDay.ImageIndex = 1;
-			this.viewAlwaysDay.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.viewAlwaysDay.Tag = freetrain.views.NightSpriteMode.AlwaysDay;
-			this.viewAlwaysDay.ToolTipText = "Always day";
-			//! this.viewAlwaysDay.ToolTipText = "常に昼";
-			// 
-			// viewAlwaysNight
-			// 
-			this.viewAlwaysNight.ImageIndex = 2;
-			this.viewAlwaysNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.viewAlwaysNight.Tag = freetrain.views.NightSpriteMode.AlwaysNight;
-			this.viewAlwaysNight.ToolTipText = "Always night";
-			//! this.viewAlwaysNight.ToolTipText = "常に夜";
-			// 
-			// separator
-			// 
-			this.separator.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
-			// 
-			// viewButtons
-			// 
-			this.viewButtons.ImageSize = new System.Drawing.Size(16, 15);
-			this.viewButtons.TransparentColor = System.Drawing.Color.Transparent;
-			// 
-			// MainWindow
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(544, 286);
-			this.Controls.Add(this.toolBar2);
-			this.Controls.Add(this.statusBar);
-			this.Controls.Add(this.toolBar1);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Menu = this.MainMenu;
-			this.Name = "MainWindow";
-			this.Text = "FreeTrain";
-			((System.ComponentModel.ISupportInitialize)(this.statusBar_Message)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBar_Controller)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBar_Time)).EndInit();
-			this.ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+            this.statusBar = new System.Windows.Forms.StatusBar();
+            this.statusBar_Message = new System.Windows.Forms.StatusBarPanel();
+            this.statusBar_Controller = new System.Windows.Forms.StatusBarPanel();
+            this.statusBar_Time = new System.Windows.Forms.StatusBarPanel();
+            this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
+            this.menuItem_file = new System.Windows.Forms.MenuItem();
+            this.menuItem_File_New = new System.Windows.Forms.MenuItem();
+            this.MenuItem_File_Open = new System.Windows.Forms.MenuItem();
+            this.MenuItem_File_Save = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuItem_listPlugins = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
+            this.mruMenuItem = new System.Windows.Forms.MenuItem();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuQuit = new System.Windows.Forms.MenuItem();
+            this.menuItem_view = new System.Windows.Forms.MenuItem();
+            this.MenuItem_OpenMap = new System.Windows.Forms.MenuItem();
+            this.menuItem_balanceSheet = new System.Windows.Forms.MenuItem();
+            this.menuItem_rail = new System.Windows.Forms.MenuItem();
+            this.menuItem_RailRoadConstruction = new System.Windows.Forms.MenuItem();
+            this.menuItem_SlopeRailRoad = new System.Windows.Forms.MenuItem();
+            this.menuItem_Platform = new System.Windows.Forms.MenuItem();
+            this.menuItem_stationPassageway = new System.Windows.Forms.MenuItem();
+            this.menuItem_railStationary = new System.Windows.Forms.MenuItem();
+            this.menuItem5 = new System.Windows.Forms.MenuItem();
+            this.menuItem_TrainPlacement = new System.Windows.Forms.MenuItem();
+            this.menuItem_TrainTrading = new System.Windows.Forms.MenuItem();
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.menuItem_road = new System.Windows.Forms.MenuItem();
+            this.menuItem_construction = new System.Windows.Forms.MenuItem();
+            this.menuItem_struct = new System.Windows.Forms.MenuItem();
+            this.menuItem_terrain = new System.Windows.Forms.MenuItem();
+            this.menuItem_varHeightBldg = new System.Windows.Forms.MenuItem();
+            this.menuItem_land = new System.Windows.Forms.MenuItem();
+            this.menuItem_landProperty = new System.Windows.Forms.MenuItem();
+            this.menuItem_config = new System.Windows.Forms.MenuItem();
+            this.menuItem_music = new System.Windows.Forms.MenuItem();
+            this.menuItem_soundEffect = new System.Windows.Forms.MenuItem();
+            this.menuItem_enableSoundEffect = new System.Windows.Forms.MenuItem();
+            this.menuItem_disableSoundEffect = new System.Windows.Forms.MenuItem();
+            this.menuItem_option = new System.Windows.Forms.MenuItem();
+            this.menuItem_help = new System.Windows.Forms.MenuItem();
+            this.menuItem_onlineHelp = new System.Windows.Forms.MenuItem();
+            this.menuItem_About = new System.Windows.Forms.MenuItem();
+            this.toolBar1 = new System.Windows.Forms.ToolBar();
+            this.tbTimer = new System.Windows.Forms.ToolBarButton();
+            this.clockMenu = new System.Windows.Forms.ContextMenu();
+            this.menuItem_ClockStop = new System.Windows.Forms.MenuItem();
+            this.menuItem_ClockGo1 = new System.Windows.Forms.MenuItem();
+            this.menuItem_ClockGo2 = new System.Windows.Forms.MenuItem();
+            this.menuItem_ClockGo3 = new System.Windows.Forms.MenuItem();
+            this.menuItem_ClockGo4 = new System.Windows.Forms.MenuItem();
+            this.tbRailRoad = new System.Windows.Forms.ToolBarButton();
+            this.tbSlope = new System.Windows.Forms.ToolBarButton();
+            this.tbStation = new System.Windows.Forms.ToolBarButton();
+            this.tbRRAcc = new System.Windows.Forms.ToolBarButton();
+            this.tbTrainPlacement = new System.Windows.Forms.ToolBarButton();
+            this.tbTrainTrading = new System.Windows.Forms.ToolBarButton();
+            this.tbTrainDiagram = new System.Windows.Forms.ToolBarButton();
+            this.tbSeparator = new System.Windows.Forms.ToolBarButton();
+            this.tbTerrain = new System.Windows.Forms.ToolBarButton();
+            this.tbStruct = new System.Windows.Forms.ToolBarButton();
+            this.tbBulldoze = new System.Windows.Forms.ToolBarButton();
+            this.toolBarIcons = new System.Windows.Forms.ImageList(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.timerStatusBarUpdate = new System.Windows.Forms.Timer(this.components);
+            this.toolBar2 = new System.Windows.Forms.ToolBar();
+            this.viewDayAndNight = new System.Windows.Forms.ToolBarButton();
+            this.viewAlwaysDay = new System.Windows.Forms.ToolBarButton();
+            this.viewAlwaysNight = new System.Windows.Forms.ToolBarButton();
+            this.separator = new System.Windows.Forms.ToolBarButton();
+            this.viewButtons = new System.Windows.Forms.ImageList(this.components);
+            this.menuItem6 = new System.Windows.Forms.MenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBar_Message)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBar_Controller)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBar_Time)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // statusBar
+            // 
+            this.statusBar.Location = new System.Drawing.Point(0, 270);
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+            this.statusBar_Message,
+            this.statusBar_Controller,
+            this.statusBar_Time});
+            this.statusBar.ShowPanels = true;
+            this.statusBar.Size = new System.Drawing.Size(544, 16);
+            this.statusBar.TabIndex = 0;
+            // 
+            // statusBar_Message
+            // 
+            this.statusBar_Message.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
+            this.statusBar_Message.BorderStyle = System.Windows.Forms.StatusBarPanelBorderStyle.None;
+            this.statusBar_Message.MinWidth = 40;
+            this.statusBar_Message.Name = "statusBar_Message";
+            this.statusBar_Message.Width = 347;
+            // 
+            // statusBar_Controller
+            // 
+            this.statusBar_Controller.Alignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.statusBar_Controller.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Contents;
+            this.statusBar_Controller.MinWidth = 0;
+            this.statusBar_Controller.Name = "statusBar_Controller";
+            this.statusBar_Controller.Text = "-";
+            this.statusBar_Controller.ToolTipText = "Current mode";
+            this.statusBar_Controller.Width = 21;
+            // 
+            // statusBar_Time
+            // 
+            this.statusBar_Time.Alignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.statusBar_Time.Name = "statusBar_Time";
+            this.statusBar_Time.Text = "date/time";
+            this.statusBar_Time.ToolTipText = "Current time";
+            this.statusBar_Time.Width = 160;
+            // 
+            // MainMenu
+            // 
+            this.MainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_file,
+            this.menuItem_view,
+            this.menuItem_rail,
+            this.menuItem_road,
+            this.menuItem_construction,
+            this.menuItem_config,
+            this.menuItem_help});
+            // 
+            // menuItem_file
+            // 
+            this.menuItem_file.Index = 0;
+            this.menuItem_file.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_File_New,
+            this.MenuItem_File_Open,
+            this.MenuItem_File_Save,
+            this.menuItem2,
+            this.menuItem_listPlugins,
+            this.menuItem3,
+            this.mruMenuItem,
+            this.menuItem1,
+            this.menuQuit});
+            this.menuItem_file.Text = "&File";
+            // 
+            // menuItem_File_New
+            // 
+            this.menuItem_File_New.Index = 0;
+            this.menuItem_File_New.Text = "&New...";
+            // 
+            // MenuItem_File_Open
+            // 
+            this.MenuItem_File_Open.Index = 1;
+            this.MenuItem_File_Open.Text = "&Open...";
+            // 
+            // MenuItem_File_Save
+            // 
+            this.MenuItem_File_Save.Index = 2;
+            this.MenuItem_File_Save.Text = "&Save...";
+            // 
+            // menuItem2
+            // 
+            this.menuItem2.Index = 3;
+            this.menuItem2.Text = "-";
+            // 
+            // menuItem_listPlugins
+            // 
+            this.menuItem_listPlugins.Index = 4;
+            this.menuItem_listPlugins.Text = "&Plugin List...";
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Index = 5;
+            this.menuItem3.Text = "-";
+            // 
+            // mruMenuItem
+            // 
+            this.mruMenuItem.Index = 6;
+            this.mruMenuItem.Text = "(Recently Used Files)";
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 7;
+            this.menuItem1.Text = "-";
+            // 
+            // menuQuit
+            // 
+            this.menuQuit.Index = 8;
+            this.menuQuit.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
+            this.menuQuit.Text = "&Quit";
+            // 
+            // menuItem_view
+            // 
+            this.menuItem_view.Index = 1;
+            this.menuItem_view.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.MenuItem_OpenMap,
+            this.menuItem_balanceSheet});
+            this.menuItem_view.MergeOrder = 1;
+            this.menuItem_view.MergeType = System.Windows.Forms.MenuMerge.MergeItems;
+            this.menuItem_view.Text = "&View";
+            // 
+            // MenuItem_OpenMap
+            // 
+            this.MenuItem_OpenMap.Index = 0;
+            this.MenuItem_OpenMap.Shortcut = System.Windows.Forms.Shortcut.CtrlM;
+            this.MenuItem_OpenMap.Text = "&Map";
+            this.MenuItem_OpenMap.Click += new System.EventHandler(this.MenuItem_OpenMap_Click);
+            // 
+            // menuItem_balanceSheet
+            // 
+            this.menuItem_balanceSheet.Index = 1;
+            this.menuItem_balanceSheet.Text = "&Balance Sheet";
+            // 
+            // menuItem_rail
+            // 
+            this.menuItem_rail.Index = 2;
+            this.menuItem_rail.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_RailRoadConstruction,
+            this.menuItem_SlopeRailRoad,
+            this.menuItem_Platform,
+            this.menuItem_stationPassageway,
+            this.menuItem_railStationary,
+            this.menuItem5,
+            this.menuItem_TrainPlacement,
+            this.menuItem_TrainTrading,
+            this.menuItem4});
+            this.menuItem_rail.MergeOrder = 2;
+            this.menuItem_rail.Text = "&Rail";
+            // 
+            // menuItem_RailRoadConstruction
+            // 
+            this.menuItem_RailRoadConstruction.Index = 0;
+            this.menuItem_RailRoadConstruction.Text = "Lay &Rail...";
+            // 
+            // menuItem_SlopeRailRoad
+            // 
+            this.menuItem_SlopeRailRoad.Index = 1;
+            this.menuItem_SlopeRailRoad.Text = "Lay &Slope...";
+            // 
+            // menuItem_Platform
+            // 
+            this.menuItem_Platform.Index = 2;
+            this.menuItem_Platform.Text = "Build St&ation...";
+            // 
+            // menuItem_stationPassageway
+            // 
+            this.menuItem_stationPassageway.Index = 3;
+            this.menuItem_stationPassageway.Text = "Over&pass...";
+            // 
+            // menuItem_railStationary
+            // 
+            this.menuItem_railStationary.Index = 4;
+            this.menuItem_railStationary.Text = "A&ccessories...";
+            // 
+            // menuItem5
+            // 
+            this.menuItem5.Index = 5;
+            this.menuItem5.Text = "-";
+            // 
+            // menuItem_TrainPlacement
+            // 
+            this.menuItem_TrainPlacement.Index = 6;
+            this.menuItem_TrainPlacement.Text = "Place &Train...";
+            // 
+            // menuItem_TrainTrading
+            // 
+            this.menuItem_TrainTrading.Index = 7;
+            this.menuItem_TrainTrading.Text = "&Buy Trains...";
+            // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 8;
+            this.menuItem4.Text = "-";
+            // 
+            // menuItem_road
+            // 
+            this.menuItem_road.Index = 3;
+            this.menuItem_road.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem6});
+            this.menuItem_road.MergeOrder = 3;
+            this.menuItem_road.Text = "R&oad";
+            // 
+            // menuItem_construction
+            // 
+            this.menuItem_construction.Index = 4;
+            this.menuItem_construction.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_struct,
+            this.menuItem_terrain,
+            this.menuItem_varHeightBldg,
+            this.menuItem_land,
+            this.menuItem_landProperty});
+            this.menuItem_construction.MergeOrder = 4;
+            this.menuItem_construction.Text = "&Construction";
+            // 
+            // menuItem_struct
+            // 
+            this.menuItem_struct.Index = 0;
+            this.menuItem_struct.Text = "Building Construction...";
+            // 
+            // menuItem_terrain
+            // 
+            this.menuItem_terrain.Index = 1;
+            this.menuItem_terrain.Text = "&Modify Terrain...";
+            // 
+            // menuItem_varHeightBldg
+            // 
+            this.menuItem_varHeightBldg.Index = 2;
+            this.menuItem_varHeightBldg.Text = "Rental &Buildings...";
+            // 
+            // menuItem_land
+            // 
+            this.menuItem_land.Index = 3;
+            this.menuItem_land.Text = "Terrain Object&s...";
+            // 
+            // menuItem_landProperty
+            // 
+            this.menuItem_landProperty.Index = 4;
+            this.menuItem_landProperty.Text = "Trade &Land...";
+            // 
+            // menuItem_config
+            // 
+            this.menuItem_config.Index = 5;
+            this.menuItem_config.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_music,
+            this.menuItem_soundEffect,
+            this.menuItem_option});
+            this.menuItem_config.MergeOrder = 5;
+            this.menuItem_config.Text = "Co&nfigure";
+            // 
+            // menuItem_music
+            // 
+            this.menuItem_music.Index = 0;
+            this.menuItem_music.Text = "&Music";
+            // 
+            // menuItem_soundEffect
+            // 
+            this.menuItem_soundEffect.Index = 1;
+            this.menuItem_soundEffect.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_enableSoundEffect,
+            this.menuItem_disableSoundEffect});
+            this.menuItem_soundEffect.Text = "&Sound Effects";
+            this.menuItem_soundEffect.Popup += new System.EventHandler(this.onMenuPopup);
+            // 
+            // menuItem_enableSoundEffect
+            // 
+            this.menuItem_enableSoundEffect.Index = 0;
+            this.menuItem_enableSoundEffect.Text = "O&n";
+            // 
+            // menuItem_disableSoundEffect
+            // 
+            this.menuItem_disableSoundEffect.Index = 1;
+            this.menuItem_disableSoundEffect.Text = "O&ff";
+            // 
+            // menuItem_option
+            // 
+            this.menuItem_option.Index = 2;
+            this.menuItem_option.Text = "&Options...";
+            // 
+            // menuItem_help
+            // 
+            this.menuItem_help.Index = 6;
+            this.menuItem_help.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_onlineHelp,
+            this.menuItem_About});
+            this.menuItem_help.MergeOrder = 6;
+            this.menuItem_help.Text = "&Help";
+            // 
+            // menuItem_onlineHelp
+            // 
+            this.menuItem_onlineHelp.Index = 0;
+            this.menuItem_onlineHelp.Text = "&Online Help";
+            // 
+            // menuItem_About
+            // 
+            this.menuItem_About.Index = 1;
+            this.menuItem_About.Text = "&About FreeTrain...";
+            // 
+            // toolBar1
+            // 
+            this.toolBar1.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
+            this.toolBar1.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
+            this.tbTimer,
+            this.tbRailRoad,
+            this.tbSlope,
+            this.tbStation,
+            this.tbRRAcc,
+            this.tbTrainPlacement,
+            this.tbTrainTrading,
+            this.tbTrainDiagram,
+            this.tbSeparator,
+            this.tbTerrain,
+            this.tbStruct,
+            this.tbBulldoze});
+            this.toolBar1.DropDownArrows = true;
+            this.toolBar1.ImageList = this.toolBarIcons;
+            this.toolBar1.Location = new System.Drawing.Point(0, 0);
+            this.toolBar1.Name = "toolBar1";
+            this.toolBar1.ShowToolTips = true;
+            this.toolBar1.Size = new System.Drawing.Size(544, 27);
+            this.toolBar1.TabIndex = 1;
+            this.toolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
+            this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
+            // 
+            // tbTimer
+            // 
+            this.tbTimer.DropDownMenu = this.clockMenu;
+            this.tbTimer.Name = "tbTimer";
+            this.tbTimer.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton;
+            this.tbTimer.Text = "Timer";
+            // 
+            // clockMenu
+            // 
+            this.clockMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem_ClockStop,
+            this.menuItem_ClockGo1,
+            this.menuItem_ClockGo2,
+            this.menuItem_ClockGo3,
+            this.menuItem_ClockGo4});
+            // 
+            // menuItem_ClockStop
+            // 
+            this.menuItem_ClockStop.Index = 0;
+            this.menuItem_ClockStop.Text = "&Pause";
+            this.menuItem_ClockStop.Click += new System.EventHandler(this.menuItem_ClockStop_Click);
+            // 
+            // menuItem_ClockGo1
+            // 
+            this.menuItem_ClockGo1.Index = 1;
+            this.menuItem_ClockGo1.Text = "&Slow";
+            this.menuItem_ClockGo1.Click += new System.EventHandler(this.menuItem_ClockGo1_Click);
+            // 
+            // menuItem_ClockGo2
+            // 
+            this.menuItem_ClockGo2.Index = 2;
+            this.menuItem_ClockGo2.Text = "&Normal";
+            this.menuItem_ClockGo2.Click += new System.EventHandler(this.menuItem_ClockGo2_Click);
+            // 
+            // menuItem_ClockGo3
+            // 
+            this.menuItem_ClockGo3.Index = 3;
+            this.menuItem_ClockGo3.Text = "&Fast";
+            this.menuItem_ClockGo3.Click += new System.EventHandler(this.menuItem_ClockGo3_Click);
+            // 
+            // menuItem_ClockGo4
+            // 
+            this.menuItem_ClockGo4.Index = 4;
+            this.menuItem_ClockGo4.Text = "&Ultra";
+            this.menuItem_ClockGo4.Click += new System.EventHandler(this.menuItem_ClockGo4_Click);
+            // 
+            // tbRailRoad
+            // 
+            this.tbRailRoad.ImageIndex = 0;
+            this.tbRailRoad.Name = "tbRailRoad";
+            this.tbRailRoad.ToolTipText = "Lay rail";
+            // 
+            // tbSlope
+            // 
+            this.tbSlope.ImageIndex = 1;
+            this.tbSlope.Name = "tbSlope";
+            this.tbSlope.ToolTipText = "Lay slope";
+            // 
+            // tbStation
+            // 
+            this.tbStation.ImageIndex = 2;
+            this.tbStation.Name = "tbStation";
+            this.tbStation.ToolTipText = "Build station";
+            // 
+            // tbRRAcc
+            // 
+            this.tbRRAcc.ImageIndex = 3;
+            this.tbRRAcc.Name = "tbRRAcc";
+            this.tbRRAcc.ToolTipText = "Build rail accessories";
+            // 
+            // tbTrainPlacement
+            // 
+            this.tbTrainPlacement.ImageIndex = 4;
+            this.tbTrainPlacement.Name = "tbTrainPlacement";
+            this.tbTrainPlacement.ToolTipText = "Place trains";
+            // 
+            // tbTrainTrading
+            // 
+            this.tbTrainTrading.ImageIndex = 5;
+            this.tbTrainTrading.Name = "tbTrainTrading";
+            this.tbTrainTrading.ToolTipText = "Buy or sell trains";
+            // 
+            // tbTrainDiagram
+            // 
+            this.tbTrainDiagram.ImageIndex = 6;
+            this.tbTrainDiagram.Name = "tbTrainDiagram";
+            this.tbTrainDiagram.ToolTipText = "Diagram settings";
+            // 
+            // tbSeparator
+            // 
+            this.tbSeparator.Name = "tbSeparator";
+            this.tbSeparator.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
+            // 
+            // tbTerrain
+            // 
+            this.tbTerrain.ImageIndex = 7;
+            this.tbTerrain.Name = "tbTerrain";
+            this.tbTerrain.ToolTipText = "Raise or lower terrain";
+            // 
+            // tbStruct
+            // 
+            this.tbStruct.ImageIndex = 8;
+            this.tbStruct.Name = "tbStruct";
+            this.tbStruct.ToolTipText = "Building construction";
+            // 
+            // tbBulldoze
+            // 
+            this.tbBulldoze.ImageIndex = 9;
+            this.tbBulldoze.Name = "tbBulldoze";
+            this.tbBulldoze.ToolTipText = "Bulldozer";
+            // 
+            // toolBarIcons
+            // 
+            this.toolBarIcons.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.toolBarIcons.ImageSize = new System.Drawing.Size(16, 15);
+            this.toolBarIcons.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // timerStatusBarUpdate
+            // 
+            this.timerStatusBarUpdate.Enabled = true;
+            this.timerStatusBarUpdate.Interval = 500;
+            this.timerStatusBarUpdate.Tick += new System.EventHandler(this.updateStatusBar);
+            // 
+            // toolBar2
+            // 
+            this.toolBar2.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
+            this.toolBar2.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
+            this.viewDayAndNight,
+            this.viewAlwaysDay,
+            this.viewAlwaysNight,
+            this.separator});
+            this.toolBar2.ButtonSize = new System.Drawing.Size(16, 15);
+            this.toolBar2.DropDownArrows = true;
+            this.toolBar2.ImageList = this.viewButtons;
+            this.toolBar2.Location = new System.Drawing.Point(0, 27);
+            this.toolBar2.Name = "toolBar2";
+            this.toolBar2.ShowToolTips = true;
+            this.toolBar2.Size = new System.Drawing.Size(544, 27);
+            this.toolBar2.TabIndex = 2;
+            // 
+            // viewDayAndNight
+            // 
+            this.viewDayAndNight.ImageIndex = 0;
+            this.viewDayAndNight.Name = "viewDayAndNight";
+            this.viewDayAndNight.Pushed = true;
+            this.viewDayAndNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+            this.viewDayAndNight.Tag = freetrain.views.NightSpriteMode.AlignClock;
+            this.viewDayAndNight.ToolTipText = "Day and night";
+            // 
+            // viewAlwaysDay
+            // 
+            this.viewAlwaysDay.ImageIndex = 1;
+            this.viewAlwaysDay.Name = "viewAlwaysDay";
+            this.viewAlwaysDay.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+            this.viewAlwaysDay.Tag = freetrain.views.NightSpriteMode.AlwaysDay;
+            this.viewAlwaysDay.ToolTipText = "Always day";
+            // 
+            // viewAlwaysNight
+            // 
+            this.viewAlwaysNight.ImageIndex = 2;
+            this.viewAlwaysNight.Name = "viewAlwaysNight";
+            this.viewAlwaysNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+            this.viewAlwaysNight.Tag = freetrain.views.NightSpriteMode.AlwaysNight;
+            this.viewAlwaysNight.ToolTipText = "Always night";
+            // 
+            // separator
+            // 
+            this.separator.Name = "separator";
+            this.separator.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
+            // 
+            // viewButtons
+            // 
+            this.viewButtons.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.viewButtons.ImageSize = new System.Drawing.Size(16, 15);
+            this.viewButtons.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // menuItem6
+            // 
+            this.menuItem6.Index = 0;
+            this.menuItem6.Text = "-";
+            // 
+            // MainWindow
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+            this.ClientSize = new System.Drawing.Size(544, 286);
+            this.Controls.Add(this.toolBar2);
+            this.Controls.Add(this.statusBar);
+            this.Controls.Add(this.toolBar1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Menu = this.MainMenu;
+            this.Name = "MainWindow";
+            this.Text = "FreeTrain";
+            ((System.ComponentModel.ISupportInitialize)(this.statusBar_Message)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBar_Controller)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBar_Time)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion
@@ -1452,6 +1428,9 @@ namespace freetrain.framework
 			// start a new game by default 
 			setWorld(new World(new Distance(127,127,12),2));
 			
+            // insert dummy menu to make visible menu items appended afterword.
+            MainMenu.MenuItems.Add(new MenuItem());
+
 			// merge menu contributions
 			foreach( MenuContribution contrib in Core.plugins.menus )
 				contrib.mergeMenu(this.MainMenu);
