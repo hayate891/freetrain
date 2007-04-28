@@ -17,7 +17,7 @@ namespace freetrain.world.terrain.terrace
 
 		internal static TerraceContributionImpl theInstance;
 
-		public override string name { get { return "Terraces & cuts"; } }
+		public override string name { get { return "Terraces and Cuts"; } }
 		//! public override string name { get { return "雛壇と切り通し"; } }
 
 		public override string oneLineDescription {

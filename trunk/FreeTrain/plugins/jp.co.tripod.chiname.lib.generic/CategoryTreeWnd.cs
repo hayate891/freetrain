@@ -36,6 +36,7 @@ namespace freetrain.framework.plugin.generic
 			int n=parent.MenuItems.Count;
 			for(int i=0;i<n;i++)
                 if (parent.MenuItems[i].Text.Equals("Structure Type Tree"))
+                //! if (parent.MenuItems[i].Text.Equals("建物類別一覧"))
 				{
 					target = parent.MenuItems[i];
 					break;
@@ -190,6 +191,7 @@ namespace freetrain.framework.plugin.generic
 			this.checkBox1.Size = new System.Drawing.Size(64, 24);
 			this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Show All";
+            //! this.checkBox1.Text = "全表示";
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
 			// CategoryTreeWnd
@@ -203,6 +205,7 @@ namespace freetrain.framework.plugin.generic
 			this.MinimumSize = new System.Drawing.Size(100, 100);
 			this.Name = "CategoryTreeWnd";
 			this.Text = "Structure Type Tree";
+            //! this.Text = "建物類別";
 			this.ResumeLayout(false);
 
 		}

@@ -16,7 +16,7 @@ namespace freetrain.framework.plugin.generic
 
 		public override void mergeMenu( MainMenu containerMenu ) {
             //! MenuItem item = new MenuItem("建物総合(&S)...");
-			MenuItem item = new MenuItem("&Structures Type Tree...");
+			MenuItem item = new MenuItem("&Structure Type Tree...");
 			item.Click += new System.EventHandler(onClick);
 
 			containerMenu.MenuItems[4].MenuItems.Add(0,item);

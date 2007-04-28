@@ -131,7 +131,7 @@ namespace freetrain.world.rail
 
 
 
-		public override string name { get { return "Girder viaduct"; } }
+		public override string name { get { return "Girder Viaduct"; } }
 		//! public override string name { get { return "ガード高架"; } }
 
 		public override string oneLineDescription { get { return "Steel reinforced viaduct"; } }
