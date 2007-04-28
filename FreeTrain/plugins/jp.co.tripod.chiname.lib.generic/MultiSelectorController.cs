@@ -407,7 +407,8 @@ namespace freetrain.framework.plugin.generic
             this.labelDir.Name = "labelDir";
             this.labelDir.Size = new System.Drawing.Size(59, 16);
             this.labelDir.TabIndex = 4;
-            this.labelDir.Text = "direction:.";
+            this.labelDir.Text = "Direction:";
+            //! this.labelDir.Text = "方向：";
             this.labelDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // selectorColor
@@ -449,7 +450,8 @@ namespace freetrain.framework.plugin.generic
             this.labelHeight.Name = "labelHeight";
             this.labelHeight.Size = new System.Drawing.Size(40, 16);
             this.labelHeight.TabIndex = 6;
-            this.labelHeight.Text = "height:";
+            this.labelHeight.Text = "Height:";
+            //! this.labelHeight.Text = "高さ：";
             this.labelHeight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnDetail
@@ -477,7 +479,8 @@ namespace freetrain.framework.plugin.generic
             // 
             this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.costBox.cost = 0;
-            this.costBox.label = "price:";
+            this.costBox.label = "Cost:";
+            //! this.costBox.label = "費用：";
             this.costBox.Location = new System.Drawing.Point(192, 192);
             this.costBox.Name = "costBox";
             this.costBox.Size = new System.Drawing.Size(136, 32);
@@ -493,7 +496,8 @@ namespace freetrain.framework.plugin.generic
             this.groupColor.Size = new System.Drawing.Size(160, 34);
             this.groupColor.TabIndex = 2;
             this.groupColor.TabStop = false;
-            this.groupColor.Text = "color1:";
+            this.groupColor.Text = "Color 1:";
+            //! this.groupColor.Text = "色：";
             // 
             // cbRandColor
             // 
@@ -504,7 +508,8 @@ namespace freetrain.framework.plugin.generic
             this.cbRandColor.Name = "cbRandColor";
             this.cbRandColor.Size = new System.Drawing.Size(64, 16);
             this.cbRandColor.TabIndex = 0;
-            this.cbRandColor.Text = "random";
+            this.cbRandColor.Text = "Random";
+            //! this.cbRandColor.Text = "ランダム";
             this.cbRandColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbRandColor.UseVisualStyleBackColor = false;
             // 
@@ -519,7 +524,8 @@ namespace freetrain.framework.plugin.generic
             this.groupDesign.Size = new System.Drawing.Size(160, 52);
             this.groupDesign.TabIndex = 1;
             this.groupDesign.TabStop = false;
-            this.groupDesign.Text = "design:";
+            this.groupDesign.Text = "Design:";
+            //! this.groupDesign.Text = "デザイン：";
             // 
             // cbRandDesign
             // 
@@ -530,7 +536,8 @@ namespace freetrain.framework.plugin.generic
             this.cbRandDesign.Name = "cbRandDesign";
             this.cbRandDesign.Size = new System.Drawing.Size(64, 16);
             this.cbRandDesign.TabIndex = 0;
-            this.cbRandDesign.Text = "random";
+            this.cbRandDesign.Text = "Random";
+            //! this.cbRandDesign.Text = "ランダム";
             this.cbRandDesign.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbRandDesign.UseVisualStyleBackColor = false;
             // 
@@ -544,7 +551,8 @@ namespace freetrain.framework.plugin.generic
             this.groupCol2.Size = new System.Drawing.Size(160, 34);
             this.groupCol2.TabIndex = 3;
             this.groupCol2.TabStop = false;
-            this.groupCol2.Text = "color2:";
+            this.groupCol2.Text = "Color 2:";
+            //! this.groupCol2.Text = "色2：";
             // 
             // selectorCol2
             // 
@@ -568,7 +576,8 @@ namespace freetrain.framework.plugin.generic
             this.cbRandCol2.Name = "cbRandCol2";
             this.cbRandCol2.Size = new System.Drawing.Size(64, 16);
             this.cbRandCol2.TabIndex = 0;
-            this.cbRandCol2.Text = "random";
+            this.cbRandCol2.Text = "Random";
+            //! this.cbRandCol2.Text = "ランダム";
             this.cbRandCol2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbRandCol2.UseVisualStyleBackColor = false;
             // 
@@ -763,7 +772,7 @@ namespace freetrain.framework.plugin.generic
 			buf+=current.categories[0].name;
 			for(int i=1; i<n; i++)
 				buf+=";"+current.categories[i].name;
-			buf+="\nmax populations:";
+			buf+="\nMax population:";
             //! buf += "\n最大人口:";
 			if( current.population==null )
 				buf+="N/A";

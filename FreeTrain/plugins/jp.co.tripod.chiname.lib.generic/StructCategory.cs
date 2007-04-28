@@ -81,7 +81,7 @@ namespace freetrain.framework.plugin.generic
 			get {
 				StructCategory cat = StructCategoryTree.theInstance.getParent(this);
 				if(cat==null)
-					throw new FormatException("no parent for "+name+" : maybe id is wrong."+idnum);
+					throw new FormatException("no parent for "+name+" : maybe ID is wrong."+idnum);
 				return cat;
 			}
 		}

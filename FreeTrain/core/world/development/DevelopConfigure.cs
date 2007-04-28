@@ -154,8 +154,9 @@ namespace freetrain.world.development
             this.tbLandPliceScale.Name = "tbLandPliceScale";
             this.tbLandPliceScale.Size = new System.Drawing.Size(72, 19);
             this.tbLandPliceScale.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbLandPliceScale, "multiplyer for land price to calculate lower limit of structure price to be build" +
+            this.toolTip1.SetToolTip(this.tbLandPliceScale, "Multiplier for land price to calculate lower limit of price of structure to be built" +
                     "");
+			//! this.toolTip1.SetToolTip(this.tbLandPliceScale, "地価に対して乗じて、建物の最低価格にする");
             // 
             // label2
             // 
@@ -165,10 +166,12 @@ namespace freetrain.world.development
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(248, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Coeff.  structure minimum price (>=0.0):";
+            this.label2.Text = "Coeff. structure minimum price (>=0.0):";
+			//! this.label2.Text = "建物下限価格・対地価係数 (>=0.0):";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label2, "multiplyer for land price to calculate lower limit of structure price to be build" +
+            this.toolTip1.SetToolTip(this.label2, "Multiplier for land price to calculate lower limit of price of structure to be built" +
                     "");
+			//! this.toolTip1.SetToolTip(this.label2, "地価に対して乗じて、建物の最低価格にする");
             // 
             // label3
             // 
@@ -179,9 +182,11 @@ namespace freetrain.world.development
             this.label3.Size = new System.Drawing.Size(248, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Coeff. structure maximum price (> 0.0):";
+			//! this.label3.Text = "建物上限価格・対降車客指数 (> 0.0):";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label3, "exponential for passengers to calucurate upper limit of structure price to be bui" +
-                    "ld");
+            this.toolTip1.SetToolTip(this.label3, "Exponential for passengers to caluculate upper limit of price of structure to be bui" +
+                    "lt");
+			//! this.toolTip1.SetToolTip(this.label3, "積算降車客数の指数として適用し、建物の価格最大値を決める");
             // 
             // tbMaxPricePower
             // 
@@ -190,8 +195,9 @@ namespace freetrain.world.development
             this.tbMaxPricePower.Name = "tbMaxPricePower";
             this.tbMaxPricePower.Size = new System.Drawing.Size(72, 19);
             this.tbMaxPricePower.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbMaxPricePower, "exponential for passengers to calucurate upper limit of structure price to be bui" +
-                    "ld");
+            this.toolTip1.SetToolTip(this.tbMaxPricePower, "Exponential for passengers to calucurate upper limit of price of structure to be bui" +
+                    "lt");
+			//! this.toolTip1.SetToolTip(this.tbMaxPricePower, "積算降車客数の指数として適用し、建物の価格最大値を決める");
             // 
             // btnApply
             // 
@@ -201,6 +207,7 @@ namespace freetrain.world.development
             this.btnApply.Size = new System.Drawing.Size(80, 23);
             this.btnApply.TabIndex = 2;
             this.btnApply.Text = "Apply";
+			//! this.btnApply.Text = "適用";
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnCancel
@@ -211,6 +218,7 @@ namespace freetrain.world.development
             this.btnCancel.Size = new System.Drawing.Size(80, 23);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
+			//! this.btnCancel.Text = "ｷｬﾝｾﾙ";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label1
@@ -222,8 +230,10 @@ namespace freetrain.world.development
             this.label1.Size = new System.Drawing.Size(248, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "1-[weekly effect reduce ratio] (0.0-1.0):";
+			//! this.label1.Text = "1-発展度減衰率 (0.0〜1.0):";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label1, "weekly multiplyer to decline fever of development");
+            this.toolTip1.SetToolTip(this.label1, "Weekly multiplier for reducing intensity of development");
+			//! this.toolTip1.SetToolTip(this.label1, "発展スコアに毎週乗じる係数");
             // 
             // tbStrDiffuse
             // 
@@ -232,7 +242,8 @@ namespace freetrain.world.development
             this.tbStrDiffuse.Name = "tbStrDiffuse";
             this.tbStrDiffuse.Size = new System.Drawing.Size(72, 19);
             this.tbStrDiffuse.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbStrDiffuse, "weekly multiplyer to decline fever of development");
+            this.toolTip1.SetToolTip(this.tbStrDiffuse, "Weekly multiplier for reducing intensity of development");
+			//! this.toolTip1.SetToolTip(this.tbStrDiffuse, "発展スコアに毎週乗じる係数");
             // 
             // label4
             // 
@@ -243,9 +254,11 @@ namespace freetrain.world.development
             this.label4.Size = new System.Drawing.Size(248, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Coeff. replacement threshold (>=0.0):";
+			//! this.label4.Text = "建て替え価格係数 (>=0.0):";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label4, "replacement happens when existing structure price is lower than the value mutiply" +
-                    "ed this coeff. with land price.");
+            this.toolTip1.SetToolTip(this.label4, "Replacement occurs when existing structure price is lower than this coeff. mutipli" +
+                    "ed with the land price.");
+			//! this.toolTip1.SetToolTip(this.label4, "地価にこの値を乗じた値より、価格が低い建物は建て替え可能");
             // 
             // tbReplacePriceFactor
             // 
@@ -254,8 +267,9 @@ namespace freetrain.world.development
             this.tbReplacePriceFactor.Name = "tbReplacePriceFactor";
             this.tbReplacePriceFactor.Size = new System.Drawing.Size(72, 19);
             this.tbReplacePriceFactor.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbReplacePriceFactor, "replacement happens when existing structure price is lower than the value mutiply" +
-                    "ed this coeff. with land price.");
+            this.toolTip1.SetToolTip(this.tbReplacePriceFactor, "Replacement occurs when existing structure price is lower than this coeff. mutipli" +
+                    "ed with the land price.");
+			//! this.toolTip1.SetToolTip(this.tbReplacePriceFactor, "地価にこの値を乗じた値より、価格が低い建物は建て替え可能");
             // 
             // tbPopAmpScale
             // 
@@ -264,7 +278,8 @@ namespace freetrain.world.development
             this.tbPopAmpScale.Name = "tbPopAmpScale";
             this.tbPopAmpScale.Size = new System.Drawing.Size(72, 19);
             this.tbPopAmpScale.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbPopAmpScale, "multiplyer for station effective area (>= 0.0):");
+            this.toolTip1.SetToolTip(this.tbPopAmpScale, "Multiplier for station effective area (>= 0.0):");
+			//! this.toolTip1.SetToolTip(this.tbPopAmpScale, "駅の発展範囲を決定するため地価に乗ずる値");
             // 
             // label7
             // 
@@ -274,9 +289,11 @@ namespace freetrain.world.development
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(248, 16);
             this.label7.TabIndex = 1;
-            this.label7.Text = "multiplyer for station effective area (>= 0.0):";
+            this.label7.Text = "Multiplier for station effective area (>= 0.0):";
+			//! this.label7.Text = "駅影響範囲・対地価乗数 (>= 0.0):";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label7, "multiplyer for land price to calcurate effective area");
+            this.toolTip1.SetToolTip(this.label7, "Multiplier for land price to calculate effective area");
+			//! this.toolTip1.SetToolTip(this.label7, "駅の発展範囲を決定するため地価に乗ずる値");
             // 
             // label8
             // 
@@ -287,8 +304,10 @@ namespace freetrain.world.development
             this.label8.Size = new System.Drawing.Size(248, 16);
             this.label8.TabIndex = 1;
             this.label8.Text = "Coeff. station effective area (> 0.0):";
+			//! this.label8.Text = "駅影響範囲・対地価指数 (> 0.0):";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label8, "coefficient for station effective area against land price");
+            this.toolTip1.SetToolTip(this.label8, "Coefficient for station effective area against land price");
+			//! this.toolTip1.SetToolTip(this.label8, "駅の発展範囲を決定する地価に対する指数");
             // 
             // tbPopAmpPower
             // 
@@ -297,7 +316,8 @@ namespace freetrain.world.development
             this.tbPopAmpPower.Name = "tbPopAmpPower";
             this.tbPopAmpPower.Size = new System.Drawing.Size(72, 19);
             this.tbPopAmpPower.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbPopAmpPower, "coefficient for station effective area against land price");
+            this.toolTip1.SetToolTip(this.tbPopAmpPower, "Coefficient for station effective area against land price");
+			//! this.toolTip1.SetToolTip(this.tbPopAmpPower, "駅の発展範囲を決定する地価に対する指数");
             // 
             // tbQDiffuse
             // 
@@ -306,7 +326,8 @@ namespace freetrain.world.development
             this.tbQDiffuse.Name = "tbQDiffuse";
             this.tbQDiffuse.Size = new System.Drawing.Size(72, 19);
             this.tbQDiffuse.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbQDiffuse, "multiplied every phase to decline land price");
+            this.toolTip1.SetToolTip(this.tbQDiffuse, "Multiplied every phase to reduce land price");
+			//! this.toolTip1.SetToolTip(this.tbQDiffuse, "毎回現在地価に乗ずる係数");
             // 
             // label11
             // 
@@ -317,8 +338,10 @@ namespace freetrain.world.development
             this.label11.Size = new System.Drawing.Size(238, 16);
             this.label11.TabIndex = 1;
             this.label11.Text = "1-[land price emit ratio] (0.0-0.999):";
+			//! this.label11.Text = "1-地価発散率 (0.0〜0.999):";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label11, "multiplied every phase to decline land price");
+            this.toolTip1.SetToolTip(this.label11, "Multiplied every phase to reduce land price");
+			//! this.toolTip1.SetToolTip(this.label11, "毎回現在地価に乗ずる係数");
             // 
             // label12
             // 
@@ -329,8 +352,10 @@ namespace freetrain.world.development
             this.label12.Size = new System.Drawing.Size(238, 16);
             this.label12.TabIndex = 1;
             this.label12.Text = "Land price conductivity (0-0.25):";
+			//! this.label12.Text = "地価伝導率 (0〜0.25):";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label12, "the ratio effected by land price of neighboring voxel");
+            this.toolTip1.SetToolTip(this.label12, "The ratio of influence on land price by neighboring voxel");
+			//! this.toolTip1.SetToolTip(this.label12, "隣のボクセルから伝わる地価落差に乗ずる係数");
             // 
             // tbQAlpha
             // 
@@ -339,7 +364,8 @@ namespace freetrain.world.development
             this.tbQAlpha.Name = "tbQAlpha";
             this.tbQAlpha.Size = new System.Drawing.Size(72, 19);
             this.tbQAlpha.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbQAlpha, "the ratio effected by land price of neighboring voxel");
+            this.toolTip1.SetToolTip(this.tbQAlpha, "The ratio of influence on land price by neighboring voxel");
+			this.toolTip1.SetToolTip(this.tbQAlpha, "隣のボクセルから伝わる地価落差に乗ずる係数");
             // 
             // label13
             // 
@@ -350,8 +376,10 @@ namespace freetrain.world.development
             this.label13.Size = new System.Drawing.Size(238, 17);
             this.label13.TabIndex = 1;
             this.label13.Text = "Land price diffusivity (0.4-0.999):";
+			//! this.label13.Text = "標準地価伝播密度 (0.4〜0.999):";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label13, "the ratio of land price diffusion for neighboring voxels");
+            this.toolTip1.SetToolTip(this.label13, "The ratio of land price diffusion for neighboring voxels");
+			//! this.toolTip1.SetToolTip(this.label13, "地価が隣のボクセルに伝播する割合");
             // 
             // tbBaseRho
             // 
@@ -360,7 +388,8 @@ namespace freetrain.world.development
             this.tbBaseRho.Name = "tbBaseRho";
             this.tbBaseRho.Size = new System.Drawing.Size(72, 19);
             this.tbBaseRho.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbBaseRho, "the ratio of land price diffusion for neighboring voxels");
+            this.toolTip1.SetToolTip(this.tbBaseRho, "The ratio of land price diffusion for neighboring voxels");
+			//! this.toolTip1.SetToolTip(this.tbBaseRho, "地価が隣のボクセルに伝播する割合");
             // 
             // tbAddedQScale
             // 
@@ -369,7 +398,8 @@ namespace freetrain.world.development
             this.tbAddedQScale.Name = "tbAddedQScale";
             this.tbAddedQScale.Size = new System.Drawing.Size(72, 19);
             this.tbAddedQScale.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbAddedQScale, "multiplyer for land price increment when passengers arrived");
+            this.toolTip1.SetToolTip(this.tbAddedQScale, "Multiplier for land price increment when passengers arrives");
+			//! this.toolTip1.SetToolTip(this.tbAddedQScale, "駅降車時の地価加算値に乗ずる係数");
             // 
             // label14
             // 
@@ -379,9 +409,11 @@ namespace freetrain.world.development
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(238, 16);
             this.label14.TabIndex = 1;
-            this.label14.Text = "Multiplyer for land price increase (>=0, int):";
+            this.label14.Text = "Multiplier for land price increase (>=0, int):";
+			//! this.label14.Text = "地価上昇補正係数 (>= 0, 整数):";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label14, "multiplyer for land price increment when passengers arrived");
+            this.toolTip1.SetToolTip(this.label14, "Multiplier for land price increment when passengers arrives");
+			//! this.toolTip1.SetToolTip(this.label14, "駅降車時の地価加算値に乗ずる係数");
             // 
             // label15
             // 
@@ -392,8 +424,10 @@ namespace freetrain.world.development
             this.label15.Size = new System.Drawing.Size(238, 16);
             this.label15.TabIndex = 1;
             this.label15.Text = "Land price modifier (> 0.0):";
+			//! this.label15.Text = "最終地価補正指数 (> 0.0):";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.label15, "multiplyer from convert internal land value to land price");
+            this.toolTip1.SetToolTip(this.label15, "Multiplier from converted internal land value to land price");
+			//! this.toolTip1.SetToolTip(this.label15, "内部地価データを実際の地価に換算するための補正指数");
             // 
             // tbLandValuePower
             // 
@@ -402,7 +436,8 @@ namespace freetrain.world.development
             this.tbLandValuePower.Name = "tbLandValuePower";
             this.tbLandValuePower.Size = new System.Drawing.Size(72, 19);
             this.tbLandValuePower.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.tbLandValuePower, "multiplyer from convert internal land value to land price");
+            this.toolTip1.SetToolTip(this.tbLandValuePower, "Multiplier from converted internal land value to land price");
+			//! this.toolTip1.SetToolTip(this.tbLandValuePower, "内部地価データを実際の地価に換算するための補正指数");
             // 
             // label10
             // 
@@ -414,9 +449,11 @@ namespace freetrain.world.development
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(238, 16);
             this.label10.TabIndex = 1;
-            this.label10.Text = "the bigger the more widely land price raised";
+            this.label10.Text = "The larger the more widely is land price raised";
+			//! this.label10.Text = "大きくすると広範囲に地価が広がります";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip1.SetToolTip(this.label10, "The ratio of land price diffusion for neighboring voxels");
+			//! this.toolTip1.SetToolTip(this.label10, "地価が隣のボクセルに伝播する割合");
             // 
             // label16
             // 
@@ -428,9 +465,11 @@ namespace freetrain.world.development
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(238, 16);
             this.label16.TabIndex = 1;
-            this.label16.Text = "the bigger the more widely land price raised";
+            this.label16.Text = "The larger the more widely is land price raised";
+			//! this.label16.Text = "大きくすると広範囲に地価が広がります";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label16, "multiplied every phase to decline land price");
+            this.toolTip1.SetToolTip(this.label16, "Multiplied every phase to reduce land price");
+			//! this.toolTip1.SetToolTip(this.label16, "毎回現在地価に乗ずる係数");
             // 
             // label17
             // 
@@ -442,9 +481,11 @@ namespace freetrain.world.development
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(238, 16);
             this.label17.TabIndex = 1;
-            this.label17.Text = "the bigger the more quickly land price raises";
+            this.label17.Text = "The larger the more quickly land price rises";
+			//! this.label17.Text = "大きくすると地価上昇が早く広がります";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label17, "the ratio effected by land price of neighboring voxel");
+            this.toolTip1.SetToolTip(this.label17, "The ratio in which land price affects neighboring voxels");
+			//! this.toolTip1.SetToolTip(this.label17, "隣のボクセルから伝わる地価落差に乗ずる係数");
             // 
             // label18
             // 
@@ -456,9 +497,11 @@ namespace freetrain.world.development
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(238, 16);
             this.label18.TabIndex = 1;
-            this.label18.Text = "enhance land price increment for transportation";
+            this.label18.Text = "Enhance land price increment for transportation";
+			//! this.label18.Text = "大きくすると少ない輸送で地価が上昇します";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label18, "multiplyer for land price increment when passengers arrived");
+            this.toolTip1.SetToolTip(this.label18, "Multiplier for land price increment when passengers arrives");
+			//! this.toolTip1.SetToolTip(this.label18, "駅降車時の地価加算値に乗ずる係数");
             // 
             // label19
             // 
@@ -470,9 +513,11 @@ namespace freetrain.world.development
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(238, 16);
             this.label19.TabIndex = 1;
-            this.label19.Text = "enhance total land price";
+            this.label19.Text = "Enhance land price increment for transportation";
+			//! this.label19.Text = "大きくすると少ない輸送で地価が上昇します";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label19, "multiplyer from convert internal land value to land price");
+            this.toolTip1.SetToolTip(this.label19, "Multiplier for land price increment when passengers arrives");
+			//! this.toolTip1.SetToolTip(this.label19, "駅降車時の地価加算値に乗ずる係数");
             // 
             // label20
             // 
@@ -484,9 +529,11 @@ namespace freetrain.world.development
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(248, 16);
             this.label20.TabIndex = 1;
-            this.label20.Text = "the bigger the more wide area around stations develops";
+            this.label20.Text = "The larger the wider area around stations develops";
+			//! this.label20.Text = "大きくすると駅の発展範囲が広くなります";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label20, "coefficient for station effective area against land price");
+            this.toolTip1.SetToolTip(this.label20, "Coefficient for station effective area against land price");
+			//! this.toolTip1.SetToolTip(this.label20, "駅の発展範囲を決定する地価に対する指数");
             // 
             // label21
             // 
@@ -498,9 +545,11 @@ namespace freetrain.world.development
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(248, 16);
             this.label21.TabIndex = 1;
-            this.label21.Text = "the bigger the more wide area around stations develops";
+            this.label21.Text = "The larger the wider area around stations develops";
+			//! this.label21.Text = "大きくすると駅の発展範囲が広くなります";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label21, "multiplyer for land price to calcurate effective area");
+            this.toolTip1.SetToolTip(this.label21, "Multiplier for land price to calculate effective area");
+			//! this.toolTip1.SetToolTip(this.label21, "駅の発展範囲を決定するため地価に乗ずる値");
             // 
             // label22
             // 
@@ -512,9 +561,11 @@ namespace freetrain.world.development
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(248, 16);
             this.label22.TabIndex = 1;
-            this.label22.Text = "the bigger the more expencive structures are build";
+            this.label22.Text = "The larger the more expensive structures are built";
+			//! this.label22.Text = "大きくすると高価な建築が建ちやすくなります";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label22, "weekly multiplyer to decline fever of development");
+            this.toolTip1.SetToolTip(this.label22, "Weekly multiplier to reduce intensity of development");
+			//! this.toolTip1.SetToolTip(this.label22, "駅の発展範囲を決定するため地価に乗ずる値");
             // 
             // label9
             // 
@@ -526,10 +577,12 @@ namespace freetrain.world.development
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(248, 16);
             this.label9.TabIndex = 1;
-            this.label9.Text = "the bigger the more cheap structuers are build";
+            this.label9.Text = "The larger the cheaper structures are built";
+			//! this.label9.Text = "大きくすると安価な建築が建ちにくくなります";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label9, "multiplyer for land price to calculate lower limit of structure price to be build" +
+            this.toolTip1.SetToolTip(this.label9, "Multiplier for land price to calculate lower limit of the price of structures to be built" +
                     "");
+			//! this.toolTip1.SetToolTip(this.label9, "地価に対して乗じて、建物の最低価格にする");
             // 
             // label23
             // 
@@ -541,10 +594,12 @@ namespace freetrain.world.development
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(248, 16);
             this.label23.TabIndex = 1;
-            this.label23.Text = "the bigger the more expensive structuers are build";
+            this.label23.Text = "The larger the more expensive structures are built";
+			//! this.label23.Text = "大きくすると高価な建築が建ちやすくなります";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label23, "exponential for passengers to calucurate upper limit of structure price to be bui" +
-                    "ld");
+            this.toolTip1.SetToolTip(this.label23, "Exponential for passengers to caluculate upper limit of the price of structures to be bui" +
+                    "lt");
+			//! this.toolTip1.SetToolTip(this.label23, "積算降車客数の指数として適用し、建物の価格最大値を決める");
             // 
             // label24
             // 
@@ -556,10 +611,12 @@ namespace freetrain.world.development
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(248, 16);
             this.label24.TabIndex = 1;
-            this.label24.Text = "the smaller the more replacement happens";
+            this.label24.Text = "The smaller the more replacement occurs";
+			//! this.label24.Text = "大きくすると建て替えが起こりにくくなります";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.label24, "replacement happens when existing structure price is lower than the value mutiply" +
-                    "ed this coeff. with land price.");
+            this.toolTip1.SetToolTip(this.label24, "Replacement occurs when existing structure price is lower than the land value" +
+                    "multiplied with this coeff.");
+			//! this.toolTip1.SetToolTip(this.label24, "地価にこの値を乗じた値より、価格が低い建物は建て替え可能");
             // 
             // label5
             // 
@@ -578,7 +635,8 @@ namespace freetrain.world.development
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
             this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Save Settings";
+			//! this.btnSave.Text = "設定保存";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnLoad
@@ -588,7 +646,8 @@ namespace freetrain.world.development
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(80, 23);
             this.btnLoad.TabIndex = 2;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "Load Settings";
+			//! this.btnLoad.Text = "設定読込";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // groupBox1
@@ -615,6 +674,7 @@ namespace freetrain.world.development
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Land price";
+			//! this.groupBox1.Text = "地価";
             // 
             // groupBox2
             // 
@@ -633,7 +693,8 @@ namespace freetrain.world.development
             this.groupBox2.Size = new System.Drawing.Size(332, 136);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Area developability";
+            this.groupBox2.Text = "Area development rate";
+			//! this.groupBox2.Text = "発展度";
             // 
             // groupBox3
             // 
@@ -653,6 +714,7 @@ namespace freetrain.world.development
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Structure selection";
+			//! this.groupBox3.Text = "建物価格";
             // 
             // a
             // 
@@ -681,7 +743,8 @@ namespace freetrain.world.development
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnLoad);
             this.Name = "DevelopConfigure";
-            this.Text = "Development algolithm: Parameters";
+            this.Text = "Development Algorithm: Parameters";
+			//! this.Text = "発展アルゴリズム：パラメータ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

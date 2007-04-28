@@ -145,7 +145,7 @@ namespace freetrain.world.rail.garage
 
 
 
-		public override string name { get { return "Train garage"; } }
+		public override string name { get { return "Train Garage"; } }
 		//! public override string name { get { return "機関庫"; } }
 
 		public override string oneLineDescription { get { return "A facility to store, maintain, and service trains. Simply a decoration."; } }
