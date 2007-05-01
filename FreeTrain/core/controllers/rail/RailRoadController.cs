@@ -71,7 +71,7 @@ namespace freetrain.controllers.rail
 		/// </summary>
 		private void updateDialog() {
 			message.Text = anchor!=UNPLACED?
-				"Select terminal point":"Select starting point";
+				"Select end point":"Select starting point";
 				//! "終点を選んでください":"始点を選んでください";
 		}
 
@@ -104,33 +104,41 @@ namespace freetrain.controllers.rail
 			this.buttonPlace = new System.Windows.Forms.RadioButton();
 			this.buttonRemove = new System.Windows.Forms.RadioButton();
 			this.costBox = new freetrain.controls.CostBox();
+			((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// picture
 			// 
+			this.picture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+						| System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.picture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.picture.Location = new System.Drawing.Point(8, 8);
+			this.picture.Location = new System.Drawing.Point(8, 9);
 			this.picture.Name = "picture";
-			this.picture.Size = new System.Drawing.Size(96, 72);
+			this.picture.Size = new System.Drawing.Size(106, 91);
 			this.picture.TabIndex = 0;
 			this.picture.TabStop = false;
 			// 
 			// message
 			// 
-			this.message.Location = new System.Drawing.Point(8, 88);
+			this.message.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.message.Location = new System.Drawing.Point(8, 103);
 			this.message.Name = "message";
-			this.message.Size = new System.Drawing.Size(96, 24);
+			this.message.Size = new System.Drawing.Size(106, 26);
 			this.message.TabIndex = 1;
 			this.message.Text = "Click on two points on the map to place tracks";
+			this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			//! this.message.Text = "マップの２点をクリックして敷設";
 			// 
 			// buttonPlace
 			// 
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(8, 144);
+			this.buttonPlace.Location = new System.Drawing.Point(8, 163);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(48, 26);
 			this.buttonPlace.TabIndex = 2;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Place";
@@ -140,10 +148,12 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(56, 144);
+			this.buttonRemove.Location = new System.Drawing.Point(56, 163);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(58, 26);
 			this.buttonRemove.TabIndex = 3;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -152,27 +162,29 @@ namespace freetrain.controllers.rail
 			// 
 			// costBox
 			// 
+			this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.costBox.cost = 0;
 			this.costBox.label = "Cost:";
+			this.costBox.Location = new System.Drawing.Point(8, 132);
 			//! this.costBox.label = "費用：";
-			this.costBox.Location = new System.Drawing.Point(8, 112);
 			this.costBox.Name = "costBox";
-			this.costBox.Size = new System.Drawing.Size(96, 32);
+			this.costBox.Size = new System.Drawing.Size(106, 25);
 			this.costBox.TabIndex = 4;
 			// 
 			// RailRoadController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(112, 172);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.costBox,
-																		  this.buttonRemove,
-																		  this.buttonPlace,
-																		  this.message,
-																		  this.picture});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(122, 198);
+			this.Controls.Add(this.costBox);
+			this.Controls.Add(this.buttonRemove);
+			this.Controls.Add(this.buttonPlace);
+			this.Controls.Add(this.message);
+			this.Controls.Add(this.picture);
 			this.Name = "RailRoadController";
 			this.Text = "Track construction";
 			//! this.Text = "線路工事";
+			((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
 			this.ResumeLayout(false);
 
 		}

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -47,7 +47,9 @@ namespace freetrain.framework
 		private System.Windows.Forms.TextBox description;
 		private System.Windows.Forms.Button okButton;
 		private System.Windows.Forms.Button cancelButton;
-		private System.Windows.Forms.ListBox list;
+		private GroupBox groupBox1;
+		private ListBox list;
+		private Label label3;
 		private System.ComponentModel.Container components = null;
 
 		private void InitializeComponent()
@@ -58,7 +60,10 @@ namespace freetrain.framework
 			this.description = new System.Windows.Forms.TextBox();
 			this.okButton = new System.Windows.Forms.Button();
 			this.cancelButton = new System.Windows.Forms.Button();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.list = new System.Windows.Forms.ListBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -104,9 +109,9 @@ namespace freetrain.framework
 			// okButton
 			// 
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.okButton.Location = new System.Drawing.Point(160, 200);
+			this.okButton.Location = new System.Drawing.Point(160, 217);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(88, 24);
+			this.okButton.Size = new System.Drawing.Size(88, 26);
 			this.okButton.TabIndex = 5;
 			this.okButton.Text = "&OK";
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
@@ -115,35 +120,54 @@ namespace freetrain.framework
 			// 
 			this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.cancelButton.Location = new System.Drawing.Point(256, 200);
+			this.cancelButton.Location = new System.Drawing.Point(256, 217);
 			this.cancelButton.Name = "cancelButton";
-			this.cancelButton.Size = new System.Drawing.Size(88, 24);
+			this.cancelButton.Size = new System.Drawing.Size(88, 26);
 			this.cancelButton.TabIndex = 6;
 			this.cancelButton.Text = "&Cancel";
 			//! this.cancelButton.Text = "ｷｬﾝｾﾙ(&C)";
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.label3);
+			this.groupBox1.Controls.Add(this.list);
+			this.groupBox1.Controls.Add(this.description);
+			this.groupBox1.Controls.Add(this.author);
+			this.groupBox1.Controls.Add(this.label2);
+			this.groupBox1.Controls.Add(this.label1);
+			this.groupBox1.Location = new System.Drawing.Point(12, 12);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(330, 199);
+			this.groupBox1.TabIndex = 7;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "New Game Plug-Ins";
+			// 
 			// list
 			// 
-			this.list.ItemHeight = 12;
-			this.list.Location = new System.Drawing.Point(8, 8);
+			this.list.Location = new System.Drawing.Point(84, 19);
 			this.list.Name = "list";
-			this.list.Size = new System.Drawing.Size(336, 88);
-			this.list.TabIndex = 7;
+			this.list.Size = new System.Drawing.Size(234, 69);
+			this.list.TabIndex = 12;
+			// 
+			// 
+			// label3
+			// 
+			this.label3.Location = new System.Drawing.Point(6, 19);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(69, 13);
+			this.label3.TabIndex = 14;
+			this.label3.Text = "Name:";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// NewWorldDialog
 			// 
 			this.AcceptButton = this.okButton;
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.CancelButton = this.cancelButton;
-			this.ClientSize = new System.Drawing.Size(354, 232);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.list,
-																		  this.cancelButton,
-																		  this.okButton,
-																		  this.description,
-																		  this.author,
-																		  this.label2,
-																		  this.label1});
+			this.ClientSize = new System.Drawing.Size(354, 247);
+			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.cancelButton);
+			this.Controls.Add(this.okButton);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -151,6 +175,8 @@ namespace freetrain.framework
 			this.ShowInTaskbar = false;
 			this.Text = "New Game";
 			//! this.Text = "新しいゲーム";
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}

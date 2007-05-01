@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -79,11 +79,12 @@ namespace freetrain.controllers.rail
 			// 
 			// label1
 			// 
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-			this.label1.Location = new System.Drawing.Point(122, 0);
+			this.label1.Location = new System.Drawing.Point(130, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(120, 144);
+			this.label1.Size = new System.Drawing.Size(120, 156);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Only for thin platforms. If a passageway and a platform are connected at right angles, please build a staircase.";
 			//! this.label1.Text = "薄いホーム専用です。通路をホームと直角に設置してから階段を設置してください。";
@@ -91,11 +92,12 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonPlace
 			// 
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(8, 112);
+			this.buttonPlace.Location = new System.Drawing.Point(8, 121);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(48, 26);
 			this.buttonPlace.TabIndex = 1;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Build";
@@ -104,10 +106,12 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(64, 112);
+			this.buttonRemove.Location = new System.Drawing.Point(64, 121);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(56, 26);
 			this.buttonRemove.TabIndex = 2;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -115,20 +119,23 @@ namespace freetrain.controllers.rail
 			// 
 			// typeCombo
 			// 
+			this.typeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.typeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.typeCombo.Location = new System.Drawing.Point(8, 8);
+			this.typeCombo.Location = new System.Drawing.Point(8, 9);
 			this.typeCombo.Name = "typeCombo";
-			this.typeCombo.Size = new System.Drawing.Size(104, 20);
+			this.typeCombo.Size = new System.Drawing.Size(112, 21);
 			this.typeCombo.TabIndex = 3;
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					this.radioStair,
-																					this.radioPassage});
-			this.groupBox1.Location = new System.Drawing.Point(8, 40);
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.radioStair);
+			this.groupBox1.Controls.Add(this.radioPassage);
+			this.groupBox1.Location = new System.Drawing.Point(8, 43);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(104, 64);
+			this.groupBox1.Size = new System.Drawing.Size(112, 70);
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Section";
@@ -136,9 +143,9 @@ namespace freetrain.controllers.rail
 			// 
 			// radioStair
 			// 
-			this.radioStair.Location = new System.Drawing.Point(8, 40);
+			this.radioStair.Location = new System.Drawing.Point(8, 43);
 			this.radioStair.Name = "radioStair";
-			this.radioStair.Size = new System.Drawing.Size(88, 16);
+			this.radioStair.Size = new System.Drawing.Size(88, 18);
 			this.radioStair.TabIndex = 1;
 			this.radioStair.Text = "Staircase";
 			//! this.radioStair.Text = "階段";
@@ -146,26 +153,24 @@ namespace freetrain.controllers.rail
 			// radioPassage
 			// 
 			this.radioPassage.Checked = true;
-			this.radioPassage.Location = new System.Drawing.Point(8, 16);
+			this.radioPassage.Location = new System.Drawing.Point(8, 17);
 			this.radioPassage.Name = "radioPassage";
-			this.radioPassage.Size = new System.Drawing.Size(88, 16);
+			this.radioPassage.Size = new System.Drawing.Size(88, 18);
 			this.radioPassage.TabIndex = 0;
 			this.radioPassage.TabStop = true;
 			this.radioPassage.Text = "Passageway";
 			//! this.radioPassage.Text = "通路";
 			// 
-			// StationBridgeController
+			// StationPassagewayController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(242, 144);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.groupBox1,
-																		  this.typeCombo,
-																		  this.label1,
-																		  this.buttonPlace,
-																		  this.buttonRemove});
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Name = "StationBridgeController";
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(250, 151);
+			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.typeCombo);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.buttonPlace);
+			this.Controls.Add(this.buttonRemove);
+			this.Name = "StationPassagewayController";
 			this.Text = "Station connecting passageway";
 			//! this.Text = "駅連絡通路";
 			this.groupBox1.ResumeLayout(false);

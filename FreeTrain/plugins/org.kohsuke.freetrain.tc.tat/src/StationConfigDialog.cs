@@ -98,9 +98,9 @@ namespace freetrain.world.rail.tattc
 			// 
 			// radioFixedDuration
 			// 
-			this.radioFixedDuration.Location = new System.Drawing.Point(8, 32);
+			this.radioFixedDuration.Location = new System.Drawing.Point(8, 35);
 			this.radioFixedDuration.Name = "radioFixedDuration";
-			this.radioFixedDuration.Size = new System.Drawing.Size(128, 16);
+			this.radioFixedDuration.Size = new System.Drawing.Size(128, 17);
 			this.radioFixedDuration.TabIndex = 2;
 			this.radioFixedDuration.Text = "Pla&nned halt";
 			//! this.radioFixedDuration.Text = "一定時間停車(&N)";
@@ -108,9 +108,9 @@ namespace freetrain.world.rail.tattc
 			// 
 			// radioSimple
 			// 
-			this.radioSimple.Location = new System.Drawing.Point(8, 104);
+			this.radioSimple.Location = new System.Drawing.Point(8, 113);
 			this.radioSimple.Name = "radioSimple";
-			this.radioSimple.Size = new System.Drawing.Size(128, 16);
+			this.radioSimple.Size = new System.Drawing.Size(128, 17);
 			this.radioSimple.TabIndex = 3;
 			this.radioSimple.Text = "&Scheduled departure";
 			//! this.radioSimple.Text = "指定時刻発車(&S)";
@@ -118,27 +118,27 @@ namespace freetrain.world.rail.tattc
 			// 
 			// hourBox
 			// 
-			this.hourBox.Location = new System.Drawing.Point(32, 128);
+			this.hourBox.Location = new System.Drawing.Point(32, 139);
 			this.hourBox.Maximum = new System.Decimal(new int[] {
 																	24,
 																	0,
 																	0,
 																	0});
 			this.hourBox.Name = "hourBox";
-			this.hourBox.Size = new System.Drawing.Size(48, 19);
+			this.hourBox.Size = new System.Drawing.Size(48, 20);
 			this.hourBox.TabIndex = 4;
 			this.hourBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.hourBox.ValueChanged += new System.EventHandler(this.onTimeChanged);
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(80, 128);
+			this.label1.Location = new System.Drawing.Point(80, 139);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(24, 16);
+			this.label1.Size = new System.Drawing.Size(56, 17);
 			this.label1.TabIndex = 5;
 			this.label1.Text = "Hour";
 			//! this.label1.Text = "時";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// minBox
 			// 
@@ -147,71 +147,74 @@ namespace freetrain.world.rail.tattc
 																	 0,
 																	 0,
 																	 0});
-			this.minBox.Location = new System.Drawing.Point(104, 128);
+			this.minBox.Location = new System.Drawing.Point(117, 139);
 			this.minBox.Maximum = new System.Decimal(new int[] {
 																   60,
 																   0,
 																   0,
 																   0});
 			this.minBox.Name = "minBox";
-			this.minBox.Size = new System.Drawing.Size(48, 19);
+			this.minBox.Size = new System.Drawing.Size(48, 20);
 			this.minBox.TabIndex = 6;
 			this.minBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.minBox.ValueChanged += new System.EventHandler(this.onTimeChanged);
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(152, 128);
+			this.label2.Location = new System.Drawing.Point(171, 139);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(24, 16);
+			this.label2.Size = new System.Drawing.Size(47, 17);
 			this.label2.TabIndex = 7;
 			this.label2.Text = "Minute";
 			//! this.label2.Text = "分";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// radioAdvanced
 			// 
-			this.radioAdvanced.Location = new System.Drawing.Point(8, 176);
+			this.radioAdvanced.Location = new System.Drawing.Point(8, 191);
 			this.radioAdvanced.Name = "radioAdvanced";
-			this.radioAdvanced.Size = new System.Drawing.Size(24, 16);
+			this.radioAdvanced.Size = new System.Drawing.Size(24, 17);
 			this.radioAdvanced.TabIndex = 8;
 			this.radioAdvanced.CheckedChanged += new System.EventHandler(this.onRadioChanged);
 			// 
 			// buttonAdvanced
 			// 
 			this.buttonAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonAdvanced.Location = new System.Drawing.Point(32, 176);
+			this.buttonAdvanced.Location = new System.Drawing.Point(32, 191);
 			this.buttonAdvanced.Name = "buttonAdvanced";
-			this.buttonAdvanced.Size = new System.Drawing.Size(120, 24);
+			this.buttonAdvanced.Size = new System.Drawing.Size(120, 26);
 			this.buttonAdvanced.TabIndex = 9;
-			this.buttonAdvanced.Text = "&Altitude Settings...";
+			this.buttonAdvanced.Text = "&Advanced Settings...";
 			//! this.buttonAdvanced.Text = "高度な設定(&A)...";
 			this.buttonAdvanced.Click += new System.EventHandler(this.buttonAdvanced_Click);
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Location = new System.Drawing.Point(184, -8);
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Location = new System.Drawing.Point(218, -9);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(2, 280);
+			this.groupBox1.Size = new System.Drawing.Size(2, 304);
 			this.groupBox1.TabIndex = 8;
 			this.groupBox1.TabStop = false;
 			// 
 			// buttonOk
 			// 
+			this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonOk.Location = new System.Drawing.Point(192, 8);
+			this.buttonOk.Location = new System.Drawing.Point(226, 9);
 			this.buttonOk.Name = "buttonOk";
-			this.buttonOk.Size = new System.Drawing.Size(72, 24);
+			this.buttonOk.Size = new System.Drawing.Size(72, 26);
 			this.buttonOk.TabIndex = 10;
 			this.buttonOk.Text = "&OK";
 			this.buttonOk.Click += new System.EventHandler(this.onOK);
 			// 
 			// radioPass
 			// 
-			this.radioPass.Location = new System.Drawing.Point(8, 8);
+			this.radioPass.Location = new System.Drawing.Point(8, 9);
 			this.radioPass.Name = "radioPass";
-			this.radioPass.Size = new System.Drawing.Size(128, 16);
+			this.radioPass.Size = new System.Drawing.Size(128, 17);
 			this.radioPass.TabIndex = 1;
 			this.radioPass.Text = "&Pass";
 			//! this.radioPass.Text = "通過(&P)";
@@ -219,31 +222,31 @@ namespace freetrain.world.rail.tattc
 			// 
 			// checkTurn2
 			// 
-			this.checkTurn2.Location = new System.Drawing.Point(32, 152);
+			this.checkTurn2.Location = new System.Drawing.Point(32, 165);
 			this.checkTurn2.Name = "checkTurn2";
-			this.checkTurn2.Size = new System.Drawing.Size(144, 16);
+			this.checkTurn2.Size = new System.Drawing.Size(144, 17);
 			this.checkTurn2.TabIndex = 11;
 			this.checkTurn2.Text = "&Turn back";
 			//! this.checkTurn2.Text = "折り返す(&T)";
 			// 
 			// checkTurn1
 			// 
-			this.checkTurn1.Location = new System.Drawing.Point(32, 80);
+			this.checkTurn1.Location = new System.Drawing.Point(32, 87);
 			this.checkTurn1.Name = "checkTurn1";
-			this.checkTurn1.Size = new System.Drawing.Size(144, 16);
+			this.checkTurn1.Size = new System.Drawing.Size(144, 17);
 			this.checkTurn1.TabIndex = 14;
 			this.checkTurn1.Text = "&Turn back";
 			//! this.checkTurn1.Text = "折り返す(&T)";
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(80, 56);
+			this.label3.Location = new System.Drawing.Point(80, 61);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(32, 16);
+			this.label3.Size = new System.Drawing.Size(56, 17);
 			this.label3.TabIndex = 13;
-			this.label3.Text = "Inclination";
+			this.label3.Text = "Minutes";
 			//! this.label3.Text = "分間";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// durationBox
 			// 
@@ -252,7 +255,7 @@ namespace freetrain.world.rail.tattc
 																		  0,
 																		  0,
 																		  0});
-			this.durationBox.Location = new System.Drawing.Point(32, 56);
+			this.durationBox.Location = new System.Drawing.Point(32, 61);
 			this.durationBox.Maximum = new System.Decimal(new int[] {
 																		1215752191,
 																		23,
@@ -264,7 +267,7 @@ namespace freetrain.world.rail.tattc
 																		0,
 																		0});
 			this.durationBox.Name = "durationBox";
-			this.durationBox.Size = new System.Drawing.Size(48, 19);
+			this.durationBox.Size = new System.Drawing.Size(48, 20);
 			this.durationBox.TabIndex = 12;
 			this.durationBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.durationBox.Value = new System.Decimal(new int[] {
@@ -276,24 +279,23 @@ namespace freetrain.world.rail.tattc
 			// StationConfigDialog
 			// 
 			this.AcceptButton = this.buttonOk;
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(270, 205);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.checkTurn1,
-																		  this.label3,
-																		  this.durationBox,
-																		  this.checkTurn2,
-																		  this.radioPass,
-																		  this.buttonOk,
-																		  this.groupBox1,
-																		  this.buttonAdvanced,
-																		  this.radioAdvanced,
-																		  this.label2,
-																		  this.minBox,
-																		  this.label1,
-																		  this.hourBox,
-																		  this.radioSimple,
-																		  this.radioFixedDuration});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(310, 229);
+			this.Controls.Add(this.checkTurn1);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.durationBox);
+			this.Controls.Add(this.checkTurn2);
+			this.Controls.Add(this.radioPass);
+			this.Controls.Add(this.buttonOk);
+			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.buttonAdvanced);
+			this.Controls.Add(this.radioAdvanced);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.minBox);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.hourBox);
+			this.Controls.Add(this.radioSimple);
+			this.Controls.Add(this.radioFixedDuration);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;

@@ -81,7 +81,7 @@ namespace freetrain.world.rail
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(PlatformPropertyDialog));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlatformPropertyDialog));
 			this.left = new System.Windows.Forms.Button();
 			this.right = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -96,14 +96,16 @@ namespace freetrain.world.rail
 			this.bell = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.groupFat.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.warning)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// left
 			// 
+			this.left.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.left.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.left.Location = new System.Drawing.Point(64, 16);
+			this.left.Location = new System.Drawing.Point(96, 17);
 			this.left.Name = "left";
-			this.left.Size = new System.Drawing.Size(96, 24);
+			this.left.Size = new System.Drawing.Size(88, 26);
 			this.left.TabIndex = 7;
 			this.left.Text = "&Left connect";
 			//! this.left.Text = "左に接続(&L)";
@@ -111,10 +113,11 @@ namespace freetrain.world.rail
 			// 
 			// right
 			// 
+			this.right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.right.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.right.Location = new System.Drawing.Point(176, 16);
+			this.right.Location = new System.Drawing.Point(192, 17);
 			this.right.Name = "right";
-			this.right.Size = new System.Drawing.Size(96, 24);
+			this.right.Size = new System.Drawing.Size(80, 26);
 			this.right.TabIndex = 8;
 			this.right.Text = "&Right connect";
 			//! this.right.Text = "右に接続(&R)";
@@ -122,9 +125,9 @@ namespace freetrain.world.rail
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(16, 8);
+			this.label1.Location = new System.Drawing.Point(8, 6);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(48, 16);
+			this.label1.Size = new System.Drawing.Size(88, 20);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "&Name:";
 			//! this.label1.Text = "名前(&N):";
@@ -132,20 +135,23 @@ namespace freetrain.world.rail
 			// 
 			// nameBox
 			// 
-			this.nameBox.Location = new System.Drawing.Point(72, 8);
+			this.nameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.nameBox.Location = new System.Drawing.Point(104, 9);
 			this.nameBox.Name = "nameBox";
-			this.nameBox.Size = new System.Drawing.Size(216, 19);
+			this.nameBox.Size = new System.Drawing.Size(176, 20);
 			this.nameBox.TabIndex = 2;
 			this.nameBox.Text = "";
 			// 
 			// groupFat
 			// 
-			this.groupFat.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				   this.left,
-																				   this.right});
-			this.groupFat.Location = new System.Drawing.Point(8, 104);
+			this.groupFat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupFat.Controls.Add(this.left);
+			this.groupFat.Controls.Add(this.right);
+			this.groupFat.Location = new System.Drawing.Point(8, 113);
 			this.groupFat.Name = "groupFat";
-			this.groupFat.Size = new System.Drawing.Size(280, 48);
+			this.groupFat.Size = new System.Drawing.Size(280, 52);
 			this.groupFat.TabIndex = 999;
 			this.groupFat.TabStop = false;
 			this.groupFat.Text = "Connect tracks";
@@ -153,31 +159,33 @@ namespace freetrain.world.rail
 			// 
 			// OKbutton
 			// 
+			this.OKbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.OKbutton.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.OKbutton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.OKbutton.Location = new System.Drawing.Point(104, 160);
+			this.OKbutton.Location = new System.Drawing.Point(104, 173);
 			this.OKbutton.Name = "OKbutton";
-			this.OKbutton.Size = new System.Drawing.Size(88, 24);
+			this.OKbutton.Size = new System.Drawing.Size(88, 26);
 			this.OKbutton.TabIndex = 10;
 			this.OKbutton.Text = "&OK";
 			this.OKbutton.Click += new System.EventHandler(this.OKbutton_Click);
 			// 
 			// cancelButton
 			// 
+			this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.cancelButton.Location = new System.Drawing.Point(200, 160);
+			this.cancelButton.Location = new System.Drawing.Point(200, 173);
 			this.cancelButton.Name = "cancelButton";
-			this.cancelButton.Size = new System.Drawing.Size(88, 24);
+			this.cancelButton.Size = new System.Drawing.Size(80, 26);
 			this.cancelButton.TabIndex = 11;
 			this.cancelButton.Text = "&Cancel";
 			//! this.cancelButton.Text = "キャンセル(&C)";
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(24, 40);
+			this.label2.Location = new System.Drawing.Point(8, 42);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(40, 16);
+			this.label2.Size = new System.Drawing.Size(88, 18);
 			this.label2.TabIndex = 3;
 			this.label2.Text = "&Station:";
 			//! this.label2.Text = "駅(&S):";
@@ -185,18 +193,21 @@ namespace freetrain.world.rail
 			// 
 			// hostList
 			// 
+			this.hostList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.hostList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.hostList.Location = new System.Drawing.Point(72, 40);
+			this.hostList.Location = new System.Drawing.Point(104, 43);
 			this.hostList.Name = "hostList";
-			this.hostList.Size = new System.Drawing.Size(216, 20);
+			this.hostList.Size = new System.Drawing.Size(176, 21);
 			this.hostList.TabIndex = 4;
 			// 
 			// remove
 			// 
+			this.remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.remove.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.remove.Location = new System.Drawing.Point(8, 160);
+			this.remove.Location = new System.Drawing.Point(8, 173);
 			this.remove.Name = "remove";
-			this.remove.Size = new System.Drawing.Size(88, 24);
+			this.remove.Size = new System.Drawing.Size(88, 26);
 			this.remove.TabIndex = 9;
 			this.remove.Text = "R&emove";
 			//! this.remove.Text = "撤去(&E)";
@@ -204,26 +215,28 @@ namespace freetrain.world.rail
 			// 
 			// warning
 			// 
-			this.warning.Image = ((System.Drawing.Bitmap)(resources.GetObject("warning.Image")));
-			this.warning.Location = new System.Drawing.Point(8, 40);
+			this.warning.Image = ((System.Drawing.Image)(resources.GetObject("warning.Image")));
+			this.warning.Location = new System.Drawing.Point(8, 46);
 			this.warning.Name = "warning";
-			this.warning.Size = new System.Drawing.Size(16, 16);
+			this.warning.Size = new System.Drawing.Size(15, 18);
 			this.warning.TabIndex = 1000;
 			this.warning.TabStop = false;
 			// 
 			// bell
 			// 
+			this.bell.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.bell.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.bell.Location = new System.Drawing.Point(72, 72);
+			this.bell.Location = new System.Drawing.Point(104, 78);
 			this.bell.Name = "bell";
-			this.bell.Size = new System.Drawing.Size(216, 20);
+			this.bell.Size = new System.Drawing.Size(176, 21);
 			this.bell.TabIndex = 6;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(16, 72);
+			this.label3.Location = new System.Drawing.Point(8, 74);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(48, 16);
+			this.label3.Size = new System.Drawing.Size(88, 21);
 			this.label3.TabIndex = 5;
 			this.label3.Text = "&Bell:";
 			//! this.label3.Text = "ベル(&B):";
@@ -231,10 +244,8 @@ namespace freetrain.world.rail
 			// 
 			// PlatformPropertyDialog
 			// 
-			this.AcceptButton = this.OKbutton;
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.CancelButton = this.cancelButton;
-			this.ClientSize = new System.Drawing.Size(298, 189);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(298, 204);
 			this.ControlBox = false;
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.label3,
@@ -256,7 +267,9 @@ namespace freetrain.world.rail
 			this.Text = "Platform properties";
 			//! this.Text = "ホームのプロパティ";
 			this.groupFat.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.warning)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 		#endregion

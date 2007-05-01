@@ -15,6 +15,8 @@ using freetrain.views;
 using freetrain.views.map;
 using org.kohsuke.directdraw;
 using freetrain.controls;
+using Mono.Unix;
+
 
 namespace freetrain.controllers.rail
 {
@@ -73,6 +75,7 @@ namespace freetrain.controllers.rail
 ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-ROOF}")
 //			};
 
+            Catalog.Init("freetrain", "./locale");
 			dirN.Tag = Direction.NORTH;
 			dirE.Tag = Direction.EAST;
 			dirS.Tag = Direction.SOUTH;
@@ -201,7 +204,7 @@ namespace freetrain.controllers.rail
 			// 
 			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(64, 200);
+			this.buttonRemove.Location = new System.Drawing.Point(81, 200);
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
 			this.buttonRemove.TabIndex = 1;
@@ -214,7 +217,7 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(8, 200);
+			this.buttonPlace.Location = new System.Drawing.Point(25, 200);
 			this.buttonPlace.Name = "buttonPlace";
 			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
 			this.buttonPlace.TabIndex = 0;
@@ -597,7 +600,7 @@ namespace freetrain.controllers.rail
 			case Mode.Station:
 				if( isPlacing ) {
 					if(!selectedStation.canBeBuilt(loc,ControlMode.player)) {
-						MainWindow.showError("Can not build");
+						MainWindow.showError(Catalog.GetString("This cannot be build here!"));
 						//! MainWindow.showError("設置できません");
 					} else {
 						selectedStation.create(loc,true);
@@ -611,7 +614,7 @@ namespace freetrain.controllers.rail
 			case Mode.FatPlatform:
 				if( isPlacing ) {
 					if(!FatPlatform.canBeBuilt(loc,direction,length)) {
-						MainWindow.showError("Can not build");
+                        MainWindow.showError(Catalog.GetString("This cannot be build here!"));
 						//! MainWindow.showError("設置できません");
 						return;
 					}
@@ -622,7 +625,7 @@ namespace freetrain.controllers.rail
 						if(p.canRemove)
 							p.remove();
 						else
-							MainWindow.showError("Can not remove");
+                            MainWindow.showError(Catalog.GetString("This cannot be removed!"));
 							//! MainWindow.showError("撤去できません");
 					}
 				}
@@ -631,7 +634,7 @@ namespace freetrain.controllers.rail
 			case Mode.ThinPlatform:
 				if( isPlacing ) {
 					if(!ThinPlatform.canBeBuilt(loc,direction,length)) {
-						MainWindow.showError("Can not build");
+                        MainWindow.showError(Catalog.GetString("This cannot be build here!"));
 						//! MainWindow.showError("設置できません");
 						return;
 					}
@@ -642,7 +645,7 @@ namespace freetrain.controllers.rail
 						if(p.canRemove)
 							p.remove();
 						else
-							MainWindow.showError("Can not remove");
+                            MainWindow.showError(Catalog.GetString("This cannot be removed!"));
 							//! MainWindow.showError("撤去できません");
 					}
 				}
