@@ -68,9 +68,9 @@ namespace freetrain.framework
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(0, 104);
+			this.label1.Location = new System.Drawing.Point(9, 104);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(40, 16);
+			this.label1.Size = new System.Drawing.Size(66, 16);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Author:";
 			//! this.label1.Text = "作者：";
@@ -78,9 +78,9 @@ namespace freetrain.framework
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(0, 128);
+			this.label2.Location = new System.Drawing.Point(3, 128);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(40, 16);
+			this.label2.Size = new System.Drawing.Size(72, 16);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Description:";
 			//! this.label2.Text = "解説：";
@@ -88,21 +88,21 @@ namespace freetrain.framework
 			// 
 			// author
 			// 
-			this.author.Location = new System.Drawing.Point(48, 104);
+			this.author.Location = new System.Drawing.Point(84, 104);
 			this.author.Name = "author";
-			this.author.Size = new System.Drawing.Size(296, 16);
+			this.author.Size = new System.Drawing.Size(234, 16);
 			this.author.TabIndex = 3;
 			this.author.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// description
 			// 
 			this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.description.Location = new System.Drawing.Point(48, 128);
+			this.description.Location = new System.Drawing.Point(84, 128);
 			this.description.Multiline = true;
 			this.description.Name = "description";
 			this.description.ReadOnly = true;
 			this.description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.description.Size = new System.Drawing.Size(296, 64);
+			this.description.Size = new System.Drawing.Size(234, 64);
 			this.description.TabIndex = 4;
 			this.description.Text = "";
 			// 
