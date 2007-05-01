@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -856,6 +856,7 @@ namespace freetrain.framework
             // tbTimer
             // 
             this.tbTimer.DropDownMenu = this.clockMenu;
+            this.tbTimer.ImageIndex = 10;
             this.tbTimer.Name = "tbTimer";
             this.tbTimer.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton;
             this.tbTimer.Text = "Timer";
