@@ -15,7 +15,6 @@ using freetrain.views;
 using freetrain.views.map;
 using org.kohsuke.directdraw;
 using freetrain.controls;
-using Mono.Unix;
 
 
 namespace freetrain.controllers.rail
