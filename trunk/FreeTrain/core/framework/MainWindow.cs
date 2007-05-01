@@ -559,7 +559,7 @@ namespace freetrain.framework
             this.mruMenuItem,
             this.menuItem1,
             this.menuQuit});
-            this.menuItem_file.Text = "&File";								  this.menuQuit});
+            this.menuItem_file.Text = "&File";
 			//! this.menuItem_file.Text = "ファイル(&F)";
             // 
             // menuItem_File_New
