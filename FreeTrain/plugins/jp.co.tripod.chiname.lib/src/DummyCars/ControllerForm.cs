@@ -169,18 +169,22 @@ namespace freetrain.world.road.dummycar
 		private void onTypeChanged(object sender, System.EventArgs e) 
 		{
 			DummyCarContribution builder = (DummyCarContribution)typeBox.SelectedItem;
-			int colors = builder.colorVariations;
-			if( this.colSelector.current > colors ) this.colSelector.current=colors;
-			this.colSelector.count=colors;
-			builder.currentColor=colors;
-			updatePreview(builder);
+			if (builder != null) {
+				int colors = builder.colorVariations;
+				if (this.colSelector.current > colors) this.colSelector.current = colors;
+				this.colSelector.count = colors;
+				builder.currentColor = colors;
+				updatePreview(builder);
+			}
 		}
 
 		protected virtual void onColorChanged(object sender, System.EventArgs e) 
 		{
 			DummyCarContribution builder = (DummyCarContribution)typeBox.SelectedItem;
-			builder.currentColor = this.currentColor;
-			updatePreview(builder);
+			if (builder != null) {
+				builder.currentColor = this.currentColor;
+				updatePreview(builder);
+			}
 		}
 
 		/// <summary>
