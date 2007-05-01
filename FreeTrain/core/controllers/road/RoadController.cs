@@ -50,9 +50,11 @@ namespace freetrain.controllers.road
 		{
 			base.InitializeComponent();
 			this.SuspendLayout();
-			this.buttonRemove.Location = new System.Drawing.Point(192, 132);
+			this.buttonRemove.Location = new System.Drawing.Point(194, 132);
 			this.buttonPlace.Location = new System.Drawing.Point(136, 132);
-			this.picture.Location = new System.Drawing.Point(136, 40);
+			this.buttonRemove.Size = new System.Drawing.Size(58, 25);
+			this.buttonPlace.Size = new System.Drawing.Size(58, 25);
+			this.picture.Location = new System.Drawing.Point(142, 40);
 			this.picture.Size = new System.Drawing.Size(104, 88);
 			this.picture.Click+=new EventHandler(picture_Click);
 			this.toolTip.SetToolTip(this.picture, "Click to display another pattern");
@@ -85,7 +87,7 @@ namespace freetrain.controllers.road
 			this.description.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.description.Location = new System.Drawing.Point(132, 4);
 			this.description.Name = "description";
-			this.description.Size = new System.Drawing.Size(112, 16);
+			this.description.Size = new System.Drawing.Size(124, 16);
 			this.description.TabIndex = 9;
 			this.description.Text = currentContrib.oneLineDescription;
 			this.description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,14 +99,14 @@ namespace freetrain.controllers.road
 			this.level.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.level.Location = new System.Drawing.Point(132, 22);
 			this.level.Name = "level";
-			this.level.Size = new System.Drawing.Size(112, 16);
+			this.level.Size = new System.Drawing.Size(124, 16);
 			this.level.TabIndex = 10;
 			this.level.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// RoadController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(248, 160);
+			this.ClientSize = new System.Drawing.Size(260, 160);
 			this.Controls.Add(this.description);
 			this.Controls.Add(this.level);
 			this.Controls.Add(this.contribTree);
@@ -133,7 +135,8 @@ namespace freetrain.controllers.road
 				for(int idx = 0; idx<contribs.Length; idx++ )
 				{
 					RoadContribution rc = contribs[idx];
-					string[] path = rc.name.Split(new char[]{'(',')','i','j','/','\\'});
+					//string[] path = rc.name.Split(new char[]{'(',')','i','j','/','\\'});
+					string[] path = rc.name.Split(new char[] { '(', ')', '/', '\\' });
 					TreeNodeCollection parent = contribTree.Nodes;
 					TreeNode node = null;
 					int m = path.Length-1;
