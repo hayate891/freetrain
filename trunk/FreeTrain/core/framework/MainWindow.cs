@@ -1481,12 +1481,6 @@ namespace freetrain.framework
 			
 			directDraw = new WindowedDirectDraw(this);
 
-			// start a new game by default 
-			setWorld(new World(new Distance(127,127,12),2));
-			
-            // insert dummy menu to make visible menu items appended afterward.
-            MenuItem tmp = new MenuItem();
-            MainMenu.MenuItems.Add(tmp);
 			// merge menu contributions
 			foreach( MenuContribution contrib in Core.plugins.menus )
 				contrib.mergeMenu(this.MainMenu);
@@ -1518,6 +1512,9 @@ namespace freetrain.framework
 //				// insert a separator
 //				menuItem_road.MenuItems.Add( idx, new MenuItem("-") );
 
+			// start a new game by default 
+			setWorld(new World(new Distance(127, 127, 12), 2));
+
 			// load the screen layout
 			try 
 			{
@@ -1528,7 +1525,6 @@ namespace freetrain.framework
 				Debug.WriteLine(ex.StackTrace);
 			}
 
-			this.MainMenu.MenuItems.Remove(tmp);
 			timer.Start();
 		}
 
