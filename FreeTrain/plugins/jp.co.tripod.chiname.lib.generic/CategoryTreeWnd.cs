@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Diagnostics;
 using System.Collections;
@@ -211,11 +211,9 @@ namespace freetrain.framework.plugin.generic
 
 		private void categoryTree_AfterSelect(object sender, System.Windows.Forms.TreeViewEventArgs e)
 		{
-			if(OnNodeSelected!=null)
-			{
-				StructCategory cat = StructCategoryTree.theInstance[(int)categoryTree.SelectedNode.Tag];
-				OnNodeSelected(cat, 0);
-			}
+			MultiSelectorController.create(); //will show if created, create and show if not.
+			StructCategory cat = StructCategoryTree.theInstance[(int)categoryTree.SelectedNode.Tag];
+			OnNodeSelected(cat, 0);
 		}
 
 		private void checkBox1_CheckedChanged(object sender, System.EventArgs e)
