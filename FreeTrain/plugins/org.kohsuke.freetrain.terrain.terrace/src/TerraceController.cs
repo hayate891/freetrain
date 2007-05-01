@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using freetrain.controllers;
@@ -52,6 +52,7 @@ namespace freetrain.world.terrain.terrace
 			this.terrace = new System.Windows.Forms.RadioButton();
 			this.cut = new System.Windows.Forms.RadioButton();
 			this.panel1 = new System.Windows.Forms.Panel();
+			((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -59,9 +60,9 @@ namespace freetrain.world.terrain.terrace
 			// 
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(4, 104);
+			this.buttonPlace.Location = new System.Drawing.Point(4, 113);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(59, 26);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Place";
@@ -71,10 +72,11 @@ namespace freetrain.world.terrain.terrace
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(52, 104);
+			this.buttonRemove.Location = new System.Drawing.Point(63, 113);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(58, 26);
 			this.buttonRemove.TabIndex = 5;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -83,11 +85,12 @@ namespace freetrain.world.terrain.terrace
 			// 
 			// preview
 			// 
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.preview.BackColor = System.Drawing.Color.White;
 			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.preview.Location = new System.Drawing.Point(8, 40);
+			this.preview.Location = new System.Drawing.Point(4, 41);
 			this.preview.Name = "preview";
-			this.preview.Size = new System.Drawing.Size(88, 56);
+			this.preview.Size = new System.Drawing.Size(117, 61);
 			this.preview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.preview.TabIndex = 0;
 			this.preview.TabStop = false;
@@ -96,9 +99,9 @@ namespace freetrain.world.terrain.terrace
 			// 
 			this.terrace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.terrace.Checked = true;
-			this.terrace.Location = new System.Drawing.Point(4, 8);
+			this.terrace.Location = new System.Drawing.Point(4, 9);
 			this.terrace.Name = "terrace";
-			this.terrace.Size = new System.Drawing.Size(48, 24);
+			this.terrace.Size = new System.Drawing.Size(59, 26);
 			this.terrace.TabIndex = 6;
 			this.terrace.TabStop = true;
 			this.terrace.Text = "Terrace";
@@ -108,10 +111,11 @@ namespace freetrain.world.terrain.terrace
 			// 
 			// cut
 			// 
+			this.cut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.cut.Appearance = System.Windows.Forms.Appearance.Button;
-			this.cut.Location = new System.Drawing.Point(52, 8);
+			this.cut.Location = new System.Drawing.Point(63, 9);
 			this.cut.Name = "cut";
-			this.cut.Size = new System.Drawing.Size(48, 24);
+			this.cut.Size = new System.Drawing.Size(58, 26);
 			this.cut.TabIndex = 7;
 			this.cut.Text = "Cut";
 			//! this.cut.Text = "切通";
@@ -120,26 +124,25 @@ namespace freetrain.world.terrain.terrace
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				 this.terrace,
-																				 this.cut});
+			this.panel1.Controls.Add(this.terrace);
+			this.panel1.Controls.Add(this.cut);
+			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(104, 32);
+			this.panel1.Size = new System.Drawing.Size(125, 35);
 			this.panel1.TabIndex = 8;
 			// 
 			// TerraceController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(104, 136);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.panel1,
-																		  this.buttonPlace,
-																		  this.buttonRemove,
-																		  this.preview});
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(126, 146);
+			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.buttonPlace);
+			this.Controls.Add(this.buttonRemove);
+			this.Controls.Add(this.preview);
 			this.Name = "TerraceController";
 			this.Text = "Terraces & Cuts";
 			//! this.Text = "雛壇と切り通し";
+			((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
