@@ -357,9 +357,9 @@ namespace freetrain.framework.plugin.generic
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.nameLabel.BackColor = System.Drawing.Color.White;
             this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.nameLabel.Location = new System.Drawing.Point(4, 32);
+            this.nameLabel.Location = new System.Drawing.Point(4, 35);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(152, 16);
+            this.nameLabel.Size = new System.Drawing.Size(152, 17);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
@@ -368,9 +368,9 @@ namespace freetrain.framework.plugin.generic
             this.previewBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.previewBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.previewBox.Location = new System.Drawing.Point(0, 128);
+            this.previewBox.Location = new System.Drawing.Point(6, 138);
             this.previewBox.Name = "previewBox";
-            this.previewBox.Size = new System.Drawing.Size(184, 224);
+            this.previewBox.Size = new System.Drawing.Size(185, 240);
             this.previewBox.TabIndex = 3;
             this.previewBox.TabStop = false;
             this.previewBox.Click += new System.EventHandler(this.previewBox_Click);
@@ -382,9 +382,9 @@ namespace freetrain.framework.plugin.generic
             this.selectorDesign.count = 10;
             this.selectorDesign.current = 0;
             this.selectorDesign.dataSource = null;
-            this.selectorDesign.Location = new System.Drawing.Point(24, 16);
+            this.selectorDesign.Location = new System.Drawing.Point(24, 17);
             this.selectorDesign.Name = "selectorDesign";
-            this.selectorDesign.Size = new System.Drawing.Size(112, 14);
+            this.selectorDesign.Size = new System.Drawing.Size(112, 16);
             this.selectorDesign.TabIndex = 1;
             this.selectorDesign.indexChanged += new System.EventHandler(this.selectorDesign_indexChanged);
             // 
@@ -394,20 +394,20 @@ namespace freetrain.framework.plugin.generic
             this.selectorDir.count = 10;
             this.selectorDir.current = 0;
             this.selectorDir.dataSource = null;
-            this.selectorDir.Location = new System.Drawing.Point(253, 152);
+            this.selectorDir.Location = new System.Drawing.Point(262, 177);
             this.selectorDir.Name = "selectorDir";
-            this.selectorDir.Size = new System.Drawing.Size(88, 16);
+            this.selectorDir.Size = new System.Drawing.Size(88, 17);
             this.selectorDir.TabIndex = 5;
             this.selectorDir.indexChanged += new System.EventHandler(this.selectorDir_indexChanged);
             // 
             // labelDir
             // 
             this.labelDir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDir.Location = new System.Drawing.Point(192, 152);
+            this.labelDir.Location = new System.Drawing.Point(201, 177);
             this.labelDir.Name = "labelDir";
-            this.labelDir.Size = new System.Drawing.Size(59, 16);
+            this.labelDir.Size = new System.Drawing.Size(59, 17);
             this.labelDir.TabIndex = 4;
-            this.labelDir.Text = "Direction:";
+            this.labelDir.Text = "Direction";
             //! this.labelDir.Text = "方向：";
             this.labelDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -418,27 +418,27 @@ namespace freetrain.framework.plugin.generic
             this.selectorColor.count = 10;
             this.selectorColor.current = 0;
             this.selectorColor.dataSource = null;
-            this.selectorColor.Location = new System.Drawing.Point(24, 16);
+            this.selectorColor.Location = new System.Drawing.Point(24, 17);
             this.selectorColor.Name = "selectorColor";
-            this.selectorColor.Size = new System.Drawing.Size(112, 14);
+            this.selectorColor.Size = new System.Drawing.Size(112, 16);
             this.selectorColor.TabIndex = 1;
             this.selectorColor.indexChanged += new System.EventHandler(this.selectorColor_indexChanged);
             // 
             // typeBox
             // 
             this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeBox.Location = new System.Drawing.Point(192, 0);
+            this.typeBox.Location = new System.Drawing.Point(201, 12);
             this.typeBox.Name = "typeBox";
-            this.typeBox.Size = new System.Drawing.Size(160, 20);
+            this.typeBox.Size = new System.Drawing.Size(160, 21);
             this.typeBox.TabIndex = 0;
             this.typeBox.SelectedIndexChanged += new System.EventHandler(this.typeBox_SelectedIndexChanged);
             // 
             // numHeight
             // 
             this.numHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numHeight.Location = new System.Drawing.Point(272, 172);
+            this.numHeight.Location = new System.Drawing.Point(262, 199);
             this.numHeight.Name = "numHeight";
-            this.numHeight.Size = new System.Drawing.Size(56, 19);
+            this.numHeight.Size = new System.Drawing.Size(88, 20);
             this.numHeight.TabIndex = 7;
             this.numHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numHeight.ValueChanged += new System.EventHandler(this.numHeight_ValueChanged);
@@ -446,11 +446,11 @@ namespace freetrain.framework.plugin.generic
             // labelHeight
             // 
             this.labelHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelHeight.Location = new System.Drawing.Point(232, 173);
+            this.labelHeight.Location = new System.Drawing.Point(204, 199);
             this.labelHeight.Name = "labelHeight";
-            this.labelHeight.Size = new System.Drawing.Size(40, 16);
+            this.labelHeight.Size = new System.Drawing.Size(58, 18);
             this.labelHeight.TabIndex = 6;
-            this.labelHeight.Text = "Height:";
+            this.labelHeight.Text = "Height";
             //! this.labelHeight.Text = "高さ：";
             this.labelHeight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -458,9 +458,9 @@ namespace freetrain.framework.plugin.generic
             // 
             this.btnDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDetail.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnDetail.Location = new System.Drawing.Point(336, 200);
+            this.btnDetail.Location = new System.Drawing.Point(341, 229);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(20, 20);
+            this.btnDetail.Size = new System.Drawing.Size(20, 21);
             this.btnDetail.TabIndex = 9;
             this.btnDetail.Text = "q";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
@@ -469,9 +469,9 @@ namespace freetrain.framework.plugin.generic
             // 
             this.labelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelInfo.Location = new System.Drawing.Point(192, 232);
+            this.labelInfo.Location = new System.Drawing.Point(201, 263);
             this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(160, 120);
+            this.labelInfo.Size = new System.Drawing.Size(156, 115);
             this.labelInfo.TabIndex = 9;
             this.labelInfo.UseMnemonic = false;
             // 
@@ -481,9 +481,9 @@ namespace freetrain.framework.plugin.generic
             this.costBox.cost = 0;
             this.costBox.label = "Cost:";
             //! this.costBox.label = "費用：";
-            this.costBox.Location = new System.Drawing.Point(192, 192);
+            this.costBox.Location = new System.Drawing.Point(201, 220);
             this.costBox.Name = "costBox";
-            this.costBox.Size = new System.Drawing.Size(136, 32);
+            this.costBox.Size = new System.Drawing.Size(136, 35);
             this.costBox.TabIndex = 8;
             // 
             // groupColor
@@ -491,12 +491,12 @@ namespace freetrain.framework.plugin.generic
             this.groupColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupColor.Controls.Add(this.selectorColor);
             this.groupColor.Controls.Add(this.cbRandColor);
-            this.groupColor.Location = new System.Drawing.Point(192, 76);
+            this.groupColor.Location = new System.Drawing.Point(201, 94);
             this.groupColor.Name = "groupColor";
-            this.groupColor.Size = new System.Drawing.Size(160, 34);
+            this.groupColor.Size = new System.Drawing.Size(160, 37);
             this.groupColor.TabIndex = 2;
             this.groupColor.TabStop = false;
-            this.groupColor.Text = "Color 1:";
+            this.groupColor.Text = "Color 1";
             //! this.groupColor.Text = "色：";
             // 
             // cbRandColor
@@ -504,9 +504,9 @@ namespace freetrain.framework.plugin.generic
             this.cbRandColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRandColor.BackColor = System.Drawing.SystemColors.Control;
             this.cbRandColor.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandColor.Location = new System.Drawing.Point(80, 0);
+            this.cbRandColor.Location = new System.Drawing.Point(73, 0);
             this.cbRandColor.Name = "cbRandColor";
-            this.cbRandColor.Size = new System.Drawing.Size(64, 16);
+            this.cbRandColor.Size = new System.Drawing.Size(71, 17);
             this.cbRandColor.TabIndex = 0;
             this.cbRandColor.Text = "Random";
             //! this.cbRandColor.Text = "ランダム";
@@ -519,12 +519,12 @@ namespace freetrain.framework.plugin.generic
             this.groupDesign.Controls.Add(this.cbRandDesign);
             this.groupDesign.Controls.Add(this.selectorDesign);
             this.groupDesign.Controls.Add(this.nameLabel);
-            this.groupDesign.Location = new System.Drawing.Point(192, 24);
+            this.groupDesign.Location = new System.Drawing.Point(201, 38);
             this.groupDesign.Name = "groupDesign";
-            this.groupDesign.Size = new System.Drawing.Size(160, 52);
+            this.groupDesign.Size = new System.Drawing.Size(160, 56);
             this.groupDesign.TabIndex = 1;
             this.groupDesign.TabStop = false;
-            this.groupDesign.Text = "Design:";
+            this.groupDesign.Text = "Design";
             //! this.groupDesign.Text = "デザイン：";
             // 
             // cbRandDesign
@@ -532,9 +532,9 @@ namespace freetrain.framework.plugin.generic
             this.cbRandDesign.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRandDesign.BackColor = System.Drawing.SystemColors.Control;
             this.cbRandDesign.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandDesign.Location = new System.Drawing.Point(80, -1);
+            this.cbRandDesign.Location = new System.Drawing.Point(73, -1);
             this.cbRandDesign.Name = "cbRandDesign";
-            this.cbRandDesign.Size = new System.Drawing.Size(64, 16);
+            this.cbRandDesign.Size = new System.Drawing.Size(71, 17);
             this.cbRandDesign.TabIndex = 0;
             this.cbRandDesign.Text = "Random";
             //! this.cbRandDesign.Text = "ランダム";
@@ -546,12 +546,12 @@ namespace freetrain.framework.plugin.generic
             this.groupCol2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupCol2.Controls.Add(this.selectorCol2);
             this.groupCol2.Controls.Add(this.cbRandCol2);
-            this.groupCol2.Location = new System.Drawing.Point(192, 112);
+            this.groupCol2.Location = new System.Drawing.Point(201, 133);
             this.groupCol2.Name = "groupCol2";
-            this.groupCol2.Size = new System.Drawing.Size(160, 34);
+            this.groupCol2.Size = new System.Drawing.Size(160, 37);
             this.groupCol2.TabIndex = 3;
             this.groupCol2.TabStop = false;
-            this.groupCol2.Text = "Color 2:";
+            this.groupCol2.Text = "Color 2";
             //! this.groupCol2.Text = "色2：";
             // 
             // selectorCol2
@@ -561,9 +561,9 @@ namespace freetrain.framework.plugin.generic
             this.selectorCol2.count = 10;
             this.selectorCol2.current = 0;
             this.selectorCol2.dataSource = null;
-            this.selectorCol2.Location = new System.Drawing.Point(24, 16);
+            this.selectorCol2.Location = new System.Drawing.Point(24, 17);
             this.selectorCol2.Name = "selectorCol2";
-            this.selectorCol2.Size = new System.Drawing.Size(112, 14);
+            this.selectorCol2.Size = new System.Drawing.Size(112, 16);
             this.selectorCol2.TabIndex = 1;
             this.selectorCol2.indexChanged += new System.EventHandler(this.selectorCol2_indexChanged);
             // 
@@ -572,9 +572,9 @@ namespace freetrain.framework.plugin.generic
             this.cbRandCol2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRandCol2.BackColor = System.Drawing.SystemColors.Control;
             this.cbRandCol2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandCol2.Location = new System.Drawing.Point(80, 0);
+            this.cbRandCol2.Location = new System.Drawing.Point(73, 0);
             this.cbRandCol2.Name = "cbRandCol2";
-            this.cbRandCol2.Size = new System.Drawing.Size(64, 16);
+            this.cbRandCol2.Size = new System.Drawing.Size(71, 17);
             this.cbRandCol2.TabIndex = 0;
             this.cbRandCol2.Text = "Random";
             //! this.cbRandCol2.Text = "ランダム";
@@ -586,17 +586,16 @@ namespace freetrain.framework.plugin.generic
             this.typeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeList.ItemHeight = 12;
-            this.typeList.Location = new System.Drawing.Point(0, 0);
+            this.typeList.Location = new System.Drawing.Point(6, 12);
             this.typeList.Name = "typeList";
-            this.typeList.Size = new System.Drawing.Size(184, 124);
+            this.typeList.Size = new System.Drawing.Size(185, 108);
             this.typeList.TabIndex = 10;
             this.typeList.SelectedIndexChanged += new System.EventHandler(this.typeList_SelectedIndexChanged);
             // 
             // MultiSelectorController
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-            this.ClientSize = new System.Drawing.Size(362, 355);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(369, 387);
             this.Controls.Add(this.costBox);
             this.Controls.Add(this.numHeight);
             this.Controls.Add(this.groupDesign);
@@ -628,13 +627,15 @@ namespace freetrain.framework.plugin.generic
 			int width = this.ClientSize.Width;
 			if( bShowDetail ) 
 			{
-				this.ClientSize = new Size(width, 355);
+				this.ClientSize = new Size(width, labelInfo.Top + labelInfo.Height + 9);
 				btnDetail.Text = "p";
+				typeList.Visible = true;
 			}
 			else
 			{
-				this.ClientSize = new Size(width, 227);
+				this.ClientSize = new Size(width, costBox.Top + costBox.Height + 6);
 				btnDetail.Text = "q";
+				typeList.Visible = false;
 			}
 			redrawPreview();
 		}
