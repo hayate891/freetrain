@@ -146,15 +146,17 @@ namespace freetrain.world.road.accessory
 		/// </summary>
 		protected virtual void onTypeChanged(object sender, System.EventArgs e) {
 			RoadAccessoryContribution builder = (RoadAccessoryContribution)typeBox.SelectedItem;
-
-			using( PreviewDrawer drawer = builder.createPreview(preview.Size) ) {
-				if( previewBitmap!=null )	previewBitmap.Dispose();
-				preview.Image = previewBitmap = drawer.createBitmap();
+			if (builder != null) {
+				using (PreviewDrawer drawer = builder.createPreview(preview.Size))
+				{
+					if (previewBitmap != null) previewBitmap.Dispose();
+					preview.Image = previewBitmap = drawer.createBitmap();
+				}
+				if (isPlacing)
+					currentController = builder.createBuilder(this.siteImpl);
+				else
+					currentController = builder.createRemover(this.siteImpl);
 			}
-			if(isPlacing)
-				currentController = builder.createBuilder(this.siteImpl);
-			else
-				currentController = builder.createRemover(this.siteImpl);
 		}
 	}
 }
