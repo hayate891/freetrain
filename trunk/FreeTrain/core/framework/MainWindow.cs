@@ -1485,8 +1485,8 @@ namespace freetrain.framework
 			setWorld(new World(new Distance(127,127,12),2));
 			
             // insert dummy menu to make visible menu items appended afterward.
-            MainMenu.MenuItems.Add(new MenuItem());
-
+            MenuItem tmp = new MenuItem();
+            MainMenu.MenuItems.Add(tmp);
 			// merge menu contributions
 			foreach( MenuContribution contrib in Core.plugins.menus )
 				contrib.mergeMenu(this.MainMenu);
@@ -1528,6 +1528,7 @@ namespace freetrain.framework
 				Debug.WriteLine(ex.StackTrace);
 			}
 
+			this.MainMenu.MenuItems.Remove(tmp);
 			timer.Start();
 		}
 
