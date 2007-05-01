@@ -75,7 +75,6 @@ namespace freetrain.controllers.rail
 ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-ROOF}")
 //			};
 
-            Catalog.Init("freetrain", "./locale");
 			dirN.Tag = Direction.NORTH;
 			dirE.Tag = Direction.EAST;
 			dirS.Tag = Direction.SOUTH;
@@ -600,7 +599,7 @@ namespace freetrain.controllers.rail
 			case Mode.Station:
 				if( isPlacing ) {
 					if(!selectedStation.canBeBuilt(loc,ControlMode.player)) {
-						MainWindow.showError(Catalog.GetString("This cannot be build here!"));
+						MainWindow.showError("Can not build");
 						//! MainWindow.showError("設置できません");
 					} else {
 						selectedStation.create(loc,true);
@@ -614,7 +613,7 @@ namespace freetrain.controllers.rail
 			case Mode.FatPlatform:
 				if( isPlacing ) {
 					if(!FatPlatform.canBeBuilt(loc,direction,length)) {
-                        MainWindow.showError(Catalog.GetString("This cannot be build here!"));
+						MainWindow.showError("Can not build");
 						//! MainWindow.showError("設置できません");
 						return;
 					}
@@ -625,7 +624,7 @@ namespace freetrain.controllers.rail
 						if(p.canRemove)
 							p.remove();
 						else
-                            MainWindow.showError(Catalog.GetString("This cannot be removed!"));
+							MainWindow.showError("Can not remove");
 							//! MainWindow.showError("撤去できません");
 					}
 				}
@@ -634,7 +633,7 @@ namespace freetrain.controllers.rail
 			case Mode.ThinPlatform:
 				if( isPlacing ) {
 					if(!ThinPlatform.canBeBuilt(loc,direction,length)) {
-                        MainWindow.showError(Catalog.GetString("This cannot be build here!"));
+						MainWindow.showError("Can not build");
 						//! MainWindow.showError("設置できません");
 						return;
 					}
@@ -645,7 +644,7 @@ namespace freetrain.controllers.rail
 						if(p.canRemove)
 							p.remove();
 						else
-                            MainWindow.showError(Catalog.GetString("This cannot be removed!"));
+							MainWindow.showError("Can not remove");
 							//! MainWindow.showError("撤去できません");
 					}
 				}

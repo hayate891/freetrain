@@ -75,10 +75,6 @@
       <HintPath>..\extlib\AxSHDocVw.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="I18N, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\I18N.dll</HintPath>
-    </Reference>
     <Reference Include="MagicLibrary">
       <Name>MagicLibrary</Name>
       <HintPath>..\extlib\MagicLibrary.DLL</HintPath>
@@ -91,10 +87,6 @@
     <Reference Include="Microsoft.Vsa">
       <Name>Microsoft.Vsa</Name>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\Mono.Posix.dll</HintPath>
     </Reference>
     <Reference Include="MsHtmlHost">
       <Name>MsHtmlHost</Name>
