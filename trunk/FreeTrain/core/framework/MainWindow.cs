@@ -856,7 +856,7 @@ namespace freetrain.framework
             // tbTimer
             // 
             this.tbTimer.DropDownMenu = this.clockMenu;
-            this.tbTimer.ImageIndex = 10;
+            this.tbTimer.ImageIndex = 12;
             this.tbTimer.Name = "tbTimer";
             this.tbTimer.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton;
             this.tbTimer.Text = "Timer";
@@ -1419,6 +1419,7 @@ namespace freetrain.framework
 			menuItem_ClockGo2.Checked = timer.Enabled && timer.Interval==100;
 			menuItem_ClockGo3.Checked = timer.Enabled && timer.Interval==50;
 			menuItem_ClockGo4.Checked = timer.Enabled && timer.Interval==1;
+			updateTimerImage();
 		}
 
 		private void menuItem_ClockStop_Click( object sender, EventArgs e ) {
@@ -1446,13 +1447,30 @@ namespace freetrain.framework
 			timer.Start();
 		}
 
+		private void updateTimerImage()
+		{
+			if (timer.Enabled)
+			{
+				switch (timer.Interval)
+				{
+					case 200: this.tbTimer.ImageIndex = 11; break;
+					case 100: this.tbTimer.ImageIndex = 12; break;
+					case 50: this.tbTimer.ImageIndex = 13; break;
+					case 1: this.tbTimer.ImageIndex = 14; break;
+				}
+			}
+			else tbTimer.ImageIndex = 10;
+		}
+
 		private void toggleClock( Command c ) {
 			timer.Enabled = !timer.Enabled;
+			updateTimerImage();
 		}
 
 		private void updateClock( Command c ) {
 //			c.Checked = !timer.Enabled;
 			tbTimer.Pushed = !timer.Enabled;
+			updateTimerImage();
 		}
 
 		private void viewOptionDayNightChanged( Command c ) 
