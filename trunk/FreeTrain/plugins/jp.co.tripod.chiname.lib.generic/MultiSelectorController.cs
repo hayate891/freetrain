@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Diagnostics;
 using System.Collections;
@@ -109,6 +109,7 @@ namespace freetrain.framework.plugin.generic
 		internal void OnNodeSelected(StructCategory cat, int option)
 		{
 			typeBox.Items.Clear();
+            typeBox.Text = "";
 			typeList.Items.Clear();
 			typeMap.Clear();
 			SetCategoryEntries(cat,typeMap);
@@ -120,6 +121,8 @@ namespace freetrain.framework.plugin.generic
 			}
 			else
 				current = dummy;
+			
+            UpdateContribution();
 		}
 
 		public override LocationDisambiguator disambiguator { get { return this; } }
@@ -790,19 +793,38 @@ namespace freetrain.framework.plugin.generic
 
 		private void UpdateContribution()
 		{
-			string key = typeBox.SelectedItem.ToString();
-			designMap = (ArrayList)typeMap[key];
-			subNames = new String[designMap.Count];
-			IEnumerator ie = designMap.GetEnumerator();
-			int i=0;
-			while(ie.MoveNext())
-				subNames[i++]=((GenericStructureContribution)ie.Current).design;
-
-			selectorDesign.count = designMap.Count;
-			bool b =( selectorDesign.count > 1 );
-			groupDesign.Enabled = b;
-
-			UpdateDesign();
+			if (typeBox.SelectedItem == null) {
+				ClearContributionInformation();
+			} else {
+				string key = typeBox.SelectedItem.ToString();
+				designMap = (ArrayList)typeMap[key];
+				subNames = new String[designMap.Count];
+				IEnumerator ie = designMap.GetEnumerator();
+				int i=0;
+				while(ie.MoveNext())
+					subNames[i++]=((GenericStructureContribution)ie.Current).design;
+	
+				selectorDesign.count = designMap.Count;
+				bool b =( selectorDesign.count > 1 );
+				groupDesign.Enabled = b;
+	
+				UpdateDesign();
+			}
+		}
+		
+		private void ClearContributionInformation() {
+			nameLabel.Text = "";
+			groupColor.Enabled = false;
+			groupCol2.Enabled = false;
+			selectorDir.Enabled = false;
+			selectorColor.count = 0;
+			selectorCol2.count = 0;
+			numHeight.Enabled = false;
+			numHeight.Text = "";
+			costBox.cost = 0;
+			//and now clear the preview... somehow?
+			current = dummy;
+			redrawPreview();
 		}
 
 		private void UpdateDesign()
