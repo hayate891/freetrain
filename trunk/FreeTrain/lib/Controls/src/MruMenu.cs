@@ -113,8 +113,14 @@ namespace freetrain.controls
 		protected void OnClick(object sender, System.EventArgs e)
 		{
 			MruMenuItem menuItem = (MruMenuItem) sender;
-			if(onClicked!=null)
-				onClicked(menuItem.Index - StartIndex, menuItem.fileName);
+			if (onClicked != null) {
+				try {
+					onClicked(menuItem.Index - StartIndex, menuItem.fileName);
+				}
+				catch {
+					//TODO: should we display an error message here?
+				}
+			}
 		}
 		#endregion
 
@@ -617,8 +623,8 @@ namespace freetrain.controls
 				dom.Load(file.FullName);
 				
 				maxEntries = int.Parse(dom.SelectSingleNode("/mru/@max").Value);
-				foreach( XmlElement e in dom.SelectNodes("/mru/entry") )
-					AddFile( e.InnerText );
+                foreach (XmlElement e in dom.SelectNodes("/mru/entry"))
+                    AddFile(e.InnerText);
 			} catch( Exception e ) {
 				Debug.WriteLine("failed to load "+file);
 				Debug.WriteLine(e);

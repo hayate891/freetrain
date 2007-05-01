@@ -75,24 +75,25 @@ namespace freetrain.controllers.rail
 			// 
 			// panel1
 			// 
+			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.panel1.BackColor = System.Drawing.Color.Transparent;
-			this.panel1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				 this.rename,
-																				 this.buttonDelete,
-																				 this.buttonConfig,
-																				 this.buttonNew});
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-			this.panel1.Location = new System.Drawing.Point(264, 0);
+			this.panel1.Controls.Add(this.rename);
+			this.panel1.Controls.Add(this.buttonDelete);
+			this.panel1.Controls.Add(this.buttonConfig);
+			this.panel1.Controls.Add(this.buttonNew);
+			this.panel1.Location = new System.Drawing.Point(0, 312);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(104, 150);
+			this.panel1.Size = new System.Drawing.Size(237, 34);
 			this.panel1.TabIndex = 0;
 			// 
 			// rename
 			// 
+			this.rename.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.rename.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.rename.Location = new System.Drawing.Point(8, 104);
+			this.rename.Location = new System.Drawing.Point(174, 4);
 			this.rename.Name = "rename";
-			this.rename.Size = new System.Drawing.Size(88, 24);
+			this.rename.Size = new System.Drawing.Size(51, 26);
 			this.rename.TabIndex = 5;
 			this.rename.Text = "&Rename";
 			//! this.rename.Text = "名前変更(&R)";
@@ -100,10 +101,11 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonDelete
 			// 
+			this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonDelete.Location = new System.Drawing.Point(8, 72);
+			this.buttonDelete.Location = new System.Drawing.Point(118, 4);
 			this.buttonDelete.Name = "buttonDelete";
-			this.buttonDelete.Size = new System.Drawing.Size(88, 24);
+			this.buttonDelete.Size = new System.Drawing.Size(50, 26);
 			this.buttonDelete.TabIndex = 4;
 			this.buttonDelete.Text = "&Delete";
 			//! this.buttonDelete.Text = "削除(&D)";
@@ -111,21 +113,24 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonConfig
 			// 
+			this.buttonConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonConfig.Location = new System.Drawing.Point(8, 40);
+			this.buttonConfig.Location = new System.Drawing.Point(65, 4);
 			this.buttonConfig.Name = "buttonConfig";
-			this.buttonConfig.Size = new System.Drawing.Size(88, 24);
+			this.buttonConfig.Size = new System.Drawing.Size(47, 26);
 			this.buttonConfig.TabIndex = 3;
-			this.buttonConfig.Text = "&Configure";
+			this.buttonConfig.Text = "&Edit";
 			//! this.buttonConfig.Text = "設定(&C)";
 			this.buttonConfig.Click += new System.EventHandler(this.buttonConfig_Click);
 			// 
 			// buttonNew
 			// 
+			this.buttonNew.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonNew.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonNew.Location = new System.Drawing.Point(8, 8);
+			this.buttonNew.Location = new System.Drawing.Point(12, 4);
 			this.buttonNew.Name = "buttonNew";
-			this.buttonNew.Size = new System.Drawing.Size(88, 24);
+			this.buttonNew.Size = new System.Drawing.Size(47, 26);
 			this.buttonNew.TabIndex = 2;
 			this.buttonNew.Text = "&New...";
 			//! this.buttonNew.Text = "新規(&N)...";
@@ -133,42 +138,48 @@ namespace freetrain.controllers.rail
 			// 
 			// list
 			// 
+			this.list.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+						| System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 																				   this.columnName,
 																				   this.columnType});
-			this.list.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.list.FullRowSelect = true;
 			this.list.HideSelection = false;
 			this.list.LabelEdit = true;
+			this.list.Location = new System.Drawing.Point(0, 0);
 			this.list.MultiSelect = false;
 			this.list.Name = "list";
-			this.list.Size = new System.Drawing.Size(264, 150);
+			this.list.Size = new System.Drawing.Size(237, 310);
 			this.list.TabIndex = 1;
+			this.list.UseCompatibleStateImageBehavior = false;
 			this.list.View = System.Windows.Forms.View.Details;
 			this.list.DoubleClick += new System.EventHandler(this.onListDoubleClick);
+			this.list.Resize += new System.EventHandler(this.list_Resize);
 			this.list.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.list_AfterLabelEdit);
 			this.list.SelectedIndexChanged += new System.EventHandler(this.list_SelectedIndexChanged);
 			// 
 			// columnName
 			// 
 			this.columnName.Text = "Name";
+			this.columnName.Width = 127;
 			//! this.columnName.Text = "名前";
-			this.columnName.Width = 200;
 			// 
 			// columnType
 			// 
 			this.columnType.Text = "Type";
 			//! this.columnType.Text = "種類";
+			this.columnType.Width = 98;
 			// 
 			// TrainControllerDialog
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(368, 150);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.list,
-																		  this.panel1});
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.ClientSize = new System.Drawing.Size(237, 346);
+			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.list);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-			this.MinimumSize = new System.Drawing.Size(376, 160);
+			this.MinimumSize = new System.Drawing.Size(245, 150);
 			this.Name = "TrainControllerDialog";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.Text = "Diagram";
@@ -285,6 +296,11 @@ namespace freetrain.controllers.rail
 		private void onListDoubleClick(object sender, System.EventArgs e) {
 			if( selectedItem!=null )
 				buttonConfig_Click(sender,e);
+		}
+
+		private void list_Resize(object sender, System.EventArgs e) {
+			list.Columns[0].Width = Convert.ToInt32(list.Width * 0.60);
+			list.Columns[1].Width = list.Width - list.Columns[0].Width - 5;
 		}
 	}
 }

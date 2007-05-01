@@ -143,7 +143,7 @@ namespace freetrain.controllers.rail
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(TrainPlacementController));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainPlacementController));
 			this.buttonRemove = new System.Windows.Forms.RadioButton();
 			this.buttonPlace = new System.Windows.Forms.RadioButton();
 			this.tree = new freetrain.util.controls.DDTreeView();
@@ -165,11 +165,11 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonRemove
 			// 
-			this.buttonRemove.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(200, 120);
+			this.buttonRemove.Location = new System.Drawing.Point(200, 133);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(56, 26);
 			this.buttonRemove.TabIndex = 5;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -178,12 +178,12 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonPlace
 			// 
-			this.buttonPlace.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(136, 120);
+			this.buttonPlace.Location = new System.Drawing.Point(136, 133);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(56, 26);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Place";
@@ -197,9 +197,12 @@ namespace freetrain.controllers.rail
 			this.tree.ContextMenu = this.treeMenu;
 			this.tree.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tree.FullRowSelect = true;
+			this.tree.ImageIndex = 0;
 			this.tree.ImageList = this.imageList;
+			this.tree.Location = new System.Drawing.Point(0, 0);
 			this.tree.Name = "tree";
-			this.tree.Size = new System.Drawing.Size(144, 155);
+			this.tree.SelectedImageIndex = 0;
+			this.tree.Size = new System.Drawing.Size(146, 171);
 			this.tree.TabIndex = 1;
 			this.tree.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.onNodeExpanded);
 			this.tree.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.onNodeCollapsed);
@@ -225,90 +228,92 @@ namespace freetrain.controllers.rail
 			this.imageList.ImageSize = new System.Drawing.Size(16, 16);
 			this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
 			this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageList.Images.SetKeyName(0, "");
+			this.imageList.Images.SetKeyName(1, "");
+			this.imageList.Images.SetKeyName(2, "");
 			// 
 			// panel2
 			// 
-			this.panel2.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				 this.typeBox,
-																				 this.label3,
-																				 this.controllerCombo,
-																				 this.label2,
-																				 this.nameBox,
-																				 this.label1,
-																				 this.buttonPlace,
-																				 this.buttonRemove});
+			this.panel2.Controls.Add(this.typeBox);
+			this.panel2.Controls.Add(this.label3);
+			this.panel2.Controls.Add(this.controllerCombo);
+			this.panel2.Controls.Add(this.label2);
+			this.panel2.Controls.Add(this.nameBox);
+			this.panel2.Controls.Add(this.label1);
+			this.panel2.Controls.Add(this.buttonPlace);
+			this.panel2.Controls.Add(this.buttonRemove);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-			this.panel2.Location = new System.Drawing.Point(144, 0);
+			this.panel2.Location = new System.Drawing.Point(146, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(264, 155);
+			this.panel2.Size = new System.Drawing.Size(264, 171);
 			this.panel2.TabIndex = 3;
 			// 
 			// typeBox
 			// 
 			this.typeBox.Enabled = false;
-			this.typeBox.Location = new System.Drawing.Point(72, 72);
+			this.typeBox.Location = new System.Drawing.Point(90, 78);
 			this.typeBox.Name = "typeBox";
-			this.typeBox.Size = new System.Drawing.Size(184, 20);
+			this.typeBox.Size = new System.Drawing.Size(166, 22);
 			this.typeBox.TabIndex = 13;
 			this.typeBox.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(8, 72);
+			this.label3.Location = new System.Drawing.Point(14, 78);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(56, 20);
+			this.label3.Size = new System.Drawing.Size(70, 22);
 			this.label3.TabIndex = 12;
 			this.label3.Text = "&Type:";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			//! this.label3.Text = "種類(&T)：";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// controllerCombo
 			// 
 			this.controllerCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.controllerCombo.Enabled = false;
-			this.controllerCombo.Location = new System.Drawing.Point(72, 40);
+			this.controllerCombo.Location = new System.Drawing.Point(90, 43);
 			this.controllerCombo.Name = "controllerCombo";
-			this.controllerCombo.Size = new System.Drawing.Size(184, 20);
+			this.controllerCombo.Size = new System.Drawing.Size(166, 21);
 			this.controllerCombo.TabIndex = 3;
 			this.controllerCombo.SelectedIndexChanged += new System.EventHandler(this.controllerCombo_SelectedIndexChanged);
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(8, 40);
+			this.label2.Location = new System.Drawing.Point(11, 43);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(56, 20);
+			this.label2.Size = new System.Drawing.Size(73, 21);
 			this.label2.TabIndex = 10;
 			this.label2.Text = "&Diagram:";
 			//! this.label2.Text = "ダイヤ(&T)：";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// nameBox
 			// 
 			this.nameBox.Enabled = false;
-			this.nameBox.Location = new System.Drawing.Point(72, 8);
+			this.nameBox.Location = new System.Drawing.Point(90, 9);
 			this.nameBox.Name = "nameBox";
-			this.nameBox.Size = new System.Drawing.Size(184, 19);
+			this.nameBox.Size = new System.Drawing.Size(166, 20);
 			this.nameBox.TabIndex = 2;
 			this.nameBox.Text = "";
 			this.nameBox.TextChanged += new System.EventHandler(this.onNameChanged);
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(8, 8);
+			this.label1.Location = new System.Drawing.Point(11, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(56, 20);
+			this.label1.Size = new System.Drawing.Size(73, 21);
 			this.label1.TabIndex = 8;
 			this.label1.Text = "&Name:";
 			//! this.label1.Text = "名前(&N)：";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				 this.tree});
+			this.panel1.Controls.Add(this.tree);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(144, 155);
+			this.panel1.Size = new System.Drawing.Size(146, 171);
 			this.panel1.TabIndex = 7;
 			// 
 			// miSell
@@ -319,16 +324,16 @@ namespace freetrain.controllers.rail
 			// 
 			// TrainPlacementController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(408, 155);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.panel1,
-																		  this.panel2});
-			this.MinimumSize = new System.Drawing.Size(416, 180);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(410, 171);
+			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.panel2);
+			this.MinimumSize = new System.Drawing.Size(416, 195);
 			this.Name = "TrainPlacementController";
 			this.Text = "Place Train";
 			//! this.Text = "車両の配置";
 			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

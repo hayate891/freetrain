@@ -6,8 +6,6 @@
     <ProjectGuid>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>
-    </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>FreeTrain.Core</AssemblyName>
@@ -20,7 +18,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>freetrain</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>freetrain.framework.MainWindow</StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -78,6 +75,10 @@
       <HintPath>..\extlib\AxSHDocVw.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="I18N, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\I18N.dll</HintPath>
+    </Reference>
     <Reference Include="MagicLibrary">
       <Name>MagicLibrary</Name>
       <HintPath>..\extlib\MagicLibrary.DLL</HintPath>
@@ -90,6 +91,10 @@
     <Reference Include="Microsoft.Vsa">
       <Name>Microsoft.Vsa</Name>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\Mono.Posix.dll</HintPath>
     </Reference>
     <Reference Include="MsHtmlHost">
       <Name>MsHtmlHost</Name>

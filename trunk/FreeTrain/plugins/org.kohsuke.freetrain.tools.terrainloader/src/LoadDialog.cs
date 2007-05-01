@@ -35,7 +35,6 @@ namespace freetrain.tools.terrainloader
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox fileName;
 		private System.Windows.Forms.Button buttonSelectFile;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button buttonOK;
 		private System.Windows.Forms.Button buttonCancel;
 		private System.Windows.Forms.GroupBox groupBox1;
@@ -60,7 +59,6 @@ namespace freetrain.tools.terrainloader
 			this.label1 = new System.Windows.Forms.Label();
 			this.fileName = new System.Windows.Forms.TextBox();
 			this.buttonSelectFile = new System.Windows.Forms.Button();
-			this.label2 = new System.Windows.Forms.Label();
 			this.previewBox = new System.Windows.Forms.PictureBox();
 			this.buttonOK = new System.Windows.Forms.Button();
 			this.buttonCancel = new System.Windows.Forms.Button();
@@ -73,7 +71,10 @@ namespace freetrain.tools.terrainloader
 			this.label4 = new System.Windows.Forms.Label();
 			this.sizeX = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.groupBox1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.previewBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// openFileDialog
@@ -85,89 +86,73 @@ namespace freetrain.tools.terrainloader
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(8, 8);
+			this.label1.Location = new System.Drawing.Point(8, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(72, 16);
+			this.label1.Size = new System.Drawing.Size(62, 17);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "&File Name:";
 			//! this.label1.Text = "ファイル名(&F)：";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// fileName
 			// 
-			this.fileName.Location = new System.Drawing.Point(88, 8);
+			this.fileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.fileName.Location = new System.Drawing.Point(67, 9);
 			this.fileName.Name = "fileName";
-			this.fileName.Size = new System.Drawing.Size(200, 19);
+			this.fileName.Size = new System.Drawing.Size(207, 20);
 			this.fileName.TabIndex = 1;
-			this.fileName.Text = "";
 			this.fileName.TextChanged += new System.EventHandler(this.onFileNameChanged);
 			// 
 			// buttonSelectFile
 			// 
 			this.buttonSelectFile.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonSelectFile.Location = new System.Drawing.Point(296, 8);
+			this.buttonSelectFile.Location = new System.Drawing.Point(282, 9);
 			this.buttonSelectFile.Name = "buttonSelectFile";
-			this.buttonSelectFile.Size = new System.Drawing.Size(64, 20);
+			this.buttonSelectFile.Size = new System.Drawing.Size(80, 20);
 			this.buttonSelectFile.TabIndex = 2;
 			this.buttonSelectFile.Text = "&Select...";
 			//! this.buttonSelectFile.Text = "選択(&S)...";
 			this.buttonSelectFile.Click += new System.EventHandler(this.onSelectFile);
 			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(8, 40);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(72, 16);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "Preview:";
-			//! this.label2.Text = "プレビュー：";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-			// 
-			// previewBox
-			// 
-			this.previewBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.previewBox.Location = new System.Drawing.Point(8, 64);
-			this.previewBox.Name = "previewBox";
-			this.previewBox.Size = new System.Drawing.Size(176, 128);
-			this.previewBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.previewBox.TabIndex = 4;
-			this.previewBox.TabStop = false;
-			// 
 			// buttonOK
 			// 
+			this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonOK.Location = new System.Drawing.Point(192, 200);
+			this.buttonOK.Location = new System.Drawing.Point(194, 216);
 			this.buttonOK.Name = "buttonOK";
-			this.buttonOK.Size = new System.Drawing.Size(80, 24);
+			this.buttonOK.Size = new System.Drawing.Size(80, 26);
 			this.buttonOK.TabIndex = 5;
 			this.buttonOK.Text = "&OK";
 			this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
 			// 
 			// buttonCancel
 			// 
+			this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonCancel.Location = new System.Drawing.Point(280, 200);
+			this.buttonCancel.Location = new System.Drawing.Point(282, 216);
 			this.buttonCancel.Name = "buttonCancel";
-			this.buttonCancel.Size = new System.Drawing.Size(80, 24);
+			this.buttonCancel.Size = new System.Drawing.Size(80, 26);
 			this.buttonCancel.TabIndex = 6;
 			this.buttonCancel.Text = "&Cancel";
 			//! this.buttonCancel.Text = "ｷｬﾝｾﾙ(&C)";
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					this.water,
-																					this.label6,
-																					this.sizeZ,
-																					this.label5,
-																					this.sizeY,
-																					this.label4,
-																					this.sizeX,
-																					this.label3});
-			this.groupBox1.Location = new System.Drawing.Point(192, 40);
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.water);
+			this.groupBox1.Controls.Add(this.label6);
+			this.groupBox1.Controls.Add(this.sizeZ);
+			this.groupBox1.Controls.Add(this.label5);
+			this.groupBox1.Controls.Add(this.sizeY);
+			this.groupBox1.Controls.Add(this.label4);
+			this.groupBox1.Controls.Add(this.sizeX);
+			this.groupBox1.Controls.Add(this.label3);
+			this.groupBox1.Location = new System.Drawing.Point(179, 43);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(168, 152);
+			this.groupBox1.Size = new System.Drawing.Size(183, 164);
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Size";
@@ -175,91 +160,117 @@ namespace freetrain.tools.terrainloader
 			// 
 			// water
 			// 
-			this.water.Location = new System.Drawing.Point(72, 120);
+			this.water.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.water.Location = new System.Drawing.Point(93, 130);
 			this.water.Name = "water";
-			this.water.Size = new System.Drawing.Size(88, 19);
+			this.water.Size = new System.Drawing.Size(82, 20);
 			this.water.TabIndex = 7;
-			this.water.Text = "";
 			// 
 			// label6
 			// 
-			this.label6.Location = new System.Drawing.Point(8, 120);
+			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label6.Location = new System.Drawing.Point(6, 130);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(64, 16);
+			this.label6.Size = new System.Drawing.Size(81, 20);
 			this.label6.TabIndex = 6;
-			this.label6.Text = "W&ater Level:";
+			this.label6.Text = "W&ater Level";
 			//! this.label6.Text = "水面高(&A)：";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// sizeZ
 			// 
-			this.sizeZ.Location = new System.Drawing.Point(72, 88);
+			this.sizeZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.sizeZ.Location = new System.Drawing.Point(93, 95);
 			this.sizeZ.Name = "sizeZ";
-			this.sizeZ.Size = new System.Drawing.Size(88, 19);
+			this.sizeZ.Size = new System.Drawing.Size(82, 20);
 			this.sizeZ.TabIndex = 5;
-			this.sizeZ.Text = "";
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(8, 88);
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label5.Location = new System.Drawing.Point(6, 95);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(64, 16);
+			this.label5.Size = new System.Drawing.Size(81, 18);
 			this.label5.TabIndex = 4;
-			this.label5.Text = "&Height";
+			this.label5.Text = "Terrain &Height";
 			//! this.label5.Text = "高さ(&H)：";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// sizeY
 			// 
-			this.sizeY.Location = new System.Drawing.Point(72, 56);
+			this.sizeY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.sizeY.Location = new System.Drawing.Point(93, 61);
 			this.sizeY.Name = "sizeY";
-			this.sizeY.Size = new System.Drawing.Size(88, 19);
+			this.sizeY.Size = new System.Drawing.Size(82, 20);
 			this.sizeY.TabIndex = 3;
-			this.sizeY.Text = "";
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(8, 56);
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label4.Location = new System.Drawing.Point(6, 61);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(64, 16);
+			this.label4.Size = new System.Drawing.Size(81, 20);
 			this.label4.TabIndex = 2;
-			this.label4.Text = "&Depth";
+			this.label4.Text = "Map Length";
 			//! this.label4.Text = "奥行(&D)：";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// sizeX
 			// 
-			this.sizeX.Location = new System.Drawing.Point(72, 24);
+			this.sizeX.Location = new System.Drawing.Point(93, 26);
 			this.sizeX.Name = "sizeX";
-			this.sizeX.Size = new System.Drawing.Size(88, 19);
+			this.sizeX.Size = new System.Drawing.Size(82, 20);
 			this.sizeX.TabIndex = 1;
-			this.sizeX.Text = "";
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(8, 24);
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label3.Location = new System.Drawing.Point(6, 26);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(64, 16);
+			this.label3.Size = new System.Drawing.Size(81, 20);
 			this.label3.TabIndex = 0;
-            this.label3.Text = "&Width";
-            //! this.label3.Text = "幅(&W)：";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label3.Text = "Map &Width";
+			//! this.label3.Text = "幅(&W)：";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox2.Controls.Add(this.previewBox);
+			this.groupBox2.Location = new System.Drawing.Point(8, 43);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(165, 164);
+			this.groupBox2.TabIndex = 7;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Preview";
+			//! this.groupBox2.Text = "プレビュー：";
+			// 
+			// previewBox
+			// 
+			this.previewBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.previewBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.previewBox.Location = new System.Drawing.Point(6, 19);
+			this.previewBox.Name = "previewBox";
+			this.previewBox.Size = new System.Drawing.Size(153, 131);
+			this.previewBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.previewBox.TabIndex = 5;
+			this.previewBox.TabStop = false;
 			// 
 			// LoadDialog
 			// 
-			this.AcceptButton = this.buttonOK;
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.CancelButton = this.buttonCancel;
-			this.ClientSize = new System.Drawing.Size(368, 229);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.groupBox1,
-																		  this.buttonCancel,
-																		  this.buttonOK,
-																		  this.previewBox,
-																		  this.label2,
-																		  this.buttonSelectFile,
-																		  this.fileName,
-																		  this.label1});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(370, 248);
+			this.Controls.Add(this.groupBox2);
+			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.buttonCancel);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.buttonSelectFile);
+			this.Controls.Add(this.fileName);
+			this.Controls.Add(this.label1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -268,9 +279,13 @@ namespace freetrain.tools.terrainloader
 			this.Text = "Loading terrain...";
 			//! this.Text = "地形の読み込み";
 			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.previewBox)).EndInit();
 			this.ResumeLayout(false);
-
+			this.PerformLayout();
 		}
+		private System.Windows.Forms.GroupBox groupBox2;
 		#endregion
 
 		private void onSelectFile(object sender, System.EventArgs e) {

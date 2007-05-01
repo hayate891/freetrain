@@ -68,10 +68,12 @@ namespace freetrain.controllers
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(56, 88);
+			this.buttonRemove.Location = new System.Drawing.Point(50, 88);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(54, 26);
 			this.buttonRemove.TabIndex = 7;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -80,11 +82,12 @@ namespace freetrain.controllers
 			// 
 			// buttonPlace
 			// 
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
 			this.buttonPlace.Location = new System.Drawing.Point(8, 88);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(42, 26);
 			this.buttonPlace.TabIndex = 6;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Place";
@@ -106,7 +109,7 @@ namespace freetrain.controllers
 			// AbstractLineController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(112, 115);
+			this.ClientSize = new System.Drawing.Size(112, 120);
 			this.Controls.Add(this.buttonRemove);
 			this.Controls.Add(this.buttonPlace);
 			this.Controls.Add(this.picture);

@@ -19,7 +19,7 @@ namespace freetrain.world.rail.tattc
 			this.controller = controller;
 			InitializeComponent();
 
-			this.Text = string.Format("Diagram settings \"{0}\"",controller.name);
+			this.Text = string.Format("Diagram settings",controller.name);
 			//! this.Text = string.Format("ダイヤ設定「{0}」",controller.name);
 
 			label1.Text = string.Format("{0}\n\n{1}",controller.name, label1.Text );
@@ -123,18 +123,18 @@ namespace freetrain.world.rail.tattc
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(8, 8);
+			this.label1.Location = new System.Drawing.Point(8, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(104, 64);
+			this.label1.Size = new System.Drawing.Size(121, 89);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Click on a point, platform, or station to set diagram settings";
 			//! this.label1.Text = "ポイント、ホーム、駅をクリックしてダイヤを設定してください";
 			// 
 			// buttonOK
 			// 
-			this.buttonOK.Location = new System.Drawing.Point(40, 80);
+			this.buttonOK.Location = new System.Drawing.Point(50, 101);
 			this.buttonOK.Name = "buttonOK";
-			this.buttonOK.Size = new System.Drawing.Size(72, 24);
+			this.buttonOK.Size = new System.Drawing.Size(72, 26);
 			this.buttonOK.TabIndex = 1;
 			this.buttonOK.Text = "&Close";
 			//! this.buttonOK.Text = "閉じる(&C)";
@@ -142,15 +142,15 @@ namespace freetrain.world.rail.tattc
 			// 
 			// TATModalController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(120, 107);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.buttonOK,
-																		  this.label1});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(134, 134);
+			this.Controls.Add(this.buttonOK);
+			this.Controls.Add(this.label1);
 			this.Name = "TATModalController";
 			this.Text = "Diagram settings";
 			//! this.Text = "ダイヤ設定";
 			this.ResumeLayout(false);
+
 		}
 		#endregion
 	

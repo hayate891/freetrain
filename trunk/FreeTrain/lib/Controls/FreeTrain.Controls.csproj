@@ -157,7 +157,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy $(ProjectDir)bin\Debug\*.* $(SolutionDir)core\Debug\</PostBuildEvent>
   </PropertyGroup>
 </Project>

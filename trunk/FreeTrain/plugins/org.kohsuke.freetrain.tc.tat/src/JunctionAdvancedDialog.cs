@@ -104,7 +104,7 @@ namespace freetrain.world.rail.tattc
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
 				| System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.radioCurve);
 			this.groupBox1.Controls.Add(this.radioStraight);
@@ -118,9 +118,9 @@ namespace freetrain.world.rail.tattc
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Location = new System.Drawing.Point(0, 8);
+			this.groupBox1.Location = new System.Drawing.Point(0, 9);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(368, 80);
+			this.groupBox1.Size = new System.Drawing.Size(428, 86);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Requirement";
@@ -129,21 +129,20 @@ namespace freetrain.world.rail.tattc
 			// radioCurve
 			// 
 			this.radioCurve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.radioCurve.Location = new System.Drawing.Point(104, 48);
+			this.radioCurve.Location = new System.Drawing.Point(78, 52);
 			this.radioCurve.Name = "radioCurve";
-			this.radioCurve.Size = new System.Drawing.Size(64, 24);
+			this.radioCurve.Size = new System.Drawing.Size(147, 26);
 			this.radioCurve.TabIndex = 9;
 			this.radioCurve.Text = "Junction";
 			//! this.radioCurve.Text = "分岐";
-			this.radioCurve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// radioStraight
 			// 
 			this.radioStraight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.radioStraight.Checked = true;
-			this.radioStraight.Location = new System.Drawing.Point(40, 48);
+			this.radioStraight.Location = new System.Drawing.Point(8, 52);
 			this.radioStraight.Name = "radioStraight";
-			this.radioStraight.Size = new System.Drawing.Size(64, 24);
+			this.radioStraight.Size = new System.Drawing.Size(64, 26);
 			this.radioStraight.TabIndex = 8;
 			this.radioStraight.TabStop = true;
 			this.radioStraight.Text = "Straight";
@@ -151,11 +150,11 @@ namespace freetrain.world.rail.tattc
 			// 
 			// buttonReplace
 			// 
-			this.buttonReplace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonReplace.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.buttonReplace.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonReplace.Location = new System.Drawing.Point(288, 48);
+			this.buttonReplace.Location = new System.Drawing.Point(348, 52);
 			this.buttonReplace.Name = "buttonReplace";
-			this.buttonReplace.Size = new System.Drawing.Size(64, 24);
+			this.buttonReplace.Size = new System.Drawing.Size(66, 26);
 			this.buttonReplace.TabIndex = 11;
 			this.buttonReplace.Text = "&Replace";
 			//! this.buttonReplace.Text = "置換(&R)";
@@ -163,7 +162,6 @@ namespace freetrain.world.rail.tattc
 			// 
 			// hourBox
 			// 
-			this.hourBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.hourBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.hourBox.Items.AddRange(new object[] {
 														 "*",
@@ -191,17 +189,16 @@ namespace freetrain.world.rail.tattc
 														 "21",
 														 "22",
 														 "23"});
-			this.hourBox.Location = new System.Drawing.Point(264, 16);
+			this.hourBox.Location = new System.Drawing.Point(324, 17);
 			this.hourBox.MaxDropDownItems = 13;
 			this.hourBox.Name = "hourBox";
-			this.hourBox.Size = new System.Drawing.Size(56, 20);
+			this.hourBox.Size = new System.Drawing.Size(50, 21);
 			this.hourBox.TabIndex = 6;
 			// 
 			// dayOfWeekBox
 			// 
-			this.dayOfWeekBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.dayOfWeekBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.dayOfWeekBox.Items.AddRange(new object[] {
+			/*this.dayOfWeekBox.Items.AddRange(new object[] {
 															  "*",
 															  "",
 															  "",
@@ -209,16 +206,24 @@ namespace freetrain.world.rail.tattc
 															  "",
 															  "",
 															  "",
-															  "y"});
-			this.dayOfWeekBox.Location = new System.Drawing.Point(168, 16);
+															  "y"});*/
+			this.dayOfWeekBox.Items.AddRange(new object[] {
+															"*",
+															"1",
+															"2",
+															"3",
+															"4",
+															"5",
+															"6",
+															"7"});
+			this.dayOfWeekBox.Location = new System.Drawing.Point(203, 17);
 			this.dayOfWeekBox.MaxDropDownItems = 13;
 			this.dayOfWeekBox.Name = "dayOfWeekBox";
-			this.dayOfWeekBox.Size = new System.Drawing.Size(56, 20);
+			this.dayOfWeekBox.Size = new System.Drawing.Size(56, 21);
 			this.dayOfWeekBox.TabIndex = 4;
 			// 
 			// dayBox
 			// 
-			this.dayBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.dayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.dayBox.Items.AddRange(new object[] {
 														"*",
@@ -253,15 +258,14 @@ namespace freetrain.world.rail.tattc
 														"29",
 														"30",
 														"31"});
-			this.dayBox.Location = new System.Drawing.Point(88, 16);
+			this.dayBox.Location = new System.Drawing.Point(111, 17);
 			this.dayBox.MaxDropDownItems = 13;
 			this.dayBox.Name = "dayBox";
-			this.dayBox.Size = new System.Drawing.Size(56, 20);
+			this.dayBox.Size = new System.Drawing.Size(44, 21);
 			this.dayBox.TabIndex = 2;
 			// 
 			// monthBox
 			// 
-			this.monthBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.monthBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.monthBox.Items.AddRange(new object[] {
 														  "*",
@@ -277,19 +281,19 @@ namespace freetrain.world.rail.tattc
 														  "10",
 														  "11",
 														  "12"});
-			this.monthBox.Location = new System.Drawing.Point(8, 16);
+			this.monthBox.Location = new System.Drawing.Point(7, 17);
 			this.monthBox.MaxDropDownItems = 13;
 			this.monthBox.Name = "monthBox";
-			this.monthBox.Size = new System.Drawing.Size(56, 20);
+			this.monthBox.Size = new System.Drawing.Size(56, 21);
 			this.monthBox.TabIndex = 0;
 			// 
 			// buttonAdd
 			// 
-			this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonAdd.Location = new System.Drawing.Point(216, 48);
+			this.buttonAdd.Location = new System.Drawing.Point(276, 52);
 			this.buttonAdd.Name = "buttonAdd";
-			this.buttonAdd.Size = new System.Drawing.Size(64, 24);
+			this.buttonAdd.Size = new System.Drawing.Size(64, 26);
 			this.buttonAdd.TabIndex = 10;
 			this.buttonAdd.Text = "&Add";
 			//! this.buttonAdd.Text = "追加(&A)";
@@ -297,78 +301,80 @@ namespace freetrain.world.rail.tattc
 			// 
 			// label4
 			// 
-			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label4.BackColor = System.Drawing.Color.Transparent;
-			this.label4.Location = new System.Drawing.Point(320, 16);
+			this.label4.Location = new System.Drawing.Point(380, 17);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(24, 20);
+			this.label4.Size = new System.Drawing.Size(42, 22);
 			this.label4.TabIndex = 7;
-			this.label4.Text = " o'clock";
+			this.label4.Text = "Hour";
 			//! this.label4.Text = "時";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label3
 			// 
-			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label3.BackColor = System.Drawing.Color.Transparent;
-			this.label3.Location = new System.Drawing.Point(224, 16);
+			this.label3.Location = new System.Drawing.Point(265, 17);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(40, 20);
+			this.label3.Size = new System.Drawing.Size(90, 22);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "day";
+			this.label3.Text = "Weekday";
 			//! this.label3.Text = "曜日";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label2
 			// 
-			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label2.BackColor = System.Drawing.Color.Transparent;
-			this.label2.Location = new System.Drawing.Point(144, 16);
+			this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.label2.Location = new System.Drawing.Point(161, 17);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(24, 20);
+			this.label2.Size = new System.Drawing.Size(36, 21);
 			this.label2.TabIndex = 3;
 			this.label2.Text = "Date";
 			//! this.label2.Text = "日";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label1
 			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Location = new System.Drawing.Point(64, 16);
+			this.label1.Location = new System.Drawing.Point(69, 17);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(24, 20);
+			this.label1.Size = new System.Drawing.Size(51, 22);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Month";
 			//! this.label1.Text = "月";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// buttonUp
 			// 
+			this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonUp.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonUp.Location = new System.Drawing.Point(296, 96);
+			this.buttonUp.Location = new System.Drawing.Point(350, 123);
 			this.buttonUp.Name = "buttonUp";
-			this.buttonUp.Size = new System.Drawing.Size(64, 24);
+			this.buttonUp.Size = new System.Drawing.Size(64, 26);
 			this.buttonUp.TabIndex = 13;
-			this.buttonUp.Text = "↑";
+			//this.buttonUp.Text = "↑";
+			this.buttonUp.Text = "Up";
 			this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
 			// 
 			// buttonDown
 			// 
+			this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonDown.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonDown.Location = new System.Drawing.Point(296, 128);
+			this.buttonDown.Location = new System.Drawing.Point(350, 158);
 			this.buttonDown.Name = "buttonDown";
-			this.buttonDown.Size = new System.Drawing.Size(64, 24);
+			this.buttonDown.Size = new System.Drawing.Size(64, 26);
 			this.buttonDown.TabIndex = 14;
-			this.buttonDown.Text = "↓";
+			//this.buttonDown.Text = "↓";
+			this.buttonDown.Text = "Down";
 			this.buttonDown.Click += new System.EventHandler(this.buttonDown_Click);
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonRemove.Location = new System.Drawing.Point(296, 160);
+			this.buttonRemove.Location = new System.Drawing.Point(350, 192);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(64, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(64, 26);
 			this.buttonRemove.TabIndex = 15;
 			this.buttonRemove.Text = "Delete";
 			//! this.buttonRemove.Text = "削除";
@@ -379,16 +385,16 @@ namespace freetrain.world.rail.tattc
 			this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonOk.Location = new System.Drawing.Point(264, 259);
+			this.buttonOk.Location = new System.Drawing.Point(350, 292);
 			this.buttonOk.Name = "buttonOk";
-			this.buttonOk.Size = new System.Drawing.Size(88, 24);
+			this.buttonOk.Size = new System.Drawing.Size(64, 27);
 			this.buttonOk.TabIndex = 16;
 			this.buttonOk.Text = "&OK";
 			// 
 			// triggerList
 			// 
-			this.triggerList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
+			this.triggerList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
 				| System.Windows.Forms.AnchorStyles.Right)));
 			this.triggerList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 																						  this.columnHeader1,
@@ -399,12 +405,13 @@ namespace freetrain.world.rail.tattc
 			this.triggerList.FullRowSelect = true;
 			this.triggerList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 			this.triggerList.HideSelection = false;
-			this.triggerList.Location = new System.Drawing.Point(8, 96);
+			this.triggerList.Location = new System.Drawing.Point(8, 104);
 			this.triggerList.MultiSelect = false;
 			this.triggerList.Name = "triggerList";
 			this.triggerList.Scrollable = false;
-			this.triggerList.Size = new System.Drawing.Size(270, 155);
+			this.triggerList.Size = new System.Drawing.Size(330, 215);
 			this.triggerList.TabIndex = 12;
+			this.triggerList.UseCompatibleStateImageBehavior = false;
 			this.triggerList.View = System.Windows.Forms.View.Details;
 			this.triggerList.SelectedIndexChanged += new System.EventHandler(this.onSelectionChanged);
 			// 
@@ -441,8 +448,8 @@ namespace freetrain.world.rail.tattc
 			// JunctionAdvancedDialog
 			// 
 			this.AcceptButton = this.buttonOk;
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(368, 285);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(428, 331);
 			this.Controls.Add(this.triggerList);
 			this.Controls.Add(this.buttonOk);
 			this.Controls.Add(this.buttonRemove);
@@ -451,7 +458,7 @@ namespace freetrain.world.rail.tattc
 			this.Controls.Add(this.groupBox1);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(376, 312);
+			this.MinimumSize = new System.Drawing.Size(376, 338);
 			this.Name = "JunctionAdvancedDialog";
 			this.Text = "Advanced point settings";
 			//! this.Text = "ポイントの詳細設定";

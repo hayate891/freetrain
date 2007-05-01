@@ -133,13 +133,19 @@ namespace freetrain.controllers.rail
 			this.buttonPlace = new System.Windows.Forms.RadioButton();
 			this.buttonRemove = new System.Windows.Forms.RadioButton();
 			this.costBox = new freetrain.controls.CostBox();
+			((System.ComponentModel.ISupportInitialize)(this.pictureN)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureE)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureW)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureN
 			// 
-			this.pictureN.Location = new System.Drawing.Point(8, 8);
+			this.pictureN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureN.Location = new System.Drawing.Point(8, 9);
 			this.pictureN.Name = "pictureN";
-			this.pictureN.Size = new System.Drawing.Size(96, 48);
+			this.pictureN.Size = new System.Drawing.Size(104, 52);
 			this.pictureN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureN.TabIndex = 0;
 			this.pictureN.TabStop = false;
@@ -147,9 +153,11 @@ namespace freetrain.controllers.rail
 			// 
 			// pictureE
 			// 
-			this.pictureE.Location = new System.Drawing.Point(8, 64);
+			this.pictureE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureE.Location = new System.Drawing.Point(8, 69);
 			this.pictureE.Name = "pictureE";
-			this.pictureE.Size = new System.Drawing.Size(96, 48);
+			this.pictureE.Size = new System.Drawing.Size(104, 52);
 			this.pictureE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureE.TabIndex = 1;
 			this.pictureE.TabStop = false;
@@ -157,9 +165,11 @@ namespace freetrain.controllers.rail
 			// 
 			// pictureS
 			// 
-			this.pictureS.Location = new System.Drawing.Point(8, 120);
+			this.pictureS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureS.Location = new System.Drawing.Point(8, 130);
 			this.pictureS.Name = "pictureS";
-			this.pictureS.Size = new System.Drawing.Size(96, 48);
+			this.pictureS.Size = new System.Drawing.Size(104, 52);
 			this.pictureS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureS.TabIndex = 2;
 			this.pictureS.TabStop = false;
@@ -167,9 +177,11 @@ namespace freetrain.controllers.rail
 			// 
 			// pictureW
 			// 
-			this.pictureW.Location = new System.Drawing.Point(8, 176);
+			this.pictureW.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureW.Location = new System.Drawing.Point(8, 191);
 			this.pictureW.Name = "pictureW";
-			this.pictureW.Size = new System.Drawing.Size(96, 48);
+			this.pictureW.Size = new System.Drawing.Size(104, 52);
 			this.pictureW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureW.TabIndex = 3;
 			this.pictureW.TabStop = false;
@@ -177,11 +189,12 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonPlace
 			// 
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(8, 256);
+			this.buttonPlace.Location = new System.Drawing.Point(8, 277);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(48, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(48, 26);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Place";
@@ -190,10 +203,12 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(56, 256);
+			this.buttonRemove.Location = new System.Drawing.Point(56, 277);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(48, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(56, 26);
 			this.buttonRemove.TabIndex = 5;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -201,29 +216,34 @@ namespace freetrain.controllers.rail
 			// 
 			// costBox
 			// 
+			this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
 			this.costBox.cost = 0;
 			this.costBox.label = "Cost:";
+			this.costBox.Location = new System.Drawing.Point(8, 243);
 			//!this.costBox.label = "費用：";
-			this.costBox.Location = new System.Drawing.Point(8, 224);
 			this.costBox.Name = "costBox";
-			this.costBox.Size = new System.Drawing.Size(96, 32);
+			this.costBox.Size = new System.Drawing.Size(104, 34);
 			this.costBox.TabIndex = 6;
 			// 
 			// SlopeRailRoadController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(112, 284);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.costBox,
-																		  this.buttonRemove,
-																		  this.buttonPlace,
-																		  this.pictureW,
-																		  this.pictureS,
-																		  this.pictureE,
-																		  this.pictureN});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(120, 307);
+			this.Controls.Add(this.costBox);
+			this.Controls.Add(this.buttonRemove);
+			this.Controls.Add(this.buttonPlace);
+			this.Controls.Add(this.pictureW);
+			this.Controls.Add(this.pictureS);
+			this.Controls.Add(this.pictureE);
+			this.Controls.Add(this.pictureN);
 			this.Name = "SlopeRailRoadController";
 			this.Text = "Slope tracks";
 			//! this.Text = "勾配線路";
+			((System.ComponentModel.ISupportInitialize)(this.pictureN)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureE)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureW)).EndInit();
 			this.ResumeLayout(false);
 
 		}
