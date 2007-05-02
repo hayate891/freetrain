@@ -7,6 +7,7 @@ using freetrain.views.map;
 using freetrain.util;
 using freetrain.world;
 using freetrain.world.terrain;
+using freetrain.framework;
 
 namespace freetrain.controllers.terrain
 {
