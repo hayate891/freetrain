@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>モノレールせっと</title>
-	<author>たいふ～ん</author>
+	<title>Monorail Set</title>
+	<author>Typhoon</author>
 	<homepage></homepage>
 
 	<contribution type="road" id="{TYPHOON-MONO-ROAD-7567171D3CEF}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>モノレール用レール</name>
-		<description>モノレール用レール</description>
+		<name>Monorail tracks</name>
+		<description>Monorail tracks</description>
 		<picture src="road_mono.bmp" size="32,32" offset="16">
 		</picture>
 	</contribution>
@@ -41,10 +41,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-TAMATOSHI-1000-HENSEI-7567171D3CEF}">
-		<company>多摩都市モノレール</company>
-		<type>1000系</type>
+		<company>Tama Toshi Monorail</company>
+		<type>1000 series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>slow</speed>
