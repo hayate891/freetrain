@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>水門</title>
+	<author>花菱烈火</author>
+	<homepage></homepage>
+	
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C300-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>5000</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="16">
+		<picture src="teibou_haru.bmp" >
+			<override when="summer" src="teibou_natu.bmp"/>
+			<override when="autumn" src="teibou_kaki.bmp"/>
+			<override when="winter" src="teibou_huyu.bmp"/>
+		</picture>
+
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C301-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>5000</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="16">
+		<picture src="teibou_haru01.bmp" >
+			<override when="summer" src="teibou_natu01.bmp"/>
+			<override when="autumn" src="teibou_kaki01.bmp"/>
+			<override when="winter" src="teibou_huyu01.bmp"/>
+		</picture>
+
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C302-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A01.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C303-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A02.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C304-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A03.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C305-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A04.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C306-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A05.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C307-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A06.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C308-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A07.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C309-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture src="teibou_A08.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C310-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="16">
+			<picture src="teibou_A09.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C311-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="16">
+			<picture src="teibou_A10.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C312-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="16">
+			<picture src="teibou_A11.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{S5776500-11118-hana-C313-A0036A6ECDEB}">
+		<group>水門</group>
+		<price>250</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="16">
+			<picture src="teibou_A12.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.RestaurantPopulation"/>
+			<base>35</base>
+		</population>
+	</contribution>
+
+</plug-in>

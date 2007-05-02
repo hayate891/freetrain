@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>国際展示場</title>
+	<author>しの</author>
+	<homepage></homepage>
+	
+	<contribution type="commercial" id="{S5776500-E8E5-4D5E-B30A-A0036A6ECDEB}">
+		<group>国際展示場</group>
+		<price>5000</price>
+		<size>4,7</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="37">
+		<picture src="kokusai.bmp" />
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+</plug-in>

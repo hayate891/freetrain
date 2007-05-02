@@ -1,0 +1,809 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+   <title>ガソリンスタンド・コンビニ他</title>
+   <author>Ken</author>
+   <homepage></homepage>
+
+	<contribution type="picture" id="{E6D105DA-77E2-41F0-9459-0FF29D5B81C6}">
+		<picture src="gs1.bmp"/>
+	</contribution>
+
+	<contribution type="picture" id="{AD89EA02-301A-4B5F-A835-8F3385BDF006}">
+		<picture src="gs2n.bmp"/>
+	</contribution>
+
+	<contribution type="picture" id="{5AAB6C26-8C58-4C8C-8B46-94478B392AE7}">
+		<picture src="yubin1.bmp"/>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS1-94478B392AE7}-A">
+		<group>ガソリンスタンド</group>
+		<name>新日本石油 SS(左)</name>
+		<price>1500</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>16</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="gs1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS1-94478B392AE7}-B">
+		<group>ガソリンスタンド</group>
+		<name>新日本石油 SS(右)</name>
+		<price>1500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>16</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="gs1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{AE1549EB-F7F9-433F-GSS2-1E2A913013FF}-A">
+		<group>ガソリンスタンド</group>
+		<name>JOMO SS(左)</name>
+		<price>1200</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>16</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="gs1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="220,110,0" to="0,102,102"/>
+		   <map from="238,68,0" to="0,153,153"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS2-94478B392AE7}-B">
+		<group>ガソリンスタンド</group>
+		<name>JOMO SS(右)</name>
+		<price>1500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>16</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="gs1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="220,110,0" to="0,102,102"/>
+		   <map from="238,68,0" to="0,153,153"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS3-249A1A149A24}-A">
+		<group>ガソリンスタンド</group>
+		<name>Shell GS</name>
+		<price>1200</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>15</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="gs1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="220,110,0" to="255,255,0"/>
+		   <map from="0,8,0" to="8,0,0"/>
+		   <map from="251,251,247" to="255,255,255"/>
+		   <map from="238,68,0" to="255,255,0"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS3-249A1A149A24}-B">
+		<group>ガソリンスタンド</group>
+		<name>Shell GS</name>
+		<price>1200</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>15</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="gs1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="220,110,0" to="255,255,0"/>
+		   <map from="0,8,0" to="8,0,0"/>
+		   <map from="251,251,247" to="255,255,255"/>
+		   <map from="238,68,0" to="255,255,0"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS4-94478B392AE7}-A">
+		<group>ガソリンスタンド</group>
+		<name>コスモ石油 SS(左)</name>
+		<price>1500</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>16</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="gs2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS4-94478B392AE7}-B">
+		<group>ガソリンスタンド</group>
+		<name>コスモ石油 SS(右)</name>
+		<price>1500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>16</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="gs2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS5-249A1A149A24}-A">
+		<group>ガソリンスタンド</group>
+		<name>Mobil GS</name>
+		<price>1200</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>15</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="gs3.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS5-249A1A149A24}-B">
+		<group>ガソリンスタンド</group>
+		<name>Mobil GS</name>
+		<price>1200</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>15</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="gs3.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR1-9603E8E6CF18}-A">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(赤左)</name>
+		<price>1500</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="cardr1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR1-9603E8E6CF18}-B">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(赤右)</name>
+		<price>1500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="cardr1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR2-9603E8E6CF18}-A">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(紺左)</name>
+		<price>1500</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="cardr1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="237,0,0" to="0,0,128"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR2-9603E8E6CF18}-B">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(紺右)</name>
+		<price>1500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="cardr1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="237,0,0" to="0,0,128"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR3-9603E8E6CF18}-A">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(緑左)</name>
+		<price>1500</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="cardr1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="237,0,0" to="0,128,128"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR3-9603E8E6CF18}-B">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(緑右)</name>
+		<price>1500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="cardr1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="237,0,0" to="0,128,128"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR4-9603E8E6CF18}-A">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(青左)</name>
+		<price>1500</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="cardr1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="237,0,0" to="0,0,255"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR4-9603E8E6CF18}-B">
+		<group>自動車販売会社</group>
+		<name>自動車販売会社(青右)</name>
+		<price>1500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="cardr1.bmp" >
+			</picture>
+		 <spriteType name="colorMapped">
+		   <map from="237,0,0" to="0,0,255"/>
+		 </spriteType>
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{C193B660-3BFC-4F7C-BF2F-449BCED5AE9E}-A">
+		<group>郵便局</group>
+		<name>郵便局(小)(左)</name>
+		<price>500</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+		        <picture src="yubin1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{C193B660-3BFC-4F7C-BF2F-449BCED5AE9E}-B">
+		<group>郵便局</group>
+		<name>郵便局(小)(右)</name>
+		<price>500</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+		　　　　<picture src="yubin1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-YUB2-94478B392AE7}-A">
+		<group>郵便局</group>
+		<name>郵便局大(左)</name>
+		<price>1000</price>
+		<size>1,2</size>
+		<height>2</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>35</base>
+		</population>
+		<sprite origin="0,0" offset="19">
+			<picture src="yubin2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-YUB2-94478B392AE7}-B">
+		<group>郵便局</group>
+		<name>郵便局大(右)</name>
+		<price>1000</price>
+		<size>2,1</size>
+		<height>2</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>35</base>
+		</population>
+		<sprite origin="48,0" offset="27">
+			<picture src="yubin2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON2-5422C86D4DE9}-A">
+		<group>コンビニ(他７種)</group>
+		<name>ローソン(左向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>25</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="con2.bmp" >
+				<override when="night" src="con2n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON2-5422C86D4DE9}-B">
+		<group>コンビニ(他７種)</group>
+		<name>ローソン(右向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>25</base>
+		</population>
+		<sprite origin="32,0" offset="10">
+			<picture src="con2.bmp" >
+				<override when="night" src="con2n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{EA3F5C47-D1EF-41A9-CON1-641E6CFEE22B}-A">
+		<group>コンビニ(他７種)</group>
+		<name>スリーエフ(左向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>25</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="con1.bmp" >
+				<override when="night" src="con1n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{EA3F5C47-D1EF-41A9-CON1-641E6CFEE22B}-B">
+		<group>コンビニ(他７種)</group>
+		<name>スリーエフ(右向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>25</base>
+		</population>
+		<sprite origin="32,0" offset="10">
+			<picture src="con1.bmp" >
+				<override when="night" src="con1n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON6-5422C86D4DC5}-A">
+		<group>コンビニ(他７種)</group>
+		<name>ａｍｐｍ(左向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>22</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="con6.bmp" >
+				<override when="night" src="con6n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON6-5422C86D4DC5}-B">
+		<group>コンビニ(他７種)</group>
+		<name>ａｍｐｍ(右向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>22</base>
+		</population>
+		<sprite origin="32,0" offset="10">
+			<picture src="con6.bmp" >
+				<override when="night" src="con6n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON4-5422C86D4DC5}-A">
+		<group>コンビニ(他７種)</group>
+		<name>ミニストップ(左向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>23</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="con4.bmp" >
+				<override when="night" src="con4n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON4-5422C86D4DC5}-B">
+		<group>コンビニ(他７種)</group>
+		<name>ミニストップ(右向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>23</base>
+		</population>
+		<sprite origin="32,0" offset="10">
+			<picture src="con4.bmp" >
+				<override when="night" src="con4n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON5-5422C86D4DC5}-A">
+		<group>コンビニ(他７種)</group>
+		<name>サークルＫ(左向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>22</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="con5.bmp" >
+				<override when="night" src="con5n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON5-5422C86D4DC5}-B">
+		<group>コンビニ(他７種)</group>
+		<name>サークルＫ(右向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>22</base>
+		</population>
+		<sprite origin="32,0" offset="10">
+			<picture src="con5.bmp" >
+				<override when="night" src="con5n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON3-5422C86D4DC5}-A">
+		<group>コンビニ(他７種)</group>
+		<name>サンクス(左向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>23</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="con3.bmp" >
+				<override when="night" src="con3n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON3-5422C86D4DC5}-B">
+		<group>コンビニ(他７種)</group>
+		<name>サンクス(右向き)</name>
+		<price>700</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>23</base>
+		</population>
+		<sprite origin="32,0" offset="10">
+			<picture src="con3.bmp" >
+				<override when="night" src="con3n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON7-5422C86D4DC5}-A">
+		<group>コンビニ(他７種)</group>
+		<name>デイリーヤマザキ(左向き)</name>
+		<price>600</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="0,0" offset="10">
+			<picture src="con7.bmp" >
+				<override when="night" src="con7n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON7-5422C86D4DC5}-B">
+		<group>コンビニ(他７種)</group>
+		<name>デイリーヤマザキ(右向き)</name>
+		<price>600</price>
+		<size>1,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>20</base>
+		</population>
+		<sprite origin="32,0" offset="10">
+			<picture src="con7.bmp" >
+				<override when="night" src="con7n.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-RES1-94478B392AE7}-A">
+		<group>レストラン</group>
+		<name>レストラン(左)</name>
+		<price>1000</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>50</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="rest1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-RES1-94478B392AE7}-B">
+		<group>レストラン</group>
+		<name>レストラン(右)</name>
+		<price>1000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>1500</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="rest1.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-A">
+		<group>展示場ホール</group>
+		<name>メッセ1(左)</name>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="0,0" offset="16">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-B">
+		<group>展示場ホール</group>
+		<name>メッセ2(右)</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="48,0" offset="24">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-C">
+		<group>展示場ホール</group>
+		<name>メッセ3(左)</name>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="96,0" offset="16">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-D">
+		<group>展示場ホール</group>
+		<name>メッセ4(右)</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="144,0" offset="24">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-E">
+		<group>展示場ホール</group>
+		<name>メッセ5(左)</name>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="192,0" offset="16">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-F">
+		<group>展示場ホール</group>
+		<name>メッセ6(右)</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="240,0" offset="24">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-G">
+		<group>展示場ホール</group>
+		<name>メッセ7(左)</name>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="288,0" offset="16">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-H">
+		<group>展示場ホール</group>
+		<name>メッセ8(右)</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<base>2500</base>
+		</population>
+		<sprite origin="336,0" offset="24">
+			<picture src="messe2.bmp" >
+			</picture>
+		</sprite>
+	</contribution>
+</plug-in>

@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plug-in [
+
+<!ENTITY br-red '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="202,83,74"/>
+</spriteType>
+'>
+<!ENTITY br-green '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="83,172,173"/>
+</spriteType>
+'>
+<!ENTITY br-navyblue '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="75,101,143"/>
+</spriteType>
+'>
+<!ENTITY br-skyblue '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="189,217,221"/>
+</spriteType>
+'>
+<!ENTITY br-gray '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="190,185,170"/>
+</spriteType>
+'>
+<!ENTITY br-white '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="237,235,236"/>
+</spriteType>
+'>
+]>
+
+<plug-in>
+
+<title>橋</title>
+<author>しかしか</author>
+<homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
+
+<!-- ワーレントラス橋 -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1r-a}">
+<name>橋-トラス1(赤,前)</name>
+<sprite>&br-red;
+<picture src="r_a_trussbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1r-b}">
+<name>橋-トラス1(赤,中)</name>
+<sprite>&br-red;
+<picture src="r_a_trussbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1r-c}">
+<name>橋-トラス1(赤,奥)</name>
+<sprite>&br-red;
+<picture src="r_a_trussbridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1g-a}">
+<name>橋-トラス1(緑,前)</name>
+<sprite>&br-green;
+<picture src="r_a_trussbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1g-b}">
+<name>橋-トラス1(緑,中)</name>
+<sprite>&br-green;
+<picture src="r_a_trussbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1g-c}">
+<name>橋-トラス1(緑,奥)</name>
+<sprite>&br-green;
+<picture src="r_a_trussbridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1b-a}">
+<name>橋-トラス1(紺,前)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_trussbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1b-b}">
+<name>橋-トラス1(紺,中)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_trussbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1b-c}">
+<name>橋-トラス1(紺,奥)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_trussbridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1s-a}">
+<name>橋-トラス1(空,前)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_trussbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1s-b}">
+<name>橋-トラス1(空,中)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_trussbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1s-c}">
+<name>橋-トラス1(空,奥)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_trussbridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1gr-a}">
+<name>橋-トラス1(灰,前)</name>
+<sprite>&br-gray;
+<picture src="r_a_trussbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1gr-b}">
+<name>橋-トラス1(灰,中)</name>
+<sprite>&br-gray;
+<picture src="r_a_trussbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1gr-c}">
+<name>橋-トラス1(灰,奥)</name>
+<sprite>&br-gray;
+<picture src="r_a_trussbridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1w-a}">
+<name>橋-トラス1(白,前)</name>
+<sprite>&br-white;
+<picture src="r_a_trussbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1w-b}">
+<name>橋-トラス1(白,中)</name>
+<sprite>&br-white;
+<picture src="r_a_trussbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge1w-c}">
+<name>橋-トラス1(白,奥)</name>
+<sprite>&br-white;
+<picture src="r_a_trussbridge1c.bmp"/>
+</sprite></contribution>
+
+<!-- ワーレン(垂直材付)トラス橋 -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2r-a}">
+<name>橋-トラス2(赤,前)</name>
+<sprite>&br-red;
+<picture src="r_a_trussbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2r-b}">
+<name>橋-トラス2(赤,中)</name>
+<sprite>&br-red;
+<picture src="r_a_trussbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2r-c}">
+<name>橋-トラス2(赤,奥)</name>
+<sprite>&br-red;
+<picture src="r_a_trussbridge2c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2g-a}">
+<name>橋-トラス2(緑,前)</name>
+<sprite>&br-green;
+<picture src="r_a_trussbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2g-b}">
+<name>橋-トラス2(緑,中)</name>
+<sprite>&br-green;
+<picture src="r_a_trussbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2g-c}">
+<name>橋-トラス2(緑,奥)</name>
+<sprite>&br-green;
+<picture src="r_a_trussbridge2c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2b-a}">
+<name>橋-トラス2(紺,前)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_trussbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2b-b}">
+<name>橋-トラス2(紺,中)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_trussbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2b-c}">
+<name>橋-トラス2(紺,奥)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_trussbridge2c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2s-a}">
+<name>橋-トラス2(空,前)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_trussbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2s-b}">
+<name>橋-トラス2(空,中)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_trussbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2s-c}">
+<name>橋-トラス2(空,奥)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_trussbridge2c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2gr-a}">
+<name>橋-トラス2(灰,前)</name>
+<sprite>&br-gray;
+<picture src="r_a_trussbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2gr-b}">
+<name>橋-トラス2(灰,中)</name>
+<sprite>&br-gray;
+<picture src="r_a_trussbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2gr-c}">
+<name>橋-トラス2(灰,奥)</name>
+<sprite>&br-gray;
+<picture src="r_a_trussbridge2c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2w-a}">
+<name>橋-トラス2(白,前)</name>
+<sprite>&br-white;
+<picture src="r_a_trussbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2w-b}">
+<name>橋-トラス2(白,中)</name>
+<sprite>&br-white;
+<picture src="r_a_trussbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-trussbridge2w-c}">
+<name>橋-トラス2(白,奥)</name>
+<sprite>&br-white;
+<picture src="r_a_trussbridge2c.bmp"/>
+</sprite></contribution>
+
+<!-- アーチ(ローゼ)橋 -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1r-a}">
+<name>橋-ローゼ(赤,前)</name>
+<sprite>&br-red;
+<picture src="r_a_loshebridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1r-b}">
+<name>橋-ローゼ(赤,中)</name>
+<sprite>&br-red;
+<picture src="r_a_loshebridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1r-c}">
+<name>橋-ローゼ(赤,奥)</name>
+<sprite>&br-red;
+<picture src="r_a_loshebridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1g-a}">
+<name>橋-ローゼ(緑,前)</name>
+<sprite>&br-green;
+<picture src="r_a_loshebridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1g-b}">
+<name>橋-ローゼ(緑,中)</name>
+<sprite>&br-green;
+<picture src="r_a_loshebridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1g-c}">
+<name>橋-ローゼ(緑,奥)</name>
+<sprite>&br-green;
+<picture src="r_a_loshebridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1b-a}">
+<name>橋-ローゼ(紺,前)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_loshebridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1b-b}">
+<name>橋-ローゼ(紺,中)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_loshebridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1b-c}">
+<name>橋-ローゼ(紺,奥)</name>
+<sprite>&br-navyblue;
+<picture src="r_a_loshebridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1s-a}">
+<name>橋-ローゼ(空,前)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_loshebridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1s-b}">
+<name>橋-ローゼ(空,中)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_loshebridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1s-c}">
+<name>橋-ローゼ(空,奥)</name>
+<sprite>&br-skyblue;
+<picture src="r_a_loshebridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1gr-a}">
+<name>橋-ローゼ(灰,前)</name>
+<sprite>&br-gray;
+<picture src="r_a_loshebridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1gr-b}">
+<name>橋-ローゼ(灰,中)</name>
+<sprite>&br-gray;
+<picture src="r_a_loshebridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1gr-c}">
+<name>橋-ローゼ(灰,奥)</name>
+<sprite>&br-gray;
+<picture src="r_a_loshebridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1w-a}">
+<name>橋-ローゼ(白,前)</name>
+<sprite>&br-white;
+<picture src="r_a_loshebridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1w-b}">
+<name>橋-ローゼ(白,中)</name>
+<sprite>&br-white;
+<picture src="r_a_loshebridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-loshebridge1w-c}">
+<name>橋-ローゼ(白,奥)</name>
+<sprite>&br-white;
+<picture src="r_a_loshebridge1c.bmp"/>
+</sprite></contribution>
+
+<!-- 桁橋 -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge1gr-a}">
+<name>橋-桁橋1(灰,前)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge1gr-b}">
+<name>橋-桁橋1(灰,中)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge1gr-c}">
+<name>橋-桁橋1(灰,奥)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge1w-a}">
+<name>橋-桁橋1(白,前)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge1a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge1w-b}">
+<name>橋-桁橋1(白,中)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge1b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge1w-c}">
+<name>橋-桁橋1(白,奥)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge1c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge2gr-a}">
+<name>橋-桁橋2(灰,前)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge2gr-b}">
+<name>橋-桁橋2(灰,中)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge2gr-c}">
+<name>橋-桁橋2(灰,奥)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge2c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge2w-a}">
+<name>橋-桁橋2(白,前)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge2a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge2w-b}">
+<name>橋-桁橋2(白,中)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge2b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge2w-c}">
+<name>橋-桁橋2(白,奥)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge2c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge3gr-a}">
+<name>橋-桁橋3(灰,前)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge3a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge3gr-b}">
+<name>橋-桁橋3(灰,中)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge3b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge3gr-c}">
+<name>橋-桁橋3(灰,奥)</name>
+<sprite>&br-gray;
+<picture src="r_a_girderbridge3c.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge3w-a}">
+<name>橋-桁橋3(白,前)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge3a.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge3w-b}">
+<name>橋-桁橋3(白,中)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge3b.bmp"/>
+</sprite></contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-GirderBridge3w-c}">
+<name>橋-桁橋3(白,奥)</name>
+<sprite>&br-white;
+<picture src="r_a_girderbridge3c.bmp"/>
+</sprite></contribution>
+
+
+</plug-in>

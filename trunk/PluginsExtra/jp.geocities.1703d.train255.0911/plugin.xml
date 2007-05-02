@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>255系特急型電車車両プラグイン</title>
+	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
+
+
+	<!-- 255系先頭車 -->
+	<contribution type="trainCar" id="{187DF275-70DE-ec255-8F66-BF0E327B80CF}-h">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+                	<picture src="255a.bmp" />
+		</sprite>
+		<capacity>64</capacity>
+	</contribution>
+	<!-- 255系中間車 -->
+	<contribution type="trainCar" id="{187DF275-70DE-ec255-8F66-BF0E327B80CF}-m">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+                	<picture src="255b.bmp" />
+		</sprite>
+		<capacity>62</capacity>
+	</contribution>
+	<!-- 255系後尾車 -->
+	<contribution type="trainCar" id="{187DF275-70DE-ec255-8F66-BF0E327B80CF}-t">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{187DF275-70DE-ec255-8F66-BF0E327B80CF}-h"/>
+		<sprite origin="0,0">
+		</sprite>
+		<capacity>52</capacity>
+	</contribution>
+
+	<contribution type="train" id="{187DF275-70DE-ec255-8F66-BF0E327B80CF}">
+		<company>JR東日本</company>
+		<type>255系</type>
+		<name>房総ビューエクスプレス</name>
+		<author>いっちー</author>
+		<description>1993年、房総方面で活躍している183系の置き換え用として登場。
+南房総の観光客や通年利用のビジネスマン等の多目的な利用を考え、ハイブリットモビリティ（複合移動空間）というトータルコンセプトを元にデザインされた。 
+JR東日本の特急車両としては初めてVVVFインバータ制御を採用した車両で、従来の特急車に比べＭＴ比を下げて省エネ化を図っている。
+塗装は太平洋をイメージするブルーと砂浜・海辺をイメージするホワイトを基調にして、ドア付近と車端に菜の花をイメージするイエローを配色。 
+臨時列車で中央東線にも乗り入れする。運転最高速度は130km/h。</description>
+		<price>100</price>
+           	<fare>1200</fare>
+		<speed>fast</speed>
+		<composition>
+			<head carRef="{187DF275-70DE-ec255-8F66-BF0E327B80CF}-h"/>
+			<body carRef="{187DF275-70DE-ec255-8F66-BF0E327B80CF}-m"/>
+			<tail carRef="{187DF275-70DE-ec255-8F66-BF0E327B80CF}-t"/>
+		</composition>
+	</contribution>
+</plug-in>

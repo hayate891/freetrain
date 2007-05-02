@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+<author>しかしか</author>
+<homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
+
+<depend on="shikashika.freetrain.traincar.locomotive"/>
+<depend on="shikashika.freetrain.traincar.passenger"/>
+<depend on="shikashika.freetrain.traincar.freight"/>
+
+<title>列車(JR九州)</title>
+
+<!-- 旅客列車の定義 -->
+
+	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-LocalTrein-50}">
+		<company>JR九州</company>
+		<type>DD 51</type>
+		<name>普通列車(50系)</name>
+		<author>しかしか</author>
+		<description>液体式ディーゼル機関車DD51が牽引する、50系(オハ50、オハフ50)客車普通列車です。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="気" ref="{FreeTrain-Shika-DieselLocomotive-TrainCar-DD51-JNR}"/>
+			<car char="客" ref="{FreeTrain-Shika-PassengerCar-TrainCar-oha50}"/>
+			<car char="緩" ref="{FreeTrain-Shika-PassengerCar-TrainCar-ohahu50}"/>
+			<car char="急" ref="{FreeTrain-Shika-PassengerCar-TrainCar-ohahu50-T}"/>
+			
+			<composition>気</composition>
+			<composition>気急</composition>
+			<composition>気緩急</composition>
+			<composition>気緩客急</composition>
+			<composition>気緩客客急</composition>
+			<composition>気緩客緩客急</composition>
+			<composition>気緩客客緩客急</composition>
+			<composition>気緩客緩客緩客急</composition>
+			<composition>気緩客客緩客緩客急</composition>
+			<composition>気緩客客緩客緩緩客急</composition>
+			<composition>気緩客客緩客緩緩客客急</composition>
+			<composition>気緩客客緩客緩緩緩客客急</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-LocalTrein-50-12}">
+		<company>JR九州</company>
+		<type>DD 51</type>
+		<name>普通列車(50系+12系)</name>
+		<author>しかしか</author>
+		<description>液体式ディーゼル機関車DD51が牽引する、冷房化された50系1000番台(オハ50、オハフ50)と12系(スハフ12)の客車普通列車です。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="気" ref="{FreeTrain-Shika-DieselLocomotive-TrainCar-DD51-JNR}"/>
+			<car char="客" ref="{FreeTrain-Shika-PassengerCar-TrainCar-oha50-1000}"/>
+			<car char="緩" ref="{FreeTrain-Shika-PassengerCar-TrainCar-ohahu50-1000}"/>
+			<car char="急" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuhahu12-T-R}"/>
+			
+			<composition>気</composition>
+			<composition>気急</composition>
+			<composition>気緩急</composition>
+			<composition>気緩緩急</composition>
+			<composition>気緩客緩急</composition>
+			<composition>気緩客客緩急</composition>
+			<composition>気緩客客緩緩急</composition>
+			<composition>気緩客客緩客緩急</composition>
+			<composition>気緩客客緩客客緩急</composition>
+			<composition>気緩客客緩客緩客緩急</composition>
+			<composition>気緩客客緩客緩緩客緩急</composition>
+			<composition>気緩客客緩客緩緩客客緩急</composition>
+		</config>
+	</contribution>
+
+<!-- 貨物列車の定義 -->
+
+</plug-in>

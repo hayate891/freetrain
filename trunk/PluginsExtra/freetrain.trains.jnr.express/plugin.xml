@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title></title>
+	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	
+
+
+	<!-- 153系電車 -->
+
+
+	<contribution type="picture" id="{Freetrain-T153-JNR-Kuha153}">
+		<picture src="kuha153.bmp" />
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-kuha153}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{Freetrain-T153-JNR-Kuha153}" />
+		</sprite>
+		<capacity>76</capacity>
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-kuha153B}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{Freetrain-Type153-JNR-shonan-kuha153}"/>
+	</contribution>
+	
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-moha153}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="moha153.bmp" />
+		</sprite>
+		<capacity>84</capacity>
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-moha152}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="moha152.bmp" />
+		</sprite>
+		<capacity>84</capacity>
+	</contribution>
+
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-sahashi153}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="sahashi153.bmp" />
+		</sprite>
+		<capacity>36</capacity>
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-saro153}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="saro153.bmp" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-saro153-900}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="saro153-900.bmp" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type153-JNR-shonan-saro152}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="saro152.bmp" />
+		</sprite>
+		<capacity>48</capacity>
+	</contribution>
+
+
+	<contribution type="train" id="{Freetrain-ytpe153-JNR-shounan-express}">
+		<company>旧日本国有鉄道</company>
+		<type>153系</type>
+		<name>153系0番台サハシ付</name>
+		<author>――</author>
+		<description>
+			80系電車の置き換えとして平坦線区用に開発された。
+			当初は準急用であったが、運用変更で準急が消えたため急行形に変更された。
+			登場当時は低運転台であったが、踏み切り事故対策のため高運転台化された500番台が後に登場している。
+			最盛期は国鉄初のビュッフェ付のサハシ153や163系として開発されたサロ163などを組み込んで大所帯となったが
+			後継の165系などに順次置き換わったり老朽化などで昭和58年に全廃となった。
+		</description>
+		<price>200</price>
+		<speed>medium</speed>
+
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+
+			<car char="1" ref="{Freetrain-Type153-JNR-shonan-kuha153}"/>
+			<car char="M" ref="{Freetrain-Type153-JNR-shonan-moha153}"/> 
+			<car char="P" ref="{Freetrain-Type153-JNR-shonan-moha152}"/> 
+			<car char="S" ref="{Freetrain-Type153-JNR-shonan-saro152}"/> 
+			<car char="B" ref="{Freetrain-Type153-JNR-shonan-sahashi153}"/> 
+			<car char="F" ref="{Freetrain-Type153-JNR-shonan-kuha153B}"/> 
+		
+
+			<composition>1PMSSBPMF</composition>
+			<composition>1PMSSBPMPMF</composition>
+			<composition>1PMSSBPMFPMF</composition>
+		</config>
+	</contribution>
+
+
+	<contribution type="train" id="{Freetrain-ytpe153-JNR-saro153-900-express}">
+		<company>旧日本国有鉄道</company>
+		<type>153系</type>
+		<name>153系0番台(サロ153-900付)</name>
+		<author>――</author>
+		<description>
+			ステンレス車体試験のために作られたサロ153-900付の編成。
+			当時では非常に珍しかったステンレス車体だが、2両のみの製造に終わった。
+			最終的には湘南色に塗られサロ110-900として113系に組み込まれた。
+		</description>
+		<price>250</price>
+		<speed>medium</speed>
+
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+
+			<car char="1" ref="{Freetrain-Type153-JNR-shonan-kuha153}"/>
+			<car char="9" ref="{Freetrain-Type153-JNR-shonan-saro153-900}"/> 
+			<car char="M" ref="{Freetrain-Type153-JNR-shonan-moha153}"/> 
+			<car char="P" ref="{Freetrain-Type153-JNR-shonan-moha152}"/> 
+			<car char="S" ref="{Freetrain-Type153-JNR-shonan-saro153}"/> 
+			<car char="F" ref="{Freetrain-Type153-JNR-shonan-kuha153B}"/> 
+	
+			<composition>1PMS9PMF</composition>
+			<composition>1PMS9PMPMF</composition>
+			<composition>1PMS9PMFPMF</composition>
+			<composition>1PMS9PMFMPMF</composition>
+
+		</config>
+	</contribution>
+
+
+	<contribution type="train" id="{Freetrain-ytpe153-JNR-shounan-express-nosaro}">
+		<company>旧日本国有鉄道</company>
+		<type>153系</type>
+		<name>153系0番台(サロなし)</name>
+		<author>――</author>
+		<description>
+			急行で活躍した153系も晩年は房総急行としてモノクラス・短編成化されました。
+
+		</description>
+		<price>150</price>
+		<speed>medium</speed>
+
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+
+			<car char="1" ref="{Freetrain-Type153-JNR-shonan-kuha153}"/>
+			<car char="M" ref="{Freetrain-Type153-JNR-shonan-moha153}"/> 
+			<car char="P" ref="{Freetrain-Type153-JNR-shonan-moha152}"/> 
+			<car char="F" ref="{Freetrain-Type153-JNR-shonan-kuha153B}"/> 
+		
+			<composition>1PMF</composition>
+			<composition>1PMFPMF</composition>
+			<composition>1PMF1PMF</composition>
+			<composition>1PMF1PMFPMF</composition>
+		</config>
+	</contribution>
+
+
+
+	<!-- 165系電車 -->
+
+	<!--非冷房-->
+	<contribution type="picture" id="{Freetrain-T165-JNR-Kumoha165}">
+		<picture src="kumoha165.bmp" />
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-shonan-kuha165}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{Freetrain-T165-JNR-Kumoha165}" />
+		</sprite>
+		<capacity>76</capacity>
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-kumoha165}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{Freetrain-Type165-JNR-shonan-kuha165}"/>
+	</contribution>
+	
+	<!--非冷房-->
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-moha164-800}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="moha164-800.bmp" />
+		</sprite>
+		<capacity>84</capacity>
+	</contribution>
+
+	<!--冷房-->
+	<contribution type="picture" id="{Freetrain-T165-JNR-Kumoha165C}">
+		<picture src="kumoha165-c.bmp" />
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-shonan-kuha165C}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{Freetrain-T165-JNR-Kumoha165C}" />
+		</sprite>
+		<capacity>76</capacity>
+	</contribution>
+
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-kumoha165C}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{Freetrain-Type165-JNR-shonan-kuha165C}"/>
+	</contribution>
+
+	<!--冷房-->
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-moha164-800C}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="moha164.bmp" />
+		</sprite>
+		<capacity>84</capacity>
+	</contribution>
+
+
+	<!--冷房-->
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-moha165}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="moha165.bmp" />
+		</sprite>
+		<capacity>84</capacity>
+	</contribution>
+
+
+	<!--冷房-->
+	<contribution type="trainCar" id="{Freetrain-Type165-JNR-moha164}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture src="moha164-0.bmp" />
+		</sprite>
+		<capacity>84</capacity>
+	</contribution>
+
+
+	<contribution type="train" id="{Freetrain-ytpe165-JNR-chouou-express}">
+		<company>旧日本国有鉄道</company>
+		<type>165系</type>
+		<name>165系湘南色(モハ164-800番台)</name>
+		<author>ななし</author>
+		<description>
+			153系の出力を上げ、山岳路線用に開発されました。最初は非冷房でしたが、後に冷房準備車や冷房試験車などが作られ順次冷房化されていきました。
+			サハシ・サロ組み込みで中央線の急行アルプスに投入され、全国の直流区間の急行は165系になったがJR化以後は急行列車が削減されていき2003年で全車引退となった。
+			
+			パンタグラフ低屋根構造のモハ164-800番台の急行アルプスの編成です。4･5量編成はサロなし非冷房の急行富士川。
+			7両編成は全冷房車・サロ2両の急行東海後期編成、8両編成は一部冷房車サロ2両の急行信州、11両編成は非冷房・サロ1両、サハシなし。12両はサロ2両・サハシあり一部冷房試作車です。
+		</description>
+		<price>150</price>
+		<speed>medium</speed>
+
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+
+			<car char="1" ref="{Freetrain-Type165-JNR-shonan-kuha165}"/>
+			<car char="2" ref="{Freetrain-Type165-JNR-kumoha165}"/> 
+			<car char="C" ref="{Freetrain-Type165-JNR-moha164-800C}"/> 
+			<car char="P" ref="{Freetrain-Type165-JNR-moha164-800}"/> 
+			<car char="M" ref="{Freetrain-Type153-JNR-shonan-moha153}"/> 
+			<car char="S" ref="{Freetrain-Type153-JNR-shonan-saro152}"/> 
+			<car char="B" ref="{Freetrain-Type153-JNR-shonan-sahashi153}"/> 
+			<car char="F" ref="{Freetrain-Type165-JNR-shonan-kuha165C}"/>
+			<car char="T" ref="{Freetrain-Type165-JNR-kumoha165C}"/> 
+			
+			<!-- ←松本・静岡・甲府　-->
+			<composition>1PM2</composition>
+			<composition>1PMP2</composition>
+			<composition>FCTSSCT</composition>
+			<composition>1SSM21C2</composition>
+			<composition>11P21P21SP2</composition>
+			<composition>1FCT1P2BSSP2</composition>
+		</config>
+	</contribution>
+
+
+	<contribution type="train" id="{Freetrain-ytpe165-JNR-tokai-express}">
+		<company>旧日本国有鉄道</company>
+		<type>165系</type>
+		<name>165系湘南色（東海道･山陽線）</name>
+		<author>ななし</author>
+		<description>
+			モハ164-0番台を組み込んだ急行の編成です。			
+			7両編成は非冷房車の急行山陽編成、12両編成は1983年の急行東海の全冷房車編成となっています。
+		</description>
+		<price>150</price>
+		<speed>medium</speed>
+
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="1" ref="{Freetrain-Type165-JNR-shonan-kuha165}"/>
+			<car char="2" ref="{Freetrain-Type165-JNR-kumoha165}"/> 
+			<car char="P" ref="{Freetrain-Type165-JNR-moha164}"/> 
+			<car char="C" ref="{Freetrain-Type165-JNR-moha165}"/> 
+			<car char="M" ref="{Freetrain-Type153-JNR-shonan-moha152}"/> 
+			<car char="S" ref="{Freetrain-Type153-JNR-shonan-saro152}"/> 
+			<car char="F" ref="{Freetrain-Type165-JNR-shonan-kuha165C}"/>
+			<car char="T" ref="{Freetrain-Type165-JNR-kumoha165C}"/> 
+		
+			<!-- ←静岡・下関　-->
+			<composition>1M2S1M2</composition>
+			<composition>FPTSSPCTFPCT</composition>
+		</config>
+	</contribution>
+
+
+	<contribution type="train" id="{Freetrain-ytpe165-JNR-shounan-express}">
+		<company>旧日本国有鉄道</company>
+		<type>165系</type>
+		<name>165系湘南色(サロ・サハシなし)</name>
+		<author>ななし</author>
+		<description>
+			冷房化されたモノクラスのモハ164（通常屋根タイプ）編成です。			
+		</description>
+		<price>150</price>
+		<speed>medium</speed>
+
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+
+			<car char="1" ref="{Freetrain-Type165-JNR-shonan-kuha165C}"/>
+			<car char="P" ref="{Freetrain-Type165-JNR-moha164}"/> 
+			<car char="M" ref="{Freetrain-Type165-JNR-moha165}"/> 
+			<car char="2" ref="{Freetrain-Type165-JNR-kumoha165C}"/> 
+		
+
+			<composition>1P2</composition>
+			<composition>1PM2</composition>
+			<composition>1P21P2</composition>
+			<composition>1P21PM2</composition>
+			<composition>1PM21PM2</composition>
+			<composition>1PM21PM21P2</composition>
+		</config>
+	</contribution>
+
+
+
+
+</plug-in>

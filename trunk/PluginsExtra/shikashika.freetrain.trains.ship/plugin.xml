@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>フェリー</title>
+	<author>しかしか</author>
+ 	<homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
+
+	<!-- イメージ画像定義 --> 
+	<!-- 松大観光船 高速船 -->
+	<contribution type="picture" id="{FreeTrain-Ship-PassengerShip-picture-BlueShuttle}">
+		<picture src="BlueShuttle.bmp" />
+	</contribution>
+ 	<!-- 船舶定義 -->
+	<!-- 松大観光船 高速船 -->
+	<contribution type="trainCar" id="{FreeTrain-Ship-PassengerShip-Ship-BlueShuttle}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-Ship-PassengerShip-picture-BlueShuttle}" />
+		</sprite>
+		<capacity>94</capacity>
+	</contribution>
+	<!-- 運航船舶の定義 -->
+	<contribution type="train" id="{FreeTrain-Ship-PassengerShip-Boat-BlueShuttle}">
+		<company>松大観光船</company>
+		<type>高速船</type>
+		<name>ブルーシャトル</name>
+		<author>しかしか</author>
+		<description>19トン、定員94名、座席68席。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="船" ref="{FreeTrain-Ship-PassengerShip-Ship-BlueShuttle}"/>
+			
+			<composition>船</composition>
+		</config>
+	</contribution>
+
+	<!-- イメージ画像定義 --> 
+	<!-- 松大観光船 フェリー -->
+	<contribution type="picture" id="{FreeTrain-Ship-PassengerShip-picture-itukushima}">
+		<picture src="itukushima.bmp" />
+	</contribution>
+ 	<!-- 船舶定義 -->
+	<!-- 松大観光船 フェリー -->
+	<contribution type="trainCar" id="{FreeTrain-Ship-PassengerShip-Ship-itukushima}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-Ship-PassengerShip-picture-itukushima}" />
+		</sprite>
+		<capacity>350</capacity>
+	</contribution>
+	<!-- 運航船舶の定義 -->
+	<contribution type="train" id="{FreeTrain-Ship-PassengerShip-Ferry-itukushima}">
+		<company>松大観光船</company>
+		<type>フェリー</type>
+		<name>厳島</name>
+		<author>しかしか</author>
+		<description>神原造船製造。197トン、定員350名、小型乗用車10台。
+		</description>
+		<price>100</price>
+		<speed>slow</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="船" ref="{FreeTrain-Ship-PassengerShip-Ship-itukushima}"/>
+			
+			<composition>船</composition>
+		</config>
+	</contribution>
+
+	<!-- イメージ画像定義 --> 
+	<!-- JR連絡船 フェリー -->
+	<contribution type="picture" id="{FreeTrain-Ship-PassengerShip-picture-mishenmaru}">
+		<picture src="mishenmaru.bmp" />
+	</contribution>
+ 	<!-- 船舶定義 -->
+	<!-- JR連絡船 フェリー -->
+	<contribution type="trainCar" id="{FreeTrain-Ship-PassengerShip-Ship-mishenmaru}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-Ship-PassengerShip-picture-mishenmaru}" />
+		</sprite>
+		<capacity>460</capacity>
+	</contribution>
+	<!-- 運航船舶の定義 -->
+	<contribution type="train" id="{FreeTrain-Ship-PassengerShip-Ferry-mishenmaru}">
+		<company>JR西日本</company>
+		<type>フェリー</type>
+		<name>みせん丸</name>
+		<author>しかしか</author>
+		<description>内海造船製造。218トン、定員460名。
+		</description>
+		<price>100</price>
+		<speed>slow</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="船" ref="{FreeTrain-Ship-PassengerShip-Ship-mishenmaru}"/>
+			
+			<composition>船</composition>
+		</config>
+	</contribution>
+
+</plug-in>

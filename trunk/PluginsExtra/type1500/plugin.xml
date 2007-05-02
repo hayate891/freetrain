@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<plug-in>
+  <title>TYPE1500</title> 
+  <author>しの</author> 
+  <homepage></homepage>
+ 
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9A44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9A44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9A44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9A44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタB車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9A44-TYPE1500}-P2">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p2_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{1A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形他社線乗り入れ可能車(低)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形低速型界磁チョッパ制御(他社線乗り入れ可能)車です)。</description>
+<fare>140</fare>
+<price>1900</price>
+<speed>slow</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9A44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9A44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9A44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9A44-TYPE1500}-P1"/> 
+<car char="B" ref="{6F2F2667-05F0-4595-9A44-TYPE1500}-P2"/> 
+<composition>前中A後</composition>
+<composition>前中B中A後</composition>
+<composition>前中A中A中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9B44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9B44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9B44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9B44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタB車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9B44-TYPE1500}-P2">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p2_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{2A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形他社線乗り入れ可能車(中)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形中速型界磁チョッパ制御(他社線乗り入れ可能)車です)。</description>
+<fare>140</fare>
+<price>1900</price>
+<speed>medium</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9B44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9B44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9B44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9B44-TYPE1500}-P1"/> 
+<car char="B" ref="{6F2F2667-05F0-4595-9B44-TYPE1500}-P2"/> 
+<composition>前中A後</composition>
+<composition>前中B中A後</composition>
+<composition>前中A中A中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9C44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9C44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9C44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9C44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタB車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9C44-TYPE1500}-P2">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p2_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{3A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形他社線乗り入れ可能車(高)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形高速型界磁チョッパ制御(他社線乗り入れ可能)車です)。</description>
+<fare>140</fare>
+<price>1900</price>
+<speed>fast</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9C44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9C44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9C44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9C44-TYPE1500}-P1"/> 
+<car char="B" ref="{6F2F2667-05F0-4595-9C44-TYPE1500}-P2"/> 
+<composition>前中A後</composition>
+<composition>前中B中A後</composition>
+<composition>前中A中A中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9D44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_2.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9D44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_2.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9D44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9D44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9D44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{4A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形1700番台(低)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1990(平成2)年に落成した車輌からは省エネ対策･メンテナンスの簡略化を目的にVVVFインバータ制御を採用し、1500形1700番台となりました。車体前面にはスカートが取り付けられ、第2編成からはバケットシートが採用されています。このVVVFインバータ制御装置は、600形にも採用されています。全車、8両固定編成で非常増圧機能があり、120km/h運転可能車です。現在、日中の都営線直通の快特や朝夕の特急･急行で活躍中です(この車輌は、1500形1700番台低速型VVVFインバータ制御車です)。</description>
+<fare>130</fare>
+<price>2000</price>
+<speed>slow</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9D44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9D44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9D44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9D44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9D44-TYPE1500}-P3"/>
+<composition>前中中中C中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9E44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_2.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9E44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_2.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9E44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9E44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9E44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{5A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形1700番代(中)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1990(平成2)年に落成した車輌からは省エネ対策･メンテナンスの簡略化を目的にVVVFインバータ制御を採用し、1500形1700番台となりました。車体前面にはスカートが取り付けられ、第2編成からはバケットシートが採用されています。このVVVFインバータ制御装置は、600形にも採用されています。全車、8両固定編成で非常増圧機能があり、120km/h運転可能車です。現在、日中の都営線直通の快特や朝夕の特急･急行で活躍中です(この車輌は、1500形1700番台中速型VVVFインバータ制御車です)。</description>
+<fare>130</fare>
+<price>2000</price>
+<speed>medium</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9E44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9E44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9E44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9E44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9E44-TYPE1500}-P3"/>
+<composition>前中中中C中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9F44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_2.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9F44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_2.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9F44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9F44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9F44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{6A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形1700番代(高)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1990(平成2)年に落成した車輌からは省エネ対策･メンテナンスの簡略化を目的にVVVFインバータ制御を採用し、1500形1700番台となりました。車体前面にはスカートが取り付けられ、第2編成からはバケットシートが採用されています。このVVVFインバータ制御装置は、600形にも採用されています。全車、8両固定編成で非常増圧機能があり、120km/h運転可能車です。現在、日中の都営線直通の快特や朝夕の特急･急行で活躍中です(この車輌は、1500形1700番台高速型VVVFインバータ制御車です)。</description>
+<fare>130</fare>
+<price>2000</price>
+<speed>fast</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9F44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9F44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9F44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9F44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9F44-TYPE1500}-P3"/>
+<composition>前中中中C中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9G44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_3.bmp" /> 
+  </sprite>
+  <capacity>156</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9G44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_3.bmp" /> 
+  </sprite>
+  <capacity>156</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9G44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9G44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9G44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{7A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形更新車(低)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>2001(平成13)年より鋼製車(20両)を対象に大規模なリニューアル工事が施されました。外見上は車輌前面にスカートが取り付けられ、鋼製車の特徴であった戸袋窓が埋められました。また、連結面の窓も埋められ、転落防止用ホロも設置されました。車内案内表示器･ドアチャイム･車イススペースなどの追設によってバリアフリー化が一層促進されており、2100形･新1000形同様に緊急スイッチも運転台に設置されています。今後は1500形全車に施工する予定となっています(この車輌は、1500形更新車低速型です)。</description>
+<fare>100</fare>
+<price>2400</price>
+<speed>slow</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9G44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9G44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9G44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9G44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9G44-TYPE1500}-P3"/>
+<composition>前中A後</composition>
+<composition>前中A中A後</composition>
+<composition>前中中中C中A後</composition>
+<composition>前中中中C中A後前中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9H44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_3.bmp" /> 
+  </sprite>
+  <capacity>156</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9H44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_3.bmp" /> 
+  </sprite>
+  <capacity>156</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9H44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9H44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9H44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{8A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形更新車(中)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>2001(平成13)年より鋼製車(20両)を対象に大規模なリニューアル工事が施されました。外見上は車輌前面にスカートが取り付けられ、鋼製車の特徴であった戸袋窓が埋められました。また、連結面の窓も埋められ、転落防止用ホロも設置されました。車内案内表示器･ドアチャイム･車イススペースなどの追設によってバリアフリー化が一層促進されており、2100形･新1000形同様に緊急スイッチも運転台に設置されています。今後は1500形全車に施工する予定となっています(この車輌は、1500形更新車中速型です)。</description>
+<fare>100</fare>
+<price>2400</price>
+<speed>medium</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9H44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9H44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9H44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9H44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9H44-TYPE1500}-P3"/>
+<composition>前中A後</composition>
+<composition>前中A中A後</composition>
+<composition>前中中中C中A後</composition>
+<composition>前中中中C中A後前中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9I44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_3.bmp" /> 
+  </sprite>
+  <capacity>156</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9I44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_3.bmp" /> 
+  </sprite>
+  <capacity>156</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9I44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9I44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9I44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_2.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{9A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形更新車(高)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>2001(平成13)年より鋼製車(20両)を対象に大規模なリニューアル工事が施されました。外見上は車輌前面にスカートが取り付けられ、鋼製車の特徴であった戸袋窓が埋められました。また、連結面の窓も埋められ、転落防止用ホロも設置されました。車内案内表示器･ドアチャイム･車イススペースなどの追設によってバリアフリー化が一層促進されており、2100形･新1000形同様に緊急スイッチも運転台に設置されています。今後は1500形全車に施工する予定となっています(この車輌は、1500形更新車高速型です)。</description>
+<fare>100</fare>
+<price>2400</price>
+<speed>fast</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9I44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9I44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9I44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9I44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9I44-TYPE1500}-P3"/> 
+<composition>前中A後</composition>
+<composition>前中A中A後</composition>
+<composition>前中中中C中A後</composition>
+<composition>前中中中C中A後前中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9J44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9J44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9J44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9J44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9J44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_1.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{10A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形(低)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形低速型界磁チョッパ制御車です)。</description>
+<fare>140</fare>
+<price>1900</price>
+<speed>slow</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9J44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9J44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9J44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9J44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9J44-TYPE1500}-P3"/> 
+<composition>前中A後</composition>
+<composition>前中A中A後</composition>
+<composition>前中中中C中A後</composition>
+<composition>前中中中C中A後前中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9K44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9K44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9K44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9K44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9K44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_1.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{11A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形(中)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形中速型界磁チョッパ制御車です)。</description>
+<fare>140</fare>
+<price>1900</price>
+<speed>medium</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9K44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9K44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9K44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9K44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9K44-TYPE1500}-P3"/> 
+<composition>前中A後</composition>
+<composition>前中A中A後</composition>
+<composition>前中中中C中A後</composition>
+<composition>前中中中C中A後前中A後</composition>
+</config>
+</contribution>
+
+<!-- 1500先頭車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9L44-TYPE1500}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a2_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- 1500最後尾車 --> 
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9L44-TYPE1500}-B">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500a1_1.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution> 
+<!--1500中間車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9L44-TYPE1500}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500b_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタA車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9L44-TYPE1500}-P1">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p1_1.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--1500パンタC車-->
+　<contribution type="trainCar" id="{6F2F2667-05F0-4595-9L44-TYPE1500}-P3">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="kei 1500p3_1.bmp" /> 
+  </sprite>
+  <capacity>174</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{12A68G5B0-0E5E-402D-87CB-525CA403F917}">
+<company>京浜急行電鉄</company>
+<type>1500形(高)</type>
+<name>京急線</name>
+<author>しの</author>
+<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形高速型界磁チョッパ制御車です)。</description>
+<fare>140</fare>
+<price>1900</price>
+<speed>fast</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{6F2F2667-05F0-4595-9L44-TYPE1500}-A"/>
+<car char="中" ref="{6F2F2667-05F0-4595-9L44-TYPE1500}-C"/>
+<car char="後" ref="{6F2F2667-05F0-4595-9L44-TYPE1500}-B"/> 
+<car char="A" ref="{6F2F2667-05F0-4595-9L44-TYPE1500}-P1"/> 
+<car char="C" ref="{6F2F2667-05F0-4595-9L44-TYPE1500}-P3"/> 
+<composition>前中A後</composition>
+<composition>前中A中A後</composition>
+<composition>前中中中C中A後</composition>
+<composition>前中中中C中A後前中A後</composition>
+</config>
+</contribution>
+
+</plug-in>

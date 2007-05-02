@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plug-in [
+
+<!ENTITY fb-skyblue '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="188,234,232"/>
+</spriteType>
+'>
+
+<!ENTITY fb-white '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="237,235,236"/>
+</spriteType>
+'>
+
+<!ENTITY fb-concrete '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="196,188,172"/>
+</spriteType>
+'>
+
+<!ENTITY fb-vermilion '
+<spriteType name="hueTransform">
+<map from="*,0,0" to="233,76,41"/>
+</spriteType>
+'>
+
+]>
+
+<plug-in>
+
+<title>道路アクセサリ</title>
+
+<author>しかしか</author>
+<homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
+
+<!-- 歩道橋 -->
+	
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1}">
+<name>歩道橋</name>
+<sprite>&fb-skyblue;
+<picture src="r_a_footbridge1.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1l}">
+<name>歩道橋(左)</name>
+<sprite>&fb-skyblue;
+<picture src="r_a_footbridge1l.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1r}">
+<name>歩道橋(右)</name>
+<sprite>&fb-skyblue;
+<picture src="r_a_footbridge1r.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1m}">
+<name>歩道橋(中央)</name>
+<sprite>&fb-skyblue;
+<picture src="r_a_footbridge1m.bmp"/>
+</sprite>
+</contribution>
+
+<!-- 歩道橋(螺旋階段) -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge2}">
+<name>歩道橋(螺旋)</name>
+<sprite>&fb-skyblue;
+<picture src="r_a_footbridge2.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge2l}">
+<name>歩道橋(螺旋左)</name>
+<sprite>&fb-skyblue;
+<picture src="r_a_footbridge2l.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge2r}">
+<name>歩道橋(螺旋右)</name>
+<sprite>&fb-skyblue;
+<picture src="r_a_footbridge2r.bmp"/>
+</sprite>
+</contribution>
+
+<!-- 歩道橋(白) -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1w}">
+<name>歩道橋(白)</name>
+<sprite>&fb-white;
+<picture src="r_a_footbridge1.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1wl}">
+<name>歩道橋(白,左)</name>
+<sprite>&fb-white;
+<picture src="r_a_footbridge1l.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1wr}">
+<name>歩道橋(白,右)</name>
+<sprite>&fb-white;
+<picture src="r_a_footbridge1r.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge1wm}">
+<name>歩道橋(白,中央)</name>
+<sprite>&fb-white;
+<picture src="r_a_footbridge1m.bmp"/>
+</sprite>
+</contribution>
+
+<!-- 歩道橋(白,螺旋階段) -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge2w}">
+<name>歩道橋(白,螺旋)</name>
+<sprite>&fb-white;
+<picture src="r_a_footbridge2.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge2wl}">
+<name>歩道橋(白,螺旋左)</name>
+<sprite>&fb-white;
+<picture src="r_a_footbridge2l.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-footbridge2wr}">
+<name>歩道橋(白,螺旋右)</name>
+<sprite>&fb-white;
+<picture src="r_a_footbridge2r.bmp"/>
+</sprite>
+</contribution>
+
+
+<!-- 地下道入口 -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-underpass1}">
+<name>地下道入口</name>
+<sprite>
+<picture src="r_a_underpass1.bmp">
+<override when="night" src="r_a_underpass1n.bmp"/>
+</picture>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-underpass1l}">
+<name>地下道入口(左)</name>
+<sprite>
+<picture src="r_a_underpass1l.bmp">
+<override when="night" src="r_a_underpass1ln.bmp"/>
+</picture>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-underpass1r}">
+<name>地下道入口(右)</name>
+<sprite>
+<picture src="r_a_underpass1r.bmp">
+<override when="night" src="r_a_underpass1rn.bmp"/>
+</picture>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-subway1}">
+<name>地下鉄入口</name>
+<sprite>
+<picture src="r_a_subway1.bmp">
+<override when="night" src="r_a_subway1n.bmp"/>
+</picture>
+</sprite>
+</contribution>
+
+<!-- 地下鉄入口 -->
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-subway1l}">
+<name>地下鉄入口(左)</name>
+<sprite>
+<picture src="r_a_subway1l.bmp">
+<override when="night" src="r_a_subway1ln.bmp"/>
+</picture>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-subway1r}">
+<name>地下鉄入口(右)</name>
+<sprite>
+<picture src="r_a_subway1r.bmp">
+<override when="night" src="r_a_subway1rn.bmp"/>
+</picture>
+</sprite>
+</contribution>
+
+<!-- 橋脚 -->
+	
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-pier1r-w}">
+<name>橋脚(右)</name>
+<sprite>&fb-white;
+<picture src="r_a_pier1r.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-pier1l-w}">
+<name>橋脚(左)</name>
+<sprite>&fb-white;
+<picture src="r_a_pier1l.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-pier2r-w}">
+<name>橋脚(細,右)</name>
+<sprite>&fb-white;
+<picture src="r_a_pier2r.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-pier2l-w}">
+<name>橋脚(細,左)</name>
+<sprite>&fb-white;
+<picture src="r_a_pier2l.bmp"/>
+</sprite>
+</contribution>
+
+<!-- 鳥居 -->
+	
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-torii01-c}">
+<name>鳥居(灰)</name>
+<sprite>&fb-concrete;
+<picture src="r_a_torii1.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-torii01-v}">
+<name>鳥居(朱)</name>
+<sprite>&fb-vermilion;
+<picture src="r_a_torii1.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-torii02-c}">
+<name>鳥居(大,灰)</name>
+<sprite>&fb-concrete;
+<picture src="r_a_torii2.bmp"/>
+</sprite>
+</contribution>
+
+<contribution type="roadAccessory" id="{FreeTrain-Shika-Road-Accessory-torii02-v}">
+<name>鳥居(大,朱)</name>
+<sprite>&fb-vermilion;
+<picture src="r_a_torii2.bmp"/>
+</sprite>
+</contribution>
+
+</plug-in>

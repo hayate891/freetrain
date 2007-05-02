@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<plug-in>
+  <title>E217系</title> 
+  <author>いっちー</author> 
+  <homepage>cyber_express_1703d@ybb.ne.jp</homepage> 
+<!-- E217先頭車 --> 
+　<contribution type="trainCar" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-A">
+　<class name="freetrain.contributions.train.AsymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="E217a.bmp" /> 
+  </sprite>
+  <capacity>142</capacity> 
+  </contribution>
+<!-- E217最後尾車 -->
+　<contribution type="trainCar" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-B">
+　<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+  <base carRef="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-A" />  
+  <capacity>142</capacity> 
+  </contribution> 
+<!--E217中間車-->
+　<contribution type="trainCar" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-C">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="E217b.bmp" /> 
+  </sprite>
+  <capacity>162</capacity> 
+  </contribution>
+<!--E217G車-->
+　<contribution type="trainCar" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-G">
+　<class name="freetrain.contributions.train.SymTrainCarImpl" /> 
+　<sprite origin="0,0">
+  <picture src="E217saro-w.bmp" /> 
+  </sprite>
+  <capacity>90</capacity> 
+  </contribution>
+
+  <contribution type="train" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217-W}">
+<company>JR東日本</company>
+<type>Ｅ217系</type>
+<name>総武快速・横須賀線</name>
+<author>いっちー</author>
+<description>総武快速・横須賀線の混雑緩和、スピードアップを目的として登場した車両。
+ＪＲ東日本の通勤路線として初めて120ｋｍ/ｈ運転を開始した。
+4ドア、ロングシート配列という209系のスタイルを踏襲しつつ、長距離客に配慮して3両のセミクロスシート車を連結。
+横須賀線ならではのグリーン車(２階建て)を2両連結している。
+現在は湘南新宿ラインとして新宿駅にも乗り入れしている。
+編成は4両、11両、15両の3種類に、4両編成を2・3編成連結した８・12両を用意しました。
+</description>
+<fare>700</fare>
+<price>60</price>
+<speed>fast</speed>
+<class name="freetrain.contributions.train.PatternTrainImpl"/>
+<config>
+<car char="前" ref="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-A"/>
+<car char="中" ref="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-C"/>
+<car char="後" ref="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-B"/> 
+<car char="G" ref="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-G"/> 
+<composition>前中中後</composition>
+<composition>前中中後前中中後</composition>
+<composition>前中中GG中中中中中後</composition>
+<composition>前中中後前中中後前中中後</composition>
+<composition>前中中後前中中GG中中中中中後</composition>
+</config>
+</contribution>
+</plug-in>

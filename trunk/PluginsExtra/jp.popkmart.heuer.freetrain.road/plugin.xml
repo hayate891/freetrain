@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>FT建設道路プラグイン(統合UI専用)</title>
+	<author>HEUER</author>
+	<homepage>http://freetrain.finito-web.com/</homepage>
+	
+	<!--農道-->
+	<contribution type="road" id="{ROAD0001-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>農道/未舗装/盛土・花</name>
+		<style name="footpath"/>
+		<description>農道(未舗装)</description>
+		<picture src="un-paving.bmp" size="32,16" offset="0">
+			<override when="autumn" src="un-paving-a.bmp"/>
+			<override when="winter" src="un-paving-w.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD0002-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>農道/未舗装/盛土・芝</name>
+		<style name="footpath"/>
+		<description>農道(未舗装)</description>
+		<picture src="un-paving2.bmp" size="32,16" offset="0">
+			<override when="autumn" src="un-paving2-a.bmp"/>
+			<override when="winter" src="un-paving2-w.bmp"/>
+		</picture>
+	</contribution>
+
+	<!--一車線生活道路-->
+	<contribution type="road" id="{ROAD1001-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>生活道路/無灯</name>
+		<style name="street" sidewalk="shoulder" lanes="1"/>
+		<description>生活道路(無灯)</description>
+		<picture src="road1.bmp" size="32,16" offset="0" />
+	</contribution>
+
+	<!--二車線道路-->
+	<contribution type="road" id="{ROAD2001-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>二車線道路/白破線/街灯</name>
+		<style name="street" sidewalk="shoulder" lanes="2"/>
+		<description>白破線二車線道路</description>
+		<picture src="road2.bmp" size="32,32" offset="16">
+			<override when="night" src="road2n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD2001-8058-11D7-BB78-0090FE1AB959A}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>二車線道路/白破線/無灯</name>
+		<style name="street" sidewalk="shoulder" lanes="2"/>
+		<description>白破線二車線道路</description>
+		<picture src="road2a.bmp" size="32,32" offset="16">
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD2002-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>二車線道路/白実線/街灯</name>
+		<style name="street" sidewalk="shoulder" lanes="2"/>
+		<description>白実線二車線道路</description>
+		<picture src="road3.bmp" size="32,32" offset="16">
+			<override when="night" src="road3n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD2002-8058-11D7-BB78-0090FE1AB959A}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>二車線道路/白実線/無灯</name>
+		<style name="street" sidewalk="shoulder" lanes="2"/>
+		<description>白実線二車線道路</description>
+		<picture src="road3a.bmp" size="32,32" offset="16">
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD2003-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>二車線道路/橙実線/街灯</name>
+		<style name="street" sidewalk="shoulder" lanes="2"/>
+		<description>橙実線二車線道路</description>
+		<picture src="road4.bmp" size="32,32" offset="16">
+			<override when="night" src="road4n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD2003-8058-11D7-BB78-0090FE1AB959A}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>二車線道路/橙実線/無灯</name>
+		<style name="street" sidewalk="shoulder" lanes="2"/>
+		<description>白実線二車線道路</description>
+		<picture src="road4a.bmp" size="32,32" offset="16">
+		</picture>
+	</contribution>
+
+	<!--高速道路-->
+	<contribution type="road" id="{ROAD3001-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>高速道路(白破線)</name>
+		<style name="highway" lanes="2"/>
+		<description>白破線高速道路</description>
+		<picture src="road10.bmp" size="32,32" offset="16">
+			<override when="night" src="road10n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD3002-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>高速道路(単線左)</name>
+		<style name="highway" lanes="1"/>
+		<description>単線左高速道路</description>
+		<picture src="road11.bmp" size="32,32" offset="16">
+			<override when="night" src="road11n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD3003-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>高速道路(単線右)</name>
+		<style name="highway" lanes="1"/>
+		<description>単線右高速道路</description>
+		<picture src="road12.bmp" size="32,32" offset="16">
+			<override when="night" src="road12n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD3004-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>高速道路(複線左)</name>
+		<style name="highway" lanes="2"/>
+		<description>複線左高速道路</description>
+		<picture src="road13.bmp" size="32,32" offset="16">
+			<override when="night" src="road13n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD3005-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>高速道路(複線右)</name>
+		<style name="highway" lanes="2"/>
+		<description>複線右高速道路</description>
+		<picture src="road14.bmp" size="32,32" offset="16">
+			<override when="night" src="road14n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="road" id="{ROAD3006-8058-11D7-BB78-0090FE1AB959}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>高速道路(対面通行)</name>
+		<style name="highway" lanes="2"/>
+		<description>対面通行高速道路</description>
+		<picture src="road15.bmp" size="32,32" offset="16">
+			<override when="night" src="road15n.bmp"/>
+		</picture>
+	</contribution>
+</plug-in>

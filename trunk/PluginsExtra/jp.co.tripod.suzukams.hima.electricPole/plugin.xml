@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>鉄骨架線柱</title>
+	<author>暇</author>
+	<homepage></homepage>
+	
+	<depends on="org.kohsuke.freetrain.rail.electricPole" />
+	
+
+	<contribution type="electricPole" id="{200305100047-0001}">
+		<name>鉄骨架線柱単線用</name>
+		<sprite>
+			<picture src="GantryA.bmp"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{200305100047-0002}">
+		<name>鉄骨架線柱複線用左</name>
+		<sprite>
+			<picture src="GantryAL.bmp"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{200305100047-0003}">
+		<name>鉄骨架線柱複線用中央</name>
+		<sprite>
+			<picture src="GantryAC.bmp"/>
+		</sprite>
+	</contribution>
+	<contribution type="electricPole" id="{200305100047-0004}">
+		<name>鉄骨架線柱複線用右</name>
+		<sprite>
+			<picture src="GantryAR.bmp"/>
+		</sprite>
+	</contribution>
+
+</plug-in>

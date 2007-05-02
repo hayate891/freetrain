@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>建物プラグイン</title>
+	<author>綾瀬ヒロ</author>
+	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
+	
+	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-StructureImg-Patlabor01}">
+		<picture src="patlabor.bmp"/>
+	</contribution>
+	
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Patlabor01a}">
+		<group>特車２課棟</group>
+		<price>30</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="32">
+			<picture ref="{FreeTrain-AYASE-Hiro-StructureImg-Patlabor01}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Patlabor01b}">
+		<group>特車２課棟</group>
+		<price>30</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="96,0" offset="32">
+			<picture ref="{FreeTrain-AYASE-Hiro-StructureImg-Patlabor01}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+</plug-in>

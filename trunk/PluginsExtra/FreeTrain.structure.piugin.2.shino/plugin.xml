@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>工場(大)</title>
+	<author>しの</author>
+	<homepage></homepage>
+
+	<contribution type="commercial" id="{AE49208E-BEB2-4319-8477-F20E0BF1F1BB}">
+		<group>工場(大)</group>
+		<price>5800</price>
+		<size>5,8</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="37">
+		<picture src="koujyou1.bmp" />
+		</sprite>
+	        <computerCannotBuild />
+        </contribution>
+</plug-in>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>鉄道施設プラグイン</title>
+	<author>綾瀬ヒロ</author>
+	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
+
+	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RailStructureImg-Light}">
+		<picture src="light.bmp"/>
+	</contribution>
+
+	<contribution type="railStationary" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Light-1}">
+		<group>投光台</group>
+		<price>100</price>
+		<size>1,1</size>
+		<height>4</height>
+		<sprite origin="0,0" offset="48">
+			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Light}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="railStationary" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Light-2}">
+		<group>投光台</group>
+		<price>100</price>
+		<size>1,1</size>
+		<height>4</height>
+		<sprite origin="32,0" offset="48">
+			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Light}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+</plug-in>

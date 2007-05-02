@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>横断歩道</title>
+	<author>C477@2両目</author>
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
+	<depend on="org.kohsuke.freetrain.structure.c477" />	
+	
+	<contribution type="roadAccessory" id="{ADE1AB2E-4700-4806-C477-20A730AE2026}">
+		<name>横断歩道</name>
+		<sprite>
+			<picture src="crosswalk01.bmp"/>
+		</sprite>
+	</contribution>
+	
+</plug-in>

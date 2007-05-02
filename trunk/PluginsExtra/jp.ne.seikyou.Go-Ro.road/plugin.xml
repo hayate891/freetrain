@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>道路（FreeTrain-想作館）</title>
+	<author>haru</author>
+	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
+	
+	<contribution type="road" id="{9257AF06-6515-6BC1-8160-5336FDF6FB6B}">
+		<class name="freetrain.contributions.road.A3RoadContribution" />
+		<name>アーケード</name>
+		<style name="footpath"/>
+		<description>アーケード</description>
+		<picture src="arcade.bmp">
+			<override when="night" src="arcade_n.bmp"/>
+		</picture>
+	</contribution>
+	
+	<contribution type="road" id="{road_001-road-C000-0000-4C8B212DD67q}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>生活道路</name>
+		<style name="street" sidewalk="shoulder" lanes="1"/>
+		<description>生活道路</description>
+		<picture src="road_001.bmp" size="32,32" offset="16" >
+			<override when="night" src="road_001n.bmp"/>
+		</picture>
+	</contribution>
+	
+	<contribution type="road" id="{road_002-road-C000-0000-4C8B212DD67q}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>橋脚（重層高架対応）</name>
+		<style name="unknown"/>
+		<description>橋脚（重層高架対応）</description>
+		<picture src="road_002.bmp" size="32,32" offset="16" >
+		</picture>
+	</contribution>
+
+	
+	<contribution type="road" id="{road_003-road-C000-0000-4C8B212DD67q}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<style name="unknown"/>
+		<name>高架橋桁</name>
+		<description>高架橋桁</description>
+		<picture src="road_003.bmp" size="32,32" offset="16" />
+	</contribution>
+
+
+	<contribution type="road" id="{sidewalk_001-road-C000-0000-4C8B212DD67q}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>けやき並木の歩道</name>
+		<style name="footpath"/>
+		<description>けやき並木の歩道</description>
+		<picture src="sidewalk_001.bmp" size="32,32" offset="16" >
+			<override when="summer" src="sidewalk_001sum.bmp"/>
+			<override when="autumn" src="sidewalk_001aut.bmp"/>
+			<override when="winter" src="sidewalk_001win.bmp"/>
+		</picture>
+	</contribution>
+
+</plug-in>

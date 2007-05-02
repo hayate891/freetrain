@@ -1,0 +1,2449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>列車セット</title>
+ 	<homepage></homepage>
+ 	
+ 	<!-- イメージ画像定義 -->
+             <!-- Tc701_0-->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-444553540000}">
+		<picture src="701a_0.bmp" />
+	</contribution>
+
+	<!-- Mc701_0-->
+	<contribution type="picture" id="{AD070311-7653-11D7-A4B7-444553540000}">
+		<picture src="701b_0.bmp" />
+	</contribution>
+
+             <!-- Mc701_100-->
+	<contribution type="picture" id="{C1C4ED5D-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="701c_100.bmp" />
+	</contribution>
+
+             <!-- クハ700_1000-->
+	<contribution type="picture" id="{C1C4ED50-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="701a_1000.bmp" />
+	</contribution>
+
+	<!-- モハ701_1000-->
+	<contribution type="picture" id="{C1C4ED51-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="701b_1000.bmp" />
+	</contribution>
+
+　　　　　　<!-- サハ700_1000-->
+	<contribution type="picture" id="{C1C4ED52-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="701c_1000.bmp" />
+	</contribution>
+
+	<!-- クモハ701_1000-->
+	<contribution type="picture" id="{C1C4ED53-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="701d_1000.bmp" />
+	</contribution>
+
+             <!-- Tc701_5000 -->
+	<contribution type="picture" id="{C1C4ED70-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="701a_5000.bmp" />
+	</contribution>
+
+	<!-- Mc701_5000 -->
+	<contribution type="picture" id="{C1C4ED71-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="701b_5000.bmp" />
+	</contribution>
+
+             <!-- Tc701_5500-->
+	<contribution type="picture" id="{B92219D0-7650-11D7-A4B7-D7D370C4F037}">
+		<picture src="701a_5500.bmp" />
+	</contribution>
+
+	<!-- Mc701_5500-->
+	<contribution type="picture" id="{B92219D1-7650-11D7-A4B7-D7D370C4F037}">
+		<picture src="701b_5500.bmp" />
+	</contribution>
+
+             <!-- Tc701_青い森 -->
+	<contribution type="picture" id="{C1C4ED40-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="青い森701a.bmp" />
+	</contribution>
+
+	<!-- Mc701_青い森 -->
+	<contribution type="picture" id="{C1C4ED41-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="青い森701b.bmp" />
+	</contribution>
+
+             <!-- Tc_IGR7000 -->
+	<contribution type="picture" id="{C1C4ED42-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="IGR7000a.bmp" />
+	</contribution>
+
+	<!-- Mc_IGR7000 -->
+	<contribution type="picture" id="{C1C4ED43-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="IGR7000b.bmp" />
+	</contribution>
+
+             <!-- Tc127 -->
+	<contribution type="picture" id="{C1C4ED60-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="E127a.bmp" />
+	</contribution>
+
+	<!-- Mc127 -->
+	<contribution type="picture" id="{C1C4ED61-7662-11D7-A4B7-8B95A9BCF237}">
+		<picture src="E127b.bmp" />
+	</contribution>
+            
+             <!-- Mc127 大糸線 -->
+	<contribution type="picture" id="{CBAF5390-76A7-11D7-A4B7-E675BA55FD37}">
+		<picture src="E127a_1000.bmp" />
+	</contribution>
+
+	<!-- Tc127 大糸線 -->
+	<contribution type="picture" id="{CBAF5391-76A7-11D7-A4B7-E675BA55FD37}">
+		<picture src="E127b_1000.bmp" />
+	</contribution>
+
+　　　　　　<!-- Mc125 -->
+	<contribution type="picture" id="{D772F860-76A0-11D7-A4B7-E675BA55FD37}">
+		<picture src="125.bmp" />
+	</contribution>
+
+	<!-- 車両定義 -->
+              <!-- クハ701 0番台 -->
+	<contribution type="trainCar" id="{AD070312-7653-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-444553540000}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ701 0番台 -->
+	<contribution type="trainCar" id="{AD070313-7653-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070311-7653-11D7-A4B7-444553540000}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+             <!-- サハ701 100番台 -->
+	<contribution type="trainCar" id="{C1C4ED5E-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED5D-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+	<!-- クモハ701 0番台 -->
+	<contribution type="trainCar" id="{AD070314-7653-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070313-7653-11D7-A4B7-444553540000}"/>
+	</contribution>
+
+             <!-- クハ700 1000番台 -->
+	<contribution type="trainCar" id="{C1C4ED54-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED50-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+　　　　　　<!-- モハ701 1000番台 -->
+	<contribution type="trainCar" id="{C1C4ED55-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED51-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+　　　　　　<!-- サハ700 1000番台 -->
+	<contribution type="trainCar" id="{C1C4ED56-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED52-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+　　　　　　<!-- クモハ700 1000番台 -->
+	<contribution type="trainCar" id="{C1C4ED57-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED53-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+　　　　　
+	<!-- クモハ701 1000番台 -->
+	<contribution type="trainCar" id="{C1C4ED59-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{C1C4ED57-7662-11D7-A4B7-8B95A9BCF237}"/>
+	</contribution>
+
+             <!-- クハ701_5000 -->
+	<contribution type="trainCar" id="{C1C4ED72-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED70-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+　　　　　　<!-- クモハ701_5000 -->
+	<contribution type="trainCar" id="{C1C4ED73-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED71-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+	<!-- クハ700_5000 -->
+	<contribution type="trainCar" id="{C1C4ED74-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{C1C4ED72-7662-11D7-A4B7-8B95A9BCF237}"/>
+	</contribution>
+
+             <!-- クハ701 5500番台 -->
+	<contribution type="trainCar" id="{B92219D2-7650-11D7-A4B7-D7D370C4F037}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{B92219D0-7650-11D7-A4B7-D7D370C4F037}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ701 5500番台 -->
+	<contribution type="trainCar" id="{B92219D4-7650-11D7-A4B7-D7D370C4F037}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{B92219D1-7650-11D7-A4B7-D7D370C4F037}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クモハ701 5500番台 -->
+	<contribution type="trainCar" id="{B92219D5-7650-11D7-A4B7-D7D370C4F037}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{B92219D4-7650-11D7-A4B7-D7D370C4F037}"/>
+	</contribution>
+
+             <!-- クハ701 青い森 -->
+	<contribution type="trainCar" id="{C1C4ED44-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED40-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ701 青い森 -->
+	<contribution type="trainCar" id="{C1C4ED45-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED41-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+	<!-- クモハ701 青い森 -->
+	<contribution type="trainCar" id="{C1C4ED46-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{C1C4ED45-7662-11D7-A4B7-8B95A9BCF237}"/>
+	</contribution>
+
+　　　　　　<!-- クハ7000 いわて銀河 -->
+	<contribution type="trainCar" id="{C1C4ED47-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED42-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ7000 いわて銀河 -->
+	<contribution type="trainCar" id="{C1C4ED48-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED43-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+	<!-- クモハ7000 いわて銀河 -->
+	<contribution type="trainCar" id="{C1C4ED49-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{C1C4ED48-7662-11D7-A4B7-8B95A9BCF237}"/>
+	</contribution>
+
+             <!-- クハE127 -->
+	<contribution type="trainCar" id="{C1C4ED62-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED60-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+　　　　　　<!-- クモハE127 -->
+	<contribution type="trainCar" id="{C1C4ED63-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{C1C4ED61-7662-11D7-A4B7-8B95A9BCF237}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+	<!-- クハE126 -->
+	<contribution type="trainCar" id="{C1C4ED64-7662-11D7-A4B7-8B95A9BCF237}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{C1C4ED62-7662-11D7-A4B7-8B95A9BCF237}"/>
+	</contribution>
+
+             <!-- クハE127 大糸色 -->
+	<contribution type="trainCar" id="{CBAF5392-76A7-11D7-A4B7-E675BA55FD37}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{CBAF5391-76A7-11D7-A4B7-E675BA55FD37}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+	
+　　　　　　<!-- クモハE127 大糸色 -->
+	<contribution type="trainCar" id="{CBAF5393-76A7-11D7-A4B7-E675BA55FD37}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{CBAF5390-76A7-11D7-A4B7-E675BA55FD37}" />
+		</sprite>
+		<capacity>100</capacity>
+	</contribution>
+
+	<!-- クハE126 大糸色 -->
+	<contribution type="trainCar" id="{CBAF5394-76A7-11D7-A4B7-E675BA55FD37}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{CBAF5392-76A7-11D7-A4B7-E675BA55FD37}"/>
+	</contribution>
+
+　　　　　　<!-- 125系 -->
+	<contribution type="trainCar" id="{D772F861-76A0-11D7-A4B7-E675BA55FD37}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{D772F860-76A0-11D7-A4B7-E675BA55FD37}" />
+		</sprite>
+		<capacity>120</capacity>
+	</contribution>
+
+　　　　　  <!-- 編成の定義 -->
+	
+             <contribution type="train" id="{AD070315-7653-11D7-A4B7-444553540000}">
+		<company>JR東日本</company>
+		<type>701系</type>
+		<name>0番台（秋田）</name>
+		<author>TAKUROU</author>
+		<description>1993年、東北地区に残っていた客車列車の置換えとワンマン運転実施により
+効率化を図るために登場した交流専用の3扉ロングシート車。羽越線酒田以北、奥羽線青森近郊や津軽線も乗り入れる。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{AD070312-7653-11D7-A4B7-444553540000}"/>
+			<car char="＞" ref="{AD070314-7653-11D7-A4B7-444553540000}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+             <contribution type="train" id="{C1C4ED5F-7662-11D7-A4B7-8B95A9BCF237}">
+		<company>JR東日本</company>
+		<type>701系</type>
+		<name>100番台/3両編成（秋田）</name>
+		<author>TAKUROU</author>
+		<description>1993年、東北地区に残っていた客車列車の置換えとワンマン運転実施により
+効率化を図るために登場した交流専用の3扉ロングシート車。補助電源装置をMGからSIVに変更した94年に登場。
+山形新幹線新庄延長時に仙台電車区に転属された。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{AD070312-7653-11D7-A4B7-444553540000}"/>
+			<car char="＞" ref="{AD070314-7653-11D7-A4B7-444553540000}"/>
+			<car char="＝" ref="{C1C4ED5E-7662-11D7-A4B7-8B95A9BCF237}"/>
+		
+			<composition>＜＝＞</composition>
+			<composition>＜＝＞＜＞</composition>
+			<composition>＜＝＞＜＝＞</composition>
+			<composition>＜＝＞＜＞＜＞</composition>
+			<composition>＜＝＞＜＝＞＜＞</composition>
+                                        <composition>＜＝＞＜＝＞＜＝＞</composition>                        
+		</config>
+	</contribution>
+
+              <!-- 編成の定義 -->
+             <contribution type="train" id="{C1C4ED5A-7662-11D7-A4B7-8B95A9BCF237}">
+		<company>JR東日本</company>
+		<type>701系</type>
+		<name>1000番台(仙台 /2両編成)</name>
+		<author>TAKUROU</author>
+		<description>仙台地区では、715系や455系を置き換えとして701系電車が投入された。
+（クハ700＋クモハ701）と4両編成（クハ700＋モハ701＋サハ700＋クモハ701）があり、
+2両編成はワンマン運転設備を持つのに対し、4両編成は，ワンマン運転の設備を持たずドアチャイムもない。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{C1C4ED54-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="＞" ref="{C1C4ED59-7662-11D7-A4B7-8B95A9BCF237}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+　　　　　　<contribution type="train" id="{C1C4ED5B-7662-11D7-A4B7-8B95A9BCF237}">
+		<company>JR東日本</company>
+		<type>701系</type>
+		<name>1000番台（仙台/4両編成）</name>
+		<author>TAKUROU</author>
+		<description>仙台地区では、715系や455系を置き換えとして701系電車が投入された。
+（クハ700＋クモハ701）と4両編成（クハ700＋モハ701＋サハ700＋クモハ701）があり、
+4両編成は，ワンマン運転の設備を持たずドアチャイムもない。一ノ関－白石間に運用が限定される。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{C1C4ED54-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="B" ref="{C1C4ED55-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="C" ref="{C1C4ED56-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="D" ref="{C1C4ED59-7662-11D7-A4B7-8B95A9BCF237}"/>
+
+			<composition>ABCD</composition>
+                                        <composition>ABCDAD</composition>
+			<composition>ABCDABCD</composition>
+		             <composition>ABCDABCDAD</composition>
+			<composition>ABCDABCDABCD</composition>		
+		</config>
+	</contribution>
+        
+             <contribution type="train" id="{C1C4ED75-7662-11D7-A4B7-8B95A9BCF237}">
+		<company>JR東日本</company>
+		<type>701系</type>
+		<name>5000番台（田沢湖線）</name>
+		<author>TAKUROU</author>
+		<description>秋田新幹線開業に伴い，改軌された田沢湖線に投入されたのが標準軌車。
+田沢湖線でのみ営業運転される。（大曲－秋田間は回送だが，大曲花火大会の臨時列車で営業運転されることもある）
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{C1C4ED73-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="＞" ref="{C1C4ED74-7662-11D7-A4B7-8B95A9BCF237}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+             <contribution type="train" id="{B92219D6-7650-11D7-A4B7-D7D370C4F037}">
+		<company>JR東日本</company>
+		<type>701系</type>
+		<name>5500番台（山形）</name>
+		<author>TAKUROU</author>
+		<description>１９９３年に、奥羽・羽越本線の客車列車淘汰を目的につくられた電車。
+以降、東北各地区に投入される。5500番台は、山形新幹線新庄延長時に標準軌用普通電車として登場。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{B92219D2-7650-11D7-A4B7-D7D370C4F037}"/>
+			<car char="＞" ref="{B92219D5-7650-11D7-A4B7-D7D370C4F037}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+             <contribution type="train" id="{C1C4ED4A-7662-11D7-A4B7-8B95A9BCF237}">
+		<company>青い森鉄道</company>
+		<type>701系</type>
+		<name>第三セクター鉄道</name>
+		<author>TAKUROU</author>
+		<description>東北新幹線盛岡～八戸間延伸に伴うJR在来線区間第三セクター化により誕生。
+車両の基本構造はJR701系と同じだが、車内はセミクロスシートを採用した。いわて銀河鉄道と共用運転。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{C1C4ED44-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="＞" ref="{C1C4ED46-7662-11D7-A4B7-8B95A9BCF237}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+             <contribution type="train" id="{C1C4ED4B-7662-11D7-A4B7-8B95A9BCF237}">
+		<company>いわて銀河鉄道</company>
+		<type>IGR7000系</type>
+		<name>第三セクター鉄道</name>
+		<author>TAKUROU</author>
+		<description>東北新幹線盛岡～八戸間延伸に伴うJR在来線区間第三セクター化により誕生。
+車両の基本構造はJR701系と同じだが、車内はセミクロスシートでトイレが設置されている。青い森鉄道と共用運転。
+		</description>
+		<fare>680</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{C1C4ED47-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="＞" ref="{C1C4ED49-7662-11D7-A4B7-8B95A9BCF237}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+             <contribution type="train" id="{C1C4ED65-7662-11D7-A4B7-8B95A9BCF237}">
+		<company>JR東日本</company>
+		<type>E127系</type>
+		<name></name>
+		<author>TAKUROU</author>
+		<description>新潟近郊のローカル輸送の一部は165系を使っていたが、老朽化が進み、
+また２扉デッキ付きでラッシュ時の乗り降りが不便であるため、置換え用に製造された。
+701系の直流版というべき車両で、ステンレス製の3扉ロングシート、VVVFインパータ制御車である。
+主に新潟近郊、松本近郊を運転。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{C1C4ED63-7662-11D7-A4B7-8B95A9BCF237}"/>
+			<car char="＞" ref="{C1C4ED64-7662-11D7-A4B7-8B95A9BCF237}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+             <contribution type="train" id="{CBAF5396-76A7-11D7-A4B7-E675BA55FD37}">
+		<company>JR東日本</company>
+		<type>E127系</type>
+		<name>大糸線色</name>
+		<author>TAKUROU</author>
+		<description>車体には軽量ステンレスを使用し、VVVFインバータ制御などの新技術を導入、省エネ化と
+保守の省力化を図っている。車体は３ドア構造で、室内は片側が（ボックス型）、もう片方が（ロングシート形）となっています。
+編成は２両編成が基本で98年12月から導入された。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{CBAF5393-76A7-11D7-A4B7-E675BA55FD37}"/>
+			<car char="＞" ref="{CBAF5394-76A7-11D7-A4B7-E675BA55FD37}"/>
+					
+			<composition>＜＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+                                        <composition>＜＞＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+　　　　　　<contribution type="train" id="{D772F862-76A0-11D7-A4B7-E675BA55FD37}">
+		<company>JR西日本</company>
+		<type>125系</type>
+		<name>近郊形電車</name>
+		<author>TAKUROU</author>
+		<description>2003年3月、JR西日本小浜線(東舞鶴～敦賀)の電化開業により登場。
+１形式クモハ１２５のみで、単行＆ワンマン運転が可能。最高速度は120km/h（小浜線内での最高速度は85km/h）。
+		</description>
+                           <fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<!-- <class name="freetrain.contributions.train.PatternTrainImpl"/> -->
+		<composition>
+			<body carRef="{D772F861-76A0-11D7-A4B7-E675BA55FD37}"/>
+		</composition>
+	</contribution>
+
+<!--国鉄形列車Ⅱ-->
+
+             <!-- イメージ画像定義 -->
+ 
+            <!-- Tc165 新カヌ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc165M}">
+		<picture src="165a_moon.bmp" />
+	</contribution>
+
+	<!-- M165 新カヌ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M165M}">
+		<picture src="165b_moon.bmp" />
+	</contribution>
+
+             <!-- Tc455 仙台色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc455S}">
+		<picture src="455a_sen.bmp" />
+	</contribution>
+
+	<!-- M455 仙台色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M455S}">
+		<picture src="455b_sen.bmp" />
+	</contribution>
+
+             <!-- Tc455 仙山色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc455Y}">
+		<picture src="455a_senzan.bmp" />
+	</contribution>
+
+	<!-- M455 仙山色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M455Y}">
+		<picture src="455b_senzan.bmp" />
+	</contribution>
+
+             <!-- Tc455 磐越色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc455B}">
+		<picture src="455a_banetsu.bmp" />
+	</contribution>
+
+	<!-- M455 磐越色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M455B}">
+		<picture src="455b_banetsu.bmp" />
+	</contribution>
+
+              <!-- Tc169 八ミツ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc169H}">
+		<picture src="169a_mitaka.bmp" />
+	</contribution>
+
+	<!-- M169 八ミツ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M168H}">
+		<picture src="169b_mitaka.bmp" />
+	</contribution>
+
+             <!-- Tc169 長ナノ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc169S}">
+		<picture src="169a_sinsyu2.bmp" />
+	</contribution>
+
+	<!-- M169 長ナノ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M168S}">
+		<picture src="169b_sinsyu2.bmp" />
+	</contribution>
+
+　　　　　　<!-- MM169 長ナノ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M165S}">
+		<picture src="169c_sinsyu2.bmp" />
+	</contribution>
+
+             <!-- Tc169 ミスズ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc169M}">
+		<picture src="169a_sinsyu1.bmp" />
+	</contribution>
+
+	<!-- M169 ミスズ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M168M}">
+		<picture src="169b_sinsyu1.bmp" />
+	</contribution>
+
+             <!-- M169 ミスズ -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M165N}">
+		<picture src="169c_sinsyu1.bmp" />
+	</contribution>
+
+             <!-- 車両定義 -->
+
+             <!-- クモハ165 新カヌ -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc165-M}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc165M}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ165 新カヌ -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M165-M}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M165M}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ165 新カヌ -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc165-M}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Mc165-M}"/>
+	</contribution>
+   
+             <!-- クハ455 仙台色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc455-S}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc455S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ454 仙台色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M454-S}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M455S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クモハ455 仙台色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc455-S}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc455-S}"/>
+	</contribution>
+
+             <!-- クハ455 仙山色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc455-Y}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc455Y}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ454 仙山色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M454-Y}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M455Y}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クモハ455 仙山色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc455-Y}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc455-Y}"/>
+	</contribution>
+
+             <!-- クハ455 磐越西色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc455-B}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc455B}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ454 磐越西色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M454-B}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M455B}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クモハ455 磐越西色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc455-B}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc455-B}"/>
+	</contribution>
+
+             <!-- クモハ169 三鷹色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc169-H}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc169H}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ168 三鷹色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M168-H}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M168H}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ169 三鷹色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc169-H}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Mc169-H}"/>
+	</contribution>
+
+             <!-- クモハ169 信州色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc169-S}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc169S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ168 信州色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M168-S}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M168S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ165 信州色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M165-S}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M165S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ169 信州色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc169-S}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Mc169-S}"/>
+	</contribution>
+
+             <!-- クモハ169 みすず色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc169-M}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc169M}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ168 みすず色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M168-M}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M168M}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ165 みすず色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M165-N}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M165N}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ169 みすず色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc169-M}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Mc169-M}"/>
+	</contribution>
+             
+             <!-- 編成の定義 -->
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE165-M}">
+		<company>JR東日本</company>
+		<type>165系</type>
+		<name>急行ムーンライトえちご</name>
+		<author>TAKUROU</author>
+		<description>上沼垂区１６５系Ｍ編成は新宿～新潟・村上菅野夜行快速「ムーンライトえちご号」として運転されている。
+また、間合い運用として「フェアウェイ号(新宿～黒磯)」としても運転されている。
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Mc165-M}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M165-M}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-Tc165-M}"/>
+			
+			<composition>ABC</composition>
+			<composition>ABCABC</composition>
+			<composition>ABCABCABC</composition>
+			<composition>ABCABCABCABC</composition>
+			<composition>ABCABCABCABCABC</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-S}">
+		<company>JR東日本</company>
+		<type>455系</type>
+		<name>快速仙台シティラビット</name>
+		<author>TAKUROU</author>
+		<description>かつて急行「まつしま」「ざおう」などで活躍していた455系もいまは車内を近郊形改造され3両編成でローカル運用に就いている。
+昭和63年から平成3年までの間、若番車を中心に一部の車両は車体更新工事が行われた。東北本線の黒磯－仙台－利府・一ノ関間、常磐線の仙台－水戸間、
+磐越西線で運用される。常磐線では堂々の9両編成が見られる。
+下り快速「仙台シティラビット」として福島→仙台間で運転されるが、これは現在唯一の快速運用である。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc455-S}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M454-S}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-Mc455-S}"/>
+			
+			<composition>ABC</composition>
+			<composition>ABCABC</composition>
+			<composition>ABCABCABC</composition>
+			<composition>ABCABCABCABC</composition>
+			<composition>ABCABCABCABCABC</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-Ｙ}">
+		<company>JR東日本</company>
+		<type>455系</type>
+		<name>SENZAN LINE 455</name>
+		<author>TAKUROU</author>
+		<description>'97年10月14日から仙山線で営業運転を開始。
+イメージアップのために塗色を青をベースに蔵王の雪景色をイメージした白に6編成が変更された。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc455-Y}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M454-Y}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-Mc455-Y}"/>
+			
+			<composition>ABC</composition>
+			<composition>ABCABC</composition>
+			<composition>ABCABCABC</composition>
+			<composition>ABCABCABCABC</composition>
+			<composition>ABCABCABCABCABC</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-Ｂ}">
+		<company>JR東日本</company>
+		<type>455系</type>
+		<name>BANETSU LINE 455</name>
+		<author>TAKUROU</author>
+		<description>平成8年から磐越西線の活性化を図るために塗色変更車が登場した。
+全7編成が磐越西線の郡山－喜多方間で運用に就いている。塗色変更車はすべて車体更新車。
+'99年12月改正で廃止となり、現在では仙台周辺で不定期に運用されている。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc455-B}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M454-B}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-Mc455-B}"/>
+			
+			<composition>ABC</composition>
+			<composition>ABCABC</composition>
+			<composition>ABCABCABC</composition>
+			<composition>ABCABCABCABC</composition>
+			<composition>ABCABCABCABCABC</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-H}">
+		<company>JR東日本</company>
+		<type>169系</type>
+		<name>INTER CITY TRAIN 169</name>
+		<author>TAKUROU</author>
+		<description>長野地区にＥ１２７系が投入され、三鷹区の１６９系を置き換えるために転属。
+同車は新幹線リレー号、ホリデー快速、大垣救済臨などの運用に入り、中央快速線を９両（ホリデー快速ピクニック）で走る姿は
+塗装こそ違うが、往年の１６９系を彷彿させる。
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Mc169-H}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M168-H}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-Tc169-H}"/>
+			
+			<composition>ABC</composition>
+			<composition>ABCABC</composition>
+			<composition>ABCABCABC</composition>
+			<composition>ABCABCABCABC</composition>
+			<composition>ABCABCABCABCABC</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-S}">
+		<company>JR東日本</company>
+		<type>169系</type>
+		<name>長野色</name>
+		<author>TAKUROU</author>
+		<description>長野冬季五輪に合わせ、長野支社管内車両のイメージアップを図るため、
+'93年(平成５年)頃から長野・松本両区に所属する115・165・169系に採用された塗装。
+これは車内アコモデーションに関わりなく塗色変更が行われた。
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Mc169-S}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M168-S}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M165-S}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc169-S}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABDABD</composition>
+			<composition>ABCDABD</composition>
+			<composition>ABCDABCD</composition>
+			<composition>ABCDABCDABCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-M}">
+		<company>JR東日本</company>
+		<type>169系</type>
+		<name>みすず色</name>
+		<author>TAKUROU</author>
+		<description>車両は信越本線で使用された長野運転所の169系３両編成の中間にサハ165系を挟んだ４両編成。
+外観はＮストライプと呼ばれるアイボリーの車体にグリーンのＮをあしらったデザイン。
+車内も廃車となった新幹線のリクライニングシートを使用して、室内サービスの向上を図った。
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Mc169-M}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M168-M}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M165-N}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc169-M}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABDABD</composition>
+			<composition>ABCDABD</composition>
+			<composition>ABCDABCD</composition>
+			<composition>ABCDABCDABCD</composition>
+		</config>
+             </contribution>
+
+<!--TAKUROUより-->
+ 	<!-- イメージ画像定義 -->
+
+	<!-- キハ75  -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-Dc75}">
+		<picture src="kiha75.bmp" />
+             </contribution>
+
+　　　　　　<!-- キハ１１ -->
+	<contribution type="picture" id="{6CAFE161-74FE-11D7-A4B7-444553540000}">
+		<picture src="kiha11.bmp" />
+	</contribution>
+
+　　　　　   <!-- キハ187 -->
+	<contribution type="picture" id="{6CAFE164-74FE-11D7-A4B7-444553540000}">
+		<picture src="kiha187.bmp" />
+             </contribution>
+
+             <!-- キハ１２５ -->
+	<contribution type="picture" id="{6CAFE168-74FE-11D7-A4B7-444553540000}">
+		<picture src="kiha125.bmp" />
+	</contribution>
+
+             <!-- キハ３１ -->
+	<contribution type="picture" id="{6CAFE16C-74FE-11D7-A4B7-444553540000}">
+		<picture src="kiha31.bmp" />
+	</contribution>
+
+　　　　　　<!-- キハ120_0 -->
+	<contribution type="picture" id="{6CAFE171-74FE-11D7-A4B7-444553540000}">
+		<picture src="kiha120_0.bmp" />
+	</contribution>
+
+             <!-- Tc185 国鉄色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc185J}">
+		<picture src="185a_J.bmp" />
+	</contribution>
+
+	<!-- M184 国鉄色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M184J}">
+		<picture src="185b_J.bmp" />
+	</contribution>
+
+             <!-- M185 国鉄色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M185J}">
+		<picture src="185c_J.bmp" />
+	</contribution>
+
+             <!-- Tc185 田町新塗装車 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc185T}">
+		<picture src="185a_T.bmp" />
+	</contribution>
+
+	<!-- M184 田町新塗装車 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M184T}">
+		<picture src="185b_T.bmp" />
+	</contribution>
+
+             <!-- M185 田町新塗装車 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M185T}">
+		<picture src="185c_T.bmp" />
+	</contribution>
+
+             <!-- Tc185 新前橋新塗装車 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc185M}">
+		<picture src="185a_M.bmp" />
+	</contribution>
+
+	<!-- M184 新前橋新塗装車 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M184M}">
+		<picture src="185b_M.bmp" />
+	</contribution>
+
+             <!-- M185 新前橋新塗装車 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M185M}">
+		<picture src="185c_M.bmp" />
+	</contribution>
+
+             <!-- Tc153 急行伊豆 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc153I}">
+		<picture src="153a_sho.bmp" />
+	</contribution>
+
+	<!-- M152 急行伊豆 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M152I}">
+		<picture src="153b_sho.bmp" />
+	</contribution>
+
+             <!-- T153 急行伊豆 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-T153I}">
+		<picture src="153c_sho.bmp" />
+	</contribution>
+
+             <!-- Mc157 特急あまぎ＆白根 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Mc157A}">
+		<picture src="157a.bmp" />
+	</contribution>
+
+	<!-- M156 特急あまぎ＆白根 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M156A}">
+		<picture src="157b.bmp" />
+	</contribution>
+
+             <!-- T157/Ts157 特急あまぎ＆白根 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-T157A}">
+		<picture src="157c.bmp" />
+	</contribution>
+
+ 	<!-- 車両定義 -->
+
+	<!-- キハ75_0 -->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_0}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-Dc75}" />
+		</sprite>
+		<capacity>68</capacity>
+	</contribution>
+             <!-- キハ75_100 -->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_100}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_0}"/>
+	</contribution>
+
+　　　　　　<!-- キハ１１ -->
+	<contribution type="trainCar" id="{6CAFE162-74FE-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{6CAFE161-74FE-11D7-A4B7-444553540000}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+
+             <!-- キハ187_1000 -->
+	<contribution type="trainCar" id="{6CAFE165-74FE-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{6CAFE164-74FE-11D7-A4B7-444553540000}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+             <!-- キハ187_0 -->
+	<contribution type="trainCar" id="{6CAFE166-74FE-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{6CAFE165-74FE-11D7-A4B7-444553540000}"/>
+	</contribution>
+
+             <!-- キハ１２５ -->
+	<contribution type="trainCar" id="{6CAFE169-74FE-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{6CAFE168-74FE-11D7-A4B7-444553540000}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+
+　　　　　　<!-- キハ３１ -->
+             <contribution type="trainCar" id="{6CAFE16D-74FE-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{6CAFE16C-74FE-11D7-A4B7-444553540000}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+
+             <!-- キハ120_0 -->
+	<contribution type="trainCar" id="{6CAFE172-74FE-11D7-A4B7-444553540000}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{6CAFE171-74FE-11D7-A4B7-444553540000}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+
+             <!-- クハ185 国鉄色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc185-J}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc185J}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ184 国鉄色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M184-J}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M184J}" />
+		</sprite>
+		<capacity>70</capacity>
+	</contribution>
+
+             <!-- モハ185 国鉄色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M185-J}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M185J}" />
+		</sprite>
+		<capacity>70</capacity>
+	</contribution>
+
+	<!-- クハ185_100 国鉄色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc185_100-J}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc185-J}"/>
+	</contribution>
+
+             <!-- クハ185 田町新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc185-T}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc185T}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ184 田町新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M184-T}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M184T}" />
+		</sprite>
+		<capacity>70</capacity>
+	</contribution>
+
+             <!-- モハ185 田町新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M185-T}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M185T}" />
+		</sprite>
+		<capacity>70</capacity>
+	</contribution>
+
+	<!-- クハ185_100 田町新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc185_100-T}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc185-T}"/>
+	</contribution>
+
+             <!-- クハ185_200 新前橋新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc185_200-M}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc185M}" />
+		</sprite>
+		<capacity>60</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ184_200 新前橋新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M184_200-M}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M184M}" />
+		</sprite>
+		<capacity>70</capacity>
+	</contribution>
+
+             <!-- モハ185_200 新前橋新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M185_200-M}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M185M}" />
+		</sprite>
+		<capacity>70</capacity>
+	</contribution>
+
+	<!-- クハ185_300 新前橋新塗装車 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc185_300-M}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc185_200-M}"/>
+	</contribution>
+
+             <!-- クハ153 急行伊豆 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc153-I}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc153I}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ152 急行伊豆 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M152-I}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M152I}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- サハ153 急行伊豆 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-T153-I}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-T153I}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- クハ152 急行伊豆 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc152-I}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc153-I}"/>
+	</contribution>
+
+             <!-- クモハ157 特急あまぎ＆白根 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc157-A}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Mc157A}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ156 特急あまぎ＆白根 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M156-A}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M156A}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- サハ157/サロ157 特急あまぎ＆白根 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-T157-A}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-T157A}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- クモハ157_100 特急あまぎ＆白根 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc157_100-A}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Mc157-A}"/>
+	</contribution>
+
+	<!-- 編成の定義 -->
+          
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DCC75}">
+		<company>JR東海</company>
+		<type>キハ７５系</type>
+		<name>汎用型気動車</name>
+		<author>TAKUROU</author>
+		<description>老朽化したキハ58系などの置換え用として製造された。エンジンなどの下回りはキハ85系と同等で、出力350ps、最高速度120km/hである。ステンレス車体の３扉車で、転換クロスシートである。
+　快速みえ、急行かすが、武豊線で使われている。
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>fast</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_0}"/>
+			<car char="＞" ref="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_100}"/>
+			
+			<composition>＜＞</composition>
+			<composition>＜＞＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+　　　　　　<contribution type="train" id="{6CAFE163-74FE-11D7-A4B7-444553540000}">
+		<company>JR東海</company>
+		<type>キハ１１系</type>
+		<name>近郊形気動車</name>
+		<author>TAKUROU</author>
+		<description>
+近距離近郊型車輛として投入した新型ディーゼル車輛。一部が東海交通事業所(城北線)から借り入れている。
+		</description>
+                           <fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<!-- <class name="freetrain.contributions.train.PatternTrainImpl"/> -->
+		<composition>
+			<body carRef="{6CAFE162-74FE-11D7-A4B7-444553540000}"/>
+		</composition>
+	</contribution>
+
+             <contribution type="train" id="{6CAFE167-74FE-11D7-A4B7-444553540000}">
+		<company>JR西日本</company>
+		<type>キハ187系</type>
+		<name>特急型気動車</name>
+		<author>TAKUROU</author>
+		<description>
+山陰本線西部の高速化に向けに造られた、新型特急気動車。今後も鳥取方面に投入予定。
+		</description>
+		<fare>1010</fare>
+		<price>100</price>
+		<speed>fast</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{6CAFE165-74FE-11D7-A4B7-444553540000}"/>
+			<car char="＞" ref="{6CAFE166-74FE-11D7-A4B7-444553540000}"/>
+			
+			<composition>＜＞</composition>
+			<composition>＜＞＞</composition>
+			<composition>＜＞＜＞</composition>
+			<composition>＜＞＜＞＞</composition>
+			<composition>＜＞＜＞＜＞</composition>
+		</config>
+	</contribution>
+
+             <contribution type="train" id="{6CAFE16A-74FE-11D7-A4B7-444553540000}">
+		<company>JR九州</company>
+		<type>キハ125系</type>
+		<name>近郊形気動車（YDC125）</name>
+		<author>TAKUROU</author>
+		<description>
+大型のキハ200では輸送力が過剰な路線があり、それに合わせて小型のキハ125が作られた。
+車体は新潟鉄工製作のレールバス（ＮＤＣ）規格。
+内装と外部の塗装はドーンデザイン研究所の水戸岡鋭冶氏によるもの。
+		</description>
+                           <fare>680</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<!-- <class name="freetrain.contributions.train.PatternTrainImpl"/> -->
+		<composition>
+			<body carRef="{6CAFE169-74FE-11D7-A4B7-444553540000}"/>
+		</composition>
+	</contribution>
+
+             <!-- 編成の定義 -->
+	<contribution type="train" id="{6CAFE16E-74FE-11D7-A4B7-444553540000}">
+		<company>JR九州</company>
+		<type>キハ３２系</type>
+		<name>近郊形気動車</name>
+		<author>TAKUROU</author>
+		<description>
+国鉄最後の新形式、ステンレス車体で転換クロスシート装備。豊肥・久大・肥薩線に運用。
+		</description>
+                          <fare>680</fare>
+		<price>100</price>
+		<speed>slow</speed>
+		<!-- <class name="freetrain.contributions.train.PatternTrainImpl"/> -->
+		<composition>
+			<body carRef="{6CAFE16D-74FE-11D7-A4B7-444553540000}"/>
+		</composition>
+	</contribution>
+
+             <contribution type="train" id="{6CAFE173-74FE-11D7-A4B7-444553540000}">
+		<company>JR西日本</company>
+		<type>キハ１20系</type>
+		<name>関西線色</name>
+		<author>TAKUROU</author>
+		<description>
+JR西日本発足後の初の新製軽快気動車。エンジンが３３０PSに変更された０番台。ロングシートの編成。
+		</description>
+                           <fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<!-- <class name="freetrain.contributions.train.PatternTrainImpl"/> -->
+		<composition>
+			<body carRef="{6CAFE172-74FE-11D7-A4B7-444553540000}"/>
+		</composition>
+	</contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-M}">
+		<company>JR東日本</company>
+		<type>185系</type>
+		<name>新特急電車</name>
+		<author>TAKUROU</author>
+		<description>新幹線上野開業後に在来線特急への転用を考慮し、185系0番代を耐寒・耐雪構造として
+1982(昭和57)年に185系200番代が新製された。
+200番台は165系との併結が考慮され、碓氷峠の通過に備えて横軽対策車となっている。
+リニューアル工事が行われ、普通車のリクライニングシート化が完了した。
+		</description>
+		<fare>900</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc185_200-M}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M184_200-M}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M185_200-M}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc185_300-M}"/>
+			
+			<composition>ACBCBCD</composition>
+			<composition>ACBCBCDACBCBCD</composition>
+		</config>
+             </contribution>
+             
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-J}">
+		<company>旧日本国有鉄道</company>
+		<type>185系</type>
+		<name>伊豆特急「踊り子」</name>
+		<author>TAKUROU</author>
+		<description>東京と伊豆を結ぶ優等列車として急行伊豆の特急化を前提に、
+153系と同様に普通列車への間合運用を考慮した特急形電車として、1981(昭和56)年に新製されたのが185系0番代である。
+185系は関西地区で新快速用として使用されていた117系近郊形直流電車を基本とし、順次置換予定の153系とも併結可能な構造としている。
+		</description>
+		<fare>900</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc185-J}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M184-J}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M185-J}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc185_100-J}"/>
+
+                                        <composition>ABCCD</composition>
+                                        <composition>ACBCCBD</composition>
+			<composition>ABCBCCCBCD</composition>
+			<composition>ABCCDABCCBCD</composition>
+			<composition>ABCCDABCBCCCBCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-T}">
+		<company>JR東日本</company>
+		<type>185系</type>
+		<name>伊豆特急「踊り子」</name>
+		<author>TAKUROU</author>
+		<description>東京と伊豆を結ぶ優等列車として急行伊豆の特急化を前提に、
+153系と同様に普通列車への間合運用を考慮した特急形電車として、1981(昭和56)年に新製されたのが185系0番代である。
+185系は関西地区で新快速用として使用されていた117系近郊形直流電車を基本とし、順次置換予定の153系とも併結可能な構造としている。
+現在はリニューアル工事が行われ、白地に湘南色を配した外部色への変更、普通車のリクライニングシート化が完了した。
+		</description>
+		<fare>900</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc185-T}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M184-T}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M185-T}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc185_100-T}"/>
+			
+			<composition>ABCCD</composition>
+                                        <composition>ACBCCBD</composition>
+			<composition>ABCBCCCBCD</composition>
+			<composition>ABCCDABCCBCD</composition>
+			<composition>ABCCDABCBCCCBCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-I}">
+		<company>旧日本国有鉄道</company>
+		<type>185系＆153系</type>
+		<name>急行「伊豆」混編成</name>
+		<author>TAKUROU</author>
+		<description>１８５系登場当時に見られた、１５３系との併結編成。基本１０両と付属５両がそれぞれ１８５系だったり１５３系だったりと、組み合わせいろいろ。
+特急「踊り子」運転開始前の急行「伊豆」や普通列車の運用に充当されていました。
+		</description>
+		<fare>900</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc185-J}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M184-J}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M185-J}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc185_100-J}"/>
+                                        <car char="E" ref="{AD070310-7653-11D7-A4B7-Tc153-S}"/>
+			<car char="F" ref="{AD070310-7653-11D7-A4B7-M152-S}"/>
+                                        <car char="G" ref="{AD070310-7653-11D7-A4B7-T153-S}"/>
+			<car char="H" ref="{AD070310-7653-11D7-A4B7-Tc152-S}"/>
+
+			<composition>EGFGHABCBCCCBCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ157-A}">
+		<company>旧日本国有鉄道</company>
+		<type>157系</type>
+		<name>特急「あまぎ」「白根」編成</name>
+		<author>TAKUROU</author>
+		<description>157系は今でいうところのリゾートＥｘｐｒｅｓｓとして首都圏を中心に運転されるとともに、
+ご静養などで那須や伊豆の御用邸へ往復される際のお召列車としても活躍。
+特急並みの設備を有するDX準急 … という登場時の車両コンセプトゆえに、通勤電車から特急電車に至る国鉄電車の
+体系からやや外れたポジションにあったことも157系の魅力であった。昭和51年に特急あまぎ運用から降り、最後まで残った
+お召し列車編成も183系に譲って、昭和57年に廃車となった。
+		</description>
+		<fare>900</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Mc157-A}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M156-A}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-T157-A}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Mc157_100-A}"/>
+                                        
+                                        <composition>ABCCCBD</composition>
+			<composition>ABCCCBDBD</composition>
+		</config>
+             </contribution>  
+<!--国鉄型列車Ⅰ-->
+             <!-- イメージ画像定義 -->
+ 
+            <!-- Tc165 HMあり -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc165S}">
+		<picture src="165a_sho.bmp" />
+	</contribution>
+
+	<!-- Tc164 HMなし -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc164S}">
+		<picture src="165b_sho.bmp" />
+	</contribution>
+
+             <!-- Tc153 湘南色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc153S}">
+		<picture src="153a_sho.bmp" />
+	</contribution>
+
+	<!-- M152 湘南色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M152S}">
+		<picture src="153b_sho.bmp" />
+	</contribution>
+
+             <!-- T153 湘南色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-T153S}">
+		<picture src="153c_sho.bmp" />
+	</contribution>
+
+	<!-- Ts152 湘南色 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Ts152S}">
+		<picture src="152saro.bmp" />
+	</contribution>
+
+              <!-- Tc455 交直流急行 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc455K}">
+		<picture src="455a.bmp" />
+	</contribution>
+
+	<!-- Ｔc475 交直流急行 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc475K}">
+		<picture src="475a.bmp" />
+	</contribution>
+
+             <!-- M474 交直流急行 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M474K}">
+		<picture src="475b.bmp" />
+	</contribution>
+
+	<!-- T475 交直流急行 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-T475K}">
+		<picture src="475c.bmp" />
+	</contribution>
+
+　　　　　　<!-- Ts455 交直流急行 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Ts455K}">
+		<picture src="455saro.bmp" />
+	</contribution>
+
+             <!-- Tc153 新快速 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc153B}">
+		<picture src="153a_sin.bmp" />
+	</contribution>
+
+	<!-- M153 新快速 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M153B}">
+		<picture src="153b_sin.bmp" />
+	</contribution>
+
+             <!-- T153 新快速 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-T153B}">
+		<picture src="153c_sin.bmp" />
+	</contribution>
+
+             <!-- Tc117 新快速 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc117S}">
+		<picture src="117a.bmp" />
+	</contribution>
+
+	<!-- M116 新快速 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M116S}">
+		<picture src="117c.bmp" />
+	</contribution>
+
+             <!-- M117 新快速 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M117S}">
+		<picture src="117b.bmp" />
+	</contribution>
+
+             <!-- Tc117 東海 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc117C}">
+		<picture src="117a_JRC.bmp" />
+	</contribution>
+
+	<!-- M116 東海 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M116C}">
+		<picture src="117c_JRC.bmp" />
+	</contribution>
+
+             <!-- M117 東海 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M117C}">
+		<picture src="117b_JRC.bmp" />
+	</contribution>
+
+             <!-- Tc117 福知山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc117F}">
+		<picture src="117a_FUKU.bmp" />
+	</contribution>
+
+	<!-- M116 福知山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M116F}">
+		<picture src="117c_FUKU.bmp" />
+	</contribution>
+
+             <!-- M117 福知山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M117F}">
+		<picture src="117b_FUKU.bmp" />
+	</contribution>
+
+             <!-- Tc117 岡山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc117O}">
+		<picture src="117a_SUN.bmp" />
+	</contribution>
+
+	<!-- M116 岡山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M116O}">
+		<picture src="117c_SUN.bmp" />
+	</contribution>
+
+             <!-- M117 岡山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M117O}">
+		<picture src="117b_SUN.bmp" />
+	</contribution>
+
+             <!-- Tc117 和歌山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc117W}">
+		<picture src="117a_WAKA.bmp" />
+	</contribution>
+
+	<!-- M116 和歌山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M116W}">
+		<picture src="117c_WAKA.bmp" />
+	</contribution>
+
+             <!-- M117 和歌山 -->
+	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M117W}">
+		<picture src="117b_WAKA.bmp" />
+	</contribution>
+
+             <!-- 車両定義 -->
+
+             <!-- クハ165 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc165-S}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc165S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+　　　　　　<!-- クハ153 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc153-S}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc153S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- クハ164 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc164-S}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc164S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ152 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M152-S}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M152S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- サハ153 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-T153-S}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-T153S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- サロ152 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Ts152-S}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Ts152S}" />
+		</sprite>
+		<capacity>50</capacity>
+	</contribution>
+
+	<!-- クモハ165 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc165-S}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc165-S}"/>
+	</contribution>
+   
+             <!-- クモハ164 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc164-S}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc164-S}"/>
+	</contribution>
+	
+　　　　　　<!-- クハ152 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc152-S}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc153-S}"/>
+	</contribution>
+
+	<!-- クハ455 交直流急行 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc455-K}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc455K}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- クハ475 交直流急行 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc475-K}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc475K}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ474 交直流急行 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M474-K}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M474K}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- サハ475 交直流急行 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-T475-K}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-T475K}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- サロ455 湘南色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Ts455-K}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Ts455K}" />
+		</sprite>
+		<capacity>50</capacity>
+	</contribution>
+
+	<!-- クモハ455 交直流急行 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc455-K}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc455-K}"/>
+	</contribution>
+   
+             <!-- クモハ475 交直流急行 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc475-K}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc475-K}"/>
+	</contribution>
+
+             <!-- クハ153 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc153-B}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc153B}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ153 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M153-B}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M153B}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- サハ153 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-T153-B}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-T153B}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ152 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc152-B}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc153-B}"/>
+	</contribution>
+
+             <!-- クハ117 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc117-S}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc117S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ117 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M117-S}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M117S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ116 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M116-S}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M116S}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ116 新快速 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc116-S}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc117-S}"/>
+	</contribution>
+
+            <!-- クハ117 東海ライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc117-C}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc117C}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ117 東海ライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M117-C}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M117C}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ116 東海ライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M116-C}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M116C}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ116 東海ライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc116-C}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc117-C}"/>
+	</contribution>
+
+             <!-- クハ117 福知山色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc117-F}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc117F}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ117 福知山色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M117-F}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M117F}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ116 福知山色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M116-F}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M116F}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ116 福知山色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc116-F}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc117-F}"/>
+	</contribution>
+
+             <!-- クハ117 サンライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc117-O}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc117O}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ117 サンライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M117-O}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M117O}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ116 サンライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M116-O}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M116O}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ116 サンライナー -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc116-O}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc117-O}"/>
+	</contribution>
+
+             <!-- クハ117 オーシャン色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc117-W}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-Tc117W}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+	
+　　　　　　<!-- モハ117 オーシャン色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M117-W}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M117W}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+             <!-- モハ116 オーシャン色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M116-W}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{AD070310-7653-11D7-A4B7-M116W}" />
+		</sprite>
+		<capacity>80</capacity>
+	</contribution>
+
+	<!-- クハ116 オーシャン色 -->
+	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc116-W}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{AD070310-7653-11D7-A4B7-Tc117-W}"/>
+	</contribution>
+
+             <!-- 編成の定義 -->
+            <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ153-S}">
+		<company>旧日本国有鉄道</company>
+		<type>153系</type>
+		<name>湘南急行電車</name>
+		<author>TAKUROU</author>
+		<description>
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc153-S}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M152-S}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-T153-S}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc152-S}"/>
+　　　　　　　　　　　　　　　　　　 <car char="S" ref="{AD070310-7653-11D7-A4B7-Ts152-S}"/>
+			
+			<composition>ABCBD</composition>
+			<composition>ABCCBD</composition>
+			<composition>ABCSCBD</composition>
+			<composition>ABCCSBCD</composition>
+			<composition>ABCDABDABCD</composition>
+                                        <composition>ABCDABCDABCD</composition>
+                                        <composition>ABCDBDCCSSDBD</composition>
+		</config>
+             </contribution>                                         
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ165-S}">
+		<company>旧日本国有鉄道</company>
+		<type>165系</type>
+		<name>湘南急行電車(HMあり)</name>
+		<author>TAKUROU</author>
+		<description>
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc165-S}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M152-S}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-T153-S}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Mc165-S}"/>
+　　　　　　　　　　　　　　　　　　 <car char="S" ref="{AD070310-7653-11D7-A4B7-Ts152-S}"/>
+			
+			<composition>ABD</composition>
+			<composition>ABCD</composition>
+			<composition>ABDABD</composition>
+                                        <composition>ASBDABD</composition>
+			<composition>ABCDABCD</composition>
+                                        <composition>ABDDBDDBD</composition>
+			<composition>ABCDABDABCD</composition>
+                                        <composition>ABCDABCDABCD</composition>
+                                        <composition>ABCDBDCCSSDBD</composition>
+		</config>
+             </contribution>  
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ164-S}">
+		<company>旧日本国有鉄道</company>
+		<type>165系</type>
+		<name>湘南急行電車(HMなし)</name>
+		<author>TAKUROU</author>
+		<description>
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc164-S}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M152-S}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-T153-S}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Mc164-S}"/>
+　　　　　　　　　　　　　　　　　　 <car char="S" ref="{AD070310-7653-11D7-A4B7-Ts152-S}"/>
+			
+			<composition>ABD</composition>
+			<composition>ABCD</composition>
+			<composition>ABDABD</composition>
+                                        <composition>ASBDABD</composition>
+			<composition>ABCDABCD</composition>
+                                        <composition>ABDDBDDBD</composition>
+			<composition>ABCDABDABCD</composition>
+                                        <composition>ABCDABCDABCD</composition>
+                                        <composition>ABCDBDCCSSDBD</composition>
+		</config>
+             </contribution>  
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ455-K}">
+		<company>旧日本国有鉄道</company>
+		<type>455系</type>
+		<name>東北急行電車</name>
+		<author>TAKUROU</author>
+		<description>
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc455-K}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M474-K}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-T475-K}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Mc455-K}"/>
+　　　　　　　　　　　　　　　　　　 <car char="S" ref="{AD070310-7653-11D7-A4B7-Ts455-K}"/>
+			
+			<composition>ABDSBD</composition>
+			<composition>ABCSBCD</composition>
+			<composition>ABDSBDABDSBD</composition>
+			<composition>ABDSBDABCSBCD</composition>
+			<composition>ABCCBDABCCBDABCD</composition>
+		</config>
+             </contribution>  
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ475-K}">
+		<company>旧日本国有鉄道</company>
+		<type>475系</type>
+		<name>北陸急行電車</name>
+		<author>TAKUROU</author>
+		<description>６０Hzの北陸本線に登場した４７１系統で、抑速ブレーキ付となり勾配区間がある線区で活躍するようになった。
+数々の急行列車で活躍し、次第に特急化されるにつれ、普通列車にも使われるようになった。
+
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc475-K}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M474-K}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-T475-K}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Mc475-K}"/>
+　　　　　　　　　　　　　　　　　　 <car char="S" ref="{AD070310-7653-11D7-A4B7-Ts455-K}"/>
+			
+			<composition>ACBD</composition>
+			<composition>ABDABD</composition>
+			<composition>ABDSCBDABD</composition>
+			<composition>ABDASSCBDABD</composition>
+		</config>
+             </contribution>  
+             
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ153-B}">
+		<company>旧日本国有鉄道</company>
+		<type>153系</type>
+		<name>ブルーライナー</name>
+		<author>TAKUROU</author>
+		<description>昭和47年に新幹線が岡山まで延長されると、急行用153系の捻出が可能となり、冷房化、スピードアップを含め、
+空気バネつき台車の乗り心地良さ、また列車ダイヤのネット化・増発などにより新快速電車として登場した。しかし、私鉄との競合という地域の特殊性から、
+列車の陳腐化なども重なり、ついに後継の座を117系に譲った。
+		</description>
+		<fare>550</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc153-B}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M153-B}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-T153-B}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc152-B}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABCCBD</composition>
+			<composition>ABCCBDABCD</composition>
+			<composition>ABCCBDABCCBD</composition>
+			<composition>ABCCBDABCCBDABCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ117-S}">
+		<company>旧日本国有鉄道</company>
+		<type>117系</type>
+		<name>シティーライナー</name>
+		<author>TAKUROU</author>
+		<description>昭和55年から私鉄と競合する京阪神間でのスピードアップやリクライニングシートを導入して快適さ、
+流線型の先頭車など独特なスタイルで、陳腐化した153系ブルーライナーに変って新快速の役割を担った。
+また、二年後には関西圏だけでなく名鉄と競合する中京地区でも東海ライナーとして投入された。
+		</description>
+		<fare>550</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc117-S}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M116-S}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M117-S}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc116-S}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABCBCD</composition>
+			<composition>ABCDABCD</composition>
+			<composition>ABCBCDABCBCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECC117-C}">
+		<company>JR東海</company>
+		<type>117系</type>
+		<name>東海ライナー</name>
+		<author>TAKUROU</author>
+		<description>関西圏に続き名古屋圏でも昭和57年から東海ライナーという愛称で暫定投入され、153系・165系の快速から置き換えられた。
+昭和61年から、中央西線にも投入される事になり６連から４連に組み返られ、以降211系などと活躍したが、平成元年から311系が新製されて快速の運用から外れた。
+この時から会社のコーポレートカラーに塗り替えられた。1992年度で一部の車両が車端部ロングシート化改造を受けている。
+		</description>
+		<fare>550</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc117-C}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M116-C}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M117-C}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc116-C}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABCDABCD</composition>
+			<composition>ABCDABCDABCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-F}">
+		<company>JR西日本</company>
+		<type>117系</type>
+		<name>300番台福知山色</name>
+		<author>TAKUROU</author>
+		<description>福知山線向けに改造された１１７系の中でも３００番台に分類される編成。
+色は白地にグリーンのカラーリングで、塗り分けは東海色のようだが、ライト周りまで及んでいない。
+また、３００番台は、ドアから中より２シート分をロングシートに改造してあり、乗降口の混雑緩和を図っている。
+		</description>
+		<fare>400</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc117-F}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M116-F}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M117-F}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc116-F}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABCBCD</composition>
+			<composition>ABCDABCD</composition>
+			<composition>ABCBCDABCBCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-O}">
+		<company>JR西日本</company>
+		<type>117系</type>
+		<name>サンライナー</name>
+		<author>TAKUROU</author>
+		<description>平成4年3月改正に117系の中間車を115系3500番台(岡山電車区・広島運転所)に改造され、
+残りの４連が同改正から30分ヘッドとなった岡山～福山間快速「サンライナー」に投入された。
+岡山地区の普通運用や平成６年には臨時快速「三都ライナー」として京都まで乗り入れた。
+三都ライナー廃止後の翌年から福山～広島間のホリデー快速「スーパーラビット」の運用に就く（Ｈ14年廃止）。
+現在ではワンマン運転に改造されている。
+                           </description>
+		<fare>550</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc117-O}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M116-O}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M117-O}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc116-O}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABCDABCD</composition>
+			<composition>ABCBCDABCBCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-W}">
+		<company>JR西日本</company>
+		<type>117系</type>
+		<name>オーシャン色</name>
+		<author>TAKUROU</author>
+		<description>平成13年末から和歌山地区（きのくに線、和歌山線）向けに０・300番台がワンマン改造されて投入された。
+塗装は同地区を通過する南紀特急オーシャンアロー車（285系）のカラーを採用。
+		</description>
+		<fare>700</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc117-W}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M116-W}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M117-W}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc116-W}"/>
+			
+			<composition>ABCD</composition>
+			<composition>ABCDABCD</composition>
+			<composition>ABCBCDABCBCD</composition>
+		</config>
+             </contribution>
+
+             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-S}">
+		<company>JR西日本</company>
+		<type>117系</type>
+		<name>混色新快速</name>
+		<author>TAKUROU</author>
+		<description>221系新快速の補完として、朝夕のみ新快速として投入された。
+		</description>
+		<fare>550</fare>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="A" ref="{AD070310-7653-11D7-A4B7-Tc117-F}"/>
+			<car char="B" ref="{AD070310-7653-11D7-A4B7-M116-F}"/>
+                                        <car char="C" ref="{AD070310-7653-11D7-A4B7-M117-F}"/>
+			<car char="D" ref="{AD070310-7653-11D7-A4B7-Tc116-F}"/>
+                                        <car char="E" ref="{AD070310-7653-11D7-A4B7-Tc117-S}"/>
+			<car char="F" ref="{AD070310-7653-11D7-A4B7-M116-S}"/>
+                                        <car char="G" ref="{AD070310-7653-11D7-A4B7-M117-S}"/>
+			<car char="H" ref="{AD070310-7653-11D7-A4B7-Tc116-S}"/>
+			
+			<composition>ABCGFH</composition>
+			<composition>EFGHABCD</composition>
+			<composition>EFGCBDEFGH</composition>
+			<composition>EFGFGHABCBCD</composition>
+		</config>
+             </contribution>                                                                                                                                        
+
+
+                   
+</plug-in>

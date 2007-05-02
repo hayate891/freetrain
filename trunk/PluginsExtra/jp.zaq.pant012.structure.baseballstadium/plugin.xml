@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>野球場</title>
+	<author>ては</author>
+	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
+	
+	<contribution type="commercial" id="{hanshin-yuusyou-mezasite-gangare}">
+		<group>野球場</group>
+		<price>5000</price>
+		<size>7,7</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="47">
+		<picture src="baseballstadium.bmp" />
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{nekoneko-nyanyanya-ground-overridtest}">
+		<name>多目的グラウンド</name>
+		<price>1000</price>
+		<size>2,4</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="18">
+		<picture src="ground1.bmp" >
+			<override when="summer" src="ground2.bmp" />
+		</picture>
+		</sprite>
+	</contribution>
+</plug-in>

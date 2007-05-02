@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>しかしかさんのバラスト地表版</title>
+	<author>竹内 智紀</author>
+	<homepage>http://t-tomonori.hp.infoseek.co.jp</homepage>
+
+	<contribution type="land" id="{tomonori-ballast-grey-8D86-7FD3B9B26994}">
+		<group>バラスト</group>
+		<name>灰色</name>
+		<price>1</price>
+		<class name="freetrain.contributions.land.StaticLandBuilder"/>
+		<sprite origin="0,0" offset="16" size="32,32">
+			<picture src="ballast_grey.bmp" />
+		</sprite>
+	<computerCannotBuild />
+	</contribution>
+
+	<contribution type="land" id="{tomonori-ballast-ocher-8D86-7FD3B9B26994}">
+		<group>バラスト</group>
+		<name>土色</name>
+		<price>1</price>
+		<class name="freetrain.contributions.land.StaticLandBuilder"/>
+		<sprite origin="0,0" offset="16" size="32,32">
+			<picture src="ballast_ocher.bmp" />
+		</sprite>
+	<computerCannotBuild />
+	</contribution>
+
+	<contribution type="land" id="{tomonori-ballast-brown-8D86-7FD3B9B26994}">
+		<group>バラスト</group>
+		<name>茶色</name>
+		<price>1</price>
+		<class name="freetrain.contributions.land.StaticLandBuilder"/>
+		<sprite origin="0,0" offset="16" size="32,32">
+			<picture src="ballast_brown.bmp" />
+		</sprite>
+	<computerCannotBuild />
+	</contribution>
+
+</plug-in>

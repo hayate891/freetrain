@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plug-in [
+<!ENTITY robby '
+		<price>600</price>
+		<size>2,1</size>
+		<height>2</height>
+		<structure>
+			<category byname="旅客ターミナル"/>
+		</structure>	
+		<computerCannotBuild/>
+'>
+<!ENTITY hall '
+		<price>100000</price>
+		<size>5,7</size>
+		<height>2</height>
+		<structure>
+			<category byname="旅客ターミナル"/>
+		</structure>	
+		<computerCannotBuild/>
+'>
+
+]>
+
+<plug-in>
+	<title>空港ターミナルＢ</title>
+	<author>C477@2両目</author>
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
+
+	<contribution type="picture" id="{278D9A05-BD93-400B-C477-029AC72C275F}-01">
+		<picture src="terminal_hallB.bmp">
+			<override when="night" src="terminal_hallB_n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="picture" id="{278D9A05-BD93-400B-C477-029AC72C275F}-02">
+		<picture src="terminal_hallB2.bmp">
+			<override when="night" src="terminal_hallB2_n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="picture" id="{278D9A05-BD93-400B-C477-029AC72C275F}-03">
+		<picture src="terminal_robbyB.bmp">
+			<override when="night" src="terminal_robbyB_n.bmp"/>
+		</picture>
+	</contribution>
+		
+	<!--メインドーム-->
+	<contribution type="GenericStructure" id="{DC4BD38D-FA51-4CDC-C477-9D6F5FFC8A34}">
+		<group>空港国際線ターミナル</group>
+		<design>メインホール</design>
+		&hall;
+		<sprite origin="0,8" offset="56">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-01"/>
+		</sprite>		
+		<sprite origin="224,8" offset="72" opposite="true">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-01"/>
+		</sprite>		
+		<sprite origin="0,136" offset="72" opposite="true">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-01"/>
+		</sprite>		
+		<sprite origin="224,136" offset="56">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-01"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{D73E9558-7685-4A09-C477-54902A0FAF7B}">
+		<group>空港国際線ターミナル</group>
+		<design>ホール拡張</design>
+		&hall;
+		<sprite origin="0,8" offset="56">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-02"/>
+		</sprite>		
+		<sprite origin="224,8" offset="72" opposite="true">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-02"/>
+		</sprite>		
+		<sprite origin="0,136" offset="72" opposite="true">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-02"/>
+		</sprite>		
+		<sprite origin="224,136" offset="56">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-02"/>
+		</sprite>		
+	</contribution>
+	<!--出発ロビー-->
+	<contribution type="GenericStructure" id="{731CF80D-81C9-41B0-C477-E06FB565850D}">
+		<group>空港搭乗口</group>
+		<design>ミラーガラス</design>
+		&robby;
+		<sprite origin="0,0" offset="32">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-03"/>
+		</sprite>		
+		<sprite origin="48,0" offset="24" opposite="true">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-03"/>
+		</sprite>		
+		<sprite origin="96,0" offset="32">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-03"/>
+		</sprite>		
+		<sprite origin="144,0" offset="24" opposite="true">
+			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-03"/>
+		</sprite>		
+	</contribution>
+</plug-in>

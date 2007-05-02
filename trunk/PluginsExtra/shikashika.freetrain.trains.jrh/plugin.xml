@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+<author>しかしか</author>
+<homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
+
+<depend on="shikashika.freetrain.traincar.locomotive"/>
+<depend on="shikashika.freetrain.traincar.passenger"/>
+<depend on="shikashika.freetrain.traincar.freight"/>
+
+<title>JR北海道</title>
+
+<!-- 旅客列車の定義 -->
+
+	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-hokuto-Cassiopeia-1}">
+		<company>JR北海道</company>
+		<type>DD 51</type>
+		<name>カシオペア</name>
+		<author>しかしか</author>
+		<description>ディーゼル機関車DD51(北斗星色)が牽引する、オール2階建寝台列車です。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="気" ref="{FreeTrain-Shika-DieselLocomotive-TrainCar-DD51-hokuto}"/>
+			<car char="展" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuronehuE26-1}"/>
+			<car char="賓" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE26-1}"/>
+			<car char="食" ref="{FreeTrain-Shika-PassengerCar-TrainCar-mashiE26-1}"/>
+			<car char="零" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-1}"/>
+			<car char="百" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-101}"/>
+			<car char="四" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-401}"/>
+			<car char="交" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kahahuE26-1}"/>
+			<car char="予" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kaya27-501}"/>
+
+			<composition>気</composition>
+			<composition>気交</composition>
+			<composition>気展交</composition>
+			<composition>気展食交</composition>
+			<composition>気展食百交</composition>
+			<composition>気展賓食百交</composition>
+			<composition>気展賓食百四交</composition>
+			<composition>気展賓食百四零交</composition>
+			<composition>気気展賓食百四零交</composition>
+			<composition>気気展賓食百四零零交</composition>
+			<composition>気気展賓食百四零零零交</composition>
+			<composition>気気展賓食百四零零零四交</composition>
+			<composition>気気展賓食百四零零零四零交</composition>
+			<composition>気気展賓食百四零零零四零零交</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-hokuto-Cassiopeia-2}">
+		<company>JR北海道</company>
+		<type>DD 51</type>
+		<name>カシオペア(予備)</name>
+		<author>しかしか</author>
+		<description>ディーゼル機関車DD51(北斗星色)が牽引する、オール2階建寝台列車です。電源車は予備のカヤ２７です。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="気" ref="{FreeTrain-Shika-DieselLocomotive-TrainCar-DD51-hokuto}"/>
+			<car char="展" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuronehuE26-1}"/>
+			<car char="賓" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE26-1}"/>
+			<car char="食" ref="{FreeTrain-Shika-PassengerCar-TrainCar-mashiE26-1}"/>
+			<car char="零" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-1}"/>
+			<car char="百" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-101}"/>
+			<car char="四" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-401}"/>
+			<car char="交" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kahahuE26-1}"/>
+			<car char="予" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kaya27-501}"/>
+
+			<composition>気</composition>
+			<composition>気予</composition>
+			<composition>気展予</composition>
+			<composition>気展食予</composition>
+			<composition>気展食百予</composition>
+			<composition>気展賓食百予</composition>
+			<composition>気展賓食百四予</composition>
+			<composition>気展賓食百四零予</composition>
+			<composition>気気展賓食百四零予</composition>
+			<composition>気気展賓食百四零零予</composition>
+			<composition>気気展賓食百四零零零予</composition>
+			<composition>気気展賓食百四零零零四予</composition>
+			<composition>気気展賓食百四零零零四零予</composition>
+			<composition>気気展賓食百四零零零四零零予</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-0-Cassiopeia-1}">
+		<company>JR北海道</company>
+		<type>ED 79</type>
+		<name>カシオペア</name>
+		<author>しかしか</author>
+		<description>津軽海峡線用の交流用電気機関車ED79が牽引する、オール2階建寝台列車です。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="電" ref="{FreeTrain-Shika-ElectricLocomotive-TrainCar-ED79-0}"/>
+			<car char="展" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuronehuE26-1}"/>
+			<car char="賓" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE26-1}"/>
+			<car char="食" ref="{FreeTrain-Shika-PassengerCar-TrainCar-mashiE26-1}"/>
+			<car char="零" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-1}"/>
+			<car char="百" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-101}"/>
+			<car char="四" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-401}"/>
+			<car char="交" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kahahuE26-1}"/>
+			<car char="予" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kaya27-501}"/>
+
+			<composition>電</composition>
+			<composition>電交</composition>
+			<composition>電展交</composition>
+			<composition>電展食交</composition>
+			<composition>電展食百交</composition>
+			<composition>電展賓食百交</composition>
+			<composition>電展賓食百四交</composition>
+			<composition>電展賓食百四零交</composition>
+			<composition>電展賓食百四零零交</composition>
+			<composition>電展賓食百四零零零交</composition>
+			<composition>電展賓食百四零零零四交</composition>
+			<composition>電展賓食百四零零零四零交</composition>
+			<composition>電展賓食百四零零零四零零交</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-0-Cassiopeia-2}">
+		<company>JR北海道</company>
+		<type>ED 79</type>
+		<name>カシオペア(予備)</name>
+		<author>しかしか</author>
+		<description>津軽海峡線用の交流用電気機関車ED79が牽引する、オール2階建寝台列車です。電源車は予備のカヤ２７です。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="電" ref="{FreeTrain-Shika-ElectricLocomotive-TrainCar-ED79-0}"/>
+			<car char="展" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuronehuE26-1}"/>
+			<car char="賓" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE26-1}"/>
+			<car char="食" ref="{FreeTrain-Shika-PassengerCar-TrainCar-mashiE26-1}"/>
+			<car char="零" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-1}"/>
+			<car char="百" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-101}"/>
+			<car char="四" ref="{FreeTrain-Shika-PassengerCar-TrainCar-shuroneE27-401}"/>
+			<car char="交" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kahahuE26-1}"/>
+			<car char="予" ref="{FreeTrain-Shika-PassengerCar-TrainCar-kaya27-501}"/>
+
+			<composition>電</composition>
+			<composition>電予</composition>
+			<composition>電展予</composition>
+			<composition>電展食予</composition>
+			<composition>電展食百予</composition>
+			<composition>電展賓食百予</composition>
+			<composition>電展賓食百四予</composition>
+			<composition>電展賓食百四零予</composition>
+			<composition>電展賓食百四零零予</composition>
+			<composition>電展賓食百四零零零予</composition>
+			<composition>電展賓食百四零零零四予</composition>
+			<composition>電展賓食百四零零零四零予</composition>
+			<composition>電展賓食百四零零零四零零予</composition>
+		</config>
+	</contribution>
+
+<!-- 貨物列車の定義 -->
+
+</plug-in>

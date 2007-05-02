@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>ホーム屋根</title>
+	<author>暇</author>
+	<homepage></homepage>
+
+	<depends on="org.kohsuke.freetrain.rail.electricPole" />
+	
+	
+	<contribution type="electricPole" id="{200405290950Roof01A}12457">
+		<name>HIMA屋根01A</name>
+		<sprite>
+			<picture src="roof01AA.bmp" />
+		</sprite>
+
+	</contribution>
+
+	<contribution type="electricPole" id="{200405291007Roof01B}16477">
+		<name>HIMA屋根01B</name>
+		<sprite>
+			<picture src="roof01AB.bmp" />
+		</sprite>
+
+	</contribution>
+
+	<contribution type="electricPole" id="{200405291007Roof01C}12587">
+		<name>HIMA屋根01C</name>
+		<sprite>
+			<picture src="roof01AC.bmp" />
+		</sprite>
+
+	</contribution>
+
+	<contribution type="electricPole" id="{200405291107Roof01A}42457">
+		<name>HIMA屋根02A</name>
+		<sprite>
+			<picture src="roof02AA.bmp" />
+		</sprite>
+
+	</contribution>
+
+	<contribution type="electricPole" id="{200405291107Roof01B}10477">
+		<name>HIMA屋根02B</name>
+		<sprite>
+			<picture src="roof01AB.bmp" />
+		</sprite>
+
+	</contribution>
+
+	<contribution type="electricPole" id="{200405291107Roof01C}22587">
+		<name>HIMA屋根02C</name>
+		<sprite>
+			<picture src="roof02AC.bmp" />
+		</sprite>
+
+	</contribution>
+
+
+
+	<contribution type="electricPole" id="{200405300146Roof01A}4212747">
+		<name>HIMA屋根03A</name>
+		<sprite>
+			<picture src="roof03AA.bmp" />
+		</sprite>
+
+	</contribution>
+
+	<contribution type="electricPole" id="{200405300146Roof01B}45865737">
+		<name>HIMA屋根03B</name>
+		<sprite>
+			<picture src="roof01AB.bmp" />
+		</sprite>
+
+	</contribution>
+
+	<contribution type="electricPole" id="{200405300146Roof01C}22478947">
+		<name>HIMA屋根03C</name>
+		<sprite>
+			<picture src="roof03AC.bmp" />
+		</sprite>
+
+	</contribution>
+</plug-in>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plug-in [
+<!ENTITY building2x2ParamA '
+	<group>貸しビル(2x2)</group>
+	<price>3300</price>
+	<size>2,2</size>
+	<minHeight>5</minHeight>
+	<maxHeight>6</maxHeight>
+	<population>
+		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<base>220</base>
+	</population>
+'>
+<!ENTITY building2x2ParamB '
+	<group>貸しビル(2x2)</group>
+	<price>3100</price>
+	<size>2,2</size>
+	<minHeight>3</minHeight>
+	<maxHeight>6</maxHeight>
+	<population>
+		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<base>200</base>
+	</population>
+'>
+<!ENTITY building2x2ParamC '
+	<group>貸しビル(2x2)</group>
+	<price>2700</price>
+	<size>2,2</size>
+	<minHeight>3</minHeight>
+	<maxHeight>8</maxHeight>
+	<population>
+		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<base>190</base>
+	</population>
+'>
+]>
+	
+<plug-in>
+	<title>ビルプラグイン</title>
+	<author>しの</author>
+	<homepage></homepage>
+
+
+        <contribution type="picture" id="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}">
+		<picture src="2x2buil 002.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{21ECC7D2-E865-493D-9FBD-3E945EB219D9}">
+		&building2x2ParamB;
+		<pictures>
+			<top    origin="0,  0" offset="26">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</top>
+			<middle origin="0, 50" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</middle>
+			<bottom origin="0, 90" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{C7CF36F1-0E8E-4846-BDE3-147779C776B4}">
+		&building2x2ParamB;
+		<pictures>
+			<top    origin="64,  0" offset="26">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</top>
+			<middle origin="64, 50" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</middle>
+			<bottom origin="64, 90" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+
+
+        <contribution type="varHeightBuilding" id="{8D8A3E10-5A2A-4948-83AB-EC566D0416DD}">
+		&building2x2ParamB;
+		<pictures>
+			<top    origin="128,  0" offset="26">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</top>
+			<middle origin="128, 50" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</middle>
+			<bottom origin="128, 90" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{74F83902-D791-4468-8AEC-0E4A66B613A0}">
+		&building2x2ParamB;
+		<pictures>
+			<top    origin="192,  0" offset="26">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</top>
+			<middle origin="192, 50" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</middle>
+			<bottom origin="192, 90" offset="16">
+				<picture ref="{AE73B6F1-0437-48F0-A4C4-E01324AF0BCF}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+
+
+
+
+
+
+        <contribution type="picture" id="{246656A9-8662-4A52-9B52-0A6D713EC83A}">
+		<picture src="2x2buil 003.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{F6519424-C47C-4281-B06E-12D21CDAF121}">
+		&building2x2ParamA;
+		<pictures>
+			<top    origin="0,  0" offset="26">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</top>
+			<middle origin="0, 50" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</middle>
+			<bottom origin="0, 90" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{2E2DA89B-9847-468A-B457-8302D7728194}">
+		&building2x2ParamA;
+		<pictures>
+			<top    origin="64,  0" offset="26">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</top>
+			<middle origin="64, 50" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</middle>
+			<bottom origin="64, 90" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+
+
+        <contribution type="varHeightBuilding" id="{235025D1-9B10-4BDE-AFD9-AB998451D42B}">
+		&building2x2ParamA;
+		<pictures>
+			<top    origin="128,  0" offset="26">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</top>
+			<middle origin="128, 50" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</middle>
+			<bottom origin="128, 90" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{6C559D81-7CCF-4D6E-8DC7-F9F49E2F0674}">
+		&building2x2ParamA;
+		<pictures>
+			<top    origin="192,  0" offset="26">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</top>
+			<middle origin="192, 50" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</middle>
+			<bottom origin="192, 90" offset="16">
+				<picture ref="{246656A9-8662-4A52-9B52-0A6D713EC83A}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+
+
+
+
+
+
+        <contribution type="picture" id="{151209FC-ED44-420A-9943-F7B05874AB61}">
+		<picture src="2x2buil 004.bmp"/>
+	</contribution>
+	
+	<contribution type="varHeightBuilding" id="{D4ED7A69-2849-49BC-8A72-05B334E2D7B3}">
+		&building2x2ParamC;
+		<pictures>
+			<top    origin="0,  0" offset="26">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</top>
+			<middle origin="0, 50" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</middle>
+			<bottom origin="0, 90" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+	
+	
+	
+	<contribution type="varHeightBuilding" id="{035F693E-70F6-4CD5-B60E-29623097612D}">
+		&building2x2ParamC;
+		<pictures>
+			<top    origin="64,  0" offset="26">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</top>
+			<middle origin="64, 50" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</middle>
+			<bottom origin="64, 90" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+
+
+        <contribution type="varHeightBuilding" id="{138ED158-FCC1-4FC0-8060-C768FF6F32FB}">
+		&building2x2ParamC;
+		<pictures>
+			<top    origin="128,  0" offset="26">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</top>
+			<middle origin="128, 50" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</middle>
+			<bottom origin="128, 90" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+
+
+        <contribution type="varHeightBuilding" id="{98E66816-638B-4699-A88B-EF2818D56D17}">
+		&building2x2ParamC;
+		<pictures>
+			<top    origin="192,  0" offset="26">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</top>
+			<middle origin="192, 50" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</middle>
+			<bottom origin="192, 90" offset="16">
+				<picture ref="{151209FC-ED44-420A-9943-F7B05874AB61}"/>
+			</bottom>
+		</pictures>
+	</contribution>
+
+</plug-in>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>トンネル坑口</title>
+	<author>HEUER</author>
+	<homepage>http://freetrain.finito-web.com/</homepage>
+	
+	<depends on="org.kohsuke.freetrain.rail.electricPole" />
+	
+	<contribution type="electricPole" id="{RAIL0100-8058-11D7-BB78-0090FE1AB959}">
+		<name>TN坑口(単線A)</name>
+		<sprite>
+			<picture src="tunnel.bmp"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0105-8058-11D7-BB78-0090FE1AB959}">
+		<name>TN坑口(単線B)</name>
+		<sprite>
+			<picture src="tunnel2.bmp">
+				<override when="winter" src="tunnel2w.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0101-8058-11D7-BB78-0090FE1AB959}">
+		<name>TN坑口(複線A左)</name>
+		<sprite>
+			<picture src="tunnel_l.bmp"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="electricPole" id="{RAIL0102-8058-11D7-BB78-0090FE1AB959}">
+		<name>TN坑口(複線A右)</name>
+		<sprite>
+			<picture src="tunnel_r.bmp"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0103-8058-11D7-BB78-0090FE1AB959}">
+		<name>TN坑口(複線B左)</name>
+		<sprite>
+			<picture src="tunnel2_l.bmp"/>
+		</sprite>
+	</contribution>
+	
+	<contribution type="electricPole" id="{RAIL0104-8058-11D7-BB78-0090FE1AB959}">
+		<name>TN坑口(複線B右)</name>
+		<sprite>
+			<picture src="tunnel2_r.bmp"/>
+		</sprite>
+	</contribution>
+
+
+	<title>ロックシェッド</title>
+	<author>HEUER</author>
+	<homepage>http://freetrain.finito-web.com/</homepage>
+	
+	<depends on="org.kohsuke.freetrain.rail.electricPole" />
+	
+	<contribution type="electricPole" id="{RAIL0200-8058-11D7-BB78-0090FE1AB959}">
+		<name>ロックシェッドA1</name>
+		<sprite>
+			<picture src="rsa1.bmp">
+				<override when="winter" src="rsa1w.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0201-8058-11D7-BB78-0090FE1AB959}">
+		<name>ロックシェッドA1c</name>
+		<sprite>
+			<picture src="rsa1c.bmp">
+				<override when="winter" src="rsa1cw.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0202-8058-11D7-BB78-0090FE1AB959}">
+		<name>ロックシェッドA2</name>
+		<sprite>
+			<picture src="rsa2.bmp">
+				<override when="winter" src="rsa2w.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0203-8058-11D7-BB78-0090FE1AB959}">
+		<name>ロックシェッドA2c</name>
+		<sprite>
+			<picture src="rsa2c.bmp">
+				<override when="winter" src="rsa2cw.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0204-8058-11D7-BB78-0090FE1AB959}">
+		<name>ロックシェッドAx</name>
+		<sprite>
+			<picture src="rsax.bmp">
+				<override when="winter" src="rsaxw.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="electricPole" id="{RAIL0205-8058-11D7-BB78-0090FE1AB959}">
+		<name>ロックシェッドAy</name>
+		<sprite>
+			<picture src="rsay.bmp">
+				<override when="winter" src="rsayw.bmp" />
+			</picture>
+		</sprite>
+	</contribution>
+
+</plug-in>
