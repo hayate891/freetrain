@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両セット　0号車</title>
+	<title>Train Set Number 0</title>
 	<homepage></homepage>
 
 	<!-- キハ55系 先頭車-->
@@ -29,11 +29,11 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-JNR-k55-HENSEI-7567171D3CEF}">
-		<company>旧日本国有鉄道</company>
-		<type>キハ55系</type>
-		<name>急行色</name>
-		<author>たいふ～ん</author>
-		<description>8両まで編成可</description>
+		<company>Japanese National Railways</company>
+		<type>Kiha type 55</type>
+		<name>Kyukoshoku</name>
+		<author>Typhoon</author>
+		<description>Supports up to 8 car formation</description>
 		<price>1</price>
 		<speed>slow</speed>
            		<fare>400</fare>
@@ -52,12 +52,12 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-NANKAI-k5501-HENSEI-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>キハ5501系</type>
+		<company>Nankai Electric Railway</company>
+		<type>Kiha type 5501</type>
 		<name></name>
-		<author>たいふ～ん</author>
-		<description>南海電気鉄道が国鉄紀勢本線への乗り入れの為、国鉄キハ55を基に昭和34年に製造した気動車。準急きのくにとして走り、後に急行に格上げされました。昭和60年の国鉄ダイヤ改正で廃止となりキハ5501も引退しました。
-（8両まで編成可）</description>
+		<author>Typhoon</author>
+		<description>Kiha 5501 was a train manufactured by Nankai Electric Railway in 1960 to serve JNR's Kisei Main Line. Based on JNR's Kiha 55, it ran as Kinokuni Local Express but was later promoted to express train. The train was withdrawn from service by JNR in 1986.
+		(Max 8 car formation.)</description>
 		<price>1</price>
 		<speed>slow</speed>
            		<fare>400</fare>
@@ -76,11 +76,11 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-NANKAI-KINOKUNI-HENSEI-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>キハ5501系+キハ58系</type>
-		<name>きのくに</name>
-		<author>たいふ～ん</author>
-		<description>（8両のみ編成可）</description>
+		<company>Nankai Electric Railway</company>
+		<type>Kiha type 5501 + Kiha type 58</type>
+		<name>Kinokuni</name>
+		<author>Typhoon</author>
+		<description>（8 car formation only）</description>
 		<price>1</price>
 		<speed>slow</speed>
            		<fare>400</fare>
