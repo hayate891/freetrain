@@ -98,8 +98,8 @@ namespace freetrain.framework.plugin.generic
 			InitializeComponent();
 			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(this.redrawPreview);
 			OnNodeSelected(CategoryTreeWnd.getSelectedCategory(),0);
-			if(typeBox.Items.Count!=0)
-				typeBox_SelectedIndexChanged(this,null);
+			if (typeBox.Items.Count != 0)
+				typeBox_SelectedIndexChanged(this, null);
 			//SetAllCategories();
 			bShowDetail = false;
 			btnDetail_Click(this,null);
@@ -817,8 +817,10 @@ namespace freetrain.framework.plugin.generic
 			groupColor.Enabled = false;
 			groupCol2.Enabled = false;
 			selectorDir.Enabled = false;
+			groupDesign.Enabled = false;
 			selectorColor.count = 0;
 			selectorCol2.count = 0;
+			selectorDesign.count = 0;
 			numHeight.Enabled = false;
 			numHeight.Text = "";
 			costBox.cost = 0;
