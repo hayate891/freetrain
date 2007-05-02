@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<plug-in>
+
+<title>道路</title>
+<author>しかしか</author>
+<homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
+
+
+<!-- 石畳 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-stonepaved}">
+<class name="freetrain.contributions.road.A3RoadContribution" />
+<name>石畳/軌道/茶</name>
+<description>軌道用石畳</description>
+<picture src="road_stonepaved001_ocher.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-stonepaved-grey}">
+<class name="freetrain.contributions.road.A3RoadContribution" />
+<name>石畳/軌道/灰</name>
+<description>軌道用石畳</description>
+<picture src="road_stonepaved001_grey.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-stonepaved-entrancepath-ocher}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>石畳/参道/茶</name>
+<style name="footpath"/>
+<description>参道</description>
+<picture src="road_stonepaved002_ocher.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-stonepaved-entrancepath-grey}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>石畳/参道/灰</name>
+<style name="footpath"/>
+<description>参道</description>
+<picture src="road_stonepaved002_grey.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-stonepaved-entrancepath-stonelantern-ocher}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>石畳/灯籠/茶</name>
+<style name="footpath"/>
+<description>参道(石灯籠付)</description>
+<picture src="road_stonepaved003_ocher.bmp" size="32,32" offset="16">
+	<override when="night" src="road_stonepaved003_ocher_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-stonepaved-entrancepath-stonelantern-grey}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>石畳/灯籠/灰</name>
+<style name="footpath"/>
+<description>参道(石灯籠付)</description>
+<picture src="road_stonepaved003_grey.bmp" size="32,32" offset="16">
+	<override when="night" src="road_stonepaved003_grey_n.bmp"/>
+</picture>
+</contribution>
+
+
+<!-- 林道 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-woodlandpath-001}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>林道/未舗装</name>
+<style name="footpath"/>
+<description>林道(未舗装)</description>
+<picture src="road_woodlandpath_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_woodlandpath001_spring.bmp"/>
+	<override when="summer" src="road_woodlandpath001_summer.bmp"/>
+	<override when="autumn" src="road_woodlandpath001_autumn.bmp"/>
+	<override when="winter" src="road_woodlandpath001_winter.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-woodlandpath-002}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>林道/舗装</name>
+<style name="footpath"/>
+<description>林道(舗装)</description>
+<picture src="road_woodlandpath_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_woodlandpath002_spring.bmp"/>
+	<override when="summer" src="road_woodlandpath002_summer.bmp"/>
+	<override when="autumn" src="road_woodlandpath002_autumn.bmp"/>
+	<override when="winter" src="road_woodlandpath002_winter.bmp"/>
+</picture>
+</contribution>
+
+
+<!-- 大街路/無灯 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-concrete-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/歩道付/コンクリート右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a000_concrete_r.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-concrete-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/歩道付/コンクリート左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a000_concrete_l.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-walk-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/歩道付/駅前歩道右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前歩道付道路</description>
+<picture src="road_a000_walk_r.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-walk-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/歩道付/駅前歩道左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前歩道付道路</description>
+<picture src="road_a000_walk_l.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-entrance-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/歩道付/駅前広場右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前広場付道路</description>
+<picture src="road_a000_entrance_r.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-entrance-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/歩道付/駅前広場左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前広場付道路</description>
+<picture src="road_a000_entrance_l.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-lane-add-add}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/2車線/追加車線</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追加走行車線</description>
+<picture src="road_a000_add.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-passinglane-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/2車線/追越右</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a000_pl_r.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-passinglane-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/2車線/追越左</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a000_pl_l.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-passinglane-verge-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/2車線/追越植栽付右</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a000_pl_r_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a000_pl_r_spring.bmp" />
+	<override when="summer" src="road_a000_pl_r_summer.bmp" />
+	<override when="autumn" src="road_a000_pl_r_autumn.bmp" />
+	<override when="winter" src="road_a000_pl_r_winter.bmp" />
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-passinglane-verge-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/2車線/追越植栽付左</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a000_pl_l_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a000_pl_l_spring.bmp" />
+	<override when="summer" src="road_a000_pl_l_summer.bmp" />
+	<override when="autumn" src="road_a000_pl_l_autumn.bmp" />
+	<override when="winter" src="road_a000_pl_l_winter.bmp" />
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-center-white}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/中央線/白実線</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>中央線白実線</description>
+<picture src="road_a000_c_white.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-center-orange}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/中央線/橙実線</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>中央線橙実線</description>
+<picture src="road_a000_c_orange.bmp" size="32,32" offset="16" />
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-verge-center}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/無灯/中央線/中央分離帯</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>中央分離帯</description>
+<picture src="road_a000_c_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a000_c_spring.bmp" />
+	<override when="summer" src="road_a000_c_summer.bmp" />
+	<override when="autumn" src="road_a000_c_autumn.bmp" />
+	<override when="winter" src="road_a000_c_winter.bmp" />
+</picture>
+</contribution>
+
+
+<!-- 大街路/街灯付 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-concrete-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/歩道付/コンクリート右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a001_concrete_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_concrete_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-concrete-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/歩道付/コンクリート左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a001_concrete_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_concrete_l_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-walk-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/歩道付/駅前歩道右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前歩道付道路</description>
+<picture src="road_a001_walk_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_walk_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-walk-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/歩道付/駅前歩道左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前歩道付道路</description>
+<picture src="road_a001_walk_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_walk_l_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-entrance-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/歩道付/駅前広場右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前広場付道路</description>
+<picture src="road_a001_entrance_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_entrance_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-entrance-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/歩道付/駅前広場左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前広場付道路</description>
+<picture src="road_a001_entrance_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_entrance_l_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-streetlamp-passinglane-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/2車線/追越右</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a001_pl_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_pl_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue--streetlamp-passinglane-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/街灯/2車線/追越左</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a001_pl_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a001_pl_l_n.bmp"/>
+</picture>
+</contribution>
+
+
+<!-- 大街路/街灯植栽帯付 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-verge-concrete-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/歩道付/コンクリート右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a002_concrete_r_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_concrete_r_spring.bmp">
+            <override when="night" src="road_a002_concrete_r_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_concrete_r_summer.bmp">
+            <override when="night" src="road_a002_concrete_r_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_concrete_r_autumn.bmp">
+            <override when="night" src="road_a002_concrete_r_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_concrete_r_winter.bmp">
+            <override when="night" src="road_a002_concrete_r_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-verge-concrete-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/歩道付/コンクリート左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a002_concrete_l_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_concrete_l_spring.bmp">
+            <override when="night" src="road_a002_concrete_l_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_concrete_l_summer.bmp">
+            <override when="night" src="road_a002_concrete_l_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_concrete_l_autumn.bmp">
+            <override when="night" src="road_a002_concrete_l_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_concrete_l_winter.bmp">
+            <override when="night" src="road_a002_concrete_l_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-verge-walk-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/歩道付/駅前歩道右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前歩道付道路</description>
+<picture src="road_a002_walk_r_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_walk_r_spring.bmp">
+            <override when="night" src="road_a002_walk_r_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_walk_r_summer.bmp">
+            <override when="night" src="road_a002_walk_r_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_walk_r_autumn.bmp">
+            <override when="night" src="road_a002_walk_r_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_walk_r_winter.bmp">
+            <override when="night" src="road_a002_walk_r_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-verge-walk-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/歩道付/駅前歩道左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前歩道付道路</description>
+<picture src="road_a002_walk_l_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_walk_l_spring.bmp">
+            <override when="night" src="road_a002_walk_l_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_walk_l_summer.bmp">
+            <override when="night" src="road_a002_walk_l_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_walk_l_autumn.bmp">
+            <override when="night" src="road_a002_walk_l_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_walk_l_winter.bmp">
+            <override when="night" src="road_a002_walk_l_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-verge-entrance-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/歩道付/駅前広場右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前広場付道路</description>
+<picture src="road_a002_entrance_r_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_entrance_r_spring.bmp">
+            <override when="night" src="road_a002_entrance_r_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_entrance_r_summer.bmp">
+            <override when="night" src="road_a002_entrance_r_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_entrance_r_autumn.bmp">
+            <override when="night" src="road_a002_entrance_r_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_entrance_r_winter.bmp">
+            <override when="night" src="road_a002_entrance_r_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-verge-entrance-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/歩道付/駅前広場左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>駅前広場付道路</description>
+<picture src="road_a002_entrance_l_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_entrance_l_spring.bmp">
+            <override when="night" src="road_a002_entrance_l_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_entrance_l_summer.bmp">
+            <override when="night" src="road_a002_entrance_l_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_entrance_l_autumn.bmp">
+            <override when="night" src="road_a002_entrance_l_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_entrance_l_winter.bmp">
+            <override when="night" src="road_a002_entrance_l_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-streetlamp-passinglane-verge-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/2車線/追越右</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a002_pl_r_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_pl_r_spring.bmp">
+            <override when="night" src="road_a002_pl_r_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_pl_r_summer.bmp">
+            <override when="night" src="road_a002_pl_r_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_pl_r_autumn.bmp">
+            <override when="night" src="road_a002_pl_r_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_pl_r_winter.bmp">
+            <override when="night" src="road_a002_pl_r_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-streetlamp-passinglane-verge-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/2車線/追越左</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a002_pl_l_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a002_pl_l_spring.bmp">
+            <override when="night" src="road_a002_pl_l_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a002_pl_l_summer.bmp">
+            <override when="night" src="road_a002_pl_l_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a002_pl_l_autumn.bmp">
+            <override when="night" src="road_a002_pl_l_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a002_pl_l_winter.bmp">
+            <override when="night" src="road_a002_pl_l_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-streetlamp-verge-center}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/植栽/中央線/中央分離帯</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>中央分離帯</description>
+<picture src="road_a002_pl_c_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a001_c_spring.bmp">
+            <override when="night" src="road_a001_c_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a001_c_summer.bmp">
+            <override when="night" src="road_a001_c_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a001_c_autumn.bmp">
+            <override when="night" src="road_a001_c_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a001_c_winter.bmp">
+            <override when="night" src="road_a001_c_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+
+<!-- 大街路/橋脚付 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-pier-concrete-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/橋脚/歩道付/コンクリート右</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a003_concrete_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a003_concrete_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-sidewalk-streetlamp-pier-concrete-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/橋脚/歩道付/コンクリート左</name>
+<style name="street" sidewalk="pavement" lanes="1"/>
+<description>コンクリート歩道付道路</description>
+<picture src="road_a003_concrete_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_a003_concrete_l_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-streetlamp-passinglane-verge-pier-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/橋脚/２車線/追越右</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a003_pl_r_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a003_pl_r_spring.bmp">
+            <override when="night" src="road_a003_pl_r_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a003_pl_r_summer.bmp">
+            <override when="night" src="road_a003_pl_r_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a003_pl_r_autumn.bmp">
+            <override when="night" src="road_a003_pl_r_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a003_pl_r_winter.bmp">
+            <override when="night" src="road_a003_pl_r_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-streetlamp-passinglane-verge-pier-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/橋脚/２車線/追越左</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>追越車線</description>
+<picture src="road_a003_pl_l_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a003_pl_l_spring.bmp">
+            <override when="night" src="road_a003_pl_l_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a003_pl_l_summer.bmp">
+            <override when="night" src="road_a003_pl_l_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a003_pl_l_autumn.bmp">
+            <override when="night" src="road_a003_pl_l_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a003_pl_l_winter.bmp">
+            <override when="night" src="road_a003_pl_l_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-avenue-streetlamp-verge-pier-center}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>大街路/橋脚/中央線/中央分離帯</name>
+<style name="street" sidewalk="none" lanes="2"/>
+<description>中央分離帯</description>
+<picture src="road_a003_pl_c_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_a003_c_spring.bmp">
+            <override when="night" src="road_a003_c_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_a003_c_summer.bmp">
+            <override when="night" src="road_a003_c_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_a003_c_autumn.bmp">
+            <override when="night" src="road_a003_c_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_a003_c_winter.bmp">
+            <override when="night" src="road_a003_c_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+
+<!-- 高架下道路 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-pier-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/1車線/右</name>
+<style name="street" sidewalk="shoulder" lanes="1"/>
+<description>高架下道路</description>
+<picture src="road_pier001_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_pier001_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-pier-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/1車線/左</name>
+<style name="street" sidewalk="shoulder" lanes="1"/>
+<description>高架下道路</description>
+<picture src="road_pier001_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_pier001_l_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-pier}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/2車線/中</name>
+<style name="street" sidewalk="shoulder" lanes="2"/>
+<description>高架下道路</description>
+<picture src="road_pier001_c_spring.bmp" size="32,32" offset="16">
+	<override when="spring" src="road_pier001_c_spring.bmp">
+            <override when="night" src="road_pier001_c_spring_n.bmp"/>
+        </override>
+	<override when="summer" src="road_pier001_c_summer.bmp">
+            <override when="night" src="road_pier001_c_summer_n.bmp"/>
+        </override>
+	<override when="autumn" src="road_pier001_c_autumn.bmp">
+            <override when="night" src="road_pier001_c_autumn_n.bmp"/>
+        </override>
+	<override when="winter" src="road_pier001_c_winter.bmp">
+            <override when="night" src="road_pier001_c_winter_n.bmp"/>
+        </override>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-pier-lane2-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/2車線/右</name>
+<style name="street" sidewalk="shoulder" lanes="2"/>
+<description>高架下道路</description>
+<picture src="road_pier002_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_pier002_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-pier-lane2-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/2車線/左</name>
+<style name="street" sidewalk="shoulder" lanes="2"/>
+<description>高架下道路</description>
+<picture src="road_pier002_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_pier002_l_n.bmp"/>
+</picture>
+</contribution>
+
+<!-- モノレール下道路 -->
+
+<contribution type="road" id="{FreeTrain-Shika-Road-monorail-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/モノレール下/高架1右</name>
+<style name="street" sidewalk="shoulder" lanes="2"/>
+<description>モノレール下道路1</description>
+<picture src="road_monorail001_r.bmp" size="32,32" offset="16">
+	<override when="night" src="road_monorail001_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-monorail-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/モノレール下/高架1左</name>
+<style name="street" sidewalk="shoulder" lanes="2"/>
+<description>モノレール下道路1</description>
+<picture src="road_monorail001_l.bmp" size="32,32" offset="16">
+	<override when="night" src="road_monorail001_l_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-monorail2-right}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/モノレール下/高架2右</name>
+<style name="street" sidewalk="shoulder" lanes="2"/>
+<description>モノレール下道路2</description>
+<picture src="road_monorail002_r.bmp" size="32,48" offset="32">
+	<override when="night" src="road_monorail002_r_n.bmp"/>
+</picture>
+</contribution>
+
+<contribution type="road" id="{FreeTrain-Shika-Road-monorail2-left}">
+<class name="freetrain.contributions.road.StandardRoadContribution" />
+<name>高架下道路/モノレール下/高架2左</name>
+<style name="street" sidewalk="shoulder" lanes="2"/>
+<description>モノレール下道路2</description>
+<picture src="road_monorail002_l.bmp" size="32,48" offset="32">
+	<override when="night" src="road_monorail002_l_n.bmp"/>
+</picture>
+</contribution>
+
+</plug-in>

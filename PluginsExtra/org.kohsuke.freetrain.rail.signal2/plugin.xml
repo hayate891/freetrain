@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>鉄道用信号機</title>
+	<author>花菱さん</author>
+	<homepage></homepage>
+		
+	<!-- 停車位置票 -->
+	<contribution type="railSignal" id="{6FA55843-E694-4140-A121-0A3D0C613B22}-r">
+		<name>停車位置票</name> 
+ 		<side>left</side> 
+ 		<picture src="teisyaba.bmp" /> 
+ 	</contribution>
+
+	<!-- 誘導信号機 -->
+	<contribution type="railSignal" id="{6FA55844-E695-4141-A122-0A3D0C613B23}-r">
+		<name>誘導信号機</name> 
+ 		<side>left</side> 
+ 		<picture src="yuudou.bmp" /> 
+ 	</contribution>
+
+	<!-- 入換信号機 -->
+	<contribution type="railSignal" id="{6FA55844-E695-4141-A133-0A3D0C613B23}-r">
+		<name>入換信号機</name> 
+ 		<side>left</side> 
+ 		<picture src="iresin0.bmp" > 
+			<override when="night" src="iresin1.bmp" />
+		</picture>
+ 	</contribution>
+</plug-in>

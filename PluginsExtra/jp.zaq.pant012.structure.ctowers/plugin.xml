@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>セントラルタワーズ</title>
+	<author>ては</author>
+	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
+	
+	<contribution type="commercial" id="{F5776500-E8E5-4D5E-B30A-A0036A6ECDEB}">
+		<group>セントラルタワーズ</group>
+		<price>5000</price>
+		<size>5,2</size>
+		<height>10</height>
+		<sprite origin="0,0" offset="186">
+		<picture src="ctowers.bmp" />
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+</plug-in>

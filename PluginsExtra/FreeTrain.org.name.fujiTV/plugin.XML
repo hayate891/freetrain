@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>フジテレビ</title>
+	<author>周</author>
+	<homepage></homepage>
+	
+ <contribution type="commercial" id="{AACA403C-56ED-418C-8444-ED4CB868234C}">
+		<name>フジテレビ</name>
+		<price>1000</price>
+		<size>8,2</size>
+		<height>6</height>
+
+     <population>
+       <class name="freetrain.contributions.population.OfficePopulation"/>
+       <base>1000</base>
+     </population>
+
+		<sprite origin="0,0" offset="131">
+		<picture src="fuji.bmp" />
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+</plug-in>

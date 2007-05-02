@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>建物セット</title>
+	<author>ては</author>
+	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
+	
+	<contribution type="commercial" id="{B7330314-2AB8-48CB-842A-083088D1E239}">
+		<group>カーフェリー(近海用)</group>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="22">
+		<picture src="ferry1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{275F3C07-94DC-4D79-B356-D53A4BBD514B}">
+		<group>カーフェリー(近海用)</group>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="14">
+		<picture src="ferry1r.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{E1346B3F-4B69-4831-9433-5B82F3C83324}">
+		<name>貨物船</name>
+		<price>5000</price>
+		<size>4,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="38">
+		<picture src="kamotsu1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{B14C68C1-22CC-4BD1-B5B9-0429106E1B01}">
+		<group>宇高連絡線</group>
+		<price>5000</price>
+		<size>4,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="38">
+		<picture src="renraku.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{825023F3-C5FA-4E68-9EFC-DB03005A0424}">
+		<group>宇高連絡線</group>
+		<price>5000</price>
+		<size>4,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="39">
+		<picture src="renrakur.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{13C1C973-27E8-40B3-AE37-139F39D68B89}">
+		<name>アパート</name>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="18">
+		<picture src="apart.bmp" />
+		</sprite>
+		<population>
+			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<base>50</base>
+		</population>
+	</contribution>
+
+	<contribution type="commercial" id="{DFE65244-99FE-48B4-A8A7-C3AE17178798}">
+		<group>工場</group>
+		<price>5000</price>
+		<size>2,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="26">
+		<picture src="plant1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{2679B42F-D747-488A-B327-6CF0CD2577DC}">
+		<group>工場</group>
+		<price>5000</price>
+		<size>2,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="26">
+		<picture src="plant2.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{E24C700F-40D3-4397-B4B3-6C9C98ECA774}">
+		<name>梅田スカイビル</name>
+		<price>5000</price>
+		<size>5,5</size>
+		<height>10</height>
+		<sprite origin="0,0" offset="184">
+		<picture src="sinumeda.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{619F301B-EB53-4FA9-8B69-6A80E9C3DD42}">
+		<name>大阪タワー</name>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>5</height>
+		<sprite origin="0,0" offset="82">
+		<picture src="osakatower.bmp" >
+			<override when="night" src="osakatower_n.bmp"/>
+		</picture>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{5FF50C0C-BECF-4AFD-AA82-EEBE3D609BA8}">
+		<name>学校</name>
+		<price>5000</price>
+		<size>5,3</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="46">
+		<picture src="gakko.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{F5B4222A-3EA0-4F98-BECD-1F32B5E64932}">
+		<name>シャア専用ザク</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="32">
+		<picture src="zaku.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{2EAF3250-AA84-4B86-9F79-02D2A3DD931E}">
+		<name>ショッピングセンター</name>
+		<price>5000</price>
+		<size>3,4</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="50">
+		<picture src="supermarket.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{1A87615B-4B76-443F-8417-728D6BF0361A}">
+		<name>ダム湖</name>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="30">
+		<picture src="water3.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7D039D58-B250-4A93-AE83-DD81BA77B757}">
+		<name>水(レベル3)</name>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>3</height>
+		<sprite origin="0,0" offset="48">
+		<picture src="water3r.bmp" />
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{CC6A8B66-BE28-4863-B5E5-18F238938B00}">
+		<name>滝</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>3</height>
+		<sprite origin="0,0" offset="56">
+		<picture src="taki.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{7225141D-052F-4642-A084-8583DFE3484F}">
+		<name>ダム</name>
+		<price>5000</price>
+		<size>2,3</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="39">
+		<picture src="dam1.bmp" />
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{FBDDC8DC-8E9D-422B-AD97-B7E9157D3D62}">
+		<name>魔城ガッデム</name>
+		<price>5000</price>
+		<size>2,2</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="40">
+		<picture src="gaddem.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{6323EA1B-3D1E-4E7D-BEB9-1D6E6ED2E1A1}">
+		<name>運命の塔</name>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="6">
+		<picture src="pyramid.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{A9823026-15C6-4836-905D-9DFE38E119A1}">
+		<name>工作船</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="12">
+		<picture src="kousakusen.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{F752307B-C840-4162-9307-316389B29CF8}">
+		<name>巡視船</name>
+		<price>5000</price>
+		<size>3,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="18">
+		<picture src="jyunsi1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{189F360B-CC55-4ACA-B406-1DD689F9D2E6}">
+		<name>フェリーターミナル</name>
+		<price>5000</price>
+		<size>3,2</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="15">
+		<picture src="ferryterminal1.bmp" />
+		</sprite>
+	</contribution>
+
+<contribution type="picture" id="{4C272624-9CE6-4210-BB72-58B2D4046E15}">
+<picture src="ganpeki.bmp"/>
+</contribution>
+
+	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-0">
+		<group>岸壁</group>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="0">
+		<picture ref="{4C272624-9CE6-4210-BB72-58B2D4046E15}"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-1">
+		<group>岸壁</group>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="32,0" offset="0">
+		<picture ref="{4C272624-9CE6-4210-BB72-58B2D4046E15}"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-2">
+		<group>岸壁</group>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="64,0" offset="0">
+		<picture ref="{4C272624-9CE6-4210-BB72-58B2D4046E15}"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-3">
+		<group>岸壁</group>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="96,0" offset="0">
+		<picture ref="{4C272624-9CE6-4210-BB72-58B2D4046E15}"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-4">
+		<group>岸壁</group>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="128,0" offset="0">
+		<picture ref="{4C272624-9CE6-4210-BB72-58B2D4046E15}"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{53134BEE-9DE4-4660-9966-01764EC731D0}">
+		<name>さんふらわあ</name>
+		<price>5000</price>
+		<size>1,5</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="-1">
+		<picture src="sunflower1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{61CD8A5D-6A2D-4EC6-A1AA-99319C83EC2E}">
+		<name>カーフェリー(遠洋)</name>
+		<price>5000</price>
+		<size>1,5</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="1">
+		<picture src="ferry2.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{C4A9FCAA-2754-409B-ABE3-573EF5DE92E6}">
+		<name>水(レベル1)</name>
+		<price>5000</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="0">
+		<picture src="water1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{DFBD51DE-E6D1-4CE0-BD2F-5C0E1CBC61FE}">
+		<name>静岡放送東京支社</name>
+		<price>5000</price>
+		<size>2,1</size>
+		<height>4</height>
+		<sprite origin="0,0" offset="72">
+		<picture src="sizuoka1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{F34E2C0D-9ECE-4590-A25A-3203BA9184C8}">
+		<name>中銀カプセルタワービル</name>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>3</height>
+		<sprite origin="0,0" offset="40">
+		<picture src="nakagin1.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{5C13B5F3-7CDF-44A4-9C59-3D359E4DB6FE}">
+		<name>ソニータワー</name>
+		<price>5000</price>
+		<size>1,2</size>
+		<height>4</height>
+		<sprite origin="0,0" offset="62">
+		<picture src="sonytower.bmp" />
+		</sprite>
+	</contribution>
+
+	<contribution type="commercial" id="{54A932D2-12BE-44BF-8E63-B517E93354F8}">
+		<name>アクティ大阪</name>
+		<price>5000</price>
+		<size>4,2</size>
+		<height>8</height>
+		<sprite origin="0,0" offset="136">
+		<picture src="actyosaka.bmp" />
+		</sprite>
+	</contribution>
+</plug-in>

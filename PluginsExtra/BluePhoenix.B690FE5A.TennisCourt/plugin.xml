@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plug-in [
+
+<!ENTITY TennisCourtData '
+	<group>テニスコート</group>
+	<price>100</price>
+	<size>1,1</size>
+	<height>1</height>
+	<population>
+		<class name="freetrain.contributions.population.ShopperPopulation"/>
+		<base>10</base>
+	</population>
+'>
+
+
+]>
+<plug-in>
+	<title>テニスコート</title>
+	<author>狼月楼夜さん</author>
+	<homepage></homepage>
+
+
+	<contribution type="picture" id="{TennisCourt-picture-C000-0000-B690FE5A-狼月}">
+		<picture src="TennisCourt.bmp"/>
+	</contribution>
+
+
+	<contribution type="commercial" id="{TennisCourt-commercial-C000-000a-B690FE5A-狼月}">
+		<name>テニスコート</name>
+				&TennisCourtData;
+		<sprite origin="0,0" offset="0">
+			<picture ref="{TennisCourt-picture-C000-0000-B690FE5A-狼月}" />
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{TennisCourt-commercial-C000-000b-B690FE5A-狼月}">
+		<name>テニスコート</name>
+				&TennisCourtData;
+		<sprite origin="32,0" offset="0">
+			<picture ref="{TennisCourt-picture-C000-0000-B690FE5A-狼月}" />
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{TennisCourt-commercial-C000-000c-B690FE5A-狼月}">
+		<name>テニスコート</name>
+				&TennisCourtData;
+		<sprite origin="64,0" offset="0">
+			<picture ref="{TennisCourt-picture-C000-0000-B690FE5A-狼月}" />
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{TennisCourt-commercial-C000-000d-B690FE5A-狼月}">
+		<name>テニスコート</name>
+				&TennisCourtData;
+		<sprite origin="96,0" offset="0">
+			<picture ref="{TennisCourt-picture-C000-0000-B690FE5A-狼月}" />
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{TennisCourt-commercial-C000-000e-B690FE5A-狼月}">
+		<name>テニスコート</name>
+				&TennisCourtData;
+		<sprite origin="128,0" offset="0">
+			<picture ref="{TennisCourt-picture-C000-0000-B690FE5A-狼月}" />
+		</sprite>
+	</contribution>
+
+
+	<contribution type="commercial" id="{TennisCourt-commercial-C000-000f-B690FE5A-狼月}">
+		<name>テニスコート</name>
+				&TennisCourtData;
+		<sprite origin="160,0" offset="0">
+			<picture ref="{TennisCourt-picture-C000-0000-B690FE5A-狼月}" />
+		</sprite>
+	</contribution>
+
+</plug-in>

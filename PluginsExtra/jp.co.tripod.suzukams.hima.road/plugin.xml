@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>二車線道路</title>
+	<author>暇</author>
+	<homepage>http://suzukams.tripod.co.jp/freetrain/</homepage>
+	
+	<contribution type="road" id="{9B8BE657-6A04-4969-9FF8-0C9A04F12D9F}-A">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>白線二車線道路</name>
+		<description>白破線の道路</description>
+		<picture src="road2w.bmp" size="32,32" offset="16" />
+	</contribution>
+
+
+	<contribution type="road" id="{9B8BE657-6A04-4969-9FF8-0C9A04F12D9F}-B">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>橙線二車線道路</name>
+		<description>橙線の道路</description>
+		<picture src="road2o.bmp" size="32,32" offset="16" />
+	</contribution>
+
+	<contribution type="road" id="{9B8BE657-6A04-4969-9FF8-0C9A04F12D9F}-C">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>アスファルト</name>
+		<description>アスファルト</description>
+		<picture src="heiyou.bmp" size="32,32" offset="16" />
+	</contribution>
+
+	<contribution type="road" id="{0405292136}B4573646">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>駅前歩道(交差青)</name>
+		<description>駅前などの広い歩道。十字の交差点に青●マークがついてます。</description>
+		<picture src="walk01B.bmp" size="32,32" offset="16" />
+	</contribution>
+
+	<contribution type="road" id="{0405292136}g24734354">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>駅前歩道(交差赤)</name>
+		<description>駅前などの広い歩道。十字の交差点に赤●マークがついてます。</description>
+		<picture src="walk01R.bmp" size="32,32" offset="16" />
+	</contribution>
+
+	<contribution type="road" id="{0405292136}n1673126">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>駅前歩道(交差黄)</name>
+		<description>駅前などの広い歩道。十字の交差点に黄●マークがついてます。</description>
+		<picture src="walk01Y.bmp" size="32,32" offset="16" />
+	</contribution>
+</plug-in>

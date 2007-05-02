@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>道路</title>
+	<author>TAKUROU様(XMLコード)/477様＆狼月楼夜(画像)</author>
+	<homepage>http://www14.big.oir.jp/~ayase/</homepage>
+	
+	<!-- これは、TAKUROU様に作っていただいたプラグインコードを、狼月が追加修正したものです。 -->
+	<!-- また、「線路敷石4」につきましては、477様が作成したものを、追加したものです。 -->
+	
+	<!-- 新しい線路敷石 -->
+	<contribution type="road" id="{FreeTrain-TAKUROU-RoadImg-Isi}">
+		<class name="freetrain.contributions.road.A3RoadContribution" />
+		<name>線路敷石1</name>
+		<description>線路敷石</description>
+		<picture src="road_isi.bmp" size="32,32" offset="16" />
+	</contribution>
+	
+	<!-- やや錆びが移った敷石(地方線等) -->
+	<contribution type="road" id="{FreeTrain-TAKUROU-RoadImg-Isi}-2">
+		<class name="freetrain.contributions.road.A3RoadContribution" />
+		<name>線路敷石2</name>
+		<description>線路敷石</description>
+		<picture src="road_isi2.bmp" size="32,32" offset="16" />
+	</contribution>	
+	
+	<!-- 年季の入った敷石(廃線等) -->
+	<contribution type="road" id="{FreeTrain-TAKUROU-RoadImg-Isi}-3">
+		<class name="freetrain.contributions.road.A3RoadContribution" />
+		<name>線路敷石3</name>
+		<description>線路敷石</description>
+		<picture src="road_isi3.bmp" size="32,32" offset="16" />
+	</contribution>	
+	
+	<!--477様に作っていただいた敷石  -->
+	<contribution type="road" id="{FreeTrain-TAKUROU-RoadImg-Isi}-4">
+		<class name="freetrain.contributions.road.A3RoadContribution" />
+		<name>線路敷石4</name>
+		<description>線路敷石</description>
+		<picture src="road_isi4.bmp" size="32,32" offset="16" />
+	</contribution>	
+		
+</plug-in>

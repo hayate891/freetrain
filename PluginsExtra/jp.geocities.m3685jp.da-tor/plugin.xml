@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>ダート</title>
+	<author>挑戦した人</author>
+	<homepage>http://www.geocities.jp/m3685jp/</homepage>
+	
+	<contribution type="road" id="{7254CD19-38B1-42DB-84E1-88F9A5C88E42}">
+		<class name="freetrain.contributions.road.StandardRoadContribution" />
+		<name>ダート</name>
+		<description>普通のダートのやつ</description>
+		<style name="footpath" lanes="2"/>
+		<picture src="da-to.bmp" size="32,16" offset="0" />
+	</contribution>
+</plug-in>

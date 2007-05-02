@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plug-in [
+<!ENTITY runway5_5 '
+		<price>100</price>
+		<size>4,4</size>
+		<height>1</height>
+		<structure>
+			<category byname="滑走路"/>
+		</structure>	
+		<computerCannotBuild/>
+'>
+<!ENTITY overrun2_5 '
+		<price>35</price>
+		<size>2,4</size>
+		<height>1</height>
+		<structure>
+			<category byname="滑走路"/>
+		</structure>
+		<computerCannotBuild/>
+'>
+<!ENTITY overrun5_2 '
+		<price>35</price>
+		<size>4,2</size>
+		<height>1</height>
+		<structure>
+			<category byname="滑走路"/>
+		</structure>
+		<computerCannotBuild/>
+'>
+<!ENTITY approach2_5 '
+		<price>15</price>
+		<size>2,4</size>
+		<height>1</height>
+		<structure>
+			<category byname="滑走路"/>
+		</structure>
+		<computerCannotBuild/>
+'>
+<!ENTITY approach5_2 '
+		<price>15</price>
+		<size>4,2</size>
+		<height>1</height>
+		<structure>
+			<category byname="滑走路"/>
+		</structure>
+		<computerCannotBuild/>
+'>
+
+]>
+
+<plug-in>
+	<title>滑走路</title>
+	<author>C477@2両目</author>
+	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
+
+
+
+	<contribution type="picture" id="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a">
+		<picture src="airport_runwayS1a.bmp">
+			<override when="night" src="airport_runwayS1a_n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="picture" id="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b">
+		<picture src="airport_runwayS1b.bmp">
+			<override when="night" src="airport_runwayS1b_n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="picture" id="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2">
+		<picture src="airport_runwayS2.bmp">
+			<override when="night" src="airport_runwayS2_n.bmp"/>
+		</picture>
+	</contribution>
+	<contribution type="picture" id="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a">
+		<picture src="airport_runwayS3a.bmp">
+			<override when="night" src="airport_runwayS3a_n.bmp"/>
+			<override when="autumn" src="airport_runwayS3aAut.bmp">
+				<override when="night" src="airport_runwayS3aAut_n.bmp"/>
+			</override>
+			<override when="winter" src="airport_runwayS3aWin.bmp">
+				<override when="night" src="airport_runwayS3aWin_n.bmp"/>
+			</override>
+		</picture>
+	</contribution>
+	<contribution type="picture" id="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b">
+		<picture src="airport_runwayS3b.bmp">
+			<override when="night" src="airport_runwayS3b_n.bmp"/>
+		</picture>
+	</contribution>
+		
+	<!--滑走路（タイヤ跡付き）-->
+	<contribution type="GenericStructure" id="{0D5808D6-787C-4498-C477-EE5C79ECE244}-S0">
+		<group>滑走路(タイヤ跡)</group>
+		<design>設地点標識</design>
+		&runway5_5;
+		<sprite origin="0,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
+		</sprite>		
+		<sprite origin="0,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{0D5808D6-787C-4498-C477-EE5C79ECE244}-S1">
+		<group>滑走路(タイヤ跡)</group>
+		<design>設地帯標識</design>
+		&runway5_5;
+		<sprite origin="128,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
+		</sprite>		
+		<sprite origin="128,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{0D5808D6-787C-4498-C477-EE5C79ECE244}-S2">
+		<group>滑走路(タイヤ跡)</group>
+		&runway5_5;
+		<sprite origin="256,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
+		</sprite>		
+		<sprite origin="256,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
+		</sprite>		
+	</contribution>
+	
+
+	<!--滑走路（タイヤ跡なし）-->
+	<contribution type="GenericStructure" id="{8755ECDC-6A76-46AA-C477-3ACFCFA1202B}-S0">
+		<group>滑走路</group>
+		<design>設地点標識</design>
+		&runway5_5;
+		<sprite origin="0,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
+		</sprite>		
+		<sprite origin="0,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{8755ECDC-6A76-46AA-C477-3ACFCFA1202B}-S1">
+		<group>滑走路</group>
+		<design>設地帯標識</design>
+		&runway5_5;
+		<sprite origin="128,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
+		</sprite>		
+		<sprite origin="128,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{8755ECDC-6A76-46AA-C477-3ACFCFA1202B}-S2">
+		<group>滑走路</group>
+		&runway5_5;
+		<sprite origin="256,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
+		</sprite>		
+		<sprite origin="256,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
+		</sprite>		
+	</contribution>
+	
+	<!--滑走路先端-->
+	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S0">
+		<group>滑走路</group>
+		<design>末端標識</design>
+		&runway5_5;
+		<sprite origin="0,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="128,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="256,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="384,0" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S1">
+		<group>滑走路</group>
+		<design>指示標識</design>
+		&runway5_5;
+		<sprite origin="0,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="128,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="256,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="384,80" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S2">
+		<group>滑走路</group>
+		<design>先端標識</design>
+		&runway5_5;
+		<sprite origin="0,240" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="128,240" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="256,240" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="384,240" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+	</contribution>
+	
+	<!--タイヤ跡-->
+	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S12">
+		<group>滑走路(タイヤ跡)</group>
+		<design>途切れパターン</design>
+		&runway5_5;
+		<sprite origin="0,160" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="128,160" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="256,160" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+		<sprite origin="384,160" offset="24">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
+		</sprite>		
+	</contribution>
+
+
+<!--進入燈-->
+	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S00">
+		<group>滑走路進入燈</group>
+		<design>芝生Ａ</design>
+		&approach2_5;
+		<sprite origin="0,0" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="96,0" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="192,0" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="288,0" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S04">
+		<group>滑走路進入燈</group>
+		<design>芝生Ｂ</design>
+		&approach2_5;
+		<sprite origin="0,64" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="96,64" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="192,64" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="288,64" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S10">
+		<group>滑走路進入燈</group>
+		<design>芝生Ｃ</design>
+		&approach2_5;
+		<sprite origin="0,128" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="96,128" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="192,128" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="288,128" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S11">
+		<group>滑走路進入燈</group>
+		<design>芝生Ｄ</design>
+		&approach2_5;
+		<sprite origin="0,192" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="96,192" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="192,192" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="288,192" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S12">
+		<group>滑走路進入燈</group>
+		<design>水上</design>
+		&approach2_5;
+		<sprite origin="0,256" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="96,256" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="192,256" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+		<sprite origin="288,256" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
+		</sprite>		
+	</contribution>
+
+	
+	<!--過走帯-->
+	<contribution type="GenericStructure" id="{31F65668-5D60-4F47-C477-0025430882BB}}-S00">
+		<group>滑走路進入燈</group>
+		<design>過走帯Ａ</design>
+		&overrun2_5;
+		<sprite origin="0,0" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="96,0" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="192,0" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="288,0" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{31F65668-5D60-4F47-C477-0025430882BB}}-S01">
+		<group>滑走路進入燈</group>
+		<design>過走帯Ｂ</design>
+		&overrun2_5;
+		<sprite origin="0,64" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="96,64" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="192,64" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="288,64" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+	</contribution>
+	<contribution type="GenericStructure" id="{31F65668-5D60-4F47-C477-0025430882BB}}-S02">
+		<group>滑走路進入燈</group>
+		<design>過走帯Ｃ</design>
+		&overrun2_5;
+		<sprite origin="0,128" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="96,128" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="192,128" offset="8">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+		<sprite origin="288,128" offset="24" opposite="true">
+			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
+		</sprite>		
+	</contribution>	
+</plug-in>

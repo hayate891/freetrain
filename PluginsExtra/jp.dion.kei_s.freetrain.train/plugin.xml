@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>旧日本国有鉄道</title>
+ 	<homepage>kei@viola.club.ne.jp</homepage>
+ 	
+ 	<!-- イメージ画像定義 -->
+ 	<!-- キハ45(一般) -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC45-1}">
+		<picture src="kiha45.bmp" />
+	</contribution>
+	<!-- キハ30(一般) -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC30-1}">
+		<picture src="kiha30.bmp" />
+	</contribution>
+	<!-- キハ40(首都圏) -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA40}">
+		<picture src="kiha40.bmp" />
+	</contribution>
+	
+	<!-- キハ82 -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA82}">
+		<picture src="kiha82.bmp" />
+	</contribution>
+	<!-- キハ80 -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA80}">
+		<picture src="kiha80.bmp" />
+	</contribution>
+	<!-- キシ80 -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KISI80}">
+		<picture src="kisi80.bmp" />
+	</contribution>
+
+	<!-- ＤＤ５４（四次型） -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-DD5402}">
+		<picture src="dd54.bmp" />
+	</contribution>
+
+	<!-- ＤＦ５０ -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-DF50DL}">
+		<picture src="df50.bmp" />
+	</contribution>
+
+	<!-- ９１１型ディーゼル機関車 -->
+	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-SKS911}">
+		<picture src="911.bmp" />
+	</contribution>
+
+
+ 	<!-- 車両定義 -->
+
+	<!-- キハ45(一般) 向き：正-->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-1-F}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC45-1}" />
+		</sprite>
+		<capacity>120</capacity>
+	</contribution>
+
+	<!-- キハ45(首都圏) 向き：正-->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-2-F}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<spriteType name="colorMapped">
+				<map from="181,152,122" to="170, 57, 12"/>
+				<map from="184,142,111" to="203, 68, 14"/>
+				<map from="218,183,147" to="210, 70, 15"/>
+				<map from="238,200,160" to="255, 85, 18"/>
+				<map from="121, 94, 73" to=" 74, 37,  9"/>
+			</spriteType>
+
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC45-1}" />
+		</sprite>
+		<capacity>120</capacity>
+	</contribution>
+
+	<!-- キハ45(一般) 向き：逆-->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-1-R}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-1-F}"/>
+	</contribution>
+
+	<!-- キハ45(首都圏) 向き：逆-->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-2-R}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-2-F}"/>
+	</contribution>
+
+	<!-- キハ30(一般) -->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA30-1}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC30-1}" />
+		</sprite>
+		<capacity>150</capacity>
+	</contribution>
+	
+	<!-- キハ30(首都圏)-->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA30-2}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<spriteType name="colorMapped">
+				<map from="181,152,122" to="170, 57, 12"/>
+				<map from="184,142,111" to="203, 68, 14"/>
+				<map from="218,183,147" to="210, 70, 15"/>
+				<map from="238,200,160" to="255, 85, 18"/>
+				<map from="121, 94, 73" to=" 74, 37,  9"/>
+			</spriteType>
+
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC30-1}" />
+		</sprite>
+		<capacity>120</capacity>
+	</contribution>
+
+	<!-- キハ40(首都圏) -->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA40}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA40}" />
+		</sprite>
+		<capacity>130</capacity>
+	</contribution>
+
+
+	<!-- キハ80 -->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA80}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA80}" />
+		</sprite>
+		<capacity>72</capacity>
+	</contribution>
+
+	<!-- キシ80 -->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KISI80}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-KISI80}" />
+		</sprite>
+		<capacity>0</capacity>
+	</contribution>
+
+	<!-- キハ82 向き：正-->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA82-F}">
+		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA82}" />
+		</sprite>
+		<capacity>52</capacity>
+	</contribution>
+	
+	<!-- キハ82 向き：逆-->
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA82-R}">
+		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
+		<base carRef="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA82-F}"/>
+	</contribution>
+
+	<!--機関車-->
+	<!-- ＤＤ５４ -->	
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-DD54-0000}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-DD5402}" />
+		</sprite>
+		<capacity>0</capacity>
+	</contribution>
+
+	<!-- ＤＦ５０ -->	
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-DF50-0000}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-DF50DL}" />
+		</sprite>
+		<capacity>0</capacity>
+	</contribution>
+
+	<!-- ９１１ -->	
+	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-SKS-911}">
+		<class name="freetrain.contributions.train.SymTrainCarImpl" />
+		<sprite origin="0,0">
+			<picture ref="{FreeTrain-N1K2J-KeiH-TrainCarImg-SKS911}" />
+		</sprite>
+		<capacity>0</capacity>
+	</contribution>
+
+	<!--客車-->
+
+	<!-- 編成の定義 -->
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-KIHA82}">
+		<company>旧日本国有鉄道</company>
+		<type>キハ 82</type>
+		<name>特急型気動車</name>
+		<author>Kei</author>
+		<description>全国の非電化区間での特急サービスアップのため導入された初の気動車特急。初期のキハ81型はボンネット車体であった。晩年は主に北海道・紀勢方面で活躍。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA82-F}"/>
+			<car char="＞" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA82-R}"/>
+			<car char="Ｓ" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KISI80}"/>
+			<car char="Ｈ" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA80}"/>
+			
+			<composition>＜Ｈ＞</composition>
+			<composition>＜ＨＨ＞</composition>
+			<composition>＜ＨＳＨ＞</composition>
+			<composition>＜ＨＨＳＨ＞</composition>
+			<composition>＜ＨＨＨＳＨ＞</composition>
+			<composition>＜ＨＨＨＨＳＨ＞</composition>
+			<composition>＜ＨＨＨＳ＞ＨＨ＞</composition>
+			<composition>＜ＨＨＨＳＨ＞ＨＨ＞</composition>
+			<composition>＜ＨＨＨＨＳＨ＞ＨＨ＞</composition>
+			<composition>＜ＨＨＳＨ＞ＨＨ＞ＨＨ＞</composition>
+			<composition>＜ＨＨＨＳＨ＞＜ＨＨＳＨ＞</composition>
+			<composition>＜ＨＨＨＳＨ＞＜ＨＨＨＳＨ＞</composition>
+			<composition>＜ＨＨＨＳＨ＞＜ＨＨＳＨ＞Ｈ＞</composition>
+			<composition>＜ＨＨＳＨ＞ＨＨ＞＜ＨＨＨＳＨ＞</composition>
+		</config>
+	</contribution>
+	
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DC0001}">
+		<company>旧日本国有鉄道</company>
+		<type>一般型気動車</type>
+		<name>気動車混合編成</name>
+		<author>Kei</author>
+		<description>一般型であるキハ20、30、45、40型および急行型であるキハ58型気動車などを混合した編成。雑多な車種と塗装が特徴。郵便車や荷物車を組み込むこともある。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+<!--DC45一般-->		<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-1-F}"/>
+<!--DC45一般-->		<car char="＞" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-1-R}"/>
+<!--DC45首都-->		<car char="≦" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-2-F}"/>
+<!--DC45首都-->		<car char="≧" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-2-R}"/>
+<!--DC40首都-->		<car char="４" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA40}"/>
+<!--DC30一般-->		<car char="３" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA30-1}"/>
+<!--DC30首都-->		<car char="③" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA30-2}"/>
+			
+			<composition>３</composition>
+			<composition>４＞</composition>
+			<composition>≦＞４</composition>
+			<composition>４＞＞③</composition>
+			<composition>③＞３４≧</composition>
+			<composition>＜＜③＞≦４</composition>
+			<composition>４３＞≦＞③＞</composition>
+			<composition>＜③＜４≦４３≧</composition>
+		</config>
+	</contribution>
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DC0002}">
+		<company>旧日本国有鉄道</company>
+		<type>キハ45系一般型気動車</type>
+		<name>キハ４５</name>
+		<author>Kei</author>
+		<description>キハ20系一般型気動車を置き換えるために作られた車両。現在ではキハ40系に置き換えられ、本州型のキハ45、北海道型のキハ24・46は形式消滅。本州型両運転台のキハ23・53系のみが細々と生き延びている。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+<!--DC45一般-->		<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-1-F}"/>
+<!--DC45一般-->		<car char="＞" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-1-R}"/>
+<!--DC45首都-->		<car char="≦" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-2-F}"/>
+<!--DC45首都-->		<car char="≧" ref="{FreeTrain-N1K2J-KeiH-TrainImg-KIHA45-2-R}"/>
+
+			<composition>＜＞</composition>
+			<composition>＜＞＞</composition>
+			<composition>≦＞＜＞</composition>
+			<composition>＜＞＞≦≧</composition>
+			<composition>＜＞≦＞＜≧</composition>
+			<composition>＜＞＜＞＜＞＞</composition>
+			<composition>≦≧≦≧≦≧≦≧</composition>
+			<composition>＜＞≦＞＜≧≦＞＞</composition>
+		</config>
+	</contribution>
+
+
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-1">
+		<company>旧日本国有鉄道</company>
+		<type>DD 54</type>
+		<name>旧客普通列車（茶）</name>
+		<author>Kei(客車は綾瀬さん)</author>
+		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-DD54-0000}"/>
+			<car char="Ｈ" ref="{FreeTrain-AYASE-Hiro-TrainImg-SUHA42TYA}"/>
+			<car char="Ｎ" ref="{FreeTrain-AYASE-Hiro-TrainImg-MANI60TYA}"/>
+			<car char="Ｙ" ref="{FreeTrain-AYASE-Hiro-TrainImg-OYU10TYA}" />
+						
+			<composition>＜</composition>
+			<composition>＜Ｈ</composition>
+			<composition>＜ＨＨ</composition>
+			<composition>＜ＮＨＨ</composition>
+			<composition>＜ＹＨＨＨ</composition>
+			<composition>＜ＮＨＨＨＨ</composition>
+			<composition>＜ＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＹＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨＨ</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-2">
+		<company>旧日本国有鉄道</company>
+		<type>DD 54</type>
+		<name>旧客普通列車（青）</name>
+		<author>Kei(客車は綾瀬さん)</author>
+		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-DD54-0000}"/>
+			<car char="Ｈ" ref="{FreeTrain-AYASE-Hiro-TrainImg-SUHA42BLU}"/>
+			<car char="Ｎ" ref="{FreeTrain-AYASE-Hiro-TrainImg-MANI60BLU}"/>
+			<car char="Ｙ" ref="{FreeTrain-AYASE-Hiro-TrainImg-OYU10BLU}" />
+						
+			<composition>＜</composition>
+			<composition>＜Ｈ</composition>
+			<composition>＜ＨＨ</composition>
+			<composition>＜ＮＨＨ</composition>
+			<composition>＜ＹＨＨＨ</composition>
+			<composition>＜ＮＨＨＨＨ</composition>
+			<composition>＜ＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＹＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨＨ</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-3">
+		<company>旧日本国有鉄道</company>
+		<type>DD 54</type>
+		<name>20系ブルートレイン(出雲)</name>
+		<author>Kei(客車は綾瀬さん)</author>
+		<description>走るホテルと絶賛された初代ブルートレイン車両による往年の夜行特急列車。
+		</description>
+		<price>300</price>
+		<speed>fast</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="Ｌ" ref="{FreeTrain-N1K2J-KeiH-TrainImg-DD54-0000}"/>
+			<car char="≪" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-3a}"/>	<!-- カニ 正 -->
+			<car char="≫" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-3b}"/>	<!-- カニ 逆 -->
+			<car char="Ｈ" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-2}"/>	<!-- ナハネ -->
+			<car char="＜" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-1a}"/>	<!-- ナハネフ21 正 -->
+			<car char="＞" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-1b}"/>	<!-- ナハネフ21 逆 -->
+			<car char="【" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-4a}"/>	<!-- ナハネフ23 正 -->
+			<car char="】" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-4b}"/>	<!-- ナハネフ23 逆 -->
+						
+			<composition>Ｌ</composition>
+			<composition>Ｌ＞</composition>
+			<composition>Ｌ＜＞</composition>
+			<composition>Ｌ【Ｈ≫</composition>
+			<composition>Ｌ≪ＨＨ】</composition>
+			<composition>Ｌ【ＨＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨ【ＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨ】ＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨＨ【ＨＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨＨ】ＨＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨＨＨ【ＨＨＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨＨＨ】ＨＨＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨＨＨＨ【ＨＨＨＨＨ≫</composition>
+		</config>
+	</contribution>
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-911-01">
+		<company>旧日本国有鉄道</company>
+		<type>911</type>
+		<name>新幹線用ディーゼル機関車</name>
+		<author>Kei</author>
+		<description>日本最速・最強のディーゼル機関車。新幹線16両を130Km/hで牽引でき、単機では160Km/hを誇る。しかし、新幹線は無事故であったため、活躍する機会のないまま全車引退した。
+		</description>
+		<price>300</price>
+		<speed>fast</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="Ｌ" ref="{FreeTrain-N1K2J-KeiH-TrainImg-SKS-911}"/>
+			<car char="＜" ref="{7BCF90BF-2FA5-4e88-B50D-91BBDA656C8A}-h" /> 
+			<car char="Ｈ" ref="{7BCF90BF-2FA5-4e88-B50D-91BBDA656C8A}-m" /> 
+			<car char="＞" ref="{7BCF90BF-2FA5-4e88-B50D-91BBDA656C8A}-t" /> 
+						
+			<composition>Ｌ</composition>
+			<composition>Ｌ＜ＨＨＨＨＨＨＨＨＨＨＨＨＨＨ＞</composition>
+		</config>
+	</contribution>
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-1">
+		<company>旧日本国有鉄道</company>
+		<type>DF 50</type>
+		<name>旧客普通列車（茶）</name>
+		<author>Kei(客車は綾瀬さん)</author>
+		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-DF50-0000}"/>
+			<car char="Ｈ" ref="{FreeTrain-AYASE-Hiro-TrainImg-SUHA42TYA}"/>
+			<car char="Ｎ" ref="{FreeTrain-AYASE-Hiro-TrainImg-MANI60TYA}"/>
+			<car char="Ｙ" ref="{FreeTrain-AYASE-Hiro-TrainImg-OYU10TYA}" />
+						
+			<composition>＜</composition>
+			<composition>＜Ｈ</composition>
+			<composition>＜ＨＨ</composition>
+			<composition>＜ＮＨＨ</composition>
+			<composition>＜ＹＨＨＨ</composition>
+			<composition>＜ＮＨＨＨＨ</composition>
+			<composition>＜ＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＹＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨＨ</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-2">
+		<company>旧日本国有鉄道</company>
+		<type>DF 50</type>
+		<name>旧客普通列車（青）</name>
+		<author>Kei(客車は綾瀬さん)</author>
+		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		</description>
+		<price>100</price>
+		<speed>medium</speed>
+		
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="＜" ref="{FreeTrain-N1K2J-KeiH-TrainImg-DF50-0000}"/>
+			<car char="Ｈ" ref="{FreeTrain-AYASE-Hiro-TrainImg-SUHA42BLU}"/>
+			<car char="Ｎ" ref="{FreeTrain-AYASE-Hiro-TrainImg-MANI60BLU}"/>
+			<car char="Ｙ" ref="{FreeTrain-AYASE-Hiro-TrainImg-OYU10BLU}" />
+						
+			<composition>＜</composition>
+			<composition>＜Ｈ</composition>
+			<composition>＜ＨＨ</composition>
+			<composition>＜ＮＨＨ</composition>
+			<composition>＜ＹＨＨＨ</composition>
+			<composition>＜ＮＨＨＨＨ</composition>
+			<composition>＜ＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＹＹＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨ</composition>
+			<composition>＜ＮＮＹＹＨＨＨＨＨＨＨＨＨＨＨＨ</composition>
+		</config>
+	</contribution>
+
+	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-3">
+		<company>旧日本国有鉄道</company>
+		<type>DF 50</type>
+		<name>20系ブルートレイン</name>
+		<author>Kei(客車は綾瀬さん)</author>
+		<description>走るホテルと絶賛された初代ブルートレイン車両による往年の夜行特急列車。
+		</description>
+		<price>300</price>
+		<speed>fast</speed>
+		<class name="freetrain.contributions.train.PatternTrainImpl"/>
+		<config>
+			<car char="Ｌ" ref="{FreeTrain-N1K2J-KeiH-TrainImg-DF50-0000}"/>
+			<car char="≪" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-3a}"/>	<!-- カニ 正 -->
+			<car char="≫" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-3b}"/>	<!-- カニ 逆 -->
+			<car char="Ｈ" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-2}"/>	<!-- ナハネ -->
+			<car char="＜" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-1a}"/>	<!-- ナハネフ21 正 -->
+			<car char="＞" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-1b}"/>	<!-- ナハネフ21 逆 -->
+			<car char="【" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-4a}"/>	<!-- ナハネフ23 正 -->
+			<car char="】" ref="{FreeTrain-AYASE-Hiro-TrainImg-BlueTrain20-4b}"/>	<!-- ナハネフ23 逆 -->
+						
+			<composition>Ｌ</composition>
+			<composition>Ｌ＞</composition>
+			<composition>Ｌ＜＞</composition>
+			<composition>Ｌ【Ｈ≫</composition>
+			<composition>Ｌ≪ＨＨ】</composition>
+			<composition>Ｌ【ＨＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨ【ＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨ】ＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨＨ【ＨＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨＨ】ＨＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨＨＨ【ＨＨＨＨ≫</composition>
+			<composition>Ｌ≪ＨＨＨＨＨ】ＨＨＨＨ＞</composition>
+			<composition>Ｌ＜ＨＨＨＨＨ【ＨＨＨＨＨ≫</composition>
+		</config>
+	</contribution>
+</plug-in>

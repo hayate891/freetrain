@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>建物セット</title>
+	<author>ゆうあ建設</author>
+	<homepage>yu-a.love2@k5.dion.ne.jp</homepage>
+	
+
+	<contribution type="commercial" id="{D50BA778-25F4-465B-8A73-4C15F8772362}">
+		<name>消防署</name>
+		<price>1600</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="30">
+			<picture src="903.fire station.bmp" />
+		</sprite>
+	</contribution>
+
+
+</plug-in>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<depend on="jp.co.infoseek.hp.efa-typoon.built"/>
+	<title>建物セット1号館・拡張セット用</title>
+	<author>たいふ～ん</author>
+	<homepage>http://typhoon.s19.xrea.com/ft/index.html</homepage>
+
+
+
+	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader1B-7567171D3CEF}">
+		<name>レーダー</name>
+		<design>警戒レーダー</design>
+		<price>3000</price>
+		<size>1,1</size>
+		<height>4</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>50</base>
+		</population>
+		<structure>
+			<category byname="軍事施設"/>
+		</structure>
+		<sprite origin="0,0" offset="40" >
+			<picture ref="{TYPHOON-GAZOU-MILITARY-RADER-7567171D3CEF}"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader2B-7567171D3CEF}">
+		<name>レーダー</name>
+		<design>空港監視レーダーA</design>
+		<price>1200</price>
+		<size>1,1</size>
+		<height>4</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>20</base>
+		</population>
+		<structure>
+			<category byname="軍事施設"/>
+			<category byname="空港"/>
+		</structure>
+		<sprite origin="32,0" offset="40" >
+			<picture ref="{TYPHOON-GAZOU-MILITARY-RADER-7567171D3CEF}"/>
+		</sprite>
+	</contribution>
+	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader3C-7567171D3CEF}">
+		<name>レーダー</name>
+		<design>空港監視レーダーB</design>
+		<price>1200</price>
+		<size>1,1</size>
+		<height>4</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>20</base>
+		</population>
+		<structure>
+			<category byname="軍事施設"/>
+			<category byname="空港"/>
+		</structure>
+		<sprite origin="64,0" offset="40" >
+			<picture ref="{TYPHOON-GAZOU-MILITARY-RADER-7567171D3CEF}"/>
+		</sprite>
+	</contribution>
+
+	<contribution type="GenericStructure" id="{TYPHOON-Military-F-15DJ2B-7567171D3CEF}">
+		<name>戦闘機</name>
+		<design>F-15DJ黒</design>
+		<price>1200</price>
+		<size>2,2</size>
+		<height>1</height>
+		<population>
+			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<base>2</base>
+		</population>
+		<structure>
+			<category byname="軍事施設"/>
+		</structure>
+		<sprite origin="0,0" offset="8" >
+			<picture ref="{TYPHOON-GAZOU-MILITARY-F-15DJ2-7567171D3CEF}"/>
+		</sprite>
+	</contribution>
+</plug-in>

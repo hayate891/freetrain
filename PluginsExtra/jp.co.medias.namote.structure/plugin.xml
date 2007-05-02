@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>建物</title>
+	<author>なもー</author>
+	<homepage>http://www.medias.co.jp/~bell8528/freetrain/</homepage>
+	
+	<contribution type="picture" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084}">
+		<picture src="sa-k.bmp">
+		</picture>
+	</contribution>
+
+	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084-1}">
+		<group>サークルK</group>
+		<price>100</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="8">
+			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28084}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084-2}">
+		<group>サークルK</group>
+		<price>100</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,32" offset="8">
+			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28084}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+
+	<title>美富士食堂</title>
+	<author>なもー</author>
+	<homepage>http://chinsou.s27.xrea.com/freetrain/</homepage>
+	
+	<contribution type="picture" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085}">
+		<picture src="mifuzi.bmp">
+			<override when="night" src="mifuzi_n.bmp" />
+		</picture>
+	</contribution>
+
+	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085-1}">
+		<group>美富士食堂</group>
+		<price>100</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="8">
+			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28085}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085-2}">
+		<group>美富士食堂</group>
+		<price>100</price>
+		<size>1,1</size>
+		<height>1</height>
+		<sprite origin="0,32" offset="8">
+			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28085}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+
+
+
+	<contribution type="picture" id="{FD978351-73CE-442E-8816-76DBA52E8875}">
+		<picture src="shop_s.bmp">
+			<override when="night" src="shop_s_n.bmp" />
+		</picture>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-1}">
+		<group>小型ショッピングセンター</group>
+		<price>100</price>
+		<size>2,3</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="22">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-2}">
+		<group>小型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,2</size>
+		<height>2</height>
+		<sprite origin="0,64" offset="40">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-3}">
+		<group>小型ショッピングセンター</group>
+		<price>100</price>
+		<size>2,3</size>
+		<height>2</height>
+		<sprite origin="96,0" offset="22">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-4}">
+		<group>小型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,2</size>
+		<height>2</height>
+		<sprite origin="96,64" offset="40">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-5}">
+		<group>小型ショッピングセンター</group>
+		<price>100</price>
+		<size>2,3</size>
+		<height>2</height>
+		<sprite origin="192,0" offset="22">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-6}">
+		<group>小型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,2</size>
+		<height>2</height>
+		<sprite origin="192,64" offset="40">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+
+
+
+	<contribution type="picture" id="{FD978351-73CE-442E-8816-76DBA52E8877}">
+		<picture src="shop_m.bmp">
+			<override when="night" src="shop_m_n.bmp" />
+		</picture>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-1}">
+		<group>中型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="31">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-2}">
+		<group>中型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="0,96" offset="32">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-3}">
+		<group>中型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="96,0" offset="31">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-4}">
+		<group>中型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="96,96" offset="32">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-5}">
+		<group>中型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="192,0" offset="31">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-6}">
+		<group>中型ショッピングセンター</group>
+		<price>100</price>
+		<size>3,3</size>
+		<height>2</height>
+		<sprite origin="192,96" offset="32">
+			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+
+</plug-in>

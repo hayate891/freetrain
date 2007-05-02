@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plug-in>
+	<title>道路プラグイン</title>
+	<author>綾瀬ヒロ</author>
+	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
+	
+	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope}">
+		<picture src="slope_road.bmp" origin="0,0" offset="0" />
+	</contribution>
+	
+	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}">
+		<picture src="slope_road2.bmp" origin="0,0" offset="0" >
+			<override when="night" src="slope_road2_n.bmp"/>
+		</picture>
+	</contribution>
+
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeN}">
+		<group>勾配道路(一般)</group>
+		<price>1000</price>
+		<size>1,4</size>
+		<height>1</height>
+		<sprite origin="0,0" offset="24">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeS}">
+		<group>勾配道路(一般)</group>
+		<price>1000</price>
+		<size>4,1</size>
+		<height>1</height>
+		<sprite origin="80,0" offset="48">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+	
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeW}">
+		<group>勾配道路(一般)</group>
+		<price>1000</price>
+		<size>1,4</size>
+		<height>1</height>
+		<sprite origin="160,0" offset="24">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+	
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeE}">
+		<group>勾配道路(一般)</group>
+		<price>1000</price>
+		<size>4,1</size>
+		<height>1</height>
+		<sprite origin="240,0" offset="48">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+	
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2N}">
+		<group>勾配道路(高速)</group>
+		<price>1000</price>
+		<size>1,4</size>
+		<height>2</height>
+		<sprite origin="0,0" offset="24">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+	
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2S}">
+		<group>勾配道路(高速)</group>
+		<price>1000</price>
+		<size>4,1</size>
+		<height>2</height>
+		<sprite origin="80,0" offset="48">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+	
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2W}">
+		<group>勾配道路(高速)</group>
+		<price>1000</price>
+		<size>1,4</size>
+		<height>2</height>
+		<sprite origin="160,0" offset="24">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+	
+	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2E}">
+		<group>勾配道路(高速)</group>
+		<price>1000</price>
+		<size>4,1</size>
+		<height>2</height>
+		<sprite origin="240,0" offset="48">
+			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
+		</sprite>
+		<computerCannotBuild/>
+	</contribution>
+</plug-in>
