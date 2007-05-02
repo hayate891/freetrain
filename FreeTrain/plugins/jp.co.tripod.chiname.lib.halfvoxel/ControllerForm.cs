@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -132,9 +132,9 @@ namespace freetrain.world.structs.hv
 			// 
 			this.btnRemove.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
 			this.btnRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.btnRemove.Location = new System.Drawing.Point(192, 152);
+			this.btnRemove.Location = new System.Drawing.Point(188, 164);
 			this.btnRemove.Name = "btnRemove";
-			this.btnRemove.Size = new System.Drawing.Size(48, 24);
+			this.btnRemove.Size = new System.Drawing.Size(56, 24);
 			this.btnRemove.TabIndex = 8;
 			this.btnRemove.Text = "Remove";
 			//! this.btnRemove.Text = "撤去";
@@ -146,7 +146,7 @@ namespace freetrain.world.structs.hv
 			this.btnPlace.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
 			this.btnPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.btnPlace.Checked = true;
-			this.btnPlace.Location = new System.Drawing.Point(144, 152);
+			this.btnPlace.Location = new System.Drawing.Point(140, 164);
 			this.btnPlace.Name = "btnPlace";
 			this.btnPlace.Size = new System.Drawing.Size(48, 24);
 			this.btnPlace.TabIndex = 7;
@@ -171,7 +171,7 @@ namespace freetrain.world.structs.hv
 																				this.cbRndColor2,
 																				this.idxColor2});
 			this.group.Name = "group";
-			this.group.Size = new System.Drawing.Size(136, 176);
+			this.group.Size = new System.Drawing.Size(136, 188);
 			this.group.TabIndex = 1;
 			this.group.TabStop = false;
 			this.toolTip1.SetToolTip(this.group, "Select a building to the left");
@@ -182,9 +182,9 @@ namespace freetrain.world.structs.hv
 			this.namelabel.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 				| System.Windows.Forms.AnchorStyles.Right);
 			this.namelabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.namelabel.Location = new System.Drawing.Point(8, 72);
+			this.namelabel.Location = new System.Drawing.Point(8, 76);
 			this.namelabel.Name = "namelabel";
-			this.namelabel.Size = new System.Drawing.Size(120, 16);
+			this.namelabel.Size = new System.Drawing.Size(120, 28);
 			this.namelabel.TabIndex = 13;
 			this.namelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
@@ -208,7 +208,7 @@ namespace freetrain.world.structs.hv
 			this.idxColor.count = 10;
 			this.idxColor.current = 0;
 			this.idxColor.dataSource = null;
-			this.idxColor.Location = new System.Drawing.Point(8, 112);
+			this.idxColor.Location = new System.Drawing.Point(8, 126);
 			this.idxColor.Name = "idxColor";
 			this.idxColor.Size = new System.Drawing.Size(120, 16);
 			this.idxColor.TabIndex = 11;
@@ -242,7 +242,7 @@ namespace freetrain.world.structs.hv
 			// label3
 			// 
 			this.label3.BackColor = System.Drawing.Color.Transparent;
-			this.label3.Location = new System.Drawing.Point(8, 96);
+			this.label3.Location = new System.Drawing.Point(8, 108);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(56, 16);
 			this.label3.TabIndex = 12;
@@ -254,9 +254,9 @@ namespace freetrain.world.structs.hv
 			// 
 			this.cbRndColor.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
 			this.cbRndColor.BackColor = System.Drawing.Color.Transparent;
-			this.cbRndColor.Location = new System.Drawing.Point(72, 96);
+			this.cbRndColor.Location = new System.Drawing.Point(68, 108);
 			this.cbRndColor.Name = "cbRndColor";
-			this.cbRndColor.Size = new System.Drawing.Size(64, 16);
+			this.cbRndColor.Size = new System.Drawing.Size(68, 16);
 			this.cbRndColor.TabIndex = 7;
 			this.cbRndColor.Text = "Random";
 			//! this.cbRndColor.Text = "ランダム";
@@ -266,9 +266,9 @@ namespace freetrain.world.structs.hv
 			// 
 			this.cbRndDesign.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
 			this.cbRndDesign.BackColor = System.Drawing.Color.Transparent;
-			this.cbRndDesign.Location = new System.Drawing.Point(72, 40);
+			this.cbRndDesign.Location = new System.Drawing.Point(68, 40);
 			this.cbRndDesign.Name = "cbRndDesign";
-			this.cbRndDesign.Size = new System.Drawing.Size(64, 16);
+			this.cbRndDesign.Size = new System.Drawing.Size(68, 16);
 			this.cbRndDesign.TabIndex = 3;
 			this.cbRndDesign.Text = "Random";
 			//! this.cbRndDesign.Text = "ランダム";
@@ -277,7 +277,7 @@ namespace freetrain.world.structs.hv
 			// label2
 			// 
 			this.label2.BackColor = System.Drawing.Color.Transparent;
-			this.label2.Location = new System.Drawing.Point(8, 136);
+			this.label2.Location = new System.Drawing.Point(8, 148);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 16);
 			this.label2.TabIndex = 12;
@@ -289,9 +289,9 @@ namespace freetrain.world.structs.hv
 			// 
 			this.cbRndColor2.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
 			this.cbRndColor2.BackColor = System.Drawing.Color.Transparent;
-			this.cbRndColor2.Location = new System.Drawing.Point(72, 136);
+			this.cbRndColor2.Location = new System.Drawing.Point(68, 148);
 			this.cbRndColor2.Name = "cbRndColor2";
-			this.cbRndColor2.Size = new System.Drawing.Size(64, 16);
+			this.cbRndColor2.Size = new System.Drawing.Size(68, 16);
 			this.cbRndColor2.TabIndex = 7;
 			this.cbRndColor2.Text = "Random";
 			//! this.cbRndColor2.Text = "ランダム";
@@ -304,7 +304,7 @@ namespace freetrain.world.structs.hv
 			this.idxColor2.count = 10;
 			this.idxColor2.current = 0;
 			this.idxColor2.dataSource = null;
-			this.idxColor2.Location = new System.Drawing.Point(8, 152);
+			this.idxColor2.Location = new System.Drawing.Point(8, 166);
 			this.idxColor2.Name = "idxColor2";
 			this.idxColor2.Size = new System.Drawing.Size(120, 16);
 			this.idxColor2.TabIndex = 11;
@@ -316,7 +316,7 @@ namespace freetrain.world.structs.hv
 			this.price.cost = 0;
 			this.price.label = "Cost:";
 			//! this.price.label = "費用：";
-			this.price.Location = new System.Drawing.Point(152, 120);
+			this.price.Location = new System.Drawing.Point(152, 130);
 			this.price.Name = "price";
 			this.price.Size = new System.Drawing.Size(80, 32);
 			this.price.TabIndex = 14;
@@ -326,7 +326,7 @@ namespace freetrain.world.structs.hv
 			// ControllerForm
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(248, 181);
+			this.ClientSize = new System.Drawing.Size(248, 194);
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.group,
 																		  this.btnRemove,
