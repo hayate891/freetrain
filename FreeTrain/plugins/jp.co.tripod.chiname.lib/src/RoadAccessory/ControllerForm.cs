@@ -37,6 +37,11 @@ namespace freetrain.world.road.accessory
 			// load list of lands
 			typeBox.DataSource = Core.plugins.listContributions(typeof(RoadAccessoryContribution));
 			typeBox.DisplayMember="name";
+			if (typeBox.Items.Count == 0)
+			{
+				buttonPlace.Enabled = false;
+				buttonRemove.Enabled = false;
+			}
 		}
 
 		protected override void Dispose( bool disposing ) {

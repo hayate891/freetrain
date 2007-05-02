@@ -38,6 +38,12 @@ namespace freetrain.world.road.dummycar
 			// load list of lands
 			typeBox.DataSource = Core.plugins.listContributions(typeof(DummyCarContribution));
 			typeBox.DisplayMember="name";
+			if (typeBox.Items.Count == 0)
+			{
+				buttonPlace.Enabled = false;
+				buttonRemove.Enabled = false;
+				colSelector.Enabled = false;
+			}
 		}
 
 		protected override void Dispose( bool disposing ) {
