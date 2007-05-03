@@ -114,14 +114,14 @@
 
 <plug-in>
 
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-<title>建物(店舗)</title>
+<title>Buildings(shops)</title>
 
-<!-- 支線観光支援会社(旅行代理店) -->
+<!-- Shisen Tour Support Corp. (travel agency) -->
 
-<!-- 支線観光支援会社ビル -->
+<!-- Shisen Tour Support Corp. Building -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-store-travelagent-shika2-01}">
 	<picture  src="shika2_01.bmp">
 		<override when="night" src="shika2_01n.bmp"/>
@@ -133,15 +133,15 @@
 	</picture>
 </contribution>
 
-<!-- 支線観光支援会社本店ビル -->
+<!-- Shisen Tour Support Corp. main office building -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-travelagent-shika2-01-headoffice}">
-	<group>サービス窓口</group>
-	<name>旅行代理店</name>
-	<design>支線観光支援会社本店</design>
+	<group>Service Counters</group>
+	<name>travel agency</name>
+	<design>Shisen Tour Support Corp. main office</design>
 	<structure>
-		<category byname="サービス窓口"/>
-		<category byname="貸事務所" hide="true"/>
-		<category byname="一般飲食店" hide="true"/>
+		<category byname="Service Counters"/>
+		<category byname="Offices for Rent" hide="true"/>
+		<category byname="Restaurants" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -223,15 +223,15 @@
 
 </contribution>
 
-<!-- 支線観光支援会社支店ビル -->
+<!-- Shisen Tour Support Corp. branch office building -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-travelagent-shika2-02-branchoffice}">
-	<group>サービス窓口</group>
-	<name>旅行代理店</name>
-	<design>支線観光支援会社支店</design>
+	<group>Service Counters</group>
+	<name>travel agency</name>
+	<design>Shisen Tour Support Corp. branch office</design>
 	<structure>
-		<category byname="サービス窓口"/>
-		<category byname="貸事務所" hide="true"/>
-		<category byname="一般飲食店" hide="true"/>
+		<category byname="Service Counters"/>
+		<category byname="Offices for Rent" hide="true"/>
+		<category byname="Restaurants" hide="true"/>
 	</structure>
 	<price>280</price>
 	<size>1,1</size>
@@ -313,9 +313,9 @@
 
 
 
-<!-- 店舗-チェーン専門店-地方の某青い家電量販店 -->
+<!-- Stores-Specialty Chain Stores-Local Outlets -->
 
-<!-- デオデオ -->
+<!-- Electronics Outlet -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-store-electrical-deo2-01}">
 	<picture  src="deo2_01.bmp">
@@ -338,14 +338,14 @@
 	</picture>
 </contribution>
 
-<!-- デオデオ本店(本館) -->
+<!-- Electronics Outlet (main store) -->
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-electrical-deo2-01-main}">
-	<group>都市型量販店</group>
-	<name>家電量販店</name>
-	<design>デオx2本店本館</design>
+	<group>Urban Outlets</group>
+	<name>Home Electronics Outlet</name>
+	<design>DEOx2 main store</design>
 	<structure>
-		<category byname="都市型量販店"/>
+		<category byname="Urban Outlets"/>
 	</structure>
 	<price>900</price>
 	<size>1,2</size>
@@ -414,14 +414,14 @@
 </contribution>
 
 
-<!-- デオデオ本店(パソコン館) -->
+<!-- Electronics Outlet (PC store) -->
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-electrical-deo2-02-pc}">
-	<group>都市型量販店</group>
-	<name>家電量販店</name>
-	<design>デオx2本店PC館</design>
+	<group>Urban Outlets</group>
+	<name>Home Electronics Outlet</name>
+	<design>DEOx2 PC store</design>
 	<structure>
-		<category byname="都市型量販店"/>
+		<category byname="Urban Outlets"/>
 	</structure>
 	<price>475</price>
 	<size>1,1</size>
@@ -489,14 +489,14 @@
 
 </contribution>
 
-<!-- デオデオ本店(ウォッチ＆カメラ館) -->
+<!-- Electronics Outlet (watchs and cameras) -->
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-electrical-deo2-03-watchcamera}">
-	<group>都市型量販店</group>
-	<name>家電量販店</name>
-	<design>デオx2本店時計カメラ館</design>
+	<group>Urban Outlets</group>
+	<name>Home Electronics Outlet</name>
+	<design>DEOx2 watchs and cameras</design>
 	<structure>
-		<category byname="都市型量販店"/>
+		<category byname="Urban Outlets"/>
 	</structure>
 	<price>250</price>
 	<size>1,1</size>
@@ -531,14 +531,14 @@
 
 </contribution>
 
-<!-- デオデオ郊外型店舗 -->
+<!-- Electronics Suburbian Outlet舗 -->
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-electrical-deo2-04-suburbs}">
-	<group>郊外型量販店</group>
-	<name>家電量販店</name>
-	<design>デオx2支店</design>
+	<group>Suburbian Outlets</group>
+	<name>Home Electronics Outlet</name>
+	<design>DEOx2 branch store</design>
 	<structure>
-		<category byname="郊外型量販店"/>
+		<category byname="Suburbian Outlets"/>
 	</structure>
 	<price>1710</price>
 	<size>2,2</size>
@@ -607,7 +607,7 @@
 </contribution>
 
 
-<!-- 本屋 -->
+<!-- Book store -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-store-bookstore-01}">
 	<picture  src="bookstore_01.bmp">
@@ -622,12 +622,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-bookstore-01-a}">
 
-	<group>個人日用品店</group>
-	<name>本屋(1x1)</name>
-	<design>本屋(1階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Book store(1x1)</name>
+	<design>Book store(1floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -670,12 +670,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-bookstore-02-a}">
 
-	<group>個人日用品店</group>
-	<name>本屋(1x1)</name>
-	<design>本屋(一階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Book store(1x1)</name>
+	<design>Book store(1froor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>115</price>
 	<size>1,1</size>
@@ -718,11 +718,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-bookstore-01-b}">
 
-	<group>個人日用品店</group>
-	<name>本屋(1x1)</name>
-	<design>本屋(2階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Book store(1x1)</name>
+	<design>Book store(2floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -769,11 +769,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-bookstore-02-b}">
 
-	<group>個人日用品店</group>
-	<name>本屋(1x1)</name>
-	<design>本屋(2階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Book store(1x1)</name>
+	<design>Book store(2floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -820,11 +820,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-bookstore-01-c}">
 
-	<group>個人日用品店</group>
-	<name>本屋(1x1)</name>
-	<design>本屋(3階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Book store(1x1)</name>
+	<design>Book store(3floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>285</price>
 	<size>1,1</size>
@@ -871,11 +871,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-bookstore-02-c}">
 
-	<group>個人日用品店</group>
-	<name>本屋(1x1)</name>
-	<design>本屋(3階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Book store(1x1)</name>
+	<design>Book store(3floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -920,7 +920,7 @@
 
 </contribution>
 
-<!-- 八百屋 -->
+<!-- Vegetable store -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-store-vegetablestore-01}">
 	<picture  src="vegetablestore_01.bmp">
@@ -935,12 +935,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-vegetablestore-01-a}">
 
-	<group>個人日用品店</group>
-	<name>八百屋(1x1)</name>
-	<design>八百屋(1階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Vegetable store(1x1)</name>
+	<design>Vegetable store(1floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -983,12 +983,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-vegetablestore-02-a}">
 
-	<group>個人日用品店</group>
-	<name>八百屋(1x1)</name>
-	<design>八百屋(1階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Vegetable store(1x1)</name>
+	<design>Vegetable store(1floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>115</price>
 	<size>1,1</size>
@@ -1031,11 +1031,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-vegetablestore-01-b}">
 
-	<group>個人日用品店</group>
-	<name>八百屋(1x1)</name>
-	<design>八百屋(2階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Vegetable store(1x1)</name>
+	<design>Vegetable store(2floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1082,11 +1082,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-vegetablestore-02-b}">
 
-	<group>個人日用品店</group>
-	<name>八百屋(1x1)</name>
-	<design>八百屋(2階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Vegetable store(1x1)</name>
+	<design>Vegetable store(2floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1133,11 +1133,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-vegetablestore-01-c}">
 
-	<group>個人日用品店</group>
-	<name>八百屋(1x1)</name>
-	<design>八百屋(3階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Vegetable store(1x1)</name>
+	<design>Vegetable store(3floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>285</price>
 	<size>1,1</size>
@@ -1184,11 +1184,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-vegetablestore-02-c}">
 
-	<group>個人日用品店</group>
-	<name>八百屋(1x1)</name>
-	<design>八百屋(3階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Vegetable store(1x1)</name>
+	<design>Vegetable store(3floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1233,7 +1233,7 @@
 
 </contribution>
 
-<!-- 肉屋 -->
+<!-- Meat shop -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-store-meatshop-01}">
 	<picture  src="meatshop_01.bmp">
@@ -1248,12 +1248,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-meatshop-01-a}">
 
-	<group>個人日用品店</group>
-	<name>肉屋(1x1)</name>
-	<design>肉屋(1階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Meat shop(1x1)</name>
+	<design>Meat shop(1floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1296,12 +1296,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-meatshop-02-a}">
 
-	<group>個人日用品店</group>
-	<name>肉屋(1x1)</name>
-	<design>肉屋(1階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Meat shop(1x1)</name>
+	<design>Meat shop(1floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>115</price>
 	<size>1,1</size>
@@ -1344,11 +1344,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-meatshop-01-b}">
 
-	<group>個人日用品店</group>
-	<name>肉屋(1x1)</name>
-	<design>肉屋(2階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Meat shop(1x1)</name>
+	<design>Meat shop(2floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1395,11 +1395,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-meatshop-02-b}">
 
-	<group>個人日用品店</group>
-	<name>肉屋(1x1)</name>
-	<design>肉屋(2階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Meat shop(1x1)</name>
+	<design>Meat shop(2floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1446,11 +1446,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-meatshop-01-c}">
 
-	<group>個人日用品店</group>
-	<name>肉屋(1x1)</name>
-	<design>肉屋(3階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Meat shop(1x1)</name>
+	<design>Meat shop(3floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>285</price>
 	<size>1,1</size>
@@ -1497,11 +1497,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-meatshop-02-c}">
 
-	<group>個人日用品店</group>
-	<name>肉屋(1x1)</name>
-	<design>肉屋(3階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Meat shop(1x1)</name>
+	<design>Meat shop(3floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1546,7 +1546,7 @@
 
 </contribution>
 
-<!-- 魚屋 -->
+<!-- Fish shop -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-store-fishstore-01}">
 	<picture  src="fishstore_01.bmp">
@@ -1561,12 +1561,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-fishstore-01-a}">
 
-	<group>個人日用品店</group>
-	<name>魚屋(1x1)</name>
-	<design>魚屋(1階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Fish shop(1x1)</name>
+	<design>Fish shop(1floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1609,12 +1609,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-fishstore-02-a}">
 
-	<group>個人日用品店</group>
-	<name>魚屋(1x1)</name>
-	<design>魚屋(1階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Fish shop(1x1)</name>
+	<design>Fish shop(1floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Private Convenience Stores"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>115</price>
 	<size>1,1</size>
@@ -1657,11 +1657,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-fishstore-01-b}">
 
-	<group>個人日用品店</group>
-	<name>魚屋(1x1)</name>
-	<design>魚屋(2階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Fish shop(1x1)</name>
+	<design>Fish shop(2floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1708,11 +1708,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-fishstore-02-b}">
 
-	<group>個人日用品店</group>
-	<name>魚屋(1x1)</name>
-	<design>魚屋(2階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Fish shop(1x1)</name>
+	<design>Fish shop(2floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1759,11 +1759,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-fishstore-01-c}">
 
-	<group>個人日用品店</group>
-	<name>魚屋(1x1)</name>
-	<design>魚屋(3階建て)</design>
+	<group>Private Convenience Stores</group>
+	<name>Fish shop(1x1)</name>
+	<design>Fish shop(3floor)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>285</price>
 	<size>1,1</size>
@@ -1810,11 +1810,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-fishstore-02-c}">
 
-	<group>個人日用品店</group>
-	<name>魚屋(1x1)</name>
-	<design>魚屋(3階建て,瓦屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Fish shop(1x1)</name>
+	<design>Fish shop(3floor,tile roof)</design>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<price>190</price>
 	<size>1,1</size>
@@ -1859,7 +1859,7 @@
 
 </contribution>
 
-<!-- 土産物屋 -->
+<!-- Souvenir Shops -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-store-souvenirstore-01}">
 	<picture  src="souvenirstore_01.bmp">
@@ -1874,12 +1874,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-001-a}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋A</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shops A</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -1922,12 +1922,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-001-b}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋B</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shops B</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -1970,12 +1970,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-001-c}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋C</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shops C</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -2018,12 +2018,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-001-d}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋D</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shops D</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -2066,12 +2066,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-002-a}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋A(平屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shopsA (flat roof)</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -2114,12 +2114,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-002-b}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋B(平屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shops B(flat roof)</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -2162,12 +2162,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-002-c}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋C(平屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shops C(flat roof)</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -2210,12 +2210,12 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-souvenirstore-002-d}">
 
-	<group>個人日用品店</group>
-	<name>土産物屋(1x1)</name>
-	<design>土産物屋D(平屋根)</design>
+	<group>Private Convenience Stores</group>
+	<name>Souvenir shops(1x1)</name>
+	<design>Souvenir shops D(flat roof)</design>
 	<structure>
-		<category byname="土産物屋"/>
-		<category byname="住宅" hide="true"/>
+		<category byname="Souvenir Shops"/>
+		<category byname="Housing" hide="true"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>

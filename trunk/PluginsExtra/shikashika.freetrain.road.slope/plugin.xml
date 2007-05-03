@@ -2,12 +2,12 @@
 
 <plug-in>
 
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-<title>道路(勾配道路)</title>
+<title>Road(Slope Road)</title>
 
-<!-- 林道 -->
+<!-- Wood land path -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-roadslope-woodlandpath-001}">
 	<picture src = "roadslope_woodlandpath_spring.bmp">
@@ -19,11 +19,11 @@
 </contribution>
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-roadslope-woodlandpath-001}">
-	<group>道路関連物</group>
-	<name>勾配道路</name>
-	<design>林道(未舗装)</design>
+	<group>Road Accessories</group>
+	<name>Slope Road</name>
+	<design>Wood land path(unpaved)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>500</price>
 	<size>1,4</size>
@@ -56,11 +56,11 @@
 </contribution>
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-roadslope-woodlandpath-002}">
-	<group>道路関連物</group>
-	<name>勾配道路</name>
-	<design>林道(舗装)</design>
+	<group>Road Accessories</group>
+	<name>Slope Road</name>
+	<design>Wood land path(paved)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>800</price>
 	<size>1,4</size>
@@ -92,7 +92,7 @@
 	</sprite>
 </contribution>
 
-<!-- 階段(コンクリート) -->
+<!-- Stairs(concrete) -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-staircase-concrete-001}">
 	<picture src = "staircase_concrete.bmp" />
@@ -100,11 +100,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-concrete-001-up}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>コンクリート</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>concrete</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -139,11 +139,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-concrete-001-up-banister}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>コンクリート(手摺付)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>concrete(handrailed)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -178,11 +178,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-concrete-001-down}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>コンクリート</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>concrete</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -217,11 +217,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-concrete-001-down-banister}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>コンクリート(手摺付)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>concrete(handlailed)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -254,7 +254,7 @@
 
 </contribution>
 
-<!-- 階段(石段(茶)) -->
+<!-- Stairs(Stone block(brown)) -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-staircase-stonesteps-001}">
 	<picture src = "staircase_stonesteps.bmp" />
@@ -262,11 +262,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-001-up}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(茶)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(brown)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -301,11 +301,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-001-up-banister}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(茶･手摺付)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(brown,handlailed)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -340,11 +340,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-001-down}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(茶)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(brown)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -379,11 +379,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-001-down-banister}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(茶･手摺付)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(brown,handlailed)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -416,7 +416,7 @@
 
 </contribution>
 
-<!-- 階段(石段(灰)) -->
+<!-- Stairs(Stone block(gray)) -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-staircase-stonesteps-grey-001}">
 	<picture src = "staircase_stonesteps_grey.bmp" />
@@ -424,11 +424,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-grey-001-up}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(灰)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(gray)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -463,11 +463,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-grey-001-up-banister}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(灰･手摺付)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(gray,handlailed)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -502,11 +502,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-grey-001-down}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(灰)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(gray)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>
@@ -541,11 +541,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-staircase-stonesteps-grey-001-down-banister}">
 
-	<group>道路関連物</group>
-	<name>階段</name>
-	<design>石段(灰･手摺付)</design>
+	<group>Road Accessories</group>
+	<name>Stairs</name>
+	<design>Stone block(gray,handlailed)</design>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>150</price>
 	<size>1,1</size>

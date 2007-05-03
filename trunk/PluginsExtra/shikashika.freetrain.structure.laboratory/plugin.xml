@@ -29,28 +29,28 @@
 
 <plug-in>
 
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-<title>建物(研究施設)</title>
+<title>Buildings(Research)</title>
 
 
-<!-- 観測所 -->
+<!-- Observatories -->
 
-<!-- 天体観測所(1x1) -->
+<!-- Astronomical Observatories(1x1) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-astronomicalobservatory-001}">
 	<picture  src="astronomicalobservatory_001.bmp">
 		<override when="night" src="astronomicalobservatory_001n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 天体観測所(1x1) -->
+<!-- Astronomical Observatories(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-astronomicalobservatory-001a}">
-	<group>天体観測所</group>
-	<name>天体観測所(1x1)</name>
-	<design>天体望遠鏡ドームA</design>
+	<group>Astronomical Observatories</group>
+	<name>Astronomical Observatories(1x1)</name>
+	<design>Astronomical telescope dome A</design>
 	<structure>
-		<category byname="天体観測所"/>
+		<category byname="Astronomical Observatories"/>
 	</structure>
 	<price>10000</price>
 	<size>1,1</size>
@@ -86,11 +86,11 @@
 </contribution>
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-astronomicalobservatory-001b}">
-	<group>天体観測所</group>
-	<name>天体観測所(1x1)</name>
-	<design>天体望遠鏡ドームB</design>
+	<group>Astronomical Observatories</group>
+	<name>Astronomical Observatories(1x1)</name>
+	<design>Astronomical telescope dome B</design>
 	<structure>
-		<category byname="天体観測所"/>
+		<category byname="Astronomical Observatories"/>
 	</structure>
 	<price>10000</price>
 	<size>1,1</size>
@@ -126,11 +126,11 @@
 </contribution>
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-astronomicalobservatory-001c}">
-	<group>天体観測所</group>
-	<name>天体観測所(1x1)</name>
-	<design>天体望遠鏡ドームC</design>
+	<group>Astronomical Observatories</group>
+	<name>Astronomical Observatories(1x1)</name>
+	<design>Astronomical telescope dome C</design>
 	<structure>
-		<category byname="天体観測所"/>
+		<category byname="Astronomical Observatories"/>
 	</structure>
 	<price>10000</price>
 	<size>1,1</size>
@@ -166,11 +166,11 @@
 </contribution>
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-astronomicalobservatory-001d}">
-	<group>天体観測所</group>
-	<name>天体観測所(1x1)</name>
-	<design>天体望遠鏡ドームD</design>
+	<group>Astronomical Observatories</group>
+	<name>Astronomical Observatories(1x1)</name>
+	<design>Astronomical telescope dome D</design>
 	<structure>
-		<category byname="天体観測所"/>
+		<category byname="Astronomical Observatories"/>
 	</structure>
 	<price>10000</price>
 	<size>1,1</size>
@@ -205,20 +205,20 @@
 
 </contribution>
 
-<!-- 天体観測所(2x2) -->
+<!-- Astronomical Observatories(2x2) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-astronomicalobservatory-002}">
 	<picture  src="astronomicalobservatory_002.bmp">
 		<override when="night" src="astronomicalobservatory_002n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 天体観測所(2x2) -->
+<!-- Astronomical Observatories(2x2) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-astronomicalobservatory-002a}">
-	<group>天体観測所</group>
-	<name>天体観測所(2x2)</name>
-	<design>大口径天体望遠鏡ドームA</design>
+	<group>Astronomical Observatories</group>
+	<name>Astronomical Observatories(2x2)</name>
+	<design>Large astronomical telescope dome A</design>
 	<structure>
-		<category byname="天体観測所"/>
+		<category byname="Astronomical Observatories"/>
 	</structure>
 	<price>20000</price>
 	<size>2,2</size>
@@ -253,13 +253,13 @@
 
 </contribution>
 
-<!-- 天体観測所(2x2) -->
+<!-- Astronomical Observatories(2x2) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-astronomicalobservatory-002b}">
-	<group>天体観測所</group>
-	<name>天体観測所(2x2)</name>
-	<design>大口径天体望遠鏡ドームB</design>
+	<group>Astronomical Observatories</group>
+	<name>Astronomical Observatories(2x2)</name>
+	<design>Large astronomical telescope dome B</design>
 	<structure>
-		<category byname="天体観測所"/>
+		<category byname="Astronomical Observatories"/>
 	</structure>
 	<price>20000</price>
 	<size>2,2</size>

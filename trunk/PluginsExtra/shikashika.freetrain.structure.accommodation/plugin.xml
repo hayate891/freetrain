@@ -179,10 +179,10 @@
 '>
 
 <!ENTITY component_campsite_001 '
-	<group>宿泊</group>
-	<name>キャンプ場(1x1)</name>
+	<group>Lodging</group>
+	<name>Camp site(1x1)</name>
 	<structure>
-		<category byname="特殊宿泊施設"/>
+		<category byname="Special Lodging"/>
 	</structure>
 	<size>1,1</size>
 	<height>1</height>
@@ -273,10 +273,10 @@
 	</population>
 '>
 <!ENTITY component_ryokan_001 '
-	<group>宿泊</group>
-	<name>旅館(1x1)</name>
+	<group>Lodging</group>
+	<name>Inn(1x1)</name>
 	<structure>
-		<category byname="旅館"/>
+		<category byname="Inns"/>
 	</structure>
 	<size>1,1</size>
 	<height>1</height>
@@ -294,10 +294,10 @@
 	</population>
 '>
 <!ENTITY component_ryokan_002 '
-	<group>宿泊</group>
-	<name>旅館(2x2)</name>
+	<group>Lodging</group>
+	<name>Inn(2x2)</name>
 	<structure>
-		<category byname="旅館"/>
+		<category byname="Inns"/>
 	</structure>
 	<size>2,2</size>
 	<height>1</height>
@@ -320,12 +320,12 @@
 
 <plug-in>
 
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-<title>建物(宿泊)</title>
+<title>Buildings(Lodging)</title>
 
-<!-- キャンプ場 -->
+<!-- Camp site -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-camp-campsite-001}">
 	<picture src = "campsite_001.bmp">
@@ -347,7 +347,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-tent1-001}">
 &component_campsite_001;
 &population_campsite_001;
-	<design>テント1</design>
+	<design>tent 1</design>
 	&tent-yellow;
 	&tent-orange;
 	&tent-green;
@@ -374,7 +374,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-tent2-001}">
 &component_campsite_001;
 &population_campsite_002;
-	<design>テント2</design>
+	<design>tent 2</design>
 	&tent-yellow;
 	&tent-orange;
 	&tent-green;
@@ -401,7 +401,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-bungalow-001}">
 &component_campsite_001;
 &population_campsite_003;
-	<design>バンガロー</design>
+	<design>bungalow</design>
 	&wall-redbrick;
 	&wall-wood001;
 	&wall-wood002;
@@ -428,7 +428,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-cabin-001}">
 &component_campsite_001;
 &population_campsite_004;
-	<design>ケビン</design>
+	<design>cabin</design>
 	&wall-redbrick;
 	&wall-wood001;
 	&wall-wood002;
@@ -472,7 +472,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-publicbathhouse-002}">
 &component_campsite_001;
 &population_campsite_005;
-	<design>共同浴場</design>
+	<design>Public bath house</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -501,7 +501,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-cookhouse-002}">
 &component_campsite_001;
 &population_campsite_006;
-	<design>炊事棟</design>
+	<design>Cook house</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -530,7 +530,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-campfire-002}">
 &component_campsite_001;
 &population_campsite_007;
-	<design>ファイア場</design>
+	<design>Campfire</design>
 
 	<sprite origin="0,64" offset="16">
 		<picture ref="{FreeTrain-Shika-picture-structure-camp-campsite-002}"/>
@@ -553,7 +553,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-informationoffice-002}">
 &component_campsite_001;
 &population_campsite_005;
-	<design>管理棟</design>
+	<design>Information office</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -599,7 +599,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-firtree-003}">
 &component_campsite_001;
 &population_campsite_008;
-	<design>樅</design>
+	<design>Fir tree</design>
 
 	<sprite origin="0,0" offset="16">
 		<picture ref="{FreeTrain-Shika-picture-structure-camp-campsite-003}"/>
@@ -622,7 +622,7 @@
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-camp-pond-003}">
 &component_campsite_001;
 &population_campsite_008;
-	<design>池</design>
+	<design>Pond</design>
 
 	<sprite origin="0,32" offset="16">
 		<picture ref="{FreeTrain-Shika-picture-structure-camp-campsite-003}"/>
@@ -642,7 +642,7 @@
 
 </contribution>
 
-<!-- 旅館 -->
+<!-- Inns -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-hotel-ryokan-001}">
 	<picture  src="ryokan_001.bmp">
@@ -665,10 +665,10 @@
 	</picture>
 </contribution>
 
-<!-- 旅館(1x1) -->
+<!-- Inns(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-001-a}">
 &component_ryokan_001;
-	<design>旅館A</design>
+	<design>Inn A</design>
 	&wall-brownbeige;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -696,7 +696,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-001-b}">
 &component_ryokan_001;
-	<design>旅館B</design>
+	<design>Inn B</design>
 	&wall-brownbeige;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -724,7 +724,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-001-c}">
 &component_ryokan_001;
-	<design>旅館C</design>
+	<design>Inn C</design>
 	&wall-brownbeige;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -752,7 +752,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-001-d}">
 &component_ryokan_001;
-	<design>旅館D</design>
+	<design>Inn D</design>
 	&wall-brownbeige;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -780,7 +780,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-002-a}">
 &component_ryokan_001;
-	<design>旅館A(瓦屋根)</design>
+	<design>Inn A(tile roof)</design>
 	&wall-wood003;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -808,7 +808,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-002-b}">
 &component_ryokan_001;
-	<design>旅館B(瓦屋根)</design>
+	<design>Inn B(tile roof)</design>
 	&wall-wood003;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -836,7 +836,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-002-c}">
 &component_ryokan_001;
-	<design>旅館C(瓦屋根)</design>
+	<design>Inn C(tile roof)</design>
 	&wall-wood003;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -864,7 +864,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-002-d}">
 &component_ryokan_001;
-	<design>旅館D(瓦屋根)</design>
+	<design>Inn D(tile roof)</design>
 	&wall-wood003;
 	&wall-ivory;
 	&wall-urbanstone;
@@ -892,7 +892,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-003-e}">
 &component_ryokan_001;
-	<design>旅館E(瓦屋根)</design>
+	<design>Inn E(tile roof)</design>
 	&ta-white;
 	&wall-wood003;
 	&wall-wood004;
@@ -920,7 +920,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-003-f}">
 &component_ryokan_001;
-	<design>旅館F(瓦屋根)</design>
+	<design>Inn F(tile roof)</design>
 	&ta-white;
 	&wall-wood003;
 	&wall-wood004;
@@ -948,7 +948,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-003-g}">
 &component_ryokan_001;
-	<design>旅館G(瓦屋根)</design>
+	<design>Inn G(tile roof)</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
@@ -976,7 +976,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-003-h}">
 &component_ryokan_001;
-	<design>旅館H(瓦屋根)</design>
+	<design>Inn H(tile roof)</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
@@ -1002,10 +1002,10 @@
 
 </contribution>
 
-<!-- 旅館(2x2) -->
+<!-- Inns(2x2) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-004-a}">
 &component_ryokan_002;
-	<design>旅館A(瓦屋根)</design>
+	<design>Inn A(tile roof)</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
@@ -1033,7 +1033,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-structure-hotel-ryokan-004-b}">
 &component_ryokan_002;
-	<design>旅館B(瓦屋根)</design>
+	<design>Inn B(tile roof)</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
