@@ -171,7 +171,7 @@ namespace freetrain.views.bank
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(BankCounterForm));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BankCounterForm));
 			this.tab_main = new System.Windows.Forms.TabControl();
 			this.pgLoan = new System.Windows.Forms.TabPage();
 			this.list_loan = new System.Windows.Forms.ListView();
@@ -245,78 +245,78 @@ namespace freetrain.views.bank
 			this.pgRepay.SuspendLayout();
 			this.pgDeposit.SuspendLayout();
 			this.pgCancel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tab_main
 			// 
 			this.tab_main.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-			this.tab_main.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.tab_main.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				   this.pgLoan,
-																				   this.pgRepay,
-																				   this.pgDeposit,
-																				   this.pgCancel});
-			this.tab_main.Location = new System.Drawing.Point(0, 48);
+			this.tab_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.tab_main.Controls.Add(this.pgLoan);
+			this.tab_main.Controls.Add(this.pgRepay);
+			this.tab_main.Controls.Add(this.pgDeposit);
+			this.tab_main.Controls.Add(this.pgCancel);
+			this.tab_main.Location = new System.Drawing.Point(0, 52);
 			this.tab_main.Name = "tab_main";
 			this.tab_main.SelectedIndex = 0;
-			this.tab_main.Size = new System.Drawing.Size(360, 272);
+			this.tab_main.Size = new System.Drawing.Size(360, 281);
 			this.tab_main.TabIndex = 2;
 			this.tab_main.SelectedIndexChanged += new System.EventHandler(this.tab_main_SelectedIndexChanged);
 			// 
 			// pgLoan
 			// 
-			this.pgLoan.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				 this.list_loan,
-																				 this.btn_loan_set,
-																				 this.btn_loan_max,
-																				 this.rb_loan1,
-																				 this.tb_loan,
-																				 this.tl_loan1,
-																				 this.label1,
-																				 this.label3,
-																				 this.tl_loan_max,
-																				 this.mlabel2,
-																				 this.mlabel3,
-																				 this.label8,
-																				 this.label11,
-																				 this.label15,
-																				 this.tl_loan3,
-																				 this.label17,
-																				 this.tl_loan5,
-																				 this.label22,
-																				 this.rb_loan3,
-																				 this.rb_loan5});
+			this.pgLoan.Controls.Add(this.tl_loan5);
+			this.pgLoan.Controls.Add(this.tl_loan3);
+			this.pgLoan.Controls.Add(this.tl_loan_max);
+			this.pgLoan.Controls.Add(this.list_loan);
+			this.pgLoan.Controls.Add(this.btn_loan_set);
+			this.pgLoan.Controls.Add(this.btn_loan_max);
+			this.pgLoan.Controls.Add(this.rb_loan1);
+			this.pgLoan.Controls.Add(this.tb_loan);
+			this.pgLoan.Controls.Add(this.tl_loan1);
+			this.pgLoan.Controls.Add(this.label1);
+			this.pgLoan.Controls.Add(this.label3);
+			this.pgLoan.Controls.Add(this.mlabel2);
+			this.pgLoan.Controls.Add(this.mlabel3);
+			this.pgLoan.Controls.Add(this.label8);
+			this.pgLoan.Controls.Add(this.label11);
+			this.pgLoan.Controls.Add(this.label15);
+			this.pgLoan.Controls.Add(this.label17);
+			this.pgLoan.Controls.Add(this.label22);
+			this.pgLoan.Controls.Add(this.rb_loan3);
+			this.pgLoan.Controls.Add(this.rb_loan5);
 			this.pgLoan.Location = new System.Drawing.Point(4, 4);
 			this.pgLoan.Name = "pgLoan";
-			this.pgLoan.Size = new System.Drawing.Size(352, 247);
+			this.pgLoan.Size = new System.Drawing.Size(352, 255);
 			this.pgLoan.TabIndex = 0;
 			this.pgLoan.Text = "Loan";
 			//! this.pgLoan.Text = "借入";
 			// 
 			// list_loan
 			// 
-			this.list_loan.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.list_loan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.list_loan.FullRowSelect = true;
 			this.list_loan.GridLines = true;
 			this.list_loan.HideSelection = false;
-			this.list_loan.Location = new System.Drawing.Point(4, 115);
+			this.list_loan.Location = new System.Drawing.Point(4, 125);
 			this.list_loan.Name = "list_loan";
-			this.list_loan.Size = new System.Drawing.Size(344, 128);
+			this.list_loan.Size = new System.Drawing.Size(344, 123);
 			this.list_loan.TabIndex = 9;
+			this.list_loan.UseCompatibleStateImageBehavior = false;
 			this.list_loan.View = System.Windows.Forms.View.Details;
 			// 
 			// btn_loan_set
 			// 
-			this.btn_loan_set.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_loan_set.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_loan_set.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btn_loan_set.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btn_loan_set.Location = new System.Drawing.Point(304, 80);
+			this.btn_loan_set.Location = new System.Drawing.Point(304, 87);
 			this.btn_loan_set.Name = "btn_loan_set";
-			this.btn_loan_set.Size = new System.Drawing.Size(40, 24);
+			this.btn_loan_set.Size = new System.Drawing.Size(40, 26);
 			this.btn_loan_set.TabIndex = 8;
 			this.btn_loan_set.Text = "OK";
 			//! this.btn_loan_set.Text = "決定";
@@ -325,12 +325,11 @@ namespace freetrain.views.bank
 			// btn_loan_max
 			// 
 			this.btn_loan_max.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_loan_max.Location = new System.Drawing.Point(168, 56);
+			this.btn_loan_max.Location = new System.Drawing.Point(170, 61);
 			this.btn_loan_max.Name = "btn_loan_max";
-			this.btn_loan_max.Size = new System.Drawing.Size(40, 24);
+			this.btn_loan_max.Size = new System.Drawing.Size(42, 20);
 			this.btn_loan_max.TabIndex = 7;
-			this.btn_loan_max.Text = "MAX";
-			this.btn_loan_max.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.btn_loan_max.Text = "Max";
 			this.btn_loan_max.Click += new System.EventHandler(this.btn_loan_max_Click);
 			// 
 			// rb_loan1
@@ -338,9 +337,9 @@ namespace freetrain.views.bank
 			this.rb_loan1.Appearance = System.Windows.Forms.Appearance.Button;
 			this.rb_loan1.Checked = true;
 			this.rb_loan1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.rb_loan1.Location = new System.Drawing.Point(8, 32);
+			this.rb_loan1.Location = new System.Drawing.Point(8, 33);
 			this.rb_loan1.Name = "rb_loan1";
-			this.rb_loan1.Size = new System.Drawing.Size(40, 20);
+			this.rb_loan1.Size = new System.Drawing.Size(60, 23);
 			this.rb_loan1.TabIndex = 3;
 			this.rb_loan1.TabStop = true;
 			this.rb_loan1.Text = "1 year";
@@ -350,11 +349,11 @@ namespace freetrain.views.bank
 			// 
 			// tb_loan
 			// 
-			this.tb_loan.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.tb_loan.Location = new System.Drawing.Point(184, 31);
+			this.tb_loan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.tb_loan.Location = new System.Drawing.Point(170, 36);
 			this.tb_loan.Name = "tb_loan";
-			this.tb_loan.Size = new System.Drawing.Size(120, 19);
+			this.tb_loan.Size = new System.Drawing.Size(112, 20);
 			this.tb_loan.TabIndex = 6;
 			this.tb_loan.Text = "0";
 			this.tb_loan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -363,82 +362,82 @@ namespace freetrain.views.bank
 			// tl_loan1
 			// 
 			this.tl_loan1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_loan1.Location = new System.Drawing.Point(56, 33);
+			this.tl_loan1.Location = new System.Drawing.Point(76, 35);
 			this.tl_loan1.Name = "tl_loan1";
-			this.tl_loan1.Size = new System.Drawing.Size(40, 18);
+			this.tl_loan1.Size = new System.Drawing.Size(30, 19);
 			this.tl_loan1.TabIndex = 2;
 			this.tl_loan1.Text = "5";
-			this.tl_loan1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_loan1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(48, 8);
+			this.label1.Location = new System.Drawing.Point(73, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(64, 16);
+			this.label1.Size = new System.Drawing.Size(48, 21);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "Interest:";
+			this.label1.Text = "Interest";
 			//! this.label1.Text = "借入利率：";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(136, 8);
+			this.label3.Location = new System.Drawing.Point(115, 12);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(48, 16);
+			this.label3.Size = new System.Drawing.Size(53, 19);
 			this.label3.TabIndex = 1;
 			this.label3.Text = "Limit:";
 			//! this.label3.Text = "限度額：";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tl_loan_max
 			// 
-			this.tl_loan_max.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.tl_loan_max.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.tl_loan_max.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_loan_max.Location = new System.Drawing.Point(184, 7);
+			this.tl_loan_max.Location = new System.Drawing.Point(170, 13);
 			this.tl_loan_max.Name = "tl_loan_max";
-			this.tl_loan_max.Size = new System.Drawing.Size(120, 18);
+			this.tl_loan_max.Size = new System.Drawing.Size(112, 18);
 			this.tl_loan_max.TabIndex = 2;
 			this.tl_loan_max.Text = "500,000,000";
 			this.tl_loan_max.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// mlabel2
 			// 
-			this.mlabel2.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel2.Location = new System.Drawing.Point(304, 8);
+			this.mlabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel2.Location = new System.Drawing.Point(283, 14);
 			this.mlabel2.Name = "mlabel2";
-			this.mlabel2.Size = new System.Drawing.Size(44, 16);
+			this.mlabel2.Size = new System.Drawing.Size(62, 17);
 			this.mlabel2.TabIndex = 1;
 			this.mlabel2.Text = "thousand yen";
 			//! this.mlabel2.Text = "千円";
-			this.mlabel2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// mlabel3
 			// 
-			this.mlabel3.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel3.Location = new System.Drawing.Point(304, 32);
+			this.mlabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel3.Location = new System.Drawing.Point(283, 37);
 			this.mlabel3.Name = "mlabel3";
-			this.mlabel3.Size = new System.Drawing.Size(44, 16);
+			this.mlabel3.Size = new System.Drawing.Size(62, 17);
 			this.mlabel3.TabIndex = 1;
 			this.mlabel3.Text = "thousand yen";
 			//! this.mlabel3.Text = "千円";
-			this.mlabel3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(136, 32);
+			this.label8.Location = new System.Drawing.Point(119, 35);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(48, 16);
+			this.label8.Size = new System.Drawing.Size(49, 18);
 			this.label8.TabIndex = 1;
 			this.label8.Text = "Loan:";
 			//! this.label8.Text = "借入額：";
-			this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label11
 			// 
-			this.label11.Location = new System.Drawing.Point(96, 34);
+			this.label11.Location = new System.Drawing.Point(105, 36);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(18, 16);
+			this.label11.Size = new System.Drawing.Size(18, 17);
 			this.label11.TabIndex = 1;
 			this.label11.Text = "%";
 			//! this.label11.Text = "％";
@@ -446,9 +445,9 @@ namespace freetrain.views.bank
 			// 
 			// label15
 			// 
-			this.label15.Location = new System.Drawing.Point(96, 58);
+			this.label15.Location = new System.Drawing.Point(105, 62);
 			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(18, 16);
+			this.label15.Size = new System.Drawing.Size(18, 17);
 			this.label15.TabIndex = 1;
 			this.label15.Text = "%";
 			//! this.label15.Text = "％";
@@ -457,18 +456,18 @@ namespace freetrain.views.bank
 			// tl_loan3
 			// 
 			this.tl_loan3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_loan3.Location = new System.Drawing.Point(56, 57);
+			this.tl_loan3.Location = new System.Drawing.Point(76, 61);
 			this.tl_loan3.Name = "tl_loan3";
-			this.tl_loan3.Size = new System.Drawing.Size(40, 18);
+			this.tl_loan3.Size = new System.Drawing.Size(30, 20);
 			this.tl_loan3.TabIndex = 2;
 			this.tl_loan3.Text = "5";
-			this.tl_loan3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_loan3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label17
 			// 
-			this.label17.Location = new System.Drawing.Point(96, 82);
+			this.label17.Location = new System.Drawing.Point(105, 88);
 			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(18, 16);
+			this.label17.Size = new System.Drawing.Size(18, 17);
 			this.label17.TabIndex = 1;
 			this.label17.Text = "%";
 			//! this.label17.Text = "％";
@@ -477,29 +476,29 @@ namespace freetrain.views.bank
 			// tl_loan5
 			// 
 			this.tl_loan5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_loan5.Location = new System.Drawing.Point(56, 81);
+			this.tl_loan5.Location = new System.Drawing.Point(76, 87);
 			this.tl_loan5.Name = "tl_loan5";
-			this.tl_loan5.Size = new System.Drawing.Size(40, 18);
+			this.tl_loan5.Size = new System.Drawing.Size(30, 20);
 			this.tl_loan5.TabIndex = 2;
 			this.tl_loan5.Text = "5";
-			this.tl_loan5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_loan5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label22
 			// 
-			this.label22.Location = new System.Drawing.Point(8, 8);
+			this.label22.Location = new System.Drawing.Point(8, 9);
 			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(40, 16);
+			this.label22.Size = new System.Drawing.Size(60, 21);
 			this.label22.TabIndex = 1;
-			this.label22.Text = "Deadline:";
+			this.label22.Text = "Deadline";
 			//! this.label22.Text = "期限：";
-			this.label22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// rb_loan3
 			// 
 			this.rb_loan3.Appearance = System.Windows.Forms.Appearance.Button;
-			this.rb_loan3.Location = new System.Drawing.Point(8, 56);
+			this.rb_loan3.Location = new System.Drawing.Point(8, 59);
 			this.rb_loan3.Name = "rb_loan3";
-			this.rb_loan3.Size = new System.Drawing.Size(40, 20);
+			this.rb_loan3.Size = new System.Drawing.Size(60, 23);
 			this.rb_loan3.TabIndex = 4;
 			this.rb_loan3.Text = "3 years";
 			//! this.rb_loan3.Text = "３年";
@@ -509,9 +508,9 @@ namespace freetrain.views.bank
 			// rb_loan5
 			// 
 			this.rb_loan5.Appearance = System.Windows.Forms.Appearance.Button;
-			this.rb_loan5.Location = new System.Drawing.Point(8, 80);
+			this.rb_loan5.Location = new System.Drawing.Point(8, 85);
 			this.rb_loan5.Name = "rb_loan5";
-			this.rb_loan5.Size = new System.Drawing.Size(40, 20);
+			this.rb_loan5.Size = new System.Drawing.Size(60, 23);
 			this.rb_loan5.TabIndex = 5;
 			this.rb_loan5.Text = "5 years";
 			//! this.rb_loan5.Text = "５年";
@@ -520,43 +519,43 @@ namespace freetrain.views.bank
 			// 
 			// pgRepay
 			// 
-			this.pgRepay.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				  this.list_repay,
-																				  this.btn_repay_set,
-																				  this.btn_repay_max,
-																				  this.tb_repay,
-																				  this.mlabel4,
-																				  this.label20});
+			this.pgRepay.Controls.Add(this.list_repay);
+			this.pgRepay.Controls.Add(this.btn_repay_set);
+			this.pgRepay.Controls.Add(this.btn_repay_max);
+			this.pgRepay.Controls.Add(this.tb_repay);
+			this.pgRepay.Controls.Add(this.mlabel4);
+			this.pgRepay.Controls.Add(this.label20);
 			this.pgRepay.Location = new System.Drawing.Point(4, 4);
 			this.pgRepay.Name = "pgRepay";
-			this.pgRepay.Size = new System.Drawing.Size(352, 247);
+			this.pgRepay.Size = new System.Drawing.Size(352, 255);
 			this.pgRepay.TabIndex = 3;
 			this.pgRepay.Text = "Repay";
 			//! this.pgRepay.Text = "返済";
 			// 
 			// list_repay
 			// 
-			this.list_repay.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.list_repay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.list_repay.FullRowSelect = true;
 			this.list_repay.GridLines = true;
 			this.list_repay.HideSelection = false;
-			this.list_repay.Location = new System.Drawing.Point(4, 43);
+			this.list_repay.Location = new System.Drawing.Point(4, 47);
 			this.list_repay.Name = "list_repay";
-			this.list_repay.Size = new System.Drawing.Size(344, 200);
+			this.list_repay.Size = new System.Drawing.Size(344, 201);
 			this.list_repay.TabIndex = 13;
+			this.list_repay.UseCompatibleStateImageBehavior = false;
 			this.list_repay.View = System.Windows.Forms.View.Details;
 			this.list_repay.SelectedIndexChanged += new System.EventHandler(this.list_repay_SelectedIndexChanged);
 			// 
 			// btn_repay_set
 			// 
-			this.btn_repay_set.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_repay_set.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_repay_set.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btn_repay_set.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btn_repay_set.Location = new System.Drawing.Point(304, 8);
+			this.btn_repay_set.Location = new System.Drawing.Point(304, 9);
 			this.btn_repay_set.Name = "btn_repay_set";
-			this.btn_repay_set.Size = new System.Drawing.Size(40, 24);
+			this.btn_repay_set.Size = new System.Drawing.Size(40, 26);
 			this.btn_repay_set.TabIndex = 12;
 			this.btn_repay_set.Text = "OK";
 			//! this.btn_repay_set.Text = "決定";
@@ -564,23 +563,22 @@ namespace freetrain.views.bank
 			// 
 			// btn_repay_max
 			// 
-			this.btn_repay_max.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_repay_max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_repay_max.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_repay_max.Location = new System.Drawing.Point(224, 8);
+			this.btn_repay_max.Location = new System.Drawing.Point(258, 9);
 			this.btn_repay_max.Name = "btn_repay_max";
-			this.btn_repay_max.Size = new System.Drawing.Size(40, 24);
+			this.btn_repay_max.Size = new System.Drawing.Size(40, 26);
 			this.btn_repay_max.TabIndex = 11;
-			this.btn_repay_max.Text = "MAX";
-			this.btn_repay_max.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.btn_repay_max.Text = "Max";
 			this.btn_repay_max.Click += new System.EventHandler(this.btn_repay_max_Click);
 			// 
 			// tb_repay
 			// 
-			this.tb_repay.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.tb_repay.Location = new System.Drawing.Point(56, 10);
+			this.tb_repay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.tb_repay.Location = new System.Drawing.Point(76, 11);
 			this.tb_repay.Name = "tb_repay";
-			this.tb_repay.Size = new System.Drawing.Size(120, 19);
+			this.tb_repay.Size = new System.Drawing.Size(136, 20);
 			this.tb_repay.TabIndex = 10;
 			this.tb_repay.Text = "0";
 			this.tb_repay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -588,78 +586,79 @@ namespace freetrain.views.bank
 			// 
 			// mlabel4
 			// 
-			this.mlabel4.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel4.Location = new System.Drawing.Point(176, 11);
+			this.mlabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel4.Location = new System.Drawing.Point(212, 12);
 			this.mlabel4.Name = "mlabel4";
-			this.mlabel4.Size = new System.Drawing.Size(44, 16);
+			this.mlabel4.Size = new System.Drawing.Size(33, 17);
 			this.mlabel4.TabIndex = 6;
 			this.mlabel4.Text = "thousand yen";
 			//! this.mlabel4.Text = "千円";
-			this.mlabel4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label20
 			// 
-			this.label20.Location = new System.Drawing.Point(8, 11);
+			this.label20.Location = new System.Drawing.Point(4, 12);
 			this.label20.Name = "label20";
-			this.label20.Size = new System.Drawing.Size(48, 16);
+			this.label20.Size = new System.Drawing.Size(66, 17);
 			this.label20.TabIndex = 7;
 			this.label20.Text = "Repayment:";
 			//! this.label20.Text = "返済額：";
-			this.label20.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// pgDeposit
 			// 
-			this.pgDeposit.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					this.list_deposit,
-																					this.btn_deposit_set,
-																					this.btn_deposit95,
-																					this.tb_deposit,
-																					this.mlabel5,
-																					this.label31,
-																					this.rb_deposit1,
-																					this.tl_deposit1,
-																					this.label23,
-																					this.label24,
-																					this.label25,
-																					this.tl_deposit3,
-																					this.label27,
-																					this.tl_deposit5,
-																					this.label29,
-																					this.rb_deposit3,
-																					this.rb_deposit5,
-																					this.label32,
-																					this.btn_deposit75,
-																					this.btn_deposit50,
-																					this.btn_deposit25});
+			this.pgDeposit.Controls.Add(this.tl_deposit5);
+			this.pgDeposit.Controls.Add(this.tl_deposit3);
+			this.pgDeposit.Controls.Add(this.list_deposit);
+			this.pgDeposit.Controls.Add(this.btn_deposit_set);
+			this.pgDeposit.Controls.Add(this.btn_deposit95);
+			this.pgDeposit.Controls.Add(this.tb_deposit);
+			this.pgDeposit.Controls.Add(this.mlabel5);
+			this.pgDeposit.Controls.Add(this.label31);
+			this.pgDeposit.Controls.Add(this.rb_deposit1);
+			this.pgDeposit.Controls.Add(this.tl_deposit1);
+			this.pgDeposit.Controls.Add(this.label23);
+			this.pgDeposit.Controls.Add(this.label24);
+			this.pgDeposit.Controls.Add(this.label25);
+			this.pgDeposit.Controls.Add(this.label27);
+			this.pgDeposit.Controls.Add(this.label29);
+			this.pgDeposit.Controls.Add(this.rb_deposit3);
+			this.pgDeposit.Controls.Add(this.rb_deposit5);
+			this.pgDeposit.Controls.Add(this.label32);
+			this.pgDeposit.Controls.Add(this.btn_deposit75);
+			this.pgDeposit.Controls.Add(this.btn_deposit50);
+			this.pgDeposit.Controls.Add(this.btn_deposit25);
 			this.pgDeposit.Location = new System.Drawing.Point(4, 4);
 			this.pgDeposit.Name = "pgDeposit";
-			this.pgDeposit.Size = new System.Drawing.Size(352, 247);
+			this.pgDeposit.Size = new System.Drawing.Size(352, 255);
 			this.pgDeposit.TabIndex = 2;
 			this.pgDeposit.Text = "Time deposit";
 			//! this.pgDeposit.Text = "定期預金";
 			// 
 			// list_deposit
 			// 
-			this.list_deposit.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.list_deposit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.list_deposit.FullRowSelect = true;
 			this.list_deposit.GridLines = true;
 			this.list_deposit.HideSelection = false;
-			this.list_deposit.Location = new System.Drawing.Point(4, 115);
+			this.list_deposit.Location = new System.Drawing.Point(4, 125);
 			this.list_deposit.Name = "list_deposit";
-			this.list_deposit.Size = new System.Drawing.Size(344, 128);
+			this.list_deposit.Size = new System.Drawing.Size(344, 123);
 			this.list_deposit.TabIndex = 23;
+			this.list_deposit.UseCompatibleStateImageBehavior = false;
 			this.list_deposit.View = System.Windows.Forms.View.Details;
 			// 
 			// btn_deposit_set
 			// 
-			this.btn_deposit_set.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_deposit_set.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_deposit_set.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btn_deposit_set.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btn_deposit_set.Location = new System.Drawing.Point(304, 80);
+			this.btn_deposit_set.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.btn_deposit_set.Location = new System.Drawing.Point(304, 87);
 			this.btn_deposit_set.Name = "btn_deposit_set";
-			this.btn_deposit_set.Size = new System.Drawing.Size(40, 24);
+			this.btn_deposit_set.Size = new System.Drawing.Size(40, 26);
 			this.btn_deposit_set.TabIndex = 22;
 			this.btn_deposit_set.Text = "OK";
 			//! this.btn_deposit_set.Text = "決定";
@@ -667,22 +666,22 @@ namespace freetrain.views.bank
 			// 
 			// btn_deposit95
 			// 
-			this.btn_deposit95.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_deposit95.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_deposit95.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_deposit95.Location = new System.Drawing.Point(208, 32);
+			this.btn_deposit95.Location = new System.Drawing.Point(190, 35);
 			this.btn_deposit95.Name = "btn_deposit95";
-			this.btn_deposit95.Size = new System.Drawing.Size(32, 20);
+			this.btn_deposit95.Size = new System.Drawing.Size(32, 21);
 			this.btn_deposit95.TabIndex = 18;
 			this.btn_deposit95.Text = "95%";
 			this.btn_deposit95.Click += new System.EventHandler(this.btn_deposit95_Click);
 			// 
 			// tb_deposit
 			// 
-			this.tb_deposit.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.tb_deposit.Location = new System.Drawing.Point(184, 8);
+			this.tb_deposit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.tb_deposit.Location = new System.Drawing.Point(190, 9);
 			this.tb_deposit.Name = "tb_deposit";
-			this.tb_deposit.Size = new System.Drawing.Size(120, 19);
+			this.tb_deposit.Size = new System.Drawing.Size(108, 20);
 			this.tb_deposit.TabIndex = 17;
 			this.tb_deposit.Text = "0";
 			this.tb_deposit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -690,33 +689,33 @@ namespace freetrain.views.bank
 			// 
 			// mlabel5
 			// 
-			this.mlabel5.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel5.Location = new System.Drawing.Point(304, 9);
+			this.mlabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel5.Location = new System.Drawing.Point(304, 10);
 			this.mlabel5.Name = "mlabel5";
-			this.mlabel5.Size = new System.Drawing.Size(44, 16);
+			this.mlabel5.Size = new System.Drawing.Size(44, 17);
 			this.mlabel5.TabIndex = 16;
 			this.mlabel5.Text = "thousand yen";
 			//! this.mlabel5.Text = "千円";
-			this.mlabel5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label31
 			// 
-			this.label31.Location = new System.Drawing.Point(136, 9);
+			this.label31.Location = new System.Drawing.Point(129, 10);
 			this.label31.Name = "label31";
-			this.label31.Size = new System.Drawing.Size(48, 16);
+			this.label31.Size = new System.Drawing.Size(55, 17);
 			this.label31.TabIndex = 17;
 			this.label31.Text = "Savings:";
 			//! this.label31.Text = "預入額：";
-			this.label31.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// rb_deposit1
 			// 
 			this.rb_deposit1.Appearance = System.Windows.Forms.Appearance.Button;
 			this.rb_deposit1.Checked = true;
 			this.rb_deposit1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.rb_deposit1.Location = new System.Drawing.Point(8, 32);
+			this.rb_deposit1.Location = new System.Drawing.Point(8, 33);
 			this.rb_deposit1.Name = "rb_deposit1";
-			this.rb_deposit1.Size = new System.Drawing.Size(40, 20);
+			this.rb_deposit1.Size = new System.Drawing.Size(60, 23);
 			this.rb_deposit1.TabIndex = 14;
 			this.rb_deposit1.TabStop = true;
 			this.rb_deposit1.Text = "1 year";
@@ -727,28 +726,28 @@ namespace freetrain.views.bank
 			// tl_deposit1
 			// 
 			this.tl_deposit1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_deposit1.Location = new System.Drawing.Point(56, 33);
+			this.tl_deposit1.Location = new System.Drawing.Point(76, 35);
 			this.tl_deposit1.Name = "tl_deposit1";
-			this.tl_deposit1.Size = new System.Drawing.Size(40, 18);
+			this.tl_deposit1.Size = new System.Drawing.Size(30, 19);
 			this.tl_deposit1.TabIndex = 11;
 			this.tl_deposit1.Text = "5";
-			this.tl_deposit1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_deposit1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label23
 			// 
-			this.label23.Location = new System.Drawing.Point(48, 8);
+			this.label23.Location = new System.Drawing.Point(73, 9);
 			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(64, 16);
+			this.label23.Size = new System.Drawing.Size(50, 21);
 			this.label23.TabIndex = 9;
-			this.label23.Text = "Interest:";
+			this.label23.Text = "Interest";
 			//! this.label23.Text = "預金利率：";
-			this.label23.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label24
 			// 
-			this.label24.Location = new System.Drawing.Point(96, 34);
+			this.label24.Location = new System.Drawing.Point(105, 36);
 			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(18, 16);
+			this.label24.Size = new System.Drawing.Size(18, 17);
 			this.label24.TabIndex = 5;
 			this.label24.Text = "%";
 			//! this.label24.Text = "％";
@@ -756,9 +755,9 @@ namespace freetrain.views.bank
 			// 
 			// label25
 			// 
-			this.label25.Location = new System.Drawing.Point(96, 58);
+			this.label25.Location = new System.Drawing.Point(105, 62);
 			this.label25.Name = "label25";
-			this.label25.Size = new System.Drawing.Size(18, 16);
+			this.label25.Size = new System.Drawing.Size(18, 17);
 			this.label25.TabIndex = 6;
 			this.label25.Text = "%";
 			//! this.label25.Text = "％";
@@ -767,18 +766,18 @@ namespace freetrain.views.bank
 			// tl_deposit3
 			// 
 			this.tl_deposit3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_deposit3.Location = new System.Drawing.Point(56, 57);
+			this.tl_deposit3.Location = new System.Drawing.Point(76, 61);
 			this.tl_deposit3.Name = "tl_deposit3";
-			this.tl_deposit3.Size = new System.Drawing.Size(40, 18);
+			this.tl_deposit3.Size = new System.Drawing.Size(30, 20);
 			this.tl_deposit3.TabIndex = 12;
 			this.tl_deposit3.Text = "5";
-			this.tl_deposit3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_deposit3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label27
 			// 
-			this.label27.Location = new System.Drawing.Point(96, 82);
+			this.label27.Location = new System.Drawing.Point(105, 88);
 			this.label27.Name = "label27";
-			this.label27.Size = new System.Drawing.Size(18, 16);
+			this.label27.Size = new System.Drawing.Size(18, 17);
 			this.label27.TabIndex = 7;
 			this.label27.Text = "%";
 			//! this.label27.Text = "％";
@@ -787,29 +786,29 @@ namespace freetrain.views.bank
 			// tl_deposit5
 			// 
 			this.tl_deposit5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_deposit5.Location = new System.Drawing.Point(56, 81);
+			this.tl_deposit5.Location = new System.Drawing.Point(76, 87);
 			this.tl_deposit5.Name = "tl_deposit5";
-			this.tl_deposit5.Size = new System.Drawing.Size(40, 18);
+			this.tl_deposit5.Size = new System.Drawing.Size(30, 20);
 			this.tl_deposit5.TabIndex = 10;
 			this.tl_deposit5.Text = "5";
-			this.tl_deposit5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_deposit5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label29
 			// 
-			this.label29.Location = new System.Drawing.Point(8, 8);
+			this.label29.Location = new System.Drawing.Point(8, 9);
 			this.label29.Name = "label29";
-			this.label29.Size = new System.Drawing.Size(40, 16);
+			this.label29.Size = new System.Drawing.Size(60, 21);
 			this.label29.TabIndex = 8;
-			this.label29.Text = "Maturity:";
+			this.label29.Text = "Maturity";
 			//! this.label29.Text = "満期：";
-			this.label29.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// rb_deposit3
 			// 
 			this.rb_deposit3.Appearance = System.Windows.Forms.Appearance.Button;
-			this.rb_deposit3.Location = new System.Drawing.Point(8, 56);
+			this.rb_deposit3.Location = new System.Drawing.Point(8, 59);
 			this.rb_deposit3.Name = "rb_deposit3";
-			this.rb_deposit3.Size = new System.Drawing.Size(40, 20);
+			this.rb_deposit3.Size = new System.Drawing.Size(60, 23);
 			this.rb_deposit3.TabIndex = 15;
 			this.rb_deposit3.Text = "3 years";
 			//! this.rb_deposit3.Text = "３年";
@@ -819,9 +818,9 @@ namespace freetrain.views.bank
 			// rb_deposit5
 			// 
 			this.rb_deposit5.Appearance = System.Windows.Forms.Appearance.Button;
-			this.rb_deposit5.Location = new System.Drawing.Point(8, 80);
+			this.rb_deposit5.Location = new System.Drawing.Point(8, 85);
 			this.rb_deposit5.Name = "rb_deposit5";
-			this.rb_deposit5.Size = new System.Drawing.Size(40, 20);
+			this.rb_deposit5.Size = new System.Drawing.Size(60, 23);
 			this.rb_deposit5.TabIndex = 16;
 			this.rb_deposit5.Text = "5 years";
 			//! this.rb_deposit5.Text = "５年";
@@ -830,75 +829,74 @@ namespace freetrain.views.bank
 			// 
 			// label32
 			// 
-			this.label32.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.label32.Location = new System.Drawing.Point(160, 32);
+			this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label32.Location = new System.Drawing.Point(129, 35);
 			this.label32.Name = "label32";
-			this.label32.Size = new System.Drawing.Size(48, 16);
+			this.label32.Size = new System.Drawing.Size(73, 21);
 			this.label32.TabIndex = 17;
 			this.label32.Text = "Equal funds";
 			//! this.label32.Text = "対資金";
 			//! Translator's comment: not sure about this expression
-			this.label32.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// btn_deposit75
 			// 
-			this.btn_deposit75.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_deposit75.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_deposit75.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_deposit75.Location = new System.Drawing.Point(240, 32);
+			this.btn_deposit75.Location = new System.Drawing.Point(228, 35);
 			this.btn_deposit75.Name = "btn_deposit75";
-			this.btn_deposit75.Size = new System.Drawing.Size(32, 20);
+			this.btn_deposit75.Size = new System.Drawing.Size(32, 21);
 			this.btn_deposit75.TabIndex = 19;
 			this.btn_deposit75.Text = "75%";
 			this.btn_deposit75.Click += new System.EventHandler(this.btn_deposit75_Click);
 			// 
 			// btn_deposit50
 			// 
-			this.btn_deposit50.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_deposit50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_deposit50.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_deposit50.Location = new System.Drawing.Point(272, 32);
+			this.btn_deposit50.Location = new System.Drawing.Point(266, 35);
 			this.btn_deposit50.Name = "btn_deposit50";
-			this.btn_deposit50.Size = new System.Drawing.Size(32, 20);
+			this.btn_deposit50.Size = new System.Drawing.Size(32, 21);
 			this.btn_deposit50.TabIndex = 20;
 			this.btn_deposit50.Text = "50%";
 			this.btn_deposit50.Click += new System.EventHandler(this.btn_deposit50_Click);
 			// 
 			// btn_deposit25
 			// 
-			this.btn_deposit25.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_deposit25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_deposit25.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_deposit25.Location = new System.Drawing.Point(304, 32);
+			this.btn_deposit25.Location = new System.Drawing.Point(304, 35);
 			this.btn_deposit25.Name = "btn_deposit25";
-			this.btn_deposit25.Size = new System.Drawing.Size(32, 20);
+			this.btn_deposit25.Size = new System.Drawing.Size(32, 21);
 			this.btn_deposit25.TabIndex = 21;
 			this.btn_deposit25.Text = "25%";
 			this.btn_deposit25.Click += new System.EventHandler(this.btn_deposit25_Click);
 			// 
 			// pgCancel
 			// 
-			this.pgCancel.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				   this.btn_cancel_maturity,
-																				   this.btn_cancel_now,
-																				   this.label33,
-																				   this.tl_intr_now,
-																				   this.mlabel6,
-																				   this.list_cancel,
-																				   this.mlabel7,
-																				   this.tl_intr_mature,
-																				   this.label38});
+			this.pgCancel.Controls.Add(this.tl_intr_now);
+			this.pgCancel.Controls.Add(this.btn_cancel_maturity);
+			this.pgCancel.Controls.Add(this.btn_cancel_now);
+			this.pgCancel.Controls.Add(this.label33);
+			this.pgCancel.Controls.Add(this.mlabel6);
+			this.pgCancel.Controls.Add(this.list_cancel);
+			this.pgCancel.Controls.Add(this.mlabel7);
+			this.pgCancel.Controls.Add(this.tl_intr_mature);
+			this.pgCancel.Controls.Add(this.label38);
 			this.pgCancel.Location = new System.Drawing.Point(4, 4);
 			this.pgCancel.Name = "pgCancel";
-			this.pgCancel.Size = new System.Drawing.Size(352, 247);
+			this.pgCancel.Size = new System.Drawing.Size(352, 255);
 			this.pgCancel.TabIndex = 4;
 			this.pgCancel.Text = "Cancel";
 			//! this.pgCancel.Text = "定期解約";
 			// 
 			// btn_cancel_maturity
 			// 
-			this.btn_cancel_maturity.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_cancel_maturity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_cancel_maturity.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_cancel_maturity.Location = new System.Drawing.Point(256, 31);
+			this.btn_cancel_maturity.Location = new System.Drawing.Point(244, 34);
 			this.btn_cancel_maturity.Name = "btn_cancel_maturity";
-			this.btn_cancel_maturity.Size = new System.Drawing.Size(80, 24);
+			this.btn_cancel_maturity.Size = new System.Drawing.Size(104, 26);
 			this.btn_cancel_maturity.TabIndex = 25;
 			this.btn_cancel_maturity.Text = "Cancel Maturity";
 			//! this.btn_cancel_maturity.Text = "満期日解約";
@@ -906,93 +904,94 @@ namespace freetrain.views.bank
 			// 
 			// btn_cancel_now
 			// 
-			this.btn_cancel_now.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.btn_cancel_now.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_cancel_now.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btn_cancel_now.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btn_cancel_now.Location = new System.Drawing.Point(256, 5);
+			this.btn_cancel_now.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.btn_cancel_now.Location = new System.Drawing.Point(244, 5);
 			this.btn_cancel_now.Name = "btn_cancel_now";
-			this.btn_cancel_now.Size = new System.Drawing.Size(80, 24);
+			this.btn_cancel_now.Size = new System.Drawing.Size(104, 26);
 			this.btn_cancel_now.TabIndex = 24;
-			this.btn_cancel_now.Text = "Cancel Nnow";
+			this.btn_cancel_now.Text = "Cancel Now";
 			//! this.btn_cancel_now.Text = "即日解約";
 			this.btn_cancel_now.Click += new System.EventHandler(this.btn_cancel_now_Click);
 			// 
 			// label33
 			// 
-			this.label33.Location = new System.Drawing.Point(8, 9);
+			this.label33.Location = new System.Drawing.Point(3, 10);
 			this.label33.Name = "label33";
-			this.label33.Size = new System.Drawing.Size(72, 16);
+			this.label33.Size = new System.Drawing.Size(93, 17);
 			this.label33.TabIndex = 22;
 			this.label33.Text = "Current Interest:";
 			//! this.label33.Text = "現在利息：";
-			this.label33.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tl_intr_now
 			// 
-			this.tl_intr_now.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.tl_intr_now.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.tl_intr_now.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_intr_now.Location = new System.Drawing.Point(80, 8);
+			this.tl_intr_now.Location = new System.Drawing.Point(94, 9);
 			this.tl_intr_now.Name = "tl_intr_now";
-			this.tl_intr_now.Size = new System.Drawing.Size(128, 18);
+			this.tl_intr_now.Size = new System.Drawing.Size(118, 18);
 			this.tl_intr_now.TabIndex = 23;
 			this.tl_intr_now.Text = "0";
 			this.tl_intr_now.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// mlabel6
 			// 
-			this.mlabel6.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel6.Location = new System.Drawing.Point(208, 9);
+			this.mlabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel6.Location = new System.Drawing.Point(212, 10);
 			this.mlabel6.Name = "mlabel6";
-			this.mlabel6.Size = new System.Drawing.Size(44, 16);
+			this.mlabel6.Size = new System.Drawing.Size(74, 17);
 			this.mlabel6.TabIndex = 21;
 			this.mlabel6.Text = "thousand yen";
 			//! this.mlabel6.Text = "千円";
-			this.mlabel6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// list_cancel
 			// 
-			this.list_cancel.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.list_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.list_cancel.FullRowSelect = true;
 			this.list_cancel.GridLines = true;
 			this.list_cancel.HideSelection = false;
-			this.list_cancel.Location = new System.Drawing.Point(4, 67);
+			this.list_cancel.Location = new System.Drawing.Point(4, 73);
 			this.list_cancel.Name = "list_cancel";
-			this.list_cancel.Size = new System.Drawing.Size(344, 176);
+			this.list_cancel.Size = new System.Drawing.Size(344, 175);
 			this.list_cancel.TabIndex = 26;
+			this.list_cancel.UseCompatibleStateImageBehavior = false;
 			this.list_cancel.View = System.Windows.Forms.View.Details;
 			this.list_cancel.SelectedIndexChanged += new System.EventHandler(this.list_cancel_SelectedIndexChanged);
 			// 
 			// mlabel7
 			// 
-			this.mlabel7.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel7.Location = new System.Drawing.Point(208, 35);
+			this.mlabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel7.Location = new System.Drawing.Point(212, 38);
 			this.mlabel7.Name = "mlabel7";
-			this.mlabel7.Size = new System.Drawing.Size(44, 16);
+			this.mlabel7.Size = new System.Drawing.Size(71, 17);
 			this.mlabel7.TabIndex = 21;
 			this.mlabel7.Text = "thousand yen";
 			//! this.mlabel7.Text = "千円";
-			this.mlabel7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// tl_intr_mature
 			// 
-			this.tl_intr_mature.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.tl_intr_mature.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.tl_intr_mature.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_intr_mature.Location = new System.Drawing.Point(80, 34);
+			this.tl_intr_mature.Location = new System.Drawing.Point(94, 37);
 			this.tl_intr_mature.Name = "tl_intr_mature";
-			this.tl_intr_mature.Size = new System.Drawing.Size(128, 18);
+			this.tl_intr_mature.Size = new System.Drawing.Size(118, 19);
 			this.tl_intr_mature.TabIndex = 23;
 			this.tl_intr_mature.Text = "0";
 			this.tl_intr_mature.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// label38
 			// 
-			this.label38.Location = new System.Drawing.Point(8, 35);
+			this.label38.Location = new System.Drawing.Point(8, 38);
 			this.label38.Name = "label38";
-			this.label38.Size = new System.Drawing.Size(72, 16);
+			this.label38.Size = new System.Drawing.Size(88, 17);
 			this.label38.TabIndex = 22;
 			this.label38.Text = "Maturity interest:";
 			//! this.label38.Text = "満期日利息：";
@@ -1000,75 +999,75 @@ namespace freetrain.views.bank
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(8, 0);
+			this.label5.Location = new System.Drawing.Point(8, 7);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(64, 16);
+			this.label5.Size = new System.Drawing.Size(64, 17);
 			this.label5.TabIndex = 8;
 			this.label5.Text = "Total funds:";
 			//! this.label5.Text = "資金総額：";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tl_tot_capital
 			// 
-			this.tl_tot_capital.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.tl_tot_capital.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.tl_tot_capital.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_tot_capital.Location = new System.Drawing.Point(80, -1);
+			this.tl_tot_capital.Location = new System.Drawing.Point(80, 7);
 			this.tl_tot_capital.Name = "tl_tot_capital";
-			this.tl_tot_capital.Size = new System.Drawing.Size(136, 18);
+			this.tl_tot_capital.Size = new System.Drawing.Size(136, 19);
 			this.tl_tot_capital.TabIndex = 9;
 			this.tl_tot_capital.Text = "500,000,000";
-			this.tl_tot_capital.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_tot_capital.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// mlabel1
 			// 
-			this.mlabel1.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel1.Location = new System.Drawing.Point(216, 0);
+			this.mlabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel1.Location = new System.Drawing.Point(216, 7);
 			this.mlabel1.Name = "mlabel1";
-			this.mlabel1.Size = new System.Drawing.Size(48, 16);
+			this.mlabel1.Size = new System.Drawing.Size(98, 17);
 			this.mlabel1.TabIndex = 7;
 			this.mlabel1.Text = "thousand yen";
 			//! this.mlabel1.Text = "千円";
-			this.mlabel1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(8, 25);
+			this.label2.Location = new System.Drawing.Point(8, 27);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(64, 16);
+			this.label2.Size = new System.Drawing.Size(64, 17);
 			this.label2.TabIndex = 11;
 			this.label2.Text = "Total debt:";
 			//! this.label2.Text = "負債総額：";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tl_tot_debt
 			// 
-			this.tl_tot_debt.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.tl_tot_debt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.tl_tot_debt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_tot_debt.Location = new System.Drawing.Point(80, 24);
+			this.tl_tot_debt.Location = new System.Drawing.Point(80, 26);
 			this.tl_tot_debt.Name = "tl_tot_debt";
-			this.tl_tot_debt.Size = new System.Drawing.Size(136, 18);
+			this.tl_tot_debt.Size = new System.Drawing.Size(136, 20);
 			this.tl_tot_debt.TabIndex = 12;
 			this.tl_tot_debt.Text = "500,000,000";
-			this.tl_tot_debt.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.tl_tot_debt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// mlabel8
 			// 
-			this.mlabel8.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.mlabel8.Location = new System.Drawing.Point(216, 25);
+			this.mlabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.mlabel8.Location = new System.Drawing.Point(216, 27);
 			this.mlabel8.Name = "mlabel8";
-			this.mlabel8.Size = new System.Drawing.Size(48, 16);
+			this.mlabel8.Size = new System.Drawing.Size(83, 17);
 			this.mlabel8.TabIndex = 10;
 			this.mlabel8.Text = "thousand yen";
 			//! this.mlabel8.Text = "千円";
-			this.mlabel8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			this.mlabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.pictureBox1.Image = ((System.Drawing.Bitmap)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(320, 8);
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(320, 9);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(32, 32);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1077,21 +1076,20 @@ namespace freetrain.views.bank
 			// 
 			// BankCounterForm
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(360, 325);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.pictureBox1,
-																		  this.label2,
-																		  this.tl_tot_debt,
-																		  this.mlabel8,
-																		  this.label5,
-																		  this.tl_tot_capital,
-																		  this.mlabel1,
-																		  this.tab_main});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(360, 333);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.tl_tot_debt);
+			this.Controls.Add(this.mlabel8);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.tl_tot_capital);
+			this.Controls.Add(this.mlabel1);
+			this.Controls.Add(this.tab_main);
+			this.MaximumSize = new System.Drawing.Size(480, 563);
 			this.MaximizeBox = false;
-			this.MaximumSize = new System.Drawing.Size(480, 520);
+			this.MinimumSize = new System.Drawing.Size(324, 260);
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(324, 240);
 			this.Name = "BankCounterForm";
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -1099,10 +1097,15 @@ namespace freetrain.views.bank
 			//! this.Text = "銀行窓口";
 			this.tab_main.ResumeLayout(false);
 			this.pgLoan.ResumeLayout(false);
+			this.pgLoan.PerformLayout();
 			this.pgRepay.ResumeLayout(false);
+			this.pgRepay.PerformLayout();
 			this.pgDeposit.ResumeLayout(false);
+			this.pgDeposit.PerformLayout();
 			this.pgCancel.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 		#endregion
