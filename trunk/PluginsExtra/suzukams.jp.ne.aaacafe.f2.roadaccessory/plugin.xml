@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-<title>HIMA道路アクセサリ</title>
-<author>暇</author>
+<title>HIMA road accessories</title>
+<author>Hima</author>
 <homepage></homepage>
 
-<!--道路アクセサリ-->
+<!--road accessories-->
 
 	<contribution type="picture" id="{0405292258}BBusSA">
 		<picture src="busstop01A.bmp">
@@ -46,7 +46,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}qw354361">
-		<name>バス停赤屋無A</name>
+		<name>Busstop red,noroof,A</name>
 		<sprite origin="0,0">
 		<picture ref="{0405292258}BBusSA"/>
 		 <spriteType name="colorMapped">
@@ -62,7 +62,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}qw354362">
-		<name>バス停赤屋無B</name>
+		<name>Busstop red,noroof,B</name>
 		<sprite origin="0,0">
 		<picture ref="{0405292258}BBusSB"/>
 		 <spriteType name="colorMapped">
@@ -78,7 +78,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}qw354363">
-		<name>バス停赤屋無C</name>
+		<name>Busstop red,noroof,C</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292258}BBusSC"/>
 		 <spriteType name="colorMapped">
@@ -93,7 +93,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}qw354365">
-		<name>バス停青屋無A</name>
+		<name>Busstop blue,noroof,A</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292258}BBusSA"/>
 		 <spriteType name="colorMapped">
@@ -108,7 +108,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}qw3543562">
-		<name>バス停青屋無B</name>
+		<name>Busstop blue,noroof,B</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292258}BBusSB"/>
 		 <spriteType name="colorMapped">
@@ -123,7 +123,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}qw3543563">
-		<name>バス停青屋無C</name>
+		<name>Busstop blue,noroof,C</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292258}BBusSC"/>
 		 <spriteType name="colorMapped">
@@ -137,7 +137,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}fdgj354365">
-		<name>バス停緑屋無A</name>
+		<name>Busstop green,noroof,A</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292258}BBusSA"/>
 		 <spriteType name="colorMapped">
@@ -153,7 +153,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}stj3543562">
-		<name>バス停緑屋無B</name>
+		<name>Busstop green,noroof,B</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292258}BBusSB"/>
 		 <spriteType name="colorMapped">
@@ -169,7 +169,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405292252}3yt3543563">
-		<name>バス停緑屋無C</name>
+		<name>Busstop green,noroof,C</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292258}BBusSC"/>
 		 <spriteType name="colorMapped">
@@ -182,12 +182,12 @@
 		</sprite>
 	</contribution>
 
-<!--屋根有バス停-->
+<!--Roofed busstop-->
 
 
 
 	<contribution type="roadAccessory" id="{0405300000}qw3453565">
-		<name>バス停赤屋有A</name>
+		<name>Busstop red,roofed,A</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSA"/>
 		 <spriteType name="colorMapped">
@@ -206,7 +206,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}qw7848562">
-		<name>バス停赤屋有B</name>
+		<name>Busstop red,roofed,B</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSB"/>
 		 <spriteType name="colorMapped">
@@ -223,7 +223,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}qw1734563">
-		<name>バス停赤屋有C</name>
+		<name>Busstop red,roofed,C</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSC"/>
 		 <spriteType name="colorMapped">
@@ -241,7 +241,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}qw3564565">
-		<name>バス停青屋有A</name>
+		<name>Busstop blue,roofed,A</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSA"/>
 		 <spriteType name="colorMapped">
@@ -259,7 +259,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}qw789662">
-		<name>バス停青屋有B</name>
+		<name>Busstop blue,roofed,B</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSB"/>
 		 <spriteType name="colorMapped">
@@ -276,7 +276,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}qw153563">
-		<name>バス停青屋有C</name>
+		<name>Busstop blue,roofed,C</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSC"/>
 		 <spriteType name="colorMapped">
@@ -292,7 +292,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}rtj3564565">
-		<name>バス停緑屋有A</name>
+		<name>Busstop green,roofed,A</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSA"/>
 		 <spriteType name="colorMapped">
@@ -311,7 +311,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}hgk789662">
-		<name>バス停緑屋有B</name>
+		<name>Busstop green,roofed,B</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSB"/>
 		 <spriteType name="colorMapped">
@@ -329,7 +329,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300000}te1545163">
-		<name>バス停緑屋有C</name>
+		<name>Busstop green,roofed,C</name>
 		<sprite origin="0,0">
 			<picture ref="{0405292357}ABusSC"/>
 		 <spriteType name="colorMapped">
@@ -344,10 +344,10 @@
 		</sprite>
 	</contribution>
 
-<!--屋根-->
+<!--Roof-->
 
 	<contribution type="roadAccessory" id="{0405300059}sshf513">
-		<name>屋根01A</name>
+		<name>Roof01A</name>
 		<sprite origin="0,0">
 		<picture src="Roof01A.bmp"/>
 
@@ -356,7 +356,7 @@
 	</contribution>
 
 	<contribution type="roadAccessory" id="{0405300059}sshf51533">
-		<name>屋根01B</name>
+		<name>Roof01B</name>
 		<sprite origin="0,0">
 		<picture src="Roof01B.bmp"/>
 
@@ -366,7 +366,7 @@
 
 
 	<contribution type="roadAccessory" id="{0405300120}sshf48653">
-		<name>屋根02</name>
+		<name>Roof02</name>
 		<sprite origin="0,0">
 		<picture src="Roof02.bmp"/>
 
