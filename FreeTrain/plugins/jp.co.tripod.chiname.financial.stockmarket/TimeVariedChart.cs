@@ -84,6 +84,7 @@ namespace freetrain.finance.stock
 																				 this.btnPlus,
 																				 this.label1});
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(128, 160);
 			this.panel1.TabIndex = 7;
@@ -93,45 +94,46 @@ namespace freetrain.finance.stock
 			this.timeChart.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 				| System.Windows.Forms.AnchorStyles.Left) 
 				| System.Windows.Forms.AnchorStyles.Right);
+			this.timeChart.Location = new System.Drawing.Point(0, 0);
 			this.timeChart.Name = "timeChart";
-			this.timeChart.Size = new System.Drawing.Size(124, 138);
+			this.timeChart.Size = new System.Drawing.Size(124, 134);
 			this.timeChart.TabIndex = 1;
 			// 
 			// btnMinus
 			// 
-			this.btnMinus.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left);
-			this.btnMinus.Location = new System.Drawing.Point(0, 140);
+			this.btnMinus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnMinus.Location = new System.Drawing.Point(0, 134);
 			this.btnMinus.Name = "btnMinus";
-			this.btnMinus.Size = new System.Drawing.Size(16, 16);
+			this.btnMinus.Size = new System.Drawing.Size(19, 22);
 			this.btnMinus.TabIndex = 3;
 			this.btnMinus.Text = "−";
 			this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
 			// 
 			// btnPlus
 			// 
-			this.btnPlus.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
-			this.btnPlus.Location = new System.Drawing.Point(108, 140);
+			this.btnPlus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnPlus.Location = new System.Drawing.Point(104, 134);
 			this.btnPlus.Name = "btnPlus";
-			this.btnPlus.Size = new System.Drawing.Size(16, 16);
+			this.btnPlus.Size = new System.Drawing.Size(20, 22);
 			this.btnPlus.TabIndex = 3;
-			this.btnPlus.Text = "＋";
+			this.btnPlus.Text = "+";
+			//this.btnPlus.Text = "＋";
 			this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
 			// 
 			// label1
 			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.label1.Location = new System.Drawing.Point(18, 140);
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.Location = new System.Drawing.Point(19, 137);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(88, 16);
+			this.label1.Size = new System.Drawing.Size(86, 16);
 			this.label1.TabIndex = 4;
 			this.label1.Text = "label1";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// TimeVariedChart
 			// 
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.panel1});
+			this.Controls.Add(this.panel1);
 			this.Name = "TimeVariedChart";
 			this.Size = new System.Drawing.Size(128, 160);
 			this.panel1.ResumeLayout(false);

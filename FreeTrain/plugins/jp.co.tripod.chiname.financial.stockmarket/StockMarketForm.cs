@@ -116,7 +116,7 @@ namespace freetrain.finance.stock
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(StockMarketForm));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockMarketForm));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.btnBuy = new System.Windows.Forms.Button();
@@ -150,48 +150,47 @@ namespace freetrain.finance.stock
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
 			// 
-			this.tabControl1.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
-			this.tabControl1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					  this.tabPage1,
-																					  this.tabPage2});
-			this.tabControl1.Location = new System.Drawing.Point(230, 101);
+			this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.tabControl1.Controls.Add(this.tabPage1);
+			this.tabControl1.Controls.Add(this.tabPage2);
+			this.tabControl1.Location = new System.Drawing.Point(418, 104);
 			this.tabControl1.Multiline = true;
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(192, 251);
+			this.tabControl1.Size = new System.Drawing.Size(242, 274);
 			this.tabControl1.TabIndex = 4;
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				   this.btnBuy,
-																				   this.label11,
-																				   this.tl_totStockBuy,
-																				   this.numberBuy,
-																				   this.label13,
-																				   this.label14,
-																				   this.tl_totCapital,
-																				   this.tl_totExpense,
-																				   this.tl_commitionBuy,
-																				   this.label18,
-																				   this.label19});
-			this.tabPage1.Location = new System.Drawing.Point(4, 21);
+			this.tabPage1.Controls.Add(this.btnBuy);
+			this.tabPage1.Controls.Add(this.label11);
+			this.tabPage1.Controls.Add(this.tl_totStockBuy);
+			this.tabPage1.Controls.Add(this.numberBuy);
+			this.tabPage1.Controls.Add(this.label13);
+			this.tabPage1.Controls.Add(this.label14);
+			this.tabPage1.Controls.Add(this.tl_totCapital);
+			this.tabPage1.Controls.Add(this.tl_totExpense);
+			this.tabPage1.Controls.Add(this.tl_commitionBuy);
+			this.tabPage1.Controls.Add(this.label18);
+			this.tabPage1.Controls.Add(this.label19);
+			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Size = new System.Drawing.Size(184, 226);
+			this.tabPage1.Size = new System.Drawing.Size(234, 248);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Buy";
 			//! this.tabPage1.Text = "購入";
 			// 
 			// btnBuy
 			// 
-			this.btnBuy.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btnBuy.Location = new System.Drawing.Point(96, 192);
+			this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.btnBuy.Location = new System.Drawing.Point(148, 210);
 			this.btnBuy.Name = "btnBuy";
-			this.btnBuy.Size = new System.Drawing.Size(80, 23);
+			this.btnBuy.Size = new System.Drawing.Size(80, 25);
 			this.btnBuy.TabIndex = 17;
 			this.btnBuy.Text = "Buy";
 			//! this.btnBuy.Text = "購入";
@@ -200,59 +199,59 @@ namespace freetrain.finance.stock
 			// label11
 			// 
 			this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label11.Location = new System.Drawing.Point(0, 76);
+			this.label11.Location = new System.Drawing.Point(4, 85);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(88, 16);
+			this.label11.Size = new System.Drawing.Size(116, 21);
 			this.label11.TabIndex = 14;
-			this.label11.Text = "Size of purchase (in hundred shares)";
+			this.label11.Text = "Purchase Size (100\'s)";
 			//! this.label11.Text = "購入数(百株)：";
-			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// tl_totStockBuy
 			// 
 			this.tl_totStockBuy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_totStockBuy.Location = new System.Drawing.Point(80, 8);
+			this.tl_totStockBuy.Location = new System.Drawing.Point(97, 11);
 			this.tl_totStockBuy.Name = "tl_totStockBuy";
-			this.tl_totStockBuy.Size = new System.Drawing.Size(96, 16);
+			this.tl_totStockBuy.Size = new System.Drawing.Size(131, 17);
 			this.tl_totStockBuy.TabIndex = 13;
 			this.tl_totStockBuy.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// numberBuy
 			// 
-			this.numberBuy.Location = new System.Drawing.Point(57, 56);
+			this.numberBuy.Location = new System.Drawing.Point(7, 63);
 			this.numberBuy.Name = "numberBuy";
 			this.numberBuy.number = 0;
-			this.numberBuy.Size = new System.Drawing.Size(120, 56);
+			this.numberBuy.Size = new System.Drawing.Size(225, 70);
 			this.numberBuy.TabIndex = 7;
 			// 
 			// label13
 			// 
 			this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label13.Location = new System.Drawing.Point(0, 8);
+			this.label13.Location = new System.Drawing.Point(4, 11);
 			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(80, 16);
+			this.label13.Size = new System.Drawing.Size(183, 17);
 			this.label13.TabIndex = 16;
-			this.label13.Text = "Number of held shares:";
+			this.label13.Text = "Shares held:";
 			//! this.label13.Text = "保有株数：";
-			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label14
 			// 
 			this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label14.Location = new System.Drawing.Point(0, 32);
+			this.label14.Location = new System.Drawing.Point(4, 37);
 			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(56, 16);
+			this.label14.Size = new System.Drawing.Size(56, 17);
 			this.label14.TabIndex = 15;
 			this.label14.Text = "Funds:";
 			//! this.label14.Text = "資金：";
-			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// tl_totCapital
 			// 
 			this.tl_totCapital.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_totCapital.Location = new System.Drawing.Point(56, 32);
+			this.tl_totCapital.Location = new System.Drawing.Point(97, 37);
 			this.tl_totCapital.Name = "tl_totCapital";
-			this.tl_totCapital.Size = new System.Drawing.Size(120, 16);
+			this.tl_totCapital.Size = new System.Drawing.Size(131, 17);
 			this.tl_totCapital.TabIndex = 9;
 			this.tl_totCapital.Text = "0";
 			this.tl_totCapital.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -260,62 +259,61 @@ namespace freetrain.finance.stock
 			// tl_totExpense
 			// 
 			this.tl_totExpense.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_totExpense.Location = new System.Drawing.Point(56, 168);
+			this.tl_totExpense.Location = new System.Drawing.Point(97, 184);
 			this.tl_totExpense.Name = "tl_totExpense";
-			this.tl_totExpense.Size = new System.Drawing.Size(120, 16);
+			this.tl_totExpense.Size = new System.Drawing.Size(131, 17);
 			this.tl_totExpense.TabIndex = 8;
 			this.tl_totExpense.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// tl_commitionBuy
 			// 
 			this.tl_commitionBuy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_commitionBuy.Location = new System.Drawing.Point(64, 144);
+			this.tl_commitionBuy.Location = new System.Drawing.Point(97, 158);
 			this.tl_commitionBuy.Name = "tl_commitionBuy";
-			this.tl_commitionBuy.Size = new System.Drawing.Size(112, 16);
+			this.tl_commitionBuy.Size = new System.Drawing.Size(131, 17);
 			this.tl_commitionBuy.TabIndex = 12;
 			this.tl_commitionBuy.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// label18
 			// 
 			this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label18.Location = new System.Drawing.Point(16, 144);
+			this.label18.Location = new System.Drawing.Point(4, 158);
 			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(48, 16);
+			this.label18.Size = new System.Drawing.Size(143, 17);
 			this.label18.TabIndex = 11;
 			this.label18.Text = "Commission:";
 			//! this.label18.Text = "手数料：";
-			this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label19
 			// 
 			this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label19.Location = new System.Drawing.Point(16, 168);
+			this.label19.Location = new System.Drawing.Point(4, 184);
 			this.label19.Name = "label19";
-			this.label19.Size = new System.Drawing.Size(40, 16);
+			this.label19.Size = new System.Drawing.Size(183, 17);
 			this.label19.TabIndex = 10;
 			this.label19.Text = "Payment:";
 			//! this.label19.Text = "支払：";
-			this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				   this.tl_totIncom,
-																				   this.label2,
-																				   this.label6,
-																				   this.numberSell,
-																				   this.btnSell,
-																				   this.tl_totStockSell,
-																				   this.label3,
-																				   this.label4,
-																				   this.tl_priceBought,
-																				   this.tl_benefit,
-																				   this.tl_commitionSell,
-																				   this.label9,
-																				   this.label10});
-			this.tabPage2.Location = new System.Drawing.Point(4, 21);
+			this.tabPage2.Controls.Add(this.tl_priceBought);
+			this.tabPage2.Controls.Add(this.tl_totIncom);
+			this.tabPage2.Controls.Add(this.label2);
+			this.tabPage2.Controls.Add(this.label6);
+			this.tabPage2.Controls.Add(this.numberSell);
+			this.tabPage2.Controls.Add(this.btnSell);
+			this.tabPage2.Controls.Add(this.tl_totStockSell);
+			this.tabPage2.Controls.Add(this.label3);
+			this.tabPage2.Controls.Add(this.label4);
+			this.tabPage2.Controls.Add(this.tl_benefit);
+			this.tabPage2.Controls.Add(this.tl_commitionSell);
+			this.tabPage2.Controls.Add(this.label9);
+			this.tabPage2.Controls.Add(this.label10);
+			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Size = new System.Drawing.Size(184, 226);
+			this.tabPage2.Size = new System.Drawing.Size(234, 248);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Sell";
 			//! this.tabPage2.Text = "売却";
@@ -323,48 +321,48 @@ namespace freetrain.finance.stock
 			// tl_totIncom
 			// 
 			this.tl_totIncom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_totIncom.Location = new System.Drawing.Point(56, 168);
+			this.tl_totIncom.Location = new System.Drawing.Point(97, 184);
 			this.tl_totIncom.Name = "tl_totIncom";
-			this.tl_totIncom.Size = new System.Drawing.Size(120, 16);
+			this.tl_totIncom.Size = new System.Drawing.Size(131, 17);
 			this.tl_totIncom.TabIndex = 18;
 			this.tl_totIncom.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// label2
 			// 
 			this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label2.Location = new System.Drawing.Point(8, 168);
+			this.label2.Location = new System.Drawing.Point(4, 184);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(48, 16);
+			this.label2.Size = new System.Drawing.Size(83, 17);
 			this.label2.TabIndex = 17;
 			this.label2.Text = "Income:";
 			//! this.label2.Text = "収入：";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label6
 			// 
 			this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label6.Location = new System.Drawing.Point(0, 76);
+			this.label6.Location = new System.Drawing.Point(4, 85);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(88, 16);
+			this.label6.Size = new System.Drawing.Size(108, 21);
 			this.label6.TabIndex = 16;
-			this.label6.Text = "Size of sale (in hundred shares)";
+			this.label6.Text = "Size of sale (100\'s)";
 			//! this.label6.Text = "売却数(百株)：";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// numberSell
 			// 
-			this.numberSell.Location = new System.Drawing.Point(57, 56);
+			this.numberSell.Location = new System.Drawing.Point(7, 63);
 			this.numberSell.Name = "numberSell";
 			this.numberSell.number = 0;
-			this.numberSell.Size = new System.Drawing.Size(120, 56);
+			this.numberSell.Size = new System.Drawing.Size(225, 70);
 			this.numberSell.TabIndex = 15;
 			// 
 			// btnSell
 			// 
-			this.btnSell.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btnSell.Location = new System.Drawing.Point(96, 192);
+			this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.btnSell.Location = new System.Drawing.Point(148, 210);
 			this.btnSell.Name = "btnSell";
-			this.btnSell.Size = new System.Drawing.Size(80, 23);
+			this.btnSell.Size = new System.Drawing.Size(80, 25);
 			this.btnSell.TabIndex = 6;
 			this.btnSell.Text = "Sell";
 			//! this.btnSell.Text = "売却";
@@ -373,113 +371,115 @@ namespace freetrain.finance.stock
 			// tl_totStockSell
 			// 
 			this.tl_totStockSell.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_totStockSell.Location = new System.Drawing.Point(80, 8);
+			this.tl_totStockSell.Location = new System.Drawing.Point(97, 11);
 			this.tl_totStockSell.Name = "tl_totStockSell";
-			this.tl_totStockSell.Size = new System.Drawing.Size(96, 16);
+			this.tl_totStockSell.Size = new System.Drawing.Size(131, 17);
 			this.tl_totStockSell.TabIndex = 5;
 			this.tl_totStockSell.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// label3
 			// 
 			this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label3.Location = new System.Drawing.Point(0, 8);
+			this.label3.Location = new System.Drawing.Point(4, 11);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(80, 16);
+			this.label3.Size = new System.Drawing.Size(183, 17);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "Number of held shares:";
+			this.label3.Text = "Shares held:";
 			//! this.label3.Text = "保有株数：";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label4
 			// 
 			this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label4.Location = new System.Drawing.Point(0, 32);
+			this.label4.Location = new System.Drawing.Point(4, 37);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(80, 16);
+			this.label4.Size = new System.Drawing.Size(133, 17);
 			this.label4.TabIndex = 5;
-			this.label4.Text = "Purchase price per share";
+			this.label4.Text = "Price per Share:";
 			//! this.label4.Text = "購入額／株：";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// tl_priceBought
 			// 
 			this.tl_priceBought.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_priceBought.Location = new System.Drawing.Point(80, 32);
+			this.tl_priceBought.Location = new System.Drawing.Point(97, 37);
 			this.tl_priceBought.Name = "tl_priceBought";
-			this.tl_priceBought.Size = new System.Drawing.Size(96, 16);
+			this.tl_priceBought.Size = new System.Drawing.Size(131, 17);
 			this.tl_priceBought.TabIndex = 5;
 			this.tl_priceBought.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// tl_benefit
 			// 
 			this.tl_benefit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_benefit.Location = new System.Drawing.Point(64, 120);
+			this.tl_benefit.Location = new System.Drawing.Point(97, 136);
 			this.tl_benefit.Name = "tl_benefit";
-			this.tl_benefit.Size = new System.Drawing.Size(112, 16);
+			this.tl_benefit.Size = new System.Drawing.Size(132, 17);
 			this.tl_benefit.TabIndex = 5;
 			this.tl_benefit.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// tl_commitionSell
 			// 
 			this.tl_commitionSell.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_commitionSell.Location = new System.Drawing.Point(64, 144);
+			this.tl_commitionSell.Location = new System.Drawing.Point(97, 158);
 			this.tl_commitionSell.Name = "tl_commitionSell";
-			this.tl_commitionSell.Size = new System.Drawing.Size(112, 16);
+			this.tl_commitionSell.Size = new System.Drawing.Size(132, 17);
 			this.tl_commitionSell.TabIndex = 5;
 			this.tl_commitionSell.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// label9
 			// 
 			this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label9.Location = new System.Drawing.Point(8, 144);
+			this.label9.Location = new System.Drawing.Point(4, 158);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(56, 16);
+			this.label9.Size = new System.Drawing.Size(91, 17);
 			this.label9.TabIndex = 5;
 			this.label9.Text = "Commission:";
 			//! this.label9.Text = "手数料：";
-			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label10
 			// 
 			this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label10.Location = new System.Drawing.Point(0, 120);
+			this.label10.Location = new System.Drawing.Point(4, 136);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(64, 16);
+			this.label10.Size = new System.Drawing.Size(91, 17);
 			this.label10.TabIndex = 5;
 			this.label10.Text = "Profit per share:";
 			//! this.label10.Text = "利益／株：";
-			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// listview
 			// 
-			this.listview.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.listview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.listview.FullRowSelect = true;
 			this.listview.GridLines = true;
 			this.listview.HideSelection = false;
+			this.listview.Location = new System.Drawing.Point(0, 0);
 			this.listview.MultiSelect = false;
 			this.listview.Name = "listview";
-			this.listview.Size = new System.Drawing.Size(424, 96);
+			this.listview.Size = new System.Drawing.Size(662, 99);
 			this.listview.TabIndex = 5;
+			this.listview.UseCompatibleStateImageBehavior = false;
 			this.listview.View = System.Windows.Forms.View.Details;
 			this.listview.SelectedIndexChanged += new System.EventHandler(this.listview_SelectedIndexChanged);
 			// 
 			// chart
 			// 
-			this.chart.Anchor = ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.chart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.chart.BackColor = System.Drawing.SystemColors.Control;
-			this.chart.Location = new System.Drawing.Point(0, 101);
+			this.chart.Location = new System.Drawing.Point(0, 104);
 			this.chart.Name = "chart";
-			this.chart.Size = new System.Drawing.Size(224, 251);
+			this.chart.Size = new System.Drawing.Size(412, 272);
 			this.chart.TabIndex = 6;
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left);
-			this.pictureBox1.Image = ((System.Drawing.Bitmap)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(2, 355);
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(2, 380);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(64, 16);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -488,16 +488,15 @@ namespace freetrain.finance.stock
 			// 
 			// StockMarketForm
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(424, 373);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.pictureBox1,
-																		  this.chart,
-																		  this.listview,
-																		  this.tabControl1});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(662, 399);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.chart);
+			this.Controls.Add(this.listview);
+			this.Controls.Add(this.tabControl1);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(344, 400);
+			this.MinimumSize = new System.Drawing.Size(344, 433);
 			this.Name = "StockMarketForm";
 			this.ShowInTaskbar = false;
 			this.Text = "Stock Market";
@@ -506,7 +505,9 @@ namespace freetrain.finance.stock
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 		#endregion

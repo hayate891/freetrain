@@ -70,26 +70,27 @@ namespace freetrain.finance.stock
 			// 
 			// listview
 			// 
-			this.listview.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
+			this.listview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Left)
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.listview.FullRowSelect = true;
 			this.listview.GridLines = true;
 			this.listview.HideSelection = false;
 			this.listview.Location = new System.Drawing.Point(2, 0);
 			this.listview.MultiSelect = false;
 			this.listview.Name = "listview";
-			this.listview.Size = new System.Drawing.Size(470, 200);
+			this.listview.Size = new System.Drawing.Size(454, 212);
 			this.listview.TabIndex = 3;
+			this.listview.UseCompatibleStateImageBehavior = false;
 			this.listview.View = System.Windows.Forms.View.Details;
 			this.listview.SelectedIndexChanged += new System.EventHandler(this.listview_SelectedIndexChanged);
 			// 
 			// btn_counter
 			// 
-			this.btn_counter.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.btn_counter.Location = new System.Drawing.Point(544, 3);
+			this.btn_counter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_counter.Location = new System.Drawing.Point(530, 3);
 			this.btn_counter.Name = "btn_counter";
-			this.btn_counter.Size = new System.Drawing.Size(72, 23);
+			this.btn_counter.Size = new System.Drawing.Size(115, 25);
 			this.btn_counter.TabIndex = 5;
 			this.btn_counter.Text = "Business Counter";
 			//! this.btn_counter.Text = "取引窓口";
@@ -97,34 +98,33 @@ namespace freetrain.finance.stock
 			// 
 			// tl_status
 			// 
-			this.tl_status.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
+			this.tl_status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.tl_status.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.tl_status.Location = new System.Drawing.Point(480, 3);
+			this.tl_status.Location = new System.Drawing.Point(462, 3);
 			this.tl_status.Name = "tl_status";
-			this.tl_status.Size = new System.Drawing.Size(56, 23);
+			this.tl_status.Size = new System.Drawing.Size(62, 25);
 			this.tl_status.TabIndex = 6;
 			this.tl_status.Text = "label2";
 			this.tl_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// chart
 			// 
-			this.chart.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.chart.Location = new System.Drawing.Point(480, 32);
+			this.chart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+				| System.Windows.Forms.AnchorStyles.Right)));
+			this.chart.Location = new System.Drawing.Point(462, 35);
 			this.chart.Name = "chart";
-			this.chart.Size = new System.Drawing.Size(136, 168);
+			this.chart.Size = new System.Drawing.Size(183, 177);
 			this.chart.TabIndex = 7;
 			// 
 			// StocksWindow
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(624, 205);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.chart,
-																		  this.tl_status,
-																		  this.btn_counter,
-																		  this.listview});
-			this.MinimumSize = new System.Drawing.Size(336, 232);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(653, 217);
+			this.Controls.Add(this.chart);
+			this.Controls.Add(this.tl_status);
+			this.Controls.Add(this.btn_counter);
+			this.Controls.Add(this.listview);
+			this.MinimumSize = new System.Drawing.Size(336, 251);
 			this.Name = "StocksWindow";
 			this.Text = "Stock Portfolio";
 			//! this.Text = "所有株式一覧";
