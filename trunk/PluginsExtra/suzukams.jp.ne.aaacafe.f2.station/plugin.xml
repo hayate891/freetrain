@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>HIMA駅舎</title>
-	<author>暇</author>
+	<title>HIMA Station Buildings.</title>
+	<author>Hima</author>
 	<homepage></homepage>
 	
 	<contribution type="station" id="{0405292143}l3574341">
-		<name>小駅用駅舎01</name>
+		<name>Small station building 01</name>
 		<price>700</price>
 		<operationCost>120</operationCost>
 		<size>1,1</size>
@@ -16,7 +16,7 @@
 	</contribution>
 
 	<contribution type="station" id="{0405292143}u373241">
-		<name>小駅用駅舎01</name>
+		<name>Small station building 01</name>
 		<price>700</price>
 		<operationCost>120</operationCost>
 		<size>1,1</size>
@@ -27,7 +27,7 @@
 	</contribution>
 
 	<contribution type="station" id="{0405292143}r6732421">
-		<name>小駅用駅舎01</name>
+		<name>Small station building 01</name>
 		<price>700</price>
 		<operationCost>120</operationCost>
 		<size>1,1</size>
@@ -38,7 +38,7 @@
 	</contribution>
 
 	<contribution type="station" id="{0405292143}w57341">
-		<name>小駅用駅舎01</name>
+		<name>Small station building 01</name>
 		<price>700</price>
 		<operationCost>120</operationCost>
 		<size>1,1</size>
