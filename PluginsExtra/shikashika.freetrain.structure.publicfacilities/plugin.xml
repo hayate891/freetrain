@@ -212,10 +212,10 @@
 '>
 
 <!ENTITY component_shintoshrine_001 '
-	<group>宗教施設</group>
-	<name>神社(3x3)</name>
+	<group>Religious Institutions</group>
+	<name>Shinto shrine(3x3)</name>
 	<structure>
-		<category byname="宗教施設"/>
+		<category byname="Religious Institutions"/>
 	</structure>
 	<price>1000</price>
 	<size>3,3</size>
@@ -233,10 +233,10 @@
 	</population>
 '>
 <!ENTITY component_shintoshrine_002 '
-	<group>宗教施設</group>
-	<name>神社(1x1)</name>
+	<group>Religious Institutions</group>
+	<name>Shinto shrine(1x1)</name>
 	<structure>
-		<category byname="宗教施設"/>
+		<category byname="Religious Institutions"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -254,10 +254,10 @@
 	</population>
 '>
 <!ENTITY component_postoffice_001 '
-	<group>郵便局</group>
-	<name>郵便局(1x1)</name>
+	<group>Post Offices</group>
+	<name>Post Offices(1x1)</name>
 	<structure>
-		<category byname="郵便局"/>
+		<category byname="Post Offices"/>
 	</structure>
 	<price>800</price>
 	<size>1,1</size>
@@ -276,10 +276,10 @@
 '>
 
 <!ENTITY component_villageoffice_001 '
-	<group>役所</group>
-	<name>村役場(1x1)</name>
+	<group>Public Offices</group>
+	<name>Village Office(1x1)</name>
 	<structure>
-		<category byname="役所"/>
+		<category byname="Public Offices"/>
 	</structure>
 	<price>200000</price>
 	<size>1,1</size>
@@ -299,10 +299,10 @@
 '>
 
 <!ENTITY component_townoffice_001 '
-	<group>役所</group>
-	<name>町役場(1x2)</name>
+	<group>Public Offices</group>
+	<name>Town hall(1x2)</name>
 	<structure>
-		<category byname="役所"/>
+		<category byname="Public Offices"/>
 	</structure>
 	<price>400000</price>
 	<size>1,2</size>
@@ -322,10 +322,10 @@
 '>
 
 <!ENTITY component_cityoffice_001 '
-	<group>役所</group>
-	<name>市役所(2x2)</name>
+	<group>Public Offices</group>
+	<name>City hall(2x2)</name>
 	<structure>
-		<category byname="役所"/>
+		<category byname="Public Offices"/>
 	</structure>
 	<price>1000000</price>
 	<size>2,2</size>
@@ -345,10 +345,10 @@
 '>
 
 <!ENTITY component_prefecturaloffice_001 '
-	<group>役所</group>
-	<name>都道府県庁(3x7)</name>
+	<group>Public Offices</group>
+	<name>Prefectural government office(3x7)</name>
 	<structure>
-		<category byname="役所"/>
+		<category byname="Public Offices"/>
 	</structure>
 	<price>156900000</price>
 	<size>3,7</size>
@@ -368,10 +368,10 @@
 '>
 
 <!ENTITY component_prefecturaloffice_002 '
-	<group>役所</group>
-	<name>都道府県庁(3x7)</name>
+	<group>Public Offices</group>
+	<name>Prefectural government office(3x7)</name>
 	<structure>
-		<category byname="役所"/>
+		<category byname="Public Offices"/>
 	</structure>
 	<price>110000000</price>
 	<size>3,7</size>
@@ -394,14 +394,14 @@
 
 <plug-in>
 
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-<title>建物(公共)</title>
+<title>Buildings(Public Facilities)</title>
 
-<!-- 神社 -->
+<!-- Shinto shrine -->
 
-<!-- 神社(3x3) -->
+<!-- Shinto shrine(3x3) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-shrine-shinto-shintoshrine-01}">
 	<picture  src="shintoshrine_01spring.bmp">
 		<override when="spring" src="shintoshrine_01spring.bmp"/>
@@ -411,10 +411,10 @@
 	</picture>
 </contribution>
 
-<!-- 神社(3x3) -->
+<!-- Shinto shrine(3x3) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-shrine-shinto-shintoshrine01}">
 &component_shintoshrine_001;
-	<design>神社</design>
+	<design>Shinto shrine</design>
 	<spriteType name="hueTransform">
 		<map  from="*,0,0"  to="222,87,57"/>
 	</spriteType>
@@ -437,17 +437,17 @@
 </contribution>
 
 
-<!-- 神社(1x1) -->
+<!-- Shinto shrine(1x1) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-shrine-shinto-shintoshrine-02}">
 	<picture  src="shintoshrine_02.bmp">
 		<override when="night" src="shintoshrine_02n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 神社(1x1) -->
+<!-- Shinto shrine(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-shrine-shinto-shintoshrine02a}">
 &component_shintoshrine_002;
-	<design>神社(朱塗り)</design>
+	<design>Shinto shrine(red painted)</design>
 
 	<sprite origin="0,0" offset="16">
 		<picture ref="{FreeTrain-Shika-picture-structure-shrine-shinto-shintoshrine-02}"/>
@@ -463,10 +463,10 @@
 	</sprite>
 </contribution>
 
-<!-- 神社(1x1) -->
+<!-- Shinto shrine(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-shrine-shinto-shintoshrine02b}">
 &component_shintoshrine_002;
-	<design>神社(木造)</design>
+	<design>Shinto shrine(wooden)</design>
 
 	<sprite origin="0,32" offset="16">
 		<picture ref="{FreeTrain-Shika-picture-structure-shrine-shinto-shintoshrine-02}"/>
@@ -483,19 +483,19 @@
 </contribution>
 
 
-<!-- 郵便局 -->
+<!-- Post Offices -->
 
-<!-- 郵便局(1x1) -->
+<!-- Post Offices(1x1) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-publicfacilities-postoffice-01}">
 	<picture  src="postoffice_01.bmp">
 		<override when="night" src="postoffice_01n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 郵便局(1x1) -->
+<!-- Post Offices(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicfacilities-postoffice01a}">
 &component_postoffice_001;
-	<design>郵便局(2階)A</design>
+	<design>Post Offices(2floor)A</design>
 	&wall-greyyellow;
 	&wall-warmbrown;
 	&wall-greywarmbrown;
@@ -517,10 +517,10 @@
 	</sprite>
 </contribution>
 
-<!-- 郵便局(1x1) -->
+<!-- Post Offices(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicfacilities-postoffice01b}">
 &component_postoffice_001;
-	<design>郵便局(2階)B</design>
+	<design>Post Offices(2floor)B</design>
 	&wall-greyyellow;
 	&wall-warmbrown;
 	&wall-greywarmbrown;
@@ -542,10 +542,10 @@
 	</sprite>
 </contribution>
 
-<!-- 郵便局(1x1) -->
+<!-- Post Offices(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicfacilities-postoffice01c}">
 &component_postoffice_001;
-	<design>郵便局(3階)A</design>
+	<design>Post Offices(3floor)A</design>
 	&wall-greyyellow;
 	&wall-warmbrown;
 	&wall-greywarmbrown;
@@ -567,10 +567,10 @@
 	</sprite>
 </contribution>
 
-<!-- 郵便局(1x1) -->
+<!-- Post Offices(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicfacilities-postoffice01d}">
 &component_postoffice_001;
-	<design>郵便局(3階)B</design>
+	<design>Post Offices(3floor)B</design>
 	&wall-greyyellow;
 	&wall-warmbrown;
 	&wall-greywarmbrown;
@@ -593,19 +593,19 @@
 </contribution>
 
 
-<!-- 役所 -->
+<!-- Public Offices -->
 
-<!-- 村役場(1x1) -->
+<!-- Village Office(1x1) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-publicoffice-villageoffice-01}">
 	<picture  src="villageoffice_01.bmp">
 		<override when="night" src="villageoffice_01n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 村役場(1x1) -->
+<!-- Village Office(1x1) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-villageoffice01a}">
 &component_villageoffice_001;
-	<design>村役場(木造1階)A</design>
+	<design>Village Office(wooden,1floor)A</design>
 	&wall-wood010;
 	&wall-wood009;
 	&wall-wood007;
@@ -629,7 +629,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-villageoffice01b}">
 &component_villageoffice_001;
-	<design>村役場(木造1階)B</design>
+	<design>Village Office(wooden,1floor)B</design>
 	&wall-wood010;
 	&wall-wood009;
 	&wall-wood006;
@@ -653,7 +653,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-villageoffice01c}">
 &component_villageoffice_001;
-	<design>村役場(鉄筋2階)A</design>
+	<design>Village Office(reinforced,2floor)A</design>
 	&wall-lightgrayishpink;
 	&wall-palegrayishpink;
 	&wall-lightyelloworange;
@@ -677,7 +677,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-villageoffice01d}">
 &component_villageoffice_001;
-	<design>村役場(鉄筋2階)B</design>
+	<design>Village Office(reinforced,2floor)B</design>
 	&wall-lightredbrick;
 	&wall-palesky;
 	&wall-redbrick;
@@ -699,17 +699,17 @@
 	</sprite>
 </contribution>
 
-<!-- 町役場(1x2) -->
+<!-- Town hall(1x2) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-publicoffice-townoffice-01}">
 	<picture  src="townoffice_01.bmp">
 		<override when="night" src="townoffice_01n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 町役場(1x2) -->
+<!-- Town hall(1x2) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-townoffice01a}">
 &component_townoffice_001;
-	<design>町役場A</design>
+	<design>Town hall A</design>
 	&wall-palegrayishpink;
 	&wall-redbrick;
 	&wall-urbanstone;
@@ -733,7 +733,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-townoffice01b}">
 &component_townoffice_001;
-	<design>町役場B</design>
+	<design>Town hall B</design>
 	&wall-palesky;
 	&wall-pastelgray;
 	&wall-greywarmbrown;
@@ -755,17 +755,17 @@
 	</sprite>
 </contribution>
 
-<!-- 市役所(2x2) -->
+<!-- City hall(2x2) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-publicoffice-cityoffice-01}">
 	<picture  src="cityoffice_01.bmp">
 		<override when="night" src="cityoffice_01n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 市役所(2x2) -->
+<!-- City hall(2x2) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-cityoffice01a}">
 &component_cityoffice_001;
-	<design>市役所A</design>
+	<design>City hall A</design>
 	&ta-white;
 	&wall-brownbeige;
 	&wall-darkbrown;
@@ -789,7 +789,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-cityoffice01b}">
 &component_cityoffice_001;
-	<design>市役所B</design>
+	<design>City hall B</design>
 	&wall-lightgrayishblue;
 	&wall-grayishbrown;
 	&wall-brownbeige;
@@ -811,7 +811,7 @@
 	</sprite>
 </contribution>
 
-<!-- 都道府県庁(7x3) -->
+<!-- Prefectural government office(7x3) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-publicoffice-prefecturaloffice-01}">
 	<picture  src="prefecturaloffice_01.bmp">
 		<override when="night" src="prefecturaloffice_01n.bmp"/>
@@ -823,10 +823,10 @@
 	</picture>
 </contribution>
 
-<!-- 都道府県庁(7x3) -->
+<!-- Prefectural government office(7x3) -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-prefecturaloffice01}">
 &component_prefecturaloffice_001;
-	<design>都庁第一本庁舎</design>
+	<design>Tokyo government office 1st building</design>
 
 	<sprite origin="0,0" offset="288">
 		<picture ref="{FreeTrain-Shika-picture-structure-publicoffice-prefecturaloffice-01}"/>
@@ -843,7 +843,7 @@
 </contribution>
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-publicoffice-prefecturaloffice02}">
 &component_prefecturaloffice_002;
-	<design>都庁第二庁舎</design>
+	<design>Tokyo government office 2nd building</design>
 
 	<sprite origin="0,0" offset="176">
 		<picture ref="{FreeTrain-Shika-picture-structure-publicoffice-prefecturaloffice-02}"/>

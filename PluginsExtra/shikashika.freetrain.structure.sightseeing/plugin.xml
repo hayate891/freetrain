@@ -49,27 +49,27 @@
 
 <plug-in>
 
-<author>しかしか</author>
+<author>Sihkashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-<title>建物(観光)</title>
+<title>Buildings(Tourism)</title>
 
-<!-- 神社 -->
+<!-- Shinto shrine -->
 
-<!-- 厳島神社 -->
+<!-- Itsukushima shrine -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-shrine-shinto-itukushima-01}">
 	<picture  src="shrine_itukushima_01.bmp">
 		<override when="night" src="shrine_itukushima_01n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 厳島神社 -->
+<!-- Itsukushima shrine -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-shrine-shinto-itukushima}">
-	<group>有名寺社</group>
-	<name>厳島神社(3x5)</name>
-	<design>厳島神社</design>
+	<group>Famous Temples</group>
+	<name>Itsukushima shrine(3x5)</name>
+	<design>Itsukushima shrine</design>
 	<structure>
-		<category byname="有名寺社"/>
+		<category byname="Famous Temples"/>
 	</structure>
 	<price>10000</price>
 	<height>1</height>
@@ -106,22 +106,22 @@
 
 </contribution>
 
-<title>灯台</title>
+<title>Lighthouses</title>
 
-<!-- 灯台 -->
+<!-- Lighthouses -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-lighthouse-01}">
 	<picture  src="lighthouse_01.bmp">
 		<override when="night" src="lighthouse_01n.bmp"/>
 	</picture>
 </contribution>
 
-<!-- 灯台 -->
+<!-- Lighthouses -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-lighthouse-01}">
-	<group>ランドマーク</group>
-	<name>灯台(1x1)</name>
-	<design>灯台</design>
+	<group>Landmarks</group>
+	<name>Lighthouses(1x1)</name>
+	<design>Lighthouses</design>
 	<structure>
-		<category byname="ランドマーク"/>
+		<category byname="Landmarks"/>
 	</structure>
 	<price>1000</price>
 	<size>1,1</size>
@@ -191,9 +191,9 @@
 
 </contribution>
 
-<title>滝</title>
+<title>Waterfall</title>
 
-<!-- 滝(1x1) -->
+<!-- Waterfall(1x1) -->
 <contribution type="picture" id="{FreeTrain-Shika-picture-structure-waterfall-001-left}">
 	<picture  src="waterfall_001_left.bmp">
 		<override when="winter" src="waterfall_001_left_winter.bmp"/>
@@ -212,11 +212,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001A-left-lower}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝A(左側下段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall A(left below)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -251,11 +251,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001B-left-lower}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝B(左側下段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall B(left below)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -290,11 +290,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001A-left-upper}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝A(左側上段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall A(left above)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -329,11 +329,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001B-left-upper}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝B(左側上段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall B(left above)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -368,11 +368,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001A-middle-lower}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝A(中央下段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall A(center below)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -407,11 +407,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001B-middle-lower}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝B(中央下段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall B(center below)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -446,11 +446,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001A-middle-upper}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝A(中央上段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall A(center above)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -485,11 +485,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001B-middle-upper}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝B(中央上段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall B(center above)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -524,11 +524,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001A-right-lower}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝A(右側下段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall A(right below)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -563,11 +563,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001B-right-lower}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝B(右側下段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall B(right below)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -602,11 +602,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001A-right-upper}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝A(右側上段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall A(right above)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
@@ -641,11 +641,11 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-waterfall-001B-right-upper}"> 
 
-	<group>景勝地</group>
-	<name>滝(1x1)</name>
-	<design>滝B(右側上段)</design>
+	<group>Beauty Spots</group>
+	<name>Waterfall(1x1)</name>
+	<design>Waterfall B(right above)</design>
 	<structure>
-		<category byname="景勝地"/>
+		<category byname="Beauty Spots"/>
 	</structure>
 	<price>500</price>
 	<size>1,1</size>
