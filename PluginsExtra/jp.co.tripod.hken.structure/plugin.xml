@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-   <title>ガソリンスタンド・コンビニ他</title>
-   <author>Ken</author>
-   <homepage></homepage>
+	<title>Gas Station, Convenience Store, etc...</title>
+	<author>Ken</author>
+	<homepage></homepage>
 
 	<contribution type="picture" id="{E6D105DA-77E2-41F0-9459-0FF29D5B81C6}">
 		<picture src="gs1.bmp"/>
@@ -17,8 +17,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS1-94478B392AE7}-A">
-		<group>ガソリンスタンド</group>
-		<name>新日本石油 SS(左)</name>
+		<group>Gas Station</group>
+		<name>Nippon Oil SS(Left)</name>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -33,8 +33,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS1-94478B392AE7}-B">
-		<group>ガソリンスタンド</group>
-		<name>新日本石油 SS(右)</name>
+		<group>Gas Station</group>
+		<name>Nippon Oil SS(Right)</name>
 		<price>1500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -49,8 +49,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{AE1549EB-F7F9-433F-GSS2-1E2A913013FF}-A">
-		<group>ガソリンスタンド</group>
-		<name>JOMO SS(左)</name>
+		<group>Gas Station</group>
+		<name>JOMO SS(Left)</name>
 		<price>1200</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -69,8 +69,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS2-94478B392AE7}-B">
-		<group>ガソリンスタンド</group>
-		<name>JOMO SS(右)</name>
+		<group>Gas Station</group>
+		<name>JOMO SS(Right)</name>
 		<price>1500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -89,7 +89,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS3-249A1A149A24}-A">
-		<group>ガソリンスタンド</group>
+		<group>Gas Station</group>
 		<name>Shell GS</name>
 		<price>1200</price>
 		<size>1,2</size>
@@ -111,7 +111,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS3-249A1A149A24}-B">
-		<group>ガソリンスタンド</group>
+		<group>Gas Station</group>
 		<name>Shell GS</name>
 		<price>1200</price>
 		<size>2,1</size>
@@ -133,8 +133,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS4-94478B392AE7}-A">
-		<group>ガソリンスタンド</group>
-		<name>コスモ石油 SS(左)</name>
+		<group>Gas Station</group>
+		<name>Cosmo Oil SS(Left)</name>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -149,8 +149,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-GSS4-94478B392AE7}-B">
-		<group>ガソリンスタンド</group>
-		<name>コスモ石油 SS(右)</name>
+		<group>Gas Station</group>
+		<name>Cosmo Oil SS(Right)</name>
 		<price>1500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -165,7 +165,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS5-249A1A149A24}-A">
-		<group>ガソリンスタンド</group>
+		<group>Gas Station</group>
 		<name>Mobil GS</name>
 		<price>1200</price>
 		<size>1,2</size>
@@ -181,7 +181,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{52B9BF4A-7AB7-4828-GSS5-249A1A149A24}-B">
-		<group>ガソリンスタンド</group>
+		<group>Gas Station</group>
 		<name>Mobil GS</name>
 		<price>1200</price>
 		<size>2,1</size>
@@ -197,8 +197,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR1-9603E8E6CF18}-A">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(赤左)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Red Left)</name>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -213,8 +213,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR1-9603E8E6CF18}-B">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(赤右)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Red Right)</name>
 		<price>1500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -229,8 +229,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR2-9603E8E6CF18}-A">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(紺左)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Dark Blue Left)</name>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -248,8 +248,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR2-9603E8E6CF18}-B">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(紺右)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Dark Blue Right)</name>
 		<price>1500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -267,8 +267,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR3-9603E8E6CF18}-A">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(緑左)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Green Left)</name>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -286,8 +286,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR3-9603E8E6CF18}-B">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(緑右)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Green Right)</name>
 		<price>1500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -305,8 +305,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR4-9603E8E6CF18}-A">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(青左)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Blue Left)</name>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -324,8 +324,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7EDDCD3E-C592-4692-CDR4-9603E8E6CF18}-B">
-		<group>自動車販売会社</group>
-		<name>自動車販売会社(青右)</name>
+		<group>Car Dealers</group>
+		<name>Car Dealer (Blue Right)</name>
 		<price>1500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -337,15 +337,15 @@
 			<picture src="cardr1.bmp" >
 			</picture>
 		 <spriteType name="colorMapped">
-		   <map from="237,0,0" to="0,0,255"/>
+			<map from="237,0,0" to="0,0,255"/>
 		 </spriteType>
 		</sprite>
 	</contribution>
 
 
 	<contribution type="commercial" id="{C193B660-3BFC-4F7C-BF2F-449BCED5AE9E}-A">
-		<group>郵便局</group>
-		<name>郵便局(小)(左)</name>
+		<group>Post Office</group>
+		<name>Small Post Office (Left)</name>
 		<price>500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -354,14 +354,14 @@
 			<base>20</base>
 		</population>
 		<sprite origin="0,0" offset="16">
-		        <picture src="yubin1.bmp" >
+			<picture src="yubin1.bmp" >
 			</picture>
 		</sprite>
 	</contribution>
 
 	<contribution type="commercial" id="{C193B660-3BFC-4F7C-BF2F-449BCED5AE9E}-B">
-		<group>郵便局</group>
-		<name>郵便局(小)(右)</name>
+		<group>Post Office</group>
+		<name>Small Post Office (Right)</name>
 		<price>500</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -370,14 +370,14 @@
 			<base>20</base>
 		</population>
 		<sprite origin="48,0" offset="24">
-		　　　　<picture src="yubin1.bmp" >
+			<picture src="yubin1.bmp" >
 			</picture>
 		</sprite>
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-YUB2-94478B392AE7}-A">
-		<group>郵便局</group>
-		<name>郵便局大(左)</name>
+		<group>Post Office</group>
+		<name>Large Post Office (Left)</name>
 		<price>1000</price>
 		<size>1,2</size>
 		<height>2</height>
@@ -392,8 +392,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-YUB2-94478B392AE7}-B">
-		<group>郵便局</group>
-		<name>郵便局大(右)</name>
+		<group>Post Office</group>
+		<name>Post Office (Right)</name>
 		<price>1000</price>
 		<size>2,1</size>
 		<height>2</height>
@@ -408,8 +408,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON2-5422C86D4DE9}-A">
-		<group>コンビニ(他７種)</group>
-		<name>ローソン(左向き)</name>
+		<group>Convenience Stores</group>
+		<name>Lawson(Left)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -425,8 +425,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON2-5422C86D4DE9}-B">
-		<group>コンビニ(他７種)</group>
-		<name>ローソン(右向き)</name>
+		<group>Convenience Stores</group>
+		<name>Lawson(Right)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -442,8 +442,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{EA3F5C47-D1EF-41A9-CON1-641E6CFEE22B}-A">
-		<group>コンビニ(他７種)</group>
-		<name>スリーエフ(左向き)</name>
+		<group>Convenience Stores</group>
+		<name>Three F(Left)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -459,8 +459,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{EA3F5C47-D1EF-41A9-CON1-641E6CFEE22B}-B">
-		<group>コンビニ(他７種)</group>
-		<name>スリーエフ(右向き)</name>
+		<group>Convenience Stores</group>
+		<name>Three F(Right)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -476,8 +476,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON6-5422C86D4DC5}-A">
-		<group>コンビニ(他７種)</group>
-		<name>ａｍｐｍ(左向き)</name>
+		<group>Convenience Stores</group>
+		<name>a m p m(Left)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -493,8 +493,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON6-5422C86D4DC5}-B">
-		<group>コンビニ(他７種)</group>
-		<name>ａｍｐｍ(右向き)</name>
+		<group>Convenience Stores</group>
+		<name>a m p m(Right)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -510,8 +510,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON4-5422C86D4DC5}-A">
-		<group>コンビニ(他７種)</group>
-		<name>ミニストップ(左向き)</name>
+		<group>Convenience Stores</group>
+		<name>MINISTOP(Left)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -527,8 +527,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON4-5422C86D4DC5}-B">
-		<group>コンビニ(他７種)</group>
-		<name>ミニストップ(右向き)</name>
+		<group>Convenience Stores</group>
+		<name>MINISTOP(Right)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -544,8 +544,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON5-5422C86D4DC5}-A">
-		<group>コンビニ(他７種)</group>
-		<name>サークルＫ(左向き)</name>
+		<group>Convenience Stores</group>
+		<name>CircleK(Left)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -561,8 +561,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON5-5422C86D4DC5}-B">
-		<group>コンビニ(他７種)</group>
-		<name>サークルＫ(右向き)</name>
+		<group>Convenience Stores</group>
+		<name>CircleK(Right)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -578,8 +578,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON3-5422C86D4DC5}-A">
-		<group>コンビニ(他７種)</group>
-		<name>サンクス(左向き)</name>
+		<group>Convenience Stores</group>
+		<name>Sunkus(Left)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -595,8 +595,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{568195AB-CEB3-42E9-CON3-5422C86D4DC5}-B">
-		<group>コンビニ(他７種)</group>
-		<name>サンクス(右向き)</name>
+		<group>Convenience Stores</group>
+		<name>Sunkus(Right)</name>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -612,8 +612,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON7-5422C86D4DC5}-A">
-		<group>コンビニ(他７種)</group>
-		<name>デイリーヤマザキ(左向き)</name>
+		<group>Convenience Stores</group>
+		<name>Daily Yamazaki(Left)</name>
 		<price>600</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -629,8 +629,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{578195AB-CEB3-42E9-CON7-5422C86D4DC5}-B">
-		<group>コンビニ(他７種)</group>
-		<name>デイリーヤマザキ(右向き)</name>
+		<group>Convenience Stores</group>
+		<name>Daily Yamazaki(Right)</name>
 		<price>600</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -646,8 +646,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-RES1-94478B392AE7}-A">
-		<group>レストラン</group>
-		<name>レストラン(左)</name>
+		<group>Restaurants</group>
+		<name>Restaurant (Left)</name>
 		<price>1000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -662,8 +662,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-RES1-94478B392AE7}-B">
-		<group>レストラン</group>
-		<name>レストラン(右)</name>
+		<group>Restaurants</group>
+		<name>Restaurant (Right)</name>
 		<price>1000</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -678,8 +678,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-A">
-		<group>展示場ホール</group>
-		<name>メッセ1(左)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 1(Left)</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -694,8 +694,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-B">
-		<group>展示場ホール</group>
-		<name>メッセ2(右)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 2(Right)</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -710,8 +710,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-C">
-		<group>展示場ホール</group>
-		<name>メッセ3(左)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 3(Left)</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -727,8 +727,8 @@
 
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-D">
-		<group>展示場ホール</group>
-		<name>メッセ4(右)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 4(Right)</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -743,8 +743,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-E">
-		<group>展示場ホール</group>
-		<name>メッセ5(左)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 5(Left)</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -759,8 +759,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-F">
-		<group>展示場ホール</group>
-		<name>メッセ6(右)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 6(Right)</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -775,8 +775,8 @@
 	</contribution>
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-G">
-		<group>展示場ホール</group>
-		<name>メッセ7(左)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 7(Left)</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -792,8 +792,8 @@
 
 
 	<contribution type="commercial" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-H">
-		<group>展示場ホール</group>
-		<name>メッセ8(右)</name>
+		<group>Exhibition Halls</group>
+		<name>Mess Hall 8(Right)</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>1</height>
