@@ -416,7 +416,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonUp.Name = "buttonUp";
 			this.buttonUp.Size = new System.Drawing.Size(64, 26);
 			this.buttonUp.TabIndex = 13;
-			this.buttonUp.Text = "↑";
+			//this.buttonUp.Text = "↑";
+			this.buttonUp.Text = "Up";
 			this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
 			// 
 			// buttonDown
@@ -427,7 +428,8 @@ namespace freetrain.world.rail.tattc
 			this.buttonDown.Name = "buttonDown";
 			this.buttonDown.Size = new System.Drawing.Size(64, 26);
 			this.buttonDown.TabIndex = 14;
-			this.buttonDown.Text = "↓";
+			//this.buttonDown.Text = "↓";
+			this.buttonDown.Text = "Down";
 			this.buttonDown.Click += new System.EventHandler(this.buttonDown_Click);
 			// 
 			// buttonRemove
