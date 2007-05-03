@@ -1,28 +1,33 @@
 ﻿2006/5/3
-■その１
-固定サイズ建物、高さ固定建物の中間層、地表で、
-スプライト指定にoffsetを省くことが出来る
-（地表は高さ０の場合のみ、建物は画像の高さ(左上位置)がh*16+(x+y)*8の場合
-■その２
-ブルドーザーで電車のいるボクセルを削除してもエラーにならないように
-■その３
-ウィンドウタイトルやアバウトの表記をFreeTrainExに
-■その４
-少々のプラグインエラーなら起動できるように
-プラグインエラーの際、タイトルと作者を表示
+#1.
+In fixed size structure, var height structure, and land contributions,
+offset attribute at the sprite tag can be omitted.
+(Only applicable when the image height is h*16+(x+y)*8 for structues,
+ Height is zero for land contributions.)
+#2.
+Fix bug that an exception occurs when remove rails by bulldozer in which trains are included.
+#3.
+Change window title and text in the about dialog from "FreeTrain" to "FreeTrainEX".
+#4.
+Do not terminate applications even if there are some minor plugin errors.
+Show author and title of plugin when the plugin cause some errors.
+
 2006/5/9
-■その５
-プラグインマネージャーで進行％値算出
-スプラッシュ画面でプログレスバー表示
+#5.
+Calculate percentage of progress on PluginManager.
+Show progress bars on splach window.
+
 2006/7/29
-■その６
-ダイヤの詳細設定で表示できなくなる問題に対処？（再現できないので未確認）
-■その７
-PluginMakerのためPluginManagerおよびPluginクラスの修正
-初期化メソッド分割、アクセス権の変更など
-（機能上の変更無し）
+#6.
+Modify layout of diagram form.
+#7.
+Modification of PluginManager and Plugin class for the tool, PluginMaker.
+(Subdivide initialization process, change accessibility of some methods.
+ No functional change.)
+ 
 2006/8/13
-■その８
-勾配線路や高架線路などで橋脚部分をブルドーザーで撤去すれば
-上部の線路まで撤去できるように修正
+#8.
+When lower pier of rail-slope or rail-bridge is removed by bulldozer,
+All above pires and rails are removed together.
+
 2006/8/16
