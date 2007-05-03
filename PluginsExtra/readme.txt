@@ -1,68 +1,65 @@
-■FreeTrainEx追加プラグインセット【2005年09月版】
-このパッケージは各プラグイン作者様のご協力を得て
-2005年09月03日時点で各サイトで公開中のプラグインを
-一つにまとめたものです。
+## Additional plug-in set for FreeTrainEx [September 2005] ##
+This package is a collection of plug-ins which are published in several web sites 
+at the date of September 03, 2005, with the permit of each authors.
 
-免責
-全てのプラグインが正常動作するかどうかは確認しておりません。
-お気づきの点がありましたら、rc-nao@rocket.ne.jp 宛てに
-ご連絡いただければ、可能な限り対応させていただきます。
+#Escape
+I did not verify whether all plug-ins work correctly.
 
-ご協力いただいた作者様/サイト（順不同）
+Followings are sites and authors who agreed with packaging there works.
+(Most of sites are Japanese only)
 
-◆暇氏：FreeTrain総合車両所
++Hima san: FreeTrain total train yard
  http://suzukams.at.infoseek.co.jp/FreeTrain/
-◆綾瀬氏：FreeTrainサポートサイト
++Ayase san: FreeTrain support site
  http://www14.big.or.jp/~ayase/freetrain/
-◆ては氏：はぢめてのFreeTrain
++Teha san: Starting FreeTrain
  http://park8.wakwak.com/~bast/freetrain/
-◆C477：FreeTrain 都市開発局
++C477: FreeTrain urban development office
  http://www.rocket.ne.jp/~nao/
-◆大不況氏：FreeTrain大不況国際財閥
++Daifukyo san: FreeTrain Daifukyo kokusai zaibatsu
  http://www63.tok2.com/home2/sinndokusaisya/daihukyou/FreeTrain/index.html
-◆Kei氏：FreeTrain 小物置き場(仮)
++Kei san: FreeTrain Small yard
  http://www.h2.dion.ne.jp/~kei_s/freetrain/
-◆qra_ra氏：FreeTrain‐想作館
++qra_ra san: FreeTrain‐Sousaku kan
  http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/
-◆HEUER氏：FreeTrain建設コンサルタント(株)
++HEUER san: FreeTrain construction consultant
  http://freetrain.finito-web.com/
-◆いっちー氏：FreeTrainプラグイン置き場
++Itchy san: FreeTrain plugins yard
  http://www.geocities.jp/cyber_express_1703d/freetrain/
-◆たいふ～ん氏：FreeTrain用プラグイン倉庫
++Typhoon san: Plugins yard for FreeTrain
  http://typhoon.s19.xrea.com/ft/index.html
-◆Altima氏：ZeroDimensions
++Altima san: ZeroDimensions
  http://zero-d.web.infoseek.co.jp/
-◆HINOTO氏：涙のボス多客臨
++HINOTO san: Boss多客臨 in tears.
  http://www4.ocn.ne.jp/~presto/ft/
-◆しかしか氏：FreeTrain支線観光支援会社
++Shikashika san: FreeTrain shisen tour support corp.
  http://shikashika.hp.infoseek.co.jp/
-◆なもー氏：愛知県民営プラグイン製作所
++Namoh san: Aich pref. private plugin factory
  http://www.medias.co.jp/~bell8528/freetrain/index.html
-◆竹内智紀氏：竹内智紀のホームページ
++Takeuchi Tomoki san: Takeuchi Tomoki's homepage
  http://f4.aaa.livedoor.jp/~tomo/free_train/ft.html
 
-◆暇氏の車両保管庫に登録された作者の皆様
- 暇氏、川口耕介氏、Min氏、qra_ra(haru氏)、きがみ氏
- TAKUROU氏、iwasaki氏、ては氏、綾瀬氏、ima氏、1500v氏、
- 名無しさん@北海道氏、Ken氏、無名の人氏、はてな君氏、
- 名無しさんの野望氏、masashi氏
++Authors of which plugins published on "total train yard", the site of Hima san.
+ Hima san、Kawaguchi Kosuke san、Min san、qra_ra(haru) san、Kigami san
+ TAKUROU san、iwasaki san、Teha san、Ayase san、ima san、1500v san、
+ Nanashi-san@Hokkaido san、Ken san、Mumei no hito san、Hatena kun san、
+ Nanashi-san no yabo san、masashi san
 
-◆本家アップローダに投稿された作者の皆様
- Kei氏、TAKUROU氏、Ken氏、ゆあ氏、佐倉西模型部氏、
- 狼月楼夜氏、名無し氏、haru氏、しの氏、ななしさん氏、
- て氏、ムー05氏、ななし氏、駅男氏、花菱氏、挑戦した人氏
-※収録にあたって、No.450, No.633を花菱氏のプラグインを
-　置き換えないように修正しました。
-※花菱氏のプラグインフォルダ名を変更させていただきました。
++Authors of which plugins posted on uploder at "www.kosuke.org/freetrain".
+ Kei san、TAKUROU san、Ken san、Yua san、Sakuranishi mokeibu san、
+ RogetsuRoya san、Nanashi(kanji) san、haru san、Shino san、Nanashi-san san、
+ Te san、Moo05 san、Nanashi(kana) san、Ekio san、Hanabishi san、Chousen shita hito san
+*The post no.450 and no.633 are modified not to replace Hanabishi san's plugin.
+*The name of  Hanabishi san's plugin folders are renamed as follows.
  jp.big.ayase.freetrain.* → org.kosuke.freetrain.*
 
-■謝辞
-上記各プラグインの作者の皆様に感謝いたします。
+#Thanks
+I appreciate in everyone authors above-mentioned.
 
-※本家アップローダや暇氏の車両保管庫にあるプラグインの作者様で
-　本パッケージに同梱されることに不都合がある方がいらっしゃれば
-　rc-nao@rocket.ne.jp までご連絡頂ければ、対応させていただきます。
+*If you are an author of any plugin included in this package,
+ And you do not want your plugins included in any more,
+ please contact me (E-mail:rc-nao@rocket.ne.jp).
 
 -----------------------------------------------------
-C477@二両目
+C477(chiname)
 E-mail:rc-nao@rocket.ne.jp
