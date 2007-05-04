@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>架線柱</title>
-	<author>花菱烈火</author>
+	<title>Bridge Pier</title>
+	<author>HanabishiRekka</author>
 	<homepage></homepage>
 	
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />
@@ -45,31 +45,31 @@
 
 	
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6000-9C5A-D0EA1049D28D}">
-		<name>橋桁(A)</name>
+		<name>Bridge pier(A)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-7008-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6001-9C5A-D0EA1049D28D}">
-		<name>橋桁(B)</name>
+		<name>Bridge pier(B)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-7009-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6002-9C5A-D0EA1049D28D}">
-		<name>橋桁(C)</name>
+		<name>Bridge pier(C)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-7007-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6003-9C5A-D0EA1049D28D}">
-		<name>橋桁(D)</name>
+		<name>Bridge pier(D)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-7006-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6004-9C5A-D0EA1049D28D}">
-		<name>橋桁(E)</name>
+		<name>Bridge pier(E)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-7005-9C5A-D0EA1049D28D}"/>
 		</sprite>
@@ -77,37 +77,37 @@
 
 
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6005-9C5A-D0EA1049D28D}">
-		<name>橋桁(赤A)</name>
+		<name>Bridge pier(red A)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-1000-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6006-9C5A-D0EA1049D28D}">
-		<name>橋桁(赤B)</name>
+		<name>Bridge pier(red B)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-1001-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6007-9C5A-D0EA1049D28D}">
-		<name>橋桁(赤C)</name>
+		<name>Bridge pier(red C)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-1002-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6008-9C5A-D0EA1049D28D}">
-		<name>橋桁(赤D)</name>
+		<name>Bridge pier(red D)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-1003-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6009-9C5A-D0EA1049D28D}">
-		<name>橋桁(赤E)</name>
+		<name>Bridge pier(red E)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-1004-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-6010-9C5A-D0EA1049D28D}">
-		<name>橋桁(赤F)</name>
+		<name>Bridge pier(red F)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-1005-9C5A-D0EA1049D28D}"/>
 		</sprite>

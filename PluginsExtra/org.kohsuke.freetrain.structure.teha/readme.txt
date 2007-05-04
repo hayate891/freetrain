@@ -8,4 +8,10 @@
 ちなみに11日バージョンのみ対応しています…
 後、私が作成したプラグインはご自由に改造したり別目的に利用したりして下さいな(ヘボすぎて使えないかと思いますが…)
 
+Thank you for downloading this package.
+
+This package is a collection of my plugins now under construction.
+I'm glad if you enjoy with them.
+Feel free to modify my plugins or appliy for other purpose.
+
 ては(T.Hara)

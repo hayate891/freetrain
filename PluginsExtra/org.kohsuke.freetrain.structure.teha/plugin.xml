@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>建物セット</title>
-	<author>ては</author>
+	<title>Building set</title>
+	<author>Teha</author>
 	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{B7330314-2AB8-48CB-842A-083088D1E239}">
-		<group>カーフェリー(近海用)</group>
+		<group>Car ferry (coastwise)</group>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -15,7 +15,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{275F3C07-94DC-4D79-B356-D53A4BBD514B}">
-		<group>カーフェリー(近海用)</group>
+		<group>Car ferry (coastwise)</group>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -25,7 +25,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{E1346B3F-4B69-4831-9433-5B82F3C83324}">
-		<name>貨物船</name>
+		<name>Cargo boat</name>
 		<price>5000</price>
 		<size>4,1</size>
 		<height>1</height>
@@ -35,7 +35,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{B14C68C1-22CC-4BD1-B5B9-0429106E1B01}">
-		<group>宇高連絡線</group>
+		<group>Ube-Kochi plying ferry</group>
 		<price>5000</price>
 		<size>4,1</size>
 		<height>1</height>
@@ -45,7 +45,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{825023F3-C5FA-4E68-9EFC-DB03005A0424}">
-		<group>宇高連絡線</group>
+		<group>Ube-Kochi plying ferry</group>
 		<price>5000</price>
 		<size>4,1</size>
 		<height>1</height>
@@ -55,7 +55,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{13C1C973-27E8-40B3-AE37-139F39D68B89}">
-		<name>アパート</name>
+		<name>Rental Apartment</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -69,7 +69,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{DFE65244-99FE-48B4-A8A7-C3AE17178798}">
-		<group>工場</group>
+		<group>Factory</group>
 		<price>5000</price>
 		<size>2,2</size>
 		<height>1</height>
@@ -79,7 +79,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{2679B42F-D747-488A-B327-6CF0CD2577DC}">
-		<group>工場</group>
+		<group>Factory</group>
 		<price>5000</price>
 		<size>2,2</size>
 		<height>1</height>
@@ -89,7 +89,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{E24C700F-40D3-4397-B4B3-6C9C98ECA774}">
-		<name>梅田スカイビル</name>
+		<name>Umeda sky building</name>
 		<price>5000</price>
 		<size>5,5</size>
 		<height>10</height>
@@ -99,7 +99,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{619F301B-EB53-4FA9-8B69-6A80E9C3DD42}">
-		<name>大阪タワー</name>
+		<name>Osaka tower</name>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>5</height>
@@ -111,7 +111,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{5FF50C0C-BECF-4AFD-AA82-EEBE3D609BA8}">
-		<name>学校</name>
+		<name>Scool</name>
 		<price>5000</price>
 		<size>5,3</size>
 		<height>1</height>
@@ -121,7 +121,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{F5B4222A-3EA0-4F98-BECD-1F32B5E64932}">
-		<name>シャア専用ザク</name>
+		<name>Char's ZAKU</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -131,7 +131,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{2EAF3250-AA84-4B86-9F79-02D2A3DD931E}">
-		<name>ショッピングセンター</name>
+		<name>Shopping center</name>
 		<price>5000</price>
 		<size>3,4</size>
 		<height>2</height>
@@ -141,7 +141,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{1A87615B-4B76-443F-8417-728D6BF0361A}">
-		<name>ダム湖</name>
+		<name>Lake with dam</name>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -151,7 +151,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7D039D58-B250-4A93-AE83-DD81BA77B757}">
-		<name>水(レベル3)</name>
+		<name>Water (level3)</name>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>3</height>
@@ -162,7 +162,7 @@
 
 
 	<contribution type="commercial" id="{CC6A8B66-BE28-4863-B5E5-18F238938B00}">
-		<name>滝</name>
+		<name>Waterfall</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>3</height>
@@ -172,7 +172,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{7225141D-052F-4642-A084-8583DFE3484F}">
-		<name>ダム</name>
+		<name>Dam</name>
 		<price>5000</price>
 		<size>2,3</size>
 		<height>2</height>
@@ -183,7 +183,7 @@
 
 
 	<contribution type="commercial" id="{FBDDC8DC-8E9D-422B-AD97-B7E9157D3D62}">
-		<name>魔城ガッデム</name>
+		<name>Devil castle Goddamn</name>
 		<price>5000</price>
 		<size>2,2</size>
 		<height>2</height>
@@ -193,7 +193,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{6323EA1B-3D1E-4E7D-BEB9-1D6E6ED2E1A1}">
-		<name>運命の塔</name>
+		<name>Tower of Distiny</name>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -203,7 +203,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{A9823026-15C6-4836-905D-9DFE38E119A1}">
-		<name>工作船</name>
+		<name>Military operation boat </name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>1</height>
@@ -213,7 +213,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{F752307B-C840-4162-9307-316389B29CF8}">
-		<name>巡視船</name>
+		<name>Patrol boat</name>
 		<price>5000</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -223,7 +223,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{189F360B-CC55-4ACA-B406-1DD689F9D2E6}">
-		<name>フェリーターミナル</name>
+		<name>Ferry terminal</name>
 		<price>5000</price>
 		<size>3,2</size>
 		<height>1</height>
@@ -237,7 +237,7 @@
 </contribution>
 
 	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-0">
-		<group>岸壁</group>
+		<group>wharf</group>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -247,7 +247,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-1">
-		<group>岸壁</group>
+		<group>wharf</group>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -257,7 +257,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-2">
-		<group>岸壁</group>
+		<group>wharf</group>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -267,7 +267,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-3">
-		<group>岸壁</group>
+		<group>wharf</group>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -277,7 +277,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{947753DE-3568-440D-9D66-02D405001C32}-4">
-		<group>岸壁</group>
+		<group>wharf</group>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -287,7 +287,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{53134BEE-9DE4-4660-9966-01764EC731D0}">
-		<name>さんふらわあ</name>
+		<name>Ferry 'Sun Flower'</name>
 		<price>5000</price>
 		<size>1,5</size>
 		<height>1</height>
@@ -297,7 +297,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{61CD8A5D-6A2D-4EC6-A1AA-99319C83EC2E}">
-		<name>カーフェリー(遠洋)</name>
+		<name>Car ferry (ocean)</name>
 		<price>5000</price>
 		<size>1,5</size>
 		<height>1</height>
@@ -307,7 +307,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{C4A9FCAA-2754-409B-ABE3-573EF5DE92E6}">
-		<name>水(レベル1)</name>
+		<name>Water (level1)</name>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -317,7 +317,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{DFBD51DE-E6D1-4CE0-BD2F-5C0E1CBC61FE}">
-		<name>静岡放送東京支社</name>
+		<name>Shizuoka broadcasting Tokyo branch</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>4</height>
@@ -327,7 +327,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{F34E2C0D-9ECE-4590-A25A-3203BA9184C8}">
-		<name>中銀カプセルタワービル</name>
+		<name>Nakagin bank capsule tower building</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>3</height>
@@ -337,7 +337,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{5C13B5F3-7CDF-44A4-9C59-3D359E4DB6FE}">
-		<name>ソニータワー</name>
+		<name>Sony tower</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>4</height>
@@ -347,7 +347,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{54A932D2-12BE-44BF-8E63-B517E93354F8}">
-		<name>アクティ大阪</name>
+		<name>'Acty Osaka' building</name>
 		<price>5000</price>
 		<size>4,2</size>
 		<height>8</height>

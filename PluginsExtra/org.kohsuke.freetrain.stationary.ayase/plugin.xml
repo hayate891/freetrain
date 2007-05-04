@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>もっと橋脚</title>
-	<author>綾瀬さん</author>
-	<homepage>http://www.kohsuke.org/freetrain/</homepage>
+	<title>Another bridge piers</title>
+	<author>AyaseHiro</author>
+	<homepage>>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
 	<contribution type="picture" id="{98619BD4-46C3-4B91-85FF-11147914F2A5}">
 		<picture src="brick-girder.bmp"/>
 	</contribution>
 	
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-0165ADC2C849}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -19,7 +19,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{556E9EC4-5751-43DA-8F08-A1484E233811}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -28,7 +28,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-AYASEBRICK-UN1}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -38,7 +38,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-AYASEBRICK-UN2}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -48,7 +48,7 @@
 	</contribution>	
 	
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-AYASEBRICK-R1}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -58,7 +58,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-AYASEBRICK-L1}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -68,7 +68,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-AYASEBRICK-UP1}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -78,7 +78,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8FC8DE03-C9FD-4154-B097-AYASEBRICK-UP2}">
-		<group>レンガ橋脚</group>
+		<group>Brick bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -89,7 +89,7 @@
 	
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-43292512BBD3}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -99,7 +99,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{CBCF4E66-6BA3-4A06-95A0-161E6C95F7EB}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -109,7 +109,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-AYASEBRG-UN1}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -119,7 +119,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-AYASEBRG-UN2}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -129,7 +129,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-AYASEBRG-L1}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -139,7 +139,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-AYASEBRG-R1}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -149,7 +149,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-AYASEBRG-UP1}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -159,7 +159,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{8A245079-053D-4A9E-AC8B-AYASEBRG-UP2}">
-		<group>コンクリート橋脚</group>
+		<group>Concrete bridge pier</group>
 		<price>10</price>
 		<size>1,1</size>
 		<height>1</height>

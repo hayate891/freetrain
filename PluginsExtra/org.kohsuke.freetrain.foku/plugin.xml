@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>フォークリフト</title>
-	<author>花菱烈火</author>
+	<title>Forklift</title>
+	<author>HanabishiRekka</author>
 	<homepage></homepage>
 	
 	<contribution type="picture" id="{474B8BFD-2516-4410-8800-D0EA1049D28D}">
@@ -15,7 +15,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{474B8BFD-3000-1010-HRE-D0EA1049D201}">
-		<group>フォークリフト</group>
+		<group>Forklift</group>
 		<price>510</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -24,7 +24,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="railStationary" id="{474B8BFD-3000-1010-HRE-D0EA1049D202}">
-		<group>フォークリフト</group>
+		<group>Forklift</group>
 		<price>510</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -34,7 +34,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{474B8BFD-3000-1010-HRE-D0EA1049D203}">
-		<group>フォークリフト</group>
+		<group>Forklift</group>
 		<price>510</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -43,7 +43,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="railStationary" id="{474B8BFD-3000-1010-HRE-D0EA1049D204}">
-		<group>フォークリフト</group>
+		<group>Forklift</group>
 		<price>510</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -53,7 +53,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{474B8BFD-3000-1010-HRE-D0EA1049D205}">
-		<group>フォークリフト</group>
+		<group>Forklift</group>
 		<price>510</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -62,7 +62,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="railStationary" id="{474B8BFD-3000-1010-HRE-D0EA1049D206}">
-		<group>フォークリフト</group>
+		<group>Forklift</group>
 		<price>510</price>
 		<size>1,1</size>
 		<height>1</height>

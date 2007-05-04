@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>架線柱</title>
-	<author>花菱烈火</author>
+	<title>Bridge pier</title>
+	<author>HanabishiRekka</author>
 	<homepage></homepage>
 	
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />
@@ -21,25 +21,25 @@
 
 	
 	<contribution type="electricPole" id="{874B8BFD-1EF4-5000-9C5A-D0EA1049D28D}">
-		<name>橋桁(下)</name>
+		<name>Bridge pier(upper)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-5008-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-5001-9C5A-D0EA1049D28D}">
-		<name>橋桁(上)</name>
+		<name>Bridge pier(lower)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-5009-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-5002-9C5A-D0EA1049D28D}">
-		<name>橋桁(無)</name>
+		<name>Bridge pier(empty)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-5007-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{874B8BFD-1EF4-5003-9C5A-D0EA1049D28D}">
-		<name>橋桁(土手)</name>
+		<name>Bridge pier(bank)</name>
 		<sprite>
 			<picture ref="{874B8BFD-1EF4-5006-9C5A-D0EA1049D28D}"/>
 		</sprite>

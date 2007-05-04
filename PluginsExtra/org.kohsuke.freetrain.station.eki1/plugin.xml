@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?> 
 
 <plug-in>
-	<title>駅舎プラグイン</title> 
-	<author>花菱さん</author> 
+	<title>Station Buildings</title> 
+	<author>HanabishiRekka</author> 
 	<homepage></homepage> 
 	<contribution type="picture" id="{474B8BFD-2500-1010-8800-D0EA1049D28D}">
 		<picture src="to_eki.bmp" origin="0,0" offset="16" >
@@ -11,7 +11,7 @@
 	</contribution>
 
 	<contribution type="station" id="{474B8BFD-2501-1010-8800-D0EA1049D28D}">
-	<group>高架下駅舎(tomix)</group> 
+	<group>Station under-viaduct (tomix)</group> 
 	<price>200</price> 
 	<height>1</height> 
 	<operationCost>10</operationCost> 
@@ -22,7 +22,7 @@
 	</contribution>
 
 	<contribution type="station" id="{474B8BFD-2502-1010-8800-D0EA1049D28D}">
-	<group>高架下駅舎(tomix)</group> 
+	<group>Station under-viaduct (tomix)</group> 
 	<price>200</price> 
 	<height>1</height> 
 	<operationCost>10</operationCost> 
