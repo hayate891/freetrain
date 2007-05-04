@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>ＪＲ東日本485系改造ジョイフルトレイン車両プラグインセット</title>
-	<author>いっちー</author> 
+	<title>JR East 485 Series Joyful Train Set</title>
+	<author>icchii</author> 
 	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
 
  	<!-- ベース車両 -->
@@ -284,13 +284,14 @@
 	<!-- きらきらうえつ -->
 
 	<contribution type="train" id="{cyber-express-1703d-040331-485uetsu}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>きらきらうえつ</name>
-		<author>いっちー</author>
-		<description>羽越線方面を訪れる観光客用として2001年11月に登場した。
-車両は485系特急形電車を改造した4両編成で、先頭車は展望車、2号車はラウンジ車で、茶屋と和風ラウンジスペースが設けられている。
-また、改造に合わせてバリアフリーに対応した設備に変更した。主に新潟～酒田間で、週末を中心に運転されている。
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Kirakirauetsu</name>
+		<author>Icchii</author>
+		<description>It appeared in 2001 November for sightseers who want to travel along the Uetsu Line.
+		As for the 4-Car Formation, it was a remodelled 485 Series super-express shape train. The lead coach  was the viewing car and the second car was the lounge car.
+		Chaya and the Japanese-style lounge space are provided.
+		It also runs services between Niigata and Sakata on weekends.
 </description>
 		<price>10</price>
 	           	<fare>1000</fare>
@@ -305,13 +306,13 @@
 	<!-- ニューなのはな -->
 
 	<contribution type="train" id="{cyber-express-1703d-040331-485nnanohana}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>ニューなのはな</name>
-		<author>いっちー</author>
-		<description>房総方面へ訪れる観光客用として1998年に登場した。車両は485系特急形電車を改造した6両編成。
-座席は、掘りごたつ付きのお座敷にも4人がけボックスシートにも変更可能な構造となっている。
-千葉県内からの団体列車や、臨時の特急列車等に使用されている。
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>New Nanohana</name>
+		<author>Icchii</author>
+		<description>This train started in 1998 for sightseers who wish to visit the Gunma prefecture as a 6-Car super-express formation.
+		The carriages had open seating and also cabins.
+		It's used for group trains and the temporary limited express to Chiba, etc...
 </description>
 		<price>10</price>
 	           	<fare>1000</fare>
@@ -326,13 +327,12 @@
 	<!-- やまなみ -->
 
 	<contribution type="train" id="{cyber-express-1703d-040331-485yamanami}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>やまなみ</name>
-		<author>いっちー</author>
-		<description>群馬県方面へ訪れる観光客用として1999年に登場した。
-車両は485系特急形電車を改造した4両編成で、掘りごたつ付きのお座敷車両である。
-「せせらぎ」と共に、群馬県内からの団体列車や高崎線・上越線の臨時快速列車として使用されている。
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Yamanami</name>
+		<author>Icchii</author>
+		<description>This train started in 1999 for sightseers who wish to visit the Gunma prefecture. It is the remodelled 4-Car set.
+		It is used as the group train from inside Gunma prefecture and the temporary express train of the Takasaki line Joetsu line.
 </description>
 		<price>10</price>
 	           	<fare>1500</fare>
@@ -347,13 +347,13 @@
 	<!-- せせらぎ -->
 
 	<contribution type="train" id="{cyber-express-1703d-040331-485seseragi}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>せせらぎ</name>
-		<author>いっちー</author>
-		<description>群馬県方面へ訪れる観光客用として2001年に登場した。
-車両は485系特急形電車を改造した4両編成で「やまなみ」とほぼ同じ構造の掘りごたつ付きお座敷車両である。
-「やまなみ」と共に、群馬県内からの団体列車や高崎線・上越線の臨時快速列車として使用されている。
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Sasaragi</name>
+		<author>Icchii</author>
+		<description>This train started in 2001 for sightseers who wish to visit the Gunma prefecture.
+		It is a 4-Car remodelled formation with super-express shape end-car.
+		It is used as the group train from inside Gunma prefecture and the temporary express train of the Takasaki line Joetsu line.
 </description>
 		<price>10</price>
 	           	<fare>1500</fare>
@@ -368,12 +368,12 @@
 	<!-- やまなみせせらぎ -->
 
 	<contribution type="train" id="{cyber-express-1703d-040331-485yamasese}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>やまなみ＋せせらぎ</name>
-		<author>いっちー</author>
-		<description>※8両編成のみです。
-それぞれ4両編成の「やまなみ」「せせらぎ」を併結し、8両編成の「やまなみ・せせらぎ号」として団体列車や臨時快速列車として使用する事もある。
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Yamanami＋Sasaragi</name>
+		<author>Icchii</author>
+		<description>This train only comes in an 8-Car Formation.
+		It is made up of the 2 separate trains, but used together when required for temporary express services.
 </description>
 		<price>10</price>
 		<fare>1500</fare>
@@ -393,14 +393,13 @@
 	<!-- 宴 -->
 
 	<contribution type="train" id="{cyber-express-1703d-040331-485utage}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>宴</name>
-		<author>いっちー</author>
-		<description>1994年に登場したジョイフルトレイン。
-車両は485系特急形電車を改造した6両編成の掘りごたつ付きお座敷車両である。
-ほとんど全ての電化区間の他、ディーゼル機関車と併結して非電化区間も走る事ができる。
-「華」と共に東京、神奈川、山梨方面での団体列車や、東海道線や中央線で臨時快速列車として使用されている。
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Buffet</name>
+		<author>Icchii</author>
+		<description>This is the 1994 Joyful Train style. This is a 6-Car set.
+		Since it has a diesel engine, it can run to electrified and non-electrified stations.
+		This train is also used to Tokyo on the Tokaido Line, Central Line, being called "Kanagawa" and "Yamanasi" as a temporary express train.
 </description>
 		<price>10</price>
 		<fare>1500</fare>
@@ -415,14 +414,13 @@
 	<!-- 華 -->
 
 	<contribution type="train" id="{cyber-express-1703d-040331-485hana}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>華</name>
-		<author>いっちー</author>
-		<description>1996年に登場したジョイフルトレイン。
-車両は485系特急形電車を改造した6両編成の掘りごたつ付きお座敷車両である。
-ほとんど全ての電化区間の他、ディーゼル機関車と併結して非電化区間も走る事ができる。
-「宴」と共に、東京、神奈川、山梨方面で団体列車や、東海道線や中央線で臨時快速列車として使用されている。
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Bloom</name>
+		<author>Icchii</author>
+		<description>This is the 1996 Joyful Train style. This is a 6-Car set.
+		Since it has a diesel engine, it can run to electrified and non-electrified stations.
+		This train is also used to Tokyo on the Tokaido Line, Central Line, being called "Kanagawa" and "Yamanasi" as a temporary express train.
 </description>
 		<price>10</price>
 		<fare>1500</fare>
