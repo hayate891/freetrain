@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 	<!ENTITY unmannedStation1 "
-		<group>下松駅1</group>
+		<group>Shimomatsu station 1</group>
 		<price>200</price>
 		<height>1</height>
 		<operationCost>10</operationCost>
 	">
 
 	<!ENTITY unmannedStation2 "
-		<group>下松駅2</group>
+		<group>Shimomatsu station 2</group>
 		<price>200</price>
 		<height>1</height>
 		<operationCost>10</operationCost>
 	">
 ]>
 <plug-in>
-	<title>架線柱</title>
-	<author>花菱烈火</author>
+	<title>Shimomatsu station</title>
+	<author>HanabisiREkka</author>
 	<homepage></homepage>
 	
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />
@@ -35,14 +35,14 @@
 	</contribution>
 
 	<contribution type="electricPole" id="{10000000-1000-2004-9C5A-D0EA1049D28D}">
-		<name>下松駅駅（左階段奥）</name>
+		<name>Shimomatsu station (left stairs behind)</name>
 		<sprite>
 			<picture src="JRW-Simomatu6.bmp"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="electricPole" id="{10000000-1000-2005-9C5A-D0EA1049D28D}">
-		<name>下松駅駅（右階段奥）</name>
+		<name>Shimomatsu station (right stairs behind)</name>
 		<sprite>
 			<picture src="JRW-Simomatu7.bmp"/>
 		</sprite>
@@ -51,28 +51,28 @@
 
 	
 	<contribution type="electricPole" id="{200000000-1000-3001-9C5A-D0EA1049D28D}">
-		<name>下松駅駅舎Ａ0</name>
+		<name>Shimomatsu station building-A0</name>
 		<sprite>
 			<picture ref="{10000000-1000-2000-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="electricPole" id="{200000000-1001-3001-9C5A-D0EA1049D28D}">
-		<name>下松駅駅舎Ｂ</name>
+		<name>Shimomatsu station building-B</name>
 		<sprite>
 			<picture ref="{10000000-1000-2001-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="electricPole" id="{200000000-1002-3001-9C5A-D0EA1049D28D}">
-		<name>下松駅駅舎Ｃ</name>
+		<name>Shimomatsu station building-C</name>
 		<sprite>
 			<picture ref="{10000000-1000-2002-9C5A-D0EA1049D28D}"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="electricPole" id="{200000000-1003-3001-9C5A-D0EA1049D28D}">
-		<name>下松駅駅舎Ａ0</name>
+		<name>Shimomatsu station building-A0</name>
 		<sprite>
 			<picture ref="{10000000-1000-2003-9C5A-D0EA1049D28D}"/>
 		</sprite>

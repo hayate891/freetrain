@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>森林</title>
+	<title>Forest</title>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
-	<author>477@２両目</author>
+	<author>c477</author>
 	
 	<depend on="org.kohsuke.freetrain.land.farmland" />
 	<!--depend on="jp.popkmart.heuer.freetrain.land.seaside" /-->
@@ -20,8 +20,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}">
-		<group>森林</group>
-		<name>杉</name>
+		<group>Forest</group>
+		<name>Cedar</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -37,8 +37,8 @@
 	
 	
 	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}">
-		<group>森林</group>
-		<name>松</name>
+		<group>Forest</group>
+		<name>Pine tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -54,8 +54,8 @@
 	
 	
 	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}">
-		<group>森林</group>
-		<name>楠</name>
+		<group>Forest</group>
+		<name>Camphor tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -71,8 +71,8 @@
 	
 	
 	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}">
-		<group>森林</group>
-		<name>楓</name>
+		<group>Forest</group>
+		<name>Maple tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -88,8 +88,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}">
-		<group>森林</group>
-		<name>銀杏</name>
+		<group>Forest</group>
+		<name>Ginkgo tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -106,8 +106,8 @@
 	
 	
 	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}">
-		<group>森林</group>
-		<name>ナラ</name>
+		<group>Forest</group>
+		<name>Japanese oak</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -124,8 +124,8 @@
 	</contribution>
 
 	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-m">
-		<group>森林(山肌)</group>
-		<name>杉</name>
+		<group>Forest(mountain)</group>
+		<name>Cedar</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -144,8 +144,8 @@
 	
 	
 	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-m">
-		<group>森林(山肌)</group>
-		<name>松</name>
+		<group>Forest(mountain)</group>
+		<name>Pine tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -165,8 +165,8 @@
 	
 	
 	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}-m">
-		<group>森林(山肌)</group>
-		<name>楠</name>
+		<group>Forest(mountain)</group>
+		<name>Camphor tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -186,8 +186,8 @@
 	
 	
 	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}-m">
-		<group>森林(山肌)</group>
-		<name>楓</name>
+		<group>Forest(mountain)</group>
+		<name>Maple tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -207,8 +207,8 @@
 	</contribution>
 		
 	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}-m">
-		<group>森林(山肌)</group>
-		<name>銀杏</name>
+		<group>Forest(mountain)</group>
+		<name>Ginkgo tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -229,8 +229,8 @@
 	
 	
 	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}-m">
-		<group>森林(山肌)</group>
-		<name>ナラ</name>
+		<group>Forest(mountain)</group>
+		<name>Japanese oak</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -251,8 +251,8 @@
 	</contribution>
 
 	<contribution type="land" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-g">
-		<group>森林(草原)</group>
-		<name>杉</name>
+		<group>Forest(grassland)</group>
+		<name>Cedar</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -271,8 +271,8 @@
 	
 	
 	<contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-g">
-		<group>森林(草原)</group>
-		<name>松</name>
+		<group>Forest(grassland)</group>
+		<name>Pine tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -292,8 +292,8 @@
 	
 	
 	<contribution type="land" id="{CE18E96E-336B-4C8A-80E6-F149DAEFD6E4}-g">
-		<group>森林(草原)</group>
-		<name>楠</name>
+		<group>Forest(grassland)</group>
+		<name>Camphor tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -313,8 +313,8 @@
 	
 	
 	<contribution type="land" id="{88868086-3B45-46B5-A3F1-8D0E735DBD1C}-g">
-		<group>森林(草原)</group>
-		<name>楓</name>
+		<group>Forest(grassland)</group>
+		<name>Maple tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -335,8 +335,8 @@
 	
 	
 	<contribution type="land" id="{77961EC1-0406-42C7-A5F5-ADEC3555400E}-g">
-		<group>森林(草原)</group>
-		<name>銀杏</name>
+		<group>Forest(grassland)</group>
+		<name>Ginkgo tree</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -357,8 +357,8 @@
 	
 	
 	<contribution type="land" id="{DF43FB52-E197-451D-B4A3-1114BBFF69D9}-g">
-		<group>森林(草原)</group>
-		<name>ナラ</name>
+		<group>Forest(grassland)</group>
+		<name>Japanese oak</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -379,8 +379,8 @@
 	</contribution>
 
 	<!--contribution type="land" id="{4B732903-B207-4693-9CF7-19AED4E42604}-s">
-		<group>松林(砂浜)</group>
-		<name>浜の松林</name>
+		<group>Pine tree (beach side)</group>
+		<name>Pine tree at beach</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -405,8 +405,8 @@
 		</picture>
 	</contribution>
 	<contribution type="land" id="{25656A24-5E4F-46B5-C477-ECC58BDF8F6F}">
-		<group>森林</group>
-		<name>タケ</name>
+		<group>Forest</group>
+		<name>Bamboo</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>		
 		<picture ref="{CBDD7411-6361-4E04-C477-8B1BA1FF3A9A}-take"/>
@@ -418,8 +418,8 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="land" id="{25656A24-5E4F-46B5-C477-ECC58BDF8F6F}-m">
-		<group>森林(山肌)</group>
-		<name>タケ</name>
+		<group>Forest(mountain)</group>
+		<name>Bamboo</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>		
 		<picture ref="{CBDD7411-6361-4E04-C477-8B1BA1FF3A9A}-take"/>
@@ -434,8 +434,8 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="land" id="{25656A24-5E4F-46B5-C477-ECC58BDF8F6F}-g">
-		<group>森林(草原)</group>
-		<name>タケ</name>
+		<group>Forest(grassland)</group>
+		<name>Bamboo</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="bin/Debug/FreeTrain.Forest.dll"/>		
 		<picture ref="{CBDD7411-6361-4E04-C477-8B1BA1FF3A9A}-take"/>

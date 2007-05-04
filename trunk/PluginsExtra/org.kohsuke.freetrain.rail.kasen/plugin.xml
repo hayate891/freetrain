@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>鉄道施設プラグイン</title>
-	<author>花菱烈火</author>
+	<title>Electronic Poles on diagonal line</title>
+	<author>HanabishiRekka</author>
 	<homepage></homepage>
 
 	<contribution type="railStationary" id="{DD1224B0-2F1B-4c26-9E66-4E604F3342C8}">
-		<group>下線1</group>
+		<group>Diagonal piece with pole1</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -19,7 +19,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{DD1224B1-2F1C-4c27-9E67-4E604F3342C9}">
-		<group>下線2</group>
+		<group>Diagonal piece with pole2</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -33,7 +33,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{DD1224B4-2F1C-4c29-9E69-4E604F3342CB}">
-		<group>下線3</group>
+		<group>Diagonal piece with pole3</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -47,7 +47,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{DD1224B5-2F1C-4c29-9E69-4E604F3342CB}">
-		<group>下線4</group>
+		<group>Diagonal piece with pole4</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -61,7 +61,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{AA1224B5-2F1C-4c29-9E69-4E604F3342CB}">
-		<group>下線5</group>
+		<group>Diagonal piece with pole5</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -75,7 +75,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{AA1224B5-2F1C-4c29-9E70-4E604F3342CB}">
-		<group>下線6</group>
+		<group>Diagonal piece with pole6</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -89,7 +89,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{DD1224B2-2F1D-4c28-9E68-4E604F3342CA}">
-		<group>下線無し1</group>
+		<group>Diagonal piece no pole1</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -103,7 +103,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{DD1224B3-2F1C-4c29-9E69-4E604F3342CB}">
-		<group>下線無し2</group>
+		<group>Diagonal piece no pole2</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -117,7 +117,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{DD1224B2-2F1D-4c30-9E68-4E604F3342CA}">
-		<group>下線無し3</group>
+		<group>Diagonal piece no pole3</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
@@ -131,7 +131,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{DD1224B3-2F1C-4c31-9E69-4E604F3342CB}">
-		<group>下線無し4</group>
+		<group>Diagonal piece no pole4</group>
 		<price>250</price>
 		<size>1,1</size>
 		<height>2</height>
