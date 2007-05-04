@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>小湊鐵道・いすみ鉄道車両プラグイン</title>
-	<author>いっちー</author>
+	<title>Kominato and Izumi Railroad Plugin</title>
+	<author>Icchii</author>
 	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
 	
-<!-- いすみ200 -->
+<!-- Isumi200 -->
 
 	<contribution type="trainCar" id="{cyber-express-1703d-040417-isumi200}-a">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
@@ -15,12 +15,11 @@
 	</contribution>
 
 	<contribution type="train" id="{cyber-express-1703d-040417-isumi200}">
-		<company>いすみ鉄道</company>
-		<type>いすみ200形</type>
-		<name>いすみ線</name>
-		<author>いっちー</author>
-		<description>
-千葉県の大原～上総中野を結ぶ第三セクター、いすみ鉄道の車両です。
+		<company>Isumi Railroad</company>
+		<type>Isumi 200 Series</type>
+		<name>Isumi Line</name>
+		<author>Icchii</author>
+		<description>Travels from Ohara (in the Chiba Prefecture) to Nakano on the 3rd Sector line.
 		</description>
 		<price>1</price>
 		<speed>slow</speed>
@@ -30,7 +29,7 @@
 		</composition>
 	</contribution>
 
-<!-- 小湊鐵道キハ200 -->
+<!-- Kominato RailroadKIHA200 -->
 
 	<contribution type="trainCar" id="{cyber-express-1703d-040417-kominato200}-a">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
@@ -41,14 +40,13 @@
 	</contribution>
 
 	<contribution type="train" id="{cyber-express-1703d-040417-kominato200}">
-		<company>小湊鐵道</company>
-		<type>キハ200形</type>
+		<company>Kominato Railroad</company>
+		<type>KIHA200 Series</type>
 		<name></name>
-		<author>いっちー</author>
-		<description>
-千葉県の五井～上総中野を結ぶ私鉄、小湊鐵道の車両。
-国鉄への乗入れを考慮し国鉄キハ20形に準じて製作された車両で、以前は国鉄千葉駅へ乗入れていたが現在は設定されていない。
-編成両数は1両から5両。全14両が製作され現在も活躍中である。 
+		<author>Icchii</author>
+		<description>From Goi (in the Chiba Prefecture) to Nakano using the Kominato Railroad.
+		This vehicle used to drive to the Chiba Station, but now KIHA20 does this.
+		15 were produced and 14 are still active.
 		</description>
 		<price>1</price>
 		<speed>slow</speed>

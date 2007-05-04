@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>列車セット</title>
+	<title>Train Set</title>
  	<homepage></homepage>
  	
  	<!-- イメージ画像定義 -->
@@ -105,7 +105,7 @@
 	</contribution>
 
 	<!-- 車両定義 -->
-              <!-- クハ701 0番台 -->
+              <!-- クハ701 0 Model -->
 	<contribution type="trainCar" id="{AD070312-7653-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -114,7 +114,7 @@
 		<capacity>100</capacity>
 	</contribution>
 	
-　　　　　　<!-- モハ701 0番台 -->
+　　　　　　<!-- モハ701 0 Model -->
 	<contribution type="trainCar" id="{AD070313-7653-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -123,7 +123,7 @@
 		<capacity>100</capacity>
 	</contribution>
 
-             <!-- サハ701 100番台 -->
+             <!-- サハ701 100 Model -->
 	<contribution type="trainCar" id="{C1C4ED5E-7662-11D7-A4B7-8B95A9BCF237}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -132,13 +132,13 @@
 		<capacity>100</capacity>
 	</contribution>
 
-	<!-- クモハ701 0番台 -->
+	<!-- クモハ701 0 Model -->
 	<contribution type="trainCar" id="{AD070314-7653-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{AD070313-7653-11D7-A4B7-444553540000}"/>
 	</contribution>
 
-             <!-- クハ700 1000番台 -->
+             <!-- クハ700 1000 Model -->
 	<contribution type="trainCar" id="{C1C4ED54-7662-11D7-A4B7-8B95A9BCF237}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -147,7 +147,7 @@
 		<capacity>100</capacity>
 	</contribution>
 
-　　　　　　<!-- モハ701 1000番台 -->
+　　　　　　<!-- モハ701 1000 Model -->
 	<contribution type="trainCar" id="{C1C4ED55-7662-11D7-A4B7-8B95A9BCF237}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -156,7 +156,7 @@
 		<capacity>100</capacity>
 	</contribution>
 
-　　　　　　<!-- サハ700 1000番台 -->
+　　　　　　<!-- サハ700 1000 Model -->
 	<contribution type="trainCar" id="{C1C4ED56-7662-11D7-A4B7-8B95A9BCF237}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -165,7 +165,7 @@
 		<capacity>100</capacity>
 	</contribution>
 	
-　　　　　　<!-- クモハ700 1000番台 -->
+　　　　　　<!-- クモハ700 1000 Model -->
 	<contribution type="trainCar" id="{C1C4ED57-7662-11D7-A4B7-8B95A9BCF237}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -174,7 +174,7 @@
 		<capacity>100</capacity>
 	</contribution>
 　　　　　
-	<!-- クモハ701 1000番台 -->
+	<!-- クモハ701 1000 Model -->
 	<contribution type="trainCar" id="{C1C4ED59-7662-11D7-A4B7-8B95A9BCF237}">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{C1C4ED57-7662-11D7-A4B7-8B95A9BCF237}"/>
@@ -204,7 +204,7 @@
 		<base carRef="{C1C4ED72-7662-11D7-A4B7-8B95A9BCF237}"/>
 	</contribution>
 
-             <!-- クハ701 5500番台 -->
+             <!-- クハ701 5500 Model -->
 	<contribution type="trainCar" id="{B92219D2-7650-11D7-A4B7-D7D370C4F037}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -213,7 +213,7 @@
 		<capacity>80</capacity>
 	</contribution>
 	
-　　　　　　<!-- モハ701 5500番台 -->
+　　　　　　<!-- モハ701 5500 Model -->
 	<contribution type="trainCar" id="{B92219D4-7650-11D7-A4B7-D7D370C4F037}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -222,7 +222,7 @@
 		<capacity>80</capacity>
 	</contribution>
 
-	<!-- クモハ701 5500番台 -->
+	<!-- クモハ701 5500 Model -->
 	<contribution type="trainCar" id="{B92219D5-7650-11D7-A4B7-D7D370C4F037}">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{B92219D4-7650-11D7-A4B7-D7D370C4F037}"/>
@@ -324,7 +324,7 @@
 		<base carRef="{CBAF5392-76A7-11D7-A4B7-E675BA55FD37}"/>
 	</contribution>
 
-　　　　　　<!-- 125系 -->
+　　　　　　<!-- 125 Series -->
 	<contribution type="trainCar" id="{D772F861-76A0-11D7-A4B7-E675BA55FD37}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -336,12 +336,11 @@
 　　　　　  <!-- 編成の定義 -->
 	
              <contribution type="train" id="{AD070315-7653-11D7-A4B7-444553540000}">
-		<company>JR東日本</company>
-		<type>701系</type>
-		<name>0番台（秋田）</name>
+		<company>JR East Japan</company>
+		<type>701 Series</type>
+		<name>0 Model(秋田)</name>
 		<author>TAKUROU</author>
-		<description>1993年、東北地区に残っていた客車列車の置換えとワンマン運転実施により
-効率化を図るために登場した交流専用の3扉ロングシート車。羽越線酒田以北、奥羽線青森近郊や津軽線も乗り入れる。
+		<description>Built in 1993, This model was introduced to improve efficiency by replacing the one-man units in the North-East. Used on the Ouu line from Sakata to Aomori and the Tsugaru line.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -359,13 +358,13 @@
 	</contribution>
 
              <contribution type="train" id="{C1C4ED5F-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR東日本</company>
-		<type>701系</type>
-		<name>100番台/3両編成（秋田）</name>
+		<company>JR East Japan</company>
+		<type>701 Series</type>
+		<name>100 Model / 3Car formation(秋田)</name>
 		<author>TAKUROU</author>
-		<description>1993年、東北地区に残っていた客車列車の置換えとワンマン運転実施により
-効率化を図るために登場した交流専用の3扉ロングシート車。補助電源装置をMGからSIVに変更した94年に登場。
-山形新幹線新庄延長時に仙台電車区に転属された。
+		<description>Built in 1993, This 3-car model was introduced to improve efficiency by replacing the one-man units in the North-East. 
+		The auxiliary power supply appeared after 94, converted from the MG model and are modified in SIV.
+		Once the Yamagata Shinkansen Shinjo extension was built, this model was transformed into the Sendai Train Ku.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -387,13 +386,13 @@
 
               <!-- 編成の定義 -->
              <contribution type="train" id="{C1C4ED5A-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR東日本</company>
-		<type>701系</type>
-		<name>1000番台(仙台 /2両編成)</name>
+		<company>JR East Japan</company>
+		<type>701 Series</type>
+		<name>1000 Model (Sendai / 2Car formation)</name>
 		<author>TAKUROU</author>
-		<description>仙台地区では、715系や455系を置き換えとして701系電車が投入された。
-（クハ700＋クモハ701）と4両編成（クハ700＋モハ701＋サハ700＋クモハ701）があり、
-2両編成はワンマン運転設備を持つのに対し、4両編成は，ワンマン運転の設備を持たずドアチャイムもない。
+		<description>In Sendai area, 701 Series Trains were used, though replaced later by the 715 Series and 455 Series.
+		The formations (KUHA 700 + KUMOHA 701) and (KUHA 700 + モハ 701 + Saha 700 + KUMOHA 701) exist. 
+		The 2-Car formation is a one-man driving setup. The 4-Car has no door chime.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -411,13 +410,12 @@
 	</contribution>
 
 　　　　　　<contribution type="train" id="{C1C4ED5B-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR東日本</company>
-		<type>701系</type>
-		<name>1000番台（仙台/4両編成）</name>
+		<company>JR East Japan</company>
+		<type>701 Series</type>
+		<name>1000 Model(Sendai / 4-Car formation)</name>
 		<author>TAKUROU</author>
-		<description>仙台地区では、715系や455系を置き換えとして701系電車が投入された。
-（クハ700＋クモハ701）と4両編成（クハ700＋モハ701＋サハ700＋クモハ701）があり、
-4両編成は，ワンマン運転の設備を持たずドアチャイムもない。一ノ関－白石間に運用が限定される。
+		<description>Sendai 地区では、701 Series Trains were used, though replaced later by the 715 Series and 455 Series.
+		The (KUHA700＋KMOHA701) and the 4-Car (KUHA700＋MOHA701＋SEHA700＋KUMOHA701) Formations exist. The 4-Car Formation does not have the One-Man Driver or Door Chime?. This model is used between Ichinoseki and Shiraishi.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -438,12 +436,12 @@
 	</contribution>
         
              <contribution type="train" id="{C1C4ED75-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR東日本</company>
-		<type>701系</type>
-		<name>5000番台（田沢湖線）</name>
+		<company>JR East Japan</company>
+		<type>701 Series</type>
+		<name>5000 Model(Tazawako Line)</name>
 		<author>TAKUROU</author>
-		<description>秋田新幹線開業に伴い，改軌された田沢湖線に投入されたのが標準軌車。
-田沢湖線でのみ営業運転される。（大曲－秋田間は回送だが，大曲花火大会の臨時列車で営業運転されることもある）
+		<description>This train is used on the Tazawako Line, since the opening of the Akita Shinkansen.
+It is only used when required for business or festivals between Omagari and Akita, like the Omagai Fireworks festival.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -461,12 +459,12 @@
 	</contribution>
 
              <contribution type="train" id="{B92219D6-7650-11D7-A4B7-D7D370C4F037}">
-		<company>JR東日本</company>
-		<type>701系</type>
-		<name>5500番台（山形）</name>
+		<company>JR East Japan</company>
+		<type>701 Series</type>
+		<name>5500 Model(Yamagata)</name>
 		<author>TAKUROU</author>
-		<description>１９９３年に、奥羽・羽越本線の客車列車淘汰を目的につくられた電車。
-以降、東北各地区に投入される。5500番台は、山形新幹線新庄延長時に標準軌用普通電車として登場。
+		<description>Built in 1993. Between the Ouu to Uetsu Mainline, this train was purposely selected for the passenger service.
+Later on, it was moved to the North East area. As for the 5500 Model, at the time of the Yamagata Shinkansen Extension, it became the standard service.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -484,12 +482,12 @@
 	</contribution>
 
              <contribution type="train" id="{C1C4ED4A-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>青い森鉄道</company>
-		<type>701系</type>
-		<name>第三セクター鉄道</name>
+		<company>Blue Forest Railway</company>
+		<type>701 Series</type>
+		<name>Third sector railroad</name>
 		<author>TAKUROU</author>
-		<description>東北新幹線盛岡～八戸間延伸に伴うJR在来線区間第三セクター化により誕生。
-車両の基本構造はJR701系と同じだが、車内はセミクロスシートを採用した。いわて銀河鉄道と共用運転。
+		<description>North East Shinkansen from Morioka to Hachinoe and between, within the third section of the JR old main lines.
+		As for the basic structure of the vehicle, the JR701 Series is the same except for the semi-cross seating arrangement. Also used on the Milky Way Railway.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -507,12 +505,12 @@
 	</contribution>
 
              <contribution type="train" id="{C1C4ED4B-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>いわて銀河鉄道</company>
-		<type>IGR7000系</type>
-		<name>第三セクター鉄道</name>
+		<company>Milky Way Railway</company>
+		<type>IGR7000 Series</type>
+		<name>Third sector railroad</name>
 		<author>TAKUROU</author>
-		<description>東北新幹線盛岡～八戸間延伸に伴うJR在来線区間第三セクター化により誕生。
-車両の基本構造はJR701系と同じだが、車内はセミクロスシートでトイレが設置されている。青い森鉄道と共用運転。
+		<description>North East Shinkansen from Morioka to Hachinoe and between, within the third section of the JR old main lines.
+As for the basic structure of the vehicle, the JR701 Series is the same except for the semi-cross seating arrangement and toilet being installed. Also used on the Blue Forest Railway.
 		</description>
 		<fare>680</fare>
 		<price>100</price>
@@ -530,14 +528,13 @@
 	</contribution>
 
              <contribution type="train" id="{C1C4ED65-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR東日本</company>
-		<type>E127系</type>
+		<company>JR East Japan</company>
+		<type>E127 Series</type>
 		<name></name>
 		<author>TAKUROU</author>
-		<description>新潟近郊のローカル輸送の一部は165系を使っていたが、老朽化が進み、
-また２扉デッキ付きでラッシュ時の乗り降りが不便であるため、置換え用に製造された。
-701系の直流版というべき車両で、ステンレス製の3扉ロングシート、VVVFインパータ制御車である。
-主に新潟近郊、松本近郊を運転。
+		<description>The 165 Series is used in the suburbs of Niigata but they are getting older. They have two doors for busy times and were produced to replace older models.
+The 701 Series has a direct current and is made of stainless steel, has long seats and VVVF Inverter in the driving trailer.
+This model is mainly used in the suburbs of Niigata and Matsumoto.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -555,13 +552,13 @@
 	</contribution>
 
              <contribution type="train" id="{CBAF5396-76A7-11D7-A4B7-E675BA55FD37}">
-		<company>JR東日本</company>
-		<type>E127系</type>
-		<name>大糸線色</name>
+		<company>JR East Japan</company>
+		<type>E127 Series</type>
+		<name>Daiito Line Color</name>
 		<author>TAKUROU</author>
-		<description>車体には軽量ステンレスを使用し、VVVFインバータ制御などの新技術を導入、省エネ化と
-保守の省力化を図っている。車体は３ドア構造で、室内は片側が（ボックス型）、もう片方が（ロングシート形）となっています。
-編成は２両編成が基本で98年12月から導入された。
+		<description>Stainless steel is used inside the carriages, a VVVF Inverter is installed to allow enegry saving, reduced maintenance and better control.
+		The body is a 3-Door type (Box shape). One side of the interior, it has long seats installed already.
+As for formations, the 2-Car formation was introduced in December, 1998.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -579,12 +576,12 @@
 	</contribution>
 
 　　　　　　<contribution type="train" id="{D772F862-76A0-11D7-A4B7-E675BA55FD37}">
-		<company>JR西日本</company>
-		<type>125系</type>
-		<name>近郊形電車</name>
+		<company>JR West</company>
+		<type>125 Series</type>
+		<name>Suburban</name>
 		<author>TAKUROU</author>
-		<description>2003年3月、JR西日本小浜線(東舞鶴～敦賀)の電化開業により登場。
-１形式クモハ１２５のみで、単行＆ワンマン運転が可能。最高速度は120km/h（小浜線内での最高速度は85km/h）。
+		<description>In March 2003, JR West 's Kohama Line (East Maizuru～Tsuruga) became electrified.
+There is only one type of KUMOHA125, but seperate and one-man driving is possible. It's top speed is 120km/h (Though on the Kohama Line, the top speed is 85km/h).
 		</description>
                            <fare>400</fare>
 		<price>100</price>
@@ -609,12 +606,12 @@
 		<picture src="165b_moon.bmp" />
 	</contribution>
 
-             <!-- Tc455 仙台色 -->
+             <!-- Tc455 Sendai 色 -->
 	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-Tc455S}">
 		<picture src="455a_sen.bmp" />
 	</contribution>
 
-	<!-- M455 仙台色 -->
+	<!-- M455 Sendai 色 -->
 	<contribution type="picture" id="{AD070310-7653-11D7-A4B7-M455S}">
 		<picture src="455b_sen.bmp" />
 	</contribution>
@@ -705,7 +702,7 @@
 		<base carRef="{AD070310-7653-11D7-A4B7-Mc165-M}"/>
 	</contribution>
    
-             <!-- クハ455 仙台色 -->
+             <!-- クハ455 Sendai 色 -->
 	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Tc455-S}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -714,7 +711,7 @@
 		<capacity>80</capacity>
 	</contribution>
 	
-　　　　　　<!-- モハ454 仙台色 -->
+　　　　　　<!-- モハ454 Sendai 色 -->
 	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-M454-S}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -723,7 +720,7 @@
 		<capacity>80</capacity>
 	</contribution>
 
-	<!-- クモハ455 仙台色 -->
+	<!-- クモハ455 Sendai 色 -->
 	<contribution type="trainCar" id="{AD070310-7653-11D7-A4B7-Mc455-S}">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{AD070310-7653-11D7-A4B7-Tc455-S}"/>
@@ -869,12 +866,12 @@
              
              <!-- 編成の定義 -->
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE165-M}">
-		<company>JR東日本</company>
-		<type>165系</type>
-		<name>急行ムーンライトえちご</name>
+		<company>JR East Japan</company>
+		<type>165 Series</type>
+		<name>Moon Light Echigo (Niigata)</name>
 		<author>TAKUROU</author>
-		<description>上沼垂区１６５系Ｍ編成は新宿～新潟・村上菅野夜行快速「ムーンライトえちご号」として運転されている。
-また、間合い運用として「フェアウェイ号(新宿～黒磯)」としても運転されている。
+		<description>The Kamimettari 165 Series Ｍ Formation travels from Shinjuku to Niigata. It is called the Murakami Sugaya "Moon Light Echigo (Niigata)". 
+Also, When not running as the Moon Light, it runs as the "Fairway (Shinjuku～Kuroiso)".
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -894,14 +891,14 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-S}">
-		<company>JR東日本</company>
-		<type>455系</type>
-		<name>快速仙台シティラビット</name>
+		<company>JR East Japan</company>
+		<type>455 Series</type>
+		<name>High Speed Sendai City Rabbit</name>
 		<author>TAKUROU</author>
-		<description>かつて急行「まつしま」「ざおう」などで活躍していた455系もいまは車内を近郊形改造され3両編成でローカル運用に就いている。
-昭和63年から平成3年までの間、若番車を中心に一部の車両は車体更新工事が行われた。東北本線の黒磯－仙台－利府・一ノ関間、常磐線の仙台－水戸間、
-磐越西線で運用される。常磐線では堂々の9両編成が見られる。
-下り快速「仙台シティラビット」として福島→仙台間で運転されるが、これは現在唯一の快速運用である。
+		<description>The 455 Series used to be the express train known as "Matsushima" or "Zaou" but is now split and used in suburban 3-Car formations.
+From 1988 to 1991, A part of the new carriages was reconstruced. This train was used on the North East mainline from Kuroiso to Sendai to Rifu to Ichinoseki, the Tokiwa Line from Sendai to Mito and also on the West Line.
+On the Tokiwa Line, the 9-Car formations could be seen.
+The only high speed use for this train is the down-train (leaving Tokyo) high speed "Sendai City Rabbit" travels Fukushima to Sendai.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -921,12 +918,12 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-Ｙ}">
-		<company>JR東日本</company>
-		<type>455系</type>
+		<company>JR East Japan</company>
+		<type>455 Series</type>
 		<name>SENZAN LINE 455</name>
 		<author>TAKUROU</author>
-		<description>'97年10月14日から仙山線で営業運転を開始。
-イメージアップのために塗色を青をベースに蔵王の雪景色をイメージした白に6編成が変更された。
+		<description>This train stated driving on the Senzan Line from the 14th of October, 1997.
+The carriages were repainted in Blue and White to match the Zaou landscape.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -946,13 +943,13 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-Ｂ}">
-		<company>JR東日本</company>
-		<type>455系</type>
+		<company>JR East Japan</company>
+		<type>455 Series</type>
 		<name>BANETSU LINE 455</name>
 		<author>TAKUROU</author>
-		<description>平成8年から磐越西線の活性化を図るために塗色変更車が登場した。
-全7編成が磐越西線の郡山－喜多方間で運用に就いている。塗色変更車はすべて車体更新車。
-'99年12月改正で廃止となり、現在では仙台周辺で不定期に運用されている。
+		<description>Frp, 1996, this color scheme was used on the new West Line.
+		The 7-Car formation is used between Kooriyama and Kitakata. The new color scheme has been applied to all cars.
+In December, 1999, it was superceeded and is now used very irregularly around Sendai.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -972,13 +969,13 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-H}">
-		<company>JR東日本</company>
-		<type>169系</type>
+		<company>JR East Japan</company>
+		<type>169 Series</type>
 		<name>INTER CITY TRAIN 169</name>
 		<author>TAKUROU</author>
-		<description>長野地区にＥ１２７系が投入され、三鷹区の１６９系を置き換えるために転属。
-同車は新幹線リレー号、ホリデー快速、大垣救済臨などの運用に入り、中央快速線を９両（ホリデー快速ピクニック）で走る姿は
-塗装こそ違うが、往年の１６９系を彷彿させる。
+		<description>The E127 Series from Nagano was used to replace the 169 Series of Mitakaku.
+		As for the same car as for the form which with 9 (holiday high speed picnic) runs the central high speed line the Shinkansen relay number, holiday entering the use of high speed and Ogaki relief overlooking etc...,
+		althought the paint is very different, it closely resembles 169 Series of the past years.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -998,13 +995,12 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-S}">
-		<company>JR東日本</company>
-		<type>169系</type>
-		<name>長野色</name>
+		<company>JR East Japan</company>
+		<type>169 Series</type>
+		<name>Nagano Color</name>
 		<author>TAKUROU</author>
-		<description>長野冬季五輪に合わせ、長野支社管内車両のイメージアップを図るため、
-'93年(平成５年)頃から長野・松本両区に所属する115・165・169系に採用された塗装。
-これは車内アコモデーションに関わりなく塗色変更が行われた。
+		<description>This is the color schemed adopted in 1993 for the Nagano Winter Olympics (115, 165 and 169 Series.)
+		Only the outside was painted.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -1025,13 +1021,12 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-M}">
-		<company>JR東日本</company>
-		<type>169系</type>
-		<name>みすず色</name>
+		<company>JR East Japan</company>
+		<type>169 Series</type>
+		<name>Misuzu Color</name>
 		<author>TAKUROU</author>
-		<description>車両は信越本線で使用された長野運転所の169系３両編成の中間にサハ165系を挟んだ４両編成。
-外観はＮストライプと呼ばれるアイボリーの車体にグリーンのＮをあしらったデザイン。
-車内も廃車となった新幹線のリクライニングシートを使用して、室内サービスの向上を図った。
+		<description>The 4 Car formation consisted of a Saha 165 Series in the center of 169 Series 3 Car Formation. It is used in Nagano on the Shinetsu main line.
+		As for appearance, the design of the N has a green stripe on the ivory body (called the N stripe). It uses the reclining seats of the Shinkansen assuring an improvement in the interior design.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -1054,32 +1049,32 @@
 <!--TAKUROUより-->
  	<!-- イメージ画像定義 -->
 
-	<!-- キハ75  -->
+	<!-- KIHA75  -->
 	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-Dc75}">
 		<picture src="kiha75.bmp" />
              </contribution>
 
-　　　　　　<!-- キハ１１ -->
+　　　　　　<!-- KIHA１１ -->
 	<contribution type="picture" id="{6CAFE161-74FE-11D7-A4B7-444553540000}">
 		<picture src="kiha11.bmp" />
 	</contribution>
 
-　　　　　   <!-- キハ187 -->
+　　　　　   <!-- KIHA187 -->
 	<contribution type="picture" id="{6CAFE164-74FE-11D7-A4B7-444553540000}">
 		<picture src="kiha187.bmp" />
              </contribution>
 
-             <!-- キハ１２５ -->
+             <!-- KIHA１２５ -->
 	<contribution type="picture" id="{6CAFE168-74FE-11D7-A4B7-444553540000}">
 		<picture src="kiha125.bmp" />
 	</contribution>
 
-             <!-- キハ３１ -->
+             <!-- KIHA３１ -->
 	<contribution type="picture" id="{6CAFE16C-74FE-11D7-A4B7-444553540000}">
 		<picture src="kiha31.bmp" />
 	</contribution>
 
-　　　　　　<!-- キハ120_0 -->
+　　　　　　<!-- KIHA120_0 -->
 	<contribution type="picture" id="{6CAFE171-74FE-11D7-A4B7-444553540000}">
 		<picture src="kiha120_0.bmp" />
 	</contribution>
@@ -1161,7 +1156,7 @@
 
  	<!-- 車両定義 -->
 
-	<!-- キハ75_0 -->
+	<!-- KIHA75_0 -->
 	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_0}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -1169,13 +1164,13 @@
 		</sprite>
 		<capacity>68</capacity>
 	</contribution>
-             <!-- キハ75_100 -->
+             <!-- KIHA75_100 -->
 	<contribution type="trainCar" id="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_100}">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{FreeTrain-N1K2J-KeiH-TrainImg-Dc75_0}"/>
 	</contribution>
 
-　　　　　　<!-- キハ１１ -->
+　　　　　　<!-- KIHA１１ -->
 	<contribution type="trainCar" id="{6CAFE162-74FE-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -1184,7 +1179,7 @@
 		<capacity>60</capacity>
 	</contribution>
 
-             <!-- キハ187_1000 -->
+             <!-- KIHA187_1000 -->
 	<contribution type="trainCar" id="{6CAFE165-74FE-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -1192,13 +1187,13 @@
 		</sprite>
 		<capacity>60</capacity>
 	</contribution>
-             <!-- キハ187_0 -->
+             <!-- KIHA187_0 -->
 	<contribution type="trainCar" id="{6CAFE166-74FE-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{6CAFE165-74FE-11D7-A4B7-444553540000}"/>
 	</contribution>
 
-             <!-- キハ１２５ -->
+             <!-- KIHA１２５ -->
 	<contribution type="trainCar" id="{6CAFE169-74FE-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -1207,7 +1202,7 @@
 		<capacity>60</capacity>
 	</contribution>
 
-　　　　　　<!-- キハ３１ -->
+　　　　　　<!-- KIHA３１ -->
              <contribution type="trainCar" id="{6CAFE16D-74FE-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -1216,7 +1211,7 @@
 		<capacity>60</capacity>
 	</contribution>
 
-             <!-- キハ120_0 -->
+             <!-- KIHA120_0 -->
 	<contribution type="trainCar" id="{6CAFE172-74FE-11D7-A4B7-444553540000}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -1393,12 +1388,12 @@
 	<!-- 編成の定義 -->
           
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DCC75}">
-		<company>JR東海</company>
-		<type>キハ７５系</type>
-		<name>汎用型気動車</name>
+		<company>JR Central</company>
+		<type>KIHA75 Series</type>
+		<name>General Purpose Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>老朽化したキハ58系などの置換え用として製造された。エンジンなどの下回りはキハ85系と同等で、出力350ps、最高速度120km/hである。ステンレス車体の３扉車で、転換クロスシートである。
-　快速みえ、急行かすが、武豊線で使われている。
+		<description>This model was produced to replace the KIHA58 Series, etc... It has an engine as powerful as the KIHA85 (350ps, 120km/h).
+		Each car has 3 doors and cross-seats. They are used for high speed services on the Taketoyo line.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -1417,12 +1412,11 @@
 	</contribution>
 
 　　　　　　<contribution type="train" id="{6CAFE163-74FE-11D7-A4B7-444553540000}">
-		<company>JR東海</company>
-		<type>キハ１１系</type>
-		<name>近郊形気動車</name>
+		<company>JR Central</company>
+		<type>KIHA11 Series</type>
+		<name>Suburban Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>
-近距離近郊型車輛として投入した新型ディーゼル車輛。一部が東海交通事業所(城北線)から借り入れている。
+		<description>The design partly borrows from the Tokai Line model, this model is used as a short-range suburban service.
 		</description>
                            <fare>400</fare>
 		<price>100</price>
@@ -1434,12 +1428,12 @@
 	</contribution>
 
              <contribution type="train" id="{6CAFE167-74FE-11D7-A4B7-444553540000}">
-		<company>JR西日本</company>
-		<type>キハ187系</type>
-		<name>特急型気動車</name>
+		<company>JR West</company>
+		<type>KIHA187 Series</type>
+		<name>Super-Express Rail-Car</name>
 		<author>TAKUROU</author>
 		<description>
-山陰本線西部の高速化に向けに造られた、新型特急気動車。今後も鳥取方面に投入予定。
+		Although kiha181 series had been used on intercity services of the Sanin line, JR West developed kiha187 series in order to increase the competitive power against motorcars in 2000 and entered “Super Oki” services and “Super Kunibiki” services in 2001.
 		</description>
 		<fare>1010</fare>
 		<price>100</price>
@@ -1458,14 +1452,13 @@
 	</contribution>
 
              <contribution type="train" id="{6CAFE16A-74FE-11D7-A4B7-444553540000}">
-		<company>JR九州</company>
-		<type>キハ125系</type>
-		<name>近郊形気動車（YDC125）</name>
+		<company>JRKyushuu</company>
+		<type>KIHA125 Series</type>
+		<name>Suburban Rail-Car(YDC125)</name>
 		<author>TAKUROU</author>
-		<description>
-大型のキハ200では輸送力が過剰な路線があり、それに合わせて小型のキハ125が作られた。
-車体は新潟鉄工製作のレールバス（ＮＤＣ）規格。
-内装と外部の塗装はドーンデザイン研究所の水戸岡鋭冶氏によるもの。
+		<description>The KIHA125 was created to run on low-traffic lines where the KIHA200 was too big.
+		As for the body, it's a rail bus built by the Niigata ironworker production (NDC) company.
+		The interior and exterior paint is that of the "Down Design" from the Mitooka Research.
 		</description>
                            <fare>680</fare>
 		<price>100</price>
@@ -1478,12 +1471,12 @@
 
              <!-- 編成の定義 -->
 	<contribution type="train" id="{6CAFE16E-74FE-11D7-A4B7-444553540000}">
-		<company>JR九州</company>
-		<type>キハ３２系</type>
-		<name>近郊形気動車</name>
+		<company>JRKyushuu</company>
+		<type>KIHA32 Series</type>
+		<name>Suburban Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>
-国鉄最後の新形式、ステンレス車体で転換クロスシート装備。豊肥・久大・肥薩線に運用。
+		<description>The final model of the Japanese National Railways, with stainless steel body conversion and cross seat equipment.
+		It uses to the Yutaka to Hisashi to Ooturu to Hisatsu line.
 		</description>
                           <fare>680</fare>
 		<price>100</price>
@@ -1495,12 +1488,12 @@
 	</contribution>
 
              <contribution type="train" id="{6CAFE173-74FE-11D7-A4B7-444553540000}">
-		<company>JR西日本</company>
-		<type>キハ１20系</type>
-		<name>関西線色</name>
+		<company>JR West</company>
+		<type>KIHA120 Series</type>
+		<name>Kansai Line Color</name>
 		<author>TAKUROU</author>
 		<description>
-JR西日本発足後の初の新製軽快気動車。エンジンが３３０PSに変更された０番台。ロングシートの編成。
+The first light rail-car after the innauguration of JR West. This is the 0 Model where the engine is modified to 330 PS. It uses the "Long seat" formation.
 		</description>
                            <fare>400</fare>
 		<price>100</price>
@@ -1512,14 +1505,14 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
 	</contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-M}">
-		<company>JR東日本</company>
-		<type>185系</type>
-		<name>新特急電車</name>
+		<company>JR East Japan</company>
+		<type>185 Series</type>
+		<name>New Super-Express</name>
 		<author>TAKUROU</author>
-		<description>新幹線上野開業後に在来線特急への転用を考慮し、185系0番代を耐寒・耐雪構造として
-1982(昭和57)年に185系200番代が新製された。
-200番台は165系との併結が考慮され、碓氷峠の通過に備えて横軽対策車となっている。
-リニューアル工事が行われ、普通車のリクライニングシート化が完了した。
+		<description>After the Shinkansen Ueno started operating, this model was considered for use on the local railroad super-express, 185 Series 200 was remodelled in 1982.
+		185 Series 0 required cold-proof resistance due to the cold weather.
+		200 Model are considered, the joining of 165 Series side lightly have become the measure car making provision for passing of the Usui pass.
+		Renewal construction was done, reclining seat conversion of the standard-sized car completed.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1537,13 +1530,12 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
              
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-J}">
-		<company>旧日本国有鉄道</company>
-		<type>185系</type>
-		<name>伊豆特急「踊り子」</name>
+		<company>Old Japanese National Railway</company>
+		<type>185 Series</type>
+		<name>Izu Super-Express "Dancer"</name>
 		<author>TAKUROU</author>
-		<description>東京と伊豆を結ぶ優等列車として急行伊豆の特急化を前提に、
-153系と同様に普通列車への間合運用を考慮した特急形電車として、1981(昭和56)年に新製されたのが185系0番代である。
-185系は関西地区で新快速用として使用されていた117系近郊形直流電車を基本とし、順次置換予定の153系とも併結可能な構造としている。
+		<description>This train is the Tokyo and Izu Super-Express. Built in 1981, the 185 Series 0 had a new super-express shape.
+		It runs the same routes as the 153 Series. The 185 Series replaced the 117 Series suburban which were used as the one for new high speed as the basis in Kansai area.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1564,14 +1556,13 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-T}">
-		<company>JR東日本</company>
-		<type>185系</type>
-		<name>伊豆特急「踊り子」</name>
+		<company>JR East Japan</company>
+		<type>185 Series</type>
+		<name>Izu Super-Express "Dancer"</name>
 		<author>TAKUROU</author>
-		<description>東京と伊豆を結ぶ優等列車として急行伊豆の特急化を前提に、
-153系と同様に普通列車への間合運用を考慮した特急形電車として、1981(昭和56)年に新製されたのが185系0番代である。
-185系は関西地区で新快速用として使用されていた117系近郊形直流電車を基本とし、順次置換予定の153系とも併結可能な構造としている。
-現在はリニューアル工事が行われ、白地に湘南色を配した外部色への変更、普通車のリクライニングシート化が完了した。
+		<description>This train is the Tokyo and Izu Super-Express. Built in 1981, the 185 Series 0 had a new super-express shape.
+		It runs the same routes as the 153 Series. The 185 Series replaced the 117 Series suburban which were used as the one for new high speed as the basis in Kansai area.
+		It has recently been remodelled with new colors and reclining seats.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1592,12 +1583,12 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-I}">
-		<company>旧日本国有鉄道</company>
-		<type>185系＆153系</type>
-		<name>急行「伊豆」混編成</name>
+		<company>Old Japanese National Railway</company>
+		<type>185 Series＆153 Series</type>
+		<name>Izu Mixed Express</name>
 		<author>TAKUROU</author>
-		<description>１８５系登場当時に見られた、１５３系との併結編成。基本１０両と付属５両がそれぞれ１８５系だったり１５３系だったりと、組み合わせいろいろ。
-特急「踊り子」運転開始前の急行「伊豆」や普通列車の運用に充当されていました。
+		<description>This train consists of a 185 Series and 153 Series train. It usually has 10 185 Series cars, with an additional 5 153 Series joined.
+		This was a super express before the Izu Super-Express 'Dancer' was introduced.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1618,15 +1609,12 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ157-A}">
-		<company>旧日本国有鉄道</company>
-		<type>157系</type>
-		<name>特急「あまぎ」「白根」編成</name>
+		<company>Old Japanese National Railway</company>
+		<type>157 Series</type>
+		<name>Super-Express "Amagi" "Shirone"</name>
 		<author>TAKUROU</author>
-		<description>157系は今でいうところのリゾートＥｘｐｒｅｓｓとして首都圏を中心に運転されるとともに、
-ご静養などで那須や伊豆の御用邸へ往復される際のお召列車としても活躍。
-特急並みの設備を有するDX準急 … という登場時の車両コンセプトゆえに、通勤電車から特急電車に至る国鉄電車の
-体系からやや外れたポジションにあったことも157系の魅力であった。昭和51年に特急あまぎ運用から降り、最後まで残った
-お召し列車編成も183系に譲って、昭和57年に廃車となった。
+		<description>The 157 Series is used as a Resort Express in the Central region.
+		The DX model possesses equipment like the Super-Express. It was designed off the JNR model.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -2121,9 +2109,9 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
 
              <!-- 編成の定義 -->
             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ153-S}">
-		<company>旧日本国有鉄道</company>
-		<type>153系</type>
-		<name>湘南急行電車</name>
+		<company>Old Japanese National Railway</company>
+		<type>153 Series</type>
+		<name>Shonan Express Train</name>
 		<author>TAKUROU</author>
 		<description>
 		</description>
@@ -2149,9 +2137,9 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>                                         
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ165-S}">
-		<company>旧日本国有鉄道</company>
-		<type>165系</type>
-		<name>湘南急行電車(HMあり)</name>
+		<company>Old Japanese National Railway</company>
+		<type>165 Series</type>
+		<name>Shonan Express Train (HM)</name>
 		<author>TAKUROU</author>
 		<description>
 		</description>
@@ -2179,9 +2167,9 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>  
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ164-S}">
-		<company>旧日本国有鉄道</company>
-		<type>165系</type>
-		<name>湘南急行電車(HMなし)</name>
+		<company>Old Japanese National Railway</company>
+		<type>165 Series</type>
+		<name>Shonan Express Train (No HM)</name>
 		<author>TAKUROU</author>
 		<description>
 		</description>
@@ -2209,9 +2197,9 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>  
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ455-K}">
-		<company>旧日本国有鉄道</company>
-		<type>455系</type>
-		<name>東北急行電車</name>
+		<company>Old Japanese National Railway</company>
+		<type>455 Series</type>
+		<name>Northeast Express Train</name>
 		<author>TAKUROU</author>
 		<description>
 		</description>
@@ -2235,13 +2223,12 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>  
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ475-K}">
-		<company>旧日本国有鉄道</company>
-		<type>475系</type>
-		<name>北陸急行電車</name>
+		<company>Old Japanese National Railway</company>
+		<type>475 Series</type>
+		<name>Hokuriku Express Train</name>
 		<author>TAKUROU</author>
-		<description>６０Hzの北陸本線に登場した４７１系統で、抑速ブレーキ付となり勾配区間がある線区で活躍するようになった。
-数々の急行列車で活躍し、次第に特急化されるにつれ、普通列車にも使われるようになった。
-
+		<description>The 471 Series "Osamu" appeared on the Hokuriku main lane (60 Hz).
+		As it participates in the numerous bullet trains, the super express is converted gradually, reaching the point where it is used even as local trains.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -2262,13 +2249,12 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>  
              
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ153-B}">
-		<company>旧日本国有鉄道</company>
-		<type>153系</type>
-		<name>ブルーライナー</name>
+		<company>Old Japanese National Railway</company>
+		<type>153 Series</type>
+		<name>Blue Liner</name>
 		<author>TAKUROU</author>
-		<description>昭和47年に新幹線が岡山まで延長されると、急行用153系の捻出が可能となり、冷房化、スピードアップを含め、
-空気バネつき台車の乗り心地良さ、また列車ダイヤのネット化・増発などにより新快速電車として登場した。しかし、私鉄との競合という地域の特殊性から、
-列車の陳腐化なども重なり、ついに後継の座を117系に譲った。
+		<description>When (1972) the Shinkansen was extended to Okayama, devices from the bullet train (153 Series) became possible.
+		This included air-conditioning, speed up, air cushions, etc. From the area came competition with the private railway corporations, the 117 Series won.
 		</description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2289,13 +2275,12 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ117-S}">
-		<company>旧日本国有鉄道</company>
-		<type>117系</type>
-		<name>シティーライナー</name>
+		<company>Old Japanese National Railway</company>
+		<type>117 Series</type>
+		<name>City Liner</name>
 		<author>TAKUROU</author>
-		<description>昭和55年から私鉄と競合する京阪神間でのスピードアップやリクライニングシートを導入して快適さ、
-流線型の先頭車など独特なスタイルで、陳腐化した153系ブルーライナーに変って新快速の役割を担った。
-また、二年後には関西圏だけでなく名鉄と競合する中京地区でも東海ライナーとして投入された。
+		<description>This train introduced the speed up and the reclining seat between capital Osaka and Kobe which competed with private railway corporations from 1980.
+		The comfort, changing with unique style, to 153 Series blue liners which such as streamlined lead coach, bore the role of new high speed.
 		</description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2315,13 +2300,13 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECC117-C}">
-		<company>JR東海</company>
-		<type>117系</type>
-		<name>東海ライナー</name>
+		<company>JR Central</company>
+		<type>117 Series</type>
+		<name>Tokai Liner</name>
 		<author>TAKUROU</author>
-		<description>関西圏に続き名古屋圏でも昭和57年から東海ライナーという愛称で暫定投入され、153系・165系の快速から置き換えられた。
-昭和61年から、中央西線にも投入される事になり６連から４連に組み返られ、以降211系などと活躍したが、平成元年から311系が新製されて快速の運用から外れた。
-この時から会社のコーポレートカラーに塗り替えられた。1992年度で一部の車両が車端部ロングシート化改造を受けている。
+		<description>This train was introduced into the Kansai area and Nagoya area (Tokai liner) in 1982. It replaced the high speed 153 and 165 Series.
+		From 1986, it was used on the central west line (6-Car and 4-Car). Later, the 211 Series and the like participated, but the new 311 Series started from 1989.
+		From this time it was repainted in the corporate color of the company. The vehicle received a long seat conversion remodelling at 1992
 		</description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2340,13 +2325,13 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-F}">
-		<company>JR西日本</company>
-		<type>117系</type>
-		<name>300番台福知山色</name>
+		<company>JR West</company>
+		<type>117 Series</type>
+		<name>300 Model (Fukuchiyama Color)</name>
 		<author>TAKUROU</author>
-		<description>福知山線向けに改造された１１７系の中でも３００番台に分類される編成。
-色は白地にグリーンのカラーリングで、塗り分けは東海色のようだが、ライト周りまで及んでいない。
-また、３００番台は、ドアから中より２シート分をロングシートに改造してあり、乗降口の混雑緩和を図っている。
+		<description>This formation was remodelled for the Fukuchiyama line.
+		It resembles the Tokai Coloring, but is not the same.
+		In addition, the 300 Model has 2 seats more and this assures less congestion when getting on and off.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -2366,15 +2351,15 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-O}">
-		<company>JR西日本</company>
-		<type>117系</type>
-		<name>サンライナー</name>
+		<company>JR West</company>
+		<type>117 Series</type>
+		<name>Sun Liner</name>
 		<author>TAKUROU</author>
-		<description>平成4年3月改正に117系の中間車を115系3500番台(岡山電車区・広島運転所)に改造され、
-残りの４連が同改正から30分ヘッドとなった岡山～福山間快速「サンライナー」に投入された。
-岡山地区の普通運用や平成６年には臨時快速「三都ライナー」として京都まで乗り入れた。
-三都ライナー廃止後の翌年から福山～広島間のホリデー快速「スーパーラビット」の運用に就く（Ｈ14年廃止）。
-現在ではワンマン運転に改造されている。
+		<description>The intermediate car of the 115 Series 3500 Model (the Okayama Express & Hiroshima) it was remodelled in March, 1992.
+		It then serviced Okayama where it was then used as the high speed "Sun Liner" between Fukuyama.
+		It saw normal operational in the Okayama area and as a temporary high speed "Sun Liner". It drove to Kyoto in 1994.
+		After it was stopped as the "Sun Liner" to Fukuyama, Holidays between Hiroshima used the high speed "Super Rabbit".
+		Currently, it has been remodelled to one-man driving.
                            </description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2393,12 +2378,12 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-W}">
-		<company>JR西日本</company>
-		<type>117系</type>
-		<name>オーシャン色</name>
+		<company>JR West</company>
+		<type>117 Series</type>
+		<name>Ocean Color</name>
 		<author>TAKUROU</author>
-		<description>平成13年末から和歌山地区（きのくに線、和歌山線）向けに０・300番台がワンマン改造されて投入された。
-塗装は同地区を通過する南紀特急オーシャンアロー車（285系）のカラーを採用。
+		<description>Used in the Wakayama area (Wakayama line), the 0-300 Model (one-man) had been remodelled but was then discontinued in 2001.
+		The south Super-Express "Ocean Arrow" Train which uses the same area (285 Series) adopted the same paint the color.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -2417,11 +2402,11 @@ JR西日本発足後の初の新製軽快気動車。エンジンが３３０PS�
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-S}">
-		<company>JR西日本</company>
-		<type>117系</type>
-		<name>混色新快速</name>
+		<company>JR West</company>
+		<type>117 Series</type>
+		<name>High Speed Mixed Color</name>
 		<author>TAKUROU</author>
-		<description>221系新快速の補完として、朝夕のみ新快速として投入された。
+		<description>New high speed 221 Series used to compliment high speed services.
 		</description>
 		<fare>550</fare>
 		<price>100</price>

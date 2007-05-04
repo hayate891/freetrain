@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>255系特急型電車車両プラグイン</title>
+	<title>255 Series Super-Express Plug-in</title>
 	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
 
 
@@ -30,15 +30,14 @@
 	</contribution>
 
 	<contribution type="train" id="{187DF275-70DE-ec255-8F66-BF0E327B80CF}">
-		<company>JR東日本</company>
-		<type>255系</type>
-		<name>房総ビューエクスプレス</name>
-		<author>いっちー</author>
-		<description>1993年、房総方面で活躍している183系の置き換え用として登場。
-南房総の観光客や通年利用のビジネスマン等の多目的な利用を考え、ハイブリットモビリティ（複合移動空間）というトータルコンセプトを元にデザインされた。 
-JR東日本の特急車両としては初めてVVVFインバータ制御を採用した車両で、従来の特急車に比べＭＴ比を下げて省エネ化を図っている。
-塗装は太平洋をイメージするブルーと砂浜・海辺をイメージするホワイトを基調にして、ドア付近と車端に菜の花をイメージするイエローを配色。 
-臨時列車で中央東線にも乗り入れする。運転最高速度は130km/h。</description>
+		<company>JR East</company>
+		<type>255 Series</type>
+		<name>Dousou View Express</name>
+		<author>Icchii</author>
+		<description>This train was built in 1993 to replace the 183 Series. This train was designed for sightseeing and business men. 
+		The first JR East Super-Express vehicle to adopt VVVF invertor control, reducing MT ratio in comparison with the conventional super-express car, assuring energy-saving conversion.
+		The paint near the door (yellow) represents the flower and the green on the car edge, the blue represents the Pacific Ocean and the white represents the sandy beach seashore.
+		It also runs a temporary service on the Central East line when required. It's top speed is 30km/h。</description>
 		<price>100</price>
            	<fare>1200</fare>
 		<speed>fast</speed>
