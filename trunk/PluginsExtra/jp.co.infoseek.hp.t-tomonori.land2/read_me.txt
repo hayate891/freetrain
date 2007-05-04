@@ -1,36 +1,36 @@
 --------------------------------------------------------------------------------------------
-�� FreeTrain �A�h�I���v���O�C�� ��
-�@�@�w�n�\�v���O�C���Z�b�g 2�x
-�@�@�@ �`�o���X�g�Z�b�g�`
+◆ FreeTrain アドオンプラグイン ◆
+　　『地表プラグインセット 2』
+　　　 ～バラストセット～
 --------------------------------------------------------------------------------------------
-�����  :�|�� �q�I
-HOMEPAGE�Fhttp://t-tomonori.hp.infoseek.co.jp/
-e-MAIL  �Fbuagi209@hi-net.zaq.ne.jp
+制作者  :竹内 智紀
+HOMEPAGE：http://t-tomonori.hp.infoseek.co.jp/
+e-MAIL  ：buagi209@hi-net.zaq.ne.jp
 --------------------------------------------------------------------------------------------
-���̂��т͢�n�\�v���O�C���Z�b�g2����䗘�p���������A�L�������܂��B
-���g�͒n�\�v���O�C���̢�o���X�g��ł��B
-�Ȃ��A���̃v���O�C���̃e�N�X�`���͂�����������(http://shikashika.hp.infoseek.co.jp/)�̢�Ώ���v���O�C���������������̂ł��B
+このたびは｢地表プラグインセット2｣を御利用いただき、有難う御座います。
+中身は地表プラグインの｢バラスト｣です。
+なお、このプラグインのテクスチャはしかしかさん(http://shikashika.hp.infoseek.co.jp/)の｢石畳｣プラグインを改造したものです。
 --------------------------------------------------------------------------------------------
-�`���e�`
-read_me.txt           �c���ǂ�ł镶�͂ł��B
-[jp.co.infoseek.hp.t-tomonori.land2] �c�t�H���_
-      |_ plugin.xml                  �c�v���O�C���t�@�C��
-      |_ ballast_grey.bmp            �c�o���X�g(�D�F)�e�N�X�`��
-      |_ ballast_ocher.bmp           �c�o���X�g(���y�F)�e�N�X�`��
-      |_ ballast_brown.bmp           �c�o���X�g(���F)�e�N�X�`��
+～内容～
+read_me.txt           …今読んでる文章です。
+[jp.co.infoseek.hp.t-tomonori.land2] …フォルダ
+      |_ plugin.xml                  …プラグインファイル
+      |_ ballast_grey.bmp            …バラスト(灰色)テクスチャ
+      |_ ballast_ocher.bmp           …バラスト(黄土色)テクスチャ
+      |_ ballast_brown.bmp           …バラスト(茶色)テクスチャ
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-�`�C���X�g�[���`
-�Free Train��̃t�H���_�̒��ɢplugins��Ƃ����t�H���_������܂��B
-���̒��ɢjp.co.infoseek.hp.t-tomonori.land2��t�H���_���t�H���_���Ƃ��̂܂ܓ���Ă��������B
+～インストール～
+｢Free Train｣のフォルダの中に｢plugins｣というフォルダがあります。
+その中に｢jp.co.infoseek.hp.t-tomonori.land2｣フォルダをフォルダごとそのまま入れてください。
 --------------------------------------------------------------------------------------------
-�`�g�p���@�`
-���̃v���O�C���͢�H����̢�n�\�����I��������̂ł��B�͈͎w��Őݒu�\�B
-�A���A���H�A�w�A�z�[���⓹�H�A�����Ȃǂ�ݒu����Ƃ��͂��̕������폜���Ȃ���΂����܂���B
-�������A�t�ɏ�L�̕���ݒu������Ƀo���X�g��~�����Ƃ͉\�ł��B
+～使用方法～
+このプラグインは｢工事｣の｢地表｣から選択するものです。範囲指定で設置可能。
+但し、線路、駅、ホームや道路、建物などを設置するときはその部分を削除しなければいけません。
+ただし、逆に上記の物を設置した後にバラストを敷くことは可能です。
 
-�܂��A�H�ʓd�ԉ���Ԃ�u���������́A���̒n�\�v���O�C���̃o���X�g�ł͂ł��܂���B
-�ɂ���̃T�C�g(http://suzukams.at.infoseek.co.jp/FreeTrain/)���瓹�H�v���O�C���𓱓����邩�A�l�̃T�C�g�Ţ���H�v���O�C���Z�b�g1����_�E�����[�h��C���X�g�[�����Ă��������B(���H�͐��H��ɂ��̂܂ܕ~�����Ƃ��ł��܂��B)
+また、路面電車化や車を置きたい方は、この地表プラグインのバラストではできません。
+暇さんのサイト(http://suzukams.at.infoseek.co.jp/FreeTrain/)から道路プラグインを導入するか、僕のサイトで｢道路プラグインセット1｣をダウンロード･インストールしてください。(道路は線路上にそのまま敷くことができます。)
 --------------------------------------------------------------------------------------------
-���Free Train���Kohsuke Kawaguchi���񂪍쐬���ꂽ�t���[�E�F�A�\�t�g�ł��B
-�@�Free Train� http://www.kohsuke.org/freetrain/
+※｢Free Train｣はKohsuke Kawaguchiさんが作成されたフリーウェアソフトです。
+　｢Free Train｣ http://www.kohsuke.org/freetrain/

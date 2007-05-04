@@ -1,34 +1,34 @@
 --------------------------------------------------------------------------------------------
-�� FreeTrain �A�h�I���v���O�C�� ��
-�@�@�w�n�\�v���O�C���Z�b�g 1�x
-�@�@�@ �`���ƃA�X�t�@���g�`
+◆ FreeTrain アドオンプラグイン ◆
+　　『地表プラグインセット 1』
+　　　 ～水とアスファルト～
 --------------------------------------------------------------------------------------------
-�����  :�|�� �q�I
-HOMEPAGE�Fhttp://t-tomonori.hp.infoseek.co.jp/
-e-MAIL  �Fbuagi209@hi-net.zaq.ne.jp
+制作者  :竹内 智紀
+HOMEPAGE：http://t-tomonori.hp.infoseek.co.jp/
+e-MAIL  ：buagi209@hi-net.zaq.ne.jp
 --------------------------------------------------------------------------------------------
-���̂��т͢�n�\�v���O�C���Z�b�g1����䗘�p���������A�L�������܂��B
-���g�͒n�\�v���O�C���̢���ƃA�X�t�@���g��ł��B
+このたびは｢地表プラグインセット1｣を御利用いただき、有難う御座います。
+中身は地表プラグインの｢水とアスファルト｣です。
 --------------------------------------------------------------------------------------------
-�`���e�`
-read_me.txt           �c���ǂ�ł镶�͂ł��B
-[jp.co.infoseek.hp.t-tomonori.land1] �c�t�H���_
-      |_ plugin.xml                  �c�v���O�C���t�@�C��
-      |_ asfa.bmp            �@�@�@�@�c���e�N�X�`��
-      |_ water.bmp         �@�@�@�@  �c�A�X�t�@���g�e�N�X�`��
+～内容～
+read_me.txt           …今読んでる文章です。
+[jp.co.infoseek.hp.t-tomonori.land1] …フォルダ
+      |_ plugin.xml                  …プラグインファイル
+      |_ asfa.bmp            　　　　…水テクスチャ
+      |_ water.bmp         　　　　  …アスファルトテクスチャ
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-�`�C���X�g�[���`
-�Free Train��̃t�H���_�̒��ɢplugins��Ƃ����t�H���_������܂��B
-���̒��ɢjp.co.infoseek.hp.t-tomonori.land1��t�H���_���t�H���_���Ƃ��̂܂ܓ���Ă��������B
+～インストール～
+｢Free Train｣のフォルダの中に｢plugins｣というフォルダがあります。
+その中に｢jp.co.infoseek.hp.t-tomonori.land1｣フォルダをフォルダごとそのまま入れてください。
 --------------------------------------------------------------------------------------------
-�`�g�p���@�`
-���̃v���O�C���͢�H����̢�n�\�����I��������̂ł��B�͈͎w��Őݒu�\�B
-�A���A���H�A�w�A�z�[���⓹�H�A�����Ȃǂ�ݒu����Ƃ��͂��̕������폜���Ȃ���΂����܂���B
-�������A�t�ɏ�L�̕���ݒu������Ƀo���X�g��~�����Ƃ͉\�ł��B
+～使用方法～
+このプラグインは｢工事｣の｢地表｣から選択するものです。範囲指定で設置可能。
+但し、線路、駅、ホームや道路、建物などを設置するときはその部分を削除しなければいけません。
+ただし、逆に上記の物を設置した後にバラストを敷くことは可能です。
 
-�܂��A�H�ʓd�ԉ���Ԃ�u���������́A���̒n�\�v���O�C���̃A�X�t�@���g�ł͂ł��܂���B
-�ɂ���̃T�C�g(http://suzukams.at.infoseek.co.jp/FreeTrain/)���瓹�H�v���O�C���𓱓����Ă��������B
+また、路面電車化や車を置きたい方は、この地表プラグインのアスファルトではできません。
+暇さんのサイト(http://suzukams.at.infoseek.co.jp/FreeTrain/)から道路プラグインを導入してください。
 --------------------------------------------------------------------------------------------
-���Free Train���Kohsuke Kawaguchi���񂪍쐬���ꂽ�t���[�E�F�A�\�t�g�ł��B
-�@�Free Train� http://www.kohsuke.org/freetrain/
+※｢Free Train｣はKohsuke Kawaguchiさんが作成されたフリーウェアソフトです。
+　｢Free Train｣ http://www.kohsuke.org/freetrain/

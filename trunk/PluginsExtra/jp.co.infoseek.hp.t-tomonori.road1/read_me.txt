@@ -1,31 +1,31 @@
 --------------------------------------------------------------------------------------------
-Ÿ FreeTrain ƒAƒhƒIƒ“ƒvƒ‰ƒOƒCƒ“ Ÿ
-@@w“¹˜Hƒvƒ‰ƒOƒCƒ“ƒZƒbƒg 1x
-@@@ `ƒoƒ‰ƒXƒgƒZƒbƒg`
+â—† FreeTrain ã‚¢ãƒ‰ã‚ªãƒ³ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ â—†
+ã€€ã€€ã€Žé“è·¯ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚»ãƒƒãƒˆ 1ã€
+ã€€ã€€ã€€ ï½žãƒãƒ©ã‚¹ãƒˆã‚»ãƒƒãƒˆï½ž
 --------------------------------------------------------------------------------------------
-§ìŽÒ  :’|“à ’q‹I
-HOMEPAGEFhttp://t-tomonori.hp.infoseek.co.jp/
-e-MAIL  Fbuagi209@hi-net.zaq.ne.jp
+åˆ¶ä½œè€…  :ç«¹å†… æ™ºç´€
+HOMEPAGEï¼šhttp://t-tomonori.hp.infoseek.co.jp/
+e-MAIL  ï¼šbuagi209@hi-net.zaq.ne.jp
 --------------------------------------------------------------------------------------------
-‚±‚Ì‚½‚Ñ‚Í¢“¹˜Hƒvƒ‰ƒOƒCƒ“ƒZƒbƒg1£‚ðŒä—˜—p‚¢‚½‚¾‚«A—L“ï‚¤ŒäÀ‚¢‚Ü‚·B
-’†g‚Í“¹˜Hƒvƒ‰ƒOƒCƒ“‚Ì¢ƒoƒ‰ƒXƒg£‚Å‚·B
-‚È‚¨A‚±‚Ìƒvƒ‰ƒOƒCƒ“‚ÌƒeƒNƒXƒ`ƒƒ‚Í‚µ‚©‚µ‚©‚³‚ñ(http://shikashika.hp.infoseek.co.jp/)‚Ì¢Îô£ƒvƒ‰ƒOƒCƒ“‚ð‰ü‘¢‚µ‚½‚à‚Ì‚Å‚·B
+ã“ã®ãŸã³ã¯ï½¢é“è·¯ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚»ãƒƒãƒˆ1ï½£ã‚’å¾¡åˆ©ç”¨ã„ãŸã ãã€æœ‰é›£ã†å¾¡åº§ã„ã¾ã™ã€‚
+ä¸­èº«ã¯é“è·¯ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ï½¢ãƒãƒ©ã‚¹ãƒˆï½£ã§ã™ã€‚
+ãªãŠã€ã“ã®ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒ†ã‚¯ã‚¹ãƒãƒ£ã¯ã—ã‹ã—ã‹ã•ã‚“(http://shikashika.hp.infoseek.co.jp/)ã®ï½¢çŸ³ç•³ï½£ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’æ”¹é€ ã—ãŸã‚‚ã®ã§ã™ã€‚
 --------------------------------------------------------------------------------------------
-`“à—e`
-read_me.txt           c¡“Ç‚ñ‚Å‚é•¶Í‚Å‚·B
-[jp.co.infoseek.hp.t-tomonori.road1] cƒtƒHƒ‹ƒ_
-      |_ plugin.xml                  cƒvƒ‰ƒOƒCƒ“ƒtƒ@ƒCƒ‹
-      |_ ballast_g+b.bmp             cƒoƒ‰ƒXƒg(ŠDF+’ƒF)ƒeƒNƒXƒ`ƒƒ
-      |_ ballast_o+b.bmp             cƒoƒ‰ƒXƒg(“yF+’ƒF)ƒeƒNƒXƒ`ƒƒ
-      |_ ballast_brown.bmp           cƒoƒ‰ƒXƒg(’ƒF)ƒeƒNƒXƒ`ƒƒ
+ï½žå†…å®¹ï½ž
+read_me.txt           â€¦ä»Šèª­ã‚“ã§ã‚‹æ–‡ç« ã§ã™ã€‚
+[jp.co.infoseek.hp.t-tomonori.road1] â€¦ãƒ•ã‚©ãƒ«ãƒ€
+      |_ plugin.xml                  â€¦ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãƒ•ã‚¡ã‚¤ãƒ«
+      |_ ballast_g+b.bmp             â€¦ãƒãƒ©ã‚¹ãƒˆ(ç°è‰²+èŒ¶è‰²)ãƒ†ã‚¯ã‚¹ãƒãƒ£
+      |_ ballast_o+b.bmp             â€¦ãƒãƒ©ã‚¹ãƒˆ(åœŸè‰²+èŒ¶è‰²)ãƒ†ã‚¯ã‚¹ãƒãƒ£
+      |_ ballast_brown.bmp           â€¦ãƒãƒ©ã‚¹ãƒˆ(èŒ¶è‰²)ãƒ†ã‚¯ã‚¹ãƒãƒ£
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-`ƒCƒ“ƒXƒg[ƒ‹`
-¢Free Train£‚ÌƒtƒHƒ‹ƒ_‚Ì’†‚É¢plugins£‚Æ‚¢‚¤ƒtƒHƒ‹ƒ_‚ª‚ ‚è‚Ü‚·B
-‚»‚Ì’†‚É¢jp.co.infoseek.hp.t-tomonori.road1£ƒtƒHƒ‹ƒ_‚ðƒtƒHƒ‹ƒ_‚²‚Æ‚»‚Ì‚Ü‚Ü“ü‚ê‚Ä‚­‚¾‚³‚¢B
+ï½žã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ï½ž
+ï½¢Free Trainï½£ã®ãƒ•ã‚©ãƒ«ãƒ€ã®ä¸­ã«ï½¢pluginsï½£ã¨ã„ã†ãƒ•ã‚©ãƒ«ãƒ€ãŒã‚ã‚Šã¾ã™ã€‚
+ãã®ä¸­ã«ï½¢jp.co.infoseek.hp.t-tomonori.road1ï½£ãƒ•ã‚©ãƒ«ãƒ€ã‚’ãƒ•ã‚©ãƒ«ãƒ€ã”ã¨ãã®ã¾ã¾å…¥ã‚Œã¦ãã ã•ã„ã€‚
 --------------------------------------------------------------------------------------------
-`Žg—p•û–@`
-‚±‚Ìƒvƒ‰ƒOƒCƒ“‚Í¢“¹˜Hƒvƒ‰ƒOƒCƒ“£‚Å‚·BFreeTrain‚Ì¢“¹˜H¨“¹˜HHŽ–¨‹O“¹£‚©‚ç‘I‚Ô‚±‚Æ‚ªo—ˆ‚Ü‚·B‚±‚Ìó‘Ô‚Å‚Í¢ŠDF+’ƒF£‚ð‘I‚Ô‚±‚Æ‚ªo—ˆ‚Ü‚·‚ªA‹O“¹‚Ì•¶Žš‚ðƒ_ƒuƒ‹ƒNƒŠƒbƒN‚·‚é‚Æ’ƒFA˜H–Ê‹O“¹+’ƒF‚Ì2‚Â‚à‘I‚Ô‚±‚Æ‚ª‚Å‚«‚Ü‚·B‚È‚¨A§ì‚Ì“s‡ãƒJ[ƒuƒŒ[ƒ‹¥ƒ|ƒCƒ“ƒg‚âA’¼ü‚Å‚à‰æ–Ê‚É…•½¥‚’¼‚Èü˜H‚É‚Í‘Î‰ž‚µ‚Ä‚¢‚Ü‚¹‚ñ(^^;
+ï½žä½¿ç”¨æ–¹æ³•ï½ž
+ã“ã®ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã¯ï½¢é“è·¯ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ï½£ã§ã™ã€‚FreeTrainã®ï½¢é“è·¯â†’é“è·¯å·¥äº‹â†’è»Œé“ï½£ã‹ã‚‰é¸ã¶ã“ã¨ãŒå‡ºæ¥ã¾ã™ã€‚ã“ã®çŠ¶æ…‹ã§ã¯ï½¢ç°è‰²+èŒ¶è‰²ï½£ã‚’é¸ã¶ã“ã¨ãŒå‡ºæ¥ã¾ã™ãŒã€è»Œé“ã®æ–‡å­—ã‚’ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨èŒ¶è‰²ã€è·¯é¢è»Œé“+èŒ¶è‰²ã®2ã¤ã‚‚é¸ã¶ã“ã¨ãŒã§ãã¾ã™ã€‚ãªãŠã€åˆ¶ä½œã®éƒ½åˆä¸Šã‚«ãƒ¼ãƒ–ãƒ¬ãƒ¼ãƒ«ï½¥ãƒã‚¤ãƒ³ãƒˆã‚„ã€ç›´ç·šã§ã‚‚ç”»é¢ã«æ°´å¹³ï½¥åž‚ç›´ãªç·šè·¯ã«ã¯å¯¾å¿œã—ã¦ã„ã¾ã›ã‚“(^^;
 --------------------------------------------------------------------------------------------
-¦¢Free Train£‚ÍKohsuke Kawaguchi‚³‚ñ‚ªì¬‚³‚ê‚½ƒtƒŠ[ƒEƒFƒAƒ\ƒtƒg‚Å‚·B
-@¢Free Train£ http://www.kohsuke.org/freetrain/
+â€»ï½¢Free Trainï½£ã¯Kohsuke Kawaguchiã•ã‚“ãŒä½œæˆã•ã‚ŒãŸãƒ•ãƒªãƒ¼ã‚¦ã‚§ã‚¢ã‚½ãƒ•ãƒˆã§ã™ã€‚
+ã€€ï½¢Free Trainï½£ http://www.kohsuke.org/freetrain/
