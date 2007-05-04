@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>野球場</title>
-	<author>ては</author>
+	<title>Baseball ground</title>
+	<author>Teha</author>
 	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{hanshin-yuusyou-mezasite-gangare}">
-		<group>野球場</group>
+		<group>Baseball ground</group>
 		<price>5000</price>
 		<size>7,7</size>
 		<height>2</height>
@@ -16,7 +16,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{nekoneko-nyanyanya-ground-overridtest}">
-		<name>多目的グラウンド</name>
+		<name>Multi purpose ground</name>
 		<price>1000</price>
 		<size>2,4</size>
 		<height>2</height>

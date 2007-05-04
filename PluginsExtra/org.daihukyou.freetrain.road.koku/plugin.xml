@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>二車線道路(田舎の国道)</title>
+	<title>Two lane road (national route at country)</title>
 	<author>romulanWarbird</author>
-	<homepage>通信圏外</homepage>
+	<homepage>not available</homepage>
 	
 	<contribution type="road" id="{7254CD19-38B1-77DB-84E3-88F9A5C88E42}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>二車線道路(田舎の国道)</name>
-		<description>三叉路、曲がり角等を含むニ車線の田舎の国道</description>
+		<name>Two lane road</name>
+		<description>Two lane national road at countryside</description>
 		<picture src="road-2-15.bmp" size="32,16" offset="0" />
 	</contribution>
 </plug-in>
