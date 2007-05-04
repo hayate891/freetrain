@@ -1,33 +1,33 @@
 --------------------------------------------------------------------------------------------
-�� FreeTrain �A�h�I���v���O�C�� ��
-   �`�V���l���ΓS�� TH2000�`�`
+◆ FreeTrain アドオンプラグイン ◆
+   ～天竜浜名湖鉄道 TH2000形～
 --------------------------------------------------------------------------------------------
-�����  :�|�� �q�I
-HOMEPAGE�Fhttp://t-tomonori.hp.infoseek.co.jp/
-e-MAIL  �Fbuagi209@hi-net.zaq.ne.jp
+制作者  :竹内 智紀
+HOMEPAGE：http://t-tomonori.hp.infoseek.co.jp/
+e-MAIL  ：buagi209@hi-net.zaq.ne.jp
 --------------------------------------------------------------------------------------------
-���̂��т͓V���S�� TH2000���䗘�p���������A�L�������܂��B
-�V���l���ΓS���ɂāATH1000�ATH3000�Ƌ��Ɋ撣���Ă��܂��B
+このたびは天竜鉄道 TH2000を御利用いただき、有難う御座います。
+天竜浜名湖鉄道にて、TH1000、TH3000と共に頑張っています。
 
-1��������c
-��p:1440
-�^��:720
-���:60��
+1両あたり…
+費用:1440
+運賃:720
+定員:60名
 --------------------------------------------------------------------------------------------
-�`���e�`
-read_me.txt           �c���ǂ�ł镶�͂ł��B
-[jp.co.infoseek.hp.t-tomonori.trains.tenryu] �c�t�H���_
-      |_ plugin.xml                          �c�v���O�C���t�@�C��
-      |_ Ten-th2000.bmp                      �c���q�e�N�X�`��
+～内容～
+read_me.txt           …今読んでる文章です。
+[jp.co.infoseek.hp.t-tomonori.trains.tenryu] …フォルダ
+      |_ plugin.xml                          …プラグインファイル
+      |_ Ten-th2000.bmp                      …車輌テクスチャ
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-�`�C���X�g�[���`
-�Free Train��̃t�H���_�̒��ɢplugins��Ƃ����t�H���_������܂��B
-���̒��ɢjp.co.infoseek.hp.t-tomonori.trains.tenryu��t�H���_���t�H���_���Ƃ��̂܂ܓ���Ă��������B
+～インストール～
+｢Free Train｣のフォルダの中に｢plugins｣というフォルダがあります。
+その中に｢jp.co.infoseek.hp.t-tomonori.trains.tenryu｣フォルダをフォルダごとそのまま入れてください。
 --------------------------------------------------------------------------------------------
-�`�g�p���@�`
-����q�̍w����ŁA�V���l���ΓS����TH2000 ��I��ŉ������B
-�Ȃ��A���܂�I�X�X���ł��܂��񂪁A�����ł��Ȃ����܂��B
+～使用方法～
+｢車輌の購入｣で、天竜浜名湖鉄道→TH2000 を選んで下さい。
+なお、あまりオススメできませんが、何両でもつなげられます。
 --------------------------------------------------------------------------------------------
-���Free Train���Kohsuke Kawaguchi���񂪍쐬���ꂽ�t���[�E�F�A�\�t�g�ł��B
-�@�Free Train� http://www.kohsuke.org/freetrain/
+※｢Free Train｣はKohsuke Kawaguchiさんが作成されたフリーウェアソフトです。
+　｢Free Train｣ http://www.kohsuke.org/freetrain/
