@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>建物プラグイン</title>
-	<author>柴山親方</author>
+	<title>Buildings</title>
+	<author>ShibayamaOyakata</author>
 	<homepage>http://www.geocities.co.jp/SiliconValley-Oakland/8444/</homepage>
 	
         <contribution type="picture" id="{9FAB85B3-1232-4DAE-B833-BD2E5ADBDDD2}">
@@ -10,7 +10,7 @@
 	</contribution>
 
         <contribution type="commercial" id="{1EBA4A26-C35D-4209-9C71-AA9B1237C14C}">
-		<group>テクノガーデンビル</group>
+		<group>Techono garden building</group>
 		<price>10000</price>
 		<size>2,4</size>
 		<height>10</height>
@@ -24,7 +24,7 @@
               </contribution>
  
    <contribution type="commercial" id="{1EBA4A26-C35D-4209-9C71-AA9B1237C14A}">
-     <group>テクノガーデンビル</group>
+     <group>Techono garden building</group>
      <price>100000</price>
      <size>4,2</size>
      <height>10</height>

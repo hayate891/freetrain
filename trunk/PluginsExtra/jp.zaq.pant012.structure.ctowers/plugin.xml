@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>セントラルタワーズ</title>
-	<author>ては</author>
+	<title>Central towers building</title>
+	<author>Teha</author>
 	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
 	
 	<contribution type="commercial" id="{F5776500-E8E5-4D5E-B30A-A0036A6ECDEB}">
-		<group>セントラルタワーズ</group>
+		<group>Central towers</group>
 		<price>5000</price>
 		<size>5,2</size>
 		<height>10</height>

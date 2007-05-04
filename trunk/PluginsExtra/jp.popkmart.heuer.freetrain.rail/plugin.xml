@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>トンネル坑口</title>
+	<title>Entrance to Tunnel</title>
 	<author>HEUER</author>
 	<homepage>http://freetrain.finito-web.com/</homepage>
 	
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />
 	
 	<contribution type="electricPole" id="{RAIL0100-8058-11D7-BB78-0090FE1AB959}">
-		<name>TN坑口(単線A)</name>
+		<name>Tunnel entrance(single-A)</name>
 		<sprite>
 			<picture src="tunnel.bmp"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="electricPole" id="{RAIL0105-8058-11D7-BB78-0090FE1AB959}">
-		<name>TN坑口(単線B)</name>
+		<name>Tunnel entrance(single-B)</name>
 		<sprite>
 			<picture src="tunnel2.bmp">
 				<override when="winter" src="tunnel2w.bmp" />
@@ -23,28 +23,28 @@
 	</contribution>
 
 	<contribution type="electricPole" id="{RAIL0101-8058-11D7-BB78-0090FE1AB959}">
-		<name>TN坑口(複線A左)</name>
+		<name>Tunnel entrance(double-A,left)</name>
 		<sprite>
 			<picture src="tunnel_l.bmp"/>
 		</sprite>
 	</contribution>
 	
 	<contribution type="electricPole" id="{RAIL0102-8058-11D7-BB78-0090FE1AB959}">
-		<name>TN坑口(複線A右)</name>
+		<name>Tunnel entrance(double-A,right)</name>
 		<sprite>
 			<picture src="tunnel_r.bmp"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="electricPole" id="{RAIL0103-8058-11D7-BB78-0090FE1AB959}">
-		<name>TN坑口(複線B左)</name>
+		<name>Tunnel entrance(double-B,left)</name>
 		<sprite>
 			<picture src="tunnel2_l.bmp"/>
 		</sprite>
 	</contribution>
 	
 	<contribution type="electricPole" id="{RAIL0104-8058-11D7-BB78-0090FE1AB959}">
-		<name>TN坑口(複線B右)</name>
+		<name>Tunnel entrance(double-B,right)</name>
 		<sprite>
 			<picture src="tunnel2_r.bmp"/>
 		</sprite>
