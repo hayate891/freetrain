@@ -7,8 +7,8 @@
 	'>	
 ]>
 <plug-in>
-	<title>小さな橋上駅舎</title>
-	<author>C477@2両目</author>
+	<title>Small bridge station</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{85119700-2E3C-48BC-C477-07D5B247AB96}">
@@ -18,7 +18,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{754F536C-E367-4B9A-C477-A15D3C2E05BA}-0">
-		<group>小さな橋上駅舎</group>
+		<group>Small bridge station</group>
 		&StationBridge_s;
 		<size>1,5</size>
 		<sprite origin=" 0,64" offset="17">
@@ -26,7 +26,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{754F536C-E367-4B9A-C477-A15D3C2E05BA}-1">
-		<group>小さな橋上駅舎</group>
+		<group>Small bridge station</group>
 		&StationBridge_s;
 		<size>5,1</size>
 		<sprite origin="128,64" offset="49">
@@ -34,7 +34,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{754F536C-E367-4B9A-C477-A15D3C2E05BA}-2">
-		<group>小さな橋上駅舎</group>
+		<group>Small bridge station</group>
 		&StationBridge_s;
 		<size>5,1</size>
 		<sprite origin="0, 0" offset="49">
@@ -42,7 +42,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{754F536C-E367-4B9A-C477-A15D3C2E05BA}-3">
-		<group>小さな橋上駅舎</group>
+		<group>Small bridge station</group>
 		&StationBridge_s;
 		<size>1,5</size>
 		<sprite origin="128, 0" offset="17">

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 	<!ENTITY RBStationA "
-		<group>赤煉瓦の駅舎A</group>
+		<group>Red-brick station A</group>
 		<size>1,1</size>
 		<price>7000</price>
 		<height>1</height>
 		<operationCost>150</operationCost>
 	">
 	<!ENTITY RBStationB "
-		<group>赤煉瓦の駅舎B</group>
+		<group>Red-brick station B</group>
 		<size>1,1</size>
 		<price>4000</price>
 		<height>1</height>
@@ -16,7 +16,7 @@
 	">
 	
 	<!ENTITY RBrenraku "
-		<group>赤煉瓦の跨線橋</group>
+		<group>Red-brick station bridge</group>
 		<price>2000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -24,8 +24,8 @@
 	">	
 ]>
 <plug-in>
-	<title>赤煉瓦の駅舎</title>
-	<author>C477@2両目</author>
+	<title>Red-brick station</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<!--<depend on="org.kohsuke.freetrain.rail.electricPole"/>-->
 		
