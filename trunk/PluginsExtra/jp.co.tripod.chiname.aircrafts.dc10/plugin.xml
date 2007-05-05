@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY dc10a '
-		<group>Douglas DC10(大)</group>
-		<design>タイプＡ</design>
+		<group>Douglas DC10(large)</group>
+		<design>Type A</design>
 		<price>800</price>
 		<size>5,5</size>
 		<height>1</height>
@@ -13,8 +13,8 @@
 		</population>
 '>
 <!ENTITY dc10b '
-		<group>Douglas DC10(大)</group>
-		<design>タイプＢ</design>
+		<group>Douglas DC10(large)</group>
+		<design>Type B</design>
 		<price>800</price>
 		<size>5,5</size>
 		<height>1</height>
@@ -52,8 +52,8 @@
 ]>
 
 <plug-in>
-	<title>DC-10型旅客機</title>
-	<author>C477@2両目</author>
+	<title>Passenger plane DC-10</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 

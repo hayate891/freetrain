@@ -1,120 +1,119 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>横断歩道</title>
-	<title>駐車場</title>
-	<author>C477@2両目</author>
-	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
+	<title>Road sign</title>
+	<author>C477</author>
+	<homepage>http,//www.rocket.ne.jp/~nao/</homepage>	
 	<depend on="jp.co.tripod.chiname.lib" />	
 	
 	<contribution type="roadAccessory" id="{09CBFF10-DEB3-4E73-C477-5AA0A516EB6D}-f">
-		<name>道路標識(青:門表)</name>
+		<name>Road sign (blue,gate-front)</name>
 		<sprite>
 			<picture src="roadsigns3f.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{09CBFF10-DEB3-4E73-C477-5AA0A516EB6D}-f2">
-		<name>道路標識(青:門表)</name>
+		<name>Road sign (blue,gate-front)</name>
 		<sprite>
 			<picture src="roadsigns3f2.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{09CBFF10-DEB3-4E73-C477-5AA0A516EB6D}-m">
-		<name>道路標識(青:門中)</name>
+		<name>Road sign (blue,gate-medium)</name>
 		<sprite>
 			<picture src="roadsigns3m.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{09CBFF10-DEB3-4E73-C477-5AA0A516EB6D}-b">
-		<name>道路標識(青:門裏)</name>
+		<name>Road sign (blue,gate-rear)</name>
 		<sprite>
 			<picture src="roadsigns3b.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{09CBFF10-DEB3-4E73-C477-5AA0A516EB6D}-b2">
-		<name>道路標識(青:門裏)</name>
+		<name>Road sign (blue,gate-rear)</name>
 		<sprite>
 			<picture src="roadsigns3b2.bmp"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="roadAccessory" id="{3FD9F20D-E0B8-43E6-C477-23C15957FDC2}">
-		<name>道路標識(青:表)</name>
+		<name>Road sign (blue,front)</name>
 		<sprite>
 			<picture src="roadsigns01a.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{546FC363-6507-4C0D-C477-18E4045A1D6F}">
-		<name>道路標識(青:裏)</name>
+		<name>Road sign (blue,rear)</name>
 		<sprite>
 			<picture src="roadsigns01b.bmp"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="roadAccessory" id="{A09CAC84-406D-48CD-C477-64F065AE3589}">
-		<name>道路標識(緑:表)</name>
+		<name>Road sign (green,front)</name>
 		<sprite>
 			<picture src="roadsigns02a.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{85C36432-C55E-43A5-C477-6554B19EE0F0}">
-		<name>道路標識(緑:裏)</name>
+		<name>Road sign (green,rear)</name>
 		<sprite>
 			<picture src="roadsigns02b.bmp"/>
 		</sprite>
 	</contribution>
 	
 	<contribution type="roadAccessory" id="{3230D383-C701-481C-C477-38D7BB6B0F6C}">
-		<name>横断歩道予告A</name>
+		<name>pedestrian crossing ahead A</name>
 		<sprite>
 			<picture src="road-ptn01a.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{A402AEA0-1BFB-408F-C477-E3A3FC7199F9}">
-		<name>横断歩道予告B</name>
+		<name>pedestrian crossing ahead B</name>
 		<sprite>
 			<picture src="road-ptn01b.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{68F983DA-F456-4D5F-C477-A574CCAC9FA9}">
-		<name>横断歩道予告C</name>
+		<name>pedestrian crossing ahead C</name>
 		<sprite>
 			<picture src="road-ptn01c.bmp"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="roadAccessory" id="{EA8B5FF9-BAB4-4481-C477-796E2152383F}">
-		<name>速度制限標示A</name>
+		<name>speed limit mark A</name>
 		<sprite>
 			<picture src="road-ptn02a.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{DEECA47A-E033-4B5A-C477-4703EACF30B7}">
-		<name>速度制限標示B</name>
+		<name>speed limit mark B</name>
 		<sprite>
 			<picture src="road-ptn02b.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{E3ED6179-DD78-475D-C477-044ADF38D386}">
-		<name>速度制限標示C</name>
+		<name>speed limit mark C</name>
 		<sprite>
 			<picture src="road-ptn02c.bmp"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="roadAccessory" id="{76FD8D1C-0559-44B2-C477-BBC873A71A73}">
-		<name>転回禁止標示A</name>
+		<name>no U-turn A</name>
 		<sprite>
 			<picture src="road-ptn03a.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{31804955-6838-4B6A-C477-A3901D0AC052}">
-		<name>転回禁止標示B</name>
+		<name>no U-turn B</name>
 		<sprite>
 			<picture src="road-ptn03b.bmp"/>
 		</sprite>
 	</contribution>
 	<contribution type="roadAccessory" id="{6F4AB903-1094-4989-C477-C43A5C799B00}">
-		<name>転回禁止標示C</name>
+		<name>no U-turn C</name>
 		<sprite>
 			<picture src="road-ptn03c.bmp"/>
 		</sprite>

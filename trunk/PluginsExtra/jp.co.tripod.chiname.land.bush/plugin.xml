@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>茂み</title>
+	<title>Bushes</title>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
-	<author>477@２両目</author>
+	<author>477</author>
 	
 	<depend on="org.kohsuke.freetrain.land.forest" />
 	<!--contribution type="picture" id="{FBD0CD06-016A-4037-AB15-02040218CBAA}-G"-->	
 	
 	<contribution type="land" id="{4307947B-3E50-4467-C477-37938B23AB89}">
-		<group>灌木</group>
-		<name>ツゲ</name>
+		<group>Bushes</group>
+		<name>boxwood</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -24,8 +24,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{7FA5C87F-2C70-460E-C477-405D5DFEB16A}">
-		<group>灌木</group>
-		<name>ススキ</name>
+		<group>Bushes</group>
+		<name>pampas grass</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -42,8 +42,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{1C67B6F8-65D2-4837-C477-D2FDF1E3102A}">
-		<group>灌木</group>
-		<name>落葉樹A</name>
+		<group>Bushes</group>
+		<name>deciduous tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -59,8 +59,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{D828F5C5-2C45-43F7-C477-AB619FB21F03}">
-		<group>灌木</group>
-		<name>常緑樹A</name>
+		<group>Bushes</group>
+		<name>evergreen tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -76,8 +76,8 @@
 	
 	
 	<contribution type="land" id="{4307947B-3E50-4467-C477-37938B23AB89}-m">
-		<group>灌木(山肌)</group>
-		<name>ツゲ</name>
+		<group>Bushes(moutnain)</group>
+		<name>boxwood</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -95,8 +95,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{7FA5C87F-2C70-460E-C477-405D5DFEB16A}-m">
-		<group>灌木(山肌)</group>
-		<name>ススキ</name>
+		<group>Bushes(moutnain)</group>
+		<name>pampas grass</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -116,8 +116,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{1C67B6F8-65D2-4837-C477-D2FDF1E3102A}-m">
-		<group>灌木(山肌)</group>
-		<name>落葉樹A</name>
+		<group>Bushes(moutnain)</group>
+		<name>deciduous tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -136,8 +136,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{D828F5C5-2C45-43F7-C477-AB619FB21F03}-m">
-		<group>灌木(山肌)</group>
-		<name>常緑樹A</name>
+		<group>Bushes(moutnain)</group>
+		<name>evergreen tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -156,8 +156,8 @@
 	
 	
 	<contribution type="land" id="{4307947B-3E50-4467-C477-37938B23AB89}-g">
-		<group>灌木(草原)</group>
-		<name>ツゲ</name>
+		<group>Bushes(grassland)</group>
+		<name>boxwood</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -175,8 +175,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{7FA5C87F-2C70-460E-C477-405D5DFEB16A}-g">
-		<group>灌木(草原)</group>
-		<name>ススキ</name>
+		<group>Bushes(grassland)</group>
+		<name>pampas grass</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -196,8 +196,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{1C67B6F8-65D2-4837-C477-D2FDF1E3102A}-g">
-		<group>灌木(草原)</group>
-		<name>落葉樹A</name>
+		<group>Bushes(grassland)</group>
+		<name>deciduous tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		
@@ -216,8 +216,8 @@
 	</contribution>
 	
 	<contribution type="land" id="{D828F5C5-2C45-43F7-C477-AB619FB21F03}-g">
-		<group>灌木(草原)</group>
-		<name>常緑樹A</name>
+		<group>Bushes(grassland)</group>
+		<name>evergreen tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
 		

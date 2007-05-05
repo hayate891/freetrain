@@ -78,8 +78,8 @@
 ]>
 
 <plug-in>
-	<title>自動車</title>
-	<author>C477@2両目</author>
+	<title>Automobils (static)</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
 	<depend on="jp.co.tripod.chiname.lib" />	
 	
@@ -88,7 +88,7 @@
 	</contribution>
 
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-0,0">
-		<name>ワゴン車(前)</name>
+		<name>Station wagon (front)</name>
 		<sprite origin="0, 0" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -103,7 +103,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-1,0">
-		<name>ワゴン車(後)</name>
+		<name>Station wagon (rear)</name>
 		<sprite origin="64, 0" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -118,7 +118,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-0,1">
-		<name>1-BOX車(前)</name>
+		<name>Minivan (front)</name>
 		<sprite origin="0,16" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -130,7 +130,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-1,1">
-		<name>1-BOX車(後)</name>
+		<name>Minivan (rear)</name>
 		<sprite origin="64,16" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -142,7 +142,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-0,2">
-		<name>セダン(前)</name>
+		<name>Sedan (front)</name>
 		<sprite origin="0,32" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -159,7 +159,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-1,2">
-		<name>セダン(後)</name>
+		<name>Sedan (rear)</name>
 		<sprite origin="64,32" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -176,7 +176,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-0,3">
-		<name>軽自動車(前)</name>
+		<name>Minicar (static) (front)</name>
 		<sprite origin="0,48" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -193,7 +193,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-1,3">
-		<name>軽自動車(後)</name>
+		<name>Minicar (static) (rear)</name>
 		<sprite origin="64,48" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -210,7 +210,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-0,4">
-		<name>トレーラ(前)</name>
+		<name>Trailer (front)</name>
 		<sprite origin="0,64" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -223,7 +223,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-1,4">
-		<name>トレーラ(後)</name>
+		<name>Trailer (rear)</name>
 		<sprite origin="64,64" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -236,7 +236,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-0,5">
-		<name>バス(前)</name>
+		<name>Bus (front)</name>
 		<sprite origin="0,104" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -250,7 +250,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-1,5">
-		<name>バス(後)</name>
+		<name>Bus (rear)</name>
 		<sprite origin="64,104" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -265,7 +265,7 @@
 	</contribution>
 
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-2,0">
-		<name>ワゴン車*(前)</name>
+		<name>Station wagon* (front)</name>
 		<sprite origin="128, 0" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -280,7 +280,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-3,0">
-		<name>ワゴン車*(後)</name>
+		<name>Station wagon* (rear)</name>
 		<sprite origin="192, 0" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -295,7 +295,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-2,1">
-		<name>1-BOX車*(前)</name>
+		<name>Minivan* (front)</name>
 		<sprite origin="128,16" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -307,7 +307,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-3,1">
-		<name>1-BOX車*(後)</name>
+		<name>Minivan* (rear)</name>
 		<sprite origin="192,16" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -319,7 +319,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-2,2">
-		<name>セダン(前)*</name>
+		<name>Sedan (front)*</name>
 		<sprite origin="128,32" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -336,7 +336,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-3,2">
-		<name>セダン(後)*</name>
+		<name>Sedan (rear)*</name>
 		<sprite origin="192,32" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -353,7 +353,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-2,3">
-		<name>軽自動車(前)*</name>
+		<name>Minicar (static) (front)*</name>
 		<sprite origin="128,48" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -370,7 +370,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-3,3">
-		<name>軽自動車(後)*</name>
+		<name>Minicar (static) (rear)*</name>
 		<sprite origin="192,48" offset="0">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -387,7 +387,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-2,4">
-		<name>トレーラ(前)*</name>
+		<name>Trailer (front)*</name>
 		<sprite origin="128,64" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -400,7 +400,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-3,4">
-		<name>トレーラ(後)*</name>
+		<name>Trailer (rear)*</name>
 		<sprite origin="192,64" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -413,7 +413,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-2,5">
-		<name>バス(前)*</name>
+		<name>Bus (front)*</name>
 		<sprite origin="128,104" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>
@@ -427,7 +427,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="DummyCar" id="{FE805631-E213-4930-C477-9699E6F37DF8}-3,5">
-		<name>バス(後)*</name>
+		<name>Bus (rear)*</name>
 		<sprite origin="192,104" offset="8">
 			<picture src="cars_base.bmp"/>
 			<variations>

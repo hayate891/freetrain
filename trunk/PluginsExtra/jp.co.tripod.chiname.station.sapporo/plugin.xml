@@ -25,8 +25,8 @@
 	'>	
 ]>
 <plug-in>
-	<title>札幌駅</title>
-	<author>C477@2両目</author>
+	<title>Sapporo station</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{59FAA85F-6A5C-4503-C477-6340DC0F460B}">
@@ -42,7 +42,7 @@
 
 
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a0">
-		<group>札幌駅</group>
+		<group>Sapporo station</group>
 		&SapporpStation;
 		<size>5,12</size>
 		<sprite origin="  0,200" offset="96">
@@ -50,7 +50,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a1">
-		<group>札幌駅</group>
+		<group>Sapporo station</group>
 		&SapporpStation;
 		<size>12,5</size>
 		<sprite origin="272,200" offset="152">
@@ -58,7 +58,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a2">
-		<group>札幌駅</group>
+		<group>Sapporo station</group>
 		&SapporpStation;
 		<size>5,12</size>
 		<sprite origin="  0,  0" offset="96">
@@ -66,7 +66,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a3">
-		<group>札幌駅</group>
+		<group>Sapporo station</group>
 		&SapporpStation;
 		<size>12,5</size>
 		<sprite origin="272,  0" offset="152">
@@ -75,28 +75,28 @@
 	</contribution>
 	
 	<contribution type="station" id="{99604146-2F69-437A-C477-96E5F6959A7B}-0">
-		<group>札幌JRタワー</group>
+		<group>Sapporo JR tower</group>
 		&SapporpJRTower;
 		<sprite origin="0,8" offset="240">
 			<picture ref="{52F93831-B2ED-42CD-C477-476ADFFBB8EB}" />
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{99604146-2F69-437A-C477-96E5F6959A7B}-1">
-		<group>札幌JRタワー</group>
+		<group>Sapporo JR tower</group>
 		&SapporpJRTower;
 		<sprite origin="160,8" offset="240">
 			<picture ref="{52F93831-B2ED-42CD-C477-476ADFFBB8EB}" />
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{99604146-2F69-437A-C477-96E5F6959A7B}-2">
-		<group>札幌JRタワー</group>
+		<group>Sapporo JR tower</group>
 		&SapporpJRTower;
 		<sprite origin="320,8" offset="240">
 			<picture ref="{52F93831-B2ED-42CD-C477-476ADFFBB8EB}" />
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{99604146-2F69-437A-C477-96E5F6959A7B}-3">
-		<group>札幌JRタワー</group>
+		<group>Sapporo JR tower</group>
 		&SapporpJRTower;
 		<sprite origin="480,8" offset="240">
 			<picture ref="{52F93831-B2ED-42CD-C477-476ADFFBB8EB}" />

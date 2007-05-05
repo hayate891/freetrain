@@ -2,9 +2,9 @@
 <!DOCTYPE plug-in [
 <!ENTITY dc10a '
 		<group>Douglas DC10</group>
-		<design>タイプＡ</design>
+		<design>Type A</design>
 		<structure>
-			<category byname="空港"/>
+			<category byname="Airports"/>
 		</structure>
 		<price>800</price>
 		<size>4,4</size>
@@ -13,9 +13,9 @@
 '>
 <!ENTITY dc10b '
 		<group>Douglas DC10</group>
-		<design>タイプＢ</design>
+		<design>Type B</design>
 		<structure>
-			<category byname="空港"/>
+			<category byname="Airports"/>
 		</structure>
 		<price>800</price>
 		<size>4,4</size>
@@ -24,9 +24,9 @@
 '>
 <!ENTITY b747a '
 		<group>Boeing747</group>
-		<design>タイプＡ</design>
+		<design>Type A</design>
 		<structure>
-			<category byname="空港"/>
+			<category byname="Airports"/>
 		</structure>
 		<price>1000</price>
 		<size>5,5</size>
@@ -35,9 +35,9 @@
 '>
 <!ENTITY b747b '
 		<group>Boeing747</group>
-		<design>タイプＢ</design>
+		<design>Type B</design>
 		<structure>
-			<category byname="空港"/>
+			<category byname="Airports"/>
 		</structure>
 		<price>1000</price>
 		<size>5,5</size>
@@ -67,8 +67,8 @@
 ]>
 
 <plug-in>
-	<title>ジャンボ機(改)</title>
-	<author>C477@2両目</author>
+	<title>Jumbo jet (resized)</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{1E923AE1-E5AE-44D3-C477-1375529F4455}">

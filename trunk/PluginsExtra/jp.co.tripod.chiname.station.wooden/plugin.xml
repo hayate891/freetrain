@@ -65,8 +65,8 @@
 	
 ]>
 <plug-in>
-	<title>田舎の木造駅舎</title>
-	<author>C477@2両目</author>
+	<title>Wooden station at countryside</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{E27467BE-9531-40DC-C477-2B976663A77F}">
@@ -78,7 +78,7 @@
 	<!--color set 1-->
 	
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-a0">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0, 0" offset="16">
@@ -87,7 +87,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-a1">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48, 0" offset="24">
@@ -96,7 +96,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-a2">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96, 0" offset="16">
@@ -105,7 +105,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-a3">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144, 0" offset="24">
@@ -114,7 +114,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-b0">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,40" offset="16">
@@ -123,7 +123,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-b1">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,40" offset="24">
@@ -132,7 +132,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-b2">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,40" offset="16">
@@ -141,7 +141,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-b3">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,40" offset="24">
@@ -150,7 +150,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-c0">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,80" offset="16">
@@ -159,7 +159,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-c1">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,80" offset="24">
@@ -168,7 +168,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-c2">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,80" offset="16">
@@ -177,7 +177,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-c3">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,80" offset="24">
@@ -186,7 +186,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-d0">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,120" offset="16">
@@ -195,7 +195,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-d1">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,120" offset="24">
@@ -204,7 +204,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-d2">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,120" offset="16">
@@ -213,7 +213,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-d3">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,120" offset="24">
@@ -222,7 +222,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-e0">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,160" offset="16">
@@ -231,7 +231,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-e1">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,160" offset="24">
@@ -240,7 +240,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-e2">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,160" offset="16">
@@ -249,7 +249,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-e3">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,160" offset="24">
@@ -258,7 +258,7 @@
 		</sprite>
 	</contribution>		
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-f0">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,200" offset="16">
@@ -267,7 +267,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-f1">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,200" offset="24">
@@ -276,7 +276,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-f2">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,200" offset="16">
@@ -285,7 +285,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7632DFB5-FB21-43AC-C477-BDA65F6A460F}-f3">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,200" offset="24">
@@ -297,7 +297,7 @@
 	<!--color set 2-->
 	
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-a0">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0, 0" offset="16">
@@ -306,7 +306,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-a1">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48, 0" offset="24">
@@ -315,7 +315,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-a2">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96, 0" offset="16">
@@ -324,7 +324,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-a3">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144, 0" offset="24">
@@ -333,7 +333,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-b0">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,40" offset="16">
@@ -342,7 +342,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-b1">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,40" offset="24">
@@ -351,7 +351,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-b2">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,40" offset="16">
@@ -360,7 +360,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-b3">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,40" offset="24">
@@ -369,7 +369,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-c0">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,80" offset="16">
@@ -378,7 +378,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-c1">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,80" offset="24">
@@ -387,7 +387,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-c2">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,80" offset="16">
@@ -396,7 +396,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-c3">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,80" offset="24">
@@ -405,7 +405,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-d0">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,120" offset="16">
@@ -414,7 +414,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-d1">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,120" offset="24">
@@ -423,7 +423,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-d2">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,120" offset="16">
@@ -432,7 +432,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-d3">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,120" offset="24">
@@ -441,7 +441,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-e0">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,160" offset="16">
@@ -450,7 +450,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-e1">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,160" offset="24">
@@ -459,7 +459,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-e2">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,160" offset="16">
@@ -468,7 +468,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-e3">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,160" offset="24">
@@ -477,7 +477,7 @@
 		</sprite>
 	</contribution>		
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-f0">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,200" offset="16">
@@ -486,7 +486,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-f1">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,200" offset="24">
@@ -495,7 +495,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-f2">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,200" offset="16">
@@ -504,7 +504,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{230E8F56-F976-4061-C477-29817768760F}-f3">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,200" offset="24">
@@ -516,7 +516,7 @@
 	<!--color set 3-->
 	
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-a0">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0, 0" offset="16">
@@ -525,7 +525,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-a1">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48, 0" offset="24">
@@ -534,7 +534,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-a2">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96, 0" offset="16">
@@ -543,7 +543,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-a3">
-		<group>木造駅舎Ａ</group>
+		<group>Wooden station A</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144, 0" offset="24">
@@ -552,7 +552,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-b0">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,40" offset="16">
@@ -561,7 +561,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-b1">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,40" offset="24">
@@ -570,7 +570,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-b2">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,40" offset="16">
@@ -579,7 +579,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-b3">
-		<group>木造駅舎Ｂ</group>
+		<group>Wooden station B</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,40" offset="24">
@@ -588,7 +588,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-c0">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,80" offset="16">
@@ -597,7 +597,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-c1">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,80" offset="24">
@@ -606,7 +606,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-c2">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,80" offset="16">
@@ -615,7 +615,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-c3">
-		<group>木造駅舎Ｃ</group>
+		<group>Wooden station C</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,80" offset="24">
@@ -624,7 +624,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-d0">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,120" offset="16">
@@ -633,7 +633,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-d1">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,120" offset="24">
@@ -642,7 +642,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-d2">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,120" offset="16">
@@ -651,7 +651,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-d3">
-		<group>木造駅舎Ｄ</group>
+		<group>Wooden station D</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,120" offset="24">
@@ -660,7 +660,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-e0">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,160" offset="16">
@@ -669,7 +669,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-e1">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,160" offset="24">
@@ -678,7 +678,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-e2">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,160" offset="16">
@@ -687,7 +687,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-e3">
-		<group>木造駅舎Ｅ</group>
+		<group>Wooden station E</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,160" offset="24">
@@ -696,7 +696,7 @@
 		</sprite>
 	</contribution>		
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-f0">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin=" 0,200" offset="16">
@@ -705,7 +705,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-f1">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="48,200" offset="24">
@@ -714,7 +714,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-f2">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>1,2</size>
 		<sprite origin="96,200" offset="16">
@@ -723,7 +723,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{7173DC7A-FFD8-414F-C477-8AB3F75C433E}-f3">
-		<group>木造駅舎Ｆ</group>
+		<group>Wooden station F</group>
 		&WoodenStation;
 		<size>2,1</size>
 		<sprite origin="144,200" offset="24">

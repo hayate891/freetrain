@@ -27,8 +27,8 @@
 	
 ]>
 <plug-in>
-	<title>赤煉瓦の駅舎</title>
-	<author>C477@2両目</author>
+	<title>Station department store</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<!--<depend on="org.kohsuke.freetrain.rail.electricPole"/>-->
 		
@@ -41,7 +41,7 @@
 	<!--khaki-->
 	
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-a0">
-		<group>デパート駅舎(土色:A)</group>
+		<group>Station department store (khaki,A)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin=" 0, 0" offset="40">
@@ -50,7 +50,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-a1">
-		<group>デパート駅舎(土色:A)</group>
+		<group>Station department store (khaki,A)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="48, 0" offset="32">
@@ -59,7 +59,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-a2">
-		<group>デパート駅舎(土色:A)</group>
+		<group>Station department store (khaki,A)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin="96, 0" offset="40">
@@ -68,7 +68,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-a3">
-		<group>デパート駅舎(土色:A)</group>
+		<group>Station department store (khaki,A)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="144, 0" offset="32">
@@ -79,7 +79,7 @@
 
 
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-b0">
-		<group>デパート駅舎(土色:B)</group>
+		<group>Station department store (khaki,B)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin=" 0,56" offset="40">
@@ -88,7 +88,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-b1">
-		<group>デパート駅舎(土色:B)</group>
+		<group>Station department store (khaki,B)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="48,56" offset="32">
@@ -97,7 +97,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-b2">
-		<group>デパート駅舎(土色:B)</group>
+		<group>Station department store (khaki,B)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin="96,56" offset="40">
@@ -106,7 +106,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{887ABEEE-7E7A-418D-C477-5369442C431B}-b3">
-		<group>デパート駅舎(土色:B)</group>
+		<group>Station department store (khaki,B)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="144,56" offset="32">
@@ -119,7 +119,7 @@
 	<!--brown-->
 
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-a0">
-		<group>デパート駅舎(赤茶:A)</group>
+		<group>Station department store (brown,A)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin=" 0, 0" offset="40">
@@ -128,7 +128,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-a1">
-		<group>デパート駅舎(赤茶:A)</group>
+		<group>Station department store (brown,A)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="48, 0" offset="32">
@@ -137,7 +137,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-a2">
-		<group>デパート駅舎(赤茶:A)</group>
+		<group>Station department store (brown,A)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin="96, 0" offset="40">
@@ -146,7 +146,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-a3">
-		<group>デパート駅舎(赤茶:A)</group>
+		<group>Station department store (brown,A)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="144, 0" offset="32">
@@ -157,7 +157,7 @@
 
 
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-b0">
-		<group>デパート駅舎(赤茶:B)</group>
+		<group>Station department store (brown,B)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin=" 0,56" offset="40">
@@ -166,7 +166,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-b1">
-		<group>デパート駅舎(赤茶:B)</group>
+		<group>Station department store (brown,B)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="48,56" offset="32">
@@ -175,7 +175,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-b2">
-		<group>デパート駅舎(赤茶:B)</group>
+		<group>Station department store (brown,B)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin="96,56" offset="40">
@@ -184,7 +184,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{554D8F19-07E9-4A17-C477-21C7BFB76DF6}-b3">
-		<group>デパート駅舎(赤茶:B)</group>
+		<group>Station department store (brown,B)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="144,56" offset="32">
@@ -196,7 +196,7 @@
 	<!--steelBlue-->
 
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-a0">
-		<group>デパート駅舎(灰青:A)</group>
+		<group>Station department store (rusty closet,A)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin=" 0, 0" offset="40">
@@ -205,7 +205,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-a1">
-		<group>デパート駅舎(灰青:A)</group>
+		<group>Station department store (rusty closet,A)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="48, 0" offset="32">
@@ -214,7 +214,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-a2">
-		<group>デパート駅舎(灰青:A)</group>
+		<group>Station department store (rusty closet,A)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin="96, 0" offset="40">
@@ -223,7 +223,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-a3">
-		<group>デパート駅舎(灰青:A)</group>
+		<group>Station department store (rusty closet,A)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="144, 0" offset="32">
@@ -234,7 +234,7 @@
 
 
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-b0">
-		<group>デパート駅舎(灰青:B)</group>
+		<group>Station department store (rusty closet,B)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin=" 0,56" offset="40">
@@ -243,7 +243,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-b1">
-		<group>デパート駅舎(灰青:B)</group>
+		<group>Station department store (rusty closet,B)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="48,56" offset="32">
@@ -252,7 +252,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-b2">
-		<group>デパート駅舎(灰青:B)</group>
+		<group>Station department store (rusty closet,B)</group>
 		&StationDepart;
 		<size>2,1</size>
 		<sprite origin="96,56" offset="40">
@@ -261,7 +261,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{032981FC-E1C3-4AFC-C477-4A3D92DC6AFA}-b3">
-		<group>デパート駅舎(灰青:B)</group>
+		<group>Station department store (rusty closet,B)</group>
 		&StationDepart;
 		<size>1,2</size>
 		<sprite origin="144,56" offset="32">

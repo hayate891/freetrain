@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY b747a '
-		<group>Boeing747(大)</group>
-		<design>タイプＡ</design>
+		<group>Boeing747(large)</group>
+		<design>Type A</design>
 		<price>1000</price>
 		<size>5,5</size>
 		<height>1</height>
 		<computerCannotBuild/>
 '>
 <!ENTITY b747b '
-		<group>Boeing747(大)</group>
-		<design>タイプＢ</design>
+		<group>Boeing747(large)</group>
+		<design>Type B</design>
 		<price>1000</price>
 		<size>5,5</size>
 		<height>1</height>
@@ -44,8 +44,8 @@
 ]>
 
 <plug-in>
-	<title>ジャンボ機</title>
-	<author>C477@2両目</author>
+	<title>Jumbo jet</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{596DBDBE-FC80-413A-C477-94D33698BC6D}">

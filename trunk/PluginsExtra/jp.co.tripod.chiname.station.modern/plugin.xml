@@ -24,8 +24,8 @@
 	
 ]>
 <plug-in>
-	<title>赤煉瓦の駅舎</title>
-	<author>C477@2両目</author>
+	<title>Urban station</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<!--<depend on="org.kohsuke.freetrain.rail.electricPole"/>-->
 		
@@ -38,7 +38,7 @@
 	<!--khaki-->
 	
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-l0">
-		<group>モダン駅舎(土色:左)</group>
+		<group>Urban station (khaki,left)</group>
 		&ModernStation;
 		<sprite origin=" 0, 0" offset="16">
 			&crKhaki;
@@ -46,7 +46,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-l1">
-		<group>モダン駅舎(土色:左)</group>
+		<group>Urban station (khaki,left)</group>
 		&ModernStation;
 		<sprite origin="32, 0" offset="16">
 			&crKhaki;
@@ -54,7 +54,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-l2">
-		<group>モダン駅舎(土色:左)</group>
+		<group>Urban station (khaki,left)</group>
 		&ModernStation;
 		<sprite origin="64, 0" offset="16">
 			&crKhaki;
@@ -62,7 +62,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-l3">
-		<group>モダン駅舎(土色:左)</group>
+		<group>Urban station (khaki,left)</group>
 		&ModernStation;
 		<sprite origin="96, 0" offset="16">
 			&crKhaki;
@@ -70,7 +70,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-l4">
-		<group>モダン駅舎(土色:左)</group>
+		<group>Urban station (khaki,left)</group>
 		&ModernStation;
 		<sprite origin="128, 0" offset="16">
 			&crKhaki;
@@ -78,7 +78,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-l5">
-		<group>モダン駅舎(土色:左)</group>
+		<group>Urban station (khaki,left)</group>
 		&ModernStation;
 		<sprite origin="160, 0" offset="16">
 			&crKhaki;
@@ -87,7 +87,7 @@
 	</contribution>
 
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-r0">
-		<group>モダン駅舎(土色:右)</group>
+		<group>Urban station (khaki,right)</group>
 		&ModernStation;
 		<sprite origin=" 0,32" offset="16">
 			&crKhaki;
@@ -95,7 +95,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-r1">
-		<group>モダン駅舎(土色:右)</group>
+		<group>Urban station (khaki,right)</group>
 		&ModernStation;
 		<sprite origin="32,32" offset="16">
 			&crKhaki;
@@ -103,7 +103,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-r2">
-		<group>モダン駅舎(土色:右)</group>
+		<group>Urban station (khaki,right)</group>
 		&ModernStation;
 		<sprite origin="64,32" offset="16">
 			&crKhaki;
@@ -111,7 +111,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-r3">
-		<group>モダン駅舎(土色:右)</group>
+		<group>Urban station (khaki,right)</group>
 		&ModernStation;
 		<sprite origin="96,32" offset="16">
 			&crKhaki;
@@ -119,7 +119,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-r4">
-		<group>モダン駅舎(土色:右)</group>
+		<group>Urban station (khaki,right)</group>
 		&ModernStation;
 		<sprite origin="128,32" offset="16">
 			&crKhaki;
@@ -127,7 +127,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-r5">
-		<group>モダン駅舎(土色:右)</group>
+		<group>Urban station (khaki,right)</group>
 		&ModernStation;
 		<sprite origin="160,32" offset="16">
 			&crKhaki;
@@ -136,7 +136,7 @@
 	</contribution>
 
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-b0">
-		<group>モダン駅舎(土色:裏)</group>
+		<group>Urban station (khaki,rear)</group>
 		&ModernStation;
 		<sprite origin=" 0,64" offset="16">
 			&crKhaki;
@@ -144,7 +144,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-b1">
-		<group>モダン駅舎(土色:裏)</group>
+		<group>Urban station (khaki,rear)</group>
 		&ModernStation;
 		<sprite origin="32,64" offset="16">
 			&crKhaki;
@@ -152,7 +152,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-b2">
-		<group>モダン駅舎(土色:裏)</group>
+		<group>Urban station (khaki,rear)</group>
 		&ModernStation;
 		<sprite origin="64,64" offset="16">
 			&crKhaki;
@@ -160,7 +160,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-b3">
-		<group>モダン駅舎(土色:裏)</group>
+		<group>Urban station (khaki,rear)</group>
 		&ModernStation;
 		<sprite origin="96,64" offset="16">
 			&crKhaki;
@@ -168,7 +168,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-b4">
-		<group>モダン駅舎(土色:裏)</group>
+		<group>Urban station (khaki,rear)</group>
 		&ModernStation;
 		<sprite origin="128,64" offset="16">
 			&crKhaki;
@@ -176,7 +176,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{A2F61D15-C6F6-4C0D-C477-3D4D9321FC39}-b5">
-		<group>モダン駅舎(土色:裏)</group>
+		<group>Urban station (khaki,rear)</group>
 		&ModernStation;
 		<sprite origin="160,64" offset="16">
 			&crKhaki;
@@ -187,7 +187,7 @@
 	<!--brown-->
 
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-l0">
-		<group>モダン駅舎(赤茶:左)</group>
+		<group>Urban station(brown,left)</group>
 		&ModernStation;
 		<sprite origin=" 0, 0" offset="16">
 			&crBrown;
@@ -195,7 +195,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-l1">
-		<group>モダン駅舎(赤茶:左)</group>
+		<group>Urban station(brown,left)</group>
 		&ModernStation;
 		<sprite origin="32, 0" offset="16">
 			&crBrown;
@@ -203,7 +203,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-l2">
-		<group>モダン駅舎(赤茶:左)</group>
+		<group>Urban station(brown,left)</group>
 		&ModernStation;
 		<sprite origin="64, 0" offset="16">
 			&crBrown;
@@ -211,7 +211,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-l3">
-		<group>モダン駅舎(赤茶:左)</group>
+		<group>Urban station(brown,left)</group>
 		&ModernStation;
 		<sprite origin="96, 0" offset="16">
 			&crBrown;
@@ -219,7 +219,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-l4">
-		<group>モダン駅舎(赤茶:左)</group>
+		<group>Urban station(brown,left)</group>
 		&ModernStation;
 		<sprite origin="128, 0" offset="16">
 			&crBrown;
@@ -227,7 +227,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-l5">
-		<group>モダン駅舎(赤茶:左)</group>
+		<group>Urban station(brown,left)</group>
 		&ModernStation;
 		<sprite origin="160, 0" offset="16">
 			&crBrown;
@@ -236,7 +236,7 @@
 	</contribution>
 
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-r0">
-		<group>モダン駅舎(赤茶:右)</group>
+		<group>Urban station(brown,right)</group>
 		&ModernStation;
 		<sprite origin=" 0,32" offset="16">
 			&crBrown;
@@ -244,7 +244,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-r1">
-		<group>モダン駅舎(赤茶:右)</group>
+		<group>Urban station(brown,right)</group>
 		&ModernStation;
 		<sprite origin="32,32" offset="16">
 			&crBrown;
@@ -252,7 +252,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-r2">
-		<group>モダン駅舎(赤茶:右)</group>
+		<group>Urban station(brown,right)</group>
 		&ModernStation;
 		<sprite origin="64,32" offset="16">
 			&crBrown;
@@ -260,7 +260,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-r3">
-		<group>モダン駅舎(赤茶:右)</group>
+		<group>Urban station(brown,right)</group>
 		&ModernStation;
 		<sprite origin="96,32" offset="16">
 			&crBrown;
@@ -268,7 +268,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-r4">
-		<group>モダン駅舎(赤茶:右)</group>
+		<group>Urban station(brown,right)</group>
 		&ModernStation;
 		<sprite origin="128,32" offset="16">
 			&crBrown;
@@ -276,7 +276,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-r5">
-		<group>モダン駅舎(赤茶:右)</group>
+		<group>Urban station(brown,right)</group>
 		&ModernStation;
 		<sprite origin="160,32" offset="16">
 			&crBrown;
@@ -285,7 +285,7 @@
 	</contribution>
 
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-b0">
-		<group>モダン駅舎(赤茶:裏)</group>
+		<group>Urban station(brown,rear)</group>
 		&ModernStation;
 		<sprite origin=" 0,64" offset="16">
 			&crBrown;
@@ -293,7 +293,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-b1">
-		<group>モダン駅舎(赤茶:裏)</group>
+		<group>Urban station(brown,rear)</group>
 		&ModernStation;
 		<sprite origin="32,64" offset="16">
 			&crBrown;
@@ -301,7 +301,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-b2">
-		<group>モダン駅舎(赤茶:裏)</group>
+		<group>Urban station(brown,rear)</group>
 		&ModernStation;
 		<sprite origin="64,64" offset="16">
 			&crBrown;
@@ -309,7 +309,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-b3">
-		<group>モダン駅舎(赤茶:裏)</group>
+		<group>Urban station(brown,rear)</group>
 		&ModernStation;
 		<sprite origin="96,64" offset="16">
 			&crBrown;
@@ -317,7 +317,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-b4">
-		<group>モダン駅舎(赤茶:裏)</group>
+		<group>Urban station(brown,rear)</group>
 		&ModernStation;
 		<sprite origin="128,64" offset="16">
 			&crBrown;
@@ -325,7 +325,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{9DE34974-5F2B-4D5F-C477-A04A6736D625}-b5">
-		<group>モダン駅舎(赤茶:裏)</group>
+		<group>Urban station(brown,rear)</group>
 		&ModernStation;
 		<sprite origin="160,64" offset="16">
 			&crBrown;
@@ -336,7 +336,7 @@
 	<!--steelBlue-->
 
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-l0">
-		<group>モダン駅舎(灰青:左)</group>
+		<group>Urban station(rusty closet,left)</group>
 		&ModernStation;
 		<sprite origin=" 0, 0" offset="16">
 			&crSteelBlue;
@@ -344,7 +344,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-l1">
-		<group>モダン駅舎(灰青:左)</group>
+		<group>Urban station(rusty closet,left)</group>
 		&ModernStation;
 		<sprite origin="32, 0" offset="16">
 			&crSteelBlue;
@@ -352,7 +352,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-l2">
-		<group>モダン駅舎(灰青:左)</group>
+		<group>Urban station(rusty closet,left)</group>
 		&ModernStation;
 		<sprite origin="64, 0" offset="16">
 			&crSteelBlue;
@@ -360,7 +360,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-l3">
-		<group>モダン駅舎(灰青:左)</group>
+		<group>Urban station(rusty closet,left)</group>
 		&ModernStation;
 		<sprite origin="96, 0" offset="16">
 			&crSteelBlue;
@@ -368,7 +368,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-l4">
-		<group>モダン駅舎(灰青:左)</group>
+		<group>Urban station(rusty closet,left)</group>
 		&ModernStation;
 		<sprite origin="128, 0" offset="16">
 			&crSteelBlue;
@@ -376,7 +376,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-l5">
-		<group>モダン駅舎(灰青:左)</group>
+		<group>Urban station(rusty closet,left)</group>
 		&ModernStation;
 		<sprite origin="160, 0" offset="16">
 			&crSteelBlue;
@@ -385,7 +385,7 @@
 	</contribution>
 
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-r0">
-		<group>モダン駅舎(灰青:右)</group>
+		<group>Urban station(rusty closet,right)</group>
 		&ModernStation;
 		<sprite origin=" 0,32" offset="16">
 			&crSteelBlue;
@@ -393,7 +393,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-r1">
-		<group>モダン駅舎(灰青:右)</group>
+		<group>Urban station(rusty closet,right)</group>
 		&ModernStation;
 		<sprite origin="32,32" offset="16">
 			&crSteelBlue;
@@ -401,7 +401,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-r2">
-		<group>モダン駅舎(灰青:右)</group>
+		<group>Urban station(rusty closet,right)</group>
 		&ModernStation;
 		<sprite origin="64,32" offset="16">
 			&crSteelBlue;
@@ -409,7 +409,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-r3">
-		<group>モダン駅舎(灰青:右)</group>
+		<group>Urban station(rusty closet,right)</group>
 		&ModernStation;
 		<sprite origin="96,32" offset="16">
 			&crSteelBlue;
@@ -417,7 +417,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-r4">
-		<group>モダン駅舎(灰青:右)</group>
+		<group>Urban station(rusty closet,right)</group>
 		&ModernStation;
 		<sprite origin="128,32" offset="16">
 			&crSteelBlue;
@@ -425,7 +425,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-r5">
-		<group>モダン駅舎(灰青:右)</group>
+		<group>Urban station(rusty closet,right)</group>
 		&ModernStation;
 		<sprite origin="160,32" offset="16">
 			&crSteelBlue;
@@ -434,7 +434,7 @@
 	</contribution>
 
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-b0">
-		<group>モダン駅舎(灰青:裏)</group>
+		<group>Urban station(rusty closet,rear)</group>
 		&ModernStation;
 		<sprite origin=" 0,64" offset="16">
 			&crSteelBlue;
@@ -442,7 +442,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-b1">
-		<group>モダン駅舎(灰青:裏)</group>
+		<group>Urban station(rusty closet,rear)</group>
 		&ModernStation;
 		<sprite origin="32,64" offset="16">
 			&crSteelBlue;
@@ -450,7 +450,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-b2">
-		<group>モダン駅舎(灰青:裏)</group>
+		<group>Urban station(rusty closet,rear)</group>
 		&ModernStation;
 		<sprite origin="64,64" offset="16">
 			&crSteelBlue;
@@ -458,7 +458,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-b3">
-		<group>モダン駅舎(灰青:裏)</group>
+		<group>Urban station(rusty closet,rear)</group>
 		&ModernStation;
 		<sprite origin="96,64" offset="16">
 			&crSteelBlue;
@@ -466,7 +466,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-b4">
-		<group>モダン駅舎(灰青:裏)</group>
+		<group>Urban station(rusty closet,rear)</group>
 		&ModernStation;
 		<sprite origin="128,64" offset="16">
 			&crSteelBlue;
@@ -474,7 +474,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{38DCCBC7-F86F-4881-C477-7DBB6A369059}-b5">
-		<group>モダン駅舎(灰青:裏)</group>
+		<group>Urban station(rusty closet,rear)</group>
 		&ModernStation;
 		<sprite origin="160,64" offset="16">
 			&crSteelBlue;
