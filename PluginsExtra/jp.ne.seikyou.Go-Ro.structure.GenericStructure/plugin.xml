@@ -832,7 +832,7 @@
 
 
 <plug-in>
-	<title>建物 (FreeTrain-想作館)の建物総合対応</title>
+	<title>FreeTrain-Sousaku Kan, primaly Buildings</title>
 	<author>haru</author>
 	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
 	<depend on="jp.ne.seikyou.Go-Ro.structure"/>
@@ -840,12 +840,12 @@
 
 
 
-<!-- テナントビル -->
+<!-- Rental office building -->
 	<contribution type="GenericStructure" id="{vhbi_001-GenericStructure-C000-000a-4C8B212Dharu}">
-		<name>テナントビル</name>
-		<design>テナントビル１</design>
+		<name>Rental office building</name>
+		<design>Rental office building１</design>
 			<structure>
-				<category byname="貸事務所"/>
+				<category byname="Offices for Rent"/>
 			</structure>
 		<price>270</price>
 		<size>1,1</size>
@@ -906,11 +906,11 @@
 
 
 
-<!-- 喫茶店 -->
+<!-- Cafe -->
 	<contribution type="GenericStructure" id="{CfeS_001-GenericStructure-C000-000a-4C8B212Dharu}">
-		<name>喫茶店</name>
+		<name>Cafe</name>
 		<structure>
-			<category byname="一般飲食店"/>
+			<category byname="Restaurants"/>
 		</structure>
 		<price>180</price>
 		<size>1,1</size>
@@ -926,12 +926,12 @@
 
 
 
-<!-- 一戸建て住宅(home_001) -->
+<!-- Single House(home_001) -->
 	<contribution type="GenericStructure" id="{home_001-GenericStructure-C000-000a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプＡ</design>
+		<name>Single House</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>96</price>
 		<size>1,1</size>
@@ -959,11 +959,11 @@
 
 
 
-<!-- 太陽の塔 -->
+<!-- The Tower of Sun -->
 	<contribution type="GenericStructure" id="{taiyo-GenericStructure-C000-000a-4C8B212Dharu}">
-		<name>太陽の塔</name>
+		<name>The Tower of Sun</name>
 		<structure>
-			<category byname="ランドマーク"/>
+			<category byname="Landmarks"/>
 		</structure>
 		<price>3000</price>
 		<size>2,4</size>
@@ -983,11 +983,11 @@
 
 
 
-<!-- 二車線道路用勾配 -->
+<!-- two lane road slope -->
 	<contribution type="GenericStructure" id="{slope_a3road_d-GenericStructure-C000-000a-4C8B212Dharu}">
-		<name>勾配道路(一般)二車線道路用</name>
+		<name>Road slope (2-lane)</name>
 		<structure>
-			<category byname="道路関連物"/>
+			<category byname="Road Accessories"/>
 		</structure>
 		<price>1000</price>
 		<height>2</height>
@@ -1013,12 +1013,12 @@
 
 
 
-<!-- アパート -->
+<!-- Apartment -->
 	<contribution type="GenericStructure" id="{Apartment_001-GenericStructure-C000-000a-4C8B212Dharu}">
-		<name>アパート</name>
-		<design>タイプＡ</design>
+		<name>Apartment</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="賃貸アパート"/>
+			<category byname="Rental Apartment"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -1049,11 +1049,11 @@
 
 
 
-<!-- 町工場 -->
+<!-- Small-Scale Factories -->
 	<contribution type="GenericStructure" id="{factory_001-GenericStructure-C000-000A-4C8B212DD67q}">
-		<name>町工場</name>
+		<name>Small-Scale Factories</name>
 		<structure>
-			<category byname="町工場"/>
+			<category byname="Small-Scale Factories"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -1078,12 +1078,12 @@
 
 
 
-<!-- 汎用倉庫(開) -->
+<!-- Multi purpose warehouse (open) -->
 	<contribution type="GenericStructure" id="{warehouse_001-GenericStructure-C000-000A-4C8B212DD67q}">
-		<name>倉庫</name>
-		<design>汎用倉庫(開)</design>
+		<name>Warehouse</name>
+		<design>Multi purpose warehouse (open)</design>
 		<structure>
-			<category byname="倉庫"/>
+			<category byname="Warehouses"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -1101,12 +1101,12 @@
 	</contribution>
 
 
-<!-- 汎用倉庫(閉) -->
+<!-- Multi purpose warehouse (close) -->
 	<contribution type="GenericStructure" id="{warehouse_001-GenericStructure-C000-000B-4C8B212DD67q}">
-		<name>倉庫</name>
-		<design>汎用倉庫(閉)</design>
+		<name>Warehouse</name>
+		<design>Multi purpose warehouse (close)</design>
 		<structure>
-			<category byname="倉庫"/>
+			<category byname="Warehouses"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -1125,12 +1125,12 @@
 
 
 
-<!-- 牛舎 -->
+<!-- Cowshed -->
 	<contribution type="GenericStructure" id="{FarmStr_001-GenericStructure-C000-000A-4C8B212DD67q}">
-		<name>牧場</name>
-		<design>牛舎</design>
+		<name>Farm</name>
+		<design>Cowshed</design>
 		<structure>
-			<category byname="畜産場"/>
+			<category byname="Livestock Farms"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -1149,12 +1149,12 @@
 	</contribution>
 
 
-<!-- 牧草地 -->
+<!-- Pasture -->
 	<contribution type="GenericStructure" id="{FarmStr_002-GenericStructure-C000-000a-4C8B212DD67q}">
-		<name>牧場</name>
-		<design>牧草地</design>
+		<name>Farm</name>
+		<design>Pasture</design>
 		<structure>
-			<category byname="畜産場"/>
+			<category byname="Livestock Farms"/>
 		</structure>
 		<price>160</price>
 		<height>1</height>
@@ -1173,12 +1173,12 @@
 	</contribution>
 
 
-<!-- サイロ -->
+<!-- Silo -->
 	<contribution type="GenericStructure" id="{FarmStr_003-GenericStructure-C000-000a-4C8B212DD67q}">
-		<name>牧場</name>
-		<design>サイロ</design>
+		<name>Farm</name>
+		<design>Silo</design>
 		<structure>
-			<category byname="畜産場"/>
+			<category byname="Livestock Farms"/>
 		</structure>
 		<price>200</price>
 		<size>1,1</size>
@@ -1204,12 +1204,12 @@
 
 
 
-<!-- インテリジェントビル -->
+<!-- Intelligent building -->
 	<contribution type="GenericStructure" id="{vhbi_005-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>インテリジェントビル</name>
-		<design>(タイプA)</design>
+		<name>Intelligent building</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="貸事務所"/>
+			<category byname="Offices for Rent"/>
 		</structure>
 		<price>1250</price>
 		<size>2,2</size>
@@ -1251,12 +1251,12 @@
 
 
 
-<!-- レンタルビデオチェーン -->
+<!-- Rental video chain shop -->
 	<contribution type="GenericStructure" id="{RentalVideoShop_001-GenericStructure-C000-000A-4C8B212DD67q}">
-		<name>レンタルビデオチェーン</name>
-		<design>タツヤ</design>
+		<name>Rental video chain shop</name>
+		<design>TATUYA</design>
 		<structure>
-			<category byname="チェーン専門店"/>
+			<category byname="Specialty Chain Stores"/>
 		</structure>
 		<price>200</price>
 		<size>1,2</size>
@@ -1281,11 +1281,11 @@
 
 
 
-<!-- 信用金庫 -->
+<!-- Credit association -->
 	<contribution type="GenericStructure" id="{CreditA_001-GenericStructure-C000-000A-4C8B212DD67q}">
-		<name>信用金庫</name>
+		<name>Credit association</name>
 		<structure>
-			<category byname="銀行"/>
+			<category byname="Banks"/>
 		</structure>
 		<price>220</price>
 		<size>1,1</size>
@@ -1314,12 +1314,12 @@
 
 
 
-<!-- 紳士服チェーン -->
+<!-- Men's wear chain shop -->
 	<contribution type="GenericStructure" id="{MensWearShop_001-GenericStructure-C000-000A-4C8B212DD67q}">
-		<name>紳士服チェーン</name>
-		<design>タイプA</design>
+		<name>Men's wear chain shop</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="チェーン専門店"/>
+			<category byname="Specialty Chain Stores"/>
 		</structure>
 		<price>160</price>
 		<size>1,1</size>
@@ -1344,11 +1344,11 @@
 
 
 
-<!-- 大型スーパー -->
+<!-- Large Supermarket -->
 	<contribution type="GenericStructure" id="{supermarket_001-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>大型スーパー</name>
+		<name>Large Supermarket</name>
 		<structure>
-			<category byname="スーパー"/>
+			<category byname="Supermarkets"/>
 		</structure>
 		<price>1160</price>
 		<size>2,2</size>
@@ -1383,12 +1383,12 @@
 
 
 
-<!-- 一戸建て住宅(home_002) -->
+<!-- Single House(home_002) -->
 	<contribution type="GenericStructure" id="{home_002-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>一戸建て住宅</name>
-		<design>タイプＢ</design>
+		<name>Single House</name>
+		<design>Type B</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>88</price>
 		<size>1,1</size>
@@ -1416,11 +1416,11 @@
 
 
 
-<!-- 和食処 -->
+<!-- Japanese food restaurant -->
 	<contribution type="GenericStructure" id="{restaurant_001-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>和食処</name>
+		<name>Japanese food restaurant</name>
 		<structure>
-			<category byname="一般飲食店"/>
+			<category byname="Restaurants"/>
 		</structure>
 		<price>560</price>
 		<size>2,2</size>
@@ -1448,12 +1448,12 @@
 
 
 
-<!-- ドーナツチェーン -->
+<!-- Donuts chain shop -->
 	<contribution type="GenericStructure" id="{DoughnutShop-GenericStructure-C000-000A-4C8B212DD67q}">
-		<name>ドーナツチェーン</name>
-		<design>テスタードーナツ</design>
+		<name>Donuts chain shop</name>
+		<design>Tester Dounuts shop</design>
 		<structure>
-			<category byname="ファーストフード"/>
+			<category byname="Fast Food"/>
 		</structure>
 		<price>175</price>
 		<size>1,1</size>
@@ -1478,13 +1478,13 @@
 
 
 
-<!-- テナントビル２ -->
+<!-- Rental office building 2 -->
 	<contribution type="GenericStructure" id="{vhbi_002-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>テナントビル</name>
-		<design>テナントビル２</design>
+		<name>Rental office building</name>
+		<design>Rental office building 2</design>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="サービス窓口" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Service Counters" hide="true"/>
 		</structure>
 		<price>250</price>
 		<size>1,1</size>
@@ -1544,13 +1544,13 @@
 
 
 
-<!-- テナントビル３ -->
+<!-- Rental office building 3 -->
 	<contribution type="GenericStructure" id="{vhbi_004-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>テナントビル</name>
-		<design>テナントビル３</design>
+		<name>Rental office building</name>
+		<design>Rental office building 3</design>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="商業向けサービス" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Business Services" hide="true"/>
 		</structure>
 		<price>270</price>
 		<size>1,1</size>
@@ -1610,12 +1610,12 @@
 
 
 
-<!-- テナントビル４ -->
+<!-- Rental office building 4 -->
 	<contribution type="GenericStructure" id="{vhbi_007-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>テナントビル</name>
-		<design>テナントビル４</design>
+		<name>Rental office building</name>
+		<design>Rental office building 4</design>
 		<structure>
-			<category byname="貸事務所"/>
+			<category byname="Offices for Rent"/>
 		</structure>
 		<price>180</price>
 		<size>1,1</size>
@@ -1677,11 +1677,11 @@
 
 
 
-<!-- 賃貸マンション -->
+<!-- Rental Apartment -->
 	<contribution type="GenericStructure" id="{vhbi_003-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>賃貸マンション</name>
+		<name>Rental Apartment</name>
 		<structure>
-			<category byname="賃貸集合住宅"/>
+			<category byname="Rental Housing"/>
 		</structure>
 		<price>290</price>
 		<size>1,1</size>
@@ -1743,12 +1743,12 @@
 
 
 
-<!-- 文化住宅 -->
+<!-- Small rental apartment -->
 	<contribution type="GenericStructure" id="{Apartment_002-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>文化住宅</name>
-		<design>文化住宅</design>
+		<name>Small rental apartment</name>
+		<design>Small rental apartment</design>
 		<structure>
-			<category byname="賃貸アパート"/>
+			<category byname="Rental Apartment"/>
 		</structure>
 		<price>110</price>
 		<size>1,1</size>
@@ -1775,14 +1775,14 @@
 
 
 
-<!-- ランドマークビル -->
+<!-- Landmark building -->
 	<contribution type="GenericStructure" id="{bldgVH02-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>ランドマークビル</name>
+		<name>Landmark building</name>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="個人専門店" hide="true"/>
-			<category byname="チェーン専門店" hide="true"/>
-			<category byname="一般飲食店" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Private Specialty Stores" hide="true"/>
+			<category byname="Specialty Chain Stores" hide="true"/>
+			<category byname="Restaurants" hide="true"/>
 		</structure>
 		<price>5000</price>
 		<size>3,2</size>
@@ -1832,12 +1832,12 @@
 
 
 
-<!-- 貸しビル(ヘリポート付) -->
+<!-- Rental office building (heliport) -->
 	<contribution type="GenericStructure" id="{bldgVH02-GenericStructure-C001-000b-4C8B212Dharu}">
-		<name>貸しビル(ヘリポート付)</name>
-		<design>タイプＢ</design>
+		<name>Rental office building (heliport)</name>
+		<design>Type B</design>
 		<structure>
-			<category byname="貸事務所"/>
+			<category byname="Offices for Rent"/>
 		</structure>
 		<price>4600</price>
 		<size>3,2</size>
@@ -1874,12 +1874,12 @@
 
 
 
-<!-- ビジネスホテル -->
+<!-- Business Hotel -->
 	<contribution type="GenericStructure" id="{vhbi_009-GenericStructure-C001-000A-4C8B212DD67q}">
-		<name>ビジネスホテル</name>
+		<name>Business Hotel</name>
 		<structure>
-			<category byname="ビジネスホテル"/>
-			<category byname="一般飲食店" hide="true"/>
+			<category byname="Business Hotels"/>
+			<category byname="Restaurants" hide="true"/>
 		</structure>
 		<price>4800</price>
 		<size>2,1</size>
@@ -1941,12 +1941,12 @@
 
 
 
-<!-- 鶏舎 -->
+<!-- Henhouse -->
 	<contribution type="GenericStructure" id="{FarmStr_004-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>鶏舎</name>
-		<design>開放鶏舎</design>
+		<name>Henhouse</name>
+		<design>Open henhouse</design>
 		<structure>
-			<category byname="畜産場"/>
+			<category byname="Livestock Farms"/>
 		</structure>
 		<price>60</price>
 		<size>1,1</size>
@@ -1966,10 +1966,10 @@
 
 
 	<contribution type="GenericStructure" id="{FarmStr_004-GenericStructure-C001-000b-4C8B212Dharu}">
-		<name>鶏舎</name>
-		<design>開放鶏舎（エサ用タンク付）</design>
+		<name>Henhouse</name>
+		<design>Open henhouse (with feed tank)</design>
 		<structure>
-			<category byname="畜産場"/>
+			<category byname="Livestock Farms"/>
 		</structure>
 		<price>60</price>
 		<size>1,1</size>
@@ -1994,12 +1994,12 @@
 	</contribution>
 
 
-<!-- 管制塔 -->
+<!-- Control tower -->
 	<contribution type="GenericStructure" id="{airport_ControlTower-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>管制塔</name>
-		<design>タイプＡ</design>
+		<name>Control tower</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="管制指令施設"/>
+			<category byname="Air Traffic Control Units"/>
 		</structure>
 		<size>1,1</size>
 		<price>300</price>
@@ -2015,13 +2015,13 @@
 	</contribution>
 
 
-<!-- デパート -->
+<!-- Department Store -->
 	<contribution type="GenericStructure" id="{DepartmentStore_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<group>デパート</group>
-		<name>デパート</name>
+		<group>Department Store</group>
+		<name>Department Store</name>
 		<structure>
-			<category byname="デパート"/>
-			<category byname="映画館" hide="true"/>
+			<category byname="Department Stores"/>
+			<category byname="Cinemas" hide="true"/>
 		</structure>
 		<size>2,3</size>
 		<price>5000</price>
@@ -2050,12 +2050,12 @@
 	</contribution>
 
 
-<!-- 一戸建て住宅(home_005)　-->
+<!-- Single House(home_005)　-->
 	<contribution type="GenericStructure" id="{home_005-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプC-1</design>
+		<name>Single House</name>
+		<design>Type C-1</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -2085,10 +2085,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{home_005-GenericStructure-C001-001a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプC-2</design>
+		<name>Single House</name>
+		<design>Type C-2</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -2118,12 +2118,12 @@
 	</contribution>
 
 
-<!-- 一戸建て住宅(home_003)　-->
+<!-- Single House(home_003)　-->
 	<contribution type="GenericStructure" id="{home_003-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプD-1</design>
+		<name>Single House</name>
+		<design>Type D-1</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2153,10 +2153,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{home_003-GenericStructure-C001-001a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプD-2</design>
+		<name>Single House</name>
+		<design>Type D-2</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2186,12 +2186,12 @@
 	</contribution>
 
 
-<!-- 一戸建て住宅(home_004)　-->
+<!-- Single House(home_004)　-->
 	<contribution type="GenericStructure" id="{home_004-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプE-1</design>
+		<name>Single House</name>
+		<design>Type E-1</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>130</price>
 		<size>1,1</size>
@@ -2221,10 +2221,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{home_004-GenericStructure-C001-001a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプE-2</design>
+		<name>Single House</name>
+		<design>Type E-2</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>130</price>
 		<size>1,1</size>
@@ -2254,12 +2254,12 @@
 	</contribution>
 
 
-<!-- 一戸建て住宅(home_006)　-->
+<!-- Single House(home_006)　-->
 	<contribution type="GenericStructure" id="{home_006-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプF-1</design>
+		<name>Single House</name>
+		<design>Type F-1</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2289,10 +2289,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{home_006-GenericStructure-C001-001a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプF-2</design>
+		<name>Single House</name>
+		<design>Type F-2</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2322,12 +2322,12 @@
 	</contribution>
 
 
-<!-- 一戸建て住宅(home_007)　-->
+<!-- Single House(home_007)　-->
 	<contribution type="GenericStructure" id="{home_007-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプG-1</design>
+		<name>Single House</name>
+		<design>Type G-1</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -2357,10 +2357,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{home_007-GenericStructure-C001-001a-4C8B212Dharu}">
-		<name>一戸建て住宅</name>
-		<design>タイプG-2</design>
+		<name>Single House</name>
+		<design>Type G-2</design>
 		<structure>
-			<category byname="一戸建て"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -2390,12 +2390,12 @@
 	</contribution>
 
 
-<!-- ファミレス　-->
+<!-- Family Restaurant　-->
 	<contribution type="GenericStructure" id="{restaurant_002-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>ファミレス</name>
-		<design>すかいらっく</design>
+		<name>Family Restaurant</name>
+		<design>Skyluck restaurant</design>
 		<structure>
-			<category byname="ファミレス"/>
+			<category byname="Family Restaurants"/>
 		</structure>
 		<price>800</price>
 		<size>2,2</size>
@@ -2423,12 +2423,12 @@
 	</contribution>
 
 
-<!-- 角地ビル(1x1)1 -->
+<!-- Corner building(1x1)1 -->
 	<contribution type="GenericStructure" id="{vhbi_010-GenericStructure-C001-0000-4C8B212Dharu}">
-		<name>角地ビル(1x1)</name>
-		<design>タイプA</design>
+		<name>Corner building(1x1)</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="貸事務所"/>
+			<category byname="Offices for Rent"/>
 		</structure>
 		<price>280</price>
 		<size>1,1</size>
@@ -2491,12 +2491,12 @@
 	</contribution>
 
 
-<!-- 角地ビル(1x1)2 -->
+<!-- Corner building(1x1)2 -->
 	<contribution type="GenericStructure" id="{vhbi_011-GenericStructure-C000-0000-4C8B212Dharu}">
-		<name>角地ビル(1x1)</name>
-		<design>タイプB</design>
+		<name>Corner building(1x1)</name>
+		<design>Type B</design>
 		<structure>
-			<category byname="貸事務所"/>
+			<category byname="Offices for Rent"/>
 		</structure>
 		<price>260</price>
 		<size>1,1</size>
@@ -2559,14 +2559,14 @@
 	</contribution>
 
 
-<!-- 貸しビル3x4 -->
+<!-- Rental office building3x4 -->
 	<contribution type="GenericStructure" id="{vhbi_012-GenericStructure-C001-0000-4C8B212Dharu}">
-		<name>貸しビル(3x4)</name>
-		<design>タイプA</design>
+		<name>Rental office building(3x4)</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="一般飲食店" hide="true"/>
-			<category byname="店舗" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Restaurants" hide="true"/>
+			<category byname="Stores" hide="true"/>
 		</structure>
 		<price>7800</price>
 		<size>3,4</size>
@@ -2635,12 +2635,12 @@
 	</contribution>
 
 
-<!-- 札幌時計台　-->
+<!-- Sapporo clock tower　-->
 	<contribution type="GenericStructure" id="{tokeidai-GenericStructure-C000-0000-4C8B212Dharu}">
-		<name>時計台</name>
-		<design>札幌</design>
+		<name>Clock tower</name>
+		<design>Sapporo</design>
 		<structure>
-			<category byname="史跡"/>
+			<category byname="Historic Sites"/>
 		</structure>
 		<price>2500</price>
 		<size>3,2</size>
@@ -2665,12 +2665,12 @@
 	</contribution>
 
 
-<!-- 貸しビル3x3[A] -->
+<!-- Rental office building3x3[A] -->
 	<contribution type="GenericStructure" id="{vhbi_013-GenericStructure-C001-0000-4C8B212Dharu}">
-		<name>貸しビル(3x3)</name>
-		<design>タイプA</design>
+		<name>Rental office building(3x3)</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="貸事務所"/>
+			<category byname="Offices for Rent"/>
 		</structure>
 		<price>10000</price>
 		<size>3,3</size>
@@ -2731,12 +2731,12 @@
 	</contribution>
 
 
-<!-- カジュアル衣料品店　-->
+<!-- Casual wear shop　-->
 	<contribution type="GenericStructure" id="{ClothingStore_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>カジュアル衣料品店</name>
-		<design>ユニロク（タイプA)</design>
+		<name>Casual wear shop</name>
+		<design>Uniloqu (Type A)</design>
 		<structure>
-			<category byname="チェーン専門店"/>
+			<category byname="Specialty Chain Stores"/>
 		</structure>
 		<price>900</price>
 		<size>2,2</size>
@@ -2760,10 +2760,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ClothingStore_002-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>カジュアル衣料品店</name>
-		<design>ユニロク（タイプB)</design>
+		<name>Casual wear shop</name>
+		<design>Uniloqu (Type B)</design>
 		<structure>
-			<category byname="チェーン専門店"/>
+			<category byname="Specialty Chain Stores"/>
 		</structure>
 		<price>700</price>
 		<size>2,2</size>
@@ -2787,10 +2787,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ClothingStore_003-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>カジュアル衣料品店</name>
-		<design>ユニロク（ポール看板)</design>
+		<name>Casual wear shop</name>
+		<design>Uniloqu (signboard)</design>
 		<structure>
-			<category byname="チェーン専門店"/>
+			<category byname="Specialty Chain Stores"/>
 		</structure>
 		<price>10</price>
 		<size>1,1</size>
@@ -2814,12 +2814,12 @@
 		</sprite>
 	</contribution>
 
-<!-- 靴店　-->
+<!-- Shoes shop　-->
 	<contribution type="GenericStructure" id="{ShoesShop_001-GenericStructure-C000-0000-4C8B212Dharu}">
-		<name>靴店</name>
+		<name>Shoes shop</name>
 		<design>FOOTMARK</design>
 		<structure>
-			<category byname="チェーン専門店"/>
+			<category byname="Specialty Chain Stores"/>
 		</structure>
 		<price>230</price>
 		<size>2,1</size>
@@ -2843,10 +2843,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ShoesShop_002-GenericStructure-C000-0000-4C8B212Dharu}">
-		<name>靴店</name>
-		<design>東京靴販売センター</design>
+		<name>Shoes shop</name>
+		<design>Tokyo shoe sales center</design>
 		<structure>
-			<category byname="チェーン専門店"/>
+			<category byname="Specialty Chain Stores"/>
 		</structure>
 		<price>160</price>
 		<size>1,1</size>
@@ -2870,12 +2870,12 @@
 	</contribution>
 
 
-<!-- バルーンタワー　-->
+<!-- Baroon tower　-->
 	<contribution type="GenericStructure" id="{ampark_BalloonTower_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>バルーンタワー</name>
-		<design>(タイプA)</design>
+		<name>Baroon tower</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>800</price>
 		<size>2,2</size>
@@ -2906,12 +2906,12 @@
 	</contribution>
 
 
-<!-- スペースショット　-->
+<!-- Space shot　-->
 	<contribution type="GenericStructure" id="{ampark_SpaceShot_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>スペースショット</name>
-		<design>(タイプA)</design>
+		<name>Space shot</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>800</price>
 		<size>1,1</size>
@@ -2941,12 +2941,12 @@
 	</contribution>
 
 
-<!-- 遊園地エントランス　-->
+<!-- Amusement Parks Entrance　-->
 	<contribution type="GenericStructure" id="{ampark_entrance_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>エントランス</name>
-		<design>(タイプA)</design>
+		<name>Entrance</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>400</price>
 		<size>1,3</size>
@@ -2975,12 +2975,12 @@
 	</contribution>
 
 
-<!-- 遊園地アストロファイター -->
+<!-- Astro fighter -->
 	<contribution type="GenericStructure" id="{ampark_AstroFighter_001-GenericStructure-C001-000b-4C8B212Dharu}">
-		<name>アストロファイター</name>
-		<design>停止状態</design>
+		<name>Astro fighter</name>
+		<design>stopping</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>750</price>
 		<size>2,2</size>
@@ -3008,10 +3008,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_AstroFighter_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>アストロファイター</name>
-		<design>運転状態</design>
+		<name>Astro fighter</name>
+		<design>driving</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>750</price>
 		<size>2,2</size>
@@ -3039,12 +3039,12 @@
 	</contribution>
 
 
-<!-- 遊園地ゲームセンター -->
+<!-- Amusement Arcade -->
 	<contribution type="GenericStructure" id="{ampark_GameCenter_001-GenericStructure-C001-0000-4C8B212Dharu}">
-		<name>ゲーム館</name>
-		<design>タイプA</design>
+		<name>Arcade game hall</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1000</price>
 		<size>3,3</size>
@@ -3076,12 +3076,12 @@
 	</contribution>
 
 
-<!-- 遊園地パラソル -->
+<!-- Amusement Parks Parasols -->
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-001a-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>1-A</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3109,10 +3109,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-001b-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>1-b</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3149,10 +3149,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-001c-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>1-c</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3189,10 +3189,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-002a-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>2-a</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3223,10 +3223,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-002b-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>2-b</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3257,10 +3257,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-002c-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>2-c</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3297,10 +3297,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-002d-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>2-d</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3337,10 +3337,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-003a-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>3-a</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3377,10 +3377,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-003b-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>3-b</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3417,10 +3417,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-003c-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>3-c</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3457,10 +3457,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-004a-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>4-a</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3488,10 +3488,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-004b-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>4-b</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3519,10 +3519,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-004c-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>4-c</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3559,10 +3559,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{ampark_Parasol_001-GenericStructure-C001-005a-4C8B212Dharu}">
-		<name>パラソル</name>
+		<name>Parasols</name>
 		<design>5-a</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1</price>
 		<size>1,1</size>
@@ -3590,12 +3590,12 @@
 	</contribution>
 
 
-<!-- 噴水広場　-->
+<!-- Fountain square　-->
 	<contribution type="GenericStructure" id="{square_001-GenericStructure-C000-0000-4C8B212Dharu}">
-		<name>噴水広場</name>
-		<design>タイプA</design>
+		<name>Fountain square</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="娯楽"/>
+			<category byname="Recreation"/>
 		</structure>
 		<price>900</price>
 		<size>3,3</size>
@@ -3609,12 +3609,12 @@
 		</sprite>
 	</contribution>
 
-<!-- 遊園地噴水広場　-->
+<!-- Park Fountain square　-->
 	<contribution type="GenericStructure" id="{ampark_square_001-GenericStructure-C000-0000-4C8B212Dharu}">
-		<name>噴水広場(遊園地舗装)</name>
-		<design>タイプA</design>
+		<name>Fountain square(park pavement)</name>
+		<design>Type A</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>900</price>
 		<size>3,3</size>
