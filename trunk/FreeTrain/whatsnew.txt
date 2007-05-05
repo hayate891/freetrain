@@ -15,7 +15,7 @@ Show author and title of plugin when the plugin cause some errors.
 2006/5/9
 #5.
 Calculate percentage of progress on PluginManager.
-Show progress bars on splach window.
+Show progress bars on splash window.
 
 2006/7/29
 #6.
@@ -31,3 +31,7 @@ When lower pier of rail-slope or rail-bridge is removed by bulldozer,
 All above pires and rails are removed together.
 
 2006/8/16
+
+2007/5/1
+#9.
+Translated to English. Many UI elements modified to accomodate for the new language.
