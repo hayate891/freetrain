@@ -2,7 +2,7 @@
 <!DOCTYPE plug-in [
 <!ENTITY Apart60 '
 	<structure>
-		<category byname="寮"/>
+		<category byname="Dormitories"/>
 	</structure>
 	<price>1500</price>
 	<population>
@@ -31,8 +31,8 @@
 ]>
 <plug-in>
 
-	<title>アパート</title>
-	<author>C477@2両目</author>
+	<title>Apartments</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{51C14811-A4AD-4251-C477-EA063A504AAD}">
@@ -58,8 +58,8 @@
 		
 <!-- white -->
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-00">
-		<group>低層アパート</group>
-		<design>非常階段付き</design>
+		<group>Low height apartment</group>
+		<design>emergency staircase</design>
 		&Apart60;
 		&crWhite;
 		&crKhaki;
@@ -78,8 +78,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-04">
-		<group>低層アパート</group>
-		<design>非常階段付き</design>
+		<group>Low height apartment</group>
+		<design>emergency staircase</design>
 		&Apart60;
 		&crWhite;
 		&crKhaki;
@@ -98,7 +98,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-08">
-		<group>低層アパート</group>
+		<group>Low height apartment</group>
 		&Apart60;
 		&crWhite;
 		&crKhaki;
@@ -117,7 +117,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-12">
-		<group>低層アパート</group>
+		<group>Low height apartment</group>
 		&Apart60;
 		&crWhite;
 		&crKhaki;
@@ -136,8 +136,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-20">
-		<group>60年代アパート</group>
-		<design>非常階段付き</design>
+		<group>Old-style apartment</group>
+		<design>emergency staircase</design>
 		&Apart60;
 		&crWhite;
 		&crGray;
@@ -156,8 +156,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-24">
-		<group>60年代アパート</group>
-		<design>非常階段付き</design>
+		<group>Old-style apartment</group>
+		<design>emergency staircase</design>
 		&Apart60;
 		&crWhite;
 		&crGray;
@@ -176,7 +176,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-28">
-		<group>60年代アパート</group>
+		<group>Old-style apartment</group>
 		&Apart60;
 		&crWhite;
 		&crGray;
@@ -195,7 +195,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{0916B378-8A3F-4DD3-C477-568137E44244}-32">
-		<group>60年代アパート</group>
+		<group>Old-style apartment</group>
 		&Apart60;
 		&crWhite;
 		&crGray;

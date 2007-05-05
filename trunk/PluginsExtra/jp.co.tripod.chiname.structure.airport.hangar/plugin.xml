@@ -5,7 +5,7 @@
 		<size>6,6</size>
 		<height>2</height>
 		<structure>
-			<category byname="格納庫"/>
+			<category byname="Hangars"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -13,7 +13,7 @@
 		<price>1200</price>
 		<height>2</height>
 		<structure>
-			<category byname="格納庫"/>
+			<category byname="Hangars"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -41,8 +41,8 @@
 ]>
 
 <plug-in>
-	<title>旅客機格納庫</title>
-	<author>C477@2両目</author>
+	<title>Airport Hangars</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{6B576D34-4544-4FB9-C477-6FA7DA640201}-01">
@@ -59,8 +59,8 @@
 	</contribution>
 		
 	<contribution type="GenericStructure" id="{1C33D56E-01ED-4ECA-C477-5C80C7E52854}-l1">
-		<group>旅客機格納庫</group>
-		<design>大Ａ</design>
+		<group>Passenger plane hanger</group>
+		<design>big-A</design>
 		&hangar_L;
 		&crLtBlue;
 		&crSkyBlue;
@@ -79,8 +79,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{1C33D56E-01ED-4ECA-C477-5C80C7E52854}-l2">
-		<group>旅客機格納庫</group>
-		<design>大Ｂ</design>
+		<group>Passenger plane hanger</group>
+		<design>big-B</design>
 		&hangar_L;
 		&crLtBlue;
 		&crSkyBlue;
@@ -99,8 +99,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{1C33D56E-01ED-4ECA-C477-5C80C7E52854}-m1">
-		<group>旅客機格納庫</group>
-		<design>中Ａ</design>
+		<group>Passenger plane hanger</group>
+		<design>medium-A</design>
 		&hangar_M;
 		&crLtBlue;
 		&crSkyBlue;
@@ -120,8 +120,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{1C33D56E-01ED-4ECA-C477-5C80C7E52854}-m2">
-		<group>旅客機格納庫</group>
-		<design>中Ｂ</design>
+		<group>Passenger plane hanger</group>
+		<design>medium-B</design>
 		&hangar_M;
 		<size>5,5</size>
 		&crLtBlue;

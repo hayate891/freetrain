@@ -16,8 +16,8 @@
 ]>
 
 <plug-in>
-	<title>半ボクセル住宅</title>
-	<author>C477@2両目</author>
+	<title>Halfsize houses</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
 	<depend on="jp.co.tripod.chiname.lib.halfvoxel" />	
 	
@@ -26,9 +26,9 @@
 	</contribution>
 
 	<contribution type="HalfVoxelStructure" id="{0BBC6983-D9AC-4348-C477-A93C14D9BBBC}-0">
-		<group>半ボクセル建築</group>
-		<subgroup>スレート葺き住宅</subgroup>
-		<name>切妻二階建てA</name>
+		<group>Halfsize structures</group>
+		<subgroup>slate-covered roof house</subgroup>
+		<name>gabled roof 2 floor A</name>
 		<price>45</price>
 		<height>1</height>
 		&housePopulation3;
@@ -42,9 +42,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0BBC6983-D9AC-4348-C477-A93C14D9BBBC}-1">
-		<group>半ボクセル建築</group>
-		<subgroup>スレート葺き住宅</subgroup>
-		<name>切妻二階建てB</name>
+		<group>Halfsize structures</group>
+		<subgroup>slate-covered roof house</subgroup>
+		<name>gabled roof 2 floor B</name>
 		<price>45</price>
 		<height>1</height>
 		&housePopulation3;
@@ -58,9 +58,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0BBC6983-D9AC-4348-C477-A93C14D9BBBC}-2">
-		<group>半ボクセル建築</group>
-		<subgroup>スレート葺き住宅</subgroup>
-		<name>切妻二階建てC</name>
+		<group>Halfsize structures</group>
+		<subgroup>slate-covered roof house</subgroup>
+		<name>gabled roof 2 floor C</name>
 		<price>45</price>
 		<height>1</height>
 		&housePopulation3;
@@ -74,9 +74,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0BBC6983-D9AC-4348-C477-A93C14D9BBBC}-3">
-		<group>半ボクセル建築</group>
-		<subgroup>スレート葺き住宅</subgroup>
-		<name>車庫付切妻二階建て</name>
+		<group>Halfsize structures</group>
+		<subgroup>slate-covered roof house</subgroup>
+		<name>gabled roof 2 floor with carport</name>
 		<price>45</price>
 		<height>1</height>
 		&housePopulation3;
@@ -90,9 +90,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0BBC6983-D9AC-4348-C477-A93C14D9BBBC}-4">
-		<group>半ボクセル建築</group>
-		<subgroup>スレート葺き住宅</subgroup>
-		<name>寄棟二階建てA</name>
+		<group>Halfsize structures</group>
+		<subgroup>slate-covered roof house</subgroup>
+		<name>hip roof 2 floor A</name>
 		<price>50</price>
 		<height>1</height>
 		&housePopulation6;
@@ -106,9 +106,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0BBC6983-D9AC-4348-C477-A93C14D9BBBC}-5">
-		<group>半ボクセル建築</group>
-		<subgroup>スレート葺き住宅</subgroup>
-		<name>寄棟二階建てB</name>
+		<group>Halfsize structures</group>
+		<subgroup>slate-covered roof house</subgroup>
+		<name>hip roof 2 floor B</name>
 		<price>50</price>
 		<height>1</height>
 		&housePopulation6;

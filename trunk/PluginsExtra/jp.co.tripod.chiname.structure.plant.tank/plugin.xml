@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY pm-silo '
-	<group>PM-サイロ</group>
+	<group>Plant-Silo</group>
 	<structure>
-		<category byname="工場用パーツ"/>
+		<category byname="Factory Components"/>
 	</structure>
 	<size>1,1</size>
 	<height>1</height>
 	<computerCannotBuild/>
 '>
 <!ENTITY pm-tank '
-	<group>PM-タンク</group>
+	<group>Plant-Tank</group>
 	<structure>
-		<category byname="工場用パーツ"/>
+		<category byname="Factory Components"/>
 	</structure>
 	<size>1,1</size>
 	<height>1</height>
@@ -20,8 +20,8 @@
 '>
 ]>
 <plug-in>
-	<title>プラントタンク</title>
-	<author>C477@2両目</author>
+	<title>PlantTank</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	
 	<contribution type="picture" id="{FF3D7E3E-8BD3-4EBC-C477-4185D693B62B}">

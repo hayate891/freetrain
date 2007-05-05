@@ -340,8 +340,8 @@
 
 <plug-in>
 
-	<title>遊園地セット３</title>
-	<author>C477@2両目</author>
+	<title>Amusement Park set 3</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{06BC1573-B9B4-42A5-C477-88B8DE5E0CB8}">
@@ -391,10 +391,10 @@
 	</contribution>
 		
 	<contribution type="GenericStructure" id="{97BEE6FC-374C-466E-C477-FB44359ADB7A}">
-		<group>アトラクション2x2</group>
-		<design>飛行塔</design>
+		<group>Attraction 2x2</group>
+		<design>plane tower</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>700</price>
 		<population>
@@ -410,10 +410,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{1978F3FC-2AFA-4902-C477-EA2911D58A5E}">
-		<group>アトラクション2x2</group>
-		<design>パラトルーパー</design>
+		<group>Attraction 2x2</group>
+		<design>para trooper</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>650</price>
 		<population>
@@ -429,10 +429,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{1ECF7E51-A426-48F9-C477-95F20BB2F5E9}">
-		<group>アトラクション2x2</group>
-		<design>ティーカップ</design>
+		<group>Attraction 2x2</group>
+		<design>teacup</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>320</price>
 		<population>
@@ -448,10 +448,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{BB3DB14A-555E-4C03-C477-68824A2A589A}">
-		<group>アトラクション2x2</group>
-		<design>ウェーブスインガー</design>
+		<group>Attraction 2x2</group>
+		<design>wave swinger</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>750</price>
 		<population>
@@ -467,10 +467,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6FCBB406-FB00-4B52-C477-00B631A6DFDF}">
-		<group>アトラクション2x2</group>
-		<design>スパースイング</design>
+		<group>Attraction 2x2</group>
+		<design>super swing</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>500</price>
 		<population>
@@ -489,20 +489,20 @@
 	
 	<contribution type="road" id="{DD832F36-77AE-465C-C477-0830EAA652D1}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>遊園地舗装(芝生)</name>
-		<description>遊園地内の舗装</description>
+		<name>Amusement Park pavement(grass)</name>
+		<description>Pavement in Amusement Park</description>
 		<picture ref="{3E3C18A9-371C-4918-C477-0F7BE2F03817}" size="32,24" offset="8"/>
 	</contribution>
 	<contribution type="road" id="{383868BC-5662-42BD-C477-211A3356C8AA}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>遊園地舗装(並木)</name>
-		<description>遊園地内の舗装</description>
+		<name>Amusement Park pavement(tree)</name>
+		<description>Pavement in Amusement Park</description>
 		<picture ref="{32716E00-3D89-4B36-C477-D239FA0B2081}" size="32,24" offset="8"/>
 	</contribution>
 	<contribution type="road" id="{6C2DC3D9-7836-4F79-C477-8C0580C248E8}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>遊園地舗装(噴水)</name>
-		<description>遊園地内の舗装</description>
+		<name>Amusement Park pavement(fountain)</name>
+		<description>Pavement in Amusement Park</description>
 		<picture ref="{03713641-E4CB-40CD-C477-61162258C092}" size="32,24" offset="8"/>
 	</contribution>
 

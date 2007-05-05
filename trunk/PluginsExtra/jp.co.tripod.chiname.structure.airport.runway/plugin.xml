@@ -5,7 +5,7 @@
 		<size>4,4</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -14,7 +14,7 @@
 		<size>2,4</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -23,7 +23,7 @@
 		<size>4,2</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -32,7 +32,7 @@
 		<size>2,4</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -41,7 +41,7 @@
 		<size>4,2</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -49,8 +49,8 @@
 ]>
 
 <plug-in>
-	<title>滑走路</title>
-	<author>C477@2両目</author>
+	<title>Runways</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 
@@ -87,10 +87,10 @@
 		</picture>
 	</contribution>
 		
-	<!--滑走路（タイヤ跡付き）-->
+	<!--Runways(with tire tracks)-->
 	<contribution type="GenericStructure" id="{0D5808D6-787C-4498-C477-EE5C79ECE244}-S0">
-		<group>滑走路(タイヤ跡)</group>
-		<design>設地点標識</design>
+		<group>Runways(tire tracks)</group>
+		<design>Landing point marker</design>
 		&runway5_5;
 		<sprite origin="0,0" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
@@ -100,8 +100,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{0D5808D6-787C-4498-C477-EE5C79ECE244}-S1">
-		<group>滑走路(タイヤ跡)</group>
-		<design>設地帯標識</design>
+		<group>Runways(tire tracks)</group>
+		<design>Landing area marker</design>
 		&runway5_5;
 		<sprite origin="128,0" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
@@ -111,7 +111,7 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{0D5808D6-787C-4498-C477-EE5C79ECE244}-S2">
-		<group>滑走路(タイヤ跡)</group>
+		<group>Runways(tire tracks)</group>
 		&runway5_5;
 		<sprite origin="256,0" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1a"/>
@@ -122,10 +122,10 @@
 	</contribution>
 	
 
-	<!--滑走路（タイヤ跡なし）-->
+	<!--Runways(no tracks)-->
 	<contribution type="GenericStructure" id="{8755ECDC-6A76-46AA-C477-3ACFCFA1202B}-S0">
-		<group>滑走路</group>
-		<design>設地点標識</design>
+		<group>Runways</group>
+		<design>fixed distance mark</design>
 		&runway5_5;
 		<sprite origin="0,0" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
@@ -135,8 +135,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{8755ECDC-6A76-46AA-C477-3ACFCFA1202B}-S1">
-		<group>滑走路</group>
-		<design>設地帯標識</design>
+		<group>Runways</group>
+		<design>touchdown zone mark</design>
 		&runway5_5;
 		<sprite origin="128,0" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
@@ -146,7 +146,7 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{8755ECDC-6A76-46AA-C477-3ACFCFA1202B}-S2">
-		<group>滑走路</group>
+		<group>Runways</group>
 		&runway5_5;
 		<sprite origin="256,0" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S1b"/>
@@ -156,10 +156,10 @@
 		</sprite>		
 	</contribution>
 	
-	<!--滑走路先端-->
+	<!--Runways end-->
 	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S0">
-		<group>滑走路</group>
-		<design>末端標識</design>
+		<group>Runways</group>
+		<design>threshold2</design>
 		&runway5_5;
 		<sprite origin="0,0" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
@@ -175,8 +175,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S1">
-		<group>滑走路</group>
-		<design>指示標識</design>
+		<group>Runways</group>
+		<design>indicator</design>
 		&runway5_5;
 		<sprite origin="0,80" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
@@ -192,8 +192,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S2">
-		<group>滑走路</group>
-		<design>先端標識</design>
+		<group>Runways</group>
+		<design>threshold1</design>
 		&runway5_5;
 		<sprite origin="0,240" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
@@ -209,10 +209,10 @@
 		</sprite>		
 	</contribution>
 	
-	<!--タイヤ跡-->
+	<!--tire tracks-->
 	<contribution type="GenericStructure" id="{5F1C1092-23ED-410B-C477-036FE255FC6E}-S12">
-		<group>滑走路(タイヤ跡)</group>
-		<design>途切れパターン</design>
+		<group>Runways(tire tracks)</group>
+		<design>end of tire tracs</design>
 		&runway5_5;
 		<sprite origin="0,160" offset="24">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S2"/>
@@ -229,10 +229,10 @@
 	</contribution>
 
 
-<!--進入燈-->
+<!--visual approach slope indicator-->
 	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S00">
-		<group>滑走路進入燈</group>
-		<design>芝生Ａ</design>
+		<group>visual approach slope indicator</group>
+		<design>grassland A</design>
 		&approach2_5;
 		<sprite origin="0,0" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
@@ -248,8 +248,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S04">
-		<group>滑走路進入燈</group>
-		<design>芝生Ｂ</design>
+		<group>visual approach slope indicator</group>
+		<design>grassland B</design>
 		&approach2_5;
 		<sprite origin="0,64" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
@@ -265,8 +265,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S10">
-		<group>滑走路進入燈</group>
-		<design>芝生Ｃ</design>
+		<group>visual approach slope indicator</group>
+		<design>grassland C</design>
 		&approach2_5;
 		<sprite origin="0,128" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
@@ -282,8 +282,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S11">
-		<group>滑走路進入燈</group>
-		<design>芝生Ｄ</design>
+		<group>visual approach slope indicator</group>
+		<design>grassland D</design>
 		&approach2_5;
 		<sprite origin="0,192" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
@@ -299,8 +299,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{2B1C7FD8-1F38-4B7C-C477-5A7DCFD577F9}-S12">
-		<group>滑走路進入燈</group>
-		<design>水上</design>
+		<group>visual approach slope indicator</group>
+		<design>water</design>
 		&approach2_5;
 		<sprite origin="0,256" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3a"/>
@@ -317,10 +317,10 @@
 	</contribution>
 
 	
-	<!--過走帯-->
+	<!--overrun area-->
 	<contribution type="GenericStructure" id="{31F65668-5D60-4F47-C477-0025430882BB}}-S00">
-		<group>滑走路進入燈</group>
-		<design>過走帯Ａ</design>
+		<group>visual approach slope indicator</group>
+		<design>overrun area A</design>
 		&overrun2_5;
 		<sprite origin="0,0" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
@@ -336,8 +336,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{31F65668-5D60-4F47-C477-0025430882BB}}-S01">
-		<group>滑走路進入燈</group>
-		<design>過走帯Ｂ</design>
+		<group>visual approach slope indicator</group>
+		<design>overrun area B</design>
 		&overrun2_5;
 		<sprite origin="0,64" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>
@@ -353,8 +353,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{31F65668-5D60-4F47-C477-0025430882BB}}-S02">
-		<group>滑走路進入燈</group>
-		<design>過走帯Ｃ</design>
+		<group>visual approach slope indicator</group>
+		<design>overrun area C</design>
 		&overrun2_5;
 		<sprite origin="0,128" offset="8">
 			<picture ref="{DE960968-07D0-4D16-C477-E40744A9F69F}-S3b"/>

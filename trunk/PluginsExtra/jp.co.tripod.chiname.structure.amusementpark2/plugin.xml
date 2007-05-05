@@ -85,8 +85,8 @@
 
 <plug-in>
 
-	<title>遊園地セット２</title>
-	<author>C477@2両目</author>
+	<title>Amusement Park set 2</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{EECD562F-03C5-4256-C477-D1F6B7912F24}">
@@ -113,22 +113,22 @@
 
 	<contribution type="road" id="{B0E968D8-BE76-4861-C477-9112FA78C953}-w">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>サイクルモノレール(緑)</name>
-		<description>サイクルモノレール</description>
+		<name>cycle monorail(green)</name>
+		<description>cycle monorail</description>
 		<picture ref="{741DB0BD-6F5B-4BCA-C477-3A2BFAA3E3A3}-1" size="32,32" offset="16"/>
 	</contribution>
 	<contribution type="road" id="{B0E968D8-BE76-4861-C477-9112FA78C953}-g">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>サイクルモノレール(白)</name>
-		<description>サイクルモノレール</description>
+		<name>cycle monorail(white)</name>
+		<description>cycle monorail</description>
 		<picture ref="{741DB0BD-6F5B-4BCA-C477-3A2BFAA3E3A3}-2" size="32,32" offset="16"/>
 	</contribution>
 
 	<contribution type="GenericStructure" id="{657DE35E-C898-4BCC-C477-B1A3AA649C1E}">
-		<group>売店</group>
-		<design>小スタンドx3</design>
+		<group>Stand</group>
+		<design>Tiny stands x3</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>18</price>
 		<population>
@@ -156,10 +156,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{D5CEA823-5FA3-44CD-C477-A3D638703394}">
-		<group>売店</group>
-		<design>小スタンドx2</design>
+		<group>Stand</group>
+		<design>Tiny stands x2</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>12</price>
 		<population>
@@ -187,10 +187,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{2661E02A-78F0-4978-C477-A1A8F32CAC1B}">
-		<group>売店</group>
-		<design>レストハウス</design>
+		<group>Stand</group>
+		<design>Resthouse</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>60</price>
 		<population>
@@ -215,10 +215,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{5B5843D7-7C58-47A3-C477-F9D24B5F21FD}">
-		<group>売店</group>
-		<design>ショップモール</design>
+		<group>Stand</group>
+		<design>Small shopping mall</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>200</price>
 		<population>
@@ -243,7 +243,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="land" id="{7E1EEEA8-AF6F-4810-C477-88C3AED6DE66}-0">
-		<group>遊園地:テーブル</group>
+		<group>Amusement Parks:tables</group>
 		<computerCannotBuild/>
 		<price>4</price>
 		<class name="freetrain.contributions.land.StaticLandBuilder"/>
@@ -252,7 +252,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="land" id="{7E1EEEA8-AF6F-4810-C477-88C3AED6DE66}-1">
-		<group>遊園地:テーブル</group>
+		<group>Amusement Parks:tables</group>
 		<computerCannotBuild/>
 		<price>4</price>
 		<class name="freetrain.contributions.land.StaticLandBuilder"/>
@@ -261,7 +261,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="land" id="{7E1EEEA8-AF6F-4810-C477-88C3AED6DE66}-2">
-		<group>遊園地:テーブル</group>
+		<group>Amusement Parks:tables</group>
 		<computerCannotBuild/>
 		<price>4</price>
 		<class name="freetrain.contributions.land.StaticLandBuilder"/>
@@ -270,7 +270,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="land" id="{7E1EEEA8-AF6F-4810-C477-88C3AED6DE66}-3">
-		<group>遊園地:テーブル</group>
+		<group>Amusement Parks:tables</group>
 		<computerCannotBuild/>
 		<price>4</price>
 		<class name="freetrain.contributions.land.StaticLandBuilder"/>
@@ -279,7 +279,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="land" id="{7E1EEEA8-AF6F-4810-C477-88C3AED6DE66}">
-		<group>遊園地:テーブル</group>
+		<group>Amusement Parks:tables</group>
 		<computerCannotBuild/>
 		<price>4</price>
 		<class name="freetrain.contributions.land.RandomLandBuilder"/>

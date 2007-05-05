@@ -2,7 +2,7 @@
 <!DOCTYPE plug-in [
 <!ENTITY warehause '
 		<structure>
-			<category byname="貨物ターミナル"/>
+			<category byname="Cargo Terminals"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -45,8 +45,8 @@
 ]>
 
 <plug-in>
-	<title>貨物ターミナル</title>
-	<author>C477@2両目</author>
+	<title>Cargo Terminals</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{0F90DC7F-61D7-4D20-C477-68DCEDDD680C}-01">
@@ -63,8 +63,8 @@
 	</contribution>
 		
 	<contribution type="GenericStructure" id="{C3BB57FE-9B46-4E39-C477-1F8129BBDFFA}-1">
-		<group>貨物ターミナル</group>
-		<design>Ａ</design>
+		<group>Cargo Terminals</group>
+		<design>type A</design>
 		&warehause;
 		<price>1600</price>
 		<size>6,3</size>
@@ -86,8 +86,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C3BB57FE-9B46-4E39-C477-1F8129BBDFFA}-2">
-		<group>貨物ターミナル</group>
-		<design>Ｂ</design>
+		<group>Cargo Terminals</group>
+		<design>type B</design>
 		&warehause;
 		<price>1600</price>
 		<size>6,3</size>
@@ -109,8 +109,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C3BB57FE-9B46-4E39-C477-1F8129BBDFFA}-3">
-		<group>貨物ターミナル</group>
-		<design>Ｃ</design>
+		<group>Cargo Terminals</group>
+		<design>type C</design>
 		&warehause;
 		<price>2400</price>
 		<size>6,4</size>
@@ -133,8 +133,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C3BB57FE-9B46-4E39-C477-1F8129BBDFFA}-4">
-		<group>貨物ターミナル</group>
-		<design>Ｄ</design>
+		<group>Cargo Terminals</group>
+		<design>type D</design>
 		&warehause;
 		<price>800</price>
 		<size>3,3</size>

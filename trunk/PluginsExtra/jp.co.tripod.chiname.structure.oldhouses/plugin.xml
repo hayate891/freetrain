@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY oldhouseM '
-	<group>古い民家(中)</group>
+	<group>Old downtown house (medium)</group>
 	<price>50</price>
 	<size>1,1</size>
 	<structure>
-		<category byname="一戸建て"/>
+		<category byname="Single House"/>
 	</structure>
 	<height>1</height>
 	<population>
@@ -14,11 +14,11 @@
 	</population>
 '>
 <!ENTITY oldhouseS '
-	<group>古い民家(小)</group>
+	<group>Old downtown house (small)</group>
 	<price>40</price>
 	<size>1,1</size>
 	<structure>
-		<category byname="一戸建て"/>
+		<category byname="Single House"/>
 	</structure>
 	<height>1</height>
 	<population>
@@ -28,8 +28,8 @@
 '>]>
 
 <plug-in>
-	<title>古い民家</title>
-	<author>C477@2両目</author>
+	<title>Old downtown house</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{84083099-B583-4B22-C477-23869F3F3969}">

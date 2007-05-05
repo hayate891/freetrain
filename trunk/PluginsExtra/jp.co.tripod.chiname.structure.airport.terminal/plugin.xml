@@ -5,7 +5,7 @@
 		<size>1,1</size>
 		<height>1</height>
 		<structure>
-			<category byname="旅客ターミナル"/>
+			<category byname="Passanger Terminals"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -14,7 +14,7 @@
 		<size>2,1</size>
 		<height>1</height>
 		<structure>
-			<category byname="旅客ターミナル"/>
+			<category byname="Passanger Terminals"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -23,7 +23,7 @@
 		<size>2,1</size>
 		<height>1</height>
 		<structure>
-			<category byname="旅客ターミナル"/>
+			<category byname="Passanger Terminals"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -32,7 +32,7 @@
 		<size>1,1</size>
 		<height>1</height>
 		<structure>
-			<category byname="旅客ターミナル"/>
+			<category byname="Passanger Terminals"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -40,8 +40,8 @@
 ]>
 
 <plug-in>
-	<title>空港ターミナルＡ</title>
-	<author>C477@2両目</author>
+	<title>Airport terminal A</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-01">
@@ -65,15 +65,15 @@
 		</picture>
 	</contribution>
 		
-	<!--メインドーム-->
+	<!--Main dome-->
 	<contribution type="GenericStructure" id="{B63CD389-C7FA-43D6-C477-74D088277950}">
-		<group>空港国際線ターミナル</group>
-		<design>大型ドーム</design>
+		<group>International Airport terminal</group>
+		<design>Huge dome</design>
 		<price>100000</price>
 		<size>8,3</size>
 		<height>2</height>
 		<structure>
-			<category byname="旅客ターミナル"/>
+			<category byname="Passanger Terminals"/>
 		</structure>	
 		<computerCannotBuild/>
 		<sprite origin="0,0" offset="80">
@@ -91,8 +91,8 @@
 	</contribution>
 	<!--出発ロビー-->
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-1">
-		<group>空港搭乗口</group>
-		<design>ロビー狭</design>
+		<group>Airport departure robby</group>
+		<design>narrow</design>
 		&robby;
 		<sprite origin="32,8" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-02"/>
@@ -102,8 +102,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-2">
-		<group>空港搭乗口</group>
-		<design>ロビー狭(看板付き)</design>
+		<group>Airport departure robby</group>
+		<design>narrow (with signboard)</design>
 		&robby;
 		<sprite origin="0,8" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-02"/>
@@ -113,8 +113,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-3">
-		<group>空港搭乗口</group>
-		<design>ロビー広</design>
+		<group>Airport departure robby</group>
+		<design>wide</design>
 		&robbyW;
 		<sprite origin="48,48" offset="16" opposite="true">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-04"/>
@@ -124,8 +124,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-4">
-		<group>空港搭乗口</group>
-		<design>ロビー広(看板付き)</design>
+		<group>Airport departure robby</group>
+		<design>wide (with signboard)</design>
 		&robbyW;
 		<sprite origin="48,0" offset="16" opposite="true">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-04"/>
@@ -134,10 +134,10 @@
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-04"/>
 		</sprite>		
 	</contribution>
-	<!--搭乗口-->
+	<!--boarding bridge-->
 	<contribution type="GenericStructure" id="{38DCF80D-2EA2-45D4-C477-94967CC1522D}-1">
-		<group>空港搭乗口</group>
-		<design>搭乗口</design>
+		<group>Airport departure robby</group>
+		<design>boarding bridge</design>
 		&gateA;
 		<sprite origin="64,0" offset="24">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-02"/>
@@ -153,8 +153,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{38DCF80D-2EA2-45D4-C477-94967CC1522D}-2">
-		<group>空港搭乗口</group>
-		<design>搭乗口</design>
+		<group>Airport departure robby</group>
+		<design>boarding bridge</design>
 		&gateA;
 		<sprite origin="64,48" offset="24">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-02"/>
@@ -171,10 +171,10 @@
 	</contribution>
 	
 
-	<!--バス・タクシー乗り場-->
+	<!--Bus or taxi stop-->
 	<contribution type="GenericStructure" id="{206632ED-DC73-454D-C477-5EF51383D81A}-1">
-		<group>駅前広場</group>
-		<design>看板付き(半)</design>
+		<group>Terminal square</group>
+		<design>half-roofed with signboard</design>
 		&entrance;
 		<sprite origin="0,0" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-03"/>
@@ -190,8 +190,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{206632ED-DC73-454D-C477-5EF51383D81A}-2">
-		<group>駅前広場</group>
-		<design>看板付き(全)</design>
+		<group>Terminal square</group>
+		<design>roofed with signboard</design>
 		&entrance;
 		<sprite origin="0,32" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-03"/>
@@ -207,8 +207,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{206632ED-DC73-454D-C477-5EF51383D81A}-5">
-		<group>駅前広場</group>
-		<design>半屋根</design>
+		<group>Terminal square</group>
+		<design>half-roofed</design>
 		&entrance;
 		<sprite origin="0,128" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-03"/>
@@ -224,8 +224,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{206632ED-DC73-454D-C477-5EF51383D81A}-6">
-		<group>駅前広場</group>
-		<design>Ｌ屋根</design>
+		<group>Terminal square</group>
+		<design>corner-roofed</design>
 		&entrance;
 		<sprite origin="0,160" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-03"/>
@@ -241,8 +241,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{206632ED-DC73-454D-C477-5EF51383D81A}-3">
-		<group>駅前広場</group>
-		<design>半屋根/半道路</design>
+		<group>Terminal square</group>
+		<design>half-roofed/road</design>
 		&entrance;
 		<sprite origin="0,64" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-03"/>
@@ -258,8 +258,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{206632ED-DC73-454D-C477-5EF51383D81A}-4">
-		<group>駅前広場</group>
-		<design>Ｌ屋根/角道路</design>
+		<group>Terminal square</group>
+		<design>corner-roofed/road</design>
 		&entrance;
 		<sprite origin="0,96" offset="16">
 			<picture ref="{DBCD7B5E-CCFE-478F-C477-F69C7B1E1FE2}-03"/>
