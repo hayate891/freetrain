@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY Manshon2_2 '
-	<group>分譲マンション(2x2)</group>
+	<group>Condominium(2x2)</group>
 	<price>2400</price>
 	<size>2,2</size>
 	<structure>
-		<category byname="分譲マンション"/>
+		<category byname="Condominiums"/>
 	</structure>
 	<minHeight>2</minHeight>
 	<maxHeight>4</maxHeight>
@@ -15,10 +15,10 @@
 	</population>
 '>
 <!ENTITY Manshon4_2 '
-	<group>分譲マンション(4x2)</group>
+	<group>Condominium(4x2)</group>
 	<size>4,2</size>
 	<structure>
-		<category byname="分譲マンション"/>
+		<category byname="Condominiums"/>
 	</structure>
 	<price>4600</price>
 	<minHeight>3</minHeight>
@@ -62,8 +62,8 @@
 ]>
 
 <plug-in>
-	<title>分譲マンション</title>
-	<author>C477@2両目</author>
+	<title>Condominium</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{35EA4620-0BE3-4424-C477-CE11599C3EF1}">

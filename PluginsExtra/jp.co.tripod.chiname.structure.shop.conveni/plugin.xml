@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY cv_small_suburb '
-	<group>コンビニ（郊外型）</group>
+	<group>Convenience Stores (suburban)</group>
 	<structure>
-		<category byname="コンビニ"/>
+		<category byname="Convenience Stores"/>
 	</structure>
 	<price>180</price>
 	<size>2,1</size>
 	<height>1</height>
 	<population>
-		<!--コンビニの客は電車ではこないだろうから、勤務者のみ登録-->
+		<!--Convenience Storesの客は電車ではこないだろうから、勤務者のみ登録-->
 		<class name="freetrain.contributions.population.OfficePopulation"/>
 		<base>1</base>
 	</population>
@@ -17,8 +17,8 @@
 
 ]>
 <plug-in>
-	<title>コンビニ</title>
-	<author>C477@2両目</author>
+	<title>Convenience Stores</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="picture" id="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}">
 		<picture src="conveni_s01.bmp">
@@ -28,7 +28,7 @@
 	
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-0">
 		&cv_small_suburb;
-		<design>ａｍｑｍ</design>
+		<design>amqm</design>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>
@@ -44,7 +44,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-1">
 		&cv_small_suburb;
-		<design>サークレＫ</design>
+		<design>Circle-J</design>
 		<sprite origin="0,40" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>
@@ -60,7 +60,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-2">
 		&cv_small_suburb;
-		<design>デイリーストヤ</design>
+		<design>Dailyshop</design>
 		<sprite origin="0,80" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>
@@ -76,7 +76,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-3">
 		&cv_small_suburb;
-		<design>ファミリーアート</design>
+		<design>Fancymart</design>
 		<sprite origin="0,120" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>
@@ -92,7 +92,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-4">
 		&cv_small_suburb;
-		<design>ローツン</design>
+		<design>Rawson</design>
 		<sprite origin="0,160" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>
@@ -108,7 +108,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-5">
 		&cv_small_suburb;
-		<design>三二ストップ</design>
+		<design>Minishop</design>
 		<sprite origin="0,200" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>
@@ -124,7 +124,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-6">
 		&cv_small_suburb;
-		<design>七ブンイレブン</design>
+		<design>SevenEven</design>
 		<sprite origin="0,240" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>
@@ -140,7 +140,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E853F67E-FA07-4365-C477-79EEA8EDA0F5}-7">
 		&cv_small_suburb;
-		<design>サンタス</design>
+		<design>Santus</design>
 		<sprite origin="0,280" offset="24">
 			<picture ref="{C1661A11-F8F4-4C9A-C477-A7AD0CEFC0D1}"/>
 		</sprite>

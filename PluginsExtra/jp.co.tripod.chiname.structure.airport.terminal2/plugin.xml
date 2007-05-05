@@ -5,7 +5,7 @@
 		<size>2,1</size>
 		<height>2</height>
 		<structure>
-			<category byname="旅客ターミナル"/>
+			<category byname="Passanger Terminals"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -14,7 +14,7 @@
 		<size>5,7</size>
 		<height>2</height>
 		<structure>
-			<category byname="旅客ターミナル"/>
+			<category byname="Passanger Terminals"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -22,8 +22,8 @@
 ]>
 
 <plug-in>
-	<title>空港ターミナルＢ</title>
-	<author>C477@2両目</author>
+	<title>Airport terminal B</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{278D9A05-BD93-400B-C477-029AC72C275F}-01">
@@ -44,8 +44,8 @@
 		
 	<!--メインドーム-->
 	<contribution type="GenericStructure" id="{DC4BD38D-FA51-4CDC-C477-9D6F5FFC8A34}">
-		<group>空港国際線ターミナル</group>
-		<design>メインホール</design>
+		<group>International Airport terminal</group>
+		<design>main hall</design>
 		&hall;
 		<sprite origin="0,8" offset="56">
 			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-01"/>
@@ -61,8 +61,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{D73E9558-7685-4A09-C477-54902A0FAF7B}">
-		<group>空港国際線ターミナル</group>
-		<design>ホール拡張</design>
+		<group>International Airport terminal</group>
+		<design>hall expansion</design>
 		&hall;
 		<sprite origin="0,8" offset="56">
 			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-02"/>
@@ -79,8 +79,8 @@
 	</contribution>
 	<!--出発ロビー-->
 	<contribution type="GenericStructure" id="{731CF80D-81C9-41B0-C477-E06FB565850D}">
-		<group>空港搭乗口</group>
-		<design>ミラーガラス</design>
+		<group>Airport departure robby</group>
+		<design>mirror glass</design>
 		&robby;
 		<sprite origin="0,0" offset="32">
 			<picture ref="{278D9A05-BD93-400B-C477-029AC72C275F}-03"/>

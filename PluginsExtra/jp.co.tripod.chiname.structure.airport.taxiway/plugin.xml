@@ -5,7 +5,7 @@
 		<size>4,4</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>	
 		<computerCannotBuild/>
 '>
@@ -14,7 +14,7 @@
 		<size>1,4</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -23,7 +23,7 @@
 		<size>4,1</size>
 		<height>1</height>
 		<structure>
-			<category byname="滑走路"/>
+			<category byname="Runways"/>
 		</structure>
 		<computerCannotBuild/>
 '>
@@ -31,8 +31,8 @@
 ]>
 
 <plug-in>
-	<title>誘導路</title>
-	<author>C477@2両目</author>
+	<title>Airport taxiway</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-01">
@@ -74,10 +74,10 @@
 		</picture>
 	</contribution>
 		
-	<!--誘導路（１ボクセル長）-->
+	<!--Airport taxiway (1 voxel length)-->
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-D477-CA46233A4D78}-0">
-		<group>誘導路</group>
-		<design>直進</design>
+		<group>Airport taxiway</group>
+		<design>straight</design>
 		&taxiway1_4;
 		<sprite origin="0,0" offset="0">
 			<picture ref="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-01"/>
@@ -87,8 +87,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-D477-CA46233A4D78}-1">
-		<group>誘導路</group>
-		<design>分岐口</design>
+		<group>Airport taxiway</group>
+		<design>branch</design>
 		&taxiway1_4;
 		<sprite origin="0,0" offset="0">
 			<picture ref="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-02"/>
@@ -104,8 +104,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-D477-CA46233A4D78}-2">
-		<group>誘導路</group>
-		<design>分岐口</design>
+		<group>Airport taxiway</group>
+		<design>branch</design>
 		&taxiway1_4;
 		<sprite origin="0,48" offset="0">
 			<picture ref="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-02"/>
@@ -121,8 +121,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-D477-CA46233A4D78}-3">
-		<group>誘導路</group>
-		<design>分岐口</design>
+		<group>Airport taxiway</group>
+		<design>branch</design>
 		&taxiway1_4;
 		<sprite origin="0,96" offset="0">
 			<picture ref="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-02"/>
@@ -139,10 +139,10 @@
 	</contribution>
 	
 
-	<!--誘導路（4x4）-->
+	<!--Airport taxiway（4x4）-->
 	<contribution type="GenericStructure" id="{B7DEA32C-106F-461B-C477-36DDCEF0E37C}-0">
-		<group>誘導路(4x4)</group>
-		<design>Ｔ字路</design>
+		<group>Airport taxiway(4x4)</group>
+		<design>T-crossing</design>
 		&taxiway4_4;
 		<sprite origin="0,0" offset="24">
 			<picture ref="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-03"/>
@@ -158,8 +158,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{B7DEA32C-106F-461B-C477-36DDCEF0E37C}-1">
-		<group>誘導路(4x4)</group>
-		<design>カーブ</design>
+		<group>Airport taxiway(4x4)</group>
+		<design>curve</design>
 		&taxiway4_4;
 		<sprite origin="0,80" offset="24">
 			<picture ref="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-03"/>
@@ -175,8 +175,8 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{B7DEA32C-106F-461B-C477-36DDCEF0E37C}-2">
-		<group>誘導路(4x4)</group>
-		<design>十字路</design>
+		<group>Airport taxiway(4x4)</group>
+		<design>crossing</design>
 		&taxiway4_4;
 		<sprite origin="0,0" offset="24">
 			<picture ref="{F8DDAE3B-DF10-4CB9-C477-CE4D0AC5029E}-04"/>

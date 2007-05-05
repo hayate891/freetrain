@@ -92,8 +92,8 @@
 
 <plug-in>
 
-	<title>遊園地セット１</title>
-	<author>C477@2両目</author>
+	<title>Amusement Park set 1</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{F88FF34F-6262-41F3-C477-F2337FF9B6BB}">
@@ -123,10 +123,10 @@
 	</contribution>
 		
 	<contribution type="GenericStructure" id="{83E34DCA-4F85-4B19-C477-08FD870912C7}">
-		<group>アトラクション2x2</group>
-		<design>メリーゴーラウンドＡ</design>
+		<group>Attraction2x2</group>
+		<design>merry-go-round A</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>750</price>
 		<population>
@@ -143,10 +143,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{EE314C4B-8743-47AC-C477-928BC05F22AE}">
-		<group>アトラクション2x2</group>
-		<design>メリーゴーラウンドＢ</design>
+		<group>Attraction2x2</group>
+		<design>merry-go-round B</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>800</price>
 		<population>
@@ -164,10 +164,10 @@
 
 
 	<contribution type="GenericStructure" id="{F3288563-FB70-409C-C477-037B789C109B}">
-		<group>観覧車</group>
-		<design>中型</design>
+		<group>Ferris wheel</group>
+		<design>medium size</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>1000</price>
 		<population>
@@ -187,10 +187,10 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{7DCC878C-1D30-49DA-C477-58FAE78FB551}">
-		<group>観覧車</group>
-		<design>大型</design>
+		<group>Ferris wheel</group>
+		<design>large</design>
 		<structure>
-			<category byname="遊園地"/>
+			<category byname="Amusement Parks"/>
 		</structure>
 		<price>4600</price>
 		<population>
@@ -211,14 +211,14 @@
 	
 	<contribution type="road" id="{9D70C491-72FA-4562-C477-13E62F2B3545}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>遊園地舗装(街灯あり)</name>
-		<description>遊園地内の舗装</description>
+		<name>Amusement Park pavement(lights)</name>
+		<description>Pavement in Amusement Parks</description>
 		<picture ref="{467E9AA2-640E-49FA-C477-67CBC09D270A}" size="32,24" offset="8"/>
 	</contribution>
 	<contribution type="road" id="{BCCD83F5-F857-4055-C477-F042B0CF002C}">
 		<class name="freetrain.contributions.road.A3RoadContribution" />
-		<name>遊園地舗装(街灯なし)</name>
-		<description>遊園地内の舗装</description>
+		<name>Amusement Park pavement(nolights)</name>
+		<description>Pavement in Amusement Parks</description>
 		<picture ref="{2DE5315B-2BE5-40F6-C477-6C597B29B3C4}"/>
 	</contribution>
 

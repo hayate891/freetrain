@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY NormalFactory '
-	<design>山型屋根(新)</design>
+	<design>gabled roof (new)</design>
 	<price>1000</price>
 	<structure>
-		<category byname="工場用パーツ"/>
+		<category byname="Factory Components"/>
 	</structure>
 	<population>
 		<class name="freetrain.contributions.population.OfficePopulation"/>
@@ -14,10 +14,10 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY OldFactory '
-	<design>山型屋根(古)</design>
+	<design>gabled roof (old)</design>
 	<price>800</price>
 	<structure>
-		<category byname="工場用パーツ"/>
+		<category byname="Factory Components"/>
 	</structure>
 	<population>
 		<class name="freetrain.contributions.population.OfficePopulation"/>
@@ -55,8 +55,8 @@
 ]>
 <plug-in>
 
-	<title>工場</title>
-	<author>C477@2両目</author>
+	<title>Factories</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{C96F811A-5CB9-48E6-C477-1D7EEA9C5681}">
@@ -69,7 +69,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{2A14C189-6FDF-49AB-C477-05E02E9BA3C7}-00">
-		<group>工場屋舎</group>
+		<group>Factory building</group>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -83,7 +83,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{2A14C189-6FDF-49AB-C477-05E02E9BA3C7}-01">
-		<group>工場屋舎</group>
+		<group>Factory building</group>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -97,7 +97,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{2A14C189-6FDF-49AB-C477-05E02E9BA3C7}-02">
-		<group>工場屋舎</group>
+		<group>Factory building</group>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -112,7 +112,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{C33F60C4-A1C6-4813-C477-4AE8D3B442D2}-00">
-		<group>工場屋舎</group>
+		<group>Factory building</group>
 		&OldFactory;
 		&crDirtyBrown;
 		&crDirtyYellow;
@@ -125,7 +125,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{C33F60C4-A1C6-4813-C477-4AE8D3B442D2}-01">
-		<group>工場屋舎</group>
+		<group>Factory building</group>
 		&OldFactory;
 		&crDirtyBrown;
 		&crDirtyYellow;
@@ -138,7 +138,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{C33F60C4-A1C6-4813-C477-4AE8D3B442D2}-02">
-		<group>工場屋舎</group>
+		<group>Factory building</group>
 		&OldFactory;
 		&crDirtyBrown;
 		&crDirtyYellow;

@@ -23,8 +23,8 @@
 '>
 ]>
 <plug-in>
-	<title>総合病院</title>
-	<author>C477@2両目</author>
+	<title>General hospital</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="picture" id="{C1E8C47D-219F-4FAC-C477-7BCC21E2999A}">
 		<picture src="gene_hospitalA.bmp">
@@ -38,10 +38,10 @@
 	</contribution>
 	
 	<contribution type="GenericStructure" id="{45E15A82-EC17-48FE-C477-27F07E6130F9}">
-		<name>総合病院</name>
-		<design>郊外型(主)</design>
+		<name>General hospital</name>
+		<design>suburban main building</design>
 		<structure>
-			<category byname="病院"/>
+			<category byname="Hospitals"/>
 		</structure>
 		<price>32000</price>
 		<size>6,5</size>
@@ -64,10 +64,10 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{4A9A4AFC-3351-4B3D-C477-8D0AC25D5D0F}">
-		<name>総合病院</name>
-		<design>郊外型(副)</design>
+		<name>General hospital</name>
+		<design>suburban sub building</design>
 		<structure>
-			<category byname="病院"/>
+			<category byname="Hospitals"/>
 		</structure>
 		<price>32000</price>
 		<size>5,4</size>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY built '
-	<group>コースター(完成品)</group>
+	<group>Roller coaster (assembled)</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>3000</price>
 	<size>3,21</size>
@@ -11,9 +11,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY built2 '
-	<group>コースター(完成品)</group>
+	<group>Roller coaster (assembled)</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>3000</price>
 	<size>4,18</size>
@@ -21,9 +21,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY straight '
-	<group>コースターB(直線・坂)</group>
+	<group>Roller coaster B(straight,slope)</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>10</price>
 	<size>1,1</size>
@@ -32,9 +32,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY smallCurve '
-	<group>コースターB(カーブ)</group>
+	<group>Roller coaster B(curve)</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>10</price>
 	<size>1,1</size>
@@ -43,9 +43,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY largeCurve '
-	<group>コースターB(カーブ)</group>
+	<group>Roller coaster B(curve)</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>40</price>
 	<size>2,2</size>
@@ -54,9 +54,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY S_Curve '
-	<group>コースターB(カーブ)</group>
+	<group>Roller coaster B(curve)</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>40</price>
 	<size>2,3</size>
@@ -65,9 +65,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY virticalLoop '
-	<group>コースターB(特殊)</group>
+	<group>Roller coaster B(special)</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>80</price>
 	<size>1,2</size>
@@ -80,9 +80,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY station '
-	<group>コースター乗り場</group>
+	<group>Roller coaster stop</group>
 	<structure>
-		<category byname="遊園地"/>
+		<category byname="Amusement Parks"/>
 	</structure>
 	<price>120</price>
 	<size>1,2</size>
@@ -161,8 +161,8 @@
 '>
 ]>
 <plug-in>
-	<title>ジェットコースター</title>
-	<author>C477@2両目</author>
+	<title>Roller coaster</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/%7Enao/</homepage>
 	<contribution type="picture" id="{33F626A5-0E8D-4D7D-C477-3B6456A8371E}-a2">
 		<picture src="ampark_coaster_A2.bmp">
@@ -225,10 +225,10 @@
 			<picture ref="{33F626A5-0E8D-4D7D-C477-3B6456A8371E}-b2"/>
 		</sprite>
 	</contribution>
-	<!--直線・坂-->	
+	<!--straight,slope-->	
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-str">
 		&straight;
-		<design>水平直進</design>
+		<design>horizontal straight</design>
 		&colorSet;
 		<pictures>
 			<top origin="320,344" offset="16">
@@ -255,7 +255,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-slp">
 		&straight;
-		<design>スロープ</design>
+		<design>slope</design>
 		&colorSet;
 		<pictures>
 			<top origin="0,8" offset="32">
@@ -304,7 +304,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-top">
 		&straight;
-		<design>スロープ[峠]</design>
+		<design>slope peak</design>
 		&colorSet;
 		<pictures>
 			<top origin="0,56" offset="32">
@@ -353,7 +353,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-btm">
 		&straight;
-		<design>スロープ[谷]</design>
+		<design>slope bottom</design>
 		&colorSet;
 		<pictures>
 			<top origin="0,104" offset="16">
@@ -400,10 +400,10 @@
 			</bottom>
 		</pictures>
 	</contribution>
-	<!--特殊-->	
+	<!--special-->	
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-vlp">
 		&virticalLoop;
-		<design>垂直ループ</design>
+		<design>virtical loop</design>
 		&colorSet;
 		<pictures>
 			<top origin="0,248" offset="48">
@@ -430,7 +430,7 @@
 	</contribution>	
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-csw">
 		&virticalLoop;
-		<design>コークスクリュー</design>
+		<design>corkscrew</design>
 		&colorSet;
 		<pictures opposite="true">
 			<top origin="112,264" offset="40">
@@ -477,10 +477,10 @@
 			</bottom>
 		</pictures>
 	</contribution>	
-	<!--カーブ-->
+	<!--curve-->
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-scv">
 		&smallCurve;
-		<design>小カーブ</design>
+		<design>small curve</design>
 		&colorSet;
 		<pictures>
 			<top origin="320,280" offset="16">
@@ -529,7 +529,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-lcv">
 		&largeCurve;
-		<design>大カーブ</design>
+		<design>big curve</design>
 		&colorSet;
 		<pictures>
 			<top origin="0,144" offset="24">
@@ -578,7 +578,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-S">
 		&S_Curve;
-		<design>Ｓ字カーブ</design>
+		<design>S-curve</design>
 		&colorSet;
 		<pictures>
 			<top origin="0,320" offset="24">
@@ -627,7 +627,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-1tL">
 		&largeCurve;
-		<design>一回転[左]</design>
+		<design>single circle [left]</design>
 		&colorSet;
 		<pictures>
 			<top origin="128,0" offset="40">
@@ -676,7 +676,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-1tR">
 		&largeCurve;
-		<design>一回転[右]</design>
+		<design>single circle [right]</design>
 		&colorSet;
 		<pictures>
 			<top origin="128,128" offset="40">
@@ -725,7 +725,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-1.5tL">
 		&largeCurve;
-		<design>一回転半[左]</design>
+		<design>single+half circle [left]</design>
 		&colorSet;
 		<pictures>
 			<top origin="256,0" offset="40">
@@ -774,7 +774,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{E583A63F-044F-4384-C477-0A280C67FAC4}-1.5tR">
 		&largeCurve;
-		<design>一回転半[右]</design>
+		<design>single+half circle [right]</design>
 		&colorSet;
 		<pictures>
 			<top origin="256,128" offset="40">

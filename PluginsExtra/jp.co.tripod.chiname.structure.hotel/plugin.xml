@@ -23,8 +23,8 @@
 '>
 ]>
 <plug-in>
-	<title>ホテル</title>
-	<author>C477@2両目</author>
+	<title>Hotel</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="picture" id="{4FC78EB3-7E50-4849-C477-5519AD183C20}">
 		<picture src="bldg_hotel01.bmp">
@@ -33,9 +33,9 @@
 	</contribution>
 	
 	<contribution type="GenericStructure" id="{4004B6D4-55BE-4F15-C477-DDD891E6D0E7}-1">
-		<name>高級ホテル</name>
+		<name>Luxury Hotel</name>
 		<structure>
-			<category byname="高級ホテル"/>
+			<category byname="Luxury Hotels"/>
 		</structure>
 		<price>52000</price>
 		<size>5,6</size>

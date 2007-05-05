@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY pm-distill '
-	<group>PM-蒸留塔</group>
+	<group>Plant-Distillation tower</group>
 	<structure>
-		<category byname="化学工場"/>
+		<category byname="Chemical Plants"/>
 	</structure>
 	<size>1,1</size>
 	<price>1600</price>
@@ -11,8 +11,8 @@
 '>
 ]>
 <plug-in>
-	<title>プラント蒸留塔</title>
-	<author>C477@2両目</author>
+	<title>Plant Distillation tower</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	
 	<contribution type="picture" id="{D6D7F90F-1923-4B30-C477-91146BFC0BFD}">

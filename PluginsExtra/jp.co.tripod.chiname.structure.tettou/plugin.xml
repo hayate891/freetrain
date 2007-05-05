@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY cableTower '
-	<group>高圧線鉄塔</group>
+	<group>Pylon</group>
 	<structure>
-		<category byname="送電線鉄塔"/>
+		<category byname="Pylons"/>
 	</structure>
 	<size>1,1</size>
 	<computerCannotBuild/>
 '>
 ]>
 <plug-in>
-	<title>高圧線鉄塔</title>
-	<author>C477@2両目</author>
+	<title>Pylons</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 
 	<contribution type="picture" id="{0525BBF9-BC20-4A08-C477-CA12C7E50B50}">

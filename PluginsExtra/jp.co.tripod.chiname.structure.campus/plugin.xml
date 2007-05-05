@@ -3,7 +3,7 @@
 <!ENTITY SchoolBldg '
 	<price>1200</price>
 	<structure>
-		<category byname="公立教育施設"/>
+		<category byname="Public Education"/>
 	</structure>
 	<population>
 		<class name="freetrain.contributions.population.OfficePopulation"/>
@@ -31,7 +31,7 @@
 ]>
 <plug-in>
 
-	<title>学園</title>
+	<title>Campus</title>
 	<author>C477@2両目</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
@@ -54,7 +54,7 @@
 		
 <!-- white -->
 	<contribution type="GenericStructure" id="{6DB9A7A9-EC5C-4501-C477-F7D99D54D45C}-00">
-		<group>校舎風建築</group>
+		<group>Shool building</group>
 		&SchoolBldg;
 		&crWhite;
 		&crBrown;
@@ -73,7 +73,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{6DB9A7A9-EC5C-4501-C477-F7D99D54D45C}-04">
-		<group>校舎風建築</group>
+		<group>Shool building</group>
 		&SchoolBldg;
 		&crWhite;
 		&crBrown;
@@ -92,7 +92,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{6DB9A7A9-EC5C-4501-C477-F7D99D54D45C}-08">
-		<group>校舎風建築</group>
+		<group>Shool building</group>
 		&SchoolBldg;
 		&crWhite;
 		&crBrown;
@@ -111,7 +111,7 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{6DB9A7A9-EC5C-4501-C477-F7D99D54D45C}-12">
-		<group>校舎風建築</group>
+		<group>Shool building</group>
 		&SchoolBldg;
 		&crWhite;
 		&crBrown;
@@ -130,8 +130,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{E69A12C2-1599-420D-C477-4E2DE896A251}-20">
-		<group>校舎風建築</group>
-		<design>汚れあり</design>
+		<group>Shool building</group>
+		<design>aged</design>
 		&SchoolBldg;
 		&crWhite;
 		&crGray;
@@ -149,8 +149,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{E69A12C2-1599-420D-C477-4E2DE896A251}-21">
-		<group>校舎風建築</group>
-		<design>汚れあり</design>
+		<group>Shool building</group>
+		<design>aged</design>
 		&SchoolBldg;
 		&crWhite;
 		&crGray;
@@ -169,8 +169,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{E69A12C2-1599-420D-C477-4E2DE896A251}-28">
-		<group>校舎風建築</group>
-		<design>汚れあり</design>
+		<group>Shool building</group>
+		<design>aged</design>
 		&SchoolBldg;
 		&crWhite;
 		&crGray;
@@ -188,8 +188,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{E69A12C2-1599-420D-C477-4E2DE896A251}-29">
-		<group>校舎風建築</group>
-		<design>汚れあり</design>
+		<group>Shool building</group>
+		<design>aged</design>
 		&SchoolBldg;
 		&crWhite;
 		&crGray;

@@ -3,7 +3,7 @@
 <!ENTITY NormalFactory '
 	<price>500</price>
 	<structure>
-		<category byname="工場用パーツ"/>
+		<category byname="Factory Components"/>
 	</structure>
 	<population>
 		<class name="freetrain.contributions.population.OfficePopulation"/>
@@ -16,7 +16,7 @@
 <!ENTITY OldFactory '
 	<price>400</price>
 	<structure>
-		<category byname="工場用パーツ"/>
+		<category byname="Factory Components"/>
 	</structure>
 	<population>
 		<class name="freetrain.contributions.population.OfficePopulation"/>
@@ -55,8 +55,8 @@
 ]>
 <plug-in>
 
-	<title>工場その２</title>
-	<author>C477@2両目</author>
+	<title>Factories 2</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{25229E91-5548-468B-C477-3D2DC45327B5}">
@@ -70,8 +70,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-00">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>扉ありＡ</design>
+		<group>Factory building(saw-roof)</group>
+		<design>door A</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -90,8 +90,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-01">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>扉ありＢ</design>
+		<group>Factory building(saw-roof)</group>
+		<design>door B</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -110,8 +110,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-02">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>換気口つき</design>
+		<group>Factory building(saw-roof)</group>
+		<design>ventilators on roof</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -130,8 +130,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-03">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>手前側面</design>
+		<group>Factory building(saw-roof)</group>
+		<design>front side</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -150,8 +150,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-04">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>手前側面扉付き</design>
+		<group>Factory building(saw-roof)</group>
+		<design>front side with door</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -170,8 +170,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-05">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>奥側面</design>
+		<group>Factory building(saw-roof)</group>
+		<design>behind side</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -190,8 +190,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-06">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>背面</design>
+		<group>Factory building(saw-roof)</group>
+		<design>rear</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -210,8 +210,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-07">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>かど</design>
+		<group>Factory building(saw-roof)</group>
+		<design>corner</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -230,8 +230,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-08">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>かど</design>
+		<group>Factory building(saw-roof)</group>
+		<design>corner</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;
@@ -250,8 +250,8 @@
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{6DC0B940-3DD3-45DF-A67C-2A633C466036}-09">
-		<group>工場屋舎(鋸屋根)</group>
-		<design>搬(入/出)口</design>
+		<group>Factory building(saw-roof)</group>
+		<design>delivery entrance</design>
 		&NormalFactory;
 		&crSkyBlue;
 		&crWineRed;

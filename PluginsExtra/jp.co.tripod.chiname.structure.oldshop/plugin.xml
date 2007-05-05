@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY oldshopM '
-	<group>下町商店(中)</group>
+	<group>Downtown shop (medium)</group>
 	<price>50</price>
 	<size>1,1</size>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<height>1</height>
 	<population>
@@ -14,11 +14,11 @@
 	</population>
 '>
 <!ENTITY oldshopS '
-	<group>下町商店(小)</group>
+	<group>Downtown shop (small)</group>
 	<price>60</price>
 	<size>1,1</size>
 	<structure>
-		<category byname="個人日用品店"/>
+		<category byname="Private Convenience Stores"/>
 	</structure>
 	<height>1</height>
 	<population>
@@ -29,8 +29,8 @@
 ]>
 <plug-in>
 
-	<title>下町商店街</title>
-	<author>C477@2両目</author>
+	<title>Downtown shopping district</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
 	<contribution type="picture" id="{77B6A74F-49BB-4B41-C477-0C93DFA1D890}">

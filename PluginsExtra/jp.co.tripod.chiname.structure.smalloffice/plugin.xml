@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY smallBuilding '
-	<group>小規模雑居ビルC</group>
+	<group>Small rental office C</group>
 	<price>250</price>
 	<size>1,1</size>
 	<minHeight>2</minHeight>
@@ -53,8 +53,8 @@
 '>
 ]>
 <plug-in>
-	<title>小規模オフィスビル</title>
-	<author>C477@2両目</author>
+	<title>Small rental offices</title>
+	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="picture" id="{451246D3-EFF2-4869-C477-E3AF0030BD63}">
 		<picture src="bldg_s01cv.bmp">
@@ -88,10 +88,10 @@
 		&crBlack;
 		&crPeru;
 		&crLtBlue;
-		<design>タイプＡ</design>
+		<design>Type A</design>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="一般飲食店" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Restaurants" hide="true"/>
 		</structure>
 		<pictures>
 			<top origin=" 0, 14" offset="2">
@@ -121,10 +121,10 @@
 		&crBrown;
 		&crMetalBlue;
 		&crBlack;
-		<design>タイプＢ</design>
+		<design>Type B</design>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="サービス窓口" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Service Counters" hide="true"/>
 		</structure>
 		<pictures>
 			<top origin=" 0, 14" offset="2">
@@ -155,11 +155,11 @@
 		&crSteelBlue;
 		&crDkBrown;
 		&crBlack;
-		<design>タイプＣ</design>
+		<design>Type C</design>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="店舗" hide="true"/>
-			<category byname="飲食" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Stores" hide="true"/>
+			<category byname="Food &amp; Drink" hide="true"/>
 		</structure>
 		<pictures>
 			<top origin=" 0, 14" offset="2">
@@ -191,10 +191,10 @@
 		&crPeru;
 		&crLtBlue;
 		&crBlack;
-		<design>タイプＤ</design>
+		<design>Type D</design>
 		<structure>
-			<category byname="貸事務所"/>
-			<category byname="個人専門店" hide="true"/>
+			<category byname="Offices for Rent"/>
+			<category byname="Private Specialty Stores" hide="true"/>
 		</structure>
 		<pictures>
 			<top origin=" 0, 0" offset="16">
@@ -225,9 +225,9 @@
 		&crWhite;
 		&crBlack;
 		&crBrown;
-		<design>タイプＥ</design>
+		<design>Type E</design>
 		<structure>
-			<category byname="貸事務所"/>
+			<category byname="Offices for Rent"/>
 		</structure>
 		<pictures>
 			<top origin=" 0, 0" offset="16">
