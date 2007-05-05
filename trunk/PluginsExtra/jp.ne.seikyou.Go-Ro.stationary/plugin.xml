@@ -158,14 +158,14 @@
 
 
 	<!ENTITY station_001-R '
-		<group>近郊駅(右)</group>
+		<group>Subarban station (right)</group>
 		<price>2300</price>
 		<height>1</height>
 		<operationCost>800</operationCost>
 	 '>
 
 <!ENTITY station_001-L '
-		<group>近郊駅(左)</group>
+		<group>Subarban station (left)</group>
 		<price>2300</price>
 		<height>1</height>
 		<operationCost>800</operationCost>
@@ -173,7 +173,7 @@
 
 
 	<!ENTITY station_002 '
-		<group>地上駅舎2</group>
+		<group>Country station 2</group>
 		<price>2800</price>
 		<height>1</height>
 		<operationCost>2000</operationCost>
@@ -181,7 +181,7 @@
 
 
 	<!ENTITY station_003 '
-		<group>地上駅舎3</group>
+		<group>Country station 3</group>
 		<price>1800</price>
 		<height>1</height>
 		<operationCost>800</operationCost>
@@ -189,7 +189,7 @@
 
 
 	<!ENTITY station_004 '
-		<group>地上駅舎4</group>
+		<group>Country station 4</group>
 		<price>500</price>
 		<height>1</height>
 		<operationCost>300</operationCost>
@@ -204,15 +204,15 @@
 
 
 <plug-in>
-	<title>鉄道施設（FreeTrain-想作館）</title>
+	<title>FreeTrain-Sousaku Kan, Rail facilities（FreeTrain-想作館）</title>
 	<author>haru</author>
 	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />
 	
 
-<!-- 重層高架橋脚 -->
+<!-- Layerd viaduct pier -->
 	<contribution type="electricPole" id="{electricPole_001-electricPole-C000-0000-4C8B212DD67q}">
-		<name>重層高架橋脚</name>
+		<name>Layerd viaduct pier</name>
 		<sprite>
 			<picture src="electricPole_001.bmp"/>
 		</sprite>
@@ -221,7 +221,7 @@
 
 
 	
-<!-- 連絡通路 -->
+<!-- Station over-bridge -->
 	<contribution type="picture" id="{electricPole_002-picture-C000-0000-4C8B212Dharu}">
 		<picture src="electricPole_002.bmp">
 			<override when="night" src="electricPole_002n.bmp"/>
@@ -229,7 +229,7 @@
 	</contribution>
 
 	<contribution type="electricPole" id="{electricPole_002-electricPole-C000-0000-4C8B212Dharu}">
-		<name>連絡通路</name>
+		<name>Station over-bridge</name>
 		<sprite>
 			<picture ref="{electricPole_002-picture-C000-0000-4C8B212Dharu}"/>
 		</sprite>
@@ -240,7 +240,7 @@
 
 
 
-<!-- 近郊駅 -->
+<!-- Subarban station -->
 	<contribution type="picture" id="{station_001-pcon-C000-0000-4C8B212Dharu}">
 		<picture src="station_001.bmp">
 			<override when="night" src="station_001n.bmp" />
@@ -250,7 +250,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C001-000a-4C8B212Dharu}">
-		<name>近郊駅(右)[サーモン]</name>
+		<name>Subarban station (right)[salmon]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="0, 0" offset="16">
@@ -260,7 +260,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C001-000b-4C8B212Dharu}">
-		<name>近郊駅(右)[サーモン]</name>
+		<name>Subarban station (right)[salmon]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="48, 0" offset="24">
@@ -270,7 +270,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C001-000c-4C8B212Dharu}">
-		<name>近郊駅(右)[サーモン]</name>
+		<name>Subarban station (right)[salmon]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="96, 0" offset="16">
@@ -280,7 +280,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C001-000d-4C8B212Dharu}">
-		<name>近郊駅(右)[サーモン]</name>
+		<name>Subarban station (right)[salmon]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="144, 0" offset="24">
@@ -293,7 +293,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C001-000e-4C8B212Dharu}">
-		<name>近郊駅(左)[サーモン]</name>
+		<name>Subarban station (left)[salmon]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="0, 48" offset="16">
@@ -303,7 +303,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C001-000f-4C8B212Dharu}">
-		<name>近郊駅(左)[サーモン]</name>
+		<name>Subarban station (left)[salmon]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="48, 48" offset="24">
@@ -313,7 +313,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C001-000g-4C8B212Dharu}">
-		<name>近郊駅(左)[サーモン]</name>
+		<name>Subarban station (left)[salmon]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="96, 48" offset="16">
@@ -323,7 +323,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C001-000h-4C8B212Dharu}">
-		<name>近郊駅(左)[サーモン]</name>
+		<name>Subarban station (left)[salmon]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="144, 48" offset="24">
@@ -338,7 +338,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C002-000a-4C8B212Dharu}">
-		<name>近郊駅(右)[灰青]</name>
+		<name>Subarban station (right)[rusty-closet]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="0, 0" offset="16">
@@ -348,7 +348,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C002-000b-4C8B212Dharu}">
-		<name>近郊駅(右)灰青]</name>
+		<name>Subarban station (right)灰青]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="48, 0" offset="24">
@@ -358,7 +358,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C002-000c-4C8B212Dharu}">
-		<name>近郊駅(右)[灰青]</name>
+		<name>Subarban station (right)[rusty-closet]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="96, 0" offset="16">
@@ -368,7 +368,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C002-000d-4C8B212Dharu}">
-		<name>近郊駅(右)[灰青]</name>
+		<name>Subarban station (right)[rusty-closet]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="144, 0" offset="24">
@@ -381,7 +381,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C002-000e-4C8B212Dharu}">
-		<name>近郊駅(左)[灰青]</name>
+		<name>Subarban station (left)[rusty-closet]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="0, 48" offset="16">
@@ -391,7 +391,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C002-000f-4C8B212Dharu}">
-		<name>近郊駅(左)[灰青]</name>
+		<name>Subarban station (left)[rusty-closet]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="48, 48" offset="24">
@@ -401,7 +401,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C002-000g-4C8B212Dharu}">
-		<name>近郊駅(左)[灰青]</name>
+		<name>Subarban station (left)[rusty-closet]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="96, 48" offset="16">
@@ -411,7 +411,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C002-000h-4C8B212Dharu}">
-		<name>近郊駅(左)[灰青]</name>
+		<name>Subarban station (left)[rusty-closet]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="144, 48" offset="24">
@@ -428,7 +428,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C003-000a-4C8B212Dharu}">
-		<name>近郊駅(右)[ターメリック]</name>
+		<name>Subarban station (right)[turmeric]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="0, 0" offset="16">
@@ -438,7 +438,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C003-000b-4C8B212Dharu}">
-		<name>近郊駅(右)[ターメリック]</name>
+		<name>Subarban station (right)[turmeric]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="48, 0" offset="24">
@@ -448,7 +448,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C003-000c-4C8B212Dharu}">
-		<name>近郊駅(右)[ターメリック]</name>
+		<name>Subarban station (right)[turmeric]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="96, 0" offset="16">
@@ -458,7 +458,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C003-000d-4C8B212Dharu}">
-		<name>近郊駅(右)[ターメリック]</name>
+		<name>Subarban station (right)[turmeric]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="144, 0" offset="24">
@@ -471,7 +471,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C003-000e-4C8B212Dharu}">
-		<name>近郊駅(左)[ターメリック]</name>
+		<name>Subarban station (left)[turmeric]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="0, 48" offset="16">
@@ -481,7 +481,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C003-000f-4C8B212Dharu}">
-		<name>近郊駅(左)[ターメリック]</name>
+		<name>Subarban station (left)[turmeric]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="48, 48" offset="24">
@@ -491,7 +491,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C003-000g-4C8B212Dharu}">
-		<name>近郊駅(左)[ターメリック]</name>
+		<name>Subarban station (left)[turmeric]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="96, 48" offset="16">
@@ -501,7 +501,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C003-000h-4C8B212Dharu}">
-		<name>近郊駅(左)[ターメリック]</name>
+		<name>Subarban station (left)[turmeric]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="144, 48" offset="24">
@@ -517,7 +517,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C004-000a-4C8B212Dharu}">
-		<name>近郊駅(右)[赤茶]</name>
+		<name>Subarban station (right)[brown]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="0, 0" offset="16">
@@ -527,7 +527,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C004-000b-4C8B212Dharu}">
-		<name>近郊駅(右)[赤茶]</name>
+		<name>Subarban station (right)[brown]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="48, 0" offset="24">
@@ -537,7 +537,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C004-000c-4C8B212Dharu}">
-		<name>近郊駅(右)[赤茶]</name>
+		<name>Subarban station (right)[brown]</name>
 		<size>1,2</size>
                 &station_001-R;
 		<sprite origin="96, 0" offset="16">
@@ -547,7 +547,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C004-000d-4C8B212Dharu}">
-		<name>近郊駅(右)[赤茶]</name>
+		<name>Subarban station (right)[brown]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="144, 0" offset="24">
@@ -560,7 +560,7 @@
 
 
 	<contribution type="station" id="{station_001-station-C004-000e-4C8B212Dharu}">
-		<name>近郊駅(左)[赤茶]</name>
+		<name>Subarban station (left)[brown]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="0, 48" offset="16">
@@ -570,7 +570,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C004-000f-4C8B212Dharu}">
-		<name>近郊駅(左)[赤茶]</name>
+		<name>Subarban station (left)[brown]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="48, 48" offset="24">
@@ -580,7 +580,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_001-station-C004-000g-4C8B212Dharu}">
-		<name>近郊駅(左)[赤茶]</name>
+		<name>Subarban station (left)[brown]</name>
 		<size>1,2</size>
                 &station_001-L;
 		<sprite origin="96, 48" offset="16">
@@ -590,7 +590,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C004-000h-4C8B212Dharu}">
-		<name>近郊駅(左)[赤茶]</name>
+		<name>Subarban station (left)[brown]</name>
 		<size>2,1</size>
                 &station_001-L;
 		<sprite origin="144, 48" offset="24">
@@ -602,7 +602,7 @@
 
 
 
-<!-- 地上駅舎2 -->
+<!-- Country station 2 -->
 	<contribution type="picture" id="{station_002-pcon-C000-0000-4C8B212Dharu}">
 		<picture src="station_002.bmp">
 			<override when="night" src="station_002n.bmp" />
@@ -611,7 +611,7 @@
 
 
 	<contribution type="station" id="{station_002-station-C001-000a-4C8B212Dharu}">
-		<name>地上駅舎2(赤)</name>
+		<name>Country station 2(red)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="0, 0" offset="5">
@@ -621,7 +621,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C001-000b-4C8B212Dharu}">
-		<name>地上駅舎2(赤)</name>
+		<name>Country station 2(red)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="64, 0" offset="21">
@@ -631,7 +631,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_002-station-C001-000c-4C8B212Dharu}">
-		<name>地上駅舎2(赤)</name>
+		<name>Country station 2(red)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="128, 0" offset="5">
@@ -641,7 +641,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C001-000d-4C8B212Dharu}">
-		<name>地上駅舎2(赤)</name>
+		<name>Country station 2(red)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="192, 0" offset="21">
@@ -652,7 +652,7 @@
 
 
 	<contribution type="station" id="{station_002-station-C002-000a-4C8B212Dharu}">
-		<name>地上駅舎2(青)</name>
+		<name>Country station 2(blue)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="0, 0" offset="5">
@@ -662,7 +662,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C002-000b-4C8B212Dharu}">
-		<name>地上駅舎2(青)</name>
+		<name>Country station 2(blue)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="64, 0" offset="21">
@@ -672,7 +672,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_002-station-C002-000c-4C8B212Dharu}">
-		<name>地上駅舎2(青)</name>
+		<name>Country station 2(blue)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="128, 0" offset="5">
@@ -682,7 +682,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C002-000d-4C8B212Dharu}">
-		<name>地上駅舎2(青)</name>
+		<name>Country station 2(blue)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="192, 0" offset="21">
@@ -693,7 +693,7 @@
 
 
 	<contribution type="station" id="{station_002-station-C003-000a-4C8B212Dharu}">
-		<name>地上駅舎2(黄)</name>
+		<name>Country station 2(yellow)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="0, 0" offset="5">
@@ -703,7 +703,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C003-000b-4C8B212Dharu}">
-		<name>地上駅舎2(黄)</name>
+		<name>Country station 2(yellow)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="64, 0" offset="21">
@@ -713,7 +713,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_002-station-C003-000c-4C8B212Dharu}">
-		<name>地上駅舎2(黄)</name>
+		<name>Country station 2(yellow)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="128, 0" offset="5">
@@ -723,7 +723,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C003-000d-4C8B212Dharu}">
-		<name>地上駅舎2(黄)</name>
+		<name>Country station 2(yellow)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="192, 0" offset="21">
@@ -734,7 +734,7 @@
 
 
 	<contribution type="station" id="{station_002-station-C004-000a-4C8B212Dharu}">
-		<name>地上駅舎2(緑)</name>
+		<name>Country station 2(green)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="0, 0" offset="5">
@@ -744,7 +744,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C004-000b-4C8B212Dharu}">
-		<name>地上駅舎2(緑)</name>
+		<name>Country station 2(green)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="64, 0" offset="21">
@@ -754,7 +754,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_002-station-C004-000c-4C8B212Dharu}">
-		<name>地上駅舎2(緑)</name>
+		<name>Country station 2(green)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="128, 0" offset="5">
@@ -764,7 +764,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C004-000d-4C8B212Dharu}">
-		<name>地上駅舎2(緑)</name>
+		<name>Country station 2(green)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="192, 0" offset="21">
@@ -775,7 +775,7 @@
 
 
 	<contribution type="station" id="{station_002-station-C005-000a-4C8B212Dharu}">
-		<name>地上駅舎2(プラム)</name>
+		<name>Country station 2(plum)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="0, 0" offset="5">
@@ -785,7 +785,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C005-000b-4C8B212Dharu}">
-		<name>地上駅舎2(プラム)</name>
+		<name>Country station 2(plum)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="64, 0" offset="21">
@@ -795,7 +795,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_002-station-C005-000c-4C8B212Dharu}">
-		<name>地上駅舎2(プラム)</name>
+		<name>Country station 2(plum)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="128, 0" offset="5">
@@ -805,7 +805,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C005-000d-4C8B212Dharu}">
-		<name>地上駅舎2(プラム)</name>
+		<name>Country station 2(plum)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="192, 0" offset="21">
@@ -816,7 +816,7 @@
 
 
 	<contribution type="station" id="{station_002-station-C006-000a-4C8B212Dharu}">
-		<name>地上駅舎2(茶)</name>
+		<name>Country station 2(brown)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="0, 0" offset="5">
@@ -826,7 +826,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C006-000b-4C8B212Dharu}">
-		<name>地上駅舎2(茶)</name>
+		<name>Country station 2(brown)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="64, 0" offset="21">
@@ -836,7 +836,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_002-station-C006-000c-4C8B212Dharu}">
-		<name>地上駅舎2(茶)</name>
+		<name>Country station 2(brown)</name>
 		<size>1,3</size>
                 &station_002;
 		<sprite origin="128, 0" offset="5">
@@ -846,7 +846,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_002-station-C006-000d-4C8B212Dharu}">
-		<name>地上駅舎2(茶)</name>
+		<name>Country station 2(brown)</name>
 		<size>3,1</size>
                 &station_002;
 		<sprite origin="192, 0" offset="21">
@@ -857,7 +857,7 @@
 
 
 
-<!-- 地上駅舎3 -->
+<!-- Country station 3 -->
 	<contribution type="picture" id="{station_003-picture-C000-0000-4C8B212Dharu}">
 		<picture src="station_003.bmp">
 			<override when="night" src="station_003n-SUM.bmp" />
@@ -867,7 +867,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C001-000a-4C8B212Dharu}">
-		<name>地上駅舎3(wine)</name>
+		<name>Country station 3(wine)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -877,7 +877,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C001-000b-4C8B212Dharu}">
-		<name>地上駅舎3(wine)</name>
+		<name>Country station 3(wine)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -887,7 +887,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C001-000c-4C8B212Dharu}">
-		<name>地上駅舎3(wine)</name>
+		<name>Country station 3(wine)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -897,7 +897,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C001-000d-4C8B212Dharu}">
-		<name>地上駅舎3(wine)</name>
+		<name>Country station 3(wine)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -908,7 +908,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C002-000a-4C8B212Dharu}">
-		<name>地上駅舎3(peacock blue)</name>
+		<name>Country station 3(peacock blue)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -918,7 +918,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C002-000b-4C8B212Dharu}">
-		<name>地上駅舎3(peacock blue)</name>
+		<name>Country station 3(peacock blue)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -928,7 +928,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C002-000c-4C8B212Dharu}">
-		<name>地上駅舎3(peacock blue)</name>
+		<name>Country station 3(peacock blue)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -938,7 +938,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C002-000d-4C8B212Dharu}">
-		<name>地上駅舎3(peacock blue)</name>
+		<name>Country station 3(peacock blue)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -949,7 +949,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C003-000a-4C8B212Dharu}">
-		<name>地上駅舎3(teal green)</name>
+		<name>Country station 3(teal green)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -959,7 +959,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C003-000b-4C8B212Dharu}">
-		<name>地上駅舎3(teal green)</name>
+		<name>Country station 3(teal green)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -969,7 +969,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C003-000c-4C8B212Dharu}">
-		<name>地上駅舎3(teal green)</name>
+		<name>Country station 3(teal green)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -979,7 +979,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C003-000d-4C8B212Dharu}">
-		<name>地上駅舎3(teal green)</name>
+		<name>Country station 3(teal green)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -990,7 +990,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C004-000a-4C8B212Dharu}">
-		<name>地上駅舎3(sepia)</name>
+		<name>Country station 3(sepia)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -1000,7 +1000,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C004-000b-4C8B212Dharu}">
-		<name>地上駅舎3(sepia)</name>
+		<name>Country station 3(sepia)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -1010,7 +1010,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C004-000c-4C8B212Dharu}">
-		<name>地上駅舎3(sepia)</name>
+		<name>Country station 3(sepia)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -1020,7 +1020,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C004-000d-4C8B212Dharu}">
-		<name>地上駅舎3(sepia)</name>
+		<name>Country station 3(sepia)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -1031,7 +1031,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C005-000a-4C8B212Dharu}">
-		<name>地上駅舎3(red)</name>
+		<name>Country station 3(red)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -1041,7 +1041,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C005-000b-4C8B212Dharu}">
-		<name>地上駅舎3(red)</name>
+		<name>Country station 3(red)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -1051,7 +1051,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C005-000c-4C8B212Dharu}">
-		<name>地上駅舎3(red)</name>
+		<name>Country station 3(red)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -1061,7 +1061,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C005-000d-4C8B212Dharu}">
-		<name>地上駅舎3(red)</name>
+		<name>Country station 3(red)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -1072,7 +1072,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C006-000a-4C8B212Dharu}">
-		<name>地上駅舎3(mint blue)</name>
+		<name>Country station 3(mint blue)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -1082,7 +1082,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C006-000b-4C8B212Dharu}">
-		<name>地上駅舎3(mint blue)</name>
+		<name>Country station 3(mint blue)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -1092,7 +1092,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C006-000c-4C8B212Dharu}">
-		<name>地上駅舎3(mint blue)</name>
+		<name>Country station 3(mint blue)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -1102,7 +1102,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C006-000d-4C8B212Dharu}">
-		<name>地上駅舎3(mint blue)</name>
+		<name>Country station 3(mint blue)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -1113,7 +1113,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C007-000a-4C8B212Dharu}">
-		<name>地上駅舎3(yellow ocher)</name>
+		<name>Country station 3(yellow ocher)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -1123,7 +1123,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C007-000b-4C8B212Dharu}">
-		<name>地上駅舎3(yellow ocher)</name>
+		<name>Country station 3(yellow ocher)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -1133,7 +1133,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C007-000c-4C8B212Dharu}">
-		<name>地上駅舎3(yellow ocher)</name>
+		<name>Country station 3(yellow ocher)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -1143,7 +1143,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C007-000d-4C8B212Dharu}">
-		<name>地上駅舎3(yellow ocher)</name>
+		<name>Country station 3(yellow ocher)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -1154,7 +1154,7 @@
 
 
 	<contribution type="station" id="{station_003-station-C008-000a-4C8B212Dharu}">
-		<name>地上駅舎3(olive green)</name>
+		<name>Country station 3(olive green)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="0, 0" offset="6">
@@ -1164,7 +1164,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C008-000b-4C8B212Dharu}">
-		<name>地上駅舎3(olive green)</name>
+		<name>Country station 3(olive green)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="48, 0" offset="14">
@@ -1174,7 +1174,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_003-station-C008-000c-4C8B212Dharu}">
-		<name>地上駅舎3(olive green)</name>
+		<name>Country station 3(olive green)</name>
 		<size>1,2</size>
                 &station_003;
 		<sprite origin="96, 0" offset="6">
@@ -1184,7 +1184,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_003-station-C008-000d-4C8B212Dharu}">
-		<name>地上駅舎3(olive green)</name>
+		<name>Country station 3(olive green)</name>
 		<size>2,1</size>
                 &station_003;
 		<sprite origin="144, 0" offset="14">
@@ -1197,7 +1197,7 @@
 
 
 
-<!-- 地上駅舎4 -->
+<!-- Country station 4 -->
 	<contribution type="picture" id="{station_004-picture-C000-0000-4C8B212Dharu}">
 		<picture src="station_004.bmp">
 			<override when="night" src="station_004n.bmp" />
@@ -1207,7 +1207,7 @@
 
 
 	<contribution type="station" id="{station_004-station-C001-000a-4C8B212Dharu}">
-		<name>地上駅舎4(茶)</name>
+		<name>Country station 4(brown)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="0, 0" offset="5">
@@ -1217,7 +1217,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C001-000b-4C8B212Dharu}">
-		<name>地上駅舎4(茶)</name>
+		<name>Country station 4(brown)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="32, 0" offset="5">
@@ -1227,7 +1227,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_004-station-C001-000c-4C8B212Dharu}">
-		<name>地上駅舎4(茶)</name>
+		<name>Country station 4(brown)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="64, 0" offset="5">
@@ -1237,7 +1237,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C001-000d-4C8B212Dharu}">
-		<name>地上駅舎4(茶)</name>
+		<name>Country station 4(brown)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="96, 0" offset="5">
@@ -1250,7 +1250,7 @@
 
 
 	<contribution type="station" id="{station_004-station-C002-000a-4C8B212Dharu}">
-		<name>地上駅舎4(北海道)</name>
+		<name>Country station 4(hokkaido)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="0, 0" offset="5">
@@ -1260,7 +1260,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C002-000b-4C8B212Dharu}">
-		<name>地上駅舎4(北海道)</name>
+		<name>Country station 4(hokkaido)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="32, 0" offset="5">
@@ -1270,7 +1270,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_004-station-C002-000c-4C8B212Dharu}">
-		<name>地上駅舎4(北海道)</name>
+		<name>Country station 4(hokkaido)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="64, 0" offset="5">
@@ -1280,7 +1280,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C002-000d-4C8B212Dharu}">
-		<name>地上駅舎4(北海道)</name>
+		<name>Country station 4(hokkaido)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="96, 0" offset="5">
@@ -1293,7 +1293,7 @@
 
 
 	<contribution type="station" id="{station_004-station-C003-000a-4C8B212Dharu}">
-		<name>地上駅舎4(東日本)</name>
+		<name>Country station 4(eastJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="0, 0" offset="5">
@@ -1303,7 +1303,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C003-000b-4C8B212Dharu}">
-		<name>地上駅舎4(東日本)</name>
+		<name>Country station 4(eastJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="32, 0" offset="5">
@@ -1313,7 +1313,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_004-station-C003-000c-4C8B212Dharu}">
-		<name>地上駅舎4(東日本)</name>
+		<name>Country station 4(eastJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="64, 0" offset="5">
@@ -1323,7 +1323,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C003-000d-4C8B212Dharu}">
-		<name>地上駅舎4(東日本)</name>
+		<name>Country station 4(eastJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="96, 0" offset="5">
@@ -1336,7 +1336,7 @@
 
 
 	<contribution type="station" id="{station_004-station-C004-000a-4C8B212Dharu}">
-		<name>地上駅舎4(東海)</name>
+		<name>Country station 4(tokai)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="0, 0" offset="5">
@@ -1346,7 +1346,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C004-000b-4C8B212Dharu}">
-		<name>地上駅舎4(東海)</name>
+		<name>Country station 4(tokai)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="32, 0" offset="5">
@@ -1356,7 +1356,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_004-station-C004-000c-4C8B212Dharu}">
-		<name>地上駅舎4(東海)</name>
+		<name>Country station 4(tokai)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="64, 0" offset="5">
@@ -1366,7 +1366,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C004-000d-4C8B212Dharu}">
-		<name>地上駅舎4(東海)</name>
+		<name>Country station 4(tokai)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="96, 0" offset="5">
@@ -1379,7 +1379,7 @@
 
 
 	<contribution type="station" id="{station_004-station-C005-000a-4C8B212Dharu}">
-		<name>地上駅舎4(西日本)</name>
+		<name>Country station 4(westJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="0, 0" offset="5">
@@ -1389,7 +1389,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C005-000b-4C8B212Dharu}">
-		<name>地上駅舎4(西日本)</name>
+		<name>Country station 4(westJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="32, 0" offset="5">
@@ -1399,7 +1399,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_004-station-C005-000c-4C8B212Dharu}">
-		<name>地上駅舎4(西日本)</name>
+		<name>Country station 4(westJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="64, 0" offset="5">
@@ -1409,7 +1409,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C005-000d-4C8B212Dharu}">
-		<name>地上駅舎4(西日本)</name>
+		<name>Country station 4(westJapan)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="96, 0" offset="5">
@@ -1422,7 +1422,7 @@
 
 
 	<contribution type="station" id="{station_004-station-C006-000a-4C8B212Dharu}">
-		<name>地上駅舎4(四国)</name>
+		<name>Country station 4(shikoku)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="0, 0" offset="5">
@@ -1432,7 +1432,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C006-000b-4C8B212Dharu}">
-		<name>地上駅舎4(四国)</name>
+		<name>Country station 4(shikoku)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="32, 0" offset="5">
@@ -1442,7 +1442,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_004-station-C006-000c-4C8B212Dharu}">
-		<name>地上駅舎4(四国)</name>
+		<name>Country station 4(shikoku)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="64, 0" offset="5">
@@ -1452,7 +1452,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C006-000d-4C8B212Dharu}">
-		<name>地上駅舎4(四国)</name>
+		<name>Country station 4(shikoku)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="96, 0" offset="5">
@@ -1465,7 +1465,7 @@
 
 
 	<contribution type="station" id="{station_004-station-C007-000a-4C8B212Dharu}">
-		<name>地上駅舎4(九州)</name>
+		<name>Country station 4(kyushu)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="0, 0" offset="5">
@@ -1475,7 +1475,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C007-000b-4C8B212Dharu}">
-		<name>地上駅舎4(九州)</name>
+		<name>Country station 4(kyushu)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="32, 0" offset="5">
@@ -1485,7 +1485,7 @@
 	</contribution>
 
 	<contribution type="station" id="{station_004-station-C007-000c-4C8B212Dharu}">
-		<name>地上駅舎4(九州)</name>
+		<name>Country station 4(kyushu)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="64, 0" offset="5">
@@ -1495,7 +1495,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_004-station-C007-000d-4C8B212Dharu}">
-		<name>地上駅舎4(九州)</name>
+		<name>Country station 4(kyushu)</name>
 		<size>1,1</size>
                 &station_004;
 		<sprite origin="96, 0" offset="5">
