@@ -71,7 +71,7 @@ namespace freetrain.world
 				onVoxelChanged += new VoxelChangeListener(EmptyHandler);
 			}else{
 				// add system-defined controllers to the list
-				trainControllers.add( DelegationTrainControllerImpl.theInstance );
+				// trainControllers.add( DelegationTrainControllerImpl.theInstance );
 				trainControllers.add( SimpleTrainControllerImpl.theInstance );
 
 				devalgo = new DevelopmentAlgorithm();
