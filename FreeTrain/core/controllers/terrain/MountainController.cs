@@ -135,6 +135,7 @@ namespace freetrain.controllers.terrain
 			this.groupBox1.TabIndex = 7;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Target Size";
+			this.groupBox1.Enabled = false;
 			// 
 			// selSize
 			// 
@@ -187,17 +188,17 @@ namespace freetrain.controllers.terrain
 		}
 
 		private void raiseLowerLand(Location loc) {
-			int origLoc = loc.y;
-			for (int sizeX = 0; sizeX < (selSize.current + 1); sizeX++)
-			{
-				for (int sizeY = 0; sizeY < (selSize.current + 1); sizeY++)
-				{
-					loc.y = origLoc + sizeY;
+			//int origLoc = loc.y;
+			//for (int sizeX = 0; sizeX < (selSize.current + 1); sizeX++)
+			//{
+			//	for (int sizeY = 0; sizeY < (selSize.current + 1); sizeY++)
+			//	{
+			//		loc.y = origLoc + sizeY;
 					if (isRaising) raise(loc);
 					else lower(loc);
-				}
-				loc.x++;
-			}
+			//	}
+			//	loc.x++;
+			//}
 		}
 
 		/// <summary>
