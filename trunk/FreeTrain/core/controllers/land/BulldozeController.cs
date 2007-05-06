@@ -76,7 +76,7 @@ namespace freetrain.controllers.land
 			// preview
 			// 
 			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.preview.Location = new System.Drawing.Point(8, 0);
+			this.preview.Location = new System.Drawing.Point(0, 0);
 			this.preview.Name = "preview";
 			this.preview.Size = new System.Drawing.Size(112, 80);
 			this.preview.TabIndex = 1;
@@ -85,7 +85,7 @@ namespace freetrain.controllers.land
 			// BulldozeController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(128, 85);
+			this.ClientSize = new System.Drawing.Size(112, 80);
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.preview});
 			this.Name = "BulldozeController";

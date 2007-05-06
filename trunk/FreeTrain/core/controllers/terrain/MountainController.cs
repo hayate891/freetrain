@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -75,10 +75,10 @@ namespace freetrain.controllers.terrain
 			// 
 			// buttonUp
 			// 
-			this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonUp.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonUp.Checked = true;
-			this.buttonUp.Location = new System.Drawing.Point(4, 193);
+			this.buttonUp.Location = new System.Drawing.Point(4, 209);
 			this.buttonUp.Name = "buttonUp";
 			this.buttonUp.Size = new System.Drawing.Size(56, 26);
 			this.buttonUp.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace freetrain.controllers.terrain
 			// 
 			this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonDown.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonDown.Location = new System.Drawing.Point(60, 193);
+			this.buttonDown.Location = new System.Drawing.Point(59, 209);
 			this.buttonDown.Name = "buttonDown";
 			this.buttonDown.Size = new System.Drawing.Size(56, 26);
 			this.buttonDown.TabIndex = 4;
@@ -101,57 +101,62 @@ namespace freetrain.controllers.terrain
 			// 
 			// preview
 			// 
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.preview.InitialImage = null;
-			this.preview.Location = new System.Drawing.Point(4, 9);
+			this.preview.Location = new System.Drawing.Point(4, 5);
 			this.preview.Name = "preview";
-			this.preview.Size = new System.Drawing.Size(112, 81);
+			this.preview.Size = new System.Drawing.Size(111, 81);
 			this.preview.TabIndex = 3;
 			this.preview.TabStop = false;
 			// 
 			// label1
 			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-				| System.Windows.Forms.AnchorStyles.Left)
-				| System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.label1.Location = new System.Drawing.Point(4, 93);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(112, 52);
+			this.label1.Size = new System.Drawing.Size(111, 68);
 			this.label1.TabIndex = 6;
 			this.label1.Text = "Press SHIFT and move mouse to quickly modify terrain.";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.selSize);
-			this.groupBox1.Location = new System.Drawing.Point(4, 149);
+			this.groupBox1.Location = new System.Drawing.Point(4, 165);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(112, 38);
+			this.groupBox1.Size = new System.Drawing.Size(111, 38);
 			this.groupBox1.TabIndex = 7;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Target Size";
 			// 
 			// selSize
 			// 
+			this.selSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.selSize.count = 10;
 			this.selSize.current = 0;
 			this.selSize.dataSource = null;
 			this.selSize.Location = new System.Drawing.Point(6, 14);
 			this.selSize.Name = "selSize";
-			this.selSize.Size = new System.Drawing.Size(98, 17);
+			this.selSize.Size = new System.Drawing.Size(95, 17);
 			this.selSize.TabIndex = 6;
 			// 
 			// MountainController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(120, 223);
+			this.ClientSize = new System.Drawing.Size(119, 239);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.buttonUp);
 			this.Controls.Add(this.buttonDown);
 			this.Controls.Add(this.preview);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "MountainController";
 			this.Text = "Modify Terrain";
 			//! this.Text = "地形操作";

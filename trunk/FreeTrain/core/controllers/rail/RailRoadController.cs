@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -109,23 +109,23 @@ namespace freetrain.controllers.rail
 			// 
 			// picture
 			// 
-			this.picture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-						| System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
+			this.picture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.picture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.picture.Location = new System.Drawing.Point(8, 9);
 			this.picture.Name = "picture";
-			this.picture.Size = new System.Drawing.Size(106, 91);
+			this.picture.Size = new System.Drawing.Size(113, 113);
 			this.picture.TabIndex = 0;
 			this.picture.TabStop = false;
 			// 
 			// message
 			// 
-			this.message.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
-			this.message.Location = new System.Drawing.Point(8, 103);
+			this.message.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.message.Location = new System.Drawing.Point(8, 125);
 			this.message.Name = "message";
-			this.message.Size = new System.Drawing.Size(106, 26);
+			this.message.Size = new System.Drawing.Size(113, 26);
 			this.message.TabIndex = 1;
 			this.message.Text = "Click on two points on the map to place tracks";
 			this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,7 +136,7 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(8, 163);
+			this.buttonPlace.Location = new System.Drawing.Point(8, 185);
 			this.buttonPlace.Name = "buttonPlace";
 			this.buttonPlace.Size = new System.Drawing.Size(48, 26);
 			this.buttonPlace.TabIndex = 2;
@@ -148,12 +148,12 @@ namespace freetrain.controllers.rail
 			// 
 			// buttonRemove
 			// 
-			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(56, 163);
+			this.buttonRemove.Location = new System.Drawing.Point(56, 185);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(58, 26);
+			this.buttonRemove.Size = new System.Drawing.Size(65, 26);
 			this.buttonRemove.TabIndex = 3;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -162,25 +162,27 @@ namespace freetrain.controllers.rail
 			// 
 			// costBox
 			// 
-			this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
+			this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.costBox.cost = 0;
 			this.costBox.label = "Cost:";
-			this.costBox.Location = new System.Drawing.Point(8, 132);
+			this.costBox.Location = new System.Drawing.Point(8, 154);
 			//! this.costBox.label = "費用：";
 			this.costBox.Name = "costBox";
-			this.costBox.Size = new System.Drawing.Size(106, 25);
+			this.costBox.Size = new System.Drawing.Size(113, 25);
 			this.costBox.TabIndex = 4;
 			// 
 			// RailRoadController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(122, 198);
+			this.ClientSize = new System.Drawing.Size(129, 220);
 			this.Controls.Add(this.costBox);
 			this.Controls.Add(this.buttonRemove);
 			this.Controls.Add(this.buttonPlace);
 			this.Controls.Add(this.message);
 			this.Controls.Add(this.picture);
+			this.Resize += new System.EventHandler(this.updateAfterResize);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "RailRoadController";
 			this.Text = "Track construction";
 			//! this.Text = "線路工事";
@@ -223,6 +225,13 @@ namespace freetrain.controllers.rail
 			}
 		}
 
+		protected virtual void updateAfterResize(object sender, System.EventArgs e){
+			this.buttonPlace.Width = this.picture.Width / 2;
+			this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width);
+			this.buttonRemove.Width = this.buttonPlace.Width;
+			updatePreview();
+		}
+		
 		public override void onMouseMove( MapViewWindow view, Location loc, Point ab ) {
 			if( anchor!=UNPLACED && isPlacing && currentPos!=loc ) {
 				// update the screen

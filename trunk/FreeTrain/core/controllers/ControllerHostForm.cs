@@ -86,17 +86,18 @@ namespace freetrain.controllers
 
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// AbstractControllerForm
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.ClientSize = new System.Drawing.Size(106, 112);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "AbstractControllerForm";
 			this.ShowInTaskbar = false;
-
+			this.ResumeLayout(false);
 		}
 		#endregion
 	}

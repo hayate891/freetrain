@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -52,11 +52,15 @@ namespace freetrain.controllers.road
 			this.SuspendLayout();
 			this.buttonRemove.Location = new System.Drawing.Point(194, 132);
 			this.buttonPlace.Location = new System.Drawing.Point(136, 132);
+			this.buttonRemove.Visible = false;
+			this.buttonPlace.Visible = false;
 			this.buttonRemove.Size = new System.Drawing.Size(58, 25);
 			this.buttonPlace.Size = new System.Drawing.Size(58, 25);
-			this.picture.Location = new System.Drawing.Point(142, 40);
-			this.picture.Size = new System.Drawing.Size(104, 88);
+			this.picture.Location = new System.Drawing.Point(132, 56);
+			this.picture.Size = new System.Drawing.Size(124, 88);
 			this.picture.Click+=new EventHandler(picture_Click);
+			this.picture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.toolTip.SetToolTip(this.picture, "Click to display another pattern");
 			//! this.toolTip.SetToolTip(this.picture, "クリックで別のパターンを表示");
 			// 
@@ -77,17 +81,19 @@ namespace freetrain.controllers.road
 			this.contribTree.ShowRootLines = true;
 			this.contribTree.Indent = 10;
 			this.contribTree.Sorted = true;
-			this.contribTree.Size = new System.Drawing.Size(128, 159);
+			this.contribTree.Size = new System.Drawing.Size(128, 147);
 			this.contribTree.TabIndex = 0;
 			this.contribTree.AfterSelect+=new TreeViewEventHandler(contribTree_AfterSelect);
 			// 
 			// description
 			// 
 			this.description = new Label();
+			this.description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top) 
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.description.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.description.Location = new System.Drawing.Point(132, 4);
 			this.description.Name = "description";
-			this.description.Size = new System.Drawing.Size(124, 16);
+			this.description.Size = new System.Drawing.Size(124, 32);
 			this.description.TabIndex = 9;
 			this.description.Text = currentContrib.oneLineDescription;
 			this.description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,8 +102,10 @@ namespace freetrain.controllers.road
 			// level
 			// 
 			this.level = new System.Windows.Forms.Label();
+			this.level.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top) 
+				| System.Windows.Forms.AnchorStyles.Right)));
 			this.level.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.level.Location = new System.Drawing.Point(132, 22);
+			this.level.Location = new System.Drawing.Point(132, 38);
 			this.level.Name = "level";
 			this.level.Size = new System.Drawing.Size(124, 16);
 			this.level.TabIndex = 10;
@@ -106,10 +114,11 @@ namespace freetrain.controllers.road
 			// RoadController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(260, 160);
+			this.ClientSize = new System.Drawing.Size(260, 148);
 			this.Controls.Add(this.description);
 			this.Controls.Add(this.level);
 			this.Controls.Add(this.contribTree);
+			this.Resize += new EventHandler(this.updateSize);
 			this.Text = "Road construction";
 			//! this.Text = "道路工事";
 			this.ResumeLayout(false);
@@ -122,6 +131,17 @@ namespace freetrain.controllers.road
 			currentPattern++;
 			if( currentPattern > 2 ) currentPattern = 0;
 			currentContrib.PreviewPatternIdx = currentPattern;
+			updatePreview();
+		}
+		
+		protected virtual void updateSize(object sender, System.EventArgs e){
+			this.contribTree.Width = (this.Width - 5) / 2;
+			this.description.Width = this.contribTree.Width - 10;
+			this.description.Left = this.contribTree.Width + 5;
+			this.level.Left = this.description.Left;
+			this.level.Width = this.description.Width;
+			this.picture.Width = this.description.Width;
+			this.picture.Left = this.description.Left;
 			updatePreview();
 		}
 

@@ -99,6 +99,7 @@ namespace freetrain.controllers.rail
 			stationType.DataSource = Core.plugins.stationGroup;
 			stationType.DisplayMember="name";
 
+			updateAfterResize(null,null);
 			onDirChange(dirN,null);
 		}
 
@@ -193,8 +194,13 @@ namespace freetrain.controllers.rail
 			this.dirN = new System.Windows.Forms.PictureBox();
 			this.tabControl = new System.Windows.Forms.TabControl();
 			this.stationPage.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.stationPicture)).BeginInit();
 			this.platformPage.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dirS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dirW)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dirE)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lengthBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dirN)).BeginInit();
 			this.tabControl.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -202,9 +208,9 @@ namespace freetrain.controllers.rail
 			// 
 			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(81, 200);
+			this.buttonRemove.Location = new System.Drawing.Point(87, 210);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(76, 26);
 			this.buttonRemove.TabIndex = 1;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -215,9 +221,9 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(25, 200);
+			this.buttonPlace.Location = new System.Drawing.Point(7, 210);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(74, 26);
 			this.buttonPlace.TabIndex = 0;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Build";
@@ -226,6 +232,7 @@ namespace freetrain.controllers.rail
 			// 
 			// stationPage
 			// 
+			this.stationPage.BackColor = System.Drawing.SystemColors.Control;
 			this.stationPage.Controls.Add(this.label3);
 			this.stationPage.Controls.Add(this.label2);
 			this.stationPage.Controls.Add(this.listView1);
@@ -237,17 +244,18 @@ namespace freetrain.controllers.rail
 			this.stationPage.Controls.Add(this.indexSelector2);
 			this.stationPage.Controls.Add(this.label5);
 			this.stationPage.Location = new System.Drawing.Point(4, 21);
+			this.stationPage.Margin = new System.Windows.Forms.Padding(0);
 			this.stationPage.Name = "stationPage";
-			this.stationPage.Size = new System.Drawing.Size(152, 167);
+			this.stationPage.Size = new System.Drawing.Size(193, 176);
 			this.stationPage.TabIndex = 1;
 			this.stationPage.Text = "Station";
 			//! this.stationPage.Text = "駅舎";
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(0, 32);
+			this.label3.Location = new System.Drawing.Point(3, 35);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(56, 16);
+			this.label3.Size = new System.Drawing.Size(47, 17);
 			this.label3.TabIndex = 6;
 			this.label3.Text = "Design:";
 			//! this.label3.Text = "デザイン：";
@@ -255,29 +263,29 @@ namespace freetrain.controllers.rail
 			// 
 			// label2
 			// 
-			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label2.Location = new System.Drawing.Point(160, 56);
+			this.label2.Location = new System.Drawing.Point(294, 54);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(168, 16);
+			this.label2.Size = new System.Drawing.Size(100, 17);
 			this.label2.TabIndex = 5;
 			this.label2.Text = "label2";
 			// 
 			// listView1
 			// 
-			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right)));
+			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-																						this.columnHeader1,
-																						this.columnHeader2,
-																						this.columnHeader3,
-																						this.columnHeader4,
-																						this.columnHeader5,
-																						this.columnHeader6});
-			this.listView1.Location = new System.Drawing.Point(160, 8);
+									this.columnHeader1,
+									this.columnHeader2,
+									this.columnHeader3,
+									this.columnHeader4,
+									this.columnHeader5,
+									this.columnHeader6});
+			this.listView1.Location = new System.Drawing.Point(206, 9);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(8, 144);
+			this.listView1.Size = new System.Drawing.Size(103, 156);
 			this.listView1.TabIndex = 4;
+			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			// 
 			// columnHeader1
@@ -316,53 +324,59 @@ namespace freetrain.controllers.rail
 			// 
 			// indexSelector
 			// 
+			this.indexSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.indexSelector.count = 10;
 			this.indexSelector.current = 0;
 			this.indexSelector.dataSource = null;
-			this.indexSelector.Location = new System.Drawing.Point(56, 32);
+			this.indexSelector.Location = new System.Drawing.Point(56, 35);
 			this.indexSelector.Name = "indexSelector";
-			this.indexSelector.Size = new System.Drawing.Size(88, 16);
+			this.indexSelector.Size = new System.Drawing.Size(132, 17);
 			this.indexSelector.TabIndex = 3;
 			this.indexSelector.indexChanged += new System.EventHandler(this.onStationChanged);
 			// 
 			// stationType
 			// 
+			this.stationType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.stationType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.stationType.ItemHeight = 12;
-			this.stationType.Location = new System.Drawing.Point(0, 8);
+			this.stationType.ItemHeight = 13;
+			this.stationType.Location = new System.Drawing.Point(3, 9);
 			this.stationType.Name = "stationType";
-			this.stationType.Size = new System.Drawing.Size(144, 20);
+			this.stationType.Size = new System.Drawing.Size(185, 21);
 			this.stationType.Sorted = true;
 			this.stationType.TabIndex = 2;
 			this.stationType.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
 			// 
 			// stationPicture
 			// 
-			this.stationPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.stationPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.stationPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.stationPicture.Location = new System.Drawing.Point(0, 56);
+			this.stationPicture.Location = new System.Drawing.Point(3, 54);
 			this.stationPicture.Name = "stationPicture";
-			this.stationPicture.Size = new System.Drawing.Size(144, 104);
+			this.stationPicture.Size = new System.Drawing.Size(185, 112);
 			this.stationPicture.TabIndex = 1;
 			this.stationPicture.TabStop = false;
 			// 
 			// indexSelector1
 			// 
-			this.indexSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.indexSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.indexSelector1.count = 10;
 			this.indexSelector1.current = 0;
 			this.indexSelector1.dataSource = null;
-			this.indexSelector1.Location = new System.Drawing.Point(216, 104);
+			this.indexSelector1.Location = new System.Drawing.Point(250, 106);
 			this.indexSelector1.Name = "indexSelector1";
-			this.indexSelector1.Size = new System.Drawing.Size(96, 16);
+			this.indexSelector1.Size = new System.Drawing.Size(96, 17);
 			this.indexSelector1.TabIndex = 3;
 			// 
 			// label4
 			// 
-			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.label4.Location = new System.Drawing.Point(160, 104);
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label4.Location = new System.Drawing.Point(260, 106);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(56, 16);
+			this.label4.Size = new System.Drawing.Size(56, 17);
 			this.label4.TabIndex = 6;
 			this.label4.Text = "Direction:";
 			//! this.label4.Text = "方向：";
@@ -370,21 +384,21 @@ namespace freetrain.controllers.rail
 			// 
 			// indexSelector2
 			// 
-			this.indexSelector2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.indexSelector2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.indexSelector2.count = 10;
 			this.indexSelector2.current = 0;
 			this.indexSelector2.dataSource = null;
-			this.indexSelector2.Location = new System.Drawing.Point(216, 120);
+			this.indexSelector2.Location = new System.Drawing.Point(250, 123);
 			this.indexSelector2.Name = "indexSelector2";
-			this.indexSelector2.Size = new System.Drawing.Size(96, 16);
+			this.indexSelector2.Size = new System.Drawing.Size(96, 17);
 			this.indexSelector2.TabIndex = 3;
 			// 
 			// label5
 			// 
-			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.label5.Location = new System.Drawing.Point(160, 120);
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label5.Location = new System.Drawing.Point(260, 123);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(56, 16);
+			this.label5.Size = new System.Drawing.Size(56, 17);
 			this.label5.TabIndex = 6;
 			this.label5.Text = "Color:";
 			//! this.label5.Text = "色：";
@@ -401,16 +415,18 @@ namespace freetrain.controllers.rail
 			this.platformPage.Controls.Add(this.dirN);
 			this.platformPage.Location = new System.Drawing.Point(4, 21);
 			this.platformPage.Name = "platformPage";
-			this.platformPage.Size = new System.Drawing.Size(152, 167);
+			this.platformPage.Size = new System.Drawing.Size(187, 176);
 			this.platformPage.TabIndex = 0;
 			this.platformPage.Text = "Platform";
 			//! this.platformPage.Text = "ホーム";
 			// 
 			// checkSlim
 			// 
-			this.checkSlim.Location = new System.Drawing.Point(8, 120);
+			this.checkSlim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.checkSlim.Location = new System.Drawing.Point(8, 130);
 			this.checkSlim.Name = "checkSlim";
-			this.checkSlim.Size = new System.Drawing.Size(104, 16);
+			this.checkSlim.Size = new System.Drawing.Size(173, 17);
 			this.checkSlim.TabIndex = 7;
 			this.checkSlim.Text = "Slim platform";
 			//!this.checkSlim.Text = "スリムなホーム";
@@ -418,10 +434,11 @@ namespace freetrain.controllers.rail
 			// 
 			// dirS
 			// 
+			this.dirS.BackColor = System.Drawing.Color.White;
 			this.dirS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dirS.Location = new System.Drawing.Point(64, 64);
+			this.dirS.Location = new System.Drawing.Point(64, 69);
 			this.dirS.Name = "dirS";
-			this.dirS.Size = new System.Drawing.Size(48, 48);
+			this.dirS.Size = new System.Drawing.Size(48, 52);
 			this.dirS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.dirS.TabIndex = 6;
 			this.dirS.TabStop = false;
@@ -429,10 +446,11 @@ namespace freetrain.controllers.rail
 			// 
 			// dirW
 			// 
+			this.dirW.BackColor = System.Drawing.Color.White;
 			this.dirW.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dirW.Location = new System.Drawing.Point(8, 64);
+			this.dirW.Location = new System.Drawing.Point(8, 69);
 			this.dirW.Name = "dirW";
-			this.dirW.Size = new System.Drawing.Size(48, 48);
+			this.dirW.Size = new System.Drawing.Size(48, 52);
 			this.dirW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.dirW.TabIndex = 5;
 			this.dirW.TabStop = false;
@@ -440,10 +458,11 @@ namespace freetrain.controllers.rail
 			// 
 			// dirE
 			// 
+			this.dirE.BackColor = System.Drawing.Color.White;
 			this.dirE.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dirE.Location = new System.Drawing.Point(64, 8);
+			this.dirE.Location = new System.Drawing.Point(64, 9);
 			this.dirE.Name = "dirE";
-			this.dirE.Size = new System.Drawing.Size(48, 48);
+			this.dirE.Size = new System.Drawing.Size(48, 52);
 			this.dirE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.dirE.TabIndex = 4;
 			this.dirE.TabStop = false;
@@ -451,9 +470,10 @@ namespace freetrain.controllers.rail
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(8, 136);
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label1.Location = new System.Drawing.Point(3, 147);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(56, 24);
+			this.label1.Size = new System.Drawing.Size(53, 20);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "&Length:";
 			//! this.label1.Text = "長さ(&L)：";
@@ -461,25 +481,28 @@ namespace freetrain.controllers.rail
 			// 
 			// lengthBox
 			// 
-			this.lengthBox.Location = new System.Drawing.Point(72, 136);
+			this.lengthBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.lengthBox.Location = new System.Drawing.Point(64, 149);
 			this.lengthBox.Name = "lengthBox";
-			this.lengthBox.Size = new System.Drawing.Size(40, 19);
+			this.lengthBox.Size = new System.Drawing.Size(117, 20);
 			this.lengthBox.TabIndex = 3;
 			this.lengthBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.lengthBox.Value = new System.Decimal(new int[] {
-																	5,
-																	0,
-																	0,
-																	0});
+			this.lengthBox.Value = new decimal(new int[] {
+									5,
+									0,
+									0,
+									0});
 			this.lengthBox.Validating += new System.ComponentModel.CancelEventHandler(this.validateLength);
 			this.lengthBox.TextChanged += new System.EventHandler(this.onLengthChanged);
 			// 
 			// dirN
 			// 
+			this.dirN.BackColor = System.Drawing.Color.White;
 			this.dirN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dirN.Location = new System.Drawing.Point(8, 8);
+			this.dirN.Location = new System.Drawing.Point(8, 9);
 			this.dirN.Name = "dirN";
-			this.dirN.Size = new System.Drawing.Size(48, 48);
+			this.dirN.Size = new System.Drawing.Size(48, 52);
 			this.dirN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.dirN.TabIndex = 1;
 			this.dirN.TabStop = false;
@@ -488,31 +511,39 @@ namespace freetrain.controllers.rail
 			// tabControl
 			// 
 			this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right)));
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.tabControl.Controls.Add(this.stationPage);
 			this.tabControl.Controls.Add(this.platformPage);
 			this.tabControl.ItemSize = new System.Drawing.Size(42, 17);
-			this.tabControl.Location = new System.Drawing.Point(0, 0);
+			this.tabControl.Location = new System.Drawing.Point(-3, 0);
 			this.tabControl.Name = "tabControl";
 			this.tabControl.SelectedIndex = 0;
-			this.tabControl.Size = new System.Drawing.Size(160, 192);
+			this.tabControl.Size = new System.Drawing.Size(201, 201);
 			this.tabControl.TabIndex = 0;
+			this.tabControl.Click += new System.EventHandler(this.updateAfterResize);
 			this.tabControl.SelectedIndexChanged += new System.EventHandler(this.onModeChanged);
 			// 
 			// PlatformController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(162, 227);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(197, 239);
 			this.Controls.Add(this.tabControl);
 			this.Controls.Add(this.buttonPlace);
 			this.Controls.Add(this.buttonRemove);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "PlatformController";
 			this.Text = "Station construction";
 			//! this.Text = "駅工事";
+			this.Resize += new System.EventHandler(this.updateAfterResize);
 			this.stationPage.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.stationPicture)).EndInit();
 			this.platformPage.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dirS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dirW)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dirE)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lengthBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dirN)).EndInit();
 			this.tabControl.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -533,6 +564,22 @@ namespace freetrain.controllers.rail
 			updatePlatformBox(sender,dirE);
 			updatePlatformBox(sender,dirW);
 			updateAlphaSprites();
+		}
+		
+		protected virtual void updateAfterResize(object sender, System.EventArgs e){
+			this.buttonPlace.Width = ((this.tabControl.Left + this.tabControl.Width) - (buttonPlace.Left * 2)) / 2;
+			this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width);
+			this.buttonRemove.Width = this.buttonPlace.Width;
+			this.dirN.Width = (this.tabControl.Width - 30) / 2;
+			this.dirN.Height = (this.checkSlim.Top - 20) / 2;
+			this.dirE.Size = this.dirN.Size;
+			this.dirS.Size = this.dirN.Size;
+			this.dirW.Size = this.dirN.Size;
+			this.dirE.Left = this.dirN.Left + this.dirN.Width + 5;
+			this.dirS.Left = this.dirE.Left;
+			this.dirS.Top = this.dirN.Top + this.dirN.Height + 5;
+			this.dirW.Top = this.dirS.Top;
+			updatePreview();
 		}
 
 		private void updatePlatformBox( object sender, PictureBox pic ) {
