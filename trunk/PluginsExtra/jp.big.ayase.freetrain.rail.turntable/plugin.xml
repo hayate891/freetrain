@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>鉄道施設プラグイン</title>
-	<author>綾瀬ヒロ</author>
+	<title>Raiload facilities (Turn table)</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RailStructureImg-TurnTable}">
@@ -9,7 +9,7 @@
 	</contribution>
 
 	<contribution type="railStationary" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-TurnTable-1}">
-		<group>転車台</group>
+		<group>Turn table</group>
 		<price>500</price>
 		<size>3,3</size>
 		<height>1</height>

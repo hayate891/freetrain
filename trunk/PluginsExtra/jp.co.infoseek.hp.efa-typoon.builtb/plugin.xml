@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<depend on="jp.co.infoseek.hp.efa-typoon.built"/>
-	<title>建物セット1号館・拡張セット用</title>
-	<author>たいふ～ん</author>
+	<title>Building set 1st (for Ex)</title>
+	<author>Typhoon</author>
 	<homepage>http://typhoon.s19.xrea.com/ft/index.html</homepage>
 
 
 
 	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader1B-7567171D3CEF}">
-		<name>レーダー</name>
-		<design>警戒レーダー</design>
+		<name>Radar</name>
+		<design>Early-warning radar</design>
 		<price>3000</price>
 		<size>1,1</size>
 		<height>4</height>
@@ -18,7 +18,7 @@
 			<base>50</base>
 		</population>
 		<structure>
-			<category byname="軍事施設"/>
+			<category byname="Military Facilities"/>
 		</structure>
 		<sprite origin="0,0" offset="40" >
 			<picture ref="{TYPHOON-GAZOU-MILITARY-RADER-7567171D3CEF}"/>
@@ -26,8 +26,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader2B-7567171D3CEF}">
-		<name>レーダー</name>
-		<design>空港監視レーダーA</design>
+		<name>Radar</name>
+		<design>Airport watch radar A</design>
 		<price>1200</price>
 		<size>1,1</size>
 		<height>4</height>
@@ -36,16 +36,16 @@
 			<base>20</base>
 		</population>
 		<structure>
-			<category byname="軍事施設"/>
-			<category byname="空港"/>
+			<category byname="Military Facilities"/>
+			<category byname="Airports"/>
 		</structure>
 		<sprite origin="32,0" offset="40" >
 			<picture ref="{TYPHOON-GAZOU-MILITARY-RADER-7567171D3CEF}"/>
 		</sprite>
 	</contribution>
 	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader3C-7567171D3CEF}">
-		<name>レーダー</name>
-		<design>空港監視レーダーB</design>
+		<name>Radar</name>
+		<design>Airports watch radar B</design>
 		<price>1200</price>
 		<size>1,1</size>
 		<height>4</height>
@@ -54,8 +54,8 @@
 			<base>20</base>
 		</population>
 		<structure>
-			<category byname="軍事施設"/>
-			<category byname="空港"/>
+			<category byname="Military Facilities"/>
+			<category byname="Airports"/>
 		</structure>
 		<sprite origin="64,0" offset="40" >
 			<picture ref="{TYPHOON-GAZOU-MILITARY-RADER-7567171D3CEF}"/>
@@ -63,8 +63,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{TYPHOON-Military-F-15DJ2B-7567171D3CEF}">
-		<name>戦闘機</name>
-		<design>F-15DJ黒</design>
+		<name>Fighter</name>
+		<design>F-15DJ (black)</design>
 		<price>1200</price>
 		<size>2,2</size>
 		<height>1</height>
@@ -73,7 +73,7 @@
 			<base>2</base>
 		</population>
 		<structure>
-			<category byname="軍事施設"/>
+			<category byname="Military Facilities"/>
 		</structure>
 		<sprite origin="0,0" offset="8" >
 			<picture ref="{TYPHOON-GAZOU-MILITARY-F-15DJ2-7567171D3CEF}"/>

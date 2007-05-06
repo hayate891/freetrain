@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>道路</title>
-	<author>綾瀬ヒロ</author>
+	<title>Road</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.oir.jp/~ayase/</homepage>
 	
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-StructureImage-hashi-01}">
@@ -19,7 +19,7 @@
 	
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-01a}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
@@ -29,7 +29,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-01b}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>3,4</size>
@@ -39,7 +39,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-02a}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
@@ -49,7 +49,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-02b}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>3,4</size>
@@ -59,7 +59,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-03a}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
@@ -69,7 +69,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-03b}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>3,4</size>
@@ -79,7 +79,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-04a}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
@@ -89,7 +89,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-04b}">
-		<group>道路橋</group>
+		<group>Highway bridge</group>
 		<price>100</price>
 		<height>2</height>
 		<size>3,4</size>

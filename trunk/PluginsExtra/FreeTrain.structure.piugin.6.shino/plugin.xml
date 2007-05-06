@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY building2x2Param '
-	<group>貸しビル(2x2)</group>
+	<group>Rental office(2x2)</group>
 	<price>3300</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -12,7 +12,7 @@
 	</population>
 '>
 <!ENTITY building3x3ParamA '
-	<group>貸しビル(3x3)</group>
+	<group>Rental office(3x3)</group>
 	<price>4000</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -23,7 +23,7 @@
 	</population>
 '>
 <!ENTITY building3x3ParamB '
-	<group>貸しビル(3x3)</group>
+	<group>Rental office(3x3)</group>
 	<price>5000</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -34,7 +34,7 @@
 	</population>
 '>
 <!ENTITY hotelParam ' 
-	<group>中型ホテル</group>
+	<group>Medium hotel</group>
 	<price>4600</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -47,8 +47,8 @@
 ]>
 	
 <plug-in>
-	<title>建物プラグイン</title>
-	<author>しの</author>
+	<title>Office Buildings 4</title>
+	<author>Shino</author>
 	<homepage></homepage>
 
         <contribution type="picture" id="{7A5FEBD6-3778-4DA6-821E-A7551BCB439F}">

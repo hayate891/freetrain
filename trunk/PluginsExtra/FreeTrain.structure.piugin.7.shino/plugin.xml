@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY building2x2ParamA '
-	<group>貸しビル(2x2)</group>
+	<group>Rental office(2x2)</group>
 	<price>3300</price>
 	<size>2,2</size>
 	<minHeight>5</minHeight>
@@ -12,7 +12,7 @@
 	</population>
 '>
 <!ENTITY building2x2ParamB '
-	<group>貸しビル(2x2)</group>
+	<group>Rental office(2x2)</group>
 	<price>3100</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -23,7 +23,7 @@
 	</population>
 '>
 <!ENTITY building2x2ParamC '
-	<group>貸しビル(2x2)</group>
+	<group>Rental office(2x2)</group>
 	<price>2700</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -36,8 +36,8 @@
 ]>
 	
 <plug-in>
-	<title>ビルプラグイン</title>
-	<author>しの</author>
+	<title>Office Buildings 5</title>
+	<author>Shino</author>
 	<homepage></homepage>
 
 

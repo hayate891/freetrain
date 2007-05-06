@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY building2x2Param '
-	<group>貸しビル(2x2)</group>
+	<group>Rental office(2x2)</group>
 	<price>3200</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -14,8 +14,8 @@
 ]>
 	
 <plug-in>
-	<title>建物プラグイン</title>
-	<author>しの</author>
+	<title>Office Buildings 3</title>
+	<author>Shino</author>
 	<homepage></homepage>
 
 

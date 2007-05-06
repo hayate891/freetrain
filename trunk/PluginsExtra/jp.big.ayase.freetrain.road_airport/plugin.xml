@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>道路</title>
-	<author>綾瀬ヒロ</author>
+	<title>Runway (road)</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.oir.jp/~ayase/</homepage>
 	
 	<contribution type="road" id="{FreeTrain-AYASE-Hiro-RoadImg-Airport}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>空港用滑走路</name>
-		<description>滑走路</description>
+		<name>Airport runway</name>
+		<description>Runway</description>
 		<picture src="road_airport.bmp" size="32,32" offset="16">
 			<override when="night" src="road_airport_n.bmp"/>
 		</picture>

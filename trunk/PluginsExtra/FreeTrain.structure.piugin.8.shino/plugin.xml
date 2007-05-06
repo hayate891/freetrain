@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY building3x3Param '
-	<group>貸しビル(3x3)</group>
+	<group>Rental office(3x3)</group>
 	<price>5000</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -12,7 +12,7 @@
 	</population>
 '>
 <!ENTITY building3x3Param0 '
-	<group>貸しビル(3x3)</group>
+	<group>Rental office(3x3)</group>
 	<price>5600</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -23,7 +23,7 @@
 	</population>
 '>
 <!ENTITY building3x3Param1 '
-	<group>貸しビル(3x3)</group>
+	<group>Rental office(3x3)</group>
 	<price>6000</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -35,12 +35,12 @@
 '>
 ]>
 <plug-in>
-	<title>建物プラグイン</title>
-	<author>しの</author>
+	<title>Ofice Buildings 6</title>
+	<author>Shino</author>
 	<homepage></homepage>
 	
 	<contribution type="commercial" id="{46E71BFC-ECCA-4EB7-8D83-EE20B291319B}">
-		<group>大型デパート</group>
+		<group>Large department store</group>
 		<price>3500</price>
 		<size>4,6</size>
 		<height>4</height>
@@ -54,7 +54,7 @@
 	</contribution>
 
         <contribution type="commercial" id="{D0D3AF45-5948-4258-939F-BBA961F597C8}">
-		<group>大型デパート</group>
+		<group>Large department store</group>
 		<price>3500</price>
 		<size>6,4</size>
 		<height>4</height>
@@ -68,7 +68,7 @@
 	</contribution>
 
         <contribution type="commercial" id="{2818E81A-BA8E-45C7-A529-F1175C8B013F}">
-		<group>大型デパート</group>
+		<group>Large department store</group>
 		<price>3500</price>
 		<size>4,6</size>
 		<height>4</height>
@@ -82,7 +82,7 @@
 	</contribution>
 
         <contribution type="commercial" id="{E28FF253-365D-49A8-9905-86701E25A1C8}">
-		<group>大型デパート</group>
+		<group>Large department store</group>
 		<price>3500</price>
 		<size>6,4</size>
 		<height>4</height>

@@ -27,8 +27,8 @@
 
 
 
-	<title>建物セット1号館</title>
-	<author>たいふ～ん</author>
+	<title>Building set 1st</title>
+	<author>Typhoon</author>
 	<homepage>http://typhoon.s19.xrea.com/ft/index.html</homepage>
 	
 	<contribution type="picture" id="{TYPHOON-GAZOU-MILITARY-RADER-7567171D3CEF}">
@@ -82,84 +82,84 @@
 	</contribution>
 
 	<contribution type="electricPole" id="{57644AE6-7FFA-HMY1-8FE0-7567171D3CEF}">
-		<name>ホーム壁・土色1</name>
+		<name>platform wall,khaki1</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tutiiro;
 			<picture ref="{57644AE6-7FFA-1HMY-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HMY2-8FE0-7567171D3CEF}">
-		<name>ホーム壁・土色2</name>
+		<name>platform wall,khaki2</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tutiiro;
 			<picture ref="{57644AE6-7FFA-2HMY-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HMY3-8FE0-7567171D3CEF}">
-		<name>ホーム壁・灰青1</name>
+		<name>platform wall,rusty-closet1</name>
 		<sprite origin=" 0, 0" offset="16">
 			&haiao;
 			<picture ref="{57644AE6-7FFA-1HMY-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HMY4-8FE0-7567171D3CEF}">
-		<name>ホーム壁・灰青2</name>
+		<name>platform wall,rusty-closet2</name>
 		<sprite origin=" 0, 0" offset="16">
 			&haiao;
 			<picture ref="{57644AE6-7FFA-2HMY-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HMY5-8FE0-7567171D3CEF}">
-		<name>ホーム壁・赤茶1</name>
+		<name>platform wall,brown1</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tyairo;
 			<picture ref="{57644AE6-7FFA-1HMY-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HMY6-8FE0-7567171D3CEF}">
-		<name>ホーム壁・赤茶2</name>
+		<name>platform wall,brown2</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tyairo;
 			<picture ref="{57644AE6-7FFA-2HMY-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HUE1-8FE0-7567171D3CEF}">
-		<name>橋上駅（土色）</name>
+		<name>Bridge station (khaki)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tutiiro;
 			<picture ref="{57644AE6-7FFA-1HUE-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MST1-8FE0-7567171D3CEF}">
-		<name>橋上駅（土色・階段右）</name>
+		<name>Bridge station (khaki,stairs-right)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tutiiro;
 			<picture ref="{57644AE6-7FFA-1MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MST2-8FE0-7567171D3CEF}">
-		<name>橋上駅（土色・階段左）</name>
+		<name>Bridge station (khaki,stairs-left)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tutiiro;
 			<picture ref="{57644AE6-7FFA-2MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MST3-8FE0-7567171D3CEF}">
-		<name>橋上駅（土色・階段右奥）</name>
+		<name>Bridge station (khaki,stairs-right behind)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tutiiro;
 			<picture ref="{57644AE6-7FFA-3MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MST4-8FE0-7567171D3CEF}">
-		<name>橋上駅（土色・階段左奥）</name>
+		<name>Bridge station (khaki,stairs-left behind)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tutiiro;
 			<picture ref="{57644AE6-7FFA-4MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{57644AE6-7FFA-MDS9-8FE0-7567171D3CEF}">
-		<group>橋上駅(土色・本体)</group>
+		<group>Bridge station (khaki,main)</group>
 		&ModernStation;
 		<sprite origin=" 64, 0" offset="16">
 			&tutiiro;
@@ -167,7 +167,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{57644AE6-7FFA-MDS10-8FE0-7567171D3CEF}">
-		<group>橋上駅(土色・本体)</group>
+		<group>Bridge station (khaki,main)</group>
 		&ModernStation;
 		<sprite origin=" 96, 0" offset="16">
 			&tutiiro;
@@ -175,42 +175,42 @@
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HUE2-8FE0-7567171D3CEF}">
-		<name>橋上駅（灰青）</name>
+		<name>Bridge station （rusty-closet)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&haiao;
 			<picture ref="{57644AE6-7FFA-1HUE-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSH1-8FE0-7567171D3CEF}">
-		<name>橋上駅（灰青・階段右）</name>
+		<name>Bridge station （rusty-closet,stairs-right)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&haiao;
 			<picture ref="{57644AE6-7FFA-1MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSH2-8FE0-7567171D3CEF}">
-		<name>橋上駅（灰青・階段左）</name>
+		<name>Bridge station （rusty-closet,stairs-left)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&haiao;
 			<picture ref="{57644AE6-7FFA-2MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSH3-8FE0-7567171D3CEF}">
-		<name>橋上駅（灰青・階段右奥）</name>
+		<name>Bridge station （rusty-closet,stairs-right behind)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&haiao;
 			<picture ref="{57644AE6-7FFA-3MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSH4-8FE0-7567171D3CEF}">
-		<name>橋上駅（灰青・階段左奥）</name>
+		<name>Bridge station （rusty-closet,stairs-left behind)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&haiao;
 			<picture ref="{57644AE6-7FFA-4MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{57644AE6-7FFA-MDS19-8FE0-7567171D3CEF}">
-		<group>橋上駅(灰青・本体)</group>
+		<group>Bridge station (rusty-closet,main)</group>
 		&ModernStation;
 		<sprite origin=" 64, 0" offset="16">
 			&haiao;
@@ -218,7 +218,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{57644AE6-7FFA-MDS20-8FE0-7567171D3CEF}">
-		<group>橋上駅(灰青・本体)</group>
+		<group>Bridge station (rusty-closet,main)</group>
 		&ModernStation;
 		<sprite origin=" 96, 0" offset="16">
 			&haiao;
@@ -226,42 +226,42 @@
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-HUE3-8FE0-7567171D3CEF}">
-		<name>橋上駅（赤茶）</name>
+		<name>Bridge station (brown)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tyairo;
 			<picture ref="{57644AE6-7FFA-1HUE-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSC1-8FE0-7567171D3CEF}">
-		<name>橋上駅（赤茶・階段右）</name>
+		<name>Bridge station (brown,stairs-right)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tyairo;
 			<picture ref="{57644AE6-7FFA-1MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSC2-8FE0-7567171D3CEF}">
-		<name>橋上駅（赤茶・階段左）</name>
+		<name>Bridge station (brown,stairs-left)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tyairo;
 			<picture ref="{57644AE6-7FFA-2MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSC3-8FE0-7567171D3CEF}">
-		<name>橋上駅（赤茶・階段右奥）</name>
+		<name>Bridge station (brown,stairs-right behind)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tyairo;
 			<picture ref="{57644AE6-7FFA-3MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{57644AE6-7FFA-MSC4-8FE0-7567171D3CEF}">
-		<name>橋上駅（赤茶・階段左奥）</name>
+		<name>Bridge station (brown,stairs-left behind)</name>
 		<sprite origin=" 0, 0" offset="16">
 			&tyairo;
 			<picture ref="{57644AE6-7FFA-4MDS-8FE0-7567171D3CEF}" />
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{57644AE6-7FFA-MDS29-8FE0-7567171D3CEF}">
-		<group>橋上駅(赤茶・本体)</group>
+		<group>Bridge station (brown,main)</group>
 		&ModernStation;
 		<sprite origin=" 64, 0" offset="16">
 			&tyairo;
@@ -269,7 +269,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{57644AE6-7FFA-MDS30-8FE0-7567171D3CEF}">
-		<group>橋上駅(赤茶・本体)</group>
+		<group>Bridge station (brown,main)</group>
 		&ModernStation;
 		<sprite origin=" 96, 0" offset="16">
 			&tyairo;
@@ -279,7 +279,7 @@
 
 
 	<contribution type="commercial" id="{TYPHOON-SUPERL-YOKADO-7567171D3CEF}">
-		<group>超大型スーパー</group>
+		<group>Huge supermarket</group>
 		<price>3000</price>
 		<height>3</height>
 		<size>8,8</size>
@@ -307,8 +307,8 @@
 
 
 	<contribution type="commercial" id="{TYPHOON-Military-Rader1-7567171D3CEF}">
-		<group>レーダー</group>
-		<name>早期警戒レーダー</name>
+		<group>Radar</group>
+		<name>Early-warning radar</name>
 		<price>3000</price>
 		<height>4</height>
 		<size>1,1</size>
@@ -325,8 +325,8 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{TYPHOON-Military-Rader2-7567171D3CEF}">
-		<group>レーダー</group>
-		<name>空港監視レーダーA</name>
+		<group>Radar</group>
+		<name>Airports watch radar A</name>
 		<price>1200</price>
 		<height>4</height>
 		<size>1,1</size>
@@ -343,8 +343,8 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{TYPHOON-Military-Rader3-7567171D3CEF}">
-		<group>レーダー</group>
-		<name>空港監視レーダーB</name>
+		<group>Radar</group>
+		<name>Airports watch radar B</name>
 		<price>1200</price>
 		<height>4</height>
 		<size>1,1</size>
@@ -361,8 +361,8 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{TYPHOON-Military-F-15DJ2-7567171D3CEF}">
-		<group>戦闘機</group>
-		<name>F-15DJ黒</name>
+		<group>Fighter</group>
+		<name>F-15DJ (black)</name>
 		<price>1200</price>
 		<height>1</height>
 		<size>2,2</size>

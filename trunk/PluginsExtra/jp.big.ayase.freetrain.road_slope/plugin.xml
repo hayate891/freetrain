@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>道路プラグイン</title>
-	<author>綾瀬ヒロ</author>
+	<title>Slope road</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope}">
@@ -15,7 +15,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeN}">
-		<group>勾配道路(一般)</group>
+		<group>Slope road(normal)</group>
 		<price>1000</price>
 		<size>1,4</size>
 		<height>1</height>
@@ -26,7 +26,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeS}">
-		<group>勾配道路(一般)</group>
+		<group>Slope road(normal)</group>
 		<price>1000</price>
 		<size>4,1</size>
 		<height>1</height>
@@ -37,7 +37,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeW}">
-		<group>勾配道路(一般)</group>
+		<group>Slope road(normal)</group>
 		<price>1000</price>
 		<size>1,4</size>
 		<height>1</height>
@@ -48,7 +48,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeE}">
-		<group>勾配道路(一般)</group>
+		<group>Slope road(normal)</group>
 		<price>1000</price>
 		<size>4,1</size>
 		<height>1</height>
@@ -59,7 +59,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2N}">
-		<group>勾配道路(高速)</group>
+		<group>Slope road(expressway)</group>
 		<price>1000</price>
 		<size>1,4</size>
 		<height>2</height>
@@ -70,7 +70,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2S}">
-		<group>勾配道路(高速)</group>
+		<group>Slope road(expressway)</group>
 		<price>1000</price>
 		<size>4,1</size>
 		<height>2</height>
@@ -81,7 +81,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2W}">
-		<group>勾配道路(高速)</group>
+		<group>Slope road(expressway)</group>
 		<price>1000</price>
 		<size>1,4</size>
 		<height>2</height>
@@ -92,7 +92,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2E}">
-		<group>勾配道路(高速)</group>
+		<group>Slope road(expressway)</group>
 		<price>1000</price>
 		<size>4,1</size>
 		<height>2</height>

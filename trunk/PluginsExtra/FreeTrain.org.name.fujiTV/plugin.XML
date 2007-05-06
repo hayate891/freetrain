@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>フジテレビ</title>
-	<author>周</author>
+	<title>Fuji TV station</title>
+	<author>Shu</author>
 	<homepage></homepage>
 	
  <contribution type="commercial" id="{AACA403C-56ED-418C-8444-ED4CB868234C}">
-		<name>フジテレビ</name>
+		<name>Fuji TV station</name>
 		<price>1000</price>
 		<size>8,2</size>
 		<height>6</height>

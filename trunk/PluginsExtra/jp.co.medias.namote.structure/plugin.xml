@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>建物</title>
-	<author>なもー</author>
+	<title>Buildings</title>
+	<author>Namo</author>
 	<homepage>http://www.medias.co.jp/~bell8528/freetrain/</homepage>
 	
 	<contribution type="picture" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084}">
@@ -10,7 +10,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084-1}">
-		<group>サークルK</group>
+		<group>Circle-K</group>
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -21,7 +21,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084-2}">
-		<group>サークルK</group>
+		<group>Circle-K</group>
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -32,8 +32,8 @@
 	</contribution>
 
 
-	<title>美富士食堂</title>
-	<author>なもー</author>
+	<title>Fujimi Restaurant</title>
+	<author>Namoh</author>
 	<homepage>http://chinsou.s27.xrea.com/freetrain/</homepage>
 	
 	<contribution type="picture" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085}">
@@ -43,7 +43,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085-1}">
-		<group>美富士食堂</group>
+		<group>Fujimi Restaurant</group>
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -54,7 +54,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085-2}">
-		<group>美富士食堂</group>
+		<group>Fujimi Restaurant</group>
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -74,7 +74,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-1}">
-		<group>小型ショッピングセンター</group>
+		<group>Small shipping center</group>
 		<price>100</price>
 		<size>2,3</size>
 		<height>2</height>
@@ -85,7 +85,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-2}">
-		<group>小型ショッピングセンター</group>
+		<group>Small shipping center</group>
 		<price>100</price>
 		<size>3,2</size>
 		<height>2</height>
@@ -96,7 +96,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-3}">
-		<group>小型ショッピングセンター</group>
+		<group>Small shipping center</group>
 		<price>100</price>
 		<size>2,3</size>
 		<height>2</height>
@@ -107,7 +107,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-4}">
-		<group>小型ショッピングセンター</group>
+		<group>Small shipping center</group>
 		<price>100</price>
 		<size>3,2</size>
 		<height>2</height>
@@ -118,7 +118,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-5}">
-		<group>小型ショッピングセンター</group>
+		<group>Small shipping center</group>
 		<price>100</price>
 		<size>2,3</size>
 		<height>2</height>
@@ -129,7 +129,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-6}">
-		<group>小型ショッピングセンター</group>
+		<group>Small shipping center</group>
 		<price>100</price>
 		<size>3,2</size>
 		<height>2</height>
@@ -149,7 +149,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-1}">
-		<group>中型ショッピングセンター</group>
+		<group>Medium shipping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
@@ -160,7 +160,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-2}">
-		<group>中型ショッピングセンター</group>
+		<group>Medium shipping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
@@ -171,7 +171,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-3}">
-		<group>中型ショッピングセンター</group>
+		<group>Medium shipping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
@@ -182,7 +182,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-4}">
-		<group>中型ショッピングセンター</group>
+		<group>Medium shipping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
@@ -193,7 +193,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-5}">
-		<group>中型ショッピングセンター</group>
+		<group>Medium shipping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
@@ -204,7 +204,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-6}">
-		<group>中型ショッピングセンター</group>
+		<group>Medium shipping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
