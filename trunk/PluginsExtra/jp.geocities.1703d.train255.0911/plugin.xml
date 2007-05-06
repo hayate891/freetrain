@@ -32,12 +32,13 @@
 	<contribution type="train" id="{187DF275-70DE-ec255-8F66-BF0E327B80CF}">
 		<company>JR East</company>
 		<type>255 Series</type>
-		<name>Dousou View Express</name>
+		<name>Boso View Express</name>
 		<author>Icchii</author>
-		<description>This train was built in 1993 to replace the 183 Series. This train was designed for sightseeing and business men. 
-		The first JR East Super-Express vehicle to adopt VVVF invertor control, reducing MT ratio in comparison with the conventional super-express car, assuring energy-saving conversion.
-		The paint near the door (yellow) represents the flower and the green on the car edge, the blue represents the Pacific Ocean and the white represents the sandy beach seashore.
-		It also runs a temporary service on the Central East line when required. It's top speed is 30km/h。</description>
+		<description>This train was built in 1993 to replace the 183 Series in the Boso region. This train was designed for both
+sightseeing and commuting business men, using a concept called "hybrid mobility". 
+The first JR East Super-Express vehicle to adopt VVVF invertor control, reducing MT ratio in comparison with the conventional super-express car, assuring energy-saving conversion.
+The paint near the door (yellow) represents the flower and the green on the car edge, the blue represents the Pacific Ocean and the white represents the sandy beach seashore.
+It also runs a temporary service on the East Chuo Line when required. It's top speed is 130km/h.</description>
 		<price>100</price>
            	<fare>1200</fare>
 		<speed>fast</speed>

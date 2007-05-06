@@ -1,4 +1,4 @@
-﻿	<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 <author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
@@ -52,9 +52,9 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-hokuto-Cassiopeia-2}">
 		<company>JR Hokkaido</company>
 		<type>DD 51</type>
-		<name>Casiopea (8 Car consist)</name>
+		<name>Casiopea (reserve)</name>
 		<author>Shikashika</author>
-		<description>Diesel Locomotive DD51 (Hokutosei Color) hauls 2-Level Sleeper Train. Can pull 8 Cars.
+		<description>Diesel Locomotive DD51 (Hokutosei Color) hauls 2-Level Sleeper Train. The power car has a Kaya27 in reserve.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -127,9 +127,9 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-0-Cassiopeia-2}">
 		<company>JR Hokkaido</company>
 		<type>ED 79</type>
-		<name>Casiopea (8 Car consist)</name>
+		<name>Casiopea (reserve)</name>
 		<author>Shikashika</author>
-		<description>The ED79 hauls a 2-Level Sleeper Train on the Tsugaru Ikyou Line
+		<description>The ED79 hauls a 2-Level Sleeper Train on the Tsugaru Ikyou Line. The power car has a Kaya27 in reserve.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>

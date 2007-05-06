@@ -2,7 +2,7 @@
 This package is a collection of plug-ins which are published in several web sites 
 at the date of September 03, 2005, with the permit of each authors.
 
-#Escape
+#Disclaimer
 I did not verify whether all plug-ins work correctly.
 
 Followings are sites and authors who agreed with packaging there works.
@@ -20,7 +20,7 @@ Followings are sites and authors who agreed with packaging there works.
  http://www63.tok2.com/home2/sinndokusaisya/daihukyou/FreeTrain/index.html
 +Kei san: FreeTrain Small yard
  http://www.h2.dion.ne.jp/~kei_s/freetrain/
-+qra_ra san: FreeTrain‐Sousaku kan
++qra_ra san: FreeTrain Sousaku kan
  http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/
 +HEUER san: FreeTrain construction consultant
  http://freetrain.finito-web.com/
@@ -30,7 +30,7 @@ Followings are sites and authors who agreed with packaging there works.
  http://typhoon.s19.xrea.com/ft/index.html
 +Altima san: ZeroDimensions
  http://zero-d.web.infoseek.co.jp/
-+HINOTO san: Boss多客臨 in tears.
++HINOTO san: Boss Takyakurin in tears.
  http://www4.ocn.ne.jp/~presto/ft/
 +Shikashika san: FreeTrain shisen tour support corp.
  http://shikashika.hp.infoseek.co.jp/
@@ -40,18 +40,18 @@ Followings are sites and authors who agreed with packaging there works.
  http://f4.aaa.livedoor.jp/~tomo/free_train/ft.html
 
 +Authors of which plugins published on "total train yard", the site of Hima san.
- Hima san、Kawaguchi Kosuke san、Min san、qra_ra(haru) san、Kigami san
- TAKUROU san、iwasaki san、Teha san、Ayase san、ima san、1500v san、
- Nanashi-san@Hokkaido san、Ken san、Mumei no hito san、Hatena kun san、
- Nanashi-san no yabo san、masashi san
+ Hima san, Kawaguchi Kohsuke san, Min san, qra_ra(haru) san, Kigami san
+ TAKUROU san, iwasaki san, Teha san, Ayase san, ima san, 1500v san, 
+ Nanashi-san@Hokkaido san, Ken san, Mumei no hito san, Hatena kun san, 
+ Nanashi-san no yabo san, masashi san
 
 +Authors of which plugins posted on uploder at "www.kosuke.org/freetrain".
- Kei san、TAKUROU san、Ken san、Yua san、Sakuranishi mokeibu san、
- RogetsuRoya san、Nanashi(kanji) san、haru san、Shino san、Nanashi-san san、
- Te san、Moo05 san、Nanashi(kana) san、Ekio san、Hanabishi san、Chousen shita hito san
+ Kei san, TAKUROU san, Ken san, Yua san, Sakuranishi mokeibu san, 
+ RougetsuRouya san, Nanashi(kanji) san, haru san, Shino san, Nanashi-san san, 
+ Te san, Moo05 san, Nanashi(kana) san, Ekio san, Hanabishi san, ChousenShitaHito san
 *The post no.450 and no.633 are modified not to replace Hanabishi san's plugin.
 *The name of  Hanabishi san's plugin folders are renamed as follows.
- jp.big.ayase.freetrain.* → org.kosuke.freetrain.*
+ jp.big.ayase.freetrain.* -> org.kosuke.freetrain.*
 
 #Thanks
 I appreciate in everyone authors above-mentioned.

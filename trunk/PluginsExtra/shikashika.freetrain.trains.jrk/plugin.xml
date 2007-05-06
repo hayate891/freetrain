@@ -12,11 +12,11 @@
 <!-- 旅1列車の定義 -->
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-LocalTrein-50}">
-		<company>JRKyushu</company>
+		<company>JR Kyushu</company>
 		<type>DD 51</type>
 		<name>Local Train(50 Series)</name>
 		<author>Shikashika</author>
-		<description>Diesel Locomotive 50 Series(OHA50、OHAHU50)
+		<description>Diesel Locomotive 50 Series (OHA50, OHAHU50); provides local passenger service.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -43,11 +43,12 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-LocalTrein-50-12}">
-		<company>JRKyushu</company>
+		<company>JR Kyushu</company>
 		<type>DD 51</type>
 		<name>Local Train(50 Series+12 Series)</name>
 		<author>Shikashika</author>
-		<description>Diesel Locomotive DD51, Air conditioned 50 Series 1000 Model (OHA50, OHAHU50)と12 Series(SUHAHU12).
+		<description>Diesel Locomotive DD51, Air conditioned 50 Series 1000 Model (OHA50, OHAHU50) and 12 Series(SUHAHU12);
+provides local passanger service.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>

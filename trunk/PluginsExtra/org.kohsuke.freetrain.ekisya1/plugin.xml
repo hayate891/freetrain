@@ -16,7 +16,7 @@
 ]>
 <plug-in>
 	<title>Shimomatsu station</title>
-	<author>HanabisiREkka</author>
+	<author>HanabisiRekka</author>
 	<homepage></homepage>
 	
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />

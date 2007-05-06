@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>Kominato and Izumi Railroad Plugin</title>
+	<title>Kominato and Isumi Railway Plugin</title>
 	<author>Icchii</author>
 	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
 	
@@ -15,11 +15,12 @@
 	</contribution>
 
 	<contribution type="train" id="{cyber-express-1703d-040417-isumi200}">
-		<company>Isumi Railroad</company>
+		<company>Isumi Railway</company>
 		<type>Isumi 200 Series</type>
 		<name>Isumi Line</name>
 		<author>Icchii</author>
-		<description>Travels from Ohara (in the Chiba Prefecture) to Nakano on the 3rd Sector line.
+		<description>An Isumi Railway train travelling from Ohara (in the Chiba Prefecture) to
+Kazusa Nakano on a 3rd Sector line.
 		</description>
 		<price>1</price>
 		<speed>slow</speed>
@@ -40,13 +41,15 @@
 	</contribution>
 
 	<contribution type="train" id="{cyber-express-1703d-040417-kominato200}">
-		<company>Kominato Railroad</company>
+		<company>Kominato Railway</company>
 		<type>KIHA200 Series</type>
 		<name></name>
 		<author>Icchii</author>
-		<description>From Goi (in the Chiba Prefecture) to Nakano using the Kominato Railroad.
-		This vehicle used to drive to the Chiba Station, but now KIHA20 does this.
-		15 were produced and 14 are still active.
+		<description>A Kominato Railway train travelling from Goi (in the Chiba Prefecture) to
+Kazusa Nakano.
+This vehicle was manufactured to conform to JNR's KIHA20 and used to drive to Chiba Station, but 
+hasn't been in service there recently.
+Supports from 1 to 5 car formations. A total of 14 were produced and all are still active.
 		</description>
 		<price>1</price>
 		<speed>slow</speed>

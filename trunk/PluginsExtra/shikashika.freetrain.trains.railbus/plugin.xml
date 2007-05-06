@@ -173,9 +173,11 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiha01-railbus}">
 		<company>Old Japanese National Railway</company>
 		<type>KIHA01</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>A small sized diesel RailBus (12 were built in 1954). Model numbers KIHA10000～11 were built first. In 1957, KIHA10000～03 became KIHA01 (#01 ~ #04), KIHA10004～11 became KIHA01 (#51～#58).
+		<description>A small sized diesel railbus. 12 were built in 1954. Model numbers were initially
+KIHA10000-11, but in 1957, KIHA10000-03 became KIHA01 (#01 - #04) while KIHA10004-11 became KIHA01
+(#51-#58).
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -190,10 +192,11 @@
 	</contribution>
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiyuni01-railbus}">
 		<company>Old Japanese National Railway</company>
-		<type>Kuyuni01</type>
-		<name>RailBus</name>
+		<type>Kiyuni01</type>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>In 1952, KIHA01 - #55 had it's interior remodelled and became Kuyuni01-1 Only one Kuyuni was built. It was used on the Sainhon Line, stopping in 1967.
+		<description>In 1952, KIHA01 - 55 had their interior remodelled and became Kiyuni01-1.
+Only one Kuyuni was built. It was used on the Sanin Main Line and North Sanko Line, stopping in 1967.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -210,9 +213,10 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiha02-railbus}">
 		<company>Old Japanese National Railway</company>
 		<type>KIHA02</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>This is a small-sized diesel RailBus. There were only 17 of the KIHA02 Series produced. From the beginning, they were numbered KIHA10012～28, but in 1957, they became KIHA02 (#01～#17)
+		<description>This is a small-sized diesel railbus. There were 17 of the KIHA02 Series produced.
+From the beginning, they were numbered KIHA10012-28, but in 1957, they became KIHA02 (#01-#17).
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -229,9 +233,11 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiha03-railbus}">
 		<company>Old Japanese National Railway</company>
 		<type>KIHA03</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>1956年に東急車輌でKIHA02を基本に北海道向けとして製造された極寒仕様のRailBusです。客窓は二重窓になり、暖房装置が強化が図られています。製造当初はKIHA10200～10219でしたが、1957年にKIHA03 1～20に改番されています。1966年までに全車廃車となっています。
+		<description>This is a railbus based on the KIHA02 built in 1956 for the extreme cold conditions in
+Hokkaido, with double windows and better heating. From the beginning, they were numbered KIHA10200-10219,
+but in 1957, they became KIHA03 (#01-#20). By 1966, they had all been retired.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -246,11 +252,13 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-nanbu-kiha10-railbus}">
-		<company>NanbuJyuukan Railway</company>
+		<company>Nambu Jukan Railway</company>
 		<type>KIHA10</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>In 1962, on the 20th of October, The NanbuJyuukan Railway opened and used these vehicles produced by Fuji Heavy Industries. In 1996, they won the "Evergreen" award. The NanbuJyuukan Railway paused on 5th April 1997 and was abolished on the 1st of August 2002.
+		<description>In 1962, on the 20th of October, The Nambu Jukan Railway opened and used these 
+vehicles produced by Fuji Heavy Industries. In 1996, they won the "Evergreen" award. The Nambu Jukan Railway
+paused on 5th April 1997 and was abolished on the 1st of August 2002.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -265,10 +273,12 @@
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-tarumi-haimo180-railbus}">
 		<company>Tarumi Railway</company>
-		<type>Haimo180</type>
-		<name>RailBus</name>
+		<type>HAIMO180</type>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>Fuji Heavy Industries produced this LE-Car(Light-Economy,Diesel Car) RailBus. 3 Cars were built with Cross-Seats and Long-Seats and one Car with Cross-Seats was transferred to the Arida Railway.
+		<description>Fuji Heavy Industries produced this LE-Car (Light-Economy,Diesel Car) railbus.
+3 cars were built with cross-seats and long-seats and one car with cross-seats was transferred to Wakayama
+Prefecture's Arida Railway.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -285,9 +295,10 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-arita-haimo180-railbus}">
 		<company>Arida Railway</company>
 		<type>Haimo180</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>Fuji Heavy Industries produced this LE-Car(Light-Economy,Diesel Car) RailBus. The Tarumi Railway received Cars which had Cross-Seats and could seat 34, with 70 passengers in total.
+		<description>Fuji Heavy Industries produced this LE-Car (Light-Economy,Diesel Car) railbus.
+Transferred from Tarumi Railway, it had cross-seats and could seat 34, with 70 passengers in total.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -303,9 +314,9 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-miki-miki180-railbus}">
 		<company>Miki Railway</company>
 		<type>MIKI180</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>Fuji Heavy Industries produced this LE-Car (Light-Economy, Diesel Car) RailBus.
+		<description>Fuji Heavy Industries produced this LE-Car (Light-Economy, Diesel Car) railbus.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -319,11 +330,13 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-miki-hurawa1985-1-railbus}">
-		<company>Hojyo Railway</company>
+		<company>Hojo Railway</company>
 		<type>Flower1985-1</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>Fuji Heavy Industries produced this LE-Car(Light-Economy,Diesel Car) RailBus. 1 Car was painted Red, Yellow and Green, another 2 Cars were painted Blue and Red, and a final 3 cars were painted Green and Red.
+		<description>Fuji Heavy Industries produced this LE-Car (Light-Economy,Diesel Car) railbus.
+The first car was painted red and yellow-green on white base, the second car was painted blue and red, and the
+third car was painted red with a green stripe.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -340,11 +353,13 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-miki-hurawa1985-2-railbus}">
-		<company>Hojyo Railway</company>
+		<company>Hojo Railway</company>
 		<type>Flower1985-2</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>Fuji Heavy Industries produced this LE-Car(Light-Economy,Diesel Car) RailBus. 1 Car was painted Red, Yellow and Green, another 2 Cars were painted Blue and Red, and a final 3 cars were painted Green and Red.
+		<description>Fuji Heavy Industries produced this LE-Car (Light-Economy,Diesel Car) railbus.
+The first car was painted red and yellow-green on white base, the second car was painted blue and red, and the
+third car was painted red with a green stripe.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -361,11 +376,13 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-miki-hurawa1985-3-railbus}">
-		<company>Hojyo Railway</company>
+		<company>Hojo Railway</company>
 		<type>Flower1985-3</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>Fuji Heavy Industries produced this LE-Car(Light-Economy, Diesel Car) RailBus. 1 Car was painted Red, Yellow and Green, another 2 Cars were painted Blue and Red, and a final 3 cars were painted Green and Red.
+		<description>Fuji Heavy Industries produced this LE-Car (Light-Economy,Diesel Car) railbus.
+The first car was painted red and yellow-green on white base, the second car was painted blue and red, and the
+third car was painted red with a green stripe.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -382,11 +399,13 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-meitetu-kiha10-railbus}">
-		<company>Meitetsu Railway</company>
+		<company>Nagoya Railroad</company>
 		<type>KIHA10</type>
-		<name>RailBus</name>
+		<name>Railbus</name>
 		<author>Shikashika</author>
-		<description>Fuji Heavy Industries produced these Cars in 1984 for the Yaotsu Line and the Mikawa Line. Airconditioning was added in 1985. These Cars were taken out of service in 1995, though 2 Cars (KIHA10 - #15 and #16) still run on rural railways.
+		<description>Fuji Heavy Industries produced these cars in 1984 for the Yaotsu Line and the
+Mikawa Line. Airconditioning was added in 1985. These cars were taken out of service in 1995, though 2 cars
+(KIHA10 - #15 and #16) still run on rural railways.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
