@@ -147,175 +147,37 @@ namespace freetrain.world.rail
 			this.toolBarDayNight = new System.Windows.Forms.ToolBar();
 			this.tbDay = new System.Windows.Forms.ToolBarButton();
 			this.tbNight = new System.Windows.Forms.ToolBarButton();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.length)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.count)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.count)).BeginInit();
 			this.SuspendLayout();
+			
+			//translations.
+			//! this.label10.Text = "名称：";
+			//! this.label7.Text = "両";
+			//! this.author.Text = "477さん";
+			//! this.label6.Text = "説明：";
+			//! this.label1.Text = "作者：";
+			//! this.label8.Text = "総費用：";
+			//! this.buttonOK.Text = "購入(&O)";
+			//! this.buttonCancel.Text = "閉じる(&C)";
+			//! this.label5.Text = "速度：";
+			// this.speed.Text = "高速";
+			//! this.label4.Text = "編成";
+			
 			// 
 			// label2
 			// 
-			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label2.Location = new System.Drawing.Point(263, 266);
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label2.Location = new System.Drawing.Point(9, 273);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(64, 22);
-			this.label2.TabIndex = 2;
+			this.label2.TabIndex = 28;
 			this.label2.Text = "&Length:";
 			//! this.label2.Text = "車両数(&L)：";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// length
-			// 
-			this.length.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.length.Minimum = new System.Decimal(new int[] {
-																   1,
-																   0,
-																   0,
-																   0});
-									0});
-			this.length.Name = "length";
-			this.length.Size = new System.Drawing.Size(64, 20);
-			this.length.TabIndex = 4;
-			this.length.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.length.Value = new System.Decimal(new int[] {
-																 3,
-																 0,
-																 0,
-																 0});
-			this.length.ValueChanged += new System.EventHandler(this.onAmountChanged);
-			// 
-			// label3
-			// 
-			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label3.Location = new System.Drawing.Point(436, 267);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(25, 19);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "x";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// count
-			// 
-			this.count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.count.Location = new System.Drawing.Point(457, 268);
-			this.count.Name = "count";
-			this.count.Size = new System.Drawing.Size(63, 20);
-			this.count.TabIndex = 6;
-			this.count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.count.Value = new System.Decimal(new int[] {
-																1,
-																0,
-																0,
-																0});
-			this.count.ValueChanged += new System.EventHandler(this.onAmountChanged);
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-									| System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox1.Location = new System.Drawing.Point(150, 297);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(477, 4);
-			this.groupBox1.TabIndex = 4;
-			this.groupBox1.TabStop = false;
-			// 
-			// label4
-			// 
-			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label4.Location = new System.Drawing.Point(526, 266);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(27, 20);
-			this.label4.TabIndex = 7;
-			this.label4.Text = "Set";
-			//! this.label4.Text = "編成";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// buttonOK
-			// 
-			this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonOK.Location = new System.Drawing.Point(392, 348);
-			this.buttonOK.Name = "buttonOK";
-			this.buttonOK.Size = new System.Drawing.Size(80, 26);
-			this.buttonOK.TabIndex = 8;
-			this.buttonOK.Text = "&Buy";
-			//! this.buttonOK.Text = "購入(&O)";
-			this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
-			// 
-			// buttonCancel
-			// 
-			this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonCancel.Location = new System.Drawing.Point(478, 348);
-			this.buttonCancel.Name = "buttonCancel";
-			this.buttonCancel.Size = new System.Drawing.Size(80, 26);
-			this.buttonCancel.TabIndex = 9;
-			this.buttonCancel.Text = "&Close";
-			//! this.buttonCancel.Text = "閉じる(&C)";
-			// 
-			// label5
-			// 
-			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label5.Location = new System.Drawing.Point(263, 240);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(64, 17);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "Speed:";
-			//! this.label5.Text = "速度：";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-			// 
-			// speed
-			// 
-			this.speed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.speed.Location = new System.Drawing.Point(333, 240);
-			this.speed.Name = "speed";
-			this.speed.Size = new System.Drawing.Size(220, 17);
-			this.speed.TabIndex = 11;
-			this.speed.Text = "Rapid";
-			// this.speed.Text = "高速";
-			this.speed.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-			// 
-			// totalPrice
-			// 
-			this.totalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.totalPrice.Location = new System.Drawing.Point(331, 304);
-			this.totalPrice.Name = "totalPrice";
-			this.totalPrice.Size = new System.Drawing.Size(227, 18);
-			this.totalPrice.TabIndex = 14;
-			this.totalPrice.Text = "100,000";
-			this.totalPrice.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-			// 
-			// label8
-			// 
-			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label8.Location = new System.Drawing.Point(263, 304);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(64, 18);
-			this.label8.TabIndex = 15;
-			this.label8.Text = "Total cost:";
-			//! this.label8.Text = "総費用：";
-			this.label8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-			// 
-			// passenger
-			// 
-			this.passenger.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.passenger.Location = new System.Drawing.Point(331, 322);
-			this.passenger.Name = "passenger";
-			this.passenger.Size = new System.Drawing.Size(222, 18);
-			this.passenger.TabIndex = 17;
-			this.passenger.Text = "100";
-			this.passenger.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-			// 
-			// label9
-			// 
-			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label9.Location = new System.Drawing.Point(263, 322);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(64, 18);
-			this.label9.TabIndex = 16;
-			this.label9.Text = "Capacity:";
-			//! this.label9.Text = "定員：";
-			this.label9.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// typeTree
 			// 
@@ -324,100 +186,9 @@ namespace freetrain.world.rail
 									| System.Windows.Forms.AnchorStyles.Right)));
 			this.typeTree.Location = new System.Drawing.Point(0, 0);
 			this.typeTree.Name = "typeTree";
-			this.typeTree.Size = new System.Drawing.Size(257, 380);
+			this.typeTree.Size = new System.Drawing.Size(203, 387);
 			this.typeTree.TabIndex = 18;
 			this.typeTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.onTypeChanged);
-			// 
-			// label1
-			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label1.Location = new System.Drawing.Point(263, 121);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(64, 18);
-			this.label1.TabIndex = 19;
-			this.label1.Text = "Author:";
-			//! this.label1.Text = "作者：";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-			// 
-			// label6
-			// 
-			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label6.Location = new System.Drawing.Point(263, 143);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(64, 18);
-			this.label6.TabIndex = 20;
-			this.label6.Text = "Description:";
-			//! this.label6.Text = "説明：";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-			// 
-			// description
-			// 
-			this.description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-									| System.Windows.Forms.AnchorStyles.Right)));
-			this.description.BackColor = System.Drawing.SystemColors.Control;
-			this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.description.Location = new System.Drawing.Point(333, 147);
-			this.description.Multiline = true;
-			this.description.Name = "description";
-			this.description.ReadOnly = true;
-			this.description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.description.Size = new System.Drawing.Size(220, 90);
-			this.description.TabIndex = 21;
-			this.description.Text = "tadasdffas";
-			// 
-			// author
-			// 
-			this.author.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.author.Location = new System.Drawing.Point(331, 121);
-			this.author.Name = "author";
-			this.author.Size = new System.Drawing.Size(222, 18);
-			this.author.TabIndex = 22;
-			this.author.Text = "477";
-			//! this.author.Text = "477さん";
-			this.author.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-			// 
-			// label7
-			// 
-			this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label7.Location = new System.Drawing.Point(403, 266);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(27, 20);
-			this.label7.TabIndex = 23;
-			this.label7.Text = "Car";
-			//! this.label7.Text = "両";
-			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// label10
-			// 
-			this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label10.Location = new System.Drawing.Point(263, 9);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(64, 17);
-			this.label10.TabIndex = 24;
-			this.label10.Text = "Name:";
-			//! this.label10.Text = "名称：";
-			this.label10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-			// 
-			// name
-			// 
-			this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.name.Location = new System.Drawing.Point(333, 9);
-			this.name.Name = "name";
-			this.name.Size = new System.Drawing.Size(220, 17);
-			this.name.TabIndex = 25;
-			this.name.Text = "123 series ABCDEF";
-			//! this.name.Text = "123系 ABCDEF";
-			this.name.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-			// 
-			// preview
-			// 
-			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.preview.Location = new System.Drawing.Point(331, 35);
-			this.preview.Name = "preview";
-			this.preview.Size = new System.Drawing.Size(222, 78);
-			this.preview.TabIndex = 26;
-			this.preview.TabStop = false;
 			// 
 			// buttonImages
 			// 
@@ -425,21 +196,71 @@ namespace freetrain.world.rail
 			this.buttonImages.ImageSize = new System.Drawing.Size(16, 15);
 			this.buttonImages.TransparentColor = System.Drawing.Color.Transparent;
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.length);
+			this.groupBox1.Controls.Add(this.toolBarDayNight);
+			this.groupBox1.Controls.Add(this.preview);
+			this.groupBox1.Controls.Add(this.name);
+			this.groupBox1.Controls.Add(this.label10);
+			this.groupBox1.Controls.Add(this.label7);
+			this.groupBox1.Controls.Add(this.author);
+			this.groupBox1.Controls.Add(this.description);
+			this.groupBox1.Controls.Add(this.label6);
+			this.groupBox1.Controls.Add(this.label1);
+			this.groupBox1.Controls.Add(this.passenger);
+			this.groupBox1.Controls.Add(this.label9);
+			this.groupBox1.Controls.Add(this.label8);
+			this.groupBox1.Controls.Add(this.totalPrice);
+			this.groupBox1.Controls.Add(this.speed);
+			this.groupBox1.Controls.Add(this.label5);
+			this.groupBox1.Controls.Add(this.buttonCancel);
+			this.groupBox1.Controls.Add(this.buttonOK);
+			this.groupBox1.Controls.Add(this.label4);
+			this.groupBox1.Controls.Add(this.groupBox2);
+			this.groupBox1.Controls.Add(this.count);
+			this.groupBox1.Controls.Add(this.label3);
+			this.groupBox1.Controls.Add(this.label2);
+			this.groupBox1.Location = new System.Drawing.Point(203, 0);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(398, 387);
+			this.groupBox1.TabIndex = 19;
+			this.groupBox1.TabStop = false;
+			// 
+			// length
+			// 
+			this.length.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.length.Location = new System.Drawing.Point(75, 275);
+			this.length.Minimum = new decimal(new int[] {
+									1,
+									0,
+									0,
+									0});
+			this.length.Name = "length";
+			this.length.Size = new System.Drawing.Size(64, 20);
+			this.length.TabIndex = 50;
+			this.length.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.length.Value = new decimal(new int[] {
+									3,
+									0,
+									0,
+									0});
+			// 
 			// toolBarDayNight
 			// 
-			this.toolBarDayNight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.toolBarDayNight.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
-																							   this.tbDay,
-																							   this.tbNight});
+									this.tbDay,
+									this.tbNight});
 			this.toolBarDayNight.Dock = System.Windows.Forms.DockStyle.None;
 			this.toolBarDayNight.DropDownArrows = true;
 			this.toolBarDayNight.ImageList = this.buttonImages;
-			this.toolBarDayNight.Location = new System.Drawing.Point(287, 35);
+			this.toolBarDayNight.Location = new System.Drawing.Point(33, 35);
 			this.toolBarDayNight.Name = "toolBarDayNight";
 			this.toolBarDayNight.ShowToolTips = true;
 			this.toolBarDayNight.Size = new System.Drawing.Size(38, 48);
-			this.toolBarDayNight.TabIndex = 27;
-			this.toolBarDayNight.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
+			this.toolBarDayNight.TabIndex = 49;
 			// 
 			// tbDay
 			// 
@@ -455,50 +276,250 @@ namespace freetrain.world.rail
 			this.tbNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
 			this.tbNight.Tag = freetrain.views.NightSpriteMode.AlwaysNight;
 			// 
+			// preview
+			// 
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.preview.Location = new System.Drawing.Point(77, 35);
+			this.preview.Name = "preview";
+			this.preview.Size = new System.Drawing.Size(302, 78);
+			this.preview.TabIndex = 48;
+			this.preview.TabStop = false;
+			// 
+			// name
+			// 
+			this.name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.name.Location = new System.Drawing.Point(79, 9);
+			this.name.Name = "name";
+			this.name.Size = new System.Drawing.Size(300, 17);
+			this.name.TabIndex = 47;
+			this.name.Text = "123 series ABCDEF";
+			//! this.name.Text = "123系 ABCDEF";
+			this.name.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// label10
+			// 
+			this.label10.Location = new System.Drawing.Point(9, 9);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(64, 17);
+			this.label10.TabIndex = 46;
+			this.label10.Text = "Name:";
+			this.label10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			// 
+			// label7
+			// 
+			this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label7.Location = new System.Drawing.Point(149, 273);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(27, 20);
+			this.label7.TabIndex = 45;
+			this.label7.Text = "Car";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// author
+			// 
+			this.author.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.author.Location = new System.Drawing.Point(77, 121);
+			this.author.Name = "author";
+			this.author.Size = new System.Drawing.Size(302, 18);
+			this.author.TabIndex = 44;
+			this.author.Text = "477";
+			this.author.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// description
+			// 
+			this.description.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.description.BackColor = System.Drawing.SystemColors.Control;
+			this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.description.Location = new System.Drawing.Point(79, 147);
+			this.description.Multiline = true;
+			this.description.Name = "description";
+			this.description.ReadOnly = true;
+			this.description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.description.Size = new System.Drawing.Size(300, 97);
+			this.description.TabIndex = 43;
+			// 
+			// label6
+			// 
+			this.label6.Location = new System.Drawing.Point(9, 143);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(64, 18);
+			this.label6.TabIndex = 42;
+			this.label6.Text = "Description:";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(9, 121);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(64, 18);
+			this.label1.TabIndex = 41;
+			this.label1.Text = "Author:";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			// 
+			// passenger
+			// 
+			this.passenger.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.passenger.Location = new System.Drawing.Point(75, 329);
+			this.passenger.Name = "passenger";
+			this.passenger.Size = new System.Drawing.Size(304, 18);
+			this.passenger.TabIndex = 40;
+			this.passenger.Text = "100";
+			this.passenger.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// label9
+			// 
+			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label9.Location = new System.Drawing.Point(7, 329);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(64, 18);
+			this.label9.TabIndex = 39;
+			this.label9.Text = "Capacity:";
+			//! this.label9.Text = "定員：";
+			this.label9.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			// 
+			// label8
+			// 
+			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label8.Location = new System.Drawing.Point(7, 311);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(64, 18);
+			this.label8.TabIndex = 38;
+			this.label8.Text = "Total cost:";
+			this.label8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			// 
+			// totalPrice
+			// 
+			this.totalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.totalPrice.Location = new System.Drawing.Point(75, 311);
+			this.totalPrice.Name = "totalPrice";
+			this.totalPrice.Size = new System.Drawing.Size(309, 18);
+			this.totalPrice.TabIndex = 37;
+			this.totalPrice.Text = "100,000";
+			this.totalPrice.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// speed
+			// 
+			this.speed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.speed.Location = new System.Drawing.Point(79, 247);
+			this.speed.Name = "speed";
+			this.speed.Size = new System.Drawing.Size(300, 17);
+			this.speed.TabIndex = 36;
+			this.speed.Text = "Rapid";
+			this.speed.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+			// 
+			// label5
+			// 
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label5.Location = new System.Drawing.Point(9, 247);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(64, 17);
+			this.label5.TabIndex = 35;
+			this.label5.Text = "Speed:";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			// 
+			// buttonCancel
+			// 
+			this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.buttonCancel.Location = new System.Drawing.Point(304, 355);
+			this.buttonCancel.Name = "buttonCancel";
+			this.buttonCancel.Size = new System.Drawing.Size(80, 26);
+			this.buttonCancel.TabIndex = 34;
+			this.buttonCancel.Text = "&Close";
+			// 
+			// buttonOK
+			// 
+			this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.buttonOK.Location = new System.Drawing.Point(218, 355);
+			this.buttonOK.Name = "buttonOK";
+			this.buttonOK.Size = new System.Drawing.Size(80, 26);
+			this.buttonOK.TabIndex = 33;
+			this.buttonOK.Text = "&Buy";
+			// 
+			// label4
+			// 
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label4.Location = new System.Drawing.Point(272, 273);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(27, 20);
+			this.label4.TabIndex = 32;
+			this.label4.Text = "Set";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox2.Location = new System.Drawing.Point(-104, 304);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(557, 4);
+			this.groupBox2.TabIndex = 29;
+			this.groupBox2.TabStop = false;
+			// 
+			// count
+			// 
+			this.count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.count.Location = new System.Drawing.Point(201, 275);
+			this.count.Name = "count";
+			this.count.Size = new System.Drawing.Size(63, 20);
+			this.count.TabIndex = 31;
+			this.count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.count.Value = new decimal(new int[] {
+									1,
+									0,
+									0,
+									0});
+			// 
+			// label3
+			// 
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label3.Location = new System.Drawing.Point(182, 274);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(25, 19);
+			this.label3.TabIndex = 30;
+			this.label3.Text = "x";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
 			// TrainTradingDialog
 			// 
-			this.AcceptButton = this.buttonOK;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.CancelButton = this.buttonCancel;
-			this.ClientSize = new System.Drawing.Size(570, 380);
-			this.Controls.Add(this.toolBarDayNight);
-			this.Controls.Add(this.preview);
-			this.Controls.Add(this.name);
-			this.Controls.Add(this.label10);
-			this.Controls.Add(this.label7);
-			this.Controls.Add(this.author);
-			this.Controls.Add(this.description);
-			this.Controls.Add(this.label6);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.typeTree);
-			this.Controls.Add(this.passenger);
-			this.Controls.Add(this.label9);
-			this.Controls.Add(this.label8);
-			this.Controls.Add(this.totalPrice);
-			this.Controls.Add(this.speed);
-			this.Controls.Add(this.label5);
-			this.Controls.Add(this.buttonCancel);
-			this.Controls.Add(this.buttonOK);
-			this.Controls.Add(this.label4);
+			this.ClientSize = new System.Drawing.Size(601, 387);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.count);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.length);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.typeTree);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "TrainTradingDialog";
 			this.Text = "Buy trains";
 			//! this.Text = "車両の購入";
+			this.Resize += new System.EventHandler(this.updateAfterResize);
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.length)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
-
 		}
+		private System.Windows.Forms.GroupBox groupBox2;
 		#endregion
 
+		protected virtual void updateAfterResize(object sender, System.EventArgs e){
+			this.typeTree.Width = this.Width / 3;
+			this.groupBox1.Width = this.ClientSize.Width - this.typeTree.Width;
+			this.groupBox1.Left = this.typeTree.Width;
+			updatePreview();
+		}
+		
 		private TrainContribution selectedTrain {
 			get {
 				TreeNode n = typeTree.SelectedNode;
