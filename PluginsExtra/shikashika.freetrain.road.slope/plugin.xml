@@ -219,7 +219,7 @@
 
 	<group>Road Accessories</group>
 	<name>Stairs</name>
-	<design>concrete(handlailed)</design>
+	<design>concrete(handrailed)</design>
 	<structure>
 		<category byname="Road Accessories"/>
 	</structure>
@@ -303,7 +303,7 @@
 
 	<group>Road Accessories</group>
 	<name>Stairs</name>
-	<design>Stone block(brown,handlailed)</design>
+	<design>Stone block(brown,handrailed)</design>
 	<structure>
 		<category byname="Road Accessories"/>
 	</structure>
@@ -381,7 +381,7 @@
 
 	<group>Road Accessories</group>
 	<name>Stairs</name>
-	<design>Stone block(brown,handlailed)</design>
+	<design>Stone block(brown,handrailed)</design>
 	<structure>
 		<category byname="Road Accessories"/>
 	</structure>
@@ -465,7 +465,7 @@
 
 	<group>Road Accessories</group>
 	<name>Stairs</name>
-	<design>Stone block(gray,handlailed)</design>
+	<design>Stone block(gray,handrailed)</design>
 	<structure>
 		<category byname="Road Accessories"/>
 	</structure>
@@ -543,7 +543,7 @@
 
 	<group>Road Accessories</group>
 	<name>Stairs</name>
-	<design>Stone block(gray,handlailed)</design>
+	<design>Stone block(gray,handrailed)</design>
 	<structure>
 		<category byname="Road Accessories"/>
 	</structure>

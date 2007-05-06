@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title>JR East 485 Series Joyful Train Set</title>
-	<author>icchii</author> 
+	<author>Icchii</author> 
 	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
 
  	<!-- ベース車両 -->
@@ -286,12 +286,12 @@
 	<contribution type="train" id="{cyber-express-1703d-040331-485uetsu}">
 		<company>JR East</company>
 		<type>485 Series</type>
-		<name>Kirakirauetsu</name>
+		<name>Kirakira Uetsu</name>
 		<author>Icchii</author>
 		<description>It appeared in 2001 November for sightseers who want to travel along the Uetsu Line.
-		As for the 4-Car Formation, it was a remodelled 485 Series super-express shape train. The lead coach  was the viewing car and the second car was the lounge car.
-		Chaya and the Japanese-style lounge space are provided.
-		It also runs services between Niigata and Sakata on weekends.
+The cars were remodelled 485 Series super-express type. The lead coach was an observation car while the second car was a lounge car
+with a teahouse and Japanese-style lounge space.
+Also, barrier-free facilities were installed during remodelling. It mainly runs weekend services between Niigata and Sakata.
 </description>
 		<price>10</price>
 	           	<fare>1000</fare>
@@ -310,9 +310,10 @@
 		<type>485 Series</type>
 		<name>New Nanohana</name>
 		<author>Icchii</author>
-		<description>This train started in 1998 for sightseers who wish to visit the Gunma prefecture as a 6-Car super-express formation.
-		The carriages had open seating and also cabins.
-		It's used for group trains and the temporary limited express to Chiba, etc...
+		<description>This train started in 1998 for sightseers who wish to visit the Boso region.
+It is a remodelled 485 Series super-express in a 6-car formation.
+The carriages had open seating and also cabins.
+It's used as a group train departing from Chiba Prefecture and also for special limited express.
 </description>
 		<price>10</price>
 	           	<fare>1000</fare>
@@ -331,8 +332,10 @@
 		<type>485 Series</type>
 		<name>Yamanami</name>
 		<author>Icchii</author>
-		<description>This train started in 1999 for sightseers who wish to visit the Gunma prefecture. It is the remodelled 4-Car set.
-		It is used as the group train from inside Gunma prefecture and the temporary express train of the Takasaki line Joetsu line.
+		<description>This train started in 1999 for sightseers who wish to visit Gunma Prefecture. It is a remodelled 485 Series
+4-Car formation with open seating.
+Together with the "Seseragi" it is used as a group train departing from Gunma prefecture as well as temporary express train on the Takasaki 
+and Joetsu lines.
 </description>
 		<price>10</price>
 	           	<fare>1500</fare>
@@ -349,11 +352,12 @@
 	<contribution type="train" id="{cyber-express-1703d-040331-485seseragi}">
 		<company>JR East</company>
 		<type>485 Series</type>
-		<name>Sasaragi</name>
+		<name>Seseragi</name>
 		<author>Icchii</author>
-		<description>This train started in 2001 for sightseers who wish to visit the Gunma prefecture.
-		It is a 4-Car remodelled formation with super-express shape end-car.
-		It is used as the group train from inside Gunma prefecture and the temporary express train of the Takasaki line Joetsu line.
+		<description>This train started in 2001 for sightseers who wish to visit the Gunma prefecture. It is a remodelled 485 Series
+4-Car formation with open seating, very much like the "Yamanami".
+Together with the "Yamanami" it is used as a group train departing from Gunma prefecture as well as temporary express train on the Takasaki 
+and Joetsu lines.
 </description>
 		<price>10</price>
 	           	<fare>1500</fare>
@@ -373,7 +377,8 @@
 		<name>Yamanami＋Sasaragi</name>
 		<author>Icchii</author>
 		<description>This train only comes in an 8-Car Formation.
-		It is made up of the 2 separate trains, but used together when required for temporary express services.
+It is made up of the 2 separate trains, four cars each from the "Yamanami" and the "Seseragi" and is used as a group train departing 
+from Gunma prefecture as well as temporary express train on the Takasaki and Joetsu lines.
 </description>
 		<price>10</price>
 		<fare>1500</fare>
@@ -395,11 +400,12 @@
 	<contribution type="train" id="{cyber-express-1703d-040331-485utage}">
 		<company>JR East</company>
 		<type>485 Series</type>
-		<name>Buffet</name>
+		<name>Utage</name>
 		<author>Icchii</author>
-		<description>This is the 1994 Joyful Train style. This is a 6-Car set.
-		Since it has a diesel engine, it can run to electrified and non-electrified stations.
-		This train is also used to Tokyo on the Tokaido Line, Central Line, being called "Kanagawa" and "Yamanasi" as a temporary express train.
+		<description>This a "Joyful Train" introduced in 1994. It is a remodelled 485 Series super-express in a 6-car formation.
+Since it has a diesel engine, it can run to electrified and non-electrified stations.
+Together with the "Hana", this train is used as a group train in Tokyo, Kanagawa, and Yamanashi, as well as temporary express on the
+Tokaido and Chuo lines.
 </description>
 		<price>10</price>
 		<fare>1500</fare>
@@ -416,11 +422,12 @@
 	<contribution type="train" id="{cyber-express-1703d-040331-485hana}">
 		<company>JR East</company>
 		<type>485 Series</type>
-		<name>Bloom</name>
+		<name>Hana</name>
 		<author>Icchii</author>
-		<description>This is the 1996 Joyful Train style. This is a 6-Car set.
-		Since it has a diesel engine, it can run to electrified and non-electrified stations.
-		This train is also used to Tokyo on the Tokaido Line, Central Line, being called "Kanagawa" and "Yamanasi" as a temporary express train.
+		<description>This a "Joyful Train" introduced in 1994. It is a remodelled 485 Series super-express in a 6-car formation.
+Since it has a diesel engine, it can run to electrified and non-electrified stations.
+Together with the "Utage", this train is used as a group train in Tokyo, Kanagawa, and Yamanashi, as well as temporary express on the
+Tokaido and Chuo lines.
 </description>
 		<price>10</price>
 		<fare>1500</fare>

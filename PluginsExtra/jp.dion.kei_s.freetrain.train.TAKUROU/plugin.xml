@@ -336,11 +336,14 @@
 　　　　　  <!-- 編成の定義 -->
 	
              <contribution type="train" id="{AD070315-7653-11D7-A4B7-444553540000}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>701 Series</type>
-		<name>0 Model(秋田)</name>
+		<name>0 Model (Akita)</name>
 		<author>TAKUROU</author>
-		<description>Built in 1993, This model was introduced to improve efficiency by replacing the one-man units in the North-East. Used on the Ouu line from Sakata to Aomori and the Tsugaru line.
+		<description>Built in 1993, this three-door 'long seat' model operating only on alternating current, 
+was introduced to replace the remaning passanger cars in the Tohoku region and to improve the effectivity 
+of conductorless services. Used on the Uetsu line north of Sakata, as well as on the Ou line in the Aomori 
+area and on the Tsugaru line.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -358,13 +361,14 @@
 	</contribution>
 
              <contribution type="train" id="{C1C4ED5F-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>701 Series</type>
-		<name>100 Model / 3Car formation(秋田)</name>
+		<name>100 Model / 3 Car Formation (Akita)</name>
 		<author>TAKUROU</author>
-		<description>Built in 1993, This 3-car model was introduced to improve efficiency by replacing the one-man units in the North-East. 
-		The auxiliary power supply appeared after 94, converted from the MG model and are modified in SIV.
-		Once the Yamagata Shinkansen Shinjo extension was built, this model was transformed into the Sendai Train Ku.
+		<description>Built in 1993, this three-door 'long seat' model operating only on alternating current, 
+was introduced to replace the remaning passanger cars in the Tohoku region and to improve the effectivity 
+of conductorless services. The auxiliary power supply appeared after 94, converted from the MG model and are modified in SIV.
+Once the Yamagata Shinkansen Shinjo extension was built, this model was transferred to the Sendai Train Ward.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -386,13 +390,13 @@
 
               <!-- 編成の定義 -->
              <contribution type="train" id="{C1C4ED5A-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>701 Series</type>
-		<name>1000 Model (Sendai / 2Car formation)</name>
+		<name>1000 Model (Sendai / 2 Car formation)</name>
 		<author>TAKUROU</author>
-		<description>In Sendai area, 701 Series Trains were used, though replaced later by the 715 Series and 455 Series.
-		The formations (KUHA 700 + KUMOHA 701) and (KUHA 700 + モハ 701 + Saha 700 + KUMOHA 701) exist. 
-		The 2-Car formation is a one-man driving setup. The 4-Car has no door chime.
+		<description>In the Sendai area, 701 Series trains were introduced to replace the 715 Series and 455 Series.
+2 car (KUHA 700 + KUMOHA 701) and 4 car (KUHA 700 + MOHA 701 + SAHA 700 + KUMOHA 701) formations exist. 
+While the 2-Car formation is a one-man driving setup, the 4-Car has no door chime.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -410,12 +414,13 @@
 	</contribution>
 
 　　　　　　<contribution type="train" id="{C1C4ED5B-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>701 Series</type>
 		<name>1000 Model(Sendai / 4-Car formation)</name>
 		<author>TAKUROU</author>
-		<description>Sendai 地区では、701 Series Trains were used, though replaced later by the 715 Series and 455 Series.
-		The (KUHA700＋KMOHA701) and the 4-Car (KUHA700＋MOHA701＋SEHA700＋KUMOHA701) Formations exist. The 4-Car Formation does not have the One-Man Driver or Door Chime?. This model is used between Ichinoseki and Shiraishi.
+		<description>In the Sendai area, 701 Series trains were introduced to replace the 715 Series and 455 Series.
+2 car (KUHA 700 + KUMOHA 701) and 4 car (KUHA 700 + MOHA 701 + SAHA 700 + KUMOHA 701) formations exist. 
+The 4-Car lacks a one-man driving setup and therefore has no door chime. This model is only used between Ichinoseki and Shiraishi.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -436,12 +441,12 @@
 	</contribution>
         
              <contribution type="train" id="{C1C4ED75-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>701 Series</type>
 		<name>5000 Model(Tazawako Line)</name>
 		<author>TAKUROU</author>
 		<description>This train is used on the Tazawako Line, since the opening of the Akita Shinkansen.
-It is only used when required for business or festivals between Omagari and Akita, like the Omagai Fireworks festival.
+It operates only on the Tazawako Line. (Normally not stopping at Omagai, special trains are in operation for the Omagai Fireworks Festival.)
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -459,12 +464,13 @@ It is only used when required for business or festivals between Omagari and Akit
 	</contribution>
 
              <contribution type="train" id="{B92219D6-7650-11D7-A4B7-D7D370C4F037}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>701 Series</type>
 		<name>5500 Model(Yamagata)</name>
 		<author>TAKUROU</author>
 		<description>Built in 1993. Between the Ouu to Uetsu Mainline, this train was purposely selected for the passenger service.
-Later on, it was moved to the North East area. As for the 5500 Model, at the time of the Yamagata Shinkansen Extension, it became the standard service.
+It was subsequently introduced all over the Tohoku region. The 5500 Model became a local service train after the completion of 
+the Yamagata Shinkansen Shinjo Extension.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -482,12 +488,13 @@ Later on, it was moved to the North East area. As for the 5500 Model, at the tim
 	</contribution>
 
              <contribution type="train" id="{C1C4ED4A-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>Blue Forest Railway</company>
+		<company>Aoimori Railway</company>
 		<type>701 Series</type>
 		<name>Third sector railroad</name>
 		<author>TAKUROU</author>
-		<description>North East Shinkansen from Morioka to Hachinoe and between, within the third section of the JR old main lines.
-		As for the basic structure of the vehicle, the JR701 Series is the same except for the semi-cross seating arrangement. Also used on the Milky Way Railway.
+		<description>Introduced as a result of the semi-privatization of the old JR main line, corresponding to today's
+Tohoku Shinkansen from Morioka to Hachinoe. The basic structure of the vehicle is the same as the JR701 Series
+except for the semi-cross seating arrangement. Shared with the Iwate Galaxy Railway Company.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -505,12 +512,13 @@ Later on, it was moved to the North East area. As for the 5500 Model, at the tim
 	</contribution>
 
              <contribution type="train" id="{C1C4ED4B-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>Milky Way Railway</company>
+		<company>Iwate Galaxy Railway</company>
 		<type>IGR7000 Series</type>
 		<name>Third sector railroad</name>
 		<author>TAKUROU</author>
-		<description>North East Shinkansen from Morioka to Hachinoe and between, within the third section of the JR old main lines.
-As for the basic structure of the vehicle, the JR701 Series is the same except for the semi-cross seating arrangement and toilet being installed. Also used on the Blue Forest Railway.
+		<description>Introduced as a result of the semi-privatization of the old JR main line, corresponding to today's
+Tohoku Shinkansen from Morioka to Hachinoe. The basic structure of the vehicle is the same as the JR701 Series
+except for the semi-cross seating arrangement. Shared with the Aoimori Railway Company.
 		</description>
 		<fare>680</fare>
 		<price>100</price>
@@ -528,13 +536,13 @@ As for the basic structure of the vehicle, the JR701 Series is the same except f
 	</contribution>
 
              <contribution type="train" id="{C1C4ED65-7662-11D7-A4B7-8B95A9BCF237}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>E127 Series</type>
 		<name></name>
 		<author>TAKUROU</author>
-		<description>The 165 Series is used in the suburbs of Niigata but they are getting older. They have two doors for busy times and were produced to replace older models.
-The 701 Series has a direct current and is made of stainless steel, has long seats and VVVF Inverter in the driving trailer.
-This model is mainly used in the suburbs of Niigata and Matsumoto.
+		<description>Manufactured as a replacement for the aging and inconvenient 165 Series used in the 
+Niigata area as a local train. Operating direct current, the 701 Series was made of stainless steel, had 
+long seats and VVVF Inverter in the driving trailer. Mainly used in the Niigata and Matsumoto areas.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -552,13 +560,14 @@ This model is mainly used in the suburbs of Niigata and Matsumoto.
 	</contribution>
 
              <contribution type="train" id="{CBAF5396-76A7-11D7-A4B7-E675BA55FD37}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>E127 Series</type>
 		<name>Daiito Line Color</name>
 		<author>TAKUROU</author>
-		<description>Stainless steel is used inside the carriages, a VVVF Inverter is installed to allow enegry saving, reduced maintenance and better control.
-		The body is a 3-Door type (Box shape). One side of the interior, it has long seats installed already.
-As for formations, the 2-Car formation was introduced in December, 1998.
+		<description>Lightweight stainless steel is used inside the carriages and a VVVF Inverter is installed
+to allow enegry saving, reduced maintenance and better control.
+The body is a 3-Door type. One side of the interior has cabins, the other long seats.
+The 2-Car formation was introduced as the default in December, 1998.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -580,8 +589,9 @@ As for formations, the 2-Car formation was introduced in December, 1998.
 		<type>125 Series</type>
 		<name>Suburban</name>
 		<author>TAKUROU</author>
-		<description>In March 2003, JR West 's Kohama Line (East Maizuru～Tsuruga) became electrified.
-There is only one type of KUMOHA125, but seperate and one-man driving is possible. It's top speed is 120km/h (Though on the Kohama Line, the top speed is 85km/h).
+		<description>This train was introduced in March 2003 as a result of the electrification of JR West's 
+Kohama Line (Higashi Maizuru - Tsuruga). There is only one type of KUMOHA125, but seperate and one-man
+driving is possible. It's top speed is 120km/h (Though on the Kohama Line, the top speed is 85km/h).
 		</description>
                            <fare>400</fare>
 		<price>100</price>
@@ -866,12 +876,13 @@ There is only one type of KUMOHA125, but seperate and one-man driving is possibl
              
              <!-- 編成の定義 -->
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE165-M}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>165 Series</type>
-		<name>Moon Light Echigo (Niigata)</name>
+		<name>Moon Light Echigo Express</name>
 		<author>TAKUROU</author>
-		<description>The Kamimettari 165 Series Ｍ Formation travels from Shinjuku to Niigata. It is called the Murakami Sugaya "Moon Light Echigo (Niigata)". 
-Also, When not running as the Moon Light, it runs as the "Fairway (Shinjuku～Kuroiso)".
+		<description>The Kamimettari 165 Series Ｍ Formation operating as a night rapid train from Shinjuku 
+to Niigata-Murakami-Sugano is known as the "Moon Light Echigo". 
+Also, When not running as the Moon Light, it runs as the "Fairway (Shinjuku - Kuroiso)".
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -891,14 +902,17 @@ Also, When not running as the Moon Light, it runs as the "Fairway (Shinjuku～Ku
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-S}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>455 Series</type>
-		<name>High Speed Sendai City Rabbit</name>
+		<name>Rapid Sendai City Rabbit</name>
 		<author>TAKUROU</author>
-		<description>The 455 Series used to be the express train known as "Matsushima" or "Zaou" but is now split and used in suburban 3-Car formations.
-From 1988 to 1991, A part of the new carriages was reconstruced. This train was used on the North East mainline from Kuroiso to Sendai to Rifu to Ichinoseki, the Tokiwa Line from Sendai to Mito and also on the West Line.
-On the Tokiwa Line, the 9-Car formations could be seen.
-The only high speed use for this train is the down-train (leaving Tokyo) high speed "Sendai City Rabbit" travels Fukushima to Sendai.
+		<description>The 455 Series used to be the express train known as "Matsushima" or "Zaou" but has now
+been refitted and used in suburban 3-Car formations.
+From 1988 to 1991, parts of the new carriages were reconstruced. This train is used on the Tohoku mainline from
+Kuroiso to Sendai to Rifu to Ichinoseki, the Tokiwa Line from Sendai to Mito and also on the West Banetsu Line.
+On the Tokiwa Line, the imposing 9-Car formations can be seen.
+The only rapid use for this train is the down-train (leaving Tokyo) "Sendai City Rabbit" that travels from
+Fukushima to Sendai.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -918,12 +932,12 @@ The only high speed use for this train is the down-train (leaving Tokyo) high sp
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-Ｙ}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>455 Series</type>
 		<name>SENZAN LINE 455</name>
 		<author>TAKUROU</author>
-		<description>This train stated driving on the Senzan Line from the 14th of October, 1997.
-The carriages were repainted in Blue and White to match the Zaou landscape.
+		<description>This train started driving on the Senzan Line from the 14th of October, 1997.
+The carriages were repainted in Blue and White to match the Mt. Zao winter landscape.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -943,12 +957,12 @@ The carriages were repainted in Blue and White to match the Zaou landscape.
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE455-Ｂ}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>455 Series</type>
 		<name>BANETSU LINE 455</name>
 		<author>TAKUROU</author>
-		<description>Frp, 1996, this color scheme was used on the new West Line.
-		The 7-Car formation is used between Kooriyama and Kitakata. The new color scheme has been applied to all cars.
+		<description>From 1996, this repainted train was used to revigorate the West Banetsu Line.
+The 7-Car formation is used between Koriyama and Kitakata. The new color scheme has been applied to all cars.
 In December, 1999, it was superceeded and is now used very irregularly around Sendai.
 		</description>
 		<fare>400</fare>
@@ -969,13 +983,13 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-H}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>169 Series</type>
 		<name>INTER CITY TRAIN 169</name>
 		<author>TAKUROU</author>
-		<description>The E127 Series from Nagano was used to replace the 169 Series of Mitakaku.
-		As for the same car as for the form which with 9 (holiday high speed picnic) runs the central high speed line the Shinkansen relay number, holiday entering the use of high speed and Ogaki relief overlooking etc...,
-		althought the paint is very different, it closely resembles 169 Series of the past years.
+		<description>The E127 Series from Nagano was used to replace the 169 Series of Mitaka.
+This train was also put in use as Shinkansen Relay, Holiday Rapid, and Ogaki Relief Nozomi. The 9 car formation running
+on the Chuo Line is, althought the paint is very different, closely resembling the 169 Series of yesteryear.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -1000,7 +1014,7 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
 		<name>Nagano Color</name>
 		<author>TAKUROU</author>
 		<description>This is the color schemed adopted in 1993 for the Nagano Winter Olympics (115, 165 and 169 Series.)
-		Only the outside was painted.
+Only the outside was painted.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -1021,12 +1035,13 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-M}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>169 Series</type>
 		<name>Misuzu Color</name>
 		<author>TAKUROU</author>
-		<description>The 4 Car formation consisted of a Saha 165 Series in the center of 169 Series 3 Car Formation. It is used in Nagano on the Shinetsu main line.
-		As for appearance, the design of the N has a green stripe on the ivory body (called the N stripe). It uses the reclining seats of the Shinkansen assuring an improvement in the interior design.
+		<description>The 4 Car formation consisted of a Saha 165 Series in the center of 169 Series 3 Car Formation.
+It is used in Nagano on the Shinetsu main line. The paint job is a green N-shaped stripe on the ivory body (called the N stripe).
+It uses the reclining seats of disused Shinkansen cars assuring an improvement of onboard service.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -1392,8 +1407,8 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
 		<type>KIHA75 Series</type>
 		<name>General Purpose Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>This model was produced to replace the KIHA58 Series, etc... It has an engine as powerful as the KIHA85 (350ps, 120km/h).
-		Each car has 3 doors and cross-seats. They are used for high speed services on the Taketoyo line.
+		<description>This model was produced to replace the aging KIHA58 Series. It has an engine as powerful
+as the KIHA85 (350ps, 120km/h). Made of stainless steel, each car has 3 doors and cross-seats. They are used for rapid services on the Taketoyo line.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -1416,7 +1431,7 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
 		<type>KIHA11 Series</type>
 		<name>Suburban Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>The design partly borrows from the Tokai Line model, this model is used as a short-range suburban service.
+		<description>The design partly borrows from the TKJ Johoku Line model, this model is used as a short-range suburban service.
 		</description>
                            <fare>400</fare>
 		<price>100</price>
@@ -1432,8 +1447,8 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
 		<type>KIHA187 Series</type>
 		<name>Super-Express Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>
-		Although kiha181 series had been used on intercity services of the Sanin line, JR West developed kiha187 series in order to increase the competitive power against motorcars in 2000 and entered “Super Oki” services and “Super Kunibiki” services in 2001.
+		<description>A new type of super express diesel train, manufactured for rapid service on western
+Sanin Main Line. Scheduled for service in the Tottori area.
 		</description>
 		<fare>1010</fare>
 		<price>100</price>
@@ -1452,13 +1467,13 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
 	</contribution>
 
              <contribution type="train" id="{6CAFE16A-74FE-11D7-A4B7-444553540000}">
-		<company>JRKyushuu</company>
+		<company>JR Kyushu</company>
 		<type>KIHA125 Series</type>
 		<name>Suburban Rail-Car(YDC125)</name>
 		<author>TAKUROU</author>
 		<description>The KIHA125 was created to run on low-traffic lines where the KIHA200 was too big.
-		As for the body, it's a rail bus built by the Niigata ironworker production (NDC) company.
-		The interior and exterior paint is that of the "Down Design" from the Mitooka Research.
+		The body is a rail bus (NDC) built by Niigata Ironworks.
+		The interior and exterior paint was designed by Mitooka Eiji of Down Design Laboratories.
 		</description>
                            <fare>680</fare>
 		<price>100</price>
@@ -1471,12 +1486,12 @@ In December, 1999, it was superceeded and is now used very irregularly around Se
 
              <!-- 編成の定義 -->
 	<contribution type="train" id="{6CAFE16E-74FE-11D7-A4B7-444553540000}">
-		<company>JRKyushuu</company>
+		<company>JR Kyushu</company>
 		<type>KIHA32 Series</type>
 		<name>Suburban Rail-Car</name>
 		<author>TAKUROU</author>
 		<description>The final model of the Japanese National Railways, with stainless steel body conversion and cross seat equipment.
-		It uses to the Yutaka to Hisashi to Ooturu to Hisatsu line.
+		It is used on the Hohi, Kyudai, and Hisatsu lines.
 		</description>
                           <fare>680</fare>
 		<price>100</price>
@@ -1505,14 +1520,14 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 	</contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-M}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>185 Series</type>
 		<name>New Super-Express</name>
 		<author>TAKUROU</author>
-		<description>After the Shinkansen Ueno started operating, this model was considered for use on the local railroad super-express, 185 Series 200 was remodelled in 1982.
-		185 Series 0 required cold-proof resistance due to the cold weather.
-		200 Model are considered, the joining of 165 Series side lightly have become the measure car making provision for passing of the Usui pass.
-		Renewal construction was done, reclining seat conversion of the standard-sized car completed.
+		<description>After the Shinkansen Ueno started operating, this model was considered for use on the local
+railroad super-express. The 185 Series 0 Model required snow- and cold-proofing and was remodelled in 1982 as 185 Series 200 Model.
+The 200 Model is being considered to be joined with the 165 Series as a measure for passing of the Usui Pass.
+Renewal construction was done, reclining seat conversion of the standard-sized car completed.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1532,10 +1547,11 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-J}">
 		<company>Old Japanese National Railway</company>
 		<type>185 Series</type>
-		<name>Izu Super-Express "Dancer"</name>
+		<name>Izu Super-Express "Odoriko"</name>
 		<author>TAKUROU</author>
-		<description>This train is the Tokyo and Izu Super-Express. Built in 1981, the 185 Series 0 had a new super-express shape.
-		It runs the same routes as the 153 Series. The 185 Series replaced the 117 Series suburban which were used as the one for new high speed as the basis in Kansai area.
+		<description>The 185 Series 0 Model was created in 1981 to run as the new super express between
+Tokyo and Izu with a super express. It runs the same routes as the 153 Series. The 185 Series also serves as New
+Rapid together with the 117 and 153 Series in the Kansai region.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1556,13 +1572,14 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-T}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>185 Series</type>
 		<name>Izu Super-Express "Dancer"</name>
 		<author>TAKUROU</author>
-		<description>This train is the Tokyo and Izu Super-Express. Built in 1981, the 185 Series 0 had a new super-express shape.
-		It runs the same routes as the 153 Series. The 185 Series replaced the 117 Series suburban which were used as the one for new high speed as the basis in Kansai area.
-		It has recently been remodelled with new colors and reclining seats.
+		<description>The 185 Series 0 Model was created in 1981 to run as the new super express between
+Tokyo and Izu with a super express. It runs the same routes as the 153 Series. The 185 Series also serves as New
+Rapid together with the 117 and 153 Series in the Kansai region.
+It has recently been remodelled with new colors and reclining seats.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1588,7 +1605,7 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<name>Izu Mixed Express</name>
 		<author>TAKUROU</author>
 		<description>This train consists of a 185 Series and 153 Series train. It usually has 10 185 Series cars, with an additional 5 153 Series joined.
-		This was a super express before the Izu Super-Express 'Dancer' was introduced.
+This was used as the 'Izu' Express as well as a local train before the 'Odoriko' Super-Express was introduced.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1613,8 +1630,11 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<type>157 Series</type>
 		<name>Super-Express "Amagi" "Shirone"</name>
 		<author>TAKUROU</author>
-		<description>The 157 Series is used as a Resort Express in the Central region.
-		The DX model possesses equipment like the Super-Express. It was designed off the JNR model.
+		<description>The 157 Series was used as a Resort Express in the central capital region and was also in
+service on imperial routes to the Imperial Villas of Nasu and Izu.
+The DX local express model was equipped like the Super-Express, which gave it a unique position among JNR trains
+and was one of its appeals. In 1977 it was retired from service as Amagi Super Express and the last remaining imperial
+formations were transferred to the 183 Series in 1983.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -2199,7 +2219,7 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ455-K}">
 		<company>Old Japanese National Railway</company>
 		<type>455 Series</type>
-		<name>Northeast Express Train</name>
+		<name>Tohoku Express Train</name>
 		<author>TAKUROU</author>
 		<description>
 		</description>
@@ -2227,8 +2247,9 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<type>475 Series</type>
 		<name>Hokuriku Express Train</name>
 		<author>TAKUROU</author>
-		<description>The 471 Series "Osamu" appeared on the Hokuriku main lane (60 Hz).
-		As it participates in the numerous bullet trains, the super express is converted gradually, reaching the point where it is used even as local trains.
+		<description>Based on the 471 Series, is was introduced on the 60 Hz Hokuriku Main Line and used in
+rough terrain. Formerly used as numerous bullet trains, is was gradually superseded by the super express class of trains
+and is now serving as local trains.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -2253,8 +2274,10 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<type>153 Series</type>
 		<name>Blue Liner</name>
 		<author>TAKUROU</author>
-		<description>When (1972) the Shinkansen was extended to Okayama, devices from the bullet train (153 Series) became possible.
-		This included air-conditioning, speed up, air cushions, etc. From the area came competition with the private railway corporations, the 117 Series won.
+		<description>When the Shinkansen was extended to Okayama in 1972, the 153 Series were introduced
+intoducing facilities such as air-conditioning, speed up, air cushions, as well as networked scheduling and more frequent
+departures. However, due to fierce competition with the private railway corporations, it had to take the back seat to
+the 117 Series.
 		</description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2279,8 +2302,10 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<type>117 Series</type>
 		<name>City Liner</name>
 		<author>TAKUROU</author>
-		<description>This train introduced the speed up and the reclining seat between capital Osaka and Kobe which competed with private railway corporations from 1980.
-		The comfort, changing with unique style, to 153 Series blue liners which such as streamlined lead coach, bore the role of new high speed.
+		<description>This train was introduced in 1980 on the lines between Kyoto, Osaka, and Kobe to compete with
+the private railway corporations. It replaced the commodified 153 Series Blue Liners, had a unique style
+with a streamlined lead coach and aimed to take the role as the 'new' rapid train. Two years later, it was also introduced
+in the Chukyo region as a 'Tokai Liner' in order to compete with Nagoya Railroad.
 		</description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2304,9 +2329,10 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<type>117 Series</type>
 		<name>Tokai Liner</name>
 		<author>TAKUROU</author>
-		<description>This train was introduced into the Kansai area and Nagoya area (Tokai liner) in 1982. It replaced the high speed 153 and 165 Series.
-		From 1986, it was used on the central west line (6-Car and 4-Car). Later, the 211 Series and the like participated, but the new 311 Series started from 1989.
-		From this time it was repainted in the corporate color of the company. The vehicle received a long seat conversion remodelling at 1992
+		<description>This train was introduced into the Kansai area and Nagoya area (Tokai liner) in 1982. It replaced the rapid 153 and 165 Series.
+From 1986, it was used on the West Chuo Line (6-Car and 4-Car). Later, it was also used in combination with the 211 Series, but as the new 311 Series was
+introduced in 1989, the train was taken out of service.
+From this time it was repainted in the corporate color of the company. The vehicle received a long seat conversion remodelling at 1992
 		</description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2330,8 +2356,8 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<name>300 Model (Fukuchiyama Color)</name>
 		<author>TAKUROU</author>
 		<description>This formation was remodelled for the Fukuchiyama line.
-		It resembles the Tokai Coloring, but is not the same.
-		In addition, the 300 Model has 2 seats more and this assures less congestion when getting on and off.
+It is painted in green on a white base and resembles the Tokai Coloring, but is not the same.
+In addition, the 300 Model has 2 seats more and this assures less congestion when getting on and off.
 		</description>
 		<fare>400</fare>
 		<price>100</price>
@@ -2355,11 +2381,11 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<type>117 Series</type>
 		<name>Sun Liner</name>
 		<author>TAKUROU</author>
-		<description>The intermediate car of the 115 Series 3500 Model (the Okayama Express & Hiroshima) it was remodelled in March, 1992.
-		It then serviced Okayama where it was then used as the high speed "Sun Liner" between Fukuyama.
-		It saw normal operational in the Okayama area and as a temporary high speed "Sun Liner". It drove to Kyoto in 1994.
-		After it was stopped as the "Sun Liner" to Fukuyama, Holidays between Hiroshima used the high speed "Super Rabbit".
-		Currently, it has been remodelled to one-man driving.
+		<description>Adapted in March 1992 from the 115 Series 3500 Model as the intermediate car for the
+117 Series. It then serviced Okayama where it was then used as the rapid "Sun Liner" between Fukuyama.
+It saw normal operation in the Okayama area and as a temporary rapid "Santo Liner" to Kyoto in 1994.
+After the "Santo Liner" service was discontinued, it operated as holiday rapid "Super Rabbit" between Fukuyama
+and Hiroshima (discontinued in 2002). Currently, it has been remodelled to one-man driving.
                            </description>
 		<fare>550</fare>
 		<price>100</price>
@@ -2382,8 +2408,9 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
 		<type>117 Series</type>
 		<name>Ocean Color</name>
 		<author>TAKUROU</author>
-		<description>Used in the Wakayama area (Wakayama line), the 0-300 Model (one-man) had been remodelled but was then discontinued in 2001.
-		The south Super-Express "Ocean Arrow" Train which uses the same area (285 Series) adopted the same paint the color.
+		<description>Made for the Wakayama area (Kinokuni Line, Wakayama Line), the 0-300 Models
+had been remodelled for one-man driving in 2001.
+Uses the same color scheme as the Nanki Super-Express "Ocean Arrow" (285 Series) that also operates in the area.
 		</description>
 		<fare>700</fare>
 		<price>100</price>
@@ -2404,9 +2431,9 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW117-S}">
 		<company>JR West</company>
 		<type>117 Series</type>
-		<name>High Speed Mixed Color</name>
+		<name>Rapid Mixed Color</name>
 		<author>TAKUROU</author>
-		<description>New high speed 221 Series used to compliment high speed services.
+		<description>Introduced to compliment the New Rapid 221 Series on mornings and evenings.
 		</description>
 		<fare>550</fare>
 		<price>100</price>

@@ -8,24 +8,24 @@
  	<!-- イメージ画像定義 -->
  	<!-- キハ45(一般) -->
 	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC45-1}">
-		<picture src="kiHa45.bmp" />
+		<picture src="kiha45.bmp" />
 	</contribution>
 	<!-- キハ30(一般) -->
 	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-DC30-1}">
-		<picture src="kiHa30.bmp" />
+		<picture src="kiha30.bmp" />
 	</contribution>
 	<!-- キハ40(首都圏) -->
 	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA40}">
-		<picture src="kiHa40.bmp" />
+		<picture src="kiha40.bmp" />
 	</contribution>
 	
 	<!-- キハ82 -->
 	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA82}">
-		<picture src="kiHa82.bmp" />
+		<picture src="kiha82.bmp" />
 	</contribution>
 	<!-- キハ80 -->
 	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KIHA80}">
-		<picture src="kiHa80.bmp" />
+		<picture src="kiha80.bmp" />
 	</contribution>
 	<!-- キシ80 -->
 	<contribution type="picture" id="{FreeTrain-N1K2J-KeiH-TrainCarImg-KISI80}">
@@ -193,7 +193,7 @@
 		<type>KIHA 82</type>
 		<name>Super-Express Rail-Car</name>
 		<author>Kei</author>
-		<description>For super-express service on non-electrified sections of the Country. The first Rail-Car Super Express to be introduced. Early KIHA 81 models had the bonnet-body type. Newer models had the Hokkaido Kisei direction.
+		<description>Was introduced to provide super-express service on non-electrified sections of Japan and was the first diesel super-express. Early KIHA 81 models had the bonnet-body type. In its later years of service, it was mainly used in the Hokkaido and Kisei regions.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -227,7 +227,7 @@
 		<type>General Rail-Car</type>
 		<name>Rail-Car Mixture Formation</name>
 		<author>Kei</author>
-		<description>KIHA20 is the general type. This formation mixes the KIHA58 Rail-Car with others like the KIHA30, KIHA45, KIHA40 and also the bullet train type. Various models and paint schemes are available. There are also times when the mail van and the baggage car are installed.
+		<description>This formation mixes the KIHA58 bullet train type with other general types like the KIHA20 KIHA30, KIHA45, and KIHA40. The various models and paint schemes available is characteristic for these trains. Occasionaly mail or baggage cars are installed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -254,10 +254,10 @@
 	</contribution>
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DC0002}">
 		<company>Old Japanese National Railway</company>
-		<type>KIHA45</type>
+		<type>KIHA series 45 diesel train</type>
 		<name>KIHA45</name>
 		<author>Kei</author>
-		<description>This vehicle was made in order to replace the KIHA20. It will soon be replaced by the KIHA40 and KIHA45 from the mainland. As for KIHA24; 46 of the Hokkaido types exist. Only the KIHA23 and 53 of tHe mainland have survived.
+		<description>This vehicle was made in order to replace the KIHA20. Today is has been replaced by the KIHA40. Honshu's KIHA45 as well as Hokkaido's KIHA24 and 46 have all gone out of service. Only the KIHA23 and 53 on Honshu are still in service in small scale.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -284,7 +284,7 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-1">
 		<company>Old Japanese National Railway</company>
 		<type>DD 54</type>
-		<name>Local Passenger Train (Brown)</name>
+		<name>Old-Fashioned Local Passenger Train (Brown)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
 		<description>A local train which includes a set of old-fashioned passenger cars. It also includes a baggage car.
 		</description>
@@ -321,7 +321,7 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-2">
 		<company>Old Japanese National Railway</company>
 		<type>DD 54</type>
-		<name>Local Passenger Train (Blue)</name>
+		<name>Old-Fashioned Local Passenger Train (Blue)</name>
 		<author>Kei(Passenger cars by Ayase)</author>
 		<description>A local train which includes a set of old-fashioned passenger cars. It also includes a baggage car.
 		</description>
@@ -358,9 +358,9 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-3">
 		<company>Old Japanese National Railway</company>
 		<type>DD 54</type>
-		<name>20 Series Bullet Train (Izumo)</name>
+		<name>20 Series Blue Train (Izumo)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
-		<description>This is a Night traveling limited express of past years, superceeded by the 'Blue Train'.
+		<description>This is the Blue Train night traveling limited express of past years, at the time praised as a 'hotel on wheels'.
 		</description>
 		<price>300</price>
 		<speed>fast</speed>
@@ -394,9 +394,9 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-911-01">
 		<company>Old Japanese National Railway</company>
 		<type>911</type>
-		<name>Diesel locomotive for SHinkansen</name>
+		<name>Shinkansen Diesel Locomotive</name>
 		<author>Kei</author>
-		<description>The fastest and strongest Japanese Diesel locomotive. Able to haul Shinkansen with 16 cars at 130km/h. This single engine can reach 160km/h. But, the Shinkansen retired because of safety reasons.
+		<description>The fastest and strongest Japanese diesel locomotive. Able to haul Shinkansen with 16 cars at 130km/h. This single engine can reach 160km/h. However, due to safety reason it was retired without being used once.
 		</description>
 		<price>300</price>
 		<speed>fast</speed>
@@ -414,7 +414,7 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-1">
 		<company>Old Japanese National Railway</company>
 		<type>DF 50</type>
-		<name>Local Passenger Train (Brown)</name>
+		<name>Old-Fashioned Local Passenger Train (Brown)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
 		<description>A local train which includes a set of old-fashioned passenger cars. It also includes a baggage car.
 		</description>
@@ -451,7 +451,7 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-2">
 		<company>Old Japanese National Railway</company>
 		<type>DF 50</type>
-		<name>Local Passenger Train (Blue)</name>
+		<name>Old-Fashioned Local Passenger Train (Blue)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
 		<description>A local train which includes a set of old-fashioned passenger cars. It also includes a baggage car.
 		</description>
@@ -488,9 +488,9 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-3">
 		<company>Old Japanese National Railway</company>
 		<type>DF 50</type>
-		<name>20 Series 'Blue Train'</name>
+		<name>20 Series Blue Train</name>
 		<author>Kei (Passenger cars by Ayase)</author>
-		<description>This is a Night traveling limited express of past years which replaced the Red version.
+		<description>This is the Blue Train night traveling limited express of past years, at the time praised as a 'hotel on wheels'.
 		</description>
 		<price>300</price>
 		<speed>fast</speed>
