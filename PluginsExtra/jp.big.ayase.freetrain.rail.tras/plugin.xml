@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>架線柱</title>
-	<author>綾瀬ヒロ</author>
+	<title>Iron bridge</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />
@@ -18,26 +18,26 @@
 	
 	
 	<contribution type="electricPole" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Tras-Center-Red}">
-		<name>鉄橋(赤, 中)</name>
+		<name>Iron bridge (red,middle)</name>
 		<sprite>
 			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Tras-Center}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Tras-Left-Red}">
-		<name>鉄橋(赤, 左)</name>
+		<name>Iron bridge (red,left)</name>
 		<sprite>
 			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Tras-Left}"/>
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Tras-Right-Red}">
-		<name>鉄橋(赤, 右)</name>
+		<name>Iron bridge (red,right)</name>
 		<sprite>
 			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Tras-Right}"/>
 		</sprite>
 	</contribution>
 
 	<contribution type="electricPole" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Tras-Center-Green}">
-		<name>鉄橋(緑, 中)</name>
+		<name>Iron bridge (green,middle)</name>
 		<sprite>
 			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Tras-Center}"/>
 			<spriteType name="colorMapped">
@@ -49,7 +49,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Tras-Left-Green}">
-		<name>鉄橋(緑, 左)</name>
+		<name>Iron bridge (green,left)</name>
 		<sprite>
 			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Tras-Left}"/>
 			<spriteType name="colorMapped">
@@ -61,7 +61,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Tras-Right-Green}">
-		<name>鉄橋(緑, 右)</name>
+		<name>Iron bridge (green,right)</name>
 		<sprite>
 			<picture ref="{FreeTrain-AYASE-Hiro-RailStructureImg-Tras-Right}"/>
 			<spriteType name="colorMapped">

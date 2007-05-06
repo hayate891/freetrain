@@ -61,9 +61,9 @@
 	</spriteType>
 '>
 <!ENTITY h0101 '
-	<name>風力発電用風車</name>
+	<name>Wind farm windmill</name>
 	<structure>
-		<category byname="風力発電所"/>
+		<category byname="Wind Farms"/>
 	</structure>
 	<price>1000</price>
 	<size>1,3</size>
@@ -81,38 +81,38 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0201 '
-	<name>物流センター</name>
+	<name>Distribution center</name>
 	<structure>
-		<category byname="集配所"/>
+		<category byname="Distribution Centers"/>
 	</structure>
 	<computerCannotBuild/>
 '>
 <!ENTITY h0301 '
-	<name>石油タンク</name>
+	<name>Oil Tank</name>
 	<structure>
-		<category byname="石油タンク"/>
+		<category byname="Oil Tanks"/>
 	</structure>
-	<design>地上式(大)</design>
+	<design>big</design>
 	<size>3,3</size>
 	<height>2</height>
 	<computerCannotBuild/>
 '>
 <!ENTITY h0302 '
-	<name>石油タンク</name>
+	<name>Oil Tank</name>
 	<structure>
-		<category byname="石油タンク"/>
+		<category byname="Oil Tanks"/>
 	</structure>
-	<design>地上式(中)</design>
+	<design>medium</design>
 	<size>3,3</size>
 	<height>2</height>
 	<computerCannotBuild/>
 '>
 <!ENTITY h0303 '
-	<name>石油タンク</name>
+	<name>Oil Tank</name>
 	<structure>
-		<category byname="石油タンク"/>
+		<category byname="Oil Tanks"/>
 	</structure>
-	<design>地上式(小)</design>
+	<design>small</design>
 	<size>2,2</size>
 	<height>2</height>
 	<price>2500</price>
@@ -123,9 +123,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0304 '
-	<name>ガスタンク</name>
+	<name>Gas Tank</name>
 	<structure>
-		<category byname="ガスタンク"/>
+		<category byname="Gas Tanks"/>
 	</structure>
 	<size>2,2</size>
 	<height>2</height>
@@ -137,11 +137,11 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0305 '
-	<name>貯水タンク</name>
+	<name>Warter tank</name>
 	<structure>
-		<category byname="給水塔"/>
+		<category byname="Water Towers"/>
 	</structure>
-	<design>大</design>
+	<design>big</design>
 	<size>2,2</size>
 	<height>2</height>
 	<price>2000</price>
@@ -152,11 +152,11 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0306 '
-	<name>石油タンク</name>
+	<name>Oil Tank</name>
 	<structure>
-		<category byname="石油タンク"/>
+		<category byname="Oil Tanks"/>
 	</structure>
-	<design>地中式</design>
+	<design>Underground tank</design>
 	<size>3,3</size>
 	<height>1</height>
 	<price>5000</price>
@@ -167,11 +167,11 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0307 '
-	<name>浄水場</name>
+	<name>Filtration plant</name>
 	<structure>
-		<category byname="浄水場"/>
+		<category byname="Filtration Plants"/>
 	</structure>
-	<design>簡易浄水場</design>
+	<design>Simple filtration plants</design>
 	<size>1,2</size>
 	<height>1</height>
 	<price>2000</price>
@@ -182,9 +182,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0308 '
-	<name>貯水タンク</name>
+	<name>Water tank</name>
 	<structure>
-		<category byname="給水塔"/>
+		<category byname="Water Towers"/>
 	</structure>
 	<design>小</design>
 	<size>1,1</size>
@@ -197,9 +197,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0401 '
-	<name>防波堤</name>
+	<name>Breakwater</name>
 	<structure>
-		<category byname="治水防波設備"/>
+		<category byname="Flood Control Facilities"/>
 	</structure>
 	<price>100</price>
 	<size>1,1</size>
@@ -207,9 +207,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0402 '
-	<name>防波堤(雛壇風)</name>
+	<name>Breakwater (platform)</name>
 	<structure>
-		<category byname="治水防波設備"/>
+		<category byname="Flood Control Facilities"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -217,18 +217,18 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0403 '
-	<name>ダム(砂防用)</name>
+	<name>Barrier to prevent landslides</name>
 	<structure>
-		<category byname="治水防波設備"/>
+		<category byname="Flood Control Facilities"/>
 	</structure>
 	<price>300</price>
 	<height>1</height>
 	<computerCannotBuild/>
 '>
 <!ENTITY h0701 '
-	<name>分譲マンション(3x3)</name>
+	<name>Condiminiums(3x3)</name>
 	<structure>
-		<category byname="分譲マンション"/>
+		<category byname="Condiminiums"/>
 	</structure>
 	<price>6000</price>
 	<size>3,3</size>
@@ -241,9 +241,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0702 '
-	<name>分譲マンション(3x2)</name>
+	<name>Condiminiums(3x2)</name>
 	<structure>
-		<category byname="分譲マンション"/>
+		<category byname="Condiminiums"/>
 	</structure>
 	<price>4000</price>
 	<size>2,3</size>
@@ -256,9 +256,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0801 '
-	<name>火力発電所</name>
+	<name>Thermal Power Plants</name>
 	<structure>
-		<category byname="火力発電所"/>
+		<category byname="Thermal Power Plants"/>
 	</structure>
 	<price>10000</price>
 	<size>5,2</size>
@@ -270,9 +270,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0802 '
-	<name>火力発電所</name>
+	<name>Thermal Power Plants</name>
 	<structure>
-		<category byname="火力発電所"/>
+		<category byname="Thermal Power Plants"/>
 	</structure>
 	<price>13000</price>
 	<size>5,3</size>
@@ -284,9 +284,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h1001 '
-	<name>橋脚(2～6)</name>
+	<name>Bridge pier(2 to 6)</name>
 	<structure>
-		<category byname="土木"/>
+		<category byname="Public Works"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -295,9 +295,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h1002 '
-	<name>橋脚(1)</name>
+	<name>Bridge pier(1)</name>
 	<structure>
-		<category byname="土木"/>
+		<category byname="Public Works"/>
 	</structure>
 	<price>300</price>
 	<size>1,1</size>
@@ -305,17 +305,17 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h1003 '
-	<design>アスファルト</design>
+	<design>Asphalt</design>
 	<spriteType  name="colorMapped">
 		<map  from="0,114,188"  to="105,105,105"/>
 	</spriteType>
 '>
 <!ENTITY h1101 '
-	<name>自動車学校</name>
+	<name>Driving school</name>
 	<structure>
-		<category byname="私立教育施設"/>
+		<category byname="Private Education"/>
 	</structure>
-	<design>コース</design>
+	<design>Driving course</design>
 	<price>2000</price>
 	<size>5,6</size>
 	<height>1</height>
@@ -326,11 +326,11 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h1102 '
-	<name>自動車学校</name>
+	<name>Driving school</name>
 	<structure>
-		<category byname="私立教育施設"/>
+		<category byname="Private Education"/>
 	</structure>
-	<design>校舎兼車庫</design>
+	<design>School building and garage</design>
 	<price>3000</price>
 	<height>1</height>
 	<population>
@@ -352,12 +352,12 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h1201 '
-	<name>カントリーエレベーター</name>
+	<name>Country elevator</name>
 	<structure>
-		<category byname="食料産地"/>
-		<category byname="倉庫" hide="true"/>
+		<category byname="Agriculture"/>
+		<category byname="Warehouses" hide="true"/>
 	</structure>
-	<design>大規模共同乾燥施設</design>
+	<design>Huge agricultural cooperative silo</design>
 	<price>5000</price>
 	<size>4,2</size>
 	<height>3</height>
@@ -376,12 +376,12 @@
 ]>
 
 <plug-in>
-	<title>建物総合ＵＩ専用(建築)</title>
+	<title>Buildings for extend UI</title>
 	<author>HEUER</author>
 	<homepage>http://freetrain.finito-web.com/</homepage>
 
 
-<!-- 風力発電所 -->
+<!-- Wind Farms -->
 	<contribution type="picture" id="{HEUER-0001-WINDMILL-PICTURE-0001}">
 		<picture src="windmill_a.bmp">
 			<override when="summer" src="windmill_b.bmp" />
@@ -406,7 +406,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0001-WINDMILL-STRUCTURE-0002}">
 		&h0101;
-		<design>通常</design>
+		<design>normal</design>
 		<sprite origin="256,0" offset="64">
 			<picture ref="{HEUER-0001-WINDMILL-PICTURE-0004}"/>
 		</sprite>
@@ -416,7 +416,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0001-WINDMILL-STRUCTURE-0003}">
 		&h0101;
-		<design>水面</design>
+		<design>water</design>
 		<sprite origin="0,0" offset="64">
 			<picture ref="{HEUER-0001-WINDMILL-PICTURE-0003}"/>
 		</sprite>
@@ -426,7 +426,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0001-WINDMILL-STRUCTURE-0004}">
 		&h0101;
-		<design>草原</design>
+		<design>grassland</design>
 		<sprite origin="128,0" offset="64">
 			<picture ref="{HEUER-0001-WINDMILL-PICTURE-0002}"/>
 		</sprite>
@@ -436,7 +436,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0001-WINDMILL-STRUCTURE-0001}">
 		&h0101;
-		<design>山肌</design>
+		<design>mountain</design>
 		<sprite origin="0,0" offset="64">
 			<picture ref="{HEUER-0001-WINDMILL-PICTURE-0001}"/>
 		</sprite>
@@ -446,7 +446,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0001-WINDMILL-STRUCTURE-0005}">
 		&h0101;
-		<design>アスファルト</design>
+		<design>asphalt</design>
 		<sprite origin="128,0" offset="64">
 			<picture ref="{HEUER-0001-WINDMILL-PICTURE-0003}"/>
 		</sprite>
@@ -456,7 +456,7 @@
 	</contribution>
 
 
-<!-- 集配所 -->
+<!-- Distribution Centers -->
 	<contribution type="picture" id="{HEUER-0002-BUTURYU-PICTURE-0001}">
 		<picture src="buturyu.bmp">
 			<override when="night" src="buturyu_n.bmp" />
@@ -535,7 +535,7 @@
 	</contribution>
 
 
-<!-- 石油タンク -->
+<!-- Oil Tank -->
 	<contribution type="picture" id="{HEUER-0003-OILTANK-PICTURE-0001}">
 		<picture src="oiltank.bmp">
 		</picture>
@@ -622,7 +622,7 @@
 	</contribution>
 
 
-<!-- ガスタンク -->
+<!-- Gas Tanks -->
 	<contribution type="picture" id="{HEUER-0003-GASTANK-PICTURE-0001}">
 		<picture src="gastank.bmp">
 		</picture>
@@ -647,7 +647,7 @@
 	</contribution>
 
 
-<!-- 給水塔 -->
+<!-- Water Towers -->
 	<contribution type="picture" id="{HEUER-0003-WATERTANK-PICTURE-0001}">
 		<picture src="watertank.bmp">
 		</picture>
@@ -672,7 +672,7 @@
 	</contribution>
 
 
-<!-- 浄水場 -->
+<!-- Filtration Plants -->
 	<contribution type="picture" id="{HEUER-0003-WPP-PICTURE-0001}">
 		<picture src="wpp.bmp">
 		</picture>
@@ -694,7 +694,7 @@
 	</contribution>
 
 
-<!-- 治水防波設備 -->
+<!-- Flood Control Facilities -->
 	<contribution type="picture" id="{HEUER-0004-BREAKWATER-PICTURE-0001}">
 		<picture src="breakwater.bmp">
 		</picture>
@@ -873,7 +873,7 @@
 	</contribution>
 
 
-<!-- 分譲マンション -->
+<!-- Condiminiums -->
 	<contribution type="picture" id="{HEUER-0007-CONDO-PICTURE-0001}">
 		<picture src="condominium.bmp">
 		</picture>
@@ -930,7 +930,7 @@
 	</contribution>
 
 
-<!-- 火力発電所 -->
+<!-- Thermal Power Plants -->
 	<contribution type="picture" id="{HEUER-0008-PLANT-PICTURE-0001}">
 		<picture src="powerplant.bmp">
 		</picture>
@@ -955,7 +955,7 @@
 	</contribution>
 
 
-<!-- 橋脚 -->
+<!-- Bridge pier -->
 	<contribution type="picture" id="{HEUER-0010-BRIDGEPIER-PICTURE-0001}">
 		<picture src="bp.bmp">
 		</picture>
@@ -969,7 +969,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0001}">
 		&h1001;
-		<design>通常</design>
+		<design>normal</design>
 		<pictures>
 			<top    origin="0,0" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -995,7 +995,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0002}">
 		&h1001;
-		<design>通常</design>
+		<design>normal</design>
 		<pictures>
 			<top    origin="0,32" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -1021,7 +1021,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0003}">
 		&h1001;
-		<design>水面</design>
+		<design>water</design>
 		<pictures>
 			<top    origin="0,0" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -1047,7 +1047,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0004}">
 		&h1001;
-		<design>水面</design>
+		<design>water</design>
 		<pictures>
 			<top    origin="0,32" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -1073,7 +1073,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0005}">
 		&h1001;
-		<design>草原</design>
+		<design>grassland</design>
 		<pictures>
 			<top    origin="0,0" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -1099,7 +1099,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0006}">
 		&h1001;
-		<design>草原</design>
+		<design>grassland</design>
 		<pictures>
 			<top    origin="0,32" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -1125,7 +1125,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0007}">
 		&h1001;
-		<design>山肌</design>
+		<design>mountain</design>
 		<pictures>
 			<top    origin="0,0" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -1151,7 +1151,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0008}">
 		&h1001;
-		<design>山肌</design>
+		<design>mountain</design>
 		<pictures>
 			<top    origin="0,32" offset="16">
 				<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
@@ -1231,7 +1231,7 @@
 
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0011}">
 		&h1002;
-		<design>通常</design>
+		<design>normal</design>
 		<sprite origin="0,0" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0002}"/>
 		</sprite>
@@ -1241,7 +1241,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0012}">
 		&h1002;
-		<design>通常</design>
+		<design>normal</design>
 		<sprite origin="0,32" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0002}"/>
 		</sprite>
@@ -1251,7 +1251,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0013}">
 		&h1002;
-		<design>水面</design>
+		<design>water</design>
 		<sprite origin="64,0" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
 		</sprite>
@@ -1261,7 +1261,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0014}">
 		&h1002;
-		<design>水面</design>
+		<design>water</design>
 		<sprite origin="64,32" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0001}"/>
 		</sprite>
@@ -1271,7 +1271,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0015}">
 		&h1002;
-		<design>草原</design>
+		<design>grassland</design>
 		<sprite origin="64,0" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0002}"/>
 		</sprite>
@@ -1281,7 +1281,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0016}">
 		&h1002;
-		<design>草原</design>
+		<design>grassland</design>
 		<sprite origin="64,32" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0002}"/>
 		</sprite>
@@ -1291,7 +1291,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0017}">
 		&h1002;
-		<design>山肌</design>
+		<design>mountain</design>
 		<sprite origin="32,0" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0002}"/>
 		</sprite>
@@ -1301,7 +1301,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-0010-BRIDGEPIER-STRUCTURE-0018}">
 		&h1002;
-		<design>山肌</design>
+		<design>mountain</design>
 		<sprite origin="32,32" offset="16">
 			<picture ref="{HEUER-0010-BRIDGEPIER-PICTURE-0002}"/>
 		</sprite>
@@ -1331,7 +1331,7 @@
 	</contribution>
 
 
-<!-- 自動車学校 -->
+<!-- Driving school -->
 	<contribution type="picture" id="{HEUER-0011-DSCHOOL-PICTURE-0001}">
 		<picture src="ds_corse.bmp">
 			<override when="winter" src="ds_corse_w.bmp" />

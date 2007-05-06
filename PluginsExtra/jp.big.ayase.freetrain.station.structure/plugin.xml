@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 	<!ENTITY unmannedStation "
-		<group>高架下駅舎(新幹線)</group>
+		<group>Under-viaduct station (shinkansen)</group>
 		<price>200</price>
 		<height>1</height>
 		<operationCost>10</operationCost>
 	">
 ]>
 <plug-in>
-	<title>駅舎プラグイン</title>
-	<author>綾瀬ヒロ</author>
+	<title>Under-viaduct station</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RailStructureImage-Station-02}">

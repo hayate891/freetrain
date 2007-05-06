@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>橋脚プラグイン</title>
-	<author>綾瀬ヒロ</author>
+	<title>Bridge pier</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RailStructureImage-Station-03}">
@@ -10,7 +10,7 @@
 
 	
 	<contribution type="railStationary" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Station-03a}">
-		<group>駅下橋脚</group>
+		<group>Bridge pier under station</group>
 		<price>200</price>
 		<height>1</height>
 		<size>1,2</size>
@@ -20,7 +20,7 @@
 	</contribution>
 	
 	<contribution type="railStationary" id="{FreeTrain-AYASE-Hiro-RailStructureImpl-Station-03b}">
-		<group>駅下橋脚</group>
+		<group>Bridge pier under station</group>
 		<price>200</price>
 		<height>1</height>
 		<size>2,1</size>

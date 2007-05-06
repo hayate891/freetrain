@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>工場(大)</title>
-	<author>しの</author>
+	<title>Factory(big)</title>
+	<author>Shino</author>
 	<homepage></homepage>
 
 	<contribution type="commercial" id="{AE49208E-BEB2-4319-8477-F20E0BF1F1BB}">
-		<group>工場(大)</group>
+		<group>Factory(big)</group>
 		<price>5800</price>
 		<size>5,8</size>
 		<height>2</height>

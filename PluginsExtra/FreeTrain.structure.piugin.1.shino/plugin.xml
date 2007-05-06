@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>国際展示場</title>
-	<author>しの</author>
+	<title>International exhibition hall</title>
+	<author>Shino</author>
 	<homepage></homepage>
 	
 	<contribution type="commercial" id="{S5776500-E8E5-4D5E-B30A-A0036A6ECDEB}">
-		<group>国際展示場</group>
+		<group>International exhibition hall</group>
 		<price>5000</price>
 		<size>4,7</size>
 		<height>2</height>

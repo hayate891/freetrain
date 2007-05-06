@@ -3,7 +3,7 @@
 
 
 <!ENTITY building2x2Param '
-	<group>貸しビル(2x2)</group>
+	<group>Rental office(2x2)</group>
 	<price>3300</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -15,8 +15,8 @@
 '>
 ]>
 <plug-in>
-	<title>ビル</title>
-	<author>しの</author>
+	<title>Office Buildings 1</title>
+	<author>Shino</author>
 	<homepage></homepage>
 	
 	

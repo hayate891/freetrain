@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title>建物プラグイン</title>
-	<author>綾瀬ヒロ</author>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RoadImg-Station}">
@@ -9,7 +9,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a1}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -19,7 +19,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a2}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -29,7 +29,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a3}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -39,7 +39,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a4}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -50,7 +50,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a5}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -60,7 +60,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a6}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -70,7 +70,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a7}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -80,7 +80,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01a8}">
-		<group>駅前広場(端その１)</group>
+		<group>Station square (edge 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -91,7 +91,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b1}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -101,7 +101,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b2}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -111,7 +111,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b3}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -121,7 +121,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b4}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -132,7 +132,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b5}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -142,7 +142,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b6}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -152,7 +152,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b7}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -162,7 +162,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01b8}">
-		<group>駅前広場(端その２)</group>
+		<group>Station square (edge 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -173,7 +173,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c1}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -183,7 +183,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c2}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -193,7 +193,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c3}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -203,7 +203,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c4}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -214,7 +214,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c5}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -224,7 +224,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c6}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -234,7 +234,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c7}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -244,7 +244,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01c8}">
-		<group>駅前広場(端その３)</group>
+		<group>Station square (edge 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -255,7 +255,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d1}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -265,7 +265,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d2}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -275,7 +275,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d3}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -285,7 +285,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d4}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -296,7 +296,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d5}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -306,7 +306,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d6}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -316,7 +316,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d7}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -326,7 +326,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl01d8}">
-		<group>駅前広場(端その４)</group>
+		<group>Station square (edge 4)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -338,7 +338,7 @@
 
 
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a1}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -348,7 +348,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a2}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -358,7 +358,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a3}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -368,7 +368,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a4}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -379,7 +379,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a5}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -389,7 +389,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a6}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -399,7 +399,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a7}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -409,7 +409,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02a8}">
-		<group>駅前広場(中その１)</group>
+		<group>Station square (middle 1)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -421,7 +421,7 @@
 
 
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b1}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -431,7 +431,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b2}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -441,7 +441,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b3}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -451,7 +451,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b4}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -462,7 +462,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b5}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -472,7 +472,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b6}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -482,7 +482,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b7}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -492,7 +492,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02b8}">
-		<group>駅前広場(中その２)</group>
+		<group>Station square (middle 2)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -504,7 +504,7 @@
 
 
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c1}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -514,7 +514,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c2}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -524,7 +524,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c3}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -534,7 +534,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c4}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -545,7 +545,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c5}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -555,7 +555,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c6}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>1,3</size>
 		<height>1</height>
@@ -565,7 +565,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c7}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>
@@ -575,7 +575,7 @@
 		<computerCannotBuild/>
 	</contribution>
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-StationImpl02c8}">
-		<group>駅前広場(中その３)</group>
+		<group>Station square (middle 3)</group>
 		<price>400</price>
 		<size>3,1</size>
 		<height>1</height>

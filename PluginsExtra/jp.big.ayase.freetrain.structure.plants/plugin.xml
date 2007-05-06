@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>建物プラグイン</title>
-	<author>綾瀬ヒロ</author>
+	<title>Buildings (factories)</title>
+	<author>AyaseHiro</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-StructureImage-Plants-01}">
@@ -17,7 +17,7 @@
 	
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-01a}">
-		<group>工場(小)</group>
+		<group>Factory(small)</group>
 		<price>2000</price>
 		<height>5</height>
 		<size>2,2</size>
@@ -28,7 +28,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-01b}">
-		<group>工場(小)</group>
+		<group>Factory(small)</group>
 		<price>2000</price>
 		<height>5</height>
 		<size>2,2</size>
@@ -40,7 +40,7 @@
 	
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-02a}">
-		<group>倉庫</group>
+		<group>Warehouse</group>
 		<price>1000</price>
 		<height>2</height>
 		<size>5,2</size>
@@ -51,7 +51,7 @@
 	</contribution>
 	
 	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-02b}">
-		<group>倉庫</group>
+		<group>Warehouse</group>
 		<price>1000</price>
 		<height>2</height>
 		<size>2,5</size>

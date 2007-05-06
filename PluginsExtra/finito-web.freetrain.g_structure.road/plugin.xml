@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY ha1101 '
-	<name>勾配道路(一般)一車線道路用</name>
+	<name>Slope road (normal,1lane)</name>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<height>1</height>
 	<computerCannotBuild/>
 '>
 <!ENTITY ha1201 '
-	<name>勾配道路(一般)二車線道路用</name>
+	<name>Slope road (normal,2lane)</name>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<size>1,4</size>
 	<computerCannotBuild/>
 '>
 <!ENTITY ha2101 '
-	<name>勾配道路(高速)一車線道路用</name>
+	<name>Slope road (expressway,1lane)</name>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<size>1,4</size>
 	<height>2</height>
 	<computerCannotBuild/>
 '>
 <!ENTITY ha2201 '
-	<name>勾配道路(高速)二車線道路用</name>
+	<name>Slope road (expressway,2lane)</name>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<size>1,4</size>
 	<computerCannotBuild/>
 '>
 <!ENTITY ha2301 '
-	<name>勾配道路(高速)三車線道路用</name>
+	<name>Slope road (expressway,3lane)</name>
 	<structure>
-		<category byname="道路関連物"/>
+		<category byname="Road Accessories"/>
 	</structure>
 	<price>2000</price>
 	<size>2,4</size>
@@ -44,9 +44,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY ha5001 '
-	<name>料金所</name>
+	<name>Tollgate</name>
 	<structure>
-		<category byname="料金所"/>
+		<category byname="Tollgates"/>
 	</structure>
 	<height>1</height>
 	<computerCannotBuild/>
@@ -54,12 +54,12 @@
 ]>
 
 <plug-in>
-	<title>建物総合ＵＩ専用(道路)</title>
+	<title>Road and road accesories for extend UI</title>
 	<author>HEUER</author>
 	<homepage>http://freetrain.finito-web.com/</homepage>
 
 
-<!-- 勾配道路(一般)一車線用 -->
+<!-- Slope road (normal,1lane) -->
 	<contribution type="picture" id="{HEUER-1001-SR-PICTURE-1101}">
 		<picture src="1101.bmp">
 		</picture>
@@ -72,7 +72,7 @@
 		&ha1101;
 		<price>250</price>
 		<size>1,4</size>
-		<design>雛壇色/無灯</design>
+		<design>terrace color/nolight</design>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1101}"/>
 		</sprite>
@@ -90,7 +90,7 @@
 		&ha1101;
 		<price>200</price>
 		<size>1,3</size>
-		<design>雛壇色/無灯/急勾配用</design>
+		<design>terrace color/nolight/steep slope</design>
 		<sprite origin="0,0" offset="32">
 			<picture ref="{HEUER-1001-SR-PICTURE-1102}"/>
 		</sprite>
@@ -106,7 +106,7 @@
 	</contribution>
 
 
-<!-- 勾配道路(一般)二車線用 -->
+<!-- Slope road (normal,2lane) -->
 	<contribution type="picture" id="{HEUER-1001-SR-PICTURE-1201}">
 		<picture src="1201.bmp">
 		</picture>
@@ -152,7 +152,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1204}">
 		&ha1201;
 		<price>300</price>
-		<design>白破線/芝/無灯</design>
+		<design>white dotted/turf/nolight</design>
 		<height>1</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1204}"/>
@@ -170,7 +170,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1202}">
 		&ha1201;
 		<price>500</price>
-		<design>白破線/雛壇色/無灯</design>
+		<design>white dotted/terrace color/nolight</design>
 		<height>1</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1202}"/>
@@ -188,7 +188,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1202B}">
 		&ha1201;
 		<price>600</price>
-		<design>白破線/雛壇色/街灯(右)</design>
+		<design>white dotted/terrace color/light(right)</design>
 		<height>2</height>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1202A}"/>
@@ -206,7 +206,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1202A}">
 		&ha1201;
 		<price>600</price>
-		<design>白破線/雛壇色/街灯(左)</design>
+		<design>white dotted/terrace color/light(left)</design>
 		<height>2</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1202A}"/>
@@ -224,7 +224,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1202D}">
 		&ha1201;
 		<price>700</price>
-		<design>白破線/ｺﾝｸﾘｰﾄ/街灯(右)</design>
+		<design>white dotted/concrete/light(right)</design>
 		<height>2</height>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1202B}"/>
@@ -242,7 +242,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1202C}">
 		&ha1201;
 		<price>700</price>
-		<design>白破線/ｺﾝｸﾘｰﾄ/街灯(左)</design>
+		<design>white dotted/concrete/light(left)</design>
 		<height>2</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1202B}"/>
@@ -260,7 +260,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1203}">
 		&ha1201;
 		<price>300</price>
-		<design>橙実線/芝/無灯</design>
+		<design>orange lined/turf/nolight</design>
 		<height>1</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1203}"/>
@@ -278,7 +278,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1201}">
 		&ha1201;
 		<price>500</price>
-		<design>橙実線/雛壇色/無灯</design>
+		<design>orange lined/terrace color/nolight</design>
 		<height>1</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1201}"/>
@@ -296,7 +296,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1201B}">
 		&ha1201;
 		<price>600</price>
-		<design>橙実線/雛壇色/街灯(右)</design>
+		<design>orange lined/terrace color/light(right)</design>
 		<height>2</height>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1201A}"/>
@@ -314,7 +314,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1201A}">
 		&ha1201;
 		<price>600</price>
-		<design>橙実線/雛壇色/街灯(左)</design>
+		<design>orange lined/terrace color/light(left)</design>
 		<height>2</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1201A}"/>
@@ -332,7 +332,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1201D}">
 		&ha1201;
 		<price>700</price>
-		<design>橙実線/ｺﾝｸﾘｰﾄ/街灯(右)</design>
+		<design>orange lined/concrete/light(right)</design>
 		<height>2</height>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1201B}"/>
@@ -350,7 +350,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-1201C}">
 		&ha1201;
 		<price>700</price>
-		<design>橙実線/ｺﾝｸﾘｰﾄ/街灯(左)</design>
+		<design>orange lined/concrete/light(left)</design>
 		<height>2</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-1201B}"/>
@@ -366,7 +366,7 @@
 		</sprite>
 	</contribution>
 
-<!-- 勾配道路(高速)一車線用 -->
+<!-- Slope road (expressway,1lane) -->
 	<contribution type="picture" id="{HEUER-1001-SR-PICTURE-2101}">
 		<picture src="2101.bmp">
 			<override when="night" src="2101n.bmp" />
@@ -380,7 +380,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2101B}">
 		&ha2101;
 		<price>600</price>
-		<design>雛壇色/単線右用</design>
+		<design>terrace color/1lane-right</design>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2101}"/>
 		</sprite>
@@ -397,7 +397,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2101A}">
 		&ha2101;
 		<price>600</price>
-		<design>雛壇色/単線左用</design>
+		<design>terrace color/1lane-left</design>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2101}"/>
 		</sprite>
@@ -414,7 +414,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2102B}">
 		&ha2101;
 		<price>700</price>
-		<design>ｺﾝｸﾘｰﾄ/単線右用</design>
+		<design>concrete/1lane-right</design>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2102}"/>
 		</sprite>
@@ -431,7 +431,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2102A}">
 		&ha2101;
 		<price>700</price>
-		<design>ｺﾝｸﾘｰﾄ/単線左用</design>
+		<design>concrete/1lane-left</design>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2102}"/>
 		</sprite>
@@ -446,7 +446,7 @@
 		</sprite>
 	</contribution>
 
-<!-- 勾配道路(高速)二車線用 -->
+<!-- Slope road (expressway,2lane) -->
 	<contribution type="picture" id="{HEUER-1001-SR-PICTURE-2201}">
 		<picture src="2201.bmp">
 			<override when="night" src="2201n.bmp" />
@@ -475,7 +475,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2202B}">
 		&ha2201;
 		<price>700</price>
-		<design>雛壇色/街灯(右)</design>
+		<design>terrace color/light(right)</design>
 		<height>2</height>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2202}"/>
@@ -493,7 +493,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2202A}">
 		&ha2201;
 		<price>700</price>
-		<design>雛壇色/街灯(左)</design>
+		<design>terrace color/light(left)</design>
 		<height>2</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2202}"/>
@@ -511,7 +511,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2201B}">
 		&ha2201;
 		<price>800</price>
-		<design>ｺﾝｸﾘｰﾄ/街灯(右)</design>
+		<design>concrete/light(right)</design>
 		<height>2</height>
 		<sprite origin="80,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2201}"/>
@@ -529,7 +529,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2201A}">
 		&ha2201;
 		<price>800</price>
-		<design>ｺﾝｸﾘｰﾄ/街灯(左)</design>
+		<design>concrete/light(left)</design>
 		<height>2</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2201}"/>
@@ -547,7 +547,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2203}">
 		&ha2201;
 		<price>800</price>
-		<design>対面通行用/ｺﾝｸﾘｰﾄ/街灯</design>
+		<design>2way/concrete/light</design>
 		<height>2</height>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{HEUER-1001-SR-PICTURE-2203}"/>
@@ -565,7 +565,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2204B}">
 		&ha2201;
 		<price>1200</price>
-		<design>2F/ｺﾝｸﾘｰﾄ/街灯(右)</design>
+		<design>2F/concrete/light(right)</design>
 		<height>3</height>
 		<sprite origin="80,0" offset="40">
 			<picture ref="{HEUER-1001-SR-PICTURE-2204}"/>
@@ -583,7 +583,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2204A}">
 		&ha2201;
 		<price>1200</price>
-		<design>2F/ｺﾝｸﾘｰﾄ/街灯(左)</design>
+		<design>2F/concrete/light(left)</design>
 		<height>3</height>
 		<sprite origin="0,0" offset="40">
 			<picture ref="{HEUER-1001-SR-PICTURE-2204}"/>
@@ -601,7 +601,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2205B}">
 		&ha2201;
 		<price>1600</price>
-		<design>3F/ｺﾝｸﾘｰﾄ/街灯(右)</design>
+		<design>3F/concrete/light(right)</design>
 		<height>4</height>
 		<sprite origin="80,0" offset="56">
 			<picture ref="{HEUER-1001-SR-PICTURE-2205}"/>
@@ -619,7 +619,7 @@
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2205A}">
 		&ha2201;
 		<price>1600</price>
-		<design>3F/ｺﾝｸﾘｰﾄ/街灯(左)</design>
+		<design>3F/concrete/light(left)</design>
 		<height>4</height>
 		<sprite origin="0,0" offset="56">
 			<picture ref="{HEUER-1001-SR-PICTURE-2205}"/>
@@ -635,7 +635,7 @@
 		</sprite>
 	</contribution>
 
-<!-- 勾配道路(高速)三車線用 -->
+<!-- Slope road (expressway,3lane) -->
 	<contribution type="picture" id="{HEUER-1001-SR-PICTURE-2301}">
 		<picture src="2301.bmp">
 			<override when="night" src="2301n.bmp" />
@@ -643,7 +643,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2301A}">
 		&ha2301;
-		<design>2F/ｺﾝｸﾘｰﾄ/右寄</design>
+		<design>2F/concrete/rightside</design>
 		<sprite origin="0,0" offset="45">
 			<picture ref="{HEUER-1001-SR-PICTURE-2301}"/>
 		</sprite>
@@ -659,7 +659,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-1001-SR-STRUCTURE-2301B}">
 		&ha2301;
-		<design>2F/ｺﾝｸﾘｰﾄ/左寄</design>
+		<design>2F/concrete/leftside</design>
 		<sprite origin="96,0" offset="45">
 			<picture ref="{HEUER-1001-SR-PICTURE-2301}"/>
 		</sprite>
@@ -674,7 +674,7 @@
 		</sprite>
 	</contribution>
 
-<!-- 料金所 -->
+<!-- Tollgates -->
 	<contribution type="picture" id="{HEUER-1002-TG-PICTURE-1001}">
 		<picture src="tollgate.bmp">
 			<override when="night" src="tollgate_n.bmp" />
@@ -682,7 +682,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-1002-TG-STRUCTURE-1001A}">
 		&ha5001;
-		<design>2レーン</design>
+		<design>2lane</design>
 		<price>1000</price>
 		<size>1,1</size>
 		<population>
@@ -704,7 +704,7 @@
 	</contribution>
 	<contribution type="GenericStructure" id="{HEUER-1002-TG-STRUCTURE-1001B}">
 		&ha5001;
-		<design>4レーン</design>
+		<design>4lane</design>
 		<price>2000</price>
 		<size>1,2</size>
 		<population>

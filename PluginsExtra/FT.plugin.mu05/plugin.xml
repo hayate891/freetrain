@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>駅の屋根</title>
-	<author>ムー05</author>
+	<title>Station roof</title>
+	<author>Moo05</author>
 	<homepage>http://tcct.zaq.ne.jp/bpbkn807</homepage>
 	
 	<depends on="org.kohsuke.freetrain.rail.electricPole" />
@@ -24,25 +24,25 @@
 	</contribution>
 
 	<contribution type="electricPole" id="{umafsu27-1532-8315-mu05-plugins00101-front}-1">
-		<name>現代っぽい壁(前)</name>
+		<name>Modern wall(front)</name>
 		<sprite origin=" 0, 0" offset="16">
 			<picture ref="{umafsu27-1532-8315-mu05-plugins00101}-1" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{umafsu27-1532-8315-mu05-plugins00102-rear}-2">
-		<name>現代っぽい壁(後)</name>
+		<name>Modern wall(behind)</name>
 		<sprite origin=" 0, 0" offset="16">
 			<picture ref="{umafsu27-1532-8315-mu05-plugins00102}-2" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{umafsu27-1532-8315-mu05-plugins00103-roof1}-3">
-		<name>現代っぽい屋根1</name>
+		<name>Modern roof1</name>
 		<sprite origin=" 0, 0" offset="16">
 			<picture ref="{umafsu27-1532-8315-mu05-plugins00103}-3" />
 		</sprite>
 	</contribution>
 	<contribution type="electricPole" id="{umafsu27-1532-8315-mu05-plugins00104-roof2}-4">
-		<name>現代っぽい屋根2</name>
+		<name>Modern roof2</name>
 		<sprite origin=" 0, 0" offset="16">
 			<picture ref="{umafsu27-1532-8315-mu05-plugins00104}-4" />
 		</sprite>
