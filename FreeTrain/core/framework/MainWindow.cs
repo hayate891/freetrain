@@ -842,7 +842,11 @@ namespace freetrain.framework
             this.tbSeparator,
             this.tbTerrain,
             this.tbStruct,
-            this.tbBulldoze});
+            this.tbBulldoze,
+            this.separator,
+            this.viewDayAndNight,
+            this.viewAlwaysDay,
+            this.viewAlwaysNight});
             this.toolBar1.DropDownArrows = true;
             this.toolBar1.ImageList = this.toolBarIcons;
             this.toolBar1.Location = new System.Drawing.Point(0, 0);
@@ -851,7 +855,6 @@ namespace freetrain.framework
             this.toolBar1.Size = new System.Drawing.Size(544, 27);
             this.toolBar1.TabIndex = 1;
             this.toolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
-            this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
             // 
             // tbTimer
             // 
@@ -995,7 +998,7 @@ namespace freetrain.framework
             // 
             // toolBar2
             // 
-            this.toolBar2.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
+            /*this.toolBar2.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
             this.toolBar2.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
             this.viewDayAndNight,
             this.viewAlwaysDay,
@@ -1008,11 +1011,11 @@ namespace freetrain.framework
             this.toolBar2.Name = "toolBar2";
             this.toolBar2.ShowToolTips = true;
             this.toolBar2.Size = new System.Drawing.Size(544, 27);
-            this.toolBar2.TabIndex = 2;
+            this.toolBar2.TabIndex = 2;*/
             // 
             // viewDayAndNight
             // 
-            this.viewDayAndNight.ImageIndex = 0;
+            this.viewDayAndNight.ImageIndex = 15;
             this.viewDayAndNight.Name = "viewDayAndNight";
             this.viewDayAndNight.Pushed = true;
             this.viewDayAndNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
@@ -1022,7 +1025,7 @@ namespace freetrain.framework
             // 
             // viewAlwaysDay
             // 
-            this.viewAlwaysDay.ImageIndex = 1;
+            this.viewAlwaysDay.ImageIndex = 16;
             this.viewAlwaysDay.Name = "viewAlwaysDay";
             this.viewAlwaysDay.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
             this.viewAlwaysDay.Tag = freetrain.views.NightSpriteMode.AlwaysDay;
@@ -1031,7 +1034,7 @@ namespace freetrain.framework
             // 
             // viewAlwaysNight
             // 
-            this.viewAlwaysNight.ImageIndex = 2;
+            this.viewAlwaysNight.ImageIndex = 17;
             this.viewAlwaysNight.Name = "viewAlwaysNight";
             this.viewAlwaysNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
             this.viewAlwaysNight.Tag = freetrain.views.NightSpriteMode.AlwaysNight;
@@ -1058,7 +1061,7 @@ namespace freetrain.framework
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
             this.ClientSize = new System.Drawing.Size(544, 286);
-            this.Controls.Add(this.toolBar2);
+            //this.Controls.Add(this.toolBar2);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.toolBar1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1481,8 +1484,9 @@ namespace freetrain.framework
 		private void viewOptionDayNightChanged( Command c ) 
 		{
 			ToolBarButton tb = (ToolBarButton)c.commandInstances[0];
-			foreach(ToolBarButton tbb in toolBar2.Buttons)
-				tbb.Pushed = (tbb==tb);
+			foreach(ToolBarButton tbb in toolBar1.Buttons)
+				if (tbb.Tag != null)
+						tbb.Pushed = (tbb==tb);
 			
 			World.world.viewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
 		}
@@ -1492,8 +1496,8 @@ namespace freetrain.framework
 			try
 			{
 				NightSpriteMode curMode = World.world.viewOptions.nightSpriteMode;
-				foreach(ToolBarButton tbb in toolBar2.Buttons)
-					if(tbb.Tag!=null)
+				foreach(ToolBarButton tbb in toolBar1.Buttons)
+				if (tbb.Tag != null)
 						tbb.Pushed = ( curMode == (NightSpriteMode)tbb.Tag);			
 			}
 			catch{}
@@ -1611,12 +1615,6 @@ namespace freetrain.framework
 						MessageBoxDefaultButton.Button2);
 			e.Cancel = (res != DialogResult.Yes );
 		}
-
-		private void toolBar1_ButtonClick(object sender, System.Windows.Forms.ToolBarButtonClickEventArgs e)
-		{
-		
-		}
-
 
 
 		/// <summary>
