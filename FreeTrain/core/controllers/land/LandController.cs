@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -85,6 +85,7 @@ namespace freetrain.controllers.land
 			this.groupBox.Sorted = true;
 			this.groupBox.TabIndex = 2;
 			this.groupBox.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
+			this.groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left |(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right))| System.Windows.Forms.AnchorStyles.Top));
 			// 
 			// preview
 			// 
@@ -94,6 +95,7 @@ namespace freetrain.controllers.land
 			this.preview.Size = new System.Drawing.Size(112, 80);
 			this.preview.TabIndex = 1;
 			this.preview.TabStop = false;
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left |(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right))| System.Windows.Forms.AnchorStyles.Bottom));
 			// 
 			// indexSelector
 			// 
@@ -105,6 +107,7 @@ namespace freetrain.controllers.land
 			this.indexSelector.Size = new System.Drawing.Size(112, 20);
 			this.indexSelector.TabIndex = 3;
 			this.indexSelector.indexChanged += new System.EventHandler(this.onTypeChanged);
+			this.indexSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left |(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			// 
 			// LandController
 			// 
@@ -117,6 +120,7 @@ namespace freetrain.controllers.land
 			this.Name = "LandController";
 			this.Text = "Terrain view";
 			//! this.Text = "地表";
+			this.Resize += new EventHandler(this.updateSize);
 			this.ResumeLayout(false);
 
 		}
@@ -136,6 +140,10 @@ namespace freetrain.controllers.land
 		/// Called when a selection of the structure has changed.
 		/// </summary>
 		protected virtual void onTypeChanged(object sender, System.EventArgs e) {			
+			updatePreview();
+		}
+		
+		protected virtual void updateSize(object sender, System.EventArgs e){
 			updatePreview();
 		}
 

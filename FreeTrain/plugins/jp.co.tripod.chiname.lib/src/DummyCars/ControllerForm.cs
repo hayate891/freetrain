@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -72,6 +72,7 @@ namespace freetrain.world.road.dummycar
 			// 
 			// typeBox
 			// 
+			this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top)| System.Windows.Forms.AnchorStyles.Right)| System.Windows.Forms.AnchorStyles.Left));
 			this.typeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.typeBox.Location = new System.Drawing.Point(8, 8);
 			this.typeBox.Name = "typeBox";
@@ -82,6 +83,7 @@ namespace freetrain.world.road.dummycar
 			// 
 			// colSelector
 			// 
+			this.colSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top)| System.Windows.Forms.AnchorStyles.Right)| System.Windows.Forms.AnchorStyles.Left));
 			this.colSelector.count = 10;
 			this.colSelector.current = 0;
 			this.colSelector.Cursor = System.Windows.Forms.Cursors.Default;
@@ -94,6 +96,7 @@ namespace freetrain.world.road.dummycar
 			// 
 			// preview
 			// 
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Bottom)| System.Windows.Forms.AnchorStyles.Top)| System.Windows.Forms.AnchorStyles.Right)| System.Windows.Forms.AnchorStyles.Left));
 			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.preview.Location = new System.Drawing.Point(8, 64);
 			this.preview.Name = "preview";
@@ -124,9 +127,11 @@ namespace freetrain.world.road.dummycar
 			//! this.buttonRemove.Text = "撤去";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.buttonRemove.CheckedChanged += new System.EventHandler(this.onColorChanged);
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom));
 			// 
 			// buttonPlace
 			// 
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
 			this.buttonPlace.Location = new System.Drawing.Point(8, 160);
@@ -152,6 +157,7 @@ namespace freetrain.world.road.dummycar
 																		  this.preview});
 			this.Name = "ControllerForm";
 			this.Text = "Automobile";
+			this.Resize += new EventHandler(this.updateAfterResize);
 			//! this.Text = "自動車";
 			this.ResumeLayout(false);
 
@@ -162,6 +168,14 @@ namespace freetrain.world.road.dummycar
 			get {
 				return buttonPlace.Checked;
 			}
+		}
+		
+		protected virtual void updateAfterResize(object sender, System.EventArgs e){
+			this.buttonPlace.Left = this.preview.Left;
+			this.buttonPlace.Width = ((this.preview.Width)) / 2;
+			this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width);
+			this.buttonRemove.Width = this.buttonPlace.Width;
+			updatePreview();
 		}
 
 		private int currentColor 

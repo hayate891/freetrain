@@ -154,24 +154,26 @@ namespace freetrain.world.rail
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(176, 234);
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label2.Location = new System.Drawing.Point(263, 266);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(64, 22);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "&Length (number of cars):";
+			this.label2.Text = "&Length:";
 			//! this.label2.Text = "車両数(&L)：";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// length
 			// 
-			this.length.Location = new System.Drawing.Point(248, 234);
+			this.length.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.length.Minimum = new System.Decimal(new int[] {
 																   1,
 																   0,
 																   0,
 																   0});
+									0});
 			this.length.Name = "length";
-			this.length.Size = new System.Drawing.Size(48, 20);
+			this.length.Size = new System.Drawing.Size(64, 20);
 			this.length.TabIndex = 4;
 			this.length.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.length.Value = new System.Decimal(new int[] {
@@ -183,19 +185,20 @@ namespace freetrain.world.rail
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(320, 234);
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label3.Location = new System.Drawing.Point(436, 267);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(18, 20);
+			this.label3.Size = new System.Drawing.Size(25, 19);
 			this.label3.TabIndex = 5;
 			this.label3.Text = "x";
-			//! this.label3.Text = "×";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// count
 			// 
-			this.count.Location = new System.Drawing.Point(344, 234);
+			this.count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.count.Location = new System.Drawing.Point(457, 268);
 			this.count.Name = "count";
-			this.count.Size = new System.Drawing.Size(48, 20);
+			this.count.Size = new System.Drawing.Size(63, 20);
 			this.count.TabIndex = 6;
 			this.count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.count.Value = new System.Decimal(new int[] {
@@ -207,21 +210,22 @@ namespace freetrain.world.rail
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox1.Location = new System.Drawing.Point(176, 260);
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Location = new System.Drawing.Point(150, 297);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(265, 4);
+			this.groupBox1.Size = new System.Drawing.Size(477, 4);
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(392, 234);
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label4.Location = new System.Drawing.Point(526, 266);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(63, 20);
+			this.label4.Size = new System.Drawing.Size(27, 20);
 			this.label4.TabIndex = 7;
-			this.label4.Text = "Formation";
+			this.label4.Text = "Set";
 			//! this.label4.Text = "編成";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
@@ -229,7 +233,7 @@ namespace freetrain.world.rail
 			// 
 			this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonOK.Location = new System.Drawing.Point(280, 338);
+			this.buttonOK.Location = new System.Drawing.Point(392, 348);
 			this.buttonOK.Name = "buttonOK";
 			this.buttonOK.Size = new System.Drawing.Size(80, 26);
 			this.buttonOK.TabIndex = 8;
@@ -242,7 +246,7 @@ namespace freetrain.world.rail
 			this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.buttonCancel.Location = new System.Drawing.Point(366, 338);
+			this.buttonCancel.Location = new System.Drawing.Point(478, 348);
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.Size = new System.Drawing.Size(80, 26);
 			this.buttonCancel.TabIndex = 9;
@@ -251,7 +255,8 @@ namespace freetrain.world.rail
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(176, 208);
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label5.Location = new System.Drawing.Point(263, 240);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(64, 17);
 			this.label5.TabIndex = 10;
@@ -261,9 +266,10 @@ namespace freetrain.world.rail
 			// 
 			// speed
 			// 
-			this.speed.Location = new System.Drawing.Point(248, 208);
+			this.speed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.speed.Location = new System.Drawing.Point(333, 240);
 			this.speed.Name = "speed";
-			this.speed.Size = new System.Drawing.Size(184, 17);
+			this.speed.Size = new System.Drawing.Size(220, 17);
 			this.speed.TabIndex = 11;
 			this.speed.Text = "Rapid";
 			// this.speed.Text = "高速";
@@ -272,16 +278,17 @@ namespace freetrain.world.rail
 			// totalPrice
 			// 
 			this.totalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.totalPrice.Location = new System.Drawing.Point(257, 277);
+			this.totalPrice.Location = new System.Drawing.Point(331, 304);
 			this.totalPrice.Name = "totalPrice";
-			this.totalPrice.Size = new System.Drawing.Size(189, 18);
+			this.totalPrice.Size = new System.Drawing.Size(227, 18);
 			this.totalPrice.TabIndex = 14;
 			this.totalPrice.Text = "100,000";
 			this.totalPrice.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(176, 277);
+			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label8.Location = new System.Drawing.Point(263, 304);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(64, 18);
 			this.label8.TabIndex = 15;
@@ -292,16 +299,17 @@ namespace freetrain.world.rail
 			// passenger
 			// 
 			this.passenger.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.passenger.Location = new System.Drawing.Point(257, 303);
+			this.passenger.Location = new System.Drawing.Point(331, 322);
 			this.passenger.Name = "passenger";
-			this.passenger.Size = new System.Drawing.Size(184, 18);
+			this.passenger.Size = new System.Drawing.Size(222, 18);
 			this.passenger.TabIndex = 17;
 			this.passenger.Text = "100";
 			this.passenger.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label9
 			// 
-			this.label9.Location = new System.Drawing.Point(176, 303);
+			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label9.Location = new System.Drawing.Point(263, 322);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(64, 18);
 			this.label9.TabIndex = 16;
@@ -311,18 +319,19 @@ namespace freetrain.world.rail
 			// 
 			// typeTree
 			// 
-			this.typeTree.Dock = System.Windows.Forms.DockStyle.Left;
-			this.typeTree.ImageIndex = -1;
+			this.typeTree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.typeTree.Location = new System.Drawing.Point(0, 0);
 			this.typeTree.Name = "typeTree";
-			this.typeTree.SelectedImageIndex = -1;
-			this.typeTree.Size = new System.Drawing.Size(168, 370);
+			this.typeTree.Size = new System.Drawing.Size(257, 380);
 			this.typeTree.TabIndex = 18;
 			this.typeTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.onTypeChanged);
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(176, 121);
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.Location = new System.Drawing.Point(263, 121);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(64, 18);
 			this.label1.TabIndex = 19;
@@ -332,7 +341,8 @@ namespace freetrain.world.rail
 			// 
 			// label6
 			// 
-			this.label6.Location = new System.Drawing.Point(176, 147);
+			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label6.Location = new System.Drawing.Point(263, 143);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(64, 18);
 			this.label6.TabIndex = 20;
@@ -342,26 +352,25 @@ namespace freetrain.world.rail
 			// 
 			// description
 			// 
-			this.description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
+			this.description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.description.BackColor = System.Drawing.SystemColors.Control;
 			this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.description.Location = new System.Drawing.Point(248, 147);
+			this.description.Location = new System.Drawing.Point(333, 147);
 			this.description.Multiline = true;
 			this.description.Name = "description";
 			this.description.ReadOnly = true;
 			this.description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.description.Size = new System.Drawing.Size(193, 52);
+			this.description.Size = new System.Drawing.Size(220, 90);
 			this.description.TabIndex = 21;
-			this.description.Text = "";
+			this.description.Text = "tadasdffas";
 			// 
 			// author
 			// 
-			this.author.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
-			this.author.Location = new System.Drawing.Point(248, 121);
+			this.author.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.author.Location = new System.Drawing.Point(331, 121);
 			this.author.Name = "author";
-			this.author.Size = new System.Drawing.Size(193, 18);
+			this.author.Size = new System.Drawing.Size(222, 18);
 			this.author.TabIndex = 22;
 			this.author.Text = "477";
 			//! this.author.Text = "477さん";
@@ -369,7 +378,8 @@ namespace freetrain.world.rail
 			// 
 			// label7
 			// 
-			this.label7.Location = new System.Drawing.Point(296, 234);
+			this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label7.Location = new System.Drawing.Point(403, 266);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(27, 20);
 			this.label7.TabIndex = 23;
@@ -379,7 +389,8 @@ namespace freetrain.world.rail
 			// 
 			// label10
 			// 
-			this.label10.Location = new System.Drawing.Point(176, 9);
+			this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label10.Location = new System.Drawing.Point(263, 9);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(64, 17);
 			this.label10.TabIndex = 24;
@@ -389,11 +400,10 @@ namespace freetrain.world.rail
 			// 
 			// name
 			// 
-			this.name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
-			this.name.Location = new System.Drawing.Point(248, 9);
+			this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.name.Location = new System.Drawing.Point(333, 9);
 			this.name.Name = "name";
-			this.name.Size = new System.Drawing.Size(193, 17);
+			this.name.Size = new System.Drawing.Size(220, 17);
 			this.name.TabIndex = 25;
 			this.name.Text = "123 series ABCDEF";
 			//! this.name.Text = "123系 ABCDEF";
@@ -401,12 +411,11 @@ namespace freetrain.world.rail
 			// 
 			// preview
 			// 
-			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.preview.Location = new System.Drawing.Point(248, 35);
+			this.preview.Location = new System.Drawing.Point(331, 35);
 			this.preview.Name = "preview";
-			this.preview.Size = new System.Drawing.Size(193, 78);
+			this.preview.Size = new System.Drawing.Size(222, 78);
 			this.preview.TabIndex = 26;
 			this.preview.TabStop = false;
 			// 
@@ -418,16 +427,17 @@ namespace freetrain.world.rail
 			// 
 			// toolBarDayNight
 			// 
+			this.toolBarDayNight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.toolBarDayNight.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
 																							   this.tbDay,
 																							   this.tbNight});
 			this.toolBarDayNight.Dock = System.Windows.Forms.DockStyle.None;
 			this.toolBarDayNight.DropDownArrows = true;
 			this.toolBarDayNight.ImageList = this.buttonImages;
-			this.toolBarDayNight.Location = new System.Drawing.Point(216, 35);
+			this.toolBarDayNight.Location = new System.Drawing.Point(287, 35);
 			this.toolBarDayNight.Name = "toolBarDayNight";
 			this.toolBarDayNight.ShowToolTips = true;
-			this.toolBarDayNight.Size = new System.Drawing.Size(24, 48);
+			this.toolBarDayNight.Size = new System.Drawing.Size(38, 48);
 			this.toolBarDayNight.TabIndex = 27;
 			this.toolBarDayNight.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
 			// 
@@ -450,7 +460,7 @@ namespace freetrain.world.rail
 			this.AcceptButton = this.buttonOK;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.CancelButton = this.buttonCancel;
-			this.ClientSize = new System.Drawing.Size(458, 370);
+			this.ClientSize = new System.Drawing.Size(570, 380);
 			this.Controls.Add(this.toolBarDayNight);
 			this.Controls.Add(this.preview);
 			this.Controls.Add(this.name);
@@ -475,7 +485,6 @@ namespace freetrain.world.rail
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.length);
 			this.Controls.Add(this.label2);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "TrainTradingDialog";

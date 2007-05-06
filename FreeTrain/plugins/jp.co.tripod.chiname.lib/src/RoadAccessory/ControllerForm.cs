@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -69,6 +69,7 @@ namespace freetrain.world.road.accessory
 			// 
 			// typeBox
 			// 
+			this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | (System.Windows.Forms.AnchorStyles.Left | (System.Windows.Forms.AnchorStyles.Right))));
 			this.typeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.typeBox.Location = new System.Drawing.Point(8, 8);
 			this.typeBox.Name = "typeBox";
@@ -79,6 +80,7 @@ namespace freetrain.world.road.accessory
 			// 
 			// preview
 			// 
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | (System.Windows.Forms.AnchorStyles.Left | (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right))));
 			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.preview.Location = new System.Drawing.Point(8, 40);
 			this.preview.Name = "preview";
@@ -88,6 +90,7 @@ namespace freetrain.world.road.accessory
 			// 
 			// costBox
 			// 
+			this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.costBox.cost = 0;
 			this.costBox.label = "Cost:";
 			//! this.costBox.label = "費用：";
@@ -134,6 +137,7 @@ namespace freetrain.world.road.accessory
 																		  this.preview});
 			this.Name = "ControllerForm";
 			this.Text = "Road Accessories";
+			this.Resize += new EventHandler(this.updateAfterResize);
 			//! this.Text = "道路アクセサリ";
 			this.ResumeLayout(false);
 
@@ -144,6 +148,16 @@ namespace freetrain.world.road.accessory
 			get {
 				return buttonPlace.Checked;
 			}
+		}
+		
+		protected virtual void updateAfterResize(object sender, System.EventArgs e){
+			this.buttonPlace.Left = this.preview.Left;
+			this.buttonPlace.Width = ((this.preview.Width)) / 2;
+			this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width);
+			this.buttonRemove.Width = this.buttonPlace.Width;
+			this.buttonPlace.Top = this.ClientSize.Height - 30;
+			this.buttonRemove.Top = this.buttonPlace.Top;
+			updatePreview();
 		}
 
 		/// <summary>

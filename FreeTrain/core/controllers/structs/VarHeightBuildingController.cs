@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -66,29 +66,27 @@ namespace freetrain.controllers.structs
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(8, 152);
+			this.label1.Location = new System.Drawing.Point(8, 166);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 16);
 			this.label1.TabIndex = 3;
 			this.label1.Text = "&Height:";
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
 			//! this.label1.Text = "高さ(&H)：";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
 			// 
 			// heightBox
 			// 
-			this.heightBox.Increment = new System.Decimal(new int[] {
-																		4,
+			this.heightBox.Increment = new System.Decimal(new int[] {4,
 																		0,
 																		0,
 																		0});
-			this.heightBox.Location = new System.Drawing.Point(56, 152);
-			this.heightBox.Maximum = new System.Decimal(new int[] {
-																	  32,
+			this.heightBox.Location = new System.Drawing.Point(56, 162);
+			this.heightBox.Maximum = new System.Decimal(new int[] {32,
 																	  0,
 																	  0,
 																	  0});
-			this.heightBox.Minimum = new System.Decimal(new int[] {
-																	  4,
+			this.heightBox.Minimum = new System.Decimal(new int[] {4,
 																	  0,
 																	  0,
 																	  0});
@@ -96,18 +94,18 @@ namespace freetrain.controllers.structs
 			this.heightBox.Size = new System.Drawing.Size(64, 19);
 			this.heightBox.TabIndex = 4;
 			this.heightBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.heightBox.Value = new System.Decimal(new int[] {
-																	4,
+			this.heightBox.Value = new System.Decimal(new int[] {4,
 																	0,
 																	0,
 																	0});
+			this.heightBox.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left |(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.heightBox.Validating += new System.ComponentModel.CancelEventHandler(this.heightBox_Validating);
 			this.heightBox.ValueChanged += new System.EventHandler(this.heightBox_ValueChanged);
 			// 
 			// VarHeightBuildingController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(128, 203);
+			this.ClientSize = new System.Drawing.Size(144, 222);
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
 																		  this.heightBox,
 																		  this.label1});
@@ -179,6 +177,7 @@ namespace freetrain.controllers.structs
 		}
 		private int height {
 			get {
+				if (heightBox == null) {return 1;}
 				return (int)heightBox.Value/4;
 			}
 		}
@@ -207,6 +206,7 @@ namespace freetrain.controllers.structs
 
 		private void heightBox_ValueChanged(object sender, System.EventArgs e) {
 			updateAlphaSprites();
+			updatePreview();
 		}
 
 		protected override void onTypeChanged(object sender, System.EventArgs e) {

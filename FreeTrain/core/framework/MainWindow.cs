@@ -1425,26 +1425,31 @@ namespace freetrain.framework
 		private void menuItem_ClockStop_Click( object sender, EventArgs e ) {
 			timer.Interval=9999;	// set to some value other than those values used for other speeds
 			timer.Stop();
+			updateTimerImage();
 		}
 
 		private void menuItem_ClockGo1_Click(object sender, System.EventArgs e) {
 			timer.Interval=200;
 			timer.Start();
+			updateTimerImage();
 		}
 
 		private void menuItem_ClockGo2_Click( object sender, EventArgs e ) {
 			timer.Interval=100;
 			timer.Start();
+			updateTimerImage();
 		}
 
 		private void menuItem_ClockGo3_Click(object sender, System.EventArgs e) {
 			timer.Interval=50;
 			timer.Start();
+			updateTimerImage();
 		}
 
 		private void menuItem_ClockGo4_Click(object sender, System.EventArgs e) {
 			timer.Interval=1;
 			timer.Start();
+			updateTimerImage();
 		}
 
 		private void updateTimerImage()

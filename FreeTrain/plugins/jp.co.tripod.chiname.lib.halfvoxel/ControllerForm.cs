@@ -174,6 +174,7 @@ namespace freetrain.world.structs.hv
 			this.group.Size = new System.Drawing.Size(136, 188);
 			this.group.TabIndex = 1;
 			this.group.TabStop = false;
+			this.group.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)|(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
 			this.toolTip1.SetToolTip(this.group, "Select a building to the left");
 			//! this.toolTip1.SetToolTip(this.group, "左側の建物選択");
 			// 
@@ -336,6 +337,7 @@ namespace freetrain.world.structs.hv
 			this.Name = "ControllerForm";
 			this.Text = "Half Voxels";
 			//! this.Text = "半ボクセル建築";
+			this.Resize += new EventHandler(this.updateSize);
 			this.group.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -465,6 +467,10 @@ namespace freetrain.world.structs.hv
 		internal void randomize()
 		{
 			onPreviewClick(this,null);
+		}
+		
+		protected virtual void updateSize(object sender, System.EventArgs e){
+			updatePreview();
 		}
 
 		private createCallback callback;

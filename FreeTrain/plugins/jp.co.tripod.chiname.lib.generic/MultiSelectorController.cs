@@ -66,7 +66,7 @@ namespace freetrain.framework.plugin.generic
 
 		#region Singleton instance management
 		private static MultiSelectorController theInstance;
-		private KeyEventHandler keyHandler;
+//		private KeyEventHandler keyHandler;
 
 		/// <summary>
 		/// Creates a new controller window, or active the existing one.
@@ -327,299 +327,300 @@ namespace freetrain.framework.plugin.generic
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.previewBox = new System.Windows.Forms.PictureBox();
-            this.selectorDesign = new freetrain.controls.IndexSelector();
-            this.selectorDir = new freetrain.controls.IndexSelector();
-            this.labelDir = new System.Windows.Forms.Label();
-            this.selectorColor = new freetrain.controls.IndexSelector();
-            this.typeBox = new System.Windows.Forms.ComboBox();
-            this.numHeight = new System.Windows.Forms.NumericUpDown();
-            this.labelHeight = new System.Windows.Forms.Label();
-            this.btnDetail = new System.Windows.Forms.Button();
-            this.labelInfo = new System.Windows.Forms.Label();
-            this.costBox = new freetrain.controls.CostBox();
-            this.groupColor = new System.Windows.Forms.GroupBox();
-            this.cbRandColor = new System.Windows.Forms.CheckBox();
-            this.groupDesign = new System.Windows.Forms.GroupBox();
-            this.cbRandDesign = new System.Windows.Forms.CheckBox();
-            this.groupCol2 = new System.Windows.Forms.GroupBox();
-            this.selectorCol2 = new freetrain.controls.IndexSelector();
-            this.cbRandCol2 = new System.Windows.Forms.CheckBox();
-            this.typeList = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.previewBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHeight)).BeginInit();
-            this.groupColor.SuspendLayout();
-            this.groupDesign.SuspendLayout();
-            this.groupCol2.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameLabel.BackColor = System.Drawing.Color.White;
-            this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.nameLabel.Location = new System.Drawing.Point(4, 35);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(152, 17);
-            this.nameLabel.TabIndex = 2;
-            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // previewBox
-            // 
-            this.previewBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.previewBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.previewBox.Location = new System.Drawing.Point(6, 138);
-            this.previewBox.Name = "previewBox";
-            this.previewBox.Size = new System.Drawing.Size(185, 240);
-            this.previewBox.TabIndex = 3;
-            this.previewBox.TabStop = false;
-            this.previewBox.Click += new System.EventHandler(this.previewBox_Click);
-            // 
-            // selectorDesign
-            // 
-            this.selectorDesign.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.selectorDesign.count = 10;
-            this.selectorDesign.current = 0;
-            this.selectorDesign.dataSource = null;
-            this.selectorDesign.Location = new System.Drawing.Point(24, 17);
-            this.selectorDesign.Name = "selectorDesign";
-            this.selectorDesign.Size = new System.Drawing.Size(112, 16);
-            this.selectorDesign.TabIndex = 1;
-            this.selectorDesign.indexChanged += new System.EventHandler(this.selectorDesign_indexChanged);
-            // 
-            // selectorDir
-            // 
-            this.selectorDir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.selectorDir.count = 10;
-            this.selectorDir.current = 0;
-            this.selectorDir.dataSource = null;
-            this.selectorDir.Location = new System.Drawing.Point(262, 177);
-            this.selectorDir.Name = "selectorDir";
-            this.selectorDir.Size = new System.Drawing.Size(88, 17);
-            this.selectorDir.TabIndex = 5;
-            this.selectorDir.indexChanged += new System.EventHandler(this.selectorDir_indexChanged);
-            // 
-            // labelDir
-            // 
-            this.labelDir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDir.Location = new System.Drawing.Point(201, 177);
-            this.labelDir.Name = "labelDir";
-            this.labelDir.Size = new System.Drawing.Size(59, 17);
-            this.labelDir.TabIndex = 4;
-            this.labelDir.Text = "Direction";
+			this.nameLabel = new System.Windows.Forms.Label();
+			this.previewBox = new System.Windows.Forms.PictureBox();
+			this.selectorDesign = new freetrain.controls.IndexSelector();
+			this.selectorDir = new freetrain.controls.IndexSelector();
+			this.labelDir = new System.Windows.Forms.Label();
+			this.selectorColor = new freetrain.controls.IndexSelector();
+			this.typeBox = new System.Windows.Forms.ComboBox();
+			this.numHeight = new System.Windows.Forms.NumericUpDown();
+			this.labelHeight = new System.Windows.Forms.Label();
+			this.btnDetail = new System.Windows.Forms.Button();
+			this.labelInfo = new System.Windows.Forms.Label();
+			this.costBox = new freetrain.controls.CostBox();
+			this.groupColor = new System.Windows.Forms.GroupBox();
+			this.cbRandColor = new System.Windows.Forms.CheckBox();
+			this.groupDesign = new System.Windows.Forms.GroupBox();
+			this.cbRandDesign = new System.Windows.Forms.CheckBox();
+			this.groupCol2 = new System.Windows.Forms.GroupBox();
+			this.selectorCol2 = new freetrain.controls.IndexSelector();
+			this.cbRandCol2 = new System.Windows.Forms.CheckBox();
+			this.typeList = new System.Windows.Forms.ListBox();
+			((System.ComponentModel.ISupportInitialize)(this.previewBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numHeight)).BeginInit();
+			this.groupColor.SuspendLayout();
+			this.groupDesign.SuspendLayout();
+			this.groupCol2.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// nameLabel
+			// 
+			this.nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.nameLabel.BackColor = System.Drawing.Color.White;
+			this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.nameLabel.Location = new System.Drawing.Point(4, 38);
+			this.nameLabel.Name = "nameLabel";
+			this.nameLabel.Size = new System.Drawing.Size(152, 17);
+			this.nameLabel.TabIndex = 2;
+			this.nameLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			// 
+			// previewBox
+			// 
+			this.previewBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.previewBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.previewBox.Location = new System.Drawing.Point(4, 114);
+			this.previewBox.Name = "previewBox";
+			this.previewBox.Size = new System.Drawing.Size(172, 268);
+			this.previewBox.TabIndex = 3;
+			this.previewBox.TabStop = false;
+			this.previewBox.Click += new System.EventHandler(this.previewBox_Click);
+			// 
+			// selectorDesign
+			// 
+			this.selectorDesign.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.selectorDesign.count = 10;
+			this.selectorDesign.current = 0;
+			this.selectorDesign.dataSource = null;
+			this.selectorDesign.Location = new System.Drawing.Point(24, 19);
+			this.selectorDesign.Name = "selectorDesign";
+			this.selectorDesign.Size = new System.Drawing.Size(112, 16);
+			this.selectorDesign.TabIndex = 1;
+			this.selectorDesign.indexChanged += new System.EventHandler(this.selectorDesign_indexChanged);
+			// 
+			// selectorDir
+			// 
+			this.selectorDir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.selectorDir.count = 10;
+			this.selectorDir.current = 0;
+			this.selectorDir.dataSource = null;
+			this.selectorDir.Location = new System.Drawing.Point(251, 192);
+			this.selectorDir.Name = "selectorDir";
+			this.selectorDir.Size = new System.Drawing.Size(88, 17);
+			this.selectorDir.TabIndex = 5;
+			this.selectorDir.indexChanged += new System.EventHandler(this.selectorDir_indexChanged);
+			// 
+			// labelDir
+			// 
+			this.labelDir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelDir.Location = new System.Drawing.Point(190, 192);
+			this.labelDir.Name = "labelDir";
+			this.labelDir.Size = new System.Drawing.Size(59, 17);
+			this.labelDir.TabIndex = 4;
+			this.labelDir.Text = "Direction";
             //! this.labelDir.Text = "方向：";
-            this.labelDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // selectorColor
-            // 
-            this.selectorColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.selectorColor.count = 10;
-            this.selectorColor.current = 0;
-            this.selectorColor.dataSource = null;
-            this.selectorColor.Location = new System.Drawing.Point(24, 17);
-            this.selectorColor.Name = "selectorColor";
-            this.selectorColor.Size = new System.Drawing.Size(112, 16);
-            this.selectorColor.TabIndex = 1;
-            this.selectorColor.indexChanged += new System.EventHandler(this.selectorColor_indexChanged);
-            // 
-            // typeBox
-            // 
-            this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeBox.Location = new System.Drawing.Point(201, 12);
-            this.typeBox.Name = "typeBox";
-            this.typeBox.Size = new System.Drawing.Size(160, 21);
-            this.typeBox.TabIndex = 0;
-            this.typeBox.SelectedIndexChanged += new System.EventHandler(this.typeBox_SelectedIndexChanged);
-            // 
-            // numHeight
-            // 
-            this.numHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numHeight.Location = new System.Drawing.Point(262, 199);
-            this.numHeight.Name = "numHeight";
-            this.numHeight.Size = new System.Drawing.Size(88, 20);
-            this.numHeight.TabIndex = 7;
-            this.numHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numHeight.ValueChanged += new System.EventHandler(this.numHeight_ValueChanged);
-            // 
-            // labelHeight
-            // 
-            this.labelHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelHeight.Location = new System.Drawing.Point(204, 199);
-            this.labelHeight.Name = "labelHeight";
-            this.labelHeight.Size = new System.Drawing.Size(58, 18);
-            this.labelHeight.TabIndex = 6;
-            this.labelHeight.Text = "Height";
-            //! this.labelHeight.Text = "高さ：";
-            this.labelHeight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnDetail
-            // 
-            this.btnDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDetail.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnDetail.Location = new System.Drawing.Point(341, 229);
-            this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(20, 21);
-            this.btnDetail.TabIndex = 9;
-            this.btnDetail.Text = "q";
-            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
-            // 
-            // labelInfo
-            // 
-            this.labelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelInfo.Location = new System.Drawing.Point(201, 263);
-            this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(156, 115);
-            this.labelInfo.TabIndex = 9;
-            this.labelInfo.UseMnemonic = false;
-            // 
-            // costBox
-            // 
-            this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.costBox.cost = 0;
-            this.costBox.label = "Cost:";
-            //! this.costBox.label = "費用：";
-            this.costBox.Location = new System.Drawing.Point(201, 220);
-            this.costBox.Name = "costBox";
-            this.costBox.Size = new System.Drawing.Size(136, 35);
-            this.costBox.TabIndex = 8;
-            // 
-            // groupColor
-            // 
-            this.groupColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupColor.Controls.Add(this.selectorColor);
-            this.groupColor.Controls.Add(this.cbRandColor);
-            this.groupColor.Location = new System.Drawing.Point(201, 94);
-            this.groupColor.Name = "groupColor";
-            this.groupColor.Size = new System.Drawing.Size(160, 37);
-            this.groupColor.TabIndex = 2;
-            this.groupColor.TabStop = false;
-            this.groupColor.Text = "Color 1";
-            //! this.groupColor.Text = "色：";
-            // 
-            // cbRandColor
-            // 
-            this.cbRandColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbRandColor.BackColor = System.Drawing.SystemColors.Control;
-            this.cbRandColor.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandColor.Location = new System.Drawing.Point(73, 0);
-            this.cbRandColor.Name = "cbRandColor";
-            this.cbRandColor.Size = new System.Drawing.Size(71, 17);
-            this.cbRandColor.TabIndex = 0;
-            this.cbRandColor.Text = "Random";
-            //! this.cbRandColor.Text = "ランダム";
-            this.cbRandColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandColor.UseVisualStyleBackColor = false;
-            // 
-            // groupDesign
-            // 
-            this.groupDesign.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupDesign.Controls.Add(this.cbRandDesign);
-            this.groupDesign.Controls.Add(this.selectorDesign);
-            this.groupDesign.Controls.Add(this.nameLabel);
-            this.groupDesign.Location = new System.Drawing.Point(201, 38);
-            this.groupDesign.Name = "groupDesign";
-            this.groupDesign.Size = new System.Drawing.Size(160, 56);
-            this.groupDesign.TabIndex = 1;
-            this.groupDesign.TabStop = false;
-            this.groupDesign.Text = "Design";
-            //! this.groupDesign.Text = "デザイン：";
-            // 
-            // cbRandDesign
-            // 
-            this.cbRandDesign.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbRandDesign.BackColor = System.Drawing.SystemColors.Control;
-            this.cbRandDesign.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandDesign.Location = new System.Drawing.Point(73, -1);
-            this.cbRandDesign.Name = "cbRandDesign";
-            this.cbRandDesign.Size = new System.Drawing.Size(71, 17);
-            this.cbRandDesign.TabIndex = 0;
-            this.cbRandDesign.Text = "Random";
-            //! this.cbRandDesign.Text = "ランダム";
-            this.cbRandDesign.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandDesign.UseVisualStyleBackColor = false;
-            // 
-            // groupCol2
-            // 
-            this.groupCol2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupCol2.Controls.Add(this.selectorCol2);
-            this.groupCol2.Controls.Add(this.cbRandCol2);
-            this.groupCol2.Location = new System.Drawing.Point(201, 133);
-            this.groupCol2.Name = "groupCol2";
-            this.groupCol2.Size = new System.Drawing.Size(160, 37);
-            this.groupCol2.TabIndex = 3;
-            this.groupCol2.TabStop = false;
-            this.groupCol2.Text = "Color 2";
-            //! this.groupCol2.Text = "色2：";
-            // 
-            // selectorCol2
-            // 
-            this.selectorCol2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.selectorCol2.count = 10;
-            this.selectorCol2.current = 0;
-            this.selectorCol2.dataSource = null;
-            this.selectorCol2.Location = new System.Drawing.Point(24, 17);
-            this.selectorCol2.Name = "selectorCol2";
-            this.selectorCol2.Size = new System.Drawing.Size(112, 16);
-            this.selectorCol2.TabIndex = 1;
-            this.selectorCol2.indexChanged += new System.EventHandler(this.selectorCol2_indexChanged);
-            // 
-            // cbRandCol2
-            // 
-            this.cbRandCol2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbRandCol2.BackColor = System.Drawing.SystemColors.Control;
-            this.cbRandCol2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandCol2.Location = new System.Drawing.Point(73, 0);
-            this.cbRandCol2.Name = "cbRandCol2";
-            this.cbRandCol2.Size = new System.Drawing.Size(71, 17);
-            this.cbRandCol2.TabIndex = 0;
-            this.cbRandCol2.Text = "Random";
-            //! this.cbRandCol2.Text = "ランダム";
-            this.cbRandCol2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbRandCol2.UseVisualStyleBackColor = false;
-            // 
-            // typeList
-            // 
-            this.typeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeList.Location = new System.Drawing.Point(6, 12);
-            this.typeList.Name = "typeList";
-            this.typeList.Size = new System.Drawing.Size(185, 108);
-            this.typeList.TabIndex = 10;
-            this.typeList.SelectedIndexChanged += new System.EventHandler(this.typeList_SelectedIndexChanged);
-            // 
-            // MultiSelectorController
-            // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(369, 387);
-            this.Controls.Add(this.costBox);
-            this.Controls.Add(this.numHeight);
-            this.Controls.Add(this.groupDesign);
-            this.Controls.Add(this.selectorDir);
-            this.Controls.Add(this.labelDir);
-            this.Controls.Add(this.btnDetail);
-            this.Controls.Add(this.labelInfo);
-            this.Controls.Add(this.groupColor);
-            this.Controls.Add(this.groupCol2);
-            this.Controls.Add(this.typeList);
-            this.Controls.Add(this.typeBox);
-            this.Controls.Add(this.previewBox);
-            this.Controls.Add(this.labelHeight);
-            this.Name = "MultiSelectorController";
-            ((System.ComponentModel.ISupportInitialize)(this.previewBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHeight)).EndInit();
-            this.groupColor.ResumeLayout(false);
-            this.groupDesign.ResumeLayout(false);
-            this.groupCol2.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+			this.labelDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// selectorColor
+			// 
+			this.selectorColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.selectorColor.count = 10;
+			this.selectorColor.current = 0;
+			this.selectorColor.dataSource = null;
+			this.selectorColor.Location = new System.Drawing.Point(24, 17);
+			this.selectorColor.Name = "selectorColor";
+			this.selectorColor.Size = new System.Drawing.Size(112, 16);
+			this.selectorColor.TabIndex = 1;
+			this.selectorColor.indexChanged += new System.EventHandler(this.selectorColor_indexChanged);
+			// 
+			// typeBox
+			// 
+			this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.typeBox.Location = new System.Drawing.Point(190, 4);
+			this.typeBox.Name = "typeBox";
+			this.typeBox.Size = new System.Drawing.Size(160, 21);
+			this.typeBox.TabIndex = 0;
+			this.typeBox.SelectedIndexChanged += new System.EventHandler(this.typeBox_SelectedIndexChanged);
+			// 
+			// numHeight
+			// 
+			this.numHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.numHeight.Location = new System.Drawing.Point(251, 214);
+			this.numHeight.Name = "numHeight";
+			this.numHeight.Size = new System.Drawing.Size(88, 20);
+			this.numHeight.TabIndex = 7;
+			this.numHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numHeight.ValueChanged += new System.EventHandler(this.numHeight_ValueChanged);
+			// 
+			// labelHeight
+			// 
+			this.labelHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelHeight.Location = new System.Drawing.Point(193, 214);
+			this.labelHeight.Name = "labelHeight";
+			this.labelHeight.Size = new System.Drawing.Size(58, 18);
+			this.labelHeight.TabIndex = 6;
+			this.labelHeight.Text = "Height";
+			this.labelHeight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			//! this.labelHeight.Text = "高さ：";
+			// 
+			// btnDetail
+			// 
+			this.btnDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnDetail.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+			this.btnDetail.Location = new System.Drawing.Point(330, 250);
+			this.btnDetail.Name = "btnDetail";
+			this.btnDetail.Size = new System.Drawing.Size(20, 21);
+			this.btnDetail.TabIndex = 9;
+			this.btnDetail.Text = "q";
+			this.btnDetail.Visible = false;
+			this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
+			// 
+			// labelInfo
+			// 
+			this.labelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.labelInfo.Location = new System.Drawing.Point(190, 278);
+			this.labelInfo.Name = "labelInfo";
+			this.labelInfo.Size = new System.Drawing.Size(156, 104);
+			this.labelInfo.TabIndex = 9;
+			this.labelInfo.UseMnemonic = false;
+			// 
+			// costBox
+			// 
+			this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.costBox.cost = 0;
+			this.costBox.label = "Cost:";
+			this.costBox.Location = new System.Drawing.Point(190, 235);
+			//! this.costBox.label = "費用：";
+			this.costBox.Name = "costBox";
+			this.costBox.Size = new System.Drawing.Size(136, 40);
+			this.costBox.TabIndex = 8;
+			// 
+			// groupColor
+			// 
+			this.groupColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupColor.Controls.Add(this.selectorColor);
+			this.groupColor.Controls.Add(this.cbRandColor);
+			this.groupColor.Location = new System.Drawing.Point(190, 103);
+			this.groupColor.Name = "groupColor";
+			this.groupColor.Size = new System.Drawing.Size(160, 37);
+			this.groupColor.TabIndex = 2;
+			this.groupColor.TabStop = false;
+			this.groupColor.Text = "Color 1";
+			//! this.groupColor.Text = "色：";
+			// 
+			// cbRandColor
+			// 
+			this.cbRandColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cbRandColor.BackColor = System.Drawing.SystemColors.Control;
+			this.cbRandColor.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.cbRandColor.Location = new System.Drawing.Point(73, 0);
+			this.cbRandColor.Name = "cbRandColor";
+			this.cbRandColor.Size = new System.Drawing.Size(71, 17);
+			this.cbRandColor.TabIndex = 0;
+			this.cbRandColor.Text = "Random";
+			this.cbRandColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.cbRandColor.UseVisualStyleBackColor = false;
+			//! this.cbRandColor.Text = "ランダム";
+			// 
+			// groupDesign
+			// 
+			this.groupDesign.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupDesign.Controls.Add(this.cbRandDesign);
+			this.groupDesign.Controls.Add(this.selectorDesign);
+			this.groupDesign.Controls.Add(this.nameLabel);
+			this.groupDesign.Location = new System.Drawing.Point(190, 37);
+			this.groupDesign.Name = "groupDesign";
+			this.groupDesign.Size = new System.Drawing.Size(160, 62);
+			this.groupDesign.TabIndex = 1;
+			this.groupDesign.TabStop = false;
+			this.groupDesign.Text = "Design";
+			//! this.groupDesign.Text = "デザイン：";
+			// 
+			// cbRandDesign
+			// 
+			this.cbRandDesign.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cbRandDesign.BackColor = System.Drawing.SystemColors.Control;
+			this.cbRandDesign.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.cbRandDesign.Location = new System.Drawing.Point(73, -1);
+			this.cbRandDesign.Name = "cbRandDesign";
+			this.cbRandDesign.Size = new System.Drawing.Size(71, 17);
+			this.cbRandDesign.TabIndex = 0;
+			this.cbRandDesign.Text = "Random";
+			//! this.cbRandDesign.Text = "ランダム";
+			this.cbRandDesign.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.cbRandDesign.UseVisualStyleBackColor = false;
+			// 
+			// groupCol2
+			// 
+			this.groupCol2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupCol2.Controls.Add(this.selectorCol2);
+			this.groupCol2.Controls.Add(this.cbRandCol2);
+			this.groupCol2.Location = new System.Drawing.Point(190, 142);
+			this.groupCol2.Name = "groupCol2";
+			this.groupCol2.Size = new System.Drawing.Size(160, 37);
+			this.groupCol2.TabIndex = 3;
+			this.groupCol2.TabStop = false;
+			this.groupCol2.Text = "Color 2";
+			//! this.groupCol2.Text = "色2：";
+			// 
+			// selectorCol2
+			// 
+			this.selectorCol2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.selectorCol2.count = 10;
+			this.selectorCol2.current = 0;
+			this.selectorCol2.dataSource = null;
+			this.selectorCol2.Location = new System.Drawing.Point(24, 17);
+			this.selectorCol2.Name = "selectorCol2";
+			this.selectorCol2.Size = new System.Drawing.Size(112, 16);
+			this.selectorCol2.TabIndex = 1;
+			this.selectorCol2.indexChanged += new System.EventHandler(this.selectorCol2_indexChanged);
+			// 
+			// cbRandCol2
+			// 
+			this.cbRandCol2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cbRandCol2.BackColor = System.Drawing.SystemColors.Control;
+			this.cbRandCol2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.cbRandCol2.Location = new System.Drawing.Point(73, 0);
+			this.cbRandCol2.Name = "cbRandCol2";
+			this.cbRandCol2.Size = new System.Drawing.Size(71, 17);
+			this.cbRandCol2.TabIndex = 0;
+			this.cbRandCol2.Text = "Random";
+			//! this.cbRandCol2.Text = "ランダム";
+			this.cbRandCol2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.cbRandCol2.UseVisualStyleBackColor = false;
+			// 
+			// typeList
+			// 
+			this.typeList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.typeList.Location = new System.Drawing.Point(4, 4);
+			this.typeList.Name = "typeList";
+			this.typeList.Size = new System.Drawing.Size(172, 95);
+			this.typeList.TabIndex = 10;
+			this.typeList.SelectedIndexChanged += new System.EventHandler(this.typeList_SelectedIndexChanged);
+			// 
+			// MultiSelectorController
+			// 
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(354, 386);
+			this.Controls.Add(this.costBox);
+			this.Controls.Add(this.numHeight);
+			this.Controls.Add(this.groupDesign);
+			this.Controls.Add(this.selectorDir);
+			this.Controls.Add(this.labelDir);
+			this.Controls.Add(this.btnDetail);
+			this.Controls.Add(this.labelInfo);
+			this.Controls.Add(this.groupColor);
+			this.Controls.Add(this.groupCol2);
+			this.Controls.Add(this.typeList);
+			this.Controls.Add(this.typeBox);
+			this.Controls.Add(this.previewBox);
+			this.Controls.Add(this.labelHeight);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.Name = "MultiSelectorController";
+			this.Resize += new System.EventHandler(this.updateAfterResize);
+			((System.ComponentModel.ISupportInitialize)(this.previewBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numHeight)).EndInit();
+			this.groupColor.ResumeLayout(false);
+			this.groupDesign.ResumeLayout(false);
+			this.groupCol2.ResumeLayout(false);
+			this.ResumeLayout(false);
 		}
 		#endregion
 
@@ -636,7 +637,7 @@ namespace freetrain.framework.plugin.generic
 			}
 			else
 			{
-				this.ClientSize = new Size(width, costBox.Top + costBox.Height + 6);
+				this.ClientSize = new Size(width, costBox.Top + costBox.Height);
 				btnDetail.Text = "q";
 				typeList.Visible = false;
 			}
@@ -647,6 +648,31 @@ namespace freetrain.framework.plugin.generic
 		{
 			typeBox.SelectedIndex = typeList.SelectedIndex;		
 			UpdateContribution();
+			redrawPreview();
+		}
+		
+		protected virtual void updateAfterResize(object sender, System.EventArgs e){
+			this.SuspendLayout();
+			this.typeList.Width = (this.Width - 9) / 2;
+			this.typeList.Height = this.previewBox.Top - 20;
+			this.previewBox.Width = this.typeList.Width;
+			this.typeBox.Left = this.typeList.Left + this.typeList.Width + 5;
+			this.typeBox.Width = this.typeList.Width - 12;
+			this.groupCol2.Left = this.typeBox.Left;
+			this.groupCol2.Width = this.typeBox.Width;
+			this.groupColor.Left = this.typeBox.Left;
+			this.groupColor.Width = this.typeBox.Width;
+			this.labelInfo.Left = this.typeBox.Left;
+			this.labelInfo.Width = this.typeBox.Width;
+			this.groupDesign.Width = this.typeBox.Width;
+			this.groupDesign.Left = this.typeBox.Left;
+			this.costBox.Left = this.typeBox.Left;
+			this.costBox.Width = this.typeBox.Width;
+			this.labelDir.Left = this.typeBox.Left;
+			this.selectorDir.Left = this.labelDir.Left + this.labelDir.Width;
+			this.labelHeight.Left = this.typeBox.Left;
+			this.numHeight.Left = this.labelHeight.Left + this.labelHeight.Width;
+			this.ResumeLayout(false);
 			redrawPreview();
 		}
 

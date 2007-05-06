@@ -167,9 +167,9 @@ namespace freetrain.controllers.rail
 			// 
 			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(200, 133);
+			this.buttonRemove.Location = new System.Drawing.Point(187, 182);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(56, 26);
+			this.buttonRemove.Size = new System.Drawing.Size(89, 26);
 			this.buttonRemove.TabIndex = 5;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -181,9 +181,9 @@ namespace freetrain.controllers.rail
 			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(136, 133);
+			this.buttonPlace.Location = new System.Drawing.Point(110, 182);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(56, 26);
+			this.buttonPlace.Size = new System.Drawing.Size(71, 26);
 			this.buttonPlace.TabIndex = 4;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Place";
@@ -202,7 +202,7 @@ namespace freetrain.controllers.rail
 			this.tree.Location = new System.Drawing.Point(0, 0);
 			this.tree.Name = "tree";
 			this.tree.SelectedImageIndex = 0;
-			this.tree.Size = new System.Drawing.Size(146, 171);
+			this.tree.Size = new System.Drawing.Size(176, 220);
 			this.tree.TabIndex = 1;
 			this.tree.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.onNodeExpanded);
 			this.tree.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.onNodeCollapsed);
@@ -243,25 +243,27 @@ namespace freetrain.controllers.rail
 			this.panel2.Controls.Add(this.buttonPlace);
 			this.panel2.Controls.Add(this.buttonRemove);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-			this.panel2.Location = new System.Drawing.Point(146, 0);
+			this.panel2.Location = new System.Drawing.Point(176, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(264, 171);
+			this.panel2.Size = new System.Drawing.Size(284, 220);
 			this.panel2.TabIndex = 3;
 			// 
 			// typeBox
 			// 
+			this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.typeBox.Enabled = false;
 			this.typeBox.Location = new System.Drawing.Point(90, 78);
 			this.typeBox.Name = "typeBox";
-			this.typeBox.Size = new System.Drawing.Size(166, 22);
+			this.typeBox.Size = new System.Drawing.Size(186, 101);
 			this.typeBox.TabIndex = 13;
-			this.typeBox.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(14, 78);
+			this.label3.Location = new System.Drawing.Point(6, 73);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(70, 22);
+			this.label3.Size = new System.Drawing.Size(78, 22);
 			this.label3.TabIndex = 12;
 			this.label3.Text = "&Type:";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -279,9 +281,9 @@ namespace freetrain.controllers.rail
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(11, 43);
+			this.label2.Location = new System.Drawing.Point(3, 43);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(73, 21);
+			this.label2.Size = new System.Drawing.Size(81, 21);
 			this.label2.TabIndex = 10;
 			this.label2.Text = "&Diagram:";
 			//! this.label2.Text = "ダイヤ(&T)：";
@@ -289,19 +291,20 @@ namespace freetrain.controllers.rail
 			// 
 			// nameBox
 			// 
+			this.nameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.nameBox.Enabled = false;
 			this.nameBox.Location = new System.Drawing.Point(90, 9);
 			this.nameBox.Name = "nameBox";
-			this.nameBox.Size = new System.Drawing.Size(166, 20);
+			this.nameBox.Size = new System.Drawing.Size(186, 20);
 			this.nameBox.TabIndex = 2;
-			this.nameBox.Text = "";
 			this.nameBox.TextChanged += new System.EventHandler(this.onNameChanged);
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(11, 9);
+			this.label1.Location = new System.Drawing.Point(3, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(73, 21);
+			this.label1.Size = new System.Drawing.Size(81, 21);
 			this.label1.TabIndex = 8;
 			this.label1.Text = "&Name:";
 			//! this.label1.Text = "名前(&N)：";
@@ -313,7 +316,7 @@ namespace freetrain.controllers.rail
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(146, 171);
+			this.panel1.Size = new System.Drawing.Size(176, 220);
 			this.panel1.TabIndex = 7;
 			// 
 			// miSell
@@ -325,9 +328,10 @@ namespace freetrain.controllers.rail
 			// TrainPlacementController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(410, 171);
+			this.ClientSize = new System.Drawing.Size(460, 220);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.panel2);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.MinimumSize = new System.Drawing.Size(416, 195);
 			this.Name = "TrainPlacementController";
 			this.Text = "Place Train";

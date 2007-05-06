@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -41,6 +41,7 @@ namespace freetrain.controllers.structs
 			// load station type list
 			structType.DataSource = groupGroup;
 			structType.DisplayMember="name";
+			updateAfterResize(null,null);
 		}
 
 		protected override void Dispose( bool disposing ) {
@@ -72,33 +73,40 @@ namespace freetrain.controllers.structs
 			this.buttonRemove = new System.Windows.Forms.RadioButton();
 			this.buttonPlace = new System.Windows.Forms.RadioButton();
 			this.indexSelector = new freetrain.controls.IndexSelector();
+			((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// structType
 			// 
+			this.structType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.structType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.structType.Location = new System.Drawing.Point(8, 8);
+			this.structType.Location = new System.Drawing.Point(8, 9);
 			this.structType.Name = "structType";
-			this.structType.Size = new System.Drawing.Size(112, 20);
+			this.structType.Size = new System.Drawing.Size(130, 21);
 			this.structType.Sorted = true;
 			this.structType.TabIndex = 2;
 			this.structType.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
 			// 
 			// preview
 			// 
+			this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.preview.Location = new System.Drawing.Point(8, 64);
+			this.preview.Location = new System.Drawing.Point(8, 69);
 			this.preview.Name = "preview";
-			this.preview.Size = new System.Drawing.Size(112, 80);
+			this.preview.Size = new System.Drawing.Size(130, 87);
 			this.preview.TabIndex = 1;
 			this.preview.TabStop = false;
 			// 
 			// buttonRemove
 			// 
+			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(64, 152);
+			this.buttonRemove.Location = new System.Drawing.Point(82, 165);
 			this.buttonRemove.Name = "buttonRemove";
-			this.buttonRemove.Size = new System.Drawing.Size(56, 24);
+			this.buttonRemove.Size = new System.Drawing.Size(56, 26);
 			this.buttonRemove.TabIndex = 1;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
@@ -106,11 +114,12 @@ namespace freetrain.controllers.structs
 			// 
 			// buttonPlace
 			// 
+			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(8, 152);
+			this.buttonPlace.Location = new System.Drawing.Point(8, 165);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(56, 24);
+			this.buttonPlace.Size = new System.Drawing.Size(56, 26);
 			this.buttonPlace.TabIndex = 0;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Build";
@@ -119,32 +128,42 @@ namespace freetrain.controllers.structs
 			// 
 			// indexSelector
 			// 
+			this.indexSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
 			this.indexSelector.count = 10;
 			this.indexSelector.current = 0;
 			this.indexSelector.dataSource = null;
-			this.indexSelector.Location = new System.Drawing.Point(8, 36);
+			this.indexSelector.Location = new System.Drawing.Point(8, 39);
 			this.indexSelector.Name = "indexSelector";
-			this.indexSelector.Size = new System.Drawing.Size(112, 20);
+			this.indexSelector.Size = new System.Drawing.Size(130, 22);
 			this.indexSelector.TabIndex = 3;
 			this.indexSelector.indexChanged += new System.EventHandler(this.onTypeChanged);
 			// 
 			// StructPlacementController
 			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(128, 179);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.indexSelector,
-																		  this.buttonPlace,
-																		  this.buttonRemove,
-																		  this.structType,
-																		  this.preview});
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(146, 195);
+			this.Controls.Add(this.indexSelector);
+			this.Controls.Add(this.buttonPlace);
+			this.Controls.Add(this.buttonRemove);
+			this.Controls.Add(this.structType);
+			this.Controls.Add(this.preview);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "StructPlacementController";
 			this.Text = "Building construction";
 			//! this.Text = "建物の工事(仮)";
+			this.Resize += new System.EventHandler(this.updateAfterResize);
+			((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
 			this.ResumeLayout(false);
-
 		}
 		#endregion
+		
+		protected virtual void updateAfterResize(object sender, System.EventArgs e){
+			this.buttonPlace.Width = ((this.preview.Left + this.preview.Width) - this.buttonPlace.Left - 5) / 2;
+			this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width) + 10;
+			this.buttonRemove.Width = this.preview.Width - this.buttonPlace.Width - 10;
+			updatePreview();
+		}
 
 
 
