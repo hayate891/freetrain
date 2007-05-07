@@ -7,7 +7,7 @@
 <depend on="shikashika.freetrain.traincar.passenger"/>
 <depend on="shikashika.freetrain.traincar.freight"/>
 
-<title>Trains (JRKyushu)</title>
+<title>Trains (JR Kyushu)</title>
 
 <!-- 旅1列車の定義 -->
 
