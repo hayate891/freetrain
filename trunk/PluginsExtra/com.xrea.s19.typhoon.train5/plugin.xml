@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両セット　5号車</title>
+	<title>Train Set Number 5</title>
 	<homepage></homepage>
 
 	<!-- 413系 先頭車-->
@@ -29,10 +29,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-A413-8FE0-7567171D3CEF}">
-		<company>JR西日本</company>
-		<type>413系</type>
+		<company>JR West</company>
+		<type>Type 413</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -61,11 +61,11 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-A205-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>205系</type>
-		<name>1000番台 南武支線</name>
-		<author>たいふ～ん</author>
-		<description>(8両までの偶数両のみ編成可)</description>
+		<company>JR East</company>
+		<type>205 series</type>
+		<name>1000 Model Nambu Branchline</name>
+		<author>Typhoon</author>
+		<description>(Even numbers up to 8 car formations)</description>
 		<price>1</price>
            		<fare>350</fare>
 		<speed>medium</speed>
@@ -113,10 +113,10 @@
 		<capacity>136</capacity>
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-B205-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>205系</type>
-		<name>3100番台 仙石線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>205 series</type>
+		<name>3100 Model Senseki Line</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -194,11 +194,11 @@
 		<capacity>136</capacity>
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-C205-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>205系</type>
-		<name>3100番台2wayシート 仙石線</name>
-		<author>たいふ～ん</author>
-		<description>(4両、8両のみ編成可)</description>
+		<company>JR East</company>
+		<type>205 series</type>
+		<name>3100 Model 2-Way Seat Senseki Line</name>
+		<author>Typhoon</author>
+		<description>(only 4 and 8 car formations available)</description>
 		<price>1</price>
            		<fare>350</fare>
 		<speed>medium</speed>
@@ -252,10 +252,10 @@
 		<capacity>136</capacity>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-JRE-20530K-HENSEI-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>205系</type>
-		<name>3000番台 八高線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>205 Series</type>
+		<name>3000 Model Hachiko Line</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -305,10 +305,10 @@
 		<capacity>136</capacity>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-JRE-20512K-HENSEI-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>205系</type>
-		<name>1200番台 南武線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>205 Series</type>
+		<name>1200 Model Nambu Line</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -362,10 +362,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-A883-8FE0-7567171D3CEF}">
-		<company>JR九州</company>
-		<type>883系</type>
+		<company>JR Kyushu</company>
+		<type>883 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>fast</speed>
@@ -377,10 +377,10 @@
 		</composition>
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-B883-8FE0-7567171D3CEF}">
-		<company>JR九州</company>
-		<type>883系</type>
-		<name>前面白</name>
-		<author>たいふ～ん</author>
+		<company>JR Kyushu</company>
+		<type>883 Series</type>
+		<name>White Front</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>fast</speed>
@@ -418,10 +418,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-JRE-651-HENSEI-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>651系</type>
-		<name>スーパーひたち</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>651 Series</type>
+		<name>Super Hitachi</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>fast</speed>
@@ -458,10 +458,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-JRS-113AOMIDO-HENSEI-7567171D3CEF}">
-		<company>JR四国</company>
-		<type>113系</type>
-		<name>更新車（青・緑）</name>
-		<author>たいふ～ん</author>
+		<company>JR Shikoku</company>
+		<type>113 Series</type>
+		<name>Renewed Train (blue/green)</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -516,10 +516,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-JRS-113MOAKA-HENSEI-7567171D3CEF}">
-		<company>JR四国</company>
-		<type>113系</type>
-		<name>更新車（桃・赤）</name>
-		<author>たいふ～ん</author>
+		<company>JR Shikoku</company>
+		<type>113 Series</type>
+		<name>Renewed Train (peach/red)</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -574,10 +574,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-JRS-113OREKI-HENSEI-7567171D3CEF}">
-		<company>JR四国</company>
-		<type>113系</type>
-		<name>更新車（黄・橙）</name>
-		<author>たいふ～ん</author>
+		<company>JR Shikoku</company>
+		<type>113 Series</type>
+		<name>Renewed Train (yellow/orange)</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -598,10 +598,10 @@
 		<capacity>76</capacity>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-KAYA-KIHA083-HENSEI-7567171D3CEF}">
-		<company>加悦鉄道</company>
-		<type>キハ083</type>
+		<company>Kaya Railway</company>
+		<type>KIHA083</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>
 			
 		</description>
@@ -638,10 +638,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-KEISEI-3000-HENSEI-7567171D3CEF}">
-		<company>京成電鉄</company>
-		<type>3000系</type>
+		<company>Keisei Electric Railway</company>
+		<type>3000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -678,10 +678,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-KEISEI-3400-HENSEI-7567171D3CEF}">
-		<company>京成電鉄</company>
-		<type>3400系</type>
+		<company>Keisei Electric Railway</company>
+		<type>3400 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -718,10 +718,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-KEISEI-3700-HENSEI-7567171D3CEF}">
-		<company>京成電鉄</company>
-		<type>3700系</type>
+		<company>Keisei Electric Railway</company>
+		<type>3700 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -759,10 +759,10 @@
 		<price>1</price>
                 	<fare>360</fare>
 		<speed>medium</speed>
-		<author>たいふ～ん</author>
-		<company>JR東海</company>
-		<type>211系</type>
-		<name>中京色</name>
+		<author>Typhoon</author>
+		<company>JR Central</company>
+		<type>211 Series</type>
+		<name>Chukyo Color</name>
 		<description></description>
 		
 		<composition>
@@ -798,10 +798,10 @@
 		<price>1</price>
                 	<fare>1200</fare>
 		<speed>fast</speed>
-		<author>たいふ～ん</author>
-		<company>JR東日本</company>
-		<type>E257系</type>
-		<name>500番台　さざなみ・わかしお</name>
+		<author>Typhoon</author>
+		<company>JR East</company>
+		<type>E257 Series</type>
+		<name>500 Model Sazanami/Wakashio</name>
 		<description></description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
  		<config>
