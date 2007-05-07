@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?> 
 <plug-in>
-  <title>E217系</title> 
-  <author>いっちー</author> 
+  <title>E217 Series</title> 
+  <author>Icchii</author> 
   <homepage>cyber_express_1703d@ybb.ne.jp</homepage> 
 <!-- E217先頭車 --> 
 　<contribution type="trainCar" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-A">
@@ -35,16 +35,18 @@
   </contribution>
 
   <contribution type="train" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217-W}">
-<company>JR東日本</company>
-<type>Ｅ217系</type>
-<name>総武快速・横須賀線</name>
-<author>いっちー</author>
-<description>総武快速・横須賀線の混雑緩和、スピードアップを目的として登場した車両。
-ＪＲ東日本の通勤路線として初めて120ｋｍ/ｈ運転を開始した。
-4ドア、ロングシート配列という209系のスタイルを踏襲しつつ、長距離客に配慮して3両のセミクロスシート車を連結。
-横須賀線ならではのグリーン車(２階建て)を2両連結している。
-現在は湘南新宿ラインとして新宿駅にも乗り入れしている。
-編成は4両、11両、15両の3種類に、4両編成を2・3編成連結した８・12両を用意しました。
+<company>JR East</company>
+<type>E217 Series</type>
+<name>Sobu Rapid/Yokosuka Line</name>
+<author>Icchii</author>
+<description>This train was introduced to provide high-speed services for Sobu Rapid and
+Yokosuka Line to relieve the congestion there. On JR East's commuter route, it was the first
+to reach the speed of 120 km/h. Having a 209 Series style setup with four doors and long-
+seats, it also had a semi-closed carriage for long-distance commuters. On the Yokosuka line
+only, two two-floor 'Green Cars' were attached.
+Today, it runs on the Shonan-Shinjuku Line and stop at Shinjuku Station as well.
+There are three types of formations: 4 car, 11 car, and 15 car. The 4 car formation can be
+connected in sets of two or three to create 8 or 12 car formations.
 </description>
 <fare>700</fare>
 <price>60</price>
