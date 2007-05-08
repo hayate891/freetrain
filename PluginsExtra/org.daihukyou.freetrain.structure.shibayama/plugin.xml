@@ -10,7 +10,7 @@
 	</contribution>
 
         <contribution type="commercial" id="{1EBA4A26-C35D-4209-9C71-AA9B1237C14C}">
-		<group>Techono garden building</group>
+		<group>Techno Garden Building</group>
 		<price>10000</price>
 		<size>2,4</size>
 		<height>10</height>
@@ -24,7 +24,7 @@
               </contribution>
  
    <contribution type="commercial" id="{1EBA4A26-C35D-4209-9C71-AA9B1237C14A}">
-     <group>Techono garden building</group>
+     <group>Techno Garden Building</group>
      <price>100000</price>
      <size>4,2</size>
      <height>10</height>

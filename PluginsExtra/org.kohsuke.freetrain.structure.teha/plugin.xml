@@ -89,7 +89,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{E24C700F-40D3-4397-B4B3-6C9C98ECA774}">
-		<name>Umeda sky building</name>
+		<name>Umeda Sky Building</name>
 		<price>5000</price>
 		<size>5,5</size>
 		<height>10</height>
@@ -99,7 +99,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{619F301B-EB53-4FA9-8B69-6A80E9C3DD42}">
-		<name>Osaka tower</name>
+		<name>Osaka Tower</name>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>5</height>
@@ -111,7 +111,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{5FF50C0C-BECF-4AFD-AA82-EEBE3D609BA8}">
-		<name>Scool</name>
+		<name>School</name>
 		<price>5000</price>
 		<size>5,3</size>
 		<height>1</height>
@@ -183,7 +183,7 @@
 
 
 	<contribution type="commercial" id="{FBDDC8DC-8E9D-422B-AD97-B7E9157D3D62}">
-		<name>Devil castle Goddamn</name>
+		<name>Devil Castle Goddamn</name>
 		<price>5000</price>
 		<size>2,2</size>
 		<height>2</height>
@@ -193,7 +193,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{6323EA1B-3D1E-4E7D-BEB9-1D6E6ED2E1A1}">
-		<name>Tower of Distiny</name>
+		<name>Tower of Destiny</name>
 		<price>5000</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -317,7 +317,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{DFBD51DE-E6D1-4CE0-BD2F-5C0E1CBC61FE}">
-		<name>Shizuoka broadcasting Tokyo branch</name>
+		<name>Shizuoka Broadcasting Tokyo Branch</name>
 		<price>5000</price>
 		<size>2,1</size>
 		<height>4</height>
@@ -327,7 +327,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{F34E2C0D-9ECE-4590-A25A-3203BA9184C8}">
-		<name>Nakagin bank capsule tower building</name>
+		<name>Nakagin Capsule Tower</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>3</height>
@@ -337,7 +337,7 @@
 	</contribution>
 
 	<contribution type="commercial" id="{5C13B5F3-7CDF-44A4-9C59-3D359E4DB6FE}">
-		<name>Sony tower</name>
+		<name>Sony Tower</name>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>4</height>

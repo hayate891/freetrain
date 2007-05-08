@@ -832,7 +832,7 @@
 
 
 <plug-in>
-	<title>FreeTrain-Sousaku Kan, primaly Buildings</title>
+	<title>FreeTrain-Sousaku Kan, primary Buildings</title>
 	<author>haru</author>
 	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
 	<depend on="jp.ne.seikyou.Go-Ro.structure"/>
@@ -959,9 +959,9 @@
 
 
 
-<!-- The Tower of Sun -->
+<!-- Tower of the Sun -->
 	<contribution type="GenericStructure" id="{taiyo-GenericStructure-C000-000a-4C8B212Dharu}">
-		<name>The Tower of Sun</name>
+		<name>Tower of the Sun</name>
 		<structure>
 			<category byname="Landmarks"/>
 		</structure>

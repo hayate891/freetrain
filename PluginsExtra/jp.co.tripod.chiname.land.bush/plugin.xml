@@ -76,7 +76,7 @@
 	
 	
 	<contribution type="land" id="{4307947B-3E50-4467-C477-37938B23AB89}-m">
-		<group>Bushes(moutnain)</group>
+		<group>Bushes(mountain)</group>
 		<name>boxwood</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
@@ -95,7 +95,7 @@
 	</contribution>
 	
 	<contribution type="land" id="{7FA5C87F-2C70-460E-C477-405D5DFEB16A}-m">
-		<group>Bushes(moutnain)</group>
+		<group>Bushes(mountain)</group>
 		<name>pampas grass</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
@@ -116,7 +116,7 @@
 	</contribution>
 	
 	<contribution type="land" id="{1C67B6F8-65D2-4837-C477-D2FDF1E3102A}-m">
-		<group>Bushes(moutnain)</group>
+		<group>Bushes(mountain)</group>
 		<name>deciduous tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>
@@ -136,7 +136,7 @@
 	</contribution>
 	
 	<contribution type="land" id="{D828F5C5-2C45-43F7-C477-AB619FB21F03}-m">
-		<group>Bushes(moutnain)</group>
+		<group>Bushes(mountain)</group>
 		<name>evergreen tree A</name>
 		<class name="freetrain.world.land.forest.ForestBuilder"
 			codebase="../org.kohsuke.freetrain.land.forest/bin/Debug/FreeTrain.Forest.dll"/>

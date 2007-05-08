@@ -25,7 +25,7 @@
 	'>	
 ]>
 <plug-in>
-	<title>Sapporo station</title>
+	<title>Sapporo Station</title>
 	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 		
@@ -42,7 +42,7 @@
 
 
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a0">
-		<group>Sapporo station</group>
+		<group>Sapporo Station</group>
 		&SapporpStation;
 		<size>5,12</size>
 		<sprite origin="  0,200" offset="96">
@@ -50,7 +50,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a1">
-		<group>Sapporo station</group>
+		<group>Sapporo Station</group>
 		&SapporpStation;
 		<size>12,5</size>
 		<sprite origin="272,200" offset="152">
@@ -58,7 +58,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a2">
-		<group>Sapporo station</group>
+		<group>Sapporo Station</group>
 		&SapporpStation;
 		<size>5,12</size>
 		<sprite origin="  0,  0" offset="96">
@@ -66,7 +66,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="station" id="{E82EF732-605C-4284-C477-0239AD9521D7}-a3">
-		<group>Sapporo station</group>
+		<group>Sapporo Station</group>
 		&SapporpStation;
 		<size>12,5</size>
 		<sprite origin="272,  0" offset="152">

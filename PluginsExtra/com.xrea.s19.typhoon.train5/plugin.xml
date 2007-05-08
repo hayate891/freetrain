@@ -30,7 +30,7 @@
 
 	<contribution type="train" id="{57644AE6-7FFA-A413-8FE0-7567171D3CEF}">
 		<company>JR West</company>
-		<type>Type 413</type>
+		<type>413 Series</type>
 		<name></name>
 		<author>Typhoon</author>
 		<description></description>
@@ -62,7 +62,7 @@
 
 	<contribution type="train" id="{57644AE6-7FFA-A205-8FE0-7567171D3CEF}">
 		<company>JR East</company>
-		<type>205 series</type>
+		<type>205 Series</type>
 		<name>1000 Model Nambu Branchline</name>
 		<author>Typhoon</author>
 		<description>(Even numbers up to 8 car formations)</description>
@@ -114,7 +114,7 @@
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-B205-8FE0-7567171D3CEF}">
 		<company>JR East</company>
-		<type>205 series</type>
+		<type>205 Series</type>
 		<name>3100 Model Senseki Line</name>
 		<author>Typhoon</author>
 		<description></description>
@@ -195,7 +195,7 @@
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-C205-8FE0-7567171D3CEF}">
 		<company>JR East</company>
-		<type>205 series</type>
+		<type>205 Series</type>
 		<name>3100 Model 2-Way Seat Senseki Line</name>
 		<author>Typhoon</author>
 		<description>(only 4 and 8 car formations available)</description>

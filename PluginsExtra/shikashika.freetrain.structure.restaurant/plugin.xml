@@ -112,7 +112,7 @@
 
 <!ENTITY component_lamianrestaurant_001 '
 	<group>Restaurants</group>
-	<name>Chinese noodle shop(1x1)</name>
+	<name>Ramen shop(1x1)</name>
 	<structure>
 		<category byname="Restaurants"/>
 		<category byname="Housing" hide="true"/>
@@ -138,7 +138,7 @@
 '>
 <!ENTITY component_noodlerestaurant_001 '
 	<group>Restaurants</group>
-	<name>Noodle and soba shop(1x1)</name>
+	<name>Udon and soba shop(1x1)</name>
 	<structure>
 		<category byname="Restaurants"/>
 		<category byname="Housing" hide="true"/>
@@ -164,7 +164,7 @@
 '>
 <!ENTITY component_thinrestaurant_001 '
 	<group>Restaurants</group>
-	<name>Japanese pancake shop(1x1)</name>
+	<name>Okonomiyaki shop(1x1)</name>
 	<structure>
 		<category byname="Restaurants"/>
 		<category byname="Housing" hide="true"/>
@@ -191,7 +191,7 @@
 
 <!ENTITY component_teahouse_001 '
 	<group>Restaurants</group>
-	<name>Japanese cafe(1x1)</name>
+	<name>Teahouse(1x1)</name>
 	<structure>
 		<category byname="Restaurants"/>
 		<category byname="Housing" hide="true"/>
@@ -228,7 +228,7 @@
 
 <!-- Restaurants -->
 
-<!-- Chinese noodles屋 -->
+<!-- Ramen shop -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-restaurant-lamian-01}">
 	<picture  src="lamian_01.bmp">
@@ -243,7 +243,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-01-a}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop A</design>
+	<design>Ramen shop A</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -271,7 +271,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-02-a}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop A(tile roof)</design>
+	<design>Ramen shop A(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -299,7 +299,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-01-b}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop B</design>
+	<design>Ramen shop B</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -327,7 +327,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-02-b}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop B(tile roof)</design>
+	<design>Ramen shop B(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -355,7 +355,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-01-c}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop C</design>
+	<design>Ramen shop C</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -383,7 +383,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-02-c}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop C(tile roof)</design>
+	<design>Ramen shop C(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -411,7 +411,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-01-d}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop D</design>
+	<design>Ramen shop D</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -439,7 +439,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-lamian-02-d}">
 &component_lamianrestaurant_001;
-	<design>Chinese noodle shop D(tile roof)</design>
+	<design>Ramen shop D(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -465,7 +465,7 @@
 
 </contribution>
 
-<!-- Noodle and soba shop -->
+<!-- Udon and soba shop -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-restaurant-noodle-01}">
 	<picture  src="noodle_01.bmp">
@@ -480,7 +480,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-01-a}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop A</design>
+	<design>Udon and soba shop A</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -508,7 +508,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-02-a}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop A(tile roof)</design>
+	<design>Udon and soba shop A(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -536,7 +536,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-01-b}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop B</design>
+	<design>Udon and soba shop B</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -564,7 +564,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-02-b}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop B(tile roof)</design>
+	<design>Udon and soba shop B(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -592,7 +592,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-01-c}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop C</design>
+	<design>Udon and soba shop C</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -620,7 +620,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-02-c}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop C(tile roof)</design>
+	<design>Udon and soba shop C(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -648,7 +648,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-01-d}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop D</design>
+	<design>Udon and soba shop D</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -676,7 +676,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-noodle-02-d}">
 &component_noodlerestaurant_001;
-	<design>Noodle and soba  shop D(tile roof)</design>
+	<design>Udon and soba shop D(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -702,7 +702,7 @@
 
 </contribution>
 
-<!-- Japanese pancake shop -->
+<!-- Okonomiyaki shop -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-restaurant-thin-01}">
 	<picture  src="thin_01.bmp">
@@ -717,7 +717,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-01-a}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop A</design>
+	<design>Okonomiyaki shop A</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -745,7 +745,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-02-a}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop A(tile roof)</design>
+	<design>Okonomiyaki shop A(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -773,7 +773,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-01-b}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop B</design>
+	<design>Okonomiyaki shop B</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -801,7 +801,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-02-b}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop B(tile roof)</design>
+	<design>Okonomiyaki shop B(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -829,7 +829,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-01-c}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop C</design>
+	<design>Okonomiyaki shop C</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -857,7 +857,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-02-c}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop C(tile roof)</design>
+	<design>Okonomiyaki shop C(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -885,7 +885,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-01-d}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop D</design>
+	<design>Okonomiyaki shop D</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -913,7 +913,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-thin-02-d}">
 &component_thinrestaurant_001;
-	<design>Japanese pancake shop D(tile roof)</design>
+	<design>Okonomiyaki shop D(tile roof)</design>
 	&wall-brownbeige;
 	&wall-redbrick;
 	&wall-ivory;
@@ -939,7 +939,7 @@
 
 </contribution>
 
-<!-- Japanese cafe -->
+<!-- Teahouse -->
 
 <contribution type="picture" id="{FreeTrain-Shika-picture-building-restaurant-teahouse-01}">
 	<picture  src="teahouse_01.bmp">
@@ -949,7 +949,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-teahouse-001-a}">
 &component_teahouse_001;
-	<design>Japanese cafe A</design>
+	<design>Teahouse A</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
@@ -977,7 +977,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-teahouse-001-b}">
 &component_teahouse_001;
-	<design>Japanese cafe B</design>
+	<design>Teahouse B</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
@@ -1005,7 +1005,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-teahouse-001-c}">
 &component_teahouse_001;
-	<design>Japanese cafe C</design>
+	<design>Teahouse C</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
@@ -1033,7 +1033,7 @@
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-restaurant-teahouse-001-d}">
 &component_teahouse_001;
-	<design>Japanese cafe D</design>
+	<design>Teahouse D</design>
 	&wall-wood003;
 	&wall-wood004;
 	&wall-wood005;
