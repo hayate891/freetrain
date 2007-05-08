@@ -61,12 +61,12 @@
 
              <!-- Tc701_青い森 -->
 	<contribution type="picture" id="{C1C4ED40-7662-11D7-A4B7-8B95A9BCF237}">
-		<picture src="青い森701a.bmp" />
+		<picture src="aoimori701a.bmp" />
 	</contribution>
 
 	<!-- Mc701_青い森 -->
 	<contribution type="picture" id="{C1C4ED41-7662-11D7-A4B7-8B95A9BCF237}">
-		<picture src="青い森701b.bmp" />
+		<picture src="aoimori701b.bmp" />
 	</contribution>
 
              <!-- Tc_IGR7000 -->

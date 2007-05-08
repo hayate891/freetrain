@@ -6,7 +6,7 @@
 	
 	<contribution type="road" id="{FreeTrain-AYASE-Hiro-RoadImg-Left}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>Road with sidewark (left)</name>
+		<name>Road with sidewalk (left)</name>
 		<description>Road for left lane</description>
 		<picture src="road_left.bmp" size="32,32" offset="16">
 			<override when="night" src="road_left_n.bmp"/>
@@ -17,7 +17,7 @@
 	
 	<contribution type="road" id="{FreeTrain-AYASE-Hiro-RoadImg-Right}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>Road with sidewark (right)</name>
+		<name>Road with sidewalk (right)</name>
 		<description>Road for left lane</description>
 		<picture src="road_right.bmp" size="32,32" offset="16">
 			<override when="night" src="road_right_n.bmp"/>
@@ -28,7 +28,7 @@
 	
 	<contribution type="road" id="{FreeTrain-AYASE-Hiro-RoadImg-Center}">
 		<class name="freetrain.contributions.road.StandardRoadContribution" />
-		<name>Road with sidewark (center)</name>
+		<name>Road with sidewalk (center)</name>
 		<description>Road for left lane</description>
 		<picture src="road_center.bmp" size="32,32" offset="16">
 			<override when="night" src="road_center_n.bmp"/>

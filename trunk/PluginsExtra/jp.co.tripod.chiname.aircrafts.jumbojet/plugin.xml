@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY b747a '
-		<group>Boeing747(large)</group>
+		<group>Boeing 747 (large)</group>
 		<design>Type A</design>
 		<price>1000</price>
 		<size>5,5</size>
@@ -9,7 +9,7 @@
 		<computerCannotBuild/>
 '>
 <!ENTITY b747b '
-		<group>Boeing747(large)</group>
+		<group>Boeing 747 (large)</group>
 		<design>Type B</design>
 		<price>1000</price>
 		<size>5,5</size>

@@ -27,7 +27,7 @@
 	</contribution>
 
 
-<!-- The tower of sun -->	
+<!-- Tower of the Sun -->	
 	<contribution type="picture" id="{885A55E5-F548-1276-83FD-001854178F24}">
 		<picture src="taiyo.bmp">
 		 	<override when="summer" src="taiyo_SUM.bmp" />

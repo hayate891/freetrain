@@ -91,7 +91,7 @@
 	</contribution>
 	<!--出発ロビー-->
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-1">
-		<group>Airport departure robby</group>
+		<group>Airport departure lobby</group>
 		<design>narrow</design>
 		&robby;
 		<sprite origin="32,8" offset="16">
@@ -102,7 +102,7 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-2">
-		<group>Airport departure robby</group>
+		<group>Airport departure lobby</group>
 		<design>narrow (with signboard)</design>
 		&robby;
 		<sprite origin="0,8" offset="16">
@@ -113,7 +113,7 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-3">
-		<group>Airport departure robby</group>
+		<group>Airport departure lobby</group>
 		<design>wide</design>
 		&robbyW;
 		<sprite origin="48,48" offset="16" opposite="true">
@@ -124,7 +124,7 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{C307E366-78BE-437E-C477-CA46233A4D78}-4">
-		<group>Airport departure robby</group>
+		<group>Airport departure lobby</group>
 		<design>wide (with signboard)</design>
 		&robbyW;
 		<sprite origin="48,0" offset="16" opposite="true">
@@ -136,7 +136,7 @@
 	</contribution>
 	<!--boarding bridge-->
 	<contribution type="GenericStructure" id="{38DCF80D-2EA2-45D4-C477-94967CC1522D}-1">
-		<group>Airport departure robby</group>
+		<group>Airport departure lobby</group>
 		<design>boarding bridge</design>
 		&gateA;
 		<sprite origin="64,0" offset="24">
@@ -153,7 +153,7 @@
 		</sprite>		
 	</contribution>
 	<contribution type="GenericStructure" id="{38DCF80D-2EA2-45D4-C477-94967CC1522D}-2">
-		<group>Airport departure robby</group>
+		<group>Airport departure lobby</group>
 		<design>boarding bridge</design>
 		&gateA;
 		<sprite origin="64,48" offset="24">

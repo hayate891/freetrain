@@ -78,7 +78,7 @@
 ]>
 
 <plug-in>
-	<title>Automobils (static)</title>
+	<title>Automobiles (static)</title>
 	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
 	<depend on="jp.co.tripod.chiname.lib" />	

@@ -23,7 +23,7 @@
 <plug-in>
 	<title>Garden trees</title>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
-	<author>477</author>
+	<author>C477</author>
 	
 	<depend on="org.kohsuke.freetrain.land.forest" />
 

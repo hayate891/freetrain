@@ -79,7 +79,7 @@
 	</contribution>
 	<!--出発ロビー-->
 	<contribution type="GenericStructure" id="{731CF80D-81C9-41B0-C477-E06FB565850D}">
-		<group>Airport departure robby</group>
+		<group>Airport departure lobby</group>
 		<design>mirror glass</design>
 		&robby;
 		<sprite origin="0,0" offset="32">

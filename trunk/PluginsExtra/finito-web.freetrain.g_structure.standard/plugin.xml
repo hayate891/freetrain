@@ -137,7 +137,7 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0305 '
-	<name>Warter tank</name>
+	<name>Water tank</name>
 	<structure>
 		<category byname="Water Towers"/>
 	</structure>
@@ -376,7 +376,7 @@
 ]>
 
 <plug-in>
-	<title>Buildings for extend UI</title>
+	<title>Buildings for extended UI</title>
 	<author>HEUER</author>
 	<homepage>http://freetrain.finito-web.com/</homepage>
 
