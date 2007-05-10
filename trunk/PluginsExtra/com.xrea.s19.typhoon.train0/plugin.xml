@@ -30,10 +30,10 @@
 
 	<contribution type="train" id="{TYPHOON-JNR-k55-HENSEI-7567171D3CEF}">
 		<company>Japanese National Railways</company>
-		<type>Kiha type 55</type>
-		<name>Kyukoshoku</name>
+		<type>KIHA 55 Series</type>
+		<name>Express Colors</name>
 		<author>Typhoon</author>
-		<description>Supports up to 8 car formation</description>
+		<description>Supports up to 8 car formations</description>
 		<price>1</price>
 		<speed>slow</speed>
            		<fare>400</fare>
@@ -53,11 +53,14 @@
 	</contribution>
 	<contribution type="train" id="{TYPHOON-NANKAI-k5501-HENSEI-7567171D3CEF}">
 		<company>Nankai Electric Railway</company>
-		<type>Kiha type 5501</type>
+		<type>KIHA 5501 Series</type>
 		<name></name>
 		<author>Typhoon</author>
-		<description>Kiha 5501 was a train manufactured by Nankai Electric Railway in 1960 to serve JNR's Kisei Main Line. Based on JNR's Kiha 55, it ran as Kinokuni Local Express but was later promoted to express train. The train was withdrawn from service by JNR in 1986.
-		(Max 8 car formation.)</description>
+		<description>KIHA 5501 was a train manufactured by Nankai Electric Railway in 1960
+to serve Japanese National Railways' Kisei Main Line. Based on Japanese National Railways' KIHA 55, 
+it ran as Kinokuni Local Express but was later promoted to express train. The train was withdrawn from 
+service by JNR in 1986.
+(Max 8 car formation.)</description>
 		<price>1</price>
 		<speed>slow</speed>
            		<fare>400</fare>
@@ -77,10 +80,10 @@
 	</contribution>
 	<contribution type="train" id="{TYPHOON-NANKAI-KINOKUNI-HENSEI-7567171D3CEF}">
 		<company>Nankai Electric Railway</company>
-		<type>Kiha type 5501 + Kiha type 58</type>
+		<type>KIHA 5501 Series + KIHA 58 Series</type>
 		<name>Kinokuni</name>
 		<author>Typhoon</author>
-		<description>（8 car formation only）</description>
+		<description>(8 car formation only)</description>
 		<price>1</price>
 		<speed>slow</speed>
            		<fare>400</fare>

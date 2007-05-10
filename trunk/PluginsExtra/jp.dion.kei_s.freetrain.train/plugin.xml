@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>Old Japanese National Railway</title>
+	<title>Japanese National Railways</title>
 	<author>Kei</author>
  	<homepage>kei@viola.club.ne.jp</homepage>
 	<depend on="org.kohsuke.freetrain.trains.jrw" />
@@ -189,7 +189,7 @@
 
 	<!-- 編成の定義 -->
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-KIHA82}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>KIHA 82</type>
 		<name>Super-Express Rail-Car</name>
 		<author>Kei</author>
@@ -223,7 +223,7 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DC0001}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>General Rail-Car</type>
 		<name>Rail-Car Mixture Formation</name>
 		<author>Kei</author>
@@ -253,7 +253,7 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DC0002}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>KIHA series 45 diesel train</type>
 		<name>KIHA45</name>
 		<author>Kei</author>
@@ -282,7 +282,7 @@
 
 
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-1">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>DD 54</type>
 		<name>Old-Fashioned Local Passenger Train (Brown)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
@@ -319,7 +319,7 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-2">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>DD 54</type>
 		<name>Old-Fashioned Local Passenger Train (Blue)</name>
 		<author>Kei(Passenger cars by Ayase)</author>
@@ -356,7 +356,7 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DD54-3">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>DD 54</type>
 		<name>20 Series Blue Train (Izumo)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
@@ -392,7 +392,7 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-911-01">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>911</type>
 		<name>Shinkansen Diesel Locomotive</name>
 		<author>Kei</author>
@@ -412,7 +412,7 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-1">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>DF 50</type>
 		<name>Old-Fashioned Local Passenger Train (Brown)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
@@ -449,7 +449,7 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-2">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>DF 50</type>
 		<name>Old-Fashioned Local Passenger Train (Blue)</name>
 		<author>Kei (Passenger cars by Ayase)</author>
@@ -486,7 +486,7 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-DF50-3">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>DF 50</type>
 		<name>20 Series Blue Train</name>
 		<author>Kei (Passenger cars by Ayase)</author>
