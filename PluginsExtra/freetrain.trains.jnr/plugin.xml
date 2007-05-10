@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>--</homepage>
@@ -81,14 +81,13 @@
 
 
 	<contribution type="train" id="{8B8C5CB2-T80-43a5-ooito-4528788BF74E}">
-		<company>旧日本国有鉄道</company>
-		<type>80系電車</type>
-		<name>80系大糸線色</name>
+		<company>Japanese National Railways</company>
+		<type>80 Series Electrical Train</type>
+		<name>80 Series Oito Line Colors</name>
 		<author>--</author>
-		<description>
-			80系の大糸線で使われていたスカイブルーの塗装です。
-			実際は大糸線の80系はクモユニ810003のみの在籍で、旧型電車と共に運行されていました。
-			
+		<description>80 Series painted in Oito Line colors. 
+The Oito Line 80 Series was in fact only registered in KUMOYUNI 81003 and
+used together with older electrical trains.
 		</description>
 		<price>1000</price>
 		<speed>medium</speed>
@@ -108,11 +107,12 @@
 
 
 	<contribution type="train" id="{8B8C5CB2-T80-43a5-kansai-4528788BF74E}">
-		<company>旧日本国有鉄道</company>
-		<type>80系電車</type>
-		<name>マーブル色</name>
+		<company>Japanese National Railways</company>
+		<type>80 Series Electrical Train</type>
+		<name>Marble Color</name>
 		<author>--</author>
-		<description>関西地方の80系はクリーム色とぶどう色に塗られて活躍しました。
+		<description>80 Series in the Kansai region was painted in
+ivory and dark purple.
 		</description>
 		<price>1000</price>
 		<speed>medium</speed>
@@ -133,11 +133,11 @@
 	</contribution>
 
 	<contribution type="train" id="{8B8C5CB2-T80-43a5-kansaiEX-4528788BF74E}">
-		<company>旧日本国有鉄道</company>
-		<type>80系電車</type>
-		<name>関西急電</name>
+		<company>Japanese National Railways</company>
+		<type>80 Series Electrical Train</type>
+		<name>Kansai Express</name>
 		<author>--</author>
-		<description>関西地方で急マークのヘッドマークをつけて快速として走行してました。
+		<description>Ran as an express train in the Kansai region.
 		</description>
 		<price>1000</price>
 		<speed>medium</speed>
@@ -203,14 +203,14 @@
 
 	
 	<contribution type="train" id="{67705E9E-4ED1-T63-duralumin-FE45DAC33699}">
-		<company>旧日本国有鉄道</company>
-		<type>62/63系</type>
-		<name>900番台ジュラ電</name>
-		<author>――</author>
-		<description>
-			63形900番台はジュラルミンで車体を作られ、
-			通称ジュラ電といわれましたが無塗装ため腐食が激しく
-			一般車両のように塗装され、最終的には鋼体車体に改造されました。
+		<company>Japanese National Railways</company>
+		<type>62/63 Series</type>
+		<name>900 Model 'Dural' Electric Train</name>
+		<author>––</author>
+		<description>63 Series 900 Model has a body made of duralumin.
+Popularly called the 'Dural' train, due to its unpainted body it suffered from
+heavy corrosion and was in the end painted and finally converted to a steel
+body.
 		</description>
 		<price>50</price>
 		<speed>slow</speed>
@@ -290,13 +290,13 @@
 
 	
 	<contribution type="train" id="{67705E9E-4ED1-T63-budou-FE45DAC33699}">
-		<company>旧日本国有鉄道</company>
-		<type>62/63系</type>
-		<name>ぶどう色</name>
-		<author>――</author>
-		<description>
-			初期は戦時中に作られた電車で、戦後になると電車不足から大量に増備去れました。
-			鋼体車、半鋼体車のほか、ジュラルミンでつくられたジュラ電などがありました。
+		<company>Japanese National Railways</company>
+		<type>62/63 Series</type>
+		<name>Dark Purple Color</name>
+		<author>––</author>
+		<description>Built during the war years, it was mass-produced
+after the war when trains were in short supply.
+Some variants had steel, half-steel or duralumin bodies.
 		</description>
 		<price>50</price>
 		<speed>slow</speed>
@@ -371,13 +371,11 @@
 
 
 	<contribution type="train" id="{67705E9E-4ED1-T63A-budou-FE45DAC33699}">
-		<company>旧日本国有鉄道</company>
-		<type>62/63系</type>
-		<name>ぶどう色(2扉・クロスシート)</name>
-		<author>――</author>
-		<description>
-			ローカル専用にクロスシート化および、2扉化されたタイプ。
-		</description>
+		<company>Japanese National Railways</company>
+		<type>62/63 Series</type>
+		<name>Dark Purple Color(2 doors/cross-seats)</name>
+		<author>––</author>
+		<description>Local train variant with cross-seats and 2 doors.		</description>
 		<price>50</price>
 		<speed>slow</speed>
 
@@ -403,12 +401,11 @@
 
 
 	<contribution type="train" id="{67705E9E-4ED1-T63-bd-FE45DAC33699}">
-		<company>旧日本国有鉄道</company>
-		<type>62/63系</type>
-		<name>ぶどう色+ジュラ電</name>
-		<author>――</author>
-		<description>
-			一般車+ジュラ電の編成です
+		<company>Japanese National Railways</company>
+		<type>62/63 Series</type>
+		<name>Dark Purple Color + Duralumin</name>
+		<author>––</author>
+		<description>Formation with normal and duralumin carriages.
 		</description>
 		<price>50</price>
 		<speed>slow</speed>
@@ -480,13 +477,13 @@
 
 
 	<contribution type="train" id="{3991CE43-T101-4923-JNR-9DA7803AW}">
-		<company>旧日本国有鉄道</company>
-		<type>101系</type>
-		<name>オレンジ</name>
+		<company>Japanese National Railways</company>
+		<type>101 Series</type>
+		<name>Orange Color</name>
 		<author>--</author>
-		<description>
-			老朽化した72系電車を置き換えるために作られたのが101系。
-			当初はオールM車であったが、電力設備の能力を超えたため最終的には6M4Tに変更された。
+		<description>101 Series was made to replace the aging 72 Series.
+Initially all M carriages, as the capacity of the electrical facilities
+improved, it was later changed to 6M4T.
 		</description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -509,13 +506,14 @@
 	</contribution>	
 
 	<contribution type="train" id="{3991CE43-T101-4923-JRE-9DA7803A}">
-		<company>JR東日本</company>
-		<type>101系</type>
-		<name>南武支線</name>
+		<company>JR East</company>
+		<type>101 Series</type>
+		<name>Nambu Branch Line</name>
 		<author>--</author>
 		<description>
-			南武の浜川崎支線で使われたいた塗装です。
-			浜川崎支線は最後の101系の活躍の場であったが、2003年12月を最後に205系に置き換われ引退しました。
+Used on Nambu's Hamagawasaki Branch Line.
+Hamagawasaki Branch Line was the last line 101 Series served on. Replaced by
+205 Series in December 2003.
 		</description>
 		<price>1</price>
 		<speed>medium</speed>
