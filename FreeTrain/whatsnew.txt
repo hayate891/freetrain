@@ -1,4 +1,4 @@
-﻿2006/5/3
+2006/5/3
 #1.
 In fixed size structure, var height structure, and land contributions,
 offset attribute at the sprite tag can be omitted.
