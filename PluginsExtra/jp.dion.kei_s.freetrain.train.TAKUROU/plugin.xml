@@ -1009,7 +1009,7 @@ on the Chuo Line is, althought the paint is very different, closely resembling t
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE169-S}">
-		<company>JR East Japan</company>
+		<company>JR East</company>
 		<type>169 Series</type>
 		<name>Nagano Color</name>
 		<author>TAKUROU</author>
@@ -1545,7 +1545,7 @@ Renewal construction was done, reclining seat conversion of the standard-sized c
              </contribution>
              
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-J}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>185 Series</type>
 		<name>Izu Super-Express "Odoriko"</name>
 		<author>TAKUROU</author>
@@ -1600,7 +1600,7 @@ It has recently been remodelled with new colors and reclining seats.
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-I}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>185 Series＆153 Series</type>
 		<name>Izu Mixed Express</name>
 		<author>TAKUROU</author>
@@ -1626,7 +1626,7 @@ This was used as the 'Izu' Express as well as a local train before the 'Odoriko'
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ157-A}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>157 Series</type>
 		<name>Super-Express "Amagi" "Shirone"</name>
 		<author>TAKUROU</author>
@@ -2129,7 +2129,7 @@ formations were transferred to the 183 Series in 1983.
 
              <!-- 編成の定義 -->
             <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ153-S}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>153 Series</type>
 		<name>Shonan Express Train</name>
 		<author>TAKUROU</author>
@@ -2157,7 +2157,7 @@ formations were transferred to the 183 Series in 1983.
              </contribution>                                         
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ165-S}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>165 Series</type>
 		<name>Shonan Express Train (HM)</name>
 		<author>TAKUROU</author>
@@ -2187,7 +2187,7 @@ formations were transferred to the 183 Series in 1983.
              </contribution>  
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ164-S}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>165 Series</type>
 		<name>Shonan Express Train (No HM)</name>
 		<author>TAKUROU</author>
@@ -2217,7 +2217,7 @@ formations were transferred to the 183 Series in 1983.
              </contribution>  
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ455-K}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>455 Series</type>
 		<name>Tohoku Express Train</name>
 		<author>TAKUROU</author>
@@ -2243,7 +2243,7 @@ formations were transferred to the 183 Series in 1983.
              </contribution>  
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ475-K}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>475 Series</type>
 		<name>Hokuriku Express Train</name>
 		<author>TAKUROU</author>
@@ -2270,7 +2270,7 @@ and is now serving as local trains.
              </contribution>  
              
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ153-B}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>153 Series</type>
 		<name>Blue Liner</name>
 		<author>TAKUROU</author>
@@ -2298,13 +2298,13 @@ the 117 Series.
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ117-S}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>117 Series</type>
 		<name>City Liner</name>
 		<author>TAKUROU</author>
 		<description>This train was introduced in 1980 on the lines between Kyoto, Osaka, and Kobe to compete with
 the private railway corporations. It replaced the commodified 153 Series Blue Liners, had a unique style
-with a streamlined lead coach and aimed to take the role as the 'new' rapid train. Two years later, it was also introduced
+with a streamlined lead coach and was intended to serve as 'Special Rapid Service'. Two years later, it was also introduced
 in the Chukyo region as a 'Tokai Liner' in order to compete with Nagoya Railroad.
 		</description>
 		<fare>550</fare>
@@ -2433,7 +2433,7 @@ Uses the same color scheme as the Nanki Super-Express "Ocean Arrow" (285 Series)
 		<type>117 Series</type>
 		<name>Rapid Mixed Color</name>
 		<author>TAKUROU</author>
-		<description>Introduced to compliment the New Rapid 221 Series on mornings and evenings.
+		<description>Introduced to compliment the Special Rapid 221 Series on mornings and evenings.
 		</description>
 		<fare>550</fare>
 		<price>100</price>

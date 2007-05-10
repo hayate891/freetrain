@@ -171,7 +171,7 @@
 
 <!-- 列車定義 -->
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiha01-railbus}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>KIHA01</type>
 		<name>Railbus</name>
 		<author>Shikashika</author>
@@ -191,7 +191,7 @@ KIHA10000-11, but in 1957, KIHA10000-03 became KIHA01 (#01 - #04) while KIHA1000
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiyuni01-railbus}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>Kiyuni01</type>
 		<name>Railbus</name>
 		<author>Shikashika</author>
@@ -211,7 +211,7 @@ Only one Kuyuni was built. It was used on the Sanin Main Line and North Sanko Li
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiha02-railbus}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>KIHA02</type>
 		<name>Railbus</name>
 		<author>Shikashika</author>
@@ -231,7 +231,7 @@ From the beginning, they were numbered KIHA10012-28, but in 1957, they became KI
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-kiha03-railbus}">
-		<company>Old Japanese National Railway</company>
+		<company>Japanese National Railways</company>
 		<type>KIHA03</type>
 		<name>Railbus</name>
 		<author>Shikashika</author>
