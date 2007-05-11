@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -61,16 +61,15 @@
 
 	
 	<contribution type="train" id="{Freetrain-T63-JNR-duralumin}">
-		<company>旧日本国有鉄道</company>
-		<type>旧型国電</type>
-		<name>63系900番台ジュラ電</name>
-		<author>ななし</author>
-		<description>
-			鋼体車体の試作車としてジュラルミンで車体を作られ
-			車内は蛍光灯採用され通称ジュラ電といわれましたが
-			無塗装ため腐食が激しく一般車両のように塗装され、
-			最終的には一般の鋼体車体に改造されました。
-			
+		<company>Japanese National Railways</company>
+		<type>JNR Old Type</type>
+		<name>63 Series 900 Model 'Dura' Electric Train</name>
+		<author>Nanashi</author>
+		<description>This train was popularly called the 'Dural' 
+train, as is had experimental duralumin carriages as well as fluorescent
+lighting on the inside. However, since it was unpainted it was also subject
+to heavy corrosion. Subsequently painted as a normal train, is was finally
+converted to a steel body.
 		</description>
 		<price>500</price>
 		<speed>slow</speed>
@@ -117,12 +116,12 @@
 
 
 	<contribution type="train" id="{Freetrain-Oldtype-JNR-2doors-budou}">
-		<company>旧日本国有鉄道</company>
-		<type>旧型国電</type>
-		<name>モハ62・クハ77</name>
-		<author>ななし</author>
-		<description>
-			戦前型の旧型電車。ローカル線用にクロスシート化改造されたタイプです
+		<company>Japanese National Railways</company>
+		<type>JNR Old Type</type>
+		<name>MOHA 62 / KUHA 77</name>
+		<author>Nanashi</author>
+		<description>An old train type from before the War. This is
+the type refitted with cross seats for local lines.
 		</description>
 		<price>150</price>
 		<speed>slow</speed>
@@ -192,14 +191,12 @@
 
 	<contribution type="train" id="{Freetrain-Oldtype-JNR-ooito}">
 		<company>旧日本国有鉄道</company>
-		<type>旧型国電</type>
-		<name>大糸線</name>
-		<author>――</author>
-		<description>
-			大糸線で活躍していたクモハ43・クモハ60・クハ55です。
-			当時としては珍しくスカイブルー一色に塗られており
-			クモユニ81003と共に1981年まで活躍しました。
-
+		<type>JNR Old Type</type>
+		<name>Oito Line</name>
+		<author>––</author>
+		<description>This is KUMOHA 43 / KUMOHA 60 / KUHA 55 active
+on the Oito Line. It has a rare sky blue paint-work and served together with
+KUMOYUNI 81003 until 1981.
 		</description>
 		<price>80</price>
 		<speed>slow</speed>
@@ -281,15 +278,15 @@
 
 
 	<contribution type="train" id="{{Freetrain-Type72-JNR-budou}">
-		<company>旧日本国有鉄道</company>
-		<type>旧型国電</type>
-		<name>73系電車近代化改造車</name>
-		<author>ななし</author>
-		<description>
-			桜木町事故を教訓とし、63系電車を諸改造した形式。
-			63系電車は20メートルの車体に4扉と後の通勤型電車の原型となった車両です。
-			戦後に足回りの改良のほか車体の鋼体化・101系に準じた前面になった近代化改造されたタイプです。
-
+		<company>Japanese National Railways</company>
+		<type>JNR Old Type</type>
+		<name>73 Series Modernized Train</name>
+		<author>Nanashi</author>
+		<description>Remodelled variant of 63 Series in the aftermath
+of the 1951 Sakuragicho accident. It became the archetype of all future
+commuter trains with its 20 meter length and 4 doors. This is the type with
+a steel body among other improvements introduced after the War, and is a
+predecessor to 101 Series.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -343,12 +340,11 @@
 
 
 	<contribution type="train" id="{{Freetrain-Type72-JNR-oldtype}">
-		<company>旧日本国有鉄道</company>
-		<type>旧型国電</type>
-		<name>73系ぶどう色</name>
-		<author>ななし</author>
-		<description>
-			足回り等の近代化改造前の旧タイプです。。
+		<company>Japanese National Railways</company>
+		<type>JNR Old Type</type>
+		<name>73 Series Grape Color</name>
+		<author>Nanashi</author>
+		<description>An older non-modernized type.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -380,12 +376,11 @@
 
 
 	<contribution type="train" id="{{Freetrain-Type72-JNR-Mix}">
-		<company>旧日本国有鉄道</company>
-		<type>旧型国電</type>
-		<name>73系ぶどう色+ジュラ電</name>
+		<company>Japanese National Railways</company>
+		<type>JNR Old Type</type>
+		<name>73 Series Grape Color + 'Dura' Electric Train</name>
 		<author>ななし</author>
-		<description>
-			一般タイプとジュラ電の混合編成です。
+		<description>A mixed formation of normal and duralumin cars.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
@@ -468,15 +463,15 @@
 
 	<contribution type="train" id="{Freetrain-Type72-JNR-sukasyoku}">
 
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 
-		<type>旧型国電</type>
-		<name>73系スカ色</name>
+		<type>JNR Old Type</type>
+		<name>73 Series Ska Colors</name>
 
-		<author>――</author>
+		<author>––</author>
 
-		<description>
-			御殿場線電化の際に転属してきた近代化73系電車の横須賀色です。
+		<description>Modernized as an effect of the electrification 
+of the Gotenba Line, this 73 Series was painted in Yokosuka colors.
 		</description>
 
 		<price>100</price>
