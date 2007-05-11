@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -77,16 +77,21 @@
 
 
 	<contribution type="train" id="{Freetrain-ytpe153-JNR-shounan-express}">
-		<company>旧日本国有鉄道</company>
-		<type>153系</type>
-		<name>153系0番台サハシ付</name>
-		<author>――</author>
-		<description>
-			80系電車の置き換えとして平坦線区用に開発された。
-			当初は準急用であったが、運用変更で準急が消えたため急行形に変更された。
-			登場当時は低運転台であったが、踏み切り事故対策のため高運転台化された500番台が後に登場している。
-			最盛期は国鉄初のビュッフェ付のサハシ153や163系として開発されたサロ163などを組み込んで大所帯となったが
-			後継の165系などに順次置き換わったり老朽化などで昭和58年に全廃となった。
+		<company>Japanese National Railways</company>
+		<type>153 Series</type>
+		<name>153 Series 0 Model Sahashi-Mura</name>
+		<author>––</author>
+		<description>Developed as a replacement for 80 Series on
+level terrain.
+Initially a local express, but as the local express class was discontinued,
+it was later converted into an express train.
+At the time of introduction it had a low motorman's seat. However, as a
+countermeasure for railway crossing accidents, the subsequent 500 Model had
+a high motorman's seat.
+During its heyday it was coupled with for example the newly developed SARO
+163 as SAHASHI 153 and 163 Series, which was JNR's first train that served
+buffets. However, due to aging and gradual replacement by 165 Series, it
+was finally taken out of service in 1984.
 		</description>
 		<price>200</price>
 		<speed>medium</speed>
@@ -110,14 +115,15 @@
 
 
 	<contribution type="train" id="{Freetrain-ytpe153-JNR-saro153-900-express}">
-		<company>旧日本国有鉄道</company>
-		<type>153系</type>
-		<name>153系0番台(サロ153-900付)</name>
-		<author>――</author>
-		<description>
-			ステンレス車体試験のために作られたサロ153-900付の編成。
-			当時では非常に珍しかったステンレス車体だが、2両のみの製造に終わった。
-			最終的には湘南色に塗られサロ110-900として113系に組み込まれた。
+		<company>Japanese National Railways</company>
+		<type>153 Series</type>
+		<name>153 Series 0 Model (incl. SARO 153-900)</name>
+		<author>––</author>
+		<description>An experimental formation including SARO 153-900
+to test a stainless steel body.
+Stainless steel carriages were at the time extremely rare and only two of this model were ever produced.
+In the end, it was painted in Shonan colors and coupled with 113 Series as
+SARO 110-900.
 		</description>
 		<price>250</price>
 		<speed>medium</speed>
@@ -142,13 +148,12 @@
 
 
 	<contribution type="train" id="{Freetrain-ytpe153-JNR-shounan-express-nosaro}">
-		<company>旧日本国有鉄道</company>
-		<type>153系</type>
-		<name>153系0番台(サロなし)</name>
-		<author>――</author>
-		<description>
-			急行で活躍した153系も晩年は房総急行としてモノクラス・短編成化されました。
-
+		<company>Japanese National Railways</company>
+		<type>153 Series</type>
+		<name>153 Series 0 Model (w/o SARO)</name>
+		<author>––</author>
+		<description>The 153 Series express train served during its
+later years in short formations and 'mono class' as Boso Express.
 		</description>
 		<price>150</price>
 		<speed>medium</speed>
@@ -248,16 +253,24 @@
 
 
 	<contribution type="train" id="{Freetrain-ytpe165-JNR-chouou-express}">
-		<company>旧日本国有鉄道</company>
-		<type>165系</type>
-		<name>165系湘南色(モハ164-800番台)</name>
-		<author>ななし</author>
-		<description>
-			153系の出力を上げ、山岳路線用に開発されました。最初は非冷房でしたが、後に冷房準備車や冷房試験車などが作られ順次冷房化されていきました。
-			サハシ・サロ組み込みで中央線の急行アルプスに投入され、全国の直流区間の急行は165系になったがJR化以後は急行列車が削減されていき2003年で全車引退となった。
-			
-			パンタグラフ低屋根構造のモハ164-800番台の急行アルプスの編成です。4･5量編成はサロなし非冷房の急行富士川。
-			7両編成は全冷房車・サロ2両の急行東海後期編成、8両編成は一部冷房車サロ2両の急行信州、11両編成は非冷房・サロ1両、サハシなし。12両はサロ2両・サハシあり一部冷房試作車です。
+		<company>Japanese National Railways</company>
+		<type>165 Series</type>
+		<name>165 Series Sonan Colors (MOHA 164-800 Model)</name>
+		<author>Nanashi</author>
+		<description>Developed as a mountain climbing train by
+increasing the output of 153 Series. Originally lacking air conditioner,
+one was subsequently installed.
+Incorporated into SAHASHI/SARO and put in use on Chuo Line as 'Alps Express'.
+It became widely used an express train on all direct current lines, but with
+the privatization of the national railways the express trains disappeared and
+the last train was taken out of service in 2003.
+
+This is the MOHA 164-800 Model 'Alps Express' formation with low roof and
+pantograph.
+The 7 car formation is a fully air-conditioned Tokai Express with 2 SARO carriages. The 8 car formation is a partially air-conditioned Shinshu Express
+with 2 SARO carriages. The 11 car formation lacks air-conditioning, SAHASHI,
+and has 1 SARO carriage. The 12 car formation has 2 SARO carriages, SAHASHI,
+and has partial experimental air-conditioning.
 		</description>
 		<price>150</price>
 		<speed>medium</speed>
@@ -287,13 +300,14 @@
 
 
 	<contribution type="train" id="{Freetrain-ytpe165-JNR-tokai-express}">
-		<company>旧日本国有鉄道</company>
-		<type>165系</type>
-		<name>165系湘南色（東海道･山陽線）</name>
-		<author>ななし</author>
-		<description>
-			モハ164-0番台を組み込んだ急行の編成です。			
-			7両編成は非冷房車の急行山陽編成、12両編成は1983年の急行東海の全冷房車編成となっています。
+		<company>Japanese National Railways</company>
+		<type>165 Series</type>
+		<name>165 Series Sonan Colors (Tokaido/Sanyo Line)</name>
+		<author>Nanashi</author>
+		<description>Express formation coupled with MOHA 164-0.
+
+The 7 car formation is a Sanyo Express and lacks air-conditioning. The 12 car
+formation is a fully air-conditioned Tokai Express from 1983.
 		</description>
 		<price>150</price>
 		<speed>medium</speed>
@@ -317,12 +331,12 @@
 
 
 	<contribution type="train" id="{Freetrain-ytpe165-JNR-shounan-express}">
-		<company>旧日本国有鉄道</company>
-		<type>165系</type>
-		<name>165系湘南色(サロ・サハシなし)</name>
-		<author>ななし</author>
-		<description>
-			冷房化されたモノクラスのモハ164（通常屋根タイプ）編成です。			
+		<company>Japanese National Railways</company>
+		<type>165 Series</type>
+		<name>165 Series Sonan Colors (no SARO/SAHASHI)</name>
+		<author>Nanashi</author>
+		<description>This formation is a mono class MOHA 164 with
+air-conditioning and normal roof.			
 		</description>
 		<price>150</price>
 		<speed>medium</speed>
