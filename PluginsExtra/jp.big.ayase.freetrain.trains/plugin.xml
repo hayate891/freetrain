@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>旧日本国有鉄道型　旧式車両</title>
+	<title>Japanese National Railways Old-Fashioned Trains</title>
  	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
  	
  	<!-- イメージ画像定義 -->
@@ -68,17 +68,17 @@
 	</contribution>
 
 
-	<!-- 貨物電車　スーパーレールカーゴＭｃ車 -->
+	<!-- Electric Freight Train　Super Rail CargoＭｃ車 -->
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-TrainCarImg-SRC-1}">
 		<picture src="src_a.bmp" />
 	</contribution>
 	
-	<!-- 貨物電車　スーパーレールカーゴＭ車 -->
+	<!-- Electric Freight Train　Super Rail CargoＭ車 -->
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-TrainCarImg-SRC-2}">
 		<picture src="src_b.bmp" />
 	</contribution>
 
-	<!-- 貨物電車　スーパーレールカーゴＴ車 -->
+	<!-- Electric Freight Train　Super Rail CargoＴ車 -->
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-TrainCarImg-SRC-3}">
 		<picture src="src_c.bmp" />
 	</contribution>
@@ -226,7 +226,7 @@
 	</contribution>
 	
 
-	<!-- 貨物電車　スーパーレールカーゴ　Ｍｃ車　向き：正-->
+	<!-- Electric Freight Train　Super Rail Cargo　Ｍｃ車　向き：正-->
 	<contribution type="trainCar" id="{FreeTrain-AYASE-Hiro-TrainImg-SRC-Mc1}">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -235,13 +235,13 @@
 		<capacity>0</capacity>
 	</contribution>
 	
-	<!-- 貨物電車　スーパーレールカーゴ　Ｍｃ車　向き：逆-->
+	<!-- Electric Freight Train　Super Rail Cargo　Ｍｃ車　向き：逆-->
 	<contribution type="trainCar" id="{FreeTrain-AYASE-Hiro-TrainImg-SRC-Mc2}">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{FreeTrain-AYASE-Hiro-TrainImg-SRC-Mc1}"/>
 	</contribution>
 
-	<!-- 貨物電車　スーパーレールカーゴ　Ｍ車　-->
+	<!-- Electric Freight Train　Super Rail Cargo　Ｍ車　-->
 	<contribution type="trainCar" id="{FreeTrain-AYASE-Hiro-TrainImg-SRC-M1}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -250,7 +250,7 @@
 		<capacity>0</capacity>
 	</contribution>
 	
-	<!-- 貨物電車　スーパーレールカーゴ　Ｔ車-->
+	<!-- Electric Freight Train　Super Rail Cargo　Ｔ車-->
 	<contribution type="trainCar" id="{FreeTrain-AYASE-Hiro-TrainImg-SRC-T1}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -477,13 +477,14 @@
 		<base carRef="{FreeTrain-AYASE-Hiro-TrainImg-C11-A}"/>
 	</contribution>
 
-	<!-- パレット貨物列車の定義 -->
+	<!-- Definition of Pallet Freight Train -->
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K01-01}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 64</type>
-		<name>パレット貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>パレットを搭載することを目的とした貨物列車。牽引はEF64単機または重連。
+		<name>Pallet Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying pallets. Pulled by
+either one or two EF 64 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -516,11 +517,12 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K01-02}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 71</type>
-		<name>パレット貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>パレットを搭載することを目的とした貨物列車。牽引はEF71単機または重連。
+		<name>Pallet Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying pallets. Pulled by
+either one or two EF 71 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -553,11 +555,12 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K01-03}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>パレット貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>パレットを搭載することを目的とした貨物列車。牽引はDD51単機または重連。
+		<name>Pallet Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying pallets. Pulled by
+either one or two EF 51 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -590,11 +593,12 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K01-04}">
-		<company>JR貨物</company>
-		<type>EF 65 特急色</type>
-		<name>パレット貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>パレットを搭載することを目的とした貨物列車。牽引はEF65単機または重連。
+		<company>JR Freight</company>
+		<type>EF 65 Special Express Colors</type>
+		<name>Pallet Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying pallets. Pulled by
+either one or two EF 65 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -626,13 +630,14 @@
 		</config>
 	</contribution>
 
-	<!-- タンク車貨物列車の定義 -->
+	<!-- Definition of Tank Freight Train -->
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K02-01}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>ガソリン輸送貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>ガソリン等揮発油輸送を目的とした貨物列車。牽引はDD51単機または重連。
+		<name>Tank Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying gasoline and other
+volatile liquid fuel. Pulled by either one or two DD 51 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -663,11 +668,12 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K02-02}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 64</type>
-		<name>ガソリン輸送貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>ガソリン等揮発油輸送を目的とした貨物列車。牽引はEF64単機または重連。
+		<name>Tank Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying gasoline and other
+volatile liquid fuel. Pulled by either one or two EF 64 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -698,11 +704,12 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K02-03}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 71</type>
-		<name>ガソリン輸送貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>ガソリン等揮発油輸送を目的とした貨物列車。牽引はEF71単機または重連。
+		<name>Tank Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying gasoline and other
+volatile liquid fuel. Pulled by either one or two EF 71 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -733,11 +740,12 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K02-04}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 15</type>
-		<name>ガソリン輸送貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>ガソリン等揮発油輸送を目的とした貨物列車。牽引はEF15単機または重連。
+		<name>Tank Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying gasoline and other
+volatile liquid fuel. Pulled by either one or two EF 15 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -768,11 +776,12 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K02-05}">
-		<company>JR貨物</company>
-		<type>EF 65 特急色</type>
-		<name>ガソリン輸送貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>ガソリン等揮発油輸送を目的とした貨物列車。牽引はEF65単機または重連。
+		<company>JR Freight</company>
+		<type>EF 65 Super Express Colors</type>
+		<name>Tank Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying gasoline and other
+volatile liquid fuel. Pulled by either one or two EF 65 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -802,13 +811,13 @@
 		</config>
 	</contribution>
 	
-	<!-- コンテナ貨物列車の定義 -->
+	<!-- Definition of Container Freight Train -->
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K03-01}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 64</type>
-		<name>コンテナ貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>コンテナ輸送を目的とした貨物列車。牽引はEF64単機または重連。
+		<name>Container Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying containers. Pulled by either one or two EF 64 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -842,11 +851,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K03-02}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>コンテナ貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>コンテナ輸送を目的とした貨物列車。牽引はDD51単機または重連。
+		<name>Container Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying containers. Pulled by either one or two DD 51 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -880,11 +889,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K03-03}">
-		<company>JR貨物</company>
-		<type>EF 65 特急色</type>
-		<name>コンテナ貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>コンテナ輸送を目的とした貨物列車。牽引はEF65単機または重連。
+		<company>JR Freight</company>
+		<type>EF 65 Express Colors</type>
+		<name>Container Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying containers. Pulled by either one or two EF 65 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -918,11 +927,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K03-04}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 15</type>
-		<name>コンテナ貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>コンテナ輸送を目的とした貨物列車。牽引はEF15単機または重連。
+		<name>Container Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying containers. Pulled by either one or two EF 15 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -956,11 +965,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K04-01}">
-		<company>JR貨物</company>
-		<type>貨物電車</type>
-		<name>スーパーレールカーゴ</name>
-		<author>綾瀬ヒロ</author>
-		<description>高速コンテナ輸送を目的とした貨物電車。世界初の動力分散型列車による貨物輸送である。
+		<company>JR Freight</company>
+		<type>Electric Freight Train</type>
+		<name>Super Rail Cargo</name>
+		<author>Hiro Ayase</author>
+		<description>Express freight train for carrying containers. The world's first power dispersion freight train.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -992,11 +1001,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K05-01}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>C 11</type>
-		<name>混結貨物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>パレットを搭載することを目的とした貨物列車。牽引はEF65単機または重連。
+		<name>Hybrid Freight Train</name>
+		<author>Hiro Ayase</author>
+		<description>Freight train for carrying pallets. Pulled by either one or two C 11 engines.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1032,11 +1041,11 @@
 
 	<!-- 普通旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R01-01">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 64</type>
-		<name>旧客普通列車（青）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Blue)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1069,11 +1078,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R01-02">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>旧客普通列車（青）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Blue)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1106,11 +1115,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R01-03">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 71</type>
-		<name>旧客普通列車（青）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Blue)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1143,11 +1152,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R01-04">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 11</type>
-		<name>旧客普通列車（青）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Blue)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1181,11 +1190,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R02-01">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 64</type>
-		<name>旧客普通列車（茶）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Brown)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1218,11 +1227,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R02-02">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>旧客普通列車（茶）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Brown)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1255,11 +1264,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R02-03">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 71</type>
-		<name>旧客普通列車（茶）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Brown)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1292,11 +1301,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R02-04">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 11</type>
-		<name>旧客普通列車（茶）</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された普通列車。荷物車も併結する。
+		<name>Old Local Passenger Train (Brown)</name>
+		<author>Hiro Ayase</author>
+		<description>Local passenger train in an old-fashioned formation. Baggage car attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1331,11 +1340,11 @@
 	
 	<!-- 急行荷物列車の定義 -->
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R03-01">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 64</type>
-		<name>旧客急行荷物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された郵便・荷物列車。
+		<name>Old Passenger and Baggage Express Train</name>
+		<author>Hiro Ayase</author>
+		<description>Old-fashioned passenger formation with post and baggage cars.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1369,11 +1378,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R03-02">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>旧客急行荷物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された郵便・荷物列車。
+		<name>Old Passenger and Baggage Express Train</name>
+		<author>Hiro Ayase</author>
+		<description>Old-fashioned passenger formation with post and baggage cars.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1407,11 +1416,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R03-03">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 71</type>
-		<name>旧客急行荷物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された郵便・荷物列車。
+		<name>Old Passenger and Baggage Express Train</name>
+		<author>Hiro Ayase</author>
+		<description>Old-fashioned passenger formation with post and baggage cars.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1445,11 +1454,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R03-04">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 15</type>
-		<name>旧客急行荷物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された郵便・荷物列車。
+		<name>Old Passenger and Baggage Express Train</name>
+		<author>Hiro Ayase</author>
+		<description>Old-fashioned passenger formation with post and baggage cars.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1483,11 +1492,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R03-05">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 11</type>
-		<name>旧客急行荷物列車</name>
-		<author>綾瀬ヒロ</author>
-		<description>旧式客車で編成された郵便・荷物列車。
+		<name>Old Passenger and Baggage Express Train</name>
+		<author>Hiro Ayase</author>
+		<description>Old-fashioned passenger formation with post and baggage cars.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1522,11 +1531,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R04-01">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 65</type>
-		<name>20系ブルートレイン</name>
-		<author>綾瀬ヒロ</author>
-		<description>走るホテルと絶賛された初代ブルートレイン車両による往年の夜行特急列車。
+		<name>20 Series Blue Train</name>
+		<author>Hiro Ayase</author>
+		<description>This is the Blue Train night traveling limited express of past years, at the time praised as a 'hotel on wheels'.
 		</description>
 		<price>300</price>
 		<speed>fast</speed>
@@ -1559,11 +1568,11 @@
 	</contribution>
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R04-02">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>20系ブルートレイン</name>
-		<author>綾瀬ヒロ</author>
-		<description>走るホテルと絶賛された初代ブルートレイン車両による往年の夜行特急列車。
+		<name>20 Series Blue Train</name>
+		<author>Hiro Ayase</author>
+		<description>This is the Blue Train night traveling limited express of past years, at the time praised as a 'hotel on wheels'.
 		</description>
 		<price>300</price>
 		<speed>fast</speed>
@@ -1596,11 +1605,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-R04-03">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 11</type>
-		<name>20系ブルートレイン</name>
-		<author>綾瀬ヒロ</author>
-		<description>走るホテルと絶賛された初代ブルートレイン車両による往年の夜行特急列車。
+		<name>20 Series Blue Train</name>
+		<author>Hiro Ayase</author>
+		<description>This is the Blue Train night traveling limited express of past years, at the time praised as a 'hotel on wheels'.
 		</description>
 		<price>300</price>
 		<speed>medium</speed>
@@ -1635,11 +1644,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-Z01-01">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD16</type>
-		<name>特雪</name>
-		<author>綾瀬ヒロ</author>
-		<description>簡易線区用に導入されたラッセル車。本機の前後にラッセルヘッドを持っている。
+		<name>Tokusetsu</name>
+		<author>Hiro Ayase</author>
+		<description>Russel snowplow introduced on easy lines. Has Russel heads installed on its front and back.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
