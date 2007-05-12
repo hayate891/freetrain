@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title>TAKUROU</title>
  	<homepage>kei@viola.club.ne.jp</homepage>
@@ -139,13 +139,18 @@
                          
         <!-- 編成の定義 -->
         <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCT85-W}">
-		<company>JR東海</company>
-		<type>キハ85系</type>
-		<name>ワイドビュー気動車</name>
+		<company>JR Central</company>
+		<type>KIHA 85 Series</type>
+		<name>'Wide View' Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>「キハ85系は、老朽化したキハ80系を置き換える為に導入されました。
- 1989年3月に特急｢ひだ｣(名古屋～高山･富山)に、1992年3月に特急｢南紀｣(名古屋～紀伊勝浦)に投入され、計80両が活躍しています。 
-当初は｢ひだ｣用(キハ85,85-100,84,キロハ84)と｢南紀｣用(キハ85-200,84-200,84-300,キロ85)に分かれて運用されていましたが、 2001年3月のダイヤ改正で｢南紀｣のグリーン車連結を廃止された。
+		<description>KIHA 85 Series was introduced as a replacement
+for the aging KIHA 80 Series.
+In March 1989 it started to run as Super Express 'Hida' (Nagoya – Takayama, Fuji) and
+in March 1992 Super Express 'Nanki' (Nagoya – Kii Katsuura). There are in total 80 trains in service today.
+In the beginning, a distinction was made between 'Hida' formations (KIHA 85,
+85-100, 84; KIROHA 84) and 'Nanki' formations (KIHA 85-200, 84-200, 84-300;
+KIRO 85) but in March 2001 the 'Nanki' Green Car was discontinued in a
+revision of the scheduling.
 		</description>
 		<fare>1010</fare>
 		<price>100</price>
@@ -165,13 +170,16 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECT383-S}">
-		<company>JR東海</company>
-		<type>383系</type>
-		<name>ワイドビュー電車</name>
+		<company>JR Central</company>
+		<type>383 Series</type>
+		<name>'Wide View' Electric Train</name>
 		<author>TAKUROU</author>
-		<description>しなのの老朽取り替え用として製造された。
-ステンレス車体のVVVFインバータ車で、381系に引き続き展望グリーン車はあるものの、制御車は増解結を考慮した貫通路付きが主体である。
-中央西線・篠ノ井線の特急しなの、急行ちくまに用いられ、一部は大阪や白馬まで足をのばす。
+		<description>Manufactures as a replacement for the aging
+Shinano.
+It had a body of stainless steel as well as VVVF inverter and observation
+'Green' cars attached, and the control was equipped with a passageway.
+Called 'Shinano' or 'Chikuma' Express on West Chuo Line and Shinonoi Line,
+some services went all the way to Osaka or Hakuba.
 		</description>
 		<fare>1010</fare>
 		<price>100</price>

@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>東京都交通局</title>
+	<title>Tokyo Metropolitan Bureau of Transportation</title>
  	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
  	
  	<!-- イメージ画像定義 -->
@@ -20,11 +20,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-T01}">
-		<company>東京都交通局</company>
-		<type>都電</type>
-		<name>7500系</name>
-		<author>綾瀬ヒロ</author>
-		<description>東京都交通局の路面電車用車両。通常、単行で運転される。
+		<company>Tokyo Metropolitan Bureau of Transportation</company>
+		<type>Toden</type>
+		<name>7500 Series</name>
+		<author>Hiro Ayase</author>
+		<description>Tokyo Metropolitan Bureau of Transportation's streetcar. Normally operated as a single car.
 		</description>
 		<price>100</price>
 		<speed>slow</speed>
