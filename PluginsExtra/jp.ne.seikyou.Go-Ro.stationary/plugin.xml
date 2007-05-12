@@ -348,7 +348,7 @@
 	</contribution>
 	
 	<contribution type="station" id="{station_001-station-C002-000b-4C8B212Dharu}">
-		<name>Suburban station (right)灰青]</name>
+		<name>Suburban station (right)[rusty-closet]</name>
 		<size>2,1</size>
                 &station_001-R;
 		<sprite origin="48, 0" offset="24">

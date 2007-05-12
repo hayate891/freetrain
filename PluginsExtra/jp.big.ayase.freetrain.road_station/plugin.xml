@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>建物プラグイン</title>
-	<author>AyaseHiro</author>
+	<title>Structure Plugin</title>
+	<author>Hiro Ayase</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 
 	<contribution type="picture" id="{FreeTrain-AYASE-Hiro-RoadImg-Station}">
