@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>道路</title>
-	<author>AyaseHiro</author>
+	<title>Road</title>
+	<author>Hiro Ayase</author>
 	<homepage>http://www14.big.oir.jp/~ayase/</homepage>
 	
 	<contribution type="road" id="{FreeTrain-AYASE-Hiro-RoadImg-Left}">
