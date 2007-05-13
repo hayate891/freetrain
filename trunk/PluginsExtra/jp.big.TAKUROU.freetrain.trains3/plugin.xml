@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title>TAKUROU</title>
  	<homepage>kei@viola.club.ne.jp</homepage>
@@ -394,9 +394,9 @@
         <!-- 編成の定義 -->
 
         <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCH183-H}">
-		<company>JR北海道</company>
-		<type>キハ183系</type>
-		<name>HET183 北斗</name>
+		<company>JR Hokkaido</company>
+		<type>KIHA 183 Series</type>
+		<name>HET183 Hokuto</name>
 		<author>TAKUROU</author>
 		<description>「スーパー北斗」の登場に併せて、従来からの「北斗」も大幅なリニューアルが施されました。
 車輌そのものは130km/hの高速運転が可能なように機器類の改造が行われ、室内インテリアも「スーパー北斗」に準じたものになっています。
@@ -418,9 +418,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCQ185-Q}">
-		<company>JR九州</company>
-		<type>キハ185系</type>
-		<name>特急「あそ｣「ゆふ」</name>
+		<company>JR Kyushu</company>
+		<type>KIHA 185 Series</type>
+		<name>Super Express 'Aso' 'Yufu'</name>
 		<author>TAKUROU</author>
 		<description>国鉄末期に四国島内向けの新性能気動車として投入されたが、ＪＲ四国発足以後に後継の特急車が
 誕生した事で余剰となり、一方で自社内での急行格上げによる特急設定の為、気動車を必要としたＪＲ九州が四国から購入してコーポトレートカラーに
@@ -443,9 +443,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCS1000-S}">
-		<company>JR四国</company>
-		<type>キハ1000系</type>
-		<name>一般形気動車</name>
+		<company>JR Shikoku</company>
+		<type>KIHA 1000 Series</type>
+		<name>Ordinary Rail-Car</name>
 		<author>TAKUROU</author>
 		<description>車内は7000系電車と同様の、車両の片側がロングシート、反対側がクロスシートとなっている「千鳥配置」。
 車両の中央部に両開きの扉があるが、ワンマン運転の時には締め切り、前後の片開き扉からの乗り降りとなる。
@@ -461,9 +461,9 @@
 	</contribution>
 
         <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW221}">
-		<company>JR西日本</company>
-		<type>221系</type>
-		<name>汎用形近郊電車</name>
+		<company>JR West</company>
+		<type>221 Series</type>
+		<name>General-Purpose Commuter Train</name>
 		<author>TAKUROU</author>
 		<description>新快速用117系の置換え、及び老朽化した113系の置換え用として製造された。
 制御方式は211系に準じた添加励磁制御で、2両、4両、6両、8両のどの編成でもMT比を1:1とするためユニット方式車と1M車がある。
@@ -490,9 +490,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECC313}">
-		<company>JR東海</company>
-		<type>313系</type>
-		<name>汎用形近郊電車</name>
+		<company>JR Central</company>
+		<type>313 Series</type>
+		<name>General-Purpose Commuter Train</name>
 		<author>TAKUROU</author>
 		<description>１９９９年から合計１８７両が製造されたＪＲ東海の次世代一般型車両です。
 通勤形からローカル形まで外観など共通化を図っています。
@@ -522,9 +522,9 @@
              </contribution>
 
                           <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW223_2000}">
-		<company>JR西日本</company>
-		<type>223系</type>
-		<name>2000番台近郊電車</name>
+		<company>JR West</company>
+		<type>223 Series</type>
+		<name>2000 Model Commuter Train</name>
 		<author>TAKUROU</author>
 		<description>阪神大震災後のＪＲの早期復興で他鉄道からの旅客の流入による乗客増に備えて新快速などが増発される事となり、223系1000番台が新製された。
 増備された2000･3000番台では、さらにコストパフォーマンスを抑え、必要最小限の機器構成となっている。 
@@ -549,9 +549,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCE110_300A}">
-		<company>JR東日本</company>
-		<type>キハ111･112系</type>
-		<name>300番台秋田ﾘﾚｰ号</name>
+		<company>JR East</company>
+		<type>KIHA 111/112 Series</type>
+		<name>300 Model Akita 'Relay'</name>
 		<author>TAKUROU</author>
 		<description>特急秋田リレー号は新鋭キハ110型気動車を使用した列車で、特急たざわ号のピンチヒッターとして北上線経由で秋田駅から東北新幹線の北上駅までを結んでいた。
 役目を終えたリレー号の気動車であるが廃車されるようなことはなく、車体は飯山線に、内装の転換クロスシートは東海道線の２階建てグリーン車などへの転用された。
@@ -572,9 +572,9 @@
 	</contribution>
 
         <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECC373-C}">
-		<company>JR東海</company>
-		<type>373系</type>
-		<name>ワイドビュー特急電車</name>
+		<company>JR Central</company>
+		<type>373 Series</type>
+		<name>'Wide View' Super Express</name>
 		<author>TAKUROU</author>
 		<description>急行東海・富士川の特急化に際して新造された直流用特急車輌。
 普通列車に転用できるようにドアは両開き・大型となっていて、デッキと客室を区切る扉はない。
@@ -597,9 +597,9 @@
         </contribution>
 
         <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCE110-E}">
-		<company>JR東日本</company>
-		<type>キハ110系</type>
-		<name>汎用型気動車</name>
+		<company>JR East</company>
+		<type>KIHA 110 Series</type>
+		<name>General-Purpose Rail-Car</name>
 		<author>TAKUROU</author>
 		<description>ローカル線のサービス改善を図るため、ＪＲ東日本が開発した気動車。
 車体の長さ、両運転台または片運転台などで多彩な車両があり、路線条件に応じて使われている。
@@ -616,9 +616,9 @@
 	</contribution>
 
         <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCE110_200E}">
-		<company>JR東日本</company>
-		<type>キハ111･112系</type>
-		<name>汎用型気動車</name>
+		<company>JR East</company>
+		<type>KIHA 111/112 Series</type>
+		<name>General-Purpose Rail-Car</name>
 		<author>TAKUROU</author>
 		<description>ローカル線のサービス改善を図るため、ＪＲ東日本が開発した気動車。
 車体の長さ、両運転台または片運転台などで多彩な車両があり、路線条件に応じて使われている。

@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>横浜高速鉄道車両プラグイン</title>
+	<title>Yokohama Minatomirai Railway Train Plugins</title>
 	<author>Altima</author>
 	<homepage>http://zero-d.web.infoseek.co.jp/</homepage>
 
@@ -29,9 +29,9 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-YMR01A00Y000}">
-		<company>横浜高速鉄道</company>
-		<type>Y000系</type>
-		<name>こどもの国線</name>
+		<company>Yokohama Minatomirai Railway</company>
+		<type>Y000 Series</type>
+		<name>Kodomonokuni Line</name>
 		<author>Altima</author>
 		<description>2000年のこどもの国線の通勤線化に伴い投入された車両。東急3000系をベースに、3扉、2両固定編成となっている。3本が在籍し、シーズン時には2連＋2連で走行することもある。(2連、4連、6連のみ編成可能)</description>
 		<fare>460</fare>
@@ -196,9 +196,9 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-YMR02A00Y500}">
-		<company>横浜高速鉄道</company>
-		<type>Y500系</type>
-		<name>みなとみらい線</name>
+		<company>Yokohama Minatomirai Railway</company>
+		<type>Y500 Series</type>
+		<name>Minatomirai Line</name>
 		<author>Altima</author>
 		<description>2004年に開通したみなとみらい線用に登場。車体構造は東急5000系と共通で、「みなとみらい」や横浜の伝統をモチーフとした斬新なカラーデザインを採用した。6編成在籍。(4、6、8、10、12、14、16連を編成可能)</description>
 		<fare>470</fare>

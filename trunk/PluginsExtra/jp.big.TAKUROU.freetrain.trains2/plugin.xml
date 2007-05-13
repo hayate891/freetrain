@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title>TAKUROU</title>
  	<homepage>kei@viola.club.ne.jp</homepage>
@@ -529,9 +529,9 @@
              <!-- 編成の定義 -->
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW113-B}">
-		<company>JR西日本</company>
-		<type>113系</type>
-		<name>7000番台阪和色(旧新快速色)</name>
+		<company>JR West</company>
+		<type>113 Series</type>
+		<name>7000 Model Hanwa Colors (Old Special Rapid Colors)</name>
 		<author>TAKUROU</author>
 		<description>最高速度110km/h対応の改造に伴い7000番代となった。
 塗装も阪和線快速色と呼ばれるものです。国鉄時代から存在したこの塗装も、最近では東海道線系統からの湘南色での転属車もあり、
@@ -555,9 +555,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW105-H}">
-		<company>JR西日本</company>
-		<type>105系</type>
-		<name>広島地区対応色</name>
+		<company>JR West</company>
+		<type>105 Series</type>
+		<name>Hiroshima Area Colors</name>
 		<author>TAKUROU</author>
 		<description>新性能電車は電動車2両ユニットが原則であったが、地方線区は輸送量の少ない所が多く、MMユニット方式では全電動車となって性能過剰となってしまう。
 このため福塩線や宇部線・小野田線の新性能化の際、1M方式の105系が製造された。
@@ -578,9 +578,9 @@
              </contribution>
 
 <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW113-F}">
-		<company>JR西日本</company>
-		<type>115系</type>
-		<name>福知山色</name>
+		<company>JR West</company>
+		<type>115 Series</type>
+		<name>Fukuchiyama Colors</name>
 		<author>TAKUROU</author>
 		<description>１１５系は、当初1995(平成７)年年の阪神淡路大震災後、阪神間の輸送力増強用として広島区より網干区に転入したもので、その後福知山区が借入した。
 その時に福知山色に塗色変更している｡
@@ -604,9 +604,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ113-Y}">
-		<company>旧日本国有鉄道</company>
-		<type>113系</type>
-		<name>800番台旧福知山線色</name>
+		<company>Japanese National Railways</company>
+		<type>113 Series</type>
+		<name>800 Model Old Fukuchiyama Line Colors</name>
 		<author>TAKUROU</author>
 		<description>1986(昭和61)年の城崎電化に際して、当時の国鉄財政状況から新車投入は見合わされ、
 各地の各地より捻出した113系０番台を降雪地帯の運用もあるため、耐寒耐雪改造を施した１１３系８００番台となりました。
@@ -627,9 +627,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW113-R}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>113系</type>
-		<name>春日色(旧関西本線快速)</name>
+		<name>Kasuga Colors (Old Kansai Main Line Rapid)</name>
 		<author>TAKUROU</author>
 		<description>1972(昭和47)年に関西本線(湊町～奈良間)の電化によって投入された。
 以降、桜井・和歌山・奈良線が電化されると４両編成が誕生した。ＪＲ化後の1989(平成元)年に221系が投入されて、
@@ -653,9 +653,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW105-Y}">
-		<company>JR西日本</company>
-		<type>105系</type>
-		<name>福塩線色</name>
+		<company>JR West</company>
+		<type>105 Series</type>
+		<name>Fukuen Line Colors</name>
 		<author>TAKUROU</author>
 		<description>新性能電車は電動車2両ユニットが原則であったが、地方線区は輸送量の少ない所が多く、MMユニット方式では全電動車となって性能過剰となってしまう。
 このため福塩線や宇部線・小野田線の新性能化の際、1M方式の105系が製造された。
@@ -678,9 +678,9 @@
              
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW115-H}">
-		<company>JR西日本</company>
-		<type>115系</type>
-		<name>山陽色</name>
+		<company>JR West</company>
+		<type>115 Series</type>
+		<name>Sanyo Colors</name>
 		<author>TAKUROU</author>
 		<description>主に山陽本線の、広島・山口県を走る電車。揺れるわトイレがない車両があるわ・・・。
 		</description>
@@ -702,9 +702,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW115_3000-S}">
-		<company>JR西日本</company>
-		<type>115系</type>
-		<name>山陽シティライナー</name>
+		<company>JR West</company>
+		<type>115 Series</type>
+		<name>Sanyo City Liner</name>
 		<author>TAKUROU</author>
 		<description>1982(昭和57)年のダイヤ改正で広島地区の輸送改善の一貫として投入された。
 113系ベースでありながら、117系と同様のシートや２扉の設計がされてある。関西地区での転属で中間車を先頭化させ、
@@ -728,9 +728,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW113-W}">
-		<company>JR西日本</company>
-		<type>１１３系</type>
-		<name>湘南色</name>
+		<company>JR West</company>
+		<type>113 Series</type>
+		<name>Shonan Colors</name>
 		<author>TAKUROU</author>
 		<description>関西圏で活躍する113系関西圏は比較的古い型の113系が多い。
 特に京阪神地区は私鉄とのスピード輸送サービスで110KM/h対応に改造されている。
@@ -758,9 +758,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW113-N}">
-		<company>JR西日本</company>
-		<type>１１３系</type>
-		<name>N40リニューアル車</name>
+		<company>JR West</company>
+		<type>113 Series</type>
+		<name>N40 Refurbished Train</name>
 		<author>TAKUROU</author>
 		<description>ＪＲ西日本で他車種にわたって行われているリニューアル更新車が登場している。
 カラーも湘南色からアーバンネットワークカラーに変更されて113系の面影が半減した。
@@ -790,9 +790,9 @@
              </contribution>
 
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECW115-N}">
-		<company>JR西日本</company>
-		<type>115系</type>
-		<name>N40リニューアル車</name>
+		<company>JR West</company>
+		<type>115 Series</type>
+		<name>N40 Refurbished Train</name>
 		<author>TAKUROU</author>
 		<description>ＪＲ西日本では新製車の投入を進める一方、在来車でまだ活躍が見込める車両についてリニューアル改造を行い新車同様に活躍出来るよう、
 ハイ・ローミックスの体制で車両サービスの向上を図っています。

@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>小田急電鉄車両パック</title>
+	<title>Odakyu Train Pack</title>
 	<author>Altima</author>
 	<homepage>http://zero-d.web.infoseek.co.jp/</homepage>
 
@@ -35,8 +35,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-2600-2670F}">
-		<company>小田急電鉄</company>
-		<type>2600形旧塗装 2670F</type>
+		<company>Odakyu Electric Railway</company>
+		<type>2600 Series (Old Coating) 2670F</type>
 		<name></name>
 		<author>Altima</author>
 		<description>1964年に小田急初の20m通勤車として登場。広幅・裾絞り車体、両開き4扉など近代の小田急電車の基本となった。最後まで残った2670Fは、ダークブルーとオレンジイエローの旧塗装に復元された。</description>
@@ -77,8 +77,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-5000}">
-		<company>小田急電鉄</company>
-		<type>5000形/5200形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>5000 Series / 5200 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>1969年に優等列車向けの車両として登場。2600形を基本とし、電動カム軸抵抗バーニア制御を採用。4連は5000形、6連は5200形となっている。1990年からは修繕・更新工事を順次実施している。</description>
@@ -119,8 +119,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-8000}">
-		<company>小田急電鉄</company>
-		<type>8000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>8000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>1982年に地上線用として登場。当時流行のブラックフェイスを取り入れたスタイル。制御装置は9000形と同じ界磁チョッパ。一部車両はIGBT-VVVF採用などの更新工事を実施している。</description>
@@ -190,8 +190,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-1000}">
-		<company>小田急電鉄</company>
-		<type>1000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>1000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>1987年に登場。同社初のステンレス車体、GTO-VVVF車で、一部を除き地下鉄直通に対応。長期間増備され形式バリエーションが豊富で、200両近い大所帯を誇る。</description>
@@ -232,8 +232,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-1700}">
-		<company>小田急電鉄</company>
-		<type>1500形/1700形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>1500 Series / 1700 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>1991年に登場した車両で、乗降時間対策として2mドアを採用。その後1.6m開口制限と座席の増加改造を行なった。4連は1500形、6連は1700形となっていたが、2004年からは6連化改造と改番を行なう。</description>
@@ -274,8 +274,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-2000}">
-		<company>小田急電鉄</company>
-		<type>2000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>2000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>1995年に登場した車両。車体は1000形とほとんど同じだが、IGBT-VVVFやLED表示器・案内装置、1.6mドアを採用している。</description>
@@ -316,8 +316,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-3000-1ST}">
-		<company>小田急電鉄</company>
-		<type>3000形 1次車</type>
+		<company>Odakyu Electric Railway</company>
+		<type>3000 Series 1st Car</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -359,8 +359,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-3000-2ND}">
-		<company>小田急電鉄</company>
-		<type>3000形 2次車</type>
+		<company>Odakyu Electric Railway</company>
+		<type>3000 Series 2nd Car</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -393,8 +393,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-3000-3RD}">
-		<company>小田急電鉄</company>
-		<type>3000形 3次車</type>
+		<company>Odakyu Electric Railway</company>
+		<type>3000 Series 3rd Car</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -436,8 +436,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-3000-3263F}">
-		<company>小田急電鉄</company>
-		<type>3000形 3次車 3263F</type>
+		<company>Odakyu Electric Railway</company>
+		<type>3000 Series 3rd Car 3263F</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -455,8 +455,8 @@
 
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-2600+5000}">
-		<company>小田急電鉄</company>
-		<type>2600形＋5000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>2600 Series + 5000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -478,8 +478,8 @@
 
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-5200+8000}">
-		<company>小田急電鉄</company>
-		<type>5200形＋8000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>5200 Series + 8000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -500,8 +500,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-5200+1000}">
-		<company>小田急電鉄</company>
-		<type>5200形＋1000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>5200 Series + 1000 series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -523,8 +523,8 @@
 
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-8000+5000}">
-		<company>小田急電鉄</company>
-		<type>8000形＋5000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>8000 Series + 5000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -545,8 +545,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-8000+1000}">
-		<company>小田急電鉄</company>
-		<type>8000形＋1000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>8000 Series + 1000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -568,8 +568,8 @@
 
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-1000+5000}">
-		<company>小田急電鉄</company>
-		<type>1000形＋5000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>1000 Series + 5000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -590,8 +590,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-1000+8000}">
-		<company>小田急電鉄</company>
-		<type>1000形＋8000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>1000 Series + 8000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -613,8 +613,8 @@
 
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-3000-1+5000}">
-		<company>小田急電鉄</company>
-		<type>3000形1次車＋5000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>3000 Series 1st Car + 5000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -635,8 +635,8 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-3000-2+8000}">
-		<company>小田急電鉄</company>
-		<type>3000形2次車＋8000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>3000 Series 2nd Car + 8000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
@@ -658,8 +658,8 @@
 
 
 	<contribution type="train" id="{AltimaTRAINS-EC-ODAKYU-3000-3+1000}">
-		<company>小田急電鉄</company>
-		<type>3000形3次車＋1000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>3000 Series 3rd Car + 1000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>
