@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>京王電鉄車両プラグイン</title>
+	<title>Keio Trains Plugin</title>
 	<author>Altima</author>
 	<homepage>http://zero-d.web.infoseek.co.jp/</homepage>
 
@@ -69,11 +69,11 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO10A006000}">
-		<company>京王電鉄</company>
-		<type>6000系</type>
-		<name>京王線,相模原線など</name>
+		<company>Keio Corporation</company>
+		<type>6000 Series</type>
+		<name>Keio Line, Sagami Line, etc.</name>
 		<author>Altima</author>
-		<description>京王電鉄初の20ｍ車として1972年に登場。ワンハンドルマスコンの採用や都営新宿線直通を考慮した設計で、1次車は抵抗制御、2次車以降は界磁チョッパを採用している。5扉車や都営線乗り入れ車などもあり、最大304両の大所帯だったが、9000系と入れ替わるように徐々に廃車が進んでいる。</description>
+		<description>Keio Corporation初の20ｍ車として1972年に登場。ワンハンドルマスコンの採用や都営新宿線直通を考慮した設計で、1次車は抵抗制御、2次車以降は界磁チョッパを採用している。5扉車や都営線乗り入れ車などもあり、最大304両の大所帯だったが、9000系と入れ替わるように徐々に廃車が進んでいる。</description>
 		<fare>390</fare>
 		<price>50</price>
 		<speed>fast</speed>
@@ -139,9 +139,9 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO14A006000}">
-		<company>京王電鉄</company>
-		<type>6000系(新塗装)</type>
-		<name>京王線など</name>
+		<company>Keio Corporation</company>
+		<type>6000 Series (New Colors)</type>
+		<name>Keio Line, etc.</name>
 		<author>Altima</author>
 		<description>2002年度中に全車が従来のエンジ帯から赤青2色帯に変更された。再塗装されたものとシールを貼り付けたものの2種類がある。</description>
 		<fare>390</fare>
@@ -197,9 +197,9 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO10B007000}">
-		<company>京王電鉄</company>
-		<type>7000系</type>
-		<name>京王線,相模原線など</name>
+		<company>Keio Corporation</company>
+		<type>7000 Series</type>
+		<name>Keio Line, Sagami Line, etc.</name>
 		<author>Altima</author>
 		<description>1984年に登場。足回りなど基本的に6000系と同じ界磁チョッパで、ステンレス車体を採用して軽量化した。無塗装の銀色前面だったが、視認性向上のためアイボリーに塗られた。コルゲート車体からビートプレスに変更されスマートになった20番台(7020系)が後に登場。現在は2、4、6、8、10連が揃っている。</description>
 		<fare>410</fare>
@@ -255,9 +255,9 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO14B007000}">
-		<company>京王電鉄</company>
-		<type>7000系(新塗装)</type>
-		<name>京王線など</name>
+		<company>Keio Corporation</company>
+		<type>7000 Series (New Colors)</type>
+		<name>Keio Line, etc.</name>
 		<author>Altima</author>
 		<description>2001年から初期の車両を中心に内外装の更新工事を実施、従来のエンジ帯から赤青2色帯に変更された。追って未更新の車両にも同様の塗色変更が行なわれた。</description>
 		<fare>410</fare>
@@ -297,9 +297,9 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO10C008000}">
-		<company>京王電鉄</company>
-		<type>8000系</type>
-		<name>京王線,相模原線,高尾線</name>
+		<company>Keio Corporation</company>
+		<type>8000 Series</type>
+		<name>Keio Line, Sagamihara Line, Takao Line</name>
 		<author>Altima</author>
 		<description>1992年に登場した京王初のGTO-VVVF車。新たなコーポレートカラーであるチェリーレッド、インディゴブルーの帯を巻き、90年代の京王のイメージリーダーとなった。6連＋4連、8連がある。都営新宿線内乗り入れには使われない。</description>
 		<fare>450</fare>
@@ -315,8 +315,8 @@
 
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO20C008000}">
-		<company>京王電鉄</company>
-		<type>8000系(6連＋4連)</type>
+		<company>Keio Corporation</company>
+		<type>8000 Series (6 cars + 4 cars)</type>
 		<name></name>
 		<author>Altima</author>
 		<description>6連＋4連の10両編成を再現。(10両編成のみ購入可能)</description>
@@ -358,9 +358,9 @@
 	</contribution>
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO10D009000}">
-		<company>京王電鉄</company>
-		<type>9000系</type>
-		<name>京王線,相模原線,高尾線</name>
+		<company>Keio Corporation</company>
+		<type>9000 Series</type>
+		<name>Keio Line, Sagamihara Line, Takao Line</name>
 		<author>Altima</author>
 		<description>2000年に登場した京王の最新鋭車両。IGBT-VVVFや片持ち式シートを採用、8000系に比べて特にバリアフリーを強化している。都営新宿線乗り入れにも対応するが、都合によりまだ運用されていない。8両編成のみのため、10連運用するときは6000系または7000系2連を増結する。</description>
 		<fare>470</fare>
@@ -376,8 +376,8 @@
 
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO20D009000}">
-		<company>京王電鉄</company>
-		<type>9000系＋6000系</type>
+		<company>Keio Corporation</company>
+		<type>9000 Series + 6000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>「特急」など優等列車として運用される時は主に6000系2連を増結し10両編成となる。(10両編成のみ購入可能)</description>
@@ -397,8 +397,8 @@
 
 
 	<contribution type="train" id="{C8A90EE2-2C5E-4F1E-ALTM-KEO30D009000}">
-		<company>京王電鉄</company>
-		<type>9000系＋7000系</type>
+		<company>Keio Corporation</company>
+		<type>9000 Series + 7000 Series</type>
 		<name></name>
 		<author>Altima</author>
 		<description>ごく稀に7000系2連を増結することもある。(10両編成のみ購入可能)</description>

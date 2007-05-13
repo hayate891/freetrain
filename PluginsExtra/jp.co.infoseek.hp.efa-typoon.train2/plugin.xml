@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両セット　2号車</title>
+	<title>Train Set No 2</title>
 	<homepage></homepage>
-	<author>たいふ～ん</author>
+	<author>Typhoon</author>
 
 
-	<title>485系九州ベース</title>
+	<title>485 Series Kyushu Base</title>
 	<contribution type="picture" id="{57644AE6-7FFA-Q485-8FE0-7567171D3CEF}">
 		<picture src="485qa.bmp" />
 	</contribution>
@@ -13,7 +13,7 @@
 	<contribution type="picture" id="{57644AE6-7FFA-485Q-8FE0-7567171D3CEF}">
 		<picture src="485qb.bmp" />
 	</contribution>
-	<title>485系東日本ベース</title>
+	<title>485 Series East Japan Base</title>
 	<contribution type="picture" id="{57644AE6-7FFA-E485-8FE0-7567171D3CEF}">
 		<picture src="485ea.bmp" />
 	</contribution>
@@ -21,7 +21,7 @@
 	<contribution type="picture" id="{57644AE6-7FFA-485E-8FE0-7567171D3CEF}">
 		<picture src="485eb.bmp" />
 	</contribution>
-	<title>485系西日本ベース</title>
+	<title>485 Series West Japan Base</title>
 	<contribution type="picture" id="{57644AE6-7FFA-W485-8FE0-7567171D3CEF}">
 		<picture src="485wa.bmp" />
 	</contribution>
@@ -73,10 +73,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-R485-8FE0-7567171D3CEF}">
-		<company>JR九州</company>
-		<type>485系</type>
-		<name>レッドエクスプレス</name>
-		<author>たいふ～ん</author>
+		<company>JR Kyushu</company>
+		<type>485 Series</type>
+		<name>Red Express</name>
+		<author>Typhoon</author>
 		<description>JR九州の485系のうち、赤くなってみた485系。</description>
 		<price>1</price>
            		<fare>1000</fare> 
@@ -122,10 +122,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-K485-8FE0-7567171D3CEF}">
-		<company>JR九州</company>
-		<type>485系</type>
-		<name>きりしま・ひゅうが</name>
-		<author>たいふ～ん</author>
+		<company>JR Kyushu</company>
+		<type>485 Series</type>
+		<name>Kirishima / Hyuga</name>
+		<author>Typhoon</author>
 		<description>きりしま用の緑の485系はひゅうがとの共通運転を行うために、旧ハウステンボス色をベースにした塗装に変更された。3,6,9両のみ編成可能。</description>
 		<price>1</price>
 		<speed>fast</speed>
@@ -183,10 +183,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-H485-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>北越、くびき野 など</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Hokuetsu, Kubikino, etc.</name>
+		<author>Typhoon</author>
 		<description>上沼垂色の485系。</description>
 		<price>1</price>
           		<fare>1000</fare> 
@@ -240,10 +240,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-I485-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>3000番台　はくたか など</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>3000 Model Hakutaka, etc.</name>
+		<author>Typhoon</author>
 		<description>上沼垂色の485系3000番台。</description>
 		<price>1</price>
           		<fare>1100</fare> 
@@ -301,10 +301,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-J485-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>3000番台　はつかり、白鳥</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>3000 Model Hatsukari, Hakucho</name>
+		<author>Typhoon</author>
 		<description>「はつかり」用に485系を改造した車両。青函トンネル内で140km/hで運転できる。東北新幹線の八戸
 延長に伴い、「白鳥」として運転されるようになった。</description>
 		<price>1</price>
@@ -362,10 +362,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-JRE-485HITA-HENSEI-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>ひたち色</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Hitachi Colors色</name>
+		<author>Typhoon</author>
 		<description>ひたち色の485系ボンネット無し。</description>
 		<price>1</price>
           		<fare>1100</fare> 
@@ -402,10 +402,10 @@
 		<capacity>56</capacity>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-JRE-485KAMO-HENSEI-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>かもしか など</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Kamoshika, etc.</name>
+		<author>Typhoon</author>
 		<description>3,6,9両のみ編成可能。</description>
 		<price>1</price>
 		<speed>fast</speed>
@@ -461,11 +461,11 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-L485-8FE0-7567171D3CEF}">
-		<company>JR西日本</company>
-		<type>485系</type>
-		<name>はくたか など</name>
-		<author>たいふ～ん</author>
-		<description>「はくたか」などで使われているJR西日本の485系。</description>
+		<company>JR West</company>
+		<type>485 Series</type>
+		<name>Hakutaka, etc.</name>
+		<author>Typhoon</author>
+		<description>「はくたか」などで使われているJR Westの485系。</description>
 		<price>1</price>
           		<fare>1100</fare> 
 		<speed>fast</speed>
@@ -518,10 +518,10 @@
 
 
 	<contribution type="train" id="{57644AE6-7FFA-M485-8FE0-7567171D3CEF}">
-		<company>JR西日本</company>
-		<type>489系</type>
-		<name>白山色・ボンネット無し</name>
-		<author>たいふ～ん</author>
+		<company>JR West</company>
+		<type>489 Series</type>
+		<name>Hakusan Colors; w/o Bonnet</name>
+		<author>Typhoon</author>
 		<description>「白山」で使われていた専用カラーの489系。「はくたか」や新幹線の前の「あさま」でも使われることがあった。北陸新幹線の開業で「白山」は廃止され、現在は特急色に戻されている。</description>
 		<price>1</price>
           		<fare>1100</fare> 
@@ -594,10 +594,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-JRW-485SHIRAP-HENSEI-7567171D3CEF}">
-		<company>JR西日本</company>
-		<type>485系</type>
-		<name>しらさぎ色(Pあり)</name>
-		<author>たいふ～ん</author>
+		<company>JR West</company>
+		<type>485 Series</type>
+		<name>Shirasagi Colors (with P)</name>
+		<author>Typhoon</author>
 		<description>しらさぎなどで使われていたパノラマ車つきの485系。10両まで編成可。</description>
 		<price>1</price>
           		<fare>1100</fare> 
@@ -621,10 +621,10 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-JRW-485SHIRA-HENSEI-7567171D3CEF}">
-		<company>JR西日本</company>
-		<type>485系</type>
-		<name>しらさぎ色(Pなし)</name>
-		<author>たいふ～ん</author>
+		<company>JR West</company>
+		<type>485 Series</type>
+		<name>Shirasagi Colors (w/o P)</name>
+		<author>Typhoon</author>
 		<description>しらさぎなどで使われていたパノラマ車なしの485系。10両まで編成可。</description>
 		<price>1</price>
           		<fare>1100</fare> 
@@ -682,10 +682,10 @@
 		<capacity>56</capacity>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-JRW-485KIRA-HENSEI-7567171D3CEF}">
-		<company>JR西日本</company>
-		<type>485系</type>
-		<name>かがやき・きらめき色</name>
-		<author>たいふ～ん</author>
+		<company>JR West</company>
+		<type>485 Series</type>
+		<name>Kagayaki / Kirameki Colors</name>
+		<author>Typhoon</author>
 		<description>かがやき・きらめき色の485系。</description>
 		<price>1</price>
           		<fare>1100</fare> 

@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>JRE205系後期型車両プラグイン</title>
+	<title>Late JRE205 Series Trains Plugin</title>
 	<author>Altima</author>
 	<homepage>http://zero-d.web.infoseek.co.jp/</homepage>
 
@@ -55,9 +55,9 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-JREAST-205KY}">
-		<company>JR東日本</company>
-		<type>205系後期型</type>
-		<name>京葉線</name>
+		<company>JR East</company>
+		<type>205 Series Late Type</type>
+		<name>Keiyo Line</name>
 		<author>Altima</author>
 		<description>
 
@@ -119,9 +119,9 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-JREAST-205MS}">
-		<company>JR東日本</company>
-		<type>205系後期型</type>
-		<name>武蔵野線</name>
+		<company>JR East</company>
+		<type>205 Series Late Type</type>
+		<name>Musashino Line</name>
 		<author>Altima</author>
 		<description>
 1991年の武蔵野線8両編成化に合わせて205系が新製投入された。京葉線に準じた後期型仕様になっているが、前面が銀色、スカート未装備、ドアエンジンの変更など差異も多い。</description>
@@ -182,9 +182,9 @@
 	</contribution>
 
 	<contribution type="train" id="{AltimaTRAINS-EC-JREAST-205SG}">
-		<company>JR東日本</company>
-		<type>205系500番台</type>
-		<name>相模線</name>
+		<company>JR East</company>
+		<type>205 Series 500 Model</type>
+		<name>Sagami Line</name>
 		<author>Altima</author>
 		<description>
 1991年の相模線電化の際にこの205系500番台が新製投入された。半自動扉や乗務員支援装置を装備していて、0番台とはまったく異なるフロントマスクを持つ。</description>
