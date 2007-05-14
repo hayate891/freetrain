@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>キハ30久留里線</title>
+	<title>KIHA 30 Kururi Line</title>
 	<homepage></homepage>
 	
 <!-- キハ30久留里線 -->
@@ -14,10 +14,10 @@
 </contribution>
 
 <contribution type="train" id="{09D6B15A-6DAD-47DF-B8E1-kiha30-kururi}">
-		<company>JR東日本</company>
-		<type>キハ30系</type>
-		<name>キハ30久留里線</name>
-		<author>いっちー</author>
+		<company>JR East</company>
+		<type>KIHA 30 Series</type>
+		<name>KIHA 30 Kururi Line</name>
+		<author>Icchii</author>
 		<description>
 木更津～上総亀山を走る日本有数の(？)ローカル線、久留里線の車両です。
 数年前に現在の、沿線自治体をイメージした塗装に変更されました。
