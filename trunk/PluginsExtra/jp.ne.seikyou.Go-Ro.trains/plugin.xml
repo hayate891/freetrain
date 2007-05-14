@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両（FreeTrain-想作館）</title>
+	<title>Trains (FreeTrain-Sosakukan)</title>
 	<author>haru</author>
 	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
 	
@@ -101,8 +101,8 @@
                 <fare>400</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>11７系</type>
-		<company>JR西日本</company>
+		<type>117 Series</type>
+		<company>JR West</company>
 		<description>国鉄が京阪神の競合私鉄に対抗すべく新製した形式。同地区の新快速に投入されたほか、中京圏にも投入された。2扉の転換クロスシートの室内に空気バネの台車を履くなど、他の国鉄近郊型車両とは一線を画していた。</description>
 		<composition>
 			<head carRef="{ADF87135-9F9C-117A-9B45-04F846A0479D}-h"/>
@@ -237,13 +237,13 @@
 	
 
 	<contribution type="train" id="{BDF87135-9F9C-117A-9B45-04F846A0479D}">
-		<name>福知山色</name>
+		<name>Fukuchiyama Colors</name>
 		<price>1</price>
                 <fare>400</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>11７系</type>
-		<company>JR西日本</company>
+		<type>117 Series</type>
+		<company>JR West</company>
 		<description>国鉄が京阪神の競合私鉄に対抗すべく新製した形式。同地区の新快速に投入されたほか、中京圏にも投入された。2扉の転換クロスシートの室内に空気バネの台車を履くなど、他の国鉄近郊型車両とは一線を画していた。</description>
 		<composition>
 			<head carRef="{BDF87135-9F9C-117A-9B45-04F846A0479D}-h"/>
@@ -398,13 +398,13 @@
 	
 
 	<contribution type="train" id="{CDF87135-9F9C-117A-9B45-04F846A0479D}">
-		<name>オーシャンカラー</name>
+		<name>Ocean Colors</name>
 		<price>1</price>
                 <fare>400</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>11７系</type>
-		<company>JR西日本</company>
+		<type>117 Series</type>
+		<company>JR West</company>
 		<description>国鉄が京阪神の競合私鉄に対抗すべく新製した形式。同地区の新快速に投入されたほか、中京圏にも投入された。2扉の転換クロスシートの室内に空気バネの台車を履くなど、他の国鉄近郊型車両とは一線を画していた。</description>
 		<composition>
 			<head carRef="{CDF87135-9F9C-117A-9B45-04F846A0479D}-h"/>
@@ -554,13 +554,13 @@
 	
 
 	<contribution type="train" id="{DDF87135-9F9C-117A-9B45-04F846A0479D}">
-		<name>サンライナー</name>
+		<name>Sun Liner</name>
 		<price>1</price>
                 <fare>400</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>11７系</type>
-		<company>JR西日本</company>
+		<type>117 Series</type>
+		<company>JR West</company>
 		<description>国鉄が京阪神の競合私鉄に対抗すべく新製した形式。同地区の新快速に投入されたほか、中京圏にも投入された。2扉の転換クロスシートの室内に空気バネの台車を履くなど、他の国鉄近郊型車両とは一線を画していた。</description>
 		<composition>
 			<head carRef="{DDF87135-9F9C-117A-9B45-04F846A0479D}-h"/>
@@ -686,13 +686,13 @@
 	
 
 	<contribution type="train" id="{EDF87135-9F9C-117A-9B45-04F846A0479D}">
-		<name>東海色</name>
+		<name>Tokai Colors</name>
 		<price>1</price>
                 <fare>400</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>11７系</type>
-		<company>JR東海</company>
+		<type>117 Series</type>
+		<company>JR Central</company>
 		<description>国鉄が京阪神の競合私鉄に対抗すべく新製した形式。同地区の新快速に投入されたほか、中京圏にも投入された。2扉の転換クロスシートの室内に空気バネの台車を履くなど、他の国鉄近郊型車両とは一線を画していた。</description>
 		<composition>
 			<head carRef="{EDF87135-9F9C-117A-9B45-04F846A0479D}-h"/>
@@ -741,13 +741,13 @@
 	
 
 	<contribution type="train" id="{train-oct60-3311-A95D-9570512E5210}">
-		<name>堺筋線</name>
+		<name>Sakaisuji Line</name>
 		<price>1</price>
                 <fare>300</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>60系</type>
-		<company>大阪市交通局</company>
+		<type>60 Series</type>
+		<company>Osaka Municipal Transportation Bureau</company>
 		<description>大阪市営地下鉄堺筋線で開通時から使用されている車両。天神橋筋六丁目から阪急に乗り入れるため、大阪市営地下鉄としては珍しい架線集電方式を採用している。
 今では一般的なフロントガラスを上部屋根付近まで延長したデザインは製造当時は斬新だった。</description>
 		<composition>
@@ -854,13 +854,13 @@
 	
 
 	<contribution type="train" id="{train-oct10-0001-A95D-9570512E5210}">
-		<name>御堂筋線</name>
+		<name>Midosuji Line</name>
 		<price>1</price>
                 <fare>300</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>10系</type>
-		<company>大阪市交通局</company>
+		<type>10 Series</type>
+		<company>Osaka Municipal Transportation Bureau</company>
 		<description>御堂筋線で使われているサイリスタチョッパ制御車両。多くの路線がトンネル上部にスペースの少ない第三軌条方式を採用している大阪市営地下鉄で、初の冷房搭載車となった。</description>
 		<composition>
 			<head carRef="{trainCar-oct10-0001-A95D-9570512E5210}-h"/>
@@ -969,13 +969,13 @@
 	
 
 	<contribution type="train" id="{train-oct10-0002-A95D-9570512E5210}">
-		<name>御堂筋線（新塗装）</name>
+		<name>Midosuji Line (New Colors)</name>
 		<price>1</price>
                 <fare>300</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>10系</type>
-		<company>大阪市交通局</company>
+		<type>10 Series</type>
+		<company>Osaka Municipal Transportation Bureau</company>
 		<description>御堂筋線で使われているサイリスタチョッパ制御車両。多くの路線がトンネル上部にスペースの少ない第三軌条方式を採用している大阪市営地下鉄で、初の冷房搭載車となった。</description>
 		<composition>
 			<head carRef="{trainCar-oct10-0002-A95D-9570512E5210}-h"/>
@@ -1101,14 +1101,14 @@
 	
 
 	<contribution type="train" id="{train-oct10-0003-A95D-9570512E5210}">
-		<name>谷町線</name>
+		<name>Tanimachi Line</name>
 		<price>1</price>
                 <fare>300</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>20系</type>
-		<company>大阪市交通局</company>
-		<description>昭和59年に登場した大阪市交通局初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
+		<type>20 Series</type>
+		<company>Osaka Municipal Transportation Bureau</company>
+		<description>昭和59年に登場したOsaka Municipal Transportation Bureau初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
 		<composition>
 			<head carRef="{trainCar-oct10-0003-A95D-9570512E5210}-h"/>
 			<body carRef="{trainCar-oct10-0003-A95D-9570512E5210}-b"/>
@@ -1223,14 +1223,14 @@
 	
 
 	<contribution type="train" id="{train-oct10-0004-A95D-9570512E5210}">
-		<name>谷町線（新塗装）</name>
+		<name>Tanimachi Line (New Colors)</name>
 		<price>1</price>
                 <fare>300</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>20系</type>
-		<company>大阪市交通局</company>
-		<description>昭和59年に登場した大阪市交通局初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
+		<type>20 Series</type>
+		<company>Osaka Municipal Transportation Bureau</company>
+		<description>昭和59年に登場したOsaka Municipal Transportation Bureau初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
 		<composition>
 			<head carRef="{trainCar-oct10-0004-A95D-9570512E5210}-h"/>
 			<body carRef="{trainCar-oct10-0004-A95D-9570512E5210}-b"/>
@@ -1353,14 +1353,14 @@
 	
 
 	<contribution type="train" id="{train-oct10-0005-A95D-9570512E5210}">
-		<name>中央線</name>
+		<name>Chuo Line</name>
 		<price>1</price>
                 <fare>300</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>20系</type>
-		<company>大阪市交通局</company>
-		<description>昭和59年に登場した大阪市交通局初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
+		<type>20 Series</type>
+		<company>Osaka Municipal Transportation Bureau</company>
+		<description>昭和59年に登場したOsaka Municipal Transportation Bureau初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
 		<composition>
 			<head carRef="{trainCar-oct10-0005-A95D-9570512E5210}-h"/>
 			<body carRef="{trainCar-oct10-0005-A95D-9570512E5210}-b"/>
@@ -1483,14 +1483,14 @@
 	
 
 	<contribution type="train" id="{train-oct10-0006-A95D-9570512E5210}">
-		<name>中央線（新塗装）</name>
+		<name>Chuo Line (New Colors)</name>
 		<price>1</price>
                 <fare>300</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>20系</type>
-		<company>大阪市交通局</company>
-		<description>昭和59年に登場した大阪市交通局初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
+		<type>20 Series</type>
+		<company>Osaka Municipal Transportation Bureau</company>
+		<description>昭和59年に登場したOsaka Municipal Transportation Bureau初のVVVFインバータ制御車両。中央線と谷町線に投入された。</description>
 		<composition>
 			<head carRef="{trainCar-oct10-0006-A95D-9570512E5210}-h"/>
 			<body carRef="{trainCar-oct10-0006-A95D-9570512E5210}-b"/>
@@ -1827,13 +1827,13 @@
 	
 		
 	<contribution type="train" id="{train-e257-0001-A95D-1570512E5210}">
-		<name>あずさ、かいじ</name>
+		<name>Azusa, Kaiji</name>
 		<price>1</price>
                 <fare>1200</fare>
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>E257系</type>
-		<company>JR東日本</company>
+		<type>E257 Series</type>
+		<company>JR East</company>
 		<description>中央線の183系、189系を置き換えるため製造された車両。基本の9両編成か2両増結した11両編成で運転される。</description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
 		<config>
@@ -1883,8 +1883,8 @@
                 <fare>200</fare>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>モ510形</type>
-		<company>名古屋鉄道</company>
+		<type>MO 510 Series</type>
+		<company>Nagoya Railroad</company>
 		<description>大正15年生まれの古豪であるが、2両が健在。現在は予備車として揖斐線、岐阜市内線で使用されている。
 路面電車区間である岐阜市内線に乗り入れるため、扉下にはステップが装備されている。
 昭和62年、鉄道友の会「エバーグリーン賞」を受賞。</description>
@@ -2083,13 +2083,13 @@
 
 
 	<contribution type="train" id="{e653-train-C001-0000-4C8B212Dharu}">
-		<name>(赤)フレッシュひたち</name>
+		<name>Fresh Hitachi (Red)</name>
 		<price>1</price>
                 <fare>1100</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>E653系</type>
-		<company>JR東日本</company>
+		<type>E653 Series</type>
+		<company>JR East</company>
 		<description>5,7,11,14両編成のみ購入可能
 11両→7両(赤)+4両(橙)
 14両→7両(赤)+7両(青)
@@ -2116,13 +2116,13 @@
 
 
 	<contribution type="train" id="{e653-train-C002-0000-4C8B212Dharu}">
-		<name>(青)フレッシュひたち</name>
+		<name>Fresh Hitachi (Blue)</name>
 		<price>1</price>
                 <fare>1100</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>E653系</type>
-		<company>JR東日本</company>
+		<type>E653 Series</type>
+		<company>JR East</company>
 		<description>5,7,11,14両編成のみ購入可能
 11両→7両(青)+4両(橙)
 14両→7両(青)+7両(黄)
@@ -2149,13 +2149,13 @@
 
 
 	<contribution type="train" id="{e653-train-C003-0000-4C8B212Dharu}">
-		<name>(黄)フレッシュひたち</name>
+		<name>Fresh Hitachi (Yellow)</name>
 		<price>1</price>
                 <fare>1100</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>E653系</type>
-		<company>JR東日本</company>
+		<type>E653 Series</type>
+		<company>JR East</company>
 		<description>5,7,11,14両編成のみ購入可能
 11両→7両(黄)+4両(橙)
 14両→7両(黄)+7両(緑)
@@ -2182,13 +2182,13 @@
 
 
 	<contribution type="train" id="{e653-train-C004-0000-4C8B212Dharu}">
-		<name>(緑)フレッシュひたち</name>
+		<name>Fresh Hitachi (Green)</name>
 		<price>1</price>
                 <fare>1100</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>E653系</type>
-		<company>JR東日本</company>
+		<type>E653 Series</type>
+		<company>JR East</company>
 		<description>5,7,11,14両編成のみ購入可能
 11両→7両(緑)+4両(橙)
 14両→7両(緑)+7両(赤)
@@ -2215,13 +2215,13 @@
 
 
 	<contribution type="train" id="{e653-train-C005-0000-4C8B212Dharu}">
-		<name>(オレンジ)フレッシュひたち</name>
+		<name>Fresh Hitachi (Orange)</name>
 		<price>1</price>
                 <fare>1100</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>E653系</type>
-		<company>JR東日本</company>
+		<type>E653 Series</type>
+		<company>JR East</company>
 		<description>4両編成のみ購入可能</description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
 		<config>
@@ -2366,13 +2366,13 @@
 
 
 	<contribution type="train" id="{721-train-C000-0010-4C8B212Dharu}">
-		<name>快速エアポート</name>
+		<name>Airport Rapid</name>
 		<price>1</price>
                 <fare>630</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>721系</type>
-		<company>JR北海道</company>
+		<type>721 Series</type>
+		<company>JR Hokkaido</company>
 		<description>3,5,6両編成のみ購入可能
 </description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
@@ -2391,13 +2391,13 @@
 
 
 	<contribution type="train" id="{721-train-C000-0020-4C8B212Dharu}">
-		<name>快速エアポート（uシート車クハ編成）</name>
+		<name>Airport Rapid (Formation with KUHA u-Seat carriage)</name>
 		<price>1</price>
                 <fare>630</fare>
 		<speed>fast</speed>
 		<author>haru</author>
 		<type>721系</type>
-		<company>JR北海道</company>
+		<company>JR Hokkaido</company>
 		<description>3,5,6両編成のみ購入可能
 </description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
@@ -2415,13 +2415,13 @@
 
 
 	<contribution type="train" id="{721-train-C000-0030-4C8B212Dharu}">
-		<name>uシート無し編成</name>
+		<name>Formation w/o u-Seat</name>
 		<price>1</price>
                 <fare>580</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>721系</type>
-		<company>JR北海道</company>
+		<type>721 Series</type>
+		<company>JR Hokkaido</company>
 		<description>3,5,6両編成のみ購入可能
 </description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
@@ -2518,13 +2518,13 @@
 
 
 	<contribution type="train" id="{885-train-C001-0000-4C8B212Dharu}">
-		<name>白いかもめ</name>
+		<name>White Kamome</name>
 		<price>1</price>
                 <fare>1200</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>885系</type>
-		<company>JR九州</company>
+		<type>885 Series</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		<composition>
 			<head carRef="{885-trainCar-C001-000a-4C8B212Dharu}"/>
@@ -2535,13 +2535,13 @@
 
 
 	<contribution type="train" id="{885-train-C002-0000-4C8B212Dharu}">
-		<name>白いソニック</name>
+		<name>White Sonic</name>
 		<price>1</price>
                 <fare>1200</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>885系</type>
-		<company>JR九州</company>
+		<type>885 Series</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		<composition>
 			<head carRef="{885-trainCar-C002-000a-4C8B212Dharu}"/>
@@ -2602,8 +2602,8 @@
                 <fare>1200</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>787系</type>
-		<company>JR九州</company>
+		<type>787 Series</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		<composition>
 			<head carRef="{787-trainCar-C001-000a-4C8B212Dharu}"/>

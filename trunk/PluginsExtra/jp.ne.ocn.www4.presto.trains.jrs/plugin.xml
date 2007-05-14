@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>JR四国 車両セット</title>
+	<title>JR Shikoku Train Set</title>
 	<homepage>http://www4.ocn.ne.jp/~presto/ft/</homepage>
 	<author>Hinoto</author>
 
@@ -87,8 +87,8 @@
 	</contribution>
 
 	<contribution type="train" id="{8773C1E0-3EDB-11D8-968B-0800460222F9-titech-jrs-TSE}">
-		<company>JR四国</company>
-		<type>2000系</type>
+		<company>JR Shikoku</company>
+		<type>2000 Series</type>
 		<name>TSE</name>
 		<author>HINOTO</author>
 		<description>
@@ -104,9 +104,9 @@
 	</contribution>
 
 	<contribution type="train" id="{8773C1E0-3EDB-11D8-968B-0800460222F9-titech-jrs-N2000-0}">
-		<company>JR四国</company>
-		<type>2000系</type>
-		<name>N2000 登場時</name>
+		<company>JR Shikoku</company>
+		<type>2000 Series</type>
+		<name>N2000 Original</name>
 		<author>HINOTO</author>
 		<description>
 		</description>
@@ -121,8 +121,8 @@
 	</contribution>
 
 	<contribution type="train" id="{8773C1E0-3EDB-11D8-968B-0800460222F9-titech-jrs-N2000}">
-		<company>JR四国</company>
-		<type>2000系</type>
+		<company>JR Shikoku</company>
+		<type>2000 Series</type>
 		<name>N2000</name>
 		<author>HINOTO</author>
 		<description>
@@ -138,9 +138,9 @@
 	</contribution>
 
 	<contribution type="train" id="{8773C1E0-3EDB-11D8-968B-0800460222F9-titech-jrs-N2000-2}">
-		<company>JR四国</company>
-		<type>2000系</type>
-		<name>N2000 量産車</name>
+		<company>JR Shikoku</company>
+		<type>2000 Series</type>
+		<name>N2000 Mass-Produced</name>
 		<author>HINOTO</author>
 		<description>
 		</description>

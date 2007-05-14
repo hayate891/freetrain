@@ -460,7 +460,7 @@
 	<contribution type="train" id="{TYPHOON-JRS-113AOMIDO-HENSEI-7567171D3CEF}">
 		<company>JR Shikoku</company>
 		<type>113 Series</type>
-		<name>Renewed Train (blue/green)</name>
+		<name>Refurbished Train (blue/green)</name>
 		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
@@ -518,7 +518,7 @@
 	<contribution type="train" id="{TYPHOON-JRS-113MOAKA-HENSEI-7567171D3CEF}">
 		<company>JR Shikoku</company>
 		<type>113 Series</type>
-		<name>Renewed Train (peach/red)</name>
+		<name>Refurbished Train (peach/red)</name>
 		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
@@ -576,7 +576,7 @@
 	<contribution type="train" id="{TYPHOON-JRS-113OREKI-HENSEI-7567171D3CEF}">
 		<company>JR Shikoku</company>
 		<type>113 Series</type>
-		<name>Renewed Train (yellow/orange)</name>
+		<name>Refurbished Train (yellow/orange)</name>
 		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>

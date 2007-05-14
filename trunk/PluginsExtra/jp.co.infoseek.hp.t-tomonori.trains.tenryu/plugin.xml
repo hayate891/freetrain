@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -16,10 +16,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{3FD0FEB7-C73F-409F-844C-526687B5C937}">
-		<company>天竜浜名湖鉄道</company>
+		<company>Tenryu Hamanako Railroad</company>
 		<type>TH2000</type>
 		<name>TH2000</name>
-		<author>竹内 智紀</author>
+		<author>Tomonori Takeuchi</author>
 		<description>
 天竜浜名湖鉄道の主力
 		</description>

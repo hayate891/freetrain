@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>キハ40日南色（車両所プラグイン依存）</title>
+	<title>KIHA 40 Nichinan Colors (dependent)</title>
 	<author>haru(qra_ra)</author>
 	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
 
@@ -79,13 +79,13 @@
 	</contribution>
 
 	<contribution type="train" id="{kiha40-train-nichinan-0001-4C8B212Dharu}">
-		<name>日南色</name>
+		<name>Nichinan Colors</name>
 		<price>1400</price>
                 <fare>100</fare>
 		<speed>slow</speed>
 		<author>haru</author>
-		<type>キハ40形</type>
-		<company>JR九州</company>
+		<type>KIHA 40 Series</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		<composition>
 			<body carRef="{kiha40-trainCar-nichinan-000a-4C8B212Dharu}"/>
@@ -100,13 +100,13 @@
 	<!-- kiha40 九州色+日南色-->
 
 	<contribution type="train" id="{kiha40-train-nichinan-0002-4C8B212Dharu}">
-		<name>九州色+日南色</name>
+		<name>Kyushu Colors + Nichinan Colors</name>
 		<price>1400</price>
                 <fare>100</fare>
 		<speed>slow</speed>
 		<author>haru</author>
-		<type>キハ40形</type>
-		<company>JR九州</company>
+		<type>KIHA 40 Series</type>
+		<company>JR Kyushu</company>
 		<description>２～５両購入可</description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
 

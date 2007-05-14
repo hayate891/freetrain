@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -16,10 +16,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{69E1A425-450B-42D4-86D3-1D05DCB4EF20}">
-		<company>能登鉄道</company>
+		<company>Noto Railway</company>
 		<type>NT100</type>
 		<name>NT100</name>
-		<author>竹内 智紀</author>
+		<author>Tomonori Takeuchi</author>
 		<description>
 廃止になる前に…
 		</description>

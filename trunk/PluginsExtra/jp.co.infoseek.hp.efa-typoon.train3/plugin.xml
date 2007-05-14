@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両セット　3号車</title>
+	<title>Train Set No 3</title>
 	<homepage>http://typhoon.s19.xrea.com/ft/index.html</homepage>
-	<author>たいふ～ん</author>
+	<author>Typhoon</author>
 
-	<title>209系ベース</title>
+	<title>209 Series Base</title>
 	<contribution type="picture" id="{57644AE6-7FFA-A209-8FE0-7567171D3CEF}">
 		<picture src="209a.bmp" />
 	</contribution>
@@ -12,7 +12,7 @@
 	<contribution type="picture" id="{57644AE6-7FFA-209A-8FE0-7567171D3CEF}">
 		<picture src="209b.bmp" />
 	</contribution>
-	<title>キハ283系ベース</title>
+	<title>KIHA 283 Series Base</title>
 	<contribution type="picture" id="{57644AE6-7FFA-283A-8FE0-7567171D3CEF}">
 		<picture src="k283a.bmp" />
 	</contribution>
@@ -63,10 +63,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-B209-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>209系</type>
-		<name>京浜東北線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>209 Series</type>
+		<name>Keihin-Tohoku Line</name>
+		<author>Typhoon</author>
 		<description>水色ラインの京浜東北線用209系。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -120,10 +120,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-C209-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>209系</type>
-		<name>八高線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>209 Series</type>
+		<name>Hachiko Line</name>
+		<author>Typhoon</author>
 		<description>緑とオレンジのラインの八高線用209系。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -178,10 +178,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-D209-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>209系</type>
-		<name>南武線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>209 Series</type>
+		<name>Nambu Line</name>
+		<author>Typhoon</author>
 		<description>黄色とオレンジのラインの南武線用209系。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -237,10 +237,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-A501-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>E501系</type>
-		<name>常磐線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>E501 Series</type>
+		<name>Joban Line</name>
+		<author>Typhoon</author>
 		<description>　常磐線取手以遠にも投入できるように、209系をベースに交直両用、最高速度120kmとして制作された。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -296,10 +296,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-A231-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>E231系</type>
-		<name>中央・総武線（緩行）</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>E231 Series</type>
+		<name>Chuo / Sobu Line (Local)</name>
+		<author>Typhoon</author>
 		<description>黄色のラインの中央・総武線（緩行）用E231系。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -354,10 +354,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-B231-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>E231系</type>
-		<name>山手線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>E231 Series</type>
+		<name>Yamanote Line</name>
+		<author>Typhoon</author>
 		<description>黄緑色のラインのE231系。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -413,10 +413,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-C231-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>E231系</type>
-		<name>東北・高崎線</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>E231 Series</type>
+		<name>Tohoku / Takasaki Line</name>
+		<author>Typhoon</author>
 		<description>緑とオレンジの近郊型のE231系。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -472,10 +472,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-D231-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>E231系</type>
-		<name>常磐線　</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>E231 Series</type>
+		<name>Joban Line</name>
+		<author>Typhoon</author>
 		<description>青緑と緑のE231系。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -519,10 +519,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-E231-8FE0-7567171D3CEF}">
-		<company>JR東日本</company>
-		<type>E231系</type>
-		<name>800番台</name>
-		<author>たいふ～ん</author>
+		<company>JR East</company>
+		<type>E231 Series</type>
+		<name>800 Model</name>
+		<author>Typhoon</author>
 		<description>地下鉄東西線に直通する301系、103系1200番台の置き換えとして用として投入された車両。</description>
 		<price>1</price>
            		<fare>500</fare> 
@@ -567,10 +567,10 @@
 		<capacity>48</capacity>
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-K283-8FE0-7567171D3CEF}">
-		<company>JR北海道</company>
-		<type>キハ283系</type>
-		<name>スーパーおおぞら、スーパーとかち など</name>
-		<author>たいふ～ん</author>
+		<company>JR Hokkaido</company>
+		<type>KIHA 283 Series</type>
+		<name>Super Ozora, Super Kachi, etc.</name>
+		<author>Typhoon</author>
 		<description>石勝線、根室本線を高速化するために開発された。キハ281系をベースとした振り子車である。</description>
 		<price>1</price>
            		<fare>1100</fare>
@@ -615,10 +615,10 @@
 		<capacity>56</capacity>
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-K261-8FE0-7567171D3CEF}">
-		<company>JR北海道</company>
-		<type>キハ261系</type>
-		<name>スーパー宗谷 など</name>
-		<author>たいふ～ん</author>
+		<company>JR Hokkaido</company>
+		<type>KIHA 261 Series</type>
+		<name>Super Soya, etc.</name>
+		<author>Typhoon</author>
 		<description>宗谷本線旭川～名寄間を高速化するために開発された。外見はキハ281系、キハ283系によく似ている。</description>
 		<price>1</price>
            		<fare>1100</fare>
@@ -675,10 +675,10 @@
 		<capacity>56</capacity>
 	</contribution>
 	<contribution type="train" id="{cyber-express-1703d-040105-ec789}">
-		<company>JR北海道</company>
-		<type>789系</type>
-		<name>スーパー白鳥 </name>
-		<author>いっちー</author>
+		<company>JR Hokkaido</company>
+		<type>789 Series</type>
+		<name>Super Hakucho</name>
+		<author>Icchii</author>
 		<description>青函トンネル用車両。</description>
 		<price>1</price>
            		<fare>1100</fare>
@@ -729,10 +729,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-80KH-8FE0-7567171D3CEF}">
-		<company>帝都高速度交通営団</company>
-		<type>8000系</type>
-		<name>半蔵門線</name>
-		<author>たいふ～ん</author>
+		<company>Teito Rapid Transit Authority</company>
+		<type>8000 Series</type>
+		<name>Hanzomon Line</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
            		<fare>350</fare>
@@ -770,10 +770,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-9KTK-8FE0-7567171D3CEF}">
-		<company>東京急行電鉄</company>
-		<type>9000系</type>
+		<company>Tokyu Corporation</company>
+		<type>9000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>東急東横線などで使われている9000系です。</description>
 		<price>1</price>
            		<fare>400</fare>
@@ -811,10 +811,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-2KTK-8FE0-7567171D3CEF}">
-		<company>東京急行電鉄</company>
-		<type>2000系</type>
+		<company>Tokyu Corporation</company>
+		<type>2000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>東急田園都市線で使われている2000系です。3編成しかないので結構レア？</description>
 		<price>1</price>
            		<fare>400</fare>
@@ -851,10 +851,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-1KTK-8FE0-7567171D3CEF}">
-		<company>東京急行電鉄</company>
-		<type>1000系</type>
+		<company>Tokyu Corporation</company>
+		<type>1000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>東急東横線、池上線などで使われている1000系です。東横線では地下鉄乗り入れ用に、池上線ではワンマン運転用に使われています。9000系との外見の大きな違いはドアとエアコンの室外機が3つなこと。</description>
 		<price>1</price>
            		<fare>420</fare>
@@ -899,10 +899,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-5KTK-8FE0-7567171D3CEF}">
-		<company>東京急行電鉄</company>
-		<type>5000系</type>
+		<company>Tokyu Corporation</company>
+		<type>5000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>東急田園都市線で使われている5000系です。</description>
 		<price>1</price>
            		<fare>420</fare>
@@ -951,10 +951,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-109-5050-HENSEI-7567171D3CEF}">
-		<company>東京急行電鉄</company>
-		<type>5050系</type>
+		<company>Tokyu Corporation</company>
+		<type>5050 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>5000系がベースの東横線用5050系です。</description>
 		<price>1</price>
            		<fare>420</fare>
@@ -1004,10 +1004,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-109-5080-HENSEI-7567171D3CEF}">
-		<company>東京急行電鉄</company>
-		<type>5080系</type>
+		<company>Tokyu Corporation</company>
+		<type>5080 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>5000系がベースの目黒線用5080系です。</description>
 		<price>1</price>
            		<fare>420</fare>

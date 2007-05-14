@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-<title>名古屋臨海高速鉄道</title>
-<author>なもー</author>
+<title>Nagoya Rinkai Kosoku Railway</title>
+<author>Namo</author>
 	<homepage>http://www.medias.co.jp/~bell8528/freetrain/</homepage>
 
 <!-- あおなみ線先頭 -->
@@ -29,12 +29,12 @@
 </contribution>
 
 <contribution type="train" id="{DD0220E0-7998-4E8B-A17D-C6116089B1CF}">
-	<company>名古屋臨海高速鉄道</company>
-	<type>1000形</type>
-	<name>あおなみ線</name>
+	<company>Nagoya Rinkai Kosoku Railway</company>
+	<type>1000 Series</type>
+	<name>Aonami Line</name>
 	<price>100</price>
 	<speed>medium</speed>
-	<author>なもー</author>
+	<author>Namo</author>
 	<fare>150</fare>
 <description>
 国際港湾・名古屋港と名古屋都心部を直結する路線として、平成16年10月6日、全線開業いたしました。

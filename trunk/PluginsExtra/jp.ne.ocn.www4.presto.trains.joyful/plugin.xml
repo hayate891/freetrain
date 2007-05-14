@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>ジョイフルトレインセット</title>
+	<title>Joyful Train Set</title>
 	<homepage>http://www4.ocn.ne.jp/~presto/ft/</homepage>
 	<author>Hinoto</author>
 
@@ -30,9 +30,9 @@
 	</contribution>
 
 	<contribution type="train" id="{2E08F220-3DDB-11D8-968B-0800460222F0-titech-silpheed}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>シルフィード</name>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Sylpheed</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなった名鉄7500系を提供された477氏に感謝 -->
 		<description>
@@ -73,9 +73,9 @@
 	</contribution>
 	
 	<contribution type="train" id="{B038C0A1-3D35-11D8-968B-0800460222F0-titech-fureaipal}">
-		<company>旧日本国有鉄道</company>
-		<type>キハ58系</type>
-		<name>ふれあいパル</name>
+		<company>Japanese National Railways</company>
+		<type>KIHA 58 Series</type>
+		<name>Fureai Pal</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったキハ58を提供されたqra_ra氏に感謝 -->
 		<description>
@@ -113,9 +113,9 @@
 	</contribution>
 
 	<contribution type="train" id="{B038C0A2-3D35-11D8-968B-0800460222F0-titech-niitsu-carpetl}">
-		<company>JR東日本</company>
-		<type>キハ58系</type>
-		<name>カーペットカー</name>
+		<company>JR East</company>
+		<type>KIHA 58 Series</type>
+		<name>Carpet Car</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったキハ58を提供されたqra_ra氏に感謝 -->
 		<description>
@@ -134,7 +134,7 @@
 		</config>
 	</contribution>
 
-<!--  JR西日本キハ65　シュプールアンドリゾート  -->
+<!--  JR Westキハ65　シュプールアンドリゾート  -->
 <!--  イメージ画像定義 
   --> 
 <contribution type="picture" id="{B038C0A2-3D35-11D8-968B-0800460222F0-titech-jrw-rands}-pic">
@@ -179,9 +179,9 @@
 </contribution>
 
 	<contribution type="train" id="{B038C0A2-3D35-11D8-968B-0800460222F0-titech-jrw-rands-y}">
-		<company>JR西日本</company>
-		<type>キハ65形</type>
-		<name>シュプール＆リゾート(黄色)</name>
+		<company>JR West</company>
+		<type>KIHA 65 Series</type>
+		<name>Spur &amp; Resort (Yellow)</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったキハ58を提供されたqra_ra氏に感謝 -->
 		<description>
@@ -203,9 +203,9 @@
 
 
 	<contribution type="train" id="{B038C0A2-3D35-11D8-968B-0800460222F0-titech-jrw-rands-g}">
-		<company>JR西日本</company>
-		<type>キハ65形</type>
-		<name>シュプール＆リゾート(緑色)</name>
+		<company>JR West</company>
+		<type>KIHA 65 Series</type>
+		<name>Spur &amp; Resort (Green)</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったキハ58を提供されたqra_ra氏に感謝 -->
 		<description>
@@ -225,9 +225,9 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{B038C0A2-3D35-11D8-968B-0800460222F0-titech-jrw-rands-gy}">
-		<company>JR西日本</company>
-		<type>キハ65形</type>
-		<name>シュプール＆リゾート(2色)</name>
+		<company>JR West</company>
+		<type>KIHA 65 Series</type>
+		<name>Spur &amp; Resort (2 Colors)</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったキハ58を提供されたqra_ra氏に感謝 -->
 		<description>
@@ -282,9 +282,9 @@
 	</contribution>
 
 	<contribution type="train" id="{B038C0A2-3D35-11D8-968B-0800460222F0-titech-aoike}">
-		<company>JR東日本</company>
-		<type>キハ40系</type>
-		<name>リゾートしらかみ　青池編成</name>
+		<company>JR East</company>
+		<type>KIHA 40 Series</type>
+		<name>Resort Shirakami Aoike Formation</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったキハ58を提供されたqra_ra氏に感謝 -->
 		<description>
@@ -343,9 +343,9 @@
 	</contribution>
 
 	<contribution type="train" id="{46397FC0-4477-11D8-968B-0800460222F0-titech-tse}">
-		<company>JR北海道</company>
-		<type>キハ80系</type>
-		<name>トマムサホロエクスプレス</name>
+		<company>JR Hokkaido</company>
+		<type>KIHA 80 Series</type>
+		<name>Tomamu Sahoro Express</name>
 		<author>HINOTO</author>
 		<description>
 
