@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>名古屋鉄道</title>
-	<author>なもー</author>
+	<title>Nagoya Railroad</title>
+	<author>Namo</author>
 	<homepage>http://www.medias.co.jp/~bell8528/freetrain/</homepage>
 
 	<!-- 1600系先頭 -->
@@ -29,11 +29,11 @@
 	</contribution>
 
 	<contribution type="train" id="{A0867E85-A539-4C26-BF3A-1C956A7ECB86}">
-		<company>名古屋鉄道</company>
-		<type>1600系</type>
-		<name>パノラマSUPER</name>
+		<company>Nagoya Railroad</company>
+		<type>1600 Series</type>
+		<name>Panorama Super</name>
 		<speed>fast</speed>
-		<author>なもー</author>
+		<author>Namo</author>
 		<price>100</price>
         <fare>100</fare> 
 		<author></author>
@@ -63,12 +63,12 @@
 	</contribution>
 
 <contribution type="train" id="{F346CBE8-313C-407E-9E80-92C7C2FC8E21}">
-	<company>名古屋鉄道</company>
-	<type>キハ30系</type>
+	<company>Nagoya Railroad</company>
+	<type>KIHA 30 Series</type>
 	<name></name>
 	<price>100</price>
 	<speed>slow</speed>
-	<author>なもー</author>
+	<author>Namo</author>
 	<fare>100</fare>
 <description>老朽化した初代LE-Carキハ10形の置換え用として、平成7年に増備された。
 キハ20形よりも車体をさらに大型化し、片側3扉の引き戸を採用、キハ20形同様一部の座席を収納式とするなど、ラッシュ対策を強化している。
@@ -103,11 +103,11 @@
 	</contribution>
 
 	<contribution type="train" id="{FCD1F8A9-A797-4B4A-90F8-ABA865294302}">
-		<company>名古屋鉄道</company>
-		<type>3500系</type>
-		<name>通勤型 ECB CAr</name>
+		<company>Nagoya Railroad</company>
+		<type>3500 Series</type>
+		<name>Commuter ECB Car</name>
 		<speed>medium</speed>
-		<author>なもー</author>
+		<author>Namo</author>
 		<price>100</price>
         <fare>100</fare> 
 <description>通勤型6000系列車両（6000・6500・6800系）の後継車として平成５年に登場。
@@ -152,11 +152,11 @@ VVVFインバータ制御・電気指令式ブレーキ・ワンハンドルマ�
 	</contribution>
 
 	<contribution type="train" id="{AAC51152-3B8F-40D5-BAA9-DD569FD29F02}">
-		<company>名古屋鉄道</company>
-		<type>キハ8500系</type>
-		<name>北アルプス</name>
+		<company>Nagoya Railroad</company>
+		<type>KIHA 8500 Series</type>
+		<name>Northern Alps</name>
 		<speed>fast</speed>
-		<author>なもー</author>
+		<author>Namo</author>
 		<price>100</price>
         <fare>100</fare> 
 		<author></author>
@@ -204,11 +204,11 @@ VVVFインバータ制御・電気指令式ブレーキ・ワンハンドルマ�
 	</contribution>
 
 	<contribution type="train" id="{21D61F4D-5671-4D8E-BB12-66327837F2D6}">
-		<company>名古屋鉄道</company>
-		<type>6500系</type>
-		<name>通勤型</name>
+		<company>Nagoya Railroad</company>
+		<type>6500 Series</type>
+		<name>Commuter</name>
 		<speed>medium</speed>
-		<author>なもー</author>
+		<author>Namo</author>
 		<price>100</price>
         <fare>100</fare> 
 <description>6000系の発展型として界磁チョッパ・回生ブレーキを採用した省エネルギー車両として昭和59年にデビュー。2M2T組成。
@@ -254,11 +254,11 @@ VVVFインバータ制御・電気指令式ブレーキ・ワンハンドルマ�
 	</contribution>
 
 	<contribution type="train" id="{BF9616B6-B721-41C4-9011-D539211CF02D}">
-		<company>名古屋鉄道</company>
-		<type>5700系</type>
-		<name>急行</name>
+		<company>Nagoya Railroad</company>
+		<type>5700 Series</type>
+		<name>Express</name>
 		<speed>fast</speed>
-		<author>なもー</author>
+		<author>Namo</author>
 		<price>100</price>
         <fare>100</fare> 
 <description>5700系は昭和61年、本線系の高速・急行用車両としてデビュー。
@@ -304,11 +304,11 @@ VVVFインバータ制御・電気指令式ブレーキ・ワンハンドルマ�
 	</contribution>
 
 	<contribution type="train" id="{A0867E85-A539-4C26-BF3A-1C956A7ECB22}">
-		<company>名古屋鉄道</company>
-		<type>2000系</type>
-		<name>ミュースカイ</name>
+		<company>Nagoya Railroad</company>
+		<type>2000 Series</type>
+		<name>μSKY</name>
 		<speed>fast</speed>
-		<author>なもー</author>
+		<author>Namo</author>
 		<price>100</price>
         <fare>100</fare> 
 		<author></author>

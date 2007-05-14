@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両プラグイン by HITNO その他</title>
+	<title>Train Plugin by HINOTO, misc</title>
 	<homepage>http://www4.ocn.ne.jp/~presto/ft/</homepage>
 	<author>Hinoto</author>
 
@@ -32,9 +32,9 @@
 
 
 	<contribution type="train" id="{E34523C0-5447-11D8-968B-444553540000-titech-eidan9000}">
-		<company>帝都高速度交通営団</company>
-		<type>9000系</type>
-		<name>南北線</name>
+		<company>Teito Rapid Transit Authority</company>
+		<type>9000 Series</type>
+		<name>Namboku Line</name>
 		<author>Hinoto</author>
 		<description></description>
 		<price>50000</price>
@@ -72,9 +72,9 @@
 
 
 	<contribution type="train" id="{E34523C0-5447-11D8-968B-444553540001-titech-eidan08}">
-		<company>帝都高速度交通営団</company>
-		<type>08系</type>
-		<name>半蔵門線</name>
+		<company>Teito Rapid Transit Authority</company>
+		<type>08 Series</type>
+		<name>Hanzomon Line</name>
 		<author>Hinoto</author>
 		<description></description>
 		<price>58000</price>
@@ -112,9 +112,9 @@
 
 
 	<contribution type="train" id="{E34523C0-5447-11D8-968B-444553540002-titech-eidan05n}">
-		<company>帝都高速度交通営団</company>
-		<type>05系</type>
-		<name>東西線</name>
+		<company>Teito Rapid Transit Authority</company>
+		<type>05 Series</type>
+		<name>Tozai Line</name>
 		<author>Hinoto</author>
 		<description></description>
 		<price>58000</price>
@@ -144,7 +144,7 @@
 	</contribution>
 
 	<contribution type="train" id="{E34523C0-5447-11D8-968B-444553540003-titech-mlrv1000}">
-		<company>万葉線</company>
+		<company>Manyosen</company>
 		<type>MLRV1000</type>
 		<name></name>
 		<author>Hinoto</author>
@@ -181,8 +181,8 @@
 	</contribution>
 
 	<contribution type="train" id="{E34523C0-5447-11D8-968B-444553540002-titech-kantetsu-kiha300}">
-		<company>関東鉄道</company>
-		<type>キハ300</type>
+		<company>Kanto Railway</company>
+		<type>KIHA 300</type>
 		<name></name>
 		<author>Hinoto</author>
 		<description></description>
@@ -195,9 +195,9 @@
 	</contribution>
 
 	<contribution type="train" id="{E34523C0-5447-11D8-968B-444553540002-titech-kantetsu-kiha100-jt}">
-		<company>関東鉄道</company>
-		<type>キハ100</type>
-		<name>常総筑波鉄道色</name>
+		<company>Kanto Railway</company>
+		<type>KIHA 100</type>
+		<name>Joso Tsukuba Railway Colors</name>
 		<author>Hinoto</author>
 		<description></description>
 		<price>30000</price>

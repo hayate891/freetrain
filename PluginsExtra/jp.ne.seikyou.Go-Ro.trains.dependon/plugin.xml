@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両（車両所プラグイン依存）</title>
+	<title>Trains (dependent)</title>
 	<author>haru(qra_ra)</author>
 	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
 
@@ -24,13 +24,13 @@
 	</contribution>
 
 	<contribution type="train" id="{381-train-S_kuroshio-0001-4C8B212Dharu}">
-		<name>スーパーくろしお</name>
+		<name>Super Kuroshio</name>
 		<price>12000</price>
                 <fare>1100</fare>
 		<speed>fast</speed>
 		<author>haru</author>
-		<type>381系</type>
-		<company>JR西日本</company>
+		<type>381 Series</type>
+		<company>JR West</company>
 		<description>4,5,6,9両編成のみ購入可能</description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
 		<config>
@@ -143,13 +143,13 @@
 
 
 	<contribution type="train" id="{kiha58-train-gassan-0001-4C8B212Dharu}">
-		<name>月山色</name>
+		<name>Gessan Colors</name>
 		<price>2200</price>
                 <fare>460</fare>
 		<speed>slow</speed>
 		<author>haru</author>
-		<type>キハ58系</type>
-		<company>JR東日本</company>
+		<type>KIHA 58 Series</type>
+		<company>JR East</company>
 		<description>2,3両編成のみ購入可能</description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
 		<config>

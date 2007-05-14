@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>JR東日本 車両セット</title>
+	<title>JR East Train Set</title>
 	<homepage>http://www4.ocn.ne.jp/~presto/ft/</homepage>
 	<author>Hinoto</author>
 
@@ -60,9 +60,9 @@
 	</contribution>
 
 	<contribution type="train" id="{005BDC20-4885-11D8-968B-0800460222F0-titech-485K60}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>勝田区K60編成</name>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>Katsuta Ward K60 Formation</name>
 		<author>Hinoto</author>
 		<description>勝田電車区の臨時・団臨用485系</description>
 		<price>55000</price>
@@ -105,13 +105,13 @@
 	</contribution>
 
 	<contribution type="train" id="{9AD58640-3D5C-11D8-968B-0800460222F0-titech-e926}">
-		<company>JR東日本</company>
-		<type>E926形</type>
+		<company>JR East</company>
+		<type>E926 Series</type>
 		<name>East i</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったこまち色E3を提供された477氏に感謝 -->
 		<description>
-JR東日本のフル規格・ミニ新幹線全線区における
+JR Eastのフル規格・ミニ新幹線全線区における
 架線・線路の検査を行う新幹線電気軌道総合試験車
 		</description>
 		<price>500000</price>
@@ -154,9 +154,9 @@ JR東日本のフル規格・ミニ新幹線全線区における
 	</contribution>
 	
 	<contribution type="train" id="{9AD58641-3D5C-11D8-968B-0800460222F0-titech-e2-hayate}">
-		<company>JR東日本</company>
-		<type>E2系</type>
-		<name>はやて(ピンク帯)</name>
+		<company>JR East</company>
+		<type>E2 Series</type>
+		<name>Hayate (Pink Stripe)</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったE2を提供された綾瀬氏に感謝 -->
 		<description>
@@ -203,9 +203,9 @@ JR東日本のフル規格・ミニ新幹線全線区における
 	</contribution>
 	
 	<contribution type="train" id="{8773C1E0-3EDB-11D8-968B-0800460222F0-titech-e3-tsubasa}">
-		<company>JR東日本</company>
-		<type>E3系</type>
-		<name>つばさ</name>
+		<company>JR East</company>
+		<type>E3 Series</type>
+		<name>Tsubasa</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったこまち色E3を提供された477氏に感謝 -->
 		<description>
@@ -252,9 +252,9 @@ JR東日本のフル規格・ミニ新幹線全線区における
 	</contribution>
 	
 	<contribution type="train" id="{8773C1E9-3EDB-11D8-968B-0800460222F0-titech-e1-renewal}">
-		<company>JR東日本</company>
-		<type>E1系</type>
-		<name>Max リニューアル</name>
+		<company>JR East</company>
+		<type>E1 Series</type>
+		<name>Max (Refurbished)</name>
 		<author>HINOTO</author>
 		<description>
 平成15年末に登場したE1系Maxのリニューアル車。
@@ -283,9 +283,9 @@ JR東日本のフル規格・ミニ新幹線全線区における
 	<depend on="org.kohsuke.freetrain.trains" />
 
 	<contribution type="train" id="{9AD58642-3D5C-11D8-968B-0800460222F0-hyate-plus-komachi}">
-		<company>JR東日本</company>
-		<type>E2系+E3系</type>
-		<name>はやて+こまち</name>
+		<company>JR East</company>
+		<type>E2 Series + E3 Series</type>
+		<name>Hayate + Komachi</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったE2を提供された綾瀬氏に感謝 -->
 		<!-- 利用させてもらっているE3を提供された477氏に感謝 -->
@@ -314,9 +314,9 @@ E2系"はやて"とE3系"こまち"を併結した16両編成です。
 		<depend on="org.kohsuke.freetrain.trains.jre" />
 
 	<contribution type="train" id="{8773C1E0-3EDB-11D8-968B-0800460222F0-e3pluse4}">
-		<company>JR東日本</company>
-		<type>E3系+E4系</type>
-		<name>つばさ+Maxやまびこ</name>
+		<company>JR East</company>
+		<type>E3 Series + E4 Series</type>
+		<name>Tsubasa + Max Yamabiko</name>
 		<author>HINOTO</author>
 		<!-- 画像のベースとなったこまち色E3を提供された477氏に感謝 -->
 		<!-- 利用させてもらっているE4を提供されたきがみ氏に感謝 -->

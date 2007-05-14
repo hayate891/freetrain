@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>JR九州セット</title>
+	<title>JR Kyushu Set</title>
 	<homepage>http://www4.ocn.ne.jp/~presto/ft/</homepage>
 	<author>Hinoto</author>
 	
@@ -43,8 +43,8 @@
                 <fare>750</fare>
 		<speed>medium</speed>
 		<author>Hinoto</author>
-		<type>キハ200形 なのはな</type>
-		<company>JR九州</company>
+		<type>KIHA 200 Series Nanohana</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		
 		
@@ -82,8 +82,8 @@
                 <fare>800</fare>
 		<speed>medium</speed>
 		<author>Hinoto</author>
-		<type>キハ200形 なのはなDX</type>
-		<company>JR九州</company>
+		<type>KIHA 200 Series Nanohana DX</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		
 		
@@ -135,7 +135,7 @@
                 <fare>750</fare>
 		<speed>medium</speed>
 		<author>Hinoto</author>
-		<type>キハ200形 シーサイドライナー</type>
+		<type>KIHA 200 Series Seaside Liner</type>
 		<company>JR九州</company>
 		<description></description>
 		

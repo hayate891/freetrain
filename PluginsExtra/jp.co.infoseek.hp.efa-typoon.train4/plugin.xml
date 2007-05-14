@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両セット　1号車</title>
+	<title>Train Set No 4</title>
 	<homepage>http://typhoon.s19.xrea.com/ft/index.html</homepage>
-	<author>たいふ～ん</author>
+	<author>Typhoon</author>
 
 
 	<!-- 南海旧7000系先頭車 -->
@@ -31,10 +31,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-71KN-8FE0-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>7000系</type>
-		<name>旧塗装</name>
-		<author>たいふ～ん</author>
+		<company>Nankai Electric Railway</company>
+		<type>7000 Series</type>
+		<name>Old Colors</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
            		<fare>350</fare>
@@ -72,10 +72,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-70KN-8FE0-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>7000系</type>
+		<company>Nankai Electric Railway</company>
+		<type>7000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
            		<fare>350</fare>
@@ -113,10 +113,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-11KN-8FE0-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>旧1000系</type>
-		<name>四国など</name>
-		<author>たいふ～ん</author>
+		<company>Nankai Electric Railway</company>
+		<type>Old 1000 Series</type>
+		<name>Shikoku, etc.</name>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
            		<fare>350</fare>
@@ -154,10 +154,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-20KN-8FE0-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>2000系</type>
+		<company>Nankai Electric Railway</company>
+		<type>2000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>(12両までの偶数両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -203,10 +203,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-NANKAI-NEW10000-HENSEI-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>10000系</type>
-		<name>サザン</name>
-		<author>たいふ～ん</author>
+		<company>Nankai Electric Railway</company>
+		<type>10000 Series</type>
+		<name>Southern</name>
+		<author>Typhoon</author>
 		<description>(4・8・12両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -224,10 +224,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-NANKAI-NEW17000-HENSEI-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>10000系+7000系</type>
-		<name>サザン</name>
-		<author>たいふ～ん</author>
+		<company>Nankai Electric Railway</company>
+		<type>10000 Series + 7000 Series</type>
+		<name>Southern</name>
+		<author>Typhoon</author>
 		<description>(8両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -263,10 +263,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-NANKAI-OLD10000-HENSEI-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>10000系</type>
-		<name>旧塗装　サザン</name>
-		<author>たいふ～ん</author>
+		<company>Nankai Electric Railway</company>
+		<type>10000 Series</type>
+		<name>Old Colors　Southern</name>
+		<author>Typhoon</author>
 		<description>(12両までの偶数両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -285,10 +285,10 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-NANKAI-OLD17000-HENSEI-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>10000系+7000系</type>
-		<name>旧塗装　サザン</name>
-		<author>たいふ～ん</author>
+		<company>Nankai Electric Railway</company>
+		<type>10000 Series + 7000 Series</type>
+		<name>Old Colors　Southern</name>
+		<author>Typhoon</author>
 		<description>(6両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -331,10 +331,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-10KN-8FE0-7567171D3CEF}">
-		<company>南海電鉄</company>
-		<type>1000系</type>
+		<company>Nankai Electric Railway</company>
+		<type>1000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>(12両までの偶数両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -380,10 +380,10 @@
 	</contribution>
 
 	<contribution type="train" id="{57644AE6-7FFA-55MT-8FE0-7567171D3CEF}">
-		<company>名古屋鉄道</company>
-		<type>5500系</type>
+		<company>Nagoya Railroad</company>
+		<type>5500 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description></description>
 		<price>1</price>
            		<fare>350</fare>
@@ -433,10 +433,10 @@
 		<capacity>136</capacity>
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-MT55A-8FE0-7567171D3CEF}">
-		<company>名古屋鉄道</company>
-		<type>5500系</type>
-		<name>スカーレット白帯</name>
-		<author>たいふ～ん</author>
+		<company>Nagoya Railroad</company>
+		<type>5500 Series</type>
+		<name>Scarlet + White Stripe</name>
+		<author>Typhoon</author>
 		<description>(8両までの偶数両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -499,10 +499,10 @@
 		<capacity>136</capacity>
 	</contribution>
 	<contribution type="train" id="{57644AE6-7FFA-MT55B-8FE0-7567171D3CEF}">
-		<company>名古屋鉄道</company>
-		<type>5500系</type>
-		<name>ストロークリーム赤帯</name>
-		<author>たいふ～ん</author>
+		<company>Nagoya Railroad</company>
+		<type>5500 Series</type>
+		<name>'Straw Cream' + Red Stripe</name>
+		<author>Typhoon</author>
 		<description>(8両までの偶数両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -535,10 +535,10 @@
 		<capacity>136</capacity>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-MEITETSU-CHO5500-HENSEI-7567171D3CEF}">
-		<company>名古屋鉄道</company>
-		<type>5500系</type>
-		<name>チョコレート</name>
-		<author>たいふ～ん</author>
+		<company>Nagoya Railroad</company>
+		<type>5500 Series</type>
+		<name>Chocolate</name>
+		<author>Typhoon</author>
 		<description>(8両までの偶数両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -557,10 +557,10 @@
 
 
 	<contribution type="train" id="{57644AE6-7FFA-MT55D-8FE0-7567171D3CEF}">
-		<company>名古屋鉄道</company>
-		<type>5500系</type>
-		<name>重連</name>
-		<author>たいふ～ん</author>
+		<company>Nagoya Railroad</company>
+		<type>5500 Series</type>
+		<name>Double-Headed</name>
+		<author>Typhoon</author>
 		<description>(6・12両までの偶数両のみ編成可)</description>
 		<price>1</price>
            		<fare>350</fare>
@@ -606,10 +606,10 @@
 	</contribution>
 
 	<contribution type="train" id="{TYPHOON-TOBU-30000-HENSEI-7567171D3CEF}">
-		<company>東武鉄道</company>
-		<type>30000系</type>
+		<company>Tobu Railway</company>
+		<type>30000 Series</type>
 		<name></name>
-		<author>たいふ～ん</author>
+		<author>Typhoon</author>
 		<description>半蔵門線、田園都市線直通の電車です。</description>
 		<price>1</price>
            		<fare>350</fare>

@@ -113,7 +113,7 @@
 
 	<contribution type="train" id="{57644AE6-7FFA-H731-8FE0-7567171D3CEF}">
 		<company>JR Hokkaido</company>
-		<type>731系</type>
+		<type>731 Series</type>
 		<name></name>
 		<author>Typhoon</author>
 		<description>JR Hokkaido's 731 Series.</description>
@@ -610,7 +610,7 @@
 		<capacity>112</capacity>
 	</contribution>
 	<contribution type="train" id="{TYPHOON-JRW-113OBAMA-HENSEI-7567171D3CEF}">
-		<company>JR　West</company>
+		<company>JR West</company>
 		<type>113 Series</type>
 		<name>Obama Line Colors</name>
 		<author>Typhoon</author>

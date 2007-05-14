@@ -190,7 +190,7 @@ the type refitted with cross seats for local lines.
 	</contribution>	
 
 	<contribution type="train" id="{Freetrain-Oldtype-JNR-ooito}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>JNR Old Type</type>
 		<name>Oito Line</name>
 		<author>––</author>

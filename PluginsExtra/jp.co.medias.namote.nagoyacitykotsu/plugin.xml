@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-<title>名古屋市交通局</title>
-<author>なもー</author>
+<title>Nagoya City Transportation Bureau</title>
+<author>Namo</author>
 	<homepage>http://www.medias.co.jp/~bell8528/freetrain/</homepage>
 
 <!-- 名城線2000形先頭 -->
@@ -29,12 +29,12 @@
 </contribution>
 
 <contribution type="train" id="{DD0220E0-7438-4E8B-A17D-C6116089B1CF}">
-	<company>名古屋市交通局</company>
-	<type>2000形</type>
-	<name>名城線・4号線</name>
+	<company>Nagoya City Transportation Bureau</company>
+	<type>2000 Series</type>
+	<name>Meijo Line / Line 4</name>
 	<price>100</price>
 	<speed>medium</speed>
-	<author>なもー</author>
+	<author>Namo</author>
 	<fare>100</fare>
 <description>
 平成元年の世界デザイン博を機に、名城線・4号線に導入した車両で、以後既存車両の買い換え用として毎年導入している。
@@ -77,12 +77,12 @@
 </contribution>
 
 <contribution type="train" id="{00263A5E-ED2F-4DDB-BBB9-11BF0269C563}">
-	<company>名古屋市交通局</company>
-	<type>5050形</type>
-	<name>東山線</name>
+	<company>Nagoya City Transportation Bureau</company>
+	<type>5050 Series</type>
+	<name>Higashiyama Line</name>
 	<price>100</price>
 	<speed>medium</speed>
-	<author>なもー</author>
+	<author>Namo</author>
 	<fare>100</fare>
 <description>
 昭和55年に5000形車両（チョッパ制御車）を導入して車両の冷房化をすすめてきましたが、さらに省エネルギー、省メンテナンスを実現すべく新形式5050形車両を導入した。
