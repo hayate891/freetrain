@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>イタリア国鉄車両セット</title>
-	<author>暇</author>
+	<title>Trenitalia Train Set</title>
+	<author>Hima</author>
 	<homepage></homepage>
 
 	
@@ -33,9 +33,9 @@
 		<name>Malpensa Express</name>
 		<price>1</price>
 		<speed>fast</speed>
-		<author>暇</author>
+		<author>Hima</author>
 		<type></type>
-		<company>イタリア国鉄</company>
+		<company>Trenitalia</company>
 		<description>イタリアのマルペンサ空港とミラノを結ぶ空港特急。30分ごとに発車しており、その性格は「はるか」や「成田エクスプレス」とよく似ている。</description>
 		
 		<composition>

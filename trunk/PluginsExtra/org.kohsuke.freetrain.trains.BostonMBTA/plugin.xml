@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>BostonMBTA 車両キット</title>
+	<title>BostonMBTA Train Set</title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 
 	<!-- series 0600 -->
@@ -12,9 +12,9 @@
 	
 	<contribution type="train" id="{383D12F8-034D-41f9-8164-A0D1EB9F68EA}">
 		<company>Boston MBTA</company>
-		<type>series 0600</type>
+		<type>0600 Series</type>
 		<name>Blue Line</name>
-		<author>川口耕介さん</author>
+		<author>Kohsuke Kawaguchi</author>
 		<description>
 Bowdoin-Wonderland. Builder: Hawker-Siddeley, Electrical: GE, Year: 1978-1980, Length: 48' 6", Width: 111", Seats: 42. Currently 68 cars are active.
 		</description>
@@ -36,9 +36,9 @@ Bowdoin-Wonderland. Builder: Hawker-Siddeley, Electrical: GE, Year: 1978-1980, L
 	
 	<contribution type="train" id="{680ED466-1EA5-4c22-A411-99CFE7B46DA6}">
 		<company>Boston MBTA</company>
-		<type>series 01500/01600</type>
+		<type>01500/01600 Series</type>
 		<name>Red Line</name>
-		<author>川口耕介さん</author>
+		<author>Kohsuke Kawaguchi</author>
 		<description>
 Alewife-Braintree. Builder: Pullman Standard, Electrical: WH, Year:1969-1970 (rebuilt 1985-1988), Length: 69' 6", Width: 122".
 		</description>
@@ -59,9 +59,9 @@ Alewife-Braintree. Builder: Pullman Standard, Electrical: WH, Year:1969-1970 (re
 	
 	<contribution type="train" id="{1524D523-85C2-465c-8240-BC55EA511D3B}">
 		<company>Boston MBTA</company>
-		<type>series 3400</type>
+		<type>3400 Series</type>
 		<name>Green Line</name>
-		<author>川口耕介さん</author>
+		<author>Kohsuke Kawaguchi</author>
 		<description>
 Lenchmere-Kenmore。野球場を通る路面電車です。
 		</description>
@@ -81,9 +81,9 @@ Lenchmere-Kenmore。野球場を通る路面電車です。
 	
 	<contribution type="train" id="{5830F166-5E53-4fd1-8FFD-A6B69B1BB8A5}">
 		<company>Boston MBTA</company>
-		<type>series 01200</type>
+		<type>01200 Series</type>
 		<name>Orange Line</name>
-		<author>川口耕介さん</author>
+		<author>Kohsuke Kawaguchi</author>
 		<description>
 Oak Grove-Forest Hills。Amtrakと接続します。
 		</description>

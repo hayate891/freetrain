@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>デオ900</title>
+	<title>DEO 900</title>
  	<homepage>http://www.cwo.zaq.ne.jp/pant012/freetrain/</homepage>
 
 	<contribution type="picture" id="{7661CAC2-57EE-4F0B-957A-E6DF86A148C4-1}">
@@ -85,11 +85,11 @@
 	</contribution>
 
 	<contribution type="train" id="{7661CAC2-57EE-4F0B-957A-E6DF86A148C4-901}">
-		<company>叡山電鉄</company>
-		<type>デオ900</type>
-		<name>きらら　紅色(901編成)</name>
+		<company>Eizan Electric Railway</company>
+		<type>DEO 900</type>
+		<name>Kirara Crimson Coating (901 Formation)</name>
               <fare>1000</fare> 
-		<author>ては</author>
+		<author>T.Hara</author>
 		<description>
 出町柳～鞍馬を結ぶ観光用電車として平成9年に誕生した電車です。窓を大きく取ったダイナミックなデザイン、叡電初のクロスシート等、乗っていて楽しい電車です。(中間車を連結していますが、実車には中間車はありません)
 		</description>
@@ -103,11 +103,11 @@
 	</contribution>
 
 	<contribution type="train" id="{7661CAC2-57EE-4F0B-957A-E6DF86A148C4-903}">
-		<company>叡山電鉄</company>
-		<type>デオ900</type>
-		<name>きらら　朱色(903編成)</name>
+		<company>Eizan Electric Railway</company>
+		<type>DEO 900</type>
+		<name>Kirara Vermilion Coating (903 Formation)</name>
               <fare>1000</fare> 
-		<author>ては</author>
+		<author>T.Hara</author>
 		<description>
 第一編成が好評だった為、急遽製造された第二編成です。ちなみに車名の"きらら"とは沿線近くにある｢雲母坂(きらら坂)｣から命名された。(中間車を連結していますが、実車には中間車はありません)
 		</description>
@@ -130,10 +130,10 @@
 	</contribution>
 
 	<contribution type="train" id="{nyaganyaga-deo600}">
-		<company>叡山電鉄</company>
-		<type>デオ600</type>
+		<company>Eizan Electric Railway</company>
+		<type>DEO 600</type>
 		<name></name>
-		<author>ては</author>
+		<author>T.Hara</author>
 		<description>
 デナ500の足回りを使用して製作された車両。冷房化されていないので現在2両を残すのみです。</description>
 		<price>100</price>
@@ -153,10 +153,10 @@
 	</contribution>
 
 	<contribution type="train" id="{nyaganyaga-deo700}">
-		<company>叡山電鉄</company>
-		<type>デオ700</type>
+		<company>Eizan Electric Railway</company>
+		<type>DEO 700</type>
 		<name></name>
-		<author>ては</author>
+		<author>T.Hara</author>
 		<description>
 叡電初の冷房車でワンマン対応の車両です。余談ながら叡電の車両は武庫川車両製で阪神の部品がかなり使われています</description>
 		<price>100</price>

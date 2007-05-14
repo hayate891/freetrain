@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -16,9 +16,9 @@
 	</contribution>
 	
 	<contribution type="train" id="{8B8C5CB2-F81D-43a5-A287-4528788BF74E}">
-		<company>旧日本国有鉄道</company>
-		<type>80系</type>
-		<name>湘南電車(2枚窓タイプ)</name>
+		<company>Japanese National Railways</company>
+		<type>80 Series</type>
+		<name>Shonan Electric Train (2-Windows Type)</name>
 		<author>暇</author>
 		<description>国鉄が製作した最初の長距離電車。途中から製作された2枚窓のスタイルは私鉄を中心にブームになった。
 		</description>
@@ -39,10 +39,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{82C533CE-FAB1-4bcb-B3D2-415F760ED605}">
-		<company>旧日本国有鉄道</company>
-		<type>72／73形</type>
-		<name>ゲタ電</name>
-		<author>暇</author>
+		<company>Japanese National Railways</company>
+		<type>72/73 Series</type>
+		<name>Geta Train</name>
+		<author>Hima</author>
 		<description>戦時中に製造された63型を桜木町火災事故をきっかけとして改造され誕生した。戦後の通勤輸送で大きな役割を果たした。
 		</description>
 		<price>50</price>
@@ -62,9 +62,9 @@
 	</contribution>
 	
 	<contribution type="train" id="{C8F663B1-0016-43dd-80AB-FBD44E9AEF85}">
-		<company>旧日本国有鉄道</company>
-		<type>72／73形</type>
-		<name>ゲタ電(淀)</name>
+		<company>Japanese National Railways</company>
+		<type>72/73 Series</type>
+		<name>Geta Train (Yodogawa)</name>
 		<author>暇</author>
 		<description>淀川電車区に配属された73形はオレンジ色に塗られ大阪環状線、桜島線、片町線で活躍した。後に阪和線にも採用され、異色の存在となっていた。
 		</description>
@@ -84,10 +84,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{67705E9E-4ED1-49b2-92FD-FE45DAC33699}">
-		<company>旧日本国有鉄道</company>
-		<type>72／73形</type>
-		<name>ゲタ電(横)</name>
-		<author>暇</author>
+		<company>Japanese National Railways</company>
+		<type>72/73 Series</type>
+		<name>Geta Train (Side)</name>
+		<author>Hima</author>
 		<description>御殿場線の電化完成に伴いスカ色に変更されて投入された。1979年秋、新性能車に置き換えられるまで使用された。
 		</description>
 		<price>50</price>
@@ -124,10 +124,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{7E51D8D7-2CD4-4593-85C0-42D2FC515438}">
-		<company>旧日本国有鉄道</company>
-		<type>キハ181系</type>
+		<company>Japanese National Railways</company>
+		<type>KIHA 181 Series</type>
 		<name></name>
-		<author>1500vさん</author>
+		<author>1500v</author>
 		<description>大馬力エンジンを搭載した国鉄の特急型気動車。
 中間車の屋根上に載ってる放熱器が目立つ。
 		</description>

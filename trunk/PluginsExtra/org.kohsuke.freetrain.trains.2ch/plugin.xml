@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>ぞぬ</title>
+	<title>Zonu</title>
  	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 
 	<!-- ゾヌー先頭 -->
@@ -29,9 +29,9 @@
 
 	<contribution type="train" id="{3DCBE7F9-2977-42A3-BBD6-3FB0EB582213}">
 		<company>2ch</company>
-		<type>超特急</type>
-		<name>ゾヌー</name>
-		<author>ては</author>
+		<type>Super Limited Express</type>
+		<name>Zonuu</name>
+		<author>T.Hara</author>
 		<description>形に騙されては(・∀・)ｲｹﾅｲ、300km/hを余裕で超える高性能だ！びゅんびゅん速いぞ！
 		</description>
 		<price>5000</price>
