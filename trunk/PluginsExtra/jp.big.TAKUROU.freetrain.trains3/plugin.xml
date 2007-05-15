@@ -420,7 +420,7 @@
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-DCQ185-Q}">
 		<company>JR Kyushu</company>
 		<type>KIHA 185 Series</type>
-		<name>Super Express 'Aso' 'Yufu'</name>
+		<name>Limited Express 'Aso' 'Yufu'</name>
 		<author>TAKUROU</author>
 		<description>国鉄末期に四国島内向けの新性能気動車として投入されたが、ＪＲ四国発足以後に後継の特急車が
 誕生した事で余剰となり、一方で自社内での急行格上げによる特急設定の為、気動車を必要としたＪＲ九州が四国から購入してコーポトレートカラーに
@@ -574,7 +574,7 @@
         <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECC373-C}">
 		<company>JR Central</company>
 		<type>373 Series</type>
-		<name>'Wide View' Super Express</name>
+		<name>'Wide View' Limited Express</name>
 		<author>TAKUROU</author>
 		<description>急行東海・富士川の特急化に際して新造された直流用特急車輌。
 普通列車に転用できるようにドアは両開き・大型となっていて、デッキと客室を区切る扉はない。

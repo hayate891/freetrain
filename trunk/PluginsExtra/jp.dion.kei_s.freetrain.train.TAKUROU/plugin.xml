@@ -1445,9 +1445,9 @@ as the KIHA85 (350ps, 120km/h). Made of stainless steel, each car has 3 doors an
              <contribution type="train" id="{6CAFE167-74FE-11D7-A4B7-444553540000}">
 		<company>JR West</company>
 		<type>KIHA187 Series</type>
-		<name>Super-Express Rail-Car</name>
+		<name>Limited Express Rail-Car</name>
 		<author>TAKUROU</author>
-		<description>A new type of super express diesel train, manufactured for rapid service on western
+		<description>A new type of limited express diesel train, manufactured for rapid service on western
 Sanin Main Line. Scheduled for service in the Tottori area.
 		</description>
 		<fare>1010</fare>
@@ -1508,7 +1508,7 @@ Sanin Main Line. Scheduled for service in the Tottori area.
 		<name>Kansai Line Color</name>
 		<author>TAKUROU</author>
 		<description>
-The first light rail-car after the innauguration of JR West. This is the 0 Model where the engine is modified to 330 PS. It uses the "Long seat" formation.
+The first light rail-car after the inauguration of JR West. This is the 0 Model where the engine is modified to 330 PS. It uses the "Long seat" formation.
 		</description>
                            <fare>400</fare>
 		<price>100</price>
@@ -1522,10 +1522,10 @@ The first light rail-car after the innauguration of JR West. This is the 0 Model
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-M}">
 		<company>JR East</company>
 		<type>185 Series</type>
-		<name>New Super-Express</name>
+		<name>New Limited Express</name>
 		<author>TAKUROU</author>
 		<description>After the Shinkansen Ueno started operating, this model was considered for use on the local
-railroad super-express. The 185 Series 0 Model required snow- and cold-proofing and was remodelled in 1982 as 185 Series 200 Model.
+railroad limited express. The 185 Series 0 Model required snow- and cold-proofing and was remodelled in 1982 as 185 Series 200 Model.
 The 200 Model is being considered to be joined with the 165 Series as a measure for passing of the Usui Pass.
 Renewal construction was done, reclining seat conversion of the standard-sized car completed.
 		</description>
@@ -1547,10 +1547,10 @@ Renewal construction was done, reclining seat conversion of the standard-sized c
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ185-J}">
 		<company>Japanese National Railways</company>
 		<type>185 Series</type>
-		<name>Izu Super-Express "Odoriko"</name>
+		<name>Izu Limited Express "Odoriko"</name>
 		<author>TAKUROU</author>
-		<description>The 185 Series 0 Model was created in 1981 to run as the new super express between
-Tokyo and Izu with a super express. It runs the same routes as the 153 Series. The 185 Series also serves as New
+		<description>The 185 Series 0 Model was created in 1981 to run as the new limited express between
+Tokyo and Izu with a limited express. It runs the same routes as the 153 Series. The 185 Series also serves as New
 Rapid together with the 117 and 153 Series in the Kansai region.
 		</description>
 		<fare>900</fare>
@@ -1574,10 +1574,10 @@ Rapid together with the 117 and 153 Series in the Kansai region.
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECE185-T}">
 		<company>JR East</company>
 		<type>185 Series</type>
-		<name>Izu Super-Express "Dancer"</name>
+		<name>Izu Limited Express "Odoriko"</name>
 		<author>TAKUROU</author>
-		<description>The 185 Series 0 Model was created in 1981 to run as the new super express between
-Tokyo and Izu with a super express. It runs the same routes as the 153 Series. The 185 Series also serves as New
+		<description>The 185 Series 0 Model was created in 1981 to run as the new limited express between
+Tokyo and Izu with a limited express. It runs the same routes as the 153 Series. The 185 Series also serves as New
 Rapid together with the 117 and 153 Series in the Kansai region.
 It has recently been remodelled with new colors and reclining seats.
 		</description>
@@ -1605,7 +1605,7 @@ It has recently been remodelled with new colors and reclining seats.
 		<name>Izu Mixed Express</name>
 		<author>TAKUROU</author>
 		<description>This train consists of a 185 Series and 153 Series train. It usually has 10 185 Series cars, with an additional 5 153 Series joined.
-This was used as the 'Izu' Express as well as a local train before the 'Odoriko' Super-Express was introduced.
+This was used as the 'Izu' Express as well as a local train before the 'Odoriko' Limited Express was introduced.
 		</description>
 		<fare>900</fare>
 		<price>100</price>
@@ -1628,12 +1628,12 @@ This was used as the 'Izu' Express as well as a local train before the 'Odoriko'
              <contribution type="train" id="{AD070310-7653-11D7-A4B7-ECJ157-A}">
 		<company>Japanese National Railways</company>
 		<type>157 Series</type>
-		<name>Super-Express "Amagi" "Shirone"</name>
+		<name>Limited Express "Amagi" "Shirone"</name>
 		<author>TAKUROU</author>
 		<description>The 157 Series was used as a Resort Express in the central capital region and was also in
 service on imperial routes to the Imperial Villas of Nasu and Izu.
-The DX local express model was equipped like the Super-Express, which gave it a unique position among JNR trains
-and was one of its appeals. In 1977 it was retired from service as Amagi Super Express and the last remaining imperial
+The DX local express model was equipped like the Limited Express, which gave it a unique position among JNR trains
+and was one of its appeals. In 1977 it was retired from service as Amagi Limited Express and the last remaining imperial
 formations were transferred to the 183 Series in 1983.
 		</description>
 		<fare>900</fare>
@@ -2248,7 +2248,7 @@ formations were transferred to the 183 Series in 1983.
 		<name>Hokuriku Express Train</name>
 		<author>TAKUROU</author>
 		<description>Based on the 471 Series, is was introduced on the 60 Hz Hokuriku Main Line and used in
-rough terrain. Formerly used as numerous bullet trains, is was gradually superseded by the super express class of trains
+rough terrain. Formerly used as numerous bullet trains, is was gradually superseded by the limited express class of trains
 and is now serving as local trains.
 		</description>
 		<fare>700</fare>
@@ -2410,7 +2410,7 @@ and Hiroshima (discontinued in 2002). Currently, it has been remodelled to one-m
 		<author>TAKUROU</author>
 		<description>Made for the Wakayama area (Kinokuni Line, Wakayama Line), the 0-300 Models
 had been remodelled for one-man driving in 2001.
-Uses the same color scheme as the Nanki Super-Express "Ocean Arrow" (285 Series) that also operates in the area.
+Uses the same color scheme as the Nanki Limited Express "Ocean Arrow" (285 Series) that also operates in the area.
 		</description>
 		<fare>700</fare>
 		<price>100</price>

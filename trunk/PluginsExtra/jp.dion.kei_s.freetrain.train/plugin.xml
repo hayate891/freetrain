@@ -191,9 +191,9 @@
 	<contribution type="train" id="{FreeTrain-N1K2J-KeiH-TrainHensei-KIHA82}">
 		<company>Japanese National Railways</company>
 		<type>KIHA 82</type>
-		<name>Super-Express Rail-Car</name>
+		<name>Limited Express Rail-Car</name>
 		<author>Kei</author>
-		<description>Was introduced to provide super-express service on non-electrified sections of Japan and was the first diesel super-express. Early KIHA 81 models had the bonnet-body type. In its later years of service, it was mainly used in the Hokkaido and Kisei regions.
+		<description>Was introduced to provide limited express service on non-electrified sections of Japan and was the first diesel limited express. Early KIHA 81 models had the bonnet-body type. In its later years of service, it was mainly used in the Hokkaido and Kisei regions.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>

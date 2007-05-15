@@ -12,7 +12,7 @@ Followings are sites and authors who agreed with packaging there works.
  http://suzukams.at.infoseek.co.jp/FreeTrain/
 +Ayase san: FreeTrain support site
  http://www14.big.or.jp/~ayase/freetrain/
-+Teha san: Starting FreeTrain
++T.Hara san: Starting FreeTrain
  http://park8.wakwak.com/~bast/freetrain/
 +C477: FreeTrain urban development office
  http://www.rocket.ne.jp/~nao/
@@ -36,12 +36,12 @@ Followings are sites and authors who agreed with packaging there works.
  http://shikashika.hp.infoseek.co.jp/
 +Namoh san: Aich pref. private plugin factory
  http://www.medias.co.jp/~bell8528/freetrain/index.html
-+Takeuchi Tomoki san: Takeuchi Tomoki's homepage
++Tomonori Takeuchi san: Tomonori Takeuchi's homepage
  http://f4.aaa.livedoor.jp/~tomo/free_train/ft.html
 
 +Authors of which plugins published on "total train yard", the site of Hima san.
  Hima san, Kawaguchi Kohsuke san, Min san, qra_ra(haru) san, Kigami san
- TAKUROU san, iwasaki san, Teha san, Ayase san, ima san, 1500v san, 
+ TAKUROU san, iwasaki san, T.Hara san, Ayase san, ima san, 1500v san, 
  Nanashi-san@Hokkaido san, Ken san, Mumei no hito san, Hatena kun san, 
  Nanashi-san no yabo san, masashi san
 
