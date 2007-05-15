@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>JR東日本 車両キット</title>
+	<title>JR East Train Kit</title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	<depend on="org.kohsuke.freetrain.trains.trainshare" />
 
@@ -13,10 +13,10 @@
 	</contribution>
 
 	<contribution type="train" id="{E231-east-joban-200309301104}">
-		<company>JR東日本</company>
-		<type>E231系</type>
-		<name>常磐線</name>
-		<author>iwasakiさん</author>
+		<company>JR East</company>
+		<type>E231 Series</type>
+		<name>Joban Line</name>
+		<author>iwasaki</author>
 		<description>常磐線の新型列車です。
 		</description>
 		<price>100</price>
@@ -34,10 +34,10 @@
 	</contribution>
 
 	<contribution type="train" id="{E231-east-yamanote-200309301120}">
-		<company>JR東日本</company>
-		<type>E231系500番台</type>
-		<name>山手線</name>
-		<author>iwasakiさん</author>
+		<company>JR East</company>
+		<type>E231 Series 500 Model</type>
+		<name>Yamanote Line</name>
+		<author>iwasaki</author>
 		<description>山手線の新型車両です。
 		</description>
 		<price>100</price>
@@ -56,10 +56,10 @@
 	</contribution>
 
 	<contribution type="train" id="{E231-east-tohoku-200309301122}">
-		<company>JR東日本</company>
-		<type>E231系台</type>
-		<name>東北本線・高崎線など</name>
-		<author>iwasakiさん</author>
+		<company>JR East</company>
+		<type>E231 Series</type>
+		<name>Tohoku Main Line, Takasaki Line, etc.</name>
+		<author>iwasaki</author>
 		<description>東北本線・高崎線などに使われているＥ２３１系の電車です。
 		</description>
 		<price>100</price>
@@ -78,10 +78,10 @@
 	</contribution>
 
 	<contribution type="train" id="{103-east-tsurumi-200309301111}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>鶴見線</name>
-		<author>iwasakiさん</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Tsurumi Line</name>
+		<author>iwasaki</author>
 		<description>鶴見線で走っている、黄色い電車です。
 		</description>
 		<price>100</price>
@@ -101,12 +101,12 @@
 	</contribution>
 
 	<contribution type="train" id="{E2078A95-1BB6-48dd-BF5B-6F3286006F33}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>仙石線</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Senseki Line</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -129,12 +129,12 @@
 	</contribution>
 
 	<contribution type="train" id="{1D9D4BD5-7EA5-4571-8074-DF973C3BCC67}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>カナリア(高運)</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Canaria (High Driver's Seat)</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -156,12 +156,12 @@
 	</contribution>
 
 	<contribution type="train" id="{51EEC947-7400-4F09-B6EC-A871E4C2704C}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>カナリア</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Canaria</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -183,12 +183,12 @@
 	</contribution>
 
 	<contribution type="train" id="{875F3931-2F9D-4CC1-89E2-E2460DFB2483}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>エメラルドグリーン(高運)</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Emerald Green (High Driver's Seat)</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -210,12 +210,12 @@
 	</contribution>
 
 	<contribution type="train" id="{F0E4FE4D-AB7E-415F-9480-ADE0D767211F}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>エメラルドグリーン</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Emerald Green</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -238,12 +238,12 @@
 	</contribution>
 
 	<contribution type="train" id="{DE070299-5E15-4498-9044-3304D78F02E7}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>スカイブルー(高運)</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Sky Blue (High Driver's Seat)</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -265,12 +265,12 @@
 	</contribution>
 
 	<contribution type="train" id="{8BD04DE3-3244-4219-B74B-7C22D27B38F9}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>スカイブルー</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Sky Blue</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -294,12 +294,12 @@
 	</contribution>
 
 	<contribution type="train" id="{E645C4DD-E47A-46E3-83AC-B747ED91B4B5}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>ウグイス</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Uguisu</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -321,12 +321,12 @@
 	</contribution>
 
 	<contribution type="train" id="{E704683D-1817-43CB-8FCF-12FCB722D641}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>ウグイス(高運)</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Uguisu (High Driver's Seat)</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -350,12 +350,12 @@
 	</contribution>
 
 	<contribution type="train" id="{0FE8DB71-1F57-4593-BF2C-F5D83EC4E11E}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>オレンジ</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Orange</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -379,12 +379,12 @@
 	</contribution>
 
 	<contribution type="train" id="{10E751CF-E779-4876-B6F0-567F27232B5B}">
-		<company>JR東日本</company>
-		<type>103系</type>
-		<name>オレンジ(高運)</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>103 Series</type>
+		<name>Orange (High Driver's Seat)</name>
+		<author>Hima</author>
 		<description>
-国鉄で製作された車両で、JR東日本では淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
+国鉄で製作された車両で、JR Eastでは淘汰が進んでいる。以前には京浜東北線や山手線にも走った経緯があるが今はその雄姿も見ることが出来ず、残念である。2002年末では武蔵野線、南武線などに残る。
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -420,10 +420,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{D96FC5B6-B763-417b-A563-DD27C2C6740A}">
-		<company>JR東日本</company>
-		<type>415系</type>
-		<name>標準色</name>
-		<author>Minさん</author>
+		<company>JR East</company>
+		<type>415 Series</type>
+		<name>Standard Colors</name>
+		<author>Min</author>
 		<description>主に常磐線を走る電車。交直流区間を走ることができる。</description>
 		<price>100</price>
 		<speed>medium</speed> 
@@ -459,10 +459,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{C9054F40-A558-4bec-AF88-3FC53F2F858B}">
-		<company>JR東日本</company>
-		<type>200系</type>
-		<name>やまびこ</name>
-		<author>綾瀬さん</author>
+		<company>JR East</company>
+		<type>200 Series</type>
+		<name>Yamabiko</name>
+		<author>Ayase</author>
 		<description>東北・上越新幹線用車両。
 主に10両(K編成),12両(F編成)があります。</description>
 		<price>100</price>
@@ -483,10 +483,10 @@
 	</contribution>
 
 	<contribution type="train" id="{98FD607D-4A3F-484c-8557-486E7CF5FE52}">
-		<company>JR東日本</company>
-		<type>165系</type>
-		<name>湘南色</name>
-		<author>Minさん</author>
+		<company>JR East</company>
+		<type>165 Series</type>
+		<name>Shonan Colors</name>
+		<author>Min</author>
 		<speed>medium</speed>  
 		<description>急行型電車。現在この色での定期運用はないはず。</description>
 		<price>100</price>
@@ -521,10 +521,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{D4BBAEE3-7491-445E-B95A-BD4D013CAA02}">
-		<company>JR東日本</company>
-		<type>485系</type>
-		<name>前面ボンネット無・いなほ等</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>485 Series</type>
+		<name>No Front Bonnet, Inaho Class</name>
+		<author>Hima</author>
 		<description>
 昭和43年に登場した交直両用特急電車。登場以来数々の特急の代名詞となった。塗色変更も多数行われ全国で運転されている。
 		</description>
@@ -548,10 +548,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{64F236E3-52C9-4f53-9B19-762445E26F5A}">
-		<company>JR東日本</company>
-		<type>113系</type>
-		<name>横須賀色</name>
-		<author>川口耕介さん</author>
+		<company>JR East</company>
+		<type>113 Series</type>
+		<name>Yokosuka Colors</name>
+		<author>Kohsuke Kawaguchi</author>
 		<description>
 首都圏の各地で見られる車両。111系を出力増強した形式だが、E217系などの登場により活躍の場が減っている。
 		</description>
@@ -575,12 +575,12 @@
 	</contribution>
 	
 	<contribution type="train" id="{88BB50A2-08DD-48C9-AA4C-3D87EEC7252E}">
-		<company>JR東日本</company>
-		<type>113系</type>
-		<name>湘南色</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>113 Series</type>
+		<name>Shonan Colors</name>
+		<author>Hima</author>
 		<description>
-JR東日本では主に東海道本線や御殿場線などで使用されている。
+JR Eastでは主に東海道本線や御殿場線などで使用されている。
 		</description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -605,12 +605,12 @@ JR東日本では主に東海道本線や御殿場線などで使用されてい
 		<capacity>130</capacity>
 	</contribution>	
 	<contribution type="train" id="{88BB50A2-08DD-48C9-AA4C-3D87EEC7252E}D">
-		<company>JR東日本</company>
-		<type>113系</type>
-		<name>湘南色DD</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>113 Series</type>
+		<name>Shonan Colors DD</name>
+		<author>Hima</author>
 		<description>
-JR東日本で使用されているうち、中間車の一部をグリーン車とした編成。東海道本線で見られる。
+JR Eastで使用されているうち、中間車の一部をグリーン車とした編成。東海道本線で見られる。
 		</description>
 		<price>1</price>
 		<speed>medium</speed>
@@ -664,10 +664,10 @@ JR東日本で使用されているうち、中間車の一部をグリーン車
 	</contribution>
 	
 	<contribution type="train" id="{46D00257-72FF-4c69-8538-9B2EAC8CF4EB}">
-		<company>JR東日本</company>
-		<type>925形</type>
-		<name>ドクターイエロー</name>
-		<author>綾瀬さん</author>
+		<company>JR East</company>
+		<type>925 Series</type>
+		<name>Dr. Yellow</name>
+		<author>Ayase</author>
 		<description>東北・上越・北陸新幹線用の総合試験車。</description>
 		<price>100</price>
 		<speed>superb</speed> 
@@ -704,10 +704,10 @@ JR東日本で使用されているうち、中間車の一部をグリーン車
 	</contribution>
 	
 	<contribution type="train" id="{377D778C-CEF0-4e4c-9CE0-C1EFA6E1D743}">
-		<company>JR東日本</company>
-		<type>E4系</type>
-		<name>MAXやまびこ</name>
-		<author>きがみさん</author>
+		<company>JR East</company>
+		<type>E4 Series</type>
+		<name>MAX Yamabiko</name>
+		<author>Kigami</author>
 		<description>暫定版</description>
 		<price>100</price>
 		<speed>superb</speed> 
@@ -743,10 +743,10 @@ JR東日本で使用されているうち、中間車の一部をグリーン車
 	</contribution>
 	
 	<contribution type="train" id="{662C0314-6527-41e4-8E18-445EAD9A71B5}">
-		<company>JR東日本</company>
-		<type>E2系</type>
-		<name>はやて、あさま等</name>
-		<author>綾瀬さん</author>
+		<company>JR East</company>
+		<type>E2 Series</type>
+		<name>Hayate, Asama Class</name>
+		<author>Ayase</author>
 		<description>東北・上越・北陸新幹線用車両。
 主に10両(J編成),8両(N編成)があります。</description>
 		<price>100</price>
@@ -784,10 +784,10 @@ JR東日本で使用されているうち、中間車の一部をグリーン車
 	</contribution>
 	
 	<contribution type="train" id="{173B58EA-80E6-493b-A447-209ED0DF6622}">
-		<company>JR東日本</company>
-		<type>581/583系</type>
-		<name>月光形</name>
-		<author>暇</author>
+		<company>JR East</company>
+		<type>581/583 Series</type>
+		<name>Gekko Type</name>
+		<author>Hima</author>
 		<description>
 高度経済成長のさなか車両運用の効率化を図るため登場した世界で初めての電車寝台特急。愛称となった「月光」をはじめ、「ゆうづる」や「彗星」など数々の特急として運転された。現在、定期運用されるのは大阪～新潟間の急行「きたぐに」だけである。
 		</description>
@@ -876,10 +876,10 @@ JR東日本で使用されているうち、中間車の一部をグリーン車
 	</contribution>
 
 	<contribution type="train" id="{2003-0211-KIGAMI-TrainImg-200-2000}">
-		<company>JR東日本</company>
-		<type>200系2000番台</type>
-		<name>やまびこ・なすの</name>
-		<author>きがみ</author>
+		<company>JR East</company>
+		<type>200 Series 2000 Model</type>
+		<name>Yamabiko, Nasuno</name>
+		<author>Kigami</author>
 		<description>東北新幹線用車両</description>
 		<price>100</price>
 		<speed>superb</speed> 
@@ -908,12 +908,12 @@ JR東日本で使用されているうち、中間車の一部をグリーン車
 	</contribution>
 	
 	<contribution type="train" id="{B1F5C25A-4F88-4778-80F7-3CBC83E6D030}">
-		<company>JR東日本</company>
-		<type>201系</type>
-		<name>中央本線等</name>
-		<author>ワムさん</author>
+		<company>JR East</company>
+		<type>201 Series</type>
+		<name>Chuo Main Line Class</name>
+		<author>Wamu</author>
 		<description>
-国鉄時代から使われている列車　JR東日本では中央本線や京葉線などで使われている。
+国鉄時代から使われている列車　JR Eastでは中央本線や京葉線などで使われている。
 		</description>
 		<price>1</price>
 		<speed>medium</speed>

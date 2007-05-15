@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -12,10 +12,10 @@
 	</contribution>
 
 	<contribution type="train" id="{kiha200-kyushu-ibusuki-kashii-200309301100}">
-		<company>JR九州</company>
-		<type>キハ200系</type>
-		<name>香椎線/指宿枕崎線</name>
-		<author>iwasakiさん</author>
+		<company>JR Kyushu</company>
+		<type>KIHA 200 Series</type>
+		<name>Kashii Line / Ibusuki-Makurazaki Line</name>
+		<author>iwasaki</author>
 		<description>九州で走っている、気動車です。
 		</description>
 		<price>100</price>
@@ -52,10 +52,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{4E5FD73B-4F93-49f4-9FE8-9E8AE5FE2127}">
-		<company>JR九州</company>
-		<type>485系</type>
-		<name>前面ボンネット無・みどり、かもめ等</name>
-		<author>暇</author>
+		<company>JR Kyushu</company>
+		<type>485 Series</type>
+		<name>No Front Bonnet; Midori, Kamome Class</name>
+		<author>Hima</author>
 		<description>
 昭和43年に登場した交直両用特急電車。登場以来数々の特急の代名詞となった。赤くなってみたり緑になってみたりしている。
 		</description>
@@ -96,10 +96,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{7E0F257B-57AF-4eda-8E9A-FE51C3734BCF}">
-		<company>JR九州</company>
-		<type>415系</type>
-		<name>標準色</name>
-		<author>Minさん</author>
+		<company>JR Kyushu</company>
+		<type>415 Series</type>
+		<name>Standard Colors</name>
+		<author>Min</author>
 		<speed>medium</speed> 
 		<capacity>95</capacity> 
 		<description>主に鹿児島本線を走る電車。交直流区間を走ることができるので、下関方面乗り入れに使われる。</description>
@@ -142,10 +142,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{23CAB2B9-D540-456f-B02F-671BC2ED03A5}">
-		<company>JR九州</company>
-		<type>811系</type>
-		<name>基本色</name>
-		<author>Minさん</author>
+		<company>JR Kyushu</company>
+		<type>811 Series</type>
+		<name>Base Colors</name>
+		<author>Min</author>
 		<speed>medium</speed> 
 		<description>主に福岡地区で活躍する通勤電車。４両で構成される。</description>
 		<price>1</price>
@@ -184,10 +184,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{B8FF8145-9108-4165-BBD5-46B647D75E2B}">
-		<company>JR九州</company>
-		<type>813系</type>
-		<name>基本色</name>
-		<author>Minさん</author>
+		<company>JR Kyushu</company>
+		<type>813 Series</type>
+		<name>Base Colors</name>
+		<author>Min</author>
 		<speed>medium</speed> 
 		<description>主に福岡・大分・長崎地区で活躍する通勤電車。2両若しくは3両で構成される。</description>
 		<price>1</price>
@@ -225,10 +225,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{973A230D-8289-440d-800C-81464AB0FE2A}">
-		<company>JR九州</company>
-		<type>キハ　71系</type>
-		<name>ゆふいんの森</name>
-		<author>きがみさん</author>
+		<company>JR Kyushu</company>
+		<type>KIHA 71 Series</type>
+		<name>Yufuin-no-Mori</name>
+		<author>Kigami</author>
 		<speed>medium</speed> 
 		<description>博多～由布院～別府を結ぶ観光特急。４両編成１日２往復。
 ほぼ毎日運行されているのに季節列車扱いで、車内には鉄道車両としては珍しく木材が使われている暖かみのある車両です。</description>
