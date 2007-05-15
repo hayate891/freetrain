@@ -554,7 +554,7 @@
 	
 
 	<contribution type="train" id="{DDF87135-9F9C-117A-9B45-04F846A0479D}">
-		<name>Sun Liner</name>
+		<name>Sun Liner Rapid</name>
 		<price>1</price>
                 <fare>400</fare>
 		<speed>medium</speed>

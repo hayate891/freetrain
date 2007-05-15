@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <plug-in>
   <title>E217 Series</title> 
-  <author>Icchii</author> 
+  <author>Itchy</author> 
   <homepage>cyber_express_1703d@ybb.ne.jp</homepage> 
 <!-- E217先頭車 --> 
 　<contribution type="trainCar" id="{669D5BDE-23F1-43BD-AC36-B4B5A4-E217}-A">
@@ -38,7 +38,7 @@
 <company>JR East</company>
 <type>E217 Series</type>
 <name>Sobu Rapid/Yokosuka Line</name>
-<author>Icchii</author>
+<author>Itchy</author>
 <description>This train was introduced to provide high-speed services for Sobu Rapid and
 Yokosuka Line to relieve the congestion there. On JR East's commuter route, it was the first
 to reach the speed of 120 km/h. Having a 209 Series style setup with four doors and long-

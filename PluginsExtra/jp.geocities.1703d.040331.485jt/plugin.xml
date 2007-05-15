@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title>JR East 485 Series Joyful Train Set</title>
-	<author>Icchii</author> 
+	<author>Itchy</author> 
 	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
 
  	<!-- ベース車両 -->
@@ -287,9 +287,9 @@
 		<company>JR East</company>
 		<type>485 Series</type>
 		<name>Kirakira Uetsu</name>
-		<author>Icchii</author>
+		<author>Itchy</author>
 		<description>It appeared in 2001 November for sightseers who want to travel along the Uetsu Line.
-The cars were remodelled 485 Series super-express type. The lead coach was an observation car while the second car was a lounge car
+The cars were remodelled 485 Series limited express type. The lead coach was an observation car while the second car was a lounge car
 with a teahouse and Japanese-style lounge space.
 Also, barrier-free facilities were installed during remodelling. It mainly runs weekend services between Niigata and Sakata.
 </description>
@@ -309,9 +309,9 @@ Also, barrier-free facilities were installed during remodelling. It mainly runs 
 		<company>JR East</company>
 		<type>485 Series</type>
 		<name>New Nanohana</name>
-		<author>Icchii</author>
+		<author>Itchy</author>
 		<description>This train started in 1998 for sightseers who wish to visit the Boso region.
-It is a remodelled 485 Series super-express in a 6-car formation.
+It is a remodelled 485 Series limited express in a 6-car formation.
 The carriages had open seating and also cabins.
 It's used as a group train departing from Chiba Prefecture and also for special limited express.
 </description>
@@ -331,7 +331,7 @@ It's used as a group train departing from Chiba Prefecture and also for special 
 		<company>JR East</company>
 		<type>485 Series</type>
 		<name>Yamanami</name>
-		<author>Icchii</author>
+		<author>Itchy</author>
 		<description>This train started in 1999 for sightseers who wish to visit Gunma Prefecture. It is a remodelled 485 Series
 4-Car formation with open seating.
 Together with the "Seseragi" it is used as a group train departing from Gunma prefecture as well as temporary express train on the Takasaki 
@@ -353,7 +353,7 @@ and Joetsu lines.
 		<company>JR East</company>
 		<type>485 Series</type>
 		<name>Seseragi</name>
-		<author>Icchii</author>
+		<author>Itchy</author>
 		<description>This train started in 2001 for sightseers who wish to visit the Gunma prefecture. It is a remodelled 485 Series
 4-Car formation with open seating, very much like the "Yamanami".
 Together with the "Yamanami" it is used as a group train departing from Gunma prefecture as well as temporary express train on the Takasaki 
@@ -375,7 +375,7 @@ and Joetsu lines.
 		<company>JR East</company>
 		<type>485 Series</type>
 		<name>Yamanami＋Sasaragi</name>
-		<author>Icchii</author>
+		<author>Itchy</author>
 		<description>This train only comes in an 8-Car Formation.
 It is made up of the 2 separate trains, four cars each from the "Yamanami" and the "Seseragi" and is used as a group train departing 
 from Gunma prefecture as well as temporary express train on the Takasaki and Joetsu lines.
@@ -401,8 +401,8 @@ from Gunma prefecture as well as temporary express train on the Takasaki and Joe
 		<company>JR East</company>
 		<type>485 Series</type>
 		<name>Utage</name>
-		<author>Icchii</author>
-		<description>This a "Joyful Train" introduced in 1994. It is a remodelled 485 Series super-express in a 6-car formation.
+		<author>Itchy</author>
+		<description>This a "Joyful Train" introduced in 1994. It is a remodelled 485 Series limited express in a 6-car formation.
 Since it has a diesel engine, it can run to electrified and non-electrified stations.
 Together with the "Hana", this train is used as a group train in Tokyo, Kanagawa, and Yamanashi, as well as temporary express on the
 Tokaido and Chuo lines.
@@ -423,8 +423,8 @@ Tokaido and Chuo lines.
 		<company>JR East</company>
 		<type>485 Series</type>
 		<name>Hana</name>
-		<author>Icchii</author>
-		<description>This a "Joyful Train" introduced in 1994. It is a remodelled 485 Series super-express in a 6-car formation.
+		<author>Itchy</author>
+		<description>This a "Joyful Train" introduced in 1994. It is a remodelled 485 Series limited express in a 6-car formation.
 Since it has a diesel engine, it can run to electrified and non-electrified stations.
 Together with the "Utage", this train is used as a group train in Tokyo, Kanagawa, and Yamanashi, as well as temporary express on the
 Tokaido and Chuo lines.

@@ -777,7 +777,7 @@ volatile liquid fuel. Pulled by either one or two EF 15 engines.
 	
 	<contribution type="train" id="{FreeTrain-AYASE-Hiro-TrainHensei-K02-05}">
 		<company>JR Freight</company>
-		<type>EF 65 Super Express Colors</type>
+		<type>EF 65 Limited Express Colors</type>
 		<name>Tank Freight Train</name>
 		<author>Hiro Ayase</author>
 		<description>Freight train for carrying gasoline and other

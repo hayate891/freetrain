@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>255 Series Super-Express Plug-in</title>
+	<title>255 Series Limited Express Plug-in</title>
 	<homepage>http://www.geocities.jp/cyber_express_1703d/freetrain/FT_plugin.html</homepage>
 
 
@@ -33,10 +33,10 @@
 		<company>JR East</company>
 		<type>255 Series</type>
 		<name>Boso View Express</name>
-		<author>Icchii</author>
+		<author>Itchy</author>
 		<description>This train was built in 1993 to replace the 183 Series in the Boso region. This train was designed for both
 sightseeing and commuting business men, using a concept called "hybrid mobility". 
-The first JR East Super-Express vehicle to adopt VVVF invertor control, reducing MT ratio in comparison with the conventional super-express car, assuring energy-saving conversion.
+The first JR East Limited Express vehicle to adopt VVVF invertor control, reducing MT ratio in comparison with the conventional limited express car, assuring energy-saving conversion.
 The paint near the door (yellow) represents the flower and the green on the car edge, the blue represents the Pacific Ocean and the white represents the sandy beach seashore.
 It also runs a temporary service on the East Chuo Line when required. It's top speed is 130km/h.</description>
 		<price>100</price>
