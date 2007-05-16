@@ -667,7 +667,7 @@
 	<contribution type="train" id="{0C7E97A3-5F15-4694-92F5-8905846A8305}">
 		<company>JR West</company>
 		<type>165 Series</type>
-		<name>Shonan Colors</name>
+		<name>Shonan Color</name>
 		<author>Min</author>
 		<speed>medium</speed>  
 		<description>急行型電車。現在この色での定期運用はないはず。</description>
@@ -725,7 +725,7 @@ JR Westに転換された後、新快速用電車として登場した。今は�
 	<contribution type="train" id="{74783521-233A-4e40-8CDD-296816AF2D4A}">
 		<company>JR West</company>
 		<type>113 Series</type>
-		<name>Shonan Colors</name>
+		<name>Shonan Color</name>
 		<author>Hima</author>
 		<description>
 JR Westでは主にJR京都線、嵯峨野線などで使用されている。しかし、現在走っているほぼ全ての車両は110km/h運転対応の5000番台である。
