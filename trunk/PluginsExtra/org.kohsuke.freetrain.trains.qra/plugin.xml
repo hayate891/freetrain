@@ -2523,7 +2523,7 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF504}">
-		<name>Hokkaido Colors</name>
+		<name>Hokkaido Color</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
