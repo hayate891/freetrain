@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>小田急・京王・都営10-000系 車両セット</title>
+	<title>Odakyu, Keio: City-Operated 10-000 Series Train Set</title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<!-- 小田急1000/2000形 -->
@@ -13,8 +13,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{7ABFBCE1-B07B-4FA1-8D3B-5917B826E911}">
-		<company>小田急電鉄</company>
-		<type>通勤型1000/2000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>Commuter Type 1000/2000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -39,8 +39,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{ABFAA473-2E1F-41D2-B4A4-2874F74A1CC3}">
-		<company>小田急電鉄</company>
-		<type>通勤型3000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>Commuter Type 3000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -64,8 +64,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{1B9DF948-F938-4085-99ED-FB5A696C6E7D}">
-		<company>小田急電鉄</company>
-		<type>通勤型8000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>Commuter Type 8000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -90,8 +90,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{91EFFA09-946A-4444-B965-486B79D31C66}">
-		<company>小田急電鉄</company>
-		<type>通勤型9000形</type>
+		<company>Odakyu Electric Railway</company>
+		<type>Commuter Type 9000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -114,8 +114,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{27DD5817-E649-4FB1-8C07-3FE597ED699D}">
-		<company>京王電鉄</company>
-		<type>6000系</type>
+		<company>Keio Corporation</company>
+		<type>6000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -138,8 +138,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{E0201566-0AD4-4B50-90F0-D3704107A6B5}">
-		<company>京王電鉄</company>
-		<type>7000系</type>
+		<company>Keio Corporation</company>
+		<type>7000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -162,8 +162,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{4409ACC3-5483-4D7A-A8FF-EE134D5E7FDF}">
-		<company>京王電鉄</company>
-		<type>8000系</type>
+		<company>Keio Corporation</company>
+		<type>8000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -187,8 +187,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{209831C3-14F6-4EF9-8E62-39558ED98FC3}">
-		<company>京王電鉄</company>
-		<type>9000系</type>
+		<company>Keio Corporation</company>
+		<type>9000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -211,8 +211,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{8063B116-42D9-4AD7-906E-7CDF0B07D986}">
-		<company>東京都交通局</company>
-		<type>新宿線10-000系</type>
+		<company>Tokyo Metropolitan Bureau of Transportation</company>
+		<type>Shinjuku Line 10-000 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>
@@ -235,8 +235,8 @@
 	</contribution>
 	
 	<contribution type="train" id="{B06094CB-D763-4829-BAAA-9C59FCFBB690}">
-		<company>東京都交通局</company>
-		<type>新宿線10-270系</type>
+		<company>Tokyo Metropolitan Bureau of Transportation</company>
+		<type>Shinjuku Line 10-270 Series</type>
 		<name></name>
 		<author>Ken</author>
 		<description>

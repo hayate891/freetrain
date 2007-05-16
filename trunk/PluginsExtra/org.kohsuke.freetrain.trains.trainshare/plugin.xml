@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>車両画像共有</title>
-	<author>暇</author>
+	<title>Shared Train Images</title>
+	<author>Hima</author>
 	<homepage>http://suzukams.tripod.co.jp/FreeTrain/index.htm</homepage>
 
 	<contribution type="picture" id="Train100a">

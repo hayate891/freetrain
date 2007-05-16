@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>相模鉄道プラグイン</title>
-	<author>無名の人</author>
+	<title>Sagami Railway Plugin</title>
+	<author>Nanashi-no-Hito</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<!-- 10000系 -->
@@ -12,11 +12,11 @@
     	</contribution>
 
 	<contribution type="train" id="{0405302000}ljkyl5xldjgul32">
- 		<company>相模鉄道</company>
-		 <type>10000系</type>
-		 <name>10000系</name>
+ 		<company>Sagami Railway</company>
+		 <type>10000 Series</type>
+		 <name>10000 Series</name>
 		 <capacity>180</capacity>
-		 <author>相鉄</author>
+		 <author>Sotetsu</author>
 		 <description>相模鉄道の最新型車輌JR東日本のE231を基本にして作られた   </description>
 		 <price>1300</price>
 		 <speed>medium</speed>
@@ -38,11 +38,11 @@
     	</contribution>
 
 	<contribution type="train" id="{0406022228}lja8953jgul32">
- 		<company>相模鉄道</company>
-		 <type>5000系</type>
-		 <name>5000系</name>
+ 		<company>Sagami Railway</company>
+		 <type>5000 Series</type>
+		 <name>5000 Series</name>
 		 <capacity>180</capacity>
-		 <author>ホリデー快速相鉄線</author>
+		 <author>Holiday Rapid Service Sotetsu Line</author>
 		 <description>相模鉄道初の新造車。VVVFインバーター制御に改造された</description>
 		 <price>1500</price>
 		 <speed>medium</speed>

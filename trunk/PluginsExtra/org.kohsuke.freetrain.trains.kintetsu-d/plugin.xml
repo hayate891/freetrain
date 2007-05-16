@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>ては</title>
+	<title>T.Hara</title>
  	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 
 	<contribution type="picture" id="{72DAC5B6-A34C-48A0-8C08-9695EB557322}">
@@ -50,11 +50,11 @@
 	</contribution>
 
 	<contribution type="train" id="{0D5E7A3E-FC17-4196-85B2-106A1C6CBBAE}">
-		<company>近畿日本鉄道</company>
-		<type>12000系</type>
-		<name>スナックカー</name>
+		<author>Kintetsu Corporation</author>
+		<type>12000 Series</type>
+		<name>Snack Car</name>
               <fare>1000</fare> 
-		<author>ては</author>
+		<author>T.Hara</author>
 		<description>
 		</description>
 		<price>1500</price>
@@ -117,10 +117,10 @@
 	</contribution>
 
 	<contribution type="train" id="{93CD3ED6-A252-40C0-B9DF-3DA8762FB1D8}">
-		<company>近畿日本鉄道</company>
-		<type>30000系</type>
-		<name>ビスタカーIII</name>
-		<author>ては</author>
+		<author>Kintetsu Corporation</author>
+		<type>30000 Series</type>
+		<name>Vista Car III</name>
+		<author>T.Hara</author>
 		<description>
 		</description>
 		<price>1500</price>
@@ -177,10 +177,10 @@
 	</contribution>
 
 	<contribution type="train" id="{43F6F375-0F31-41F1-86D0-D367068EAA35}">
-		<company>近畿日本鉄道</company>
-		<type>12400系</type>
-		<name>サニーカー</name>
-		<author>ては</author>
+		<author>Kintetsu Corporation</author>
+		<type>12400 Series</type>
+		<name>Sunny Car</name>
+		<author>T.Hara</author>
 		<description>
 		</description>
 		<price>1100</price>
@@ -217,10 +217,10 @@
 	</contribution>
 
 	<contribution type="train" id="{0845A7E9-7E6D-48C1-BA93-89BB1E5A4F1A}">
-		<company>近畿日本鉄道</company>
-		<type>22000系</type>
-		<name>Ａ　Ｃ　Ｅ</name>
-		<author>ては</author>
+		<author>Kintetsu Corporation</author>
+		<type>22000 Series</type>
+		<name>A C E</name>
+		<author>T.Hara</author>
 		<description>
 		</description>
 		<price>1500</price>

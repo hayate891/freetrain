@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
-	<author>無名の人</author>
+	<author>Nanashi-no-Hito</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<!-- 600形 iwasaki氏-->
@@ -12,10 +12,10 @@
 	</contribution>
 
 	<contribution type="train" id="{600-keikyu-iw200309301107}">
-		<company>京浜急行電鉄</company>
-		<type>600形</type>
-		<name>京急600形</name>
-		<author>iwasakiさん</author>
+		<company>Keihin Electric Express Railway</company>
+		<type>600 Series</type>
+		<name>Keikyu 600 Series</name>
+		<author>iwasaki</author>
 		<description>いろいろな形で使われている電車。
 		</description>
 		<price>100</price>
@@ -37,10 +37,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{8684A084-CCC1-4a80-ACA0-7F8E038C54C8}">
-		<company>京浜急行電鉄</company>
-		<type>快特タイプ</type>
+		<company>Keihin Electric Express Railway</company>
+		<type>Limited Express Type</type>
 		<name></name>
-		<author>無名の人さん</author>
+		<author>Nanashi-no-Hito</author>
 		<description>
 京急の快特タイプ。
 		</description>
@@ -78,10 +78,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{D89A6A3E-2972-441b-8468-24C4289EC5FA}">
-		<company>京浜急行電鉄</company>
-		<type>2100系</type>
+		<company>Keihin Electric Express Railway</company>
+		<type>2100 Series</type>
 		<name></name>
-		<author>暇</author>
+		<author>Hima</author>
 		<description>
 1998年に製造された京急の快特用車両で、居住性の向上を第一にコストおよびメンテナンス低減を図り、外国製品を多々導入している。運転最高速度は時速120kmだが高速化を見込み時速130kmでも均衡できるようになっている。8両固定編成で主に快特に運用されている。
 		</description>
@@ -105,11 +105,11 @@
 	</contribution>
 
 	<contribution type="train" id="{0405301938}ljkyl5374632">
-		<company>京浜急行電鉄</company>
-		 <name>京急1000形</name>
+		<company>Keihin Electric Express Railway</company>
+		 <name>Keikyu 1000 Series</name>
 		 <capacity>170</capacity>
-		 <type>1000形</type>
-		 <author>はてな君</author>
+		 <type>1000 Series</type>
+		 <author>Hatena-kun</author>
 		 <description>京急を代表する形式で、2、4、6、8両の各固定編成を組み普通から快速特急まで幅広く使用されている車両。</description>
 		 <price>1500</price>
 		 <speed>medium</speed>

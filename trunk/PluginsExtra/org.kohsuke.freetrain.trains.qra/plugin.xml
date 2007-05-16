@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-     <title>車両ぷらぐいん</title>
+     <title>Train Plugin</title>
      <author>qra_ra</author>
      <homepage></homepage>
 
@@ -224,13 +224,13 @@
 	
 	
 	<contribution type="train" id="{001D31EE-F3A2-4CD6-A820-54200A6EF537}">
-		<name>国鉄特急色</name>
+		<name>JNR Limited Express Colors</name>
 		<price>1</price>
               <fare>1000</fare> 
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>183系0番台</type>
-		<company>JR東日本</company>
+		<type>183 Series 0 Model</type>
+		<company>JR East</company>
 		<description>内房線，外房線の電化と、総武線の東京地下駅へ乗入れるため製造された車両。</description>
 				
 		<composition>
@@ -454,13 +454,13 @@
 	
 	
 	<contribution type="train" id="{002D31EE-F3A2-4CD6-A820-54200A6EF537}">
-		<name>国鉄特急色</name>
+		<name>JNR Limited Express Colors</name>
 		<price>1</price>
               <fare>1050</fare> 
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>381系</type>
-		<company>JR東海</company>
+		<type>381 Series</type>
+		<company>JR Central</company>
 		<description>カーブの多い区間での到達時間短縮を図るために製造された自然振り子式電車。
 重心を下げるためクーラーが床下に搭載されており、屋根上が非常にすっきりしている。
 「しなの」「くろしお」「やくも」に投入された。</description>
@@ -475,13 +475,13 @@
 	</contribution>
 
 	<contribution type="train" id="{002D31EF-F3A2-4CD6-A820-54200A6EF537}">
-		<name>国鉄特急色</name>
+		<name>JNR Limited Express Colors</name>
 		<price>1</price>
               <fare>1050</fare> 
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>381系</type>
-		<company>JR西日本</company>
+		<type>381 Series</type>
+		<company>JR West</company>
 		<description>カーブの多い区間での到達時間短縮を図るために製造された自然振り子式電車。
 重心を下げるためクーラーが床下に搭載されており、屋根上が非常にすっきりしている。
 「しなの」「くろしお」「やくも」に投入された。</description>
@@ -727,13 +727,13 @@
 	
 	
 	<contribution type="train" id="{003D31EE-F3A2-4CD6-A820-54200A6EF537}">
-		<name>くろしお色</name>
+		<name>Kuroshio Colors</name>
 		<price>1</price>
               <fare>1050</fare> 
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>381系</type>
-		<company>JR西日本</company>
+		<type>381 Series</type>
+		<company>JR West</company>
 		<description>「くろしお」用の381系は、283系「オーシャンアロー」にあわせた塗色に変更されている。</description>
 		
 
@@ -969,13 +969,13 @@
 	
 	
 	<contribution type="train" id="{004D31EE-F3A2-4CD6-A820-54200A6EF537}">
-		<name>やくも色</name>
+		<name>Yakumo Colors</name>
 		<price>1</price>
               <fare>1050</fare> 
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>381系</type>
-		<company>JR西日本</company>
+		<type>381 Series</type>
+		<company>JR West</company>
 		<description>「やくも」用の381系グレードアップ車。伯備線の陰陽連絡特急である「やくも」は、「スーパーやくも」を含め本数は多いが、中には3両編成の運転もある。</description>
 		
 
@@ -1233,13 +1233,13 @@
 	
 	
 	<contribution type="train" id="{005D31EE-F3A2-4CD6-A820-54200A6EF537}">
-		<name>あさま色</name>
+		<name>Asama Colors</name>
 		<price>1</price>
 		<speed>fast</speed>
               <fare>1000</fare> 
 		<author>qra_ra</author>
-		<type>189系</type>
-		<company>JR東日本</company>
+		<type>189 Series</type>
+		<company>JR East</company>
 		<description>新幹線になる前の「あさま」で使用されていた車両。189系は碓氷峠で機関車との協調運転が可能な形式である。</description>
 		
 		<composition>
@@ -1481,8 +1481,8 @@
               <fare>1000</fare> 
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>183系800番台</type>
-		<company>JR西日本</company>
+		<type>183 Series 800 Model</type>
+		<company>JR West</company>
 		<description>京都、大阪方面と、近畿北部を結ぶ、「北近畿」等に使われている車両。
 もともとは485系で交流機器を撤去し183系になった。</description>
 		
@@ -1746,13 +1746,13 @@
 	
 	
 	<contribution type="train" id="{007D31EE-F3A2-4CD6-A820-54200A6EF537}">
-		<name>あずさ色</name>
+		<name>Azusa Colors</name>
 		<price>1</price>
               <fare>1000</fare> 
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>183系1000番台</type>
-		<company>JR東日本</company>
+		<type>183 Series 1000 Model</type>
+		<company>JR East</company>
 		<description></description>
 				
 		<composition>
@@ -1790,9 +1790,9 @@
      </contribution>
 
      <contribution type="train" id="{FBEAD280-1069-11D7-AA41-000740323A8D}">
-          <company>JR北海道</company>
-          <type>キハ183-0番台</type>
-          <name>（スラントノーズタイプ）</name>
+          <company>JR Hokkaido</company>
+          <type>KIHA 183-0 Model</type>
+          <name>(Sliding Nose Type)</name>
           <author>qra_ra</author>
           <description>
 北海道用として製造された特急型気動車。
@@ -1841,13 +1841,13 @@
      </contribution>
 
      <contribution type="train" id="{FBEAD281-1069-11D7-AA41-000740323A8D}">
-         <name>南風等</name>
+         <name>Nampu Class</name>
          <fare>1000</fare> 
          <price>1</price> 
          <speed>fast</speed> 
          <author>qra_ra</author> 
-         <type>2000系</type> 
-         <company>JR四国</company> 
+         <type>2000 Series</type> 
+         <company>JR Shikoku</company> 
          <description>
 世界初の振子式気動車であり、日本初の制御付振子車両。
 この車両の開発で完成された技術が各地の列車の高速化に貢献している。
@@ -1884,9 +1884,9 @@
      </contribution>
 
      <contribution type="train" id="{FBEAD282-1069-11D7-AA41-000740323A8D}">
-           <company>JR西日本</company>
-           <type>285系</type>
-           <name>サンライズエクスプレス</name>
+           <company>JR West</company>
+           <type>285 Series</type>
+           <name>Sunrise Express</name>
            <author>qra_ra</author>
            <description>
 1998年、〈出雲〉と〈瀬戸〉に登場した寝台特急電車。
@@ -1903,8 +1903,8 @@
      </contribution>
 
      <contribution type="train" id="{FBEAD283-1069-11D7-AA41-000740323A8D}">
-           <company>JR東海</company>
-           <type>285系</type>
+           <company>JR Central</company>
+           <type>285 Series</type>
            <name>サンライズエクスプレス</name>
            <author>qra_ra</author>
            <description>
@@ -1946,8 +1946,8 @@
      </contribution>
 
      <contribution type="train" id="{FBEAD284-1069-11D7-AA41-000740323A8D}">
-           <company>JR西日本</company>
-           <type>300系</type>
+           <company>JR West</company>
+           <type>300 Series</type>
            <name></name>
            <author>qra_ra</author>
            <description>
@@ -1965,8 +1965,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD285-1069-11D7-AA41-000740323A8D}">
-           <company>JR東海</company>
-           <type>300系</type>
+           <company>JR Central</company>
+           <type>300 Series</type>
            <name></name>
            <author>qra_ra</author>
            <description>
@@ -2008,9 +2008,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD286-1069-11D7-AA41-000740323A8D}">
-           <company>JR東日本</company>
-           <type>253系</type>
-           <name>成田エクスプレス</name>
+           <company>JR East</company>
+           <type>253 Series</type>
+           <name>Narita Express</name>
            <author>qra_ra</author>
            <description>
 成田空港と都心を結ぶ特急〈成田エクスプレス〉専用車両。
@@ -2098,9 +2098,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 
      <contribution type="train" id="{FBEAD293-1069-11D7-AA41-000740323A8D}">
-           <company>JR北海道</company>
-           <type>キハ40形</type>
-           <name>首都圏色</name>
+           <company>JR Hokkaido</company>
+           <type>KIHA 40 Series</type>
+           <name>Metropolitan Area Colors</name>
            <author>qra_ra</author>
            <description>
 老朽車両置き換えのため昭和５２年に登場した近郊形気動車。
@@ -2114,9 +2114,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD288-1069-11D7-AA41-000740323A8D}">
-           <company>JR東日本</company>
-           <type>キハ40形</type>
-           <name>首都圏色</name>
+           <company>JR East</company>
+           <type>KIHA 40 Series</type>
+           <name>Metropolitan Area Colors</name>
            <author>qra_ra</author>
            <description>
 老朽車両置き換えのため昭和５２年に登場した近郊形気動車。
@@ -2130,9 +2130,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD289-1069-11D7-AA41-000740323A8D}">
-           <company>JR東海</company>
-           <type>キハ40形</type>
-           <name>首都圏色</name>
+           <company>JR Central</company>
+           <type>KIHA 40 Series</type>
+           <name>Metropolitan Area Colors</name>
            <author>qra_ra</author>
            <description>
 老朽車両置き換えのため昭和５２年に登場した近郊形気動車。
@@ -2146,9 +2146,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD290-1069-11D7-AA41-000740323A8D}">
-           <company>JR西日本</company>
-           <type>キハ40形</type>
-           <name>首都圏色</name>
+           <company>JR West</company>
+           <type>KIHA 40 Series</type>
+           <name>Metropolitan Area Colors</name>
            <author>qra_ra</author>
            <description>
 老朽車両置き換えのため昭和５２年に登場した近郊形気動車。
@@ -2162,9 +2162,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD291-1069-11D7-AA41-000740323A8D}">
-           <company>JR四国</company>
-           <type>キハ40形</type>
-           <name>首都圏色</name>
+           <company>JR Shikoku</company>
+           <type>KIHA 40 Series</type>
+           <name>Metropolitan Area Colors</name>
            <author>qra_ra</author>
            <description>
 老朽車両置き換えのため昭和５２年に登場した近郊形気動車。
@@ -2178,9 +2178,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD292-1069-11D7-AA41-000740323A8D}">
-           <company>JR九州</company>
-           <type>キハ40形</type>
-           <name>首都圏色</name>
+           <company>JR Kyushu</company>
+           <type>KIHA 40 Series</type>
+           <name>Metropolitan Area Colors</name>
            <author>qra_ra</author>
            <description>
 老朽車両置き換えのため昭和５２年に登場した近郊形気動車。
@@ -2259,12 +2259,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF500}">
-		<name>宗谷、サロベツ</name>
+		<name>Soya, Sarobetsu</name>
 		<price>1</price>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>キハ400形</type>
-		<company>JR北海道</company>
+		<type>KIHA 400 Series</type>
+		<company>JR Hokkaido</company>
 		<description>宗谷線の急行用にキハ40形を改造した形式。
 「宗谷」「サロベツ」「利尻」に使用されていたが、すべて特急に格上げされ、
 その際この形式での運転も終了した。</description>
@@ -2324,12 +2324,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF501}">
-		<name>盛岡色（ワンマン対応）</name>
+		<name>Morioka Colors (conductorless)</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ40形</type>
-		<company>JR東日本</company>
+		<type>KIHA 40 Series</type>
+		<company>JR East</company>
 		<description>ワンマン対応車両の盛岡色です。「赤鬼」と呼ばれています。</description>
 		
 		<composition>		
@@ -2386,12 +2386,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF502}">
-		<name>仙台色</name>
+		<name>Sendai Colors</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ40形</type>
-		<company>JR東日本</company>
+		<type>KIHA 40 Series</type>
+		<company>JR East</company>
 		<description></description>
 		
 		<composition>		
@@ -2457,12 +2457,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF503}">
-		<name>盛岡色</name>
+		<name>Morioka Colors</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ40形</type>
-		<company>JR東日本</company>
+		<type>KIHA 40 Series</type>
+		<company>JR East</company>
 		<description></description>
 		
 		<composition>		
@@ -2523,12 +2523,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF504}">
-		<name>北海道色</name>
+		<name>Hokkaido Colors</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ40形</type>
-		<company>JR北海道</company>
+		<type>KIHA 40 Series</type>
+		<company>JR Hokkaido</company>
 		<description>キハ40の北海道色です。全道の非電化区間で活躍しています。</description>
 		
 		<composition>		
@@ -2596,12 +2596,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF506}">
-		<name>広島色</name>
+		<name>Hiroshima Colors</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ40形</type>
-		<company>JR西日本</company>
+		<type>KIHA 40 Series</type>
+		<company>JR West</company>
 		<description></description>
 		
 		<composition>		
@@ -2661,12 +2661,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF507}">
-		<name>四国色</name>
+		<name>Shikoku Colors</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ40形</type>
-		<company>JR四国</company>
+		<type>KIHA 40 Series</type>
+		<company>JR Shikoku</company>
 		<description></description>
 		
 		<composition>		
@@ -2724,12 +2724,12 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{15ED3147-F3A2-4C96-A620-54CD0A6EF508}">
-		<name>九州色</name>
+		<name>Kyushu Colors</name>
 		<price>1</price>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ40形</type>
-		<company>JR九州</company>
+		<type>KIHA 40 Series</type>
+		<company>JR Kyushu</company>
 		<description>九州色です。現在のJR九州の流れとは違って、落ち着いた塗装です。</description>
 		
 		<composition>		
@@ -2860,9 +2860,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD294-1069-11D7-AA41-000740323A8D}">
-           <company>北越急行</company>
-           <type>681系</type>
-           <name>スノーラビットエクスプレス</name>
+           <company>Hokuetsu Express</company>
+           <type>681 Series</type>
+           <name>Snow Rabbit Express</name>
            <author>qra_ra</author>
            <description>（実車は9両編成です。22両以上は設定できません。）
            </description>
@@ -3055,9 +3055,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAE294-1069-11D7-AA41-000740323A8D}">
-           <company>JR西日本</company>
-           <type>681系</type>
-           <name>サンダーバード、はくたか</name>
+           <company>JR West</company>
+           <type>681 Series</type>
+           <name>Thunderbird, Hakutaka</name>
            <author>qra_ra</author>
            <description>（22両以上は設定できません。）
            </description>
@@ -3263,9 +3263,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>8000系タイプ</type>
+		<type>8000 Series Type</type>
 　　　　　　　　<name></name>
-		<company>阪急電鉄</company>
+		<company>Hankyu Corporation</company>
 		<description>フロントが額縁タイプの車両です。神戸・宝塚線用の8000系と京都線用の8300系があります。</description>
 		
 		<composition>
@@ -3389,9 +3389,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>7000系タイプ</type>
+		<type>7000 Series Type</type>
 　　　　　　　　<name></name>
-		<company>阪急電鉄</company>
+		<company>Hankyu Corporation</company>
 		<description>説明募集中</description>
 		
 		<composition>
@@ -3520,9 +3520,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>5000系更新車タイプ</type>
+		<type>5000 Series Refurbished Type</type>
 　　　　　　　　<name></name>
-		<company>阪急電鉄</company>
+		<company>Hankyu Corporation</company>
 		<description>説明募集中</description>
 		
 		<composition>
@@ -3697,9 +3697,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>6300系</type>
-　　　　　　　　<name>京都線特急</name>
-		<company>阪急電鉄</company>
+		<type>6300 Series</type>
+　　　　　　　　<name>Kyoto Line Limited Express</name>
+		<company>Hankyu Corporation</company>
 		<description>京都線の特急、快速急行を中心に使用されている車両。両開き二扉間に転換クロスシートが並ぶ。昭和59年デビュー。</description>
 		
 		<composition>
@@ -3877,9 +3877,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>3000系タイプ</type>
+		<type>3000 Series Type</type>
 　　　　　　　　<name></name>
-		<company>阪急電鉄</company>
+		<company>Hankyu Corporation</company>
 		<description></description>
 		
 		<composition>
@@ -4018,9 +4018,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>2000系タイプ</type>
+		<type>2000 Series Type</type>
 　　　　　　　　<name></name>
-		<company>阪急電鉄</company>
+		<company>Hankyu Corporation</company>
 		<description>フロントガラス下にライトがないタイプです。</description>
 		
 		<composition>
@@ -4171,9 +4171,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>3100系</type>
+		<type>3100 Series</type>
 　　　　　　　　<name></name>
-		<company>能勢電鉄</company>
+		<company>Nose Electric Railway</company>
 		<description>実車は４両編成です。</description>
 		
 		<composition>
@@ -4305,9 +4305,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 		<price>1</price>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>1700系</type>
+		<type>1700 Series</type>
 　　　　　　　　<name></name>
-		<company>能勢電鉄</company>
+		<company>Nose Electric Railway</company>
 		<description>実車は４両編成です。</description>
 		
 		<composition>
@@ -4457,8 +4457,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD2A2-1069-11D7-AA41-000740323A8D}">
-           <company>阪神電気鉄道</company>
-           <type>8000系</type>
+           <company>Hanshin Electric Railway</company>
+           <type>8000 Series</type>
            <name></name>
            <author>qra_ra</author>
            <description>
@@ -4589,8 +4589,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD2A3-1069-11D7-AA41-000740323A8D}">
-           <company>阪神電気鉄道</company>
-           <type>5500系</type>
+           <company>Hanshin Electric Railway</company>
+           <type>5500 Series</type>
            <name></name>
            <author>qra_ra</author>
            <description>
@@ -4736,8 +4736,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD2A4-1069-11D7-AA41-000740323A8D}">
-           <company>阪神電気鉄道</company>
-           <type>9000系</type>
+           <company>Hanshin Electric Railway</company>
+           <type>9000 Series</type>
            <name></name>
            <author>qra_ra</author>
            <description>
@@ -4808,10 +4808,10 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{FBEAD2A5-1069-11D7-AA41-000740323A8D}">
-           <company>阪神電気鉄道</company>
-           <type>9300系</type>
+           <company>Hanshin Electric Railway</company>
+           <type>9300 Series</type>
            <name></name>
-           <author>masashiさん  (車体:qra_ra)</author>
+           <author>masashi (bodies by qra_ra)</author>
            <description>
 主に直通特急に使われる車両
 区間は
@@ -4867,9 +4867,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{ABE582A2-1069-11D7-AA41-697740001A8D}">
-           <company>帝都高速度交通営団</company>
-           <type>6000系</type>
-           <name>千代田線</name>
+           <company>Teito Rapid Transit Authority</company>
+           <type>6000 Series</type>
+           <name>Chiyoda Line</name>
            <author>qra_ra</author>
            <description>
 
@@ -4941,9 +4941,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
      </contribution>
 
      <contribution type="train" id="{ABE582A2-1069-11D7-AA41-697740002A8D}">
-           <company>帝都高速度交通営団</company>
-           <type>7000系</type>
-           <name>有楽町線</name>
+           <company>Teito Rapid Transit Authority</company>
+           <type>7000 Series</type>
+           <name>Yurakucho Line</name>
            <author>qra_ra</author>
            <description>
 
@@ -5030,8 +5030,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>500</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>211系</type>
-		<company>JR東日本</company>
+		<type>211 Series</type>
+		<company>JR East</company>
 		<description>（7両以上でグリーン車が連結されます。23両以上は設定できません。）
 </description>
 		
@@ -5158,8 +5158,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>450</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>415系1500番台</type>
-		<company>JR東日本</company>
+		<type>415 Series 1500 Model</type>
+		<company>JR East</company>
 		<description></description>
 		
 		<composition>
@@ -5270,8 +5270,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>470</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>6000系</type>
-		<company>JR四国</company>
+		<type>6000 Series</type>
+		<company>JR Shikoku</company>
 		<description></description>
 		
 		<composition>
@@ -5343,8 +5343,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>460</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>719系</type>
-		<company>JR東日本</company>
+		<type>719 Series</type>
+		<company>JR East</company>
 		<description></description>
 		
 		
@@ -5466,8 +5466,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>450</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>415系1500番台</type>
-		<company>JR九州</company>
+		<type>415 Series 1500 Model</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		
 		<composition>
@@ -5518,8 +5518,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>450</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>211系5000番台</type>
-		<company>JR東海</company>
+		<type>211系5000 Model</type>
+		<company>JR Central</company>
 		<description></description>
 		
 		<composition>
@@ -5579,8 +5579,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>450</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>213系5000番台</type>
-		<company>JR東海</company>
+		<type>213 Series 5000 Model</type>
+		<company>JR Central</company>
 		<description></description>
 		
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
@@ -5718,8 +5718,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>580</fare>
 		<speed>fast</speed>
 		<author>qra_ra</author>
-		<type>311系</type>
-		<company>JR東海</company>
+		<type>311 Series</type>
+		<company>JR Central</company>
 		<description></description>
 		
 		<composition>
@@ -5863,8 +5863,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>450</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>キハ200形</type>
-		<company>JR九州</company>
+		<type>KIHA 200 Series</type>
+		<company>JR Kyushu</company>
 		<description></description>
 		
 		
@@ -5938,8 +5938,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>220</fare>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>9200形</type>
-		<company>岡山電気軌道</company>
+		<type>9200 Series</type>
+		<company>Okayama Electric Tramway</company>
 		<description>ドイツの技術を採用し100%低床化を実現した、超低床路面電車。
 特殊な構造の他にも、車内外のデザインや、市民グループが大きく関った導入経緯も、この車両の特徴である。
 公募により「MOMO」の愛称が付けられた。
@@ -5987,13 +5987,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 
 	<contribution type="train" id="{BDEFADEA-5581-8000-75CF-885D7EDE8000}">
-		<name>軌道線</name>
+		<name>Tramline</name>
 		<price>1</price>
                 <fare>200</fare>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>デ8000形</type>
-		<company>富山地方鉄道</company>
+		<type>DE 8000 Series</type>
+		<company>Toyama Chiho Railway</company>
 		<description>平成5年、軌道線の非冷房車を置き換えるため5両新造された、VVVFインバータ制御車両。</description>
 		
 		<composition>
@@ -6061,13 +6061,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{001D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>山手線</name>
+		<name>Yamanote Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR東日本</company>
+		<type>205 Series</type>
+		<company>JR East</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -6153,13 +6153,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{002D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>南武線</name>
+		<name>Nambu Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR東日本</company>
+		<type>205 Series</type>
+		<company>JR East</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -6283,13 +6283,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{003D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>総武線</name>
+		<name>Sobu Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>201系</type>
-		<company>JR東日本</company>
+		<type>201 Series</type>
+		<company>JR East</company>
 		<description>103系の後継車両として開発された通勤型電車。様々な新機軸が積極的に取り入れられ、大幅な省エネルギー化が図られたが、その結果、製造コストが高くつくことになった。</description>
 		
 		<composition>
@@ -6419,13 +6419,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{004D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>中央線</name>
+		<name>Chuo Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>201系</type>
-		<company>JR東日本</company>
+		<type>201 Series</type>
+		<company>JR East</company>
 		<description>103系の後継車両として開発された通勤型電車。様々な新機軸が積極的に取り入れられ、大幅な省エネルギー化が図られたが、その結果、製造コストが高くつくことになった。</description>
 		
 		<composition>
@@ -6548,8 +6548,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>201系</type>
-		<company>JR西日本</company>
+		<type>201 Series</type>
+		<company>JR West</company>
 		<description>103系の後継車両として開発された通勤型電車。様々な新機軸が積極的に取り入れられ、大幅な省エネルギー化が図られたが、その結果、製造コストが高くつくことになった。</description>
 		
 		<composition>
@@ -6561,13 +6561,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 
 	
 	<contribution type="train" id="{105D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>京葉線</name>
+		<name>Keiyo Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>201系</type>
-		<company>JR東日本</company>
+		<type>201 Series</type>
+		<company>JR East</company>
 		<description>103系の後継車両として開発された通勤型電車。様々な新機軸が積極的に取り入れられ、大幅な省エネルギー化が図られたが、その結果、製造コストが高くつくことになった。</description>
 		
 		<composition>
@@ -6647,8 +6647,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR西日本</company>
+		<type>205 Series</type>
+		<company>JR West</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -6659,13 +6659,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 	
 	<contribution type="train" id="{106D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>京浜東北線</name>
+		<name>Keihin-Tohoku Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR東日本</company>
+		<type>205 Series</type>
+		<company>JR East</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -6737,13 +6737,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{007D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>横浜線</name>
+		<name>Yokohama Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR東日本</company>
+		<type>205 Series</type>
+		<company>JR East</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -6828,13 +6828,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{008D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>総武線</name>
+		<name>Sobu Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR東日本</company>
+		<type>205 Series</type>
+		<company>JR East</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -6920,13 +6920,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{009D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>埼京線</name>
+		<name>Saikyo Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR東日本</company>
+		<type>205 Series</type>
+		<company>JR East</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -7011,13 +7011,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	
 	
 	<contribution type="train" id="{010D31EE-F3A2-4CD6-A820-542DEA6E6537}">
-		<name>武蔵野線</name>
+		<name>Musashino Line</name>
 		<price>1</price>
                 <fare>360</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>205系</type>
-		<company>JR東日本</company>
+		<type>205 Series</type>
+		<company>JR East</company>
 		<description>製造費を抑えつつ省エネルギー化を目指した通勤型電車。ステンレス車体やボルスタレス台車の採用により軽量化が図られている。</description>
 		
 		<composition>
@@ -7273,13 +7273,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 		
 	<contribution type="train" id="{ADF87135-8F9C-1C24-9B45-04F846A0479D}">
-		<name>北斗星</name>
+		<name>Hokutosei</name>
 		<price>1</price>
                 <fare>1850</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>EF81+24系</type>
-		<company>JR東日本</company>
+		<type>EF81+24 Series</type>
+		<company>JR East</company>
 		<description>1988年3月、青函トンネルの開通により、上野～札幌間に設定された寝台特急。個室寝台が設けられたほか、食堂車やロビーカーも連結されている。上野～青森間は、交流・直流兼用のEF81が牽引する。</description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
 		<config>
@@ -7393,9 +7393,9 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 
      <contribution type="train" id="{DC183AAA-1069-11D7-AA41-000740323A8D}">
-          <company>JR北海道</company>
-          <type>キハ183-0番台+スハネフ14</type>
-          <name>オホーツク9,10号</name>
+          <company>JR Hokkaido</company>
+          <type>KIHA 183-0 Model + SUHANEFU 14</type>
+          <name>Okhotsk 9,10</name>
           <author>qra_ra</author>
           <description>夜行特急オホーツク9,10号にはキハ183系気動車に挟まれて、スハネフ14形寝台客車が連結されている。
          </description>
@@ -7507,13 +7507,13 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
 	</contribution>
 
 	<contribution type="train" id="{15ED3147-F3B2-4C96-A620-54CD0A6EF500}">
-		<name>利尻</name>
+		<name>Rishiri</name>
 		<price>1</price>
               <fare>700</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>キハ400形+スハネフ14</type>
-		<company>JR北海道</company>
+		<type>KIHA 400 Series + SUHANEFU 14</type>
+		<company>JR Hokkaido</company>
 		<description>宗谷線の急行にキハ400形が使用される際、夜行列車の「利尻」にはスハネフ14形寝台客車が編成中間に連結された。</description>
 		
 
@@ -7643,8 +7643,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>380</fare>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ58系</type>
-		<company>旧日本国有鉄道</company>
+		<type>KIHA 58 Series</type>
+		<company>Japanese National Railways</company>
 		<description>国鉄の急行型気動車。大量に生産されローカル輸送にも広く活躍した。全国の非電化区間で見る事が出来たが、老朽化で数が減っている。</description>
 		<class name="freetrain.contributions.train.PatternTrainImpl"/>
 		<config>
@@ -7680,8 +7680,8 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>380</fare>
 		<speed>slow</speed>
 		<author>qra_ra</author>
-		<type>キハ58系+キハ65系</type>
-		<company>旧日本国有鉄道</company>
+		<type>KIHA 58 Series + KIHA 65 Series</type>
+		<company>Japanese National Railways</company>
 		<description>キハ65形はキハ181系の流れをくむ大出力エンジン１台と冷房用の電源を搭載している。キハ58系の編成にこの車両を組み込むことで山岳路線など大出力を必要とする列車の冷房化が行われた。
 
 </description>
