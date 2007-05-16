@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<author>しかしか</author>
+	<author>Shikashika</author>
  	<homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-	<title>一畑電気鉄道</title>
+	<title>Ichibata Electric Railway</title>
 
 	<!-- イメージ画像定義 --> 
 	<!-- 一畑電気鉄道 ED22 -->
@@ -45,10 +45,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-ED22}">
-		<company>一畑電気鉄道</company>
+		<company>Ichibata Electric Railway</company>
 		<type>ED22</type>
-		<name>荷物列車</name>
-		<author>しかしか</author>
+		<name>Baggage Train</name>
+		<author>Shikashika</author>
 		<description>昭和02年ボールドウイン・ウェスチングハウス社製造の電気機関車ED22です。元信濃鉄道1号で、国鉄ED221、西武鉄道ED1、近江鉄道ED1と変遷して昭和30年ED221に改番、昭和35年一畑電鉄に入線しました。一畑電鉄の貨物営業廃止以後、昭和49年に弘南鉄道に譲渡されています。
 		</description>
 		<price>100</price>
@@ -98,10 +98,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-dehani50}">
-		<company>一畑電気鉄道</company>
-		<type>デハニ50形</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHANI 50 Series</type>
 		<name></name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>昭和03年日本車輌製造の荷物合造車。荷物輸送の減少と共に、デハニ51は昭和26年にデハ21に、デハニ54は昭和42年にデハ11に改造され、デハニ52は定員36名のお座敷列車デハ52に改造されています。3扉全て手動扉です。ラッシュ時の増強や、無蓋貨車を引いてバラスト散布作業などに使用されたりしています。
 		</description>
 		<price>100</price>
@@ -116,10 +116,10 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha50}">
-		<company>一畑電気鉄道</company>
-		<type>デハ  50形</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 50 Series</type>
 		<name></name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>昭和03年日本車輌製造の荷物合造車デハニ52を、お座敷列車に改造したものです。畳は難燃性のものを使用しています。
 		</description>
 		<price>100</price>
@@ -148,10 +148,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha1}">
-		<company>一畑電気鉄道</company>
-		<type>デハ   1形</type>
-		<name>大社線</name>
-		<author>しかしか</author>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 1 Series</type>
+		<name>Daisha Line</name>
+		<author>Shikashika</author>
 		<description>昭和02年日本車輌製造。昭和53年にアルナ工機でワンマン化の改造がされ、大社線専用車となりました。
 		</description>
 		<price>100</price>
@@ -196,10 +196,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha10}">
-		<company>一畑電気鉄道</company>
-		<type>デハ  10形+クハ110形</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 10 Series + KUHA 110 Series</type>
 		<name></name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>デハ10形とクハ110形の編成。デハ11は、昭和05年日本車輌製造のデハニ54を昭和42年に改造して製造されました。クハ111は、昭和03年日本車輌製造の制御車クハ101を昭和23年に電動車デハ7に改造し、それを昭和37年に再び制御車として改造して製造されました。
 		</description>
 		<price>100</price>
@@ -245,10 +245,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha20}">
-		<company>一畑電気鉄道</company>
-		<type>デハ  20形+クハ100形</type>
-		<name>松江線</name>
-		<author>しかしか</author>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 20 Series + KUHA 100 Series</type>
+		<name>Matsue Line</name>
+		<author>Shikashika</author>
 		<description>デハ20形とクハ100形の編成。デハ20形は、日本車輌製造のデハニ50形やデハ1形を、長距離輸送用に2扉セミクロスシートにナニワ工機で改造して製造されました。クハ100形は、昭和15年木南車両製造の武蔵野鉄道クハ5860形(西部1235～)を昭和33年～34年に移籍し、昭和37年には両運転台だったものを片運転台に改造してスペースを確保し、車椅子にも対応しています。どちらの車両もドアは手動です。
 		</description>
 		<price>100</price>
@@ -279,10 +279,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha60}">
-		<company>一畑電気鉄道</company>
-		<type>デハ  60系</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 60 Series</type>
 		<name></name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>昭和36年西武所沢車輌工場製造の元西武鉄道クモハ551系です。クモハ552に551の、554に553の運転台を搭載して両運転台の車両に改造して、昭和61年に入線しました。当初はデハ92と93でしたが、改番されました。
 		</description>
 		<price>100</price>
@@ -327,10 +327,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha70}">
-		<company>一畑電気鉄道</company>
-		<type>デハ  70系+クハ170系</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 70 Series + KUHA 170 Series</type>
 		<name>松江線</name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>デハ70系とクハ170系の編成。デハ70系は、元武蔵野鉄道の制御車のクハ5570系で、昭和22年に電装化され西武モハ300系(クモハ300系)になり、昭和39年に西武所沢車両工場で改造して入線しました。クハ170系は、同じく元武蔵野鉄道クハ5570系で、電装化されていた西武モハ300系(クモハ300系)を電装解除して、再び制御車に改造されました。
 		</description>
 		<price>100</price>
@@ -376,10 +376,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha80}">
-		<company>一畑電気鉄道</company>
-		<type>デハ  80系+クハ180系</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 80 Series + KUHA 180 Series</type>
 		<name></name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>昭和34年西武所沢車輌工場製造の元西武鉄道451系です。昭和57年に入線しました。
 		</description>
 		<price>100</price>
@@ -428,10 +428,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha90}">
-		<company>一畑電気鉄道</company>
-		<type>デハ  90系+クハ190系</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 90 Series + KUHA 190 Series</type>
 		<name></name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>昭和37年西武所沢車輌工場製造の元西武鉄道551系です。昭和60年に入線しました。
 		</description>
 		<price>100</price>
@@ -504,10 +504,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha2101}">
-		<company>一畑電気鉄道</company>
-		<type>デハ2100+2110系</type>
-		<name>3扉</name>
-		<author>しかしか</author>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 2100+2110 Series</type>
+		<name>3-door</name>
+		<author>Shikashika</author>
 		<description>昭和43年日本車輌製造の元京王電鉄5000系です。平成06年に入線しました。
 		</description>
 		<price>100</price>
@@ -521,10 +521,10 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha2103}">
-		<company>一畑電気鉄道</company>
-		<type>デハ2100+2110系</type>
-		<name>2扉</name>
-		<author>しかしか</author>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 2100+2110 Series</type>
+		<name>2-door</name>
+		<author>Shikashika</author>
 		<description>昭和43年日本車輌製造の元京王電鉄5000系です。平成07年に入線しました。2扉に改造され座席定員が増えています。
 		</description>
 		<price>100</price>
@@ -570,10 +570,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha3010}">
-		<company>一畑電気鉄道</company>
-		<type>デハ3000+3010系</type>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 3000+3010 Series</type>
 		<name></name>
-		<author>しかしか</author>
+		<author>Shikashika</author>
 		<description>昭和34年帝国車輌製造の元南海電鉄21000系です。平成08年に入線しました。
 		</description>
 		<price>100</price>
@@ -619,10 +619,10 @@
 	</contribution>
 	<!-- 旅客列車の定義 -->
 	<contribution type="train" id="{FreeTrain-Streetcar-Tramcar-Train-deha5000}">
-		<company>一畑電気鉄道</company>
-		<type>デハ5000+5100系</type>
-		<name>出雲大社号</name>
-		<author>しかしか</author>
+		<company>Ichibata Electric Railway</company>
+		<type>DEHA 5000+5100 Series</type>
+		<name>Izumo Oyashiro</name>
+		<author>Shikashika</author>
 		<description>昭和42年日本車輌製造の元京王電鉄5000系です。平成10年に入線しました。
 		</description>
 		<price>100</price>
