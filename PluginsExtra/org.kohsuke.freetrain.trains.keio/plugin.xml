@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -16,10 +16,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{2B3E6067-B2C3-43c5-BA0E-236DC69533CF}">
-		<company>京王電鉄</company>
-		<type>通勤車タイプ</type>
+		<company>Keio Corporation</company>
+		<type>Commuter Type</type>
 		<name></name>
-		<author>無名の人さん</author>
+		<author>Nanashi-no-Hito</author>
 		<description>
 京王電鉄の通勤型電車。
 		</description>

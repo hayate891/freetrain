@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>山陽電気鉄道 車両キット</title>
+	<title>Sanyo Electric Railway Train Kit</title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 
 	<!--  -->
@@ -11,10 +11,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{BEF87D95-5D62-4374-A5D2-8613E3C4F6DC}">
-		<company>山陽電気鉄道</company>
-		<type>3000系</type>
-		<name>普通</name>
-		<author>masashiさん</author>
+		<company>Sanyo Electric Railway</company>
+		<type>3000 Series</type>
+		<name>Local</name>
+		<author>masashi</author>
 		<description>主に普通に使われる車両。
 ごくまれに特急として使われる。
 区間は
@@ -42,10 +42,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{1F80A2E8-1A5D-4a8d-8830-CB89AC3B0AA6}">
-		<company>山陽電気鉄道</company>
-		<type>5000系</type>
-		<name>特急</name>
-		<author>masashiさん</author>
+		<company>Sanyo Electric Railway</company>
+		<type>5000 Series</type>
+		<name>Limited Express</name>
+		<author>masashi</author>
 		<description>主に特急、直通特急に使われる車両。
 区間は
 特急

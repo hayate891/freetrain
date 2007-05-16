@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>ては</title>
+	<title>T.Hara</title>
  	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 
 	<!-- トワイライト中間車両 -->
@@ -31,10 +31,10 @@
 	</contribution>
 
 	<contribution type="train" id="{4161129C-2C3C-493A-B703-16825455D353}">
-		<company>JR西日本</company>
+		<company>JR West</company>
 		<type>EF81</type>
-		<name>トワイライトエクスプレス</name>
-		<author>ては</author>
+		<name>Twilight Express</name>
+		<author>T.Hara</author>
 		<description>大阪～札幌間を走行する豪華寝台特急。ホテル並みの設備を揃える。
 		</description>
 		<price>100</price>
@@ -84,10 +84,10 @@
 
 
 <contribution type="train" id="{4B41FC2E-DFFE-4F57-9412-74F2A368577C}">
-<company>JR西日本</company>
-<type>103系</type>
-<name>USJ　アメリカの町並</name>
-<author>ては</author>
+<company>JR West</company>
+<type>103 Series</type>
+<name>USJ America-no-Machinami</name>
+<author>T.Hara</author>
 <description>USJの開業に合わせてラッピングされた103系、全車N40改造車である。(メモリ食い…)
 </description>
 <price>100</price>
@@ -139,10 +139,10 @@
 
 
 <contribution type="train" id="{5174FFB3-C406-41C1-9198-CD23D40DCA3F}">
-<company>JR西日本</company>
-<type>103系</type>
-<name>USJ　ユニバーサルグローブ</name>
-<author>ては</author>
+<company>JR West</company>
+<type>103 Series</type>
+<name>USJ Universal Group</name>
+<author>T.Hara</author>
 <description>USJの開業に合わせてラッピングされた103系、全車N40改造車である。
 </description>
 <price>100</price>
@@ -189,10 +189,10 @@
 	</contribution>
 
 	<contribution type="train" id="{2C7C4B10-8BBB-4196-873A-764A5BFC53D0}">
-		<company>JR西日本</company>
-		<type>103系</type>
-		<name>103系朱色　低運転台</name>
-		<author>ては</author>
+		<company>JR West</company>
+		<type>103 Series</type>
+		<name>103 Series Vermilion (low motorman's seat)</name>
+		<author>T.Hara</author>
 		<description>
 N40延命改造を受けた103系、シート等は207系レベルに変更されているが乗り心地は103系…　大阪環状線等で使用されている		</description>
 		<price>100</price>
@@ -229,10 +229,10 @@ N40延命改造を受けた103系、シート等は207系レベルに変更さ�
 	</contribution>
 
 	<contribution type="train" id="{97C123C3-89A2-488C-AB83-1D9AB108741F}">
-		<company>JR西日本</company>
-		<type>207系</type>
-		<name>207系　0番台</name>
-		<author>ては</author>
+		<company>JR West</company>
+		<type>207 Series</type>
+		<name>207 Series 　0 Model</name>
+		<author>T.Hara</author>
 		<description>JR西日本の標準型通勤車、乗り心地が良いがかなり高額なのが…ちなみにJR東日本に900番台が在籍しているが、全く別物である。
 		</description>
 		<price>2000</price>
@@ -245,10 +245,10 @@ N40延命改造を受けた103系、シート等は207系レベルに変更さ�
 	</contribution>
 
 	<contribution type="train" id="{B2F41693-134A-4044-9D13-49990166AD47}">
-		<company>JR西日本</company>
-		<type>207系</type>
-		<name>207系　学研都市、東西線</name>
-		<author>ては</author>
+		<company>JR West</company>
+		<type>207 Series</type>
+		<name>207 Series Science City, Tozai Line</name>
+		<author>T.Hara</author>
 		<description>学研都市、東西線では4+3で走っている、松井山手で前3両を切り離して運転するからである。また、東西線区間はダブルパンタで走行する。
 		</description>
 		<price>2000</price>

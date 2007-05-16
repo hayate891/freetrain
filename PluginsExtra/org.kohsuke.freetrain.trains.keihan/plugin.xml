@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -13,10 +13,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{C1F95779-DC2F-4580-B905-836BC1D073ED}">
-		<company>京阪電鉄</company>
-		<type>2600系</type>
+		<company>Keihan Electric Railway</company>
+		<type>2600 Series</type>
 		<name></name>
-		<author>暇</author>
+		<author>Hima</author>
 		<description>
 2000系の車体などを活用した車両で、昭和53年より改造が始まった。2,3,4の各固定ユニットがあり、普通から急行まで幅広く運用される。2両編成や3両編成での運用は存在せず、最短は4両、最長は8両。
 		</description>
@@ -53,10 +53,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{0B6321F5-C21F-4490-8486-28CBDC8C15D9}">
-		<company>京阪電鉄</company>
-		<type>7000系</type>
+		<company>Keihan Electric Railway</company>
+		<type>7000 Series</type>
 		<name></name>
-		<author>暇</author>
+		<author>Hima</author>
 		<description>平成元年、鴨東線開業時に8000系特急車とともに登場。後に7200系が登場したため全4編成と少数派だが、この車両から京阪の新しいスタイルが確立されたことは特筆すべきだろう。7両固定編成で急行から普通まで使用されている。
 		</description>
 		<price>100</price>
@@ -103,10 +103,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{01D6FB67-F28D-4da5-A3B0-630DB1F4D10D}">
-		<company>京阪電鉄</company>
-		<type>8000系</type>
+		<company>Keihan Electric Railway</company>
+		<type>8000 Series</type>
 		<name></name>
-		<author>暇</author>
+		<author>Hima</author>
 		<description>平成元年、鴨東線開業時に3000系の置き換えも兼ね登場。テレビカーなどの伝統を受け継いだばかりでなく、連続側面窓やワンハンドルマスコンなど新機軸も取り入れた。また、平成9年から平成10年にかけてダブルデッカー車両が増結され8両編成で主に特急に使用されている。
 		</description>
 		<price>100</price>
@@ -155,10 +155,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{0406051144}kh1900local">
-		<company>京阪電鉄</company>
-		<type>1900系普通車</type>
+		<company>Keihan Electric Railway</company>
+		<type>1900 Series Local</type>
 		<name></name>
-		<author>暇</author>
+		<author>Hima</author>
 		<description>特急が3000系で統一されるまで京阪特急の代名詞として走っていた。特急引退後は3扉・ロングシート化、塗装変更のうえ、普通車に転用された。前面のバンパーや、普通車でありながら扉が片開きであるなど、京阪電車で特徴的な存在である。中には一車両中に両開きと片開きが混在する車両も存在する。
 		</description>
 		<price>100</price>
@@ -196,10 +196,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{0406051249}kh1900local">
-		<company>京阪電鉄</company>
-		<type>1900系特急車</type>
+		<company>Keihan Electric Railway</company>
+		<type>1900 Series Limited Express</type>
 		<name></name>
-		<author>暇</author>
+		<author>Hima</author>
 		<description>3000系の前の世代の特急車。淀屋橋延長の際に新造された車両と、1810系から編入された車両がある。前面のバンパーは当初、新造グループにのみ取り付けられていた。
 		</description>
 		<price>100</price>

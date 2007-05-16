@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>名古屋鉄道 車両キット</title>
+	<title>Nagoya Railroad Train Kit</title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 
 	<!-- 1000系先頭車両 -->
@@ -29,10 +29,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{EB30F347-A83A-46e2-8E3B-35BAF50E96BC}">
-		<company>名古屋鉄道</company>
-		<type>1000系</type>
-		<name>パノラマSuper</name>
-		<author>477さん</author>
+		<company>Nagoya Railroad</company>
+		<type>1000 Series</type>
+		<name>Panorama Super</name>
+		<author>477</author>
 		<description>昭和63年、7000系の後継車として登場した名鉄の看板車両。
 車内電話、飲料水販売機、ＬＥＤ式案内装置など
 車内設備も7000系に比べ格段に充実した特急専用車。
@@ -74,10 +74,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{50313BB1-442B-4017-BB52-D158809C6724}">
-		<company>名古屋鉄道</company>
-		<type>7500系</type>
-		<name>パノラマカー</name>
-		<author>477さん</author>
+		<company>Nagoya Railroad</company>
+		<type>7500 Series</type>
+		<name>Panorama Car</name>
+		<author>477</author>
 		<description>昭和38年、7000系をベースに定速度制御（現在は撤去）、
 回生ブレーキなど下回りを大幅に改良して登場。
 外見は7000系に似るが、低重心化のため床が低い。

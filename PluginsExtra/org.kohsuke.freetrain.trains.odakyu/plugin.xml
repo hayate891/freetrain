@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
 	<title></title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
@@ -16,10 +16,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{2F672A7D-537E-4f71-ACD1-EEC76D6CAEC0}">
-		<company>小田急電鉄</company>
-		<type>通勤車タイプ</type>
+		<company>Odakyu Electric Railway</company>
+		<type>Commuter Type</type>
 		<name></name>
-		<author>無名の人さん</author>
+		<author>Nanashi-no-Hito</author>
 		<description>
 小田急電鉄の通勤車タイプ。
 		</description>
@@ -56,10 +56,10 @@
 	</contribution>
 	
 	<contribution type="train" id="{5BA3B71C-4DFD-4b48-839D-BE68CCFA9C09}">
-		<company>小田急電鉄</company>
-		<type>10000系</type>
+		<company>Odakyu Electric Railway</company>
+		<type>10000 Series</type>
 		<name>HiSE</name>
-		<author>477さん</author>
+		<author>477</author>
 		<description>
 小田急開業６０周年の昭和62年運行開始。小田急最後の展望席付き車輌。
 フルハイデッカーの客室からワイドなパノラマを楽しむことができます。

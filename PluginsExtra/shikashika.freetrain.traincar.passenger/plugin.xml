@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
-<title>車輌(客車:旧国鉄及びJR各社)</title>
+<title>Traincars (Passenger Cars: JNR or JR)</title>
 
 <!-- 特急形客車(スハ44系) -->
 <!-- イメージ画像定義 -->

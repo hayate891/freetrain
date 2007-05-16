@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>京成電鉄車両セット</title>
+	<title>Keisei Electric Railway Train Set</title>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	<depend on="org.kohsuke.freetrain.trains.trainshare" />
 
@@ -12,10 +12,10 @@
 	</contribution>
 
 	<contribution type="train" id="{3700-keisei-iw200309301114}">
-		<company>京成電鉄</company>
-		<type>3700形</type>
-		<name>特急など</name>
-		<author>iwasakiさん</author>
+		<company>Keisei Electric Railway</company>
+		<type>3700 Series</type>
+		<name>Limited Express, etc.</name>
+		<author>iwasaki</author>
 		<description>特急などに活躍している電車です。
 		</description>
 		<price>100</price>
