@@ -1,21 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
 <depend on="shikashika.freetrain.traincar.locomotive"/>
 <depend on="shikashika.freetrain.traincar.passenger"/>
 <depend on="shikashika.freetrain.traincar.freight"/>
 
-<title>列車(JR東日本)</title>
+<title>Trains (JR East)</title>
 
 <!-- 旅客列車の定義 -->
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-700-LocalTrein-50}">
-		<company>JR東日本</company>
+		<company>JR East</company>
 		<type>ED 75</type>
-		<name>700番台 普通列車(50系)</name>
-		<author>しかしか</author>
+		<name>700 Model Local Train (50 Series)</name>
+		<author>Shikashika</author>
 		<description>電気機関車ED75-700番台が牽引する、50系(オハ50、オハフ50)客車普通列車です。
 		</description>
 		<price>100</price>
@@ -43,10 +43,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-hokuto-LocalTrein-50}">
-		<company>JR東日本</company>
+		<company>JR East</company>
 		<type>EF 81</type>
-		<name>北斗星色 普通列車(50系)</name>
-		<author>しかしか</author>
+		<name>Hokutosei Colors Local Train (50 Series)</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF81(北斗星塗装)が牽引する、50系(オハ50、オハフ50)客車普通列車です。
 		</description>
 		<price>100</price>
@@ -74,10 +74,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-Cassiopeia-1}">
-		<company>JR東日本</company>
+		<company>JR East</company>
 		<type>EF 81</type>
-		<name>カシオペア</name>
-		<author>しかしか</author>
+		<name>Cassiopeia</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF81(カシオペア塗装)が牽引する、オール2階建寝台列車です。
 		</description>
 		<price>100</price>
@@ -111,10 +111,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-Cassiopeia-2}">
-		<company>JR東日本</company>
+		<company>JR East</company>
 		<type>EF 81</type>
-		<name>カシオペア(予備)</name>
-		<author>しかしか</author>
+		<name>Cassiopeia (reserve)</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF81(カシオペア塗装)が牽引する、オール2階建寝台列車です。電源車は予備のカヤ２７です。
 		</description>
 		<price>100</price>

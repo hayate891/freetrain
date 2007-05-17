@@ -1,21 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
 <depend on="shikashika.freetrain.traincar.locomotive"/>
 <depend on="shikashika.freetrain.traincar.passenger"/>
 <depend on="shikashika.freetrain.traincar.freight"/>
 
-<title>列車(旧日本国有鉄道)</title>
+<title>Trains (Japanese National Railways)</title>
 
 	<!-- 旅客列車の定義 -->
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LimitedExpressTrain-swallowangel}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>特急つばめ</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Tsubame'</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、特急つばめです。客車はスハ44系で、最後尾には1等展望車を連結しています。
 		</description>
 		<price>100</price>
@@ -48,10 +48,10 @@
 
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LimitedExpressTrain-hatukari-B}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>特急はつかり</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Hatsukari'</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、特急はつかりです。客車は客車はスハ44系で、昭和39年以降の青に塗り替えられたものです。
 		</description>
 		<price>100</price>
@@ -84,10 +84,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>旧普通列車(茶)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Mail Car</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -117,10 +117,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein-mani60}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>旧普通列車(茶)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、荷物車マニ60を併結しています。
 		</description>
 		<price>100</price>
@@ -150,10 +150,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>旧普通列車(茶)現金輸送荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -184,10 +184,10 @@
 
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein-B}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>旧普通列車(青)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に荷物車を併結しています。
 		</description>
 		<price>100</price>
@@ -217,10 +217,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein-B-oyu10}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>旧普通列車(青)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Mail Car</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -250,10 +250,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein-B-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>旧普通列車(青)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Cash Transport Baggage Car</name>
+		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -283,10 +283,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-ExpressTrain-yamagutigou}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>ＳＬ山口号(青)</name>
-		<author>しかしか</author>
+		<name>SL Yamaguchi (blue)</name>
+		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引するSL山口号です。C571号機には、白いラインが引かれ集煙装置が付けられています。客車は昭和44年に登場した12系の急行形客車を牽引しています。
 		</description>
 		<price>100</price>
@@ -311,10 +311,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-LocalTrein}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>旧普通列車(茶)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Mail Car</name>
+		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -344,10 +344,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-LocalTrein-mani60}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>旧普通列車(茶)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、荷物車マニ60を併結しています。
 		</description>
 		<price>100</price>
@@ -377,10 +377,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-LocalTrein-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>旧普通列車(茶)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -410,10 +410,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-LocalTrein-B}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>旧普通列車(青)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に荷物車マニ60を併結しています。
 		</description>
 		<price>100</price>
@@ -443,10 +443,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-LocalTrein-B-oyu10}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>旧普通列車(青)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Mail Car</name>
+		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -476,10 +476,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-LocalTrein-B-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>旧普通列車(青)</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue)</name>
+		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -509,10 +509,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>旧普通列車(茶)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Mail Car</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -542,10 +542,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein-mani60}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>旧普通列車(茶)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、荷物車マニ60を併結しています。
 		</description>
 		<price>100</price>
@@ -575,10 +575,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>旧普通列車(茶)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -608,10 +608,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein-B}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>旧普通列車(青)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に荷物車を併結しています。
 		</description>
 		<price>100</price>
@@ -641,10 +641,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein-B-oyu10}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>旧普通列車(青)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Mail Car</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -674,10 +674,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein-B-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>旧普通列車(青)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Cash Transport Baggage Car</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -707,10 +707,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-LimitedExpressTrain-swallowangel}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>特急つばめ</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Tsubame'</name>
+		<author>Shikashika</author>
 		<description>昭和26年から製造された戦後初の急行旅客用機関車EF58が牽引する、特急つばめです。塗装はかつての電気機関車の標準色であったぶどう色です。客車はスハ44系で、最後尾には1等展望車を連結しています。
 		</description>
 		<price>100</price>
@@ -745,10 +745,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-LimitedExpressTrain-Pigeon-A}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>特急はと</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Hato'</name>
+		<author>Shikashika</author>
 		<description>EF58(青大将色)が牽引する、特急はとです。客車はスハ44系で、青大将と呼ばれた淡緑色に塗装されています。昭和31年東海道全線電化に伴い新設されました。
 		</description>
 		<price>100</price>
@@ -783,10 +783,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-LimitedExpressTrain-hatukari-B}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>特急はつかり</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Hatsukari'</name>
+		<author>Shikashika</author>
 		<description>EF58(特急色)が牽引する、特急はつかりです。客車はスハ44系で、昭和39年以降の青に塗り替えられたものです。
 		</description>
 		<price>100</price>
@@ -822,10 +822,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>旧普通列車(茶)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Mail Car</name>
+		<author>Shikashika</author>
 		<description>EF58(ぶどう色)が牽引する、客車普通列車です。客車はスハ43系で、昔のぶどう色のものです。郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -855,10 +855,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein-mini60}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>旧普通列車(茶)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>EF58(ぶどう色)が牽引する、客車普通列車です。客車はスハ43系で、昔のぶどう色のものです。荷物車マニ60を併結しています。
 		</description>
 		<price>100</price>
@@ -888,10 +888,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>旧普通列車(茶)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<author>Shikashika</author>
 		<description>EF58(ぶどう色)が牽引する、客車普通列車です。客車はスハ43系で、昔のぶどう色のものです。現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -921,10 +921,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein-B}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>旧普通列車(青)荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Baggage Car</name>
+		<author>Shikashika</author>
 		<description>EF58(一般色)が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。荷物車マニ60を併結しています。
 		</description>
 		<price>100</price>
@@ -954,10 +954,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein-B-oyu10}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>旧普通列車(青)郵便車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Mail Car</name>
+		<author>Shikashika</author>
 		<description>EF58(一般色)が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に郵便車オユ10を併結しています。
 		</description>
 		<price>100</price>
@@ -987,10 +987,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein-B-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>旧普通列車(青)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Old Local Train (blue) Cash Transport Baggage Car</name>
+		<author>Shikashika</author>
 		<description>EF58(一般色)が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -1020,10 +1020,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-B-ex-LimitedExpressTrain-tugaru}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>特急津軽</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Tsugaru'</name>
+		<author>Shikashika</author>
 		<description>EF58(一般色)が牽引する、特急津軽です。客車は14系特急形寝台客車と14系特急形客車の併結です。
 		</description>
 		<price>100</price>
@@ -1055,10 +1055,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF66-LimitedExpressTrain-sakura}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 66</type>
-		<name>特急さくら</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Sakura'</name>
+		<author>Shikashika</author>
 		<description>高速貨車用大型電気機関車EF66が牽引する、特急さくらです。客車は14系特急形寝台客車です。
 		</description>
 		<price>100</price>
@@ -1094,10 +1094,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF66-LimitedExpressTrain-hayabusa}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 66</type>
-		<name>特急はやぶさ</name>
-		<author>しかしか</author>
+		<name>Limited Express 'Hayabusa'</name>
+		<author>Shikashika</author>
 		<description>高速貨車用大型電気機関車EF66が牽引する、特急はやぶさです。客車は24系25形特急形寝台客車で、中間にロビーカーを連結しています。
 		</description>
 		<price>100</price>
@@ -1134,10 +1134,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-LocalTrein-50-mani50}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>普通列車(50系)</name>
-		<author>しかしか</author>
+		<name>Local Train (50 Series)</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51が牽引する、客車普通列車です。客車は50系(オハ50、オハフ50)で、最後尾に荷物車マニ50を併結しています。
 		</description>
 		<price>100</price>
@@ -1169,10 +1169,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-745-LocalTrein-50-mani50}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>745号機 普通列車(50系)</name>
-		<author>しかしか</author>
+		<name>Engine no.745 Local Train (50 Series)</name>
+		<author>Shikashika</author>
 		<description>三つ目(ヘッドライトが3灯ある)に改造された液体式ディーゼル機関車DD51-745号機が牽引する、客車普通列車です。客車は50系(オハ50、オハフ50)で、荷物車マニ50を併結しています。
 		</description>
 		<price>100</price>
@@ -1206,10 +1206,10 @@
 	<!-- 貨物列車の定義 -->
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-D511115-Freight-Container}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>D 51</type>
-		<name>コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>国鉄貨物用標準型機関車D51が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -1255,10 +1255,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-D511115-Freight}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>D 51</type>
-		<name>荷物列車</name>
-		<author>しかしか</author>
+		<name>Baggage Train</name>
+		<author>Shikashika</author>
 		<description>国鉄貨物用標準型機関車D51が牽引する、貨物列車です。最後尾に昭和50年に登場した車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1318,10 +1318,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-D51-Freight-Tank}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>D 51</type>
-		<name>タンカー列車</name>
-		<author>しかしか</author>
+		<name>Tank Train</name>
+		<author>Shikashika</author>
 		<description>国鉄貨物用標準型機関車D51が牽引する、タンク貨物です。最後尾に昭和50年に登場した車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1368,10 +1368,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-D51100-Freight}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>D 51</type>
-		<name>荷物列車(なめくじ)</name>
-		<author>しかしか</author>
+		<name>Baggage Train (Namekuji)</name>
+		<author>Shikashika</author>
 		<description>煙突からスチームドームまでカバーされたなめくじドームタイプのD51が牽引する貨物列車です。最後尾に昭和37年から製造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1431,10 +1431,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-Freight-Local}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>荷物列車</name>
-		<author>しかしか</author>
+		<name>Baggage Train</name>
+		<author>Shikashika</author>
 		<description>国鉄客貨両用機関車C58が牽引する貨物です。ワキで編成しています。最後尾に緩急車を連結しています。
 		</description>
 		<price>100</price>
@@ -1472,10 +1472,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-Freight-Local-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>荷物列車･現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Baggage Train with Cash Transport Car</name>
+		<author>Shikashika</author>
 		<description>国鉄客貨両用機関車C58が牽引する貨物です。ワキで編成しています。現金輸送用荷物車マニ30や、最後尾に緩急車を連結しています。
 		</description>
 		<price>100</price>
@@ -1514,10 +1514,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-Freight-m}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>国鉄客貨両用機関車C58が牽引する、無蓋貨車です。最後尾には昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1549,10 +1549,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-Freight-long}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>長物輸送列車</name>
-		<author>しかしか</author>
+		<name>Flatcar Train</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車C58が牽引する、長物輸送貨車(積荷は制作中の為、空荷)です。最後尾に昭和37年から製造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1583,10 +1583,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-Freight}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>貨物列車</name>
-		<author>しかしか</author>
+		<name>Freight Train</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車C58が牽引する貨物です。最後尾に昭和50年に登場した車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1648,10 +1648,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-Freight-Tank}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>タンカー列車</name>
-		<author>しかしか</author>
+		<name>Tank Train</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車C58が牽引する、タンク貨物です。最後尾に昭和37年から製造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1698,10 +1698,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-Freight-Test}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>テスト貨物</name>
-		<author>しかしか</author>
+		<name>Test Freight</name>
+		<author>Shikashika</author>
 		<description>客貨両用機関車C58が牽引する、貨車製作用テスト列車です。制作中の貨車のテスト走行に使用しています。
 		</description>
 		<price>100</price>
@@ -1780,10 +1780,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-Freight-takara}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>コンテナ特急貨物たから</name>
-		<author>しかしか</author>
+		<name>Container Limited Express Freight 'Takara'</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、コンテナ特急貨物列車たからです。コンテナと同じ色に塗られた車掌車を牽引しています。
 		</description>
 		<price>100</price>
@@ -1826,10 +1826,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-Freight-Local}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>荷物列車</name>
-		<author>しかしか</author>
+		<name>Baggage Train</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、荷物列車です。
 		</description>
 		<price>100</price>
@@ -1883,10 +1883,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-Freight-Local-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>荷物列車･現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Baggage Train with Cash Transport Car</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、荷物列車です。現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -1942,10 +1942,10 @@
 
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-Freight-FreightLiner-Tank}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>タンカー列車</name>
-		<author>しかしか</author>
+		<name>Tank Train</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、タンク貨物です。最後尾に昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -1994,10 +1994,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-2-Freight-takara}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>*2コンテナ特急貨物たから</name>
-		<author>しかしか</author>
+		<name>*2 Container Limited Express Freight 'Takara'</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、コンテナ特急貨物列車たからです。コンテナと同じ色に塗られた車掌車を牽引しています。
 		</description>
 		<price>100</price>
@@ -2041,10 +2041,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-2-Freight-Local}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>*2荷物列車</name>
-		<author>しかしか</author>
+		<name>*2 Baggage Train</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、荷物列車です。
 		</description>
 		<price>100</price>
@@ -2099,10 +2099,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-2-Freight-Local-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>*2荷物列車･現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>*2 Baggage Train with Cash Transport Car</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、荷物列車です。現金輸送用荷物車マニ30を併結しています。
 		</description>
 		<price>100</price>
@@ -2158,10 +2158,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH10-2-Freight-FreightLiner-Tank}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EH 10</type>
-		<name>*2タンカー列車</name>
-		<author>しかしか</author>
+		<name>*2 Tank Train</name>
+		<author>Shikashika</author>
 		<description>重貨物用電気機関車EH10が牽引する、タンク貨物です。最後尾に昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -2211,10 +2211,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF66-Freight-Freshfish}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 66</type>
-		<name>鮮魚特急貨物(とびうお号)</name>
-		<author>しかしか</author>
+		<name>Fresh Fish Limited Express Freight 'Tobiuo'</name>
+		<author>Shikashika</author>
 		<description>高速貨車用大型電気機関車EF66が牽引する、鮮魚特急貨物(通称とびうお号)です。冷凍魚や鮮魚輸送用の大型冷蔵車の編成で、前後に緩急車を連結しています。
 		</description>
 		<price>100</price>
@@ -2246,10 +2246,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF66-Freight-FreightLiner-Tank}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 66</type>
-		<name>タンカー列車</name>
-		<author>しかしか</author>
+		<name>Tank Train</name>
+		<author>Shikashika</author>
 		<description>高速貨車用大型電気機関車EF66が牽引する、タンク貨物です。最後尾に昭和50年に登場した車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -2298,10 +2298,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF66-Freight-FreightLiner}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 66</type>
-		<name>フレートライナー</name>
-		<author>しかしか</author>
+		<name>Freight Liner</name>
+		<author>Shikashika</author>
 		<description>高速貨車用大型電気機関車EF66が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -2345,10 +2345,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-Deck-Freight-Local}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>荷物列車(デッキ付)</name>
-		<author>しかしか</author>
+		<name>Baggage Train (with deck)</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(デッキ付)が牽引する、荷物列車です。最後尾に緩急車を連結しています。貨物ならFE18かもしれませんが…。
 		</description>
 		<price>100</price>
@@ -2388,10 +2388,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-Deck-Freight-Local-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>荷物列車(デッキ付)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Baggage Train (with deck) with Cash Transport Car</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(デッキ付)が牽引する、荷物列車です。現金輸送用荷物車マニ30や、最後尾には緩急車を連結しています。貨物ならFE18かもしれませんが…。
 		</description>
 		<price>100</price>
@@ -2432,10 +2432,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-Freight-Local}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>荷物列車(茶)</name>
-		<author>しかしか</author>
+		<name>Baggage Train (brown)</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(ぶどう色)が牽引する、荷物列車です。最後尾に緩急車を連結しています。
 		</description>
 		<price>100</price>
@@ -2475,10 +2475,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-Freight-Local-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>荷物列車(茶)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Baggage Train (brown) Cash Transport Car</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(ぶどう色)が牽引する、荷物列車です。現金輸送用荷物車マニ30や、最後尾には緩急車を連結しています。
 		</description>
 		<price>100</price>
@@ -2519,10 +2519,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-B-Freight-express}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>急行荷物列車(青)</name>
-		<author>しかしか</author>
+		<name>Express Baggage Train (blue)</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(一般色)が牽引する、急行荷物列車です。最後尾に緩急車を連結しています。
 		</description>
 		<price>100</price>
@@ -2561,10 +2561,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-B-Freight-express-mani30}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>急行荷物列車(青)現金輸送用荷物車</name>
-		<author>しかしか</author>
+		<name>Express Baggage Train (blue) with Cash Transport Car</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(一般色)が牽引する、急行荷物列車です。現金輸送用荷物車マニ30や、最後尾には緩急車を連結しています。
 		</description>
 		<price>100</price>
@@ -2604,10 +2604,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-Deck-Freight-FreightLiner}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>フレートライナー</name>
-		<author>しかしか</author>
+		<name>Freight Liner</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(デッキ付)が牽引する、コンテナ貨物列車です。貨物ならFE18かもしれませんが…。
 		</description>
 		<price>100</price>
@@ -2651,10 +2651,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-300s-Freight-Container-koki10000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>303号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Enginge no.303 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>関門海底トンネル区間用に煙害対策がされた交直両用電気機関車EF81(ステンレス無塗装)が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -2725,10 +2725,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-300s-Freight-Tank-kaki43000-yo8000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>303号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Engine no.303 Tank Train</name>
+		<author>Shikashika</author>
 		<description>関門海底トンネル区間用に煙害対策がされた交直両用電気機関車EF81(ステンレス無塗装)が牽引する、タンク貨物です。最後尾に昭和50年に登場した車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -2775,10 +2775,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-300s-Freight-m-toki25000-yo5000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>303号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Engine no.303 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>関門海底トンネル区間用に煙害対策がされた交直両用電気機関車EF81(ステンレス無塗装)が牽引する、無蓋貨車です。最後尾には昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -2810,10 +2810,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-300p-Freight-Container-koki10000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>302号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Engine no.302 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(ステンレス赤13号塗装)が牽引する、コンテナ貨物列車です。元々は関門海底トンネル区間用でしたが、常磐線転属で塗装されました。
 		</description>
 		<price>100</price>
@@ -2884,10 +2884,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-300p-Freight-Tank-kaki43000-yo5000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>302号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Engine no.302 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(ステンレス赤13号塗装)が牽引する、タンク貨物です。元々は関門海底トンネル区間用でしたが、常磐線転属で塗装されました。最後尾に昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -2934,10 +2934,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-300p-Freight-m-toki25000-yo8000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>302号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Engine no.302 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(ステンレス赤13号塗装)が牽引する、無蓋貨車です。元々は関門海底トンネル区間用でしたが、常磐線転属で塗装されました。最後尾に昭和50年に登場した車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -2969,10 +2969,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-81-Freight-Container-koki10000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>81号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Engine no.81 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(81号機お召し塗装)が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -3042,10 +3042,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-81-Freight-Tank-kaki43000-yo6000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>81号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Engine no.81 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(81号機お召し塗装)が牽引する、タンク貨物です。最後尾に昭和37年から製造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -3090,10 +3090,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-81-Freight-m-toki25000-yo5000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>EF 81</type>
-		<name>81号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Engine no.81 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(81号機お召し塗装)が牽引する、無蓋貨車です。最後尾に昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -3125,10 +3125,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-745-Freight-Container-koki10000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>745号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Engine no.745 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>三つ目(ヘッドライトが3灯ある)に改造された液体式ディーゼル機関車DD51-745号機が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -3201,10 +3201,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-745-Freight-Tank-kaki43000-yo5000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>745号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Engine no.745 Tank Train</name>
+		<author>Shikashika</author>
 		<description>三つ目(ヘッドライトが3灯ある)に改造された液体式ディーゼル機関車DD51-745号機が牽引する、タンク貨物です。最後尾に昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -3253,10 +3253,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-745-Freight-m-toki250000-yo6000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>745号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Engine no.745 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>三つ目(ヘッドライトが3灯ある)に改造された液体式ディーゼル機関車DD51-745号機が牽引する、無蓋貨車です。最後尾に昭和37年から製造された車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -3294,10 +3294,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-592-Freight-Container-koki10000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>ユーロライナー コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Euro Liner Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(ユーロライナー)が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -3369,10 +3369,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-592-Freight-Tank-kaki43000-yo8000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>ユーロライナー タンカー列車</name>
-		<author>しかしか</author>
+		<name>Euro Liner Tank Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(ユーロライナー)が牽引する、タンク貨物です。最後尾に昭和50年に登場した車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -3421,10 +3421,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-592-Freight-m-toki25000-yo5000}">
-		<company>旧日本国有鉄道</company>
+		<company>Japanese National Railways</company>
 		<type>DD 51</type>
-		<name>ユーロライナー 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Euro Liner Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(ユーロライナー)が牽引する、無蓋貨車です。最後尾に昭和34年に最高許容速度が85km/hに改造された車掌車を連結しています。
 		</description>
 		<price>100</price>

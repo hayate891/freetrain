@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?> 
 <plug-in>
   <title>TYPE2000</title> 
-  <author>しの</author> 
+  <author>Shino</author> 
   <homepage></homepage>
  
 <!-- 2000先頭車 --> 
@@ -36,10 +36,10 @@
   </contribution>
 
   <contribution type="train" id="{79C7B654-0E5E-402D-87CB-525CA403F917}">
-<company>京浜急行電鉄</company>
-<type>2000形改造後(低)</type>
-<name>京急線</name>
-<author>しの</author>
+<company>Keihin Express Electric Railway</company>
+<type>2000 Series Remodeled (low)</type>
+<name>Keikyu Line</name>
+<author>Shino</author>
 <description>1982年に登場した2000形2扉クロスシート車を改造した車両。改造後の車両は、扉を中央に増設し3扉化され、座席がクロスシートからロングシートに変更された。だが、性能はもともとの2扉クロスシート車時代のまま残されたため、快特運用の基本＆付属編成ともに活躍の場を広げた。(この車両は低速型)
 </description>
 <fare>200</fare>
@@ -89,10 +89,10 @@
   </contribution>
 
   <contribution type="train" id="{52C7B654-0E5E-402D-87CB-525CA403F917}">
-<company>京浜急行電鉄</company>
-<type>2000形改造後(中)</type>
-<name>京急線</name>
-<author>しの</author>
+<company>Keihin Express Electric Railway</company>
+<type>2000 Series Remodeled (medium)</type>
+<name>Keikyu Line</name>
+<author>Shino</author>
 <description>1982年に登場した2000形2扉クロスシート車を改造した車両。改造後の車両は、扉を中央に増設し3扉化され、座席がクロスシートからロングシートに変更された。だが、性能はもともとの2扉クロスシート車時代のまま残されたため、快特運用の基本＆付属編成ともに活躍の場を広げた。(この車両は中速型)
 </description>
 <fare>200</fare>
@@ -142,10 +142,10 @@
   </contribution>
 
   <contribution type="train" id="{75G3A011-0E5E-402D-87CB-525CA403F917}">
-<company>京浜急行電鉄</company>
-<type>2000形改造後(高)</type>
-<name>京急線</name>
-<author>しの</author>
+<company>Keihin Express Electric Railway</company>
+<type>2000 Series Remodeled (high)</type>
+<name>Keikyu Line</name>
+<author>Shino</author>
 <description>1982年に登場した2000形2扉クロスシート車を改造した車両。改造後の車両は、扉を中央に増設し3扉化され、座席がクロスシートからロングシートに変更された。だが、性能はもともとの2扉クロスシート車時代のまま残されたため、快特運用の基本＆付属編成ともに活躍の場を広げた。(この車両は高速型)
 </description>
 <fare>200</fare>
@@ -197,10 +197,10 @@
   </contribution>
 
   <contribution type="train" id="{628615F9-AECD-4E43-A179-088290B7B216}">
-<company>京浜急行電鉄</company>
-<type>2000形改造前(低)</type>
-<name>京急線</name>
-<author>しの</author>
+<company>Keihin Express Electric Railway</company>
+<type>2000 Series Nonremodeled (low)</type>
+<name>Keikyu Line</name>
+<author>Shino</author>
 <description>快速特急用として活躍してきた旧600形の後継車両として1982(昭和57)年に登場しました。室内は運転室の直後を除いてクロスシートが配列されています。編成は8輌固定編成の他に、12両編成に対応するための4輌編成が1985(昭和60)年から製造され、朝方夕方ラッシュ時の増結や、4輌＋4輌の8輌編成で運用されていました。(この車両は低速型)
 </description>
 <fare>200</fare>
@@ -250,10 +250,10 @@
   </contribution>
 
   <contribution type="train" id="{123F092D-91F0-449C-BCB3-9A2A189650B8}">
-<company>京浜急行電鉄</company>
-<type>2000形改造前(中)</type>
-<name>京急線</name>
-<author>しの</author>
+<company>Keihin Express Electric Railway</company>
+<type>2000 Series Nonremodeled (medium)</type>
+<name>Keikyu Line</name>
+<author>Shino</author>
 <description>快速特急用として活躍してきた旧600形の後継車両として1982(昭和57)年に登場しました。室内は運転室の直後を除いてクロスシートが配列されています。編成は8輌固定編成の他に、12両編成に対応するための4輌編成が1985(昭和60)年から製造され、朝方夕方ラッシュ時の増結や、4輌＋4輌の8輌編成で運用されていました。(この車両は中速型)
 </description>
 <fare>200</fare>
@@ -303,10 +303,10 @@
   </contribution>
 
   <contribution type="train" id="{6204E5B8-6EB6-4F64-A14D-44694A5C5D02}">
-<company>京浜急行電鉄</company>
-<type>2000形改造前(高)</type>
-<name>京急線</name>
-<author>しの</author>
+<company>Keihin Express Electric Railway</company>
+<type>2000 Series Nonremodeled (high)</type>
+<name>Keikyu Line</name>
+<author>Shino</author>
 <description>快速特急用として活躍してきた旧600形の後継車両として1982(昭和57)年に登場しました。室内は運転室の直後を除いてクロスシートが配列されています。編成は8輌固定編成の他に、12両編成に対応するための4輌編成が1985(昭和60)年から製造され、朝方夕方ラッシュ時の増結や、4輌＋4輌の8輌編成で運用されていました。(この車両は高速型)
 </description>
 <fare>200</fare>
@@ -356,10 +356,10 @@
   </contribution>
 
   <contribution type="train" id="{90G4AE26-7EB6-9D32-H49F-44694A5C5D02}">
-<company>京浜急行電鉄</company>
-<type>2000形改造前4輌＋4輌(高)</type>
-<name>京急線</name>
-<author>しの</author>
+<company>Keihin Express Electric Railway</company>
+<type>2000 Series Nonremodeled 4-car+4-car(high)</type>
+<name>Keikyu Line</name>
+<author>Shino</author>
 <description>快速特急用として活躍してきた旧600形の後継車両として1982(昭和57)年に登場しました。室内は運転室の直後を除いてクロスシートが配列されています。編成は8輌固定編成の他に、12両編成に対応するための4輌編成が1985(昭和60)年から製造され、朝方夕方ラッシュ時の増結や、4輌＋4輌の8輌編成で運用されていました。(4輌＆4輌＋4輌編成高速型)
 </description>
 <fare>200</fare>
