@@ -152,7 +152,7 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein-mani30}">
 		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<name>Old Local Train (brown) Cash Transport Car</name>
 		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
@@ -252,7 +252,7 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C622-LocalTrein-B-mani30}">
 		<company>Japanese National Railways</company>
 		<type>C 62</type>
-		<name>Old Local Train (blue) Cash Transport Baggage Car</name>
+		<name>Old Local Train (blue) Cash Transport Car</name>
 		<author>Shikashika</author>
 		<description>国鉄最大最後の旅客用機関車C62が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。現金輸送用荷物車マニ30を併結しています。
 		</description>
@@ -379,7 +379,7 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C57-LocalTrein-mani30}">
 		<company>Japanese National Railways</company>
 		<type>C 57</type>
-		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<name>Old Local Train (brown) Cash Transport Car</name>
 		<author>Shikashika</author>
 		<description>貴婦人と呼ばれたC57が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
@@ -577,7 +577,7 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein-mani30}">
 		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<name>Old Local Train (brown) Cash Transport Car</name>
 		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車は昭和26年から製造された急行用3等車(3等緩急車)スハ43系で、最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
@@ -676,7 +676,7 @@
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-C58-LocalTrein-B-mani30}">
 		<company>Japanese National Railways</company>
 		<type>C 58</type>
-		<name>Old Local Train (blue) Cash Transport Baggage Car</name>
+		<name>Old Local Train (blue) Cash Transport Car</name>
 		<author>Shikashika</author>
 		<description>客貨両用機関車のC58が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。最後尾に現金輸送用荷物車マニ30を併結しています。
 		</description>
@@ -890,7 +890,7 @@
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein-mani30}">
 		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>Old Local Train (brown) Cash Transport Baggage Car</name>
+		<name>Old Local Train (brown) Cash Transport Car</name>
 		<author>Shikashika</author>
 		<description>EF58(ぶどう色)が牽引する、客車普通列車です。客車はスハ43系で、昔のぶどう色のものです。現金輸送用荷物車マニ30を併結しています。
 		</description>
@@ -989,7 +989,7 @@
 	<contribution type="train" id="{FreeTrain-Railroad-Train-EF58-LocalTrein-B-mani30}">
 		<company>Japanese National Railways</company>
 		<type>EF 58</type>
-		<name>Old Local Train (blue) Cash Transport Baggage Car</name>
+		<name>Old Local Train (blue) Cash Transport Car</name>
 		<author>Shikashika</author>
 		<description>EF58(一般色)が牽引する、客車普通列車です。客車はスハ43系で、改良を施して青に塗り替えられたものです。現金輸送用荷物車マニ30を併結しています。
 		</description>

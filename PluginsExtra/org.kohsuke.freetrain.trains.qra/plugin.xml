@@ -1905,7 +1905,7 @@
      <contribution type="train" id="{FBEAD283-1069-11D7-AA41-000740323A8D}">
            <company>JR Central</company>
            <type>285 Series</type>
-           <name>サンライズエクスプレス</name>
+           <name>Sunrise Express</name>
            <author>qra_ra</author>
            <description>
 1998年、〈出雲〉と〈瀬戸〉に登場した寝台特急電車。
@@ -5518,7 +5518,7 @@ JR東海のJ編成16両61本と、JR西日本のF編成16両9本が存在する�
                 <fare>450</fare>
 		<speed>medium</speed>
 		<author>qra_ra</author>
-		<type>211系5000 Model</type>
+		<type>211 Series 5000 Model</type>
 		<company>JR Central</company>
 		<description></description>
 		
