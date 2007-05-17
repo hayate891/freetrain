@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-<author>しかしか</author>
+<author>Shikashika</author>
 <homepage>http://shikashika.hp.infoseek.co.jp/</homepage>
 
 <depend on="shikashika.freetrain.traincar.locomotive"/>
 <depend on="shikashika.freetrain.traincar.passenger"/>
 <depend on="shikashika.freetrain.traincar.freight"/>
 
-<title>列車(JR貨物)</title>
+<title>Train (JR Freight)</title>
 
 <!-- 旅客列車の定義 -->
 
 <!-- 貨物列車の定義 -->
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF66-Freight-Container-JR}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 66</type>
-		<name>コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>高速貨車用大型電気機関車EF66が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -88,10 +88,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF66-Freight-Container-JR-mani30}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 66</type>
-		<name>コンテナ貨物列車(現金輸送)</name>
-		<author>しかしか</author>
+		<name>Container Freight Train (Cash Transport)</name>
+		<author>Shikashika</author>
 		<description>高速貨車用大型電気機関車EF66が牽引する、コンテナ貨物列車です。現金輸送用荷物車マニ30も牽引しています。
 		</description>
 		<price>100</price>
@@ -166,10 +166,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-B-Freight-Container-JR}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 58</type>
-		<name>コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(一般色)が牽引する、コンテナ貨物列車です。
 		</description>
 		<price>100</price>
@@ -240,10 +240,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF58-B-Freight-Container-JR-mani30}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 58</type>
-		<name>コンテナ貨物列車(現金輸送)</name>
-		<author>しかしか</author>
+		<name>Container Freight Train (Cash Transport)</name>
+		<author>Shikashika</author>
 		<description>電気機関車EF58(一般色)が牽引する、コンテナ貨物列車です。現金輸送用荷物車マニ30も牽引しています。
 		</description>
 		<price>100</price>
@@ -318,10 +318,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-0-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -403,10 +403,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-0-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>タンカー列車</name>
-		<author>しかしか</author>
+		<name>Tank Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -451,10 +451,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-0-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -489,10 +489,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-700-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>700番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>700 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(700番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -574,10 +574,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-700-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>700番台 タンカー列車</name>
-		<author>しかしか</author>
+		<name>700 Model Tank Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(700番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -622,10 +622,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-700-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>700番台 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>700 Model Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(700番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -660,10 +660,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-1000-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>1000番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>1000 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(1000番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -745,10 +745,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-1000-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>1000番台 タンカー列車</name>
-		<author>しかしか</author>
+		<name>1000 Model Tank Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(1000番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -793,10 +793,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-1000-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>1000番台 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>1000 Model Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(1000番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -830,10 +830,10 @@
 		</config>
 	</contribution>
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-renew-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>更新機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -915,10 +915,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-renew-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>更新機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Tank Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(JR貨物更新機)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -963,10 +963,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-renew-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>更新機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(JR貨物更新機)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1001,10 +1001,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-1028-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>1028号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>No.1028 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(1028号機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -1087,10 +1087,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-1028-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>1028号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>No.1028 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(1028号機)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1136,10 +1136,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-1028-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>1028号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>No.1028 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(1028号機)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1175,10 +1175,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-panda-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>試験塗色 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Test Coating Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(JR貨物試験塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -1261,10 +1261,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-panda-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>試験塗色 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Test Coating Tank Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(JR貨物試験塗色)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1310,10 +1310,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED75-panda-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 75</type>
-		<name>試験塗色 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Test Coating Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交流用電気機関車ED75(JR貨物試験塗色)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1349,10 +1349,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-0-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 79</type>
-		<name>0番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>0 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>津軽海峡線用の交流用電気機関車ED79重連(0番台と100番台)が牽引する、コンテナ貨物列車です。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -1435,10 +1435,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-0-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 79</type>
-		<name>0番台 タンカー列車</name>
-		<author>しかしか</author>
+		<name>0 Model Tank Train</name>
+		<author>Shikashika</author>
 		<description>津軽海峡線用の交流用電気機関車ED79重連(0番台と100番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1484,10 +1484,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-0-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 79</type>
-		<name>0番台 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>0 Model Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>津軽海峡線用の交流用電気機関車ED79重連(0番台と100番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1523,10 +1523,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-50-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 79</type>
-		<name>50番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>50 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>津軽海峡線用の交流用電気機関車ED79(50番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -1608,10 +1608,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-50-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 79</type>
-		<name>50番台 タンカー列車</name>
-		<author>しかしか</author>
+		<name>50 Model Tank Train</name>
+		<author>Shikashika</author>
 		<description>津軽海峡線用の交流用電気機関車ED79(50番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1657,10 +1657,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-ED79-50-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>ED 79</type>
-		<name>50番台 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>50 Model Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>津軽海峡線用の交流用電気機関車ED79(50番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -1695,10 +1695,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-renew-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>更新車 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -1773,10 +1773,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-renew-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>更新車 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(JR貨物更新機)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -1790,10 +1790,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-renew-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>更新車 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(JR貨物更新機)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -1807,10 +1807,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-301p-renew-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>301号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>No.301 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(301号機ステンレス赤13号塗装JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -1885,10 +1885,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-301p-renew-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>301号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>No.301 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(301号機ステンレス赤13号塗装JR貨物更新機)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -1902,10 +1902,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-301p-renew-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>301号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>No.301 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(301号機ステンレス赤13号塗装JR貨物更新機)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -1919,10 +1919,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-304s-renew-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>304号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>No.304 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(304号機ステンレス無塗装JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -1997,10 +1997,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-304s-renew-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>304号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>No.304 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(304号機ステンレス無塗装JR貨物更新機)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2014,10 +2014,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-304s-renew-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>304号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>No.304 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(304号機ステンレス無塗装JR貨物更新機)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2031,10 +2031,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-400-renew-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>400番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>400 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(400番台JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2109,10 +2109,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-400-renew-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>400番台 タンカー列車</name>
-		<author>しかしか</author>
+		<name>400 Model Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(400番台JR貨物更新機)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2126,10 +2126,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-400-renew-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>400番台 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>400 Model Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(400番台JR貨物更新機)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2143,10 +2143,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-408-test-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>408号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>No.408 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(408号機試験塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2221,10 +2221,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-408-test-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>408号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>No.408 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(408号機試験塗色)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2238,10 +2238,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-408-test-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>408号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>No.408 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(408号機試験塗色)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2255,10 +2255,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-451-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>451号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>No.451 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(451号機)が牽引する、コンテナ貨物列車です。451、452号機は他のEF81と違ってヘッドライトが下にあります。コンテナ車はコキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2333,10 +2333,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-451-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>451号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>No.451 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(451号機)が牽引する、タンク貨物です。451、452号機は他のEF81と違ってヘッドライトが下にあります。
 		</description>
 		<price>100</price>
@@ -2350,10 +2350,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-451-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>451号機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>No.451 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(451号機)が牽引する、無蓋貨車です。451、452号機は他のEF81と違ってヘッドライトが下にあります。
 		</description>
 		<price>100</price>
@@ -2367,10 +2367,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-453-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>450番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>450 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(450番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2445,10 +2445,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-453-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>450番台 タンカー列車</name>
-		<author>しかしか</author>
+		<name>450 Model Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(450番台)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2462,10 +2462,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-453-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>450番台 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>450 Model Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(450番台)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2479,10 +2479,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-500-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>500番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>500 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(500番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2557,10 +2557,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-500-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>500番台 タンカー列車</name>
-		<author>しかしか</author>
+		<name>500 Model Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(500番台)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2574,10 +2574,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-500-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>500番台 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>500 Model Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(500番台)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2591,10 +2591,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-p-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>赤13号 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Red no.13 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(赤13号塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2669,10 +2669,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-p-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>赤13号 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Red no.13 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(赤13号塗色)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2686,10 +2686,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-p-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>赤13号 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Red no.13 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(赤13号塗色)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2703,10 +2703,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-r-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>赤2号 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Red no.2 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(赤2号塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2781,10 +2781,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-r-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>赤2号 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Red no.2 Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(赤2号塗色)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2798,10 +2798,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-r-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>赤2号 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Red no.2 Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(赤2号塗色)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2815,10 +2815,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-hokuto-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>北斗星 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Hokutosei Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(北斗星塗装)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -2893,10 +2893,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-hokuto-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>北斗星 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Hokutosei Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(北斗星塗装)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -2910,10 +2910,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-hokuto-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>北斗星 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Hokutosei Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81(北斗星塗装)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -2927,10 +2927,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-rainbow-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>レインボー コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Rainbow Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81-95号機(スーパー・エクスプレス・レインボー塗装)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3005,10 +3005,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-rainbow-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>レインボー タンカー列車</name>
-		<author>しかしか</author>
+		<name>Rainbow Tank Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81-95号機(スーパー・エクスプレス・レインボー塗装)が牽引する、タンク貨物です。
 		</description>
 		<price>100</price>
@@ -3022,10 +3022,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF81-rainbow-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 81</type>
-		<name>レインボー 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Rainbow Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>交直両用電気機関車EF81-95号機(スーパー・エクスプレス・レインボー塗装)が牽引する、無蓋貨車です。
 		</description>
 		<price>100</price>
@@ -3039,10 +3039,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF200-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 200</type>
-		<name>コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>6000kWという狭軌で世界一の出力を誇る貨物用直流電気機関車EF200が牽引する、コンテナ貨物列車です。あまりに出力が大きいので変電所の能力が追いつかないとか…。コンテナ車の方は、コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3123,10 +3123,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF200-Freight-big-shiki1000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 200</type>
-		<name>大物貨物列車</name>
-		<author>しかしか</author>
+		<name>Schnabel Car Freight Train</name>
+		<author>Shikashika</author>
 		<description>6000kWという狭軌で世界一の出力を誇る貨物用直流電気機関車EF200が牽引する、大物貨物列車です。あまりに出力が大きいので変電所の能力が追いつかないとか…。大物車はシキ1000で、2両分で1両となっています。最後尾に車掌車を連結しています。
 		</description>
 		<price>100</price>
@@ -3147,10 +3147,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF210-000-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 210</type>
-		<name>-0番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>-0 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>「ECO-POWER桃太郎」の愛称をもつ貨物用直流電気機関車EF210(0番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3225,10 +3225,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF210-100-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 210</type>
-		<name>-100番台 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>-100 Model Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>「ECO-POWER桃太郎」の愛称をもつ貨物用直流電気機関車EF210(100番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3303,10 +3303,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EF210-100-sa-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EF 210</type>
-		<name>シングルアームパンタグラフ コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Single Arm Pantograph Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>「ECO-POWER桃太郎」の愛称をもつ貨物用直流電気機関車EF210(シングルアームパンタグラフタイプ)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3381,10 +3381,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH500-901-2-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 500</type>
-		<name>*2-901号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>*2-no.901 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(901号機試作機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3469,10 +3469,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH500-001-2-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 500</type>
-		<name>*2-1次 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>*2-1st Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(1次)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3557,10 +3557,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH500-003-2-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 500</type>
-		<name>*2-2次 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>*2-2nd Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(2次)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3645,10 +3645,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH500-010-2-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 500</type>
-		<name>*2-3次 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>*2-3rd Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(3次)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3733,10 +3733,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH200-901-2-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 200</type>
-		<name>*2-901号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>*2-no.901 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(901号機試作機)です。EF64型機関車の後継車として急勾配線区用に開発され、試作機は2001年に東芝府中事業所で製造されました。コンテナ貨物列車で、コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3821,10 +3821,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH200-901-2-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 200</type>
-		<name>*2-901号機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>*2-no.901 Tank Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(901号機試作機)です。EF64型機関車の後継車として急勾配線区用に開発され、試作機は2001年に東芝府中事業所で製造されました。タキ43000のタンク貨物列車です。
 		</description>
 		<price>100</price>
@@ -3869,10 +3869,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH200-001-2-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 200</type>
-		<name>*2 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>*2 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(量産型)です。EF64型機関車の後継車として急勾配線区用に開発され、2003年3月28日から量産型の製造が東芝府中事業所でされています。コンテナ貨物列車で、コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -3957,10 +3957,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-EH200-001-2-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>EH 200</type>
-		<name>*2 タンカー列車</name>
-		<author>しかしか</author>
+		<name>*2 Tank Train</name>
+		<author>Shikashika</author>
 		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(量産型)です。EF64型機関車の後継車として急勾配線区用に開発され、2003年3月28日から量産型の製造が東芝府中事業所でされています。タキ43000のタンク貨物列車です。
 		</description>
 		<price>100</price>
@@ -4005,10 +4005,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-JRF-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>更新機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -4090,10 +4090,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-JRF-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>更新機 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Tank Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(JR貨物更新機)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -4138,10 +4138,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-JRF-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>更新機 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(JR貨物更新機)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -4176,10 +4176,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-renew-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>更新機(北海道仕様) コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished (Hokkaido specs.) Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(JR貨物更新機北海道仕様)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -4261,10 +4261,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-renew-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>更新機(北海道仕様) タンカー列車</name>
-		<author>しかしか</author>
+		<name>Refurbished (Hokkaido specs.) Tank Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(JR貨物更新機北海道仕様)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -4309,10 +4309,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-renew-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>更新機(北海道仕様) 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Refurbished (Hokkaido specs.) Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(JR貨物更新機北海道仕様)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -4347,10 +4347,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-hokuto-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>北斗星 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>Hokutosei Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(北斗星塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -4432,10 +4432,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-hokuto-Freight-Tank-kaki43000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>北斗星 タンカー列車</name>
-		<author>しかしか</author>
+		<name>Hokutosei Tank Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(北斗星塗色)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -4480,10 +4480,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DD51-hokuto-Freight-m-toki250000}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DD 51</type>
-		<name>北斗星 無蓋貨物列車</name>
-		<author>しかしか</author>
+		<name>Hokutosei Open Freight Train</name>
+		<author>Shikashika</author>
 		<description>液体式ディーゼル機関車DD51(北斗星塗色)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
 		</description>
 		<price>100</price>
@@ -4518,10 +4518,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DF200-901-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DF 200</type>
-		<name>-901号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>-no.901 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>電気式ディーゼル機関車DF200(試作901号機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -4596,10 +4596,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DF200-001-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DF 200</type>
-		<name>-001号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>-no.001 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>電気式ディーゼル機関車DF200(1～9号機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
@@ -4674,10 +4674,10 @@
 	</contribution>
 
 	<contribution type="train" id="{FreeTrain-Shika-RailroadTrain-DF200-010-Freight-Container-koki100-JRF}">
-		<company>JR貨物</company>
+		<company>JR Freight</company>
 		<type>DF 200</type>
-		<name>-010号機 コンテナ貨物列車</name>
-		<author>しかしか</author>
+		<name>-no.010 Container Freight Train</name>
+		<author>Shikashika</author>
 		<description>電気式ディーゼル機関車DF200(10号機～)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
 		</description>
 		<price>100</price>
