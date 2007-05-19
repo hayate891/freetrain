@@ -6,12 +6,12 @@
     <name>Housing</name> <!--!住宅-->
 		<category id="0101">
 			<icon src="icons_sp.bmp" index="0"/>
-			<name>Single House</name> <!--!一戸建て-->			
+			<name>Single Houses</name> <!--!一戸建て-->			
 		</category>
 		<category id="0102">
 			<name>Rental Housing</name>					
 			<category id="010201">
-				<name>Rental Apartment</name> <!--!賃貸アパート-->
+				<name>Rental Apartments</name> <!--!賃貸アパート-->
 			</category>
 		</category>
 		<category id="0103">
@@ -27,7 +27,7 @@
 			<name>Condominium Apartments</name> <!--!分譲集合住宅-->
 			<icon src="icons_sp.bmp" index="1"/>
 			<category id="010401">
-				<name>Condiminiums</name> <!--!分譲マンション-->
+				<name>Condominiums</name> <!--!分譲マンション-->
 			</category>
 		</category>
 		
@@ -591,7 +591,7 @@
 		</category>
 		<category id="5040">
 			<icon src="icons_sp.bmp" index="13"/>
-			<name>Groves</name> <!--! 緑地-->
+			<name>Green Tracts</name> <!--! 緑地-->
 		</category>
 		<category id="5042">
 			<icon src="icons_sp.bmp" index="13"/>
