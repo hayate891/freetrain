@@ -127,7 +127,7 @@ namespace TrainListBuilder.src
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "MainForm";
-			this.Text = "A tool to create HTML lists of trains";
+			this.Text = "HTML Train List Generation";
 			//! this.Text = "列車一覧HTML作成ツール";
 			this.ResumeLayout(false);
 
@@ -144,7 +144,7 @@ namespace TrainListBuilder.src
 			string dir = output.Text;
 
 			if( !Directory.Exists(dir) ) {
-				MessageBox.Show(this,"The chosen output directory does not exist");
+				MessageBox.Show(this,"The output directory does not exist");
 				//! MessageBox.Show(this,"指定された出力先は存在しません");
 				return;
 			}

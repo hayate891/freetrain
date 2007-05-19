@@ -19,7 +19,7 @@
 	</contribution>
 	
 	<contribution type="train" id="{F3604C61-D0D5-4c9c-ADD6-405610FA6250}">
-		<name>FT1 model</name>
+		<name>FT1 Series</name>
 		<!--!<name>ＦＴ１型</name>-->
 		<price>1800</price>
 		<speed>fast</speed>
@@ -36,7 +36,7 @@
 	</contribution>
 	
 	<contribution type="train" id="{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}">
-		<name>FT2 model</name>
+		<name>FT2 Series</name>
 		<!--!<name>ＦＴ２型</name>-->
 		<price>1000</price>
 		<speed>medium</speed>
@@ -53,7 +53,7 @@
 	</contribution>
 	
 	<contribution type="train" id="{F7134C8E-6B63-4780-AF16-90D33131CD07}">
-		<name>FT3 model</name>
+		<name>FT3 Series</name>
 		<!--!<name>ＦＴ３型</name>-->
 		<price>500</price>
 		<speed>slow</speed>
@@ -103,7 +103,7 @@
 		<price>1</price>
 		<speed>fast</speed>
 		<author>477</author>
-		<type>485 series</type>
+		<type>485 Series</type>
 		<!--!<type>485系</type>-->
 		<company>JR East</company>
 		<!--!<company>JR東日本</company>-->
@@ -157,7 +157,7 @@
 		<price>100</price>
 		<speed>superb</speed>
 		<author>477</author>
-		<type>E3 series</type>
+		<type>E3 Series</type>
 		<!--!<type>E3系</type>-->
 		<company>JR East</company>
 		<!--!<company>JR東日本</company>-->

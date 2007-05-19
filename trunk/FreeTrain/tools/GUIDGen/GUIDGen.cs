@@ -50,7 +50,7 @@ namespace GUIDGen
 			this.buttonNew.Name = "buttonNew";
 			this.buttonNew.Size = new System.Drawing.Size(128, 24);
 			this.buttonNew.TabIndex = 2;
-			this.buttonNew.Text = "&New ID and copy";
+			this.buttonNew.Text = "&New ID && Copy";
 			//! this.buttonNew.Text = "新しいID＆コピー(&N)";
 			this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
 			// 
