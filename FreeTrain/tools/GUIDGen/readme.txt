@@ -1,13 +1,12 @@
 
-FreeTrainでは全てのcontributionはユニークなIDを持つ必要があります。
-GUIDGen.exeはこのためのIDを生成するツールです。.NET実行環境が必要
-です。FreeTrainが動作していれば十分なはずです。
+All FreeTrain contributions have to have a unique ID. GUIDGen.exe is a tool
+that generates such IDs. It needs the .NET framework to run, but if you're
+already running FreeTrain, that should be enough.
 
-起動された時点で新しいIDが作成されクリップボードにコピーされます。
-IDが１つしか要らないなら、コピーボタンを押す必要はありません。
+When run, this tool will generate a new ID and copy it to the clipboard. If
+you only need one ID, you don't have to press the copy button.
 
-プログラミングをしている人ならわかると思いますが、このツールは単に
-GUIDを作成しているだけです。
+As any programmer will understand, this tool simply generates a GUID.
 
 
 
