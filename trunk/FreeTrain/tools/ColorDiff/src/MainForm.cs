@@ -93,7 +93,8 @@ namespace ColorDiff
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(112, 16);
 			this.label1.TabIndex = 2;
-			this.label1.Text = "ƒ}ƒbƒsƒ“ƒOF";
+			this.label1.Text = "Mapping: ";
+			//! this.label1.Text = "ãƒãƒƒãƒ”ãƒ³ã‚°ï¼š";
 			// 
 			// loadRight
 			// 
@@ -102,7 +103,8 @@ namespace ColorDiff
 			this.loadRight.Name = "loadRight";
 			this.loadRight.Size = new System.Drawing.Size(88, 24);
 			this.loadRight.TabIndex = 1;
-			this.loadRight.Text = "‰Eƒ[ƒh(&L)...";
+			this.loadRight.Text = "&Load Right...";
+			//! this.loadRight.Text = "å³ãƒ­ãƒ¼ãƒ‰(&L)...";
 			this.loadRight.Click += new System.EventHandler(this.OnLoadRight);
 			// 
 			// loadLeft
@@ -112,7 +114,8 @@ namespace ColorDiff
 			this.loadLeft.Name = "loadLeft";
 			this.loadLeft.Size = new System.Drawing.Size(88, 24);
 			this.loadLeft.TabIndex = 0;
-			this.loadLeft.Text = "¶ƒ[ƒh(&L)...";
+			this.loadLeft.Text = "&Load Left...";
+			//! this.loadLeft.Text = "å·¦ãƒ­ãƒ¼ãƒ‰(&L)...";
 			this.loadLeft.Click += new System.EventHandler(this.OnLoadLeft);
 			// 
 			// splitter1
@@ -154,7 +157,8 @@ namespace ColorDiff
 																		  this.panel1});
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MainForm";
-			this.Text = "‰æ‘œ”äŠrƒc[ƒ‹";
+			this.Text = "Image Diff Tool";
+			//! this.Text = "ç”»åƒæ¯”è¼ƒãƒ„ãƒ¼ãƒ«";
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -205,8 +209,10 @@ namespace ColorDiff
 			Bitmap l = (Bitmap)pictureLeft.Image;
 			Bitmap r = (Bitmap)pictureRight.Image;
 
-			if(l==null || r==null)	return "‚Q‚Â‚Ì‰æ‘œ‚ğƒ[ƒh‚µ‚Ä‚­‚¾‚³‚¢";
-			if(l.Size!=r.Size)		return "‰æ‘œ‚ÌƒTƒCƒY‚ªˆá‚¢‚Ü‚·("+l.Size+" vs "+r.Size+")";
+			if(l==null || r==null)	return "Please load two images.";
+			//! if(l==null || r==null)	return "ï¼’ã¤ã®ç”»åƒã‚’ãƒ­ãƒ¼ãƒ‰ã—ã¦ãã ã•ã„";
+			if(l.Size!=r.Size)		return "The images have different dimensions ("+l.Size+" vs "+r.Size+")";
+			//! if(l.Size!=r.Size)		return "ç”»åƒã®ã‚µã‚¤ã‚ºãŒé•ã„ã¾ã™("+l.Size+" vs "+r.Size+")";
 
 			StringBuilder output = new StringBuilder();
 
@@ -223,7 +229,8 @@ namespace ColorDiff
 						if( !conflicts.Contains(src) ) {
 							conflicts[src]=dst;	// avoid duplicating errors
 							output.Append(
-								string.Format("ˆêŠÑ«‚Ì‚È‚¢ƒ}ƒbƒsƒ“ƒO: ({0})¨({1}),({2})\n",
+								string.Format("Inconsistent mapping: ({0})â†’({1}),({2})\n",
+								//! string.Format("ä¸€è²«æ€§ã®ãªã„ãƒãƒƒãƒ”ãƒ³ã‚°: ({0})â†’({1}),({2})\n",
 									printColor(src),
 									printColor(dst),
 									printColor((Color)assoc[src]) ));
