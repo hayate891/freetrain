@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>Building Set</title>
-	<!--!<title>建物セット</title>-->
+	<title>Parking Garage</title>
 	<author>Bankare</author>
-	<!--!<author>ばんかれさん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="picture" id="{10146B06-4D3C-40E2-BA95-AE51FA611DA5}">
 		<picture src="park.bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{72AF542C-3251-43ad-9094-43E6FDDE9420}">
-		<group>Parking lot</group>
-		<!--!<group>立体駐車場</group>-->
+	<contribution type="GenericStructure" id="{72AF542C-3251-43ad-9094-43E6FDDE9420}">
+		<group>Parking garage</group>
+		<structure>
+			<category byname="Parking Areas"/>
+		</structure>
 		<price>2400</price>
 		<size>2,2</size>
 		<minHeight>2</minHeight>
