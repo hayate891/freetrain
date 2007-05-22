@@ -100,8 +100,8 @@
 	</contribution>
 
 	<contribution type="picture" id="{2888B890-524B-43C4-9FC7-7A82728E4EDB}">
-		<picture src="store_s01.bmp" >
-			<override when="night" src="store_s01_n.bmp" />
+		<picture src="store_m01.bmp" >
+			<override when="night" src="store_m01_n.bmp" />
 		</picture>
 	</contribution>
 	
