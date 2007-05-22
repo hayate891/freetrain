@@ -35,3 +35,11 @@ All above pires and rails are removed together.
 2007/5/1
 #9.
 Translated to English. Many UI elements modified to accomodate for the new language.
+
+2007/5/22
+#10.
+Convert structure plugins to the 'generic' format.
+#11.
+Merge the two main window toolbars and add an icon for the timer button.
+#12.
+Fix crashes when using an empty build dialog.
