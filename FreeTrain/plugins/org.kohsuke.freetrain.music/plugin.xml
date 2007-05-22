@@ -2,13 +2,13 @@
 <plug-in>
 	<title>Standard BGM Set</title>
 	<!--!<title>基本ＢＧＭセット</title>-->
-	<author>Kouensya A &amp; 915</author>
+	<author>Kouensya-A &amp; 915</author>
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="bgm" id="{4DFF42D2-FD4A-4d45-A18A-F2882D936C73}">
 		<name>Pioneers</name>
 		<!--!<name>開拓</name>-->
-		<author>Kouensya A</author>
+		<author>Kouensya-A</author>
 		<!--!<author>後援者Ａさん</author>-->
 		<href>map.mid</href>
 	</contribution>
