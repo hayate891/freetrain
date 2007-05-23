@@ -3,6 +3,9 @@
 <!ENTITY dc10a '
 		<group>Douglas DC10(large)</group>
 		<design>Type A</design>
+		<structure>
+			<category byname="Airports"/>
+		</structure>
 		<price>800</price>
 		<size>5,5</size>
 		<height>1</height>
@@ -15,6 +18,9 @@
 <!ENTITY dc10b '
 		<group>Douglas DC10(large)</group>
 		<design>Type B</design>
+		<structure>
+			<category byname="Airports"/>
+		</structure>
 		<price>800</price>
 		<size>5,5</size>
 		<height>1</height>

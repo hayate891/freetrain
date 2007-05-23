@@ -931,7 +931,7 @@
 		<name>Single House</name>
 		<design>Type A</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>96</price>
 		<size>1,1</size>
@@ -1018,7 +1018,7 @@
 		<name>Apartment</name>
 		<design>Type A</design>
 		<structure>
-			<category byname="Rental Apartment"/>
+			<category byname="Rental Apartments"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -1388,7 +1388,7 @@
 		<name>Single House</name>
 		<design>Type B</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>88</price>
 		<size>1,1</size>
@@ -1748,7 +1748,7 @@
 		<name>Small rental apartment</name>
 		<design>Small rental apartment</design>
 		<structure>
-			<category byname="Rental Apartment"/>
+			<category byname="Rental Apartments"/>
 		</structure>
 		<price>110</price>
 		<size>1,1</size>
@@ -2055,7 +2055,7 @@
 		<name>Single House</name>
 		<design>Type C-1</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -2088,7 +2088,7 @@
 		<name>Single House</name>
 		<design>Type C-2</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -2123,7 +2123,7 @@
 		<name>Single House</name>
 		<design>Type D-1</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2156,7 +2156,7 @@
 		<name>Single House</name>
 		<design>Type D-2</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2191,7 +2191,7 @@
 		<name>Single House</name>
 		<design>Type E-1</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>130</price>
 		<size>1,1</size>
@@ -2224,7 +2224,7 @@
 		<name>Single House</name>
 		<design>Type E-2</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>130</price>
 		<size>1,1</size>
@@ -2259,7 +2259,7 @@
 		<name>Single House</name>
 		<design>Type F-1</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2292,7 +2292,7 @@
 		<name>Single House</name>
 		<design>Type F-2</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2327,7 +2327,7 @@
 		<name>Single House</name>
 		<design>Type G-1</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -2360,7 +2360,7 @@
 		<name>Single House</name>
 		<design>Type G-2</design>
 		<structure>
-			<category byname="Single House"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -2872,7 +2872,7 @@
 
 <!-- Baroon tower　-->
 	<contribution type="GenericStructure" id="{ampark_BalloonTower_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>Baroon tower</name>
+		<name>Balloon tower</name>
 		<design>Type A</design>
 		<structure>
 			<category byname="Amusement Parks"/>

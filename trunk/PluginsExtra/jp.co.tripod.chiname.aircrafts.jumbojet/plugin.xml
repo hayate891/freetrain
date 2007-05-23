@@ -3,6 +3,9 @@
 <!ENTITY b747a '
 		<group>Boeing 747 (large)</group>
 		<design>Type A</design>
+		<structure>
+			<category byname="Airports"/>
+		</structure>
 		<price>1000</price>
 		<size>5,5</size>
 		<height>1</height>
@@ -11,6 +14,9 @@
 <!ENTITY b747b '
 		<group>Boeing 747 (large)</group>
 		<design>Type B</design>
+		<structure>
+			<category byname="Airports"/>
+		</structure>
 		<price>1000</price>
 		<size>5,5</size>
 		<height>1</height>
