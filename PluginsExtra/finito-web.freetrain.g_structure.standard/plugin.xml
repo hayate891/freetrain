@@ -226,9 +226,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0701 '
-	<name>Condiminiums(3x3)</name>
+	<name>Condominiums(3x3)</name>
 	<structure>
-		<category byname="Condiminiums"/>
+		<category byname="Condominiums"/>
 	</structure>
 	<price>6000</price>
 	<size>3,3</size>
@@ -241,9 +241,9 @@
 	<computerCannotBuild/>
 '>
 <!ENTITY h0702 '
-	<name>Condiminiums(3x2)</name>
+	<name>Condominiums(3x2)</name>
 	<structure>
-		<category byname="Condiminiums"/>
+		<category byname="Condominiums"/>
 	</structure>
 	<price>4000</price>
 	<size>2,3</size>
@@ -873,7 +873,7 @@
 	</contribution>
 
 
-<!-- Condiminiums -->
+<!-- Condominiums -->
 	<contribution type="picture" id="{HEUER-0007-CONDO-PICTURE-0001}">
 		<picture src="condominium.bmp">
 		</picture>

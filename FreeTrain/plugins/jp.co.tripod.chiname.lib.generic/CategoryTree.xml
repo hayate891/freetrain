@@ -89,7 +89,7 @@
 		</category>
 		<category id="1080">
 			<icon src="icons_sp.bmp" index="20"/>
-			<name>Service Counters</name> <!--!サービス窓口-->
+			<name>Service Providers</name> <!--!サービス窓口-->
 		</category>
 		<category id="1081">
 			<icon src="icons_sp.bmp" index="20"/>
@@ -152,7 +152,7 @@
 				<name>Weather Observatories</name> <!--! 気象観測所-->
 			</category>
 			<category id="209002">
-				<name>Astronomical Observatores</name> <!--!天体観測所-->
+				<name>Astronomical Observatories</name> <!--!天体観測所-->
 			</category>
 		</category>
 	</category>

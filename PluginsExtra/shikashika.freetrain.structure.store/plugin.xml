@@ -135,11 +135,11 @@
 
 <!-- Shisen Tour Support Corp. main office building -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-travelagent-shika2-01-headoffice}">
-	<group>Service Counters</group>
-	<name>travel agency</name>
+	<group>Service Providers</group>
+	<name>Travel agency</name>
 	<design>Shisen Tour Support Corp. main office</design>
 	<structure>
-		<category byname="Service Counters"/>
+		<category byname="Service Providers"/>
 		<category byname="Offices for Rent" hide="true"/>
 		<category byname="Restaurants" hide="true"/>
 	</structure>
@@ -225,11 +225,11 @@
 
 <!-- Shisen Tour Support Corp. branch office building -->
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-travelagent-shika2-02-branchoffice}">
-	<group>Service Counters</group>
-	<name>travel agency</name>
+	<group>Service Providers</group>
+	<name>Travel agency</name>
 	<design>Shisen Tour Support Corp. branch office</design>
 	<structure>
-		<category byname="Service Counters"/>
+		<category byname="Service Providers"/>
 		<category byname="Offices for Rent" hide="true"/>
 		<category byname="Restaurants" hide="true"/>
 	</structure>

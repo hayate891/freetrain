@@ -214,10 +214,10 @@
 '>
 
 <!ENTITY component_park_001 '
-	<group>Groves</group>
+	<group>Parks</group>
 	<name>Park(1x1)</name>
 	<structure>
-		<category byname="Groves"/>
+		<category byname="Green Tracts"/>
 	</structure>
 	<price>1000</price>
 	<size>1,1</size>
@@ -232,10 +232,10 @@
 	</population>
 '>
 <!ENTITY component_park_002 '
-	<group>Groves</group>
+	<group>Parks</group>
 	<name>Park(1x1)</name>
 	<structure>
-		<category byname="Groves"/>
+		<category byname="Green Tracts"/>
 	</structure>
 	<price>1500</price>
 	<size>1,1</size>
@@ -250,10 +250,10 @@
 	</population>
 '>
 <!ENTITY component_park_003 '
-	<group>Groves</group>
+	<group>Parks</group>
 	<name>Park(1x1)</name>
 	<structure>
-		<category byname="Groves"/>
+		<category byname="Green Tracts"/>
 	</structure>
 	<price>1200</price>
 	<size>1,1</size>
