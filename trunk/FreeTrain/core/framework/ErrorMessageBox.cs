@@ -124,8 +124,7 @@ namespace freetrain.framework
 			this.linkLabel1.Size = new System.Drawing.Size(312, 16);
 			this.linkLabel1.TabIndex = 4;
 			this.linkLabel1.TabStop = true;
-			this.linkLabel1.TargetUrl = "http://www.kohsuke.org/freetrain/wiki/pukiwiki.php?%A5%D0%A5%B0%CA%F3%B9%F0%A4%CE" +
-				"%BC%EA%BD%E7";
+			this.linkLabel1.TargetUrl = "http://freetrain.sourceforge.net/";
 			this.linkLabel1.Text = "Report a bug";
 			//! this.linkLabel1.Text = "バグを報告する";
 			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -1583,7 +1583,7 @@ namespace freetrain.framework
 		}
 
 		private void showOnlineHelp() {
-			UrlInvoker.openUrl("http://www.kohsuke.org/freetrain/wiki/pukiwiki.php?%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB");
+			UrlInvoker.openUrl("http://freetrain.sourceforge.net/");
 		}
 
 		/// <summary> Called when a new file is dropped on this form. </summary>
