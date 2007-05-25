@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY housePopulation3 '
 	<population>
@@ -16,10 +16,8 @@
 ]>
 
 <plug-in>
-	<title>Half Voxel Houses</title>
+	<title>Halfsize Houses</title>
 	<author>C477</author>
-	<!--!<title>半ボクセル住宅</title>
-	<author>C477@2両目</author>-->
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
 	<depend on="jp.co.tripod.chiname.lib.halfvoxel" />	
 	
@@ -28,12 +26,9 @@
 	</contribution>
 
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-0">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof A</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てA</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof 2 floors A</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;
@@ -46,12 +41,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-1">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof B</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てB</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof two-story B</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;
@@ -64,12 +56,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-2">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof C</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てC</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof two-story C</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;
@@ -82,12 +71,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-3">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof D</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てD</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof two-story D</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;
@@ -100,12 +86,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-4">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof E</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てE</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof two-story E</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;
@@ -118,12 +101,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-5">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof F</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てF</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof two-story F</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;
@@ -136,12 +116,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-6">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof G</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てG</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof two-story G</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;
@@ -154,12 +131,9 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-7">
-		<group>Half voxel contruction</group>
-		<subgroup>Old private house</subgroup>
-		<name>Two-story house with gabled roof H</name>
-		<!--!<group>半ボクセル建築</group>
-		<subgroup>古い民家</subgroup>
-		<name>切妻二階建てH</name>-->
+		<group>Halfsize structures</group>
+		<subgroup>Old downtown house</subgroup>
+		<name>gabled roof two-story H</name>
 		<price>25</price>
 		<height>1</height>
 		&housePopulation3;

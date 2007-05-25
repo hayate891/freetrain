@@ -12,7 +12,7 @@
 <!ENTITY smallBuildingParam '
 	<group>Office building (1x1)</group>
 	<structure>
-		<category byname="Offices for Rent"/>
+		<category byname="Rental Offices"/>
 	</structure>
 	<price>350</price>
 	<size>1,1</size>
@@ -26,7 +26,7 @@
 <!ENTITY building2x2Param '
 	<group>Office building (2x2)</group>
 	<structure>
-		<category byname="Offices for Rent"/>
+		<category byname="Rental Offices"/>
 	</structure>
 	<price>3000</price>
 	<size>2,2</size>
