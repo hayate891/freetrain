@@ -177,7 +177,7 @@
 	<contribution type="GenericStructure" id="{258312FF-9F91-49C5-BA4D-C68CB8F947C1}">
 		<name>Medium-rise office building</name>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>1600</price>
 		<size>2,2</size>
@@ -206,7 +206,7 @@
 	<contribution type="GenericStructure" id="{442C7E12-A3BA-4c25-9129-C3803EA760BC}">
 		<group>Office building (A)</group>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>3900</price>
 		<size>3,2</size>
@@ -270,7 +270,7 @@
 	<contribution type="GenericStructure" id="{9BF4DD25-050A-4633-BC8B-0B8B226FC5E8}">
 		<group>Office building (with heliport)</group>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Restaurants" hide="true"/>
 			<category byname="Private Specialty Stores" hide="true"/>
 		</structure>
@@ -313,7 +313,7 @@
 	<contribution type="GenericStructure" id="{D57200E0-8E73-4899-8EEC-0E9AC95C3D40}">
 		<group>Shinjuku Mitsui Building</group>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Restaurants" hide="true"/>
 			<category byname="Stores" hide="true"/>
 		</structure>
@@ -385,7 +385,7 @@
 	<contribution type="GenericStructure" id="{C35B9F7A-7D69-4D1B-9B92-D05CBF4C20D7}">
 		<group>Shinjuku Sumitomo Building</group>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Restaurants" hide="true"/>
 			<category byname="Stores" hide="true"/>
 		</structure>

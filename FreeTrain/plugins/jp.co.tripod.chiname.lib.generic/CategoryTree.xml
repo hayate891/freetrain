@@ -72,7 +72,7 @@
 			<name>Urban Outlets</name> <!--!都市型量販店-->
 		</category>
 		<category id="1031">
-			<name>Suburbian Outlets</name> <!--!郊外型量販店-->	
+			<name>Suburban Outlets</name> <!--!郊外型量販店-->	
 		</category>
 		<category id="1050">
 			<name>Shopping Malls</name> <!--!ショッピングモール-->			
@@ -100,7 +100,7 @@
 		<icon src="icons.bmp" index="3"/>
 		<name>Offices</name> <!--!オフィス-->
 		<category id="1101">
-			<name>Offices for Rent</name> <!--!貸事務所-->
+			<name>Rental Offices</name> <!--!貸事務所-->
 		</category>
 		<category id="1102">
 			<name>Corporate Offices</name> <!--!企業事務所-->
@@ -190,7 +190,7 @@
 			</category>
 		</category>
 		<category id="2136">
-			<name>Precision Instrument Factory</name> <!--! 精機工場-->
+			<name>Precision Instrument Factories</name> <!--! 精機工場-->
 		</category>
 		<category id="2140">
 			<name>Raw Material Processing</name> <!--! 資材工場-->
