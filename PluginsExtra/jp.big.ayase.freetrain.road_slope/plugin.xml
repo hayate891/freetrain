@@ -14,88 +14,46 @@
 		</picture>
 	</contribution>
 
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeN}">
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeN}">
 		<group>Slope road(normal)</group>
 		<price>1000</price>
 		<size>1,4</size>
 		<height>1</height>
+		<structure>
+			<category byname="Road Accessories"/>
+		</structure>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeS}">
-		<group>Slope road(normal)</group>
-		<price>1000</price>
-		<size>4,1</size>
-		<height>1</height>
 		<sprite origin="80,0" offset="48">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeW}">
-		<group>Slope road(normal)</group>
-		<price>1000</price>
-		<size>1,4</size>
-		<height>1</height>
 		<sprite origin="160,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-SlopeE}">
-		<group>Slope road(normal)</group>
-		<price>1000</price>
-		<size>4,1</size>
-		<height>1</height>
 		<sprite origin="240,0" offset="48">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
 	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2N}">
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2N}">
 		<group>Slope road(expressway)</group>
 		<price>1000</price>
 		<size>1,4</size>
 		<height>2</height>
+		<structure>
+			<category byname="Road Accessories"/>
+		</structure>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2S}">
-		<group>Slope road(expressway)</group>
-		<price>1000</price>
-		<size>4,1</size>
-		<height>2</height>
 		<sprite origin="80,0" offset="48">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2W}">
-		<group>Slope road(expressway)</group>
-		<price>1000</price>
-		<size>1,4</size>
-		<height>2</height>
 		<sprite origin="160,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-RoadImg-Slope2E}">
-		<group>Slope road(expressway)</group>
-		<price>1000</price>
-		<size>4,1</size>
-		<height>2</height>
 		<sprite origin="240,0" offset="48">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Slope2}"/>
 		</sprite>
