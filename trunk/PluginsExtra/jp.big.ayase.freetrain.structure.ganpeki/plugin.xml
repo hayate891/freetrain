@@ -9,81 +9,35 @@
 	</contribution>
 	
 	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-01}">
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-01}">
 		<group>Wharf</group>
+		<structure>
+			<category byname="Other Shipping Facilities"/>
+		</structure>
 		<price>100</price>
 		<height>1</height>
 		<size>1,1</size>
 		<sprite origin="0,0" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-02}">
-		<group>Wharf</group>
-		<price>100</price>
-		<height>1</height>
-		<size>1,1</size>
 		<sprite origin="32,0" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-03}">
-		<group>Wharf</group>
-		<price>100</price>
-		<height>1</height>
-		<size>1,1</size>
 		<sprite origin="64,0" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-04}">
-		<group>Wharf</group>
-		<price>100</price>
-		<height>1</height>
-		<size>1,1</size>
 		<sprite origin="0,32" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-05}">
-		<group>Wharf</group>
-		<price>100</price>
-		<height>1</height>
-		<size>1,1</size>
 		<sprite origin="32,32" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-06}">
-		<group>Wharf</group>
-		<price>100</price>
-		<height>1</height>
-		<size>1,1</size>
 		<sprite origin="64,32" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-07}">
-		<group>Wharf</group>
-		<price>100</price>
-		<height>1</height>
-		<size>1,1</size>
 		<sprite origin="0,64" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-ganpeki-08}">
-		<group>Wharf</group>
-		<price>100</price>
-		<height>1</height>
-		<size>1,1</size>
 		<sprite origin="32,64" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-ganpeki-01}"/>
 		</sprite>

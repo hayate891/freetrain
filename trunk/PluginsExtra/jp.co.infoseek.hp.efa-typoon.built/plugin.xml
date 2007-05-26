@@ -27,7 +27,7 @@
 
 
 
-	<title>Building set 1st</title>
+	<title>Building Set No.1</title>
 	<author>Typhoon</author>
 	<homepage>http://typhoon.s19.xrea.com/ft/index.html</homepage>
 	
@@ -278,8 +278,11 @@
 	</contribution>
 
 
-	<contribution type="commercial" id="{TYPHOON-SUPERL-YOKADO-7567171D3CEF}">
+	<contribution type="GenericStructure" id="{TYPHOON-SUPERL-YOKADO-7567171D3CEF}">
 		<group>Huge supermarket</group>
+		<structure>
+			<category byname="Supermarkets"/>
+		</structure>
 		<price>3000</price>
 		<height>3</height>
 		<size>8,8</size>
@@ -306,9 +309,12 @@
 
 
 
-	<contribution type="commercial" id="{TYPHOON-Military-Rader1-7567171D3CEF}">
+	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader1-7567171D3CEF}">
 		<group>Radar</group>
 		<name>Early-warning radar</name>
+		<structure>
+			<category byname="Military Facilities"/>
+		</structure>
 		<price>3000</price>
 		<height>4</height>
 		<size>1,1</size>
@@ -324,9 +330,13 @@
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
-	<contribution type="commercial" id="{TYPHOON-Military-Rader2-7567171D3CEF}">
+	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader2-7567171D3CEF}">
 		<group>Radar</group>
-		<name>Airports watch radar A</name>
+		<name>Airport surveillance radar A</name>
+		<structure>
+			<category byname="Military Facilities"/>
+			<category byname="Airports"/>
+		</structure>
 		<price>1200</price>
 		<height>4</height>
 		<size>1,1</size>
@@ -334,7 +344,7 @@
 		<class name="freetrain.contributions.population.CombinationPopulation"/>
 		<population>
 			<class name="freetrain.contributions.population.OfficePopulation"/>
-			<base>40</base>
+			<base>20</base>
 		</population>
 	</population>
 		<sprite origin="32,0" offset="40">
@@ -342,9 +352,13 @@
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
-	<contribution type="commercial" id="{TYPHOON-Military-Rader3-7567171D3CEF}">
+	<contribution type="GenericStructure" id="{TYPHOON-Military-Rader3-7567171D3CEF}">
 		<group>Radar</group>
-		<name>Airports watch radar B</name>
+		<name>Airport surveillance radar B</name>
+		<structure>
+			<category byname="Military Facilities"/>
+			<category byname="Airports"/>
+		</structure>
 		<price>1200</price>
 		<height>4</height>
 		<size>1,1</size>
@@ -352,7 +366,7 @@
 		<class name="freetrain.contributions.population.CombinationPopulation"/>
 		<population>
 			<class name="freetrain.contributions.population.OfficePopulation"/>
-			<base>40</base>
+			<base>20</base>
 		</population>
 	</population>
 		<sprite origin="64,0" offset="40">
@@ -360,9 +374,12 @@
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
-	<contribution type="commercial" id="{TYPHOON-Military-F-15DJ2-7567171D3CEF}">
+	<contribution type="GenericStructure" id="{TYPHOON-Military-F-15DJ2-7567171D3CEF}">
 		<group>Fighter</group>
 		<name>F-15DJ (black)</name>
+		<structure>
+			<category byname="Military Facilities"/>
+		</structure>
 		<price>1200</price>
 		<height>1</height>
 		<size>2,2</size>
@@ -370,7 +387,7 @@
 		<class name="freetrain.contributions.population.CombinationPopulation"/>
 		<population>
 			<class name="freetrain.contributions.population.OfficePopulation"/>
-			<base>20</base>
+			<base>2</base>
 		</population>
 	</population>
 		<sprite origin="0,0" offset="8">

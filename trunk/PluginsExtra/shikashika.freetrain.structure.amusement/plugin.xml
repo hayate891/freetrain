@@ -217,7 +217,7 @@
 	<group>Parks</group>
 	<name>Park(1x1)</name>
 	<structure>
-		<category byname="Green Tracts"/>
+		<category byname="Parks"/>
 	</structure>
 	<price>1000</price>
 	<size>1,1</size>
@@ -235,7 +235,7 @@
 	<group>Parks</group>
 	<name>Park(1x1)</name>
 	<structure>
-		<category byname="Green Tracts"/>
+		<category byname="Parks"/>
 	</structure>
 	<price>1500</price>
 	<size>1,1</size>
@@ -253,7 +253,7 @@
 	<group>Parks</group>
 	<name>Park(1x1)</name>
 	<structure>
-		<category byname="Green Tracts"/>
+		<category byname="Parks"/>
 	</structure>
 	<price>1200</price>
 	<size>1,1</size>

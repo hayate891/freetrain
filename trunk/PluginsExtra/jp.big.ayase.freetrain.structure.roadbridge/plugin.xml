@@ -18,81 +18,68 @@
 	</contribution>
 	
 	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-01a}">
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-01a}">
 		<group>Highway bridge</group>
+		<structure>
+			<category byname="Road Accessories"/>
+		</structure>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-01b}">
-		<group>Highway bridge</group>
-		<price>100</price>
-		<height>2</height>
-		<size>3,4</size>
 		<sprite origin="112,0" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-01}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-02a}">
+	
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-02a}">
 		<group>Highway bridge</group>
+		<structure>
+			<category byname="Road Accessories"/>
+		</structure>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-02}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-02b}">
-		<group>Highway bridge</group>
-		<price>100</price>
-		<height>2</height>
-		<size>3,4</size>
 		<sprite origin="112,0" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-02}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-03a}">
+	
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-03a}">
 		<group>Highway bridge</group>
+		<structure>
+			<category byname="Road Accessories"/>
+		</structure>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-03}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-03b}">
-		<group>Highway bridge</group>
-		<price>100</price>
-		<height>2</height>
-		<size>3,4</size>
 		<sprite origin="112,0" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-03}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-04a}">
+	
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-04a}">
 		<group>Highway bridge</group>
+		<structure>
+			<category byname="Road Accessories"/>
+		</structure>
 		<price>100</price>
 		<height>2</height>
 		<size>4,3</size>
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-04}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-hashi-04b}">
-		<group>Highway bridge</group>
-		<price>100</price>
-		<height>2</height>
-		<size>3,4</size>
 		<sprite origin="112,0" offset="16">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-04}"/>
 		</sprite>

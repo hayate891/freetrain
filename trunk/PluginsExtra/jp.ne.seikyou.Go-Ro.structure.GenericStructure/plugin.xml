@@ -832,7 +832,7 @@
 
 
 <plug-in>
-	<title>FreeTrain-Sousaku Kan, primary Buildings</title>
+	<title>FreeTrain-Sousaku Kan, Primary Buildings</title>
 	<author>haru</author>
 	<homepage>http://hb4.seikyou.ne.jp/home/Go-Ro/FreeTrain/</homepage>
 	<depend on="jp.ne.seikyou.Go-Ro.structure"/>
@@ -843,9 +843,9 @@
 <!-- Rental office building -->
 	<contribution type="GenericStructure" id="{vhbi_001-GenericStructure-C000-000a-4C8B212Dharu}">
 		<name>Rental office building</name>
-		<design>Rental office building１</design>
+		<design>Rental office building 1</design>
 			<structure>
-				<category byname="Offices for Rent"/>
+				<category byname="Rental Offices"/>
 			</structure>
 		<price>270</price>
 		<size>1,1</size>
@@ -931,7 +931,7 @@
 		<name>Single House</name>
 		<design>Type A</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>96</price>
 		<size>1,1</size>
@@ -1209,7 +1209,7 @@
 		<name>Intelligent building</name>
 		<design>Type A</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>1250</price>
 		<size>2,2</size>
@@ -1388,7 +1388,7 @@
 		<name>Single House</name>
 		<design>Type B</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>88</price>
 		<size>1,1</size>
@@ -1483,7 +1483,7 @@
 		<name>Rental office building</name>
 		<design>Rental office building 2</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Service Counters" hide="true"/>
 		</structure>
 		<price>250</price>
@@ -1549,7 +1549,7 @@
 		<name>Rental office building</name>
 		<design>Rental office building 3</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Business Services" hide="true"/>
 		</structure>
 		<price>270</price>
@@ -1615,7 +1615,7 @@
 		<name>Rental office building</name>
 		<design>Rental office building 4</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>180</price>
 		<size>1,1</size>
@@ -1779,7 +1779,7 @@
 	<contribution type="GenericStructure" id="{bldgVH02-GenericStructure-C001-000a-4C8B212Dharu}">
 		<name>Landmark building</name>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Private Specialty Stores" hide="true"/>
 			<category byname="Specialty Chain Stores" hide="true"/>
 			<category byname="Restaurants" hide="true"/>
@@ -1837,7 +1837,7 @@
 		<name>Rental office building (heliport)</name>
 		<design>Type B</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>4600</price>
 		<size>3,2</size>
@@ -2055,7 +2055,7 @@
 		<name>Single House</name>
 		<design>Type C-1</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -2088,7 +2088,7 @@
 		<name>Single House</name>
 		<design>Type C-2</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>100</price>
 		<size>1,1</size>
@@ -2123,7 +2123,7 @@
 		<name>Single House</name>
 		<design>Type D-1</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2156,7 +2156,7 @@
 		<name>Single House</name>
 		<design>Type D-2</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2191,7 +2191,7 @@
 		<name>Single House</name>
 		<design>Type E-1</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>130</price>
 		<size>1,1</size>
@@ -2224,7 +2224,7 @@
 		<name>Single House</name>
 		<design>Type E-2</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>130</price>
 		<size>1,1</size>
@@ -2259,7 +2259,7 @@
 		<name>Single House</name>
 		<design>Type F-1</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2292,7 +2292,7 @@
 		<name>Single House</name>
 		<design>Type F-2</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>140</price>
 		<size>1,1</size>
@@ -2327,7 +2327,7 @@
 		<name>Single House</name>
 		<design>Type G-1</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -2360,7 +2360,7 @@
 		<name>Single House</name>
 		<design>Type G-2</design>
 		<structure>
-			<category byname="Single Houses"/>
+			<category byname="Single House"/>
 		</structure>
 		<price>120</price>
 		<size>1,1</size>
@@ -2428,7 +2428,7 @@
 		<name>Corner building(1x1)</name>
 		<design>Type A</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>280</price>
 		<size>1,1</size>
@@ -2496,7 +2496,7 @@
 		<name>Corner building(1x1)</name>
 		<design>Type B</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>260</price>
 		<size>1,1</size>
@@ -2564,7 +2564,7 @@
 		<name>Rental office building(3x4)</name>
 		<design>Type A</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Restaurants" hide="true"/>
 			<category byname="Stores" hide="true"/>
 		</structure>
@@ -2670,7 +2670,7 @@
 		<name>Rental office building(3x3)</name>
 		<design>Type A</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<price>10000</price>
 		<size>3,3</size>
@@ -2872,7 +2872,7 @@
 
 <!-- Baroon tower　-->
 	<contribution type="GenericStructure" id="{ampark_BalloonTower_001-GenericStructure-C001-000a-4C8B212Dharu}">
-		<name>Balloon tower</name>
+		<name>Baroon tower</name>
 		<design>Type A</design>
 		<structure>
 			<category byname="Amusement Parks"/>
@@ -3611,7 +3611,7 @@
 
 <!-- Park Fountain square　-->
 	<contribution type="GenericStructure" id="{ampark_square_001-GenericStructure-C000-0000-4C8B212Dharu}">
-		<name>Fountain square(park pavement)</name>
+		<name>Fountain square (park pavement)</name>
 		<design>Type A</design>
 		<structure>
 			<category byname="Amusement Parks"/>

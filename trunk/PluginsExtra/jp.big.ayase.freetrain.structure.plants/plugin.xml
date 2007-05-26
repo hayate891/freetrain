@@ -16,22 +16,17 @@
 	</contribution>
 	
 	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-01a}">
-		<group>Factory(small)</group>
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-01a}">
+		<group>Factory</group>
+		<structure>
+			<category byname="Factories"/>
+		</structure>
 		<price>2000</price>
 		<height>5</height>
 		<size>2,2</size>
 		<sprite origin="0,0" offset="72">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-Plants-01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-01b}">
-		<group>Factory(small)</group>
-		<price>2000</price>
-		<height>5</height>
-		<size>2,2</size>
 		<sprite origin="64,0" offset="72">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-Plants-01}"/>
 		</sprite>
@@ -39,22 +34,17 @@
 	</contribution>
 	
 	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-02a}">
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-02a}">
 		<group>Warehouse</group>
+		<structure>
+			<category byname="Warehouses"/>
+		</structure>
 		<price>1000</price>
 		<height>2</height>
 		<size>5,2</size>
 		<sprite origin="0,0" offset="56">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-Plants-02}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Plants-02b}">
-		<group>Warehouse</group>
-		<price>1000</price>
-		<height>2</height>
-		<size>2,5</size>
 		<sprite origin="112,0" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-Plants-02}"/>
 		</sprite>

@@ -1,40 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>Buildings</title>
-	<author>Namo</author>
-	<homepage>http://www.medias.co.jp/~bell8528/freetrain/</homepage>
+	<title>Buildings (Namoh)</title>
+	<author>Namoh</author>
+	<homepage>http://namoge.xrea.jp/freetrain/</homepage>
 	
 	<contribution type="picture" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084}">
 		<picture src="sa-k.bmp">
+			<override when="night" src="sa-k_n.bmp" />
 		</picture>
 	</contribution>
 
-	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084-1}">
+	<contribution type="GenericStructure" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084-1}">
 		<group>Circle-K</group>
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
+		<structure>
+			<category byname="Convenience Stores"/>
+		</structure>
 		<sprite origin="0,0" offset="8">
 			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28084}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28084-2}">
-		<group>Circle-K</group>
-		<price>100</price>
-		<size>1,1</size>
-		<height>1</height>
 		<sprite origin="0,32" offset="8">
 			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28084}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
 
-
-	<title>Fujimi Restaurant</title>
-	<author>Namoh</author>
-	<homepage>http://chinsou.s27.xrea.com/freetrain/</homepage>
 	
 	<contribution type="picture" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085}">
 		<picture src="mifuzi.bmp">
@@ -42,28 +34,22 @@
 		</picture>
 	</contribution>
 
-	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085-1}">
-		<group>Fujimi Restaurant</group>
+	<contribution type="GenericStructure" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085-1}">
+		<group>Mifuji Restaurant</group>
 		<price>100</price>
 		<size>1,1</size>
 		<height>1</height>
+		<structure>
+			<category byname="Restaurants"/>
+		</structure>
 		<sprite origin="0,0" offset="8">
 			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28085}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{A5BD857C-F2A1-4218-936C-C61EA4D28085-2}">
-		<group>Fujimi Restaurant</group>
-		<price>100</price>
-		<size>1,1</size>
-		<height>1</height>
 		<sprite origin="0,32" offset="8">
 			<picture ref="{A5BD857C-F2A1-4218-936C-C61EA4D28085}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
-
 
 
 
@@ -73,66 +59,51 @@
 		</picture>
 	</contribution>
 
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-1}">
-		<group>Small shipping center</group>
+	<contribution type="GenericStructure" id="{FD978351-73CE-442E-8816-76DBA52E8875-1}">
+		<group>Small shopping center</group>
 		<price>100</price>
 		<size>2,3</size>
 		<height>2</height>
+		<structure>
+			<category byname="Shopping Malls"/>
+		</structure>
 		<sprite origin="0,0" offset="22">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-2}">
-		<group>Small shipping center</group>
-		<price>100</price>
-		<size>3,2</size>
-		<height>2</height>
 		<sprite origin="0,64" offset="40">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
 
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-3}">
-		<group>Small shipping center</group>
+	<contribution type="GenericStructure" id="{FD978351-73CE-442E-8816-76DBA52E8875-3}">
+		<group>Small shopping center</group>
 		<price>100</price>
 		<size>2,3</size>
 		<height>2</height>
+		<structure>
+			<category byname="Shopping Malls"/>
+		</structure>
 		<sprite origin="96,0" offset="22">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-4}">
-		<group>Small shipping center</group>
-		<price>100</price>
-		<size>3,2</size>
-		<height>2</height>
 		<sprite origin="96,64" offset="40">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
 
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-5}">
-		<group>Small shipping center</group>
+	<contribution type="GenericStructure" id="{FD978351-73CE-442E-8816-76DBA52E8875-5}">
+		<group>Small shopping center</group>
 		<price>100</price>
 		<size>2,3</size>
 		<height>2</height>
+		<structure>
+			<category byname="Shopping Malls"/>
+		</structure>
 		<sprite origin="192,0" offset="22">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8875-6}">
-		<group>Small shipping center</group>
-		<price>100</price>
-		<size>3,2</size>
-		<height>2</height>
 		<sprite origin="192,64" offset="40">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
@@ -148,66 +119,51 @@
 		</picture>
 	</contribution>
 
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-1}">
-		<group>Medium shipping center</group>
+	<contribution type="GenericStructure" id="{FD978351-73CE-442E-8816-76DBA52E8877-1}">
+		<group>Medium shopping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
+		<structure>
+			<category byname="Shopping Malls"/>
+		</structure>
 		<sprite origin="0,0" offset="31">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-2}">
-		<group>Medium shipping center</group>
-		<price>100</price>
-		<size>3,3</size>
-		<height>2</height>
 		<sprite origin="0,96" offset="32">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
 
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-3}">
-		<group>Medium shipping center</group>
+	<contribution type="GenericStructure" id="{FD978351-73CE-442E-8816-76DBA52E8877-3}">
+		<group>Medium shopping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
+		<structure>
+			<category byname="Shopping Malls"/>
+		</structure>
 		<sprite origin="96,0" offset="31">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-4}">
-		<group>Medium shipping center</group>
-		<price>100</price>
-		<size>3,3</size>
-		<height>2</height>
 		<sprite origin="96,96" offset="32">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
 		</sprite>
 		<computerCannotBuild/>
 	</contribution>
 
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-5}">
-		<group>Medium shipping center</group>
+	<contribution type="GenericStructure" id="{FD978351-73CE-442E-8816-76DBA52E8877-5}">
+		<group>Medium shopping center</group>
 		<price>100</price>
 		<size>3,3</size>
 		<height>2</height>
+		<structure>
+			<category byname="Shopping Malls"/>
+		</structure>
 		<sprite origin="192,0" offset="31">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FD978351-73CE-442E-8816-76DBA52E8877-6}">
-		<group>Medium shipping center</group>
-		<price>100</price>
-		<size>3,3</size>
-		<height>2</height>
 		<sprite origin="192,96" offset="32">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8877}"/>
 		</sprite>
