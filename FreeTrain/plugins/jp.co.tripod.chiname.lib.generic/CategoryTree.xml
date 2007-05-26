@@ -47,8 +47,11 @@
 				<name>Consumer Electronics Stores</name> <!--!家電店-->		
 			</category>
 			<category id="100302">
-        <name>Car Dealers</name> <!--!自動車販売店-->
-      </category>
+				<name>Car Dealers</name> <!--!自動車販売店-->
+			</category>
+			<category id="100303">
+				<name>Gas Stations</name>
+			</category>
 		</category>
 		<category id="1010">
 			<name>Regional Convenience Chain Stores</name> <!--!地域チェーン日用品店-->			
@@ -591,7 +594,7 @@
 		</category>
 		<category id="5040">
 			<icon src="icons_sp.bmp" index="13"/>
-			<name>Green Tracts</name> <!--! 緑地-->
+			<name>Parks</name> <!--! 緑地-->
 		</category>
 		<category id="5042">
 			<icon src="icons_sp.bmp" index="13"/>

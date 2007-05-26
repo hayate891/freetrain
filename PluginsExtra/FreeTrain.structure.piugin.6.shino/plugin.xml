@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY building2x2Param '
-	<group>Rental office(2x2)</group>
+	<group>Rental office (2x2)</group>
+	<structure>
+		<category byname="Rental Offices"/>
+	</structure>
 	<price>3300</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -12,7 +15,10 @@
 	</population>
 '>
 <!ENTITY building3x3ParamA '
-	<group>Rental office(3x3)</group>
+	<group>Rental office (3x3)</group>
+	<structure>
+		<category byname="Rental Offices"/>
+	</structure>
 	<price>4000</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -23,7 +29,10 @@
 	</population>
 '>
 <!ENTITY building3x3ParamB '
-	<group>Rental office(3x3)</group>
+	<group>Rental office (3x3)</group>
+	<structure>
+		<category byname="Rental Offices"/>
+	</structure>
 	<price>5000</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -35,6 +44,9 @@
 '>
 <!ENTITY hotelParam ' 
 	<group>Medium hotel</group>
+	<structure>
+		<category byname="Business Hotels"/>
+	</structure>
 	<price>4600</price>
 	<size>3,3</size>
 	<minHeight>3</minHeight>
@@ -55,7 +67,7 @@
 		<picture src="2x2buil 001.bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{839D3127-4BB0-4E62-A014-5286DC362A21}">
+	<contribution type="GenericStructure" id="{839D3127-4BB0-4E62-A014-5286DC362A21}">
 		&building2x2Param;
 		<pictures>
 			<top    origin="0,  0" offset="26">
@@ -68,12 +80,6 @@
 				<picture ref="{7A5FEBD6-3778-4DA6-821E-A7551BCB439F}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{C77698B4-A388-4461-A61F-D4B113B5E470}">
-		&building2x2Param;
 		<pictures>
 			<top    origin="64,  0" offset="26">
 				<picture ref="{7A5FEBD6-3778-4DA6-821E-A7551BCB439F}"/>
@@ -89,11 +95,11 @@
         
 
 
-        <contribution type="picture" id="{D3E96A43-5F05-48B7-B773-E9B93953BD87}">
+	<contribution type="picture" id="{D3E96A43-5F05-48B7-B773-E9B93953BD87}">
 		<picture src="3x3buil 001.bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{683D1CB6-5726-4B5D-9087-3858B7DEC20C}">
+	<contribution type="GenericStructure" id="{683D1CB6-5726-4B5D-9087-3858B7DEC20C}">
 		&building3x3ParamA;
 		<pictures>
 			<top    origin="0,  0" offset="26">
@@ -106,12 +112,6 @@
 				<picture ref="{D3E96A43-5F05-48B7-B773-E9B93953BD87}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{32255C46-93EE-46A7-A539-DDEDF486205A}">
-		&building3x3ParamA;
 		<pictures>
 			<top    origin="96,  0" offset="26">
 				<picture ref="{D3E96A43-5F05-48B7-B773-E9B93953BD87}"/>
@@ -123,12 +123,6 @@
 				<picture ref="{D3E96A43-5F05-48B7-B773-E9B93953BD87}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-
-
-
-        <contribution type="varHeightBuilding" id="{62AB9A74-9C2B-4D68-A9EE-2D2BB707CF74}">
-		&building3x3ParamA;
 		<pictures>
 			<top    origin="192,  0" offset="26">
 				<picture ref="{D3E96A43-5F05-48B7-B773-E9B93953BD87}"/>
@@ -140,12 +134,6 @@
 				<picture ref="{D3E96A43-5F05-48B7-B773-E9B93953BD87}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{3BAAFAD2-F764-4804-A52E-F5C1CE82C79F}">
-		&building3x3ParamA;
 		<pictures>
 			<top    origin="288,  0" offset="26">
 				<picture ref="{D3E96A43-5F05-48B7-B773-E9B93953BD87}"/>
@@ -158,14 +146,15 @@
 			</bottom>
 		</pictures>
 	</contribution>
+	
 
 
 
-        <contribution type="picture" id="{9C5886B0-E753-4F54-BF39-06181F52F6D4}">
+	<contribution type="picture" id="{9C5886B0-E753-4F54-BF39-06181F52F6D4}">
 		<picture src="3x3buil 002.bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{2DECFAE6-7B81-4B07-9C1C-1E419DF7FAB8}">
+	<contribution type="GenericStructure" id="{2DECFAE6-7B81-4B07-9C1C-1E419DF7FAB8}">
 		&building3x3ParamB;
 		<pictures>
 			<top    origin="0,  0" offset="26">
@@ -178,12 +167,6 @@
 				<picture ref="{9C5886B0-E753-4F54-BF39-06181F52F6D4}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{95D1C7A1-0818-44BB-9469-3167E9E1213B}">
-		&building3x3ParamB;
 		<pictures>
 			<top    origin="96,  0" offset="26">
 				<picture ref="{9C5886B0-E753-4F54-BF39-06181F52F6D4}"/>
@@ -196,14 +179,15 @@
 			</bottom>
 		</pictures>
 	</contribution>
+	
  
 
         
-        <contribution type="picture" id="{C03D71E4-2233-4D74-A940-C82E253F0956}">
+	<contribution type="picture" id="{C03D71E4-2233-4D74-A940-C82E253F0956}">
 		<picture src="hotel 001.bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{E102FC0C-6DDD-430C-A3E1-1AF80C83FACA}">
+	<contribution type="GenericStructure" id="{E102FC0C-6DDD-430C-A3E1-1AF80C83FACA}">
 		&hotelParam;
 		<pictures>
 			<top    origin="0,  0" offset="26">
@@ -216,12 +200,6 @@
 				<picture ref="{C03D71E4-2233-4D74-A940-C82E253F0956}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{4147F53A-98ED-44EF-ADF8-C405372AEE1A}">
-		&hotelParam;
 		<pictures>
 			<top    origin="96,  0" offset="26">
 				<picture ref="{C03D71E4-2233-4D74-A940-C82E253F0956}"/>
@@ -233,11 +211,6 @@
 				<picture ref="{C03D71E4-2233-4D74-A940-C82E253F0956}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-
-
-        <contribution type="varHeightBuilding" id="{BB16D01A-8231-4B02-AEAE-1F17CF43CF89}">
-		&hotelParam;
 		<pictures>
 			<top    origin="192,  0" offset="26">
 				<picture ref="{C03D71E4-2233-4D74-A940-C82E253F0956}"/>
@@ -249,12 +222,6 @@
 				<picture ref="{C03D71E4-2233-4D74-A940-C82E253F0956}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{4F944FE5-7024-4E0D-B7FC-A14062CA3D77}">
-		&hotelParam;
 		<pictures>
 			<top    origin="288,  0" offset="26">
 				<picture ref="{C03D71E4-2233-4D74-A940-C82E253F0956}"/>
@@ -267,5 +234,6 @@
 			</bottom>
 		</pictures>
 	</contribution>
+	
 
 </plug-in>

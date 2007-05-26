@@ -90,7 +90,7 @@
 		&crLtBlue;
 		<design>Type A</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Restaurants" hide="true"/>
 		</structure>
 		<pictures>
@@ -123,8 +123,8 @@
 		&crBlack;
 		<design>Type B</design>
 		<structure>
-			<category byname="Offices for Rent"/>
-			<category byname="Service Counters" hide="true"/>
+			<category byname="Rental Offices"/>
+			<category byname="Service Providers" hide="true"/>
 		</structure>
 		<pictures>
 			<top origin=" 0, 14" offset="2">
@@ -157,7 +157,7 @@
 		&crBlack;
 		<design>Type C</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Stores" hide="true"/>
 			<category byname="Food &amp; Drink" hide="true"/>
 		</structure>
@@ -193,7 +193,7 @@
 		&crBlack;
 		<design>Type D</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 			<category byname="Private Specialty Stores" hide="true"/>
 		</structure>
 		<pictures>
@@ -227,7 +227,7 @@
 		&crBrown;
 		<design>Type E</design>
 		<structure>
-			<category byname="Offices for Rent"/>
+			<category byname="Rental Offices"/>
 		</structure>
 		<pictures>
 			<top origin=" 0, 0" offset="16">

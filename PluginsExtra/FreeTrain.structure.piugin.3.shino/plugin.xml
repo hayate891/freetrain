@@ -3,7 +3,10 @@
 
 
 <!ENTITY building2x2Param '
-	<group>Rental office(2x2)</group>
+	<group>Rental office (2x2)</group>
+	<structure>
+		<category byname="Rental Offices"/>
+	</structure>
 	<price>3300</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -25,7 +28,7 @@
 		<picture src="2x2buil1.bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{0CB3458F-F256-443E-90E0-ABD10EE737DE}">
+	<contribution type="GenericStructure" id="{0CB3458F-F256-443E-90E0-ABD10EE737DE}">
 		&building2x2Param;
 		<pictures>
 			<top    origin="0,  0" offset="26">
@@ -42,7 +45,7 @@
 	
 	
 	
-	<contribution type="varHeightBuilding" id="{351E5A00-B2E8-4920-BA2B-F943A0597B90}">
+	<contribution type="GenericStructure" id="{351E5A00-B2E8-4920-BA2B-F943A0597B90}">
 		&building2x2Param;
 		<pictures>
 			<top    origin="64,  0" offset="26">
@@ -63,7 +66,7 @@
 		<picture src="2x2buil2.bmp"/>
 	</contribution>
 
-	<contribution type="varHeightBuilding" id="{7580EF7F-56A4-41F5-B966-8ABF20B36771}">
+	<contribution type="GenericStructure" id="{7580EF7F-56A4-41F5-B966-8ABF20B36771}">
 		&building2x2Param;
 		<pictures>
 			<top    origin="0,  0" offset="26">
@@ -80,7 +83,7 @@
 	
 	
 	
-	<contribution type="varHeightBuilding" id="{4FA243FA-EB96-4F2B-949D-B353CFBF922E}">
+	<contribution type="GenericStructure" id="{4FA243FA-EB96-4F2B-949D-B353CFBF922E}">
 		&building2x2Param;
 		<pictures>
 			<top    origin="64,  0" offset="26">

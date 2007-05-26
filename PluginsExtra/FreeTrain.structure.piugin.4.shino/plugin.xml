@@ -3,7 +3,10 @@
 
 
 <!ENTITY building2x2Param '
-	<group>Rental office(2x2)</group>
+	<group>Rental office (2x2)</group>
+	<structure>
+		<category byname="Rental Offices"/>
+	</structure>
 	<price>2800</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -25,7 +28,7 @@
 		<picture src="2x2buil(T).bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{6C9498F6-839C-464F-B824-26DFA4154ED7}">
+	<contribution type="GenericStructure" id="{6C9498F6-839C-464F-B824-26DFA4154ED7}">
 		&building2x2Param;
 		<pictures>
 			<top    origin="0,  0" offset="26">

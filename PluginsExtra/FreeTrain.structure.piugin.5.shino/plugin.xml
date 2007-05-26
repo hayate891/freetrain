@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plug-in [
 <!ENTITY building2x2Param '
-	<group>Rental office(2x2)</group>
+	<group>Rental office (2x2)</group>
+	<structure>
+		<category byname="Rental Offices"/>
+	</structure>
 	<price>3200</price>
 	<size>2,2</size>
 	<minHeight>3</minHeight>
@@ -19,11 +22,11 @@
 	<homepage></homepage>
 
 
-        <contribution type="picture" id="{91787706-22C5-4195-940F-81CCE16AAB7E}">
+	<contribution type="picture" id="{91787706-22C5-4195-940F-81CCE16AAB7E}">
 		<picture src="2x2buil(4).bmp"/>
 	</contribution>
 	
-	<contribution type="varHeightBuilding" id="{0290147F-5B99-463B-978A-E4900510D64E}">
+	<contribution type="GenericStructure" id="{0290147F-5B99-463B-978A-E4900510D64E}">
 		&building2x2Param;
 		<pictures>
 			<top    origin="0,  0" offset="26">
@@ -36,12 +39,6 @@
 				<picture ref="{91787706-22C5-4195-940F-81CCE16AAB7E}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{131FA597-1242-44A8-9AFE-5BF09AC94C6B}">
-		&building2x2Param;
 		<pictures>
 			<top    origin="64,  0" offset="26">
 				<picture ref="{91787706-22C5-4195-940F-81CCE16AAB7E}"/>
@@ -53,12 +50,6 @@
 				<picture ref="{91787706-22C5-4195-940F-81CCE16AAB7E}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-
-
-
-        <contribution type="varHeightBuilding" id="{3AE6CDFF-187C-4603-A8AA-6B1D720803F3}">
-		&building2x2Param;
 		<pictures>
 			<top    origin="128,  0" offset="26">
 				<picture ref="{91787706-22C5-4195-940F-81CCE16AAB7E}"/>
@@ -70,12 +61,6 @@
 				<picture ref="{91787706-22C5-4195-940F-81CCE16AAB7E}"/>
 			</bottom>
 		</pictures>
-	</contribution>
-	
-	
-	
-	<contribution type="varHeightBuilding" id="{C44CF4C8-F4EE-4375-B04A-10C06BDD3E44}">
-		&building2x2Param;
 		<pictures>
 			<top    origin="192,  0" offset="26">
 				<picture ref="{91787706-22C5-4195-940F-81CCE16AAB7E}"/>
@@ -88,4 +73,6 @@
 			</bottom>
 		</pictures>
 	</contribution>
+	
+	
 </plug-in>

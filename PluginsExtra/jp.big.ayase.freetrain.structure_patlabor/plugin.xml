@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plug-in>
-	<title>Buildings</title>
+	<title>Patlabor</title>
 	<author>Hiro Ayase</author>
 	<homepage>http://www14.big.or.jp/~ayase/freetrain/</homepage>
 	
@@ -8,22 +8,17 @@
 		<picture src="patlabor.bmp"/>
 	</contribution>
 	
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Patlabor01a}">
-		<group>Special vehicle division 2 office</group>
+	<contribution type="GenericStructure" id="{FreeTrain-AYASE-Hiro-StructureImpl-Patlabor01a}">
+		<group>Special Vehicle Division 2 Headquarters</group>
+		<structure>
+			<category byname="Police Stations"/>
+		</structure>
 		<price>30</price>
 		<size>3,3</size>
 		<height>2</height>
 		<sprite origin="0,0" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImg-Patlabor01}"/>
 		</sprite>
-		<computerCannotBuild/>
-	</contribution>
-
-	<contribution type="commercial" id="{FreeTrain-AYASE-Hiro-StructureImpl-Patlabor01b}">
-		<group>Special vehicle division 2 office</group>
-		<price>30</price>
-		<size>3,3</size>
-		<height>2</height>
 		<sprite origin="96,0" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImg-Patlabor01}"/>
 		</sprite>
