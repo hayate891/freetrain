@@ -9,8 +9,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{3AAB6C26-8C58-4C8C-GSS1-94478B392AE7}-A">
-		<group>Gas Station</group>
-		<name>Nippon Oil SS</name>
+		<name>Gas Station</name>
+		<design>Nippon Oil SS</design>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -30,8 +30,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{AE1549EB-F7F9-433F-GSS2-1E2A913013FF}-A">
-		<group>Gas Station</group>
-		<name>JOMO SS</name>
+		<name>Gas Station</name>
+		<design>JOMO SS</design>
 		<price>1200</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -59,8 +59,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{52B9BF4A-7AB7-4828-GSS3-249A1A149A24}-A">
-		<group>Gas Station</group>
-		<name>Shell GS</name>
+		<name>Gas Station</name>
+		<design>Shell GS</design>
 		<price>1200</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -96,8 +96,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{3AAB6C26-8C58-4C8C-GSS4-94478B392AE7}-A">
-		<group>Gas Station</group>
-		<name>Cosmo Oil SS</name>
+		<name>Gas Station</name>
+		<design>Cosmo Oil SS</design>
 		<price>1500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -121,8 +121,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{52B9BF4A-7AB7-4828-GSS5-249A1A149A24}-A">
-		<group>Gas Station</group>
-		<name>Mobil GS</name>
+		<name>Gas Station</name>
+		<design>Mobil GS</design>
 		<price>1200</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -253,8 +253,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{C193B660-3BFC-4F7C-BF2F-449BCED5AE9E}-A">
-		<group>Post Office</group>
-		<name>Small Post Office</name>
+		<name>Post Office</name>
+		<design>Small Post Office</design>
 		<price>500</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -278,8 +278,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{3AAB6C26-8C58-4C8C-YUB2-94478B392AE7}-A">
-		<group>Post Office</group>
-		<name>Large Post Office</name>
+		<name>Post Office</name>
+		<design>Large Post Office</design>
 		<price>1000</price>
 		<size>1,2</size>
 		<height>2</height>
@@ -305,8 +305,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{568195AB-CEB3-42E9-CON2-5422C86D4DE9}-A">
-		<group>Convenience Stores</group>
-		<name>Lawson</name>
+		<name>Convenience Stores</name>
+		<design>Lawson</design>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -332,8 +332,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{EA3F5C47-D1EF-41A9-CON1-641E6CFEE22B}-A">
-		<group>Convenience Stores</group>
-		<name>Three F</name>
+		<name>Convenience Stores</name>
+		<design>Three F</design>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -359,8 +359,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{578195AB-CEB3-42E9-CON6-5422C86D4DC5}-A">
-		<group>Convenience Stores</group>
-		<name>a m p m</name>
+		<name>Convenience Stores</name>
+		<design>a m p m</design>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -386,8 +386,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{578195AB-CEB3-42E9-CON4-5422C86D4DC5}-A">
-		<group>Convenience Stores</group>
-		<name>MINISTOP</name>
+		<name>Convenience Stores</name>
+		<design>MINISTOP</design>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -413,8 +413,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{578195AB-CEB3-42E9-CON5-5422C86D4DC5}-A">
-		<group>Convenience Stores</group>
-		<name>CircleK</name>
+		<name>Convenience Stores</name>
+		<design>CircleK</design>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -440,8 +440,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{568195AB-CEB3-42E9-CON3-5422C86D4DC5}-A">
-		<group>Convenience Stores</group>
-		<name>Sunkus</name>
+		<name>Convenience Stores</name>
+		<design>Sunkus</design>
 		<price>700</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -467,8 +467,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{578195AB-CEB3-42E9-CON7-5422C86D4DC5}-A">
-		<group>Convenience Stores</group>
-		<name>Daily Yamazaki</name>
+		<name>Convenience Stores</name>
+		<design>Daily Yamazaki</design>
 		<price>600</price>
 		<size>1,1</size>
 		<height>1</height>
@@ -492,8 +492,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{3AAB6C26-8C58-4C8C-RES1-94478B392AE7}-A">
-		<group>Restaurants</group>
-		<name>Restaurant</name>
+		<name>Restaurants</name>
+		<design>Restaurant</design>
 		<price>1000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -517,8 +517,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-A">
-		<group>Exhibition Halls</group>
-		<name>Fair</name>
+		<name>Exhibition Halls</name>
+		<design>Fair</design>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -544,8 +544,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-E">
-		<group>Exhibition Halls</group>
-		<name>Fair</name>
+		<name>Exhibition Halls</name>
+		<design>Fair</design>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>
@@ -565,8 +565,8 @@
 	</contribution>
 
 	<contribution type="GenericStructure" id="{3AAB6C26-8C58-4C8C-MES1-94478B392AE7}-G">
-		<group>Exhibition Halls</group>
-		<name>Fair</name>
+		<name>Exhibition Halls</name>
+		<design>Fair</design>
 		<price>5000</price>
 		<size>1,2</size>
 		<height>1</height>

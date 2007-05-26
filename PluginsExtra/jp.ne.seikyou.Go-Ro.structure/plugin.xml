@@ -406,7 +406,7 @@
 	</contribution>
 
 
-<!-- Baroon tower　-->
+<!-- Balloon tower　-->
 	<contribution type="picture" id="{ampark_BalloonTower_001-picture-C000-0000-4C8B212Dharu}">
 		<picture src="ampark_BalloonTower_001.bmp">
 			<override when="night" src="ampark_BalloonTower_001n.bmp" />

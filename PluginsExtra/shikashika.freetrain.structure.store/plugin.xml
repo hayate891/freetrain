@@ -531,14 +531,14 @@
 
 </contribution>
 
-<!-- Electronics Suburbian Outlet舗 -->
+<!-- Electronics Suburban Outlet舗 -->
 
 <contribution type="GenericStructure" id="{FreeTrain-Shika-structure-building-store-electrical-deo2-04-suburbs}">
-	<group>Suburbian Outlets</group>
+	<group>Suburban Outlets</group>
 	<name>Home Electronics Outlet</name>
 	<design>DEOx2 branch store</design>
 	<structure>
-		<category byname="Suburbian Outlets"/>
+		<category byname="Suburban Outlets"/>
 	</structure>
 	<price>1710</price>
 	<size>2,2</size>
