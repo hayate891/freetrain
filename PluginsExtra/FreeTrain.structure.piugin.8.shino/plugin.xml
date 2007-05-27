@@ -63,13 +63,13 @@
 		<sprite origin="0,0" offset="77">
 		<picture ref="{1764511E-D3FB-404C-AB28-04D5087B94C7}" />
 		</sprite>
-		<sprite origin="160,0" offset="93">
+		<sprite origin="160,0" offset="93" opposite="true">
 		<picture ref="{1764511E-D3FB-404C-AB28-04D5087B94C7}" />
 		</sprite>
 		<sprite origin="320,0" offset="77">
 		<picture ref="{1764511E-D3FB-404C-AB28-04D5087B94C7}" />
 		</sprite>
-		<sprite origin="480,0" offset="93">
+		<sprite origin="480,0" offset="93" opposite="true">
 		<picture ref="{1764511E-D3FB-404C-AB28-04D5087B94C7}" />
 		</sprite>
 		<population>

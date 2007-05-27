@@ -29,7 +29,7 @@
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-01}"/>
 		</sprite>
-		<sprite origin="112,0" offset="16">
+		<sprite origin="112,0" offset="16" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-01}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -46,7 +46,7 @@
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-02}"/>
 		</sprite>
-		<sprite origin="112,0" offset="16">
+		<sprite origin="112,0" offset="16" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-02}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -63,7 +63,7 @@
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-03}"/>
 		</sprite>
-		<sprite origin="112,0" offset="16">
+		<sprite origin="112,0" offset="16" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-03}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -80,7 +80,7 @@
 		<sprite origin="0,0" offset="24">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-04}"/>
 		</sprite>
-		<sprite origin="112,0" offset="16">
+		<sprite origin="112,0" offset="16" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-hashi-04}"/>
 		</sprite>
 		<computerCannotBuild/>

@@ -24,7 +24,7 @@
 		<sprite origin="0,0" offset="16">
 			<picture ref="{E6D105DA-77E2-41F0-9459-0FF29D5B81C6}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{E6D105DA-77E2-41F0-9459-0FF29D5B81C6}"/>
 		</sprite>
 	</contribution>
@@ -49,7 +49,7 @@
 		   <map from="238,68,0" to="0,153,153"/>
 		 </spriteType>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{E6D105DA-77E2-41F0-9459-0FF29D5B81C6}"/>
 		 <spriteType name="colorMapped">
 		   <map from="220,110,0" to="0,102,102"/>
@@ -80,7 +80,7 @@
 		   <map from="238,68,0" to="255,255,0"/>
 		 </spriteType>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{E6D105DA-77E2-41F0-9459-0FF29D5B81C6}"/>
 		 <spriteType name="colorMapped">
 		   <map from="220,110,0" to="255,255,0"/>
@@ -111,7 +111,7 @@
 		<sprite origin="0,0" offset="16">
 			<picture ref="{AD89EA02-301A-4B5F-A835-8F3385BDF006}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{AD89EA02-301A-4B5F-A835-8F3385BDF006}"/>
 		</sprite>
 	</contribution>
@@ -136,7 +136,7 @@
 		<sprite origin="0,0" offset="16">
 			<picture ref="{EBADE9C9-F58D-42A9-B92B-2EA5E62F48B8}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{EBADE9C9-F58D-42A9-B92B-2EA5E62F48B8}"/>
 		</sprite>
 	</contribution>
@@ -161,7 +161,7 @@
 		<sprite origin="0,0" offset="16">
 			<picture ref="{317EF77D-E74E-47BC-9B66-0EBF7FEB0267}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{317EF77D-E74E-47BC-9B66-0EBF7FEB0267}"/>
 		</sprite>
 	</contribution>
@@ -185,7 +185,7 @@
 		   <map from="237,0,0" to="0,0,128"/>
 		 </spriteType>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{317EF77D-E74E-47BC-9B66-0EBF7FEB0267}"/>
 		 <spriteType name="colorMapped">
 		   <map from="237,0,0" to="0,0,128"/>
@@ -212,7 +212,7 @@
 		   <map from="237,0,0" to="0,128,128"/>
 		 </spriteType>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{317EF77D-E74E-47BC-9B66-0EBF7FEB0267}"/>
 		 <spriteType name="colorMapped">
 		   <map from="237,0,0" to="0,128,128"/>
@@ -239,7 +239,7 @@
 		   <map from="237,0,0" to="0,0,255"/>
 		 </spriteType>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{317EF77D-E74E-47BC-9B66-0EBF7FEB0267}"/>
 		 <spriteType name="colorMapped">
 			<map from="237,0,0" to="0,0,255"/>
@@ -268,7 +268,7 @@
 		<sprite origin="0,0" offset="16">
 			<picture ref="{5AAB6C26-8C58-4C8C-8B46-94478B392AE7}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{5AAB6C26-8C58-4C8C-8B46-94478B392AE7}"/>
 		</sprite>
 	</contribution>
@@ -293,7 +293,7 @@
 		<sprite origin="0,0" offset="19">
 			<picture ref="{E647843E-FCDC-400D-8DF6-CDE4800CACFD}"/>
 		</sprite>
-		<sprite origin="48,0" offset="27">
+		<sprite origin="48,0" offset="27" opposite="true">
 			<picture ref="{E647843E-FCDC-400D-8DF6-CDE4800CACFD}"/>
 		</sprite>
 	</contribution>
@@ -507,7 +507,7 @@
 		<sprite origin="0,0" offset="16">
 			<picture ref="{FB569081-0309-4E3F-ACAC-954B530502C6}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{FB569081-0309-4E3F-ACAC-954B530502C6}"/>
 		</sprite>
 	</contribution>
@@ -532,13 +532,13 @@
 		<sprite origin="0,0" offset="16">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
 		<sprite origin="96,0" offset="16">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
-		<sprite origin="144,0" offset="24">
+		<sprite origin="144,0" offset="24" opposite="true">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
 	</contribution>
@@ -559,7 +559,7 @@
 		<sprite origin="192,0" offset="16">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
-		<sprite origin="240,0" offset="24">
+		<sprite origin="240,0" offset="24" opposite="true">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
 	</contribution>
@@ -580,7 +580,7 @@
 		<sprite origin="288,0" offset="16">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
-		<sprite origin="336,0" offset="24">
+		<sprite origin="336,0" offset="24" opposite="true">
 			<picture ref="{79B1835F-2206-4065-9259-68C8C1B02FE8}"/>
 		</sprite>
 	</contribution>
