@@ -45,7 +45,7 @@
 		<sprite origin="0,0" offset="56">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-Plants-02}"/>
 		</sprite>
-		<sprite origin="112,0" offset="32">
+		<sprite origin="112,0" offset="32" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-StructureImage-Plants-02}"/>
 		</sprite>
 		<computerCannotBuild/>

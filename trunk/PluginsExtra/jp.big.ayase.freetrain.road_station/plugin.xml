@@ -22,10 +22,10 @@
 		<sprite origin="64,0" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="128,0" offset="48">
+		<sprite origin="128,0" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="192,0" offset="48">
+		<sprite origin="192,0" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<sprite origin="256,0" offset="32">
@@ -34,10 +34,10 @@
 		<sprite origin="320,0" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="384,0" offset="48">
+		<sprite origin="384,0" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="448,0" offset="48">
+		<sprite origin="448,0" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -57,10 +57,10 @@
 		<sprite origin="64,64" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="128,64" offset="48">
+		<sprite origin="128,64" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="192,64" offset="48">
+		<sprite origin="192,64" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<sprite origin="256,64" offset="32">
@@ -69,10 +69,10 @@
 		<sprite origin="320,64" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="384,64" offset="48">
+		<sprite origin="384,64" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="448,64" offset="48">
+		<sprite origin="448,64" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -92,10 +92,10 @@
 		<sprite origin="64,128" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="128,128" offset="48">
+		<sprite origin="128,128" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="192,128" offset="48">
+		<sprite origin="192,128" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<sprite origin="256,128" offset="32">
@@ -104,10 +104,10 @@
 		<sprite origin="320,128" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="384,128" offset="48">
+		<sprite origin="384,128" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="448,128" offset="48">
+		<sprite origin="448,128" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -127,10 +127,10 @@
 		<sprite origin="64,192" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="128,192" offset="48">
+		<sprite origin="128,192" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="192,192" offset="48">
+		<sprite origin="192,192" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<sprite origin="256,192" offset="32">
@@ -139,10 +139,10 @@
 		<sprite origin="320,192" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="384,192" offset="48">
+		<sprite origin="384,192" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="448,192" offset="48">
+		<sprite origin="448,192" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -162,10 +162,10 @@
 		<sprite origin="64,256" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="128,256" offset="48">
+		<sprite origin="128,256" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="192,256" offset="48">
+		<sprite origin="192,256" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<sprite origin="256,256" offset="32">
@@ -174,10 +174,10 @@
 		<sprite origin="320,256" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="384,256" offset="48">
+		<sprite origin="384,256" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="448,256" offset="48">
+		<sprite origin="448,256" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -197,10 +197,10 @@
 		<sprite origin="64,320" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="128,320" offset="48">
+		<sprite origin="128,320" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="192,320" offset="48">
+		<sprite origin="192,320" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -220,10 +220,10 @@
 		<sprite origin="320,320" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="384,320" offset="48">
+		<sprite origin="384,320" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="448,320" offset="48">
+		<sprite origin="448,320" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -243,10 +243,10 @@
 		<sprite origin="64,384" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="128,384" offset="48">
+		<sprite origin="128,384" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="192,384" offset="48">
+		<sprite origin="192,384" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -266,10 +266,10 @@
 		<sprite origin="320,384" offset="32">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="384,384" offset="48">
+		<sprite origin="384,384" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
-		<sprite origin="448,384" offset="48">
+		<sprite origin="448,384" offset="48" opposite="true">
 			<picture ref="{FreeTrain-AYASE-Hiro-RoadImg-Station}"/>
 		</sprite>
 		<computerCannotBuild/>

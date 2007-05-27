@@ -53,7 +53,7 @@
 	<contribution type="GenericStructure" id="{7775E0B1-AF3E-46A4-A0E6-06AF87989A7E}">
 		<name>Farmhouse (L)</name>
 		<structure>
-			<category byname="Farms"/>
+			<category byname="Agriculture"/>
 		</structure>
 		<price>100</price>
 		<size>2,2</size>
@@ -79,7 +79,7 @@
 	<contribution type="GenericStructure" id="{01799382-3860-4BF6-BE11-F2E40DA093E7}">
 		<name>Farmhouse (L)</name>
 		<structure>
-			<category byname="Farms"/>
+			<category byname="Agriculture"/>
 		</structure>
 		<price>100</price>
 		<size>2,2</size>
@@ -105,7 +105,7 @@
 	<contribution type="GenericStructure" id="{95F5EF63-1B4D-4EE3-8BF3-4BD5B7AC5311}">
 		<name>Farmhouse (M)</name>
 		<structure>
-			<category byname="Farms"/>
+			<category byname="Agriculture"/>
 		</structure>
 		<price>100</price>
 		<size>2,1</size>
@@ -113,13 +113,13 @@
 		<sprite origin="0,0" offset="32">
 			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">
 			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
 		</sprite>
 		<sprite origin="96,0" offset="32">
 			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
 		</sprite>
-		<sprite origin="144,0" offset="24">
+		<sprite origin="144,0" offset="24" opposite="true">
 			<picture ref="{171F794F-5305-4DCE-8BBD-9CFEB33BC5C2}"/>
 		</sprite>
 		&Population;
@@ -137,7 +137,7 @@
 	<contribution type="GenericStructure" id="{D730EC7C-97BD-471D-A4C1-BB2CCD17EAE7}">
 		<name>Farmhouse (M)</name>
 		<structure>
-			<category byname="Farms"/>
+			<category byname="Agriculture"/>
 		</structure>
 		<price>100</price>
 		<size>2,1</size>
@@ -145,13 +145,13 @@
 		<sprite origin="0,0" offset="32">
 			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
 		</sprite>
-		<sprite origin="48,0" offset="24">
+		<sprite origin="48,0" offset="24" opposite="true">>
 			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
 		</sprite>
 		<sprite origin="96,0" offset="32">
 			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
 		</sprite>
-		<sprite origin="144,0" offset="24">
+		<sprite origin="144,0" offset="24" opposite="true">>
 			<picture ref="{8A2DF9AA-92CA-4760-8064-7973A52AF760}"/>
 		</sprite>
 		&Population;

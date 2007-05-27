@@ -355,7 +355,7 @@
 		<name>Agriculture</name> <!--! 食料産地-->
 		<category id="3001">
 			<icon src="icons_sp.bmp" index="7"/>
-			<name>Farming</name> <!--! 食料農場-->
+			<name>Farmland</name> <!--! 食料農場-->
 			<category id="300101">
 				<name>Paddy Fields</name> <!--! 水田-->
 			</category>
@@ -367,7 +367,7 @@
 			</category>
 		</category>
 		<category id="3002">
-			<name>Livestock Farms</name> <!--! 畜産場-->
+			<name>Livestock Pens</name> <!--! 畜産場-->
 		</category>
 		<category id="3010">
 			<name>Fishing Ports</name> <!--! 漁港-->
@@ -388,11 +388,11 @@
 		</category>
 		<category id="3102">
 			<icon src="icons_sp.bmp" index="8"/>
-			<name>Farms</name> <!--! 農園-->
+			<name>Farming</name> <!--! 農園-->
 		</category>
 		<category id="3103">
 			<icon src="icons_sp.bmp" index="8"/>
-			<name>Ranches</name> <!--! 一般牧場-->
+			<name>Ranching</name> <!--! 一般牧場-->
 		</category>
 		<category id="3150">
 			<name>Mining</name> <!--! 一般鉱山-->

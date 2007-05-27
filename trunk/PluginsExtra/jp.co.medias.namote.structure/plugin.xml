@@ -70,7 +70,7 @@
 		<sprite origin="0,0" offset="22">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
-		<sprite origin="0,64" offset="40">
+		<sprite origin="0,64" offset="40" opposite="true">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -87,7 +87,7 @@
 		<sprite origin="96,0" offset="22">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
-		<sprite origin="96,64" offset="40">
+		<sprite origin="96,64" offset="40" opposite="true">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
 		<computerCannotBuild/>
@@ -104,7 +104,7 @@
 		<sprite origin="192,0" offset="22">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
-		<sprite origin="192,64" offset="40">
+		<sprite origin="192,64" offset="40" opposite="true">
 			<picture ref="{FD978351-73CE-442E-8816-76DBA52E8875}"/>
 		</sprite>
 		<computerCannotBuild/>

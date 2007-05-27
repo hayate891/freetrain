@@ -23,7 +23,7 @@
 		<sprite origin="0,0" offset="22">
 		<picture ref="{57ECC1ED-6ED9-49FE-B165-B469325D7B5D}" />
 		</sprite>
-		<sprite origin="0,0" offset="14">
+		<sprite origin="0,0" offset="14" opposite="true">
 		<picture ref="{9D150F8F-0128-41FB-9862-0EB2F20EEF07}" />
 		</sprite>
 	</contribution>
