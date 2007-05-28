@@ -54,6 +54,7 @@
 		<name>Farmhouse (L)</name>
 		<structure>
 			<category byname="Agriculture"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>100</price>
 		<size>2,2</size>
@@ -80,6 +81,7 @@
 		<name>Farmhouse (L)</name>
 		<structure>
 			<category byname="Agriculture"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>100</price>
 		<size>2,2</size>
@@ -106,6 +108,7 @@
 		<name>Farmhouse (M)</name>
 		<structure>
 			<category byname="Agriculture"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>100</price>
 		<size>2,1</size>
@@ -138,6 +141,7 @@
 		<name>Farmhouse (M)</name>
 		<structure>
 			<category byname="Agriculture"/>
+			<category byname="Single Houses"/>
 		</structure>
 		<price>100</price>
 		<size>2,1</size>
