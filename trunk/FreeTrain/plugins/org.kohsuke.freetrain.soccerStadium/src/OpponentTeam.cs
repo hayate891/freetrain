@@ -19,16 +19,16 @@ namespace freetrain.world.soccerstadium
 		}
 
 		public static readonly OpponentTeam[] OPPONENTS = new OpponentTeam[]{
-			new OpponentTeam("JefYouKnighthead Chiha",0),
-			new OpponentTeam("Sunflash Hirojima",10),
-			new OpponentTeam("Yokobama-F Marinades",20),
-			new OpponentTeam("Nakoya Grandpas-eighty",30),
-			new OpponentTeam("Kajima Untollders",40),
-			new OpponentTeam("Oita Trineat",50),
-			new OpponentTeam("Shovel Iwada",60),
-			new OpponentTeam("Shimitsu Essplus",70),
-			new OpponentTeam("Nanba Ozaka",80),
-			new OpponentTeam("Kawazaki Fractale",90),
+			new OpponentTeam("Chiba Knights",0),
+			new OpponentTeam("Sunflash Hiroshima",10),
+			new OpponentTeam("Yokohama Sailors",20),
+			new OpponentTeam("Nagoya Dolphins",30),
+			new OpponentTeam("Kashima Juniors",40),
+			new OpponentTeam("Oita Trumpets",50),
+			new OpponentTeam("Iwata Jewels",60),
+			new OpponentTeam("Shimizu Spurs",70),
+			new OpponentTeam("Osaka Gophers",80),
+			new OpponentTeam("Kawasaki Front",90),
 			new OpponentTeam("Urawa Mets",100)
 			//! new OpponentTeam("ジェフユーナイトヘッド千葉",0),
 			//! new OpponentTeam("サンフラッシュ広島",10),
