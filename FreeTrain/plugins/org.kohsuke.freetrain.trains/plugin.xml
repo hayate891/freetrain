@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
 	<title>Standard Train Kit</title>
-	<!--!<title>基本車両キット</title>-->
 	<author>C477</author>
-	<!--!<author>477さん</author>-->
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	
 	
 	
-	<!-- ディフォルトFT型用の中間車両 -->
+	<!-- Default Body for FT Series -->
 	<contribution type="trainCar" id="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -20,15 +18,12 @@
 	
 	<contribution type="train" id="{F3604C61-D0D5-4c9c-ADD6-405610FA6250}">
 		<name>FT1 Series</name>
-		<!--!<name>ＦＴ１型</name>-->
 		<price>1800</price>
 		<speed>fast</speed>
 		<author>Kohsuke Kawaguchi</author>
-		<!--!<author>川口耕介</author>-->
 		<type>FT</type>
 		<company>FreeTrain</company>
-		<description>A fictional train</description>
-		<!--!<description>架空の列車です</description>-->
+		<description>This is a fictional train</description>
 		
 		<composition>
 			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
@@ -37,15 +32,12 @@
 	
 	<contribution type="train" id="{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}">
 		<name>FT2 Series</name>
-		<!--!<name>ＦＴ２型</name>-->
 		<price>1000</price>
 		<speed>medium</speed>
 		<author>Kohsuke Kawaguchi</author>
-		<!--!<author>川口耕介</author>-->
 		<type>FT</type>
 		<company>FreeTrain</company>
-		<description>A fictional train</description>
-		<!--!<description>架空の列車です</description>-->
+		<description>This is a fictional train</description>
 		
 		<composition>
 			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
@@ -54,15 +46,12 @@
 	
 	<contribution type="train" id="{F7134C8E-6B63-4780-AF16-90D33131CD07}">
 		<name>FT3 Series</name>
-		<!--!<name>ＦＴ３型</name>-->
 		<price>500</price>
 		<speed>slow</speed>
 		<author>Kohsuke Kawaguchi</author>
-		<!--!<author>川口耕介</author>-->
 		<type>FT</type>
 		<company>FreeTrain</company>
-		<description>A fictional train</description>
-		<!--!<description>架空の列車です</description>-->
+		<description>This is a fictional train</description>
 		
 		<composition>
 			<body carRef="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}"/>
@@ -73,7 +62,7 @@
 	
 	
 	
-	<!-- 485系先頭車両 -->
+	<!-- 485 Series Head -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -82,7 +71,7 @@
 		<capacity>65</capacity>
 	</contribution>
 	
-	<!-- 485系中間車両 -->
+	<!-- 485 Series Body -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -91,7 +80,7 @@
 		<capacity>70</capacity>
 	</contribution>
 	
-	<!-- 485系後尾車両 -->
+	<!-- 485 Series Tail -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-t">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h"/>
@@ -99,22 +88,19 @@
 	
 	<contribution type="train" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}">
 		<name>Raicho</name>
-		<!--!<name>雷鳥</name>-->
 		<price>1</price>
 		<speed>fast</speed>
-		<author>477</author>
+		<author>C477</author>
 		<type>485 Series</type>
-		<!--!<type>485系</type>-->
-		<company>JR East</company>
-		<!--!<company>JR東日本</company>-->
-		<description>Description wanted</description>
-		<!--!<description>説明募集中</description>-->
+		<company>JR West</company>
+		<description>Developed and manufactured by Japanese National Railways, 485 Series was put into use in large scale between 1968 and 1979.
+Unlike other variants, the 485 Series "Raicho" still uses the original black rollsigns from the JNR era.</description>
 		
 		<composition>
-			<!-- 先頭車両が他と一緒ならheadは省略可能 -->
+			<!-- If the engine is identical to the other cars, head can be abbreviated -->
 			<head carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h"/>
 			<body carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m"/>
-			<!-- 後尾車両が他と一緒ならheadは省略可能 -->
+			<!-- If the tail is identical to the other cars, head can be abbreviated -->
 			<tail carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-t"/>
 		</composition>
 	</contribution>
@@ -127,7 +113,7 @@
 	
 	
 	
-	<!-- E3系先頭車両 -->
+	<!-- E3 Series Head -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h">
 		<class name="freetrain.contributions.train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -136,7 +122,7 @@
 		<capacity>56</capacity>
 	</contribution>
 	
-	<!-- E3系中間車両 -->
+	<!-- E3 Series Body -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-m">
 		<class name="freetrain.contributions.train.SymTrainCarImpl" />
 		<sprite origin="0,0">
@@ -145,7 +131,7 @@
 		<capacity>64</capacity>
 	</contribution>
 	
-	<!-- E3系後尾車両 -->
+	<!-- E3 Series Tail -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-t">
 		<class name="freetrain.contributions.train.ReverseTrainCarImpl" />
 		<base carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h"/>
@@ -153,16 +139,13 @@
 	
 	<contribution type="train" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}">
 		<name>Komachi</name>
-		<!--!<name>こまち</name>-->
 		<price>100</price>
 		<speed>superb</speed>
-		<author>477</author>
+		<author>C477</author>
 		<type>E3 Series</type>
-		<!--!<type>E3系</type>-->
 		<company>JR East</company>
-		<!--!<company>JR東日本</company>-->
-		<description>Description wanted</description>
-		<!--!<description>説明募集中</description>-->
+		<description>Komachi is the limited express service running on Akita Shinkansen, also the line's sole service.
+The service is named after the famous waka poet Ono-no-Komachi, who is believed to have been born in the area of Akita Prefecture</description>
 		
 		<composition>
 			<head carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h"/>
