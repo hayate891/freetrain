@@ -47,10 +47,10 @@
 
   <contribution type="train" id="{1A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series; may run on competitor's lines (low)</type>
+<type>1500 Series; may run on competitors' lines (slow)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形低速型界磁チョッパ制御(他社線乗り入れ可能)車です)。</description>
+<description>Introduced in 1985, 1500 Series train ran on second generation Toei Asakusa, Keisei, and Hokuso-Kodan lines. It has until date seen its specifications change occasionally. The first 20 carriages were manufactured in steel, while the following were in aluminum alloy. There are three set formations of 4, 6, and 8 cars. Of these, the 8 car formation has an emergency mode that can bring the train up to speeds of 120 km/h. Widely used as everything from local service to rapid express. (low-speed version with field chopper control; can run on competitors' lines)</description>
 <fare>140</fare>
 <price>1900</price>
 <speed>slow</speed>
@@ -113,7 +113,7 @@
 <type>1500 Series; may run on competitor's lines (medium)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形中速型界磁チョッパ制御(他社線乗り入れ可能)車です)。</description>
+<description>Introduced in 1985, 1500 Series ran on second generation Toei Asakusa, Keisei, and Hokuso-Kodan lines. It has until date seen its specifications change occasionally. The first 20 carriages were manufactured in steel, while the following were in aluminum alloy. There are three set formations of 4, 6, and 8 cars. Of these, the 8 car formation has an emergency mode that can bring the train up to speeds of 120 km/h. Widely used as everything from local service to rapid express. (medium-speed version with field chopper control; can run on competitors' lines)</description>
 <fare>140</fare>
 <price>1900</price>
 <speed>medium</speed>
@@ -173,10 +173,10 @@
 
   <contribution type="train" id="{3A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series; may run on competitor's lines (high)</type>
+<type>1500 Series; may run on competitor's lines (fast)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形高速型界磁チョッパ制御(他社線乗り入れ可能)車です)。</description>
+<description>Introduced in 1985, 1500 Series ran on second generation Toei Asakusa, Keisei, and Hokuso-Kodan lines. It has until date seen its specifications change occasionally. The first 20 carriages were manufactured in steel, while the following were in aluminum alloy. There are three set formations of 4, 6, and 8 cars. Of these, the 8 car formation has an emergency mode that can bring the train up to speeds of 120 km/h. Widely used as everything from local service to rapid express. (high-speed version with field chopper control; can run on competitors' lines)</description>
 <fare>140</fare>
 <price>1900</price>
 <speed>fast</speed>
@@ -236,10 +236,10 @@
 
   <contribution type="train" id="{4A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series 1700 Model (low)</type>
+<type>1500 Series 1700 Model (slow)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1990(平成2)年に落成した車輌からは省エネ対策･メンテナンスの簡略化を目的にVVVFインバータ制御を採用し、1500形1700番台となりました。車体前面にはスカートが取り付けられ、第2編成からはバケットシートが採用されています。このVVVFインバータ制御装置は、600形にも採用されています。全車、8両固定編成で非常増圧機能があり、120km/h運転可能車です。現在、日中の都営線直通の快特や朝夕の特急･急行で活躍中です(この車輌は、1500形1700番台低速型VVVFインバータ制御車です)。</description>
+<description>Completed in 1990, the 1700 Model had a VVVF inverter installed to save energy and simplify maintenance. The front of the train has a skirt attached and the from the second carriage, bucket seats installed. This VVVF inverter setup was used for 600 Series as well. A set formation of 8 cars, it also has an emergency mode that can bring the train up to speeds of 120 km/h. Today, it is used on Toei Line on nonstop routes during the night and express during the day. (low-speed version with VVF inverter)</description>
 <fare>130</fare>
 <price>2000</price>
 <speed>slow</speed>
@@ -300,7 +300,7 @@
 <type>1500 Series 1700 Model (medium)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1990(平成2)年に落成した車輌からは省エネ対策･メンテナンスの簡略化を目的にVVVFインバータ制御を採用し、1500形1700番台となりました。車体前面にはスカートが取り付けられ、第2編成からはバケットシートが採用されています。このVVVFインバータ制御装置は、600形にも採用されています。全車、8両固定編成で非常増圧機能があり、120km/h運転可能車です。現在、日中の都営線直通の快特や朝夕の特急･急行で活躍中です(この車輌は、1500形1700番台中速型VVVFインバータ制御車です)。</description>
+<description>Completed in 1990, the 1700 Model had a VVVF inverter installed to save energy and simplify maintenance. The front of the train has a skirt attached and the from the second carriage, bucket seats installed. This VVVF inverter setup was used for 600 Series as well. A set formation of 8 cars, it also has an emergency mode that can bring the train up to speeds of 120 km/h. Today, it is used on Toei Line on nonstop routes during the night and express during the day. (medium-speed version with VVF inverter)</description>
 <fare>130</fare>
 <price>2000</price>
 <speed>medium</speed>
@@ -358,10 +358,10 @@
 
   <contribution type="train" id="{6A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series 1700 Model (high)</type>
+<type>1500 Series 1700 Model (fast)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1990(平成2)年に落成した車輌からは省エネ対策･メンテナンスの簡略化を目的にVVVFインバータ制御を採用し、1500形1700番台となりました。車体前面にはスカートが取り付けられ、第2編成からはバケットシートが採用されています。このVVVFインバータ制御装置は、600形にも採用されています。全車、8両固定編成で非常増圧機能があり、120km/h運転可能車です。現在、日中の都営線直通の快特や朝夕の特急･急行で活躍中です(この車輌は、1500形1700番台高速型VVVFインバータ制御車です)。</description>
+<description>Completed in 1990, the 1700 Model had a VVVF inverter installed to save energy and simplify maintenance. The front of the train has a skirt attached and the from the second carriage, bucket seats installed. This VVVF inverter setup was used for 600 Series as well. A set formation of 8 cars, it also has an emergency mode that can bring the train up to speeds of 120 km/h. Today, it is used on Toei Line on nonstop routes during the night and express during the day. (high-speed version with VVF inverter)</description>
 <fare>130</fare>
 <price>2000</price>
 <speed>fast</speed>
@@ -419,10 +419,10 @@
 
   <contribution type="train" id="{7A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series Refurbished (low)</type>
+<type>1500 Series Refurbished (slow)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>2001(平成13)年より鋼製車(20両)を対象に大規模なリニューアル工事が施されました。外見上は車輌前面にスカートが取り付けられ、鋼製車の特徴であった戸袋窓が埋められました。また、連結面の窓も埋められ、転落防止用ホロも設置されました。車内案内表示器･ドアチャイム･車イススペースなどの追設によってバリアフリー化が一層促進されており、2100形･新1000形同様に緊急スイッチも運転台に設置されています。今後は1500形全車に施工する予定となっています(この車輌は、1500形更新車低速型です)。</description>
+<description>Starting in 2001, a complete refurbishment of the 20 steel cars in the series was carried out. The window shutters unique for the steel cars were covered and so were the windows next to the connectors. Instead, fall protection hoods were installed. For accessibility, digital information boards, door chimes, and wheelchair space were also installed. Just like 2100 Series and the new 1000 Series, the motorman's seat got an emergency switch. All 1500 Series carriages are scheduled for this refurbishment. (low-speed refurbished 1500 Series)</description>
 <fare>100</fare>
 <price>2400</price>
 <speed>slow</speed>
@@ -486,7 +486,7 @@
 <type>1500 Series Refurbished (medium)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>2001(平成13)年より鋼製車(20両)を対象に大規模なリニューアル工事が施されました。外見上は車輌前面にスカートが取り付けられ、鋼製車の特徴であった戸袋窓が埋められました。また、連結面の窓も埋められ、転落防止用ホロも設置されました。車内案内表示器･ドアチャイム･車イススペースなどの追設によってバリアフリー化が一層促進されており、2100形･新1000形同様に緊急スイッチも運転台に設置されています。今後は1500形全車に施工する予定となっています(この車輌は、1500形更新車中速型です)。</description>
+<description>Starting in 2001, a complete refurbishment of the 20 steel cars in the series was carried out. The window shutters unique for the steel cars were covered and so were the windows next to the connectors. Instead, fall protection hoods were installed. For accessibility, digital information boards, door chimes, and wheelchair space were also installed. Just like 2100 Series and the new 1000 Series, the motorman's seat got an emergency switch. All 1500 Series carriages are scheduled for this refurbishment. (medium-speed refurbished 1500 Series)</description>
 <fare>100</fare>
 <price>2400</price>
 <speed>medium</speed>
@@ -547,10 +547,10 @@
 
   <contribution type="train" id="{9A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series Refurbished (high)</type>
+<type>1500 Series Refurbished (fast)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>2001(平成13)年より鋼製車(20両)を対象に大規模なリニューアル工事が施されました。外見上は車輌前面にスカートが取り付けられ、鋼製車の特徴であった戸袋窓が埋められました。また、連結面の窓も埋められ、転落防止用ホロも設置されました。車内案内表示器･ドアチャイム･車イススペースなどの追設によってバリアフリー化が一層促進されており、2100形･新1000形同様に緊急スイッチも運転台に設置されています。今後は1500形全車に施工する予定となっています(この車輌は、1500形更新車高速型です)。</description>
+<description>Starting in 2001, a complete refurbishment of the 20 steel cars in the series was carried out. The window shutters unique for the steel cars were covered and so were the windows next to the connectors. Instead, fall protection hoods were installed. For accessibility, digital information boards, door chimes, and wheelchair space were also installed. Just like 2100 Series and the new 1000 Series, the motorman's seat got an emergency switch. All 1500 Series carriages are scheduled for this refurbishment. (high-speed refurbished 1500 Series)</description>
 <fare>100</fare>
 <price>2400</price>
 <speed>fast</speed>
@@ -611,10 +611,10 @@
 
   <contribution type="train" id="{10A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series (low)</type>
+<type>1500 Series (slow)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形低速型界磁チョッパ制御車です)。</description>
+<description>Introduced in 1985, 1500 Series train ran on second generation Toei Asakusa, Keisei, and Hokuso-Kodan lines. It has until date seen its specifications change occasionally. The first 20 carriages were manufactured in steel, while the following were in aluminum alloy. There are three set formations of 4, 6, and 8 cars. Of these, the 8 car formation has an emergency mode that can bring the train up to speeds of 120 km/h. Widely used as everything from local service to rapid express. (low-speed version with field chopper control)</description>
 <fare>140</fare>
 <price>1900</price>
 <speed>slow</speed>
@@ -678,7 +678,7 @@
 <type>1500 Series (medium)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形中速型界磁チョッパ制御車です)。</description>
+<description>Introduced in 1985, 1500 Series train ran on second generation Toei Asakusa, Keisei, and Hokuso-Kodan lines. It has until date seen its specifications change occasionally. The first 20 carriages were manufactured in steel, while the following were in aluminum alloy. There are three set formations of 4, 6, and 8 cars. Of these, the 8 car formation has an emergency mode that can bring the train up to speeds of 120 km/h. Widely used as everything from local service to rapid express. (medium-speed version with field chopper control)</description>
 <fare>140</fare>
 <price>1900</price>
 <speed>medium</speed>
@@ -739,10 +739,10 @@
 
   <contribution type="train" id="{12A68G5B0-0E5E-402D-87CB-525CA403F917}">
 <company>Keihin Electric Express Railway</company>
-<type>1500 Series (high)</type>
+<type>1500 Series (fast)</type>
 <name>Keikyu Line</name>
 <author>Shino</author>
-<description>1985(昭和60)年に登場した第2世代の都営浅草線･京成線･北総･公団線への乗り入れ対応車輌で、現在に至るまでたびたび仕様が変更されてきました。最初の20両は鋼製車で、その後の車輌からはアルミ合金製の車体となりました。4両、6両、8両固定編成が存在し、このうち8両固定編成は非常増圧機能が追加され、120km/h運転可能車になりました。現在、普通から都営線直通の快特まで幅広く柔軟に対応できる車輌としてオールマイティに活躍中です(この車輌は、1500形高速型界磁チョッパ制御車です)。</description>
+<description>Introduced in 1985, 1500 Series train ran on second generation Toei Asakusa, Keisei, and Hokuso-Kodan lines. It has until date seen its specifications change occasionally. The first 20 carriages were manufactured in steel, while the following were in aluminum alloy. There are three set formations of 4, 6, and 8 cars. Of these, the 8 car formation has an emergency mode that can bring the train up to speeds of 120 km/h. Widely used as everything from local service to rapid express. (high-speed version with field chopper control)</description>
 <fare>140</fare>
 <price>1900</price>
 <speed>fast</speed>
