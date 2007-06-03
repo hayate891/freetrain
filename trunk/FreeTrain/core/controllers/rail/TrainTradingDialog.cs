@@ -541,7 +541,7 @@ namespace freetrain.world.rail
 					foreach( TrainCarContribution car in cars )
 						p += car.capacity;
 
-					passenger.Text = p.ToString()+" Passengers/Formation";
+					passenger.Text = p.ToString()+" Passengers/set";
 					//! passenger.Text = p.ToString()+" 人/編成";
 					return;
 				}
