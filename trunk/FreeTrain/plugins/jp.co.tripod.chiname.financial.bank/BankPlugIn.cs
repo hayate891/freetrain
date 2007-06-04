@@ -22,7 +22,7 @@ namespace freetrain.views.bank
 
 		public override void mergeMenu( MainMenu containerMenu ) {
 			MenuItem item = new MenuItem();
-			item.Text = "Bank";
+			item.Text = "Bank Teller";
 			//! item.Text = "銀行";
 			item.Click += new System.EventHandler(onClick);
 

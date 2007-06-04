@@ -120,7 +120,7 @@ namespace freetrain.views.bank
 			this.cb_status.Name = "cb_status";
 			this.cb_status.Size = new System.Drawing.Size(95, 23);
 			this.cb_status.TabIndex = 2;
-			this.cb_status.Text = "Bank teller";
+			this.cb_status.Text = "Bank Teller";
 			//! this.cb_status.Text = "銀行窓口";
 			this.cb_status.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.cb_status.UseVisualStyleBackColor = false;

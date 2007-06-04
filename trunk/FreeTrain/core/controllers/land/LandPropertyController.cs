@@ -136,7 +136,7 @@ namespace freetrain.controllers.land
 																		  this.buttonPlace,
 																		  this.preview});
 			this.Name = "LandPropertyController";
-			this.Text = "Real estate market";
+			this.Text = "Trade Land";
 			//! this.Text = "土地売買";
 			this.ResumeLayout(false);
 

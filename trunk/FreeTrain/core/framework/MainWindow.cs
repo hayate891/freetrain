@@ -733,7 +733,7 @@ namespace freetrain.framework
             // menuItem_struct
             // 
             this.menuItem_struct.Index = 0;
-            this.menuItem_struct.Text = "Building Construction...";
+            this.menuItem_struct.Text = "Building &Construction...";
 			//! this.menuItem_struct.Text = "建物の工事(仮)...";
             // 
             // menuItem_terrain
