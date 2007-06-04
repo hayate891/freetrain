@@ -43,3 +43,11 @@ Convert structure plugins to the 'generic' format.
 Merge the two main window toolbars and add an icon for the timer button.
 #12.
 Fix crashes when using an empty build dialog.
+
+2007/6/4
+#13.
+Repair the broken train trading dialog.
+#14.
+Merge a number of standard plugins with improved versions from the 'extra' package.
+#15.
+Change the about name of the game to 'FreeTrain SE' and make URLs in the code to point to our own website.
