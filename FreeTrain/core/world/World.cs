@@ -79,15 +79,15 @@ namespace freetrain.world
 					TimeLength.fromHours(1) );
 
 				// for test
-				new Train( rootTrainGroup, "3 Car High Speed Formation",3,
+				new Train( rootTrainGroup, "3-Car High-Speed Train",3,
 				//! new Train( rootTrainGroup, "３両高速編成",3,
 					(TrainContribution)Core.plugins.getContribution("{3983B298-ADB1-4905-94E5-03B7AAE5A221}"),
 					SimpleTrainControllerImpl.theInstance );
-				new Train( rootTrainGroup, "5 Car Medium Speed Formation",5,
+				new Train( rootTrainGroup, "5-Car Medium-Speed Train",5,
 				//! new Train( rootTrainGroup, "５両中速編成",5,
 					(TrainContribution)Core.plugins.getContribution("{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}"),
 					SimpleTrainControllerImpl.theInstance );
-				new Train( rootTrainGroup, "7 Car Low Speed Formation",7,
+				new Train( rootTrainGroup, "7-Car Low-Speed Train",7,
 				//! new Train( rootTrainGroup, "７両低速編成",7,
 					(TrainContribution)Core.plugins.getContribution("{F7134C8E-6B63-4780-AF16-90D33131CD07}"),
 					SimpleTrainControllerImpl.theInstance );
@@ -498,7 +498,7 @@ namespace freetrain.world
 
 
 		/// <summary> Root train group that holds all the trains in its descendants. </summary>
-		public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"Owned trains");
+		public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"My Trains");
 		//! public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"保有する列車");
 
 		

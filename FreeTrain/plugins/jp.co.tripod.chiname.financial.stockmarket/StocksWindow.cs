@@ -92,7 +92,7 @@ namespace freetrain.finance.stock
 			this.btn_counter.Name = "btn_counter";
 			this.btn_counter.Size = new System.Drawing.Size(115, 25);
 			this.btn_counter.TabIndex = 5;
-			this.btn_counter.Text = "Business Counter";
+			this.btn_counter.Text = "Stock Exchange";
 			//! this.btn_counter.Text = "取引窓口";
 			this.btn_counter.Click += new System.EventHandler(this.btn_counter_Click);
 			// 

@@ -51,11 +51,11 @@ namespace freetrain.contributions.train
 		public string speedDisplayName {
 			get {
 				switch(minutesPerVoxel) {
-				case 1:	return "Highest speed";
-				case 2:	return "High speed";
-				case 3: return "Medium speed";
-				case 4: return "Low speed";
-				default:	return "Lowest speed";
+				case 1:	return "Highest";
+				case 2:	return "High";
+				case 3: return "Medium";
+				case 4: return "Low";
+				default:	return "Lowest";
 				//! case 1:	return "超高速";
 				//! case 2:	return "高速";
 				//! case 3: return "中速";

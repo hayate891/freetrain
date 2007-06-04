@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
 	<title>Stock Market Module</title>
-	<!--!株取引モジュール-->
 	<author>C477</author>
-	<!--!<author>C477@2両目</author>-->
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<contribution type="dockingContent" id="{25FBD928-C82D-4EB3-C477-D08AC8A5504F}">
-		<name>Stock Market</name>
-		<!--!保有株式一覧-->
-		<menu name="Stock Market" location="view" />
-		<!--! name="保有株式一覧" location="view" -->
+		<name>StockPorfolio</name>
+		<menu name="Stock Portfolio" location="view" />
 		<class name="freetrain.finance.stock.StocksWindow" codebase="bin/Debug/StockMarket.dll" />
 	</contribution>
 	<contribution type="menu" id="{7DA77890-54E8-43EB-C477-F9B7C7F6F31C}">
