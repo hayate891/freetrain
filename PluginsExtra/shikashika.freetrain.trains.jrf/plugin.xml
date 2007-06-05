@@ -18,7 +18,7 @@
 		<type>EF 66</type>
 		<name>Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>高速貨車用大型電気機関車EF66が牽引する、コンテナ貨物列車です。
+		<description>Container train pulled by the large-sized EF66 high-speed electric locomotive.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -92,7 +92,7 @@
 		<type>EF 66</type>
 		<name>Container Freight Train (Cash Transport)</name>
 		<author>Shikashika</author>
-		<description>高速貨車用大型電気機関車EF66が牽引する、コンテナ貨物列車です。現金輸送用荷物車マニ30も牽引しています。
+		<description>Container train pulled by the large-sized EF66 high-speed electric locomotive. A MANI 30 baggage car for cash transport is also attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -170,7 +170,7 @@
 		<type>EF 58</type>
 		<name>Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>電気機関車EF58(一般色)が牽引する、コンテナ貨物列車です。
+		<description>A container freight train pulled by the EF58 freight locomotive (standard colors).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -244,7 +244,7 @@
 		<type>EF 58</type>
 		<name>Container Freight Train (Cash Transport)</name>
 		<author>Shikashika</author>
-		<description>電気機関車EF58(一般色)が牽引する、コンテナ貨物列車です。現金輸送用荷物車マニ30も牽引しています。
+		<description>A container freight train pulled by the EF58 freight locomotive (standard colors). A MANI 30 baggage car for cash transport is also attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -322,7 +322,7 @@
 		<type>ED 75</type>
 		<name>Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Continer train pulled by the AC freight locomotive ED75. KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -407,7 +407,7 @@
 		<type>ED 75</type>
 		<name>Tank Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED75. Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -455,7 +455,7 @@
 		<type>ED 75</type>
 		<name>Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the AC freight locomotive ED75. Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -493,7 +493,7 @@
 		<type>ED 75</type>
 		<name>700 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(700番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC freight locomotive ED75 (700 Model). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -578,7 +578,7 @@
 		<type>ED 75</type>
 		<name>700 Model Tank Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(700番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED75 (700 Model). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -626,7 +626,7 @@
 		<type>ED 75</type>
 		<name>700 Model Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(700番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the AC freight locomotive ED75 (700 Model). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -664,7 +664,7 @@
 		<type>ED 75</type>
 		<name>1000 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(1000番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC freight locomotive ED75 (1000 Model). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -749,7 +749,7 @@
 		<type>ED 75</type>
 		<name>1000 Model Tank Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(1000番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED75 (1000 Model). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -797,7 +797,7 @@
 		<type>ED 75</type>
 		<name>1000 Model Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(1000番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the AC freight locomotive ED75 (1000 Model). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -834,7 +834,7 @@
 		<type>ED 75</type>
 		<name>Refurbished Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC freight locomotive ED75 (JR Freight refurbished). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -919,7 +919,7 @@
 		<type>ED 75</type>
 		<name>Refurbished Tank Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(JR貨物更新機)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED75 (JR Freight refurbished). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -967,7 +967,7 @@
 		<type>ED 75</type>
 		<name>Refurbished Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(JR貨物更新機)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the AC freight locomotive ED75 (JR Freight refurbished). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1005,7 +1005,7 @@
 		<type>ED 75</type>
 		<name>No.1028 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(1028号機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC freight locomotive ED75 (No.1028). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1091,7 +1091,7 @@
 		<type>ED 75</type>
 		<name>No.1028 Tank Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(1028号機)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED75 (No.1028). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1140,7 +1140,7 @@
 		<type>ED 75</type>
 		<name>No.1028 Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(1028号機)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the AC freight locomotive ED75 (No.1028). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1179,7 +1179,7 @@
 		<type>ED 75</type>
 		<name>Test Coating Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(JR貨物試験塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Continer freight train pulled by the AC freight locomotive ED75 (JR Freight test coating). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1265,7 +1265,7 @@
 		<type>ED 75</type>
 		<name>Test Coating Tank Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(JR貨物試験塗色)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED75 (JR Freight test coating). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1314,7 +1314,7 @@
 		<type>ED 75</type>
 		<name>Test Coating Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交流用電気機関車ED75(JR貨物試験塗色)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the AC freight locomotive ED75 (JR Freight test coating). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1353,7 +1353,7 @@
 		<type>ED 79</type>
 		<name>0 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>津軽海峡線用の交流用電気機関車ED79重連(0番台と100番台)が牽引する、コンテナ貨物列車です。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Continer freight train pulled by the AC freight locomotive ED79 double-headed for Tsugaru-Kaikyo Line (0 + 100 Models). A MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1439,7 +1439,7 @@
 		<type>ED 79</type>
 		<name>0 Model Tank Train</name>
 		<author>Shikashika</author>
-		<description>津軽海峡線用の交流用電気機関車ED79重連(0番台と100番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED79 double-headed for Tsugaru-Kaikyo Line (0 + 100 Models)が牽引する、タンク貨物です。 Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1488,7 +1488,7 @@
 		<type>ED 79</type>
 		<name>0 Model Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>津軽海峡線用の交流用電気機関車ED79重連(0番台と100番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>train pulled by the AC freight locomotive ED79 double-headed for Tsugaru-Kaikyo Line (0 + 100 Models). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1527,7 +1527,7 @@
 		<type>ED 79</type>
 		<name>50 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>津軽海峡線用の交流用電気機関車ED79(50番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC freight locomotive ED79 (50 Model) for Tsugaru-Kaikyo Line. KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1612,7 +1612,7 @@
 		<type>ED 79</type>
 		<name>50 Model Tank Train</name>
 		<author>Shikashika</author>
-		<description>津軽海峡線用の交流用電気機関車ED79(50番台)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the AC freight locomotive ED79 (50 Model) for Tsugaru-Kaikyo Line. Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1661,7 +1661,7 @@
 		<type>ED 79</type>
 		<name>50 Model Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>津軽海峡線用の交流用電気機関車ED79(50番台)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the AC freight locomotive ED79 (50 Model) for Tsugaru-Kaikyo Line. Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1699,7 +1699,7 @@
 		<type>EF 81</type>
 		<name>Refurbished Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (JR Freight refurbished). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1777,7 +1777,7 @@
 		<type>EF 81</type>
 		<name>Refurbished Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(JR貨物更新機)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1794,7 +1794,7 @@
 		<type>EF 81</type>
 		<name>Refurbished Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(JR貨物更新機)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1811,7 +1811,7 @@
 		<type>EF 81</type>
 		<name>No.301 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(301号機ステンレス赤13号塗装JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (no.301 stainless steel red no.13 JR Freight refurbished). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1889,7 +1889,7 @@
 		<type>EF 81</type>
 		<name>No.301 Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(301号機ステンレス赤13号塗装JR貨物更新機)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (no.301 stainless steel red no.13 JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1906,7 +1906,7 @@
 		<type>EF 81</type>
 		<name>No.301 Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(301号機ステンレス赤13号塗装JR貨物更新機)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (no.301 stainless steel red no.13 JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -1923,7 +1923,7 @@
 		<type>EF 81</type>
 		<name>No.304 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(304号機ステンレス無塗装JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (no.304 stainless steel unpainted JR Freight refurbished). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2001,7 +2001,7 @@
 		<type>EF 81</type>
 		<name>No.304 Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(304号機ステンレス無塗装JR貨物更新機)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (no.304 stainless steel unpainted JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2018,7 +2018,7 @@
 		<type>EF 81</type>
 		<name>No.304 Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(304号機ステンレス無塗装JR貨物更新機)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (no.304 stainless steel unpainted JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2035,7 +2035,7 @@
 		<type>EF 81</type>
 		<name>400 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(400番台JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (400 Model JR Freight refurbished). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2113,7 +2113,7 @@
 		<type>EF 81</type>
 		<name>400 Model Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(400番台JR貨物更新機)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (400 Model JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2130,7 +2130,7 @@
 		<type>EF 81</type>
 		<name>400 Model Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(400番台JR貨物更新機)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (400 Model JR Freight refurbished).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2147,7 +2147,7 @@
 		<type>EF 81</type>
 		<name>No.408 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(408号機試験塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (no.408 test coating). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2225,7 +2225,7 @@
 		<type>EF 81</type>
 		<name>No.408 Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(408号機試験塗色)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (no.408 test coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2242,7 +2242,7 @@
 		<type>EF 81</type>
 		<name>No.408 Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(408号機試験塗色)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (no.408 test coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2259,7 +2259,7 @@
 		<type>EF 81</type>
 		<name>No.451 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(451号機)が牽引する、コンテナ貨物列車です。451、452号機は他のEF81と違ってヘッドライトが下にあります。コンテナ車はコキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (no.451). Unlike other EF81 trains, no.451 and 452 have low headlights. The container carriages KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2337,7 +2337,7 @@
 		<type>EF 81</type>
 		<name>No.451 Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(451号機)が牽引する、タンク貨物です。451、452号機は他のEF81と違ってヘッドライトが下にあります。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (no.451). Unlike other EF81 trains, no.451 and 452 have low headlights. 
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2354,7 +2354,7 @@
 		<type>EF 81</type>
 		<name>No.451 Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(451号機)が牽引する、無蓋貨車です。451、452号機は他のEF81と違ってヘッドライトが下にあります。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (no.451). Unlike other EF81 trains, no.451 and 452 have low headlights. 
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2371,7 +2371,7 @@
 		<type>EF 81</type>
 		<name>450 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(450番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (450 Model). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2449,7 +2449,7 @@
 		<type>EF 81</type>
 		<name>450 Model Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(450番台)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (450 Model).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2466,7 +2466,7 @@
 		<type>EF 81</type>
 		<name>450 Model Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(450番台)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (450 Model).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2483,7 +2483,7 @@
 		<type>EF 81</type>
 		<name>500 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(500番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (500 Model). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2561,7 +2561,7 @@
 		<type>EF 81</type>
 		<name>500 Model Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(500番台)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (500 Model).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2578,7 +2578,7 @@
 		<type>EF 81</type>
 		<name>500 Model Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(500番台)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (500 Model).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2595,7 +2595,7 @@
 		<type>EF 81</type>
 		<name>Red no.13 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(赤13号塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (red no.13). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2673,7 +2673,7 @@
 		<type>EF 81</type>
 		<name>Red no.13 Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(赤13号塗色)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (red no.13).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2690,7 +2690,7 @@
 		<type>EF 81</type>
 		<name>Red no.13 Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(赤13号塗色)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (red no.13).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2707,7 +2707,7 @@
 		<type>EF 81</type>
 		<name>Red no.2 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(赤2号塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (red no.2). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2785,7 +2785,7 @@
 		<type>EF 81</type>
 		<name>Red no.2 Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(赤2号塗色)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (red no.2).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2802,7 +2802,7 @@
 		<type>EF 81</type>
 		<name>Red no.2 Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(赤2号塗色)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (red no.2).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2819,7 +2819,7 @@
 		<type>EF 81</type>
 		<name>Hokutosei Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(北斗星塗装)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81 (Hokutosei coating). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2897,7 +2897,7 @@
 		<type>EF 81</type>
 		<name>Hokutosei Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(北斗星塗装)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81 (Hokutosei coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2914,7 +2914,7 @@
 		<type>EF 81</type>
 		<name>Hokutosei Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81(北斗星塗装)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81 (Hokutosei coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -2931,7 +2931,7 @@
 		<type>EF 81</type>
 		<name>Rainbow Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81-95号機(スーパー・エクスプレス・レインボー塗装)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the AC/DC freight locomotive EF81-95 (Super Express Rainbow coating). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -3009,7 +3009,7 @@
 		<type>EF 81</type>
 		<name>Rainbow Tank Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81-95号機(スーパー・エクスプレス・レインボー塗装)が牽引する、タンク貨物です。
+		<description>Tank train pulled by the AC/DC freight locomotive EF81-95 (Super Express Rainbow coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -3026,7 +3026,7 @@
 		<type>EF 81</type>
 		<name>Rainbow Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>交直両用電気機関車EF81-95号機(スーパー・エクスプレス・レインボー塗装)が牽引する、無蓋貨車です。
+		<description>Open freight train pulled by the AC/DC freight locomotive EF81-95 (Super Express Rainbow coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -3043,7 +3043,7 @@
 		<type>EF 200</type>
 		<name>Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>6000kWという狭軌で世界一の出力を誇る貨物用直流電気機関車EF200が牽引する、コンテナ貨物列車です。あまりに出力が大きいので変電所の能力が追いつかないとか…。コンテナ車の方は、コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the world's strongest narrow guage DC freight locomotive with 6000kW output, EF200. It has so high output that the power unit sometimes can't keep up with it... The container carriages KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3127,7 +3127,7 @@
 		<type>EF 200</type>
 		<name>Schnabel Car Freight Train</name>
 		<author>Shikashika</author>
-		<description>6000kWという狭軌で世界一の出力を誇る貨物用直流電気機関車EF200が牽引する、大物貨物列車です。あまりに出力が大きいので変電所の能力が追いつかないとか…。大物車はシキ1000で、2両分で1両となっています。最後尾に車掌車を連結しています。
+		<description>Schnabel car freight train pulled by the world's strongest narrow guage DC freight locomotive with 6000kW output, EF200. It has so high output that the power unit sometimes can't keep up with it... The schnabel car is a SHIKI 1000 and two pieces make up one carriage. A caboose is attached at the end.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -3151,7 +3151,7 @@
 		<type>EF 210</type>
 		<name>-0 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>「ECO-POWER桃太郎」の愛称をもつ貨物用直流電気機関車EF210(0番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by DS freight locomotive known as 'Eco-Power Momotaro': EF210 (0 Model). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3229,7 +3229,7 @@
 		<type>EF 210</type>
 		<name>-100 Model Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>「ECO-POWER桃太郎」の愛称をもつ貨物用直流電気機関車EF210(100番台)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by DS freight locomotive known as 'Eco-Power Momotaro': EF210 (100 Model). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3307,7 +3307,7 @@
 		<type>EF 210</type>
 		<name>Single Arm Pantograph Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>「ECO-POWER桃太郎」の愛称をもつ貨物用直流電気機関車EF210(シングルアームパンタグラフタイプ)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by DS freight locomotive known as 'Eco-Power Momotaro': EF210 (Single Arm Pantograph). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3385,7 +3385,7 @@
 		<type>EH 500</type>
 		<name>*2-no.901 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(901号機試作機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the 'Eco-Power Momotaro' AC/DC freight locomotive with two permanently coupled cars and 8 axles EH500 (no.901 prototype). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3473,7 +3473,7 @@
 		<type>EH 500</type>
 		<name>*2-1st Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(1次)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the 'Eco-Power Momotaro' AC/DC freight locomotive with two permanently coupled cars and 8 axles EH500 (1st). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3561,7 +3561,7 @@
 		<type>EH 500</type>
 		<name>*2-2nd Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(2次)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the 'Eco-Power Momotaro' AC/DC freight locomotive with two permanently coupled cars and 8 axles EH500 (2nd). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3649,7 +3649,7 @@
 		<type>EH 500</type>
 		<name>*2-3rd Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER金太郎」の愛称をもつ2車体永久連結･動軸8軸の交直流電気機関車EH500(3次)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the 'Eco-Power Momotaro' AC/DC freight locomotive with two permanently coupled cars and 8 axles EH500 (3rd). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3737,7 +3737,7 @@
 		<type>EH 200</type>
 		<name>*2-no.901 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(901号機試作機)です。EF64型機関車の後継車として急勾配線区用に開発され、試作機は2001年に東芝府中事業所で製造されました。コンテナ貨物列車で、コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the 'Eco-Power Blue Thunder' DC freight locomotive with two-segment body and 8 axles, EH200 (no.901 prototype). Developed as the successor of the EF64 locomotive for use in steep terrain. The prototype was manufactured at Toshiba's Fuchu factory. KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3825,7 +3825,7 @@
 		<type>EH 200</type>
 		<name>*2-no.901 Tank Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(901号機試作機)です。EF64型機関車の後継車として急勾配線区用に開発され、試作機は2001年に東芝府中事業所で製造されました。タキ43000のタンク貨物列車です。
+		<description>Tank train pulled by the 'Eco-Power Blue Thunder' DC freight locomotive with two-segment body and 8 axles EH200 (no.901 prototype). Developed as the successor of the EF64 locomotive for use in steep terrain. The prototype was manufactured at Toshiba's Fuchu factory. Using TAKI 43000 tank cars.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3873,7 +3873,7 @@
 		<type>EH 200</type>
 		<name>*2 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(量産型)です。EF64型機関車の後継車として急勾配線区用に開発され、2003年3月28日から量産型の製造が東芝府中事業所でされています。コンテナ貨物列車で、コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the 'Eco-Power Blue Thunder' DC freight locomotive with two-segment body and 8 axles EH200 (mass produced). Developed as the successor of the EF64 locomotive for use in steep terrain. Has been mass produced at Toshiba's Fuchu factory since March 28th 2003. KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -3961,7 +3961,7 @@
 		<type>EH 200</type>
 		<name>*2 Tank Train</name>
 		<author>Shikashika</author>
-		<description>｢ECO-POWER BlueThunder」の愛称をもつ2分割車体方式の8軸構造の直流電気機関車EH200(量産型)です。EF64型機関車の後継車として急勾配線区用に開発され、2003年3月28日から量産型の製造が東芝府中事業所でされています。タキ43000のタンク貨物列車です。
+		<description>Tank train pulled by the 'Eco-Power Blue Thunder' DC freight locomotive with two-segment body and 8 axles EH200 (mass produced). Developed as the successor of the EF64 locomotive for use in steep terrain. Has been mass produced at Toshiba's Fuchu factory since March 28th 2003. Uses TAKI 43000 tank cars.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -4009,7 +4009,7 @@
 		<type>DD 51</type>
 		<name>Refurbished Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(JR貨物更新機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the liquid diesel locomotive DD51 (JR Freight refurbished). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4094,7 +4094,7 @@
 		<type>DD 51</type>
 		<name>Refurbished Tank Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(JR貨物更新機)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the liquid diesel locomotive DD51 (JR Freight refurbished). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4142,7 +4142,7 @@
 		<type>DD 51</type>
 		<name>Refurbished Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(JR貨物更新機)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the liquid diesel locomotive DD51 (JR Freight refurbished). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4180,7 +4180,7 @@
 		<type>DD 51</type>
 		<name>Refurbished (Hokkaido specs.) Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(JR貨物更新機北海道仕様)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the liquid diesel locomotive DD51 (JR Freight refurbished Hokkaido specifications). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4265,7 +4265,7 @@
 		<type>DD 51</type>
 		<name>Refurbished (Hokkaido specs.) Tank Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(JR貨物更新機北海道仕様)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the liquid diesel locomotive DD51 (JR Freight refurbished Hokkaido specifications). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4313,7 +4313,7 @@
 		<type>DD 51</type>
 		<name>Refurbished (Hokkaido specs.) Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(JR貨物更新機北海道仕様)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the liquid diesel locomotive DD51 (JR Freight refurbished Hokkaido specifications). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4351,7 +4351,7 @@
 		<type>DD 51</type>
 		<name>Hokutosei Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(北斗星塗色)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the liquid diesel locomotive DD51 (Hokutosei coating). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4436,7 +4436,7 @@
 		<type>DD 51</type>
 		<name>Hokutosei Tank Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(北斗星塗色)が牽引する、タンク貨物です。偶数で機関車が重連になっています。
+		<description>Tank train pulled by the liquid diesel locomotive DD51 (Hokutosei coating). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4484,7 +4484,7 @@
 		<type>DD 51</type>
 		<name>Hokutosei Open Freight Train</name>
 		<author>Shikashika</author>
-		<description>液体式ディーゼル機関車DD51(北斗星塗色)が牽引する、無蓋貨車です。偶数で機関車が重連になっています。
+		<description>Open freight train pulled by the liquid diesel locomotive DD51 (Hokutosei coating). Even-numbered formations are double-headed.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -4522,7 +4522,7 @@
 		<type>DF 200</type>
 		<name>-no.901 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>電気式ディーゼル機関車DF200(試作901号機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the electric diesel locomotive DF200 (910 prototype). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -4600,7 +4600,7 @@
 		<type>DF 200</type>
 		<name>-no.001 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>電気式ディーゼル機関車DF200(1～9号機)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the electric diesel locomotive DF200 (no.1-9). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>
@@ -4678,7 +4678,7 @@
 		<type>DF 200</type>
 		<name>-no.010 Container Freight Train</name>
 		<author>Shikashika</author>
-		<description>電気式ディーゼル機関車DF200(10号機～)が牽引する、コンテナ貨物列車です。コキ100とコキ101が4両でユニットを組んでいます。また現金輸送用荷物車マニ30を牽引する組み合わせもあります。
+		<description>Container freight train pulled by the electric diesel locomotive DF200 (no.10-). KOKI 100 and 101 are joined in 4 car units and a MANI 30 baggage car for cash transport is also sometimes attached.
 		</description>
 		<price>100</price>
 		<speed>fast</speed>

@@ -16,7 +16,7 @@
 		<type>ED 75</type>
 		<name>700 Model Local Train (50 Series)</name>
 		<author>Shikashika</author>
-		<description>電気機関車ED75-700番台が牽引する、50系(オハ50、オハフ50)客車普通列車です。
+		<description>50 Series local passenger train (OHA50, OHAFU50) pulled by the electric locomotive ED75-700.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -47,7 +47,7 @@
 		<type>EF 81</type>
 		<name>Hokutosei Colors Local Train (50 Series)</name>
 		<author>Shikashika</author>
-		<description>電気機関車EF81(北斗星塗装)が牽引する、50系(オハ50、オハフ50)客車普通列車です。
+		<description>50 Series local passenger train (OHA50, OHAFU50) pulled by the electric locomotive ED81 (Hokutosei coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -78,7 +78,7 @@
 		<type>EF 81</type>
 		<name>Cassiopeia</name>
 		<author>Shikashika</author>
-		<description>電気機関車EF81(カシオペア塗装)が牽引する、オール2階建寝台列車です。
+		<description>All two-story sleeper car pulled by the electric locomotive EF81 (Cassiopeia coating).
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
@@ -115,7 +115,7 @@
 		<type>EF 81</type>
 		<name>Cassiopeia (reserve)</name>
 		<author>Shikashika</author>
-		<description>電気機関車EF81(カシオペア塗装)が牽引する、オール2階建寝台列車です。電源車は予備のカヤ２７です。
+		<description>All two-story sleeper car pulled by the electric locomotive EF81 (Cassiopeia coating). The power car is a reserve KAYA27.
 		</description>
 		<price>100</price>
 		<speed>medium</speed>
