@@ -335,7 +335,7 @@ namespace freetrain.world.structs.hv
 																		  this.preview,
 																		  this.price});
 			this.Name = "ControllerForm";
-			this.Text = "Half Voxels";
+			this.Text = "Half-tile Construction";
 			//! this.Text = "半ボクセル建築";
 			this.Resize += new EventHandler(this.updateSize);
 			this.group.ResumeLayout(false);
