@@ -256,22 +256,22 @@ namespace freetrain.world.rail.tattc
 			this.dayOfWeekBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			/*this.dayOfWeekBox.Items.AddRange(new object[] {
 															  "*",
-															  "",
-															  "",
-															  "",
-															  "",
-															  "",
-															  "",
-															  "y"});*/
+ 															  "日",
+ 															  "月",
+ 															  "火",
+ 															  "水",
+ 															  "木",
+ 															  "金",
+ 															  "土"*/
 			this.dayOfWeekBox.Items.AddRange(new object[] {
 															  "*",
+															  "7",
 															  "1",
 															  "2",
 															  "3",
 															  "4",
 															  "5",
-															  "6",
-															  "7"});
+															  "6"});
 			this.dayOfWeekBox.Location = new System.Drawing.Point(205, 17);
 			this.dayOfWeekBox.MaxDropDownItems = 13;
 			this.dayOfWeekBox.Name = "dayOfWeekBox";
