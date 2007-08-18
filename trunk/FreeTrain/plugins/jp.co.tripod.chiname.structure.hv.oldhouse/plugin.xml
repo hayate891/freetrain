@@ -16,7 +16,7 @@
 ]>
 
 <plug-in>
-	<title>Halfsize Houses</title>
+	<title>Half-tile Houses</title>
 	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
 	<depend on="jp.co.tripod.chiname.lib.halfvoxel" />	
@@ -26,7 +26,7 @@
 	</contribution>
 
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-0">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof 2 floors A</name>
 		<price>25</price>
@@ -41,7 +41,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-1">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof two-story B</name>
 		<price>25</price>
@@ -56,7 +56,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-2">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof two-story C</name>
 		<price>25</price>
@@ -71,7 +71,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-3">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof two-story D</name>
 		<price>25</price>
@@ -86,7 +86,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-4">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof two-story E</name>
 		<price>25</price>
@@ -101,7 +101,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-5">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof two-story F</name>
 		<price>25</price>
@@ -116,7 +116,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-6">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof two-story G</name>
 		<price>25</price>
@@ -131,7 +131,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{A5AD425E-BE10-4470-C477-204D881878E5}-7">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>Old downtown house</subgroup>
 		<name>gabled roof two-story H</name>
 		<price>25</price>

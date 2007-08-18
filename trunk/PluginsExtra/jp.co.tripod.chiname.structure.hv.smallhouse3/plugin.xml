@@ -16,7 +16,7 @@
 ]>
 
 <plug-in>
-	<title>Halfsize houses</title>
+	<title>Half-tile houses 3</title>
 	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
 	<depend on="jp.co.tripod.chiname.lib.halfvoxel" />	
@@ -26,7 +26,7 @@
 	</contribution>
 
 	<contribution type="HalfVoxelStructure" id="{0D38E912-C4E3-48DF-C477-2F9C1D332FFE}-0">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>flat roof house</subgroup>
 		<name>RC 2 floor</name>
 		<price>45</price>
@@ -42,7 +42,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0D38E912-C4E3-48DF-C477-2F9C1D332FFE}-1">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>flat roof house</subgroup>
 		<name>RC 3 floor A</name>
 		<price>55</price>
@@ -58,7 +58,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0D38E912-C4E3-48DF-C477-2F9C1D332FFE}-4">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>flat roof house</subgroup>
 		<name>RC 3 floor B</name>
 		<price>55</price>
@@ -74,7 +74,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0D38E912-C4E3-48DF-C477-2F9C1D332FFE}-2">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>flat roof house</subgroup>
 		<name>S 3 floor A</name>
 		<price>60</price>
@@ -90,7 +90,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0D38E912-C4E3-48DF-C477-2F9C1D332FFE}-3">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>flat roof house</subgroup>
 		<name>S 3 floor B</name>
 		<price>60</price>
@@ -106,7 +106,7 @@
 		</sprite>
 	</contribution>
 	<contribution type="HalfVoxelStructure" id="{0D38E912-C4E3-48DF-C477-2F9C1D332FFE}-5">
-		<group>Halfsize structures</group>
+		<group>Half-tile structures</group>
 		<subgroup>flat roof house</subgroup>
 		<name>flat S 3 floor C</name>
 		<price>60</price>
