@@ -1,5 +1,0 @@
-\CVS
-.cvsignore
-.csproj
-\obj
-\src

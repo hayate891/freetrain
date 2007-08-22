@@ -1,6 +1,0 @@
-*.ncb
-Debug
-Release
-*.aps
-DirectDraw.AlphaBlend.h
-DirectDraw.AlphaBlend_i.c
