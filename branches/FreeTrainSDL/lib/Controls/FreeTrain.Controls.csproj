@@ -74,15 +74,13 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxSHDocVw">
-      <Name>AxSHDocVw</Name>
-      <HintPath>..\..\extlib\AxSHDocVw.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="AxSHDocVw, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AxSHDocVw.dll</HintPath>
     </Reference>
-    <Reference Include="MsHtmlHost">
-      <Name>MsHtmlHost</Name>
-      <HintPath>..\..\extlib\MsHtmlHost.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="MsHtmlHost, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MsHtmlHost.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -157,6 +155,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>copy $(ProjectDir)bin\Debug\*.* $(SolutionDir)core\Debug\</PostBuildEvent>
+    <PostBuildEvent>copy "$(ProjectDir)bin\Release\*.dll" "$(SolutionDir)core\Debug\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
