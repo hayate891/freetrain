@@ -74,20 +74,13 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxSHDocVw">
-      <Name>AxSHDocVw</Name>
-      <HintPath>..\..\..\..\extlib\AxSHDocVw.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="AxSHDocVw, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AxSHDocVw.dll</HintPath>
     </Reference>
-    <Reference Include="MagicLibrary">
-      <Name>MagicLibrary</Name>
-      <HintPath>..\..\extlib\MagicLibrary.DLL</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MsHtmlHost">
-      <Name>MsHtmlHost</Name>
-      <HintPath>..\..\..\..\extlib\MsHtmlHost.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="MsHtmlHost, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MsHtmlHost.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -116,11 +109,9 @@
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\lib\DirectDraw.net\DirectDraw.net.csproj">
-      <Name>DirectDraw.net</Name>
-      <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-      <Private>False</Private>
+    <ProjectReference Include="..\..\lib\SDLGFX.net\SDL.net.csproj">
+      <Project>{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}</Project>
+      <Name>SDL.net</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
