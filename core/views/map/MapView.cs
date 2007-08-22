@@ -18,7 +18,7 @@ namespace freetrain.views.map
 	/// Form implementation of the map view.
 	/// </summary>
 	public class MapViewWindow : Form {
-		private WindowedDirectDraw ddraw;
+		//private WindowedDirectDraw ddraw;
 
 		/// <summary> Store the MapView object attached to it. </summary>
 		internal MapView controller;
@@ -70,9 +70,9 @@ namespace freetrain.views.map
 
 		protected override void OnLoad(EventArgs e) {
 			base.OnLoad(e);
-			ddraw = new WindowedDirectDraw(this);
-			drawer = new QuarterViewDrawer( World.world, ddraw,
-				new Rectangle( this.scrollPos, ClientSize ) );
+			//ddraw = new WindowedDirectDraw(this);
+			//drawer = new QuarterViewDrawer( World.world, ddraw,
+			//	new Rectangle( this.scrollPos, ClientSize ) );
 			drawer.OnUpdated += new EventHandler(onDrawerUpdated);
 
 			weatherOverlay = NullWeatherOverlay.theInstance;
@@ -88,7 +88,7 @@ namespace freetrain.views.map
 			weatherOverlay.Dispose();
 			PictureManager.onSurfaceLost -= new EventHandler(onSurfaceLost);
 			drawer.Dispose();
-			ddraw.Dispose();
+			//ddraw.Dispose();
 			base.Dispose( disposing );
 		}
 
@@ -175,11 +175,11 @@ namespace freetrain.views.map
 
 			weatherOverlay.setSize(this.ClientSize);
 
-			if( ddraw.primarySurface.handle.isLost()!=0 )	// surface is lost
-				PictureManager.onSurfaceLost(this,null);
+			//if( ddraw.primarySurface.handle.isLost()!=0 )	// surface is lost
+			//	PictureManager.onSurfaceLost(this,null);
 
 			//			drawer.draw( ddraw.primarySurface, PointToScreen(new Point(0,0)) );
-			weatherOverlay.draw( drawer, ddraw.primarySurface, PointToScreen(new Point(0,0)) );
+			//weatherOverlay.draw( drawer, ddraw.primarySurface, PointToScreen(new Point(0,0)) );
 
 			base.OnPaint(pe);
 		}
@@ -189,7 +189,7 @@ namespace freetrain.views.map
 		}
 
 		protected void onSurfaceLost( object sender, EventArgs e ) {
-			ddraw.primarySurface.restore();
+			//ddraw.primarySurface.restore();
 			Invalidate();
 		}
 
@@ -338,7 +338,7 @@ namespace freetrain.views.map
 		protected override void OnGotFocus( EventArgs e ) {
 			base.OnGotFocus(e);
 			// register this map view as the primary map view
-			MainWindow.primaryMapView = controller;
+			//MainWindow.primaryMapView = controller;
 		}
 
 		/// <summary>
@@ -445,10 +445,10 @@ namespace freetrain.views.map
 		/// return true. Otherwise false.
 		/// </summary>
 		public static bool isVisibleInAny( Location loc ) {
-			foreach( IView view in MainWindow.mainWindow.getAllViews() ) {
-				if( view is MapView && ((MapView)view).form.isVisible(loc) )
-					return true;
-			}
+			//foreach( IView view in MainWindow.mainWindow.getAllViews() ) {
+			//	if( view is MapView && ((MapView)view).form.isVisible(loc) )
+			//		return true;
+			//}
 			return false;
 		}
 	}

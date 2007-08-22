@@ -46,7 +46,7 @@ namespace freetrain.framework.graphics
 							continue;	// this voxel is invisible
 						}
 
-						Surface surface = ResourceUtil.directDraw.createOffscreenSurface(sz);
+                        Surface surface = new Surface(sz.Width, sz.Height);// ResourceUtil.directDraw.createOffscreenSurface(sz);
 						surfaces[x,y,z] = surface;
 						surface.fill( Color.Magenta );
 						surface.sourceColorKey = Color.Magenta;

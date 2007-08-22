@@ -38,7 +38,7 @@ namespace freetrain.framework.graphics
 		///		All the successive method calls will use this size as offset.
 		/// </param>
 		public PreviewDrawer( Size pixelSize, Size objSize, int height ) {
-			surface = ResourceUtil.directDraw.createOffscreenSurface(pixelSize);
+            surface = new Surface(pixelSize.Width, pixelSize.Height);// ResourceUtil.directDraw.createOffscreenSurface(pixelSize);
 			this.pixelSize = pixelSize;
 
 			int P = (objSize.Width + objSize.Height)*8;

@@ -31,13 +31,13 @@ namespace freetrain.framework
 		/// </summary>
 		public bool showErrorMessageBox = false;
 
-		public DDSurfaceAllocation surfaceAlloc = DirectDraw.SurfeceAllocation;
+		/*public DDSurfaceAllocation surfaceAlloc = DirectDraw.SurfeceAllocation;
 		public DDSurfaceAllocation SurfaceAlloc
 		{
 			get{ return surfaceAlloc; }
 			set{ DirectDraw.SurfeceAllocation = value; 
 				 surfaceAlloc = value; }
-		}
+		}*/
 		
 		public double[] devParams = new double[11];
 
@@ -90,7 +90,7 @@ namespace freetrain.framework
 		public new GlobalOptions load() 
 		{
 			GlobalOptions opt = (GlobalOptions)base.load();
-			DirectDraw.SurfeceAllocation = opt.SurfaceAlloc; 
+			//DirectDraw.SurfeceAllocation = opt.SurfaceAlloc; 
 			return opt;
 		}
 

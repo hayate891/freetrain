@@ -41,7 +41,7 @@ namespace freetrain.framework
 			drawStationNames.Checked = opts.drawStationNames;
 			showBoundingBox.Checked = opts.drawBoundingBox;
 			hideTrees.Checked = opts.hideTrees;
-			comboSurfaceAlloc.SelectedIndex = (int)opts.SurfaceAlloc;
+			//comboSurfaceAlloc.SelectedIndex = (int)opts.SurfaceAlloc;
 		}
 
 		protected override void Dispose( bool disposing ) {
@@ -251,7 +251,7 @@ namespace freetrain.framework
 			opts.drawStationNames = drawStationNames.Checked;
 			opts.drawBoundingBox = showBoundingBox.Checked;
 			opts.hideTrees = hideTrees.Checked;
-			opts.SurfaceAlloc = (DDSurfaceAllocation)comboSurfaceAlloc.SelectedIndex;
+			//opts.SurfaceAlloc = (DDSurfaceAllocation)comboSurfaceAlloc.SelectedIndex;
 			opts.save();
 			Close();
 		}

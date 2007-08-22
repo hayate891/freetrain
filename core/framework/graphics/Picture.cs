@@ -139,7 +139,7 @@ namespace freetrain.framework.graphics
 					loaders[s,1] = specifiedLoaders[s,1];
 				else {
 					if( specifiedLoaders[s,0]!=null)
-						loaders[s,1] = new NightSurfaceLoader(loaders[s,0]);
+						loaders[s,1] = new NightSurfaceLoader(loaders[s,0].fileName);
 					else
 						loaders[s,1] = loaders[0,1];
 				}
@@ -177,8 +177,8 @@ namespace freetrain.framework.graphics
 					World world = World.world;
 					// reload the surface
 					Clock c = world.clock;
-					Color key = loaders[(int)c.season,(world.viewOptions.useNightView)?1:0].load(ref _surface);
-					_surface.sourceColorKey = key;
+					loaders[(int)c.season,(world.viewOptions.useNightView)?1:0].load(ref _surface);
+					//_surface.sourceColorKey = key;
 					dirty = false;
 				}
 				return _surface;

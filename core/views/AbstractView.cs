@@ -40,7 +40,7 @@ namespace freetrain.views
 		public void close() {
 			form.Close();
 			form.Dispose();
-			MainWindow.mainWindow.removeView(this);
+			//MainWindow.mainWindow.removeView(this);
 		}
 	}
 }

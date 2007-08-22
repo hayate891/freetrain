@@ -157,12 +157,16 @@ namespace freetrain.world.accounting
 		private System.Windows.Forms.MenuItem menuItem2;
 		private System.Windows.Forms.MenuItem menuItem3;
 		private System.Windows.Forms.MenuItem menuItem4;
-		private Crownwood.Magic.Controls.TabPage tabPage1;
-		private Crownwood.Magic.Controls.TabPage tabPage2;
-		private Crownwood.Magic.Controls.TabPage tabPage3;
+		//private Crownwood.Magic.Controls.TabPage tabPage1;
+		//private Crownwood.Magic.Controls.TabPage tabPage2;
+		//private Crownwood.Magic.Controls.TabPage tabPage3;
+        TabPage tabPage1;
+        TabPage tabPage2;
+        TabPage tabPage3;
 		private System.Windows.Forms.Label debts;
 		private System.Windows.Forms.ListView detailView;
-		private Crownwood.Magic.Controls.TabControl tabControl;
+		//private Crownwood.Magic.Controls.TabControl tabControl;
+        TabControl tabControl;
 		private System.ComponentModel.Container components = null;
 		#endregion
 		#region Windows Form Designer generated code
@@ -191,10 +195,10 @@ namespace freetrain.world.accounting
 			this.colSales = new System.Windows.Forms.ColumnHeader();
 			this.colCost = new System.Windows.Forms.ColumnHeader();
 			this.colBalance = new System.Windows.Forms.ColumnHeader();
-			this.tabControl = new Crownwood.Magic.Controls.TabControl();
-			this.tabPage1 = new Crownwood.Magic.Controls.TabPage();
-			this.tabPage2 = new Crownwood.Magic.Controls.TabPage();
-			this.tabPage3 = new Crownwood.Magic.Controls.TabPage();
+            this.tabControl = new TabControl();//Crownwood.Magic.Controls.TabControl();
+            this.tabPage1 = new TabPage();//Crownwood.Magic.Controls.TabPage();
+			this.tabPage2 = new TabPage();//Crownwood.Magic.Controls.TabPage();
+			this.tabPage3 = new TabPage();//Crownwood.Magic.Controls.TabPage();
 			this.fontDialog = new System.Windows.Forms.FontDialog();
 			this.SuspendLayout();
 			// 
@@ -341,36 +345,36 @@ namespace freetrain.world.accounting
 			this.tabControl.SelectedTab = this.tabPage1;
 			this.tabControl.Size = new System.Drawing.Size(322, 24);
 			this.tabControl.TabIndex = 5;
-			this.tabControl.TabPages.AddRange(new Crownwood.Magic.Controls.TabPage[] {
+			this.tabControl.TabPages.AddRange(new TabPage[] {
 																						 this.tabPage1,
 																						 this.tabPage2,
 																						 this.tabPage3});
-			this.tabControl.SelectionChanged += new System.EventHandler(this.onSelectorChanged);
+			this.tabControl.SelectedIndexChanged += new System.EventHandler(this.onSelectorChanged);
 			// 
 			// tabPage1
 			// 
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Size = new System.Drawing.Size(322, 0);
 			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Title = "Today";
+			this.tabPage1.Text = "Today";
 			//! this.tabPage1.Title = "今日";
 			// 
 			// tabPage2
 			// 
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Selected = false;
+			//this.tabPage2. = false;
 			this.tabPage2.Size = new System.Drawing.Size(322, 0);
 			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Title = "This month";
+            this.tabPage2.Text = "This month";
 			//! this.tabPage2.Title = "今月";
 			// 
 			// tabPage3
 			// 
 			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Selected = false;
+			//this.tabPage3.Selected = false;
 			this.tabPage3.Size = new System.Drawing.Size(322, 0);
 			this.tabPage3.TabIndex = 2;
-			this.tabPage3.Title = "This year";
+            this.tabPage3.Text = "This year";
 			//! this.tabPage3.Title = "今年";
 			// 
 			// AccountSummaryWindow

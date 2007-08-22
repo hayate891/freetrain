@@ -29,7 +29,7 @@ namespace freetrain.world.development
 
 
 		public override void onMouseMove( MapViewWindow view, Location loc, Point ab ) {
-			MainWindow.mainWindow.statusText = "Land value:" + World.world.landValue[loc];
+			//MainWindow.mainWindow.statusText = "Land value:" + World.world.landValue[loc];
 			//! MainWindow.mainWindow.statusText = "地価：" + World.world.landValue[loc];
 		}
 

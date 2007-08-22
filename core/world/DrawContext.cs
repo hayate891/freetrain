@@ -15,21 +15,21 @@ namespace freetrain.world
 		public DrawContext( Surface s ) { this._surface=s; }
 
 		private readonly Surface _surface;
-		private GDIGraphics _graphics=null;
+		/*private GDIGraphics _graphics=null;*/
 		
-		public Graphics graphics {
+		/*public Graphics graphics {
 			get {
 				if( _graphics==null )
 					_graphics = new GDIGraphics(_surface);
 				return _graphics.graphics;
 			}
-		}
+		}*/
 		public Surface surface {
 			get {
-				if( _graphics!=null ) {
+				/*if( _graphics!=null ) {
 					_graphics.Dispose();
 					_graphics = null;
-				}
+				}*/
 				return _surface;
 			}
 		}
@@ -39,8 +39,8 @@ namespace freetrain.world
 		/// call this method.
 		/// </summary>
 		public void Dispose() {
-			if( _graphics!=null )
-				_graphics.Dispose();
+			/*if( _graphics!=null )
+				_graphics.Dispose();*/
 		}
 	}
 }

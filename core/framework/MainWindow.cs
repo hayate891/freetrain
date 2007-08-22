@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Data;
 using Microsoft.Win32;
-using freetrain.contributions.dock;
+//using freetrain.contributions.dock;
 using freetrain.contributions.common;
 using freetrain.contributions.rail;
 using freetrain.contributions.road;
@@ -32,9 +32,9 @@ using freetrain.world.accounting;
 using freetrain.world.rail;
 using freetrain.util;
 using freetrain.util.command;
-using freetrain.util.docking;
-using org.kohsuke.directdraw;
-using ICSharpCode.SharpZipLib.BZip2;
+//using freetrain.util.docking;
+
+//using ICSharpCode.SharpZipLib.BZip2;
 
 namespace freetrain.framework
 {
@@ -44,7 +44,7 @@ namespace freetrain.framework
 	public class MainWindow : Form
 	{
 		#region GUI components
-		private System.Windows.Forms.MenuItem mruMenuItem;
+		/*private System.Windows.Forms.MenuItem mruMenuItem;
 		private System.Windows.Forms.MenuItem menuItem1;
 		private System.Windows.Forms.MenuItem menuQuit;
 		private System.Windows.Forms.ToolBar toolBar1;
@@ -73,10 +73,10 @@ namespace freetrain.framework
 		private System.Windows.Forms.MenuItem menuItem5;
 		private System.Windows.Forms.MenuItem menuItem_struct;
 		private System.Windows.Forms.MenuItem menuItem_terrain;
-		private System.Windows.Forms.MenuItem menuItem_railStationary;
+		private System.Windows.Forms.MenuItem menuItem_railStationary;*/
 		public System.Windows.Forms.MenuItem menuItem_rail;
 		public System.Windows.Forms.MenuItem menuItem_construction;
-		private System.Windows.Forms.MenuItem menuItem4;
+		/*private System.Windows.Forms.MenuItem menuItem4;
 		private System.Windows.Forms.MenuItem menuItem_ClockGo4;
 		private System.Windows.Forms.MenuItem menuItem_ClockGo3;
 		private System.Windows.Forms.ToolBarButton tbTimer;
@@ -90,9 +90,9 @@ namespace freetrain.framework
 		private System.Windows.Forms.ToolBarButton tbTrainDiagram;
 		private System.Windows.Forms.ToolBarButton tbSeparator;
 		private System.Windows.Forms.ToolBarButton tbTerrain;
-		private System.Windows.Forms.ToolBarButton tbStruct;
+		private System.Windows.Forms.ToolBarButton tbStruct;*/
 		public System.Windows.Forms.MenuItem menuItem_config;
-		private System.Windows.Forms.MenuItem menuItem_music;
+		/*private System.Windows.Forms.MenuItem menuItem_music;
 		private System.Windows.Forms.MenuItem menuItem_option;
 		private System.Windows.Forms.Timer timerStatusBarUpdate;
 		private System.Windows.Forms.MenuItem MenuItem_File_Open;
@@ -101,15 +101,15 @@ namespace freetrain.framework
 		private System.Windows.Forms.MenuItem menuItem_disableSoundEffect;
 		private System.Windows.Forms.MenuItem menuItem_soundEffect;
 		private System.Windows.Forms.MenuItem menuItem_stationPassageway;
-		private System.Windows.Forms.MenuItem menuItem_land;
+		private System.Windows.Forms.MenuItem menuItem_land;*/
 		public System.Windows.Forms.MenuItem menuItem_road;
-		private System.Windows.Forms.MenuItem menuItem_About;
-		private System.Windows.Forms.MenuItem menuItem_onlineHelp;
+		//private System.Windows.Forms.MenuItem menuItem_About;
+		//private System.Windows.Forms.MenuItem menuItem_onlineHelp;
 		public System.Windows.Forms.MenuItem menuItem_view;
 		public System.Windows.Forms.MenuItem menuItem_help;
 		public System.Windows.Forms.MenuItem menuItem_file;
-		private System.Windows.Forms.MenuItem menuItem_landProperty;
-		private System.Windows.Forms.MenuItem menuItem_balanceSheet;
+		//private System.Windows.Forms.MenuItem menuItem_landProperty;
+		//private System.Windows.Forms.MenuItem menuItem_balanceSheet;
 		#endregion
 
 		//なぜか知らないが起動直後にセーブデータを読み込むと、
@@ -122,69 +122,70 @@ namespace freetrain.framework
 		public readonly CommandManager commands = new CommandManager();
 		
 		/// <summary> Process file drops to this form. </summary>
-		private readonly FileDropHandler fileDropHandler;
+		//private readonly FileDropHandler fileDropHandler;
 
 		/// <summary> Controls window docking. </summary>
-		public readonly DockingManagerEx dockingManager;
+		//public readonly DockingManagerEx dockingManager;
 
 		/// <summary>
 		/// DirectDraw object for those who needs to create secondary surfaces.
 		/// Should be treated as read-only.
 		/// </summary>
-		public WindowedDirectDraw directDraw;
-		private System.Windows.Forms.ToolBarButton tbBulldoze;
-		private System.Windows.Forms.ToolBar toolBar2;
-		private System.Windows.Forms.ImageList viewButtons;
-		private System.Windows.Forms.ToolBarButton viewDayAndNight;
-		private System.Windows.Forms.ToolBarButton viewAlwaysDay;
-		private System.Windows.Forms.ToolBarButton viewAlwaysNight;
-		private System.Windows.Forms.ToolBarButton separator;
-        private MenuItem menuItem6;
+		//public WindowedDirectDraw directDraw;
+		//private System.Windows.Forms.ToolBarButton tbBulldoze;
+		//private System.Windows.Forms.ToolBar toolBar2;
+		//private System.Windows.Forms.ImageList viewButtons;
+		//private System.Windows.Forms.ToolBarButton viewDayAndNight;
+		//private System.Windows.Forms.ToolBarButton viewAlwaysDay;
+		//private System.Windows.Forms.ToolBarButton viewAlwaysNight;
+		//private System.Windows.Forms.ToolBarButton separator;
+        //private MenuItem menuItem6;
 
-		private readonly MruHelper mruMenu;
+		//private readonly MruHelper mruMenu;
 
 		public MainWindow( string[] args, bool constructionMode ) {
 //			this.additionalPluginDirectories = args;
 
 			// set the singleton reference
-			Debug.Assert(mainWindow==null);
+			//Debug.Assert(mainWindow==null);
 			mainWindow = this;	// set the instance to this field
 
 			// persist window state
-			new WindowStateTracker( this,
-				new RegistryPersistentWindowState( Core.userRegistry.CreateSubKey("mainWindowState") ) );
+			//new WindowStateTracker( this,
+			//	new RegistryPersistentWindowState( Core.userRegistry.CreateSubKey("mainWindowState") ) );
 			
 			// spawn file drop handler
-			fileDropHandler = new FileDropHandler(this,new FileDropEventHandler(onFileDropped));
+			//fileDropHandler = new FileDropHandler(this,new FileDropEventHandler(onFileDropped));
 
 			// initialize the form
-			InitializeComponent();
+			//InitializeComponent();
 
-			this.IsMdiContainer = true;
+			//this.IsMdiContainer = true;
 
 			// set up docking manager
-			this.dockingManager = new DockingManagerEx(this);
-			this.dockingManager.OuterControl = statusBar;
+			//this.dockingManager = new DockingManagerEx(this);
+			//this.dockingManager.OuterControl = statusBar;
 
 
 
-			timer.Tick += new EventHandler(timerHandler);
-			clockMenu.Popup += new EventHandler(clockMenuUpdater);
+			//timer.Tick += new EventHandler(timerHandler);
+			//clockMenu.Popup += new EventHandler(clockMenuUpdater);
 
 			// set toolbar bitmap
-			Bitmap bmp = ResourceUtil.loadSystemBitmap("Toolbar.bmp");
-			toolBarIcons.TransparentColor = bmp.GetPixel(0,0);
-			toolBarIcons.Images.AddStrip(bmp);
+			//Bitmap bmp = ResourceUtil.loadSystemBitmap("Toolbar.bmp");
+			//toolBarIcons.TransparentColor = bmp.GetPixel(0,0);
+			//toolBarIcons.Images.AddStrip(bmp);
 
-			Bitmap bmp2 = ResourceUtil.loadSystemBitmap("DayNight.bmp");
-			viewButtons.TransparentColor = bmp2.GetPixel(0,0);
-			viewButtons.Images.AddStrip(bmp2);
+			//Bitmap bmp2 = ResourceUtil.loadSystemBitmap("DayNight.bmp");
+			//viewButtons.TransparentColor = bmp2.GetPixel(0,0);
+			//viewButtons.Images.AddStrip(bmp2);
 
-			errorIcon = new Icon(ResourceUtil.findSystemResource("error.ico"));
+			//errorIcon = new Icon(ResourceUtil.findSystemResource("error.ico"));
 
 			//
 			// register command handlers
 			//
+            /*
 			#region command handler registration
 
 			// file
@@ -248,8 +249,9 @@ namespace freetrain.framework
 			// other
 			new Command( commands )
 				.addExecuteHandler( new CommandHandlerNoArg(CommercialStructPlacementController.create) )
-				.commandInstances.AddAll( menuItem_struct/*, tbStruct*/ );
+				.commandInstances.AddAll( menuItem_struct/*, tbStruct );
 
+            /*
 			new Command( commands )
 				.addExecuteHandler( new CommandHandlerNoArg(MountainController.create) )
 				.commandInstances.AddAll( menuItem_terrain, tbTerrain );
@@ -323,91 +325,91 @@ namespace freetrain.framework
 			#endregion
 			
 			// initialize the FreeTrain framework
-			using(Splash s = new Splash()) {
+			/*using(Splash s = new Splash()) {
 				s.Show();
 				Application.DoEvents();
 
 				Core.init(args,this,menuItem_music,new ProgressHandler(s.updateMessage),constructionMode);
-			}
-
-			mruMenu = new MruHelper(this,mruMenuItem);
-		}
-
-		internal MainWindow(string[] args, ProgressHandler handler){
-			Debug.Assert(mainWindow==null);
-			mainWindow = this;	// set the instance to this field		
-
-			// initialize the form
-			InitializeComponent();
-
-			this.IsMdiContainer = true;
-
-			// set up docking manager
-			this.dockingManager = new DockingManagerEx(this);
-			this.dockingManager.OuterControl = statusBar;
-
-			timer.Tick += new EventHandler(timerHandler);
-
-			// set toolbar bitmap
-			Bitmap bmp = ResourceUtil.loadSystemBitmap("Toolbar.bmp");
-			toolBarIcons.TransparentColor = bmp.GetPixel(0,0);
-			toolBarIcons.Images.AddStrip(bmp);
-
-			Bitmap bmp2 = ResourceUtil.loadSystemBitmap("DayNight.bmp");
-			viewButtons.TransparentColor = bmp2.GetPixel(0,0);
-			viewButtons.Images.AddStrip(bmp2);
-
-			errorIcon = new Icon(ResourceUtil.findSystemResource("error.ico"));
-			
-			Core.init(args,this,menuItem_music,handler,false);
+			}*/
 
 			//mruMenu = new MruHelper(this,mruMenuItem);
 		}
 
-		public void SetToolBarButtonHandler(string barName,int index,CommandHandlerNoArg handler)
-		{
-			foreach( Control c in this.Controls )
-			{
-				ToolBar bar = c as ToolBar;
-				if(bar!=null && bar.Name.Equals(barName))
-				{
-						if( bar.Buttons.Count>index )
-						{
-							new Command( commands )
-								.addExecuteHandler( handler)
-								.commandInstances.AddAll( bar.Buttons[index] );
-						}
-				}
-			}
+		internal MainWindow(string[] args, ProgressHandler handler){
+			//Debug.Assert(mainWindow==null);
+			mainWindow = this;	// set the instance to this field		
+
+			// initialize the form
+			//InitializeComponent();
+
+			//this.IsMdiContainer = true;
+
+			// set up docking manager
+			//this.dockingManager = new DockingManagerEx(this);
+			//this.dockingManager.OuterControl = statusBar;
+
+			//timer.Tick += new EventHandler(timerHandler);
+
+			// set toolbar bitmap
+			//Bitmap bmp = ResourceUtil.loadSystemBitmap("Toolbar.bmp");
+			//toolBarIcons.TransparentColor = bmp.GetPixel(0,0);
+			//toolBarIcons.Images.AddStrip(bmp);
+
+            //Bitmap bmp2 = ResourceUtil.loadSystemBitmap("DayNight.bmp");
+            //viewButtons.TransparentColor = bmp2.GetPixel(0,0);
+            //viewButtons.Images.AddStrip(bmp2);
+
+            //errorIcon = new Icon(ResourceUtil.findSystemResource("error.ico"));
+			
+            //Core.init(args,this,menuItem_music,handler,false);
+
+			//mruMenu = new MruHelper(this,mruMenuItem);
 		}
 
-		public void setWorld( World w ) {
-			// close all the views attached to the previous world
-			// closing a view will modify the views set, so copy to an array first.
-			IView[] vs = (IView[])views.toArray(typeof(IView));
-			foreach( IView e in vs )
-				e.close();
-			detachController();
-			Debug.Assert(views.isEmpty);
+        //public void SetToolBarButtonHandler(string barName,int index,CommandHandlerNoArg handler)
+        //{
+        //    foreach( Control c in this.Controls )
+        //    {
+        //        ToolBar bar = c as ToolBar;
+        //        if(bar!=null && bar.Name.Equals(barName))
+        //        {
+        //                if( bar.Buttons.Count>index )
+        //                {
+        //                    new Command( commands )
+        //                        .addExecuteHandler( handler)
+        //                        .commandInstances.AddAll( bar.Buttons[index] );
+        //                }
+        //        }
+        //    }
+        //}
 
-			World.setWorld(w);
-			updateCaption();
-			viewOptionDayNightUpdate(null);
+        //public void setWorld( World w ) {
+        //    // close all the views attached to the previous world
+        //    // closing a view will modify the views set, so copy to an array first.
+        //    IView[] vs = (IView[])views.toArray(typeof(IView));
+        //    foreach( IView e in vs )
+        //        e.close();
+        //    detachController();
+        //    Debug.Assert(views.isEmpty);
+
+        //    World.setWorld(w);
+        //    updateCaption();
+        //    viewOptionDayNightUpdate(null);
 
 
-			// open a new map view
-			addView(new MapView());
-		}
+        //    // open a new map view
+        //    addView(new MapView());
+        //}
 
 
 
 		protected override void Dispose( bool disposing ) {
-			if( disposing && components != null)
-				components.Dispose();
-			dockingManager.Dispose();
+            //if( disposing && components != null)
+            //    components.Dispose();
+            //dockingManager.Dispose();
 			base.Dispose( disposing );
 		}
-
+        /*
 		#region Windows Form Designer generated code
 		/// <summary>
 		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を
@@ -733,7 +735,7 @@ namespace freetrain.framework
             // menuItem_struct
             // 
             this.menuItem_struct.Index = 0;
-            this.menuItem_struct.Text = "Building &Construction...";
+            this.menuItem_struct.Text = "Building Construction...";
 			//! this.menuItem_struct.Text = "建物の工事(仮)...";
             // 
             // menuItem_terrain
@@ -1015,6 +1017,7 @@ namespace freetrain.framework
             // 
             // viewDayAndNight
             // 
+        /*
             this.viewDayAndNight.ImageIndex = 15;
             this.viewDayAndNight.Name = "viewDayAndNight";
             this.viewDayAndNight.Pushed = true;
@@ -1076,7 +1079,7 @@ namespace freetrain.framework
 
 		}
 		#endregion
-
+    */
 		/// <summary>
 		/// アプリケーションのメイン エントリ ポイントです。
 		/// </summary>
@@ -1090,12 +1093,12 @@ namespace freetrain.framework
 		
 
 
-		private static MapView _primaryMapView;
+		//private static MapView _primaryMapView;
 
 		/// <summary>
 		/// Gets the "primary" map view, which will be controlled by other views.
 		/// </summary>
-		public static MapView primaryMapView {
+		/*public static MapView primaryMapView {
 			get {
 				if( _primaryMapView.IsDisposed )
 					_primaryMapView = null;
@@ -1104,17 +1107,17 @@ namespace freetrain.framework
 			set {
 				_primaryMapView = value;
 			}
-		}
+		}*/
 
 		#region error message
-		private readonly Icon errorIcon;
+		//private readonly Icon errorIcon;
 
 		/// <summary>
 		/// Sets the status bar message.
 		/// 
 		/// The message will disappear after the certain amount of time.
 		/// </summary>
-		public string statusText {
+		/*public string statusText {
 			set {
 				statusBar_Message.Text = value;
 				statusBar_Message.Icon = errorIcon;
@@ -1128,10 +1131,10 @@ namespace freetrain.framework
 				statusBar_Message.Icon = null;
 				statusBarTime = DateTime.MaxValue;
 			}
-		}
+		}*/
 
-		[DllImport("user32.dll")]
-		public static extern bool MessageBeep(uint soundtype);
+		//[DllImport("user32.dll")]
+		//public static extern bool MessageBeep(uint soundtype);
 
 		/// <summary>
 		/// Reports an error.
@@ -1139,13 +1142,14 @@ namespace freetrain.framework
 		/// or just send the message to the status bar
 		/// </summary>
 		public static void showError( string msg ) {
-			if(Core.options.showErrorMessageBox) {
-				MessageBox.Show(mainWindow,msg,Application.ProductName,
-					MessageBoxButtons.OK, MessageBoxIcon.Stop);
-			} else {
-				mainWindow.statusText = msg;
-				MessageBeep(0x10);
-			}
+            //if(Core.options.showErrorMessageBox) {
+            //    MessageBox.Show(mainWindow,msg,Application.ProductName,
+            //        MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            //} else {
+            //    mainWindow.statusText = msg;
+            //    MessageBeep(0x10);
+            //}
+			
 		}
 //#define MB_ICONHAND                 0x00000010L
 //#define MB_ICONQUESTION             0x00000020L
@@ -1155,7 +1159,7 @@ namespace freetrain.framework
 		/// <summary>
 		/// The time when the current status message should be cleared.
 		/// </summary>
-		private DateTime statusBarTime = DateTime.MaxValue;
+		//private DateTime statusBarTime = DateTime.MaxValue;
 		#endregion
 
 		#region Controller management
@@ -1177,7 +1181,7 @@ namespace freetrain.framework
 
 			controller = newHandler;
 			controller.onAttached();
-			statusBar_Controller.Text = controller.name;
+			//statusBar_Controller.Text = controller.name;
 
 			// update all the views
 			// TODO: update voxels correctly
@@ -1192,7 +1196,7 @@ namespace freetrain.framework
 
 			controller.onDetached();
 			controller=null;
-			statusBar_Controller.Text = null;
+			//statusBar_Controller.Text = null;
 
 			// update all the views
 			// TODO: update voxels correctly
@@ -1200,7 +1204,7 @@ namespace freetrain.framework
 		}
 		#endregion
 
-		#region View management
+		/*#region View management
 		/// <summary>
 		/// Set of currently registered views.
 		/// </summary>
@@ -1230,8 +1234,8 @@ namespace freetrain.framework
 		public void removeView( IView view ) {
 			views.remove(view);
 		}
-		#endregion
-
+		#endregion*/
+        /*
 		#region save/load
 		// FIXME: the save/load architecture is too ugly.
 
@@ -1308,7 +1312,7 @@ namespace freetrain.framework
 //			stream = new GZipOutputStream( stream );
 			World.world.save( getFormatter(file), stream );
 			stream.Close();
-			mruMenu.addFile(file);
+			//mruMenu.addFile(file);
 		}
 
 		private void saveGame2() { saveGame(); }	// change the return type
@@ -1330,7 +1334,7 @@ namespace freetrain.framework
 		/// </summary>
 		internal void loadGame( FileInfo file ) {
 			loadGame( getFormatter(file), file.OpenRead() );
-			mruMenu.addFile(file);
+			//mruMenu.addFile(file);
 		}
 		
 		private IFormatter getFormatter( FileInfo fi ) {
@@ -1505,8 +1509,9 @@ namespace freetrain.framework
 
 		protected override void OnLoad(System.EventArgs e) {
 			base.OnLoad(e);
-			
-			directDraw = new WindowedDirectDraw(this);
+
+            setWorld(new World(new Distance(127, 127, 12), 2));
+			//directDraw = new WindowedDirectDraw(this);
 
 			// merge menu contributions
 			foreach( MenuContribution contrib in Core.plugins.menus )
@@ -1540,7 +1545,7 @@ namespace freetrain.framework
 //				menuItem_road.MenuItems.Add( idx, new MenuItem("-") );
 
 			// start a new game by default 
-			setWorld(new World(new Distance(127, 127, 12), 2));
+			
 
 			// load the screen layout
 			try 
@@ -1583,7 +1588,7 @@ namespace freetrain.framework
 		}
 
 		private void showOnlineHelp() {
-			UrlInvoker.openUrl("http://freetrain.sourceforge.net/");
+			UrlInvoker.openUrl("http://www.kohsuke.org/freetrain/wiki/pukiwiki.php?%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB");
 		}
 
 		/// <summary> Called when a new file is dropped on this form. </summary>
@@ -1654,7 +1659,7 @@ namespace freetrain.framework
 		private class RoadPlacementHandler {
 			internal RoadPlacementHandler() {
 			}
-			private readonly RoadContribution[] contribs;
+			//private readonly RoadContribution[] contribs;
 			private RoadController controller;
 
 			internal MenuItem createMenuItem() {
@@ -1709,5 +1714,6 @@ namespace freetrain.framework
 			// start the game
 			Application.Run(new MainWindow(args,false));
 		}
-	}
+      * */
+	}   
 }

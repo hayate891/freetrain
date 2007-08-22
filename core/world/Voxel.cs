@@ -45,6 +45,7 @@ namespace freetrain.world
 			else
 				draw( display, pt, heightCutDiff );
 		}
+        public abstract Color getColorOfTile();
 
 		public abstract void setFence( Direction d, Fence f );
 
@@ -153,6 +154,13 @@ namespace freetrain.world
 			return fence[d.index/2];
 		
 		}
+
+        public override Color  getColorOfTile()
+        {
+ 	        //return Color.Beige;   
+            if (this.GetType().Name == "VoxelImpl") return Color.AliceBlue;
+            else return Color.Green;
+        }
 	
 	}
 

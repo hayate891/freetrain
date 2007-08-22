@@ -280,8 +280,8 @@ namespace freetrain.framework.plugin
 		/// <returns></returns>
 		public static string getDefaultPluginDirectory() {
 			// try the IDE directory first
-			string pluginDir = Path.GetFullPath(Path.Combine(
-				Core.installationDirectory, @"..\..\plugins" ));
+			//string pluginDir = Path.GetFullPath(Path.Combine(Core.installationDirectory, @"..\..\plugins" ));
+            string pluginDir = Application.StartupPath + "\\plugins";
 			if(Directory.Exists(pluginDir))
 				return pluginDir;
 

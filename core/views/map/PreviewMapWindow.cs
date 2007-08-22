@@ -17,7 +17,7 @@ namespace freetrain.views.map
 	/// Form implementation of the map view.
 	/// </summary>
 	public class PreviewMapWindow : UserControl {
-		private WindowedDirectDraw ddraw;
+		//private WindowedDirectDraw ddraw;
 		private QuarterViewDrawer drawer;
 		private WeatherOverlay weatherOverlay;
 		private World world;
@@ -105,8 +105,8 @@ namespace freetrain.views.map
 
 			weatherOverlay.setSize(this.ClientSize);
 
-			if( ddraw.primarySurface.handle.isLost()!=0 )	// surface is lost
-				PictureManager.onSurfaceLost(this,null);
+			//if( ddraw.primarySurface.handle.isLost()!=0 )	// surface is lost
+			//	PictureManager.onSurfaceLost(this,null);
 
 			//			drawer.draw( ddraw.primarySurface, PointToScreen(new Point(0,0)) );
 			weatherOverlay.draw( drawer, ddraw.primarySurface, PointToScreen(new Point(0,0)) );

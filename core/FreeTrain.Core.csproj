@@ -70,15 +70,9 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxSHDocVw">
-      <Name>AxSHDocVw</Name>
-      <HintPath>..\extlib\AxSHDocVw.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MagicLibrary">
-      <Name>MagicLibrary</Name>
-      <HintPath>..\extlib\MagicLibrary.DLL</HintPath>
-      <Private>True</Private>
+    <Reference Include="AxSHDocVw, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\AxSHDocVw.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.JScript">
       <Name>Microsoft.JScript</Name>
@@ -88,20 +82,9 @@
       <Name>Microsoft.Vsa</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MsHtmlHost">
-      <Name>MsHtmlHost</Name>
-      <HintPath>..\extlib\MsHtmlHost.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SharpZipLib">
-      <Name>SharpZipLib</Name>
-      <HintPath>..\extlib\SharpZipLib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SHDocVw">
-      <Name>SHDocVw</Name>
-      <HintPath>..\extlib\SHDocVw.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MsHtmlHost, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MsHtmlHost.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -124,32 +107,10 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <ProjectReference Include="..\lib\Controls\FreeTrain.Controls.csproj">
-      <Name>FreeTrain.Controls</Name>
-      <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\lib\DirectAudio.net\DirectAudio.net.csproj">
-      <Name>DirectAudio.net</Name>
-      <Project>{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\lib\DirectDraw.net\DirectDraw.net.csproj">
-      <Name>DirectDraw.net</Name>
-      <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-      <Private>True</Private>
-    </ProjectReference>
-    <COMReference Include="DxVBLib">
-      <Guid>{E1211242-8E94-11D1-8808-00C04FC2C602}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Private>True</Private>
-    </COMReference>
+    <Reference Include="Tao.Sdl, Version=1.2.11.1, Culture=neutral, PublicKeyToken=9c7a200e36c0094e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Debug\Tao.Sdl.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs">
@@ -180,12 +141,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="contributions\common\SubDividedStructureContribution.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="contributions\dock\DockingContribution.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="contributions\dock\IDockingWindow.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="contributions\land\Bulldozer.cs">
@@ -509,9 +464,6 @@
     <Compile Include="framework\MenuItemConstants.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\MruHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="framework\NewWorldDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -584,18 +536,6 @@
     <Compile Include="util\CurrencyUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\docking\ContentEx.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="util\docking\DockingManagerEx.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="util\docking\EconomicalContent.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="util\docking\SuicidalContent.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="util\FontInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -634,9 +574,6 @@
     </Compile>
     <Compile Include="views\map\PreviewForm.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\map\PreviewMapWindow.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="views\NullWeatherOverlay.cs">
       <SubType>Code</SubType>
@@ -1008,6 +945,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="framework\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
@@ -1027,12 +965,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\map\MapView.resx">
       <DependentUpon>MapView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="views\map\PreviewForm.resx">
       <DependentUpon>PreviewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\map\PreviewMapWindow.resx">
-      <DependentUpon>PreviewMapWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="world\accounting\AccountSummaryWindow.resx">
       <DependentUpon>AccountSummaryWindow.cs</DependentUpon>
@@ -1052,6 +988,20 @@
     <EmbeddedResource Include="world\subsidiaries\MarketWindow.resx">
       <DependentUpon>MarketWindow.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\Controls\FreeTrain.Controls.csproj">
+      <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
+      <Name>FreeTrain.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\DirectAudio.net\DirectAudio.net.csproj">
+      <Project>{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}</Project>
+      <Name>DirectAudio.net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\SDLGFX.net\SDL.net.csproj">
+      <Project>{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}</Project>
+      <Name>SDL.net</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="util\video\" />

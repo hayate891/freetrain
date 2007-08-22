@@ -34,7 +34,7 @@ namespace freetrain.util
 		private ValueComparer valueComparer;
 
 		public void setValueComparer( ValueComparer vc ) {
-			this.valueComparer = valueComparer;
+			this.valueComparer = vc;
 		}
 
 		/// <summary>

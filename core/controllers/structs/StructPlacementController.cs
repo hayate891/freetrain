@@ -188,9 +188,11 @@ namespace freetrain.controllers.structs
 
 		public void drawVoxel( QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt ) {
 			if(!isPlacing)	return;
-			
-			if( Cube.createExclusive( baseLoc, alphaSprites.size ).contains(loc) )
-				alphaSprites.getSprite( loc-baseLoc ).drawAlpha( canvas.surface, pt );
+            if (alphaSprites != null)
+            {
+                if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
+                    alphaSprites.getSprite(loc - baseLoc).drawAlpha(canvas.surface, pt);
+            }
 		}
 
 		public void drawAfter( QuarterViewDrawer view, DrawContextEx surface ) {}
@@ -244,14 +246,14 @@ namespace freetrain.controllers.structs
 
 		public override void updatePreview()
 		{
-			using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) ) 
+			/*using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) ) 
 			{
 
 				if( previewBitmap!=null )	previewBitmap.Dispose();
 				preview.Image = previewBitmap = drawer.createBitmap();
-			}
+			}*/
 
-			updateAlphaSprites();
+			if (selectedType != null) updateAlphaSprites();
 		}
 	}
 }

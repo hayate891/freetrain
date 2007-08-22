@@ -4,14 +4,14 @@ using System.Drawing;
 using System.Collections;
 using freetrain.world;
 using freetrain.framework.plugin;
-using freetrain.controls;
+using freetrain;
 
 namespace freetrain.framework.plugin.graphics
 {	
 	/// <summary>
 	/// ColorLibrary の概要の説明です。
 	/// </summary>
-	public class ColorLibrary :Contribution, IColorLibrary
+	public class ColorLibrary :Contribution//, IColorLibrary
 	{
 		protected static readonly string null_id="{COLORLIB-NULL}";
 		protected ArrayList list;

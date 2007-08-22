@@ -238,10 +238,10 @@ namespace freetrain.controllers.rail
 			cmd.Enabled = train!=null && train.isPlaced;
 		}
 		private void onMove() {
-			if( train.head.state.isUnplaced )		return;
-			if( MainWindow.primaryMapView==null )	return;
+			//if( train.head.state.isUnplaced )		return;
+			//if( MainWindow.primaryMapView==null )	return;
 			
-			MainWindow.primaryMapView.moveTo( train.head.state.asPlaced().location );
+			//MainWindow.primaryMapView.moveTo( train.head.state.asPlaced().location );
 		}
 	}
 }
