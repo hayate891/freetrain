@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 
 using Tao.Sdl;
-using Tao.Platform.Windows;
+//using Tao.Platform.Windows;
 using org.kohsuke.directdraw;
 
 using freetrain.world;
@@ -41,7 +41,7 @@ namespace FreeTrainSDL
 
         static int CURRENT_BPP = 16;
 
-        Surface tmp, satmap;
+        Surface tmp;
 
         ModalController controller = null;
 
