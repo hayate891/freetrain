@@ -58,12 +58,12 @@ namespace freetrain.framework.sound
 		/// that can take time.
 		/// </summary>
 		public static void PlaySynchronousSound( string fileName ) {
-			if( Core.options.enableSoundEffect && Core.soundEffectManager.IsAvailable )
-				sndPlaySound(fileName,0);
+			//if( Core.options.enableSoundEffect && Core.soundEffectManager.IsAvailable )
+			//	sndPlaySound(fileName,0);
 		}
 		public static void PlayAsynchronousSound( string fileName ) {
-			if( Core.options.enableSoundEffect && Core.soundEffectManager.IsAvailable )
-				sndPlaySound(fileName,1);
+			//if( Core.options.enableSoundEffect && Core.soundEffectManager.IsAvailable )
+			//	sndPlaySound(fileName,1);
 		}
 	}
 }
