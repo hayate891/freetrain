@@ -61,7 +61,8 @@ namespace freetrain.controllers.structs
 
 
 		protected override AlphaBlendSpriteSet createAlphaSprites() {
-			return new AlphaBlendSpriteSet( selectedType.sprites );
+            if (selectedType != null) return new AlphaBlendSpriteSet(selectedType.sprites);
+            else return null;
 		}
 	}
 }

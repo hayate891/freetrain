@@ -210,6 +210,16 @@ namespace freetrain.world
 			if(_accessory!=null)	_accessory.drawAfter(display,pt);
 		}
 
+        public override Color getColorOfTile()
+        {
+            if (_car != null) return Color.White;
+            if (_railRoad != null) return Color.Black;
+            if (_road != null) return Color.Gray;
+            if (_accessory != null) return Color.Yellow;
+
+            return Color.Blue;
+        }
+
 		/// <summary>
 		/// Gets the existing TrafficVoxel in the specified location,
 		/// or create new TrafficVoxel if the location is unoccupied.

@@ -29,12 +29,12 @@ namespace freetrain.framework
 		}
 
 		protected override void OnLoad(System.EventArgs e) {
-			using( WindowedDirectDraw dd = new WindowedDirectDraw(this) ) {
+			/*using( WindowedDirectDraw dd = new WindowedDirectDraw(this) ) {
 				this.size.Text = format(dd.availableVideoMemory)+"/"+format(dd.totalVideoMemory);
 				this.displayMode.Text = dd.primarySurface.displayModeName;
 				this.progressBar.Value = Math.Min( 10000,
 					(int)(10000.0*dd.availableVideoMemory/dd.totalVideoMemory) );
-			}
+			}*/
 		}
 
 		private string format( long value ) {

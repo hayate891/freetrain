@@ -34,7 +34,8 @@ namespace freetrain.framework
 		/// </summary>
 		public static string installationDirectory {
 			get {
-				return (string)userRegistry.GetValue("installationDirectory");
+				//return (string)userRegistry.GetValue("installationDirectory");
+                return Application.StartupPath;
 			}
 			set {
 				userRegistry.SetValue("installationDirectory",value);
@@ -93,14 +94,23 @@ namespace freetrain.framework
 			if(progressHandler==null)
 				progressHandler = new ProgressHandler(silentProgressHandler);
 
-			_soundEffectManager = new SoundEffectManager(owner);
-		
-			// load plug-ins
-			Core.plugins.init(
-				args.Length==0?getDefaultProfile():parseProfile(args[0]),
-				progressHandler, new DefaultPluginErrorHandler(5));
+			if (owner!=null) _soundEffectManager = new SoundEffectManager(owner);
 
-			_bgmManager = new BGMManager(bgmMenuItem);
+            if (args == null)
+            {
+                Core.plugins.init(getDefaultProfile(),
+                    progressHandler, new DefaultPluginErrorHandler(5));
+            }
+            else
+            {
+
+                // load plug-ins
+                Core.plugins.init(
+                    args.Length == 0 ? getDefaultProfile() : parseProfile(args[0]),
+                    progressHandler, new DefaultPluginErrorHandler(5));
+            }
+
+            if (bgmMenuItem != null) _bgmManager = new BGMManager(bgmMenuItem);
 		}
 
 		private static void silentProgressHandler( string msg, float progress ) {

@@ -81,8 +81,9 @@ namespace freetrain.framework
 		}
 
 		public static Surface loadTimeIndependentSystemSurface( string name ) {
-			using(Bitmap bmp=loadSystemBitmap(name))
-				return directDraw.createSprite(bmp);
+			//using(Bitmap bmp=loadSystemBitmap(name))
+			//	return directDraw.createSprite(bmp);
+            return new Surface(findSystemResource(name));
 		}
 
 
@@ -90,7 +91,7 @@ namespace freetrain.framework
 		/// <summary>
 		/// DirectDraw instance for loading surface objects.
 		/// </summary>
-		public static readonly DirectDraw directDraw = new DirectDraw();
+		//public static readonly DirectDraw directDraw = new DirectDraw();
 
 		private static Picture emptyChips = loadSystemPicture("EmptyChip.bmp","EmptyChip_n.bmp");
 		private static Picture cursorChips = loadSystemPicture("cursorChip.bmp","cursorChip.bmp");

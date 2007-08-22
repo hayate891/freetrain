@@ -60,7 +60,7 @@ namespace freetrain.contributions.dock
 
 
 		public DockingContribution( XmlElement e ) : base("dockingContent",e.Attributes["id"].Value) {
-
+/*
 			singleton = (e.SelectSingleNode("multiple")==null);
 
 			name = XmlUtil.selectSingleNode(e,"name").InnerText;
@@ -92,6 +92,7 @@ namespace freetrain.contributions.dock
 				parent.MenuItems.Add(menuItem);
 			else
 				parent.MenuItems.Add( int.Parse(menuElement.Attributes["position"].Value), menuItem );
+ * */
 		}
 
 		private ContentEx createEconomicalContent( string name ) {

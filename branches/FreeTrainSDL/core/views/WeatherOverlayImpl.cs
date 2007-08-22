@@ -32,7 +32,7 @@ namespace freetrain.views
 			this.canvasSize = sz;
 			if( offscreenSurface!=null )
 				offscreenSurface.Dispose();
-			offscreenSurface = MainWindow.mainWindow.directDraw.createOffscreenSurface(sz);
+			//offscreenSurface = MainWindow.mainWindow.directDraw.createOffscreenSurface(sz);
 		}
 
 		public void draw( QuarterViewDrawer drawer, Surface target, Point pt ) {

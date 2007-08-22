@@ -24,7 +24,7 @@ namespace freetrain.framework.graphics
 		/// <summary>
 		/// Surface that contains the image.
 		/// </summary>
-		protected Picture picture;
+		public Picture picture;
 
 		/// <summary>
 		/// The point in the image that will be aligned to

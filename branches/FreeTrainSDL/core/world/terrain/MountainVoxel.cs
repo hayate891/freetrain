@@ -64,7 +64,7 @@ namespace freetrain.world.terrain
 				case 3:		heightData = (Int16)((heightData&0xFFF0)|(h    )); break;
 				default:	throw new ArgumentOutOfRangeException();
 			}
-			World.world.onVoxelUpdated(location); // update this voxel
+			World.world.onVoxelUpdated(this); // update this voxel
 		}
 
 
@@ -184,7 +184,7 @@ namespace freetrain.world.terrain
 
 		public override void draw( DrawContext display, Point pt, int heightCutDiff ) 
 		{
-			heightCutDiff--;
+			heightCutDiff--;          
 			drawGround(display,pt,heightCutDiff);
 			if( patterns != null && !Core.options.hideTrees)
 				drawTrees(display,pt,heightCutDiff);
@@ -212,14 +212,13 @@ namespace freetrain.world.terrain
 			pt.Y -= getHeight(0)*4;	// apply offset
 
 			// compute target colors
-			Color[] dstColors = new Color[]{
-											   selectColor(),
-											   mapColor(isUnderWater?Color.Navy:currentMountainColors[0]) };
+            
+			Color[] dstColors = new Color[]{selectColor(),mapColor(isUnderWater?Color.Navy:currentMountainColors[0]) };
 
-			int tdiff = (getHeight(0)-getHeight(2)+4);
+            int tdiff = (getHeight(0)-getHeight(2)+4);
 			int umax = Math.Min(tdiff+2,6);
 
-			Size sz = new Size(16,tdiff*4+2*4+1);
+            Size sz = new Size(16, tdiff * 4 + 2 * 4 + 1);
 			
 			// draw left half
 			int ldiff = (getHeight(0)-getHeight(3)+2);
@@ -234,9 +233,21 @@ namespace freetrain.world.terrain
 				vflip = false;
 			int lidx = (umax-ldiff);
 
-			display.surface.bltColorTransform( new Point(pt.X,pt.Y-(vflip?2*4:0)),
-				images[tdiff], new Point(lidx*32,0), sz,
-				srcColors, dstColors, vflip );
+
+                Rectangle src = new Rectangle(lidx * 32, 0, sz.Width, sz.Height);
+                Rectangle dst = new Rectangle(pt.X, pt.Y - (2 * 4), sz.Width, sz.Height);
+                if (vflip)
+                {
+                    //flippedImages[tdiff].clipVflip(ref dst, ref src);
+                    display.surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
+                }
+                else
+                {
+                    flippedImages[tdiff].resetClipRect();
+                    //flippedImages[tdiff].clipRectangle(ref dst, ref src);
+                    display.surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
+                }
+
 
 		{
 			// left cliff
@@ -260,9 +271,20 @@ namespace freetrain.world.terrain
 			int ridx = (umax-rdiff);
 
 			pt.X +=16;
-			display.surface.bltColorTransform( new Point(pt.X,pt.Y-(vflip?2*4:0)),
-				images[tdiff], new Point(ridx*32+16,0), sz,
-				srcColors, dstColors, vflip );
+
+            src = new Rectangle(ridx * 32 + 16, 0, sz.Width, sz.Height);
+            dst = new Rectangle(pt.X, pt.Y - (2 * 4), sz.Width, sz.Height);
+            if (vflip)
+            {
+                ////flippedImages[tdiff].clipVflip(ref dst, ref src);
+                display.surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
+            }
+            else
+            {
+                flippedImages[tdiff].resetClipRect();
+                //flippedImages[tdiff].clipRectangle(ref dst, ref src);
+                display.surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
+            }
 
 		{
 			basePt.X+=16;
@@ -418,6 +440,12 @@ namespace freetrain.world.terrain
 			owned = false;
 		}
 
+        public override Color getColorOfTile()
+        {
+            if (this.isUnderWater) return Color.RoyalBlue;
+            else return Color.Green;
+        }
+
 		#region cliff
 		private static Sprite[,,] cliff = new Sprite[2/*0:S,1:W*/,5/*lHeight*/,5/*rHeight*/];
 		/// <summary> Load sprites for cliffs. </summary>
@@ -441,68 +469,56 @@ namespace freetrain.world.terrain
 		#endregion
 
 		#region drawing
-		private static Surface[] images = new Surface[9];
+		public static Surface[] images = new Surface[9];
+        public static Surface[] flippedImages = new Surface[9];
 		static MountainVoxel() 
 		{
+            // load color palettes
+            XmlDocument doc = new XmlDocument();
+            doc.Load(ResourceUtil.findSystemResource("mountainPalette.xml"));
+            mountainColors[0] = loadColors((XmlElement)doc.SelectSingleNode("/*/spring"));
+            mountainColors[1] = loadColors((XmlElement)doc.SelectSingleNode("/*/summer"));
+            mountainColors[2] = loadColors((XmlElement)doc.SelectSingleNode("/*/autumn"));
+            mountainColors[3] = loadColors((XmlElement)doc.SelectSingleNode("/*/winter"));
+            waterColors = loadColors((XmlElement)doc.SelectSingleNode("/*/water"));
+
 			initCliffSprites();
 
 			// pre-draw pictures
-
-			Pen blackPen = new Pen(Color.Black);
-			Brush whiteBrush = new SolidBrush(Color.White);
-			Brush magentaBrush = new SolidBrush(Color.Magenta);
 
 			for( int tdiff=0; tdiff<=8; tdiff++ ) 
 			{// tdiff= difference between top and bottom
 				int u = Math.Min(tdiff+2,6);
 
-				images[tdiff] = ResourceUtil.directDraw.createOffscreenSurface(
-					new Size(32*(5-(Math.Abs(tdiff-4)+1)/2), tdiff*4+1 +2*4) );
-				images[tdiff].sourceColorKey = Color.Magenta;
-
-				using( GDIGraphics g = new GDIGraphics(images[tdiff]) ) 
-				{
-					// clearing the surface at the beginning will leave dots since
-					// adjacent pictures sometimes overlap.
-					//					g.graphics.FillRectangle(magentaBrush,
-					//						new Rectangle( new Point(0,0), images[tdiff].size )); // clear the surface
-
-
-					int idx=0;
+                images[tdiff] = new Surface(32 * (5 - (Math.Abs(tdiff - 4) + 1) / 2), tdiff * 4 + 1 + 2 * 4);
+                flippedImages[tdiff] = new Surface(32 * (5 - (Math.Abs(tdiff - 4) + 1) / 2), tdiff * 4 + 1 + 2 * 4);
 					
-					for( ; u>=tdiff-u; u--,idx++ ) 
-					{
-						int offset = idx*32;
+                int idx=0;
+				for( ; u>=tdiff-u; u--,idx++ ) 
+				{
+					int offset = idx*32;
+					// clear the sprite
+                    images[tdiff].fill(new Rectangle(new Point(offset, 0), new Size(32, images[tdiff].size.Height)), Color.Magenta);
+                    flippedImages[tdiff].fill(new Rectangle(new Point(offset, 0), new Size(32, flippedImages[tdiff].size.Height)), Color.Magenta);
 
-						// clear the sprite
-						g.graphics.FillRectangle(magentaBrush,
-							new Rectangle( new Point(offset,0), new Size(32, images[tdiff].size.Height) ));
+					Point[] pts = new Point[]{   new Point(offset+16,   0),
+												 new Point(offset+32, u    *4),
+												 new Point(offset+16, tdiff*4),
+												 new Point(offset+16, tdiff*4),
+												 new Point(offset   , u    *4),
+												 new Point(offset+16,   0)};
 
-						Point[] pts = new Point[]{
-													 new Point(offset+16,   0/*1*/),
-													 new Point(offset+32, u    *4),
-													 new Point(offset+16, tdiff*4),
-													 new Point(offset+15, tdiff*4),
-													 new Point(offset   , u    *4),
-													 new Point(offset+15,   0/*1*/)};
-						g.graphics.FillPolygon( whiteBrush, pts );
-						g.graphics.DrawLines( blackPen, pts );
-					}
+                    images[tdiff].fillPolygon(mountainColors[0][4], pts);
+                    images[tdiff].drawLines(Color.Black, pts);
 				}
+                flippedImages[tdiff] = images[tdiff].createFlippedVerticalSurface();
+                
+                //flippedImages[tdiff].blt(new Point(0,0),tmpSurface);
+                //flippedImages[tdiff].sourceColorKey = Color.Magenta;
+
+                //images[tdiff].sourceColorKey = Color.Magenta;
+
 			}
-
-			blackPen.Dispose();
-			whiteBrush.Dispose();
-			magentaBrush.Dispose();
-
-			// load color palettes
-			XmlDocument doc = new XmlDocument();
-			doc.Load(ResourceUtil.findSystemResource("mountainPalette.xml"));
-			mountainColors[0] = loadColors( (XmlElement)doc.SelectSingleNode("/*/spring") );
-			mountainColors[1] = loadColors( (XmlElement)doc.SelectSingleNode("/*/summer") );
-			mountainColors[2] = loadColors( (XmlElement)doc.SelectSingleNode("/*/autumn") );
-			mountainColors[3] = loadColors( (XmlElement)doc.SelectSingleNode("/*/winter") );
-			waterColors		  = loadColors( (XmlElement)doc.SelectSingleNode("/*/water") );
 		}
 		#endregion
 	}

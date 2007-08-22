@@ -3,9 +3,9 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.dock;
+//using freetrain.contributions.dock;
 using freetrain.framework;
-using freetrain.util.docking;
+//using freetrain.util.docking;
 using freetrain.util.command;
 
 namespace freetrain.world.subsidiaries
@@ -278,7 +278,7 @@ namespace freetrain.world.subsidiaries
 		#endregion
 		
 		private void onGoToClicked() {
-			MainWindow.primaryMapView.moveTo( selectedProperty.owner.locationClue );
+			//MainWindow.primaryMapView.moveTo( selectedProperty.owner.locationClue );
 		}
 		private void updateGoToButton( Command cmd ) {
 			cmd.Enabled = (selectedProperty!=null);

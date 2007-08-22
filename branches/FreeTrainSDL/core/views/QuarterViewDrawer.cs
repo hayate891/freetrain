@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -22,12 +22,12 @@ namespace freetrain.views
 		/// </summary>
 		private bool _enableOverlay;
 
-		private DirectDraw directDraw;
+		//private DirectDraw directDraw;
 
 		/// <summary>
 		/// Off-screen buffer that keeps the image of this window.
 		/// </summary>
-		private Surface offscreenBuffer;
+        public Surface offscreenBuffer;
 		
 		/// <summary>
 		/// Drawing context that wraps <code>offscreenBuffer</code>
@@ -64,23 +64,29 @@ namespace freetrain.views
 
 		private World world;
 
+        Sprite emptyChip,waterChip;
 
 		/// <param name="initialView">
 		///		the region that this object draws in the A,B axis.
 		/// </param>
-		public QuarterViewDrawer( World _world, DirectDraw directDraw, Rectangle initialView ) 
+		public QuarterViewDrawer( World _world,  Rectangle initialView ) 
 		{
 			this.world = _world;
+
 			_heightCutHeight = world.size.z-1;
-			this.directDraw = directDraw;
+			//this.directDraw = directDraw;
+            //offscreenBuffer = offscreen;
 			recreateDrawBuffer( initialView.Size, true );
+            
 			topLeft = new Point( initialView.X, initialView.Y );
 
 			world.voxelOutlookListeners.Add(this);
 			
 			onUpdateAllVoxels();	// initially all the rects are dirty
-			PictureManager.onSurfaceLost += new EventHandler(onSurfaceLost);
+			//PictureManager.onSurfaceLost += new EventHandler(onSurfaceLost);
 		}
+
+        public Size view_size;
 
 		/// <summary>
 		/// Size of the view in pixels.
@@ -89,7 +95,7 @@ namespace freetrain.views
 		{
 			get 
 			{
-				if( offscreenBuffer!=null )		return offscreenBuffer.size;
+				if( offscreenBuffer!=null )		return view_size; //offscreenBuffer.size;
 				else							return new Size(0,0);
 			}
 			set 
@@ -107,7 +113,7 @@ namespace freetrain.views
 			set 
 			{
 				if( topLeft==value )	return;
-
+/*
 				Rectangle shared = Rectangle.Intersect(
 					new Rectangle( topLeft, size ),
 					new Rectangle( value,   size ) );
@@ -118,17 +124,21 @@ namespace freetrain.views
 					topLeft = value;
 					onUpdateAllVoxels();
 					return;
-				}
-
+				}*/
+                topLeft = value;
 				// copy the reusable rect
-				offscreenBuffer.resetClipRect();
-				offscreenBuffer.blt(
+				//offscreenBuffer.resetClipRect();
+
+//dirtyRect.add(new Rectangle(topLeft, view_size));
+
+
+				/*offscreenBuffer.blt(
 					new Point( shared.X-value.X,   shared.Y-value.Y ),
 					offscreenBuffer,
 					new Point( shared.X-topLeft.X, shared.Y-topLeft.Y ),
-					shared.Size );
+					shared.Size );*/
 
-				topLeft = value;
+				/*
 
 				// adjust Y
 				if( value.Y < shared.Y ) 
@@ -150,7 +160,7 @@ namespace freetrain.views
 				{ // scroll right
 					dirtyRect.add( value.X+shared.Width, value.Y, size.Width-shared.Width, size.Height );
 				}
-				updateScreen();
+				updateScreen();*/
 			}
 		}
 
@@ -215,9 +225,9 @@ namespace freetrain.views
 		/// This is useful when you absolutely wants a fresh surface
 		/// (such as when the current surface is lost)
 		/// </param>
-		private void recreateDrawBuffer( Size size, bool forceRecreate ) 
+		public void recreateDrawBuffer( Size size, bool forceRecreate ) 
 		{
-			if(offscreenBuffer!=null ) 
+			/*if(offscreenBuffer!=null ) 
 			{
 				if( size==offscreenBuffer.size && !forceRecreate )
 					return;	// no need for re-allocation
@@ -225,11 +235,13 @@ namespace freetrain.views
 				drawContext = null;
 				offscreenBuffer.Dispose();
 				offscreenBuffer = null;
-			}
+			}*/
+
+            view_size = size;
 
 			if(size.Width>0 && size.Height>0) 
 			{
-				offscreenBuffer = directDraw.createOffscreenSurface( size );
+				//offscreenBuffer = directDraw.createOffscreenSurface( size );
 				drawContext = new DrawContextEx(offscreenBuffer);
 			}
 
@@ -280,6 +292,8 @@ namespace freetrain.views
 				dirtyRect.add(r);
 				if(OnUpdated!=null)		OnUpdated(this,null);
 			}
+
+            
 		}
 
 		/// <summary>
@@ -288,6 +302,7 @@ namespace freetrain.views
 		public void onUpdateAllVoxels() 
 		{
 			dirtyRect.add(this.visibleRect);
+            Console.WriteLine("TIMESHIFT");
 			if(OnUpdated!=null)			OnUpdated(this,null);
 		}
 
@@ -321,7 +336,7 @@ namespace freetrain.views
 		/// Should be used only from the draw() method.
 		/// </summary>
 		/// <param name="updateRect">Rectangle in the (A,B) coordinates.</param>
-		private void draw( Rectangle rectAB, MapOverlay overlay ) 
+		public void draw( Rectangle rectAB, MapOverlay overlay ) 
 		{
 			// the same rectangle in the client coordinates
 			Rectangle rectClient = fromABToClient(rectAB);
@@ -333,49 +348,64 @@ namespace freetrain.views
 			if( world.viewOptions.useNightView )
 				waterSurfaceColor = ColorMap.getNightColor(waterSurfaceColor);
 
+            rectAB.Inflate(20, 20);
+            if (rectAB.X < 0) rectAB.X = 0;
+            if (rectAB.Y < 0) rectAB.Y = 0;
+            if ((rectAB.Width + rectAB.X) > offscreenBuffer.size.Width) rectAB.Width = (rectAB.Width - rectAB.X);
+            if ((rectAB.Height + rectAB.Y) > offscreenBuffer.size.Height) rectAB.Height = (rectAB.Height - rectAB.Y);
 
-			offscreenBuffer.clipRect = rectClient;	// set clipping
+            //if (rectClient. > offscreenBuffer.clipRect)
+            //dirtyRect.add(rectClient);
+            offscreenBuffer.clipRect = rectAB;	// set clipping
 
-			Rectangle rectHV = fromABToHV(rectAB);	// determine the region to draw
+            Rectangle rectHV = fromABToHV(rectAB);	// determine the region to draw
 
 			int Hmax = Math.Min( rectHV.Right, world.size.x-1 );
 
 			int Zinit = noHeightCut ? (int)waterLevel : 0;	// no need to draw underwater unless in the height cut mode
 			int Z = heightCutHeight;
 			int Vmax = Math.Min( rectHV.Bottom + Z*2, world.size.y-1 );
-			Sprite emptyChip = ResourceUtil.getGroundChip(world);
-			Sprite waterChip = ResourceUtil.underWaterChip;
+
+            emptyChip = ResourceUtil.getGroundChip(world);
+            waterChip = ResourceUtil.underWaterChip;
+
 			for( int v=Math.Max(0,rectHV.Top); v<=Vmax; v++ ) 
 			{
 				for( int h=rectHV.Left; h<=Hmax; h++ ) 
 				{
-
+                    
 					int groundLevel = world.getGroundLevelFromHV(h,v);
+                    
 
 					int zi = Zinit;
-					if( Zinit<=groundLevel && !shouldDrawGround(h,v,Zinit) )
-						zi = Math.Max(zi-1,0);	// if the surface is being cut, start from one smaller
+					if( Zinit<=groundLevel && !shouldDrawGround(h,v,Zinit) ) zi = Math.Max(zi-1,0);	// if the surface is being cut, start from one smaller
+                    
 					
 					for( int z=zi; z<=Z; z++ ) 
 					{
+                        
 						Voxel voxel = world.voxelHVD(h,v,z);
 						//						if(voxel!=null)
 						//							Debug.Assert( voxel.location==world.toXYZ(h,v,z) );
 
 						// point in the client coordinate to draw
 						Point pt = fromHVZToClient(h,v,z);
-
 						// draw the surface anyway.
+                        
 						if( voxel == null || voxel.transparent )
 						{
 							if(z==groundLevel) 
 							{
 								if( shouldDrawGround(h,v,z)) 
 								{
-									if( waterLevel<=z ) 									
-										emptyChip.draw( drawContext.surface, pt );									
-									else
-										waterChip.draw( drawContext.surface, pt );
+                                    if (waterLevel <= z)
+                                    {
+                                        //DateTime start = DateTime.Now;
+                                        emptyChip.draw(drawContext.surface, pt);
+                                        //Debug.WriteLine(z + "[3]: " + (DateTime.Now - start).TotalMilliseconds + "ms, ");
+                                    }
+                                    else
+                                        waterChip.draw(drawContext.surface, pt);
 								}
 							} 
 							else
@@ -412,38 +442,41 @@ namespace freetrain.views
 //						if( z<groundLevel && z<heightCutHeight ) continue;
 //						Point pt = fromHVZToClient(h,v,z);
 
-						if(voxel!=null)
-							voxel.drawVoxel( drawContext, pt, noHeightCut?-1:(Z-z+1) );
+                        if (voxel != null)
+                        {
+                            //DateTime start = DateTime.Now;
+                            voxel.drawVoxel(drawContext, pt, noHeightCut ? -1 : (Z - z + 1));
+                            //Debug.WriteLine("voxel took: " + (DateTime.Now - start).TotalMilliseconds + "ms");
+                        }
 						if(overlay!=null)
 							overlay.drawVoxel( this, drawContext, world.toXYZ(h,v,z),  pt );
 					}
+                   // Debug.WriteLine("outer loop took: " + (DateTime.Now - start).TotalMilliseconds + "ms");
 				}
 			}
 			
 			if( Core.options.drawBoundingBox ) 
 			{
-				rectClient.Inflate(-1,-1);
-				offscreenBuffer.drawBox(rectClient);
+				rectAB.Inflate(-1,-1);
+                offscreenBuffer.drawBox(rectAB);
 			}
 		}
 
 		/// <summary>
 		/// Update the surface by redrawing necessary parts.
 		/// </summary>
-		private void updateScreen() 
+		public void updateScreen() 
 		{
-			if( dirtyRect.isEmpty || offscreenBuffer==null)
-				return;	// no need for draw.
+			if( dirtyRect.isEmpty || offscreenBuffer==null) return;	// no need for draw.
 
 			DateTime start = DateTime.Now;
 
 			MapOverlay overlay = null;
 			ModalController controller = MainWindow.mainWindow.currentController;
-			if(controller!=null)
-				overlay = controller.overlay;
+			if(controller!=null) overlay = controller.overlay;
 
 			if(overlay!=null)
-				overlay.drawBefore( this, drawContext );
+                overlay.drawBefore( this, drawContext );
 
 			// draw the rect
 			Rectangle dr = dirtyRect.rect;
@@ -452,14 +485,13 @@ namespace freetrain.views
 			dirtyRect.clear();
 
 			// allow MapOverlay to do the wrap-up
-			if(overlay!=null)
-				overlay.drawAfter( this, drawContext );
+			if(overlay!=null) overlay.drawAfter( this, drawContext );
 
 			if( Core.options.drawStationNames ) 
 			{
 				// REVISIT: I don't want these code inside this method.
 				//  it needs to be extensible.
-				Graphics graphics = drawContext.graphics;
+				/*Graphics graphics = drawContext.graphics;
 				
 				foreach( freetrain.world.rail.Station st in world.stations ) 
 				{
@@ -471,7 +503,7 @@ namespace freetrain.views
 
 					graphics.DrawString( st.name, drawFont, drawBrush1, pt.X+1, pt.Y+1 );
 					graphics.DrawString( st.name, drawFont, drawBrush2, pt.X  , pt.Y   );
-				}
+				}*/
 			}
 
 			drawContext.tag = null;		// reset the attached tag
@@ -488,15 +520,15 @@ namespace freetrain.views
 			{
 				updateScreen();
 			} 
-			catch( COMException e ) 
+			catch //( COMException e ) 
 			{
-				if( DirectDraw.isSurfaceLostException(e) ) 
-				{
-					PictureManager.onSurfaceLost(this,null);
-					updateScreen();	// and retry
-				} 
-				else
-					throw e;	// unable to handle this exception
+				//if( DirectDraw.isSurfaceLostException(e) ) 
+				//{
+				//	PictureManager.onSurfaceLost(this,null);
+				//	updateScreen();	// and retry
+				//} 
+				//else
+				//	throw e;	// unable to handle this exception
 			}
 
 			// just send the offscreen buffer to the primary surface
@@ -556,15 +588,15 @@ namespace freetrain.views
 		public Point fromClientToAB( Point pt ) 
 		{
 			return new Point(
-				pt.X + topLeft.X,
-				pt.Y + topLeft.Y );
+				pt.X,// + topLeft.X,
+				pt.Y);// + topLeft.Y );
 		}
 
 		public Point fromABToClient( Point pt ) 
 		{
 			return new Point(
-				pt.X - topLeft.X,
-				pt.Y - topLeft.Y );
+				pt.X,// - topLeft.X,
+				pt.Y);// - topLeft.Y );
 		}
 
 		public Rectangle fromABToClient( Rectangle r ) 

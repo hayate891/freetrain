@@ -38,7 +38,7 @@ namespace freetrain.world
 		/// </summary>
 		public static World world;
 
-
+        public Surface satellite;
 		/// <summary>
 		/// 世界の大きさ (H,V,D)
 		/// </summary>
@@ -215,6 +215,10 @@ namespace freetrain.world
 			return !isOutsideWorld( cube );
 		}
 
+        public System.Drawing.Size realSize()
+        {
+            return new Size(this.size.x * 32, this.size.y * 16);
+        }
 
 		/// <summary>
 		/// Returns true only when the given location is inside the world.
@@ -388,6 +392,8 @@ namespace freetrain.world
 
 			public override Fence getFence( Direction d ) { return null; }	
 
+            public override Color getColorOfTile() { return Color.Red; }
+
 		}
 
 		/// <summary>
@@ -466,6 +472,9 @@ namespace freetrain.world
 
 		public void onVoxelUpdated(Voxel v) {
 			onVoxelUpdated(v.location);
+            Point p = new Point((int)(Math.Round(v.location.x * Math.Cos(45) + v.location.y * Math.Sin(45)) - world.size.x / 2),
+                                (int)(Math.Round(-v.location.x * Math.Sin(45) + v.location.y * Math.Cos(45)) + world.size.y / 2));
+            if (satellite != null) satellite.SetPixel(p, v.getColorOfTile());
 		}
 
 		/// <summary>

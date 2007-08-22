@@ -287,7 +287,7 @@ namespace freetrain.world.structs
 				state++;
 				World.world.onVoxelUpdated(this);
 				registerClockHandler();
-				theSound.play(location);
+				//theSound.play(location);
 				return;
 			}
 
@@ -383,8 +383,7 @@ namespace freetrain.world.structs
 			/// <summary>
 			/// Sound-effect of construction.
 			/// </summary>
-			private static readonly SoundEffect theSound = new RepeatableSoundEffectImpl(
-				ResourceUtil.loadSystemSound("construction.wav"),5,200);
+			///private static readonly SoundEffect theSound = null;//new RepeatableSoundEffectImpl(ResourceUtil.loadSystemSound("construction.wav"),5,200);
 
 
 			//

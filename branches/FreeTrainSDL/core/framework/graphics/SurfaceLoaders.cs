@@ -14,7 +14,8 @@ namespace freetrain.framework.graphics
 		/// Fill the surface by the image and return the mask color.
 		/// If the surface is null, the callee needs to allocate a new surface
 		/// </summary>
-		Color load(ref Surface s);
+		void load(ref Surface s);
+        string fileName { get; }
 	}
 
 	/// <summary>
@@ -23,24 +24,20 @@ namespace freetrain.framework.graphics
 	public class BitmapSurfaceLoader : SurfaceLoader
 	{
 		/// <summary> File name of the bitmap. </summary>
-		private readonly string fileName;
+		private readonly string _fileName;
+        protected Surface daySurface;
+
+        public string fileName { get { return _fileName; } }
 		
 		public BitmapSurfaceLoader( string _fileName) {
-			this.fileName = _fileName;
+			this._fileName = _fileName;
+            
 		}
 
-		public Color load(ref Surface surface) {
-			using( Bitmap bmp = new Bitmap(fileName) ) {
-				if(surface==null) {
-					surface = ResourceUtil.directDraw.createOffscreenSurface( bmp.Size );
-				}
-
-				using( GDIGraphics g = new GDIGraphics(surface) ) {
-					// without the size parameter, it doesn't work well with non-standard DPIs.
-					g.graphics.DrawImage( bmp, new Rectangle( new Point(0,0), bmp.Size ) );
-				}
-				return bmp.GetPixel(0,0);
-			}
+		public void load(ref Surface surface) {
+            if (this.daySurface == null) this.daySurface = new Surface(fileName);
+			if(surface!=null) surface.Dispose();
+            surface = daySurface;
 		}
 	}
 
@@ -54,20 +51,32 @@ namespace freetrain.framework.graphics
 		/// <summary>
 		/// Base surface loader.
 		/// </summary>
-		private readonly SurfaceLoader coreLoader;
+		//private readonly SurfaceLoader coreLoader;
+        private Surface nightSurface;
 
-		public NightSurfaceLoader( SurfaceLoader _core ) {
-			Debug.Assert(_core!=null);
-			this.coreLoader = _core;
+        public string fileName { get { return _fileName;} }
+
+        private string _fileName;
+
+        public NightSurfaceLoader(string _fileName)
+        {
+			//Debug.Assert(_core!=null);
+			//this.coreLoader = _core;
+            this._fileName = _fileName;
+
 		}
 
-		[DllImport("DirectDraw.AlphaBlend.dll")]
-		private static extern int buildNightImage( DxVBLib.DirectDrawSurface7 surface);
+		//[DllImport("DirectDraw.AlphaBlend.dll")]
+		//private static extern int buildNightImage( DxVBLib.DirectDrawSurface7 surface);
 
-		public virtual Color load(ref Surface surface) {
-			Color c = coreLoader.load(ref surface);
-			buildNightImage(surface.handle);
-			return ColorMap.getNightColor(c);
+		public virtual void load(ref Surface surface) {
+            if (this.nightSurface == null)
+            {
+                this.nightSurface = new Surface(_fileName);
+                this.nightSurface.buildNightImage();
+            }
+            if (surface != null) surface.Dispose();
+            surface = nightSurface;
 		}
 	}
 }
