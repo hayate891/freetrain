@@ -521,7 +521,7 @@ namespace org.kohsuke.directdraw
             //surface.BlueMask = B_dest.ToArgb();
             //surface.Green = G_dest.ToArgb();
             //surface.Blit(source.handle, new Rectangle(dstPos.X, dstPos.Y, sz.Width, sz.Height), new Rectangle(srcPos.X, srcPos.Y, sz.Width, sz.Height));
-            throw new Exception("NOT IMPLEMENTED YET!");
+            //throw new Exception("NOT IMPLEMENTED YET!");
 		}
 
         public void SetPixel(Point p, Color col) { SetPixel(p.X, p.Y, col); }
