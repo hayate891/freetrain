@@ -56,7 +56,8 @@ namespace freetrain.controls
 
 		public object currentItem {
 			get {
-				return _collection[_current];
+                if (_collection != null) return _collection[_current];
+                else return null;
 			}
 		}
 
