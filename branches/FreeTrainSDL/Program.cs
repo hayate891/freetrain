@@ -38,6 +38,7 @@ namespace FreeTrainSDL
         bool quitFlag = false;
         Sdl.SDL_VideoInfo videoInfo;
         Sdl.SDL_PixelFormat pixelFormat;
+        Sdl.SDL_Event evt;
 
         static int CURRENT_BPP = 16;
 
@@ -141,12 +142,16 @@ namespace FreeTrainSDL
 
             gui.SHOW_SPLASH = false;
 
-            Sdl.SDL_Event evt;
-
-            int result;
+            Timer timer = new Timer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = 33;
+            timer.Enabled = true;
+            timer.Start();
+            
             while (quitFlag == false)
             {
-                result = Sdl.SDL_PollEvent(out evt);
+                //do shit all.
+                int result = Sdl.SDL_PollEvent(out evt);
                 switch (evt.type)
                 {
                     case Sdl.SDL_QUIT:
@@ -159,7 +164,7 @@ namespace FreeTrainSDL
                         width = evt.resize.w;
                         height = evt.resize.h;
                         screen = Sdl.SDL_SetVideoMode(width, height, CURRENT_BPP, flags);
-                        weatherOverlay.setSize(new Size(width,height));
+                        weatherOverlay.setSize(new Size(width, height));
                         qview.size = new Size(evt.resize.w, evt.resize.h);
                         break;
                     case Sdl.SDL_MOUSEBUTTONDOWN:
@@ -171,7 +176,7 @@ namespace FreeTrainSDL
                     case Sdl.SDL_MOUSEMOTION:
                         Events_MouseMotion(evt.motion);
                         break;
-                }                
+                }
 
                 //Sdl.SDL_Rect current_view = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
                 //Tao.Sdl.Sdl.SDL_FillRect(screen, ref current_view, Sdl.SDL_MapRGB(videoInfo.vfmt, 0, 100, 0));
@@ -179,41 +184,52 @@ namespace FreeTrainSDL
                 if (qview != null)
                 {
                     controller = MainWindow.mainWindow.currentController;
-                    clock = World.world.clock;
-                    clock.tick();
+                    //clock = 
+                    //clock.tick();
                     //clock.tick();
 
                     qview.updateScreen();
                     if (World.world.satellite == null || World.world.satellite.surface.w != 150 || World.world.satellite.surface.h != 150)
                     {
                         World.world.satellite = new Surface(150, 150, 32);
-                        World.world.satellite.fill(Color.FromArgb(222,195,132));
+                        World.world.satellite.fill(Color.FromArgb(222, 195, 132));
                     }
 
                     for (int i = 0; i < World.world.rootTrainGroup.items.Count; i++)
                     {
                         Train t = (Train)World.world.rootTrainGroup.items.get(i);
-                        if (t.state == Train.State.Moving) 
+                        if (t.state == Train.State.Moving)
                             gui.updateTrainStatus(i, 3);
-                        else if (t.isPlaced)   
+                        else if (t.isPlaced)
                             gui.updateTrainStatus(i, 2);
-                        else 
+                        else
                             gui.updateTrainStatus(i, 1);
+
+                        if (i == gui.sat.selectedTrain) gui.sat.currentTrainText = t.name;
                     }
 
                     gui.updateSatellite(ref World.world.satellite);
-
-
-
-                    source_rect = new Sdl.SDL_Rect((short)scrollPos.X, (short)scrollPos.Y, (short)width, (short)height);
-                    dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
-                    Tao.Sdl.Sdl.SDL_BlitSurface(qview.offscreenBuffer.surfacePtr(), ref source_rect, screen, ref dst);
-                    //Tao.Sdl.Sdl.SDL_BlitSurface(tmp.surfacePtr(), ref dst, screen, ref dst);
                 }
 
-
-                finalDraw();
+                Application.DoEvents();
            }
+
+           timer.Stop();
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            if (qview != null)
+            {
+                World.world.clock.tick();
+                source_rect = new Sdl.SDL_Rect((short)scrollPos.X, (short)scrollPos.Y, (short)width, (short)height);
+                dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
+                Tao.Sdl.Sdl.SDL_BlitSurface(qview.offscreenBuffer.surfacePtr(), ref source_rect, screen, ref dst);
+                //Tao.Sdl.Sdl.SDL_BlitSurface(tmp.surfacePtr(), ref dst, screen, ref dst);
+            }
+
+
+            finalDraw();
         }
 
         void finalDraw()

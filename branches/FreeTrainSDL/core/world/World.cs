@@ -472,8 +472,9 @@ namespace freetrain.world
 
 		public void onVoxelUpdated(Voxel v) {
 			onVoxelUpdated(v.location);
-            Point p = new Point((int)(Math.Round(v.location.x * Math.Cos(45) + v.location.y * Math.Sin(45)) - world.size.x / 2),
-                                (int)(Math.Round(-v.location.x * Math.Sin(45) + v.location.y * Math.Cos(45)) + world.size.y / 2));
+            //Point p = new Point((int)(Math.Round(v.location.x * Math.Cos(45) + v.location.y * Math.Sin(45)) - world.size.x / 2),
+            //                    (int)(Math.Round(-v.location.x * Math.Sin(45) + v.location.y * Math.Cos(45)) + world.size.y / 2));
+            Point p = new Point(v.location.x, v.location.y);
             if (satellite != null) satellite.SetPixel(p, v.getColorOfTile());
 		}
 
