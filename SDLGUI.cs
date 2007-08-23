@@ -31,7 +31,7 @@ namespace FreeTrainSDL
 
         SDLGUIDrawer system;
 
-        SDLGUIDrawerSatellite sat;
+        public SDLGUIDrawerSatellite sat;
 
         public EventHandler SystemMenuClick;
 

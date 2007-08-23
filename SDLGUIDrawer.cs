@@ -52,7 +52,7 @@ namespace FreeTrainSDL
 
         public Color drawerColor = Color.FromArgb(236, 236, 184), baseGUIColor = Color.FromArgb(252, 252, 236);
 
-        protected int dColor, bColor, wColor;
+        protected int dColor, bColor, wColor, tPlacedColor, tMovingColor;
 
         protected GUI_DRAWER_Movements drawer_movement = GUI_DRAWER_Movements.NO_MOVEMENT;
         protected GUI_DRAWER_Alignment drawer_alignment = GUI_DRAWER_Alignment.TOP_DOWN;
@@ -86,6 +86,7 @@ namespace FreeTrainSDL
             dColor = Sdl.SDL_MapRGB(pf, drawerColor.R, drawerColor.G, drawerColor.B);
             bColor = Sdl.SDL_MapRGB(pf, baseGUIColor.R, baseGUIColor.G, baseGUIColor.B);
             wColor = Sdl.SDL_MapRGB(pf, 255,255,255);
+            tPlacedColor = Sdl.SDL_MapRGB(pf, 150,150,150);
         }
 
         public void updateDrawer(int width, int height)
@@ -256,12 +257,15 @@ namespace FreeTrainSDL
 
         public void drawText(IntPtr screen, IntPtr in_font, string in_text, byte r, byte g, byte b, byte a, int x, int y)
         {
-            IntPtr text = SdlTtf.TTF_RenderUTF8_Blended(in_font, in_text, new Sdl.SDL_Color(r, g, b, a));
-            Sdl.SDL_Surface txt = (Sdl.SDL_Surface)Marshal.PtrToStructure(text, typeof(Sdl.SDL_Surface));
-            Sdl.SDL_Rect src = new Sdl.SDL_Rect(0, 0, (short)txt.w, (short)txt.h);
-            Sdl.SDL_Rect dst = new Sdl.SDL_Rect((short)(x - (txt.w / 2)), (short)y, src.w, src.h);
-            Tao.Sdl.Sdl.SDL_BlitSurface(text, ref src, screen, ref dst);
-            Sdl.SDL_FreeSurface(text);
+            if (in_text != string.Empty)
+            {
+                IntPtr text = SdlTtf.TTF_RenderUTF8_Blended(in_font, in_text, new Sdl.SDL_Color(r, g, b, a));
+                Sdl.SDL_Surface txt = (Sdl.SDL_Surface)Marshal.PtrToStructure(text, typeof(Sdl.SDL_Surface));
+                Sdl.SDL_Rect src = new Sdl.SDL_Rect(0, 0, (short)txt.w, (short)txt.h);
+                Sdl.SDL_Rect dst = new Sdl.SDL_Rect((short)(x - (txt.w / 2)), (short)y, src.w, src.h);
+                Tao.Sdl.Sdl.SDL_BlitSurface(text, ref src, screen, ref dst);
+                Sdl.SDL_FreeSurface(text);
+            }
         }
     }
 
@@ -289,9 +293,44 @@ namespace FreeTrainSDL
             for (int i = 0; i < MAX_TRAINS; i++) TrainStatus[i] = 0;
         }
 
+        public int selectedTrain = -1;
         int TrainRegistryLeft, TrainRegistryTop, TrainRegistryButtonWidth = 25, TrainRegistryButtonHeight = 16, TrainRegistryButtonSpacing = 4;
         const int MAX_TRAINS = 30;
         public int[] TrainStatus = new int[MAX_TRAINS];
+
+        new public EventHandler MenuItemClicked;
+
+        public string currentTrainText;
+
+        new public bool checkClick(Sdl.SDL_MouseButtonEvent e)
+        {
+            bool wasGUIClick = false;
+            int x = e.x, y = e.y;
+            if (x >= CLICK_X_MIN && x <= CLICK_X_MAX)
+                if (y >= CLICK_Y_MIN && y <= CLICK_Y_MAX)
+                {
+                    if ((x >= TrainRegistryLeft && x <= (TrainRegistryLeft + (5 * (TrainRegistryButtonWidth + TrainRegistryButtonSpacing)) + 3)) &&
+                        y <= (TrainRegistryTop + (6 * (TrainRegistryButtonHeight + TrainRegistryButtonSpacing)) + 2) && y >= TrainRegistryTop)
+                    {
+                        selectedTrain = (x-TrainRegistryLeft)/(TrainRegistryButtonWidth + TrainRegistryButtonSpacing) + (((y-TrainRegistryTop)/(TrainRegistryButtonHeight + TrainRegistryButtonSpacing)) * 5);
+                        //Console.WriteLine(curTrain);
+                        currentTrainText = "";
+                    }
+                    else
+                    {
+                    
+                    if (currentArea >= 0 && MenuItemClicked != null && DRAW_OPEN_AMOUNT == 100) MenuItemClicked(currentArea, null);
+
+                    if (drawer_movement == GUI_DRAWER_Movements.NO_MOVEMENT && DRAW_OPEN_AMOUNT == 0)
+                        drawer_movement = GUI_DRAWER_Movements.DRAWER_OPENING;
+                    else
+                        drawer_movement = GUI_DRAWER_Movements.DRAWER_CLOSING;
+                    }
+                    wasGUIClick = true;
+                }
+            Console.WriteLine("CLICK!");
+            return wasGUIClick;
+        }
 
         public void drawDrawer(IntPtr screen, int width, int height, Surface satmap)
         {                        
@@ -334,12 +373,18 @@ namespace FreeTrainSDL
                         dst = new Sdl.SDL_Rect((short)(x1 + 1), (short)(y1 + 1), (short)(TrainRegistryButtonWidth - 1), (short)(TrainRegistryButtonHeight - 3));
                         if (TrainStatus[curTrain] == 2) 
                             Sdl.SDL_FillRect(screen, ref dst,0);
-                        else if (TrainStatus[curTrain] == 3) 
-                            Sdl.SDL_FillRect(screen, ref dst, 2000);
-                        drawText(screen, freesans, curTrain.ToString(), 0, 0, 0, 255, x1 + 13, y1 - 3);
+                        else if (TrainStatus[curTrain] == 3)
+                            Sdl.SDL_FillRect(screen, ref dst, wColor);
+                        if (curTrain == selectedTrain) drawText(screen, freesans, curTrain.ToString(), 200, 0, 0, 255, x1 + 13, y1 - 3);
+                        else drawText(screen, freesans, curTrain.ToString(), 0, 0, 0, 255, x1 + 13, y1 - 3);
                     }
                     else drawText(screen, freesans, curTrain.ToString(), 204, 204, 168, 255, x1 + 13, y1 - 3);
                     
+                }
+
+                if (selectedTrain >= 0)
+                {
+                    drawText(screen, freesans, currentTrainText, 0, 0, 0, 255, TrainRegistryLeft + ((5 * (TrainRegistryButtonWidth + TrainRegistryButtonSpacing))/2), (TrainRegistryTop + (6 * (TrainRegistryButtonHeight + TrainRegistryButtonSpacing)) + 2) + 20);
                 }
             }
 
