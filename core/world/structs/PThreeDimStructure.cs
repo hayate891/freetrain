@@ -6,7 +6,7 @@ using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.framework.plugin;
 using freetrain.util;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.world.structs
 {

@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.framework;
 
 namespace freetrain.world

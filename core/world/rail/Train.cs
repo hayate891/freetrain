@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.contributions.train;
 using freetrain.framework;
 using freetrain.framework.sound;
@@ -41,6 +41,7 @@ namespace freetrain.world.rail
 		/// </summary>
 		private static readonly SoundEffect thudSound = new RepeatableSoundEffectImpl(
 			ResourceUtil.loadSystemSound("train.wav"),1,300);
+
 
 
 		/// <summary>

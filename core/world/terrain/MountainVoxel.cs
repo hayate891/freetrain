@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.framework;
 using freetrain.framework.graphics;
 
@@ -156,6 +156,7 @@ namespace freetrain.world.terrain
 		{
 			// TODO: not sure what to do.
 			// you can't just remove one mountain voxel without affecting the terrain
+            if (onEntityRemoved != null) onEntityRemoved(this, null);
 		}
 
 		public event EventHandler onEntityRemoved;

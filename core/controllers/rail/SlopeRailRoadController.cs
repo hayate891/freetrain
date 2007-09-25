@@ -10,7 +10,7 @@ using freetrain.world;
 using freetrain.world.rail;
 using freetrain.views;
 using freetrain.views.map;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.controllers.rail
 {

@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.views
 {

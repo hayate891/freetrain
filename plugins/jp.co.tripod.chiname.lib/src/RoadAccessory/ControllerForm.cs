@@ -14,7 +14,7 @@ using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.framework.plugin;
 using freetrain.util;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.world.road.accessory
 {
@@ -65,6 +65,7 @@ namespace freetrain.world.road.accessory
 			this.costBox = new freetrain.controls.CostBox();
 			this.buttonRemove = new System.Windows.Forms.RadioButton();
 			this.buttonPlace = new System.Windows.Forms.RadioButton();
+            this.indexSelector = new freetrain.controls.IndexSelector();
 			this.SuspendLayout();
 			// 
 			// typeBox

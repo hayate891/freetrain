@@ -244,7 +244,7 @@ namespace freetrain.world.development
 				}
 					break;
 				case Phase.FitPlace: {
-					bool OK = true;
+					//bool OK = true;
 					
 					if(World.world.isOutsideWorld(plan.cube)||!plan.cube.isOnGround){
 						phase = Phase.Start;

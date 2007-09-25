@@ -5,7 +5,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using freetrain.controls;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.util;
 
 namespace freetrain.framework

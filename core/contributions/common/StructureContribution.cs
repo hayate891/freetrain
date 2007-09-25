@@ -9,7 +9,7 @@ using freetrain.framework.plugin;
 using freetrain.framework.graphics;
 using freetrain.world;
 using freetrain.world.structs;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.contributions.common {
 	public interface AbstractExStructure {

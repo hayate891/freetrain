@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.world;
 using freetrain.framework;
 using freetrain.framework.plugin;

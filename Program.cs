@@ -6,8 +6,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 
 using Tao.Sdl;
-//using Tao.Platform.Windows;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 using freetrain.world;
 using freetrain.world.rail;
@@ -68,8 +67,6 @@ namespace FreeTrainSDL
         World w = null;
         WeatherOverlay weatherOverlay;
 
-        Clock clock = null;
-
         Sdl.SDL_Rect source_rect,dst;
         
         /// <summary>
@@ -88,13 +85,22 @@ namespace FreeTrainSDL
             gui.addSplashText(msg.Replace('\n',' '), progress);
         }
 
+        public void musicHasStopped()
+        {
+            Core.bgmManager.nextSong();
+        }
+
         public void Go()
         {
             dragStartMousePos = new Point(0, 0);
             dragStartScrollPos = new Point(0, 0);
             scrollPos = new Point(0, 0);
 
-            Sdl.SDL_Init(Sdl.SDL_INIT_EVERYTHING);
+            Sdl.SDL_Init(Sdl.SDL_INIT_EVERYTHING | Sdl.SDL_INIT_AUDIO);
+            SdlMixer.Mix_OpenAudio(SdlMixer.MIX_DEFAULT_FREQUENCY, unchecked(Sdl.AUDIO_S16LSB), 2, 1024);
+            SdlMixer.MusicFinishedDelegate musicStopped = new SdlMixer.MusicFinishedDelegate(musicHasStopped);
+            SdlMixer.Mix_HookMusicFinished(musicStopped);
+
             Sdl.SDL_WM_SetCaption("FreeTrain SDL", "");
             screen = Sdl.SDL_SetVideoMode(
                     width,
@@ -110,8 +116,15 @@ namespace FreeTrainSDL
             }
 
             gui = new SDLGUI();
-            gui.SystemMenuClick += new EventHandler(sysMenuClick);
+            gui.ButtonClick += new EventHandler(GUIButtonClick);
             gui.initGUI(width, height, videoInfo.vfmt);
+            gui.addButton("rail","Railroad Construction");
+            gui.addButton("station","Station Construction");
+            gui.addButton("train","Train Stuff");
+            gui.addButton("land","Modify Terrain");
+            gui.addButton("struct", "Structure Construction");
+            gui.addButton("playlist", "Music Playlist");
+            
             gui.clock_text = "Initialising...";
 
             updateMessage("FreeTrain SDL Starting...", -1);
@@ -158,7 +171,7 @@ namespace FreeTrainSDL
                         quitFlag = true;
                         break;
                     case Sdl.SDL_KEYDOWN:
-                        if ((evt.key.keysym.sym == (int)Sdl.SDLK_ESCAPE) || (evt.key.keysym.sym == (int)Sdl.SDLK_q)) quitFlag = true;
+                        Events_KeyDown(evt.key);
                         break;
                     case Sdl.SDL_VIDEORESIZE:
                         width = evt.resize.w;
@@ -184,9 +197,6 @@ namespace FreeTrainSDL
                 if (qview != null)
                 {
                     controller = MainWindow.mainWindow.currentController;
-                    //clock = 
-                    //clock.tick();
-                    //clock.tick();
 
                     qview.updateScreen();
                     if (World.world.satellite == null || World.world.satellite.surface.w != 150 || World.world.satellite.surface.h != 150)
@@ -195,7 +205,7 @@ namespace FreeTrainSDL
                         World.world.satellite.fill(Color.FromArgb(222, 195, 132));
                     }
 
-                    for (int i = 0; i < World.world.rootTrainGroup.items.Count; i++)
+                    /*for (int i = 0; i < World.world.rootTrainGroup.items.Count; i++)
                     {
                         Train t = (Train)World.world.rootTrainGroup.items.get(i);
                         if (t.state == Train.State.Moving)
@@ -208,11 +218,14 @@ namespace FreeTrainSDL
                         if (i == gui.sat.selectedTrain) gui.sat.currentTrainText = t.name;
                     }
 
-                    gui.updateSatellite(ref World.world.satellite);
+                    gui.updateSatellite(ref World.world.satellite);*/
                 }
 
                 Application.DoEvents();
            }
+
+
+           SdlMixer.Mix_CloseAudio();
 
            timer.Stop();
         }
@@ -222,6 +235,11 @@ namespace FreeTrainSDL
             if (qview != null)
             {
                 World.world.clock.tick();
+                World.world.clock.tick();
+                //World.world.clock.tick();
+                //World.world.clock.tick();
+                //World.world.clock.tick();
+                //World.world.clock.tick();
                 source_rect = new Sdl.SDL_Rect((short)scrollPos.X, (short)scrollPos.Y, (short)width, (short)height);
                 dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
                 Tao.Sdl.Sdl.SDL_BlitSurface(qview.offscreenBuffer.surfacePtr(), ref source_rect, screen, ref dst);
@@ -237,7 +255,7 @@ namespace FreeTrainSDL
             if (gui != null)
             {
                 gui.updateGUIElements(width, height);
-                if (clock != null) gui.clock_text = clock.displayString;
+                if (World.world != null) gui.clock_text = World.world.clock.displayString;
                 gui.drawGUI(width, height, screen);
             }
             int result = Sdl.SDL_Flip(screen);
@@ -247,14 +265,30 @@ namespace FreeTrainSDL
         {
         }
 
-        void sysMenuClick(object sender, EventArgs e)
+        void GUIButtonClick(object sender, EventArgs e)
         {
-            switch ((int)sender)
+            switch ((string)sender)
             {
-                case 0: 
+                case "rail": 
                     RailRoadController.create();
                     break;
-                case 1:
+                   case "station":
+                    PlatformController.create();
+                    break;
+                   	case "train":
+                    TrainPlacementController.create();
+                    break;
+                   case "land":
+                    MountainController.create();
+                    break;
+                case "struct":
+                    VarHeightBuildingController.create();
+                    break;
+                case "playlist":
+                    BGMPlaylist bgmplaylist = new BGMPlaylist();
+                    bgmplaylist.Show();
+                    break;
+                /*case 1:
                     TrainTradingDialog t = new TrainTradingDialog();
                     t.ShowDialog();
                     t.Dispose();
@@ -262,10 +296,10 @@ namespace FreeTrainSDL
                     break;
                 case 2:
 
-                    MountainController.create();
+                    
                     break;
                 case 3:
-                    /*if (screen.FullScreen)
+                    if (screen.FullScreen)
                     {
                         width = old_width;
                         height = old_height;
@@ -279,8 +313,8 @@ namespace FreeTrainSDL
                     }
                     bool new_FS = !screen.FullScreen;
                     screen = Video.SetVideoMode(width, height, CURRENT_BPP, true, false, new_FS);
-                    //qview.size = new Size(width, height);
-                    break;*/
+                    qview.size = new Size(width, height);
+                    break;
 
                     StationaryStructPlacementController.create();
                     VarHeightBuildingController.create();
@@ -289,7 +323,7 @@ namespace FreeTrainSDL
 
                 case 4:
                     quitFlag = true;
-                    break;
+                    break;*/
             }
         }
 
@@ -300,6 +334,19 @@ namespace FreeTrainSDL
                //maybe do something? I don't know.
             //}
             //
+        }
+
+        void Events_KeyDown(Sdl.SDL_KeyboardEvent e)
+        {
+            switch (e.keysym.sym) {
+                case (int)Sdl.SDLK_ESCAPE:
+                case (int)Sdl.SDLK_q:
+                    quitFlag = true;
+                    break;
+                case (int)Sdl.SDLK_b:
+                    RailRoadController.create();
+                    break;
+            }
         }
 
         short old_x, old_y;

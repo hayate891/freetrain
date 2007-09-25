@@ -3,7 +3,7 @@ using System.Collections;
 using System.Drawing;
 using System.Xml;
 using System.Runtime.Serialization;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.world;
 using freetrain.framework.plugin;
 using freetrain.framework.graphics;

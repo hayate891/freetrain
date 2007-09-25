@@ -4,7 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using freetrain.world;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.framework
 {

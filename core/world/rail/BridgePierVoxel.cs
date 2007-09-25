@@ -1,6 +1,6 @@
 using System;
 using System.Drawing;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.util;

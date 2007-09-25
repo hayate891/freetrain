@@ -3,7 +3,7 @@ using System.Drawing;
 using freetrain.framework;
 using freetrain.util;
 using freetrain.world.terrain;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.world.structs
 {

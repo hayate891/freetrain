@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using freetrain.framework.graphics;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.world.land
 {

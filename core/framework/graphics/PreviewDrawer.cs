@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using freetrain.framework;
 using freetrain.world;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.framework.graphics
 {
@@ -158,7 +158,7 @@ namespace freetrain.framework.graphics
 		/// The caller needs to dispose the bitmap.
 		/// </summary>
 		public Bitmap createBitmap() {
-			return surface.createBitmap();
+            return surface.Bitmap;
 		}
 	}
 }

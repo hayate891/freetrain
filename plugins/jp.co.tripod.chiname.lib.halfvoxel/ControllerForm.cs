@@ -14,7 +14,8 @@ using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.framework.plugin;
 using freetrain.util;
-using org.kohsuke.directdraw;
+//using SDL.net;
+using SDL.net;
 
 namespace freetrain.world.structs.hv
 {
@@ -111,6 +112,7 @@ namespace freetrain.world.structs.hv
 			this.idxColor2 = new freetrain.controls.IndexSelector();
 			this.price = new freetrain.controls.CostBox();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.indexSelector = new freetrain.controls.IndexSelector();
 			this.group.SuspendLayout();
 			this.SuspendLayout();
 			// 

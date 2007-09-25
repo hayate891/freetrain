@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 using System.Xml;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.contributions.land;
 using freetrain.contributions.population;
 using freetrain.controllers;

@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual C# Express 2005
+# Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrainSDL", "FreeTrainSDL.csproj", "{B43DC0F1-5C4B-490F-8171-C3754A02D605}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.Core", "core\FreeTrain.Core.csproj", "{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.Controls", "lib\Controls\FreeTrain.Controls.csproj", "{D3B86CCE-530E-4472-AE8E-3FA5F903C206}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectAudio.net", "lib\DirectAudio.net\DirectAudio.net.csproj", "{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL.net", "lib\SDLGFX.net\SDL.net.csproj", "{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}"
 EndProject
@@ -41,10 +39,6 @@ Global
 		{D3B86CCE-530E-4472-AE8E-3FA5F903C206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3B86CCE-530E-4472-AE8E-3FA5F903C206}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3B86CCE-530E-4472-AE8E-3FA5F903C206}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU

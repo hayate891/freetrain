@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 
-namespace org.kohsuke.directdraw
+namespace SDL.net
 {
 	internal class Util
 	{

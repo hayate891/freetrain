@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
-using org.kohsuke.directaudio;
 using freetrain.world;
 using freetrain.views.map;
+using SDL.net;
 
 namespace freetrain.framework.sound
 {
@@ -37,7 +37,7 @@ namespace freetrain.framework.sound
 		/// SegmentState objects that represent the state
 		/// of segments being played.
 		/// </summary>
-		private readonly ArrayList states = new ArrayList();
+		//private readonly ArrayList states = new ArrayList();
 
 		/// <summary>
 		/// Don't schedule more than this number of concurrent playback.
@@ -53,17 +53,17 @@ namespace freetrain.framework.sound
 		private int queue = 0;
 
 		/// <summary> Count the number of simltaneously played sound. </summary>
-		private int countOverlap() {
+		/*private int countOverlap() {
 			while( states.Count!=0 && !((SegmentState)states[0]).isPlaying )
 				states.RemoveAt(0);
 			return states.Count;
-		}
+		}*/
 
 		public void play( Location loc ) {
 			if( !MapView.isVisibleInAny(loc) )
 				return;
 
-			if( countOverlap()+queue < concurrentPlaybackMax )
+			/*if( countOverlap()+queue < concurrentPlaybackMax )*/
 				if( queue++ == 0 )
 					World.world.clock.endOfTurnHandlers += new EventHandler(onTurnEnd);
 		}
@@ -72,8 +72,10 @@ namespace freetrain.framework.sound
 		private void onTurnEnd( object sender, EventArgs a ) {
 			int ms=0;
 			for( ; queue>0; queue--,ms+=intervalTime ) {
-				SegmentState st = Core.soundEffectManager.play(segment,ms);
-				if(st!=null)	states.Add(st);
+				//SegmentState st = Core.soundEffectManager.play(segment,ms);
+				//if(st!=null)	states.Add(st);
+                //Core.soundEffectManager.play(segment, ms);
+                segment.play();
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.framework.graphics;
 
 namespace freetrain.world

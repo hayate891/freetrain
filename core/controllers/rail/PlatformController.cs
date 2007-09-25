@@ -13,7 +13,7 @@ using freetrain.world;
 using freetrain.world.rail;
 using freetrain.views;
 using freetrain.views.map;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.controls;
 
 
@@ -204,35 +204,47 @@ namespace freetrain.controllers.rail
 			this.tabControl.SuspendLayout();
 			this.SuspendLayout();
 			// 
+			// lblTitle
+			// 
+			this.lblTitle.Size = new System.Drawing.Size(187, 15);
+			// 
+			// lblExit
+			// 
+			this.lblExit.Location = new System.Drawing.Point(153, 5);
+			// 
 			// buttonRemove
 			// 
 			this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-			this.buttonRemove.Location = new System.Drawing.Point(87, 210);
+			this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
+			this.buttonRemove.Location = new System.Drawing.Point(109, 208);
 			this.buttonRemove.Name = "buttonRemove";
 			this.buttonRemove.Size = new System.Drawing.Size(76, 26);
 			this.buttonRemove.TabIndex = 1;
 			this.buttonRemove.Text = "Remove";
 			//! this.buttonRemove.Text = "撤去";
 			this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.buttonRemove.UseVisualStyleBackColor = false;
 			// 
 			// buttonPlace
 			// 
 			this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
+			this.buttonPlace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
 			this.buttonPlace.Checked = true;
-			this.buttonPlace.Location = new System.Drawing.Point(7, 210);
+			this.buttonPlace.Location = new System.Drawing.Point(9, 208);
 			this.buttonPlace.Name = "buttonPlace";
-			this.buttonPlace.Size = new System.Drawing.Size(74, 26);
+			this.buttonPlace.Size = new System.Drawing.Size(85, 26);
 			this.buttonPlace.TabIndex = 0;
 			this.buttonPlace.TabStop = true;
 			this.buttonPlace.Text = "Build";
 			//! this.buttonPlace.Text = "設置";
 			this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.buttonPlace.UseVisualStyleBackColor = false;
 			// 
 			// stationPage
 			// 
-			this.stationPage.BackColor = System.Drawing.SystemColors.Control;
+			this.stationPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
 			this.stationPage.Controls.Add(this.label3);
 			this.stationPage.Controls.Add(this.label2);
 			this.stationPage.Controls.Add(this.listView1);
@@ -243,12 +255,13 @@ namespace freetrain.controllers.rail
 			this.stationPage.Controls.Add(this.label4);
 			this.stationPage.Controls.Add(this.indexSelector2);
 			this.stationPage.Controls.Add(this.label5);
-			this.stationPage.Location = new System.Drawing.Point(4, 21);
+			this.stationPage.Location = new System.Drawing.Point(5, 21);
 			this.stationPage.Margin = new System.Windows.Forms.Padding(0);
 			this.stationPage.Name = "stationPage";
-			this.stationPage.Size = new System.Drawing.Size(193, 176);
+			this.stationPage.Size = new System.Drawing.Size(185, 157);
 			this.stationPage.TabIndex = 1;
 			this.stationPage.Text = "Station";
+			this.stationPage.UseVisualStyleBackColor = true;
 			//! this.stationPage.Text = "駅舎";
 			// 
 			// label3
@@ -265,7 +278,7 @@ namespace freetrain.controllers.rail
 			// 
 			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label2.Location = new System.Drawing.Point(294, 54);
+			this.label2.Location = new System.Drawing.Point(286, 35);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 17);
 			this.label2.TabIndex = 5;
@@ -281,7 +294,7 @@ namespace freetrain.controllers.rail
 									this.columnHeader4,
 									this.columnHeader5,
 									this.columnHeader6});
-			this.listView1.Location = new System.Drawing.Point(206, 9);
+			this.listView1.Location = new System.Drawing.Point(198, 9);
 			this.listView1.Name = "listView1";
 			this.listView1.Size = new System.Drawing.Size(103, 156);
 			this.listView1.TabIndex = 4;
@@ -331,7 +344,7 @@ namespace freetrain.controllers.rail
 			this.indexSelector.dataSource = null;
 			this.indexSelector.Location = new System.Drawing.Point(56, 35);
 			this.indexSelector.Name = "indexSelector";
-			this.indexSelector.Size = new System.Drawing.Size(132, 17);
+			this.indexSelector.Size = new System.Drawing.Size(124, 17);
 			this.indexSelector.TabIndex = 3;
 			this.indexSelector.indexChanged += new System.EventHandler(this.onStationChanged);
 			// 
@@ -343,7 +356,7 @@ namespace freetrain.controllers.rail
 			this.stationType.ItemHeight = 13;
 			this.stationType.Location = new System.Drawing.Point(3, 9);
 			this.stationType.Name = "stationType";
-			this.stationType.Size = new System.Drawing.Size(185, 21);
+			this.stationType.Size = new System.Drawing.Size(177, 21);
 			this.stationType.Sorted = true;
 			this.stationType.TabIndex = 2;
 			this.stationType.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
@@ -356,7 +369,7 @@ namespace freetrain.controllers.rail
 			this.stationPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.stationPicture.Location = new System.Drawing.Point(3, 54);
 			this.stationPicture.Name = "stationPicture";
-			this.stationPicture.Size = new System.Drawing.Size(185, 112);
+			this.stationPicture.Size = new System.Drawing.Size(177, 93);
 			this.stationPicture.TabIndex = 1;
 			this.stationPicture.TabStop = false;
 			// 
@@ -366,7 +379,7 @@ namespace freetrain.controllers.rail
 			this.indexSelector1.count = 10;
 			this.indexSelector1.current = 0;
 			this.indexSelector1.dataSource = null;
-			this.indexSelector1.Location = new System.Drawing.Point(250, 106);
+			this.indexSelector1.Location = new System.Drawing.Point(242, 87);
 			this.indexSelector1.Name = "indexSelector1";
 			this.indexSelector1.Size = new System.Drawing.Size(96, 17);
 			this.indexSelector1.TabIndex = 3;
@@ -374,7 +387,7 @@ namespace freetrain.controllers.rail
 			// label4
 			// 
 			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label4.Location = new System.Drawing.Point(260, 106);
+			this.label4.Location = new System.Drawing.Point(252, 87);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(56, 17);
 			this.label4.TabIndex = 6;
@@ -388,7 +401,7 @@ namespace freetrain.controllers.rail
 			this.indexSelector2.count = 10;
 			this.indexSelector2.current = 0;
 			this.indexSelector2.dataSource = null;
-			this.indexSelector2.Location = new System.Drawing.Point(250, 123);
+			this.indexSelector2.Location = new System.Drawing.Point(242, 104);
 			this.indexSelector2.Name = "indexSelector2";
 			this.indexSelector2.Size = new System.Drawing.Size(96, 17);
 			this.indexSelector2.TabIndex = 3;
@@ -396,7 +409,7 @@ namespace freetrain.controllers.rail
 			// label5
 			// 
 			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label5.Location = new System.Drawing.Point(260, 123);
+			this.label5.Location = new System.Drawing.Point(252, 104);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(56, 17);
 			this.label5.TabIndex = 6;
@@ -406,6 +419,7 @@ namespace freetrain.controllers.rail
 			// 
 			// platformPage
 			// 
+			this.platformPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
 			this.platformPage.Controls.Add(this.checkSlim);
 			this.platformPage.Controls.Add(this.dirS);
 			this.platformPage.Controls.Add(this.dirW);
@@ -415,18 +429,19 @@ namespace freetrain.controllers.rail
 			this.platformPage.Controls.Add(this.dirN);
 			this.platformPage.Location = new System.Drawing.Point(4, 21);
 			this.platformPage.Name = "platformPage";
-			this.platformPage.Size = new System.Drawing.Size(187, 176);
+			this.platformPage.Size = new System.Drawing.Size(185, 157);
 			this.platformPage.TabIndex = 0;
 			this.platformPage.Text = "Platform";
+			this.platformPage.UseVisualStyleBackColor = true;
 			//! this.platformPage.Text = "ホーム";
 			// 
 			// checkSlim
 			// 
 			this.checkSlim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
 									| System.Windows.Forms.AnchorStyles.Right)));
-			this.checkSlim.Location = new System.Drawing.Point(8, 130);
+			this.checkSlim.Location = new System.Drawing.Point(8, 111);
 			this.checkSlim.Name = "checkSlim";
-			this.checkSlim.Size = new System.Drawing.Size(173, 17);
+			this.checkSlim.Size = new System.Drawing.Size(171, 17);
 			this.checkSlim.TabIndex = 7;
 			this.checkSlim.Text = "Slim platform";
 			//!this.checkSlim.Text = "スリムなホーム";
@@ -471,7 +486,7 @@ namespace freetrain.controllers.rail
 			// label1
 			// 
 			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.label1.Location = new System.Drawing.Point(3, 147);
+			this.label1.Location = new System.Drawing.Point(3, 128);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(53, 20);
 			this.label1.TabIndex = 2;
@@ -483,9 +498,9 @@ namespace freetrain.controllers.rail
 			// 
 			this.lengthBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
 									| System.Windows.Forms.AnchorStyles.Right)));
-			this.lengthBox.Location = new System.Drawing.Point(64, 149);
+			this.lengthBox.Location = new System.Drawing.Point(64, 130);
 			this.lengthBox.Name = "lengthBox";
-			this.lengthBox.Size = new System.Drawing.Size(117, 20);
+			this.lengthBox.Size = new System.Drawing.Size(115, 20);
 			this.lengthBox.TabIndex = 3;
 			this.lengthBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.lengthBox.Value = new decimal(new int[] {
@@ -516,10 +531,10 @@ namespace freetrain.controllers.rail
 			this.tabControl.Controls.Add(this.stationPage);
 			this.tabControl.Controls.Add(this.platformPage);
 			this.tabControl.ItemSize = new System.Drawing.Size(42, 17);
-			this.tabControl.Location = new System.Drawing.Point(-3, 0);
+			this.tabControl.Location = new System.Drawing.Point(5, 26);
 			this.tabControl.Name = "tabControl";
 			this.tabControl.SelectedIndex = 0;
-			this.tabControl.Size = new System.Drawing.Size(201, 201);
+			this.tabControl.Size = new System.Drawing.Size(186, 180);
 			this.tabControl.TabIndex = 0;
 			this.tabControl.Click += new System.EventHandler(this.updateAfterResize);
 			this.tabControl.SelectedIndexChanged += new System.EventHandler(this.onModeChanged);
@@ -527,16 +542,21 @@ namespace freetrain.controllers.rail
 			// PlatformController
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(197, 239);
+			this.ClientSize = new System.Drawing.Size(197, 240);
 			this.Controls.Add(this.tabControl);
 			this.Controls.Add(this.buttonPlace);
 			this.Controls.Add(this.buttonRemove);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "PlatformController";
 			this.Text = "Station construction";
 			//! this.Text = "駅工事";
 			this.Resize += new System.EventHandler(this.updateAfterResize);
+			this.Controls.SetChildIndex(this.buttonRemove, 0);
+			this.Controls.SetChildIndex(this.buttonPlace, 0);
+			this.Controls.SetChildIndex(this.tabControl, 0);
+			this.Controls.SetChildIndex(this.lblTitle, 0);
+			this.Controls.SetChildIndex(this.lblExit, 0);
 			this.stationPage.ResumeLayout(false);
+            this.lblTitle.Text = "STATION";
 			((System.ComponentModel.ISupportInitialize)(this.stationPicture)).EndInit();
 			this.platformPage.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dirS)).EndInit();

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.util;
 using freetrain.world;
 using freetrain.framework;
@@ -554,7 +554,7 @@ namespace freetrain.views
 		public Bitmap createBitmap() 
 		{
 			updateScreen();
-			return drawContext.surface.createBitmap();
+			return drawContext.surface.Bitmap;
 		}
 
 		//		/// <summary>

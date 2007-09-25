@@ -388,6 +388,12 @@
     <Compile Include="framework\BGMManager.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="framework\BGMPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="framework\BGMPlaylist.Designer.cs">
+      <DependentUpon>BGMPlaylist.cs</DependentUpon>
+    </Compile>
     <Compile Include="framework\ConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -939,6 +945,10 @@
     <EmbeddedResource Include="framework\AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="framework\BGMPlaylist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BGMPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="framework\ConfigDialog.resx">
       <DependentUpon>ConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -995,10 +1005,6 @@
     <ProjectReference Include="..\lib\Controls\FreeTrain.Controls.csproj">
       <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
       <Name>FreeTrain.Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lib\DirectAudio.net\DirectAudio.net.csproj">
-      <Project>{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}</Project>
-      <Name>DirectAudio.net</Name>
     </ProjectReference>
     <ProjectReference Include="..\lib\SDLGFX.net\SDL.net.csproj">
       <Project>{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}</Project>

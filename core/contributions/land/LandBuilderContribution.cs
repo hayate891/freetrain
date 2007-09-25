@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.world;
 using freetrain.world.terrain;
 using freetrain.contributions.common;
