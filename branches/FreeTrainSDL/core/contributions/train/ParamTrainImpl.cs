@@ -26,6 +26,23 @@ namespace freetrain.contributions.train
 		/// </summary>
 		private XmlElement composition;
 
+        public override int maxLength
+        {
+            get
+            {
+                return 16;
+            }
+        }
+
+        public override int minLength
+        {
+            get
+            {
+                return 3;
+            }
+        }
+
+
 		protected internal override void onInitComplete() {
 			base.onInitComplete();
 

@@ -33,6 +33,9 @@ namespace freetrain.contributions.train
 
 		public abstract string description { get; }
 
+        public abstract int maxLength { get; }
+        public abstract int minLength { get; }
+
 		/// <summary>Price of the train .</summary>
 		public abstract int price( int length );
 
@@ -70,7 +73,7 @@ namespace freetrain.contributions.train
 		/// <summary>
 		/// Builds a nice preview of a train.
 		/// </summary>
-		public PreviewDrawer createPreview( Size pixelSize ) {
+		public PreviewDrawer createPreview( Size pixelSize, int trainlength ) {
 			PreviewDrawer pd = new PreviewDrawer( pixelSize, new Size(1,3), 0 );
 
 			// build up rail like
@@ -83,22 +86,24 @@ namespace freetrain.contributions.train
 			for( int x=1; x<=10; x++ )
 				pd.draw( RailPattern.get( Direction.NORTHWEST, Direction.SOUTHEAST ), x, x );
 
-			TrainCarContribution[] cars = create(5);
-			if( cars==null ) {
+            TrainCarContribution[] cars = create(trainlength);
+			/*if( cars==null ) {
 				for( int i=6; cars==null && i<15; i++ )
 					cars = create(i);
 				for( int i=4; cars==null && i>0; i-- )
 					cars = create(i);
 				if( cars==null )
 					return pd;	// no preview
-			}
+			}*/
 
-			int[] pos = new int[]{ -2,0, -1,0, 0,0, 1,1, 2,2 };
-			int[] angle = new int[]{ 12,12,13,14,14 };  
-			int[] offset = new int[]{ 0,0, 0,0, 4,+2, 0,0, 0,0 };
+            if (cars == null) return pd;	// no preview
+
+			int[] pos = new int[]{ -2,0, -1,0, 0,0, 1,1, 2,2, 3,3, 4,4, 5,5 };
+			int[] angle = new int[]{ 12,12,13,14,14,14,14,14 };
+            int[] offset = new int[] { 0, 0, 0, 0, 4, +2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 			using( DrawContext dc = new DrawContext(pd.surface) ) {
-				for( int i=4; i>=0; i-- ) {
+				for( int i=7; i>=0; i-- ) {
 					if( cars.Length<=i )
 						continue;		// no car
 
