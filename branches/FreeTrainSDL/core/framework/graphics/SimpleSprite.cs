@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
 using freetrain.world;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.framework.graphics
 {

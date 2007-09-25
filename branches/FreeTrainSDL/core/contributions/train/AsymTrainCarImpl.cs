@@ -5,7 +5,7 @@ using freetrain.framework;
 using freetrain.framework.plugin;
 using freetrain.framework.graphics;
 using freetrain.world;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.contributions.train
 {

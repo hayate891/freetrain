@@ -25,6 +25,11 @@ namespace freetrain.contributions.sound
 		/// <summary> Title of the music. </summary>
 		public readonly string name;
 
+        public override string ToString()
+        {
+            return this.name;
+        }
+
 		/// <summary> File name of the music. </summary>
 		public readonly string fileName;
 	}

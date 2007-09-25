@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Xml;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.contributions.rail;
 using freetrain.framework;
 using freetrain.framework.graphics;

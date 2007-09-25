@@ -9,7 +9,7 @@ using freetrain.world;
 using freetrain.controllers;
 using freetrain.framework;
 using freetrain.framework.graphics;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.views.map
 {
@@ -23,7 +23,7 @@ namespace freetrain.views.map
 		/// <summary> Store the MapView object attached to it. </summary>
 		internal MapView controller;
 
-		private QuarterViewDrawer drawer;
+		//private QuarterViewDrawer drawer;
 		private System.Windows.Forms.Timer weatherTimer;
 
 		private WeatherOverlay weatherOverlay;
@@ -73,7 +73,7 @@ namespace freetrain.views.map
 			//ddraw = new WindowedDirectDraw(this);
 			//drawer = new QuarterViewDrawer( World.world, ddraw,
 			//	new Rectangle( this.scrollPos, ClientSize ) );
-			drawer.OnUpdated += new EventHandler(onDrawerUpdated);
+			//drawer.OnUpdated += new EventHandler(onDrawerUpdated);
 
 			weatherOverlay = NullWeatherOverlay.theInstance;
 			// TODO
@@ -87,7 +87,7 @@ namespace freetrain.views.map
 				components.Dispose();
 			weatherOverlay.Dispose();
 			PictureManager.onSurfaceLost -= new EventHandler(onSurfaceLost);
-			drawer.Dispose();
+			//drawer.Dispose();
 			//ddraw.Dispose();
 			base.Dispose( disposing );
 		}
@@ -170,8 +170,8 @@ namespace freetrain.views.map
 
 
 		protected override void OnPaint(PaintEventArgs pe) {
-			drawer.size = this.ClientSize;
-			drawer.origin = this.scrollPos;
+			//drawer.size = this.ClientSize;
+			//drawer.origin = this.scrollPos;
 
 			weatherOverlay.setSize(this.ClientSize);
 
@@ -184,9 +184,9 @@ namespace freetrain.views.map
 			base.OnPaint(pe);
 		}
 		
-		protected void onDrawerUpdated( object sender, EventArgs e ) {
-			Invalidate();
-		}
+		//protected void onDrawerUpdated( object sender, EventArgs e ) {
+		//	Invalidate();
+		//}
 
 		protected void onSurfaceLost( object sender, EventArgs e ) {
 			//ddraw.primarySurface.restore();
@@ -200,10 +200,10 @@ namespace freetrain.views.map
 
 
 		protected override void OnMouseWheel( MouseEventArgs arg ) {
-			if( arg.Delta<0 && drawer.heightCutHeight < World.world.size.z-1 )
-				drawer.heightCutHeight ++;
-			if( arg.Delta>0 && drawer.heightCutHeight > 0 )
-				drawer.heightCutHeight --;
+			//if( arg.Delta<0 && drawer.heightCutHeight < World.world.size.z-1 )
+			//	drawer.heightCutHeight ++;
+			//if( arg.Delta>0 && drawer.heightCutHeight > 0 )
+			//	drawer.heightCutHeight --;
 		}
 
 		#region scroll by drag
@@ -270,11 +270,11 @@ namespace freetrain.views.map
 				scrollByDrag(arg);
 			else {
 				if(controller!=null) {
-					Point ab = drawer.fromClientToAB( arg.X, arg.Y );
+					//Point ab = drawer.fromClientToAB( arg.X, arg.Y );
 
-					controller.onMouseMove( this,
-						drawer.fromABToXYZ(ab,controller),
-						ab );
+					//controller.onMouseMove( this,
+					//	drawer.fromABToXYZ(ab,controller),
+					//	ab );
 				}
 			}
 		}
@@ -295,32 +295,32 @@ namespace freetrain.views.map
 			}
 
 			if(controller!=null) {
-				Point ab = drawer.fromClientToAB( arg.X, arg.Y );
-				Location xyz = drawer.fromABToXYZ( ab, controller );
+				//Point ab = drawer.fromClientToAB( arg.X, arg.Y );
+				//Location xyz = drawer.fromABToXYZ( ab, controller );
 
-				if( arg.Button == MouseButtons.Left )
-					controller.onClick( this, xyz, ab );
-				if( arg.Button == MouseButtons.Right )
-					controller.onRightClick( this, xyz, ab );
+				//if( arg.Button == MouseButtons.Left )
+				//	controller.onClick( this, xyz, ab );
+				//if( arg.Button == MouseButtons.Right )
+				//	controller.onRightClick( this, xyz, ab );
 			} else {
 
 				if( arg.Button==MouseButtons.Left ) {
 					// dispatch this click event to the appropriate voxel.
 
-					Location loc = drawer.fromClientToXYZ(arg,null); {
+					//Location loc = drawer.fromClientToXYZ(arg,null); {
 					 // print debug information
-						Debug.WriteLine("mouse clicked on MapViewWindow. (x,y,z)="+loc);
-						int h,v;
-						World.world.toHV( loc.x, loc.y, out h, out v );
-						Debug.WriteLine(string.Format(" (h,v)=({0},{1})",h,v) );
-					}
+					//	Debug.WriteLine("mouse clicked on MapViewWindow. (x,y,z)="+loc);
+					//	int h,v;
+					//	World.world.toHV( loc.x, loc.y, out h, out v );
+					//	Debug.WriteLine(string.Format(" (h,v)=({0},{1})",h,v) );
+					//}
 
 					// look for voxels that can process this event
-					for( int z=drawer.heightCutHeight; z>=0; z-- ) {
-						Voxel v = World.world[ loc.x-z, loc.y+z, z ];
-						if(v!=null && v.onClick())
-							return;
-					}
+					//for( int z=drawer.heightCutHeight; z>=0; z-- ) {
+					//	Voxel v = World.world[ loc.x-z, loc.y+z, z ];
+					//	if(v!=null && v.onClick())
+					//		return;
+					//}
 				}
 			}
 		}
@@ -346,20 +346,21 @@ namespace freetrain.views.map
 		/// </summary>
 		public void moveTo( Location loc ) {
 			// compute the new origin
-			Point pt = World.world.fromXYZToAB(loc);
-			Size sz = drawer.size;
-			sz.Width /= 2;
-			sz.Height /= 2;
-			pt -= sz;
+			//Point pt = World.world.fromXYZToAB(loc);
+			//Size sz = drawer.size;
+			//sz.Width /= 2;
+			//sz.Height /= 2;
+			//pt -= sz;
 
-			this.scrollPos = pt;
+			//this.scrollPos = pt;
 		}
 
 		/// <summary>
 		/// Determine if the specified location is visible by this view.
 		/// </summary>
 		public bool isVisible( Location loc ) {
-			return drawer.isVisible(loc);
+			//return drawer.isVisible(loc);
+            return false;
 		}
 
 
@@ -387,10 +388,10 @@ namespace freetrain.views.map
 			private readonly int height;
 
 			protected override void OnClick(EventArgs e) {
-				owner.drawer.heightCutHeight = height;
+				//owner.drawer.heightCutHeight = height;
 			}
 			internal void update() {
-				this.Checked = (owner.drawer.heightCutHeight==height);
+				//this.Checked = (owner.drawer.heightCutHeight==height);
 			}
 		}
 
@@ -402,10 +403,10 @@ namespace freetrain.views.map
 		internal HeightCutWindow heightCutWindow = null;
 
 		private void menuItem_heightCutWnd_Click(object sender, System.EventArgs e) {
-			if( heightCutWindow==null ) {
-				heightCutWindow = new HeightCutWindow(this,drawer);
-				MainWindow.mainWindow.AddOwnedForm(heightCutWindow);
-			}
+			//if( heightCutWindow==null ) {
+			//	heightCutWindow = new HeightCutWindow(this,drawer);
+			//	MainWindow.mainWindow.AddOwnedForm(heightCutWindow);
+			//}
 
 			heightCutWindow.Show();
 			heightCutWindow.BringToFront();
@@ -449,7 +450,7 @@ namespace freetrain.views.map
 			//	if( view is MapView && ((MapView)view).form.isVisible(loc) )
 			//		return true;
 			//}
-			return false;
+			return true;
 		}
 	}
 

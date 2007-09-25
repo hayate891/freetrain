@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using System.Diagnostics;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.world.rail;
 using freetrain.world.road;
 

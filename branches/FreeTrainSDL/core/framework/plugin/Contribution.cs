@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.Net;
 using System.Windows.Forms;
 using System.Xml;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.framework.graphics;
 
 

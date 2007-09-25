@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
-using org.kohsuke.directdraw;
+using SDL.net;
 using freetrain.framework;
 
 namespace freetrain.world.rail

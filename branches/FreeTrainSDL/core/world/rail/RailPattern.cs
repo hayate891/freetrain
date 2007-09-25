@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.util;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.world.rail
 {

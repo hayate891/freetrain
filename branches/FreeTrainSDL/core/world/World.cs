@@ -15,7 +15,7 @@ using freetrain.world;
 using freetrain.world.rail;
 using freetrain.views;
 using freetrain.world.development;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.world
 {
@@ -374,6 +374,7 @@ namespace freetrain.world
 			public void remove() {
 				// TODO: not sure what to do.
 				// can't be removed.
+                if (onEntityRemoved != null) onEntityRemoved(this, null);
 			}
 
 			public event EventHandler onEntityRemoved;

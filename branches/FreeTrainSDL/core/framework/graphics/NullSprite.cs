@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using System.Runtime.Serialization;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.framework.graphics
 {

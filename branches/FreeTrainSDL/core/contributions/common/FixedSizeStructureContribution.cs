@@ -9,7 +9,7 @@ using freetrain.controllers;
 using freetrain.world;
 using freetrain.world.structs;
 using freetrain.contributions.common;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.contributions.common
 {

@@ -14,7 +14,7 @@ using freetrain.framework;
 using freetrain.framework.graphics;
 using freetrain.framework.plugin;
 using freetrain.util;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.controllers.structs
 {
@@ -37,7 +37,7 @@ namespace freetrain.controllers.structs
 		protected StructPlacementController( StructureGroupGroup groupGroup ) {
 			InitializeComponent();
 			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
-
+            previewBitmap = null;
 			// load station type list
 			structType.DataSource = groupGroup;
 			structType.DisplayMember="name";

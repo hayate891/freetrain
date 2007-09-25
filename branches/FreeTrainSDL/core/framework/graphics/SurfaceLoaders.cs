@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.framework.graphics
 {

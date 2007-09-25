@@ -1,9 +1,10 @@
 using System;
 using System.Runtime.Serialization;
+using System.Collections;
 using System.Windows.Forms;
 using freetrain.contributions.sound;
 using freetrain.framework.plugin;
-using org.kohsuke.directaudio;
+using SDL.net;
 
 namespace freetrain.framework
 {
@@ -13,12 +14,18 @@ namespace freetrain.framework
 	public class BGMManager
 	{
 		/// <summary> BGM player. </summary>
-		private readonly BGM bgm = new BGM();
+        private readonly BGM bgm = new BGM();
 
 		/// <summary> Reference to the "music" menu item. </summary>
-		private readonly MenuItem musicMenu;
+		//private readonly MenuItem musicMenu;
 
-		internal BGMManager( MenuItem musicMenu ) {
+        internal BGMManager()
+        {
+
+        }
+
+
+		/*internal BGMManager( MenuItem musicMenu ) {
 			this.musicMenu = musicMenu;
 
 			// "silent"
@@ -39,7 +46,96 @@ namespace freetrain.framework
 			SelectMenuItem miSelect = new SelectMenuItem(this);
 			musicMenu.MenuItems.Add( miSelect );
 			musicMenu.Popup += new EventHandler(miSelect.update);
-		}
+		}*/
+
+        public ArrayList currentPlaylist = new ArrayList();
+
+        public void addSong(string songname) {
+            foreach (BGMContribution contrib in Core.plugins.bgms)
+            {
+                if (contrib.name == songname) currentPlaylist.Add(contrib);
+            }
+        }
+
+        public void moveUp(string songname)
+        {
+            foreach (BGMContribution contrib in Core.plugins.bgms)
+            {
+                if (contrib.name == songname)
+                {
+                    int index = currentPlaylist.IndexOf(contrib);
+                    if (index > 0)
+                    {
+                        currentPlaylist.Remove(contrib);
+                        currentPlaylist.Insert(index - 1, contrib);
+                    }
+                }
+            }
+        }
+
+        public void moveDown(string songname)
+        {
+            foreach (BGMContribution contrib in Core.plugins.bgms)
+            {
+                if (contrib.name == songname)
+                {
+                    int index = currentPlaylist.IndexOf(contrib);
+                    if (index < currentPlaylist.Count - 1)
+                    {
+                        currentPlaylist.Remove(contrib);
+                        currentPlaylist.Insert(index + 1, contrib);
+                    }
+                }
+            }
+        }
+
+        public void removeSong(string songname)
+        {
+            foreach (BGMContribution contrib in Core.plugins.bgms)
+            {
+                if (contrib.name == songname)
+                {
+                    if (contrib == currentBGM)
+                    {
+                        if (currentPlaylist.Count > 1) nextSong();
+                        else bgm.stop();
+                    }
+                    currentPlaylist.Remove(contrib);
+                }
+            }
+        }
+
+        public void nextSong()
+        {
+            bool getNext = false, wasChanged = false;
+            foreach (BGMContribution contrib in currentPlaylist)
+            {
+                if (getNext)
+                {
+                    this.currentBGM = contrib;
+                    wasChanged = true;
+                    getNext = false;
+                }
+                else if (contrib == this.currentBGM) getNext = true;
+            }
+            if (!wasChanged && currentPlaylist.Count > 0) this.currentBGM = (BGMContribution)currentPlaylist[0];
+        }
+
+        public void previousSong()
+        {
+            BGMContribution prev = null;
+            bool useLast = false;
+            foreach (BGMContribution contrib in currentPlaylist)
+            {
+                if (contrib == this.currentBGM)
+                {
+                    if (prev == null) useLast = true;
+                    else this.currentBGM = prev;
+                }
+                prev = contrib;
+            }
+            if (useLast && currentPlaylist.Count > 0) this.currentBGM = (BGMContribution)currentPlaylist[currentPlaylist.Count - 1];
+        }
 
 		private BGMContribution current = null;
 
@@ -53,7 +149,7 @@ namespace freetrain.framework
 			}
 			set {
 				current = value;
-				bgm.stop();
+				//bgm.stop();
 				if( current!=null ) {
 					try {
 						bgm.fileName = current.fileName;
@@ -72,7 +168,7 @@ namespace freetrain.framework
 		/// <summary>
 		/// MenuItem that selects a BGM from BGMContribution.
 		/// </summary>
-		internal class MusicMenuItem : MenuItem
+		/*internal class MusicMenuItem : MenuItem
 		{
 			private readonly BGMContribution contrib;
 			private readonly BGMManager owner;
@@ -119,7 +215,7 @@ namespace freetrain.framework
 			internal void update( object sender, EventArgs e ) {
 				this.Checked = (owner.currentBGM is TempBGMContribution);
 			}
-		}
+		}*/
 
 		/// <summary>
 		/// Temporary BGM contribution created from a music in a file system.

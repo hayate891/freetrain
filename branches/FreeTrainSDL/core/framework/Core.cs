@@ -110,7 +110,8 @@ namespace freetrain.framework
                     progressHandler, new DefaultPluginErrorHandler(5));
             }
 
-            if (bgmMenuItem != null) _bgmManager = new BGMManager(bgmMenuItem);
+            //if (bgmMenuItem != null) _bgmManager = new BGMManager(bgmMenuItem);
+            _bgmManager = new BGMManager();
 		}
 
 		private static void silentProgressHandler( string msg, float progress ) {

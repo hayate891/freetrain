@@ -3,12 +3,10 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Diagnostics;
 using System.Collections;
-//using DxVBLib;
-//using DirectDrawAlphaBlendLib;
-//using SdlDotNet.Graphics;
 using Tao.Sdl;
+using System.IO;
 
-namespace org.kohsuke.directdraw
+namespace SDL.net
 {
 	/// <summary>
 	/// Color mask.
@@ -24,29 +22,31 @@ namespace org.kohsuke.directdraw
 	/// Since I couldn't figure out how to create a CLR binding for
 	/// clipper, this class implements a clipping support by itself.
 	/// </summary>
-	public class Surface
-	{
-		//private DirectDrawSurface7 surface;
-		//public Tao.Sdl.Sdl.SDL_Surface surface;
+    public class Surface
+    {
+        //private DirectDrawSurface7 surface;
+        //public Tao.Sdl.Sdl.SDL_Surface surface;
         //Surface mask;
-		//private static AlphaBlender alpha = new AlphaBlenderClass();
+        //private static AlphaBlender alpha = new AlphaBlenderClass();
 
-		/// <summary> Bit-width. </summary>
-		//private readonly byte widthR,widthB,widthG;
+        /// <summary> Bit-width. </summary>
+        //private readonly byte widthR,widthB,widthG;
 
-		/// <summary>
-		/// Clipping rect. Even if the client doesn't set any clipping,
-		/// this is initialized to (0,0)-(size)
-		/// </summary>
-		//private Rectangle clip;
+        /// <summary>
+        /// Clipping rect. Even if the client doesn't set any clipping,
+        /// this is initialized to (0,0)-(size)
+        /// </summary>
+        //private Rectangle clip;
 
         private string _filename;
 
         const int TOTAL_SURFACES = 10;
 
+        private readonly int BmpHeader = 54;
+
         public IntPtr[] surfacePtrs = new IntPtr[TOTAL_SURFACES];
         private String[] surfaceSignatures = new String[TOTAL_SURFACES];
-        
+
         public IntPtr mask, dupSurface;
         public Sdl.SDL_Surface surface; //, dupSurface, mask;
         private Sdl.SDL_PixelFormat pixelFormat;
@@ -58,7 +58,8 @@ namespace org.kohsuke.directdraw
 
 
 
-        public Size size { 
+        public Size size
+        {
             get { return new Size(this.surface.w, this.surface.h); }
         }
 
@@ -72,9 +73,11 @@ namespace org.kohsuke.directdraw
             this.currentSurfaceCount++;
         }
 
-        public Surface(int w, int h) : this(w, h, IntPtr.Zero) {}
-        public Surface(int w, int h, IntPtr pf){
-            if (pf == IntPtr.Zero) {
+        public Surface(int w, int h) : this(w, h, IntPtr.Zero) { }
+        public Surface(int w, int h, IntPtr pf)
+        {
+            if (pf == IntPtr.Zero)
+            {
                 this.surfacePtrs[0] = Sdl.SDL_CreateRGBSurface(flags, w, h, bpp, 0, 0, 0, 0);
                 this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
                 pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(this.surface.format, typeof(Sdl.SDL_PixelFormat));
@@ -85,7 +88,7 @@ namespace org.kohsuke.directdraw
                 this.surfacePtrs[0] = Sdl.SDL_CreateRGBSurface(flags, w, h, bpp, pixelFormat.Rmask, pixelFormat.Gmask, pixelFormat.Bmask, pixelFormat.Amask);
                 this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
             }
-            
+
             this.sourceColorKey = Color.Magenta;
             this.resetClipRect();
             this.currentSurfaceCount++;
@@ -126,33 +129,36 @@ namespace org.kohsuke.directdraw
                 return r;
             }
         }
-		public Rectangle clipRect {
+        public Rectangle clipRect
+        {
             get
             {
                 Sdl.SDL_Rect r = new Sdl.SDL_Rect();
                 Sdl.SDL_GetClipRect(this.surfacePtr(), ref r);
                 return new Rectangle(r.x, r.y, r.w, r.h);
             }
-			set
+            set
             {
-				value.Intersect( new Rectangle( 0,0, size.Width, size.Height ) );
+                value.Intersect(new Rectangle(0, 0, size.Width, size.Height));
                 srect.x = (short)value.X;
                 srect.y = (short)value.Y;
                 srect.w = (short)value.Width;
                 srect.h = (short)value.Height;
                 Sdl.SDL_SetClipRect(this.surfacePtr(), ref srect);
-			}
-		}
-		
+            }
+        }
 
-		public void Dispose() {
+
+        public void Dispose()
+        {
             //i'm sure something needs to be cleared here
-		}
+        }
 
         public int getSDLColor(Color c) { return Sdl.SDL_MapRGB(this.surfacePtrs[0], c.R, c.G, c.B); }
 
-		public void bltFast( int destX, int destY, Surface source, Rectangle srcRect ) {
-			//RECT srect = Util.toRECT(srcRect);
+        public void bltFast(int destX, int destY, Surface source, Rectangle srcRect)
+        {
+            //RECT srect = Util.toRECT(srcRect);
 
             //Sdl.SDL_Rect src = toRect(srcRect), dst = toRect(destX, destY, srcRect.Width, srcRect.Height);
             //Tao.Sdl.Sdl.SDL_BlitSurface(source.surface, ref src, this.surface, ref dst);
@@ -166,15 +172,15 @@ namespace org.kohsuke.directdraw
             srect.w = (short)srcRect.Width;
             srect.h = (short)srcRect.Height;
 
-            blt(drect,source,srect);
-		}
+            blt(drect, source, srect);
+        }
 
         //public Sdl.SDL_Rect toRect(Rectangle r) { return new Sdl.SDL_Rect((short)r.Left, (short)r.Top, (short)r.Width, (short)r.Height); }
         //public Sdl.SDL_Rect toRect(int x, int y, int w, int h) { return new Sdl.SDL_Rect((short)x, (short)y, (short)w, (short)h); }
 
-		/// <summary>
-		/// Copies an image from another surface.
-		/// </summary>
+        /// <summary>
+        /// Copies an image from another surface.
+        /// </summary>
         /// 
 
         private Sdl.SDL_Rect drect, srect;
@@ -205,21 +211,23 @@ namespace org.kohsuke.directdraw
             blt(drect, source, srect);
         }
 
-		public void blt( int dstX1, int dstY1, int dstX2, int dstY2, Surface source,
-						 int srcX1, int srcY1, int srcX2, int srcY2 ) {
-                             drect.x = (short)dstX1;
-                             drect.y = (short)dstY1;
-                             drect.w = (short)(dstX2 - dstX1);
-                             drect.h = (short)(dstY2 - dstY1);
-                             srect.x = (short)srcX1;
-                             srect.y = (short)srcY1;
-                             srect.w = (short)(srcX2 - srcX1);
-                             srect.h = (short)(srcY2 - srcY1);
-			                 blt( drect, source, srect );
-		}
+        public void blt(int dstX1, int dstY1, int dstX2, int dstY2, Surface source,
+                         int srcX1, int srcY1, int srcX2, int srcY2)
+        {
+            drect.x = (short)dstX1;
+            drect.y = (short)dstY1;
+            drect.w = (short)(dstX2 - dstX1);
+            drect.h = (short)(dstY2 - dstY1);
+            srect.x = (short)srcX1;
+            srect.y = (short)srcY1;
+            srect.w = (short)(srcX2 - srcX1);
+            srect.h = (short)(srcY2 - srcY1);
+            blt(drect, source, srect);
+        }
 
-        public  void blt(Point dst, Surface source, Rectangle src) {blt(new Rectangle(dst.X, dst.Y, src.Width, src.Height), source, src);}
-		private void blt(Rectangle dst, Surface source, Rectangle src ) {
+        public void blt(Point dst, Surface source, Rectangle src) { blt(new Rectangle(dst.X, dst.Y, src.Width, src.Height), source, src); }
+        private void blt(Rectangle dst, Surface source, Rectangle src)
+        {
             drect.x = (short)dst.X;
             drect.y = (short)dst.Y;
             drect.w = (short)dst.Width;
@@ -229,73 +237,75 @@ namespace org.kohsuke.directdraw
             srect.w = (short)src.Width;
             srect.h = (short)src.Height;
             Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr(), ref srect, this.surfacePtr(), ref drect);
-		}
+        }
 
         private void blt(Sdl.SDL_Rect dst, Surface source, Sdl.SDL_Rect src)
         {
             Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr(), ref src, this.surfacePtr(), ref dst);
         }
-		
-		public void setAlpha(byte val) {
-			//surface.AlphaBlending = true;
-			//surface.Alpha = 128;
-            Sdl.SDL_SetAlpha(this.surfacePtrs[0],  Sdl.SDL_SRCALPHA | Sdl.SDL_SRCCOLORKEY, val);
-		}
-/*
-        public void clipRectangle(ref Rectangle dst, ref Rectangle src)
+
+        public void setAlpha(byte val)
         {
-            int t;
-
-            // compute new dst.Left
-            t = Math.Max(dst.Left, clip.Left);
-            src.X += (t - dst.Left);
-            dst.X = t;
-
-            t = Math.Max(dst.Top, clip.Top);
-            src.Y += (t - dst.Top);
-            dst.Y = t;
-
-            t = Math.Min(dst.Right, clip.Right);
-            //src.Width += (t - dst.Right);
-            //dst.Width = t - dst.Left;
-
-            t = Math.Min(dst.Bottom, clip.Bottom);
-            //src.Height += (t - dst.Bottom);
-            //dst.Height = t - dst.Top;
+            //surface.AlphaBlending = true;
+            //surface.Alpha = 128;
+            Sdl.SDL_SetAlpha(this.surfacePtrs[0], Sdl.SDL_SRCALPHA | Sdl.SDL_SRCCOLORKEY, val);
         }
+        /*
+                public void clipRectangle(ref Rectangle dst, ref Rectangle src)
+                {
+                    int t;
 
-        public void clipVflip(ref Rectangle dst, ref Rectangle src)
+                    // compute new dst.Left
+                    t = Math.Max(dst.Left, clip.Left);
+                    src.X += (t - dst.Left);
+                    dst.X = t;
+
+                    t = Math.Max(dst.Top, clip.Top);
+                    src.Y += (t - dst.Top);
+                    dst.Y = t;
+
+                    t = Math.Min(dst.Right, clip.Right);
+                    //src.Width += (t - dst.Right);
+                    //dst.Width = t - dst.Left;
+
+                    t = Math.Min(dst.Bottom, clip.Bottom);
+                    //src.Height += (t - dst.Bottom);
+                    //dst.Height = t - dst.Top;
+                }
+
+                public void clipVflip(ref Rectangle dst, ref Rectangle src)
+                {
+                    //this.resetClipRect();
+                    int t;
+
+                    // compute new dst.Left
+                    t = Math.Max(dst.Left, clip.Left);
+                    //src.X += (t - dst.Left);
+                    dst.X = t;		// dst.Left += (t-dst.Left)
+
+                    t = Math.Max(dst.Top, clip.Top);
+                    //src.Height -= (t - dst.Top);		// different than the clip method
+                    dst.Y = t;
+
+                    t = Math.Min(dst.Right, clip.Right);
+                    //src.Width += (t - dst.Right);
+                    dst.Width = t - dst.Left;
+
+                    t = Math.Min(dst.Bottom, clip.Bottom);
+                    //src.Y -= (t - dst.Bottom);	// different than the clip method
+                    dst.Height = t - dst.Top;
+                }
+                */
+        public void bltAlpha(Point dstPos, Surface source) { bltAlpha(dstPos, source, new Point(0, 0), source.size); }
+        public void bltAlpha(Point dstPos, Surface source, Point srcPos, Size sz)
         {
-            //this.resetClipRect();
-            int t;
-
-            // compute new dst.Left
-            t = Math.Max(dst.Left, clip.Left);
-            //src.X += (t - dst.Left);
-            dst.X = t;		// dst.Left += (t-dst.Left)
-
-            t = Math.Max(dst.Top, clip.Top);
-            //src.Height -= (t - dst.Top);		// different than the clip method
-            dst.Y = t;
-
-            t = Math.Min(dst.Right, clip.Right);
-            //src.Width += (t - dst.Right);
-            dst.Width = t - dst.Left;
-
-            t = Math.Min(dst.Bottom, clip.Bottom);
-            //src.Y -= (t - dst.Bottom);	// different than the clip method
-            dst.Height = t - dst.Top;
-        }
-        */
-        public void bltAlpha(Point dstPos,Surface source) {bltAlpha(dstPos, source, new Point(0, 0), source.size);}
-		public void bltAlpha(Point dstPos,Surface source, Point srcPos, Size sz ) {
-			//Rectangle dst = new Rectangle( dstPos.X,dstPos.Y,sz.Width,sz.Height );
-			//Rectangle src = new Rectangle( srcPos.X,srcPos.Y,sz.Width,sz.Height );
-			//Util.clip( ref dst, ref src, clip );
-			/*alpha.bltAlphaFast( surface, source.surface,
-				dst.Left, dst.Top,
-				src.Left, src.Top, src.Right, src.Bottom,
-				source.colorKey );*/
+            //Rectangle dst = new Rectangle( dstPos.X,dstPos.Y,sz.Width,sz.Height );
+            //Rectangle src = new Rectangle( srcPos.X,srcPos.Y,sz.Width,sz.Height );
+            //Util.clip( ref dst, ref src, clip );
+            /*alpha.bltAlphaFast( surface, source.surface,
+                dst.Left, dst.Top,
+                src.Left, src.Top, src.Right, src.Bottom,
+                source.colorKey );*/
             ///source.handle.Transparent = false;
             source.setAlpha(128);
 
@@ -312,9 +322,10 @@ namespace org.kohsuke.directdraw
             //Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr, ref nsrc, this.surfacePtr, ref ndst);
             blt(drect, source, srect);
             source.setAlpha(255);
-		}
+        }
 
-		public void bltShape( Point dstPos, Surface source, Point srcPos, Size sz, Color fill ) {
+        public void bltShape(Point dstPos, Surface source, Point srcPos, Size sz, Color fill)
+        {
             drect.x = (short)dstPos.X;
             drect.y = (short)dstPos.Y;
             drect.w = (short)sz.Width;
@@ -323,25 +334,25 @@ namespace org.kohsuke.directdraw
             srect.y = (short)srcPos.Y;
             srect.w = (short)sz.Width;
             srect.h = (short)sz.Height;
-			//this.clipRectangle( ref dst, ref src );
+            //this.clipRectangle( ref dst, ref src );
 
-			/*alpha.bltShape( surface, source.surface,
-				dst.Left, dst.Top,
-				src.Left, src.Top, src.Right, src.Bottom,
-				(int)colorToFill(fill),
-				source.colorKey );*/
-			//source.setAlpha(128);
+            /*alpha.bltShape( surface, source.surface,
+                dst.Left, dst.Top,
+                src.Left, src.Top, src.Right, src.Bottom,
+                (int)colorToFill(fill),
+                source.colorKey );*/
+            //source.setAlpha(128);
             //source.fill(src,fill);
-            
+
             //surface.Blit(source.fillMask(src,fill), dst,src);
             //Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr(), ref src, this.surfacePtr, ref dst);
             //lastMaskColor = fill;
             int index = checkMask(source, srect, fill);
-            
+
             //srect.x = 0;
             //srect.y = 0;
             Tao.Sdl.Sdl.SDL_BlitSurface(this.surfacePtrs[index], ref srect, this.surfacePtr(), ref drect);
-		}
+        }
 
         private int checkMask(Surface source, Sdl.SDL_Rect r, Color fill)
         {
@@ -352,7 +363,8 @@ namespace org.kohsuke.directdraw
 
             for (int i = 1; i <= currentSurfaceCount; i++) if (surfaceSignatures[i] == curSig) curIndex = i;
 
-            if (curIndex == -1) {
+            if (curIndex == -1)
+            {
 
                 curIndex = currentSurfaceCount;
                 surfacePtrs[curIndex] = Sdl.SDL_CreateRGBSurface(flags, r.w, r.h, bpp, 0, 0, 0, 0);
@@ -363,7 +375,7 @@ namespace org.kohsuke.directdraw
                 pink1 = Sdl.SDL_MapRGB(source.surface.format, 255, 0, 255);
                 pink2 = Sdl.SDL_MapRGB(maskSurf.format, 255, 0, 255);
 
-                drect = new Sdl.SDL_Rect(0,0, 1, 1);
+                drect = new Sdl.SDL_Rect(0, 0, 1, 1);
                 for (int xx = 0; xx < maskSurf.w; xx++)
                 {
                     for (int yy = 0; yy < maskSurf.h; yy++)
@@ -429,19 +441,20 @@ namespace org.kohsuke.directdraw
 
         public void bltShape(Point dstPos, Surface source, Color fill)
         {
-			bltShape( dstPos, source, new Point(0,0), source.size, fill );
-		}
+            bltShape(dstPos, source, new Point(0, 0), source.size, fill);
+        }
 
         public Surface createFlippedVerticalSurface()
-        { 
-            return new Surface(SdlGfx.rotozoomSurfaceXY(this.surfacePtr(),0,1,-1,SdlGfx.SMOOTHING_OFF));
+        {
+            return new Surface(SdlGfx.rotozoomSurfaceXY(this.surfacePtr(), 0, 1, -1, SdlGfx.SMOOTHING_OFF));
         }
 
         //public Tao.Sdl.Sdl.SDL_Surface createFlippedHorizontalSurface() { return null; }
 
-		public void bltColorTransform( Point dstPos, Surface source,Point srcPos, Size sz,Color[] _srcColors, Color[] _dstColors, bool vflip ) {
+        public void bltColorTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color[] _srcColors, Color[] _dstColors, bool vflip)
+        {
             if (vflip) Console.WriteLine("VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! ");
-            int index = source.reColor(_srcColors,_dstColors);
+            int index = source.reColor(_srcColors, _dstColors);
             //blt(dstPos, source, srcPos,sz);
             drect.x = (short)dstPos.X;
             drect.y = (short)dstPos.Y;
@@ -452,10 +465,14 @@ namespace org.kohsuke.directdraw
             srect.w = (short)sz.Width;
             srect.h = (short)sz.Height;
             Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtrs[index], ref srect, this.surfacePtr(), ref drect);
-		}
+        }
 
-        public int reColor(Color[] _srcColors, Color[] _dstColors) {
-            String curSig = "recolor" + _dstColors[0].ToArgb() + _dstColors[1].ToArgb() + _dstColors[2].ToArgb() + _dstColors[3].ToArgb();
+        public int reColor(Color[] _srcColors, Color[] _dstColors)
+        {
+            String curSig = "recolor";
+            for (int curCol = 0; curCol < 4; curCol++)
+                if (_dstColors.GetLength(0) > curCol) curSig += _dstColors[0].ToArgb();
+
             int curIndex = -1;
 
             for (int i = 1; i <= currentSurfaceCount; i++) if (surfaceSignatures[i] == curSig) curIndex = i;
@@ -506,23 +523,24 @@ namespace org.kohsuke.directdraw
             return curIndex;
         }
 
-		public void bltHueTransform(Point dstPos,Surface source,Point srcPos,Size sz,Color R_dest, Color G_dest, Color B_dest ) {
-			/*RECT dst = Util.toRECT( dstPos, sz );
-			RECT src = Util.toRECT( srcPos, sz );
-			Util.clip( ref dst, ref src, clip );
+        public void bltHueTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color R_dest, Color G_dest, Color B_dest)
+        {
+            /*RECT dst = Util.toRECT( dstPos, sz );
+            RECT src = Util.toRECT( srcPos, sz );
+            Util.clip( ref dst, ref src, clip );
 
-			//Debug.WriteLine(""+R_dest.ToArgb()+","+G_dest.ToArgb()+","+B_dest.ToArgb());
-			bltHueTransform( surface, source.surface,
-				dst.Left, dst.Top,
-				src.Left, src.Top, src.Right, src.Bottom,				
-				R_dest.ToArgb(), G_dest.ToArgb(), B_dest.ToArgb(),
-				source.colorKey );*/
+            //Debug.WriteLine(""+R_dest.ToArgb()+","+G_dest.ToArgb()+","+B_dest.ToArgb());
+            bltHueTransform( surface, source.surface,
+                dst.Left, dst.Top,
+                src.Left, src.Top, src.Right, src.Bottom,				
+                R_dest.ToArgb(), G_dest.ToArgb(), B_dest.ToArgb(),
+                source.colorKey );*/
             //surface.RedMask = R_dest.ToArgb();
             //surface.BlueMask = B_dest.ToArgb();
             //surface.Green = G_dest.ToArgb();
             //surface.Blit(source.handle, new Rectangle(dstPos.X, dstPos.Y, sz.Width, sz.Height), new Rectangle(srcPos.X, srcPos.Y, sz.Width, sz.Height));
             //throw new Exception("NOT IMPLEMENTED YET!");
-		}
+        }
 
         public void SetPixel(Point p, Color col) { SetPixel(p.X, p.Y, col); }
         public void SetPixel(int x, int y, Color col)
@@ -663,7 +681,8 @@ namespace org.kohsuke.directdraw
                         Marshal.Copy(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
                     }
                 }
-                else*/ if (bytesPerPixel >= 3)
+                else*/
+                if (bytesPerPixel >= 3)
                 {
                     //the buffer for a row of pixels.
                     Int32[] buffer = new Int32[this.surface.w], original = new Int32[this.surface.w];
@@ -684,7 +703,7 @@ namespace org.kohsuke.directdraw
                                     if (lower24 == Sdl.SDL_MapRGB(this.surface.format, 0, 0, 8)) buffer[x] = (Int32)(original[x] & 0xFF000000) | (Int32)Sdl.SDL_MapRGB(this.surface.format, 255, 227, 99);
                                     else
                                         buffer[x] = (Int32)(original[x] & 0xFF000000) | (Int32)((original[x] & 0x00FCFCFC) >> 2);// pix /= 4
-                            
+
                             if (x == 0 && y == 0) this.colorKey = buffer[x];
                         }
                         //then copies them to the image.
@@ -714,7 +733,7 @@ namespace org.kohsuke.directdraw
                     byte[] buffer = new byte[this.surface.w];
                     for (int y = 0; y < this.surface.h; ++y)
                     {
-                        Marshal.Copy(new IntPtr(pixels + y * pitch), buffer,0, buffer.Length);
+                        Marshal.Copy(new IntPtr(pixels + y * pitch), buffer, 0, buffer.Length);
                         //gets only the pixels in the row that are required.
                         for (int x = 0; x < buffer.Length; ++x)
                         {
@@ -742,19 +761,19 @@ namespace org.kohsuke.directdraw
             {
                 Sdl.SDL_UnlockSurface(this.surfacePtrs[0]);
             }
-            
+
         }
 
         private void darken16(byte color1, byte color2, byte color3,
                                 byte light1, byte light2, byte light3, byte colormask, ref byte pix)
         {
             if (pix == color1)
-                    pix = light1;
+                pix = light1;
             else
-                if (pix == color2) 
+                if (pix == color2)
                     pix = light2;
                 else
-                    if (pix == color3) 
+                    if (pix == color3)
                         pix = light3;
                     else
                         pix = (byte)((pix & colormask) >> 1);		// pix /= 4
@@ -766,58 +785,63 @@ namespace org.kohsuke.directdraw
         public void fill(Color c)
         {
             fill(clipRect, c);
-		}
+        }
 
-		public void fill( Rectangle rect, Color c ) {
-			//rect.Intersect(clip);
-           //surface.Fill(rect, c);
+        public void fill(Rectangle rect, Color c)
+        {
+            //rect.Intersect(clip);
+            //surface.Fill(rect, c);
             srect.x = (short)rect.X;
             srect.y = (short)rect.Y;
             srect.w = (short)rect.Width;
             srect.h = (short)rect.Height;
-            Tao.Sdl.Sdl.SDL_FillRect(this.surfacePtr(),ref srect,Sdl.SDL_MapRGB(this.surface.format,c.R,c.G,c.B));
-		}
+            Tao.Sdl.Sdl.SDL_FillRect(this.surfacePtr(), ref srect, Sdl.SDL_MapRGB(this.surface.format, c.R, c.G, c.B));
+        }
 
         private int _colKey;
-		private int colorKey {
+        private int colorKey
+        {
             get { return _colKey; }
             set { _colKey = value; Tao.Sdl.Sdl.SDL_SetColorKey(this.surfacePtr(), Sdl.SDL_SRCCOLORKEY | Sdl.SDL_RLEACCEL, _colKey); }
         }
 
-		/// <summary>
-		/// Source color key. A mask color that will not be copied to other plains.
-		/// </summary>
-		public Color sourceColorKey {
+        /// <summary>
+        /// Source color key. A mask color that will not be copied to other plains.
+        /// </summary>
+        public Color sourceColorKey
+        {
             get { return Color.FromArgb(_colKey); }
-			set {
-                colorKey = Sdl.SDL_MapRGB(this.surface.format, value.R , value.G , value.B );
-			}
-		}
+            set
+            {
+                colorKey = Sdl.SDL_MapRGB(this.surface.format, value.R, value.G, value.B);
+            }
+        }
 
-		// retruns true if the color at the specified pixel is valid (opaque).
-		public bool HitTest( Point p ) { return HitTest(p.X, p.Y); }
+        // retruns true if the color at the specified pixel is valid (opaque).
+        public bool HitTest(Point p) { return HitTest(p.X, p.Y); }
 
-		// retruns true if the color at the specified pixel is valid (opaque).
-		public bool HitTest( int x, int y )
-		{
-			if(x<0 || x>size.Width || y<0 || y>size.Height )
-				return false;
-			return ((getColorAt(x,y)&0xffffff) == colorKey);
-		}
+        // retruns true if the color at the specified pixel is valid (opaque).
+        public bool HitTest(int x, int y)
+        {
+            if (x < 0 || x > size.Width || y < 0 || y > size.Height)
+                return false;
+            return ((getColorAt(x, y) & 0xffffff) == colorKey);
+        }
 
-		// returns color at specified point.
-		// the return value suited for current pixel format.
-		// outrange point will raise an error.
-		int getColorAt( int x, int y )
-		{
+        // returns color at specified point.
+        // the return value suited for current pixel format.
+        // outrange point will raise an error.
+        int getColorAt(int x, int y)
+        {
             Color c = this.GetPixel(x, y);
             return c.R & c.G & c.B;
-			
-		}
-		
-		public Color getColor(int x, int y) {
-			return this.GetPixel(x,y);
-		}
+
+        }
+
+        public Color getColor(int x, int y)
+        {
+            return this.GetPixel(x, y);
+        }
 
         public Color getColor(IntPtr surf, int x, int y)
         {
@@ -838,18 +862,18 @@ namespace org.kohsuke.directdraw
             return System.Drawing.Color.FromArgb(a, r, g, b);
         }
 
-		public void drawBox( Rectangle r ) { drawBox(r, Color.CornflowerBlue); }
-        public void drawBox( Rectangle r , Color c)
+        public void drawBox(Rectangle r) { drawBox(r, Color.CornflowerBlue); }
+        public void drawBox(Rectangle r, Color c)
         {
             /*surface.Draw(new SdlDotNet.Graphics.Primitives.Box((short)r.Left,
                                                             (short)r.Top,
                                                             (short)r.Right,
                                                             (short)r.Bottom), c);*/
             //SdlGfx.boxColor(this.surfacePtr(),(short)r.X,(short)r.Y,(short)(r.X+r.Width),(short)(r.Y+r.Height),Sdl.SDL_MapRGB(this.surface.format,c.R,c.G,c.B));
-            SdlGfx.rectangleRGBA(this.surfacePtr(),(short)r.X,(short)r.Y,(short)(r.X+r.Width),(short)(r.Y+r.Height),c.R,c.G,c.B,255);
+            SdlGfx.rectangleRGBA(this.surfacePtr(), (short)r.X, (short)r.Y, (short)(r.X + r.Width), (short)(r.Y + r.Height), c.R, c.G, c.B, 255);
         }
 
-        public void drawPolygon(Point p1, Point p2, Point p3, Point p4) {drawBox(new Rectangle(p1, new Size(p2.X - p1.X, p4.Y - p1.Y)));}
+        public void drawPolygon(Point p1, Point p2, Point p3, Point p4) { drawBox(new Rectangle(p1, new Size(p2.X - p1.X, p4.Y - p1.Y))); }
         public void drawPolygon(Color col, Point[] pts)
         {
             //surface.Draw(new SdlDotNet.Graphics.Primitives.Polygon(new ArrayList(pts)), col);
@@ -867,7 +891,7 @@ namespace org.kohsuke.directdraw
                 ptX[i] = (short)pts[i].X;
                 ptY[i] = (short)pts[i].Y;
             }
-            Tao.Sdl.SdlGfx.filledPolygonRGBA(this.surfacePtr(), ptX, ptY, pts.GetLength(0), col.R,col.G,col.B, 255);
+            Tao.Sdl.SdlGfx.filledPolygonRGBA(this.surfacePtr(), ptX, ptY, pts.GetLength(0), col.R, col.G, col.B, 255);
         }
 
         public void drawLines(Color col, Point[] pts)
@@ -877,22 +901,80 @@ namespace org.kohsuke.directdraw
             //    surface.Draw(new SdlDotNet.Graphics.Primitives.Line((Point)pts[curPoint], (Point)pts[curPoint + 1]), col,false,false);
         }
 
-		/// <summary>
-		/// Tries to recover a lost surface.
-		/// </summary>
-		public void restore() {
-			//handle.restore();
-		}
+        /// <summary>
+        /// Tries to recover a lost surface.
+        /// </summary>
+        public void restore()
+        {
+            //handle.restore();
+        }
 
-		/// <summary>
-		/// Makes the bitmap of this surface.
-		/// The caller needs to dispose the bitmap.
-		/// </summary>
-		public Bitmap createBitmap() {
-            //return surface.Bitmap;
-            return null;
-		}
-	}
+        /// <summary>
+        /// Makes the bitmap of this surface.
+        /// The caller needs to dispose the bitmap.
+        /// </summary>
+
+        public Bitmap Bitmap
+        {
+            get
+            {
+                byte[] arr = new byte[(this.size.Width * this.size.Height * this.bpp) + this.BmpHeader];
+                IntPtr i = Marshal.AllocHGlobal(arr.Length);
+
+                try
+                {
+
+                    try
+                    {
+                        Marshal.Copy(arr, 0, i, arr.Length);
+                        Sdl.SDL_SaveBMP_RW(this.surfacePtr(), Sdl.SDL_RWFromMem(i, arr.Length), 1);
+                        Marshal.Copy(i, arr, 0, arr.Length);
+                    }
+                    catch (AccessViolationException e)
+                    {
+                        Console.WriteLine(e.StackTrace);
+                        e.ToString();
+                    }
+
+                    Bitmap bitmap;
+                    try
+                    {
+                        if (arr != null)
+                        {
+                            bitmap = (Bitmap)Bitmap.FromStream(new MemoryStream(arr, 0, arr.Length));
+                            return bitmap;
+                        }
+                        else
+                        {
+                            return new Bitmap(1, 1);
+                        }
+                    }
+                    catch (OutOfMemoryException e)
+                    {
+                        e.ToString();
+                        bitmap = new Bitmap(1, 1);
+                        return bitmap;
+                    }
+                    catch (ArgumentException e)
+                    {
+                        e.ToString();
+                        bitmap = new Bitmap(1, 1);
+                        return bitmap;
+                    }
+                    catch (ExternalException e)
+                    {
+                        e.ToString();
+                        bitmap = new Bitmap(1, 1);
+                        return bitmap;
+                    }
+                }
+                finally
+                {
+                    Marshal.FreeHGlobal(i);
+                }
+            }
+        }
+    }
 
     static class MarshalHelper
     {

@@ -135,9 +135,12 @@ namespace freetrain.framework.plugin
 		private static XmlDocument loadManifest( string dirName ) {
 			string path = Path.Combine(dirName,"plugin.xml");
 			using( FileStream file = new FileStream(path,FileMode.Open,FileAccess.Read,FileShare.ReadWrite) ) {
-				XmlDocument doc = new XmlDocument();
-				XmlValidatingReader reader = new XmlValidatingReader(new XmlTextReader(path,file));
-				reader.ValidationType = ValidationType.None;
+                XmlDocument doc = new XmlDocument();
+                XmlReaderSettings settings = new XmlReaderSettings();
+                settings.XmlResolver = null;
+                settings.ValidationType = ValidationType.None;
+                settings.ProhibitDtd = false;
+                XmlReader reader = XmlReader.Create(new XmlTextReader(path, file), settings);
 				doc.Load(reader);
 				return doc;
 			}

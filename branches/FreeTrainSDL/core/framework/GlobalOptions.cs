@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 using freetrain.util;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.framework
 {

@@ -5,7 +5,7 @@ using freetrain.framework;
 using freetrain.framework.sound;
 using freetrain.framework.plugin;
 using freetrain.framework.graphics;
-using org.kohsuke.directdraw;
+using SDL.net;
 
 namespace freetrain.world.structs
 {
