@@ -32,6 +32,29 @@ namespace freetrain.contributions.train
 		/// </summary>
 		private readonly IDictionary cars = new Hashtable();
 
+        public override int maxLength
+        {
+            get
+            {
+                int curMax = 0;
+                for (int i = 16; i > 0 && curMax == 0; i--)
+                    if (compositions[i] != null) curMax = i;
+                return curMax;
+            } 
+        }
+
+        public override int minLength
+        {
+            get
+            {
+                int curMin = 0;
+                for (int i = 1; i >0 && curMin == 0; i++)
+                    if (compositions[i] != null) curMin = i;
+                return curMin;
+            }
+        }
+
+
 		/// <summary>
 		/// Map from length to its composition.
 		/// </summary>

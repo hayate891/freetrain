@@ -70,5 +70,8 @@ namespace freetrain.contributions.train
 
 		public readonly int _fare = 600;	// TODO
 		public override int fare { get { return _fare; } }
+
+        public readonly int _maxlength = 3;	// TODO
+        public override int maxLength { get { return _maxlength; } }
 	}
 }
