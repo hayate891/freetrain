@@ -69,9 +69,6 @@
     </Compile>
     <Compile Include="SDLGUI.cs" />
     <Compile Include="SDLGUIButton.cs" />
-    <Compile Include="SDLGUIDrawer.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="core\FreeTrain.Core.csproj">
