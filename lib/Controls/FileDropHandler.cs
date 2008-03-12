@@ -1,0 +1,78 @@
+#region LICENSE
+/*
+ * Copyright (C) 2004 - 2007 David Hudson (jendave@yahoo.com)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
+using System;
+using System.Windows.Forms;
+
+namespace freetrain.controls
+{
+    /// <summary> Delegate that received dropped files. </summary>
+    public delegate void FileDropEventHandler(string fileName);
+
+
+    /// <summary>
+    /// Encapsulates DragNDrop logic for Windows Forms.
+    /// </summary>
+    public class FileDropHandler
+    {
+        private FileDropEventHandler handler;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="parent"></param>
+        /// <param name="handler"></param>
+        public FileDropHandler(Control parent, FileDropEventHandler handler)
+        {
+            this.handler = handler;
+
+            parent.AllowDrop = true;
+            parent.DragEnter += new DragEventHandler(onDragEnter);
+            parent.DragDrop += new DragEventHandler(onDragDrop);
+        }
+
+        private void onDragEnter(object sender, DragEventArgs args)
+        {
+            // make sure they're actually dropping files (not text or anything else)
+            if (args.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
+                // allow them to continue
+                // (without this, the cursor stays a "NO" symbol
+                args.Effect = DragDropEffects.All;
+        }
+
+        private void onDragDrop(object sender, DragEventArgs args)
+        {
+            string[] files = (string[])args.Data.GetData(DataFormats.FileDrop);
+
+            // report dropped files
+            foreach (string file in files)
+                onFileDropped(file);
+        }
+
+        /// <summary>
+        /// Overridable. This method is called for each dropped file.
+        /// </summary>
+        /// <param name="fileName"></param>
+        protected virtual void onFileDropped(string fileName)
+        {
+            handler(fileName);
+        }
+    }
+}
