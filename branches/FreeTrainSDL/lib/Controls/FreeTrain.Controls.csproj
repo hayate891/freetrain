@@ -36,8 +36,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>
-    </DocumentationFile>
+    <DocumentationFile>bin\Debug\FreeTrain.Controls.XML</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -99,56 +98,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\ColorPickButton.cs">
+    <Compile Include="ColorPickButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="src\ColorPicker.cs">
+    <Compile Include="ColorPicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\CostBox.cs">
+    <Compile Include="CostBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\DocHostUIHandlerImpl.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\FileDropHandler.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\IndexSelector.cs">
+    <Compile Include="DocHostUIHandlerImpl.cs" />
+    <Compile Include="FileDropHandler.cs" />
+    <Compile Include="IndexSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\MruMenu.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\SubListSelector.cs">
+    <Compile Include="MruMenu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubListSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\TrackBarEx.cs">
+    <Compile Include="TrackBarEx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="src\UrlLinkLabel.cs">
+    <Compile Include="UrlLinkLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="src\WebBrowser.cs">
+    <Compile Include="WebBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="src\ColorPickButton.resx">
+    <EmbeddedResource Include="ColorPickButton.resx">
       <DependentUpon>ColorPickButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\ColorPicker.resx">
+    <EmbeddedResource Include="ColorPicker.resx">
       <DependentUpon>ColorPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\CostBox.resx">
+    <EmbeddedResource Include="CostBox.resx">
       <DependentUpon>CostBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\IndexSelector.resx">
+    <EmbeddedResource Include="IndexSelector.resx">
       <DependentUpon>IndexSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\SubListSelector.resx">
+    <EmbeddedResource Include="SubListSelector.resx">
       <DependentUpon>SubListSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
