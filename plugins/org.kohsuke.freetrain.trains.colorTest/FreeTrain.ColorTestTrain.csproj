@@ -41,15 +41,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\AssemblyInfo.cs" />
-    <Compile Include="src\ColorConfigCommand.cs" />
-    <Compile Include="src\ColorConfigDialog.cs">
+      <Compile Include="src\AssemblyInfo.cs" />
+      <Compile Include="src\ColorConfigCommand.cs" />
+      <Compile Include="src\ColorConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="src\ColorConfigDialog.resx">
