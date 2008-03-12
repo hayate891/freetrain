@@ -45,7 +45,7 @@ namespace FreeTrainSDL
             tooltip_text = tooltip;
             x_pos = x;
             y_pos = y;
-            
+
             ButtonClick += click;
 
             btnoff = new Surface(Application.StartupPath + "\\gui\\" + name + ".png");
@@ -58,16 +58,16 @@ namespace FreeTrainSDL
 
         public void draw(IntPtr screen)
         {
-            Sdl.SDL_Rect dst = new Sdl.SDL_Rect((short)x_pos,(short)y_pos,btnon.clipSDLRect.w,btnon.clipSDLRect.h);
+            Sdl.SDL_Rect dst = new Sdl.SDL_Rect((short)x_pos, (short)y_pos, btnon.clipSDLRect.w, btnon.clipSDLRect.h);
             Sdl.SDL_Rect src = btnon.clipSDLRect;
 
-            if (button_down) Tao.Sdl.Sdl.SDL_BlitSurface(btnon.surfacePtr(),ref src,screen,ref dst);
+            if (button_down) Tao.Sdl.Sdl.SDL_BlitSurface(btnon.surfacePtr(), ref src, screen, ref dst);
             else Tao.Sdl.Sdl.SDL_BlitSurface(btnoff.surfacePtr(), ref src, screen, ref dst);
 
             //TOOL TIPS!?!?!
             if (draw_tooltip)
             {
-                SDLGUI.drawText(screen, fnt, tooltip_text, Color.White, new Point(x_pos,y_pos + btnon.clipRect.Height + 6), 0, true, false);
+                SDLGUI.drawText(screen, fnt, tooltip_text, Color.White, new Point(x_pos, y_pos + btnon.clipRect.Height + 6), 0, true, false);
             }
         }
 
@@ -80,7 +80,7 @@ namespace FreeTrainSDL
                 {
                     draw_tooltip = true;
                 }
-                
+
         }
 
         public bool checkClick(Sdl.SDL_MouseButtonEvent e)
@@ -95,7 +95,7 @@ namespace FreeTrainSDL
                     if (e.button == Sdl.SDL_BUTTON_LEFT)
                     {
                         button_down = true;
-                        if (ButtonClick != null) ButtonClick(button_name,null);
+                        if (ButtonClick != null) ButtonClick(button_name, null);
                     }
                     wasGUIClick = true;
                 }
