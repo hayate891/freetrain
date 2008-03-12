@@ -8,7 +8,7 @@ using freetrain.contributions.train;
 namespace freetrain.world.rail.cttrain
 {
 	/// <summary>
-	/// ColorConfigDialog の概要の説明です。
+	/// ColorConfigDialog
 	/// </summary>
 	public class ColorConfigDialog : Form
 	{

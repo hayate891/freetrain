@@ -1,4 +1,24 @@
-﻿using System;
+﻿#region LICENSE
+/*
+ * Copyright (C) 2004 - 2007 David Hudson (jendave@yahoo.com)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
+using System;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Diagnostics;
@@ -8,20 +28,33 @@ using System.IO;
 
 namespace SDL.net
 {
-	/// <summary>
-	/// Color mask.
-	/// </summary>
-	public enum ColorMask { R,G,B };
+    /// <summary>
+    /// Color mask.
+    /// </summary>
+    public enum ColorMask { 
+        /// <summary>
+        /// 
+        /// </summary>
+        R, 
+        /// <summary>
+        /// 
+        /// </summary>
+        G, 
+        /// <summary>
+        /// 
+        /// </summary>
+        B 
+    };
 
-	/// <summary>
-	/// Wraps DirectDraw surface object.
-	/// 
-	/// This is the core object of DirectDraw.
-	/// The code is a wrapper around Visual BASIC binding of DirectDraw.
-	/// 
-	/// Since I couldn't figure out how to create a CLR binding for
-	/// clipper, this class implements a clipping support by itself.
-	/// </summary>
+    /// <summary>
+    /// Wraps DirectDraw surface object.
+    /// 
+    /// This is the core object of DirectDraw.
+    /// The code is a wrapper around Visual BASIC binding of DirectDraw.
+    /// 
+    /// Since I couldn't figure out how to create a CLR binding for
+    /// clipper, this class implements a clipping support by itself.
+    /// </summary>
     public class Surface
     {
         //private DirectDrawSurface7 surface;
@@ -29,7 +62,7 @@ namespace SDL.net
         //Surface mask;
         //private static AlphaBlender alpha = new AlphaBlenderClass();
 
-        /// <summary> Bit-width. </summary>
+        
         //private readonly byte widthR,widthB,widthG;
 
         /// <summary>
@@ -44,10 +77,19 @@ namespace SDL.net
 
         private readonly int BmpHeader = 54;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IntPtr[] surfacePtrs = new IntPtr[TOTAL_SURFACES];
         private String[] surfaceSignatures = new String[TOTAL_SURFACES];
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IntPtr mask, dupSurface;
+        /// <summary>
+        /// 
+        /// </summary>
         public Sdl.SDL_Surface surface; //, dupSurface, mask;
         private Sdl.SDL_PixelFormat pixelFormat;
 
@@ -57,12 +99,20 @@ namespace SDL.net
         private int currentSurfaceCount = 0;
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public Size size
         {
             get { return new Size(this.surface.w, this.surface.h); }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="w"></param>
+        /// <param name="h"></param>
+        /// <param name="newbpp"></param>
         public Surface(int w, int h, int newbpp)
         {
             bpp = newbpp;
@@ -73,7 +123,18 @@ namespace SDL.net
             this.currentSurfaceCount++;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="w"></param>
+        /// <param name="h"></param>
         public Surface(int w, int h) : this(w, h, IntPtr.Zero) { }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="w"></param>
+        /// <param name="h"></param>
+        /// <param name="pf"></param>
         public Surface(int w, int h, IntPtr pf)
         {
             if (pf == IntPtr.Zero)
@@ -93,6 +154,10 @@ namespace SDL.net
             this.resetClipRect();
             this.currentSurfaceCount++;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filename"></param>
         public Surface(string filename)
         {
             this.surfacePtrs[0] = Tao.Sdl.SdlImage.IMG_Load(filename);
@@ -113,13 +178,23 @@ namespace SDL.net
             this.currentSurfaceCount++;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IntPtr surfacePtr() { return this.surfacePtrs[0]; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void resetClipRect()
         {
             Sdl.SDL_Rect r = new Sdl.SDL_Rect(0, 0, (short)size.Width, (short)size.Height);
             Sdl.SDL_SetClipRect(this.surfacePtr(), ref r);
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public Sdl.SDL_Rect clipSDLRect
         {
             get
@@ -129,6 +204,9 @@ namespace SDL.net
                 return r;
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public Rectangle clipRect
         {
             get
@@ -149,13 +227,28 @@ namespace SDL.net
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Dispose()
         {
             //i'm sure something needs to be cleared here
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public int getSDLColor(Color c) { return Sdl.SDL_MapRGB(this.surfacePtrs[0], c.R, c.G, c.B); }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="destX"></param>
+        /// <param name="destY"></param>
+        /// <param name="source"></param>
+        /// <param name="srcRect"></param>
         public void bltFast(int destX, int destY, Surface source, Rectangle srcRect)
         {
             //RECT srect = Util.toRECT(srcRect);
@@ -185,6 +278,13 @@ namespace SDL.net
 
         private Sdl.SDL_Rect drect, srect;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
+        /// <param name="srcPos"></param>
+        /// <param name="sz"></param>
         public void blt(Point dstPos, Surface source, Point srcPos, Size sz)
         {
             drect.x = (short)dstPos.X;
@@ -198,6 +298,11 @@ namespace SDL.net
             blt(drect, source, srect);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
         public void blt(Point dstPos, Surface source)
         {
             drect.x = (short)dstPos.X;
@@ -211,6 +316,18 @@ namespace SDL.net
             blt(drect, source, srect);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstX1"></param>
+        /// <param name="dstY1"></param>
+        /// <param name="dstX2"></param>
+        /// <param name="dstY2"></param>
+        /// <param name="source"></param>
+        /// <param name="srcX1"></param>
+        /// <param name="srcY1"></param>
+        /// <param name="srcX2"></param>
+        /// <param name="srcY2"></param>
         public void blt(int dstX1, int dstY1, int dstX2, int dstY2, Surface source,
                          int srcX1, int srcY1, int srcX2, int srcY2)
         {
@@ -225,6 +342,12 @@ namespace SDL.net
             blt(drect, source, srect);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dst"></param>
+        /// <param name="source"></param>
+        /// <param name="src"></param>
         public void blt(Point dst, Surface source, Rectangle src) { blt(new Rectangle(dst.X, dst.Y, src.Width, src.Height), source, src); }
         private void blt(Rectangle dst, Surface source, Rectangle src)
         {
@@ -244,6 +367,10 @@ namespace SDL.net
             Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr(), ref src, this.surfacePtr(), ref dst);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="val"></param>
         public void setAlpha(byte val)
         {
             //surface.AlphaBlending = true;
@@ -296,7 +423,19 @@ namespace SDL.net
                     dst.Height = t - dst.Top;
                 }
                 */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
         public void bltAlpha(Point dstPos, Surface source) { bltAlpha(dstPos, source, new Point(0, 0), source.size); }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
+        /// <param name="srcPos"></param>
+        /// <param name="sz"></param>
         public void bltAlpha(Point dstPos, Surface source, Point srcPos, Size sz)
         {
             //Rectangle dst = new Rectangle( dstPos.X,dstPos.Y,sz.Width,sz.Height );
@@ -306,7 +445,7 @@ namespace SDL.net
                 dst.Left, dst.Top,
                 src.Left, src.Top, src.Right, src.Bottom,
                 source.colorKey );*/
-            ///source.handle.Transparent = false;
+            //source.handle.Transparent = false;
             source.setAlpha(128);
 
             //this.sourceColorKey = Color.Magenta;
@@ -324,6 +463,14 @@ namespace SDL.net
             source.setAlpha(255);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
+        /// <param name="srcPos"></param>
+        /// <param name="sz"></param>
+        /// <param name="fill"></param>
         public void bltShape(Point dstPos, Surface source, Point srcPos, Size sz, Color fill)
         {
             drect.x = (short)dstPos.X;
@@ -394,9 +541,29 @@ namespace SDL.net
             return curIndex;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public Color GetPixel(int x, int y) { return GetPixel(this.surfacePtr(), x, y); }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="surf"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public Color GetPixel(IntPtr surf, int x, int y) { return this.GetColor(surf, this.GetIntPixel(surf, x, y)); }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="surf"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public int GetIntPixel(IntPtr surf, int x, int y)
         {
             Sdl.SDL_Surface s;
@@ -415,6 +582,15 @@ namespace SDL.net
             return GetIntPixel(s, pf, surf, x, y);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="pf"></param>
+        /// <param name="surf"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public int GetIntPixel(Sdl.SDL_Surface s, Sdl.SDL_PixelFormat pf, IntPtr surf, int x, int y)
         {
             IntPtr ptr = new IntPtr(s.pixels.ToInt32() + (y * s.pitch) + (x * pf.BytesPerPixel)); //* bytesPerPixel);
@@ -439,11 +615,22 @@ namespace SDL.net
             return value;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
+        /// <param name="fill"></param>
         public void bltShape(Point dstPos, Surface source, Color fill)
         {
             bltShape(dstPos, source, new Point(0, 0), source.size, fill);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Surface createFlippedVerticalSurface()
         {
             return new Surface(SdlGfx.rotozoomSurfaceXY(this.surfacePtr(), 0, 1, -1, SdlGfx.SMOOTHING_OFF));
@@ -451,6 +638,16 @@ namespace SDL.net
 
         //public Tao.Sdl.Sdl.SDL_Surface createFlippedHorizontalSurface() { return null; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
+        /// <param name="srcPos"></param>
+        /// <param name="sz"></param>
+        /// <param name="_srcColors"></param>
+        /// <param name="_dstColors"></param>
+        /// <param name="vflip"></param>
         public void bltColorTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color[] _srcColors, Color[] _dstColors, bool vflip)
         {
             if (vflip) Console.WriteLine("VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! ");
@@ -467,6 +664,12 @@ namespace SDL.net
             Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtrs[index], ref srect, this.surfacePtr(), ref drect);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_srcColors"></param>
+        /// <param name="_dstColors"></param>
+        /// <returns></returns>
         public int reColor(Color[] _srcColors, Color[] _dstColors)
         {
             String curSig = "recolor";
@@ -523,6 +726,16 @@ namespace SDL.net
             return curIndex;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dstPos"></param>
+        /// <param name="source"></param>
+        /// <param name="srcPos"></param>
+        /// <param name="sz"></param>
+        /// <param name="R_dest"></param>
+        /// <param name="G_dest"></param>
+        /// <param name="B_dest"></param>
         public void bltHueTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color R_dest, Color G_dest, Color B_dest)
         {
             /*RECT dst = Util.toRECT( dstPos, sz );
@@ -542,12 +755,27 @@ namespace SDL.net
             //throw new Exception("NOT IMPLEMENTED YET!");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="col"></param>
         public void SetPixel(Point p, Color col) { SetPixel(p.X, p.Y, col); }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="col"></param>
         public void SetPixel(int x, int y, Color col)
         {
             SdlGfx.pixelRGBA(this.surfacePtrs[0], (short)x, (short)y, col.R, col.G, col.B, 255);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="buf"></param>
         public void SetPixels(Int32[] buf)
         {
             Sdl.SDL_LockSurface(this.surfacePtrs[0]);
@@ -636,6 +864,9 @@ namespace SDL.net
             }*/
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void buildNightImage()
         {
             /*byte[] src = new byte[16],src2 = new byte[16], dst = new byte[16];
@@ -787,6 +1018,12 @@ namespace SDL.net
             fill(clipRect, c);
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rect"></param>
+        /// <param name="c"></param>
         public void fill(Rectangle rect, Color c)
         {
             //rect.Intersect(clip);
@@ -818,9 +1055,20 @@ namespace SDL.net
         }
 
         // retruns true if the color at the specified pixel is valid (opaque).
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public bool HitTest(Point p) { return HitTest(p.X, p.Y); }
 
         // retruns true if the color at the specified pixel is valid (opaque).
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public bool HitTest(int x, int y)
         {
             if (x < 0 || x > size.Width || y < 0 || y > size.Height)
@@ -838,16 +1086,35 @@ namespace SDL.net
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public Color getColor(int x, int y)
         {
             return this.GetPixel(x, y);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="surf"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public Color getColor(IntPtr surf, int x, int y)
         {
             return this.GetPixel(surf, x, y);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="colorValue"></param>
+        /// <returns></returns>
+        [CLSCompliant(false)]
         public System.Drawing.Color GetColor(int colorValue)
         {
             byte r, g, b, a;
@@ -855,6 +1122,13 @@ namespace SDL.net
             return System.Drawing.Color.FromArgb(a, r, g, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="surf"></param>
+        /// <param name="colorValue"></param>
+        /// <returns></returns>
+        [CLSCompliant(false)]
         public System.Drawing.Color GetColor(IntPtr surf, int colorValue)
         {
             byte r, g, b, a;
@@ -862,7 +1136,16 @@ namespace SDL.net
             return System.Drawing.Color.FromArgb(a, r, g, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="r"></param>
         public void drawBox(Rectangle r) { drawBox(r, Color.CornflowerBlue); }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="r"></param>
+        /// <param name="c"></param>
         public void drawBox(Rectangle r, Color c)
         {
             /*surface.Draw(new SdlDotNet.Graphics.Primitives.Box((short)r.Left,
@@ -873,12 +1156,29 @@ namespace SDL.net
             SdlGfx.rectangleRGBA(this.surfacePtr(), (short)r.X, (short)r.Y, (short)(r.X + r.Width), (short)(r.Y + r.Height), c.R, c.G, c.B, 255);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <param name="p3"></param>
+        /// <param name="p4"></param>
         public void drawPolygon(Point p1, Point p2, Point p3, Point p4) { drawBox(new Rectangle(p1, new Size(p2.X - p1.X, p4.Y - p1.Y))); }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="col"></param>
+        /// <param name="pts"></param>
         public void drawPolygon(Color col, Point[] pts)
         {
             //surface.Draw(new SdlDotNet.Graphics.Primitives.Polygon(new ArrayList(pts)), col);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="col"></param>
+        /// <param name="pts"></param>
         public void fillPolygon(Color col, Point[] pts)
         {
             //Surface tx = new Surface(Video.CreateRgbSurface(20,20));
@@ -893,7 +1193,11 @@ namespace SDL.net
             }
             Tao.Sdl.SdlGfx.filledPolygonRGBA(this.surfacePtr(), ptX, ptY, pts.GetLength(0), col.R, col.G, col.B, 255);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="col"></param>
+        /// <param name="pts"></param>
         public void drawLines(Color col, Point[] pts)
         {
             for (int curPoint = 0; curPoint <= (pts.GetLength(0) - 2); curPoint++)
