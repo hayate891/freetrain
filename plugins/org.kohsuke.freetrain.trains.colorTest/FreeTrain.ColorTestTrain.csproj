@@ -25,6 +25,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <PlatformTarget>x86</PlatformTarget>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\FreeTrain.ColorTestTrain.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <NoStdLib>false</NoStdLib>
@@ -46,15 +47,16 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-      <Compile Include="src\AssemblyInfo.cs" />
-      <Compile Include="src\ColorConfigCommand.cs" />
-      <Compile Include="src\ColorConfigDialog.cs">
+    <Compile Include="ColorConfigCommand.cs" />
+    <Compile Include="ColorConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="src\ColorConfigDialog.resx">
+    <Compile Include="ColorTestTrainCar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ColorConfigDialog.resx">
       <DependentUpon>ColorConfigDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="src\ColorTestTrainCar.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
