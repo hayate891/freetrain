@@ -51,7 +51,7 @@ namespace FreeTrainSDL
         public EventHandler ButtonClick;
 
         const int MAX_BUTTONS = 16;
-        
+
         private SDLGUIButton[] top_toolbar;
 
         public SDLGUI()
@@ -66,9 +66,9 @@ namespace FreeTrainSDL
         {
             baseColor = Sdl.SDL_MapRGB(pf, baseGUIColor.R, baseGUIColor.G, baseGUIColor.B);
             shadeColor = Sdl.SDL_MapRGB(pf, shadeGUIColor.R, shadeGUIColor.G, shadeGUIColor.B);
-            
+
             top_toolbar = new SDLGUIButton[MAX_BUTTONS];
-            
+
             /*rail = new SDLGUIButton("rail","Railroad Construction", 10, 10);
             if (ButtonClick != null) rail.ButtonClick += ButtonClick;
             
@@ -87,14 +87,15 @@ namespace FreeTrainSDL
 
         public void checkMouseMovement(Sdl.SDL_MouseMotionEvent e)
         {
-        	for (int i = 0; i < MAX_BUTTONS; i++) if (top_toolbar[i] != null) top_toolbar[i].checkMovement(e);
+            for (int i = 0; i < MAX_BUTTONS; i++) if (top_toolbar[i] != null) top_toolbar[i].checkMovement(e);
         }
 
         public bool checkIfGUIClick(Sdl.SDL_MouseButtonEvent e)
         {
             bool wasGUIClick = false;
-            for (int i = 0; i < MAX_BUTTONS; i++) {
-            	if (!wasGUIClick && top_toolbar[i] != null) wasGUIClick = top_toolbar[i].checkClick(e);
+            for (int i = 0; i < MAX_BUTTONS; i++)
+            {
+                if (!wasGUIClick && top_toolbar[i] != null) wasGUIClick = top_toolbar[i].checkClick(e);
             }
             return wasGUIClick;
         }
@@ -105,7 +106,7 @@ namespace FreeTrainSDL
             if (!SPLASH_TEXT[MAX_SPLASH_LINES - 1].Contains(nstr))
                 for (int cur = 0; cur < MAX_SPLASH_LINES; cur++)
                 {
-                    if (cur < (MAX_SPLASH_LINES-1)) SPLASH_TEXT[cur] = SPLASH_TEXT[cur + 1];
+                    if (cur < (MAX_SPLASH_LINES - 1)) SPLASH_TEXT[cur] = SPLASH_TEXT[cur + 1];
                     else SPLASH_TEXT[cur] = nstr;
                 }
         }
@@ -116,7 +117,7 @@ namespace FreeTrainSDL
         }
 
         public void drawGUI(int width, int height, IntPtr screen)
-        {         
+        {
             int curXPos = -(top_bar.size.Width);
 
             Sdl.SDL_Rect src, dst;
@@ -187,28 +188,30 @@ namespace FreeTrainSDL
                 int xpos = (width / 2) - (splash.size.Width / 2);
                 int ypos = (height / 2) - (splash.size.Height / 2);
                 src = new Sdl.SDL_Rect((short)xpos, (short)ypos, (short)splash.size.Width, (short)(splash.size.Height * 2));
-                Tao.Sdl.Sdl.SDL_FillRect(screen,ref src,baseColor);
+                Tao.Sdl.Sdl.SDL_FillRect(screen, ref src, baseColor);
                 src = splash.clipSDLRect;
                 dst = new Sdl.SDL_Rect((short)xpos, (short)ypos, (short)splash.size.Width, (short)(splash.size.Height));
                 Tao.Sdl.Sdl.SDL_BlitSurface(splash.surfacePtr(), ref src, screen, ref dst);
                 for (int i = 0; i < MAX_SPLASH_LINES; i++)
                     if (SPLASH_TEXT[i] != string.Empty)
-                        drawText(screen,freesans, SPLASH_TEXT[i], Color.Black, xpos + 10, (ypos + splash.size.Height + 10) + (i * (2 + SPLASH_TEXT_HEIGHT)),0,false, false);
+                        drawText(screen, freesans, SPLASH_TEXT[i], Color.Black, xpos + 10, (ypos + splash.size.Height + 10) + (i * (2 + SPLASH_TEXT_HEIGHT)), 0, false, false);
                 drawText(screen, freesans, "[" + SPLASH_PERCENT.ToString() + "%]", Color.Black, new Point(xpos + (splash.size.Height * 2) - 16, ypos + splash.size.Width - 20), 0, false, false);
             }
 
         }
-        
-        public bool addButton(string name, string tooltip) {
-        	bool added = false;
-        	for (int i = 0; i < MAX_BUTTONS; i++)
-        	{
-        		if (!added && top_toolbar[i] == null) {
-        			top_toolbar[i] = new SDLGUIButton(name,tooltip, (10 + (i * 26)), 1,ref ButtonClick);
-        			added = true;
-        		}
-        	}
-        	return added;
+
+        public bool addButton(string name, string tooltip)
+        {
+            bool added = false;
+            for (int i = 0; i < MAX_BUTTONS; i++)
+            {
+                if (!added && top_toolbar[i] == null)
+                {
+                    top_toolbar[i] = new SDLGUIButton(name, tooltip, (10 + (i * 26)), 1, ref ButtonClick);
+                    added = true;
+                }
+            }
+            return added;
         }
 
         public static void drawText(IntPtr screen, IntPtr in_font, string in_text, Color c, Point p, int rotate, bool fill, bool centered)
@@ -269,12 +272,12 @@ namespace FreeTrainSDL
 
         public void updateSatellite(ref Surface s)
         {
-        /*    if (sat.DRAW_OPEN_AMOUNT > 0)
-            {
-                //if (satmap == null || satmap.surface.w != w || satmap.surface.h != h) satmap = new Surface(w, h, 16);
+            /*    if (sat.DRAW_OPEN_AMOUNT > 0)
+                {
+                    //if (satmap == null || satmap.surface.w != w || satmap.surface.h != h) satmap = new Surface(w, h, 16);
 
-                satmap = s;
-            }*/
+                    satmap = s;
+                }*/
         }
     }
 }

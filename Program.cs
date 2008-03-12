@@ -50,7 +50,7 @@ namespace FreeTrainSDL
     {
         int flags = (Sdl.SDL_HWSURFACE | Sdl.SDL_DOUBLEBUF | Sdl.SDL_ANYFORMAT | Sdl.SDL_RESIZABLE);
 
-        static int width = 640,height = 480;
+        static int width = 640, height = 480;
         private int MAP_X_OFFSET = 12, MAP_Y_OFFSET = 24;
         private IntPtr screen;
         private SDLGUI gui;
@@ -77,9 +77,9 @@ namespace FreeTrainSDL
             }
             set
             {
-                AutoScrollPosition =new Point(
-                    Math.Max(value.X - MAP_X_OFFSET,0),
-                    Math.Max(value.Y - MAP_Y_OFFSET,0));
+                AutoScrollPosition = new Point(
+                    Math.Max(value.X - MAP_X_OFFSET, 0),
+                    Math.Max(value.Y - MAP_Y_OFFSET, 0));
             }
         }
 
@@ -87,8 +87,8 @@ namespace FreeTrainSDL
         World w = null;
         WeatherOverlay weatherOverlay;
 
-        Sdl.SDL_Rect source_rect,dst;
-        
+        Sdl.SDL_Rect source_rect, dst;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -102,7 +102,7 @@ namespace FreeTrainSDL
         public void updateMessage(string msg, float progress)
         {
             //Console.WriteLine("LOADING: " + msg + "{" + progress + "}");
-            gui.addSplashText(msg.Replace('\n',' '), progress);
+            gui.addSplashText(msg.Replace('\n', ' '), progress);
         }
 
         public void musicHasStopped()
@@ -130,21 +130,22 @@ namespace FreeTrainSDL
 
             IntPtr videoInfoPointer = Sdl.SDL_GetVideoInfo();
 
-            if (videoInfoPointer != IntPtr.Zero) {
+            if (videoInfoPointer != IntPtr.Zero)
+            {
                 videoInfo = (Sdl.SDL_VideoInfo)Marshal.PtrToStructure(videoInfoPointer, typeof(Sdl.SDL_VideoInfo));
-                pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(videoInfo.vfmt,typeof(Sdl.SDL_PixelFormat));
+                pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(videoInfo.vfmt, typeof(Sdl.SDL_PixelFormat));
             }
 
             gui = new SDLGUI();
             gui.ButtonClick += new EventHandler(GUIButtonClick);
             gui.initGUI(width, height, videoInfo.vfmt);
-            gui.addButton("rail","Railroad Construction");
-            gui.addButton("station","Station Construction");
-            gui.addButton("train","Train Stuff");
-            gui.addButton("land","Modify Terrain");
+            gui.addButton("rail", "Railroad Construction");
+            gui.addButton("station", "Station Construction");
+            gui.addButton("train", "Train Stuff");
+            gui.addButton("land", "Modify Terrain");
             gui.addButton("struct", "Structure Construction");
             gui.addButton("playlist", "Music Playlist");
-            
+
             gui.clock_text = "Initialising...";
 
             updateMessage("FreeTrain SDL Starting...", -1);
@@ -153,21 +154,21 @@ namespace FreeTrainSDL
             finalDraw();
 
             MainWindow.mainWindow = new MainWindow(null, true);
-            updateMessage("Loading plugins...",-1);
+            updateMessage("Loading plugins...", -1);
             finalDraw();
             Core.init(null, null, null, new ProgressHandler(updateMessage), true);
-            w = new World(new Distance(150,150, 7), 3);
+            w = new World(new Distance(150, 150, 7), 3);
             World.world = w;
 
             weatherOverlay = NullWeatherOverlay.theInstance;
             tmp = new Surface(width, height);
 
-            updateMessage("Creating Map...",0);
+            updateMessage("Creating Map...", 0);
             finalDraw();
             qview = new QuarterViewDrawer(w, new Rectangle(0, 0, w.size.x * 32 - 16, (w.size.y - 2 * w.size.z - 1) * 8));
             qview.offscreenBuffer = new Surface(w.size.x * 32 - 16, (w.size.y - 2 * w.size.z - 1) * 8, videoInfo.vfmt);
             qview.recreateDrawBuffer(new Size(width, height), true);
-            updateMessage("Creating Map...",100);
+            updateMessage("Creating Map...", 100);
             finalDraw();
 
             qview.draw(new Rectangle(0, 0, w.size.x * 32 - 16, (w.size.y - 2 * w.size.z - 1) * 8), null);
@@ -180,7 +181,7 @@ namespace FreeTrainSDL
             timer.Interval = 33;
             timer.Enabled = true;
             timer.Start();
-            
+
             while (quitFlag == false)
             {
                 //do shit all.
@@ -242,12 +243,12 @@ namespace FreeTrainSDL
                 }
 
                 Application.DoEvents();
-           }
+            }
 
 
-           SdlMixer.Mix_CloseAudio();
+            SdlMixer.Mix_CloseAudio();
 
-           timer.Stop();
+            timer.Stop();
         }
 
         void timer_Tick(object sender, EventArgs e)
@@ -289,16 +290,16 @@ namespace FreeTrainSDL
         {
             switch ((string)sender)
             {
-                case "rail": 
+                case "rail":
                     RailRoadController.create();
                     break;
-                   case "station":
+                case "station":
                     PlatformController.create();
                     break;
-                   	case "train":
+                case "train":
                     TrainPlacementController.create();
                     break;
-                   case "land":
+                case "land":
                     MountainController.create();
                     break;
                 case "struct":
@@ -351,14 +352,15 @@ namespace FreeTrainSDL
         {
             //if (qview.offscreenBuffer != null)
             //{
-               //maybe do something? I don't know.
+            //maybe do something? I don't know.
             //}
             //
         }
 
         void Events_KeyDown(Sdl.SDL_KeyboardEvent e)
         {
-            switch (e.keysym.sym) {
+            switch (e.keysym.sym)
+            {
                 case (int)Sdl.SDLK_ESCAPE:
                 case (int)Sdl.SDLK_q:
                     quitFlag = true;
@@ -375,7 +377,7 @@ namespace FreeTrainSDL
             if (dragMode)
             {
                 scrollByDrag(new Point(e.x, e.y));
-               
+
             }
             else
             {
@@ -389,7 +391,7 @@ namespace FreeTrainSDL
                 old_y = e.y;
             }
 
-            
+
         }
         byte lastMouseState;
         void Events_MouseButtonDown(Sdl.SDL_MouseButtonEvent e)
@@ -435,22 +437,22 @@ namespace FreeTrainSDL
             int dragAccel = 1;
             //if (controller == null)
             //{
-                Point pt = this.dragStartScrollPos;
-                pt.X +=(curMousePos.X - dragStartMousePos.X) * dragAccel;
-                pt.Y += (curMousePos.Y - dragStartMousePos.Y) * dragAccel;
-                //pt.X *= -1;
-                //pt.Y *= -1;
-                //Console.WriteLine(pt);
-                scrollPos = pt;
-                qview.origin = scrollPos;
-                //if (qview.origin != scrollPos)
-                //{
-                //    dragStartMousePos = curMousePos;
-                //    dragStartScrollPos = curMousePos;
-                //    scrollPos = qview.origin;
-                //}
-                //Console.Write(scrollPos);
-                return true;
+            Point pt = this.dragStartScrollPos;
+            pt.X += (curMousePos.X - dragStartMousePos.X) * dragAccel;
+            pt.Y += (curMousePos.Y - dragStartMousePos.Y) * dragAccel;
+            //pt.X *= -1;
+            //pt.Y *= -1;
+            //Console.WriteLine(pt);
+            scrollPos = pt;
+            qview.origin = scrollPos;
+            //if (qview.origin != scrollPos)
+            //{
+            //    dragStartMousePos = curMousePos;
+            //    dragStartScrollPos = curMousePos;
+            //    scrollPos = qview.origin;
+            //}
+            //Console.Write(scrollPos);
+            return true;
             //}
             //return false;
         }
@@ -462,35 +464,35 @@ namespace FreeTrainSDL
 
         //private void Tick(object sender, TickEventArgs args)
         //{
-            //screen.Fill(Color.Black);
-            /*if (qview != null) {
-                controller = MainWindow.mainWindow.currentController;
-                clock = World.world.clock;
-                clock.tick();
-                clock.tick();
-                clock.tick();
-                clock.tick();
+        //screen.Fill(Color.Black);
+        /*if (qview != null) {
+            controller = MainWindow.mainWindow.currentController;
+            clock = World.world.clock;
+            clock.tick();
+            clock.tick();
+            clock.tick();
+            clock.tick();
 
-                qview.updateScreen();
+            qview.updateScreen();
              
-                //if (scrollPos.X == source_rect.X && scrollPos.Y == source_rect.Y)
-                //{
-                    //tst = screen.CreateScaledSurface(0.5);
-                 //   screen.Blit(qview.offscreenBuffer.handle, new Point(0,0), source_rect);
-              //screen.Draw(new SdlDotNet.Graphics.Primitives.Box(qview.offscreenBuffer.clipRect.Location, qview.offscreenBuffer.clipRect.Size),Color.Black);
-                  //Rectangle r = new Rectangle(0, 0, width / 2, height / 2);
+            //if (scrollPos.X == source_rect.X && scrollPos.Y == source_rect.Y)
+            //{
+                //tst = screen.CreateScaledSurface(0.5);
+             //   screen.Blit(qview.offscreenBuffer.handle, new Point(0,0), source_rect);
+          //screen.Draw(new SdlDotNet.Graphics.Primitives.Box(qview.offscreenBuffer.clipRect.Location, qview.offscreenBuffer.clipRect.Size),Color.Black);
+              //Rectangle r = new Rectangle(0, 0, width / 2, height / 2);
                     
-                    //screen.Blit(tst,new Point(0,0));
-                    //tst.Dispose();
+                //screen.Blit(tst,new Point(0,0));
+                //tst.Dispose();
                     
-                //}
-                //else
-                //{
-                    source_rect = new Rectangle(scrollPos, new Size(width, height));
-                    screen.Blit(qview.offscreenBuffer.handle, new Point(0, 0), source_rect);
-                //}
+            //}
+            //else
+            //{
+                source_rect = new Rectangle(scrollPos, new Size(width, height));
+                screen.Blit(qview.offscreenBuffer.handle, new Point(0, 0), source_rect);
+            //}
                 
-            }*/
+        }*/
 
         //    if (gui != null) {
         //        gui.updateGUIElements(width,height);
@@ -503,7 +505,7 @@ namespace FreeTrainSDL
 
         public void Dispose()
         {
-            
+
             weatherOverlay.Dispose();
             Dispose();
         }
