@@ -7,54 +7,65 @@ using freetrain.contributions.train;
 
 namespace freetrain.world.rail.cttrain
 {
-	/// <summary>
-	/// ColorConfigDialog
-	/// </summary>
-	public class ColorConfigDialog : Form
-	{
-		public ColorConfigDialog( ColorTestTrainCar car ) {
-			InitializeComponent();
-			this.car = car;
-			comboType.DataSource = ColoredTrainPictureContribution.list();
-			picture = ColoredTrainPictureContribution.list()[0];
-			colors = car.colors;
-			updateDialog();
-		}
+    /// <summary>
+    /// ColorConfigDialog
+    /// </summary>
+    public class ColorConfigDialog : Form
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="car"></param>
+        [CLSCompliant(false)]
+        public ColorConfigDialog(ColorTestTrainCar car)
+        {
+            InitializeComponent();
+            this.car = car;
+            comboType.DataSource = ColoredTrainPictureContribution.list();
+            picture = ColoredTrainPictureContribution.list()[0];
+            colors = car.colors;
+            updateDialog();
+        }
 
-		protected override void Dispose( bool disposing ) {
-			if( disposing && components != null)
-				components.Dispose();
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null)
+                components.Dispose();
+            base.Dispose(disposing);
+        }
 
-		private readonly ColorTestTrainCar car;
-		private ColoredTrainPictureContribution picture;
-		private Color[] colors;
+        private readonly ColorTestTrainCar car;
+        private ColoredTrainPictureContribution picture;
+        private Color[] colors;
 
-		#region Windows Form Designer generated code
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.PictureBox boxBase;
-		private System.Windows.Forms.Button buttonBase;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Button buttonCopy;
-		private System.Windows.Forms.ColorDialog colorDialog;
-		private System.Windows.Forms.Button buttonLine1;
-		private System.Windows.Forms.PictureBox boxLine1;
-		private System.Windows.Forms.Button buttonLine2;
-		private System.Windows.Forms.PictureBox boxLine2;
-		private System.Windows.Forms.Button buttonLine3;
-		private System.Windows.Forms.PictureBox boxLine3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.ComboBox comboType;
-		private System.ComponentModel.Container components = null;
-		/// <summary>
-		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を
-		/// コード エディタで変更しないでください。
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Windows Form Designer generated code
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox boxBase;
+        private System.Windows.Forms.Button buttonBase;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonCopy;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.Button buttonLine1;
+        private System.Windows.Forms.PictureBox boxLine1;
+        private System.Windows.Forms.Button buttonLine2;
+        private System.Windows.Forms.PictureBox boxLine2;
+        private System.Windows.Forms.Button buttonLine3;
+        private System.Windows.Forms.PictureBox boxLine3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboType;
+        private System.ComponentModel.Container components = null;
+        /// <summary>
+        /// デザイナ サポートに必要なメソッドです。このメソッドの内容を
+        /// コード エディタで変更しないでください。
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.label1 = new System.Windows.Forms.Label();
             this.boxBase = new System.Windows.Forms.PictureBox();
             this.buttonBase = new System.Windows.Forms.Button();
@@ -253,62 +264,71 @@ namespace freetrain.world.rail.cttrain
             ((System.ComponentModel.ISupportInitialize)(this.boxLine3)).EndInit();
             this.ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private void updateDialog() {
-			boxBase.BackColor = colors[0];
-			boxLine1.BackColor = colors[1];
-			boxLine2.BackColor = colors[2];
-			boxLine3.BackColor = colors[3];
-			car.picture = picture;
-			car.colors = colors;
-			World.world.onAllVoxelUpdated();	// redraw
-		}
+        private void updateDialog()
+        {
+            boxBase.BackColor = colors[0];
+            boxLine1.BackColor = colors[1];
+            boxLine2.BackColor = colors[2];
+            boxLine3.BackColor = colors[3];
+            car.picture = picture;
+            car.colors = colors;
+            World.world.onAllVoxelUpdated();	// redraw
+        }
 
-		private void buttonBase_Click(object sender, EventArgs e) {
-			colors[0] = selectColor(colors[0]);
-			updateDialog();
-		}
-		private void buttonLine1_Click(object sender, EventArgs e) {
-			colors[1] = selectColor(colors[1]);
-			updateDialog();
-		}
-		private void buttonLine2_Click(object sender, EventArgs e) {
-			colors[2] = selectColor(colors[2]);
-			updateDialog();
-		}
-		private void buttonLine3_Click(object sender, EventArgs e) {
-			colors[3] = selectColor(colors[3]);
-			updateDialog();
-		}
+        private void buttonBase_Click(object sender, EventArgs e)
+        {
+            colors[0] = selectColor(colors[0]);
+            updateDialog();
+        }
+        private void buttonLine1_Click(object sender, EventArgs e)
+        {
+            colors[1] = selectColor(colors[1]);
+            updateDialog();
+        }
+        private void buttonLine2_Click(object sender, EventArgs e)
+        {
+            colors[2] = selectColor(colors[2]);
+            updateDialog();
+        }
+        private void buttonLine3_Click(object sender, EventArgs e)
+        {
+            colors[3] = selectColor(colors[3]);
+            updateDialog();
+        }
 
-		private Color selectColor( Color org ) {
-			colorDialog.Color = org;
-			if(colorDialog.ShowDialog(this)==DialogResult.OK)
-				return colorDialog.Color;
-			else
-				return org;
-		}
+        private Color selectColor(Color org)
+        {
+            colorDialog.Color = org;
+            if (colorDialog.ShowDialog(this) == DialogResult.OK)
+                return colorDialog.Color;
+            else
+                return org;
+        }
 
-		private void buttonCopy_Click(object sender, System.EventArgs e) {
-			Clipboard.SetDataObject(
-				string.Format("<colorMap picture=\"{0}\" base=\"{1}\" line1=\"{2}\" line2=\"{3}\" line3=\"{4}\" />",
-					picture.id,
-					displayName(colors[0]),
-					displayName(colors[1]),
-					displayName(colors[2]),
-					displayName(colors[3])));
-		}
+        private void buttonCopy_Click(object sender, System.EventArgs e)
+        {
+            Clipboard.SetDataObject(
+                string.Format("<colorMap picture=\"{0}\" base=\"{1}\" line1=\"{2}\" line2=\"{3}\" line3=\"{4}\" />",
+                    picture.id,
+                    displayName(colors[0]),
+                    displayName(colors[1]),
+                    displayName(colors[2]),
+                    displayName(colors[3])));
+        }
 
-		private string displayName( Color c ) {
-			return string.Format("{0},{1},{2}", c.R, c.G, c.B);
-		}
+        private string displayName(Color c)
+        {
+            return string.Format("{0},{1},{2}", c.R, c.G, c.B);
+        }
 
-		private void comboType_SelectedIndexChanged(object sender, System.EventArgs e) {
-			picture = (ColoredTrainPictureContribution)comboType.SelectedItem;
-			updateDialog();
-		}
+        private void comboType_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            picture = (ColoredTrainPictureContribution)comboType.SelectedItem;
+            updateDialog();
+        }
 
-	}
+    }
 }
