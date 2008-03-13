@@ -1,3 +1,23 @@
+#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
 using System;
 using System.Drawing;
 using System.Xml;
@@ -19,6 +39,10 @@ namespace freetrain.contributions.train
 	[Serializable]
 	public class SymTrainCarImpl : TrainCarContribution
 	{
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
 		public SymTrainCarImpl( XmlElement e ) : base(e) {
 
 			levelSprites = new Sprite[8];
@@ -46,11 +70,22 @@ namespace freetrain.contributions.train
 		/// <summary> Sprites used to draw a car on a slope. 4 way from dir=0,2,4, and 6 </summary>
 		private readonly Sprite[] slopeSprites;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="display"></param>
+        /// <param name="pt"></param>
+        /// <param name="angle"></param>
 		public override void draw( Surface display, Point pt, int angle ) {
 			levelSprites[angle&7].draw( display, pt );
 		}
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="display"></param>
+        /// <param name="pt"></param>
+        /// <param name="angle"></param>
+        /// <param name="isClimbing"></param>
 		public override void drawSlope( Surface display, Point pt, Direction angle, bool isClimbing ) {
 			if(!isClimbing)		angle = angle.opposite;
 			slopeSprites[ angle.index/2 ].draw( display, pt );

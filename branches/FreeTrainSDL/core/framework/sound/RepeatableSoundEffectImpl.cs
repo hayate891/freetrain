@@ -1,3 +1,23 @@
+#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
 using System;
 using System.Collections;
 using freetrain.world;
@@ -6,77 +26,84 @@ using SDL.net;
 
 namespace freetrain.framework.sound
 {
-	/// <summary>
-	/// SoundEffect object that handles multiple
-	/// simultaneous requests in a smart way.
-	/// 
-	/// A sound that a train moves for example doesn't simply
-	/// play five sounds simultaneously when five trains are moving.
-	/// Instead, it plays just two sounds but with a short interval.
-	/// 
-	/// This implementation handles this kind of behavior.
-	/// </summary>
-	public class RepeatableSoundEffectImpl : SoundEffect
-	{
-		/// <summary>
-		/// </summary>
-		/// <param name="seg">Sound-effect object</param>
-		/// <param name="concurrentPlaybackMax">Number of maximum concurrent playback.</param>
-		/// <param name="intervalTime">Interval between two successive playbacks</param>
-		public RepeatableSoundEffectImpl( Segment seg, int concurrentPlaybackMax, int intervalTime ) {
-			this.segment = seg;
-			this.concurrentPlaybackMax = concurrentPlaybackMax;
-			this.intervalTime = intervalTime;
-		}
+    /// <summary>
+    /// SoundEffect object that handles multiple
+    /// simultaneous requests in a smart way.
+    /// 
+    /// A sound that a train moves for example doesn't simply
+    /// play five sounds simultaneously when five trains are moving.
+    /// Instead, it plays just two sounds but with a short interval.
+    /// 
+    /// This implementation handles this kind of behavior.
+    /// </summary>
+    public class RepeatableSoundEffectImpl : SoundEffect
+    {
+        /// <summary>
+        /// </summary>
+        /// <param name="seg">Sound-effect object</param>
+        /// <param name="concurrentPlaybackMax">Number of maximum concurrent playback.</param>
+        /// <param name="intervalTime">Interval between two successive playbacks</param>
+        public RepeatableSoundEffectImpl(Segment seg, int concurrentPlaybackMax, int intervalTime)
+        {
+            this.segment = seg;
+            this.concurrentPlaybackMax = concurrentPlaybackMax;
+            this.intervalTime = intervalTime;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="seg"></param>
+        public RepeatableSoundEffectImpl(Segment seg) : this(seg, 3, 200) { }
 
-		public RepeatableSoundEffectImpl( Segment seg ) : this(seg,3,200) {}
+        private readonly Segment segment;
 
-		private readonly Segment segment;
+        /// <summary>
+        /// SegmentState objects that represent the state
+        /// of segments being played.
+        /// </summary>
+        //private readonly ArrayList states = new ArrayList();
 
-		/// <summary>
-		/// SegmentState objects that represent the state
-		/// of segments being played.
-		/// </summary>
-		//private readonly ArrayList states = new ArrayList();
+        /// <summary>
+        /// Don't schedule more than this number of concurrent playback.
+        /// </summary>
+        private readonly int concurrentPlaybackMax;
 
-		/// <summary>
-		/// Don't schedule more than this number of concurrent playback.
-		/// </summary>
-		private readonly int concurrentPlaybackMax;
-
-		private readonly int intervalTime;
+        private readonly int intervalTime;
 
 
-		/// <summary>
-		/// Number of scheduled playbacks.
-		/// </summary>
-		private int queue = 0;
+        /// <summary>
+        /// Number of scheduled playbacks.
+        /// </summary>
+        private int queue = 0;
 
-		/// <summary> Count the number of simltaneously played sound. </summary>
-		/*private int countOverlap() {
-			while( states.Count!=0 && !((SegmentState)states[0]).isPlaying )
-				states.RemoveAt(0);
-			return states.Count;
-		}*/
+        /// <summary> Count the number of simltaneously played sound. </summary>
+        /*private int countOverlap() {
+            while( states.Count!=0 && !((SegmentState)states[0]).isPlaying )
+                states.RemoveAt(0);
+            return states.Count;
+        }*/
 
-		public void play( Location loc ) {
-			if( !MapView.isVisibleInAny(loc) )
-				return;
+        public void play(Location loc)
+        {
+            if (!MapView.isVisibleInAny(loc))
+                return;
 
-			/*if( countOverlap()+queue < concurrentPlaybackMax )*/
-				if( queue++ == 0 )
-					World.world.clock.endOfTurnHandlers += new EventHandler(onTurnEnd);
-		}
+            /*if( countOverlap()+queue < concurrentPlaybackMax )*/
+            if (queue++ == 0)
+                World.world.clock.endOfTurnHandlers += new EventHandler(onTurnEnd);
+        }
 
-		// called at the end of turn
-		private void onTurnEnd( object sender, EventArgs a ) {
-			int ms=0;
-			for( ; queue>0; queue--,ms+=intervalTime ) {
-				//SegmentState st = Core.soundEffectManager.play(segment,ms);
-				//if(st!=null)	states.Add(st);
+        // called at the end of turn
+        private void onTurnEnd(object sender, EventArgs a)
+        {
+            int ms = 0;
+            for (; queue > 0; queue--, ms += intervalTime)
+            {
+                //SegmentState st = Core.soundEffectManager.play(segment,ms);
+                //if(st!=null)	states.Add(st);
                 //Core.soundEffectManager.play(segment, ms);
                 segment.play();
-			}
-		}
-	}
+            }
+        }
+    }
 }

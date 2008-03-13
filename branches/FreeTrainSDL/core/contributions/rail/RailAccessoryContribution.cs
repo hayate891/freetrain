@@ -1,3 +1,23 @@
+#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
 using System;
 using System.Xml;
 using System.Drawing;
@@ -9,40 +29,71 @@ using freetrain.contributions.population;
 
 namespace freetrain.contributions.rail
 {
-	/// <summary>
-	/// Contribution that adds <c>TrafficVoxel.Accessory</c>
-	/// </summary>
-	[Serializable]
-	public abstract class RailAccessoryContribution : Contribution, IEntityBuilder
-	{
-		private readonly string _name;
+    /// <summary>
+    /// Contribution that adds <c>TrafficVoxel.Accessory</c>
+    /// </summary>
+    [Serializable]
+    public abstract class RailAccessoryContribution : Contribution, IEntityBuilder
+    {
+        private readonly string _name;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        public RailAccessoryContribution(XmlElement e)
+            : base(e)
+        {
+            _name = XmlUtil.selectSingleNode(e, "name").InnerText;
+        }
 
-		public RailAccessoryContribution( XmlElement e ) : base(e) {
-			_name = XmlUtil.selectSingleNode(e,"name").InnerText;
-		}
 
+        // TODO: do we need a method like
+        // void create( Location loc ) ?
 
-		// TODO: do we need a method like
-		// void create( Location loc ) ?
+        #region IEntityBuilder o
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual string name { get { return _name; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual Population population { get { return null; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual int price { get { return 0; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual double pricePerArea { get { return 0; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool computerCannotBuild { get { return false; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool playerCannotBuild { get { return true; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pixelSize"></param>
+        /// <returns></returns>
+        public abstract freetrain.framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="site"></param>
+        /// <returns></returns>
+        public abstract freetrain.controllers.ModalController createBuilder(freetrain.controllers.IControllerSite site);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="site"></param>
+        /// <returns></returns>
+        public abstract freetrain.controllers.ModalController createRemover(freetrain.controllers.IControllerSite site);
 
-		#region IEntityBuilder o
-		public virtual string name { get { return _name; } }
-
-		public virtual Population population { get { return null; } }
-
-		public virtual int price {	get {return 0;}	}
-		public virtual double pricePerArea {	get {return 0;}	}
-
-		public bool computerCannotBuild { get{ return false; } }
-
-		public bool playerCannotBuild {	get{ return true; }	}
-
-		public abstract freetrain.framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize);
-
-		public abstract freetrain.controllers.ModalController createBuilder(freetrain.controllers.IControllerSite site);
-
-		public abstract freetrain.controllers.ModalController createRemover(freetrain.controllers.IControllerSite site);
-
-		#endregion
-	}
+        #endregion
+    }
 }

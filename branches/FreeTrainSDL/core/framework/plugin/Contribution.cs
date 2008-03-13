@@ -65,6 +65,7 @@ namespace freetrain.framework.plugin
         /// but Contribution will be inherited multiple times, so it would be
         /// little awkward to pass a lot of parameters around.
         /// </summary>
+        /// <param name="_parent"></param>
         /// <param name="_baseUri"></param>
         internal void init(Plugin _parent, Uri _baseUri)
         {
@@ -178,6 +179,11 @@ namespace freetrain.framework.plugin
         internal sealed class ReferenceImpl : IObjectReference
         {
             private string id = null;
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="context"></param>
+            /// <returns></returns>
             public object GetRealObject(StreamingContext context)
             {
                 object o = Core.plugins.getContribution(id);

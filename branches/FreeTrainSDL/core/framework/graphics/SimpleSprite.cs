@@ -33,6 +33,13 @@ namespace freetrain.framework.graphics
     [Serializable]
     public class SimpleSprite : Sprite
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_picture"></param>
+        /// <param name="_offset"></param>
+        /// <param name="_origin"></param>
+        /// <param name="_size"></param>
         public SimpleSprite(Picture _picture, Point _offset, Point _origin, Size _size)
         {
             this.picture = _picture;
@@ -58,8 +65,15 @@ namespace freetrain.framework.graphics
         /// The area of the image to be drawn.
         /// </summary>
         protected readonly Point origin;
+        /// <summary>
+        /// 
+        /// </summary>
         protected readonly Size _size;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="surface"></param>
+        /// <param name="pt"></param>
         public virtual void draw(Surface surface, Point pt)
         {
             pt.X -= _offset.X;
@@ -76,7 +90,11 @@ namespace freetrain.framework.graphics
             pt.Y -= _offset.Y;
             surface.bltShape(pt, picture.surface, origin, _size, color);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="surface"></param>
+        /// <param name="pt"></param>
         public virtual void drawAlpha(Surface surface, Point pt)
         {
             pt.X -= _offset.X;
@@ -84,8 +102,20 @@ namespace freetrain.framework.graphics
             surface.bltAlpha(pt, picture.surface, origin, _size);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Size size { get { return _size; } }
+        /// <summary>
+        /// 
+        /// </summary>
         public Point offset { get { return _offset; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public bool HitTest(int x, int y) { return picture.surface.HitTest(x, y); }
     }
 
@@ -95,6 +125,14 @@ namespace freetrain.framework.graphics
     /// </summary>
     public class SimpleSpriteFactory : SpriteFactory
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="picture"></param>
+        /// <param name="offset"></param>
+        /// <param name="origin"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
         public override Sprite createSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new SimpleSprite(picture, offset, origin, size);
