@@ -25,9 +25,19 @@ using freetrain.framework.plugin;
 
 namespace freetrain.world.rail
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public enum JunctionRoute
     {
-        Straight, Curve
+        /// <summary>
+        /// 
+        /// </summary>
+        Straight, 
+        /// <summary>
+        /// 
+        /// </summary>
+        Curve
     }
 
     /// <summary>

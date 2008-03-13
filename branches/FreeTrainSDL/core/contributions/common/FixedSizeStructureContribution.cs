@@ -77,6 +77,7 @@ namespace freetrain.contributions.common
         }
 
         /// <summary>Price of this structure.</summary>
+        [CLSCompliant(false)]
         protected readonly int _price;			// TODO: should be moved up
         /// <summary>
         /// 
@@ -85,6 +86,7 @@ namespace freetrain.contributions.common
         /// <summary>
         /// 
         /// </summary>
+        [CLSCompliant(false)]
         protected readonly double _ppa;
         /// <summary>
         /// 

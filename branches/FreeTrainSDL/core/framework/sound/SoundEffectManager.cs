@@ -62,12 +62,12 @@ namespace freetrain.framework.sound
 
         //private readonly Performance performance;
 
-        /// <summary>
-        /// Internal method for the SoundEffect class.
-        /// 
-        /// Plays a sound segment, if the sound effect is turned on.
-        /// </summary>
-        /// <returns>non-null if the sound is actually played.</returns>
+        ///// <summary>
+        ///// Internal method for the SoundEffect class.
+        ///// 
+        ///// Plays a sound segment, if the sound effect is turned on.
+        ///// </summary>
+        ///// <returns>non-null if the sound is actually played.</returns>
         /*internal SegmentState play( Segment seg, int leadTime ) {
             if( !Core.options.enableSoundEffect|| !available )	return null;
 

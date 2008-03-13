@@ -1005,9 +1005,6 @@
       <Name>SDL.net</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="util\video\" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>rem del $(ProjectDir)\obj\Debug\*.PDB</PreBuildEvent>

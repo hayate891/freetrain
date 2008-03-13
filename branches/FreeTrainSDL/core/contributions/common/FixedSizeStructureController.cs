@@ -1,4 +1,24 @@
-﻿using System;
+﻿#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using freetrain.controllers;
@@ -10,81 +30,137 @@ using freetrain.world.structs;
 
 namespace freetrain.contributions.common
 {
-	/// <summary>
-	/// FixedSizeStructureController
-	/// </summary>
-	public class FixedSizeStructurePlacementController : CubeSelectorController, MapOverlay
-	{
-		protected readonly FixedSizeStructureContribution contrib;
+    /// <summary>
+    /// FixedSizeStructureController
+    /// </summary>
+    public class FixedSizeStructurePlacementController : CubeSelectorController, MapOverlay
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        protected readonly FixedSizeStructureContribution contrib;
 
-		private readonly AlphaBlendSpriteSet alphaSprites;
-
-
-
-		public FixedSizeStructurePlacementController( FixedSizeStructureContribution _contrib, IControllerSite _site )
-			: base( _contrib.size, _site ) {
-			this.contrib = _contrib;
-			this.alphaSprites = new AlphaBlendSpriteSet( contrib.sprites );
-		}
-
-		protected override void onSelected( Cube cube ) {
-			if( contrib.canBeBuilt(cube.corner,ControlMode.player) ) {
-				MainWindow.showError("Can not build");
-				//! MainWindow.showError("設置できません");
-			} else {
-				CompletionHandler handler = new CompletionHandler(contrib,cube.corner,true);
-				new ConstructionSite( cube.corner, new EventHandler(handler.handle), contrib.size );
-			}
-		}
-
-		public override void onDetached() {
-			alphaSprites.Dispose();
-		}
+        private readonly AlphaBlendSpriteSet alphaSprites;
 
 
-		public void drawBefore( QuarterViewDrawer view, DrawContextEx surface ) {}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_contrib"></param>
+        /// <param name="_site"></param>
+        public FixedSizeStructurePlacementController(FixedSizeStructureContribution _contrib, IControllerSite _site)
+            : base(_contrib.size, _site)
+        {
+            this.contrib = _contrib;
+            this.alphaSprites = new AlphaBlendSpriteSet(contrib.sprites);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cube"></param>
+        protected override void onSelected(Cube cube)
+        {
+            if (contrib.canBeBuilt(cube.corner, ControlMode.player))
+            {
+                MainWindow.showError("Can not build");
+                //! MainWindow.showError("設置できません");
+            }
+            else
+            {
+                CompletionHandler handler = new CompletionHandler(contrib, cube.corner, true);
+                new ConstructionSite(cube.corner, new EventHandler(handler.handle), contrib.size);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void onDetached()
+        {
+            alphaSprites.Dispose();
+        }
 
-		public void drawVoxel( QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt ) {
-			if( currentCube.contains(loc) )
-				alphaSprites.getSprite( loc-this.location ).drawAlpha( canvas.surface, pt );
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="surface"></param>
+        public void drawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="canvas"></param>
+        /// <param name="loc"></param>
+        /// <param name="pt"></param>
+        public void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        {
+            if (currentCube.contains(loc))
+                alphaSprites.getSprite(loc - this.location).drawAlpha(canvas.surface, pt);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="surface"></param>
+        public void drawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
 
-		public void drawAfter( QuarterViewDrawer view, DrawContextEx surface ) {}
 
-
-		[Serializable]
-		private class CompletionHandler {
-			internal CompletionHandler( FixedSizeStructureContribution contribution, Location loc, bool owned ) {
-				this.contribution = contribution;
-				this.loc = loc;
-				this.owned = owned;
-			}
-			private readonly FixedSizeStructureContribution contribution;
-			private readonly Location loc;
-			private readonly bool owned;
-			public void handle( object sender, EventArgs args ) {
-				contribution.create(loc,owned);
-			}
-		}
-	}
-
-	public class FixedSizeStructureRemovalController : CubeSelectorController
-	{
-		protected readonly FixedSizeStructureContribution contrib;
-
-		public FixedSizeStructureRemovalController( FixedSizeStructureContribution _contrib, IControllerSite _site )
-			: base( _contrib.size, _site ) {
-			this.contrib = _contrib;
-		}
-
-		protected override void onSelected( Cube cube ) {
-			PThreeDimStructure s = World.world.getEntityAt(cube.corner) as PThreeDimStructure;
-			if( s==null || s.type!=contrib ) {
-				MainWindow.showError("Wrong type");
-				//! MainWindow.showError("種類が違います");
-				return;
-			}
-			s.remove();
-		}
-	}
+        [Serializable]
+        private class CompletionHandler
+        {
+            internal CompletionHandler(FixedSizeStructureContribution contribution, Location loc, bool owned)
+            {
+                this.contribution = contribution;
+                this.loc = loc;
+                this.owned = owned;
+            }
+            private readonly FixedSizeStructureContribution contribution;
+            private readonly Location loc;
+            private readonly bool owned;
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="args"></param>
+            public void handle(object sender, EventArgs args)
+            {
+                contribution.create(loc, owned);
+            }
+        }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    public class FixedSizeStructureRemovalController : CubeSelectorController
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        protected readonly FixedSizeStructureContribution contrib;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_contrib"></param>
+        /// <param name="_site"></param>
+        public FixedSizeStructureRemovalController(FixedSizeStructureContribution _contrib, IControllerSite _site)
+            : base(_contrib.size, _site)
+        {
+            this.contrib = _contrib;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cube"></param>
+        protected override void onSelected(Cube cube)
+        {
+            PThreeDimStructure s = World.world.getEntityAt(cube.corner) as PThreeDimStructure;
+            if (s == null || s.type != contrib)
+            {
+                MainWindow.showError("Wrong type");
+                //! MainWindow.showError("種類が違います");
+                return;
+            }
+            s.remove();
+        }
+    }
 }

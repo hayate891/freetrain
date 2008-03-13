@@ -64,6 +64,7 @@ namespace freetrain.contributions.land
         public Size Grid { get { return _grid; } }
 
         /// <summary> Price of the land per voxel. </summary>
+        [CLSCompliant(false)]
         protected readonly int _price;
         /// <summary>
         /// 

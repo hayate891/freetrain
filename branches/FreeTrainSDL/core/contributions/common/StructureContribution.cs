@@ -199,6 +199,7 @@ namespace freetrain.contributions.common
             /// <summary>
             /// 
             /// </summary>
+            [CLSCompliant(false)]
             protected readonly int _price;
 
             #region IEntityBuilder o

@@ -59,6 +59,7 @@ namespace freetrain.framework.graphics
         /// The point in the image that will be aligned to
         /// the left-top corner of a voxel.
         /// </summary>
+        [CLSCompliant(false)]
         protected readonly Point _offset;
 
         /// <summary>
@@ -68,6 +69,7 @@ namespace freetrain.framework.graphics
         /// <summary>
         /// 
         /// </summary>
+        [CLSCompliant(false)]
         protected readonly Size _size;
         /// <summary>
         /// 

@@ -109,7 +109,11 @@ namespace freetrain.world.accounting
                 _liquidAssets += 100000000;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="delta"></param>
+        /// <param name="genre"></param>
         public void spend(long delta, AccountGenre genre)
         {
             transact(delta, genre);
@@ -117,7 +121,11 @@ namespace freetrain.world.accounting
             if (genre.onUpdate != null) genre.onUpdate();
             if (onAccountChange != null) onAccountChange();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="delta"></param>
+        /// <param name="genre"></param>
         public void earn(long delta, AccountGenre genre)
         {
             transact(-delta, genre);

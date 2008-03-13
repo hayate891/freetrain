@@ -1,3 +1,23 @@
+#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -7,101 +27,152 @@ using freetrain.views.map;
 
 namespace freetrain.controllers
 {
-	/// <summary>
-	/// ModalController that selects a cube of the fixed size.
-	/// </summary>
-	public abstract class CubeSelectorController : ModalController
-	{
-		/// <summary>Constant</summary>
-		protected static readonly Location UNPLACED = world.Location.UNPLACED;
+    /// <summary>
+    /// ModalController that selects a cube of the fixed size.
+    /// </summary>
+    public abstract class CubeSelectorController : ModalController
+    {
+        /// <summary>Constant</summary>
+        protected static readonly Location UNPLACED = world.Location.UNPLACED;
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Location location = UNPLACED;
+        /// <summary>
+        /// 
+        /// </summary>
+        protected readonly Distance size;
+        /// <summary>
+        /// 
+        /// </summary>
+        protected readonly IControllerSite site;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_size"></param>
+        /// <param name="_site"></param>
+        public CubeSelectorController(Distance _size, IControllerSite _site)
+        {
+            this.size = _size;
+            this.site = _site;
+        }
 
-		protected Location location = UNPLACED;
+        //
+        // methods that can/should be overrided by derived classes
+        //
 
-		protected readonly Distance size;
+        /// <summary>
+        /// Called when the selection is completed.
+        /// </summary>
+        protected abstract void onSelected(Cube cube);
 
-		protected readonly IControllerSite site;
-		
-		public CubeSelectorController( Distance _size, IControllerSite _site ) {
-			this.size = _size;
-			this.site = _site;
-		}
+        /// <summary>
+        /// Called when the user wants to cancel the modal controller.
+        /// </summary>
+        protected virtual void onCanceled()
+        {
+            site.close();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual string name { get { return site.name; } }
 
-	//
-	// methods that can/should be overrided by derived classes
-	//
-
-		/// <summary>
-		/// Called when the selection is completed.
-		/// </summary>
-		protected abstract void onSelected( Cube cube );
-
-		/// <summary>
-		/// Called when the user wants to cancel the modal controller.
-		/// </summary>
-		protected virtual void onCanceled() {
-			site.close();
-		}
-
-		public virtual string name { get { return site.name; } }
-
-		// can be overrided by a derived class to return another object.
-		public virtual MapOverlay overlay {
-			get {
-				// return this object if it implements MapOverlay by itself.
-				return this as MapOverlay;
-			}
-		}
-
-
-	//
-	// convenience methods
-		/// <summary>
-		/// North-west corner of the selected region.
-		/// </summary>
-		protected Cube currentCube {
-			get {
-				Debug.Assert( location!=UNPLACED );
-				return Cube.createExclusive( location, size );
-			}
-		}
-
-
-	//
-	// internal logic
-	//
-
-
-		public virtual LocationDisambiguator disambiguator { get { return GroundDisambiguator.theInstance; } }
+        // can be overrided by a derived class to return another object.
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual MapOverlay overlay
+        {
+            get
+            {
+                // return this object if it implements MapOverlay by itself.
+                return this as MapOverlay;
+            }
+        }
 
 
-		public virtual void onClick(MapViewWindow view, Location loc, Point ab) {
-			onSelected(Cube.createExclusive(loc,size));
-		}
+        //
+        // convenience methods
+        /// <summary>
+        /// North-west corner of the selected region.
+        /// </summary>
+        protected Cube currentCube
+        {
+            get
+            {
+                Debug.Assert(location != UNPLACED);
+                return Cube.createExclusive(location, size);
+            }
+        }
 
-		public virtual void onRightClick( MapViewWindow source, Location loc, Point ab ) {
-			onCanceled();
-		}
 
-		public virtual void onMouseMove(MapViewWindow view, Location loc, Point ab ) {
-			World w = World.world;
+        //
+        // internal logic
+        //
 
-			if(location!=loc) {
-				// the current location is moved.
-				// update the screen
-				w.onVoxelUpdated(currentCube);
-				location = loc;
-				w.onVoxelUpdated(currentCube);
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual LocationDisambiguator disambiguator { get { return GroundDisambiguator.theInstance; } }
 
-		public virtual void onAttached() {}
-		public virtual void onDetached() {
-			// redraw the entire surface to erase any left-over from this controller
-			World.world.onAllVoxelUpdated();
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="loc"></param>
+        /// <param name="ab"></param>
+        public virtual void onClick(MapViewWindow view, Location loc, Point ab)
+        {
+            onSelected(Cube.createExclusive(loc, size));
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="loc"></param>
+        /// <param name="ab"></param>
+        public virtual void onRightClick(MapViewWindow source, Location loc, Point ab)
+        {
+            onCanceled();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="loc"></param>
+        /// <param name="ab"></param>
+        public virtual void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        {
+            World w = World.world;
 
-		public virtual void close() {
-			onCanceled();
-		}
-	}
+            if (location != loc)
+            {
+                // the current location is moved.
+                // update the screen
+                w.onVoxelUpdated(currentCube);
+                location = loc;
+                w.onVoxelUpdated(currentCube);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual void onAttached() { }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual void onDetached()
+        {
+            // redraw the entire surface to erase any left-over from this controller
+            World.world.onAllVoxelUpdated();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual void close()
+        {
+            onCanceled();
+        }
+    }
 }
