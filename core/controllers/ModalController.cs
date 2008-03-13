@@ -22,7 +22,19 @@ namespace freetrain.controllers
 		/// <param name="loc">(X,Y,Z) location that was clicked</param>
 		/// <param name="ab">(A,B) location that was clicked.</param>
 		void onClick( MapViewWindow source, Location loc, Point ab );
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="loc"></param>
+        /// <param name="ab"></param>
 		void onRightClick( MapViewWindow source, Location loc, Point ab );
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="loc"></param>
+        /// <param name="ab"></param>
 		void onMouseMove( MapViewWindow source, Location loc, Point ab );
 
 		/// <summary>

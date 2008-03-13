@@ -12,6 +12,10 @@ namespace freetrain.world
 	/// between GDI DC and DirectDraw.
 	/// </summary>
 	public class DrawContext : IDisposable {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
 		public DrawContext( Surface s ) { this._surface=s; }
 
 		private readonly Surface _surface;
@@ -24,6 +28,9 @@ namespace freetrain.world
 				return _graphics.graphics;
 			}
 		}*/
+        /// <summary>
+        /// 
+        /// </summary>
 		public Surface surface {
 			get {
 				/*if( _graphics!=null ) {
