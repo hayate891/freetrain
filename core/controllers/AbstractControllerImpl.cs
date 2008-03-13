@@ -76,6 +76,7 @@ namespace freetrain.controllers
         /// <summary>
         /// 
         /// </summary>
+        [CLSCompliant(false)]
         public void close()
         {
             base.Close();

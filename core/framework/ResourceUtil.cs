@@ -36,6 +36,11 @@ namespace freetrain.framework
     /// </summary>
     public abstract class ResourceUtil
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static string findSystemResource(string name)
         {
             string path;
@@ -150,6 +155,9 @@ namespace freetrain.framework
         private static Picture emptyChips = loadSystemPicture("EmptyChip.bmp", "EmptyChip_n.bmp");
         private static Picture cursorChips = loadSystemPicture("cursorChip.bmp", "cursorChip.bmp");
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static Sprite emptyChip
         {
             get

@@ -54,6 +54,10 @@ namespace freetrain.controllers
     /// </summary>
     public class DrawContextEx : DrawContext
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="surface"></param>
         public DrawContextEx(Surface surface) : base(surface) { }
 
         /// <summary>

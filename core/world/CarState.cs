@@ -31,25 +31,74 @@ namespace freetrain.world
     [Serializable]
     public abstract class CarState
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Inside asInside() { return this as Inside; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Unplaced asUnplaced() { return this as Unplaced; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Outside asOutside() { return this as Outside; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Placed asPlaced() { return this as Placed; }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public bool isInside { get { return this is Inside; } }
+        /// <summary>
+        /// 
+        /// </summary>
         public bool isUnplaced { get { return this is Unplaced; } }
+        /// <summary>
+        /// 
+        /// 
+        /// </summary>
         public bool isOutside { get { return this is Outside; } }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="visitor"></param>
+        /// <returns></returns>
         public abstract object accept(Visitor visitor);
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public interface Visitor
         {
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="state"></param>
+            /// <returns></returns>
             object onInside(Inside state);
+            /// <summary>
+            /// 
+            /// 
+            /// </summary>
+            /// <param name="state"></param>
+            /// <returns></returns>
             object onUnplaced(Unplaced state);
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="state"></param>
+            /// <returns></returns>
             object onOutsie(Outside state);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         [Serializable]
         public abstract class Placed : CarState
         {
@@ -67,7 +116,11 @@ namespace freetrain.world
             /// Voxel that represents the location.
             /// </summary>
             public TrafficVoxel voxel { get { return (TrafficVoxel)World.world[location]; } }
-
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="loc"></param>
+            /// <param name="dir"></param>
             public Placed(Location loc, Direction dir)
             {
                 this.location = loc;
@@ -81,7 +134,17 @@ namespace freetrain.world
         [Serializable]
         public class Inside : Placed
         {
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="loc"></param>
+            /// <param name="dir"></param>
             public Inside(Location loc, Direction dir) : base(loc, dir) { }
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="visitor"></param>
+            /// <returns></returns>
             public override object accept(Visitor visitor)
             {
                 return visitor.onInside(this);
@@ -96,16 +159,29 @@ namespace freetrain.world
         {
             private Unplaced() { }
 
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="ctxt"></param>
+            /// <returns></returns>
             public object GetRealObject(StreamingContext ctxt)
             {
                 return theInstance;
             }
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="visitor"></param>
+            /// <returns></returns>
             public override object accept(Visitor visitor)
             {
                 return visitor.onUnplaced(this);
             }
 
             // singleton pattern.
+            /// <summary>
+            /// 
+            /// </summary>
             public readonly static CarState theInstance = new Unplaced();
         }
 
@@ -121,12 +197,22 @@ namespace freetrain.world
             /// Decreasing counter. When it hits zero, the car will be back to the world.
             /// </summary>
             public readonly int timeLeft;
-
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="loc"></param>
+            /// <param name="dir"></param>
+            /// <param name="_timeLeft"></param>
             public Outside(Location loc, Direction dir, int _timeLeft)
                 : base(loc, dir)
             {
                 this.timeLeft = _timeLeft;
             }
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="visitor"></param>
+            /// <returns></returns>
             public override object accept(Visitor visitor)
             {
                 return visitor.onOutsie(this);

@@ -1,3 +1,23 @@
+#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
 using System;
 using System.Drawing;
 using freetrain.framework;
@@ -14,6 +34,9 @@ namespace freetrain.world.structs
 	[Serializable]
 	public abstract class Structure : Entity
 	{
+        /// <summary>
+        /// 
+        /// </summary>
 		public Structure() {
 		}
 
@@ -21,10 +44,25 @@ namespace freetrain.world.structs
 		// actually none of the methods are implemented.
 		// we just require Structure to implement Entity
 		#region Entity implementation
+        /// <summary>
+        /// 
+        /// </summary>
 		public abstract bool isSilentlyReclaimable { get; }
+        /// <summary>
+        /// 
+        /// </summary>
 		public abstract bool isOwned { get; }
+        /// <summary>
+        /// 
+        /// </summary>
 		public abstract void remove();
+        /// <summary>
+        /// 
+        /// </summary>
 		public abstract int entityValue { get; }
+        /// <summary>
+        /// 
+        /// </summary>
 		public abstract event EventHandler onEntityRemoved;
 		#endregion
 
@@ -50,6 +88,13 @@ namespace freetrain.world.structs
 //		{
 //			return canBeBuilt(loc,sz,ControlMode.player);
 //		}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loc"></param>
+        /// <param name="sz"></param>
+        /// <param name="mode"></param>
+        /// <returns></returns>
 		public static bool canBeBuilt( Location loc, Distance sz, ControlMode mode ) 
 		{
 			if(mode == ControlMode.com)
@@ -84,7 +129,11 @@ namespace freetrain.world.structs
 				}
 			return true;
 		}
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="aspect"></param>
+        /// <returns></returns>
 		public virtual object queryInterface( Type aspect ) { return null; }
 
 
@@ -93,10 +142,19 @@ namespace freetrain.world.structs
 		/// </summary>
 		[Serializable]
 		protected internal abstract class StructureVoxel : AbstractVoxelImpl {
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="_owner"></param>
+            /// <param name="_loc"></param>
 			protected StructureVoxel( Structure _owner, Location _loc ) : base(_loc) {
 				this.owner = _owner;
 			}
-
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="_owner"></param>
+            /// <param name="wloc"></param>
 			protected StructureVoxel( Structure _owner, WorldLocator wloc ) : base(wloc) {
 				this.owner = _owner;
 			}
@@ -105,7 +163,9 @@ namespace freetrain.world.structs
 			/// The structure object to which this voxel belongs.
 			/// </summary>
 			public readonly Structure owner;
-
+            /// <summary>
+            /// 
+            /// </summary>
 			public override Entity entity { get { return owner; } }
 
 			/// <summary>

@@ -1,4 +1,24 @@
-﻿using System;
+﻿#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
+using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -12,113 +32,126 @@ using freetrain.world.accounting;
 
 namespace freetrain.world.rail
 {
-	/// <summary>
-	/// Dialog box to buy trains
-	/// </summary>
-	public class TrainTradingDialog : Form
-	{
-		public TrainTradingDialog() {
-			InitializeComponent();
-			//handler = new OptionChangedHandler(updatePreview);
-			World.world.viewOptions.OnViewOptionChanged+=new OptionChangedHandler(updatePreview);
-			Bitmap bmp = ResourceUtil.loadSystemBitmap("DayNight.bmp");
-			buttonImages.TransparentColor = bmp.GetPixel(0,0);
-			buttonImages.Images.AddStrip(bmp);
-			
-			tbDay.Pushed=(World.world.viewOptions.nightSpriteMode==NightSpriteMode.AlwaysDay);
-			tbNight.Pushed=(World.world.viewOptions.nightSpriteMode==NightSpriteMode.AlwaysNight);
+    /// <summary>
+    /// Dialog box to buy trains
+    /// </summary>
+    public class TrainTradingDialog : Form
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public TrainTradingDialog()
+        {
+            InitializeComponent();
+            //handler = new OptionChangedHandler(updatePreview);
+            World.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            Bitmap bmp = ResourceUtil.loadSystemBitmap("DayNight.bmp");
+            buttonImages.TransparentColor = bmp.GetPixel(0, 0);
+            buttonImages.Images.AddStrip(bmp);
 
-			// organize trains into a tree
-			IDictionary types = new SortedList();
-			foreach( TrainContribution tc in Core.plugins.trains ) {
-				IDictionary company = (IDictionary)types[tc.companyName];
-				if( company==null )
-					types[tc.companyName] = company = new SortedList();
+            tbDay.Pushed = (World.world.viewOptions.nightSpriteMode == NightSpriteMode.AlwaysDay);
+            tbNight.Pushed = (World.world.viewOptions.nightSpriteMode == NightSpriteMode.AlwaysNight);
 
-				IDictionary type = (IDictionary)company[tc.typeName];
-				if( type==null )
-					company[tc.typeName] = type = new SortedList();
+            // organize trains into a tree
+            IDictionary types = new SortedList();
+            foreach (TrainContribution tc in Core.plugins.trains)
+            {
+                IDictionary company = (IDictionary)types[tc.companyName];
+                if (company == null)
+                    types[tc.companyName] = company = new SortedList();
 
-				type.Add( tc.nickName, tc );
-			}
+                IDictionary type = (IDictionary)company[tc.typeName];
+                if (type == null)
+                    company[tc.typeName] = type = new SortedList();
 
-			// build a tree
-			foreach( DictionaryEntry company in types ) {
-				TreeNode cn = new TreeNode((string)company.Key);
-				typeTree.Nodes.Add(cn);
+                type.Add(tc.nickName, tc);
+            }
 
-				foreach( DictionaryEntry type in (IDictionary)company.Value ) {
-					IDictionary t = (IDictionary)type.Value;
-					if(t.Count==1) {
-						addTrains( cn, t );
-					} else {
-						TreeNode tn = new TreeNode((string)type.Key);
-						cn.Nodes.Add(tn);
+            // build a tree
+            foreach (DictionaryEntry company in types)
+            {
+                TreeNode cn = new TreeNode((string)company.Key);
+                typeTree.Nodes.Add(cn);
 
-						addTrains( tn, t );
-					}
-				}
-			}
+                foreach (DictionaryEntry type in (IDictionary)company.Value)
+                {
+                    IDictionary t = (IDictionary)type.Value;
+                    if (t.Count == 1)
+                    {
+                        addTrains(cn, t);
+                    }
+                    else
+                    {
+                        TreeNode tn = new TreeNode((string)type.Key);
+                        cn.Nodes.Add(tn);
 
-			onTypeChanged(null,null);
-		}
+                        addTrains(tn, t);
+                    }
+                }
+            }
 
-		private void addTrains( TreeNode parent, IDictionary list ) {
-			foreach( DictionaryEntry trainEntry in list ) {
-				TrainContribution t = (TrainContribution)trainEntry.Value;
+            onTypeChanged(null, null);
+        }
 
-				TreeNode trainNode = new TreeNode(t.name);
-				trainNode.Tag = t;
-				parent.Nodes.Add(trainNode);
-			}
-		}
+        private void addTrains(TreeNode parent, IDictionary list)
+        {
+            foreach (DictionaryEntry trainEntry in list)
+            {
+                TrainContribution t = (TrainContribution)trainEntry.Value;
 
-		/// <summary>
-		/// 使用されているリソースに後処理を実行します。
-		/// </summary>
-		protected override void Dispose( bool disposing ) {
-			if( disposing && components != null)
-				components.Dispose();
-			base.Dispose( disposing );
-		}
+                TreeNode trainNode = new TreeNode(t.name);
+                trainNode.Tag = t;
+                parent.Nodes.Add(trainNode);
+            }
+        }
 
-		#region Windows Form Designer generated code
+        /// <summary>
+        /// 使用されているリソースに後処理を実行します。
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null)
+                components.Dispose();
+            base.Dispose(disposing);
+        }
 
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.NumericUpDown length;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Button buttonOK;
-		private System.Windows.Forms.Button buttonCancel;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label speed;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Label totalPrice;
-		private System.Windows.Forms.NumericUpDown count;
-		private System.Windows.Forms.Label passenger;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.TreeView typeTree;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox description;
-		private System.Windows.Forms.Label author;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label name;
-		private System.Windows.Forms.PictureBox preview;
-		private System.Windows.Forms.ToolBarButton tbDay;
-		private System.Windows.Forms.ToolBarButton tbNight;
-		private System.Windows.Forms.ImageList buttonImages;
-		private System.Windows.Forms.ToolBar toolBarDayNight;
-		private System.ComponentModel.IContainer components;
-		
-		/// <summary>
-		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を
-		/// コード エディタで変更しないでください。
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Windows Form Designer generated code
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown length;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label speed;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label totalPrice;
+        private System.Windows.Forms.NumericUpDown count;
+        private System.Windows.Forms.Label passenger;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TreeView typeTree;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox description;
+        private System.Windows.Forms.Label author;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.PictureBox preview;
+        private System.Windows.Forms.ToolBarButton tbDay;
+        private System.Windows.Forms.ToolBarButton tbNight;
+        private System.Windows.Forms.ImageList buttonImages;
+        private System.Windows.Forms.ToolBar toolBarDayNight;
+        private System.ComponentModel.IContainer components;
+
+        /// <summary>
+        /// デザイナ サポートに必要なメソッドです。このメソッドの内容を
+        /// コード エディタで変更しないでください。
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.length = new System.Windows.Forms.NumericUpDown();
@@ -480,132 +513,147 @@ namespace freetrain.world.rail
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private TrainContribution selectedTrain {
-			get {
-				TreeNode n = typeTree.SelectedNode;
-				if(n==null)	return null;
-				return (TrainContribution)n.Tag;
-			}
-		}
+        private TrainContribution selectedTrain
+        {
+            get
+            {
+                TreeNode n = typeTree.SelectedNode;
+                if (n == null) return null;
+                return (TrainContribution)n.Tag;
+            }
+        }
 
-		private long getTotalPrice() {
-			return (long)(selectedTrain.price(1) * length.Value * count.Value);
-		}
+        private long getTotalPrice()
+        {
+            return (long)(selectedTrain.price(1) * length.Value * count.Value);
+        }
 
-		private void onTypeChanged(object sender, System.Windows.Forms.TreeViewEventArgs e) {
-			updatePreview();
-		}
+        private void onTypeChanged(object sender, System.Windows.Forms.TreeViewEventArgs e)
+        {
+            updatePreview();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void updatePreview()
+        {
+            length.Enabled = count.Enabled = buttonOK.Enabled = (selectedTrain != null);
 
-		public void updatePreview() 
-		{
-			length.Enabled = count.Enabled = buttonOK.Enabled = (selectedTrain!=null);
+            Image im = preview.Image;
+            if (im != null)
+            {
+                preview.Image = null;
+                im.Dispose();
+            }
 
-			Image im = preview.Image;
-			if(im!=null) {
-				preview.Image = null;
-				im.Dispose();
-			}
-
-			if( selectedTrain!=null ) {
-				name.Text = selectedTrain.name;
-				author.Text = selectedTrain.author;
-				description.Text = selectedTrain.description;
-				speed.Text = selectedTrain.speedDisplayName;
+            if (selectedTrain != null)
+            {
+                name.Text = selectedTrain.name;
+                author.Text = selectedTrain.author;
+                description.Text = selectedTrain.description;
+                speed.Text = selectedTrain.speedDisplayName;
                 length.Maximum = selectedTrain.maxLength;
                 length.Minimum = selectedTrain.minLength;
                 //if (length.Value > selectedTrain.maxLength) length.Value = selectedTrain.maxLength;
-				using( PreviewDrawer pd = selectedTrain.createPreview( preview.ClientSize, (int)length.Value ) ) {
-					preview.Image = pd.createBitmap();
-				}
+                using (PreviewDrawer pd = selectedTrain.createPreview(preview.ClientSize, (int)length.Value))
+                {
+                    preview.Image = pd.createBitmap();
+                }
 
-				if( count.Value==0 )
-					// if the user changes the type, s/he is going to buy another train.
-					// thus change the value to 1.
-					count.Value=1;
+                if (count.Value == 0)
+                    // if the user changes the type, s/he is going to buy another train.
+                    // thus change the value to 1.
+                    count.Value = 1;
 
-				onAmountChanged(null,null);
-			} else {
-				name.Text = author.Text = description.Text = speed.Text = "";
-			}
-		}
+                onAmountChanged(null, null);
+            }
+            else
+            {
+                name.Text = author.Text = description.Text = speed.Text = "";
+            }
+        }
 
-		private void onAmountChanged(object sender, EventArgs e) {
-			if( count.Value!=0 && selectedTrain!=null ) {
-				TrainCarContribution[] cars = selectedTrain.create((int)length.Value);
-				if( cars!=null ) {
-					buttonOK.Enabled = true;
+        private void onAmountChanged(object sender, EventArgs e)
+        {
+            if (count.Value != 0 && selectedTrain != null)
+            {
+                TrainCarContribution[] cars = selectedTrain.create((int)length.Value);
+                if (cars != null)
+                {
+                    buttonOK.Enabled = true;
 
-					// TODO: non-linear price support
-					totalPrice.Text = getTotalPrice().ToString();
+                    // TODO: non-linear price support
+                    totalPrice.Text = getTotalPrice().ToString();
 
-					int p=0;
-					foreach( TrainCarContribution car in cars )
-						p += car.capacity;
+                    int p = 0;
+                    foreach (TrainCarContribution car in cars)
+                        p += car.capacity;
 
-					passenger.Text = p.ToString()+" passengers/set";
-					//! passenger.Text = p.ToString()+" 人/編成";
+                    passenger.Text = p.ToString() + " passengers/set";
+                    //! passenger.Text = p.ToString()+" 人/編成";
 
                     using (PreviewDrawer pd = selectedTrain.createPreview(preview.ClientSize, (int)length.Value))
                     {
                         preview.Image = pd.createBitmap();
                     }
 
-					return;
-				}
-                
-			}
+                    return;
+                }
 
-			buttonOK.Enabled = false;
-			totalPrice.Text = "---";
-			passenger.Text = "---";
+            }
 
-		}
+            buttonOK.Enabled = false;
+            totalPrice.Text = "---";
+            passenger.Text = "---";
 
-		private void buttonOK_Click(object sender, EventArgs e) {
-			// buy trains
-			for( int i=0; i<(int)count.Value; i++ )
-				new Train( World.world.rootTrainGroup,
-					(int)length.Value, selectedTrain );
+        }
 
-			freetrain.framework.sound.SoundEffectManager
-				.PlaySynchronousSound( ResourceUtil.findSystemResource("vehiclePurchase.wav") );
-			
-			AccountManager.theInstance.spend( getTotalPrice(), AccountGenre.RAIL_SERVICE );
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            // buy trains
+            for (int i = 0; i < (int)count.Value; i++)
+                new Train(World.world.rootTrainGroup,
+                    (int)length.Value, selectedTrain);
 
-			// set count to 0 to avoid accidental purchase
-			count.Value=0;
-		}
+            freetrain.framework.sound.SoundEffectManager
+                .PlaySynchronousSound(ResourceUtil.findSystemResource("vehiclePurchase.wav"));
 
-		private void toolBar1_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
-		{
-			foreach( ToolBarButton tb in toolBarDayNight.Buttons)
-			{
-				if(e.Button == tb)
-				{
-					if(tb.Pushed)
-						World.world.viewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
-					else
-						World.world.viewOptions.nightSpriteMode = NightSpriteMode.AlignClock;
-				}
-				else
-				{
-					tb.Pushed = false;
-				}
-			}
-		}
+            AccountManager.theInstance.spend(getTotalPrice(), AccountGenre.RAIL_SERVICE);
 
-		private void TrainTradingDialog_Closed(object sender, System.EventArgs e)
-		{
-			World.world.viewOptions.OnViewOptionChanged-=new OptionChangedHandler(updatePreview);
-		}
+            // set count to 0 to avoid accidental purchase
+            count.Value = 0;
+        }
 
-		
-		void TrainTradingDialogLoad(object sender, EventArgs e)
-		{
-			
-		}
-	}
+        private void toolBar1_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
+        {
+            foreach (ToolBarButton tb in toolBarDayNight.Buttons)
+            {
+                if (e.Button == tb)
+                {
+                    if (tb.Pushed)
+                        World.world.viewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
+                    else
+                        World.world.viewOptions.nightSpriteMode = NightSpriteMode.AlignClock;
+                }
+                else
+                {
+                    tb.Pushed = false;
+                }
+            }
+        }
+
+        private void TrainTradingDialog_Closed(object sender, System.EventArgs e)
+        {
+            World.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+        }
+
+
+        void TrainTradingDialogLoad(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
