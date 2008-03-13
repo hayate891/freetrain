@@ -57,10 +57,10 @@ namespace freetrain.framework.sound
 
         private readonly Segment segment;
 
-        /// <summary>
-        /// SegmentState objects that represent the state
-        /// of segments being played.
-        /// </summary>
+        ///// <summary>
+        ///// SegmentState objects that represent the state
+        ///// of segments being played.
+        ///// </summary>
         //private readonly ArrayList states = new ArrayList();
 
         /// <summary>

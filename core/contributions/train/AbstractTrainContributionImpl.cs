@@ -123,6 +123,7 @@ namespace freetrain.contributions.train
         /// 
         /// 
         /// </summary>
+        [CLSCompliant(false)]
         public readonly int _fare = 600;	// TODO
         /// <summary>
         /// 
@@ -131,6 +132,7 @@ namespace freetrain.contributions.train
         /// <summary>
         /// 
         /// </summary>
+        [CLSCompliant(false)]
         public readonly int _maxlength = 3;	// TODO
         /// <summary>
         /// 

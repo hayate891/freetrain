@@ -406,6 +406,10 @@ namespace freetrain.views.map
         //			drawer.size = this.ClientSize;
         //		}
         //
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnClosed(EventArgs e)
         {
             if (heightCutWindow != null)
@@ -529,6 +533,9 @@ namespace freetrain.views.map
     /// </summary>
     public class MapView : AbstractView
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public MapView()
             : base(new MapViewWindow())
         {

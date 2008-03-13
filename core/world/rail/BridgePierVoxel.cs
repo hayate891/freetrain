@@ -91,11 +91,11 @@ namespace freetrain.world.rail
             }
         }
 
-        /// <summary>
-        /// Elects a bridge support from the surface level to the given location,
-        /// if it can be done.
-        /// </summary>
-        /// <param name="loc">The location of the elevated RR.</param>
+        ///// <summary>
+        ///// Elects a bridge support from the surface level to the given location,
+        ///// if it can be done.
+        ///// </summary>
+        ///// <param name="loc">The location of the elevated RR.</param>
         //		public static void electBridgeSupport( Location loc, Type topBridgeType, Type otherBridgeType ) {
         //			
         //			// check if a support is buildable

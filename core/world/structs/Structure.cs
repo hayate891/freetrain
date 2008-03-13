@@ -77,13 +77,13 @@ namespace freetrain.world.structs
 		/// </summary>
 		public abstract string name { get; }
 
-		/// <summary>
-		/// Returns true if there is enough space in the spcified location
-		/// to built a structure of a given size.
-		/// 
-		/// Usually, derived classes override this method and add necessary
-		/// checks specific to that structure.
-		/// </summary>
+        ///// <summary>
+        ///// Returns true if there is enough space in the spcified location
+        ///// to built a structure of a given size.
+        ///// 
+        ///// Usually, derived classes override this method and add necessary
+        ///// checks specific to that structure.
+        ///// </summary>
 //		public static bool canBeBuilt( Location loc, Distance sz ) 
 //		{
 //			return canBeBuilt(loc,sz,ControlMode.player);

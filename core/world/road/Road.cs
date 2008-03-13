@@ -49,6 +49,7 @@ namespace freetrain.world.road
         /// <summary>
         /// Detailed Attribute of road
         /// </summary>
+        [CLSCompliant(false)]
         internal protected RoadStyle _style;
         /// <summary>
         /// 

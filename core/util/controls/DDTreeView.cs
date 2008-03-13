@@ -130,6 +130,10 @@ namespace freetrain.util.controls
         /// 
         /// </summary>
         public DDTreeNode() : base() { }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="text"></param>
         public DDTreeNode(string text) : base(text) { }
         /// <summary>
         /// 

@@ -211,9 +211,9 @@ namespace freetrain.framework
 
 
 
-        /// <summary>
-        /// MenuItem that selects a BGM from BGMContribution.
-        /// </summary>
+        ///// <summary>
+        ///// MenuItem that selects a BGM from BGMContribution.
+        ///// </summary>
         /*internal class MusicMenuItem : MenuItem
         {
             private readonly BGMContribution contrib;

@@ -1,4 +1,24 @@
-﻿using System;
+﻿#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
+
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Collections;
@@ -16,133 +36,146 @@ using SDL.net;
 
 namespace freetrain.controllers.rail
 {
-	/// <summary>
-	/// Controller that allows the user to
-	/// place/remove trains.
-	/// </summary>
-	public class TrainPlacementController : AbstractControllerImpl, MapOverlay, LocationDisambiguator
-	{
-		#region singleton instance management
-		/// <summary>
-		/// Creates a new controller window, or active the existing one.
-		/// </summary>
-		public static void create() {
-			if(theInstance==null)
-				theInstance = new TrainPlacementController();
-			theInstance.Show();
-			theInstance.Activate();
-		}
+    /// <summary>
+    /// Controller that allows the user to
+    /// place/remove trains.
+    /// </summary>
+    public class TrainPlacementController : AbstractControllerImpl, MapOverlay, LocationDisambiguator
+    {
+        #region singleton instance management
+        /// <summary>
+        /// Creates a new controller window, or active the existing one.
+        /// </summary>
+        public static void create()
+        {
+            if (theInstance == null)
+                theInstance = new TrainPlacementController();
+            theInstance.Show();
+            theInstance.Activate();
+        }
 
-		private System.Windows.Forms.ComboBox controllerCombo;
-		private System.Windows.Forms.MenuItem miSell;
+        private System.Windows.Forms.ComboBox controllerCombo;
+        private System.Windows.Forms.MenuItem miSell;
         private Button cmdTrading;
 
-		private static TrainPlacementController theInstance;
-
-		protected override void OnClosing(System.ComponentModel.CancelEventArgs e) {
-			base.OnClosing(e);
-			theInstance = null;
-		}
-		#endregion
-
-
-
-
-
-		public TrainPlacementController() {
-			// Windows フォーム デザイナ サポートに必要です。
-			InitializeComponent();
-
-			controllerCombo.DataSource = World.world.trainControllers;
-			tree.ItemMoved = new ItemMovedHandler(onItemDropped);
-
-			//this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
-
-			reset();
-
-			// register command manager
-			new Command( commands )
-				.addUpdateHandler( new CommandHandler(updateAddGroup) )
-				.addExecuteHandler( new CommandHandlerNoArg(executeAddGroup) )
-				.commandInstances.AddAll( miAddGroup );
-			new Command( commands )
-				.addUpdateHandler( new CommandHandler(updateSell) )
-				.addExecuteHandler( new CommandHandlerNoArg(executeSell) )
-				.commandInstances.AddAll( miSell );
-		}
-
-		private readonly CommandManager commands = new CommandManager();
-
-		/// <summary>
-		/// Location of the arrow.
-		/// </summary>
-		private readonly LocationStore arrowLoc = new LocationStore();
+        private static TrainPlacementController theInstance;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            theInstance = null;
+        }
+        #endregion
 
 
-		/// <summary>
-		/// Resets the contents of the list.
-		/// </summary>
-		private void reset() {
-			tree.BeginUpdate();
-			tree.Nodes.Clear();
 
-			TreeNode root = createNode( World.world.rootTrainGroup );
-			tree.Nodes.Add(root);
-			populate( World.world.rootTrainGroup, root.Nodes );
-			
-			tree.ExpandAll();
-			tree.EndUpdate();
-		}
 
-		private TreeNode createNode( TrainItem item ) {
-			DDTreeNode n = new DDTreeNode( item.name );
-			n.Tag = item;
-			n.canAcceptDrop = (item is TrainGroup);
-			n.ImageIndex = n.SelectedImageIndex = (item is Train)?2:0;
-			return n;
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public TrainPlacementController()
+        {
+            // Windows フォーム デザイナ サポートに必要です。
+            InitializeComponent();
 
-		// populate a tree control with trains
-		private void populate( TrainGroup group, TreeNodeCollection col ) {
-			foreach( TrainItem ti in group.items ) {
-				TreeNode node = createNode(ti);
-				col.Add(node);
-				if( ti is TrainGroup )
-					populate( (TrainGroup)ti, node.Nodes );
-			}
-		}
+            controllerCombo.DataSource = World.world.trainControllers;
+            tree.ItemMoved = new ItemMovedHandler(onItemDropped);
 
-		/// <summary>
-		/// 使用されているリソースに後処理を実行します。
-		/// </summary>
-		protected override void Dispose( bool disposing ) {
-			if( disposing && components != null)
-				components.Dispose();
-			base.Dispose( disposing );
-		}
+            //this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
 
-		#region Windows Form Designer generated code
-		private DDTreeView tree;
-		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox nameBox;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label typeBox;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.ContextMenu treeMenu;
-		private System.Windows.Forms.MenuItem miAddGroup;
-		private System.Windows.Forms.ImageList imageList;
-		private System.Windows.Forms.RadioButton buttonRemove;
-		private System.Windows.Forms.RadioButton buttonPlace;
-		private System.ComponentModel.IContainer components;
+            reset();
 
-		/// <summary>
-		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を
-		/// コード エディタで変更しないでください。
-		/// </summary>
-		private void InitializeComponent()
-		{
+            // register command manager
+            new Command(commands)
+                .addUpdateHandler(new CommandHandler(updateAddGroup))
+                .addExecuteHandler(new CommandHandlerNoArg(executeAddGroup))
+                .commandInstances.AddAll(miAddGroup);
+            new Command(commands)
+                .addUpdateHandler(new CommandHandler(updateSell))
+                .addExecuteHandler(new CommandHandlerNoArg(executeSell))
+                .commandInstances.AddAll(miSell);
+        }
+
+        private readonly CommandManager commands = new CommandManager();
+
+        /// <summary>
+        /// Location of the arrow.
+        /// </summary>
+        private readonly LocationStore arrowLoc = new LocationStore();
+
+
+        /// <summary>
+        /// Resets the contents of the list.
+        /// </summary>
+        private void reset()
+        {
+            tree.BeginUpdate();
+            tree.Nodes.Clear();
+
+            TreeNode root = createNode(World.world.rootTrainGroup);
+            tree.Nodes.Add(root);
+            populate(World.world.rootTrainGroup, root.Nodes);
+
+            tree.ExpandAll();
+            tree.EndUpdate();
+        }
+
+        private TreeNode createNode(TrainItem item)
+        {
+            DDTreeNode n = new DDTreeNode(item.name);
+            n.Tag = item;
+            n.canAcceptDrop = (item is TrainGroup);
+            n.ImageIndex = n.SelectedImageIndex = (item is Train) ? 2 : 0;
+            return n;
+        }
+
+        // populate a tree control with trains
+        private void populate(TrainGroup group, TreeNodeCollection col)
+        {
+            foreach (TrainItem ti in group.items)
+            {
+                TreeNode node = createNode(ti);
+                col.Add(node);
+                if (ti is TrainGroup)
+                    populate((TrainGroup)ti, node.Nodes);
+            }
+        }
+
+        /// <summary>
+        /// 使用されているリソースに後処理を実行します。
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null)
+                components.Dispose();
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+        private DDTreeView tree;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label typeBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ContextMenu treeMenu;
+        private System.Windows.Forms.MenuItem miAddGroup;
+        private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.RadioButton buttonRemove;
+        private System.Windows.Forms.RadioButton buttonPlace;
+        private System.ComponentModel.IContainer components;
+
+        /// <summary>
+        /// デザイナ サポートに必要なメソッドです。このメソッドの内容を
+        /// コード エディタで変更しないでください。
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainPlacementController));
             this.buttonRemove = new System.Windows.Forms.RadioButton();
@@ -353,271 +386,349 @@ namespace freetrain.controllers.rail
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private bool isPlacingMode { get { return buttonPlace.Checked; } }
+        private bool isPlacingMode { get { return buttonPlace.Checked; } }
 
-		private TrainItem selectedItem {
-			get {
-				TreeNode n = tree.SelectedNode;
-				if(n==null)			return null;
-				return (TrainItem)n.Tag;
-			}
-		}
-		/// <summary>
-		/// Gets the currently selected train, if any
-		/// </summary>
-		private Train selectedTrain {
-			get {
-				TrainItem ti = selectedItem;
-				if(ti is Train)		return (Train)ti;
-				else				return null;
-			}
-		}
-		/// <summary>
-		/// Gets the currently selected group, if any.
-		/// </summary>
-		private TrainGroup selectedGroup {
-			get {
-				TrainItem ti = selectedItem;
-				if(ti is TrainGroup)	return (TrainGroup)ti;
-				else					return null;
-			}
-		}
+        private TrainItem selectedItem
+        {
+            get
+            {
+                TreeNode n = tree.SelectedNode;
+                if (n == null) return null;
+                return (TrainItem)n.Tag;
+            }
+        }
+        /// <summary>
+        /// Gets the currently selected train, if any
+        /// </summary>
+        private Train selectedTrain
+        {
+            get
+            {
+                TrainItem ti = selectedItem;
+                if (ti is Train) return (Train)ti;
+                else return null;
+            }
+        }
+        /// <summary>
+        /// Gets the currently selected group, if any.
+        /// </summary>
+        private TrainGroup selectedGroup
+        {
+            get
+            {
+                TrainItem ti = selectedItem;
+                if (ti is TrainGroup) return (TrainGroup)ti;
+                else return null;
+            }
+        }
 
-		/// <summary>
-		/// Re-computes the arrow location correctly
-		/// </summary>
-		private void resetArrowLocation() {
-			Train tr = this.selectedTrain;
-			if(tr==null || !tr.head.state.isInside ) {
-				arrowLoc.location = world.Location.UNPLACED;
-			} else {
-				arrowLoc.location = tr.head.state.asInside().location;
-			}
-		}
+        /// <summary>
+        /// Re-computes the arrow location correctly
+        /// </summary>
+        private void resetArrowLocation()
+        {
+            Train tr = this.selectedTrain;
+            if (tr == null || !tr.head.state.isInside)
+            {
+                arrowLoc.location = world.Location.UNPLACED;
+            }
+            else
+            {
+                arrowLoc.location = tr.head.state.asInside().location;
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="loc"></param>
+        /// <param name="ab"></param>
+        public override void onClick(MapViewWindow source, Location loc, Point ab)
+        {
+            if (isPlacingMode)
+            {
+                if (this.selectedTrain == null) return;
 
-		public override void onClick( MapViewWindow source, Location loc, Point ab ) {
-			if(isPlacingMode) {
-				if( this.selectedTrain==null )	return;
+                // place
+                Train tr = this.selectedTrain;
+                if (tr.isPlaced)
+                {
+                    // see if the user has clicked the same train
+                    Car c = Car.get(loc);
+                    if (c is Train.TrainCar && ((Train.TrainCar)c).parent == tr)
+                    {
+                        // clicking the same train will be considered to reverse its direction
+                        // and change the position of arrow
+                        tr.reverse();
+                        resetArrowLocation();
+                        return;
+                    }
+                    else
+                    {
+                        MainWindow.showError("This train is already placed");
+                        //; MainWindow.showError("配置済みです");
+                        return;
+                    }
+                }
 
-				// place
-				Train tr = this.selectedTrain;
-				if(tr.isPlaced) {
-					// see if the user has clicked the same train
-					Car c = Car.get(loc);
-					if(c is Train.TrainCar && ((Train.TrainCar)c).parent==tr) {
-						// clicking the same train will be considered to reverse its direction
-						// and change the position of arrow
-						tr.reverse();
-						resetArrowLocation();
-						return;
-					} else {
-						MainWindow.showError("This train is already placed");
-						//; MainWindow.showError("配置済みです");
-						return;
-					}
-				}
+                RailRoad rr = RailRoad.get(loc);
+                if (rr == null)
+                {
+                    MainWindow.showError("Can not place without tracks");
+                    //; MainWindow.showError("線路のないところには配置できません");
+                    return;
+                }
 
-				RailRoad rr = RailRoad.get(loc);
-				if(rr==null) {
-					MainWindow.showError("Can not place without tracks");
-					//; MainWindow.showError("線路のないところには配置できません");
-					return;
-				}
+                if (!tr.place(loc))
+                {
+                    MainWindow.showError("Can not place");
+                    //! MainWindow.showError("配置できません");
+                }
+                else
+                    playSound();
 
-				if(!tr.place(loc)) {
-					MainWindow.showError("Can not place");
-					//! MainWindow.showError("配置できません");
-				} else
-					playSound();
+            }
+            else
+            {
+                // remove
+                RailRoad rr = RailRoad.get(loc);
+                if (rr == null)
+                {
+                    MainWindow.showError("There are no tracks");
+                    //! MainWindow.showError("線路がありません");
+                    return;
+                }
+                if (!(rr.voxel.car is Train.TrainCar))
+                {
+                    MainWindow.showError("There are no cars");
+                    //! MainWindow.showError("車両がありません");
+                    return;
+                }
+                ((Train.TrainCar)rr.voxel.car).parent.remove();
+                playSound();
+                // successfully removed
+            }
+        }
 
-			} else {
-				// remove
-				RailRoad rr = RailRoad.get(loc);
-				if(rr==null) {
-					MainWindow.showError("There are no tracks");
-					//! MainWindow.showError("線路がありません");
-					return;
-				}
-				if(!(rr.voxel.car is Train.TrainCar)) {
-					MainWindow.showError("There are no cars");
-					//! MainWindow.showError("車両がありません");
-					return;
-				}
-				((Train.TrainCar)rr.voxel.car).parent.remove();
-				playSound();
-				// successfully removed
-			}
-		}
+        private void playSound()
+        {
+            SoundEffectManager.PlayAsynchronousSound(
+                ResourceUtil.findSystemResource("vehiclePurchase.wav"));
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void onAttached()
+        {
+            reset();
+        }
 
-		private void playSound() {
-			SoundEffectManager.PlayAsynchronousSound(
-				ResourceUtil.findSystemResource("vehiclePurchase.wav") );
-		}
+        // place or remove button is clicked.
+        private void onModeChange(object sender, EventArgs e)
+        {
+        }
 
-		public override void onAttached() {
-			reset();
-		}
+        // when a selected train is changed
+        private void onTrainChange(object sender, TreeViewEventArgs e)
+        {
 
-		// place or remove button is clicked.
-		private void onModeChange(object sender, EventArgs e) {
-		}
+            // update controls
+            if (selectedItem != null)
+            {
+                nameBox.Enabled = true;
+                nameBox.Text = selectedItem.name;
+                controllerCombo.Enabled = true;
+                controllerCombo.SelectedItem = selectedItem.controller;
+            }
+            else
+            {
+                nameBox.Enabled = false;
+                controllerCombo.Enabled = false;
+                controllerCombo.SelectedIndex = -1;	// unset selection
+            }
 
-		// when a selected train is changed
-		private void onTrainChange(object sender, TreeViewEventArgs e) {
+            if (selectedTrain != null)
+            {
+                typeBox.Enabled = true;
+                typeBox.Text = selectedTrain.type.name;
+            }
+            else
+            {
+                typeBox.Enabled = false;
+                typeBox.Text = "";
+            }
 
-			// update controls
-			if( selectedItem!=null ) {
-				nameBox.Enabled = true;
-				nameBox.Text = selectedItem.name;
-				controllerCombo.Enabled = true;
-				controllerCombo.SelectedItem = selectedItem.controller;
-			} else {
-				nameBox.Enabled = false;
-				controllerCombo.Enabled = false;
-				controllerCombo.SelectedIndex=-1;	// unset selection
-			}
+            resetArrowLocation();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public override LocationDisambiguator disambiguator { get { return this; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loc"></param>
+        /// <returns></returns>
+        public bool isSelectable(Location loc)
+        {
+            RailRoad rr = RailRoad.get(loc);
+            if (rr == null) return false;
 
-			if( selectedTrain!=null ) {
-				typeBox.Enabled = true;
-				typeBox.Text = selectedTrain.type.name;
-			} else {
-				typeBox.Enabled = false;
-				typeBox.Text = "";
-			}
-			
-			resetArrowLocation();
-		}
+            if (isPlacingMode)
+            {
+                if (rr.voxel.car == null) return true;
 
-		public override LocationDisambiguator disambiguator { get { return this; } }
+                Train.TrainCar car = rr.voxel.car as Train.TrainCar;
+                if (car != null && car.parent == selectedTrain)
+                    // allow selecting the same train to reverse the direction
+                    return true;
 
-		public bool isSelectable(Location loc) {
-			RailRoad rr = RailRoad.get(loc);
-			if(rr==null)	return false;
-
-			if( isPlacingMode ) {
-				if(rr.voxel.car==null)	return true;
-				
-				Train.TrainCar car = rr.voxel.car as Train.TrainCar;
-				if( car!=null && car.parent == selectedTrain )
-					// allow selecting the same train to reverse the direction
-					return true;
-
-				return false;
-			} else {
-				return rr.voxel.car!=null;
-			}
-		}
-
-
-
-		public void drawBefore( QuarterViewDrawer view, DrawContextEx surface ) {}
-
-		public void drawVoxel( QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt ) {}
-
-		public void drawAfter( QuarterViewDrawer view, DrawContextEx dc ) {
-			Train tr = this.selectedTrain;
-			if(tr==null || !tr.head.state.isInside)	return;
-
-			// draw an arrow that indicates the direction of the train
-			CarState.Inside ci = tr.head.state.asInside();
-
-			Point pt = view.fromXYZToClient(ci.location);
-			pt.Y -= 12;
-
-			ci.direction.drawArrow( dc.surface, pt );
-		}
-
-		private void onDoubleClick(object sender, EventArgs e) {
-		
-		}
-
-		private void onNameChanged(object sender, EventArgs e) {
-			string name = nameBox.Text;
-			selectedItem.name = name;
-			tree.SelectedNode.Text = name;
-		}
-
-		private TreeNode rightSelectedItem;
-
-		// this method is called before the context menu pops up.
-		private void treeMenu_Popup(object sender, System.EventArgs e) {
-			rightSelectedItem = tree.GetNodeAt(tree.PointToClient(Cursor.Position));
-			commands.updateAll();
-		}
-
-		private void onNodeExpanded(object sender, System.Windows.Forms.TreeViewEventArgs e) {
-			e.Node.SelectedImageIndex = e.Node.ImageIndex = 1;
-		}
-
-		private void onNodeCollapsed(object sender, System.Windows.Forms.TreeViewEventArgs e) {
-			e.Node.SelectedImageIndex = e.Node.ImageIndex = 0;
-		}
-
-
-
-		private void onItemDropped(TreeNode node, TreeNode newParent) {
-			// move this train under a new group.
-			node.Remove();
-			newParent.Nodes.Add( node );
-
-			TrainItem item = (TrainItem)node.Tag;
-			TrainGroup newGroup = (TrainGroup)newParent.Tag;
-
-			item.moveUnder(newGroup);
-		}
-
-		private void controllerCombo_SelectedIndexChanged(object sender, System.EventArgs e) {
-			TrainItem item = selectedItem;
-			if( item!=null )
-				item.controller = (TrainController)controllerCombo.SelectedItem;
-		}
+                return false;
+            }
+            else
+            {
+                return rr.voxel.car != null;
+            }
+        }
 
 
-		
-		
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="surface"></param>
+        public void drawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="canvas"></param>
+        /// <param name="loc"></param>
+        /// <param name="pt"></param>
+        public void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt) { }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="dc"></param>
+        public void drawAfter(QuarterViewDrawer view, DrawContextEx dc)
+        {
+            Train tr = this.selectedTrain;
+            if (tr == null || !tr.head.state.isInside) return;
 
-		private void updateAddGroup( Command cmd ) {
-			cmd.Enabled = ( rightSelectedItem!=null && rightSelectedItem.Tag is TrainGroup );
-		}
+            // draw an arrow that indicates the direction of the train
+            CarState.Inside ci = tr.head.state.asInside();
 
-		private void executeAddGroup() {
-			TrainGroup newGroup = new TrainGroup( (TrainGroup)rightSelectedItem.Tag );
-			TreeNode node = createNode(newGroup);
-			rightSelectedItem.Nodes.Add(node);
-			tree.SelectedNode = node;
-		}
+            Point pt = view.fromXYZToClient(ci.location);
+            pt.Y -= 12;
 
-		private void updateSell( Command cmd ) {
-			bool b = false;
-			if( rightSelectedItem!=null ) {
-				Train tr = rightSelectedItem.Tag as Train;
-				if( tr!=null && !tr.isPlaced )
-					b = true;
-			}
+            ci.direction.drawArrow(dc.surface, pt);
+        }
 
-			cmd.Enabled = b;
-		}
+        private void onDoubleClick(object sender, EventArgs e)
+        {
 
-		private void executeSell() {
-			if( MessageBox.Show(this,"Do you want to sell this train?",Application.ProductName,
-			//! if( MessageBox.Show(this,"売却しますか？",Application.ProductName,
-				MessageBoxButtons.YesNo,
-				MessageBoxIcon.Question) == DialogResult.Yes) {
+        }
 
-				Train tr = (Train)rightSelectedItem.Tag;
-				tr.sell();
+        private void onNameChanged(object sender, EventArgs e)
+        {
+            string name = nameBox.Text;
+            selectedItem.name = name;
+            tree.SelectedNode.Text = name;
+        }
 
-				rightSelectedItem.Remove();
-			}
-		}
+        private TreeNode rightSelectedItem;
+
+        // this method is called before the context menu pops up.
+        private void treeMenu_Popup(object sender, System.EventArgs e)
+        {
+            rightSelectedItem = tree.GetNodeAt(tree.PointToClient(Cursor.Position));
+            commands.updateAll();
+        }
+
+        private void onNodeExpanded(object sender, System.Windows.Forms.TreeViewEventArgs e)
+        {
+            e.Node.SelectedImageIndex = e.Node.ImageIndex = 1;
+        }
+
+        private void onNodeCollapsed(object sender, System.Windows.Forms.TreeViewEventArgs e)
+        {
+            e.Node.SelectedImageIndex = e.Node.ImageIndex = 0;
+        }
+
+
+
+        private void onItemDropped(TreeNode node, TreeNode newParent)
+        {
+            // move this train under a new group.
+            node.Remove();
+            newParent.Nodes.Add(node);
+
+            TrainItem item = (TrainItem)node.Tag;
+            TrainGroup newGroup = (TrainGroup)newParent.Tag;
+
+            item.moveUnder(newGroup);
+        }
+
+        private void controllerCombo_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            TrainItem item = selectedItem;
+            if (item != null)
+                item.controller = (TrainController)controllerCombo.SelectedItem;
+        }
+
+
+
+
+
+        private void updateAddGroup(Command cmd)
+        {
+            cmd.Enabled = (rightSelectedItem != null && rightSelectedItem.Tag is TrainGroup);
+        }
+
+        private void executeAddGroup()
+        {
+            TrainGroup newGroup = new TrainGroup((TrainGroup)rightSelectedItem.Tag);
+            TreeNode node = createNode(newGroup);
+            rightSelectedItem.Nodes.Add(node);
+            tree.SelectedNode = node;
+        }
+
+        private void updateSell(Command cmd)
+        {
+            bool b = false;
+            if (rightSelectedItem != null)
+            {
+                Train tr = rightSelectedItem.Tag as Train;
+                if (tr != null && !tr.isPlaced)
+                    b = true;
+            }
+
+            cmd.Enabled = b;
+        }
+
+        private void executeSell()
+        {
+            if (MessageBox.Show(this, "Do you want to sell this train?", Application.ProductName,
+                //! if( MessageBox.Show(this,"売却しますか？",Application.ProductName,
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                Train tr = (Train)rightSelectedItem.Tag;
+                tr.sell();
+
+                rightSelectedItem.Remove();
+            }
+        }
 
         private void cmdTrading_Click(object sender, EventArgs e)
         {
             TrainTradingDialog tr = new TrainTradingDialog();
             tr.ShowDialog();
         }
-	}
+    }
 }
