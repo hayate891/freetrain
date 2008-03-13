@@ -75,14 +75,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\AxSHDocVw.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.JScript">
-      <Name>Microsoft.JScript</Name>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Vsa">
-      <Name>Microsoft.Vsa</Name>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MsHtmlHost, Version=0.0.0.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\MsHtmlHost.dll</HintPath>
@@ -90,15 +82,11 @@
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
-    <Reference Include="System.Design">
-      <Name>System.Design</Name>
-    </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
-    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
-      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
-    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
