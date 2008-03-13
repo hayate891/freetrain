@@ -11,17 +11,41 @@ namespace freetrain.world.road.accessory
 	/// <summary>
 	/// ModalController implementation for road accessory contribution
 	/// </summary>
-	public class ControllerImpl : PointSelectorController
+    [CLSCompliant(false)]
+    public class ControllerImpl : PointSelectorController
 	{
-		protected readonly RoadAccessoryContribution contribution;
+        /// <summary>
+        /// 
+        /// </summary>
+        [CLSCompliant(false)]
+        protected readonly RoadAccessoryContribution contribution;
+        /// <summary>
+        /// 
+        /// 
+        /// </summary>
 		protected readonly bool remove;
 
-		public ControllerImpl( RoadAccessoryContribution _contrib, IControllerSite _site, bool _remover) : base(_site) {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_contrib"></param>
+        /// <param name="_site"></param>
+        /// <param name="_remover"></param>
+        [CLSCompliant(false)]
+        public ControllerImpl(RoadAccessoryContribution _contrib, IControllerSite _site, bool _remover)
+            : base(_site)
+        {
 			this.contribution = _contrib;
 			this.remove = _remover;
 		}
 
-		protected override void onLocationSelected( Location loc ) {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loc"></param>
+        [CLSCompliant(false)]
+        protected override void onLocationSelected(Location loc)
+        {
 			if( remove )
 			{
 				if( contribution.canBeBuilt(loc))
@@ -39,11 +63,20 @@ namespace freetrain.world.road.accessory
 					contribution.create(loc);
 				else
 					MainWindow.showError("Can not place");
-					//! MainWindow.showError("設置できません");
+					
 			}
 		}
 
-		public override void drawVoxel( QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt) {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="canvas"></param>
+        /// <param name="loc"></param>
+        /// <param name="pt"></param>
+        [CLSCompliant(false)]
+        public override void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        {
 			if( base.currentPos!=loc )		return;
 			if( !contribution.canBeBuilt(loc) )	return;
 			
@@ -56,20 +89,38 @@ namespace freetrain.world.road.accessory
 			contribution.sprites[x,1].drawAlpha( canvas.surface, pt );
 		}
 
-		public override LocationDisambiguator disambiguator {
+        /// <summary>
+        /// 
+        /// </summary>
+        [CLSCompliant(false)]
+        public override LocationDisambiguator disambiguator
+        {
 			get {
 				return RoadDisambiguator.theInstance;
 			}
 		}
 	}
 
+    /// <summary>
+    /// 
+    /// </summary>
 	public class RoadDisambiguator : LocationDisambiguator
 	{
 		// the singleton instance
-		public static LocationDisambiguator theInstance = new RoadDisambiguator();
+        /// <summary>
+        /// 
+        /// </summary>
+        [CLSCompliant(false)]
+        public static LocationDisambiguator theInstance = new RoadDisambiguator();
 		private RoadDisambiguator() {}
 
-		public bool isSelectable(Location loc) 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loc"></param>
+        /// <returns></returns>
+        [CLSCompliant(false)]
+        public bool isSelectable(Location loc) 
 		{
 			// if there's any rail roads, fine
 			if( Road.get(loc)!=null )	return true;
