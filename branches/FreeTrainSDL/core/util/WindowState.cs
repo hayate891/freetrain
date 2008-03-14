@@ -20,7 +20,7 @@
 
 using System;
 using System.IO;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -190,44 +190,44 @@ namespace freetrain.util
     /// <summary>
     /// PersistentWindowState that saves the state to a registry.
     /// </summary>
-    public class RegistryPersistentWindowState : PersistentWindowState
-    {
-        private readonly RegistryKey key;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_key"></param>
-        public RegistryPersistentWindowState(RegistryKey _key)
-        {
-            this.key = _key;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        internal protected override void load()
-        {
-            left = (int)key.GetValue("Left");
-            top = (int)key.GetValue("Top");
-            width = (int)key.GetValue("Width");
-            height = (int)key.GetValue("Height");
-            windowState = (FormWindowState)key.GetValue("WindowState");
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        internal protected override void save()
-        {
-            // save position, size and state
-            key.SetValue("Left", left);
-            key.SetValue("Top", top);
-            key.SetValue("Width", width);
-            key.SetValue("Height", height);
+    //public class RegistryPersistentWindowState : PersistentWindowState
+    //{
+    //    private readonly RegistryKey key;
+    //    /// <summary>
+    //    /// 
+    //    /// </summary>
+    //    /// <param name="_key"></param>
+    //    public RegistryPersistentWindowState(RegistryKey _key)
+    //    {
+    //        this.key = _key;
+    //    }
+    //    /// <summary>
+    //    /// 
+    //    /// </summary>
+    //    internal protected override void load()
+    //    {
+    //        left = (int)key.GetValue("Left");
+    //        top = (int)key.GetValue("Top");
+    //        width = (int)key.GetValue("Width");
+    //        height = (int)key.GetValue("Height");
+    //        windowState = (FormWindowState)key.GetValue("WindowState");
+    //    }
+    //    /// <summary>
+    //    /// 
+    //    /// </summary>
+    //    internal protected override void save()
+    //    {
+    //        // save position, size and state
+    //        key.SetValue("Left", left);
+    //        key.SetValue("Top", top);
+    //        key.SetValue("Width", width);
+    //        key.SetValue("Height", height);
 
-            if (windowState == FormWindowState.Minimized)
-                windowState = FormWindowState.Normal;
+    //        if (windowState == FormWindowState.Minimized)
+    //            windowState = FormWindowState.Normal;
 
-            key.SetValue("WindowState", (int)windowState);
-        }
-    }
+    //        key.SetValue("WindowState", (int)windowState);
+    //    }
+    //}
 
 }

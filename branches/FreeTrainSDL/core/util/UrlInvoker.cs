@@ -21,7 +21,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 
 namespace freetrain.util
 {
@@ -38,8 +38,8 @@ namespace freetrain.util
         {
             ProcessStartInfo info = new ProcessStartInfo();
             // URLに関連づけられたアプリケーションを探す
-            RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
-            String val = rkey.GetValue("").ToString();
+            //RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
+            String val = "";// rkey.GetValue("").ToString();
             // レジストリ値には、起動パラメータも含まれるので、
             // 実行ファイル名と起動パラメータを分離する
             if (val.StartsWith("\""))
