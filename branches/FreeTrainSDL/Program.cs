@@ -26,6 +26,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 
 using Tao.Sdl;
+using SdlDotNet.Audio;
 //using SdlDotNet.Graphics;
 using SDL.net;
 
@@ -117,8 +118,10 @@ namespace FreeTrainSDL
             dragStartScrollPos = new Point(0, 0);
             scrollPos = new Point(0, 0);
 
-            Sdl.SDL_Init(Sdl.SDL_INIT_EVERYTHING | Sdl.SDL_INIT_AUDIO);
-            SdlMixer.Mix_OpenAudio(SdlMixer.MIX_DEFAULT_FREQUENCY, unchecked(Sdl.AUDIO_S16LSB), 2, 1024);
+            //Sdl.SDL_Init(Sdl.SDL_INIT_EVERYTHING | Sdl.SDL_INIT_AUDIO);
+            SdlDotNet.Graphics.Video.Initialize();
+            Mixer.Initialize();
+            //SdlMixer.Mix_OpenAudio(SdlMixer.MIX_DEFAULT_FREQUENCY, unchecked(Sdl.AUDIO_S16LSB), 2, 1024);
             SdlMixer.MusicFinishedDelegate musicStopped = new SdlMixer.MusicFinishedDelegate(musicHasStopped);
             SdlMixer.Mix_HookMusicFinished(musicStopped);
 
