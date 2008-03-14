@@ -13,13 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.HalfVoxelStructur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.ColorTestTrain", "plugins\org.kohsuke.freetrain.trains.colorTest\FreeTrain.ColorTestTrain.csproj", "{4380999E-CA4C-4AA2-8848-12FFABF72535}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.ContribEx", "plugins\jp.co.tripod.chiname.lib.generic\FreeTrain.ContribEx.csproj", "{14C6D588-E391-49CE-A1D2-2A8A2A60A540}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.DummyCars", "plugins\jp.co.tripod.chiname.lib\src\DummyCars\FreeTrain.DummyCars.csproj", "{733996EC-7260-4A94-B118-D1E957F0474D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.RoadAccessory", "plugins\jp.co.tripod.chiname.lib\src\RoadAccessory\FreeTrain.RoadAccessory.csproj", "{7264D32E-75DB-4C13-9EE4-E6263FD5B652}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.VinylHouse", "plugins\org.kohsuke.freetrain.land.477\FreeTrain.VinylHouse.csproj", "{D01D6622-F67B-4EDC-8CA3-4E1A8FCA422B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.ExpandedContributions", "plugins\jp.co.tripod.chiname.lib.generic\FreeTrain.ExpandedContributions.csproj", "{14C6D588-E391-49CE-A1D2-2A8A2A60A540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +51,6 @@ Global
 		{4380999E-CA4C-4AA2-8848-12FFABF72535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4380999E-CA4C-4AA2-8848-12FFABF72535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4380999E-CA4C-4AA2-8848-12FFABF72535}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Release|Any CPU.Build.0 = Release|Any CPU
 		{733996EC-7260-4A94-B118-D1E957F0474D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{733996EC-7260-4A94-B118-D1E957F0474D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{733996EC-7260-4A94-B118-D1E957F0474D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,6 +63,10 @@ Global
 		{D01D6622-F67B-4EDC-8CA3-4E1A8FCA422B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D01D6622-F67B-4EDC-8CA3-4E1A8FCA422B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D01D6622-F67B-4EDC-8CA3-4E1A8FCA422B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C6D588-E391-49CE-A1D2-2A8A2A60A540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
