@@ -71,14 +71,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxSHDocVw, Version=1.1.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\AxSHDocVw.dll</HintPath>
-    </Reference>
-    <Reference Include="MsHtmlHost, Version=0.0.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\MsHtmlHost.dll</HintPath>
-    </Reference>
     <Reference Include="SdlDotNet, Version=6.1.0.0, Culture=neutral, PublicKeyToken=26ad4f7e10c61408, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\SdlDotNet.dll</HintPath>
@@ -930,6 +922,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="framework\AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\BGMPlaylist.resx">
       <SubType>Designer</SubType>

@@ -75,14 +75,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxSHDocVw, Version=1.1.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\AxSHDocVw.dll</HintPath>
-    </Reference>
-    <Reference Include="MsHtmlHost, Version=0.0.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MsHtmlHost.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -107,7 +99,6 @@
     <Compile Include="CostBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DocHostUIHandlerImpl.cs" />
     <Compile Include="FileDropHandler.cs" />
     <Compile Include="IndexSelector.cs">
       <SubType>UserControl</SubType>
@@ -121,9 +112,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UrlLinkLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="WebBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="ColorPickButton.resx">

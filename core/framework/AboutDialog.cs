@@ -31,7 +31,7 @@ using freetrain.util;
 namespace freetrain.framework
 {
     /// <summary>
-    /// AboutDialog の概要の説明です。
+    /// AboutDialog
     /// </summary>
     public class AboutDialog : System.Windows.Forms.Form
     {
@@ -50,9 +50,9 @@ namespace freetrain.framework
         {
             InitializeComponent();
 
-            browser.navigate("about:blank");
-            browser.docHostUIHandler = new DocHostUIHandlerImpl(this);
-            browser.navigate(ResourceUtil.findSystemResource("about.html"));
+            browser.Navigate("about:blank");
+            //browser.docHostUIHandler = new DocHostUIHandlerImpl(this);
+            browser.Navigate(ResourceUtil.findSystemResource("about.html"));
         }
         /// <summary>
         /// 
@@ -92,7 +92,7 @@ namespace freetrain.framework
         private System.Windows.Forms.Label size;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label displayMode;
-        private freetrain.controls.WebBrowser browser;
+        private System.Windows.Forms.WebBrowser browser;
         private System.Windows.Forms.Panel panel1;
         private System.ComponentModel.Container components = null;
         /// <summary>
@@ -108,7 +108,7 @@ namespace freetrain.framework
             this.size = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.displayMode = new System.Windows.Forms.Label();
-            this.browser = new freetrain.controls.WebBrowser();
+            this.browser = new System.Windows.Forms.WebBrowser();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.browser)).BeginInit();
             this.panel1.SuspendLayout();
@@ -180,10 +180,10 @@ namespace freetrain.framework
             // 
             // browser
             // 
-            this.browser.ContainingControl = this;
+            //this.browser.Container = this;
             this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.browser.Enabled = true;
-            this.browser.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("browser.OcxState")));
+            //this.browser.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("browser.OcxState")));
             this.browser.Size = new System.Drawing.Size(320, 192);
             this.browser.TabIndex = 0;
             // 
