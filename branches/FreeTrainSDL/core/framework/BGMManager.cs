@@ -24,7 +24,8 @@ using System.Collections;
 using System.Windows.Forms;
 using freetrain.contributions.sound;
 using freetrain.framework.plugin;
-using SDL.net;
+//using SDL.net;
+using SdlDotNet.Audio;
 
 namespace freetrain.framework
 {
@@ -34,7 +35,8 @@ namespace freetrain.framework
     public class BGMManager
     {
         /// <summary> BGM player. </summary>
-        private readonly BGM bgm = new BGM();
+        //private readonly BGM bgm = new BGM();
+        private static SdlDotNet.Audio.Music bgm;
 
         /// <summary> Reference to the "music" menu item. </summary>
         //private readonly MenuItem musicMenu;
@@ -132,8 +134,15 @@ namespace freetrain.framework
                 {
                     if (contrib == currentBGM)
                     {
-                        if (currentPlaylist.Count > 1) nextSong();
-                        else bgm.stop();
+                        if (currentPlaylist.Count > 1)
+                        {
+                            nextSong();
+                        }
+                        else
+                        {
+                            SdlDotNet.Audio.MusicPlayer.Stop();
+                        }
+                        //else bgm.stop();
                     }
                     currentPlaylist.Remove(contrib);
                 }
@@ -196,8 +205,10 @@ namespace freetrain.framework
                 {
                     try
                     {
-                        bgm.fileName = current.fileName;
-                        bgm.run();
+                        bgm = new SdlDotNet.Audio.Music(current.fileName);
+                        bgm.Play();
+                        //SdlDotNet.Audio.MusicPlayer.Play();
+                        //bgm.run();
                     }
                     catch (Exception e)
                     {

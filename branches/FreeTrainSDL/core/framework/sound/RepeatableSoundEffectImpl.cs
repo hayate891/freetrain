@@ -22,7 +22,9 @@ using System;
 using System.Collections;
 using freetrain.world;
 using freetrain.views.map;
-using SDL.net;
+using SdlDotNet.Audio;
+using SdlDotNet;
+//using SDL.net;
 
 namespace freetrain.framework.sound
 {
@@ -43,7 +45,7 @@ namespace freetrain.framework.sound
         /// <param name="seg">Sound-effect object</param>
         /// <param name="concurrentPlaybackMax">Number of maximum concurrent playback.</param>
         /// <param name="intervalTime">Interval between two successive playbacks</param>
-        public RepeatableSoundEffectImpl(Segment seg, int concurrentPlaybackMax, int intervalTime)
+        public RepeatableSoundEffectImpl(Sound seg, int concurrentPlaybackMax, int intervalTime)
         {
             this.segment = seg;
             this.concurrentPlaybackMax = concurrentPlaybackMax;
@@ -53,9 +55,9 @@ namespace freetrain.framework.sound
         /// 
         /// </summary>
         /// <param name="seg"></param>
-        public RepeatableSoundEffectImpl(Segment seg) : this(seg, 3, 200) { }
+        public RepeatableSoundEffectImpl(Sound seg) : this(seg, 3, 200) { }
 
-        private readonly Segment segment;
+        private readonly Sound segment;
 
         ///// <summary>
         ///// SegmentState objects that represent the state
@@ -101,8 +103,14 @@ namespace freetrain.framework.sound
             {
                 //SegmentState st = Core.soundEffectManager.play(segment,ms);
                 //if(st!=null)	states.Add(st);
-                //Core.soundEffectManager.play(segment, ms);
-                segment.play();
+                try
+                {
+                    segment.Play();
+                }
+                catch (SdlDotNet.Core.SdlException e)
+                {
+                    e.Message.ToString();
+                }
             }
         }
     }

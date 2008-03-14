@@ -22,7 +22,9 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Collections;
-using SDL.net;
+using SdlDotNet.Audio;
+using SdlDotNet.Core;
+//using SDL.net;
 
 namespace freetrain.framework.sound
 {
@@ -38,7 +40,7 @@ namespace freetrain.framework.sound
         /// </summary>
         public bool IsAvailable { get { return available; } }
 
-        private SDL.net.Audio _audio;
+        //private SDL.net.Audio _audio;
 
         /// <summary>
         /// A new instance should be created only by the MainWindow class.
@@ -47,7 +49,7 @@ namespace freetrain.framework.sound
         {
             try
             {
-                this._audio = new Audio();
+                //this._audio = new Audio();
                 available = true;
             }
             catch (Exception e)
@@ -97,12 +99,19 @@ namespace freetrain.framework.sound
         {
             //if( Core.options.enableSoundEffect && Core.soundEffectManager.IsAvailable )
             //	sndPlaySound(fileName,0);
-            if (sounds.Contains(fileName)) { ((Segment)sounds[fileName]).play(); }
-            else
+            try
             {
-                Segment newSound = new Segment(fileName);
-                sounds.Add(fileName, newSound);
-                newSound.play();
+                if (sounds.Contains(fileName)) { ((Sound)sounds[fileName]).Play(); }
+                else
+                {
+                    Sound newSound = new Sound(fileName);
+                    sounds.Add(fileName, newSound);
+                    newSound.Play();
+                }
+            }
+            catch (SdlException e)
+            {
+                e.Message.ToString();
             }
             //SDL.net.Audio.play(fileName);
 
@@ -116,12 +125,19 @@ namespace freetrain.framework.sound
             //if( Core.options.enableSoundEffect && Core.soundEffectManager.IsAvailable )
             //	sndPlaySound(fileName,1);
             //SDL.net.Audio.play(fileName);
-            if (sounds.Contains(fileName)) { ((Segment)sounds[fileName]).play(); }
-            else
+            try
             {
-                Segment newSound = new Segment(fileName);
-                sounds.Add(fileName, newSound);
-                newSound.play();
+                if (sounds.Contains(fileName)) { ((Sound)sounds[fileName]).Play(); }
+                else
+                {
+                    Sound newSound = new Sound(fileName);
+                    sounds.Add(fileName, newSound);
+                    newSound.Play();
+                }
+            }
+            catch (SdlException e)
+            {
+                e.Message.ToString();
             }
         }
 
@@ -131,10 +147,17 @@ namespace freetrain.framework.sound
             segment.play(ms);
         }*/
 
-        internal void play(Segment segment, int ms)
+        //internal void play(Segment segment, int ms)
+        internal void play(Sound segment, int ms)
         {
-            //throw new Exception("The method or operation is not implemented.");
-            segment.play(ms);
+            try
+            {
+                segment.Play();
+            }
+            catch (SdlException e)
+            {
+                e.Message.ToString();
+            }
         }
     }
 }
