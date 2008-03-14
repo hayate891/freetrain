@@ -46,10 +46,10 @@ namespace freetrain.framework
         {
             string path;
 
-            path = Path.Combine(Core.installationDirectory, @"res\" + name);
+            path = Path.Combine(Core.installationDirectory, Path.Combine("res", name));
             if (File.Exists(path)) return path;
 
-            path = Path.Combine(Core.installationDirectory, @"..\..\core\res\" + name);
+            path = Path.Combine(Core.installationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine("res", name)))));
             if (File.Exists(path)) return path;
 
             throw new FileNotFoundException("system resource: " + name);
