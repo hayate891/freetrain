@@ -34,20 +34,20 @@
 
 	<contribution type="menu" id="{2E1EE15E-101A-43E5-C477-95363F8E8AF0}">
 		<class name="freetrain.framework.plugin.generic.MenuContributionImpl"
-			codebase="bin/Debug/FreeTrain.ContribEx.dll" />
+			codebase="FreeTrain.ExpandedContributions.dll" />
 	</contribution>
 	
 	<contribution type="contribution" id="{F9C26336-8D20-44FE-C477-453A270EC37D}">
 		<name>GenericStructure</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.framework.plugin.generic.GenericStructureContribution"
-			codebase="bin/Debug/FreeTrain.ContribEx.dll" />
+			codebase="FreeTrain.ExpandedContributions.dll" />
 	</contribution>
 	<contribution type="contribution" id="{E58C4314-E57B-4F02-C477-A86CF1E1D655}">
 		<name>GenericLand</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.framework.plugin.generic.GenericLandContribution"
-			codebase="bin/Debug/FreeTrain.ContribEx.dll" />
+			codebase="FreeTrain.ExpandedContributions.dll" />
 	</contribution>
 	<!--<contribution type="dockingContent" id="{C7E08038-DADA-46FD-C477-AEB5A4112B1C}">-->
 	<!--	<name>StructureTypeTree</name>-->
