@@ -70,7 +70,7 @@ namespace freetrain.controllers.terrain
         public MountainController()
         {
             InitializeComponent();
-            previewBitmap = ResourceUtil.loadSystemBitmap("terrain.bmp");
+            previewBitmap = ResourceUtil.loadSystemBitmap("Terrain.bmp");
             preview.Image = previewBitmap;
         }
         /// <summary>
