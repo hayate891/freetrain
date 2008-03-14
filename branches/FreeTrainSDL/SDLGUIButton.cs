@@ -24,6 +24,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
 using Tao.Sdl;
 using SDL.net;
 
@@ -48,10 +49,10 @@ namespace FreeTrainSDL
 
             ButtonClick += click;
 
-            btnoff = new Surface(Application.StartupPath + "\\gui\\" + name + ".png");
-            btnon = new Surface(Application.StartupPath + "\\gui\\" + name + "_down.png");
+            btnoff = new Surface(Path.Combine(Application.StartupPath, Path.Combine(SDLGUI.GuiDirectory, name + ".png")));
+            btnon = new Surface(Path.Combine(Application.StartupPath, Path.Combine(SDLGUI.GuiDirectory, name + "_down.png")));
 
-            fnt = SdlTtf.TTF_OpenFont(Application.StartupPath + "\\gui\\freesans.ttf", 12);
+            fnt = SdlTtf.TTF_OpenFont(Path.Combine(Application.StartupPath, Path.Combine(SDLGUI.GuiDirectory, "FreeSans.ttf")), 12);
 
             button_name = name;
         }

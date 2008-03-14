@@ -24,6 +24,7 @@ using System.Runtime.InteropServices;
 using System.Collections;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
 using Tao.Sdl;
 using SDL.net;
 
@@ -60,6 +61,24 @@ namespace FreeTrainSDL
             baseGUIColor = Color.FromArgb(252, 252, 236);
             shadeGUIColor = Color.FromArgb(152, 152, 116);
             drawerGUIColor = Color.FromArgb(236, 236, 184);
+            initGuiDirectory();
+        }
+
+        static string guiDirectory = "gui";
+
+        public static string GuiDirectory
+        {
+            get { return guiDirectory; }
+            set { guiDirectory = value; }
+        }
+        static string filePath = Path.Combine("..", "..");
+        private static void initGuiDirectory()
+        {
+            if (File.Exists(Path.Combine(guiDirectory, "FreeSans.ttf")))
+            {
+                filePath = "";
+            }
+            guiDirectory = Path.Combine(filePath, guiDirectory);
         }
 
         public void initGUI(int width, int height, IntPtr pf)
@@ -78,9 +97,9 @@ namespace FreeTrainSDL
             station = new SDLGUIButton("station","Station Construction", 10, 10);
             if (ButtonClick != null) station.ButtonClick += ButtonClick;*/
 
-            top_bar = new Surface(Application.StartupPath + "\\gui\\top.bmp");
-            splash = new Surface(Application.StartupPath + "\\gui\\splash.bmp");
-            freesans = SdlTtf.TTF_OpenFont(Application.StartupPath + "\\gui\\freesans.ttf", SPLASH_TEXT_HEIGHT);
+            top_bar = new Surface(Path.Combine(Application.StartupPath, Path.Combine(guiDirectory, "top.bmp")));
+            splash = new Surface(Path.Combine(Application.StartupPath, Path.Combine(guiDirectory, "splash.bmp")));
+            freesans = SdlTtf.TTF_OpenFont(Path.Combine(Application.StartupPath, Path.Combine(guiDirectory, "FreeSans.ttf")), SPLASH_TEXT_HEIGHT);
             SPLASH_TEXT = new string[MAX_SPLASH_LINES];
             for (int cur = 0; cur < MAX_SPLASH_LINES; cur++) SPLASH_TEXT[cur] = string.Empty;
         }
