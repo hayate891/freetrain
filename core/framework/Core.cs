@@ -24,7 +24,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 using freetrain.framework.plugin;
 using freetrain.framework.sound;
 using freetrain.util;
@@ -39,17 +39,17 @@ namespace freetrain.framework
         private Core() { }		// no instantiation
 
 
-        /// <summary>
-        /// Registry key where the per-user application setting
-        /// should be stored.
-        /// </summary>
-        public static RegistryKey userRegistry
-        {
-            get
-            {
-                return Registry.CurrentUser.CreateSubKey(@"Software\FreeTrain");
-            }
-        }
+        ///// <summary>
+        ///// Registry key where the per-user application setting
+        ///// should be stored.
+        ///// </summary>
+        //public static RegistryKey userRegistry
+        //{
+        //    get
+        //    {
+        //        return Registry.CurrentUser.CreateSubKey(@"Software\FreeTrain");
+        //    }
+        //}
 
         /// <summary>
         /// Installation directory of the FreeTrain framework.
@@ -63,7 +63,7 @@ namespace freetrain.framework
             }
             set
             {
-                userRegistry.SetValue("installationDirectory", value);
+                //userRegistry.SetValue("installationDirectory", value);
             }
         }
 

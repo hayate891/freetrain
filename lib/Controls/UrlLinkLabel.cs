@@ -23,7 +23,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 
 namespace freetrain.controls
 {
@@ -64,8 +64,9 @@ namespace freetrain.controls
             // we have to specify executing module directory
             ProcessStartInfo info = new ProcessStartInfo();
             // get default browser (exe) path
-            RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
-            String val = rkey.GetValue("").ToString();
+            //TODO
+            //RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
+            String val = "";// rkey.GetValue("").ToString();
             Debug.WriteLine(val);
             if (val.StartsWith("\""))
             {
