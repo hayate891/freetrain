@@ -110,7 +110,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(SolutionDir)gui\*.*" "$(TargetDir)gui"
-xcopy /Y /E "$(SolutionDir)plugins\*.*" "$(TargetDir)plugins"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
