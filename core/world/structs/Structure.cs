@@ -141,7 +141,7 @@ namespace freetrain.world.structs
 		/// Individual voxel that a structure occupies.
 		/// </summary>
 		[Serializable]
-		protected internal abstract class StructureVoxel : AbstractVoxelImpl {
+		public abstract class StructureVoxel : AbstractVoxelImpl {
             /// <summary>
             /// 
             /// </summary>
