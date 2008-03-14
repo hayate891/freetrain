@@ -41,6 +41,7 @@
     </Compile>
   </ItemGroup>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)bin\Debug\*.dll" "$(SolutionDir)core\Debug\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -4,7 +4,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4380999E-CA4C-4AA2-8848-12FFABF72535}</ProjectGuid>
-    <RootNamespace>freetrain.world.rail.cttrain</RootNamespace>
+    <RootNamespace>FreeTrain.ColorTestTrain</RootNamespace>
     <AssemblyName>FreeTrain.ColorTestTrain</AssemblyName>
     <OutputType>Library</OutputType>
     <ApplicationIcon />
@@ -25,7 +25,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <PlatformTarget>x86</PlatformTarget>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\FreeTrain.ColorTestTrain.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\FreeTrain.ColorTestTrain.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <NoStdLib>false</NoStdLib>

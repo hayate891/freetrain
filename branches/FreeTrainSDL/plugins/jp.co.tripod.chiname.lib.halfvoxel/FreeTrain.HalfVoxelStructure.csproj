@@ -10,7 +10,7 @@
     </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>HalfVoxelStructure</AssemblyName>
+    <AssemblyName>FreeTrain.HalfVoxelStructure</AssemblyName>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
@@ -28,7 +28,7 @@
     </UpgradeBackupLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <PlatformTarget>x86</PlatformTarget>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
@@ -36,7 +36,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\HalfVoxelStructure.XML</DocumentationFile>
+    <DocumentationFile>FreeTrain.HalfVoxelStructure.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
