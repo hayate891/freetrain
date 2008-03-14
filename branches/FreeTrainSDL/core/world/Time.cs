@@ -44,25 +44,25 @@ namespace freetrain.world
         /// <summary>
         /// 
         /// </summary>
-        public const long MINUTE = 1;
+        public const long MINUTE_INITIAL = 1;
         /// <summary>
         /// 
         /// </summary>
-        public const long HOUR = MINUTE * 60;
+        public const long HOUR_INITIAL = MINUTE_INITIAL * 60;
         /// <summary>
         /// 
         /// </summary>
-        public const long DAY = HOUR * 24;
+        public const long DAY_INITIAL = HOUR_INITIAL * 24;
         /// <summary>
         /// 
         /// </summary>
-        public const long YEAR = DAY * 365;
+        public const long YEAR_INITIAL = DAY_INITIAL * 365;
         // the initial time when a game starts
         /// <summary>
         /// 
         /// 
         /// </summary>
-        public const long START_TIME = (31 + 28 + 31) * DAY + 8 * HOUR;
+        public const long START_TIME = (31 + 28 + 31) * DAY_INITIAL + 8 * HOUR_INITIAL;
 
 
 
@@ -95,7 +95,7 @@ namespace freetrain.world
         /// <summary>
         /// the current year. from 1.
         /// </summary>
-        public int year { get { return (int)(currentTime / YEAR) + 1; } }
+        public int year { get { return (int)(currentTime / YEAR_INITIAL) + 1; } }
         /// <summary>
         /// the current month. from 1.
         /// </summary>
@@ -103,7 +103,7 @@ namespace freetrain.world
         {
             get
             {
-                long days = currentTime / DAY;
+                long days = currentTime / DAY_INITIAL;
                 days %= 365;	// 1 year = 365 days. No leap year.
 
                 for (int i = 0; i < 12; i++)
@@ -123,7 +123,7 @@ namespace freetrain.world
         {
             get
             {
-                long days = currentTime / DAY;
+                long days = currentTime / DAY_INITIAL;
                 days %= 365;	// 1 year = 365 days. No leap year.
 
                 for (int i = 0; i < 12; i++)
@@ -143,18 +143,18 @@ namespace freetrain.world
         {
             get
             {
-                long days = currentTime / DAY;
+                long days = currentTime / DAY_INITIAL;
                 return (int)days % 7;
             }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int hour { get { return (int)((currentTime / HOUR) % 24); } }
+        public int hour { get { return (int)((currentTime / HOUR_INITIAL) % 24); } }
         /// <summary>
         /// 
         /// </summary>
-        public int minutes { get { return (int)((currentTime / MINUTE) % 60); } }
+        public int minutes { get { return (int)((currentTime / MINUTE_INITIAL) % 60); } }
         /// <summary>
         /// 
         /// </summary>

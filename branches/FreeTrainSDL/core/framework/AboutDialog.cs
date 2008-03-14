@@ -35,14 +35,14 @@ namespace freetrain.framework
     /// </summary>
     public class AboutDialog : System.Windows.Forms.Form
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public static void show()
-        {
-            AboutDialog dlg = new AboutDialog();
-            dlg.ShowDialog(MainWindow.mainWindow);
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        //public static void show()
+        //{
+        //    AboutDialog dlg = new AboutDialog();
+        //    dlg.ShowDialog(MainWindow.mainWindow);
+        //}
         /// <summary>
         /// 
         /// </summary>

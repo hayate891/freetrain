@@ -279,7 +279,7 @@ namespace freetrain.framework.plugin
                 Environment.Exit(-1);
 
             {// convert it to an array by sorting them in the order of dependency
-                this.plugins = new Plugin[pluginSet.count];
+                this.plugins = new Plugin[pluginSet.Count];
                 int ptr = 0;
                 Plugin p = null;
                 while (!pluginSet.isEmpty)

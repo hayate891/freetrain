@@ -63,10 +63,6 @@ namespace freetrain.util
         /// <summary>
         /// 
         /// </summary>
-        public int count { get { return core.Count; } }
-        /// <summary>
-        /// 
-        /// </summary>
         public int Count { get { return core.Count; } }
         /// <summary>
         /// 
@@ -80,7 +76,7 @@ namespace freetrain.util
         /// 
         /// 
         /// </summary>
-        public bool isEmpty { get { return count == 0; } }
+        public bool isEmpty { get { return Count == 0; } }
         /// <summary>
         /// 
         /// </summary>
@@ -106,7 +102,7 @@ namespace freetrain.util
         /// <returns></returns>
         public Array toArray(Type type)
         {
-            Array r = Array.CreateInstance(type, count);
+            Array r = Array.CreateInstance(type, Count);
             int idx = 0;
 
             foreach (object o in this)

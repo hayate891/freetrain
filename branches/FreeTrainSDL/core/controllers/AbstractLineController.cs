@@ -198,10 +198,10 @@ namespace freetrain.controllers
         {
             loc.z = anchor.z;
 
-            if (type.directionMode == SpecialRailContribution.DirectionMode.FourWay)
+            if (type.DirectionMode == SpecialRailContribution.DirectionModes.FourWay)
                 return loc.align4To(anchor);
 
-            if (type.directionMode == SpecialRailContribution.DirectionMode.EightWay)
+            if (type.DirectionMode == SpecialRailContribution.DirectionModes.EightWay)
                 return loc.align8To(anchor);
 
             Debug.Assert(false);

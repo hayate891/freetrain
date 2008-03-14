@@ -123,7 +123,7 @@ namespace freetrain.controls
         /// <summary>
         /// 
         /// </summary>
-        protected ColorPicker picker;
+        private ColorPicker picker;
         /// <summary>
         /// 
         /// </summary>

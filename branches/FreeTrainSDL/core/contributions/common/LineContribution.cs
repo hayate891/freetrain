@@ -75,7 +75,7 @@ namespace freetrain.contributions.common
         /// <summary>
         /// 
         /// </summary>
-        public enum DirectionMode
+        public enum DirectionModes
         {
             /// <summary>
             /// 
@@ -90,6 +90,6 @@ namespace freetrain.contributions.common
         /// <summary>
         /// Available directions
         /// </summary>
-        public virtual DirectionMode directionMode { get { return DirectionMode.FourWay; } }
+        public virtual DirectionModes DirectionMode { get { return DirectionModes.FourWay; } }
     }
 }

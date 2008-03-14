@@ -220,8 +220,8 @@ namespace freetrain.world
 
             currentTime++;
 
-            long m = (currentTime % DAY);
-            if (m == 6 * HOUR || m == 18 * HOUR)
+            long m = (currentTime % DAY_INITIAL);
+            if (m == 6 * HOUR_INITIAL || m == 18 * HOUR_INITIAL)
             {
                 PictureManager.reset();
                 World.world.onAllVoxelUpdated();	// time change

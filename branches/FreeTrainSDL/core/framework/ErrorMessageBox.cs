@@ -39,7 +39,7 @@ namespace freetrain.framework
         /// <param name="owner">can be null.</param>
         /// <param name="caption"></param>
         /// <param name="e"></param>
-        public static void show(IWin32Window owner, string caption, Exception e)
+        public static void ShowDialog(IWin32Window owner, string caption, Exception e)
         {
             using (Form f = new ErrorMessageBox(caption, e))
             {

@@ -28,7 +28,7 @@ namespace freetrain.world.road.dummycar
     /// Accessory implementation.
     /// </summary>
     [Serializable]
-    public class DummyCar : TrafficVoxel.Accessory
+    public class DummyCar : TrafficVoxel.IAccessory
     {
         private readonly byte index;
         private readonly DummyCarContribution contrib;

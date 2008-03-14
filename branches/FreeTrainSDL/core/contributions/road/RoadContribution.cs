@@ -122,11 +122,11 @@ namespace freetrain.contributions.road
         /// <summary>
         /// 
         /// </summary>
-        public override sealed DirectionMode directionMode
+        public override sealed DirectionModes DirectionMode
         {
             get
             {
-                return DirectionMode.FourWay;
+                return DirectionModes.FourWay;
             }
         }
     }
