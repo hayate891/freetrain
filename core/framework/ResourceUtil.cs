@@ -25,6 +25,7 @@ using System.IO;
 using System.Net;
 //using org.kohsuke.directaudio;
 using SDL.net;
+using SdlDotNet.Audio;
 using freetrain.util;
 using freetrain.framework.graphics;
 using freetrain.world;
@@ -83,10 +84,10 @@ namespace freetrain.framework
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static Segment loadSystemSound(String name)
+        public static Sound loadSystemSound(String name)
         {
             // can't read from stream
-            return Segment.fromFile(findSystemResource(name));
+            return new Sound(findSystemResource(name));
         }
 
         // using URI is essentially dangerous as Segment only support file names.
@@ -96,9 +97,9 @@ namespace freetrain.framework
         /// </summary>
         /// <param name="uri"></param>
         /// <returns></returns>
-        public static Segment loadSound(Uri uri)
+        public static Sound loadSound(Uri uri)
         {
-            return Segment.fromFile(uri.LocalPath);
+            return new Sound(uri.LocalPath);
         }
         /// <summary>
         /// 

@@ -28,39 +28,6 @@ namespace SDL.net
     /// <summary>
     /// 
     /// </summary>
-    public class Audio : IDisposable
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        public Audio()
-        {
-            //SdlMixer.Mix_OpenAudio(SdlMixer.MIX_DEFAULT_FREQUENCY, unchecked(Sdl.AUDIO_S16LSB), 2, 1024);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="filename"></param>
-        public static void play(string filename)
-        {
-            IntPtr tmp = SdlMixer.Mix_LoadWAV(filename);
-            SdlMixer.Mix_PlayChannel(-1, tmp, 0);
-            //SdlMixer.Mix_FreeChunk(tmp);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void Dispose()
-        {
-            //SdlMixer.Mix_CloseAudio();
-        }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
     public class Segment
     {
         IntPtr sndHandle;
@@ -109,63 +76,6 @@ namespace SDL.net
         public static Segment fromFile(string p)
         {
             return new Segment(p);
-        }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public class BGM
-    {
-        private string _filename;
-        /// <summary>
-        /// 
-        /// </summary>
-        public string fileName
-        {
-            get
-            {
-                return _filename;
-            }
-            set
-            {
-                if (music != IntPtr.Zero) SdlMixer.Mix_FreeMusic(music);
-                _filename = value;
-                music = SdlMixer.Mix_LoadMUS(_filename);
-            }
-        }
-
-        private IntPtr music;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public BGM()
-        {
-            _filename = string.Empty;
-            music = IntPtr.Zero;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void stop()
-        {
-            //throw new Exception("The method or operation is not implemented.");
-            SdlMixer.Mix_HaltMusic();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void run()
-        {
-            //throw new Exception("The method or operation is not implemented.");
-            if (_filename != string.Empty)
-            {
-                SdlMixer.Mix_LoadMUS(fileName);
-                SdlMixer.Mix_PlayMusic(music, 0);
-            }
         }
     }
 }
