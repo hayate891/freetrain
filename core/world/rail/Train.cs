@@ -124,7 +124,7 @@ namespace freetrain.world.rail
         public TrainCar head { get { return cars[0]; } }
 
         /// <summary> Return true if this train is placed on the map </summary>
-        public bool isPlaced { get { return state != State.Unplaced; } }
+        public bool isPlaced { get { return State != TrainStates.Unplaced; } }
 
         /// <summary> Place a train to the specified location.</summary>
         /// <returns> false if it can't be done. </returns>
@@ -171,7 +171,7 @@ namespace freetrain.world.rail
 
             stopCallCount = 0;
             registerTimer();
-            state = State.Moving;
+            State = TrainStates.Moving;
 
             return true;
         }
@@ -188,7 +188,7 @@ namespace freetrain.world.rail
 
             // make sure that we don't have any pending event
             World.world.clock.unregister(new ClockHandler(clockHandler));
-            state = State.Unplaced;
+            State = TrainStates.Unplaced;
         }
 
         /// <summary> Sell this train. </summary>
@@ -206,7 +206,7 @@ namespace freetrain.world.rail
 
 
         /// <summary> Possible states of a train. </summary>
-        public enum State : byte
+        public enum TrainStates : byte
         {
             /// <summary>
             /// 
@@ -231,11 +231,11 @@ namespace freetrain.world.rail
         }
 
         /// <summary> State of this train. Usually updated by the clock handler. </summary>
-        private State __state = State.Unplaced;
+        private TrainStates __state = TrainStates.Unplaced;
         /// <summary>
         /// 
         /// </summary>
-        public State state
+        public TrainStates State
         {
             get
             {
@@ -265,13 +265,13 @@ namespace freetrain.world.rail
         {
             get
             {
-                switch (state)
+                switch (State)
                 {
-                    case State.Unplaced: return "Unplaced";
-                    case State.Moving: return "Moving";
-                    case State.StoppingAtStation: return "Stopping at station";
-                    case State.StoppingAtSignal: return "Stopping at signal";
-                    case State.EmergencyStopping: return "Emergency stop";
+                    case TrainStates.Unplaced: return "Unplaced";
+                    case TrainStates.Moving: return "Moving";
+                    case TrainStates.StoppingAtStation: return "Stopping at station";
+                    case TrainStates.StoppingAtSignal: return "Stopping at signal";
+                    case TrainStates.EmergencyStopping: return "Emergency stop";
                     //! case State.Unplaced:			return "未配置";
                     //! case State.Moving:				return "進行中";
                     //! case State.StoppingAtStation:	return "発車時間待";
@@ -324,7 +324,7 @@ namespace freetrain.world.rail
                     registerTimer(time);	// resume after the specified time
 
                     // TODO: see where this train is being stopped. do something if necessary
-                    state = State.StoppingAtStation;
+                    State = TrainStates.StoppingAtStation;
                     return;
                 }
 
@@ -335,7 +335,7 @@ namespace freetrain.world.rail
 
             // this car can now move
             stopCallCount = 0;
-            State s = State.Moving;
+            TrainStates s = TrainStates.Moving;
 
             // determine the next head car state
             CarState next = calcNextTrainCarState[head.state];
@@ -345,7 +345,7 @@ namespace freetrain.world.rail
                     move(next);
                 else
                     // otherwise we can't move. emergency stop.
-                    s = State.EmergencyStopping;
+                    s = TrainStates.EmergencyStopping;
             }
             else
             {
@@ -356,9 +356,9 @@ namespace freetrain.world.rail
                 if (next != null && !isBlocked[next])
                     move(next);
                 else
-                    s = State.EmergencyStopping;
+                    s = TrainStates.EmergencyStopping;
             }
-            state = s;	// update the state
+            State = s;	// update the state
             registerTimer();
         }
 

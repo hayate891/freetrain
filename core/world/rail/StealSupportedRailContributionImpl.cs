@@ -203,7 +203,7 @@ namespace freetrain.world.rail
         /// <summary>
         /// 
         /// </summary>
-        public override DirectionMode directionMode { get { return DirectionMode.EightWay; } }
+        public override DirectionModes DirectionMode { get { return DirectionModes.EightWay; } }
         /// <summary>
         /// 
         /// </summary>

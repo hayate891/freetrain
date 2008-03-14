@@ -31,7 +31,7 @@ namespace freetrain.world
 	/// Rail-road crossing
 	/// </summary>
 	[Serializable]
-	class RRCrossing : TrafficVoxel.Accessory, IDeserializationCallback
+	class RRCrossing : TrafficVoxel.IAccessory, IDeserializationCallback
 	{
 		/// <summary> This crossing belongs to this voxel. </summary>
 		private readonly TrafficVoxel owner;

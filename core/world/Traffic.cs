@@ -46,7 +46,7 @@ namespace freetrain.world
 
         private Road _road;
 
-        private Accessory _accessory;
+        private IAccessory _accessory;
         /// <summary>
         /// 
         /// </summary>
@@ -69,7 +69,7 @@ namespace freetrain.world
         /// <summary>
         /// 
         /// </summary>
-        public interface Accessory
+        public interface IAccessory
         {
             /// <summary>
             /// 
@@ -146,7 +146,7 @@ namespace freetrain.world
         /// <summary>
         /// 
         /// </summary>
-        public Accessory accessory
+        public IAccessory accessory
         {
             get
             {
