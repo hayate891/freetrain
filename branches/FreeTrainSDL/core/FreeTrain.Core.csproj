@@ -24,7 +24,7 @@
     </UpgradeBackupLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <PlatformTarget>x86</PlatformTarget>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
@@ -32,7 +32,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>Debug\FreeTrain.Core.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\FreeTrain.Core.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -47,7 +47,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <PlatformTarget>x86</PlatformTarget>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
