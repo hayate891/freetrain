@@ -187,9 +187,9 @@ namespace freetrain.util
         }
     }
 
-    /// <summary>
-    /// PersistentWindowState that saves the state to a registry.
-    /// </summary>
+    ///// <summary>
+    ///// PersistentWindowState that saves the state to a registry.
+    ///// </summary>
     //public class RegistryPersistentWindowState : PersistentWindowState
     //{
     //    private readonly RegistryKey key;

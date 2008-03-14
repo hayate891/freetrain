@@ -26,7 +26,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 
 namespace freetrain.controls
 {
@@ -774,20 +774,20 @@ namespace freetrain.controls
 
             RemoveAll();
 
-            RegistryKey regKey = Registry.CurrentUser.OpenSubKey(registryKeyName);
-            if (regKey != null)
-            {
-                maxEntries = (int)regKey.GetValue("max", maxEntries);
+            //RegistryKey regKey = Registry.CurrentUser.OpenSubKey(registryKeyName);
+            //if (regKey != null)
+            //{
+            //    maxEntries = (int)regKey.GetValue("max", maxEntries);
 
-                for (int number = maxEntries; number > 0; number--)
-                {
-                    String filename = (String)regKey.GetValue("File" + number.ToString());
-                    if (filename != null)
-                        AddFile(filename);
-                }
+            //    for (int number = maxEntries; number > 0; number--)
+            //    {
+            //        String filename = (String)regKey.GetValue("File" + number.ToString());
+            //        if (filename != null)
+            //            AddFile(filename);
+            //    }
 
-                regKey.Close();
-            }
+            //    regKey.Close();
+            //}
         }
 
         /// <summary>
@@ -797,25 +797,25 @@ namespace freetrain.controls
         {
             Debug.Assert(registryKeyName != null);
 
-            RegistryKey regKey = Registry.CurrentUser.CreateSubKey(registryKeyName);
-            if (regKey != null)
-            {
-                regKey.SetValue("max", maxEntries);
+            //RegistryKey regKey = Registry.CurrentUser.CreateSubKey(registryKeyName);
+            //if (regKey != null)
+            //{
+            //    regKey.SetValue("max", maxEntries);
 
-                int number = 1;
-                int i = StartIndex;
-                for (; i < EndIndex; i++, number++)
-                {
-                    regKey.SetValue("File" + number.ToString(), ((MruMenuItem)MenuItems[i]).fileName);
-                }
+            //    int number = 1;
+            //    int i = StartIndex;
+            //    for (; i < EndIndex; i++, number++)
+            //    {
+            //        regKey.SetValue("File" + number.ToString(), ((MruMenuItem)MenuItems[i]).fileName);
+            //    }
 
-                for (; number <= 16; number++)
-                {
-                    regKey.DeleteValue("File" + number.ToString(), false);
-                }
+            //    for (; number <= 16; number++)
+            //    {
+            //        regKey.DeleteValue("File" + number.ToString(), false);
+            //    }
 
-                regKey.Close();
-            }
+            //    regKey.Close();
+            //}
         }
 
         #endregion

@@ -28,7 +28,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Data;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 //using freetrain.contributions.dock;
 using freetrain.contributions.common;
 using freetrain.contributions.rail;
