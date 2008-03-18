@@ -1089,23 +1089,23 @@ namespace SDL.net
         //    return this.GetPixel(x, y);
         //}
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="surf"></param>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="surf"></param>
+        ///// <param name="x"></param>
+        ///// <param name="y"></param>
+        ///// <returns></returns>
         //public Color getColor(IntPtr surf, int x, int y)
         //{
         //    return this.GetPixel(surf, x, y);
         //}
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="colorValue"></param>
-        /// <returns></returns>
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="colorValue"></param>
+        ///// <returns></returns>
         //[CLSCompliant(false)]
         //public System.Drawing.Color GetColor(int colorValue)
         //{
