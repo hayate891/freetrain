@@ -25,7 +25,7 @@ using System.Drawing;
 using System.Data;
 using System.Windows.Forms;
 
-namespace FreeTrain.controls
+namespace FreeTrain.Controls
 {
     /// <summary>
     /// Select an ordered sub list from another list.

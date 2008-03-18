@@ -28,7 +28,7 @@ using System.Windows.Forms;
 using System.Xml;
 //using Microsoft.Win32;
 
-namespace FreeTrain.controls
+namespace FreeTrain.Controls
 {
     /// <summary>
     /// 

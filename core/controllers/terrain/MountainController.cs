@@ -50,7 +50,7 @@ namespace FreeTrain.Controllers.Terrain
 
         private Label label1;
         private GroupBox groupBox1;
-        private FreeTrain.controls.IndexSelector selSize;
+        private FreeTrain.Controls.IndexSelector selSize;
 
         private static MountainController theInstance;
         /// <summary>
@@ -101,7 +101,7 @@ namespace FreeTrain.Controllers.Terrain
             this.preview = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.selSize = new FreeTrain.controls.IndexSelector();
+            this.selSize = new FreeTrain.Controls.IndexSelector();
             ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();

@@ -55,7 +55,7 @@ namespace FreeTrain.Controllers.Structs
         /// </summary>
         protected System.Windows.Forms.RadioButton buttonPlace;
         private System.ComponentModel.IContainer components = null;
-        private FreeTrain.controls.IndexSelector indexSelector;
+        private FreeTrain.Controls.IndexSelector indexSelector;
 
         private Bitmap previewBitmap;
         /// <summary>
@@ -111,7 +111,7 @@ namespace FreeTrain.Controllers.Structs
             this.preview = new System.Windows.Forms.PictureBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
-            this.indexSelector = new FreeTrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.Controls.IndexSelector();
             ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.SuspendLayout();
             // 

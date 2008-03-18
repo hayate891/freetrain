@@ -37,7 +37,7 @@ using FreeTrain.Util;
 //using SDL.net;
 using SDL.net;
 
-namespace FreeTrain.world.Structs.hv
+namespace FreeTrain.world.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// Controller that allows the user to
@@ -50,18 +50,18 @@ namespace FreeTrain.world.Structs.hv
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton btnRemove;
         private System.Windows.Forms.RadioButton btnPlace;
-        private FreeTrain.controls.CostBox price;
+        private FreeTrain.Controls.CostBox price;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox group;
         private System.Windows.Forms.Label namelabel;
-        private FreeTrain.controls.IndexSelector idxDesign;
-        private FreeTrain.controls.IndexSelector idxColor;
+        private FreeTrain.Controls.IndexSelector idxDesign;
+        private FreeTrain.Controls.IndexSelector idxColor;
         private System.Windows.Forms.ComboBox typeBox;
         private System.Windows.Forms.CheckBox cbRndColor;
         private System.Windows.Forms.CheckBox cbRndDesign;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbRndColor2;
-        private FreeTrain.controls.IndexSelector idxColor2;
+        private FreeTrain.Controls.IndexSelector idxColor2;
 
         private Bitmap previewBitmap;
         private Random rnd;
@@ -118,7 +118,7 @@ namespace FreeTrain.world.Structs.hv
         #region Designer generated code
         private System.Windows.Forms.PictureBox preview;
         private System.ComponentModel.IContainer components = null;
-        private FreeTrain.controls.IndexSelector indexSelector;
+        private FreeTrain.Controls.IndexSelector indexSelector;
 
         private void InitializeComponent()
         {
@@ -128,8 +128,8 @@ namespace FreeTrain.world.Structs.hv
             this.btnPlace = new System.Windows.Forms.RadioButton();
             this.group = new System.Windows.Forms.GroupBox();
             this.namelabel = new System.Windows.Forms.Label();
-            this.idxDesign = new FreeTrain.controls.IndexSelector();
-            this.idxColor = new FreeTrain.controls.IndexSelector();
+            this.idxDesign = new FreeTrain.Controls.IndexSelector();
+            this.idxColor = new FreeTrain.Controls.IndexSelector();
             this.label1 = new System.Windows.Forms.Label();
             this.typeBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -137,10 +137,10 @@ namespace FreeTrain.world.Structs.hv
             this.cbRndDesign = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbRndColor2 = new System.Windows.Forms.CheckBox();
-            this.idxColor2 = new FreeTrain.controls.IndexSelector();
-            this.price = new FreeTrain.controls.CostBox();
+            this.idxColor2 = new FreeTrain.Controls.IndexSelector();
+            this.price = new FreeTrain.Controls.CostBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.indexSelector = new FreeTrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.Controls.IndexSelector();
             this.group.SuspendLayout();
             this.SuspendLayout();
             // 

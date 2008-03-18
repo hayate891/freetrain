@@ -73,14 +73,14 @@ namespace FreeTrain.world.Accounting
 
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
-        private FreeTrain.controls.SubListSelector selector;
+        private FreeTrain.Controls.SubListSelector selector;
         private System.ComponentModel.Container components = null;
 
         private void InitializeComponent()
         {
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.selector = new FreeTrain.controls.SubListSelector();
+            this.selector = new FreeTrain.Controls.SubListSelector();
             this.SuspendLayout();
             // 
             // okButton

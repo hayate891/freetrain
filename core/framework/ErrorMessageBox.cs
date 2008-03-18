@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using FreeTrain.controls;
+using FreeTrain.Controls;
 
 namespace FreeTrain.Framework
 {
@@ -97,7 +97,7 @@ namespace FreeTrain.Framework
             this.detail = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
             this.msg = new System.Windows.Forms.Label();
-            this.linkLabel1 = new FreeTrain.controls.UrlLinkLabel();
+            this.linkLabel1 = new FreeTrain.Controls.UrlLinkLabel();
             this.SuspendLayout();
             // 
             // icon

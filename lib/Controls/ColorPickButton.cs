@@ -25,7 +25,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
 
-namespace FreeTrain.controls
+namespace FreeTrain.Controls
 {
     /// <summary>
     /// the button pick color by opening ColorPicker

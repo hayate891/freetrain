@@ -25,7 +25,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 //using AxSHDocVw;
 //using MsHtmlHost;
-using FreeTrain.controls;
+using FreeTrain.Controls;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 

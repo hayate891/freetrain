@@ -37,13 +37,13 @@
 	<contribution type="contribution" id="{A8454630-96EB-45AD-C477-7DA394892BE6}">
 		<name>HalfVoxelStructure</name>
 		<class name="FreeTrain.Framework.plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.world.Structs.hv.HalfVoxelContribution"
+		<implementation name="FreeTrain.world.Structs.HalfVoxelStructure.HalfVoxelContribution"
 			codebase="FreeTrain.HalfVoxelStructure.dll" />
 	</contribution>
 	
 	<!-- temporary -->
 	<contribution type="menu" id="{01AA051B-6112-4C00-C477-DE82E240F19F}">
-		<class name="FreeTrain.world.Structs.hv.MenuContributionImpl"
+		<class name="FreeTrain.world.Structs.HalfVoxelStructure.MenuContributionImpl"
 			codebase="FreeTrain.HalfVoxelStructure.dll" />
 	</contribution>	
 	<!--ここまでの順序は大切-->

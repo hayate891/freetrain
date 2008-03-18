@@ -105,14 +105,14 @@ namespace FreeTrain.Controllers.Land
         #region Designer generated code
         private System.Windows.Forms.PictureBox preview;
         private System.ComponentModel.IContainer components = null;
-        private FreeTrain.controls.CostBox costBox;
+        private FreeTrain.Controls.CostBox costBox;
         private System.Windows.Forms.RadioButton buttonRemove;
         private System.Windows.Forms.RadioButton buttonPlace;
 
         private void InitializeComponent()
         {
             this.preview = new System.Windows.Forms.PictureBox();
-            this.costBox = new FreeTrain.controls.CostBox();
+            this.costBox = new FreeTrain.Controls.CostBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();

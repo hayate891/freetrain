@@ -66,12 +66,12 @@ namespace FreeTrain.Views.Map
             drawer.heightCutHeight = trackBar.Value;
         }
         #region Windows Form Designer generated code
-        private FreeTrain.controls.TrackBarEx trackBar;
+        private FreeTrain.Controls.TrackBarEx trackBar;
         private System.ComponentModel.Container components = null;
 
         private void InitializeComponent()
         {
-            this.trackBar = new FreeTrain.controls.TrackBarEx();
+            this.trackBar = new FreeTrain.Controls.TrackBarEx();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.SuspendLayout();
             // 

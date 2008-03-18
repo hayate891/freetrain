@@ -35,7 +35,7 @@ using FreeTrain.Contributions.Rail;
 using FreeTrain.Contributions.road;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Contributions.Others;
-using FreeTrain.controls;
+using FreeTrain.Controls;
 using FreeTrain.Controllers;
 using FreeTrain.Controllers.Land;
 using FreeTrain.Controllers.Rail;
