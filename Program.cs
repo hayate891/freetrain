@@ -42,7 +42,7 @@ using FreeTrain.Views;
 
 namespace FreeTrainSDL
 {
-    public class FreeTrainSDL : IDisposable
+    class FreeTrainSDL : IDisposable
     {
         #region Private fields
 
@@ -115,7 +115,9 @@ namespace FreeTrainSDL
                 controller = MainWindow.mainWindow.currentController;
 
                 qView.updateScreen();
-                if (World.world.satellite == null || World.world.satellite.surface.w != 150 || World.world.satellite.surface.h != 150)
+                if (World.world.satellite == null || 
+                    World.world.satellite.surface.w != 150 || 
+                    World.world.satellite.surface.h != 150)
                 {
                     World.world.satellite = new Surface(150, 150, 32);
                     World.world.satellite.sourceColorKey = Color.Magenta;
@@ -235,10 +237,6 @@ namespace FreeTrainSDL
             screen.Update();
         }
 
-        private void weatherTimer_Tick(object sender, System.EventArgs e)
-        {
-        }
-
         private void GUIButtonClick(object sender, EventArgs e)
         {
             switch ((string)sender)
@@ -263,10 +261,6 @@ namespace FreeTrainSDL
                     bgmplaylist.Show();
                     break;
             }
-        }
-
-        private void qview_OnUpdated(object sender, EventArgs e)
-        {
         }
 
         private bool scrollByDrag(Point curMousePos)
@@ -371,8 +365,7 @@ namespace FreeTrainSDL
             finalDraw();
 
             qView.draw(new Rectangle(0, 0, world.size.x * 32 - 16, (world.size.y - 2 * world.size.z - 1) * 8), null);
-            qView.OnUpdated += new EventHandler(qview_OnUpdated);
-
+            
             gui.SHOW_SPLASH = false;
 
             timer.Tick += new EventHandler(timerTick);
@@ -385,12 +378,52 @@ namespace FreeTrainSDL
 
         #endregion
 
-        #region Public Methods
+        #region IDisposable Members
 
+        private bool disposed;
+
+        /// <summary>
+        /// Destroy object
+        /// </summary>
         public void Dispose()
         {
-            weatherOverlay.Dispose();
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// Destroy object
+        /// </summary>
+        public void Close()
+        {
             Dispose();
+        }
+
+        /// <summary>
+        /// Destroy object
+        /// </summary>
+        ~FreeTrainSDL()
+        {
+            Dispose(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    if (this.weatherOverlay != null)
+                    {
+                        this.weatherOverlay.Dispose();
+                        this.weatherOverlay = null;
+                    }
+                }
+                this.disposed = true;
+            }
         }
 
         #endregion
