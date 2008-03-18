@@ -26,7 +26,7 @@ using FreeTrain.Contributions.Others;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.world.Rail.cttrain
+namespace FreeTrain.world.Rail.ColorTestTrain
 {
     /// <summary>
     /// Menu item contribution that allows an user to

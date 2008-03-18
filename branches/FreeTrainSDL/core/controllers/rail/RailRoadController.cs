@@ -125,7 +125,7 @@ namespace FreeTrain.Controllers.Rail
         #region Windows Form Designer generated code
         private System.Windows.Forms.RadioButton buttonPlace;
         private System.Windows.Forms.RadioButton buttonRemove;
-        private FreeTrain.controls.CostBox costBox;
+        private FreeTrain.Controls.CostBox costBox;
         private System.Windows.Forms.Label message;
         private System.ComponentModel.Container components = null;
 
@@ -134,7 +134,7 @@ namespace FreeTrain.Controllers.Rail
             this.message = new System.Windows.Forms.Label();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
-            this.costBox = new FreeTrain.controls.CostBox();
+            this.costBox = new FreeTrain.Controls.CostBox();
             this.SuspendLayout();
             // 
             // message

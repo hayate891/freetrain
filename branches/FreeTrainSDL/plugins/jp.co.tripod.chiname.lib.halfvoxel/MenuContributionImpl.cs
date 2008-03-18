@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Contributions.Others;
 
-namespace FreeTrain.world.Structs.hv
+namespace FreeTrain.world.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// Adds "half voxel" menu to the main window

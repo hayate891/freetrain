@@ -34,7 +34,7 @@ using FreeTrain.world.Rail;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using SDL.net;
-using FreeTrain.controls;
+using FreeTrain.Controls;
 
 
 namespace FreeTrain.Controllers.Rail
@@ -56,13 +56,13 @@ namespace FreeTrain.Controllers.Rail
             theInstance.Activate();
         }
 
-        private FreeTrain.controls.IndexSelector indexSelector;
+        private FreeTrain.Controls.IndexSelector indexSelector;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private FreeTrain.controls.IndexSelector indexSelector1;
+        private FreeTrain.Controls.IndexSelector indexSelector1;
         private System.Windows.Forms.Label label4;
-        private FreeTrain.controls.IndexSelector indexSelector2;
+        private FreeTrain.Controls.IndexSelector indexSelector2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -219,12 +219,12 @@ namespace FreeTrain.Controllers.Rail
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.indexSelector = new FreeTrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.Controls.IndexSelector();
             this.stationType = new System.Windows.Forms.ComboBox();
             this.stationPicture = new System.Windows.Forms.PictureBox();
-            this.indexSelector1 = new FreeTrain.controls.IndexSelector();
+            this.indexSelector1 = new FreeTrain.Controls.IndexSelector();
             this.label4 = new System.Windows.Forms.Label();
-            this.indexSelector2 = new FreeTrain.controls.IndexSelector();
+            this.indexSelector2 = new FreeTrain.Controls.IndexSelector();
             this.label5 = new System.Windows.Forms.Label();
             this.platformPage = new System.Windows.Forms.TabPage();
             this.checkSlim = new System.Windows.Forms.CheckBox();

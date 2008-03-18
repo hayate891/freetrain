@@ -28,7 +28,7 @@ using FreeTrain.Views.Map;
 using FreeTrain.Controllers;
 
 
-namespace FreeTrain.world.Structs.hv
+namespace FreeTrain.world.Structs.HalfVoxelStructure
 {
     internal delegate void createCallback();
     /// <summary>

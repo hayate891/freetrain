@@ -24,7 +24,7 @@ using System.Xml;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Contributions.Train;
 
-namespace FreeTrain.world.Rail.cttrain
+namespace FreeTrain.world.Rail.ColorTestTrain
 {
     /// <summary>
     /// TrainCar contribution implementation for ColorTestTrain.

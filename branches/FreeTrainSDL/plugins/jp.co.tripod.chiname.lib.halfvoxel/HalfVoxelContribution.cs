@@ -32,7 +32,7 @@ using FreeTrain.world.Structs;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Structs;
 
-namespace FreeTrain.world.Structs.hv
+namespace FreeTrain.world.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// 

@@ -51,7 +51,7 @@ namespace FreeTrain.Controllers.Rail
             theInstance.Activate();
         }
 
-        private FreeTrain.controls.CostBox costBox;
+        private FreeTrain.Controls.CostBox costBox;
 
         private static SlopeRailRoadController theInstance;
         /// <summary>
@@ -170,7 +170,7 @@ namespace FreeTrain.Controllers.Rail
             this.pictureW = new System.Windows.Forms.PictureBox();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
-            this.costBox = new FreeTrain.controls.CostBox();
+            this.costBox = new FreeTrain.Controls.CostBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureS)).BeginInit();

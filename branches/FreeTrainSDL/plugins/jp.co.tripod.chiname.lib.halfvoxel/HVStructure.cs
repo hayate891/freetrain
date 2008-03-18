@@ -32,7 +32,7 @@ using FreeTrain.Util;
 using FreeTrain.world;
 using FreeTrain.world.Subsidiaries;
 
-namespace FreeTrain.world.Structs.hv
+namespace FreeTrain.world.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// The half divided voxel structure.

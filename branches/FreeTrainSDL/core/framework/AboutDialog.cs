@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using FreeTrain.controls;
+using FreeTrain.Controls;
 using SDL.net;
 using FreeTrain.Util;
 

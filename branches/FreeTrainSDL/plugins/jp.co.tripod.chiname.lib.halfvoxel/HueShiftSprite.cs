@@ -28,7 +28,7 @@ using FreeTrain.world;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Framework.graphics;
 
-namespace FreeTrain.world.Structs.hv
+namespace FreeTrain.world.Structs.HalfVoxelStructure
 {
 
     /// <summary>

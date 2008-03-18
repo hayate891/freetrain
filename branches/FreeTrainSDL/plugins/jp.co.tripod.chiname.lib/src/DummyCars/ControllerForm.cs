@@ -45,11 +45,11 @@ namespace FreeTrain.world.road.DummyCar
     [CLSCompliant(false)]
     public class ControllerForm : ControllerHostForm
     {
-        private FreeTrain.controls.CostBox costBox;
+        private FreeTrain.Controls.CostBox costBox;
         private System.Windows.Forms.RadioButton buttonRemove;
         private System.Windows.Forms.RadioButton buttonPlace;
         private System.Windows.Forms.ComboBox typeBox;
-        private FreeTrain.controls.IndexSelector colSelector;
+        private FreeTrain.Controls.IndexSelector colSelector;
 
         private Bitmap previewBitmap;
         /// <summary>
@@ -86,7 +86,7 @@ namespace FreeTrain.world.road.DummyCar
         #region Designer generated code
         private System.Windows.Forms.PictureBox preview;
         private System.ComponentModel.IContainer components = null;
-        private FreeTrain.controls.IndexSelector indexSelector;
+        private FreeTrain.Controls.IndexSelector indexSelector;
 
         private void InitializeComponent()
         {
@@ -95,9 +95,9 @@ namespace FreeTrain.world.road.DummyCar
             //this.costBox = new freetrain.controls.CostBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
-            this.colSelector = new FreeTrain.controls.IndexSelector();
-            this.costBox = new FreeTrain.controls.CostBox();
-            this.indexSelector = new FreeTrain.controls.IndexSelector();
+            this.colSelector = new FreeTrain.Controls.IndexSelector();
+            this.costBox = new FreeTrain.Controls.CostBox();
+            this.indexSelector = new FreeTrain.Controls.IndexSelector();
             this.SuspendLayout();
             // 
             // typeBox

@@ -21,7 +21,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace FreeTrain.controls
+namespace FreeTrain.Controls
 {
     /// <summary> Delegate that received dropped files. </summary>
     public delegate void FileDropEventHandler(string fileName);

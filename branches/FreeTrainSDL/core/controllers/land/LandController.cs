@@ -98,14 +98,14 @@ namespace FreeTrain.Controllers.Land
         #region Designer generated code
         private System.Windows.Forms.PictureBox preview;
         private System.ComponentModel.IContainer components = null;
-        private FreeTrain.controls.IndexSelector indexSelector;
+        private FreeTrain.Controls.IndexSelector indexSelector;
         private System.Windows.Forms.ComboBox groupBox;
 
         private void InitializeComponent()
         {
             this.groupBox = new System.Windows.Forms.ComboBox();
             this.preview = new System.Windows.Forms.PictureBox();
-            this.indexSelector = new FreeTrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.Controls.IndexSelector();
             this.SuspendLayout();
             // 
             // groupBox
