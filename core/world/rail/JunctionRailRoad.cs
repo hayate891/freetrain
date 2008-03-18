@@ -20,9 +20,9 @@
 
 using System;
 using System.Diagnostics;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Railroad with a junction.

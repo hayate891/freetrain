@@ -23,21 +23,21 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.contributions.common;
-using freetrain.contributions.rail;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.views;
-using freetrain.views.map;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
 using SDL.net;
-using freetrain.controls;
+using FreeTrain.controls;
 
 
-namespace freetrain.controllers.rail
+namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
     /// 
@@ -56,13 +56,13 @@ namespace freetrain.controllers.rail
             theInstance.Activate();
         }
 
-        private freetrain.controls.IndexSelector indexSelector;
+        private FreeTrain.controls.IndexSelector indexSelector;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private freetrain.controls.IndexSelector indexSelector1;
+        private FreeTrain.controls.IndexSelector indexSelector1;
         private System.Windows.Forms.Label label4;
-        private freetrain.controls.IndexSelector indexSelector2;
+        private FreeTrain.controls.IndexSelector indexSelector2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -219,12 +219,12 @@ namespace freetrain.controllers.rail
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.indexSelector = new freetrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.controls.IndexSelector();
             this.stationType = new System.Windows.Forms.ComboBox();
             this.stationPicture = new System.Windows.Forms.PictureBox();
-            this.indexSelector1 = new freetrain.controls.IndexSelector();
+            this.indexSelector1 = new FreeTrain.controls.IndexSelector();
             this.label4 = new System.Windows.Forms.Label();
-            this.indexSelector2 = new freetrain.controls.IndexSelector();
+            this.indexSelector2 = new FreeTrain.controls.IndexSelector();
             this.label5 = new System.Windows.Forms.Label();
             this.platformPage = new System.Windows.Forms.TabPage();
             this.checkSlim = new System.Windows.Forms.CheckBox();

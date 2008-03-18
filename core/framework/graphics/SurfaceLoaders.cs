@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using SDL.net;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// Function object that can load a picture into the given surface.

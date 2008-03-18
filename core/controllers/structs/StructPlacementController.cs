@@ -24,19 +24,19 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.common;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.structs;
-using freetrain.contributions.rail;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.controllers.structs
+namespace FreeTrain.Controllers.Structs
 {
     /// <summary>
     /// Controller that allows the user to
@@ -55,7 +55,7 @@ namespace freetrain.controllers.structs
         /// </summary>
         protected System.Windows.Forms.RadioButton buttonPlace;
         private System.ComponentModel.IContainer components = null;
-        private freetrain.controls.IndexSelector indexSelector;
+        private FreeTrain.controls.IndexSelector indexSelector;
 
         private Bitmap previewBitmap;
         /// <summary>
@@ -111,7 +111,7 @@ namespace freetrain.controllers.structs
             this.preview = new System.Windows.Forms.PictureBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
-            this.indexSelector = new freetrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.controls.IndexSelector();
             ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.SuspendLayout();
             // 

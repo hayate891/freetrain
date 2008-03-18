@@ -20,14 +20,14 @@
 
 using System;
 using System.Windows.Forms;
-using freetrain.controllers.structs;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.rail;
+using FreeTrain.Controllers.Structs;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
 
-namespace freetrain.controllers.rail
+namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
     /// StationaryStructPlacementController の概要の説明です。

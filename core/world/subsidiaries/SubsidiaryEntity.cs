@@ -20,7 +20,7 @@
 
 using System;
 
-namespace freetrain.world.subsidiaries
+namespace FreeTrain.world.subsidiaries
 {
     /// <summary>
     /// 

@@ -24,7 +24,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace freetrain.views.map
+namespace FreeTrain.Views.Map
 {
     /// <summary>
     /// Window that controls the height cut mode of the given quarter view drawer.
@@ -66,12 +66,12 @@ namespace freetrain.views.map
             drawer.heightCutHeight = trackBar.Value;
         }
         #region Windows Form Designer generated code
-        private freetrain.controls.TrackBarEx trackBar;
+        private FreeTrain.controls.TrackBarEx trackBar;
         private System.ComponentModel.Container components = null;
 
         private void InitializeComponent()
         {
-            this.trackBar = new freetrain.controls.TrackBarEx();
+            this.trackBar = new FreeTrain.controls.TrackBarEx();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.SuspendLayout();
             // 

@@ -20,9 +20,9 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.train
+namespace FreeTrain.Contributions.train
 {
     /// <summary>
     /// LoadsTrainContributionFactory.

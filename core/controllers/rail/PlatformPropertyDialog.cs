@@ -24,10 +24,10 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.rail;
-using freetrain.framework;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// PlatformPropertyDialog の概要の説明です。

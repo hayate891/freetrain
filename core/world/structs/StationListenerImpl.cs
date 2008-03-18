@@ -21,18 +21,18 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
-using freetrain.contributions.population;
-using freetrain.framework.plugin;
-using freetrain.world.rail;
+using FreeTrain.Contributions.population;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world.Rail;
 
-namespace freetrain.world.structs
+namespace FreeTrain.world.Structs
 {
     /// <summary>
     /// StationListener implementation that uses
     /// Population object to calculate population.
     /// </summary>
     [Serializable]
-    public class StationListenerImpl : rail.StationListener
+    public class StationListenerImpl : Rail.StationListener
     {
         /// <summary>
         /// 

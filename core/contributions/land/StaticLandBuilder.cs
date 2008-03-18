@@ -23,15 +23,15 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
 using SDL.net;
-using freetrain.controllers;
-using freetrain.contributions.population;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.views;
-using freetrain.world;
-using freetrain.world.land;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.population;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views;
+using FreeTrain.world;
+using FreeTrain.world.Land;
 
-namespace freetrain.contributions.land
+namespace FreeTrain.Contributions.land
 {
     /// <summary>
     /// Places static chip as the land.

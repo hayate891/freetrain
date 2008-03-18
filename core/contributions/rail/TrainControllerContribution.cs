@@ -20,10 +20,10 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
-using freetrain.world.rail;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world.Rail;
 
-namespace freetrain.contributions.rail
+namespace FreeTrain.Contributions.rail
 {
     /// <summary>
     /// plug-in that provides TrainController implementations

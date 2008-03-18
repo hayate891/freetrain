@@ -24,11 +24,11 @@ using System.Diagnostics;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.views;
-using freetrain.world;
+using FreeTrain.Framework;
+using FreeTrain.Views;
+using FreeTrain.world;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// Pop-up tool window to host modal controllers.

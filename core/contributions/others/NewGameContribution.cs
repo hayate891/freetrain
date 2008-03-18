@@ -20,10 +20,10 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
-using freetrain.world;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
 
-namespace freetrain.contributions.others
+namespace FreeTrain.Contributions.Others
 {
     /// <summary>
     /// Plug-in that creates a new game.

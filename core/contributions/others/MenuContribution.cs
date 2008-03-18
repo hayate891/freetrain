@@ -22,9 +22,9 @@ using System;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.others
+namespace FreeTrain.Contributions.Others
 {
     /// <summary>
     /// Plug-in that exposes menu item.

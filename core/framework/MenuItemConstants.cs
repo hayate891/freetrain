@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Enumeration of the menus.

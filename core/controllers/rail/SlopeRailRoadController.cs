@@ -23,16 +23,16 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.util;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.views;
-using freetrain.views.map;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
 using SDL.net;
 
-namespace freetrain.controllers.rail
+namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
     /// Controller to place/remove slope RRs.
@@ -51,7 +51,7 @@ namespace freetrain.controllers.rail
             theInstance.Activate();
         }
 
-        private freetrain.controls.CostBox costBox;
+        private FreeTrain.controls.CostBox costBox;
 
         private static SlopeRailRoadController theInstance;
         /// <summary>
@@ -170,7 +170,7 @@ namespace freetrain.controllers.rail
             this.pictureW = new System.Windows.Forms.PictureBox();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
-            this.costBox = new freetrain.controls.CostBox();
+            this.costBox = new FreeTrain.controls.CostBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureS)).BeginInit();

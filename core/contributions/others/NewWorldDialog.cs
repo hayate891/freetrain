@@ -23,9 +23,9 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.contributions.others
+namespace FreeTrain.Contributions.Others
 {
 	/// <summary>
 	/// Dialog box to create a new World object.

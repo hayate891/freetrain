@@ -21,10 +21,10 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.road
+namespace FreeTrain.Contributions.road
 {
     /// <summary>
     /// RoadContribution for "org.kohsuke.freetrain.road.pc-9801fa" plug-in

@@ -22,12 +22,12 @@ using System;
 using System.Runtime.Serialization;
 using System.Collections;
 using System.Windows.Forms;
-using freetrain.contributions.sound;
-using freetrain.framework.plugin;
+using FreeTrain.Contributions.sound;
+using FreeTrain.Framework.plugin;
 //using SDL.net;
 using SdlDotNet.Audio;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Manages the selection and control of BGM

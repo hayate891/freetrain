@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// Maintain a set of dirty rects.

@@ -27,10 +27,10 @@ using System.Net;
 using System.Windows.Forms;
 using System.Xml;
 using SDL.net;
-using freetrain.framework.graphics;
+using FreeTrain.Framework.graphics;
 
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
     /// <summary>
     /// Common base class of contributions.

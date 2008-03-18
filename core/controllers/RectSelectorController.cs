@@ -22,10 +22,10 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.world;
-using freetrain.views.map;
+using FreeTrain.world;
+using FreeTrain.Views.Map;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// ModalController that selects the rectangular region

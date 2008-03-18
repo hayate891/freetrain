@@ -20,9 +20,9 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.population
+namespace FreeTrain.Contributions.population
 {
 	/// <summary>
 	/// HourlyPopulation with a typical distribution for

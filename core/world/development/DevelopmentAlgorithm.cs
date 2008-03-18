@@ -21,18 +21,18 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
-using freetrain.contributions.common;
-using freetrain.contributions.land;
-using freetrain.contributions.structs;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.util;
-using freetrain.world.rail;
-using freetrain.world.land;
-using freetrain.world.structs;
-using freetrain.world.subsidiaries;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
+using FreeTrain.world.Rail;
+using FreeTrain.world.Land;
+using FreeTrain.world.Structs;
+using FreeTrain.world.subsidiaries;
 
-namespace freetrain.world.development
+namespace FreeTrain.world.development
 {
     /// <summary>
     /// Receives clock event and build a new structure if appropriate

@@ -20,9 +20,9 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.sound
+namespace FreeTrain.Contributions.sound
 {
     /// <summary>
     /// Background music.

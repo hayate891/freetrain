@@ -24,9 +24,9 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 using SDL.net;
-using freetrain.framework;
+using FreeTrain.Framework;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// 線路

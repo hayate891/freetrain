@@ -21,10 +21,10 @@
 using System;
 using System.Windows.Forms;
 using System.Xml;
-using freetrain.contributions.others;
-using freetrain.framework.plugin;
+using FreeTrain.Contributions.Others;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.development
+namespace FreeTrain.world.development
 {
     /// <summary>
     /// 

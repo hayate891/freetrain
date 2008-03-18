@@ -20,11 +20,11 @@
 
 using System;
 using System.Diagnostics;
-using freetrain.world;
-using freetrain.framework.graphics;
+using FreeTrain.world;
+using FreeTrain.Framework.graphics;
 
 
-namespace freetrain.views
+namespace FreeTrain.Views
 {
     /// <summary>
     /// 

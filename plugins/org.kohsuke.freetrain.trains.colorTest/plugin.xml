@@ -5,14 +5,14 @@
 	<homepage>http://www.kohsuke.org/freetrain/</homepage>
 	
 	<contribution type="menu" id="{8CA8F000-4DC6-4441-8F53-A628C952BD9F}">
-		<class name="freetrain.world.rail.cttrain.ColorConfigCommand"
+		<class name="FreeTrain.world.Rail.cttrain.ColorConfigCommand"
 			codebase="FreeTrain.ColorTestTrain.dll" />
 	</contribution>
 	
 	<!-- Test Train -->
 	<contribution type="trainCar" id="{6E5E12DD-69CB-4DF2-B4F0-2BCDA703CBB0}">
 		<class
-			name="freetrain.world.rail.cttrain.ColorTestTrainCar"
+			name="FreeTrain.world.Rail.cttrain.ColorTestTrainCar"
 			codebase="FreeTrain.ColorTestTrain.dll" />
 	</contribution>
 	

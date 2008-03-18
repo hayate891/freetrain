@@ -21,13 +21,13 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
-using freetrain.world;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
+using FreeTrain.world;
 using SDL.net;
 
-namespace freetrain.contributions.train
+namespace FreeTrain.Contributions.train
 {
     /// <summary>
     /// Assymetric train car.

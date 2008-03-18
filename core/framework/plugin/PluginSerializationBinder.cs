@@ -22,9 +22,9 @@ using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.Serialization;
-using freetrain.framework;
+using FreeTrain.Framework;
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
     /// <summary>
     /// Allows objects from plug-ins to be de-serialized.

@@ -21,7 +21,7 @@
 using System;
 using System.Xml;
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
     /// <summary>
     /// Loads a Contribution from a designated class by passing the XmlElement

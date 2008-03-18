@@ -23,15 +23,15 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using SDL.net;
-using freetrain.contributions.train;
-using freetrain.framework;
-using freetrain.framework.sound;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.world.accounting;
+using FreeTrain.Contributions.train;
+using FreeTrain.Framework;
+using FreeTrain.Framework.sound;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world.Accounting;
 using System.Runtime.Serialization;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// 

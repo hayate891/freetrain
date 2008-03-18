@@ -20,12 +20,12 @@
 
 using System;
 using System.Drawing;
-using freetrain.framework;
-using freetrain.util;
-using freetrain.world.terrain;
+using FreeTrain.Framework;
+using FreeTrain.Util;
+using FreeTrain.world.Terrain;
 using SDL.net;
 
-namespace freetrain.world.structs
+namespace FreeTrain.world.Structs
 {
 	/// <summary>
 	/// Base implementation of the generic "structure"

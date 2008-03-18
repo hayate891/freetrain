@@ -20,9 +20,9 @@
 
 using System;
 using System.Runtime.Serialization;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.contributions.population
+namespace FreeTrain.Contributions.population
 {
     /// <summary>
     /// Population implementation that wraps another Population and

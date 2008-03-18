@@ -24,17 +24,17 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.framework;
-using freetrain.framework.sound;
-using freetrain.util.controls;
-using freetrain.util.command;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.Framework;
+using FreeTrain.Framework.sound;
+using FreeTrain.Util.controls;
+using FreeTrain.Util.Command;
 using SDL.net;
 
-namespace freetrain.controllers.rail
+namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
     /// Controller that allows the user to
@@ -180,7 +180,7 @@ namespace freetrain.controllers.rail
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainPlacementController));
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
-            this.tree = new freetrain.util.controls.DDTreeView();
+            this.tree = new FreeTrain.Util.controls.DDTreeView();
             this.treeMenu = new System.Windows.Forms.ContextMenu();
             this.miAddGroup = new System.Windows.Forms.MenuItem();
             this.miSell = new System.Windows.Forms.MenuItem();

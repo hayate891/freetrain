@@ -24,7 +24,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace freetrain.views.map
+namespace FreeTrain.Views.Map
 {
     /// <summary>
     /// PreviewForm の概要の説明です。

@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Xml.Serialization;
 
-namespace freetrain.util
+namespace FreeTrain.Util
 {
     /// <summary>
     /// LOGFONT structure that keeps all the information of Font.

@@ -22,9 +22,9 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using SDL.net;
-using freetrain.framework;
+using FreeTrain.Framework;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Rail road adjacent to a platform

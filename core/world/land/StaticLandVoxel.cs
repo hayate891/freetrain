@@ -20,12 +20,12 @@
 
 using System;
 using System.Drawing;
-using freetrain.contributions.land;
-using freetrain.framework.plugin;
-using freetrain.world.rail;
-using freetrain.world.structs;
+using FreeTrain.Contributions.land;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world.Rail;
+using FreeTrain.world.Structs;
 
-namespace freetrain.world.land
+namespace FreeTrain.world.Land
 {
     /// <summary>
     /// Land voxel with a fixed graphics and its population.

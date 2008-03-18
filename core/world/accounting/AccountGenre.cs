@@ -20,9 +20,9 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.accounting
+namespace FreeTrain.world.Accounting
 {
     /// <summary>
     /// Accounting genre. Used to categorize expenses and sales.

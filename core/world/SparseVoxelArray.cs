@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.Serialization;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// 3D sparse array for <c>Voxel</c>s.

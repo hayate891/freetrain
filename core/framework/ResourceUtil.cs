@@ -26,11 +26,11 @@ using System.Net;
 //using org.kohsuke.directaudio;
 using SDL.net;
 using SdlDotNet.Audio;
-using freetrain.util;
-using freetrain.framework.graphics;
-using freetrain.world;
+using FreeTrain.Util;
+using FreeTrain.Framework.graphics;
+using FreeTrain.world;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Simplified resource manager.

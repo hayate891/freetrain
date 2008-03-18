@@ -24,7 +24,7 @@ using System.Timers;
 using System.Windows.Forms;
 
 
-namespace freetrain.util.command
+namespace FreeTrain.Util.Command
 {
     // Command Executor base class
     /// <summary>

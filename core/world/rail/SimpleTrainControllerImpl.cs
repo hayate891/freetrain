@@ -22,10 +22,10 @@ using System;
 using System.Collections;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
-using freetrain.framework.plugin;
-using freetrain.contributions.rail;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Contributions.rail;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Default TrainController implementation that doesn't do anything

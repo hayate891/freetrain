@@ -25,11 +25,11 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 //using Microsoft.Win32;
-using freetrain.framework.plugin;
-using freetrain.framework.sound;
-using freetrain.util;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.sound;
+using FreeTrain.Util;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Entry point to other static instances in the FreeTrain framework.

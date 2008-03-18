@@ -20,7 +20,7 @@
 
 using System;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// SubDividedStructureContribution の概要の説明です。

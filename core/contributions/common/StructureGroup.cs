@@ -22,7 +22,7 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// Group of StructureContributions.

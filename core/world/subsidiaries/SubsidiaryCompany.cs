@@ -20,10 +20,10 @@
 
 using System;
 using System.Diagnostics;
-using freetrain.world.structs;
-using freetrain.world.accounting;
+using FreeTrain.world.Structs;
+using FreeTrain.world.Accounting;
 
-namespace freetrain.world.subsidiaries
+namespace FreeTrain.world.subsidiaries
 {
     /// <summary>
     /// Tradable subsidiary company.

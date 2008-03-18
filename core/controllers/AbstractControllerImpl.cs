@@ -24,11 +24,11 @@ using System.Diagnostics;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.views.map;
-using freetrain.world;
+using FreeTrain.Framework;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// 

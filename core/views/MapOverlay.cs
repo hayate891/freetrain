@@ -20,11 +20,11 @@
 
 using System;
 using System.Drawing;
-using freetrain.views;
-using freetrain.world;
+using FreeTrain.Views;
+using FreeTrain.world;
 using SDL.net;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// Modifies the image of map view window

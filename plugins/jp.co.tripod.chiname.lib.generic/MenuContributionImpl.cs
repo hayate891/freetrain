@@ -21,11 +21,11 @@
 using System;
 using System.Xml;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.contributions.others;
-using freetrain.util.command;
+using FreeTrain.Framework;
+using FreeTrain.Contributions.Others;
+using FreeTrain.Util.Command;
 
-namespace freetrain.framework.plugin.generic
+namespace FreeTrain.Framework.plugin.Generic
 {
     /// <summary>
     /// Adds "signal" menu to the main window

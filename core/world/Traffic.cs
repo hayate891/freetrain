@@ -22,10 +22,10 @@ using System;
 using System.Drawing;
 using System.Diagnostics;
 using SDL.net;
-using freetrain.world.rail;
-using freetrain.world.road;
+using FreeTrain.world.Rail;
+using FreeTrain.world.road;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// 

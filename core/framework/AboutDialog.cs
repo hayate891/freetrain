@@ -24,11 +24,11 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.controls;
+using FreeTrain.controls;
 using SDL.net;
-using freetrain.util;
+using FreeTrain.Util;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// AboutDialog

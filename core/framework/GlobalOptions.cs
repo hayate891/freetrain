@@ -26,10 +26,10 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
-using freetrain.util;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Global Configuration.

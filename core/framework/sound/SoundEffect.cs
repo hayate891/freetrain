@@ -19,9 +19,9 @@
 #endregion LICENSE
 
 using System;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.framework.sound
+namespace FreeTrain.Framework.sound
 {
     /// <summary>
     /// Sound Effect

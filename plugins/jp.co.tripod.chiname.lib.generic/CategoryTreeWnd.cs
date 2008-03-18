@@ -25,10 +25,10 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 //using freetrain.util.docking;
-using freetrain.world;
-using freetrain.world.accounting;
+using FreeTrain.world;
+using FreeTrain.world.Accounting;
 
-namespace freetrain.framework.plugin.generic
+namespace FreeTrain.Framework.plugin.Generic
 {
     /// <summary>
     /// 

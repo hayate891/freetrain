@@ -21,12 +21,12 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.framework.graphics;
-using freetrain.views;
-using freetrain.controllers;
-using freetrain.world;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Views;
+using FreeTrain.Controllers;
+using FreeTrain.world;
 
-namespace freetrain.contributions.land
+namespace FreeTrain.Contributions.land
 {
     /// <summary>
     /// ModalController implementation typical for most of the land builder contribution.

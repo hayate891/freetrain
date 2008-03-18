@@ -24,20 +24,20 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.land;
-using freetrain.contributions.common;
-using freetrain.contributions.sound;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.terrain;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
+using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.sound;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Terrain;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.controllers.land
+namespace FreeTrain.Controllers.Land
 {
     /// <summary>
     /// Controller that allows the user to
@@ -98,14 +98,14 @@ namespace freetrain.controllers.land
         #region Designer generated code
         private System.Windows.Forms.PictureBox preview;
         private System.ComponentModel.IContainer components = null;
-        private freetrain.controls.IndexSelector indexSelector;
+        private FreeTrain.controls.IndexSelector indexSelector;
         private System.Windows.Forms.ComboBox groupBox;
 
         private void InitializeComponent()
         {
             this.groupBox = new System.Windows.Forms.ComboBox();
             this.preview = new System.Windows.Forms.PictureBox();
-            this.indexSelector = new freetrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.controls.IndexSelector();
             this.SuspendLayout();
             // 
             // groupBox

@@ -23,12 +23,12 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.util;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// レールの形状のパターンに関する情報を表現するオブジェクト

@@ -25,7 +25,7 @@ using System.Drawing;
 using System.Data;
 using System.Windows.Forms;
 
-namespace freetrain.controls
+namespace FreeTrain.controls
 {
     /// <summary>
     /// Displays a price.

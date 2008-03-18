@@ -24,13 +24,13 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.rail;
-using freetrain.framework.plugin;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.rail;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
 
-namespace freetrain.controllers.rail
+namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
     /// Controller to place/remove BridgeRails

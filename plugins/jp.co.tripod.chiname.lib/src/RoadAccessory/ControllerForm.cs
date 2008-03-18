@@ -24,19 +24,19 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.controllers;
-using freetrain.contributions.common;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.terrain;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Terrain;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.world.road.accessory
+namespace FreeTrain.world.road.Accessory
 {
     /// <summary>
     /// Controller that allows the user to
@@ -45,7 +45,7 @@ namespace freetrain.world.road.accessory
     [CLSCompliant(false)]
     public class ControllerForm : ControllerHostForm
     {
-        private freetrain.controls.CostBox costBox;
+        private FreeTrain.controls.CostBox costBox;
         private System.Windows.Forms.RadioButton buttonRemove;
         private System.Windows.Forms.RadioButton buttonPlace;
         private System.Windows.Forms.ComboBox typeBox;
@@ -86,16 +86,16 @@ namespace freetrain.world.road.accessory
         #region Designer generated code
         private System.Windows.Forms.PictureBox preview;
         private System.ComponentModel.IContainer components = null;
-        private freetrain.controls.IndexSelector indexSelector;
+        private FreeTrain.controls.IndexSelector indexSelector;
 
         private void InitializeComponent()
         {
             this.typeBox = new System.Windows.Forms.ComboBox();
             this.preview = new System.Windows.Forms.PictureBox();
-            this.costBox = new freetrain.controls.CostBox();
+            this.costBox = new FreeTrain.controls.CostBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
-            this.indexSelector = new freetrain.controls.IndexSelector();
+            this.indexSelector = new FreeTrain.controls.IndexSelector();
             this.SuspendLayout();
             // 
             // typeBox

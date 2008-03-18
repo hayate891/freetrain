@@ -23,14 +23,14 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
 using SDL.net;
-using freetrain.contributions.land;
-using freetrain.contributions.population;
-using freetrain.controllers;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.views;
+using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.population;
+using FreeTrain.Controllers;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views;
 
-namespace freetrain.world.land.vinylhouse
+namespace FreeTrain.world.Land.VinylHouse
 {
     /// <summary>
     /// 

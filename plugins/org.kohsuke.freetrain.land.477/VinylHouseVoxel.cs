@@ -20,11 +20,11 @@
 
 using System;
 using System.Drawing;
-using freetrain.world.land;
-using freetrain.world.rail;
-using freetrain.world.structs;
+using FreeTrain.world.Land;
+using FreeTrain.world.Rail;
+using FreeTrain.world.Structs;
 
-namespace freetrain.world.land.vinylhouse
+namespace FreeTrain.world.Land.VinylHouse
 {
     /// <summary>
     /// Land voxel with a fixed graphics and its population.

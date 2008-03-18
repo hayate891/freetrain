@@ -21,10 +21,10 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using freetrain.framework;
-using freetrain.framework.graphics;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Rail road with a raised passageway

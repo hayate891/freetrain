@@ -20,11 +20,11 @@
 
 using System;
 using System.Drawing;
-using freetrain.framework;
-using freetrain.world;
+using FreeTrain.Framework;
+using FreeTrain.world;
 using SDL.net;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// Builds a set of sprites for alpha-blending blit

@@ -20,11 +20,11 @@
 
 using System;
 using System.Drawing;
-using freetrain.framework;
-using freetrain.framework.graphics;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
 using SDL.net;
 
-namespace freetrain.views
+namespace FreeTrain.Views
 {
     /// <summary>
     /// WeatherOverlayImpl の概要の説明です。

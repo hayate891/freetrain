@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 
-namespace freetrain.world.land
+namespace FreeTrain.world.Land
 {
     /// <summary>
     /// Land filler that occupies only one voxel.

@@ -21,7 +21,7 @@
 using System;
 using System.Text;
 
-namespace freetrain.util
+namespace FreeTrain.Util
 {
 	/// <summary>
 	/// Currency converter.

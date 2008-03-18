@@ -22,13 +22,13 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.world;
-using freetrain.world.road;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.road;
 
-namespace freetrain.contributions.road
+namespace FreeTrain.Contributions.road
 {
     /// <summary>
     /// RoadContribution implemented by 15 sprites.

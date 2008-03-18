@@ -22,14 +22,14 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.contributions.structs;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.util;
-using freetrain.world;
-using freetrain.world.subsidiaries;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.world.subsidiaries;
 
-namespace freetrain.world.structs
+namespace FreeTrain.world.Structs
 {
     // TODO: value should be unified to use long, not int.
 

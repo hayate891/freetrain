@@ -20,11 +20,11 @@
 
 using System;
 using System.Xml;
-using freetrain.world;
-using freetrain.world.structs;
-using freetrain.framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.population
+namespace FreeTrain.Contributions.population
 {
     /// <summary>
     /// Always the same population

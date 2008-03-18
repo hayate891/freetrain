@@ -19,9 +19,9 @@
 #endregion LICENSE
 
 using System;
-using freetrain.world.road;
+using FreeTrain.world.road;
 
-namespace freetrain.world.development
+namespace FreeTrain.world.development
 {
     /// <summary>
     /// Computes and maintains land value.
@@ -206,7 +206,7 @@ namespace freetrain.world.development
                 {
                     roadFound = ((TrafficVoxel)vxl).road;
                 }
-                if (vxl is terrain.MountainVoxel)
+                if (vxl is Terrain.MountainVoxel)
                     hasMountain = true;
             }
 

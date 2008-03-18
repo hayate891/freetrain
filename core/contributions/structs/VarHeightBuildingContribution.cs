@@ -23,16 +23,16 @@ using System.Collections;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using freetrain.util;
-using freetrain.controllers;
-using freetrain.contributions.common;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Util;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 using SDL.net;
 
-namespace freetrain.contributions.structs
+namespace FreeTrain.Contributions.Structs
 {
     /// <summary>
     /// Building of a variable height.

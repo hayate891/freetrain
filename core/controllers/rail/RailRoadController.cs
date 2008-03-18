@@ -24,15 +24,15 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.util;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.views;
-using freetrain.views.map;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
 
-namespace freetrain.controllers.rail
+namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
     /// Railroad construction dialog
@@ -118,14 +118,14 @@ namespace freetrain.controllers.rail
         /// </summary>
         private Location currentPos = UNPLACED;
 
-        private static Location UNPLACED = freetrain.world.Location.UNPLACED;
+        private static Location UNPLACED = FreeTrain.world.Location.UNPLACED;
 
         private bool isPlacing { get { return buttonPlace.Checked; } }
 
         #region Windows Form Designer generated code
         private System.Windows.Forms.RadioButton buttonPlace;
         private System.Windows.Forms.RadioButton buttonRemove;
-        private freetrain.controls.CostBox costBox;
+        private FreeTrain.controls.CostBox costBox;
         private System.Windows.Forms.Label message;
         private System.ComponentModel.Container components = null;
 
@@ -134,7 +134,7 @@ namespace freetrain.controllers.rail
             this.message = new System.Windows.Forms.Label();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
-            this.costBox = new freetrain.controls.CostBox();
+            this.costBox = new FreeTrain.controls.CostBox();
             this.SuspendLayout();
             // 
             // message

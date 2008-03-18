@@ -24,7 +24,7 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Windows.Forms;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Base implementation for persistent configuration information

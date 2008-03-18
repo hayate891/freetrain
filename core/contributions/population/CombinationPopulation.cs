@@ -20,9 +20,9 @@
 
 using System;
 using System.Xml;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.contributions.population
+namespace FreeTrain.Contributions.population
 {
     /// <summary>
     /// Populaion that additively combines other populations.

@@ -20,7 +20,7 @@
 
 using System;
 
-namespace freetrain.world.development
+namespace FreeTrain.world.development
 {
     /// <summary>
     /// Factory of ULV.

@@ -21,7 +21,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace freetrain.util
+namespace FreeTrain.Util
 {
     /// <summary>
     /// Provides a simple UI feedback.

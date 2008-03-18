@@ -21,9 +21,9 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// DefaultSpriteLoaderContributionImpl の概要の説明です。

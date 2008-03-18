@@ -23,7 +23,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// Current state of a car. Immutable.

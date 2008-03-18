@@ -21,11 +21,11 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using freetrain.util;
-using freetrain.framework;
-using freetrain.framework.graphics;
+using FreeTrain.Util;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// Handles a clock event.

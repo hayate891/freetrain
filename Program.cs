@@ -30,21 +30,21 @@ using SdlDotNet.Audio;
 //using SdlDotNet.Graphics;
 using SDL.net;
 
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.world.terrain;
-using freetrain.controllers.land;
-using freetrain.framework.plugin;
-using freetrain.framework.sound;
-using freetrain.util;
-using freetrain.util.command;
-using freetrain.controllers;
-using freetrain.controllers.rail;
-using freetrain.controllers.terrain;
-using freetrain.controllers.structs;
-using freetrain.framework;
-using freetrain.views;
-using freetrain.framework.graphics;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.world.Terrain;
+using FreeTrain.Controllers.Land;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.sound;
+using FreeTrain.Util;
+using FreeTrain.Util.Command;
+using FreeTrain.Controllers;
+using FreeTrain.Controllers.Rail;
+using FreeTrain.Controllers.Terrain;
+using FreeTrain.Controllers.Structs;
+using FreeTrain.Framework;
+using FreeTrain.Views;
+using FreeTrain.Framework.graphics;
 
 namespace FreeTrainSDL
 {

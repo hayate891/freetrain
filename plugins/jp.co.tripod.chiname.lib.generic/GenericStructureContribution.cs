@@ -23,21 +23,21 @@ using System.Drawing;
 using System.Diagnostics;
 using System.Xml;
 using System.Collections;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.controllers;
-using freetrain.controllers.structs;
-using freetrain.contributions;
-using freetrain.contributions.common;
-using freetrain.contributions.population;
-using freetrain.contributions.structs;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Controllers;
+using FreeTrain.Controllers.Structs;
+using FreeTrain.Contributions;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 
-namespace freetrain.framework.plugin.generic
+namespace FreeTrain.Framework.plugin.Generic
 {
     /// <summary>
     /// 

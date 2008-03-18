@@ -19,10 +19,10 @@
 #endregion LICENSE
 
 using System;
-using freetrain.contributions.structs;
-using freetrain.world.structs;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.world.Structs;
 
-namespace freetrain.world.development
+namespace FreeTrain.world.development
 {
 	/// <summary>
 	/// CommercialStructurePlan の概要の説明です。

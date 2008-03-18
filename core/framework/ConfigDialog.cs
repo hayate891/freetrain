@@ -23,10 +23,10 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.world;
+using FreeTrain.world;
 using SDL.net;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// ConfigDialog の概要の説明です。

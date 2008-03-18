@@ -20,13 +20,13 @@
 
 using System;
 using System.Collections;
-using freetrain.world;
-using freetrain.views.map;
+using FreeTrain.world;
+using FreeTrain.Views.Map;
 using SdlDotNet.Audio;
 using SdlDotNet;
 //using SDL.net;
 
-namespace freetrain.framework.sound
+namespace FreeTrain.Framework.sound
 {
     /// <summary>
     /// SoundEffect object that handles multiple

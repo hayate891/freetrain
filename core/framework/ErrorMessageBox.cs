@@ -23,9 +23,9 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.controls;
+using FreeTrain.controls;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Shows an exception to the user
@@ -97,7 +97,7 @@ namespace freetrain.framework
             this.detail = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
             this.msg = new System.Windows.Forms.Label();
-            this.linkLabel1 = new freetrain.controls.UrlLinkLabel();
+            this.linkLabel1 = new FreeTrain.controls.UrlLinkLabel();
             this.SuspendLayout();
             // 
             // icon

@@ -24,14 +24,14 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.common;
-using freetrain.contributions.rail;
-using freetrain.framework.plugin;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// Controller that places/removes lines, such as roads or rail roads.
@@ -188,7 +188,7 @@ namespace freetrain.controllers
         /// </summary>
         private Location currentPos = UNPLACED;
 
-        private static Location UNPLACED = freetrain.world.Location.UNPLACED;
+        private static Location UNPLACED = FreeTrain.world.Location.UNPLACED;
 
         /// <summary>
         /// Aligns the given location to the anchor so that

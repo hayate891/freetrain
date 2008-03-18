@@ -22,10 +22,10 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
-using freetrain.framework;
-using freetrain.framework.graphics;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world.road
+namespace FreeTrain.world.road
 {
     /// <summary>
     /// Road pattern.

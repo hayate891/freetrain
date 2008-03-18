@@ -21,9 +21,9 @@
 using System;
 using System.Collections;
 using System.ComponentModel;
-using freetrain.contributions.common;
+using FreeTrain.Contributions.Common;
 
-namespace freetrain.contributions.land
+namespace FreeTrain.Contributions.land
 {
     /// <summary>
     /// Group of LandContribution.

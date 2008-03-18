@@ -22,15 +22,15 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.contributions.rail;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.util;
-using freetrain.world.accounting;
-using freetrain.world.structs;
-using freetrain.world.development;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
+using FreeTrain.world.Accounting;
+using FreeTrain.world.Structs;
+using FreeTrain.world.development;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Station

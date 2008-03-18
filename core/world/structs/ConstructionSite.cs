@@ -21,13 +21,13 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using freetrain.framework;
-using freetrain.framework.sound;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
+using FreeTrain.Framework;
+using FreeTrain.Framework.sound;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
 using SDL.net;
 
-namespace freetrain.world.structs
+namespace FreeTrain.world.Structs
 {
     /// <summary>
     /// Construction site.

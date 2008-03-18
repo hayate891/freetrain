@@ -23,11 +23,11 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.others;
-using freetrain.framework.plugin;
-using freetrain.world;
+using FreeTrain.Contributions.Others;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Let the user create a new world.

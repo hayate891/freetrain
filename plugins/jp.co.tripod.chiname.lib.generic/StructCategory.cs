@@ -26,7 +26,7 @@ using System.Globalization;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace freetrain.framework.plugin.generic
+namespace FreeTrain.Framework.plugin.Generic
 {
     /// <summary>
     /// StructCategory

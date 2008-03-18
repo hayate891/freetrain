@@ -25,7 +25,7 @@ using System.Windows.Forms;
 using System.IO;
 //using Microsoft.Win32;
 
-namespace freetrain.controls
+namespace FreeTrain.controls
 {
     /// <summary>
     /// LinkLabel control that launchs a browser and

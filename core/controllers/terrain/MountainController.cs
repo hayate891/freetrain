@@ -23,13 +23,13 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.views.map;
-using freetrain.util;
-using freetrain.world;
-using freetrain.world.terrain;
-using freetrain.framework;
+using FreeTrain.Views.Map;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.world.Terrain;
+using FreeTrain.Framework;
 
-namespace freetrain.controllers.terrain
+namespace FreeTrain.Controllers.Terrain
 {
     /// <summary>
     /// Manipulates mountains
@@ -50,7 +50,7 @@ namespace freetrain.controllers.terrain
 
         private Label label1;
         private GroupBox groupBox1;
-        private freetrain.controls.IndexSelector selSize;
+        private FreeTrain.controls.IndexSelector selSize;
 
         private static MountainController theInstance;
         /// <summary>
@@ -101,7 +101,7 @@ namespace freetrain.controllers.terrain
             this.preview = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.selSize = new freetrain.controls.IndexSelector();
+            this.selSize = new FreeTrain.controls.IndexSelector();
             ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();

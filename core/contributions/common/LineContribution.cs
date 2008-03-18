@@ -20,10 +20,10 @@
 
 using System;
 using System.Drawing;
-using freetrain.world;
-using freetrain.framework.plugin;
+using FreeTrain.world;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// Base class for SpecialRailContribution and RoadContritbuion

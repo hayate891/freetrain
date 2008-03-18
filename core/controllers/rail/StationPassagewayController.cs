@@ -24,13 +24,13 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.rail;
+using FreeTrain.Framework;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
 
-namespace freetrain.controllers.rail
+namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
     /// StationBridgeController の概要の説明です。

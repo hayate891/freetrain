@@ -21,13 +21,13 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.controllers;
+using FreeTrain.Framework;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.Controllers;
 
 
-namespace freetrain.world.road.dummycar
+namespace FreeTrain.world.road.DummyCar
 {
     /// <summary>
     /// ModalController implementation for DummyCar contribution

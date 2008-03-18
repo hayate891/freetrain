@@ -23,15 +23,15 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
-using freetrain.controllers;
-using freetrain.contributions.rail;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.contributions.common;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.Contributions.Common;
 
-namespace freetrain.world.road.accessory
+namespace FreeTrain.world.road.Accessory
 {
     /// <summary>
     /// 

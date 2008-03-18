@@ -20,9 +20,9 @@
 
 using System;
 using System.Runtime.Serialization;
-using freetrain.util;
+using FreeTrain.Util;
 
-namespace freetrain.world.subsidiaries
+namespace FreeTrain.world.subsidiaries
 {
     /// <summary>
     /// 

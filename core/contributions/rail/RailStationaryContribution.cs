@@ -20,13 +20,13 @@
 
 using System;
 using System.Xml;
-using freetrain.contributions.common;
-using freetrain.framework.plugin;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.world.structs;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.world.Structs;
 
-namespace freetrain.contributions.rail
+namespace FreeTrain.Contributions.rail
 {
     /// <summary>
     /// Stationary objects related to rail road.

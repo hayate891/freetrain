@@ -23,14 +23,14 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.train;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.views;
-using freetrain.world.accounting;
+using FreeTrain.Contributions.train;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views;
+using FreeTrain.world.Accounting;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Dialog box to buy trains
@@ -465,14 +465,14 @@ namespace freetrain.world.rail
             this.tbDay.ImageIndex = 1;
             this.tbDay.Name = "tbDay";
             this.tbDay.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-            this.tbDay.Tag = freetrain.views.NightSpriteMode.AlwaysDay;
+            this.tbDay.Tag = FreeTrain.Views.NightSpriteMode.AlwaysDay;
             // 
             // tbNight
             // 
             this.tbNight.ImageIndex = 2;
             this.tbNight.Name = "tbNight";
             this.tbNight.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-            this.tbNight.Tag = freetrain.views.NightSpriteMode.AlwaysNight;
+            this.tbNight.Tag = FreeTrain.Views.NightSpriteMode.AlwaysNight;
             // 
             // TrainTradingDialog
             // 
@@ -618,7 +618,7 @@ namespace freetrain.world.rail
                 new Train(World.world.rootTrainGroup,
                     (int)length.Value, selectedTrain);
 
-            freetrain.framework.sound.SoundEffectManager
+            FreeTrain.Framework.sound.SoundEffectManager
                 .PlaySynchronousSound(ResourceUtil.findSystemResource("vehiclePurchase.wav"));
 
             AccountManager.theInstance.spend(getTotalPrice(), AccountGenre.RAIL_SERVICE);

@@ -23,9 +23,9 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.accounting
+namespace FreeTrain.world.Accounting
 {
     /// <summary>
     /// Let the user select a list of account genre.
@@ -73,14 +73,14 @@ namespace freetrain.world.accounting
 
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
-        private freetrain.controls.SubListSelector selector;
+        private FreeTrain.controls.SubListSelector selector;
         private System.ComponentModel.Container components = null;
 
         private void InitializeComponent()
         {
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.selector = new freetrain.controls.SubListSelector();
+            this.selector = new FreeTrain.controls.SubListSelector();
             this.SuspendLayout();
             // 
             // okButton

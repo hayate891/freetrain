@@ -21,7 +21,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace freetrain.util
+namespace FreeTrain.Util
 {
     /// <summary>
     /// Keyboard-related utility functions
