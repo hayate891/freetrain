@@ -81,11 +81,12 @@ namespace FreeTrain.Framework
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(Splash));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.status = new System.Windows.Forms.Label();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -93,38 +94,38 @@ namespace FreeTrain.Framework
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(320, 260);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // status
             // 
             this.status.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
-            this.status.Location = new System.Drawing.Point(0, 256);
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.status.Location = new System.Drawing.Point(0, 254);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(320, 24);
+            this.status.Size = new System.Drawing.Size(320, 26);
             this.status.TabIndex = 1;
             // 
             // imageList
             // 
-            this.imageList.ImageSize = new System.Drawing.Size(35, 24);
             this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "");
             // 
             // progressBar
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(8, 240);
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Location = new System.Drawing.Point(8, 260);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(304, 16);
+            this.progressBar.Size = new System.Drawing.Size(304, 0);
             this.progressBar.TabIndex = 2;
             // 
             // Splash
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(320, 280);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.status);
@@ -134,6 +135,7 @@ namespace FreeTrain.Framework
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
