@@ -27,7 +27,7 @@ using FreeTrain.Framework.graphics;
 using FreeTrain.world;
 using FreeTrain.world.road;
 
-namespace FreeTrain.Contributions.Road
+namespace FreeTrain.Contributions.road
 {
     /// <summary>
     /// Road for cars/buses
