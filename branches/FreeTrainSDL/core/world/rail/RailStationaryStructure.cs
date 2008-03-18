@@ -20,11 +20,11 @@
 
 using System;
 using System.Drawing;
-using freetrain.contributions.rail;
-using freetrain.world.structs;
-using freetrain.framework.plugin;
+using FreeTrain.Contributions.rail;
+using FreeTrain.world.Structs;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// RailStationaryStructure の概要の説明です。

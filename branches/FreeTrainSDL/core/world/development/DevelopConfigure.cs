@@ -23,14 +23,14 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.framework;
+using FreeTrain.Framework;
 
-namespace freetrain.world.development
+namespace FreeTrain.world.development
 {
     /// <summary>
     /// 
     /// </summary>
-    public class DevelopConfigure : freetrain.controllers.AbstractControllerForm
+    public class DevelopConfigure : FreeTrain.Controllers.AbstractControllerForm
     {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

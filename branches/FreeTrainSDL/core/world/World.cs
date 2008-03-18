@@ -26,18 +26,18 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
-using freetrain.contributions.sound;
-using freetrain.contributions.train;
-using freetrain.controllers;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.views;
-using freetrain.world.development;
+using FreeTrain.Contributions.sound;
+using FreeTrain.Contributions.train;
+using FreeTrain.Controllers;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.Views;
+using FreeTrain.world.development;
 using SDL.net;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// 世界の操作権限定義
@@ -191,7 +191,7 @@ namespace freetrain.world
         /// <summary>
         /// 
         /// </summary>
-        public readonly accounting.AccountManager account = new accounting.AccountManager();
+        public readonly Accounting.AccountManager account = new Accounting.AccountManager();
 
         /// <summary>
         /// Responsible for computing/maintaining land values for this world.
@@ -847,7 +847,7 @@ namespace freetrain.world
         /// <returns></returns>
         public static World load(IFormatter f, Stream stream)
         {
-            using (new util.LongTask())
+            using (new Util.LongTask())
             {
                 //				SoapFormatter f = new SoapFormatter();
                 //				BinaryFormatter f = new BinaryFormatter();
@@ -864,7 +864,7 @@ namespace freetrain.world
         /// <param name="stream"></param>
         public void save(IFormatter f, Stream stream)
         {
-            using (new util.LongTask())
+            using (new Util.LongTask())
             {
                 // currentBGM can be null, so serialize as an array
                 f.Serialize(stream, new BGMContribution[] { Core.bgmManager.currentBGM });

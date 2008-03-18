@@ -24,17 +24,17 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.accounting;
-using freetrain.world.land;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.util;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Accounting;
+using FreeTrain.world.Land;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.controllers.land
+namespace FreeTrain.Controllers.Land
 {
     /// <summary>
     /// Controller that allows the user buy/sell land properties.
@@ -105,14 +105,14 @@ namespace freetrain.controllers.land
         #region Designer generated code
         private System.Windows.Forms.PictureBox preview;
         private System.ComponentModel.IContainer components = null;
-        private freetrain.controls.CostBox costBox;
+        private FreeTrain.controls.CostBox costBox;
         private System.Windows.Forms.RadioButton buttonRemove;
         private System.Windows.Forms.RadioButton buttonPlace;
 
         private void InitializeComponent()
         {
             this.preview = new System.Windows.Forms.PictureBox();
-            this.costBox = new freetrain.controls.CostBox();
+            this.costBox = new FreeTrain.controls.CostBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();

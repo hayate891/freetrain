@@ -21,14 +21,14 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.controllers;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.views;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Controllers;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Views;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// FixedSizeStructureController

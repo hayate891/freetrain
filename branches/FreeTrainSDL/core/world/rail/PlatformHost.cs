@@ -20,7 +20,7 @@
 
 using System;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// A structure that can host platforms.

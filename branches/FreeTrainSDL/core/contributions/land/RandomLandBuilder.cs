@@ -23,14 +23,14 @@ using System.Collections;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using freetrain.controllers;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
-using freetrain.views;
-using freetrain.world;
-using freetrain.world.land;
+using FreeTrain.Controllers;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Views;
+using FreeTrain.world;
+using FreeTrain.world.Land;
 
-namespace freetrain.contributions.land
+namespace FreeTrain.Contributions.land
 {
     /// <summary>
     /// RandomLandBuilder の概要の説明です。

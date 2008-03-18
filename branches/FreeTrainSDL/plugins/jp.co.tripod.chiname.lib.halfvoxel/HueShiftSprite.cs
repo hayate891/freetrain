@@ -24,11 +24,11 @@ using System.Drawing;
 using System.Xml;
 using System.Runtime.Serialization;
 using SDL.net;
-using freetrain.world;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
+using FreeTrain.world;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world.structs.hv
+namespace FreeTrain.world.Structs.hv
 {
 
     /// <summary>

@@ -24,14 +24,14 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.util;
-using freetrain.world;
-using freetrain.controllers;
-using freetrain.framework;
-using freetrain.framework.graphics;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.Controllers;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
 using SDL.net;
 
-namespace freetrain.views.map
+namespace FreeTrain.Views.Map
 {
 
     /// <summary>

@@ -1,7 +1,7 @@
 using System;
 using System.Xml;
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
 	/// <summary>
 	/// Responsible for loading a contribution from an XML element.

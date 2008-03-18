@@ -24,7 +24,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// Splash screen that reports the progress of initialization.

@@ -20,9 +20,9 @@
 
 using System;
 using System.Drawing;
-using freetrain.framework.graphics;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.views
+namespace FreeTrain.Views
 {
     /// <summary>
     /// sprite images.

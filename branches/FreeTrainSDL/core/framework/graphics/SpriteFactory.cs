@@ -21,9 +21,9 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// Create a sprite from a picture.

@@ -22,12 +22,12 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using freetrain.contributions.common;
-using freetrain.framework.graphics;
-using freetrain.world;
-using freetrain.world.road;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework.graphics;
+using FreeTrain.world;
+using FreeTrain.world.road;
 
-namespace freetrain.contributions.road
+namespace FreeTrain.Contributions.road
 {
     /// <summary>
     /// Road for cars/buses

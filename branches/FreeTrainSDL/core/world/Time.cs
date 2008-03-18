@@ -21,7 +21,7 @@
 using System;
 using System.Diagnostics;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// Time instant.

@@ -20,10 +20,10 @@
 
 using System;
 using System.Windows.Forms;
-using freetrain.world;
-using freetrain.framework;
+using FreeTrain.world;
+using FreeTrain.Framework;
 
-namespace freetrain.views
+namespace FreeTrain.Views
 {
     /// <summary>
     /// Viewからコンテナに対するインターフェース

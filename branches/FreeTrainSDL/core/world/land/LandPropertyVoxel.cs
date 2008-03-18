@@ -21,10 +21,10 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using freetrain.framework.graphics;
+using FreeTrain.Framework.graphics;
 using SDL.net;
 
-namespace freetrain.world.land
+namespace FreeTrain.world.Land
 {
     /// <summary>
     /// Player-owned land property.

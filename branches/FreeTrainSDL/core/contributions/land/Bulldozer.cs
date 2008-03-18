@@ -23,17 +23,17 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
 using SDL.net;
-using freetrain.controllers;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.framework;
-using freetrain.views;
-using freetrain.world;
-using freetrain.world.rail;
-using freetrain.world.terrain;
-using freetrain.world.land;
+using FreeTrain.Controllers;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework;
+using FreeTrain.Views;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
+using FreeTrain.world.Terrain;
+using FreeTrain.world.Land;
 
-namespace freetrain.contributions.land
+namespace FreeTrain.Contributions.land
 {
     /// <summary>
     /// Removes any land voxel in the region.

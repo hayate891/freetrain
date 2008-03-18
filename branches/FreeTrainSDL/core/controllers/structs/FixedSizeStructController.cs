@@ -23,15 +23,15 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.common;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 
-namespace freetrain.controllers.structs
+namespace FreeTrain.Controllers.Structs
 {
     /// <summary>
     /// FixedSizeStructController の概要の説明です。

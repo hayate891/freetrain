@@ -21,7 +21,7 @@
 using System;
 using System.Collections;
 
-namespace freetrain.util
+namespace FreeTrain.Util
 {
     /// <summary>
     /// java.util.Set

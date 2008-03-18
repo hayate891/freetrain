@@ -22,9 +22,9 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using SDL.net;
-using freetrain.framework.graphics;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// A block in the game world.

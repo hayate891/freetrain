@@ -21,9 +21,9 @@
 using System;
 using System.Drawing;
 using System.Collections;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// IPreviewWorldBuilder

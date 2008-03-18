@@ -21,11 +21,11 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// Partial <c>ModalController</c> implementation that selects

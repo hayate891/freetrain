@@ -25,7 +25,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace freetrain.util
+namespace FreeTrain.Util
 {
     /// <summary>
     /// Persist window state/location across application sessions.

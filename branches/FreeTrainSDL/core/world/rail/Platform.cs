@@ -22,12 +22,12 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using SDL.net;
-using freetrain.contributions.rail;
-using freetrain.framework;
-using freetrain.world.accounting;
-using freetrain.util;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework;
+using FreeTrain.world.Accounting;
+using FreeTrain.Util;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Platform that trains can stop by.

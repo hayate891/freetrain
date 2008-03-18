@@ -23,15 +23,15 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using freetrain.world;
-using freetrain.world.terrain;
-using freetrain.contributions.common;
-using freetrain.controllers;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Terrain;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Controllers;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.land
+namespace FreeTrain.Contributions.land
 {
     /// <summary>
     /// Plug-in that places land voxels.

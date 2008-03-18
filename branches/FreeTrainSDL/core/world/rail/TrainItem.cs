@@ -20,7 +20,7 @@
 
 using System;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Common aspect of Train and TrainGroup.

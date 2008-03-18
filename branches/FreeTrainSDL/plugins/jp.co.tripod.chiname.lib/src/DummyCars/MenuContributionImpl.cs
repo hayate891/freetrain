@@ -21,10 +21,10 @@
 using System;
 using System.Xml;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.contributions.others;
+using FreeTrain.Framework;
+using FreeTrain.Contributions.Others;
 
-namespace freetrain.world.road.dummycar
+namespace FreeTrain.world.road.DummyCar
 {
     /// <summary>
     /// Adds "automobile" menu to the main window

@@ -25,12 +25,12 @@ using System.IO;
 using System.Windows.Forms;
 using System.Text;
 using System.Xml;
-using freetrain.util;
-using freetrain.contributions.train;
-using freetrain.contributions.land;
-using freetrain.framework.graphics;
+using FreeTrain.Util;
+using FreeTrain.Contributions.train;
+using FreeTrain.Contributions.land;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
     /// <summary>
     /// Represents a loaded plug-in

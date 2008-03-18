@@ -20,14 +20,14 @@
 
 using System;
 using System.Drawing;
-using freetrain.contributions.structs;
-using freetrain.contributions.population;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.world.subsidiaries;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Contributions.population;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world.subsidiaries;
 
-namespace freetrain.world.structs
+namespace FreeTrain.world.Structs
 {
     /// <summary>
     /// Variable height building
@@ -176,7 +176,7 @@ namespace freetrain.world.structs
         /// <returns></returns>
         public override object queryInterface(Type aspect)
         {
-            if (aspect == typeof(rail.StationListener))
+            if (aspect == typeof(Rail.StationListener))
                 return stationListener;
 
             return base.queryInterface(aspect);

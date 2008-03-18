@@ -24,7 +24,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
     /// <summary>
     /// PluginListDialog

@@ -21,9 +21,9 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// Repository of pictures.

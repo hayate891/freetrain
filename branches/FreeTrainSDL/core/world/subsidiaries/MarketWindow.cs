@@ -24,11 +24,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 //using freetrain.contributions.dock;
-using freetrain.framework;
+using FreeTrain.Framework;
 //using freetrain.util.docking;
-using freetrain.util.command;
+using FreeTrain.Util.Command;
 
-namespace freetrain.world.subsidiaries
+namespace FreeTrain.world.subsidiaries
 {
 	/// <summary>
 	/// Controller of SubsidiaryMarket.
@@ -59,7 +59,7 @@ namespace freetrain.world.subsidiaries
 
 			reset(null,null);
 
-			freetrain.util.controls.ToolBarCustomizerUI.attach(toolBar);
+			FreeTrain.Util.controls.ToolBarCustomizerUI.attach(toolBar);
 			tbModeSell.Pushed = true;
 
 			// associate UI with code
@@ -355,10 +355,10 @@ namespace freetrain.world.subsidiaries
 
 				base.SubItems.Clear();
 				base.Text = company.owner.name;
-				base.SubItems.Add(util.CurrencyUtil.format(company.currentMarketPrice));
-				base.SubItems.Add(util.CurrencyUtil.format(company.profit));
-				base.SubItems.Add(util.CurrencyUtil.format(company.sales));
-				base.SubItems.Add(util.CurrencyUtil.format(company.cost));
+				base.SubItems.Add(Util.CurrencyUtil.format(company.currentMarketPrice));
+				base.SubItems.Add(Util.CurrencyUtil.format(company.profit));
+				base.SubItems.Add(Util.CurrencyUtil.format(company.sales));
+				base.SubItems.Add(Util.CurrencyUtil.format(company.cost));
 			}
 
 			internal void onDeleted() {

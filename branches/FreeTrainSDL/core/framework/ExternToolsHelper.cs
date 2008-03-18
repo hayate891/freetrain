@@ -21,10 +21,10 @@
 using System;
 using System.Collections;
 using System.IO;
-using freetrain.framework.plugin;
-using freetrain.world;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// SilentInitializer の概要の説明です。

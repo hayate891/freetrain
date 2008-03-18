@@ -22,16 +22,16 @@ using System;
 using System.Collections;
 using System.Drawing;
 using System.Xml;
-using freetrain.util;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.controllers;
-using freetrain.world;
-using freetrain.world.structs;
-using freetrain.contributions.common;
+using FreeTrain.Util;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Controllers;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
+using FreeTrain.Contributions.Common;
 using SDL.net;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// StructureContribution for structures of a fixed size.

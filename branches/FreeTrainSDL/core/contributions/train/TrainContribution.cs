@@ -21,12 +21,12 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
-using freetrain.world;
-using freetrain.world.rail;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
 
-namespace freetrain.contributions.train
+namespace FreeTrain.Contributions.train
 {
     /// <summary>
     /// Train type

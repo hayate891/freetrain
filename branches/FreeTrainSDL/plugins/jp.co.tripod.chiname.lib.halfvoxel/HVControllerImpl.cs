@@ -21,14 +21,14 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.controllers;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.Controllers;
 
 
-namespace freetrain.world.structs.hv
+namespace FreeTrain.world.Structs.hv
 {
     internal delegate void createCallback();
     /// <summary>

@@ -26,7 +26,7 @@ using SdlDotNet.Audio;
 using SdlDotNet.Core;
 //using SDL.net;
 
-namespace freetrain.framework.sound
+namespace FreeTrain.Framework.sound
 {
     /// <summary>
     /// Coordinates sound effects.

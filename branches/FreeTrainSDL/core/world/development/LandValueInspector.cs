@@ -21,13 +21,13 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.controllers;
-using freetrain.framework;
-using freetrain.views.map;
-using freetrain.world.rail;
+using FreeTrain.Controllers;
+using FreeTrain.Framework;
+using FreeTrain.Views.Map;
+using FreeTrain.world.Rail;
 using SDL.net;
 
-namespace freetrain.world.development
+namespace FreeTrain.world.development
 {
 	/// <summary>
 	/// Controller that checks the land value.

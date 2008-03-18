@@ -21,7 +21,7 @@
 using System;
 using System.Diagnostics;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// 

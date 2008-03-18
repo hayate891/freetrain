@@ -22,10 +22,10 @@ using System;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using freetrain.framework.plugin;
-using freetrain.world;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
 
-namespace freetrain.contributions.train
+namespace FreeTrain.Contributions.train
 {
     /// <summary>
     /// Train car type.

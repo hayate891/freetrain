@@ -23,10 +23,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using freetrain.framework;
-using freetrain.framework.graphics;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world.terrain
+namespace FreeTrain.world.Terrain
 {
     /// <summary>
     /// Slopes used for mountains and under-waters.

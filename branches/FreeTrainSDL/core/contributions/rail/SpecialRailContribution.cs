@@ -21,10 +21,10 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.contributions.common;
-using freetrain.world;
+using FreeTrain.Contributions.Common;
+using FreeTrain.world;
 
-namespace freetrain.contributions.rail
+namespace FreeTrain.Contributions.rail
 {
     /// <summary>
     /// Contribution that adds a special kind of railroads, like tunnels or bridges.

@@ -24,14 +24,14 @@ using System.Drawing;
 using System.IO;
 using System.Xml;
 using SDL.net;
-using freetrain.contributions.rail;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
-using freetrain.world.terrain;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
+using FreeTrain.world.Terrain;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// SpecialRailContribution implementation for the BridgeRail

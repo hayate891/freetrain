@@ -19,9 +19,9 @@
 #endregion LICENSE
 
 using System;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// Stores a single Location object that requires screen update.

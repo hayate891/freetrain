@@ -24,11 +24,11 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
 using SDL.net;
-using freetrain.util;
-using freetrain.framework;
-using freetrain.framework.graphics;
+using FreeTrain.Util;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Thin platform that doesn't oocupy any additional pixels

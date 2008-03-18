@@ -21,14 +21,14 @@
 using System;
 using System.Drawing;
 using System.Runtime.Serialization;
-using freetrain.contributions.common;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.world.structs
+namespace FreeTrain.world.Structs
 {
     /// <summary>
     /// Pseudo three-dimensional structure.

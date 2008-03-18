@@ -25,11 +25,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.util;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
 
-namespace freetrain.world.accounting
+namespace FreeTrain.world.Accounting
 {
     /// <summary>
     /// 

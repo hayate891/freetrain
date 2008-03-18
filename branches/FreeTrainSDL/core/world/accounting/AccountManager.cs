@@ -20,10 +20,10 @@
 
 using System;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.util;
+using FreeTrain.Framework;
+using FreeTrain.Util;
 
-namespace freetrain.world.accounting
+namespace FreeTrain.world.Accounting
 {
     /// <summary>
     /// 

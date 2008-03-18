@@ -20,7 +20,7 @@
 
 using System;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// 

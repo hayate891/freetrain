@@ -22,10 +22,10 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
-using freetrain.world.rail;
-using freetrain.framework.graphics;
+using FreeTrain.world.Rail;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
 	/// <summary>
 	/// Rail-road crossing

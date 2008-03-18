@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using SDL.net;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// Empty, in the sense that nothing will be drawn, but

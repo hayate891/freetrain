@@ -21,14 +21,14 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.contributions.common;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.world;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
 using SDL.net;
 
-namespace freetrain.contributions.train
+namespace FreeTrain.Contributions.train
 {
     // TODO: this code needs to be re-written by using ColorMapSprite
 

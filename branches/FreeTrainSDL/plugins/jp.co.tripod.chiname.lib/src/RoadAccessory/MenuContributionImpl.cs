@@ -21,10 +21,10 @@
 using System;
 using System.Xml;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.contributions.others;
+using FreeTrain.Framework;
+using FreeTrain.Contributions.Others;
 
-namespace freetrain.world.road.accessory
+namespace FreeTrain.world.road.Accessory
 {
     /// <summary>
     /// Adds "accessory" menu to the main window

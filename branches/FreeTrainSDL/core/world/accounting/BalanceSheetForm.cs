@@ -25,11 +25,11 @@ using System.ComponentModel;
 using System.Windows.Forms;
 //using AxSHDocVw;
 //using MsHtmlHost;
-using freetrain.controls;
-using freetrain.framework;
-using freetrain.framework.plugin;
+using FreeTrain.controls;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.accounting
+namespace FreeTrain.world.Accounting
 {
     /// <summary>
     /// Displays the balance sheet.

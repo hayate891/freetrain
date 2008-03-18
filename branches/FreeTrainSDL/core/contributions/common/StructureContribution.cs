@@ -22,16 +22,16 @@ using System;
 using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
-using freetrain.util;
-using freetrain.contributions.population;
-using freetrain.controllers;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Util;
+using FreeTrain.Contributions.population;
+using FreeTrain.Controllers;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 using SDL.net;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// 
@@ -232,7 +232,7 @@ namespace freetrain.contributions.common
             /// </summary>
             /// <param name="pixelSize"></param>
             /// <returns></returns>
-            public virtual freetrain.framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize)
+            public virtual FreeTrain.Framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize)
             {
                 throw new NotImplementedException();
             }
@@ -241,7 +241,7 @@ namespace freetrain.contributions.common
             /// </summary>
             /// <param name="site"></param>
             /// <returns></returns>
-            public virtual freetrain.controllers.ModalController createBuilder(freetrain.controllers.IControllerSite site)
+            public virtual FreeTrain.Controllers.ModalController createBuilder(FreeTrain.Controllers.IControllerSite site)
             {
                 throw new NotImplementedException();
             }
@@ -250,7 +250,7 @@ namespace freetrain.contributions.common
             /// </summary>
             /// <param name="site"></param>
             /// <returns></returns>
-            public virtual freetrain.controllers.ModalController createRemover(freetrain.controllers.IControllerSite site)
+            public virtual FreeTrain.Controllers.ModalController createRemover(FreeTrain.Controllers.IControllerSite site)
             {
                 throw new NotImplementedException();
             }

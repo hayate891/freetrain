@@ -46,7 +46,7 @@ using System.Collections;
 using System.Timers;
 using System.Windows.Forms;
 
-namespace freetrain.util.command
+namespace FreeTrain.Util.Command
 {
     /// <summary>
     /// 

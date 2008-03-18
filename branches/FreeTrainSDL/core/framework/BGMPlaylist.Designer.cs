@@ -1,4 +1,4 @@
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     partial class BGMPlaylist
     {

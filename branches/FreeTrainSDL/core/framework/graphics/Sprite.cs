@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using SDL.net;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// A sprite object that can draw itself to other surfaces.

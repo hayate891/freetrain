@@ -22,11 +22,11 @@ using System;
 using System.Xml;
 using System.Drawing;
 using System.Collections;
-using freetrain.world;
-using freetrain.framework.plugin;
-using freetrain;
+using FreeTrain.world;
+using FreeTrain.Framework.plugin;
+using FreeTrain;
 
-namespace freetrain.framework.plugin.graphics
+namespace FreeTrain.Framework.plugin.graphics
 {
     /// <summary>
     /// ColorLibrary の概要の説明です。

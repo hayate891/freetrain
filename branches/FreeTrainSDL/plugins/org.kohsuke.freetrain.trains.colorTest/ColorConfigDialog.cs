@@ -23,9 +23,9 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.train;
+using FreeTrain.Contributions.train;
 
-namespace freetrain.world.rail.cttrain
+namespace FreeTrain.world.Rail.cttrain
 {
     /// <summary>
     /// ColorConfigDialog

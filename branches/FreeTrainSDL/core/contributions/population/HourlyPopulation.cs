@@ -20,11 +20,11 @@
 
 using System;
 using System.Diagnostics;
-using freetrain.world;
-using freetrain.world.structs;
-using freetrain.framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.population
+namespace FreeTrain.Contributions.population
 {
     /// <summary>
     /// Population depends on hour of the day

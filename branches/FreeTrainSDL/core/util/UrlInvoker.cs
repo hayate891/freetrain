@@ -23,7 +23,7 @@ using System.Diagnostics;
 using System.IO;
 //using Microsoft.Win32;
 
-namespace freetrain.util
+namespace FreeTrain.Util
 {
     /// <summary>
     /// UrlInvoker の概要の説明です。

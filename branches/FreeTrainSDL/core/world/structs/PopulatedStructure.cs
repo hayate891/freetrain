@@ -20,11 +20,11 @@
 
 using System;
 using System.Diagnostics;
-using freetrain.contributions.common;
-using freetrain.world.rail;
-using freetrain.framework.plugin;
+using FreeTrain.Contributions.Common;
+using FreeTrain.world.Rail;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.structs
+namespace FreeTrain.world.Structs
 {
 	/// <summary>
 	/// Structure that has population.
@@ -57,7 +57,7 @@ namespace freetrain.world.structs
         /// <returns></returns>
 		public override object queryInterface( Type aspect ) {
 			// if type.population is null, we don't have any population
-			if( aspect==typeof(rail.StationListener) )
+			if( aspect==typeof(Rail.StationListener) )
 				return stationListener;
 			else
 				return base.queryInterface(aspect);

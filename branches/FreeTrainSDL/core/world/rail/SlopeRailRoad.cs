@@ -22,9 +22,9 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
-using freetrain.framework.graphics;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Slope rail road.
@@ -207,7 +207,7 @@ namespace freetrain.world.rail
             Debug.Assert(canCreateSlope(_base, dir));
 
             // charge the cost before we alter something
-            accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfNewSlope(_base, dir));
+            Accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfNewSlope(_base, dir));
 
             SlopeEntity entity = new SlopeEntity(_base, dir);
 
@@ -416,7 +416,7 @@ namespace freetrain.world.rail
             Debug.Assert(canRemoveSlope(loc, dir));
 
             // charge the cost before we alter something
-            accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfTearDownSlope(loc, dir));
+            Accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfTearDownSlope(loc, dir));
 
             for (int i = 0; i < 4; i++)
             {

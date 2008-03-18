@@ -20,12 +20,12 @@
 
 using System;
 using System.Xml;
-using freetrain.contributions.common;
-using freetrain.framework.plugin;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 
-namespace freetrain.contributions.structs
+namespace FreeTrain.Contributions.Structs
 {
     /// <summary>
     /// commercial structure.

@@ -22,11 +22,11 @@ using System;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using freetrain.world;
-using freetrain.framework;
-using freetrain.framework.plugin;
+using FreeTrain.world;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.train
+namespace FreeTrain.Contributions.train
 {
     /// <summary>
     /// TrainCarContribution that draws cars from another TrainCarContribution

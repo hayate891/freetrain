@@ -21,7 +21,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// Implemented by a dialog box who hosts <c>ModalController</c>s.

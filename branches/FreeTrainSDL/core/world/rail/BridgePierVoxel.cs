@@ -21,11 +21,11 @@
 using System;
 using System.Drawing;
 using SDL.net;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.util;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Util;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// Voxel that is used to support raised railroad.

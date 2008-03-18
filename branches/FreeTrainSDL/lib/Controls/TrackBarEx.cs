@@ -21,7 +21,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace freetrain.controls
+namespace FreeTrain.controls
 {
     /// <summary>
     /// TrackBar class with a bug fix to the mouse wheel support.

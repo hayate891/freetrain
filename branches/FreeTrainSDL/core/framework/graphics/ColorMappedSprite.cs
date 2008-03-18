@@ -22,10 +22,10 @@ using System;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using freetrain.world;
-using freetrain.framework.plugin;
+using FreeTrain.world;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// Draw an image in the picture with color-mapping.

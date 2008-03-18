@@ -20,7 +20,7 @@
 
 using System;
 
-namespace freetrain.world.accounting
+namespace FreeTrain.world.Accounting
 {
     /// <summary>
     /// 

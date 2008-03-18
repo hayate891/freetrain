@@ -23,9 +23,9 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Xml;
-using freetrain.world;
+using FreeTrain.world;
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
     /// <summary>
     /// Utility methods to help parsing XML documents.

@@ -24,17 +24,17 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.contributions.structs;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.structs;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
 using SDL.net;
 
-namespace freetrain.controllers.structs
+namespace FreeTrain.Controllers.Structs
 {
     /// <summary>
     /// Controller that allows the user to

@@ -21,10 +21,10 @@
 using System;
 using System.Collections;
 using System.Xml;
-using freetrain.framework;
-using freetrain.framework.plugin;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.train
+namespace FreeTrain.Contributions.train
 {
     /// <summary>
     /// Parameterized train contribution implementation

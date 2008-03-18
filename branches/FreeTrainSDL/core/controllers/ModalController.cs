@@ -21,10 +21,10 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.views.map;
-using freetrain.world;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// User Interface by using MapViewWindow.

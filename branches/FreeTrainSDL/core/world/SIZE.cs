@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// Better "Size" class.

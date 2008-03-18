@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using SDL.net;
 
-namespace freetrain.views
+namespace FreeTrain.Views
 {
     /// <summary>
     /// NullWeatherOverlay の概要の説明です。

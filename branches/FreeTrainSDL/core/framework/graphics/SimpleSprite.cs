@@ -22,10 +22,10 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using freetrain.world;
+using FreeTrain.world;
 using SDL.net;
 
-namespace freetrain.framework.graphics
+namespace FreeTrain.Framework.graphics
 {
     /// <summary>
     /// Draw an image in the picture as-is.

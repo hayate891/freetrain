@@ -20,10 +20,10 @@
 
 using System;
 using System.Runtime.Serialization;
-using freetrain.world;
-using freetrain.framework.plugin;
+using FreeTrain.world;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.population
+namespace FreeTrain.Contributions.population
 {
     /// <summary>
     /// Multiplies another population by a constant factor.

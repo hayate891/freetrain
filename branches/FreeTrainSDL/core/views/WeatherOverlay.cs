@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using SDL.net;
 
-namespace freetrain.views
+namespace FreeTrain.Views
 {
 	/// <summary>
 	/// Draws overlay images to a QuarterViewDrawer.

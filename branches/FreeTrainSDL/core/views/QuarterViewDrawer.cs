@@ -24,13 +24,13 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SDL.net;
-using freetrain.util;
-using freetrain.world;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.controllers;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Controllers;
 
-namespace freetrain.views
+namespace FreeTrain.Views
 {
     /// <summary>
     /// Draw quarter view of the map and maintain them properly.

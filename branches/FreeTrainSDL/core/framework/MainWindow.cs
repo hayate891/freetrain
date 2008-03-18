@@ -30,33 +30,33 @@ using System.Runtime.Serialization;
 using System.Data;
 //using Microsoft.Win32;
 //using freetrain.contributions.dock;
-using freetrain.contributions.common;
-using freetrain.contributions.rail;
-using freetrain.contributions.road;
-using freetrain.contributions.structs;
-using freetrain.contributions.others;
-using freetrain.controls;
-using freetrain.controllers;
-using freetrain.controllers.land;
-using freetrain.controllers.rail;
-using freetrain.controllers.road;
-using freetrain.controllers.terrain;
-using freetrain.controllers.structs;
-using freetrain.framework.plugin;
-using freetrain.framework.sound;
-using freetrain.framework.graphics;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.accounting;
-using freetrain.world.rail;
-using freetrain.util;
-using freetrain.util.command;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.road;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Contributions.Others;
+using FreeTrain.controls;
+using FreeTrain.Controllers;
+using FreeTrain.Controllers.Land;
+using FreeTrain.Controllers.Rail;
+using FreeTrain.Controllers.road;
+using FreeTrain.Controllers.Terrain;
+using FreeTrain.Controllers.Structs;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.sound;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Accounting;
+using FreeTrain.world.Rail;
+using FreeTrain.Util;
+using FreeTrain.Util.Command;
 //using freetrain.util.docking;
 
 //using ICSharpCode.SharpZipLib.BZip2;
 
-namespace freetrain.framework
+namespace FreeTrain.Framework
 {
     /// <summary>
     /// MDI Container Window

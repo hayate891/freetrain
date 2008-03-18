@@ -20,10 +20,10 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// Picture can be contributed.

@@ -22,10 +22,10 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 using System.Drawing;
-using freetrain.util;
-using freetrain.world.terrain;
+using FreeTrain.Util;
+using FreeTrain.world.Terrain;
 
-namespace freetrain.world
+namespace FreeTrain.world
 {
     /// <summary>
     /// Cubic space in the world.

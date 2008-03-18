@@ -1,12 +1,12 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.controllers;
+using FreeTrain.Framework;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.Controllers;
 
-namespace freetrain.world.road.accessory
+namespace FreeTrain.world.road.Accessory
 {
 	/// <summary>
 	/// ModalController implementation for road accessory contribution

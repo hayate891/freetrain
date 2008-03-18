@@ -22,7 +22,7 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// 
@@ -279,7 +279,7 @@ namespace freetrain.world.rail
                 here = here.toward(there);
             }
 
-            accounting.AccountGenre.RAIL_SERVICE.spend(cost);	// charge the cost
+            Accounting.AccountGenre.RAIL_SERVICE.spend(cost);	// charge the cost
             return true;
         }
 
@@ -324,7 +324,7 @@ namespace freetrain.world.rail
             Direction d = here.getDirectionTo(there);
 
             // charge the cost first. 
-            accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfRemoving(here, there));
+            Accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfRemoving(here, there));
 
             while (true)
             {

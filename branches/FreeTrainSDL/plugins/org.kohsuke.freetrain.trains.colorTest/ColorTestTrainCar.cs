@@ -21,10 +21,10 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.framework.plugin;
-using freetrain.contributions.train;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Contributions.train;
 
-namespace freetrain.world.rail.cttrain
+namespace FreeTrain.world.Rail.cttrain
 {
     /// <summary>
     /// TrainCar contribution implementation for ColorTestTrain.

@@ -24,17 +24,17 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using freetrain.util;
-using freetrain.contributions.sound;
-using freetrain.contributions.others;
-using freetrain.contributions.rail;
-using freetrain.contributions.land;
-using freetrain.contributions.train;
-using freetrain.contributions.common;
-using freetrain.contributions.structs;
-using freetrain.contributions.road;
+using FreeTrain.Util;
+using FreeTrain.Contributions.sound;
+using FreeTrain.Contributions.Others;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.train;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Contributions.road;
 
-namespace freetrain.framework.plugin
+namespace FreeTrain.Framework.plugin
 {
     /// <summary>
     /// 

@@ -2,7 +2,7 @@
 <!DOCTYPE plug-in [
 <!ENTITY Population '
 		<population>
-			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<class name="FreeTrain.Contributions.population.ResidentialPopulation"/>
 			<base>10</base>
 		</population>
 '>
@@ -18,24 +18,24 @@
 	
 	<contribution type="land" id="{66B81CAD-8B41-416C-8624-137C2D8110F2}">
 		<group>Greenhouse</group>
-		<class name="freetrain.world.land.vinylhouse.XVinylHouseBuilder"
+		<class name="FreeTrain.world.Land.VinylHouse.XVinylHouseBuilder"
 			codebase="FreeTrain.VinylHouse.dll"/>
 		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="0" />
 		<price>20</price>
 		<population>
-			<class name="freetrain.contributions.population.AgriculturalPopulation"/>
+			<class name="FreeTrain.Contributions.population.AgriculturalPopulation"/>
 			<base>5</base>
 		</population>
 	</contribution>
 	
 	<contribution type="land" id="{4F97D7DD-749E-4B65-BF13-5733B10D8570}">
 		<group>Greenhouse</group>
-		<class name="freetrain.world.land.vinylhouse.YVinylHouseBuilder"
+		<class name="FreeTrain.world.Land.VinylHouse.YVinylHouseBuilder"
 			codebase="FreeTrain.VinylHouse.dll"/>
 		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="32" />
 		<price>20</price>
 		<population>
-			<class name="freetrain.contributions.population.AgriculturalPopulation"/>
+			<class name="FreeTrain.Contributions.population.AgriculturalPopulation"/>
 			<base>5</base>
 		</population>
 	</contribution>

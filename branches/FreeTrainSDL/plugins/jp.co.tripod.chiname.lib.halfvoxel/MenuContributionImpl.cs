@@ -21,10 +21,10 @@
 using System;
 using System.Xml;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.contributions.others;
+using FreeTrain.Framework;
+using FreeTrain.Contributions.Others;
 
-namespace freetrain.world.structs.hv
+namespace FreeTrain.world.Structs.hv
 {
     /// <summary>
     /// Adds "half voxel" menu to the main window

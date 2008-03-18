@@ -46,19 +46,19 @@
 
 <!ENTITY smallBuildingPopulation '
 	<population>
-		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<class name="FreeTrain.Contributions.population.OfficePopulation"/>
 		<base>35</base>
 	</population>
 '>
 <!ENTITY officeBuildingAPopulation '
 	<population>
-		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<class name="FreeTrain.Contributions.population.OfficePopulation"/>
 		<base>200</base>
 	</population>
 '>
 <!ENTITY officeBuildingWithHeliportPopulation '
 	<population>
-		<class name="freetrain.contributions.population.OfficePopulation"/>
+		<class name="FreeTrain.Contributions.population.OfficePopulation"/>
 		<base>250</base>
 	</population>
 '>
@@ -91,7 +91,7 @@
 		<size>1,1</size>
 		<height>1</height>
 		<population>
-			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<class name="FreeTrain.Contributions.population.ShopperPopulation"/>
 			<base>35</base>
 		</population>
 		<sprite origin="0,0" offset="16">
@@ -114,7 +114,7 @@
 		<size>2,2</size>
 		<height>3</height>
 		<population>
-			<class name="freetrain.contributions.population.ShopperPopulation"/>
+			<class name="FreeTrain.Contributions.population.ShopperPopulation"/>
 			<base>600</base>
 		</population>
 		<sprite origin="0,0" offset="49">
@@ -141,7 +141,7 @@
 			<picture ref="{C9FC2889-10D0-4699-ACB6-C62A4273BED9}" />
 		</sprite>
 		<population>
-			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<class name="FreeTrain.Contributions.population.ResidentialPopulation"/>
 			<base>200</base>
 		</population>
 	</contribution>
@@ -162,7 +162,7 @@
 			<picture ref="{A2C5271D-9EED-47AE-A5BB-A1BA0B776186}" />
 		</sprite>
 		<population>
-			<class name="freetrain.contributions.population.ResidentialPopulation"/>
+			<class name="FreeTrain.Contributions.population.ResidentialPopulation"/>
 			<base>10</base>
 		</population>
 	</contribution>
@@ -183,7 +183,7 @@
 		<size>2,2</size>
 		<height>3</height>
 		<population>
-			<class name="freetrain.contributions.population.OfficePopulation"/>
+			<class name="FreeTrain.Contributions.population.OfficePopulation"/>
 			<base>300</base>
 		</population>
 		&crSilver;
@@ -321,13 +321,13 @@
 		<minHeight>3</minHeight>
 		<maxHeight>10</maxHeight>
 		<population>
-			<class name="freetrain.contributions.population.CombinationPopulation"/>
+			<class name="FreeTrain.Contributions.population.CombinationPopulation"/>
 			<population>
-				<class name="freetrain.contributions.population.OfficePopulation"/>
+				<class name="FreeTrain.Contributions.population.OfficePopulation"/>
 				<base>1200</base>
 			</population>
 			<population>
-				<class name="freetrain.contributions.population.ShopperPopulation"/>
+				<class name="FreeTrain.Contributions.population.ShopperPopulation"/>
 				<base>300</base>
 			</population>
 		</population>
@@ -394,13 +394,13 @@
 		<minHeight>3</minHeight>
 		<maxHeight>10</maxHeight>
 		<population>
-			<class name="freetrain.contributions.population.CombinationPopulation"/>
+			<class name="FreeTrain.Contributions.population.CombinationPopulation"/>
 			<population>
-				<class name="freetrain.contributions.population.OfficePopulation"/>
+				<class name="FreeTrain.Contributions.population.OfficePopulation"/>
 				<base>1000</base>
 			</population>
 			<population>
-				<class name="freetrain.contributions.population.ShopperPopulation"/>
+				<class name="FreeTrain.Contributions.population.ShopperPopulation"/>
 				<base>200</base>
 			</population>
 		</population>

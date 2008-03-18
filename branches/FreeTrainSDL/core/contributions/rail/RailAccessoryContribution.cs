@@ -21,13 +21,13 @@
 using System;
 using System.Xml;
 using System.Drawing;
-using freetrain.contributions.common;
-using freetrain.framework.plugin;
-using freetrain.framework.graphics;
-using freetrain.controllers;
-using freetrain.contributions.population;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.population;
 
-namespace freetrain.contributions.rail
+namespace FreeTrain.Contributions.rail
 {
     /// <summary>
     /// Contribution that adds <c>TrafficVoxel.Accessory</c>
@@ -80,19 +80,19 @@ namespace freetrain.contributions.rail
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        public abstract freetrain.framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize);
+        public abstract FreeTrain.Framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public abstract freetrain.controllers.ModalController createBuilder(freetrain.controllers.IControllerSite site);
+        public abstract FreeTrain.Controllers.ModalController createBuilder(FreeTrain.Controllers.IControllerSite site);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public abstract freetrain.controllers.ModalController createRemover(freetrain.controllers.IControllerSite site);
+        public abstract FreeTrain.Controllers.ModalController createRemover(FreeTrain.Controllers.IControllerSite site);
 
         #endregion
     }

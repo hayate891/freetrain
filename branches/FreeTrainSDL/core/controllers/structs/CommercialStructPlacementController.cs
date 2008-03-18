@@ -20,13 +20,13 @@
 
 using System;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 
-namespace freetrain.controllers.structs
+namespace FreeTrain.Controllers.Structs
 {
     /// <summary>
     /// CommercialStructPlacementController の概要の説明です。

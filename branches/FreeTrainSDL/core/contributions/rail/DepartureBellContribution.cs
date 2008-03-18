@@ -20,13 +20,13 @@
 
 using System;
 using System.Xml;
-using freetrain.contributions.common;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.framework.sound;
-using freetrain.world;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.sound;
+using FreeTrain.world;
 
-namespace freetrain.contributions.rail
+namespace FreeTrain.Contributions.rail
 {
     /// <summary>
     /// Departure bell for trains.

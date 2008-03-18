@@ -21,18 +21,18 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using freetrain.contributions.common;
-using freetrain.contributions.population;
-using freetrain.framework;
-using freetrain.framework.plugin;
-using freetrain.framework.plugin.graphics;
-using freetrain.framework.graphics;
-using freetrain.world;
-using freetrain.world.structs;
-using freetrain.controllers;
-using freetrain.contributions.structs;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.population;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.plugin.graphics;
+using FreeTrain.Framework.graphics;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.Structs;
 
-namespace freetrain.world.structs.hv
+namespace FreeTrain.world.Structs.hv
 {
     /// <summary>
     /// 

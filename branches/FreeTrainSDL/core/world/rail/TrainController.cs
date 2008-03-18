@@ -20,10 +20,10 @@
 
 using System;
 using System.Windows.Forms;
-using freetrain.contributions.rail;
-using freetrain.framework.plugin;
+using FreeTrain.Contributions.rail;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// 

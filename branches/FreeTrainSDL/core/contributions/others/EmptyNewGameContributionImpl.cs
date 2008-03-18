@@ -21,10 +21,10 @@
 using System;
 using System.Xml;
 using System.Windows.Forms;
-using freetrain.framework;
-using freetrain.world;
+using FreeTrain.Framework;
+using FreeTrain.world;
 
-namespace freetrain.contributions.others
+namespace FreeTrain.Contributions.Others
 {
     /// <summary>
     /// Creates a new empty game by allowing the user to specify the size of the world.

@@ -21,11 +21,11 @@
 using System;
 using System.Runtime.Serialization;
 using System.Xml;
-using freetrain.framework.plugin;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.Framework.plugin;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 
-namespace freetrain.contributions.population
+namespace FreeTrain.Contributions.population
 {
     /// <summary>
     /// Computes the population from the base population.

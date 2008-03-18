@@ -22,11 +22,11 @@ using System;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
-using freetrain.contributions.others;
-using freetrain.framework;
-using freetrain.framework.plugin;
+using FreeTrain.Contributions.Others;
+using FreeTrain.Framework;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.world.rail.cttrain
+namespace FreeTrain.world.Rail.cttrain
 {
     /// <summary>
     /// Menu item contribution that allows an user to

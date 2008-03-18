@@ -23,16 +23,16 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.Serialization;
-using freetrain.contributions.common;
-using freetrain.contributions.structs;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.util;
-using freetrain.world;
-using freetrain.world.subsidiaries;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Util;
+using FreeTrain.world;
+using FreeTrain.world.subsidiaries;
 
-namespace freetrain.world.structs.hv
+namespace FreeTrain.world.Structs.hv
 {
     /// <summary>
     /// The half divided voxel structure.
@@ -166,7 +166,7 @@ namespace freetrain.world.structs.hv
         public override object queryInterface(Type aspect)
         {
             // if type.population is null, we don't have any population
-            if (aspect == typeof(rail.StationListener))
+            if (aspect == typeof(Rail.StationListener))
                 return stationListener;
             else
                 return base.queryInterface(aspect);

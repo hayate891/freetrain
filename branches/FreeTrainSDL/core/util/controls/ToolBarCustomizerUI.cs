@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace freetrain.util.controls
+namespace FreeTrain.Util.controls
 {
 	/// <summary>
 	/// Implements a context menu for toolbar and allows the player

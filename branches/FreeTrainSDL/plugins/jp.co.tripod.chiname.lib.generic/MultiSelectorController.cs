@@ -24,22 +24,22 @@ using System.Diagnostics;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using freetrain.controls;
-using freetrain.controllers;
-using freetrain.contributions;
-using freetrain.contributions.common;
-using freetrain.contributions.population;
-using freetrain.contributions.structs;
-using freetrain.contributions.land;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.framework.plugin;
-using freetrain.views;
-using freetrain.views.map;
-using freetrain.world;
-using freetrain.world.structs;
+using FreeTrain.controls;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Structs;
+using FreeTrain.Contributions.land;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.plugin;
+using FreeTrain.Views;
+using FreeTrain.Views.Map;
+using FreeTrain.world;
+using FreeTrain.world.Structs;
 
-namespace freetrain.framework.plugin.generic
+namespace FreeTrain.Framework.plugin.Generic
 {
     /// <summary>
     /// MultiSelectorController
@@ -51,20 +51,20 @@ namespace freetrain.framework.plugin.generic
 
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.PictureBox previewBox;
-        private freetrain.controls.IndexSelector selectorDir;
-        private freetrain.controls.IndexSelector selectorColor;
+        private FreeTrain.controls.IndexSelector selectorDir;
+        private FreeTrain.controls.IndexSelector selectorColor;
         private System.Windows.Forms.NumericUpDown numHeight;
         private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.ComboBox typeBox;
-        private freetrain.controls.CostBox costBox;
+        private FreeTrain.controls.CostBox costBox;
         private System.ComponentModel.Container components = null;
         private System.Windows.Forms.Label labelDir;
         private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.Label labelInfo;
-        private freetrain.controls.IndexSelector selectorDesign;
+        private FreeTrain.controls.IndexSelector selectorDesign;
         private System.Windows.Forms.CheckBox cbRandColor;
         private System.Windows.Forms.CheckBox cbRandDesign;
-        private freetrain.controls.IndexSelector selectorCol2;
+        private FreeTrain.controls.IndexSelector selectorCol2;
         private System.Windows.Forms.CheckBox cbRandCol2;
         private System.Windows.Forms.ListBox typeList;
         private System.Windows.Forms.GroupBox groupColor;
@@ -407,22 +407,22 @@ namespace freetrain.framework.plugin.generic
         {
             this.nameLabel = new System.Windows.Forms.Label();
             this.previewBox = new System.Windows.Forms.PictureBox();
-            this.selectorDesign = new freetrain.controls.IndexSelector();
-            this.selectorDir = new freetrain.controls.IndexSelector();
+            this.selectorDesign = new FreeTrain.controls.IndexSelector();
+            this.selectorDir = new FreeTrain.controls.IndexSelector();
             this.labelDir = new System.Windows.Forms.Label();
-            this.selectorColor = new freetrain.controls.IndexSelector();
+            this.selectorColor = new FreeTrain.controls.IndexSelector();
             this.typeBox = new System.Windows.Forms.ComboBox();
             this.numHeight = new System.Windows.Forms.NumericUpDown();
             this.labelHeight = new System.Windows.Forms.Label();
             this.btnDetail = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.costBox = new freetrain.controls.CostBox();
+            this.costBox = new FreeTrain.controls.CostBox();
             this.groupColor = new System.Windows.Forms.GroupBox();
             this.cbRandColor = new System.Windows.Forms.CheckBox();
             this.groupDesign = new System.Windows.Forms.GroupBox();
             this.cbRandDesign = new System.Windows.Forms.CheckBox();
             this.groupCol2 = new System.Windows.Forms.GroupBox();
-            this.selectorCol2 = new freetrain.controls.IndexSelector();
+            this.selectorCol2 = new FreeTrain.controls.IndexSelector();
             this.cbRandCol2 = new System.Windows.Forms.CheckBox();
             this.typeList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.previewBox)).BeginInit();

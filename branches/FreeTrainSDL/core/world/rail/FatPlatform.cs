@@ -23,11 +23,11 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
 using SDL.net;
-using freetrain.framework;
-using freetrain.framework.graphics;
-using freetrain.util;
+using FreeTrain.Framework;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Util;
 
-namespace freetrain.world.rail
+namespace FreeTrain.world.Rail
 {
     /// <summary>
     /// "Take the A-train" style fat platform.

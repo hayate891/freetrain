@@ -19,10 +19,10 @@
 #endregion LICENSE
 
 using System;
-using freetrain.world;
-using freetrain.world.rail;
+using FreeTrain.world;
+using FreeTrain.world.Rail;
 
-namespace freetrain.controllers
+namespace FreeTrain.Controllers
 {
     /// <summary>
     /// LocationDisambiguator implementation that prefers

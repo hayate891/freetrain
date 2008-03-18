@@ -20,11 +20,11 @@
 
 using System;
 using System.Drawing;
-using freetrain.framework.graphics;
-using freetrain.controllers;
-using freetrain.contributions.population;
+using FreeTrain.Framework.graphics;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.population;
 
-namespace freetrain.contributions.common
+namespace FreeTrain.Contributions.Common
 {
     /// <summary>
     /// IEntityBuilder の概要の説明です。

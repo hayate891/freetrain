@@ -20,9 +20,9 @@
 
 using System;
 using System.Xml;
-using freetrain.framework.plugin;
+using FreeTrain.Framework.plugin;
 
-namespace freetrain.contributions.structs
+namespace FreeTrain.Contributions.Structs
 {
     /// <summary>
     /// Contribution that adds a special kind of structures, like airports.
