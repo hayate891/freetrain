@@ -106,6 +106,14 @@ namespace FreeTrain.Controllers.Terrain
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Size = new System.Drawing.Size(109, 15);
+            // 
+            // lblExit
+            // 
+            this.lblExit.Location = new System.Drawing.Point(75, 5);
+            // 
             // buttonUp
             // 
             this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -117,7 +125,6 @@ namespace FreeTrain.Controllers.Terrain
             this.buttonUp.TabIndex = 2;
             this.buttonUp.TabStop = true;
             this.buttonUp.Text = "Raise";
-            //! this.buttonUp.Text = "隆起";
             this.buttonUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonDown
@@ -129,13 +136,12 @@ namespace FreeTrain.Controllers.Terrain
             this.buttonDown.Size = new System.Drawing.Size(56, 26);
             this.buttonDown.TabIndex = 4;
             this.buttonDown.Text = "Lower";
-            //! this.buttonDown.Text = "掘削";
             this.buttonDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // preview
             // 
             this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.preview.InitialImage = null;
             this.preview.Location = new System.Drawing.Point(4, 5);
@@ -147,8 +153,8 @@ namespace FreeTrain.Controllers.Terrain
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                                    | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Location = new System.Drawing.Point(4, 93);
             this.label1.Name = "label1";
@@ -160,15 +166,15 @@ namespace FreeTrain.Controllers.Terrain
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.selSize);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(4, 165);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(111, 38);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Target Size";
-            this.groupBox1.Enabled = false;
             // 
             // selSize
             // 
@@ -190,10 +196,15 @@ namespace FreeTrain.Controllers.Terrain
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.preview);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "MountainController";
             this.Text = "Modify Terrain";
-            //! this.Text = "地形操作";
+            this.Controls.SetChildIndex(this.preview, 0);
+            this.Controls.SetChildIndex(this.buttonDown, 0);
+            this.Controls.SetChildIndex(this.buttonUp, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.lblTitle, 0);
+            this.Controls.SetChildIndex(this.lblExit, 0);
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
