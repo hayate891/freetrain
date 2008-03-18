@@ -23,7 +23,7 @@ using System.Xml;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.Sound;
+using FreeTrain.Framework.sound;
 using FreeTrain.world;
 
 namespace FreeTrain.Contributions.Rail

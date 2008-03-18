@@ -618,7 +618,7 @@ namespace FreeTrain.world.Rail
                 new Train(World.world.rootTrainGroup,
                     (int)length.Value, selectedTrain);
 
-            FreeTrain.Framework.Sound.SoundEffectManager
+            FreeTrain.Framework.sound.SoundEffectManager
                 .PlaySynchronousSound(ResourceUtil.findSystemResource("vehiclePurchase.wav"));
 
             AccountManager.theInstance.spend(getTotalPrice(), AccountGenre.RAIL_SERVICE);

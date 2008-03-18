@@ -35,7 +35,7 @@ using FreeTrain.world.Rail;
 using FreeTrain.world.Terrain;
 using FreeTrain.Controllers.Land;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.Sound;
+using FreeTrain.Framework.sound;
 using FreeTrain.Util;
 using FreeTrain.Util.Command;
 using FreeTrain.Controllers;

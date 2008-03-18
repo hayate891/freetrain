@@ -43,7 +43,7 @@ using FreeTrain.Controllers.Road;
 using FreeTrain.Controllers.Terrain;
 using FreeTrain.Controllers.Structs;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.Sound;
+using FreeTrain.Framework.sound;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
