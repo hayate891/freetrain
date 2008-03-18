@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
 using SDL.net;
-using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.Land;
 using FreeTrain.Contributions.population;
 using FreeTrain.Controllers;
 using FreeTrain.Framework.graphics;

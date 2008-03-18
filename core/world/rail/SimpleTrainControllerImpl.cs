@@ -23,7 +23,7 @@ using System.Collections;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.Rail;
 
 namespace FreeTrain.world.Rail
 {

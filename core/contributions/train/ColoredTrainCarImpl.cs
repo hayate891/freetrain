@@ -28,7 +28,7 @@ using FreeTrain.Framework.plugin;
 using FreeTrain.world;
 using SDL.net;
 
-namespace FreeTrain.Contributions.train
+namespace FreeTrain.Contributions.Train
 {
     // TODO: this code needs to be re-written by using ColorMapSprite
 

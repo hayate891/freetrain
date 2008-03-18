@@ -23,10 +23,10 @@ using System.Xml;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.sound;
+using FreeTrain.Framework.Sound;
 using FreeTrain.world;
 
-namespace FreeTrain.Contributions.rail
+namespace FreeTrain.Contributions.Rail
 {
     /// <summary>
     /// Departure bell for trains.

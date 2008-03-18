@@ -25,7 +25,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using FreeTrain.Framework;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {
     /// <summary>
     /// 

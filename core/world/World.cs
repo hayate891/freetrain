@@ -26,15 +26,15 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
-using FreeTrain.Contributions.sound;
-using FreeTrain.Contributions.train;
+using FreeTrain.Contributions.Sound;
+using FreeTrain.Contributions.Train;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world;
 using FreeTrain.world.Rail;
 using FreeTrain.Views;
-using FreeTrain.world.development;
+using FreeTrain.world.Development;
 using SDL.net;
 
 namespace FreeTrain.world
@@ -140,7 +140,7 @@ namespace FreeTrain.world
                 // when a voxel is changed, it should be notified to OutlookListeners automatically
                 onVoxelChanged += new VoxelChangeListener(onVoxelUpdated);
 
-                landValue = new development.LandValue(this);
+                landValue = new Development.LandValue(this);
             }
         }
         /// <summary>
@@ -196,7 +196,7 @@ namespace FreeTrain.world
         /// <summary>
         /// Responsible for computing/maintaining land values for this world.
         /// </summary>
-        public readonly development.LandValue landValue;
+        public readonly Development.LandValue landValue;
 
         /// <summary>
         /// Other objects associated to this world.

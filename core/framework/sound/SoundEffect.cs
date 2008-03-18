@@ -21,7 +21,7 @@
 using System;
 using FreeTrain.world;
 
-namespace FreeTrain.Framework.sound
+namespace FreeTrain.Framework.Sound
 {
     /// <summary>
     /// Sound Effect

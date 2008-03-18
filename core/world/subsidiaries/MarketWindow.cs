@@ -28,7 +28,7 @@ using FreeTrain.Framework;
 //using freetrain.util.docking;
 using FreeTrain.Util.Command;
 
-namespace FreeTrain.world.subsidiaries
+namespace FreeTrain.world.Subsidiaries
 {
 	/// <summary>
 	/// Controller of SubsidiaryMarket.
@@ -59,7 +59,7 @@ namespace FreeTrain.world.subsidiaries
 
 			reset(null,null);
 
-			FreeTrain.Util.controls.ToolBarCustomizerUI.attach(toolBar);
+			FreeTrain.Util.Controls.ToolBarCustomizerUI.attach(toolBar);
 			tbModeSell.Pushed = true;
 
 			// associate UI with code

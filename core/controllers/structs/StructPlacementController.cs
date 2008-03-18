@@ -29,7 +29,7 @@ using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using FreeTrain.world;
 using FreeTrain.world.Structs;
-using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Framework.plugin;

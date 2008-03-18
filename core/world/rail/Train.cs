@@ -23,7 +23,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using SDL.net;
-using FreeTrain.Contributions.train;
+using FreeTrain.Contributions.Train;
 using FreeTrain.Framework;
 using FreeTrain.Framework.sound;
 using FreeTrain.Framework.graphics;

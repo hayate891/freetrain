@@ -23,7 +23,7 @@ using System.Diagnostics;
 using FreeTrain.world.Structs;
 using FreeTrain.world.Accounting;
 
-namespace FreeTrain.world.subsidiaries
+namespace FreeTrain.world.Subsidiaries
 {
     /// <summary>
     /// Tradable subsidiary company.

@@ -22,7 +22,7 @@ using System;
 using System.Xml;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.train
+namespace FreeTrain.Contributions.Train
 {
     /// <summary>
     /// LoadsTrainContributionFactory.

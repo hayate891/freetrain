@@ -26,8 +26,8 @@ using System.Windows.Forms;
 using System.Text;
 using System.Xml;
 using FreeTrain.Util;
-using FreeTrain.Contributions.train;
-using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.Train;
+using FreeTrain.Contributions.Land;
 using FreeTrain.Framework.graphics;
 
 namespace FreeTrain.Framework.plugin

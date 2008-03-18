@@ -31,7 +31,7 @@ using FreeTrain.Framework;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.land
+namespace FreeTrain.Contributions.Land
 {
     /// <summary>
     /// Plug-in that places land voxels.

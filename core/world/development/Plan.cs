@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {	
 	// TODO: allow a contribution to implement PlanFactory
 

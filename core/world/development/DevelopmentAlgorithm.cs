@@ -22,7 +22,7 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.Land;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
@@ -30,9 +30,9 @@ using FreeTrain.Util;
 using FreeTrain.world.Rail;
 using FreeTrain.world.Land;
 using FreeTrain.world.Structs;
-using FreeTrain.world.subsidiaries;
+using FreeTrain.world.Subsidiaries;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {
     /// <summary>
     /// Receives clock event and build a new structure if appropriate

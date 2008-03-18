@@ -26,7 +26,7 @@ using FreeTrain.world;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.train
+namespace FreeTrain.Contributions.Train
 {
     /// <summary>
     /// TrainCarContribution that draws cars from another TrainCarContribution

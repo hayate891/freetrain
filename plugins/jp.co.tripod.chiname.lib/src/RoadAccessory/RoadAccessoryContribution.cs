@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
 using FreeTrain.Controllers;
-using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Framework.graphics;
 using FreeTrain.world;
