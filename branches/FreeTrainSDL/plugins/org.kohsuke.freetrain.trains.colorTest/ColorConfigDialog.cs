@@ -277,7 +277,7 @@ namespace FreeTrain.world.Rail.ColorTestTrain
             this.MinimizeBox = false;
             this.Name = "ColorConfigDialog";
             this.ShowInTaskbar = false;
-            this.Text = "Color test train settings";
+            this.Text = "Color Test Train Settings";
             ((System.ComponentModel.ISupportInitialize)(this.boxBase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxLine1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxLine2)).EndInit();
