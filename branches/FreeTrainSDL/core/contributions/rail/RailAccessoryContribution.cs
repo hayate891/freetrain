@@ -27,7 +27,7 @@ using FreeTrain.Framework.graphics;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.population;
 
-namespace FreeTrain.Contributions.rail
+namespace FreeTrain.Contributions.Rail
 {
     /// <summary>
     /// Contribution that adds <c>TrafficVoxel.Accessory</c>

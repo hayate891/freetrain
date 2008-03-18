@@ -23,7 +23,7 @@ using System.Collections;
 using System.ComponentModel;
 using FreeTrain.Contributions.Common;
 
-namespace FreeTrain.Contributions.land
+namespace FreeTrain.Contributions.Land
 {
     /// <summary>
     /// Group of LandContribution.

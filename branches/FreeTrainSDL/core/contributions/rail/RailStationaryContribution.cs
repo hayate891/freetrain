@@ -26,7 +26,7 @@ using FreeTrain.world;
 using FreeTrain.world.Rail;
 using FreeTrain.world.Structs;
 
-namespace FreeTrain.Contributions.rail
+namespace FreeTrain.Contributions.Rail
 {
     /// <summary>
     /// Stationary objects related to rail road.

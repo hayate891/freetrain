@@ -26,7 +26,7 @@ using FreeTrain.Framework.graphics;
 using FreeTrain.world;
 using FreeTrain.world.Rail;
 
-namespace FreeTrain.Contributions.train
+namespace FreeTrain.Contributions.Train
 {
     /// <summary>
     /// Train type

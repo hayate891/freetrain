@@ -24,7 +24,7 @@ using System.Xml;
 using FreeTrain.Contributions.Others;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {
     /// <summary>
     /// 

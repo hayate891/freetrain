@@ -25,7 +25,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FreeTrain.Contributions.sound;
+using FreeTrain.Contributions.Sound;
 
 
 namespace FreeTrain.Framework

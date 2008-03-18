@@ -23,7 +23,7 @@ using System.Net;
 using System.Xml;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.sound
+namespace FreeTrain.Contributions.Sound
 {
     /// <summary>
     /// Code that lists up BGMContribution programatically.

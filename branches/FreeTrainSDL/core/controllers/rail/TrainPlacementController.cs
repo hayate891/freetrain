@@ -30,7 +30,7 @@ using FreeTrain.world;
 using FreeTrain.world.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.sound;
-using FreeTrain.Util.controls;
+using FreeTrain.Util.Controls;
 using FreeTrain.Util.Command;
 using SDL.net;
 
@@ -180,7 +180,7 @@ namespace FreeTrain.Controllers.Rail
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainPlacementController));
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
-            this.tree = new FreeTrain.Util.controls.DDTreeView();
+            this.tree = new FreeTrain.Util.Controls.DDTreeView();
             this.treeMenu = new System.Windows.Forms.ContextMenu();
             this.miAddGroup = new System.Windows.Forms.MenuItem();
             this.miSell = new System.Windows.Forms.MenuItem();

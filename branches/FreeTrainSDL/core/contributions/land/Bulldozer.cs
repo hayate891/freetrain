@@ -33,7 +33,7 @@ using FreeTrain.world.Rail;
 using FreeTrain.world.Terrain;
 using FreeTrain.world.Land;
 
-namespace FreeTrain.Contributions.land
+namespace FreeTrain.Contributions.Land
 {
     /// <summary>
     /// Removes any land voxel in the region.

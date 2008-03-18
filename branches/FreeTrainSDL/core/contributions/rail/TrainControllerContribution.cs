@@ -23,7 +23,7 @@ using System.Xml;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world.Rail;
 
-namespace FreeTrain.Contributions.rail
+namespace FreeTrain.Contributions.Rail
 {
     /// <summary>
     /// plug-in that provides TrainController implementations

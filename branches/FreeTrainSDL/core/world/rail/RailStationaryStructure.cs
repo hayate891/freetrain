@@ -20,7 +20,7 @@
 
 using System;
 using System.Drawing;
-using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.Rail;
 using FreeTrain.world.Structs;
 using FreeTrain.Framework.plugin;
 

@@ -27,7 +27,7 @@ using FreeTrain.Views.Map;
 using FreeTrain.world.Rail;
 using SDL.net;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {
 	/// <summary>
 	/// Controller that checks the land value.

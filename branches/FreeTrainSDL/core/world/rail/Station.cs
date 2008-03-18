@@ -22,13 +22,13 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Util;
 using FreeTrain.world.Accounting;
 using FreeTrain.world.Structs;
-using FreeTrain.world.development;
+using FreeTrain.world.Development;
 
 namespace FreeTrain.world.Rail
 {

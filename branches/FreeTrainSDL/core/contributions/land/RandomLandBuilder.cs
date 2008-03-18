@@ -30,7 +30,7 @@ using FreeTrain.Views;
 using FreeTrain.world;
 using FreeTrain.world.Land;
 
-namespace FreeTrain.Contributions.land
+namespace FreeTrain.Contributions.Land
 {
     /// <summary>
     /// RandomLandBuilder の概要の説明です。

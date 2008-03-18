@@ -22,7 +22,7 @@ using System;
 using System.Runtime.Serialization;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.subsidiaries
+namespace FreeTrain.world.Subsidiaries
 {
     /// <summary>
     /// 

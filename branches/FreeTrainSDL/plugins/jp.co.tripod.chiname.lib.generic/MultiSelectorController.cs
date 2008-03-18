@@ -30,7 +30,7 @@ using FreeTrain.Contributions;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.population;
 using FreeTrain.Contributions.Structs;
-using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.Land;
 using FreeTrain.Framework;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Framework.plugin;

@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using FreeTrain.Contributions.train;
+using FreeTrain.Contributions.Train;
 using FreeTrain.Framework;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Framework.plugin;
@@ -618,7 +618,7 @@ namespace FreeTrain.world.Rail
                 new Train(World.world.rootTrainGroup,
                     (int)length.Value, selectedTrain);
 
-            FreeTrain.Framework.sound.SoundEffectManager
+            FreeTrain.Framework.Sound.SoundEffectManager
                 .PlaySynchronousSound(ResourceUtil.findSystemResource("vehiclePurchase.wav"));
 
             AccountManager.theInstance.spend(getTotalPrice(), AccountGenre.RAIL_SERVICE);

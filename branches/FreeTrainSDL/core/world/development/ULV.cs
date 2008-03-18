@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {
     /// <summary>
     /// ULV stands for "Unused Land Value."

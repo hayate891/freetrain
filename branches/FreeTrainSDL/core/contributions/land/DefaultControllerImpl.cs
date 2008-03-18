@@ -26,7 +26,7 @@ using FreeTrain.Views;
 using FreeTrain.Controllers;
 using FreeTrain.world;
 
-namespace FreeTrain.Contributions.land
+namespace FreeTrain.Contributions.Land
 {
     /// <summary>
     /// ModalController implementation typical for most of the land builder contribution.

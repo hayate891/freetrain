@@ -24,7 +24,7 @@ using System.Xml;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.train
+namespace FreeTrain.Contributions.Train
 {
     /// <summary>
     /// Parameterized train contribution implementation

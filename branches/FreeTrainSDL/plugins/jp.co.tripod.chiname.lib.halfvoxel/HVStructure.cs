@@ -30,7 +30,7 @@ using FreeTrain.Framework.graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Util;
 using FreeTrain.world;
-using FreeTrain.world.subsidiaries;
+using FreeTrain.world.Subsidiaries;
 
 namespace FreeTrain.world.Structs.hv
 {

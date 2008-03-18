@@ -25,7 +25,7 @@ using FreeTrain.Contributions.population;
 using FreeTrain.Framework;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Framework.plugin;
-using FreeTrain.world.subsidiaries;
+using FreeTrain.world.Subsidiaries;
 
 namespace FreeTrain.world.Structs
 {

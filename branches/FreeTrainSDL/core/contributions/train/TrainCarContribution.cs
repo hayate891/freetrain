@@ -25,7 +25,7 @@ using SDL.net;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world;
 
-namespace FreeTrain.Contributions.train
+namespace FreeTrain.Contributions.Train
 {
     /// <summary>
     /// Train car type.

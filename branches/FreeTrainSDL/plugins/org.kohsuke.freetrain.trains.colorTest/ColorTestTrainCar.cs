@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using System.Xml;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Contributions.train;
+using FreeTrain.Contributions.Train;
 
 namespace FreeTrain.world.Rail.cttrain
 {

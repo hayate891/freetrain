@@ -7,24 +7,24 @@
 	<contribution type="contribution" id="{312E3101-E7A6-4276-8AC9-617FA6D7ADEA}">
 		<name>bgm</name>
 		<class name="FreeTrain.Framework.plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.sound.BGMContribution" />
+		<implementation name="FreeTrain.Contributions.Sound.BGMContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{5E0E178B-835A-4987-8ECC-B9E7A70EB39A}">
 		<name>bgmFactory</name>
-		<class name="FreeTrain.Contributions.sound.BGMFactoryContributionFactory"/>
+		<class name="FreeTrain.Contributions.Sound.BGMFactoryContributionFactory"/>
 	</contribution>
 	
 	<contribution type="contribution" id="{32A5AFB2-B676-4A4E-A06E-917AF760FFB6}">
 		<name>station</name>
 		<class name="FreeTrain.Framework.plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.rail.StationContribution" />
+		<implementation name="FreeTrain.Contributions.Rail.StationContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{636703FB-D70F-4AF8-9254-FBDA1DAB4344}">
 		<name>land</name>
 		<class name="FreeTrain.Framework.plugin.DynamicContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.land.LandBuilderContribution" />
+		<implementation name="FreeTrain.Contributions.Land.LandBuilderContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{6D1F34DC-F3E0-4CA8-B705-028C2F4D2F39}">
@@ -35,25 +35,25 @@
 	
 	<contribution type="contribution" id="{12975FE4-93CB-41D5-9947-59FF28A8C961}">
 		<name>train</name>
-		<class name="FreeTrain.Contributions.train.TrainContributionFactory"/>
+		<class name="FreeTrain.Contributions.Train.TrainContributionFactory"/>
 	</contribution>
 	
 	<contribution type="contribution" id="{A18E14FD-1EC5-4C78-A721-42C91A864084}">
 		<name>trainCar</name>
 		<class name="FreeTrain.Framework.plugin.DynamicContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.train.TrainCarContribution" />
+		<implementation name="FreeTrain.Contributions.Train.TrainCarContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{A53A5080-8F66-4CA3-A88F-8B4D5D7EC0AC}">
 		<name>trainController</name>
 		<class name="FreeTrain.Framework.plugin.DynamicContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.rail.TrainControllerContribution" />
+		<implementation name="FreeTrain.Contributions.Rail.TrainControllerContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{9D6AC382-8A79-4CCF-BE16-15AAA5EBD5F3}">
 		<name>specialRail</name>
 		<class name="FreeTrain.Framework.plugin.DynamicContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.rail.SpecialRailContribution" />
+		<implementation name="FreeTrain.Contributions.Rail.SpecialRailContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{DE8F9D81-67D0-4F8E-810D-E53D2251E64B}">
@@ -77,7 +77,7 @@
 	<contribution type="contribution" id="{BFA3A8EA-05B0-4910-907F-4F617528B7CD}">
 		<name>railStationary</name>
 		<class name="FreeTrain.Framework.plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.rail.RailStationaryContribution" />
+		<implementation name="FreeTrain.Contributions.Rail.RailStationaryContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{8D79D146-21F9-4E9E-ACAB-5B43A003F032}">
@@ -247,7 +247,7 @@
 	<contribution type="contribution" id="{821FC629-4180-48a4-8B47-ECE2817D2106}">
 		<name>trainDepartureBell</name>
 		<class name="FreeTrain.Framework.plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.rail.DepartureBellContribution" />
+		<implementation name="FreeTrain.Contributions.Rail.DepartureBellContribution" />
 	</contribution>
 	
 	<contribution type="trainDepartureBell" id="{9B087AEA-6E9C-48cd-A1F3-1B774500752E}">
@@ -318,7 +318,7 @@
 	<contribution type="contribution" id="{669FE39E-0F2B-42C1-B618-49832461448A}">
 		<name>colorMapTrainPicture</name>
 		<class name="FreeTrain.Framework.plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.train.ColoredTrainPictureContribution" />
+		<implementation name="FreeTrain.Contributions.Train.ColoredTrainPictureContribution" />
 	</contribution>
 	
 	<contribution type="colorMapTrainPicture" id="{243D9F53-67FB-432E-B985-3B9B696D8CE0}-1">

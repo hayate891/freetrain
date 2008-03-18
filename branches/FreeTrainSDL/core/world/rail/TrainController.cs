@@ -20,7 +20,7 @@
 
 using System;
 using System.Windows.Forms;
-using FreeTrain.Contributions.rail;
+using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework.plugin;
 
 namespace FreeTrain.world.Rail

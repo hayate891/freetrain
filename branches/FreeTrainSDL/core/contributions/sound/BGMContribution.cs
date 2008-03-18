@@ -22,7 +22,7 @@ using System;
 using System.Xml;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.sound
+namespace FreeTrain.Contributions.Sound
 {
     /// <summary>
     /// Background music.

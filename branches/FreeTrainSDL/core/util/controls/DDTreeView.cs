@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace FreeTrain.Util.controls
+namespace FreeTrain.Util.Controls
 {
     /// <summary>
     /// TreeView control with drag-n-drop functionality

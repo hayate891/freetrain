@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using FreeTrain.Contributions.road;
+using FreeTrain.Contributions.Road;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Views.Map;
@@ -32,7 +32,7 @@ using FreeTrain.world;
 using FreeTrain.world.road;
 using FreeTrain.Contributions.Common;
 
-namespace FreeTrain.Controllers.road
+namespace FreeTrain.Controllers.Road
 {
     /// <summary>
     /// Controller to place/remove roads

@@ -21,7 +21,7 @@
 using System;
 using FreeTrain.world.road;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {
     /// <summary>
     /// Computes and maintains land value.

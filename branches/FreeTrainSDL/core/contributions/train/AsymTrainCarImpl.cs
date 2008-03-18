@@ -27,7 +27,7 @@ using FreeTrain.Framework.graphics;
 using FreeTrain.world;
 using SDL.net;
 
-namespace FreeTrain.Contributions.train
+namespace FreeTrain.Contributions.Train
 {
     /// <summary>
     /// Assymetric train car.

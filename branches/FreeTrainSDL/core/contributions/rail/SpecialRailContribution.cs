@@ -24,7 +24,7 @@ using System.Xml;
 using FreeTrain.Contributions.Common;
 using FreeTrain.world;
 
-namespace FreeTrain.Contributions.rail
+namespace FreeTrain.Contributions.Rail
 {
     /// <summary>
     /// Contribution that adds a special kind of railroads, like tunnels or bridges.

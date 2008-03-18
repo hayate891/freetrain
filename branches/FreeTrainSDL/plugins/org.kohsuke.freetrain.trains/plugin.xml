@@ -9,7 +9,7 @@
 	
 	<!-- Default Body for FT Series -->
 	<contribution type="trainCar" id="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}">
-		<class name="FreeTrain.Contributions.train.SymTrainCarImpl" />
+		<class name="FreeTrain.Contributions.Train.SymTrainCarImpl" />
 		<sprite origin="0,0">
 			<picture src="train.bmp" />
 		</sprite>
@@ -64,7 +64,7 @@
 	
 	<!-- 485 Series Head -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h">
-		<class name="FreeTrain.Contributions.train.AsymTrainCarImpl" />
+		<class name="FreeTrain.Contributions.Train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
 			<picture src="train485a.bmp" />
 		</sprite>
@@ -73,7 +73,7 @@
 	
 	<!-- 485 Series Body -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m">
-		<class name="FreeTrain.Contributions.train.SymTrainCarImpl" />
+		<class name="FreeTrain.Contributions.Train.SymTrainCarImpl" />
 		<sprite origin="0,0">
 			<picture src="train485b.bmp" />
 		</sprite>
@@ -82,7 +82,7 @@
 	
 	<!-- 485 Series Tail -->
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-t">
-		<class name="FreeTrain.Contributions.train.ReverseTrainCarImpl" />
+		<class name="FreeTrain.Contributions.Train.ReverseTrainCarImpl" />
 		<base carRef="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h"/>
 	</contribution>
 	
@@ -115,7 +115,7 @@ Unlike other variants, the 485 Series "Raicho" still uses the original black rol
 	
 	<!-- E3 Series Head -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h">
-		<class name="FreeTrain.Contributions.train.AsymTrainCarImpl" />
+		<class name="FreeTrain.Contributions.Train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
 			<picture src="trainE3a.bmp" />
 		</sprite>
@@ -124,7 +124,7 @@ Unlike other variants, the 485 Series "Raicho" still uses the original black rol
 	
 	<!-- E3 Series Body -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-m">
-		<class name="FreeTrain.Contributions.train.SymTrainCarImpl" />
+		<class name="FreeTrain.Contributions.Train.SymTrainCarImpl" />
 		<sprite origin="0,0">
 			<picture src="trainE3b.bmp" />
 		</sprite>
@@ -133,7 +133,7 @@ Unlike other variants, the 485 Series "Raicho" still uses the original black rol
 	
 	<!-- E3 Series Tail -->
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-t">
-		<class name="FreeTrain.Contributions.train.ReverseTrainCarImpl" />
+		<class name="FreeTrain.Contributions.Train.ReverseTrainCarImpl" />
 		<base carRef="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h"/>
 	</contribution>
 	

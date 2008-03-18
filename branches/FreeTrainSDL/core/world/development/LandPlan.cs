@@ -19,9 +19,9 @@
 #endregion LICENSE
 
 using System;
-using FreeTrain.Contributions.land;
+using FreeTrain.Contributions.Land;
 
-namespace FreeTrain.world.development
+namespace FreeTrain.world.Development
 {
 	/// <summary>
 	/// Plan of land surfaces such as crop fields.
