@@ -6,6 +6,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>SDLGFX.net</RootNamespace>
     <AssemblyName>SDLGFX.net</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>FreeTrainSdl.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -43,4 +45,7 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="FreeTrainSdl.snk" />
+  </ItemGroup>
 </Project>
