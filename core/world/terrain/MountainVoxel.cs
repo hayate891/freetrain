@@ -526,7 +526,7 @@ namespace FreeTrain.world.Terrain
         /// <summary> Load sprites for cliffs. </summary>
         private static void initCliffSprites()
         {
-            Picture picture = ResourceUtil.loadSystemPicture("Cliff.bmp");
+            Picture picture = ResourceUtil.loadSystemPicture("cliff.bmp");
             for (int side = 0; side < 2; side++)
             {
                 for (int l = 0; l <= 4; l++)
