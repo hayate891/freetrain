@@ -12,6 +12,8 @@
     <PostBuildEvent />
     <StartupObject />
     <NoConfig>false</NoConfig>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>FreeTrainSdl.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <NoStdLib>false</NoStdLib>
@@ -68,6 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="plugin.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FreeTrainSdl.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

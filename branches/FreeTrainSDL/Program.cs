@@ -117,13 +117,14 @@ namespace FreeTrainSDL
             dragStartMousePos = new Point(0, 0);
             dragStartScrollPos = new Point(0, 0);
             scrollPos = new Point(0, 0);
-
+            SdlDotNet.Graphics.Video.WindowCaption = "FreeTrain SDL";
+            SdlDotNet.Graphics.Video.WindowIcon();
             SdlDotNet.Graphics.Video.Initialize();
             Mixer.Initialize();
             SdlMixer.MusicFinishedDelegate musicStopped = new SdlMixer.MusicFinishedDelegate(musicHasStopped);
             SdlMixer.Mix_HookMusicFinished(musicStopped);
 
-            Sdl.SDL_WM_SetCaption("FreeTrain SDL", "");
+            
             screen = Sdl.SDL_SetVideoMode(
                     width,
                     height,

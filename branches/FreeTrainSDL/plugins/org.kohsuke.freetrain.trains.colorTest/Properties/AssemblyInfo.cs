@@ -34,6 +34,5 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyVersion("1.0.*")]
 
 [assembly: AssemblyDelaySign(false)]
-[assembly: AssemblyKeyFile("")]
 [assembly: AssemblyKeyName("")]
 [assembly: CLSCompliant(true)]

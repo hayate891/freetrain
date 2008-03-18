@@ -37,5 +37,5 @@ using System.Runtime.CompilerServices;
 
 [assembly: CLSCompliant(true)]
 [assembly: AssemblyDelaySign(false)]
-[assembly: AssemblyKeyFile("")]
+
 [assembly: AssemblyKeyName("")]
