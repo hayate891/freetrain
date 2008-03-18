@@ -3,7 +3,7 @@
 
 ]>
 
-<plugin>
+<plug-in>
   <title>Half-tile Structures</title>
   <author>C477</author>
   <!--<title>半ボクセル建築</title>
@@ -48,4 +48,4 @@
 	</contribution>	
 	<!--ここまでの順序は大切-->
 	
-</plugin>
+</plug-in>

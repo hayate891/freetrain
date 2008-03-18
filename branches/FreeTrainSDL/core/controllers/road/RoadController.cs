@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using FreeTrain.Contributions.Road;
+using FreeTrain.Contributions.road;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Views.Map;
