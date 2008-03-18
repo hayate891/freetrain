@@ -78,7 +78,7 @@ namespace FreeTrain.Framework.graphics
 
                         Surface surface = new Surface(sz.Width, sz.Height);// ResourceUtil.directDraw.createOffscreenSurface(sz);
                         surfaces[x, y, z] = surface;
-                        surface.fill(Color.Magenta);
+                        surface.Fill(Color.Magenta);
                         surface.sourceColorKey = Color.Magenta;
 
                         Point offset = src[x, y, z].offset;
@@ -104,7 +104,7 @@ namespace FreeTrain.Framework.graphics
                             }
                         }
 
-                        sprites[x, y, z] = new DirectSprite(surface, offset, new Point(0, 0), surface.size);
+                        sprites[x, y, z] = new DirectSprite(surface, offset, new Point(0, 0), surface.Size);
                     }
                 }
             }

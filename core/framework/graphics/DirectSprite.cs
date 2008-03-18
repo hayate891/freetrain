@@ -49,7 +49,7 @@ namespace FreeTrain.Framework.graphics
         /// <param name="_surface"></param>
         /// <param name="_offset"></param>
         public DirectSprite(Surface _surface, Point _offset)
-            : this(_surface, _offset, new Point(0, 0), _surface.size) { }
+            : this(_surface, _offset, new Point(0, 0), _surface.Size) { }
 
 
         /// <summary>

@@ -137,14 +137,14 @@ namespace FreeTrainSDL
 
         public void drawGUI(int width, int height, IntPtr screen)
         {
-            int curXPos = -(top_bar.size.Width);
+            int curXPos = -(top_bar.Size.Width);
 
             Sdl.SDL_Rect src, dst;
 
             while (curXPos < width)
             {
-                curXPos += top_bar.size.Width;
-                src = new Sdl.SDL_Rect((short)curXPos, 0, (short)top_bar.size.Width, (short)top_bar.size.Height);
+                curXPos += top_bar.Size.Width;
+                src = new Sdl.SDL_Rect((short)curXPos, 0, (short)top_bar.Size.Width, (short)top_bar.Size.Height);
                 dst = top_bar.clipSDLRect;
                 Tao.Sdl.Sdl.SDL_BlitSurface(top_bar.surfacePtr(), ref dst, screen, ref src);
             }
@@ -204,17 +204,17 @@ namespace FreeTrainSDL
 
             if (SHOW_SPLASH)
             {
-                int xpos = (width / 2) - (splash.size.Width / 2);
-                int ypos = (height / 2) - (splash.size.Height / 2);
-                src = new Sdl.SDL_Rect((short)xpos, (short)ypos, (short)splash.size.Width, (short)(splash.size.Height * 2));
+                int xpos = (width / 2) - (splash.Size.Width / 2);
+                int ypos = (height / 2) - (splash.Size.Height / 2);
+                src = new Sdl.SDL_Rect((short)xpos, (short)ypos, (short)splash.Size.Width, (short)(splash.Size.Height * 2));
                 Tao.Sdl.Sdl.SDL_FillRect(screen, ref src, baseColor);
                 src = splash.clipSDLRect;
-                dst = new Sdl.SDL_Rect((short)xpos, (short)ypos, (short)splash.size.Width, (short)(splash.size.Height));
+                dst = new Sdl.SDL_Rect((short)xpos, (short)ypos, (short)splash.Size.Width, (short)(splash.Size.Height));
                 Tao.Sdl.Sdl.SDL_BlitSurface(splash.surfacePtr(), ref src, screen, ref dst);
                 for (int i = 0; i < MAX_SPLASH_LINES; i++)
                     if (SPLASH_TEXT[i] != string.Empty)
-                        drawText(screen, freesans, SPLASH_TEXT[i], Color.Black, xpos + 10, (ypos + splash.size.Height + 10) + (i * (2 + SPLASH_TEXT_HEIGHT)), 0, false, false);
-                drawText(screen, freesans, "[" + SPLASH_PERCENT.ToString() + "%]", Color.Black, new Point(xpos + (splash.size.Height * 2) - 16, ypos + splash.size.Width - 20), 0, false, false);
+                        drawText(screen, freesans, SPLASH_TEXT[i], Color.Black, xpos + 10, (ypos + splash.Size.Height + 10) + (i * (2 + SPLASH_TEXT_HEIGHT)), 0, false, false);
+                drawText(screen, freesans, "[" + SPLASH_PERCENT.ToString() + "%]", Color.Black, new Point(xpos + (splash.Size.Height * 2) - 16, ypos + splash.Size.Width - 20), 0, false, false);
             }
 
         }

@@ -118,10 +118,8 @@ namespace FreeTrainSDL
             dragStartScrollPos = new Point(0, 0);
             scrollPos = new Point(0, 0);
 
-            //Sdl.SDL_Init(Sdl.SDL_INIT_EVERYTHING | Sdl.SDL_INIT_AUDIO);
             SdlDotNet.Graphics.Video.Initialize();
             Mixer.Initialize();
-            //SdlMixer.Mix_OpenAudio(SdlMixer.MIX_DEFAULT_FREQUENCY, unchecked(Sdl.AUDIO_S16LSB), 2, 1024);
             SdlMixer.MusicFinishedDelegate musicStopped = new SdlMixer.MusicFinishedDelegate(musicHasStopped);
             SdlMixer.Mix_HookMusicFinished(musicStopped);
 
@@ -216,9 +214,6 @@ namespace FreeTrainSDL
                         break;
                 }
 
-                //Sdl.SDL_Rect current_view = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
-                //Tao.Sdl.Sdl.SDL_FillRect(screen, ref current_view, Sdl.SDL_MapRGB(videoInfo.vfmt, 0, 100, 0));
-
                 if (qview != null)
                 {
                     controller = MainWindow.mainWindow.currentController;
@@ -227,7 +222,7 @@ namespace FreeTrainSDL
                     if (World.world.satellite == null || World.world.satellite.surface.w != 150 || World.world.satellite.surface.h != 150)
                     {
                         World.world.satellite = new Surface(150, 150, 32);
-                        World.world.satellite.fill(Color.FromArgb(222, 195, 132));
+                        World.world.satellite.Fill(Color.FromArgb(222, 195, 132));
                     }
 
                     /*for (int i = 0; i < World.world.rootTrainGroup.items.Count; i++)

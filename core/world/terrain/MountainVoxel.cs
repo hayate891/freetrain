@@ -579,8 +579,8 @@ namespace FreeTrain.world.Terrain
                 {
                     int offset = idx * 32;
                     // clear the sprite
-                    images[tdiff].fill(new Rectangle(new Point(offset, 0), new Size(32, images[tdiff].size.Height)), Color.Magenta);
-                    flippedImages[tdiff].fill(new Rectangle(new Point(offset, 0), new Size(32, flippedImages[tdiff].size.Height)), Color.Magenta);
+                    images[tdiff].Fill(new Rectangle(new Point(offset, 0), new Size(32, images[tdiff].Size.Height)), Color.Magenta);
+                    flippedImages[tdiff].Fill(new Rectangle(new Point(offset, 0), new Size(32, flippedImages[tdiff].Size.Height)), Color.Magenta);
 
                     Point[] pts = new Point[]{   new Point(offset+16,   0),
 												 new Point(offset+32, u    *4),
