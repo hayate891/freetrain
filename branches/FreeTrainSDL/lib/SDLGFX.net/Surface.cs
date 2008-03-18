@@ -86,7 +86,7 @@ namespace SDL.net
         /// <summary>
         /// 
         /// </summary>
-        public IntPtr mask, dupSurface;
+        public IntPtr mask;//, dupSurface;
         /// <summary>
         /// 
         /// </summary>
@@ -102,7 +102,7 @@ namespace SDL.net
         /// <summary>
         /// 
         /// </summary>
-        public Size size
+        public Size Size
         {
             get { return new Size(this.surface.w, this.surface.h); }
         }
@@ -189,7 +189,7 @@ namespace SDL.net
         /// </summary>
         public void resetClipRect()
         {
-            Sdl.SDL_Rect r = new Sdl.SDL_Rect(0, 0, (short)size.Width, (short)size.Height);
+            Sdl.SDL_Rect r = new Sdl.SDL_Rect(0, 0, (short)Size.Width, (short)Size.Height);
             Sdl.SDL_SetClipRect(this.surfacePtr(), ref r);
         }
         /// <summary>
@@ -217,7 +217,7 @@ namespace SDL.net
             }
             set
             {
-                value.Intersect(new Rectangle(0, 0, size.Width, size.Height));
+                value.Intersect(new Rectangle(0, 0, Size.Width, Size.Height));
                 srect.x = (short)value.X;
                 srect.y = (short)value.Y;
                 srect.w = (short)value.Width;
@@ -235,46 +235,38 @@ namespace SDL.net
             //i'm sure something needs to be cleared here
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="c"></param>
-        /// <returns></returns>
-        public int getSDLColor(Color c) { return Sdl.SDL_MapRGB(this.surfacePtrs[0], c.R, c.G, c.B); }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="c"></param>
+        ///// <returns></returns>
+        //public int getSDLColor(Color c) { return Sdl.SDL_MapRGB(this.surfacePtrs[0], c.R, c.G, c.B); }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="destX"></param>
-        /// <param name="destY"></param>
-        /// <param name="source"></param>
-        /// <param name="srcRect"></param>
-        public void bltFast(int destX, int destY, Surface source, Rectangle srcRect)
-        {
-            //RECT srect = Util.toRECT(srcRect);
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="destX"></param>
+        ///// <param name="destY"></param>
+        ///// <param name="source"></param>
+        ///// <param name="srcRect"></param>
+        //public void bltFast(int destX, int destY, Surface source, Rectangle srcRect)
+        //{
+        //    //RECT srect = Util.toRECT(srcRect);
 
-            //Sdl.SDL_Rect src = toRect(srcRect), dst = toRect(destX, destY, srcRect.Width, srcRect.Height);
-            //Tao.Sdl.Sdl.SDL_BlitSurface(source.surface, ref src, this.surface, ref dst);
+        //    //Sdl.SDL_Rect src = toRect(srcRect), dst = toRect(destX, destY, srcRect.Width, srcRect.Height);
+        //    //Tao.Sdl.Sdl.SDL_BlitSurface(source.surface, ref src, this.surface, ref dst);
 
-            drect.x = (short)destX;
-            drect.y = (short)destY;
-            drect.w = (short)srcRect.Width;
-            drect.h = (short)srcRect.Height;
-            srect.x = (short)srcRect.X;
-            srect.y = (short)srcRect.Y;
-            srect.w = (short)srcRect.Width;
-            srect.h = (short)srcRect.Height;
+        //    drect.x = (short)destX;
+        //    drect.y = (short)destY;
+        //    drect.w = (short)srcRect.Width;
+        //    drect.h = (short)srcRect.Height;
+        //    srect.x = (short)srcRect.X;
+        //    srect.y = (short)srcRect.Y;
+        //    srect.w = (short)srcRect.Width;
+        //    srect.h = (short)srcRect.Height;
 
-            blt(drect, source, srect);
-        }
-
-        //public Sdl.SDL_Rect toRect(Rectangle r) { return new Sdl.SDL_Rect((short)r.Left, (short)r.Top, (short)r.Width, (short)r.Height); }
-        //public Sdl.SDL_Rect toRect(int x, int y, int w, int h) { return new Sdl.SDL_Rect((short)x, (short)y, (short)w, (short)h); }
-
-        /// <summary>
-        /// Copies an image from another surface.
-        /// </summary>
-        /// 
+        //    blt(drect, source, srect);
+        //}
 
         private Sdl.SDL_Rect drect, srect;
 
@@ -307,48 +299,48 @@ namespace SDL.net
         {
             drect.x = (short)dstPos.X;
             drect.y = (short)dstPos.Y;
-            drect.w = (short)source.size.Width;
-            drect.h = (short)source.size.Height;
+            drect.w = (short)source.Size.Width;
+            drect.h = (short)source.Size.Height;
             srect.x = 0;
             srect.y = 0;
-            srect.w = (short)source.size.Width;
-            srect.h = (short)source.size.Height;
+            srect.w = (short)source.Size.Width;
+            srect.h = (short)source.Size.Height;
             blt(drect, source, srect);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dstX1"></param>
-        /// <param name="dstY1"></param>
-        /// <param name="dstX2"></param>
-        /// <param name="dstY2"></param>
-        /// <param name="source"></param>
-        /// <param name="srcX1"></param>
-        /// <param name="srcY1"></param>
-        /// <param name="srcX2"></param>
-        /// <param name="srcY2"></param>
-        public void blt(int dstX1, int dstY1, int dstX2, int dstY2, Surface source,
-                         int srcX1, int srcY1, int srcX2, int srcY2)
-        {
-            drect.x = (short)dstX1;
-            drect.y = (short)dstY1;
-            drect.w = (short)(dstX2 - dstX1);
-            drect.h = (short)(dstY2 - dstY1);
-            srect.x = (short)srcX1;
-            srect.y = (short)srcY1;
-            srect.w = (short)(srcX2 - srcX1);
-            srect.h = (short)(srcY2 - srcY1);
-            blt(drect, source, srect);
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="dstX1"></param>
+        ///// <param name="dstY1"></param>
+        ///// <param name="dstX2"></param>
+        ///// <param name="dstY2"></param>
+        ///// <param name="source"></param>
+        ///// <param name="srcX1"></param>
+        ///// <param name="srcY1"></param>
+        ///// <param name="srcX2"></param>
+        ///// <param name="srcY2"></param>
+        //public void blt(int dstX1, int dstY1, int dstX2, int dstY2, Surface source,
+        //                 int srcX1, int srcY1, int srcX2, int srcY2)
+        //{
+        //    drect.x = (short)dstX1;
+        //    drect.y = (short)dstY1;
+        //    drect.w = (short)(dstX2 - dstX1);
+        //    drect.h = (short)(dstY2 - dstY1);
+        //    srect.x = (short)srcX1;
+        //    srect.y = (short)srcY1;
+        //    srect.w = (short)(srcX2 - srcX1);
+        //    srect.h = (short)(srcY2 - srcY1);
+        //    blt(drect, source, srect);
+        //}
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dst"></param>
-        /// <param name="source"></param>
-        /// <param name="src"></param>
-        public void blt(Point dst, Surface source, Rectangle src) { blt(new Rectangle(dst.X, dst.Y, src.Width, src.Height), source, src); }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="dst"></param>
+        ///// <param name="source"></param>
+        ///// <param name="src"></param>
+        //public void blt(Point dst, Surface source, Rectangle src) { blt(new Rectangle(dst.X, dst.Y, src.Width, src.Height), source, src); }
         private void blt(Rectangle dst, Surface source, Rectangle src)
         {
             drect.x = (short)dst.X;
@@ -428,7 +420,7 @@ namespace SDL.net
         /// </summary>
         /// <param name="dstPos"></param>
         /// <param name="source"></param>
-        public void bltAlpha(Point dstPos, Surface source) { bltAlpha(dstPos, source, new Point(0, 0), source.size); }
+        public void bltAlpha(Point dstPos, Surface source) { bltAlpha(dstPos, source, new Point(0, 0), source.Size); }
         /// <summary>
         /// 
         /// </summary>
@@ -616,16 +608,16 @@ namespace SDL.net
         }
 
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dstPos"></param>
-        /// <param name="source"></param>
-        /// <param name="fill"></param>
-        public void bltShape(Point dstPos, Surface source, Color fill)
-        {
-            bltShape(dstPos, source, new Point(0, 0), source.size, fill);
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="dstPos"></param>
+        ///// <param name="source"></param>
+        ///// <param name="fill"></param>
+        //public void bltShape(Point dstPos, Surface source, Color fill)
+        //{
+        //    bltShape(dstPos, source, new Point(0, 0), source.Size, fill);
+        //}
 
         /// <summary>
         /// 
@@ -772,97 +764,97 @@ namespace SDL.net
             SdlGfx.pixelRGBA(this.surfacePtrs[0], (short)x, (short)y, col.R, col.G, col.B, 255);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="buf"></param>
-        public void SetPixels(Int32[] buf)
-        {
-            Sdl.SDL_LockSurface(this.surfacePtrs[0]);
-            Marshal.Copy(buf, 0, new IntPtr(this.surface.pixels.ToInt32()), buf.Length);
-            Sdl.SDL_UnlockSurface(this.surfacePtrs[0]);
-            /*
-            try
-            {
-                int bytesPerPixel = this.pixelFormat.BytesPerPixel;
-                //int pixels = this.surface.pixels.ToInt32() + point.X * bytesPerPixel;
-                int pitch = this.surface.pitch;
-                if (bytesPerPixel == 4)
-                {
-                    //the buffer for a row of pixels.
-                    //Int32[] buffer = new Int32[colors.GetLength(0)];
-                    DateTime d = DateTime.Now;
-                    /*for (short x = 0; x < colors.GetLength(0); x++)
-                    {
-                        //gets only the pixels in the row that are required.
-                        for (short y = 0; y < colors.GetLength(1); y++)
-                        {
-                            //converts the pixel to a color value.
-                            //buffer[x] = Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
-                            SdlGfx.pixelRGBA(this.surfacePtrs[0], x, y, colors[x, y].R, colors[x, y].G, colors[x, y].B, 255);
-                        }
-                        //then copies them to the image.
-                        //Marshal.Copy(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="buf"></param>
+        //public void SetPixels(Int32[] buf)
+        //{
+        //    Sdl.SDL_LockSurface(this.surfacePtrs[0]);
+        //    Marshal.Copy(buf, 0, new IntPtr(this.surface.pixels.ToInt32()), buf.Length);
+        //    Sdl.SDL_UnlockSurface(this.surfacePtrs[0]);
+        //    /*
+        //    try
+        //    {
+        //        int bytesPerPixel = this.pixelFormat.BytesPerPixel;
+        //        //int pixels = this.surface.pixels.ToInt32() + point.X * bytesPerPixel;
+        //        int pitch = this.surface.pitch;
+        //        if (bytesPerPixel == 4)
+        //        {
+        //            //the buffer for a row of pixels.
+        //            //Int32[] buffer = new Int32[colors.GetLength(0)];
+        //            DateTime d = DateTime.Now;
+        //            /*for (short x = 0; x < colors.GetLength(0); x++)
+        //            {
+        //                //gets only the pixels in the row that are required.
+        //                for (short y = 0; y < colors.GetLength(1); y++)
+        //                {
+        //                    //converts the pixel to a color value.
+        //                    //buffer[x] = Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
+        //                    SdlGfx.pixelRGBA(this.surfacePtrs[0], x, y, colors[x, y].R, colors[x, y].G, colors[x, y].B, 255);
+        //                }
+        //                //then copies them to the image.
+        //                //Marshal.Copy(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
                      
-                    }
+        //            }
 
-                    Marshal.Copy(buf, 0, new IntPtr(pixels), buf.Length);
-                    Console.WriteLine((DateTime.Now - d).TotalMilliseconds + "ms");
-                }
-                else if (bytesPerPixel == 3)
-                {
-                    //the buffer for a row of pixels.
-                    Int32[] buffer = new Int32[colors.GetLength(0)];
-                    for (int y = 0; y < colors.GetLength(1); ++y)
-                    {
-                        //gets only the pixels in the row that are required.
-                        for (int x = 0; x < buffer.Length; ++x)
-                        {
-                            //converts the pixel to a color value.
-                            buffer[x] = Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
-                        }
-                        //then copies them to the image.
-                        MarshalHelper.CopyInt24(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
-                    }
-                }
-                else if (bytesPerPixel == 2)
-                {
-                    //the buffer for a row of pixels.
-                    Int16[] buffer = new Int16[colors.GetLength(0)];
-                    for (int y = 0; y < colors.GetLength(1); ++y)
-                    {
-                        //gets only the pixels in the row that are required.
-                        for (int x = 0; x < buffer.Length; ++x)
-                        {
-                            //converts the pixel to a color value.
-                            buffer[x] = (short)Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
-                        }
-                        //then copies them to the image.
-                        Marshal.Copy(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
-                    }
-                }
-                else if (bytesPerPixel == 1)
-                {
-                    //the buffer for a row of pixels.
-                    Byte[] buffer = new Byte[colors.GetLength(0)];
-                    for (int y = 0; y < colors.GetLength(1); ++y)
-                    {
-                        //gets only the pixels in the row that are required.
-                        for (int x = 0; x < buffer.Length; ++x)
-                        {
-                            //converts the pixel to a color value.
-                            buffer[x] = (byte)Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
-                        }
-                        //then copies them to the image.
-                        Marshal.Copy(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
-                    }
-                }
-            }
-            finally
-            {
-                Sdl.SDL_UnlockSurface(this.surfacePtrs[0]);
-            }*/
-        }
+        //            Marshal.Copy(buf, 0, new IntPtr(pixels), buf.Length);
+        //            Console.WriteLine((DateTime.Now - d).TotalMilliseconds + "ms");
+        //        }
+        //        else if (bytesPerPixel == 3)
+        //        {
+        //            //the buffer for a row of pixels.
+        //            Int32[] buffer = new Int32[colors.GetLength(0)];
+        //            for (int y = 0; y < colors.GetLength(1); ++y)
+        //            {
+        //                //gets only the pixels in the row that are required.
+        //                for (int x = 0; x < buffer.Length; ++x)
+        //                {
+        //                    //converts the pixel to a color value.
+        //                    buffer[x] = Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
+        //                }
+        //                //then copies them to the image.
+        //                MarshalHelper.CopyInt24(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
+        //            }
+        //        }
+        //        else if (bytesPerPixel == 2)
+        //        {
+        //            //the buffer for a row of pixels.
+        //            Int16[] buffer = new Int16[colors.GetLength(0)];
+        //            for (int y = 0; y < colors.GetLength(1); ++y)
+        //            {
+        //                //gets only the pixels in the row that are required.
+        //                for (int x = 0; x < buffer.Length; ++x)
+        //                {
+        //                    //converts the pixel to a color value.
+        //                    buffer[x] = (short)Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
+        //                }
+        //                //then copies them to the image.
+        //                Marshal.Copy(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
+        //            }
+        //        }
+        //        else if (bytesPerPixel == 1)
+        //        {
+        //            //the buffer for a row of pixels.
+        //            Byte[] buffer = new Byte[colors.GetLength(0)];
+        //            for (int y = 0; y < colors.GetLength(1); ++y)
+        //            {
+        //                //gets only the pixels in the row that are required.
+        //                for (int x = 0; x < buffer.Length; ++x)
+        //                {
+        //                    //converts the pixel to a color value.
+        //                    buffer[x] = (byte)Sdl.SDL_MapRGB(this.surface.format, colors[x, y].R, colors[x, y].G, colors[x, y].B);
+        //                }
+        //                //then copies them to the image.
+        //                Marshal.Copy(buffer, 0, new IntPtr(pixels + (y + point.Y) * pitch), buffer.Length);
+        //            }
+        //        }
+        //    }
+        //    finally
+        //    {
+        //        Sdl.SDL_UnlockSurface(this.surfacePtrs[0]);
+        //    }*/
+        //}
 
         /// <summary>
         /// 
@@ -1013,9 +1005,9 @@ namespace SDL.net
         /// <summary>
         /// Fills the surface.
         /// </summary>
-        public void fill(Color c)
+        public void Fill(Color c)
         {
-            fill(clipRect, c);
+            Fill(clipRect, c);
         }
 
 
@@ -1024,7 +1016,7 @@ namespace SDL.net
         /// </summary>
         /// <param name="rect"></param>
         /// <param name="c"></param>
-        public void fill(Rectangle rect, Color c)
+        public void Fill(Rectangle rect, Color c)
         {
             //rect.Intersect(clip);
             //surface.Fill(rect, c);
@@ -1071,7 +1063,7 @@ namespace SDL.net
         /// <returns></returns>
         public bool HitTest(int x, int y)
         {
-            if (x < 0 || x > size.Width || y < 0 || y > size.Height)
+            if (x < 0 || x > Size.Width || y < 0 || y > Size.Height)
                 return false;
             return ((getColorAt(x, y) & 0xffffff) == colorKey);
         }
@@ -1086,16 +1078,16 @@ namespace SDL.net
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
-        public Color getColor(int x, int y)
-        {
-            return this.GetPixel(x, y);
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="x"></param>
+        ///// <param name="y"></param>
+        ///// <returns></returns>
+        //public Color getColor(int x, int y)
+        //{
+        //    return this.GetPixel(x, y);
+        //}
 
         /// <summary>
         /// 
@@ -1104,23 +1096,23 @@ namespace SDL.net
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public Color getColor(IntPtr surf, int x, int y)
-        {
-            return this.GetPixel(surf, x, y);
-        }
+        //public Color getColor(IntPtr surf, int x, int y)
+        //{
+        //    return this.GetPixel(surf, x, y);
+        //}
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="colorValue"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public System.Drawing.Color GetColor(int colorValue)
-        {
-            byte r, g, b, a;
-            Sdl.SDL_GetRGBA(colorValue, this.surface.format, out r, out g, out b, out a);
-            return System.Drawing.Color.FromArgb(a, r, g, b);
-        }
+        //[CLSCompliant(false)]
+        //public System.Drawing.Color GetColor(int colorValue)
+        //{
+        //    byte r, g, b, a;
+        //    Sdl.SDL_GetRGBA(colorValue, this.surface.format, out r, out g, out b, out a);
+        //    return System.Drawing.Color.FromArgb(a, r, g, b);
+        //}
 
         /// <summary>
         /// 
@@ -1156,24 +1148,24 @@ namespace SDL.net
             SdlGfx.rectangleRGBA(this.surfacePtr(), (short)r.X, (short)r.Y, (short)(r.X + r.Width), (short)(r.Y + r.Height), c.R, c.G, c.B, 255);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p1"></param>
-        /// <param name="p2"></param>
-        /// <param name="p3"></param>
-        /// <param name="p4"></param>
-        public void drawPolygon(Point p1, Point p2, Point p3, Point p4) { drawBox(new Rectangle(p1, new Size(p2.X - p1.X, p4.Y - p1.Y))); }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="p1"></param>
+        ///// <param name="p2"></param>
+        ///// <param name="p3"></param>
+        ///// <param name="p4"></param>
+        //public void drawPolygon(Point p1, Point p2, Point p3, Point p4) { drawBox(new Rectangle(p1, new Size(p2.X - p1.X, p4.Y - p1.Y))); }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="col"></param>
-        /// <param name="pts"></param>
-        public void drawPolygon(Color col, Point[] pts)
-        {
-            //surface.Draw(new SdlDotNet.Graphics.Primitives.Polygon(new ArrayList(pts)), col);
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="col"></param>
+        ///// <param name="pts"></param>
+        //public void drawPolygon(Color col, Point[] pts)
+        //{
+        //    //surface.Draw(new SdlDotNet.Graphics.Primitives.Polygon(new ArrayList(pts)), col);
+        //}
         /// <summary>
         /// 
         /// </summary>
@@ -1205,13 +1197,13 @@ namespace SDL.net
             //    surface.Draw(new SdlDotNet.Graphics.Primitives.Line((Point)pts[curPoint], (Point)pts[curPoint + 1]), col,false,false);
         }
 
-        /// <summary>
-        /// Tries to recover a lost surface.
-        /// </summary>
-        public void restore()
-        {
-            //handle.restore();
-        }
+        ///// <summary>
+        ///// Tries to recover a lost surface.
+        ///// </summary>
+        //public void restore()
+        //{
+        //    //handle.restore();
+        //}
 
         /// <summary>
         /// Makes the bitmap of this surface.
@@ -1222,7 +1214,7 @@ namespace SDL.net
         {
             get
             {
-                byte[] arr = new byte[(this.size.Width * this.size.Height * this.bpp) + this.BmpHeader];
+                byte[] arr = new byte[(this.Size.Width * this.Size.Height * this.bpp) + this.BmpHeader];
                 IntPtr i = Marshal.AllocHGlobal(arr.Length);
 
                 try

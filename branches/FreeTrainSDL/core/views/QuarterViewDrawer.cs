@@ -389,8 +389,8 @@ namespace FreeTrain.Views
             rectAB.Inflate(20, 20);
             if (rectAB.X < 0) rectAB.X = 0;
             if (rectAB.Y < 0) rectAB.Y = 0;
-            if ((rectAB.Width + rectAB.X) > offscreenBuffer.size.Width) rectAB.Width = (rectAB.Width - rectAB.X);
-            if ((rectAB.Height + rectAB.Y) > offscreenBuffer.size.Height) rectAB.Height = (rectAB.Height - rectAB.Y);
+            if ((rectAB.Width + rectAB.X) > offscreenBuffer.Size.Width) rectAB.Width = (rectAB.Width - rectAB.X);
+            if ((rectAB.Height + rectAB.Y) > offscreenBuffer.Size.Height) rectAB.Height = (rectAB.Height - rectAB.Y);
 
             //if (rectClient. > offscreenBuffer.clipRect)
             //dirtyRect.add(rectClient);
