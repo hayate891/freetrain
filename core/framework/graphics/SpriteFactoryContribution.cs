@@ -22,7 +22,7 @@ using System;
 using System.Xml;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Let SpriteFactories to be contributed.

@@ -27,7 +27,7 @@ using System.Net;
 using SDL.net;
 using SdlDotNet.Audio;
 using FreeTrain.Util;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.world;
 
 namespace FreeTrain.Framework

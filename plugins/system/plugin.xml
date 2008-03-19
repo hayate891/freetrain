@@ -71,7 +71,7 @@
 	<contribution type="contribution" id="{94B9070E-DEEA-4C70-AEF2-7E795312FEC3}">
 		<name>road</name>
 		<class name="FreeTrain.Framework.plugin.DynamicContributionFactory"/>
-		<implementation name="FreeTrain.Contributions.road.RoadContribution" />
+		<implementation name="FreeTrain.Contributions.Road.RoadContribution" />
 	</contribution>
 	
 	<contribution type="contribution" id="{BFA3A8EA-05B0-4910-907F-4F617528B7CD}">
@@ -89,7 +89,7 @@
 	<contribution type="contribution" id="{C6F610B7-5046-4F74-C477-049B238F262D}">
 		<name>ColorLibrary</name>
 		<class name="FreeTrain.Framework.plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.Framework.plugin.graphics.ColorLibrary"/>
+		<implementation name="FreeTrain.Framework.plugin.Graphics.ColorLibrary"/>
 	</contribution>
 
 	<contribution type="ColorLibrary" id="{COLORLIB-NULL}">
@@ -264,29 +264,29 @@
 	<contribution type="contribution" id="{DC051871-BA74-45ED-B122-247BC7EA0BFA}">
 		<name>spriteFactory</name>
 		<class name="FreeTrain.Framework.plugin.DynamicContributionFactory"/>
-		<implementation name="FreeTrain.Framework.graphics.SpriteFactoryContribution" />
+		<implementation name="FreeTrain.Framework.Graphics.SpriteFactoryContribution" />
 	</contribution>
 	
 	<contribution type="spriteFactory" id="spriteFactory:default">
-		<class name="FreeTrain.Framework.graphics.SimpleSpriteFactoryContributionImpl"/>
+		<class name="FreeTrain.Framework.Graphics.SimpleSpriteFactoryContributionImpl"/>
 	</contribution>
 	
 	<contribution type="spriteFactory" id="spriteFactory:colorMapped">
-		<class name="FreeTrain.Framework.graphics.ColorMappedSpriteFactoryContributionImpl"/>
+		<class name="FreeTrain.Framework.Graphics.ColorMappedSpriteFactoryContributionImpl"/>
 	</contribution>
 	
 	<contribution type="spriteFactory" id="spriteFactory:hueTransform">
-		<class name="FreeTrain.Framework.graphics.HueTransformSpriteFactoryContributionImpl"/>
+		<class name="FreeTrain.Framework.Graphics.HueTransformSpriteFactoryContributionImpl"/>
 	</contribution>
 	
 	<contribution type="contribution" id="{5733A3EA-7A2D-4602-B702-D63D55A0FAB9}">
 		<name>spriteLoader</name>
 		<class name="FreeTrain.Framework.plugin.DynamicContributionFactory"/>
-		<implementation name="FreeTrain.Framework.graphics.SpriteLoaderContribution" />
+		<implementation name="FreeTrain.Framework.Graphics.SpriteLoaderContribution" />
 	</contribution>
 	
 	<contribution type="spriteLoader" id="spriteLoader:default">
-		<class name="FreeTrain.Framework.graphics.DefaultSpriteLoaderContributionImpl"/>
+		<class name="FreeTrain.Framework.Graphics.DefaultSpriteLoaderContributionImpl"/>
 	</contribution>
 	
 	

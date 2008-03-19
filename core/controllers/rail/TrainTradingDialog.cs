@@ -25,7 +25,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Train;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Views;
 using FreeTrain.world.Accounting;

@@ -23,7 +23,7 @@ using System.Xml;
 using System.Drawing;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Population;
 
@@ -80,7 +80,7 @@ namespace FreeTrain.Contributions.Rail
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        public abstract FreeTrain.Framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize);
+        public abstract FreeTrain.Framework.Graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize);
         /// <summary>
         /// 
         /// </summary>

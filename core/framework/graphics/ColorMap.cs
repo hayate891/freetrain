@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Determines the color mapping between daylight time and night time.

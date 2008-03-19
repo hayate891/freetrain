@@ -23,11 +23,11 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.world;
-using FreeTrain.world.road;
+using FreeTrain.world.Road;
 
-namespace FreeTrain.Contributions.road
+namespace FreeTrain.Contributions.Road
 {
     /// <summary>
     /// Road for cars/buses

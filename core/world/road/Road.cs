@@ -21,13 +21,13 @@
 using System;
 using System.Drawing;
 
-namespace FreeTrain.world.road
+namespace FreeTrain.world.Road
 {
     /// <summary>
     /// Automobile Road
     /// </summary>
     [Serializable]
-    public abstract class Road
+    public abstract class BaseRoad
     {
         /// <summary>
         /// 
@@ -35,7 +35,7 @@ namespace FreeTrain.world.road
         /// <param name="tv"></param>
         /// <param name="pattern"></param>
         /// <param name="style"></param>
-        protected Road(TrafficVoxel tv, RoadPattern pattern, RoadStyle style)
+        protected BaseRoad(TrafficVoxel tv, RoadPattern pattern, RoadStyle style)
         {
             this._style = style;
             this.voxel = tv;
@@ -160,7 +160,7 @@ namespace FreeTrain.world.road
         /// Gets the Road object of the specified location, if any.
         /// Otherwise null.
         /// </summary>
-        public static Road get(Location loc)
+        public static BaseRoad get(Location loc)
         {
             TrafficVoxel v = World.world[loc] as TrafficVoxel;
             if (v == null) return null;

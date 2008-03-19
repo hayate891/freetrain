@@ -23,10 +23,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Graphics;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.world;
-using FreeTrain.world.road;
+using FreeTrain.world.Road;
 
 namespace FreeTrain.Contributions.Road
 {
@@ -103,7 +103,7 @@ namespace FreeTrain.Contributions.Road
             Location here = from;
             while (true)
             {
-                Road r = Road.get(here);
+                BaseRoad r = BaseRoad.get(here);
                 if (r == null)
                 {
                     RoadPattern p = RoadPattern.getStraight(d);
@@ -126,7 +126,7 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// Creates a new road with a given pattern.
         /// </summary>
-        protected virtual Road create(TrafficVoxel voxel, RoadPattern pattern)
+        protected virtual BaseRoad create(TrafficVoxel voxel, RoadPattern pattern)
         {
             return new RoadImpl(this, voxel, pattern);
         }
@@ -144,7 +144,7 @@ namespace FreeTrain.Contributions.Road
 
             while (true)
             {
-                Road r = Road.get(here);
+                BaseRoad r = BaseRoad.get(here);
                 if (r != null)
                     r.detach(d, d.opposite);
 
@@ -212,7 +212,7 @@ namespace FreeTrain.Contributions.Road
         /// Road implementation
         /// </summary>
         [Serializable]
-        internal class RoadImpl : Road
+        internal class RoadImpl : BaseRoad
         {
             /// <summary>
             /// 

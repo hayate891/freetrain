@@ -30,7 +30,7 @@ using FreeTrain.world;
 using FreeTrain.world.Accounting;
 using FreeTrain.world.Land;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 using SDL.net;
 

@@ -26,10 +26,10 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Road;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views.Map;
 using FreeTrain.world;
-using FreeTrain.world.road;
+using FreeTrain.world.Road;
 using FreeTrain.Contributions.Common;
 
 namespace FreeTrain.Controllers.Road

@@ -24,7 +24,7 @@ using FreeTrain.Framework;
 using FreeTrain.world;
 using SDL.net;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Utility class that draws a preview image programatically.

@@ -27,7 +27,7 @@ using SDL.net;
 using FreeTrain.Util;
 using FreeTrain.world;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Controllers;
 
 namespace FreeTrain.Views

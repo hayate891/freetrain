@@ -51,7 +51,7 @@ namespace FreeTrain.Framework
             Application.DoEvents();
             if (progress > 0.4 && exflag)
             {
-                Graphics g = pictureBox1.CreateGraphics();
+                System.Drawing.Graphics g = pictureBox1.CreateGraphics();
                 imageList.Draw(g, 232, 128, 0);
                 exflag = false;
             }

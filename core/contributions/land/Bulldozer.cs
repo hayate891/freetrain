@@ -24,7 +24,7 @@ using System.Runtime.Serialization;
 using System.Xml;
 using SDL.net;
 using FreeTrain.Controllers;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Framework;
 using FreeTrain.Views;

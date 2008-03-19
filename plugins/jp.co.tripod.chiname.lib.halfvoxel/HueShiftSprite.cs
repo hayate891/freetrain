@@ -26,7 +26,7 @@ using System.Runtime.Serialization;
 using SDL.net;
 using FreeTrain.world;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.world.Structs.HalfVoxelStructure
 {

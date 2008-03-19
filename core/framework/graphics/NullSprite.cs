@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using SDL.net;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Sprite that draws nothing.

@@ -28,7 +28,7 @@ using FreeTrain.Util;
 using FreeTrain.world;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using SDL.net;
 
 namespace FreeTrain.Views.Map

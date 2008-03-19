@@ -23,7 +23,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using FreeTrain.Util;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.world
 {

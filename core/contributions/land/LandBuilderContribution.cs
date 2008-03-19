@@ -28,7 +28,7 @@ using FreeTrain.world.Terrain;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 
 namespace FreeTrain.Contributions.Land

@@ -26,7 +26,7 @@ using System.Runtime.Serialization;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Util;
 using FreeTrain.world;

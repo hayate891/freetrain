@@ -26,7 +26,7 @@ using FreeTrain.Util;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Controllers;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.world;
 using FreeTrain.world.Structs;
 using SDL.net;
@@ -232,7 +232,7 @@ namespace FreeTrain.Contributions.Common
             /// </summary>
             /// <param name="pixelSize"></param>
             /// <returns></returns>
-            public virtual FreeTrain.Framework.graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize)
+            public virtual FreeTrain.Framework.Graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize)
             {
                 throw new NotImplementedException();
             }

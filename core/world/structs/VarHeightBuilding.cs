@@ -23,7 +23,7 @@ using System.Drawing;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world.Subsidiaries;
 

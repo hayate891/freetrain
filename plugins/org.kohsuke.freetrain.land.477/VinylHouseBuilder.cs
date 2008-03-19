@@ -26,7 +26,7 @@ using SDL.net;
 using FreeTrain.Contributions.Land;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Controllers;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Views;
 
