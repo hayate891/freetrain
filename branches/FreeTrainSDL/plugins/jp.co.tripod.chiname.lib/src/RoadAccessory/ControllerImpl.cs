@@ -6,7 +6,7 @@ using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using FreeTrain.Controllers;
 
-namespace FreeTrain.world.Road.Accessory
+namespace FreeTrain.World.Road.Accessory
 {
 	/// <summary>
 	/// ModalController implementation for road accessory contribution
@@ -126,7 +126,7 @@ namespace FreeTrain.world.Road.Accessory
 			if( BaseRoad.get(loc)!=null )	return true;
 
 			// or if we hit the ground
-			if( World.world.getGroundLevel(loc)>=loc.z )	return true;
+			if( WorldDefinition.world.getGroundLevel(loc)>=loc.z )	return true;
 
 			return false;
 		}

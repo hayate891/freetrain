@@ -21,10 +21,10 @@
 using System;
 using System.Diagnostics;
 using FreeTrain.Contributions.Common;
-using FreeTrain.world.Rail;
-using FreeTrain.Framework.plugin;
+using FreeTrain.World.Rail;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.world.Structs
+namespace FreeTrain.World.Structs
 {
 	/// <summary>
 	/// Structure that has population.
@@ -42,7 +42,7 @@ namespace FreeTrain.world.Structs
 		public PopulatedStructure( FixedSizeStructureContribution type, WorldLocator wloc )
 			: base(type,wloc) {
 
-			if( type.population!=null && wloc.world==World.world)
+			if( type.population!=null && wloc.world==WorldDefinition.world)
 				stationListener = new StationListenerImpl( type.population, wloc.location );
 		}
 

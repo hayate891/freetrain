@@ -23,7 +23,7 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Accounting
+namespace FreeTrain.World.Accounting
 {
     /// <summary>
     /// 
@@ -53,7 +53,7 @@ namespace FreeTrain.world.Accounting
         {
             get
             {
-                return World.world.account;
+                return WorldDefinition.world.account;
             }
         }
 

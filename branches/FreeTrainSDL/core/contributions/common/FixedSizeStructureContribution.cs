@@ -24,10 +24,10 @@ using System.Drawing;
 using System.Xml;
 using FreeTrain.Util;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Controllers;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 using FreeTrain.Contributions.Common;
 using SDL.net;
 
@@ -113,7 +113,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="baseLoc"></param>
         public Structure create(Location baseLoc, bool initiallyOwned)
         {
-            return create(new WorldLocator(World.world, baseLoc), initiallyOwned);
+            return create(new WorldLocator(WorldDefinition.world, baseLoc), initiallyOwned);
         }
         /// <summary>
         /// 
@@ -131,7 +131,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="baseLoc"></param>
         public void create2(Location baseLoc)
         {
-            create(new WorldLocator(World.world, baseLoc), false);
+            create(new WorldLocator(WorldDefinition.world, baseLoc), false);
         }
 
         /// <summary>
@@ -184,9 +184,9 @@ namespace FreeTrain.Contributions.Common
         /// <param name="minsizePixel"></param>
         /// <param name="options"></param>
         /// <returns></returns>
-        public World CreatePreviewWorld(Size minsizePixel, IDictionary options)
+        public WorldDefinition CreatePreviewWorld(Size minsizePixel, IDictionary options)
         {
-            World w = World.CreatePreviewWorld(minsizePixel, size);
+            WorldDefinition w = WorldDefinition.CreatePreviewWorld(minsizePixel, size);
             Location l = w.toXYZ((w.size.x - size.x + size.y) / 2, w.size.y - size.y - 2, 0);
             create(new WorldLocator(w, l), false);
             return w;

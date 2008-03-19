@@ -21,9 +21,9 @@
 using System;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Rail;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// 

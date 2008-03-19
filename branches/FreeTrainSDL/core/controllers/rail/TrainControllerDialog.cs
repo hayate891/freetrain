@@ -26,9 +26,9 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 
 namespace FreeTrain.Controllers.Rail
 {
@@ -45,7 +45,7 @@ namespace FreeTrain.Controllers.Rail
         {
             InitializeComponent();
             reset();
-            World.onNewWorld += new EventHandler(onNewWorld);
+            WorldDefinition.onNewWorld += new EventHandler(onNewWorld);
         }
         /// <summary>
         /// 
@@ -56,7 +56,7 @@ namespace FreeTrain.Controllers.Rail
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);
-            World.onNewWorld -= new EventHandler(onNewWorld);
+            WorldDefinition.onNewWorld -= new EventHandler(onNewWorld);
         }
 
         private void onNewWorld(object sender, EventArgs ea)
@@ -69,7 +69,7 @@ namespace FreeTrain.Controllers.Rail
             // refresh the list
             list.BeginUpdate();
             list.Items.Clear();
-            foreach (TrainController tc in World.world.trainControllers)
+            foreach (TrainController tc in WorldDefinition.world.trainControllers)
             {
                 if (tc.contribution == null) continue;	// those are system controllers
                 list.Items.Add(createListViewItem(tc));
@@ -276,7 +276,7 @@ namespace FreeTrain.Controllers.Rail
             TrainController tc = contrib.newController(
                 string.Format("New diagram{0}", iota++));
             //! string.Format("新しいダイヤグラム{0}",iota++));
-            World.world.trainControllers.add(tc);
+            WorldDefinition.world.trainControllers.add(tc);
 
             // update GUI
             list.Items.Add(createListViewItem(tc));
@@ -302,7 +302,7 @@ namespace FreeTrain.Controllers.Rail
         {
             // update data structure
             // TODO: what will happen to trains that are controlled by this train controller?
-            World.world.trainControllers.remove(selectedItem);
+            WorldDefinition.world.trainControllers.remove(selectedItem);
 
             // update GUI
             list.Items.Remove(list.SelectedItems[0]);

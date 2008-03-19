@@ -24,11 +24,11 @@ using System.Drawing;
 using System.Xml;
 using SDL.net;
 using FreeTrain.Controllers;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Views;
-using FreeTrain.world;
-using FreeTrain.world.Land;
+using FreeTrain.World;
+using FreeTrain.World.Land;
 
 namespace FreeTrain.Contributions.Land
 {

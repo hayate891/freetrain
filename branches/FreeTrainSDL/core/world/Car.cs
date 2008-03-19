@@ -23,7 +23,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// A car can be in three states.
@@ -52,7 +52,7 @@ namespace FreeTrain.world
             {
                 Debug.Assert(ss.voxel.car == this);
                 ss.voxel.car = null;
-                World.world.onVoxelUpdated(ss.voxel);
+                WorldDefinition.world.onVoxelUpdated(ss.voxel);
             }
 
             _state = s;
@@ -62,7 +62,7 @@ namespace FreeTrain.world
             {
                 Debug.Assert(ss.voxel.car == null);
                 ss.voxel.car = this;
-                World.world.onVoxelUpdated(ss.voxel);
+                WorldDefinition.world.onVoxelUpdated(ss.voxel);
             }
 
             return oldState;

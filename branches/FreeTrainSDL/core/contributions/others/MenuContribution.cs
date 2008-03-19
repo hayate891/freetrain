@@ -22,7 +22,7 @@ using System;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Contributions.Others
 {

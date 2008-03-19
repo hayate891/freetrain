@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 
-namespace FreeTrain.world.Road
+namespace FreeTrain.World.Road
 {
     /// <summary>
     /// Automobile Road
@@ -43,7 +43,7 @@ namespace FreeTrain.world.Road
             voxel.road = this;
             // voxel.roadを設定してからOnVoxelChangedイベントを投げないと
             // 地価の係数計算が正しくできない。(477)
-            World.world.fireOnVoxelChanged(tv.location);
+            WorldDefinition.world.fireOnVoxelChanged(tv.location);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace FreeTrain.world.Road
         public virtual void invalidateVoxel()
         {
             // by default, the occupied voxel is updated
-            World.world.onVoxelUpdated(voxel);
+            WorldDefinition.world.onVoxelUpdated(voxel);
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace FreeTrain.world.Road
         /// </summary>
         public static BaseRoad get(Location loc)
         {
-            TrafficVoxel v = World.world[loc] as TrafficVoxel;
+            TrafficVoxel v = WorldDefinition.world[loc] as TrafficVoxel;
             if (v == null) return null;
             return v.road;
         }

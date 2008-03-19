@@ -22,9 +22,9 @@ using System;
 using System.Xml;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Sound;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Rail
 {

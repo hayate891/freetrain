@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Structures that "use" a station.

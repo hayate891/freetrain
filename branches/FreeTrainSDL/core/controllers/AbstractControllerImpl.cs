@@ -26,7 +26,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Controllers
 {
@@ -107,7 +107,7 @@ namespace FreeTrain.Controllers
         public virtual void onDetached()
         {
             // redraw the entire surface to erase any left-over from this controller
-            World.world.onAllVoxelUpdated();
+            WorldDefinition.world.onAllVoxelUpdated();
         }
 
         /// <summary>

@@ -24,7 +24,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
     /// PluginListDialog
@@ -172,7 +172,7 @@ namespace FreeTrain.Framework.plugin
         {
             // populate the list
             list.Items.Clear();
-            foreach (Plugin p in Core.plugins)
+            foreach (PluginDefinition p in Core.plugins)
             {
                 list.Items.Add(new ListViewItem(
                     new string[] { p.title, p.author, p.homepage }, 0));

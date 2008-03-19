@@ -23,8 +23,8 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
 using SDL.net;
-using FreeTrain.world;
-using FreeTrain.Framework.plugin;
+using FreeTrain.World;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Framework.Graphics
 {
@@ -226,7 +226,7 @@ namespace FreeTrain.Framework.Graphics
             {
                 if (dirty)
                 {
-                    World world = World.world;
+                    WorldDefinition world = WorldDefinition.world;
                     // reload the surface
                     Clock c = world.clock;
                     loaders[(int)c.season, (world.viewOptions.useNightView) ? 1 : 0].load(ref _surface);

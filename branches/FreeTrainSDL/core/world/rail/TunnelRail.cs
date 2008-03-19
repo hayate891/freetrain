@@ -27,11 +27,11 @@ using SDL.net;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
-using FreeTrain.world.Terrain;
+using FreeTrain.World.Terrain;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// SpecialRailContribution implementation for the BridgeRail
@@ -107,7 +107,7 @@ namespace FreeTrain.world.Rail
             internal void remove()
             {
                 Location loc = this.location;
-                World.world.remove(loc);
+                WorldDefinition.world.remove(loc);
                 new MountainVoxel(loc, heights[0], heights[1], heights[2], heights[3]);
             }
 
@@ -141,7 +141,7 @@ namespace FreeTrain.world.Rail
             public override void invalidateVoxel()
             {
                 if (sOrW == null || !(RailRoad.get(this.location + sOrW) is TunnelRail))
-                    World.world.onVoxelUpdated(this.location);
+                    WorldDefinition.world.onVoxelUpdated(this.location);
 
                 // otherwise no need to update the voxel since a train will be hidden by this tunnel
             }
@@ -159,7 +159,7 @@ namespace FreeTrain.world.Rail
         public override bool canBeBuilt(Location from, Location to)
         {
             if (from == to) return false;
-            if (from.z < World.world.waterLevel) return false;	// below the water level
+            if (from.z < WorldDefinition.world.waterLevel) return false;	// below the water level
 
             Debug.Assert(from.z == to.z);
 
@@ -171,9 +171,9 @@ namespace FreeTrain.world.Rail
             // there must be at least one water between two locations
             while (true)
             {
-                if (World.world[here] != null)
+                if (WorldDefinition.world[here] != null)
                 {
-                    if ((World.world[here] as MountainVoxel) != null)
+                    if ((WorldDefinition.world[here] as MountainVoxel) != null)
                     {
                         atLeastOneMountain = true;
                     }
@@ -211,7 +211,7 @@ namespace FreeTrain.world.Rail
             {
                 if (RailRoad.get(here) == null)
                 {
-                    MountainVoxel mv = World.world[here] as MountainVoxel;
+                    MountainVoxel mv = WorldDefinition.world[here] as MountainVoxel;
                     if (mv != null)
                     {
                         // build a tunnel
@@ -219,7 +219,7 @@ namespace FreeTrain.world.Rail
                         for (int i = 0; i < 4; i++)
                             heights[i] = (byte)mv.getHeight(Direction.get(i * 2 + 1));
 
-                        World.world.remove(here);	// remove this mountain
+                        WorldDefinition.world.remove(here);	// remove this mountain
 
                         create(TrafficVoxel.getOrCreate(here), d, heights);
                     }

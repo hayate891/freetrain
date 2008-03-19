@@ -26,11 +26,11 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 using SDL.net;
 

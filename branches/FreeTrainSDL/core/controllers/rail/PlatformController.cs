@@ -29,8 +29,8 @@ using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using SDL.net;
@@ -686,7 +686,7 @@ namespace FreeTrain.Controllers.Rail
         }
 
 
-        private Location baseLoc = world.Location.UNPLACED;
+        private Location baseLoc = World.Location.UNPLACED;
         /// <summary>
         /// 
         /// </summary>
@@ -695,7 +695,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="ab"></param>
         public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
 
             if (baseLoc != loc)
             {
@@ -725,7 +725,7 @@ namespace FreeTrain.Controllers.Rail
                     loc2 += direction.right90;	// for the attached rail road, width is two
                 }
             }
-            World.world.onVoxelUpdated(Cube.createExclusive(baseLoc, loc2));
+            WorldDefinition.world.onVoxelUpdated(Cube.createExclusive(baseLoc, loc2));
         }
         /// <summary>
         /// 
@@ -953,7 +953,7 @@ namespace FreeTrain.Controllers.Rail
         public override void onDetached()
         {
             // TODO: update voxels correctly
-            World.world.onAllVoxelUpdated();
+            WorldDefinition.world.onAllVoxelUpdated();
         }
 
         private void onLengthChanged(object sender, EventArgs e)
@@ -1034,7 +1034,7 @@ namespace FreeTrain.Controllers.Rail
             }
 
             alphaSprites = new AlphaBlendSpriteSet(alphas);
-            World.world.onAllVoxelUpdated();	// completely redraw the window
+            WorldDefinition.world.onAllVoxelUpdated();	// completely redraw the window
         }
 
         private void onModeChanged(object sender, System.EventArgs e)

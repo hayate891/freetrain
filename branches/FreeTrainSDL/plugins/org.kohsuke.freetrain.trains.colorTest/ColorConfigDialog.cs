@@ -25,7 +25,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Train;
 
-namespace FreeTrain.world.Rail.ColorTestTrain
+namespace FreeTrain.World.Rail.ColorTestTrain
 {
     /// <summary>
     /// ColorConfigDialog
@@ -295,7 +295,7 @@ namespace FreeTrain.world.Rail.ColorTestTrain
             boxLine3.BackColor = colors[3];
             car.picture = picture;
             car.colors = colors;
-            World.world.onAllVoxelUpdated();	// redraw
+            WorldDefinition.world.onAllVoxelUpdated();	// redraw
         }
 
         private void buttonBase_Click(object sender, EventArgs e)

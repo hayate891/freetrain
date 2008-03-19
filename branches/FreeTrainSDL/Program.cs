@@ -32,7 +32,7 @@ using SdlDotNet.Core;
 using SdlDotNet.Input;
 using SDL.net;
 
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Controllers;
 using FreeTrain.Controllers.Rail;
 using FreeTrain.Controllers.Terrain;
@@ -62,7 +62,7 @@ namespace FreeTrain
         Point dragStartScrollPosition;
         Point autoScrollPosition;
         QuarterViewDrawer qView = null;
-        World world = null;
+        WorldDefinition world = null;
         WeatherOverlay weatherOverlay;
         Sdl.SDL_Rect sourceRect;
         Sdl.SDL_Rect dst;
@@ -115,13 +115,13 @@ namespace FreeTrain
                 controller = MainWindow.mainWindow.currentController;
 
                 qView.updateScreen();
-                if (World.world.satellite == null || 
-                    World.world.satellite.surface.w != 150 || 
-                    World.world.satellite.surface.h != 150)
+                if (WorldDefinition.world.satellite == null || 
+                    WorldDefinition.world.satellite.surface.w != 150 || 
+                    WorldDefinition.world.satellite.surface.h != 150)
                 {
-                    World.world.satellite = new Surface(150, 150, 32);
-                    World.world.satellite.sourceColorKey = Color.Magenta;
-                    World.world.satellite.Fill(Color.FromArgb(222, 195, 132));
+                    WorldDefinition.world.satellite = new Surface(150, 150, 32);
+                    WorldDefinition.world.satellite.sourceColorKey = Color.Magenta;
+                    WorldDefinition.world.satellite.Fill(Color.FromArgb(222, 195, 132));
                 }
             }
             Application.DoEvents();
@@ -215,8 +215,8 @@ namespace FreeTrain
         {
             if (qView != null)
             {
-                World.world.clock.tick();
-                World.world.clock.tick();
+                WorldDefinition.world.clock.tick();
+                WorldDefinition.world.clock.tick();
 
                 sourceRect = new Sdl.SDL_Rect((short)ScrollPosition.X, (short)ScrollPosition.Y, (short)width, (short)height);
                 dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
@@ -231,7 +231,7 @@ namespace FreeTrain
             if (gui != null)
             {
                 gui.updateGUIElements(width, height);
-                if (World.world != null) gui.clock_text = World.world.clock.displayString;
+                if (WorldDefinition.world != null) gui.clock_text = WorldDefinition.world.clock.displayString;
                 gui.drawGUI(width, height, screen.Handle);
             }
             screen.Update();
@@ -350,8 +350,8 @@ namespace FreeTrain
             UpdateMessage("Loading plugins...", -1);
             finalDraw();
             Core.init(null, null, null, new ProgressHandler(UpdateMessage), true);
-            world = new World(new Distance(150, 150, 7), 3);
-            World.world = world;
+            world = new WorldDefinition(new Distance(150, 150, 7), 3);
+            WorldDefinition.world = world;
 
             weatherOverlay = NullWeatherOverlay.theInstance;
 

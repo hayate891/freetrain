@@ -25,7 +25,7 @@ using FreeTrain.Util;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// Handles a clock event.
@@ -94,7 +94,7 @@ namespace FreeTrain.world
             this.currentTime = t;
             // notify the time change
             PictureManager.reset();
-            World.world.onAllVoxelUpdated();
+            WorldDefinition.world.onAllVoxelUpdated();
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace FreeTrain.world
         /// </summary>
         public void registerOneShot(ClockHandler handler, Time time)
         {
-            registerOneShot(handler, time - World.world.clock);
+            registerOneShot(handler, time - WorldDefinition.world.clock);
         }
 
 
@@ -224,7 +224,7 @@ namespace FreeTrain.world
             if (m == 6 * HOUR_INITIAL || m == 18 * HOUR_INITIAL)
             {
                 PictureManager.reset();
-                World.world.onAllVoxelUpdated();	// time change
+                WorldDefinition.world.onAllVoxelUpdated();	// time change
             }
 
             Debug.Assert((long)queue.minPriority >= currentTime);

@@ -22,10 +22,10 @@ using System;
 using System.Drawing;
 using System.Diagnostics;
 using SDL.net;
-using FreeTrain.world.Rail;
-using FreeTrain.world.Road;
+using FreeTrain.World.Rail;
+using FreeTrain.World.Road;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// 
@@ -275,7 +275,7 @@ namespace FreeTrain.world
             BridgePierVoxel.teardownBridgeSupport(location, this);
             if (onEntityRemoved != null)
                 onEntityRemoved(this, null);
-            World.world.remove(this);
+            WorldDefinition.world.remove(this);
         }
         /// <summary>
         /// 
@@ -320,7 +320,7 @@ namespace FreeTrain.world
         /// <returns>null if the specified location is already occupied</returns>
         public static TrafficVoxel getOrCreate(Location loc)
         {
-            Voxel v = World.world[loc];
+            Voxel v = WorldDefinition.world[loc];
             if (v != null) return v as TrafficVoxel;
 
             return new TrafficVoxel(loc);
@@ -344,7 +344,7 @@ namespace FreeTrain.world
         /// </summary>
         public static TrafficVoxel get(Location loc)
         {
-            return World.world[loc] as TrafficVoxel;
+            return WorldDefinition.world[loc] as TrafficVoxel;
         }
         /// <summary>
         /// 

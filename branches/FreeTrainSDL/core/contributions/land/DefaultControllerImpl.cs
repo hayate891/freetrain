@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Views;
 using FreeTrain.Controllers;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Land
 {

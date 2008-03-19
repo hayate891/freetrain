@@ -21,11 +21,11 @@
 using System;
 using System.Drawing;
 using FreeTrain.Contributions.Land;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world.Rail;
-using FreeTrain.world.Structs;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World.Rail;
+using FreeTrain.World.Structs;
 
-namespace FreeTrain.world.Land
+namespace FreeTrain.World.Land
 {
     /// <summary>
     /// Land voxel with a fixed graphics and its population.

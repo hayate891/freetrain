@@ -25,13 +25,13 @@ using System.Windows.Forms;
 using System.Xml;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Rail;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 using FreeTrain.Contributions.Common;
 
-namespace FreeTrain.world.Road.Accessory
+namespace FreeTrain.World.Road.Accessory
 {
     /// <summary>
     /// 

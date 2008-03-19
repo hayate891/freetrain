@@ -27,12 +27,12 @@ using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
-using FreeTrain.world;
-using FreeTrain.world.Subsidiaries;
+using FreeTrain.World;
+using FreeTrain.World.Subsidiaries;
 
-namespace FreeTrain.world.Structs.HalfVoxelStructure
+namespace FreeTrain.World.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// The half divided voxel structure.
@@ -111,7 +111,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
                     }
                 }
             }
-            World.world.onVoxelUpdated(baseLocation);
+            WorldDefinition.world.onVoxelUpdated(baseLocation);
             return false;
         }
         /// <summary>
@@ -135,7 +135,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
                 if (back == null)
                     remove();
             }
-            World.world.onVoxelUpdated(baseLocation);
+            WorldDefinition.world.onVoxelUpdated(baseLocation);
             return true;
         }
 
@@ -213,7 +213,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         public override void remove()
         {
             // just remove the voxels
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
             world.remove(baseLocation);
 
             if (onEntityRemoved != null)
@@ -288,7 +288,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         public long totalLandPrice
-        { get { return World.world.landValue[baseLocation]; } }
+        { get { return WorldDefinition.world.landValue[baseLocation]; } }
 
         /// <summary>
         /// 

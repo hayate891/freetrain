@@ -27,12 +27,12 @@ using System.Windows.Forms;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 using SDL.net;
 
@@ -65,7 +65,7 @@ namespace FreeTrain.Controllers.Structs
         protected StructPlacementController(StructureGroupGroup groupGroup)
         {
             InitializeComponent();
-            World.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
             previewBitmap = null;
             // load station type list
             structType.DataSource = groupGroup;
@@ -78,7 +78,7 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            World.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);
@@ -217,7 +217,7 @@ namespace FreeTrain.Controllers.Structs
 
 
 
-        private Location baseLoc = world.Location.UNPLACED;
+        private Location baseLoc = World.Location.UNPLACED;
         /// <summary>
         /// 
         /// </summary>
@@ -226,7 +226,7 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="ab"></param>
         public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
 
             if (baseLoc != loc)
             {

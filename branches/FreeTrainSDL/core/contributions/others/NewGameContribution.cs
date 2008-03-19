@@ -20,8 +20,8 @@
 
 using System;
 using System.Xml;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Others
 {
@@ -55,6 +55,6 @@ namespace FreeTrain.Contributions.Others
         /// Creates a new game by creating a new instance of the World object.
         /// </summary>
         /// <returns>null to indicate that the operation was cancelled.</returns>
-        public abstract World createNewGame();
+        public abstract WorldDefinition createNewGame();
     }
 }

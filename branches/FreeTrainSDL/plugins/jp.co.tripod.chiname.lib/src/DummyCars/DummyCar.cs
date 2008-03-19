@@ -20,9 +20,9 @@
 
 using System;
 using System.Drawing;
-using FreeTrain.world;
+using FreeTrain.World;
 
-namespace FreeTrain.world.Road.DummyCar
+namespace FreeTrain.World.Road.DummyCar
 {
     /// <summary>
     /// Accessory implementation.

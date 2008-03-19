@@ -22,8 +22,8 @@ using System;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using FreeTrain.world;
-using FreeTrain.Framework.plugin;
+using FreeTrain.World;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Framework.Graphics
 {
@@ -91,7 +91,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            int idx = (World.world.viewOptions.useNightView) ? 1 : 0;
+            int idx = (WorldDefinition.world.viewOptions.useNightView) ? 1 : 0;
             surface.bltColorTransform(pt, picture.surface, origin, size,
                 srcColors[idx], dstColors[idx], false);
         }

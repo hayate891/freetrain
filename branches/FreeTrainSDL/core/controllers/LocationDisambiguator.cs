@@ -19,7 +19,7 @@
 #endregion LICENSE
 
 using System;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Controllers
 {

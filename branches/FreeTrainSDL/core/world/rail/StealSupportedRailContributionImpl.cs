@@ -27,10 +27,10 @@ using SDL.net;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// SpecialRailContribution implementation for the steal-supported rail
@@ -113,7 +113,7 @@ namespace FreeTrain.world.Rail
 
             while (true)
             {
-                if (World.world[here] != null)
+                if (WorldDefinition.world[here] != null)
                 {
                     TrafficVoxel v = TrafficVoxel.get(here);
                     if (v == null) return false;	// occupied
@@ -123,7 +123,7 @@ namespace FreeTrain.world.Rail
                         return false;	// rail is running 
                 }
 
-                if (World.world.getGroundLevel(here) >= here.z)
+                if (WorldDefinition.world.getGroundLevel(here) >= here.z)
                     return false;	// must be all raised 
 
                 if (here == to) return true;

@@ -26,7 +26,7 @@ using SDL.net;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world.Terrain
+namespace FreeTrain.World.Terrain
 {
     /// <summary>
     /// Slopes used for mountains and under-waters.
@@ -100,7 +100,7 @@ namespace FreeTrain.world.Terrain
                 case 3: heightData = (Int16)((heightData & 0xFFF0) | (h)); break;
                 default: throw new ArgumentOutOfRangeException();
             }
-            World.world.onVoxelUpdated(this); // update this voxel
+            WorldDefinition.world.onVoxelUpdated(this); // update this voxel
         }
 
 
@@ -143,7 +143,7 @@ namespace FreeTrain.world.Terrain
         /// </summary>
         public static int getTotalHeight(Location loc, Direction d)
         {
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
 
             if (w.isOutsideWorld(loc)) return -1;
 
@@ -223,7 +223,7 @@ namespace FreeTrain.world.Terrain
 
         private Color mapColor(Color c)
         {
-            if (World.world.viewOptions.useNightView)
+            if (WorldDefinition.world.viewOptions.useNightView)
                 return ColorMap.getNightColor(c);
             else
                 return c;
@@ -233,7 +233,7 @@ namespace FreeTrain.world.Terrain
         {
             get
             {
-                return mountainColors[(int)World.world.clock.season];
+                return mountainColors[(int)WorldDefinition.world.clock.season];
             }
         }
         /// <summary>
@@ -253,7 +253,7 @@ namespace FreeTrain.world.Terrain
         private void drawGround(DrawContext display, Point pt, int heightCutDiff)
         {
             Point basePt = pt;
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
 
             if (heightCutDiff == 0)
             {
@@ -422,7 +422,7 @@ namespace FreeTrain.world.Terrain
         // it should be big so that integer ops in the selectBrush operation 
         // would run with a small rounding error.
 
-        private bool isUnderWater { get { return location.z < World.world.waterLevel; } }
+        private bool isUnderWater { get { return location.z < WorldDefinition.world.waterLevel; } }
 
         /// <summary>
         /// Returns the brush to draw this voxel.
@@ -484,7 +484,7 @@ namespace FreeTrain.world.Terrain
         /// <returns></returns>
         public static MountainVoxel get(Location loc)
         {
-            return World.world[loc] as MountainVoxel;
+            return WorldDefinition.world[loc] as MountainVoxel;
         }
         /// <summary>
         /// 

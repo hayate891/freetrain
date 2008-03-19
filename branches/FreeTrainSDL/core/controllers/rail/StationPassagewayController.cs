@@ -27,8 +27,8 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 
 namespace FreeTrain.Controllers.Rail
 {
@@ -230,7 +230,7 @@ namespace FreeTrain.Controllers.Rail
                 return ThinPlatform.get(loc) != null || GroundDisambiguator.theInstance.isSelectable(loc);
         }
 
-        private static readonly Location UNPLACED = world.Location.UNPLACED;
+        private static readonly Location UNPLACED = World.Location.UNPLACED;
 
         /// <summary> Used when we are placing a passageway. </summary>
         private Location anchor = UNPLACED;
@@ -243,7 +243,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="ab"></param>
         public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
 
             if (isStair)
             {
@@ -320,7 +320,7 @@ namespace FreeTrain.Controllers.Rail
             else
             {
                 // cancel the anchor
-                World.world.onAllVoxelUpdated();
+                WorldDefinition.world.onAllVoxelUpdated();
                 anchor = UNPLACED;
             }
         }
@@ -393,7 +393,7 @@ namespace FreeTrain.Controllers.Rail
                 if (loc == loc2)
                 {
                     // TODO: correctly updated voxels
-                    World.world.onAllVoxelUpdated();
+                    WorldDefinition.world.onAllVoxelUpdated();
                     return;
                 }
             }
@@ -412,7 +412,7 @@ namespace FreeTrain.Controllers.Rail
 
                 ThinPlatform.RailRoadImpl rr = ThinPlatform.RailRoadImpl.get(loc1);
 
-                if (World.world[loc1] == null		// unused voxel == can be used in any way
+                if (WorldDefinition.world[loc1] == null		// unused voxel == can be used in any way
                 || (rr != null && Direction.angle(rr.direction, dd) == 2))
                 {	// orthogonal platform.
 

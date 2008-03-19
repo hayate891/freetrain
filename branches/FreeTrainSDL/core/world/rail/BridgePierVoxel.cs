@@ -25,7 +25,7 @@ using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Voxel that is used to support raised railroad.
@@ -79,11 +79,11 @@ namespace FreeTrain.world.Rail
             // check if a support is buildable
             // TODO: start from the surface level
             for (int z = 0; z < loc.z; z++)
-                if (World.world[loc.x, loc.y, z] != null)
+                if (WorldDefinition.world[loc.x, loc.y, z] != null)
                     return;
 
             // if we can, do it
-            for (int z = World.world.getGroundLevel(loc); z < loc.z; z++)
+            for (int z = WorldDefinition.world.getGroundLevel(loc); z < loc.z; z++)
             {
                 Activator.CreateInstance(
                     (z == loc.z - 1) ? topBridgeType : otherBridgeType,
@@ -119,9 +119,9 @@ namespace FreeTrain.world.Rail
         {
             for (int z = 0; z < loc.z; z++)
             {
-                BridgePierVoxel v = World.world[loc.x, loc.y, z] as BridgePierVoxel;
+                BridgePierVoxel v = WorldDefinition.world[loc.x, loc.y, z] as BridgePierVoxel;
                 if (v != null)
-                    World.world.remove(loc.x, loc.y, z);
+                    WorldDefinition.world.remove(loc.x, loc.y, z);
             }
         }
 

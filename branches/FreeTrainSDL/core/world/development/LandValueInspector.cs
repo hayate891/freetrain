@@ -24,10 +24,10 @@ using System.Windows.Forms;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
 using FreeTrain.Views.Map;
-using FreeTrain.world.Rail;
+using FreeTrain.World.Rail;
 using SDL.net;
 
-namespace FreeTrain.world.Development
+namespace FreeTrain.World.Development
 {
 	/// <summary>
 	/// Controller that checks the land value.

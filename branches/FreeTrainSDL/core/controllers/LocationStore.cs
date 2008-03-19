@@ -19,7 +19,7 @@
 #endregion LICENSE
 
 using System;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Controllers
 {
@@ -48,10 +48,10 @@ namespace FreeTrain.Controllers
             set
             {
                 if (loc != Location.UNPLACED)
-                    World.world.onVoxelUpdated(loc);
+                    WorldDefinition.world.onVoxelUpdated(loc);
                 loc = value;
                 if (loc != Location.UNPLACED)
-                    World.world.onVoxelUpdated(loc);
+                    WorldDefinition.world.onVoxelUpdated(loc);
             }
         }
     }

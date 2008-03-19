@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world.Accounting
+namespace FreeTrain.World.Accounting
 {
     /// <summary>
     /// Payable.
@@ -41,7 +41,7 @@ namespace FreeTrain.world.Accounting
             this.genre = genre;
 
             manager.addDebt(this);
-            World.world.clock.registerOneShot(new ClockHandler(onDue), span);
+            WorldDefinition.world.clock.registerOneShot(new ClockHandler(onDue), span);
         }
 
 
@@ -57,7 +57,7 @@ namespace FreeTrain.world.Accounting
         /// <summary> TimeLength before the due date </summary>
         public TimeLength span
         {
-            get { return due - World.world.clock; }
+            get { return due - WorldDefinition.world.clock; }
         }
 
         /// <summary>
@@ -70,6 +70,6 @@ namespace FreeTrain.world.Accounting
             manager.removeDebt(this);
         }
 
-        private AccountManager manager { get { return World.world.account; } }
+        private AccountManager manager { get { return WorldDefinition.world.account; } }
     }
 }

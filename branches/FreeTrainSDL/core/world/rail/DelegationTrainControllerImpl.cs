@@ -23,9 +23,9 @@ using System.Collections;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Rail;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     // NO THIS DOES NOT WORK.
 

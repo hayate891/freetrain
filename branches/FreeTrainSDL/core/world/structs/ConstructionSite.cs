@@ -23,11 +23,11 @@ using System.Diagnostics;
 using System.Drawing;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Sound;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
 using SDL.net;
 
-namespace FreeTrain.world.Structs
+namespace FreeTrain.World.Structs
 {
     /// <summary>
     /// Construction site.
@@ -56,7 +56,7 @@ namespace FreeTrain.world.Structs
                     for (int y = 0; y < size.y; y++)
                     {
                         Location l = new Location(baseLoc.x + x, baseLoc.y + y, baseLoc.z + h);
-                        if (World.world.isInsideWorld(l))
+                        if (WorldDefinition.world.isInsideWorld(l))
                             voxels[x, y, h] = new VoxelImpl(this, l,
                                 new bool[] { y != 0, x != size.x - 1, y != size.y - 1, x != 0 });
                     }
@@ -106,7 +106,7 @@ namespace FreeTrain.world.Structs
 
             // remove all voxels
             foreach (VoxelImpl v in voxels)
-                World.world.remove(v);
+                WorldDefinition.world.remove(v);
 
             // then fire the event
             completionHandler(null, null);
@@ -128,7 +128,7 @@ namespace FreeTrain.world.Structs
         {
             // remove all voxels
             foreach (VoxelImpl v in voxels)
-                World.world.remove(v);
+                WorldDefinition.world.remove(v);
             // then fire the event
             completionHandler = null;
             // TODO: not sure what to do. ConstructionSite is not removable.
@@ -251,14 +251,14 @@ namespace FreeTrain.world.Structs
             /// <summary>
             /// Returns true if this voxel is at the ground level
             /// </summary>
-            private bool isGroundLevel { get { return World.world.getGroundLevel(location) == location.z; } }
+            private bool isGroundLevel { get { return WorldDefinition.world.getGroundLevel(location) == location.z; } }
 
             /// <summary> Construction voxel under this voxel, or null if none. </summary>
             private VoxelImpl below
             {
                 get
                 {
-                    return World.world[location.x, location.y, location.z - 1] as VoxelImpl;
+                    return WorldDefinition.world[location.x, location.y, location.z - 1] as VoxelImpl;
                 }
             }
 
@@ -267,7 +267,7 @@ namespace FreeTrain.world.Structs
             {
                 get
                 {
-                    return World.world[location.x, location.y, location.z + 1] as VoxelImpl;
+                    return WorldDefinition.world[location.x, location.y, location.z + 1] as VoxelImpl;
                 }
             }
 
@@ -281,7 +281,7 @@ namespace FreeTrain.world.Structs
             private bool canProceed()
             {
 
-                Time ct = World.world.clock;
+                Time ct = WorldDefinition.world.clock;
                 if (ct.isWeekend) return false;	// no construction work during the weekends
                 int h = ct.hour;
                 if (h < 9 || 17 < h) return false;	// no work during the night
@@ -340,14 +340,14 @@ namespace FreeTrain.world.Structs
                             }
                             break;
                     }
-                    World.world.onVoxelUpdated(this);
+                    WorldDefinition.world.onVoxelUpdated(this);
                     registerClockHandler();
                     return;
                 }
 
                 // proceed one step
                 state++;
-                World.world.onVoxelUpdated(this);
+                WorldDefinition.world.onVoxelUpdated(this);
                 registerClockHandler();
                 //theSound.play(location);
                 return;
@@ -370,7 +370,7 @@ namespace FreeTrain.world.Structs
                 }
 
                 // TODO: change the time span
-                World.world.clock.registerOneShot(new ClockHandler(clockHandler),
+                WorldDefinition.world.clock.registerOneShot(new ClockHandler(clockHandler),
                     TimeLength.fromMinutes(40 + random.Next(80)));
             }
 

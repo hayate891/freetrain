@@ -27,9 +27,9 @@ using FreeTrain.Util;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 using SDL.net;
 
 namespace FreeTrain.Contributions.Structs
@@ -180,7 +180,7 @@ namespace FreeTrain.Contributions.Structs
         public Structure create(Location baseLoc, int height, bool initiallyOwned)
         {
             Debug.Assert(canBeBuilt(baseLoc, height));
-            return create(new WorldLocator(World.world, baseLoc), height, initiallyOwned);
+            return create(new WorldLocator(WorldDefinition.world, baseLoc), height, initiallyOwned);
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace FreeTrain.Contributions.Structs
             for (int z = 0; z < height; z++)
                 for (int y = 0; y < size.y; y++)
                     for (int x = 0; x < size.x; x++)
-                        if (World.world[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
+                        if (WorldDefinition.world[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
                             return false;
 
             return true;
@@ -268,10 +268,10 @@ namespace FreeTrain.Contributions.Structs
         /// <param name="minsizePixel"></param>
         /// <param name="options"></param>
         /// <returns></returns>
-        public World CreatePreviewWorld(Size minsizePixel, IDictionary options)
+        public WorldDefinition CreatePreviewWorld(Size minsizePixel, IDictionary options)
         {
             Distance d = new Distance(size.x * 2 + 1, size.y * 2 + 1, maxHeight);
-            World w = World.CreatePreviewWorld(minsizePixel, d);
+            WorldDefinition w = WorldDefinition.CreatePreviewWorld(minsizePixel, d);
             int v = w.size.y - size.y - 2;
             Location l = w.toXYZ((w.size.x - size.x - size.y - 1) / 2, v, 0);
             create(new WorldLocator(w, l), maxHeight, false);

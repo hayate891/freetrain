@@ -25,8 +25,8 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Views.Map;
 using FreeTrain.Util;
-using FreeTrain.world;
-using FreeTrain.world.Terrain;
+using FreeTrain.World;
+using FreeTrain.World.Terrain;
 using FreeTrain.Framework;
 
 namespace FreeTrain.Controllers.Terrain
@@ -268,7 +268,7 @@ namespace FreeTrain.Controllers.Terrain
         private Location selectVoxel(MapViewWindow view, Location loc, Point ab)
         {
             // top-left corner of the selected location
-            Point vxl = World.world.fromXYZToAB(loc);
+            Point vxl = WorldDefinition.world.fromXYZToAB(loc);
 
             Point offset = new Point(ab.X - vxl.X, ab.Y - vxl.Y);
 
@@ -320,7 +320,7 @@ namespace FreeTrain.Controllers.Terrain
         /// </summary>
         private bool canBeRaised(Location loc)
         {
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
 
             if (!isFourAdjacentCornersMatched(loc)) return false;
 
@@ -331,7 +331,7 @@ namespace FreeTrain.Controllers.Terrain
             if (loc.z != glevel) return false;	//mountain can be placed only at the ground level
 
             // true if this ground level is too close to the roof.
-            bool nearRoof = (glevel == World.world.size.z - 1);
+            bool nearRoof = (glevel == WorldDefinition.world.size.z - 1);
 
             for (int x = 0; x <= 1; x++)
             {
@@ -366,7 +366,7 @@ namespace FreeTrain.Controllers.Terrain
                 }
             }
 
-            if (World.world.isOutsideWorld(loc))
+            if (WorldDefinition.world.isOutsideWorld(loc))
                 return false;
 
             return true;
@@ -378,7 +378,7 @@ namespace FreeTrain.Controllers.Terrain
         /// <returns>false if the operation was unsuccessful.</returns>
         private bool raise(Location loc)
         {
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
 
             // make sure that four surrounding voxels can be raised,
             // and the ground levels of them are the same
@@ -393,7 +393,7 @@ namespace FreeTrain.Controllers.Terrain
                     Location l = new Location(loc.x + x, loc.y + y, loc.z);
 
                     Voxel vx = w[l];
-                    if (vx is World.OutOfWorldVoxel)
+                    if (vx is WorldDefinition.OutOfWorldVoxel)
                         continue;	// this is beyond the border
 
                     MountainVoxel v = vx as MountainVoxel;
@@ -422,7 +422,7 @@ namespace FreeTrain.Controllers.Terrain
         // clean it up by using MountainVoxel.isCornerMatched
         private bool canBeLowered(ref Location loc)
         {
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
 
             if (!isFourAdjacentCornersMatched(loc)) return false;
 
@@ -453,15 +453,15 @@ namespace FreeTrain.Controllers.Terrain
                         continue;	// if it's mountain, OK.
 
                     // otherwise, make sure that nothing is on it.
-                    if (World.world[l.x, l.y, l.z + 1] != null)
+                    if (WorldDefinition.world[l.x, l.y, l.z + 1] != null)
                         return false;
                     // and nothing is under it
-                    if (World.world[l.x, l.y, l.z] != null)
+                    if (WorldDefinition.world[l.x, l.y, l.z] != null)
                         return false;
                 }
             }
 
-            if (World.world.isOutsideWorld(loc))
+            if (WorldDefinition.world.isOutsideWorld(loc))
                 return false;
 
             return true;
@@ -474,7 +474,7 @@ namespace FreeTrain.Controllers.Terrain
         private bool lower(Location loc)
         {
 
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
 
             if (!canBeLowered(ref loc)) return false;
 
@@ -490,7 +490,7 @@ namespace FreeTrain.Controllers.Terrain
                     MountainVoxel mv = MountainVoxel.get(l);
                     if (mv == null)
                     {
-                        World.world.lowerGround(l);
+                        WorldDefinition.world.lowerGround(l);
                         mv = new MountainVoxel(l, 4, 4, 4, 4);
                     }
 

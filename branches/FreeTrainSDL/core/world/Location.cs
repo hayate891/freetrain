@@ -26,7 +26,7 @@ using System.Runtime.Serialization;
 using SDL.net;
 using FreeTrain.Framework;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// 
@@ -36,7 +36,7 @@ namespace FreeTrain.world
         /// <summary>
         /// 
         /// </summary>
-        protected World w;
+        protected WorldDefinition w;
         /// <summary>
         /// 
         /// </summary>
@@ -48,7 +48,7 @@ namespace FreeTrain.world
         /// <param name="_x"></param>
         /// <param name="_y"></param>
         /// <param name="_z"></param>
-        public WorldLocator(World world, int _x, int _y, int _z)
+        public WorldLocator(WorldDefinition world, int _x, int _y, int _z)
         {
             w = world;
             l = new Location(_x, _y, _z);
@@ -58,7 +58,7 @@ namespace FreeTrain.world
         /// </summary>
         /// <param name="world"></param>
         /// <param name="loc"></param>
-        public WorldLocator(World world, Location loc)
+        public WorldLocator(WorldDefinition world, Location loc)
         {
             w = world;
             l = loc;
@@ -70,7 +70,7 @@ namespace FreeTrain.world
         /// <summary>
         /// 
         /// </summary>
-        public World world { get { return w; } }
+        public WorldDefinition world { get { return w; } }
     }
 
     /// <summary>
@@ -131,7 +131,7 @@ namespace FreeTrain.world
         /// <summary>
         /// 
         /// </summary>
-        public World world { get { return World.world; } }
+        public WorldDefinition world { get { return WorldDefinition.world; } }
 
         /// <summary>
         /// Computes the distance (in Euclidean sense)

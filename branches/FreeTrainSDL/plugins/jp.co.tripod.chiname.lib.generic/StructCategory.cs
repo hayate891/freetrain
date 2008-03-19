@@ -26,7 +26,7 @@ using System.Globalization;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace FreeTrain.Framework.plugin.Generic
+namespace FreeTrain.Framework.Plugin.Generic
 {
     /// <summary>
     /// StructCategory
@@ -272,7 +272,7 @@ namespace FreeTrain.Framework.plugin.Generic
         /// </summary>
         static public void loadDefaultTree()
         {
-            Plugin p = PluginManager.theInstance.getPlugin("jp.co.tripod.chiname.lib.generic");
+            PluginDefinition p = PluginManager.theInstance.getPlugin("jp.co.tripod.chiname.lib.generic");
             _baseDir = p.dirName;
             string filename = Path.Combine(p.dirName, "CategoryTree.xml");
             using (Stream file = p.loadStream(filename))

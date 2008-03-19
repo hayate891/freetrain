@@ -28,7 +28,7 @@ using FreeTrain.Framework;
 //using freetrain.util.docking;
 using FreeTrain.Util.Command;
 
-namespace FreeTrain.world.Subsidiaries
+namespace FreeTrain.World.Subsidiaries
 {
 	/// <summary>
 	/// Controller of SubsidiaryMarket.
@@ -50,7 +50,7 @@ namespace FreeTrain.world.Subsidiaries
 			imageList.TransparentColor = bmp.GetPixel(0,0);
 			imageList.Images.AddStrip(bmp);
 			
-			World.onNewWorld += new EventHandler(reset);
+			WorldDefinition.onNewWorld += new EventHandler(reset);
 
 			SubsidiaryMarket.BUY .volatileEvents.onAdded += new SubsidiaryMarketListener(onAdded);
 			SubsidiaryMarket.SELL.volatileEvents.onAdded += new SubsidiaryMarketListener(onAdded);
@@ -94,7 +94,7 @@ namespace FreeTrain.world.Subsidiaries
 				components.Dispose();
 			base.Dispose( disposing );
 			
-			World.onNewWorld -= new EventHandler(reset);
+			WorldDefinition.onNewWorld -= new EventHandler(reset);
 			SubsidiaryMarket.BUY .volatileEvents.onAdded -= new SubsidiaryMarketListener(onAdded);
 			SubsidiaryMarket.SELL.volatileEvents.onAdded -= new SubsidiaryMarketListener(onAdded);
 			SubsidiaryMarket.BUY .volatileEvents.onRemoved -= new SubsidiaryMarketListener(onRemoved);

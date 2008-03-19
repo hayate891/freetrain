@@ -23,13 +23,13 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using FreeTrain.world;
-using FreeTrain.world.Terrain;
+using FreeTrain.World;
+using FreeTrain.World.Terrain;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Contributions.Land
 {

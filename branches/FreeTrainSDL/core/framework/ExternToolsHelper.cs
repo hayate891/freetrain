@@ -21,8 +21,8 @@
 using System;
 using System.Collections;
 using System.IO;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World;
 
 namespace FreeTrain.Framework
 {
@@ -53,8 +53,8 @@ namespace FreeTrain.Framework
                 r.Add(Path.Combine(baseDir, subdir));
             // load plug-ins
             Core.plugins.init(r, progressHandler, errorHandler);
-            if (World.world == null)
-                World.world = new World(new Distance(5, 5, 5), 0);
+            if (WorldDefinition.world == null)
+                WorldDefinition.world = new WorldDefinition(new Distance(5, 5, 5), 0);
             initialized = true;
         }
         /// <summary>

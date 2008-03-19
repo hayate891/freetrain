@@ -20,9 +20,9 @@
 
 using System;
 using System.Diagnostics;
-using FreeTrain.world;
+using FreeTrain.World;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Railroad with a junction.
@@ -174,7 +174,7 @@ namespace FreeTrain.world.Rail
 
                 // replace the railroad
                 new SingleRailRoad(v, RailPattern.get(a, b));
-                World.world.onVoxelUpdated(loc);
+                WorldDefinition.world.onVoxelUpdated(loc);
 
                 return;
             }

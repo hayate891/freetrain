@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 using FreeTrain.Framework;
-using FreeTrain.world;
+using FreeTrain.World;
 using SDL.net;
 
 namespace FreeTrain.Framework.Graphics
@@ -88,7 +88,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary> Clears the canvas by tiling empty chips. </summary>
         public void clear()
         {
-            Sprite empty = ResourceUtil.getGroundChip(World.world);
+            Sprite empty = ResourceUtil.getGroundChip(WorldDefinition.world);
             for (int y = (ptOrigin.Y % 8) - 16; y < pixelSize.Height; y += 8)
             {
                 int x = (ptOrigin.X % 32) - 64;

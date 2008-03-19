@@ -20,7 +20,7 @@
 
 using System;
 using System.Collections;
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Views.Map;
 using SdlDotNet.Audio;
 using SdlDotNet;
@@ -92,7 +92,7 @@ namespace FreeTrain.Framework.Sound
 
             /*if( countOverlap()+queue < concurrentPlaybackMax )*/
             if (queue++ == 0)
-                World.world.clock.endOfTurnHandlers += new EventHandler(onTurnEnd);
+                WorldDefinition.world.clock.endOfTurnHandlers += new EventHandler(onTurnEnd);
         }
 
         // called at the end of turn

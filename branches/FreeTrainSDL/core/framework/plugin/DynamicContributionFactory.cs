@@ -21,7 +21,7 @@
 using System;
 using System.Xml;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
     /// Loads a Contribution class by using a &lt;class> element
@@ -55,7 +55,7 @@ namespace FreeTrain.Framework.plugin
         /// <param name="owner"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public Contribution load(Plugin owner, XmlElement e)
+        public Contribution load(PluginDefinition owner, XmlElement e)
         {
             Contribution contrib = (Contribution)PluginUtil.loadObjectFromManifest(e);
             if (baseType.IsInstanceOfType(contrib))

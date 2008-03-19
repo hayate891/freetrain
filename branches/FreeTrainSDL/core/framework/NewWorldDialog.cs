@@ -24,8 +24,8 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Others;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World;
 
 namespace FreeTrain.Framework
 {
@@ -65,7 +65,7 @@ namespace FreeTrain.Framework
         /// 
         /// </summary>
         /// <returns></returns>
-        public World createWorld()
+        public WorldDefinition createWorld()
         {
             NewGameContribution contrib = (NewGameContribution)list.SelectedItem;
             return contrib.createNewGame();

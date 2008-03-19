@@ -33,13 +33,13 @@ using FreeTrain.Contributions.Structs;
 using FreeTrain.Contributions.Land;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 
-namespace FreeTrain.Framework.plugin.Generic
+namespace FreeTrain.Framework.Plugin.Generic
 {
     /// <summary>
     /// MultiSelectorController
@@ -77,7 +77,7 @@ namespace FreeTrain.Framework.plugin.Generic
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        protected static readonly Location UNPLACED = world.Location.UNPLACED;
+        protected static readonly Location UNPLACED = World.Location.UNPLACED;
         private Bitmap previewBitmap;
         private bool bShowDetail;
         private Hashtable typeMap = new Hashtable();
@@ -127,7 +127,7 @@ namespace FreeTrain.Framework.plugin.Generic
             // Windows フォーム デザイナ サポートに必要です。
             //
             InitializeComponent();
-            World.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(this.redrawPreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(this.redrawPreview);
             OnNodeSelected(CategoryTreeWnd.getSelectedCategory(), 0);
             if (typeBox.Items.Count != 0)
                 typeBox_SelectedIndexChanged(this, null);
@@ -192,14 +192,14 @@ namespace FreeTrain.Framework.plugin.Generic
                     // update the screen
                     baseLoc = loc;
                     // TODO: we need to correctly update the screen
-                    World.world.onAllVoxelUpdated();
+                    WorldDefinition.world.onAllVoxelUpdated();
                 }
             }
             else
             {
-                world.Location l = loc.align4To(anchor);
+                World.Location l = loc.align4To(anchor);
                 mouseDir = anchor.getDirectionTo(l);
-                World.world.onVoxelUpdated(anchor);
+                WorldDefinition.world.onVoxelUpdated(anchor);
             }
         }
 
@@ -258,7 +258,7 @@ namespace FreeTrain.Framework.plugin.Generic
             for (int z = 0; z < height; z++)
                 for (int y = 0; y < size.y; y++)
                     for (int x = 0; x < size.x; x++)
-                        if (World.world[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
+                        if (WorldDefinition.world[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
                             return false;
 
             return true;
@@ -376,7 +376,7 @@ namespace FreeTrain.Framework.plugin.Generic
         /// </summary>
         protected override void Dispose(bool disposing)
         {
-            World.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(this.redrawPreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(this.redrawPreview);
             if (disposing)
             {
                 if (components != null)

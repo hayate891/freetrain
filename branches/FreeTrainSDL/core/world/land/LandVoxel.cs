@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 
-namespace FreeTrain.world.Land
+namespace FreeTrain.World.Land
 {
     /// <summary>
     /// Land filler that occupies only one voxel.
@@ -38,7 +38,7 @@ namespace FreeTrain.world.Land
             : base(loc)
         {
             Debug.Assert(canBeBuilt(loc));
-            Debug.Assert(loc.z == World.world.getGroundLevel(loc));
+            Debug.Assert(loc.z == WorldDefinition.world.getGroundLevel(loc));
         }
         /// <summary>
         /// 
@@ -71,7 +71,7 @@ namespace FreeTrain.world.Land
         /// </summary>
         public void remove()
         {
-            World.world.remove(this);
+            WorldDefinition.world.remove(this);
             if (onEntityRemoved != null) onEntityRemoved(this, null);
         }
         /// <summary>
@@ -87,9 +87,9 @@ namespace FreeTrain.world.Land
         /// </summary>
         public static bool canBeBuilt(Location loc)
         {
-            if (World.world.getGroundLevel(loc) != loc.z)
+            if (WorldDefinition.world.getGroundLevel(loc) != loc.z)
                 return false;	// can only be placed on the ground
-            return World.world.isReusable(loc);
+            return WorldDefinition.world.isReusable(loc);
         }
     }
 }

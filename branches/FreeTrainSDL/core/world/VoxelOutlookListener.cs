@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
 	/// <summary>
 	/// Receive notifications of changes in voxel outlook.

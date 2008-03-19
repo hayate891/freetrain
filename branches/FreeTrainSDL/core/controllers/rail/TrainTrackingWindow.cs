@@ -26,8 +26,8 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Util.Command;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 
 namespace FreeTrain.Controllers.Rail
 {
@@ -229,7 +229,7 @@ namespace FreeTrain.Controllers.Rail
         private void buttonSelect_Click(object sender, EventArgs e)
         {
             ContextMenu m = new ContextMenu();
-            populateMenu(m.MenuItems, World.world.rootTrainGroup);
+            populateMenu(m.MenuItems, WorldDefinition.world.rootTrainGroup);
             m.Show(buttonSelect, new Point(0, buttonSelect.Height));
         }
 

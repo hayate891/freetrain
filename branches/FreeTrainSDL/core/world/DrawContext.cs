@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using SDL.net;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// Voxels will access GDI DC or DirectDraw surface

@@ -24,10 +24,10 @@ using FreeTrain.Contributions.Structs;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world.Subsidiaries;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World.Subsidiaries;
 
-namespace FreeTrain.world.Structs
+namespace FreeTrain.World.Structs
 {
     /// <summary>
     /// Variable height building
@@ -62,7 +62,7 @@ namespace FreeTrain.world.Structs
                         WorldLocator wl = new WorldLocator(wloc.world, baseLocation + new Distance(x, y, z));
                         voxels[x, y, z] = new VoxelImpl(this, (byte)x, (byte)y, (byte)z, wl);
                     }
-            if (wloc.world == World.world)
+            if (wloc.world == WorldDefinition.world)
                 this.subsidiary = new SubsidiaryCompany(this, initiallyOwned);
 
             if (type.population != null)
@@ -115,7 +115,7 @@ namespace FreeTrain.world.Structs
         {
             get
             {
-                return World.world.landValue[baseLocation + new Distance(type.size, 0) / 2] * type.size.x * type.size.y;
+                return WorldDefinition.world.landValue[baseLocation + new Distance(type.size, 0) / 2] * type.size.x * type.size.y;
             }
         }
         /// <summary>
@@ -159,7 +159,7 @@ namespace FreeTrain.world.Structs
             if (onEntityRemoved != null)
                 onEntityRemoved(this, null);
 
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
             foreach (VoxelImpl v in voxels)
                 world.remove(v);
         }
@@ -246,7 +246,7 @@ namespace FreeTrain.world.Structs
         /// </summary>
         public static VarHeightBuilding get(Location loc)
         {
-            Voxel v = World.world[loc];
+            Voxel v = WorldDefinition.world[loc];
             if (!(v is VarHeightBuilding.VoxelImpl)) return null;
 
             return ((StructureVoxel)v).owner as VarHeightBuilding;

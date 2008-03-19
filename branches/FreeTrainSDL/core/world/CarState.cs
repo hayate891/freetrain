@@ -23,7 +23,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// Current state of a car. Immutable.
@@ -115,7 +115,7 @@ namespace FreeTrain.world
             /// <summary>
             /// Voxel that represents the location.
             /// </summary>
-            public TrafficVoxel voxel { get { return (TrafficVoxel)World.world[location]; } }
+            public TrafficVoxel voxel { get { return (TrafficVoxel)WorldDefinition.world[location]; } }
             /// <summary>
             /// 
             /// </summary>

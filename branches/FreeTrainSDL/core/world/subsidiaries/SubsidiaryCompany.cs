@@ -20,10 +20,10 @@
 
 using System;
 using System.Diagnostics;
-using FreeTrain.world.Structs;
-using FreeTrain.world.Accounting;
+using FreeTrain.World.Structs;
+using FreeTrain.World.Accounting;
 
-namespace FreeTrain.world.Subsidiaries
+namespace FreeTrain.World.Subsidiaries
 {
     /// <summary>
     /// Tradable subsidiary company.
@@ -182,13 +182,13 @@ namespace FreeTrain.world.Subsidiaries
 
         private void registerClock()
         {
-            World.world.clock.registerOneShot(
+            WorldDefinition.world.clock.registerOneShot(
                 new ClockHandler(clockHandler),
                 TimeLength.random(TimeLength.fromDays(14), TimeLength.fromDays(28)));
         }
         private void unregisterClock()
         {
-            World.world.clock.unregister(new ClockHandler(clockHandler));
+            WorldDefinition.world.clock.unregister(new ClockHandler(clockHandler));
         }
 
 

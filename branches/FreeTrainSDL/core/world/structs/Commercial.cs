@@ -24,12 +24,12 @@ using System.Drawing;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
-using FreeTrain.world;
-using FreeTrain.world.Subsidiaries;
+using FreeTrain.World;
+using FreeTrain.World.Subsidiaries;
 
-namespace FreeTrain.world.Structs
+namespace FreeTrain.World.Structs
 {
     // TODO: value should be unified to use long, not int.
 
@@ -57,7 +57,7 @@ namespace FreeTrain.world.Structs
         {
 
             this.type = _type;
-            if (wloc.world == World.world)
+            if (wloc.world == WorldDefinition.world)
             {
                 this.subsidiary = new SubsidiaryCompany(this, initiallyOwned);
             }
@@ -94,7 +94,7 @@ namespace FreeTrain.world.Structs
         {
             get
             {
-                return World.world.landValue[baseLocation + type.size / 2] * type.size.x * type.size.y;
+                return WorldDefinition.world.landValue[baseLocation + type.size / 2] * type.size.x * type.size.y;
             }
         }
         /// <summary>
@@ -148,7 +148,7 @@ namespace FreeTrain.world.Structs
         /// </summary>
         public static Commercial get(Location loc)
         {
-            return World.world.getEntityAt(loc) as Commercial;
+            return WorldDefinition.world.getEntityAt(loc) as Commercial;
         }
         /// <summary>
         /// 

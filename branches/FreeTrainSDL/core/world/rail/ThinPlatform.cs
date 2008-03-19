@@ -28,7 +28,7 @@ using FreeTrain.Util;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Thin platform that doesn't oocupy any additional pixels
@@ -46,7 +46,7 @@ namespace FreeTrain.world.Rail
 
             for (; length > 0; length--, loc += dir)
             {
-                if (World.world[loc] == null)
+                if (WorldDefinition.world[loc] == null)
                     continue;		// this voxel is empty.OK.
 
                 TrafficVoxel tv = TrafficVoxel.get(loc);
@@ -106,7 +106,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public override void remove()
         {
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
 
             onHostDisconnected();
 
@@ -215,7 +215,7 @@ namespace FreeTrain.world.Rail
                 set
                 {
                     if (value != _outlook)
-                        World.world.onVoxelUpdated(this.voxel);
+                        WorldDefinition.world.onVoxelUpdated(this.voxel);
                     _outlook = value;
                 }
             }
@@ -229,7 +229,7 @@ namespace FreeTrain.world.Rail
                 set
                 {
                     if (value != _hasRoof)
-                        World.world.onVoxelUpdated(this.voxel);
+                        WorldDefinition.world.onVoxelUpdated(this.voxel);
                     _hasRoof = value;
                 }
             }

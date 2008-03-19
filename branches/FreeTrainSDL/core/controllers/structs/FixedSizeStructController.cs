@@ -26,10 +26,10 @@ using System.Windows.Forms;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 
 namespace FreeTrain.Controllers.Structs
 {

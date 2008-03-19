@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Controllers
 {
@@ -106,7 +106,7 @@ namespace FreeTrain.Controllers
         {
             // clear the remaining image
             if (currentPos != Location.UNPLACED)
-                World.world.onVoxelUpdated(currentPos);
+                WorldDefinition.world.onVoxelUpdated(currentPos);
         }
         /// <summary>
         /// 
@@ -117,9 +117,9 @@ namespace FreeTrain.Controllers
         public virtual void onMouseMove(MapViewWindow source, Location loc, Point ab)
         {
             if (currentPos != Location.UNPLACED)
-                World.world.onVoxelUpdated(currentPos);
+                WorldDefinition.world.onVoxelUpdated(currentPos);
             currentPos = loc;
-            World.world.onVoxelUpdated(currentPos);
+            WorldDefinition.world.onVoxelUpdated(currentPos);
 
             onSelectionChanged(currentPos);
         }

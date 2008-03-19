@@ -28,7 +28,7 @@ using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 using SDL.net;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// レールの形状のパターンに関する情報を表現するオブジェクト

@@ -20,7 +20,7 @@
 
 using System;
 using System.Windows.Forms;
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Framework;
 
 namespace FreeTrain.Views

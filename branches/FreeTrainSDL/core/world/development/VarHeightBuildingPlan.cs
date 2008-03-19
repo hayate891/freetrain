@@ -20,9 +20,9 @@
 
 using System;
 using FreeTrain.Contributions.Structs;
-using FreeTrain.world.Structs;
+using FreeTrain.World.Structs;
 
-namespace FreeTrain.world.Development
+namespace FreeTrain.World.Development
 {
 	/// <summary>
 	/// VarHeightBuildingPlan の概要の説明です。

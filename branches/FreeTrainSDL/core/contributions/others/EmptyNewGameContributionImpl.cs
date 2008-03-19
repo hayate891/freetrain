@@ -22,7 +22,7 @@ using System;
 using System.Xml;
 using System.Windows.Forms;
 using FreeTrain.Framework;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Others
 {
@@ -54,7 +54,7 @@ namespace FreeTrain.Contributions.Others
         /// 
         /// </summary>
         /// <returns></returns>
-        public override World createNewGame()
+        public override WorldDefinition createNewGame()
         {
             using (NewWorldDialog dialog = new NewWorldDialog())
             {

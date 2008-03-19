@@ -22,9 +22,9 @@ using System;
 using System.Windows.Forms;
 using System.Xml;
 using FreeTrain.Contributions.Others;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.world.Development
+namespace FreeTrain.World.Development
 {
     /// <summary>
     /// 

@@ -21,9 +21,9 @@
 using System;
 using System.Xml;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 
 namespace FreeTrain.Contributions.Structs
 {

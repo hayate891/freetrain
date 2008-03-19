@@ -25,10 +25,10 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Rail;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 
 namespace FreeTrain.Controllers.Rail
 {

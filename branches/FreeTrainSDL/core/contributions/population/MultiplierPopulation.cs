@@ -20,8 +20,8 @@
 
 using System;
 using System.Runtime.Serialization;
-using FreeTrain.world;
-using FreeTrain.Framework.plugin;
+using FreeTrain.World;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Contributions.Population
 {

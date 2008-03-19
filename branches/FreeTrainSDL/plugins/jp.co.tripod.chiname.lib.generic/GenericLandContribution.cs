@@ -25,7 +25,7 @@ using System.Xml;
 using System.Collections;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Controllers;
 using FreeTrain.Controllers.Structs;
 using FreeTrain.Contributions;
@@ -34,10 +34,10 @@ using FreeTrain.Contributions.Population;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 
-namespace FreeTrain.Framework.plugin.Generic
+namespace FreeTrain.Framework.Plugin.Generic
 {
     /// <summary>
     /// GenericLandContribution

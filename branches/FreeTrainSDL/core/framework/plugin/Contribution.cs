@@ -67,7 +67,7 @@ namespace FreeTrain.Framework.Plugin
         /// </summary>
         /// <param name="_parent"></param>
         /// <param name="_baseUri"></param>
-        internal void init(Plugin _parent, Uri _baseUri)
+        internal void init(PluginDefinition _parent, Uri _baseUri)
         {
             this._parent = _parent;
             this._baseUri = _baseUri;
@@ -112,8 +112,8 @@ namespace FreeTrain.Framework.Plugin
         /// <summary>
         /// Returns the Plugin object that contains this contribution.
         /// </summary>
-        public Plugin parent { get { return _parent; } }
-        private Plugin _parent;
+        public PluginDefinition parent { get { return _parent; } }
+        private PluginDefinition _parent;
 
 
         /// <summary>

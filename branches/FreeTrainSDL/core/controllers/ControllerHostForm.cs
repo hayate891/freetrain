@@ -25,7 +25,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Views;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Controllers
 {
@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers
         public ControllerHostForm()
         {
             InitializeComponent();
-            World.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
             siteImpl = new ControllerSiteImpl(this);
         }
         /// <summary>
@@ -84,7 +84,7 @@ namespace FreeTrain.Controllers
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            World.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);

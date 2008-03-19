@@ -24,7 +24,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using FreeTrain.Framework;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
     /// Allows objects from plug-ins to be de-serialized.

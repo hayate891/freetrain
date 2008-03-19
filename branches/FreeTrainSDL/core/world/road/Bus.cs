@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 
-namespace FreeTrain.world.Road
+namespace FreeTrain.World.Road
 {
     /// <summary>
     /// Bus

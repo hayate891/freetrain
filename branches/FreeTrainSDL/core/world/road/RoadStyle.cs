@@ -25,7 +25,7 @@ using System.Runtime.Serialization;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world.Road
+namespace FreeTrain.World.Road
 {
     /// <summary>
     /// 

@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using FreeTrain.world;
+using FreeTrain.World;
 using SDL.net;
 
 namespace FreeTrain.Framework
