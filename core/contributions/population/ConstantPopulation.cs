@@ -24,13 +24,13 @@ using FreeTrain.world;
 using FreeTrain.world.Structs;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.population
+namespace FreeTrain.Contributions.Population
 {
     /// <summary>
     /// Always the same population
     /// </summary>
     [Serializable]
-    public class ConstantPopulation : Population
+    public class ConstantPopulation : BasePopulation
     {
         /// <summary>
         /// 

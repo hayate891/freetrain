@@ -28,7 +28,7 @@ using FreeTrain.Framework.plugin;
 using FreeTrain.world;
 using FreeTrain.world.road;
 
-namespace FreeTrain.Contributions.road
+namespace FreeTrain.Contributions.Road
 {
     /// <summary>
     /// Usual implementation of RoadContribution.

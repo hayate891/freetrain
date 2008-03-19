@@ -155,6 +155,7 @@
     <Compile Include="contributions\population\AgriculturalPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="contributions\population\BasePopulation.cs" />
     <Compile Include="contributions\population\CombinationPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -171,9 +172,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="contributions\population\PersistentPopulation.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="contributions\population\Population.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="contributions\population\ResidentialPopulation.cs">
@@ -992,7 +990,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="FreeTrainSdl.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

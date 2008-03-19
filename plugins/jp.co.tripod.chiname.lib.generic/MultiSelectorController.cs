@@ -28,7 +28,7 @@ using FreeTrain.Controls;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Population;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Contributions.Land;
 using FreeTrain.Framework;

@@ -22,7 +22,7 @@ using System;
 using System.Xml;
 using FreeTrain.world;
 
-namespace FreeTrain.Contributions.population
+namespace FreeTrain.Contributions.Population
 {
     /// <summary>
     /// Populaion that additively combines other populations.
@@ -39,9 +39,9 @@ namespace FreeTrain.Contributions.population
     ///   ...
     /// &lt;/population>
     /// </summary>
-    public class CombinationPopulation : Population
+    public class CombinationPopulation : BasePopulation
     {
-        private readonly Population[] children;
+        private readonly BasePopulation[] children;
 
         /// <summary>
         /// 
@@ -50,9 +50,9 @@ namespace FreeTrain.Contributions.population
         public CombinationPopulation(XmlElement e)
         {
             XmlNodeList nl = e.SelectNodes("population");
-            children = new Population[nl.Count];
+            children = new BasePopulation[nl.Count];
             for (int i = 0; i < nl.Count; i++)
-                children[i] = Population.load((XmlElement)nl[i]);
+                children[i] = BasePopulation.load((XmlElement)nl[i]);
         }
         /// <summary>
         /// 
@@ -62,7 +62,7 @@ namespace FreeTrain.Contributions.population
             get
             {
                 int r = 0;
-                foreach (Population p in children)
+                foreach (BasePopulation p in children)
                     r += p.residents;
                 return r;
             }
@@ -75,7 +75,7 @@ namespace FreeTrain.Contributions.population
         public override int calcPopulation(Time currentTime)
         {
             int r = 0;
-            foreach (Population p in children)
+            foreach (BasePopulation p in children)
                 r += p.calcPopulation(currentTime);
             return r;
         }

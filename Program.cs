@@ -40,7 +40,7 @@ using FreeTrain.Controllers.Structs;
 using FreeTrain.Framework;
 using FreeTrain.Views;
 
-namespace FreeTrainSDL
+namespace FreeTrain
 {
     class FreeTrainSDL : IDisposable
     {
@@ -372,6 +372,8 @@ namespace FreeTrainSDL
             timer.Interval = 33;
             timer.Enabled = true;
             timer.Start();
+            //ControlPanel controlPanel = new ControlPanel();
+            //controlPanel.Show();
 
             Events.Run();
         }

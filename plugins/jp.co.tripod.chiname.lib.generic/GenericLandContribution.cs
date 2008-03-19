@@ -30,7 +30,7 @@ using FreeTrain.Controllers;
 using FreeTrain.Controllers.Structs;
 using FreeTrain.Contributions;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Population;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;

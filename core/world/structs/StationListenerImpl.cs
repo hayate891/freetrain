@@ -21,7 +21,7 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
-using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Population;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world.Rail;
 
@@ -41,7 +41,7 @@ namespace FreeTrain.world.Structs
         /// <param name="pop">Population pattern</param>
         /// <param name="loc">The location used to decide if this object
         /// can subscribe to a given station.</param>
-        public StationListenerImpl(Population pop, Location loc)
+        public StationListenerImpl(BasePopulation pop, Location loc)
         {
             this.population = pop;
             this.location = loc;
@@ -58,7 +58,7 @@ namespace FreeTrain.world.Structs
 
         private readonly Location location;
 
-        private readonly Population population;
+        private readonly BasePopulation population;
 
 
         /// <summary>

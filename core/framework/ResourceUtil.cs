@@ -84,10 +84,10 @@ namespace FreeTrain.Framework
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static Sound loadSystemSound(String name)
+        public static SdlDotNet.Audio.Sound loadSystemSound(String name)
         {
             // can't read from stream
-            return new Sound(findSystemResource(name));
+            return new SdlDotNet.Audio.Sound(findSystemResource(name));
         }
 
         // using URI is essentially dangerous as Segment only support file names.
@@ -97,9 +97,9 @@ namespace FreeTrain.Framework
         /// </summary>
         /// <param name="uri"></param>
         /// <returns></returns>
-        public static Sound loadSound(Uri uri)
+        public static SdlDotNet.Audio.Sound loadSound(Uri uri)
         {
-            return new Sound(uri.LocalPath);
+            return new SdlDotNet.Audio.Sound(uri.LocalPath);
         }
         /// <summary>
         /// 

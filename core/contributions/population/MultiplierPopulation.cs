@@ -23,23 +23,23 @@ using System.Runtime.Serialization;
 using FreeTrain.world;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.population
+namespace FreeTrain.Contributions.Population
 {
     /// <summary>
     /// Multiplies another population by a constant factor.
     /// This object is not-persistent.
     /// </summary>
     [Serializable]
-    public class MultiplierPopulation : Population
+    public class MultiplierPopulation : BasePopulation
     {
         private readonly int factor;
-        private readonly Population core;
+        private readonly BasePopulation core;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="f"></param>
         /// <param name="_core"></param>
-        public MultiplierPopulation(int f, Population _core)
+        public MultiplierPopulation(int f, BasePopulation _core)
         {
             this.factor = f;
             this.core = _core;

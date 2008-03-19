@@ -26,7 +26,7 @@ using SdlDotNet.Audio;
 using SdlDotNet;
 //using SDL.net;
 
-namespace FreeTrain.Framework.sound
+namespace FreeTrain.Framework.Sound
 {
     /// <summary>
     /// SoundEffect object that handles multiple
@@ -45,7 +45,7 @@ namespace FreeTrain.Framework.sound
         /// <param name="seg">Sound-effect object</param>
         /// <param name="concurrentPlaybackMax">Number of maximum concurrent playback.</param>
         /// <param name="intervalTime">Interval between two successive playbacks</param>
-        public RepeatableSoundEffectImpl(Sound seg, int concurrentPlaybackMax, int intervalTime)
+        public RepeatableSoundEffectImpl(SdlDotNet.Audio.Sound seg, int concurrentPlaybackMax, int intervalTime)
         {
             this.segment = seg;
             this.concurrentPlaybackMax = concurrentPlaybackMax;
@@ -55,9 +55,9 @@ namespace FreeTrain.Framework.sound
         /// 
         /// </summary>
         /// <param name="seg"></param>
-        public RepeatableSoundEffectImpl(Sound seg) : this(seg, 3, 200) { }
+        public RepeatableSoundEffectImpl(SdlDotNet.Audio.Sound seg) : this(seg, 3, 200) { }
 
-        private readonly Sound segment;
+        private readonly SdlDotNet.Audio.Sound segment;
 
         ///// <summary>
         ///// SegmentState objects that represent the state
