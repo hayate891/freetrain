@@ -24,13 +24,13 @@ using FreeTrain.world;
 using FreeTrain.world.Structs;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Contributions.population
+namespace FreeTrain.Contributions.Population
 {
     /// <summary>
     /// Population depends on hour of the day
     /// </summary>
     [Serializable]
-    public class HourlyPopulation : Population
+    public class HourlyPopulation : BasePopulation
     {
         /// <summary>
         /// 

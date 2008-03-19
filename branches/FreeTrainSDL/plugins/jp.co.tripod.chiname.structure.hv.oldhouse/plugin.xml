@@ -2,13 +2,13 @@
 <!DOCTYPE plug-in [
 <!ENTITY housePopulation3 '
 	<population>
-		<class name="FreeTrain.Contributions.population.ResidentialPopulation"/>
+		<class name="FreeTrain.Contributions.Population.ResidentialPopulation"/>
 		<base>3</base>
 	</population>
 '>
 <!ENTITY housePopulation6 '
 	<population>
-		<class name="FreeTrain.Contributions.population.ResidentialPopulation"/>
+		<class name="FreeTrain.Contributions.Population.ResidentialPopulation"/>
 		<base>6</base>
 	</population>
 '>

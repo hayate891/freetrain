@@ -26,7 +26,7 @@ using System.Windows.Forms;
 using System.Xml;
 //using Microsoft.Win32;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.sound;
+using FreeTrain.Framework.Sound;
 using FreeTrain.Util;
 
 namespace FreeTrain.Framework

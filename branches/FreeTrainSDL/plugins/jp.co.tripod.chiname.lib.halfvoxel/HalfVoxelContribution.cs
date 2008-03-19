@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using System.Xml;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Population;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Framework.plugin.graphics;
@@ -608,7 +608,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public virtual Population population
+        public virtual BasePopulation population
         {
             get { return contrib.population; }
         }
@@ -650,7 +650,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public override Population population { get { return null; } }
+        public override BasePopulation population { get { return null; } }
     }
     #endregion
     #region SpriteSet

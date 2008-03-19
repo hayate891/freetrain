@@ -2,7 +2,7 @@
 <!DOCTYPE plug-in [
 <!ENTITY Population '
 		<population>
-			<class name="FreeTrain.Contributions.population.ResidentialPopulation"/>
+			<class name="FreeTrain.Contributions.Population.ResidentialPopulation"/>
 			<base>10</base>
 		</population>
 '>
@@ -23,7 +23,7 @@
 		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="0" />
 		<price>20</price>
 		<population>
-			<class name="FreeTrain.Contributions.population.AgriculturalPopulation"/>
+			<class name="FreeTrain.Contributions.Population.AgriculturalPopulation"/>
 			<base>5</base>
 		</population>
 	</contribution>
@@ -35,7 +35,7 @@
 		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="32" />
 		<price>20</price>
 		<population>
-			<class name="FreeTrain.Contributions.population.AgriculturalPopulation"/>
+			<class name="FreeTrain.Contributions.Population.AgriculturalPopulation"/>
 			<base>5</base>
 		</population>
 	</contribution>

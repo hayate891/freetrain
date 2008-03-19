@@ -26,7 +26,7 @@ using SdlDotNet.Audio;
 using SdlDotNet.Core;
 //using SDL.net;
 
-namespace FreeTrain.Framework.sound
+namespace FreeTrain.Framework.Sound
 {
     /// <summary>
     /// Coordinates sound effects.
@@ -101,10 +101,10 @@ namespace FreeTrain.Framework.sound
             //	sndPlaySound(fileName,0);
             try
             {
-                if (sounds.Contains(fileName)) { ((Sound)sounds[fileName]).Play(); }
+                if (sounds.Contains(fileName)) { ((SdlDotNet.Audio.Sound)sounds[fileName]).Play(); }
                 else
                 {
-                    Sound newSound = new Sound(fileName);
+                    SdlDotNet.Audio.Sound newSound = new SdlDotNet.Audio.Sound(fileName);
                     sounds.Add(fileName, newSound);
                     newSound.Play();
                 }
@@ -127,10 +127,10 @@ namespace FreeTrain.Framework.sound
             //SDL.net.Audio.play(fileName);
             try
             {
-                if (sounds.Contains(fileName)) { ((Sound)sounds[fileName]).Play(); }
+                if (sounds.Contains(fileName)) { ((SdlDotNet.Audio.Sound)sounds[fileName]).Play(); }
                 else
                 {
-                    Sound newSound = new Sound(fileName);
+                    SdlDotNet.Audio.Sound newSound = new SdlDotNet.Audio.Sound(fileName);
                     sounds.Add(fileName, newSound);
                     newSound.Play();
                 }
@@ -148,7 +148,7 @@ namespace FreeTrain.Framework.sound
         }*/
 
         //internal void play(Segment segment, int ms)
-        internal void play(Sound segment, int ms)
+        internal void play(SdlDotNet.Audio.Sound segment, int ms)
         {
             try
             {

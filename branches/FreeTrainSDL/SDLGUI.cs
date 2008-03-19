@@ -28,7 +28,7 @@ using System.IO;
 using Tao.Sdl;
 using SDL.net;
 
-namespace FreeTrainSDL
+namespace FreeTrain
 {
     public class SDLGUI
     {

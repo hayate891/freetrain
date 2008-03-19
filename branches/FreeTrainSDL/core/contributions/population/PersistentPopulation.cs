@@ -22,7 +22,7 @@ using System;
 using System.Runtime.Serialization;
 using FreeTrain.world;
 
-namespace FreeTrain.Contributions.population
+namespace FreeTrain.Contributions.Population
 {
     /// <summary>
     /// Population implementation that wraps another Population and
@@ -32,9 +32,9 @@ namespace FreeTrain.Contributions.population
     /// to the existing PersistentPopulation object.
     /// </summary>
     [Serializable]
-    public class PersistentPopulation : Population, ISerializable
+    public class PersistentPopulation : BasePopulation, ISerializable
     {
-        private readonly Population core;
+        private readonly BasePopulation core;
 
         /// <summary>
         /// Object used to restore the reference to this Population object.
@@ -50,7 +50,7 @@ namespace FreeTrain.Contributions.population
         /// This object needs to be serializable, and will be used to
         /// restore reference correctly.
         /// </param>
-        public PersistentPopulation(Population _core, IObjectReference _ref)
+        public PersistentPopulation(BasePopulation _core, IObjectReference _ref)
         {
             this.core = _core;
             this.resolver = _ref;
@@ -95,7 +95,7 @@ namespace FreeTrain.Contributions.population
         [Serializable]
         internal class SerializationHelper : IObjectReference
         {
-            private Population reference = null;
+            private BasePopulation reference = null;
             /// <summary>
             /// 
             /// </summary>

@@ -29,7 +29,7 @@ using FreeTrain.Views.Map;
 using FreeTrain.world;
 using FreeTrain.world.Rail;
 using FreeTrain.Framework;
-using FreeTrain.Framework.sound;
+using FreeTrain.Framework.Sound;
 using FreeTrain.Util.Controls;
 using FreeTrain.Util.Command;
 using SDL.net;

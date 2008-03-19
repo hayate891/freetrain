@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using FreeTrain.Framework;
-using FreeTrain.Framework.sound;
+using FreeTrain.Framework.Sound;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Framework.graphics;
 using SDL.net;

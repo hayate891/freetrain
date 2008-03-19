@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FreeTrain</RootNamespace>
     <AssemblyName>FreeTrainSDL</AssemblyName>
-    <StartupObject>FreeTrainSDL.FreeTrainSDL</StartupObject>
+    <StartupObject>FreeTrain.FreeTrainSDL</StartupObject>
     <PublishUrl>http://localhost/FreeTrainSDL/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>

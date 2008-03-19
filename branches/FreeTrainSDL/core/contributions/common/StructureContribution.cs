@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
 using FreeTrain.Util;
-using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Population;
 using FreeTrain.Controllers;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Framework.graphics;
@@ -115,7 +115,7 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        public virtual Population population { get { return core.population; } }
+        public virtual BasePopulation population { get { return core.population; } }
 
         /// <summary>
         /// True if the computer (the development algorithm) is not allowed to
@@ -187,12 +187,12 @@ namespace FreeTrain.Contributions.Common
 
                 XmlElement pop = (XmlElement)e.SelectSingleNode("population");
                 if (pop != null)
-                    _population = new PersistentPopulation(Population.load(pop),
+                    _population = new PersistentPopulation(BasePopulation.load(pop),
                         new PopulationReferenceImpl(ownerId));
             }
 
 
-            private readonly Population _population;
+            private readonly BasePopulation _population;
             private readonly bool _computerCannotBuild;
             private readonly bool _playerCannotBuild;
             private readonly string _name;
@@ -206,7 +206,7 @@ namespace FreeTrain.Contributions.Common
             /// <summary>
             /// 
             /// </summary>
-            public Population population { get { return _population; } }
+            public BasePopulation population { get { return _population; } }
             /// <summary>
             /// 
             /// </summary>

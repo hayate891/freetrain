@@ -25,7 +25,7 @@ using FreeTrain.Framework.plugin;
 using FreeTrain.world;
 using FreeTrain.world.Structs;
 
-namespace FreeTrain.Contributions.population
+namespace FreeTrain.Contributions.Population
 {
     /// <summary>
     /// Computes the population from the base population.
@@ -43,7 +43,7 @@ namespace FreeTrain.Contributions.population
     /// population object and then asked to restore the reference.
     /// </summary>
     [Serializable]
-    public abstract class Population
+    public abstract class BasePopulation
     {
         /// <summary>
         /// Number of population that is counted toward the total population of the world.
@@ -58,9 +58,9 @@ namespace FreeTrain.Contributions.population
         /// <summary>
         /// Loads a population from the plug-in manifest file.
         /// </summary>
-        public static Population load(XmlElement e)
+        public static BasePopulation load(XmlElement e)
         {
-            return (Population)PluginUtil.loadObjectFromManifest(e);
+            return (BasePopulation)PluginUtil.loadObjectFromManifest(e);
         }
     }
 }

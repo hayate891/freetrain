@@ -25,7 +25,7 @@ using FreeTrain.Contributions.Common;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Controllers;
-using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Population;
 
 namespace FreeTrain.Contributions.Rail
 {
@@ -58,7 +58,7 @@ namespace FreeTrain.Contributions.Rail
         /// <summary>
         /// 
         /// </summary>
-        public virtual Population population { get { return null; } }
+        public virtual BasePopulation population { get { return null; } }
         /// <summary>
         /// 
         /// </summary>

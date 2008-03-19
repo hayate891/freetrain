@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using FreeTrain.Framework.graphics;
 using FreeTrain.Controllers;
-using FreeTrain.Contributions.population;
+using FreeTrain.Contributions.Population;
 
 namespace FreeTrain.Contributions.Common
 {
@@ -35,7 +35,7 @@ namespace FreeTrain.Contributions.Common
         /// <summary> 
         /// Population of this structure, or null if this structure is not populated. 
         /// </summary>
-        Population population { get; }
+        BasePopulation population { get; }
 
         /// <summary>
         /// True if the computer (the development algorithm) is not allowed to
