@@ -147,8 +147,8 @@ namespace FreeTrain.Controllers.Rail
             this.message.TabIndex = 1;
             this.message.Text = "Click on two points on the map to place tracks";
             this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.message.MouseDown += new MouseEventHandler(this.AbstractControllerForm_MouseDown);
-            this.message.MouseMove += new MouseEventHandler(this.AbstractControllerForm_MouseMove);
+            //this.message.MouseDown += new MouseEventHandler(this.AbstractControllerForm_MouseDown);
+            //this.message.MouseMove += new MouseEventHandler(this.AbstractControllerForm_MouseMove);
             // 
             // buttonPlace
             // 
@@ -191,8 +191,8 @@ namespace FreeTrain.Controllers.Rail
             this.costBox.Name = "costBox";
             this.costBox.Size = new System.Drawing.Size(105, 25);
             this.costBox.TabIndex = 4;
-            this.costBox.MouseDown += new MouseEventHandler(this.AbstractControllerForm_MouseDown);
-            this.costBox.MouseMove += new MouseEventHandler(this.AbstractControllerForm_MouseMove);
+            //this.costBox.MouseDown += new MouseEventHandler(this.AbstractControllerForm_MouseDown);
+            //this.costBox.MouseMove += new MouseEventHandler(this.AbstractControllerForm_MouseMove);
 
             // 
             // RailRoadController

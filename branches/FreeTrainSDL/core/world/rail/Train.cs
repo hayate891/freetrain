@@ -384,7 +384,7 @@ namespace FreeTrain.world.Rail
             if (((moveCount++) & 15) == 0)
             {
                 // TODO: exact amount is still under debate
-                AccountManager.theInstance.spend(length * 20 + (passenger / 20), AccountGenre.RAIL_SERVICE);
+                AccountManager.theInstance.spend(length * 20 + (passenger / 20), AccountGenre.RailService);
             }
 
             playSound(thudSound);
@@ -480,7 +480,7 @@ namespace FreeTrain.world.Rail
                 // record the sales
                 AccountManager.theInstance.earn(
                     r * type.fare * dist / 5000,
-                    AccountGenre.RAIL_SERVICE);
+                    AccountGenre.RailService);
 
                 passengerSourceState = null;
             }

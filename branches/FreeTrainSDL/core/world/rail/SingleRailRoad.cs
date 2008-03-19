@@ -279,7 +279,7 @@ namespace FreeTrain.world.Rail
                 here = here.toward(there);
             }
 
-            Accounting.AccountGenre.RAIL_SERVICE.spend(cost);	// charge the cost
+            Accounting.AccountGenre.RailService.Spend(cost);	// charge the cost
             return true;
         }
 
@@ -324,7 +324,7 @@ namespace FreeTrain.world.Rail
             Direction d = here.getDirectionTo(there);
 
             // charge the cost first. 
-            Accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfRemoving(here, there));
+            Accounting.AccountGenre.RailService.Spend(calcCostOfRemoving(here, there));
 
             while (true)
             {

@@ -466,7 +466,7 @@ namespace FreeTrain.world.Accounting
             private readonly AccountSummaryWindow parent;
 
             /// <summary> History object that whose value we are displaying. </summary>
-            private TransactionHistory history { get { return genre.history; } }
+            private TransactionHistory history { get { return genre.History; } }
 
             internal GenreListItem(AccountSummaryWindow _parent, AccountGenre genre)
             {
@@ -539,9 +539,9 @@ namespace FreeTrain.world.Accounting
                         // recover from missing plug-in error by returning a default list.
                         Debug.WriteLine(e.StackTrace);
                         return new AccountGenre[] {
-							AccountGenre.RAIL_SERVICE,
-							AccountGenre.ROAD_SERVICE,
-							AccountGenre.SUBSIDIARIES
+							AccountGenre.RailService,
+							AccountGenre.RoadService,
+							AccountGenre.Subsidiaries
 						};
                     }
                 }

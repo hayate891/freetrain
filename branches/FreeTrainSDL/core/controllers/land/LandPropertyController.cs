@@ -259,7 +259,7 @@ namespace FreeTrain.Controllers.Land
                     if (v != null && !v.entity.isOwned && v.entity.isSilentlyReclaimable)
                     {
                         // remove the old structure if possible
-                        AccountGenre.SUBSIDIARIES.spend(v.entity.entityValue);
+                        AccountGenre.Subsidiaries.Spend(v.entity.entityValue);
                         v.entity.remove();
                     }
                     v = World.world[x, y, z];
@@ -267,7 +267,7 @@ namespace FreeTrain.Controllers.Land
                     if (v == null)
                     {
                         // buy it
-                        AccountGenre.SUBSIDIARIES.spend(World.world.landValue[new Location(x, y, z)]);
+                        AccountGenre.Subsidiaries.Spend(World.world.landValue[new Location(x, y, z)]);
                         new LandPropertyVoxel(new Location(x, y, z));
                     }
                 }
@@ -321,7 +321,7 @@ namespace FreeTrain.Controllers.Land
                     LandPropertyVoxel v = World.world[x, y, z] as LandPropertyVoxel;
                     if (v != null)
                     {
-                        AccountGenre.SUBSIDIARIES.earn(v.landPrice);
+                        AccountGenre.Subsidiaries.Earn(v.landPrice);
                         v.remove();
                     }
                 }

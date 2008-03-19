@@ -204,7 +204,7 @@ namespace FreeTrain.world.Rail
         private void onDayClock()
         {
             // called once a day. charge the operation cost
-            AccountManager.theInstance.spend(type.operationCost, AccountGenre.RAIL_SERVICE);
+            AccountManager.theInstance.spend(type.operationCost, AccountGenre.RailService);
         }
 
 
@@ -420,7 +420,7 @@ namespace FreeTrain.world.Rail
         public void clockHandlerDay()
         {
             // called once a day. charge the operation cost
-            AccountManager.theInstance.spend(type.operationCost, AccountGenre.RAIL_SERVICE);
+            AccountManager.theInstance.spend(type.operationCost, AccountGenre.RailService);
             import.DailyReset();
             export.DailyReset();
             trains.DailyReset();

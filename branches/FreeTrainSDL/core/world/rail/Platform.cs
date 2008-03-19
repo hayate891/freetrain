@@ -197,7 +197,7 @@ namespace FreeTrain.world.Rail
         public void onClockPerDay()
         {
             // charge the cost
-            AccountManager.theInstance.spend(18 * length, AccountGenre.RAIL_SERVICE);
+            AccountManager.theInstance.spend(18 * length, AccountGenre.RailService);
         }
 
 

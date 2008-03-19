@@ -207,7 +207,7 @@ namespace FreeTrain.world.Rail
             Debug.Assert(canCreateSlope(_base, dir));
 
             // charge the cost before we alter something
-            Accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfNewSlope(_base, dir));
+            Accounting.AccountGenre.RailService.Spend(calcCostOfNewSlope(_base, dir));
 
             SlopeEntity entity = new SlopeEntity(_base, dir);
 
@@ -416,7 +416,7 @@ namespace FreeTrain.world.Rail
             Debug.Assert(canRemoveSlope(loc, dir));
 
             // charge the cost before we alter something
-            Accounting.AccountGenre.RAIL_SERVICE.spend(calcCostOfTearDownSlope(loc, dir));
+            Accounting.AccountGenre.RailService.Spend(calcCostOfTearDownSlope(loc, dir));
 
             for (int i = 0; i < 4; i++)
             {
