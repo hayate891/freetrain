@@ -117,7 +117,7 @@ namespace FreeTrain.world.Accounting
         public void spend(long delta, AccountGenre genre)
         {
             transact(delta, genre);
-            genre.history.spend(delta);
+            genre.History.spend(delta);
             if (genre.onUpdate != null) genre.onUpdate();
             if (onAccountChange != null) onAccountChange();
         }
@@ -129,7 +129,7 @@ namespace FreeTrain.world.Accounting
         public void earn(long delta, AccountGenre genre)
         {
             transact(-delta, genre);
-            genre.history.earn(delta);
+            genre.History.earn(delta);
             if (genre.onUpdate != null) genre.onUpdate();
             if (onAccountChange != null) onAccountChange();
         }

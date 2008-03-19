@@ -115,7 +115,7 @@ namespace FreeTrain.world.Subsidiaries
             _isOwned = false;
             SubsidiaryMarket.SELL.remove(this);
 
-            AccountGenre.SUBSIDIARIES.earn(currentMarketPrice);
+            AccountGenre.Subsidiaries.Earn(currentMarketPrice);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace FreeTrain.world.Subsidiaries
             SubsidiaryMarket.BUY.remove(this);
             SubsidiaryMarket.SELL.add(this);
 
-            AccountGenre.SUBSIDIARIES.spend(currentMarketPrice);
+            AccountGenre.Subsidiaries.Spend(currentMarketPrice);
         }
 
         /// <summary>

@@ -621,7 +621,7 @@ namespace FreeTrain.world.Rail
             FreeTrain.Framework.sound.SoundEffectManager
                 .PlaySynchronousSound(ResourceUtil.findSystemResource("vehiclePurchase.wav"));
 
-            AccountManager.theInstance.spend(getTotalPrice(), AccountGenre.RAIL_SERVICE);
+            AccountManager.theInstance.spend(getTotalPrice(), AccountGenre.RailService);
 
             // set count to 0 to avoid accidental purchase
             count.Value = 0;

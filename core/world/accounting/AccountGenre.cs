@@ -54,7 +54,7 @@ namespace FreeTrain.world.Accounting
         /// <summary>
         /// Get the transaction history of this genre.
         /// </summary>
-        public TransactionHistory history
+        public TransactionHistory History
         {
             get
             {
@@ -78,7 +78,7 @@ namespace FreeTrain.world.Accounting
         /// Short-cut to the <code>AccountManager.spend</code> method.
         /// </summary>
         /// <param name="delta"></param>
-        public void spend(long delta)
+        public void Spend(long delta)
         {
             AccountManager.theInstance.spend(delta, this);
         }
@@ -87,7 +87,7 @@ namespace FreeTrain.world.Accounting
         /// Short-cut to the <code>AccountManager.earn</code> method.
         /// </summary>
         /// <param name="delta"></param>
-        public void earn(long delta)
+        public void Earn(long delta)
         {
             AccountManager.theInstance.earn(delta, this);
         }
@@ -104,7 +104,7 @@ namespace FreeTrain.world.Accounting
         /// <summary>
         /// 
         /// </summary>
-        public static AccountGenre RAIL_SERVICE
+        public static AccountGenre RailService
         {
             get
             {
@@ -116,7 +116,7 @@ namespace FreeTrain.world.Accounting
         /// 
         /// 
         /// </summary>
-        public static AccountGenre ROAD_SERVICE
+        public static AccountGenre RoadService
         {
             get
             {
@@ -127,7 +127,7 @@ namespace FreeTrain.world.Accounting
         /// <summary>
         /// 
         /// </summary>
-        public static AccountGenre SUBSIDIARIES
+        public static AccountGenre Subsidiaries
         {
             get
             {
@@ -138,7 +138,7 @@ namespace FreeTrain.world.Accounting
         /// <summary>
         /// 
         /// </summary>
-        public static AccountGenre OTHERS
+        public static AccountGenre Others
         {
             get
             {

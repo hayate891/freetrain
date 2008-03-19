@@ -157,7 +157,7 @@ namespace FreeTrainSDL
         private void MouseButtonDown(object sender, MouseButtonEventArgs e)
         {
             lastMouseState = e.ButtonPressed;
-            if (e.Button == MouseButton.PrimaryButton && !dragMode)
+            if (e.Button == MouseButton.SecondaryButton && !dragMode)
             {
                 dragMode = true;
                 dragStartMousePosition = new Point(e.X, e.Y);
@@ -185,7 +185,7 @@ namespace FreeTrainSDL
                         Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
                         Location xyz = qView.fromABToXYZ(ab, controller);
 
-                        if (e.Button == MouseButton.SecondaryButton) controller.onClick(null, xyz, ab);
+                        if (e.Button == MouseButton.PrimaryButton) controller.onClick(null, xyz, ab);
                     }
                 }
             }
