@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Diagnostics;
 using SDL.net;
 using FreeTrain.world.Rail;
-using FreeTrain.world.road;
+using FreeTrain.world.Road;
 
 namespace FreeTrain.world
 {
@@ -44,7 +44,7 @@ namespace FreeTrain.world
 
         private RailRoad _railRoad;
 
-        private Road _road;
+        private BaseRoad _road;
 
         private IAccessory _accessory;
         /// <summary>
@@ -130,7 +130,7 @@ namespace FreeTrain.world
         /// <summary>
         /// Road that occupies this voxel, or null otherwise.
         /// </summary>
-        public Road road
+        public BaseRoad road
         {
             get
             {

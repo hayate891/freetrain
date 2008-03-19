@@ -21,7 +21,7 @@
 using System;
 using System.Diagnostics;
 using FreeTrain.world;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 
 
 namespace FreeTrain.Views

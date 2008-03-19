@@ -28,7 +28,7 @@ using System.Xml;
 using FreeTrain.Util;
 using FreeTrain.Contributions.Train;
 using FreeTrain.Contributions.Land;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Framework.plugin
 {

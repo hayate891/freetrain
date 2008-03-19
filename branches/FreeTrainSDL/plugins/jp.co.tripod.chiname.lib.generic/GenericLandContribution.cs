@@ -24,7 +24,7 @@ using System.Diagnostics;
 using System.Xml;
 using System.Collections;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Controllers;
 using FreeTrain.Controllers.Structs;

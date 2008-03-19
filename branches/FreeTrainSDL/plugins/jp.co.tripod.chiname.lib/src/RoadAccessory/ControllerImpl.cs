@@ -6,7 +6,7 @@ using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using FreeTrain.Controllers;
 
-namespace FreeTrain.world.road.Accessory
+namespace FreeTrain.world.Road.Accessory
 {
 	/// <summary>
 	/// ModalController implementation for road accessory contribution
@@ -123,7 +123,7 @@ namespace FreeTrain.world.road.Accessory
         public bool isSelectable(Location loc) 
 		{
 			// if there's any rail roads, fine
-			if( Road.get(loc)!=null )	return true;
+			if( BaseRoad.get(loc)!=null )	return true;
 
 			// or if we hit the ground
 			if( World.world.getGroundLevel(loc)>=loc.z )	return true;

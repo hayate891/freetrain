@@ -21,7 +21,7 @@
 using System;
 using System.Runtime.Serialization;
 using System.Xml;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.world;
 using FreeTrain.world.Structs;
 

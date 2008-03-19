@@ -25,7 +25,7 @@ using System.Xml;
 using FreeTrain.world;
 using SDL.net;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Draw an image in the picture as-is.

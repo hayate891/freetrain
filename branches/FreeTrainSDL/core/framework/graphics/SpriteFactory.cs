@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Xml;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Create a sprite from a picture.

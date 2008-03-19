@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Contributions.Others;
 
-namespace FreeTrain.world.road.DummyCar
+namespace FreeTrain.world.Road.DummyCar
 {
     /// <summary>
     /// Adds "automobile" menu to the main window

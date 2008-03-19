@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Contributions.Others;
 
-namespace FreeTrain.world.road.Accessory
+namespace FreeTrain.world.Road.Accessory
 {
     /// <summary>
     /// Adds "accessory" menu to the main window

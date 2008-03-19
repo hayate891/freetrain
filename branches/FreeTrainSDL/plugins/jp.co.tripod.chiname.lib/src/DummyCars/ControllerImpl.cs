@@ -27,7 +27,7 @@ using FreeTrain.Views.Map;
 using FreeTrain.Controllers;
 
 
-namespace FreeTrain.world.road.DummyCar
+namespace FreeTrain.world.Road.DummyCar
 {
     /// <summary>
     /// ModalController implementation for DummyCar contribution
@@ -138,7 +138,7 @@ namespace FreeTrain.world.road.DummyCar
         public bool isSelectable(Location loc)
         {
             // if there's any rail roads, fine
-            if (Road.get(loc) != null) return true;
+            if (BaseRoad.get(loc) != null) return true;
 
             // or if we hit the ground
             if (World.world.getGroundLevel(loc) >= loc.z) return true;

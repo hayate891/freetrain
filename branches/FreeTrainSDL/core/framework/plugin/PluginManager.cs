@@ -32,7 +32,7 @@ using FreeTrain.Contributions.Land;
 using FreeTrain.Contributions.Train;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.Structs;
-using FreeTrain.Contributions.road;
+using FreeTrain.Contributions.Road;
 
 namespace FreeTrain.Framework.plugin
 {

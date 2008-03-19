@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Xml;
 using FreeTrain.Framework;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.world;
 using SDL.net;
 

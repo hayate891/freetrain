@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Views;
 using FreeTrain.Controllers;
 using FreeTrain.world;

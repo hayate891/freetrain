@@ -26,7 +26,7 @@ using System.Xml;
 using FreeTrain.Util;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world;
 using FreeTrain.world.Structs;

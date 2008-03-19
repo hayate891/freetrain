@@ -25,7 +25,7 @@ using System.Xml;
 using SDL.net;
 using FreeTrain.Controllers;
 using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Views;
 using FreeTrain.world;
 using FreeTrain.world.Land;

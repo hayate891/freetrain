@@ -31,12 +31,12 @@ using FreeTrain.Views.Map;
 using FreeTrain.world;
 using FreeTrain.world.Terrain;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.Util;
 using SDL.net;
 
-namespace FreeTrain.world.road.DummyCar
+namespace FreeTrain.world.Road.DummyCar
 {
     /// <summary>
     /// Controller that allows the user to

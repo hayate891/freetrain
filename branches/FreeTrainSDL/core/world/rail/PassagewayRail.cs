@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.world.Rail
 {

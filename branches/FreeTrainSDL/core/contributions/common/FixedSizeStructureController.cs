@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Views;
 using FreeTrain.world;
 using FreeTrain.world.Structs;

@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 using SDL.net;
 

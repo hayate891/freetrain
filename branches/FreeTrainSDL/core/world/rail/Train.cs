@@ -26,7 +26,7 @@ using SDL.net;
 using FreeTrain.Contributions.Train;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Sound;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world.Accounting;
 using System.Runtime.Serialization;

@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using System.Reflection;
 using System.Xml;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Framework.plugin
 {

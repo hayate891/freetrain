@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using SDL.net;
 using FreeTrain.Framework;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 
 namespace FreeTrain.world.Rail

@@ -30,7 +30,7 @@ using FreeTrain.Contributions.Sound;
 using FreeTrain.Contributions.Train;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.world;
 using FreeTrain.world.Rail;
 using FreeTrain.Views;

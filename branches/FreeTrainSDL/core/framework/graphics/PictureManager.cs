@@ -23,7 +23,7 @@ using System.Collections;
 using System.Diagnostics;
 using FreeTrain.world;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Repository of pictures.

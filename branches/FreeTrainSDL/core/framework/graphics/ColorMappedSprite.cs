@@ -25,7 +25,7 @@ using SDL.net;
 using FreeTrain.world;
 using FreeTrain.Framework.plugin;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Draw an image in the picture with color-mapping.

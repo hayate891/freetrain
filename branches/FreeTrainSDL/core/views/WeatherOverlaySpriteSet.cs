@@ -20,7 +20,7 @@
 
 using System;
 using System.Drawing;
-using FreeTrain.Framework.graphics;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Views
 {

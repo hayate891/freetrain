@@ -19,7 +19,7 @@
 #endregion LICENSE
 
 using System;
-using FreeTrain.world.road;
+using FreeTrain.world.Road;
 
 namespace FreeTrain.world.Development
 {
@@ -195,7 +195,7 @@ namespace FreeTrain.world.Development
             int h, v;
             World.world.toHV(loc.x, loc.y, out h, out v);
 
-            Road roadFound = null;
+            BaseRoad roadFound = null;
             bool hasMountain = false;
 
             // FIXME: this code shouldn't have the knowledge of any particular voxel type.

@@ -25,7 +25,7 @@ using SDL.net;
 using FreeTrain.Framework.plugin;
 using FreeTrain.world;
 
-namespace FreeTrain.Framework.graphics
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
     /// Draw an image in the picture with transforming colors by keying a hue.
