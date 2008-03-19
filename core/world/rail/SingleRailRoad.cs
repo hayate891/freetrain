@@ -22,7 +22,7 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// 
@@ -91,7 +91,7 @@ namespace FreeTrain.world.Rail
                 // if the line is already well connected, make it a junction
                 TrafficVoxel v = voxel;
                 v.railRoad = new JunctionRailRoad(v, RailPattern.getJunction(d1, d2, newDir));
-                World.world.onVoxelUpdated(voxel);
+                WorldDefinition.world.onVoxelUpdated(voxel);
                 return true;
             }
             else
@@ -101,13 +101,13 @@ namespace FreeTrain.world.Rail
                 if (Direction.angle(d1, newDir) >= 3)
                 {
                     pattern = RailPattern.get(d1, newDir);
-                    World.world.onVoxelUpdated(voxel);
+                    WorldDefinition.world.onVoxelUpdated(voxel);
                     return true;
                 }
                 if (Direction.angle(d2, newDir) >= 3)
                 {
                     pattern = RailPattern.get(d2, newDir);
-                    World.world.onVoxelUpdated(voxel);
+                    WorldDefinition.world.onVoxelUpdated(voxel);
                     return true;
                 }
             }
@@ -143,8 +143,8 @@ namespace FreeTrain.world.Rail
         /// <param name="loc"></param>
         private static int calcRailRoadCost(Location loc, Direction d1, Direction d2)
         {
-            int waterLevel = World.world.waterLevel;
-            int glevel = World.world.getGroundLevel(loc);
+            int waterLevel = WorldDefinition.world.waterLevel;
+            int glevel = WorldDefinition.world.getGroundLevel(loc);
             //			int multiplier = Math.Max( loc.z-World.world.waterLevel, 1 );
             int multiplier = Math.Abs(loc.z - glevel) + 1;
 
@@ -152,7 +152,7 @@ namespace FreeTrain.world.Rail
             if (glevel <= loc.z && loc.z <= waterLevel && glevel < waterLevel)
                 return 0;	// underwater or on water.
 
-            Voxel v = World.world[loc];
+            Voxel v = WorldDefinition.world[loc];
             if (v == null) return RAILROAD_CONSTRUCTION_UNIT_COST * multiplier;
 
             // TODO: incorrect compuattion
@@ -236,7 +236,7 @@ namespace FreeTrain.world.Rail
         public static bool build(Location here, Location there)
         {
             // ensure that nothing is on our way between "from" and "to"
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
             int cost;
 
             if (comupteRoute(here, there, out cost) == null)
@@ -249,7 +249,7 @@ namespace FreeTrain.world.Rail
                 TrafficVoxel v = TrafficVoxel.getOrCreate(here);
                 if (v == null)
                 {
-                    Voxel vv = World.world[here];
+                    Voxel vv = WorldDefinition.world[here];
                     Debug.Assert(vv.entity.isSilentlyReclaimable);
                     vv.entity.remove();
                     v = TrafficVoxel.getOrCreate(here);
@@ -262,7 +262,7 @@ namespace FreeTrain.world.Rail
                 if (v.railRoad != null)
                 {
                     v.railRoad.attach(here == there ? d.opposite : d);
-                    World.world.onVoxelUpdated(here);
+                    WorldDefinition.world.onVoxelUpdated(here);
                 }
                 else
                 {
@@ -291,7 +291,7 @@ namespace FreeTrain.world.Rail
 
             if (here == there) return 0;
 
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
             Direction d = here.getDirectionTo(there);
             int cost = 0;
 
@@ -320,7 +320,7 @@ namespace FreeTrain.world.Rail
         /// <returns>false if the operation was unsuccessful</returns>
         public static void remove(Location here, Location there)
         {
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
             Direction d = here.getDirectionTo(there);
 
             // charge the cost first. 

@@ -21,7 +21,7 @@
 using System;
 using System.Xml;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
     /// Loads a Contribution from a designated class by passing the XmlElement
@@ -51,7 +51,7 @@ namespace FreeTrain.Framework.plugin
         /// <param name="owner"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public Contribution load(Plugin owner, XmlElement e)
+        public Contribution load(PluginDefinition owner, XmlElement e)
         {
             return (Contribution)Activator.CreateInstance(concreteType, new object[] { e });
         }

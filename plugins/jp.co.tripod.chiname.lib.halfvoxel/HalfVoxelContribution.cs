@@ -24,15 +24,15 @@ using System.Xml;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
-using FreeTrain.Framework.plugin.Graphics;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.Framework.Plugin.Graphics;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Structs;
 
-namespace FreeTrain.world.Structs.HalfVoxelStructure
+namespace FreeTrain.World.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// 
@@ -459,7 +459,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         public Structure create(Location baseLoc, Direction front, PlaceSide side)
         {
             ContributionReference reffer = new ContributionReference(this, currentColor, currentHighlight, front, side);
-            HalfDividedVoxel v = World.world[baseLoc] as HalfDividedVoxel;
+            HalfDividedVoxel v = WorldDefinition.world[baseLoc] as HalfDividedVoxel;
             if (v == null)
                 return new HVStructure(reffer, baseLoc);
             else
@@ -482,7 +482,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         [CLSCompliant(false)]
         public void destroy(Location baseLoc, Direction front, PlaceSide side)
         {
-            HalfDividedVoxel v = World.world[baseLoc] as HalfDividedVoxel;
+            HalfDividedVoxel v = WorldDefinition.world[baseLoc] as HalfDividedVoxel;
             if (v != null)
                 v.owner.remove(side);
         }
@@ -495,7 +495,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         [CLSCompliant(false)]
         public static bool canBeBuilt(Location baseLoc)
         {
-            Voxel v = World.world[baseLoc];
+            Voxel v = WorldDefinition.world[baseLoc];
             if (v != null)
             {
                 HalfDividedVoxel hv = v as HalfDividedVoxel;

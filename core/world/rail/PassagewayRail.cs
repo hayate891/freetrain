@@ -24,7 +24,7 @@ using System.Drawing;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Rail road with a raised passageway

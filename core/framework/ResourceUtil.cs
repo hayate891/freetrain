@@ -28,7 +28,7 @@ using SDL.net;
 using SdlDotNet.Audio;
 using FreeTrain.Util;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Framework
 {
@@ -171,7 +171,7 @@ namespace FreeTrain.Framework
         /// </summary>
         /// <param name="w"></param>
         /// <returns></returns>
-        public static Sprite getGroundChip(World w)
+        public static Sprite getGroundChip(WorldDefinition w)
         {
             if (w.clock.season != Season.Winter)
                 return groundChips[0];

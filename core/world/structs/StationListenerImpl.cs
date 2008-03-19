@@ -22,10 +22,10 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 using FreeTrain.Contributions.Population;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world.Rail;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World.Rail;
 
-namespace FreeTrain.world.Structs
+namespace FreeTrain.World.Structs
 {
     /// <summary>
     /// StationListener implementation that uses
@@ -80,8 +80,8 @@ namespace FreeTrain.world.Structs
         /// <returns></returns>
         public int getPopulation(Station s)
         {
-            int v = World.world.landValue[location];
-            int p = population.calcPopulation(World.world.clock);
+            int v = WorldDefinition.world.landValue[location];
+            int p = population.calcPopulation(WorldDefinition.world.clock);
             p /= stations.Count;
             return Math.Min(p, v + 10);
         }
@@ -132,7 +132,7 @@ namespace FreeTrain.world.Structs
         /// </summary>
         private void attachToStation()
         {
-            foreach (Station s in World.world.stations)
+            foreach (Station s in WorldDefinition.world.stations)
             {
                 if (!s.withinReach(location))
                     continue;

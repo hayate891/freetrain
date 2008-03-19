@@ -24,11 +24,11 @@ using System.Drawing;
 using System.Xml;
 using System.Runtime.Serialization;
 using SDL.net;
-using FreeTrain.world;
-using FreeTrain.Framework.plugin;
+using FreeTrain.World;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world.Structs.HalfVoxelStructure
+namespace FreeTrain.World.Structs.HalfVoxelStructure
 {
 
     /// <summary>

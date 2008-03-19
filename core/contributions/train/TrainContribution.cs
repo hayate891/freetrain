@@ -21,10 +21,10 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 
 namespace FreeTrain.Contributions.Train
 {

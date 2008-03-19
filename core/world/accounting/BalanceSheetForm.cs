@@ -27,9 +27,9 @@ using System.Windows.Forms;
 //using MsHtmlHost;
 using FreeTrain.Controls;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.world.Accounting
+namespace FreeTrain.World.Accounting
 {
     /// <summary>
     /// Displays the balance sheet.

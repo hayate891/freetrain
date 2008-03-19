@@ -23,7 +23,7 @@ using System.Runtime.Serialization;
 using System.Collections;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Sound;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 //using SDL.net;
 using SdlDotNet.Audio;
 

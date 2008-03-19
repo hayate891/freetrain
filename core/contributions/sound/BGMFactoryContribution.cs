@@ -21,7 +21,7 @@
 using System;
 using System.Net;
 using System.Xml;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Contributions.Sound
 {
@@ -67,7 +67,7 @@ namespace FreeTrain.Contributions.Sound
         /// <param name="owner"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public Contribution load(Plugin owner, XmlElement e)
+        public Contribution load(PluginDefinition owner, XmlElement e)
         {
             BGMFactoryContribution contrib =
                 (BGMFactoryContribution)PluginUtil.loadObjectFromManifest(e);

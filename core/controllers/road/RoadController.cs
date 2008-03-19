@@ -28,8 +28,8 @@ using FreeTrain.Contributions.Road;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Plugin;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Road;
+using FreeTrain.World;
+using FreeTrain.World.Road;
 using FreeTrain.Contributions.Common;
 
 namespace FreeTrain.Controllers.Road

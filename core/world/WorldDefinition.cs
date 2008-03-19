@@ -31,13 +31,13 @@ using FreeTrain.Contributions.Train;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Plugin;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 using FreeTrain.Views;
-using FreeTrain.world.Development;
+using FreeTrain.World.Development;
 using SDL.net;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// 世界の操作権限定義
@@ -65,12 +65,12 @@ namespace FreeTrain.world
     /// ゲームデータのルート
     /// </summary>
     [Serializable]
-    public sealed class World : IDeserializationCallback
+    public sealed class WorldDefinition : IDeserializationCallback
     {
         /// <summary>
         /// 現在ゲーム中の世界
         /// </summary>
-        public static World world;
+        public static WorldDefinition world;
         /// <summary>
         /// 
         /// </summary>
@@ -95,7 +95,7 @@ namespace FreeTrain.world
         /// <param name="sz">世界の大きさ (H,V,D)</param>
         /// <param name="tempolary"></param>
         /// <param name="waterLevel"></param>
-        private World(Distance sz, int waterLevel, bool tempolary)
+        private WorldDefinition(Distance sz, int waterLevel, bool tempolary)
         {
             this.name = "Terra Incognita";
             //! this.name = "ななしさん";
@@ -148,7 +148,7 @@ namespace FreeTrain.world
         /// </summary>
         /// <param name="sz"></param>
         /// <param name="waterLevel"></param>
-        public World(Distance sz, int waterLevel)
+        public WorldDefinition(Distance sz, int waterLevel)
             : this(sz, waterLevel, false)
         {
         }
@@ -158,14 +158,14 @@ namespace FreeTrain.world
         /// <param name="minsizePixel"></param>
         /// <param name="struct_size"></param>
         /// <returns></returns>
-        public static World CreatePreviewWorld(Size minsizePixel, Distance struct_size)
+        public static WorldDefinition CreatePreviewWorld(Size minsizePixel, Distance struct_size)
         {
             int v = struct_size.x + struct_size.y;
             int h = struct_size.z;
             int mx = (minsizePixel.Width + 33) >> 5;
             int my = (minsizePixel.Height + 9) >> 3;
             Distance sz = new Distance(Math.Max(mx, v / 2 + 2), Math.Max(my, v / 2 + h * 2 + 4), h + 2);
-            return new World(sz, 0, true);
+            return new WorldDefinition(sz, 0, true);
         }
 
         /// <summary>ゲームの名前</summary>
@@ -245,7 +245,7 @@ namespace FreeTrain.world
             // collapse z
             x += z; y -= z;
             // change the origin of x
-            x -= (World.world.size.y - 1) / 2;
+            x -= (WorldDefinition.world.size.y - 1) / 2;
 
             return new Point(16 * (x + y), 8 * (-x + y));
         }
@@ -393,7 +393,7 @@ namespace FreeTrain.world
         /// 
         /// </summary>
         /// <param name="w"></param>
-        public static void setWorld(World w)
+        public static void setWorld(WorldDefinition w)
         {
             world = w;
             if (onNewWorld != null)
@@ -845,7 +845,7 @@ namespace FreeTrain.world
         /// <param name="f"></param>
         /// <param name="stream"></param>
         /// <returns></returns>
-        public static World load(IFormatter f, Stream stream)
+        public static WorldDefinition load(IFormatter f, Stream stream)
         {
             using (new Util.LongTask())
             {
@@ -853,7 +853,7 @@ namespace FreeTrain.world
                 //				BinaryFormatter f = new BinaryFormatter();
                 f.Binder = new PluginSerializationBinder();
                 Core.bgmManager.currentBGM = ((BGMContribution[])f.Deserialize(stream))[0];
-                return (World)f.Deserialize(stream);
+                return (WorldDefinition)f.Deserialize(stream);
             }
         }
 

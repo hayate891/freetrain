@@ -25,7 +25,7 @@ using FreeTrain.Framework;
 using FreeTrain.Contributions.Others;
 using FreeTrain.Util.Command;
 
-namespace FreeTrain.Framework.plugin.Generic
+namespace FreeTrain.Framework.Plugin.Generic
 {
     /// <summary>
     /// Adds "signal" menu to the main window

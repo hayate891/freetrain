@@ -34,7 +34,7 @@ using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Contributions.Road;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
     /// 
@@ -48,14 +48,14 @@ namespace FreeTrain.Framework.plugin
         /// <param name="p_2nd"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        bool OnNameDuplicated(Plugin p_1st, Plugin p_2nd, Exception e);
+        bool OnNameDuplicated(PluginDefinition p_1st, PluginDefinition p_2nd, Exception e);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="p"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        bool OnPluginLoadError(Plugin p, Exception e);
+        bool OnPluginLoadError(PluginDefinition p, Exception e);
         /// <summary>
         /// 
         /// </summary>
@@ -92,7 +92,7 @@ namespace FreeTrain.Framework.plugin
         /// <param name="p_2nd"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public bool OnNameDuplicated(Plugin p_1st, Plugin p_2nd, Exception e)
+        public bool OnNameDuplicated(PluginDefinition p_1st, PluginDefinition p_2nd, Exception e)
         {
             return false;
         }
@@ -102,7 +102,7 @@ namespace FreeTrain.Framework.plugin
         /// <param name="p"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public bool OnPluginLoadError(Plugin p, Exception e)
+        public bool OnPluginLoadError(PluginDefinition p, Exception e)
         {
             return false;
         }
@@ -154,7 +154,7 @@ namespace FreeTrain.Framework.plugin
         /// <summary>
         /// All loaded plug-ins.
         /// </summary>
-        private Plugin[] plugins;
+        private PluginDefinition[] plugins;
 
         /// <summary>
         /// Plugins keyed by their names.
@@ -240,16 +240,16 @@ namespace FreeTrain.Framework.plugin
 
                 if (!File.Exists(Path.Combine(dir, "plugin.xml")))
                     continue;	// this directory doesn't have the plugin.xml file.
-                Plugin p = null;
+                PluginDefinition p = null;
                 try
                 {
-                    p = new Plugin(dir);
+                    p = new PluginDefinition(dir);
                     p.loadContributionFactories();
                 }
                 catch (Exception e)
                 {
                     errCount++;
-                    p = Plugin.loadFailSafe(dir);
+                    p = PluginDefinition.loadFailSafe(dir);
                     errorPlugins.Add(p, e);
                     errBreak = errorHandler.OnPluginLoadError(p, e);
                     if (errBreak)
@@ -264,8 +264,8 @@ namespace FreeTrain.Framework.plugin
                     Exception e = new Exception(string.Format(
                         "Plugin \"{0}\" is loaded from more than one place ({1} and {2})",
                         //! "プラグイン「{0}」は{1}と{2}の二箇所からロードされています",
-                        p.name, p.dirName, ((Plugin)pluginMap[p.name]).dirName));
-                    errBreak = errorHandler.OnNameDuplicated(pluginMap[p.name] as Plugin, p, e);
+                        p.name, p.dirName, ((PluginDefinition)pluginMap[p.name]).dirName));
+                    errBreak = errorHandler.OnNameDuplicated(pluginMap[p.name] as PluginDefinition, p, e);
                     errorPlugins.Add(p, e);
                     if (errBreak)
                         break;
@@ -279,19 +279,19 @@ namespace FreeTrain.Framework.plugin
                 Environment.Exit(-1);
 
             {// convert it to an array by sorting them in the order of dependency
-                this.plugins = new Plugin[pluginSet.Count];
+                this.plugins = new PluginDefinition[pluginSet.Count];
                 int ptr = 0;
-                Plugin p = null;
+                PluginDefinition p = null;
                 while (!pluginSet.isEmpty)
                 {
                     progressHandler("Sorting dependencies...", ++count / c_max);
                     //! progressHandler("依存関係を整理中",++count/c_max);
-                    p = (Plugin)pluginSet.getOne();
+                    p = (PluginDefinition)pluginSet.getOne();
                     try
                     {
                         while (true)
                         {
-                            Plugin[] deps = p.getDependencies();
+                            PluginDefinition[] deps = p.getDependencies();
                             int i;
                             for (i = 0; i < deps.Length; i++)
                                 if (pluginSet.contains(deps[i]))
@@ -319,7 +319,7 @@ namespace FreeTrain.Framework.plugin
                 Environment.Exit(-2);
 
             //	 load all the contributions			
-            foreach (Plugin p in plugins)
+            foreach (PluginDefinition p in plugins)
             {
                 progressHandler("Loading contributions...\n" + Path.GetFileName(p.dirName), ++count / c_max);
                 //! progressHandler("コントリビューションをロード中\n"+Path.GetFileName(p.dirName),++count/c_max);
@@ -355,7 +355,7 @@ namespace FreeTrain.Framework.plugin
                 {
                     errCount++;
                     errBreak = errorHandler.OnContributionInitError(contrib, e);
-                    Plugin p = contrib.parent;
+                    PluginDefinition p = contrib.parent;
                     if (!errorPlugins.ContainsKey(p))
                         errorPlugins.Add(p, e);
                     if (errBreak)
@@ -377,7 +377,7 @@ namespace FreeTrain.Framework.plugin
                         Exception e = new FormatException("ID:" + contrib.id + " is not unique");
                         //! Exception e = new FormatException("ID:"+contrib.id+"が一意ではありません");
                         errBreak = errorHandler.OnContribIDDuplicated(dic[contrib.id] as Contribution, contrib, e);
-                        Plugin p = contrib.parent;
+                        PluginDefinition p = contrib.parent;
                         if (!errorPlugins.ContainsKey(p))
                             errorPlugins.Add(p, e);
                         if (errBreak)
@@ -627,7 +627,7 @@ namespace FreeTrain.Framework.plugin
         public Array listContributions(Type contributionType)
         {
             ArrayList list = new ArrayList();
-            foreach (Plugin p in plugins)
+            foreach (PluginDefinition p in plugins)
             {
                 foreach (Contribution contrib in p.contributions)
                 {
@@ -648,7 +648,7 @@ namespace FreeTrain.Framework.plugin
             get
             {
                 ArrayList list = new ArrayList();
-                foreach (Plugin p in plugins)
+                foreach (PluginDefinition p in plugins)
                     foreach (Contribution contrib in p.contributions)
                         list.Add(contrib);
 
@@ -689,9 +689,9 @@ namespace FreeTrain.Framework.plugin
         /// <summary>
         /// Get the plug-in of the specified name, or null if not found.
         /// </summary>
-        public Plugin getPlugin(string name)
+        public PluginDefinition getPlugin(string name)
         {
-            return (Plugin)pluginMap[name];
+            return (PluginDefinition)pluginMap[name];
         }
     }
 

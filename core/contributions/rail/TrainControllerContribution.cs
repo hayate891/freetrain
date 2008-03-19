@@ -20,8 +20,8 @@
 
 using System;
 using System.Xml;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world.Rail;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World.Rail;
 
 namespace FreeTrain.Contributions.Rail
 {

@@ -26,9 +26,9 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Accounting;
-using FreeTrain.world.Land;
+using FreeTrain.World;
+using FreeTrain.World.Accounting;
+using FreeTrain.World.Land;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
@@ -255,19 +255,19 @@ namespace FreeTrain.Controllers.Land
             {
                 for (int y = loc1.y; y <= loc2.y; y++)
                 {
-                    Voxel v = World.world[x, y, z];
+                    Voxel v = WorldDefinition.world[x, y, z];
                     if (v != null && !v.entity.isOwned && v.entity.isSilentlyReclaimable)
                     {
                         // remove the old structure if possible
                         AccountGenre.Subsidiaries.Spend(v.entity.entityValue);
                         v.entity.remove();
                     }
-                    v = World.world[x, y, z];
+                    v = WorldDefinition.world[x, y, z];
 
                     if (v == null)
                     {
                         // buy it
-                        AccountGenre.Subsidiaries.Spend(World.world.landValue[new Location(x, y, z)]);
+                        AccountGenre.Subsidiaries.Spend(WorldDefinition.world.landValue[new Location(x, y, z)]);
                         new LandPropertyVoxel(new Location(x, y, z));
                     }
                 }
@@ -289,18 +289,18 @@ namespace FreeTrain.Controllers.Land
             {
                 for (int y = loc1.y; y <= loc2.y; y++)
                 {
-                    Voxel v = World.world[x, y, z];
+                    Voxel v = WorldDefinition.world[x, y, z];
                     if (v != null && !v.entity.isOwned && v.entity.isSilentlyReclaimable)
                     {
                         // cost for removing this structure
                         if (s.add(v.entity))
                             r += v.entity.entityValue;
                     }
-                    v = World.world[x, y, z];
+                    v = WorldDefinition.world[x, y, z];
 
                     if (v == null)
                         // cost for the land
-                        r += World.world.landValue[new Location(x, y, z)];
+                        r += WorldDefinition.world.landValue[new Location(x, y, z)];
                 }
             }
             return r;
@@ -318,7 +318,7 @@ namespace FreeTrain.Controllers.Land
             {
                 for (int y = loc1.y; y <= loc2.y; y++)
                 {
-                    LandPropertyVoxel v = World.world[x, y, z] as LandPropertyVoxel;
+                    LandPropertyVoxel v = WorldDefinition.world[x, y, z] as LandPropertyVoxel;
                     if (v != null)
                     {
                         AccountGenre.Subsidiaries.Earn(v.landPrice);
@@ -342,7 +342,7 @@ namespace FreeTrain.Controllers.Land
             {
                 for (int y = loc1.y; y <= loc2.y; y++)
                 {
-                    LandPropertyVoxel v = World.world[x, y, z] as LandPropertyVoxel;
+                    LandPropertyVoxel v = WorldDefinition.world[x, y, z] as LandPropertyVoxel;
                     if (v != null)
                         r += v.landPrice;
                 }

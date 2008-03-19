@@ -22,7 +22,7 @@
 using System;
 using System.Collections;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Group of trains and child train groups.

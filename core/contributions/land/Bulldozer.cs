@@ -25,13 +25,13 @@ using System.Xml;
 using SDL.net;
 using FreeTrain.Controllers;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework;
 using FreeTrain.Views;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
-using FreeTrain.world.Terrain;
-using FreeTrain.world.Land;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
+using FreeTrain.World.Terrain;
+using FreeTrain.World.Land;
 
 namespace FreeTrain.Contributions.Land
 {
@@ -55,7 +55,7 @@ namespace FreeTrain.Contributions.Land
         public override void create(int x1, int y1, int x2, int y2, int z, bool owned)
         {
             bulldoze(new Location(x1, y1, z), new Location(x2, y2, z));
-            World.world.onVoxelUpdated(new Cube(x1, y1, z, x2 - x1 + 1, y2 - y1 + 1, 1));
+            WorldDefinition.world.onVoxelUpdated(new Cube(x1, y1, z, x2 - x1 + 1, y2 - y1 + 1, 1));
         }
         /// <summary>
         /// 
@@ -71,14 +71,14 @@ namespace FreeTrain.Contributions.Land
                 {
                     // edited by 477 (04/02/14)
                     //if( World.world.isReusable(x,y,z) && World.world[x,y,z]!=null ) 
-                    Voxel v = World.world[x, y, z];
+                    Voxel v = WorldDefinition.world[x, y, z];
                     if (v != null)
                     {
                         if (v is MountainVoxel)
                         {
                             MountainVoxel mv = v as MountainVoxel;
                             if (mv.isFlattened)
-                                World.world.remove(x, y, z);
+                                WorldDefinition.world.remove(x, y, z);
                             else
                                 mv.removeTrees();
                         }
@@ -88,7 +88,7 @@ namespace FreeTrain.Contributions.Land
                         }
                         else
                         {
-                            World.world.remove(x, y, z);
+                            WorldDefinition.world.remove(x, y, z);
                         }
                     }
                 }

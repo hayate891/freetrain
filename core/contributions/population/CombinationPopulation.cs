@@ -20,7 +20,7 @@
 
 using System;
 using System.Xml;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Population
 {

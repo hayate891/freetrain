@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Slope rail road.
@@ -67,7 +67,7 @@ namespace FreeTrain.world.Rail
             foreach (Voxel v in cube.voxels)
             {
                 if (v.entity == this && !(v is BridgePierVoxel))
-                    World.world.remove(v);
+                    WorldDefinition.world.remove(v);
                 else
                 {
                     TrafficVoxel tv = v as TrafficVoxel;
@@ -117,14 +117,14 @@ namespace FreeTrain.world.Rail
         public override void invalidateVoxel()
         {
             // this voxel and the voxel below/above needs to be updated
-            World.world.onVoxelUpdated(voxel);
+            WorldDefinition.world.onVoxelUpdated(voxel);
 
             Location loc = location;
             if (pattern.level < 2)	// the voxel above
                 loc.z++;
             else
                 loc.z--;
-            World.world.onVoxelUpdated(loc);
+            WorldDefinition.world.onVoxelUpdated(loc);
         }
         /// <summary>
         /// 
@@ -213,7 +213,7 @@ namespace FreeTrain.world.Rail
 
             for (int i = 0; i < 4; i++)
             {
-                if (_base.z < World.world.getGroundLevel(_base))
+                if (_base.z < WorldDefinition.world.getGroundLevel(_base))
                 {
                     new SlopeRailRoad(entity, TrafficVoxel.getOrCreate(
                         _base.x, _base.y, _base.z + (i / 2)),
@@ -267,7 +267,7 @@ namespace FreeTrain.world.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = World.world.getGroundLevel(location);
+                int glevel = WorldDefinition.world.getGroundLevel(location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
             }
@@ -296,7 +296,7 @@ namespace FreeTrain.world.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = World.world.getGroundLevel(location);
+                int glevel = WorldDefinition.world.getGroundLevel(location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
                 sprite = s;
@@ -350,20 +350,20 @@ namespace FreeTrain.world.Rail
         {
             if (!dir.isSharp) return 0;
 
-            if (_base.z == World.world.size.z - 1)
+            if (_base.z == WorldDefinition.world.size.z - 1)
                 return 0;	// we can't go above the ceil
 
             // 8 voxels around (depth-4 height-2) must be completely available.
             // it's not even OK to have a TrafficVoxel.
             for (int i = 0; i < 4; i++)
             {
-                if (World.world[_base] != null) return 0;
-                if (World.world[_base.x, _base.y, _base.z + 1] != null) return 0;
+                if (WorldDefinition.world[_base] != null) return 0;
+                if (WorldDefinition.world[_base.x, _base.y, _base.z + 1] != null) return 0;
 
                 _base += dir;
             }
 
-            return SLOPE_CONSTRUCTION_UNIT_COST * Math.Max(1, _base.z - World.world.waterLevel);
+            return SLOPE_CONSTRUCTION_UNIT_COST * Math.Max(1, _base.z - WorldDefinition.world.waterLevel);
         }
         /// <summary>
         /// 
@@ -404,7 +404,7 @@ namespace FreeTrain.world.Rail
             loc += dir;
             if (Car.get(loc) != null) return 0;
 
-            return SLOPE_DESTRUCTION_UNIT_COST * Math.Max(1, loc.z - World.world.waterLevel);
+            return SLOPE_DESTRUCTION_UNIT_COST * Math.Max(1, loc.z - WorldDefinition.world.waterLevel);
         }
 
         /// <summary>
@@ -425,8 +425,8 @@ namespace FreeTrain.world.Rail
 
                 Location l = loc;
                 l.z += -(i / 2) + 1;
-                Debug.Assert(World.world[l] is EmptyVoxel);
-                World.world.remove(l);
+                Debug.Assert(WorldDefinition.world[l] is EmptyVoxel);
+                WorldDefinition.world.remove(l);
 
                 BridgePierVoxel.teardownBridgeSupport(loc, v);
 

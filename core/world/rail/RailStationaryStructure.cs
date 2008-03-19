@@ -21,10 +21,10 @@
 using System;
 using System.Drawing;
 using FreeTrain.Contributions.Rail;
-using FreeTrain.world.Structs;
-using FreeTrain.Framework.plugin;
+using FreeTrain.World.Structs;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// RailStationaryStructure の概要の説明です。
@@ -79,7 +79,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public static RailStationaryStructure get(Location loc)
         {
-            return World.world.getEntityAt(loc) as RailStationaryStructure;
+            return WorldDefinition.world.getEntityAt(loc) as RailStationaryStructure;
         }
         /// <summary>
         /// 

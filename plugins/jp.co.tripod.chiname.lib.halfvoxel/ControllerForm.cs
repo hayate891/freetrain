@@ -28,16 +28,16 @@ using FreeTrain.Controllers;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Terrain;
+using FreeTrain.World;
+using FreeTrain.World.Terrain;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 //using SDL.net;
 using SDL.net;
 
-namespace FreeTrain.world.Structs.HalfVoxelStructure
+namespace FreeTrain.World.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// Controller that allows the user to
@@ -71,7 +71,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         public ControllerForm()
         {
             InitializeComponent();
-            World.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
             rnd = new Random();
 
             callback = new createCallback(randomize);
@@ -106,7 +106,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            World.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);

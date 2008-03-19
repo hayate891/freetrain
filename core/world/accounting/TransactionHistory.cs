@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world.Accounting
+namespace FreeTrain.World.Accounting
 {
     /// <summary>
     /// 
@@ -54,7 +54,7 @@ namespace FreeTrain.world.Accounting
             private long _dayTotal;
             private long _monthTotal;
             private long _yearTotal;
-            private readonly Clock clock = World.world.clock;
+            private readonly Clock clock = WorldDefinition.world.clock;
 
             internal Recorder()
             {

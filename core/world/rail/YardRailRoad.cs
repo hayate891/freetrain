@@ -24,7 +24,7 @@ using System.Drawing;
 using SDL.net;
 using FreeTrain.Framework;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Rail road adjacent to a platform

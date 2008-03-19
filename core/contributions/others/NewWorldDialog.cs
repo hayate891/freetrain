@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Others
 {
@@ -223,11 +223,11 @@ namespace FreeTrain.Contributions.Others
 		/// <summary>
 		/// Creates a new empty world as specified by the user.
 		/// </summary>
-		public World createWorld() {
+		public WorldDefinition createWorld() {
 			int x = int.Parse(sizeX.Text);
 			int y = int.Parse(sizeY.Text);
 			int z = int.Parse(sizeZ.Text);
-			World w = new World( new Distance(x,y+z*2,z),  z/4 );
+			WorldDefinition w = new WorldDefinition( new Distance(x,y+z*2,z),  z/4 );
 			w.name = this.name.Text;
 			if(w.name==null || w.name.Length==0)
 				w.name = "Terra Incognita";

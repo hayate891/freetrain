@@ -22,8 +22,8 @@ using System;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Train
 {

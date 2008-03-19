@@ -26,10 +26,10 @@ using SDL.net;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views;
-using FreeTrain.world;
-using FreeTrain.world.Land;
+using FreeTrain.World;
+using FreeTrain.World.Land;
 
 namespace FreeTrain.Contributions.Land
 {

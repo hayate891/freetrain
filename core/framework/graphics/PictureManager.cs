@@ -21,7 +21,7 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Framework.Graphics
 {
@@ -46,7 +46,7 @@ namespace FreeTrain.Framework.Graphics
         static PictureManager()
         {
             onSurfaceLost += new EventHandler(_onSurfaceLost);
-            World.onNewWorld += new EventHandler(reset);
+            WorldDefinition.onNewWorld += new EventHandler(reset);
         }
 
 

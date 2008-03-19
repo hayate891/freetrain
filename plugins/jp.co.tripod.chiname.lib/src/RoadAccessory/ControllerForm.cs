@@ -28,15 +28,15 @@ using FreeTrain.Controllers;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Terrain;
+using FreeTrain.World;
+using FreeTrain.World.Terrain;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 using SDL.net;
 
-namespace FreeTrain.world.Road.Accessory
+namespace FreeTrain.World.Road.Accessory
 {
     /// <summary>
     /// Controller that allows the user to

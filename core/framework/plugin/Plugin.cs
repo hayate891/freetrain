@@ -30,12 +30,12 @@ using FreeTrain.Contributions.Train;
 using FreeTrain.Contributions.Land;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
     /// Represents a loaded plug-in
     /// </summary>
-    public class Plugin
+    public class PluginDefinition
     {
         private readonly string _title;
         /// <summary>
@@ -90,7 +90,7 @@ namespace FreeTrain.Framework.plugin
         /// <param name="title"></param>
         /// <param name="homepage"></param>
         /// <param name="author"></param>
-        protected Plugin(string dirname, string title, string homepage, string author)
+        protected PluginDefinition(string dirname, string title, string homepage, string author)
         {
             this.dirName = dirname;
             this._title = title;
@@ -102,7 +102,7 @@ namespace FreeTrain.Framework.plugin
         /// <summary>
         /// Loads a plug-in from manifest XML "plugin.xml".
         /// </summary>
-        public Plugin(string dirName)
+        public PluginDefinition(string dirName)
         {
             this.dirName = dirName;
             doc = loadManifest(dirName);
@@ -151,7 +151,7 @@ namespace FreeTrain.Framework.plugin
         /// <summary>
         /// Get all the dependent plug-ins.
         /// </summary>
-        public Plugin[] getDependencies()
+        public PluginDefinition[] getDependencies()
         {
             ArrayList a = new ArrayList();
             if (!this.name.Equals("system"))
@@ -160,7 +160,7 @@ namespace FreeTrain.Framework.plugin
             foreach (XmlElement depend in doc.DocumentElement.SelectNodes("depend"))
             {
                 string name = depend.Attributes["on"].Value;
-                Plugin p = PluginManager.theInstance.getPlugin(name);
+                PluginDefinition p = PluginManager.theInstance.getPlugin(name);
                 if (p == null)
                     throw new Exception(String.Format(
                         "Plugin {1} that is needed for plugin {0} could not be found", this.name, name));
@@ -168,7 +168,7 @@ namespace FreeTrain.Framework.plugin
 
                 a.Add(p);
             }
-            return (Plugin[])a.ToArray(typeof(Plugin));
+            return (PluginDefinition[])a.ToArray(typeof(PluginDefinition));
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace FreeTrain.Framework.plugin
         /// <summary>
         /// Loads plugin.xml file as plain text.
         /// </summary>
-        public static Plugin loadFailSafe(string dirName)
+        public static PluginDefinition loadFailSafe(string dirName)
         {
             string path = Path.Combine(dirName, "plugin.xml");
             string title = "s";
@@ -213,7 +213,7 @@ namespace FreeTrain.Framework.plugin
                 if (sr != null)
                     sr.Close();
             }
-            return new Plugin(dirName, title, homepage, author);
+            return new PluginDefinition(dirName, title, homepage, author);
         }
 
         private static string extractNodeText(string buffer, string tagname)

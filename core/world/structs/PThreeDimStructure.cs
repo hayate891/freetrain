@@ -24,11 +24,11 @@ using System.Runtime.Serialization;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 using SDL.net;
 
-namespace FreeTrain.world.Structs
+namespace FreeTrain.World.Structs
 {
     /// <summary>
     /// Pseudo three-dimensional structure.
@@ -178,7 +178,7 @@ namespace FreeTrain.world.Structs
         public override void remove()
         {
             // just remove all the voxels
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
             foreach (Voxel v in this.cube.voxels)
                 world.remove(v);
 
@@ -200,7 +200,7 @@ namespace FreeTrain.world.Structs
             // make sure all the voxels are on the ground.
             for (int y = 0; y < size.y; y++)
                 for (int x = 0; x < size.x; x++)
-                    if (World.world.getGroundLevel(loc.x + x, loc.y + y) != loc.z)
+                    if (WorldDefinition.world.getGroundLevel(loc.x + x, loc.y + y) != loc.z)
                         return false;
             return true;
         }

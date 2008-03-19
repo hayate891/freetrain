@@ -42,14 +42,14 @@ using FreeTrain.Controllers.Rail;
 using FreeTrain.Controllers.Road;
 using FreeTrain.Controllers.Terrain;
 using FreeTrain.Controllers.Structs;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Sound;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Accounting;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Accounting;
+using FreeTrain.World.Rail;
 using FreeTrain.Util;
 using FreeTrain.Util.Command;
 //using freetrain.util.docking;
@@ -1235,7 +1235,7 @@ namespace FreeTrain.Framework
 
             // update all the views
             // TODO: update voxels correctly
-            World.world.onAllVoxelUpdated();
+            WorldDefinition.world.onAllVoxelUpdated();
         }
 
         /// <summary>
@@ -1251,7 +1251,7 @@ namespace FreeTrain.Framework
 
             // update all the views
             // TODO: update voxels correctly
-            World.world.onVoxelUpdated(world.Location.UNPLACED);
+            WorldDefinition.world.onVoxelUpdated(World.Location.UNPLACED);
         }
         #endregion
 

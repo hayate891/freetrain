@@ -25,14 +25,14 @@ using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.Land;
 using FreeTrain.Contributions.Structs;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
-using FreeTrain.world.Rail;
-using FreeTrain.world.Land;
-using FreeTrain.world.Structs;
-using FreeTrain.world.Subsidiaries;
+using FreeTrain.World.Rail;
+using FreeTrain.World.Land;
+using FreeTrain.World.Structs;
+using FreeTrain.World.Subsidiaries;
 
-namespace FreeTrain.world.Development
+namespace FreeTrain.World.Development
 {
     /// <summary>
     /// Receives clock event and build a new structure if appropriate
@@ -151,10 +151,10 @@ namespace FreeTrain.world.Development
         /// </summary>
         private void doClock()
         {
-            Clock c = World.world.clock;
+            Clock c = WorldDefinition.world.clock;
             if (c.hour == 0)
             {
-                foreach (Station s in World.world.stations)
+                foreach (Station s in WorldDefinition.world.stations)
                 {
                     if (s.ScoreTrains > 0)
                     {
@@ -266,10 +266,10 @@ namespace FreeTrain.world.Development
                     {
                         if (strength <= 0)
                             break;
-                        Clock c = World.world.clock;
+                        Clock c = WorldDefinition.world.clock;
                         if (c.hour < vie)
                             scaning = pickPlace(4);
-                        if (scaning != Location.UNPLACED && World.world.isInsideWorld(scaning))
+                        if (scaning != Location.UNPLACED && WorldDefinition.world.isInsideWorld(scaning))
                             phase++;
                         else
                             strength += strength * (1 - F_StrDiffuse) / 7;
@@ -277,8 +277,8 @@ namespace FreeTrain.world.Development
                     break;
                 case Phase.SelectStruct1:
                     {
-                        Debug.Assert(World.world.isInsideWorld(scaning));
-                        int minVal = (int)(World.world.landValue[scaning] * F_LandPriceScale);
+                        Debug.Assert(WorldDefinition.world.isInsideWorld(scaning));
+                        int minVal = (int)(WorldDefinition.world.landValue[scaning] * F_LandPriceScale);
                         int maxVal = Math.Max(minVal + 15, (int)(minVal * 1.2));
                         //maxVal = Math.Max(maxVal,(int)Math.Pow(strength,F_MaxPricePower));
                         Debug.WriteLine(string.Format("target price: {0} to {1}", minVal, maxVal), "devalgo");
@@ -322,7 +322,7 @@ namespace FreeTrain.world.Development
                     {
                         //bool OK = true;
 
-                        if (World.world.isOutsideWorld(plan.cube) || !plan.cube.isOnGround)
+                        if (WorldDefinition.world.isOutsideWorld(plan.cube) || !plan.cube.isOnGround)
                         {
                             phase = Phase.Start;
                             break;
@@ -330,7 +330,7 @@ namespace FreeTrain.world.Development
                         Entity[] es = plan.cube.getEntities();
                         foreach (Entity e in es)
                         {
-                            if (!IsReplaceable(e, World.world.landValue[scaning]))
+                            if (!IsReplaceable(e, WorldDefinition.world.landValue[scaning]))
                             {
                                 strength += (int)Math.Pow(plan.value, 1.0 / F_MaxPricePower);
                                 phase = Phase.Start;
@@ -412,7 +412,7 @@ namespace FreeTrain.world.Development
             while (count-- > 0)
             {
                 Location loc = target.baseLocation;
-                World w = World.world;
+                WorldDefinition w = WorldDefinition.world;
                 int amp = F_PopAmpBase + (int)(Math.Pow(w[loc].landPrice, F_PopAmpPower) * F_PopAmpScale);
                 // then randomly pick nearby voxel
                 loc.x = Rand(loc.x, amp);

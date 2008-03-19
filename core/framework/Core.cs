@@ -25,7 +25,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 //using Microsoft.Win32;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Sound;
 using FreeTrain.Util;
 
@@ -209,7 +209,7 @@ namespace FreeTrain.Framework
         /// <param name="p_2nd"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public bool OnNameDuplicated(Plugin p_1st, Plugin p_2nd, Exception e)
+        public bool OnNameDuplicated(PluginDefinition p_1st, PluginDefinition p_2nd, Exception e)
         {
             if (errCount++ < errMax)
             {
@@ -231,7 +231,7 @@ namespace FreeTrain.Framework
         /// <param name="p"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public bool OnPluginLoadError(Plugin p, Exception e)
+        public bool OnPluginLoadError(PluginDefinition p, Exception e)
         {
             if (errCount++ < errMax)
             {
@@ -322,7 +322,7 @@ Do you want to quit FreeTrain now?
         }
         #endregion
 
-        private static string makeErrorMessage(Plugin p, Exception e)
+        private static string makeErrorMessage(PluginDefinition p, Exception e)
         {
             return string.Format("Title: {0}\tAuthor: {1}\n\n{2}", p.title, p.author, e.ToString());
             //! return string.Format("タイトル： {0}\t作者： {1}\n\n{2}",p.title,p.author,e.ToString());
@@ -330,7 +330,7 @@ Do you want to quit FreeTrain now?
 
         private static string makeErrorMessage(Contribution c, Exception e)
         {
-            Plugin p = c.parent;
+            PluginDefinition p = c.parent;
             return string.Format("Title: {0}\tAuthor: {1}\nID={2}\n\n{3}", p.title, p.author, c.id, e.ToString());
             //! return string.Format("タイトル： {0}\t作者： {1}\nID={2}\n\n{3}",p.title,p.author,c.id,e.ToString());
         }

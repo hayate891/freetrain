@@ -27,7 +27,7 @@ using System.Windows.Forms;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// PlatformPropertyDialog の概要の説明です。

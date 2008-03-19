@@ -25,7 +25,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SDL.net;
 using FreeTrain.Util;
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Controllers;
@@ -82,7 +82,7 @@ namespace FreeTrain.Views
         /// </summary>
         public event EventHandler OnUpdated;
 
-        private World world;
+        private WorldDefinition world;
 
         Sprite emptyChip, waterChip;
 
@@ -91,7 +91,7 @@ namespace FreeTrain.Views
         ///		the region that this object draws in the A,B axis.
         /// </param>
         /// <param name="_world"></param>
-        public QuarterViewDrawer(World _world, Rectangle initialView)
+        public QuarterViewDrawer(WorldDefinition _world, Rectangle initialView)
         {
             this.world = _world;
 
@@ -285,7 +285,7 @@ namespace FreeTrain.Views
         public bool isVisible(Location loc)
         {
             // find the bounding box in (A,B) axes
-            return World.world.getBoundingBox(loc).IntersectsWith(this.visibleRect);
+            return WorldDefinition.world.getBoundingBox(loc).IntersectsWith(this.visibleRect);
         }
         /// <summary>
         /// 

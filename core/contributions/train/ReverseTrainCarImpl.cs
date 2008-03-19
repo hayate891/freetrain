@@ -22,9 +22,9 @@ using System;
 using System.Drawing;
 using System.Xml;
 using SDL.net;
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Contributions.Train
 {

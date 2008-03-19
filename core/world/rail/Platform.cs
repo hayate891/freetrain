@@ -24,10 +24,10 @@ using System.Drawing;
 using SDL.net;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
-using FreeTrain.world.Accounting;
+using FreeTrain.World.Accounting;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Platform that trains can stop by.
@@ -49,7 +49,7 @@ namespace FreeTrain.world.Rail
             this.name = string.Format("Platform {0,2:d}", iota++);
             //! this.name = string.Format("ホーム{0,2:d}",iota++);
             this.bellSound = DepartureBellContribution.DEFAULT;
-            World.world.clock.registerRepeated(new ClockHandler(onClockPerDay), TimeLength.ONEDAY);
+            WorldDefinition.world.clock.registerRepeated(new ClockHandler(onClockPerDay), TimeLength.ONEDAY);
 
             // attach to the nearby station.
             foreach (PlatformHost h in listHosts())
@@ -130,7 +130,7 @@ namespace FreeTrain.world.Rail
                 }
 
                 // update the warning icon
-                World.world.onVoxelUpdated(location);
+                WorldDefinition.world.onVoxelUpdated(location);
             }
         }
 
@@ -168,7 +168,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public virtual void remove()
         {
-            World.world.clock.unregister(new ClockHandler(onClockPerDay));
+            WorldDefinition.world.clock.unregister(new ClockHandler(onClockPerDay));
             if (onEntityRemoved != null) onEntityRemoved(this, null);
         }
         /// <summary>
@@ -254,7 +254,7 @@ namespace FreeTrain.world.Rail
             Location loc = location;
             for (int i = 0; i < length; i++, loc += direction)
             {
-                for (int z = 0; z < World.world.size.z; z++)
+                for (int z = 0; z < WorldDefinition.world.size.z; z++)
                 {
                     Station st = Station.get(loc.x, loc.y, z);
                     if (st != null) result.add(st);

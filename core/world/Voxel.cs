@@ -24,7 +24,7 @@ using System.Drawing;
 using SDL.net;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// A block in the game world.
@@ -143,7 +143,7 @@ namespace FreeTrain.world
         {
             get
             {
-                return (int)World.world.landValue[location];
+                return (int)WorldDefinition.world.landValue[location];
             }
         }
 
@@ -182,7 +182,7 @@ namespace FreeTrain.world
         protected AbstractVoxelImpl(Location _loc)
         {
             this.loc = _loc;
-            World.world[loc] = this;
+            WorldDefinition.world[loc] = this;
         }
         /// <summary>
         /// 

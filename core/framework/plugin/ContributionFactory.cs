@@ -1,7 +1,7 @@
 using System;
 using System.Xml;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
 	/// <summary>
 	/// Responsible for loading a contribution from an XML element.
@@ -15,6 +15,6 @@ namespace FreeTrain.Framework.plugin
 		/// In case of an error, this method must throw an exception
 		/// instead of silently returning null.
 		/// </summary>
-		Contribution load( Plugin owner, XmlElement e );
+		Contribution load( PluginDefinition owner, XmlElement e );
 	}
 }

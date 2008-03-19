@@ -26,8 +26,8 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using SDL.net;
@@ -389,7 +389,7 @@ namespace FreeTrain.Controllers.Rail
             else
             {
                 // it is always allowed to place it on or under ground 
-                if (World.world.getGroundLevel(loc) >= loc.z)
+                if (WorldDefinition.world.getGroundLevel(loc) >= loc.z)
                     return true;
 
                 // if the new rail road is at the edge of existing rail,
@@ -442,7 +442,7 @@ namespace FreeTrain.Controllers.Rail
             loc2.y += direction.offsetY * 3;
             loc2.z++;
 
-            World.world.onVoxelUpdated(Cube.createInclusive(lastMouse, loc2));
+            WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(lastMouse, loc2));
         }
 
         /// <summary>
@@ -472,7 +472,7 @@ namespace FreeTrain.Controllers.Rail
         {
             if (!isPlacing) return;
             Location loc = lastMouse;
-            if (loc == world.Location.UNPLACED) return;
+            if (loc == World.Location.UNPLACED) return;
             if (!SlopeRailRoad.canCreateSlope(loc, direction)) return;
 
             Surface canvas = dc.surface;
@@ -482,7 +482,7 @@ namespace FreeTrain.Controllers.Rail
             {
                 if (i == 2) loc.z++;
 
-                for (int j = World.world.getGroundLevel(loc); j < Z; j++)
+                for (int j = WorldDefinition.world.getGroundLevel(loc); j < Z; j++)
                     // TODO: ground level handling
                     BridgePierVoxel.defaultSprite.drawAlpha(
                         canvas, view.fromXYZToClient(loc.x, loc.y, j));

@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Development
+namespace FreeTrain.World.Development
 {
     /// <summary>
     /// ULV stands for "Unused Land Value."
@@ -74,7 +74,7 @@ namespace FreeTrain.world.Development
             int z = cube.z1;
 
             int landValue = 0, entityValue = 0;
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
             Set s = new Set();
 
             if (z < world.waterLevel) return null; // underwater

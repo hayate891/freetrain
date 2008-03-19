@@ -28,7 +28,7 @@ using FreeTrain.Views.Map;
 using FreeTrain.Controllers;
 
 
-namespace FreeTrain.world.Structs.HalfVoxelStructure
+namespace FreeTrain.World.Structs.HalfVoxelStructure
 {
     internal delegate void createCallback();
     /// <summary>
@@ -40,7 +40,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
 
         /// <summary>Constant</summary>
         [CLSCompliant(false)]
-        protected static readonly Location UNPLACED = world.Location.UNPLACED;
+        protected static readonly Location UNPLACED = World.Location.UNPLACED;
         static private readonly string cur_id = "{HALF-VOXEL-STRUCTURE-CURSOR-IMAGE}";
         /// <summary>
         /// 
@@ -138,7 +138,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         {
             get
             {
-                HalfDividedVoxel v = World.world[anchor] as HalfDividedVoxel;
+                HalfDividedVoxel v = WorldDefinition.world[anchor] as HalfDividedVoxel;
                 if (v != null)
                 {
                     ContributionReference[] refs = v.getReferences();
@@ -180,7 +180,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
                 if (currentPos == UNPLACED || currentPos.Equals(anchor))
                     throw new Exception("invalid call");
 
-                HalfDividedVoxel v = World.world[anchor] as HalfDividedVoxel;
+                HalfDividedVoxel v = WorldDefinition.world[anchor] as HalfDividedVoxel;
                 // There is no restriction for empty voxel.
                 if (v == null)
                     return anchor.getDirectionTo(currentPos);
@@ -261,7 +261,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         /// <returns></returns>
         private Direction getSide(Point ab)
         {
-            Point p = World.world.fromXYZToAB(currentPos);
+            Point p = WorldDefinition.world.fromXYZToAB(currentPos);
             int x = ab.X - p.X - 16;
             int y = (ab.Y - p.Y - 8) * 2;
 
@@ -374,7 +374,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
         {
             // clear the remaining image
             if (currentPos != Location.UNPLACED)
-                World.world.onVoxelUpdated(currentPos);
+                WorldDefinition.world.onVoxelUpdated(currentPos);
         }
 
 
@@ -398,7 +398,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
                 //if( !currentPos.Equals(anchor) )
                 //onVoxelUpdated(anchor,front,currentSide);
 
-                World.world.onVoxelUpdated(anchor);
+                WorldDefinition.world.onVoxelUpdated(anchor);
             }
         }
 
@@ -416,7 +416,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
             {
                 if (remover)
                 {
-                    if (null == World.world[loc] as HalfDividedVoxel)
+                    if (null == WorldDefinition.world[loc] as HalfDividedVoxel)
                         return;
                 }
                 else
@@ -433,7 +433,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
             {
                 if (!currentPos.Equals(anchor))
                     onVoxelSelected(anchor, front, currentSide);
-                World.world.onVoxelUpdated(anchor);
+                WorldDefinition.world.onVoxelUpdated(anchor);
                 anchor = UNPLACED;
             }
         }
@@ -450,7 +450,7 @@ namespace FreeTrain.world.Structs.HalfVoxelStructure
                 close();	// cancel
             else
             {
-                World.world.onVoxelUpdated(anchor);
+                WorldDefinition.world.onVoxelUpdated(anchor);
                 anchor = UNPLACED;
             }
         }

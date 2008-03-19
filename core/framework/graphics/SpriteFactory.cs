@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Framework.Graphics
 {

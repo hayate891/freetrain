@@ -23,9 +23,9 @@ using System.Collections;
 using System.Diagnostics;
 using System.Drawing;
 using FreeTrain.Util;
-using FreeTrain.world.Terrain;
+using FreeTrain.World.Terrain;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// Cubic space in the world.
@@ -181,9 +181,9 @@ namespace FreeTrain.world
                 {
                     for (int y = y1; y < my; y++)
                     {
-                        if (World.world.getGroundLevel(x, y) != z1)
+                        if (WorldDefinition.world.getGroundLevel(x, y) != z1)
                             return false;
-                        if (World.world[x, y, z1] is MountainVoxel)
+                        if (WorldDefinition.world[x, y, z1] is MountainVoxel)
                             return false;
                     }
                 }
@@ -212,8 +212,8 @@ namespace FreeTrain.world
             get
             {
                 // calculate the correct top left corner.
-                int a1 = World.world.fromXYZToAB(corner).X;
-                int b1 = World.world.fromXYZToAB(x2 - 1, y1, z2 - 1).Y - 16;
+                int a1 = WorldDefinition.world.fromXYZToAB(corner).X;
+                int b1 = WorldDefinition.world.fromXYZToAB(x2 - 1, y1, z2 - 1).Y - 16;
 
                 int xyDiff = sx + sy;
 
@@ -241,7 +241,7 @@ namespace FreeTrain.world
                 {
                     for (int z = corner.z; z < mz; z++)
                     {
-                        Voxel v = World.world[x, y, z];
+                        Voxel v = WorldDefinition.world[x, y, z];
                         if (v != null) r.add(v.entity);
                     }
                 }
@@ -264,7 +264,7 @@ namespace FreeTrain.world
                     {
                         for (int z = 0; z < sz; z++)
                         {
-                            Voxel v = World.world[corner.x + x, corner.y + y, corner.z + z];
+                            Voxel v = WorldDefinition.world[corner.x + x, corner.y + y, corner.z + z];
                             if (v != null) a.Add(v);
                         }
                     }

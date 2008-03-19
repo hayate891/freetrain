@@ -22,7 +22,7 @@ using System;
 using System.Runtime.Serialization;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Subsidiaries
+namespace FreeTrain.World.Subsidiaries
 {
     /// <summary>
     /// 
@@ -76,9 +76,9 @@ namespace FreeTrain.world.Subsidiaries
         private static SubsidiaryMarket theInstance(string suffix)
         {
             string name = typeof(SubsidiaryMarket).Name + suffix;
-            SubsidiaryMarket r = (SubsidiaryMarket)World.world.otherObjects[name];
+            SubsidiaryMarket r = (SubsidiaryMarket)WorldDefinition.world.otherObjects[name];
             if (r == null)
-                World.world.otherObjects[name] = r = new SubsidiaryMarket();
+                WorldDefinition.world.otherObjects[name] = r = new SubsidiaryMarket();
             return r;
         }
 

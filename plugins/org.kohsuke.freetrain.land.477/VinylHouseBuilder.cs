@@ -27,10 +27,10 @@ using FreeTrain.Contributions.Land;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Controllers;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views;
 
-namespace FreeTrain.world.Land.VinylHouse
+namespace FreeTrain.World.Land.VinylHouse
 {
     /// <summary>
     /// 

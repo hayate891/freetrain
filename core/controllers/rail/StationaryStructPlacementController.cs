@@ -22,10 +22,10 @@ using System;
 using System.Windows.Forms;
 using FreeTrain.Controllers.Structs;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 
 namespace FreeTrain.Controllers.Rail
 {

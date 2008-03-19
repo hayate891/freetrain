@@ -22,10 +22,10 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
-using FreeTrain.world.Rail;
+using FreeTrain.World.Rail;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
 	/// <summary>
 	/// Rail-road crossing
@@ -135,21 +135,21 @@ namespace FreeTrain.world
 		public void onCarApproaching( TrafficVoxel v ) {
 			// method needs to be public so that the delegate can be serialized
 			// redraw this voxel
-			World.world.onVoxelUpdated(owner);
+			WorldDefinition.world.onVoxelUpdated(owner);
 			registerTimer();
 		}
 
 		private void registerTimer() {
-			int min = FLASH_FREQUENCY-(World.world.clock.minutes%FLASH_FREQUENCY);
+			int min = FLASH_FREQUENCY-(WorldDefinition.world.clock.minutes%FLASH_FREQUENCY);
 			if(min==0)	min=FLASH_FREQUENCY;
 
 			if( currentState!=State.Open )	// register the handler while the Xing is closed.
-				World.world.clock.registerOneShot( new ClockHandler(followUp), TimeLength.fromMinutes(min) );
+				WorldDefinition.world.clock.registerOneShot( new ClockHandler(followUp), TimeLength.fromMinutes(min) );
 		}
 
 		public void followUp() {
 			// method needs to be public so that the delegate can be serialized
-			World.world.onVoxelUpdated(owner);
+			WorldDefinition.world.onVoxelUpdated(owner);
 			registerTimer();
 		}
 
@@ -205,7 +205,7 @@ namespace FreeTrain.world
 				if( currentState!=State.Closed )
 					return (int)currentState;
 				else
-					return ((World.world.clock.minutes/FLASH_FREQUENCY)%2==0)?2:3;
+					return ((WorldDefinition.world.clock.minutes/FLASH_FREQUENCY)%2==0)?2:3;
 			}
 		}
 

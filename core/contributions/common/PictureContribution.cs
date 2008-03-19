@@ -20,7 +20,7 @@
 
 using System;
 using System.Xml;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Contributions.Common

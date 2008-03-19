@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
 	/// <summary>
 	/// Set of voxels that behaves as one logical concept.

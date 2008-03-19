@@ -26,10 +26,10 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Accounting
+namespace FreeTrain.World.Accounting
 {
     /// <summary>
     /// 
@@ -46,7 +46,7 @@ namespace FreeTrain.world.Accounting
             // register an event handler
             AccountManager.onAccountChange += new AccountListener(onAccountChanged);
 
-            World.onNewWorld += new EventHandler(onNewWorld);
+            WorldDefinition.onNewWorld += new EventHandler(onNewWorld);
 
             populateListView();
             onAccountChanged();

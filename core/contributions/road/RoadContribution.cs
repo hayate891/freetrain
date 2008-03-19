@@ -24,8 +24,8 @@ using System.Drawing;
 using System.Xml;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.world;
-using FreeTrain.world.Road;
+using FreeTrain.World;
+using FreeTrain.World.Road;
 
 namespace FreeTrain.Contributions.Road
 {

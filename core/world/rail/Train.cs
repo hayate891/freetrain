@@ -27,11 +27,11 @@ using FreeTrain.Contributions.Train;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Sound;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
-using FreeTrain.world.Accounting;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.World.Accounting;
 using System.Runtime.Serialization;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// 
@@ -187,7 +187,7 @@ namespace FreeTrain.world.Rail
                 car.remove();
 
             // make sure that we don't have any pending event
-            World.world.clock.unregister(new ClockHandler(clockHandler));
+            WorldDefinition.world.clock.unregister(new ClockHandler(clockHandler));
             State = TrainStates.Unplaced;
         }
 
@@ -300,7 +300,7 @@ namespace FreeTrain.world.Rail
 
         private void registerTimer(TimeLength time)
         {
-            World.world.clock.registerOneShot(new ClockHandler(clockHandler), time);
+            WorldDefinition.world.clock.registerOneShot(new ClockHandler(clockHandler), time);
         }
 
         /// <summary> Counter that remembers the # of consecutive times this train is told to stop. </summary>
@@ -548,7 +548,7 @@ namespace FreeTrain.world.Rail
                 Location newLoc = state.location + go;
                 newLoc.z += rr.zdiff(state.direction);
 
-                if (World.world.isBorderOfWorld(newLoc))
+                if (WorldDefinition.world.isBorderOfWorld(newLoc))
                 {
                     // go outside the world
                     return new CarState.Outside(newLoc, go, OUTSIDE_COUNTER_INITIAL_VALUE);

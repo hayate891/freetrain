@@ -21,7 +21,7 @@
 using System;
 using FreeTrain.Contributions.Land;
 
-namespace FreeTrain.world.Development
+namespace FreeTrain.World.Development
 {
 	/// <summary>
 	/// Plan of land surfaces such as crop fields.

@@ -25,8 +25,8 @@ using System.Xml;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.Plugin;
-using FreeTrain.world;
-using FreeTrain.world.Road;
+using FreeTrain.World;
+using FreeTrain.World.Road;
 
 namespace FreeTrain.Contributions.Road
 {
@@ -72,7 +72,7 @@ namespace FreeTrain.Contributions.Road
 
             while (true)
             {
-                if (World.world[here] != null)
+                if (WorldDefinition.world[here] != null)
                 {
                     TrafficVoxel v = TrafficVoxel.get(here);
                     if (v == null) return false;	// occupied
@@ -269,7 +269,7 @@ namespace FreeTrain.Contributions.Road
                     voxel.road = new RoadImpl(contribution, voxel, RoadPattern.get(dirs));
                 }
 
-                World.world.onVoxelUpdated(location);
+                WorldDefinition.world.onVoxelUpdated(location);
             }
             /// <summary>
             /// 

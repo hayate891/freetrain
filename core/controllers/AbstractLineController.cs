@@ -29,7 +29,7 @@ using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework.Plugin;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Controllers
 {
@@ -188,7 +188,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         private Location currentPos = UNPLACED;
 
-        private static Location UNPLACED = FreeTrain.world.Location.UNPLACED;
+        private static Location UNPLACED = FreeTrain.World.Location.UNPLACED;
 
         /// <summary>
         /// Aligns the given location to the anchor so that
@@ -222,9 +222,9 @@ namespace FreeTrain.Controllers
             if (anchor != UNPLACED && isPlacing && currentPos != loc)
             {
                 if (currentPos != UNPLACED)
-                    World.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 currentPos = align(loc);
-                World.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
             }
         }
         /// <summary>
@@ -254,7 +254,7 @@ namespace FreeTrain.Controllers
                     else
                         // remove existing ones
                         type.remove(anchor, loc);
-                    World.world.onVoxelUpdated(Cube.createInclusive(anchor, loc));
+                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, loc));
                 }
                 anchor = UNPLACED;
             }
@@ -273,7 +273,7 @@ namespace FreeTrain.Controllers
             {
                 // cancel the anchor
                 if (currentPos != UNPLACED)
-                    World.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 anchor = UNPLACED;
             }
         }

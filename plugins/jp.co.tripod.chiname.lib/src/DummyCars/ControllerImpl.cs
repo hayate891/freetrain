@@ -27,7 +27,7 @@ using FreeTrain.Views.Map;
 using FreeTrain.Controllers;
 
 
-namespace FreeTrain.world.Road.DummyCar
+namespace FreeTrain.World.Road.DummyCar
 {
     /// <summary>
     /// ModalController implementation for DummyCar contribution
@@ -141,7 +141,7 @@ namespace FreeTrain.world.Road.DummyCar
             if (BaseRoad.get(loc) != null) return true;
 
             // or if we hit the ground
-            if (World.world.getGroundLevel(loc) >= loc.z) return true;
+            if (WorldDefinition.world.getGroundLevel(loc) >= loc.z) return true;
 
             return false;
         }

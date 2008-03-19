@@ -25,10 +25,10 @@ using System.Xml;
 using FreeTrain.Util;
 using FreeTrain.Contributions.Population;
 using FreeTrain.Controllers;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 using SDL.net;
 
 namespace FreeTrain.Contributions.Common

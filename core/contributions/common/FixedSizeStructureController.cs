@@ -25,8 +25,8 @@ using FreeTrain.Controllers;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Views;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
 
 namespace FreeTrain.Contributions.Common
 {
@@ -153,7 +153,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="cube"></param>
         protected override void onSelected(Cube cube)
         {
-            PThreeDimStructure s = World.world.getEntityAt(cube.corner) as PThreeDimStructure;
+            PThreeDimStructure s = WorldDefinition.world.getEntityAt(cube.corner) as PThreeDimStructure;
             if (s == null || s.type != contrib)
             {
                 MainWindow.showError("Wrong type");

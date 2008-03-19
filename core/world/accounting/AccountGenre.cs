@@ -20,9 +20,9 @@
 
 using System;
 using System.Xml;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.world.Accounting
+namespace FreeTrain.World.Accounting
 {
     /// <summary>
     /// Accounting genre. Used to categorize expenses and sales.
@@ -38,7 +38,7 @@ namespace FreeTrain.world.Accounting
             : base(e)
         {
             name = XmlUtil.selectSingleNode(e, "name").InnerText;
-            World.onNewWorld += new EventHandler(onNewWorld);
+            WorldDefinition.onNewWorld += new EventHandler(onNewWorld);
         }
 
         /// <summary> Name of this genre. </summary>
@@ -60,9 +60,9 @@ namespace FreeTrain.world.Accounting
             {
                 if (_history == null)
                 {
-                    _history = (TransactionHistory)World.world.otherObjects[this];
+                    _history = (TransactionHistory)WorldDefinition.world.otherObjects[this];
                     if (_history == null)
-                        World.world.otherObjects.Add(this, _history = new TransactionHistory());
+                        WorldDefinition.world.otherObjects.Add(this, _history = new TransactionHistory());
                 }
 
                 return _history;

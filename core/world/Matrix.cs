@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// Matrix that applies to directions. Immutable.

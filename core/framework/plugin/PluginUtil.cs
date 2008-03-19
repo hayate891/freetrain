@@ -24,7 +24,7 @@ using System.Reflection;
 using System.Xml;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.Framework.plugin
+namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
     /// Utility code

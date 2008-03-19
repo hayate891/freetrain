@@ -27,7 +27,7 @@ using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// "Take the A-train" style fat platform.
@@ -48,7 +48,7 @@ namespace FreeTrain.world.Rail
 
             for (; length > 0; length--)
             {
-                if (World.world[loc] != null)
+                if (WorldDefinition.world[loc] != null)
                     return false;	// already occupied
                 loc += d;
             }
@@ -106,7 +106,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public override void remove()
         {
-            World world = World.world;
+            WorldDefinition world = WorldDefinition.world;
 
             onHostDisconnected();
 
@@ -186,7 +186,7 @@ namespace FreeTrain.world.Rail
 
             for (int i = 0; i < length; i++, loc += direction)
             {
-                Voxel v = World.world[loc];
+                Voxel v = WorldDefinition.world[loc];
                 if (v == null) continue;	// OK
                 if (v is TrafficVoxel)
                 {
@@ -254,7 +254,7 @@ namespace FreeTrain.world.Rail
                 new SingleRailRoad(
                     TrafficVoxel.getOrCreate(loc),
                     rr.getPattern());
-                World.world.onVoxelUpdated(loc);
+                WorldDefinition.world.onVoxelUpdated(loc);
             }
         }
 
@@ -366,7 +366,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public new static FatPlatform get(Location loc)
         {
-            Voxel v = World.world[loc];
+            Voxel v = WorldDefinition.world[loc];
             if (v is FatPlatformVoxel)
                 return ((FatPlatformVoxel)v).owner;
             else

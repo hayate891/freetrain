@@ -25,7 +25,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Util;
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Controllers;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
@@ -56,7 +56,7 @@ namespace FreeTrain.Views.Map
         {
             InitializeComponent();
 
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
             AutoScroll = true;
             // ( (X*32+16) -16 -16, Y*8 -8 -(8+16*Z) )
             // the left edge of the world is shaggy, so we need to cut the left-most 16 pixels.
@@ -75,7 +75,7 @@ namespace FreeTrain.Views.Map
             PictureManager.onSurfaceLost += new EventHandler(onSurfaceLost);
 
             // build height-cut MenuItems
-            for (int i = World.world.size.z - 1; i >= 0; i--)
+            for (int i = WorldDefinition.world.size.z - 1; i >= 0; i--)
                 menuItem_heightCut.MenuItems.Add(new HeightCutMenuItem(this, i));
         }
 
@@ -473,14 +473,14 @@ namespace FreeTrain.Views.Map
 
                 //				this.Checked = ( height==owner.drawer.heightCutHeight );
 
-                if (height == World.world.size.z - 1)
+                if (height == WorldDefinition.world.size.z - 1)
                 {
                     this.Text = "None";
                     //! this.Text = "なし";
                 }
                 else
                 {
-                    int h = height - World.world.waterLevel;
+                    int h = height - WorldDefinition.world.waterLevel;
                     if (h == 0) this.Text = "Water level";
                     //! if( h==0 )		this.Text = "地表";
                     else this.Text = h.ToString();

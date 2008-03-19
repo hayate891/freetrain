@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Interface implemented by an entity that allows a train

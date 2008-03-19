@@ -22,7 +22,7 @@ using System;
 using System.Xml;
 using System.Drawing;
 using FreeTrain.Contributions.Common;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Controllers;
 using FreeTrain.Contributions.Population;

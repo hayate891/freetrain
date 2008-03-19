@@ -24,13 +24,13 @@ using System.Drawing;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
-using FreeTrain.world.Accounting;
-using FreeTrain.world.Structs;
-using FreeTrain.world.Development;
+using FreeTrain.World.Accounting;
+using FreeTrain.World.Structs;
+using FreeTrain.World.Development;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// Station
@@ -51,11 +51,11 @@ namespace FreeTrain.world.Rail
         {
             this.type = _type;
             this._name = string.Format("ST{0,2:d}", iota++);
-            if (wloc.world == World.world)
+            if (wloc.world == WorldDefinition.world)
             {
-                World.world.stations.add(this);
-                World.world.clock.registerRepeated(new ClockHandler(clockHandlerHour), TimeLength.fromHours(1));
-                World.world.clock.registerRepeated(new ClockHandler(clockHandlerDay), TimeLength.fromHours(24));
+                WorldDefinition.world.stations.add(this);
+                WorldDefinition.world.clock.registerRepeated(new ClockHandler(clockHandlerHour), TimeLength.fromHours(1));
+                WorldDefinition.world.clock.registerRepeated(new ClockHandler(clockHandlerDay), TimeLength.fromHours(24));
             }
             Distance r = new Distance(REACH_RANGE, REACH_RANGE, REACH_RANGE);
 
@@ -131,13 +131,13 @@ namespace FreeTrain.world.Rail
         public override void remove()
         {
 
-            World.world.clock.unregister(new ClockHandler(clockHandlerHour));
-            World.world.clock.unregister(new ClockHandler(clockHandlerDay));
+            WorldDefinition.world.clock.unregister(new ClockHandler(clockHandlerHour));
+            WorldDefinition.world.clock.unregister(new ClockHandler(clockHandlerDay));
 
             // first, remove this station from the list of all stations.
             // this will allow disconnected structures to find the next
             // nearest station.
-            World.world.stations.remove(this);
+            WorldDefinition.world.stations.remove(this);
 
             // notify listeners
             foreach (StationListener l in listeners)
@@ -372,7 +372,7 @@ namespace FreeTrain.world.Rail
             import.AddAmount(r);
             trains.AddAmount(1);
             Debug.WriteLine(string.Format("devQ on unload v={0} for {1} passengers.", import.LastWeek / 24, r));
-            World.world.landValue.addQ(location, Math.Min((float)(import.LastWeek / 24), r));
+            WorldDefinition.world.landValue.addQ(location, Math.Min((float)(import.LastWeek / 24), r));
             accumulatedUnloadedPassengers += r;
             GlobalTrafficMonitor.TheInstance.NotifyPassengerTransport(this, r);
         }
@@ -396,7 +396,7 @@ namespace FreeTrain.world.Rail
 
             gonePassengers += pass;
             accumulatedLoadedPassengers += pass;
-            World.world.landValue.addQ(location, pass);
+            WorldDefinition.world.landValue.addQ(location, pass);
             Debug.WriteLine(name + ": # of passengers gone (up to) " + gonePassengers);
 
             tr.loadPassengers(this, pass);
@@ -448,7 +448,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public static Station get(Location loc)
         {
-            return World.world.getEntityAt(loc) as Station;
+            return WorldDefinition.world.getEntityAt(loc) as Station;
         }
         /// <summary>
         /// 
@@ -487,7 +487,7 @@ namespace FreeTrain.world.Rail
             thisweek += Math.Pow(today, 1 / LogFactor);
             yesterday = today;
             today = 0;
-            Clock c = World.world.clock;
+            Clock c = WorldDefinition.world.clock;
             if (c.dayOfWeek == 6)
             {
                 lastweek = Math.Pow(thisweek / 7, LogFactor);
@@ -508,7 +508,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public double ThisWeek
         {
-            get { return Math.Pow(thisweek / (World.world.clock.dayOfWeek + 1), LogFactor); }
+            get { return Math.Pow(thisweek / (WorldDefinition.world.clock.dayOfWeek + 1), LogFactor); }
         }
         /// <summary>
         /// 

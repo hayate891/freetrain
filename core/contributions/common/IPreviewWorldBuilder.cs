@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 using System.Collections;
-using FreeTrain.world;
+using FreeTrain.World;
 
 namespace FreeTrain.Contributions.Common
 {
@@ -36,6 +36,6 @@ namespace FreeTrain.Contributions.Common
         /// <param name="minsizePixel"></param>
         /// <param name="options"></param>
         /// <returns></returns>
-        World CreatePreviewWorld(Size minsizePixel, IDictionary options);
+        WorldDefinition CreatePreviewWorld(Size minsizePixel, IDictionary options);
     }
 }

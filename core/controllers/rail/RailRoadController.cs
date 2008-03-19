@@ -27,8 +27,8 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
 
@@ -118,7 +118,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         private Location currentPos = UNPLACED;
 
-        private static Location UNPLACED = FreeTrain.world.Location.UNPLACED;
+        private static Location UNPLACED = FreeTrain.World.Location.UNPLACED;
 
         private bool isPlacing { get { return buttonPlace.Checked; } }
 
@@ -264,7 +264,7 @@ namespace FreeTrain.Controllers.Rail
             {
                 // cancel the anchor
                 if (currentPos != UNPLACED)
-                    World.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 anchor = UNPLACED;
                 updateDialog();
             }
@@ -293,9 +293,9 @@ namespace FreeTrain.Controllers.Rail
             {
                 // update the screen
                 if (currentPos != UNPLACED)
-                    World.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 currentPos = loc;
-                World.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
 
                 int cost;
                 SingleRailRoad.comupteRoute(anchor, currentPos, out cost);
@@ -380,7 +380,7 @@ namespace FreeTrain.Controllers.Rail
                 RailPattern rp = (RailPattern)dic[loc];
                 if (rp != null)
                 {
-                    for (int j = World.world.getGroundLevel(loc); j < loc.z; j++)
+                    for (int j = WorldDefinition.world.getGroundLevel(loc); j < loc.z; j++)
                         // TODO: ground level handling
                         BridgePierVoxel.defaultSprite.drawAlpha(
                             canvas.surface,

@@ -26,7 +26,7 @@ using System.Windows.Forms;
 using SDL.net;
 using FreeTrain.Framework;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// 線路
@@ -95,7 +95,7 @@ namespace FreeTrain.world.Rail
                 {
                     if (hasRail(d))
                     {
-                        Voxel v = World.world[location + d];
+                        Voxel v = WorldDefinition.world[location + d];
                         if (v is TrafficVoxel)
                         {
                             TrafficVoxel tv = (TrafficVoxel)v;
@@ -186,7 +186,7 @@ namespace FreeTrain.world.Rail
         public virtual void invalidateVoxel()
         {
             // by default, the occupied voxel is updated
-            World.world.onVoxelUpdated(voxel);
+            WorldDefinition.world.onVoxelUpdated(voxel);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace FreeTrain.world.Rail
         /// </summary>
         public static RailRoad get(Location loc)
         {
-            Voxel v = World.world[loc];
+            Voxel v = WorldDefinition.world[loc];
             if (!(v is TrafficVoxel)) return null;
             return ((TrafficVoxel)v).railRoad;
         }

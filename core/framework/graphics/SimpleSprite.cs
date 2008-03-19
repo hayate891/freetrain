@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using FreeTrain.world;
+using FreeTrain.World;
 using SDL.net;
 
 namespace FreeTrain.Framework.Graphics

@@ -25,7 +25,7 @@ using System.Runtime.Serialization;
 using SDL.net;
 using FreeTrain.Framework;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// 方向（８方向。速度を伴わない）

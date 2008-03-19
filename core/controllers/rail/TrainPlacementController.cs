@@ -26,8 +26,8 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using FreeTrain.world;
-using FreeTrain.world.Rail;
+using FreeTrain.World;
+using FreeTrain.World.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Sound;
 using FreeTrain.Util.Controls;
@@ -81,7 +81,7 @@ namespace FreeTrain.Controllers.Rail
             // Windows フォーム デザイナ サポートに必要です。
             InitializeComponent();
 
-            controllerCombo.DataSource = World.world.trainControllers;
+            controllerCombo.DataSource = WorldDefinition.world.trainControllers;
             tree.ItemMoved = new ItemMovedHandler(onItemDropped);
 
             //this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
@@ -115,9 +115,9 @@ namespace FreeTrain.Controllers.Rail
             tree.BeginUpdate();
             tree.Nodes.Clear();
 
-            TreeNode root = createNode(World.world.rootTrainGroup);
+            TreeNode root = createNode(WorldDefinition.world.rootTrainGroup);
             tree.Nodes.Add(root);
-            populate(World.world.rootTrainGroup, root.Nodes);
+            populate(WorldDefinition.world.rootTrainGroup, root.Nodes);
 
             tree.ExpandAll();
             tree.EndUpdate();
@@ -433,7 +433,7 @@ namespace FreeTrain.Controllers.Rail
             Train tr = this.selectedTrain;
             if (tr == null || !tr.head.state.isInside)
             {
-                arrowLoc.location = world.Location.UNPLACED;
+                arrowLoc.location = World.Location.UNPLACED;
             }
             else
             {

@@ -22,10 +22,10 @@ using System;
 using System.Drawing;
 using FreeTrain.Framework;
 using FreeTrain.Util;
-using FreeTrain.world.Terrain;
+using FreeTrain.World.Terrain;
 using SDL.net;
 
-namespace FreeTrain.world.Structs
+namespace FreeTrain.World.Structs
 {
 	/// <summary>
 	/// Base implementation of the generic "structure"
@@ -122,9 +122,9 @@ namespace FreeTrain.world.Structs
 		public static bool isOnTheGround( Location loc, Distance sz ) {
 			for( int y=0; y<sz.y; y++ )
 				for( int x=0; x<sz.x; x++ ) {
-					if( World.world.getGroundLevel(loc.x+x,loc.y+y)!=loc.z )
+					if( WorldDefinition.world.getGroundLevel(loc.x+x,loc.y+y)!=loc.z )
 						return false;
-					if(World.world[loc.x+x,loc.y+y,loc.z] is MountainVoxel)
+					if(WorldDefinition.world[loc.x+x,loc.y+y,loc.z] is MountainVoxel)
 						return false;
 				}
 			return true;

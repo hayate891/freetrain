@@ -20,7 +20,7 @@
 
 using System;
 
-namespace FreeTrain.world
+namespace FreeTrain.World
 {
     /// <summary>
     /// Span of time
@@ -69,7 +69,7 @@ namespace FreeTrain.world
         /// <returns></returns>
         public static TimeLength untilTomorrow()
         {
-            Clock c = World.world.clock;
+            Clock c = WorldDefinition.world.clock;
             return fromMinutes(ONEDAY.totalMinutes - (c.hour * 60 + c.minutes) % ONEDAY.totalMinutes);
         }
 

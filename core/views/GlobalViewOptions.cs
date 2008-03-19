@@ -20,7 +20,7 @@
 
 using System;
 using System.Diagnostics;
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Framework.Graphics;
 
 
@@ -81,7 +81,7 @@ namespace FreeTrain.Views
             {
                 _nightSpriteMode = value;
                 PictureManager.reset();
-                World.world.onAllVoxelUpdated();
+                WorldDefinition.world.onAllVoxelUpdated();
                 if (OnViewOptionChanged != null)
                 {
                     Debug.WriteLine("###" + OnViewOptionChanged.GetInvocationList().Length);
@@ -98,7 +98,7 @@ namespace FreeTrain.Views
             get
             {
                 if (nightSpriteMode == NightSpriteMode.AlignClock)
-                    return World.world.clock.dayOrNight == DayNight.Night;
+                    return WorldDefinition.world.clock.dayOrNight == DayNight.Night;
                 else
                     return nightSpriteMode == NightSpriteMode.AlwaysNight;
             }

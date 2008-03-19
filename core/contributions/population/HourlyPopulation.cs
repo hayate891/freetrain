@@ -20,9 +20,9 @@
 
 using System;
 using System.Diagnostics;
-using FreeTrain.world;
-using FreeTrain.world.Structs;
-using FreeTrain.Framework.plugin;
+using FreeTrain.World;
+using FreeTrain.World.Structs;
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Contributions.Population
 {

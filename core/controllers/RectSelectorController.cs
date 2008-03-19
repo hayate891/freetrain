@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using FreeTrain.world;
+using FreeTrain.World;
 using FreeTrain.Views.Map;
 
 namespace FreeTrain.Controllers
@@ -34,7 +34,7 @@ namespace FreeTrain.Controllers
     public abstract class RectSelectorController : ModalController, LocationDisambiguator
     {
         /// <summary>Constant</summary>
-        protected static readonly Location UNPLACED = world.Location.UNPLACED;
+        protected static readonly Location UNPLACED = World.Location.UNPLACED;
         /// <summary>
         /// 
         /// </summary>
@@ -178,7 +178,7 @@ namespace FreeTrain.Controllers
             else
             {
                 // cancel the anchor
-                World.world.onAllVoxelUpdated();
+                WorldDefinition.world.onAllVoxelUpdated();
                 anchor = UNPLACED;
             }
         }
@@ -190,7 +190,7 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public virtual void onMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            World w = World.world;
+            WorldDefinition w = WorldDefinition.world;
 
             if (anchor != UNPLACED && currentLoc != loc)
             {
@@ -211,7 +211,7 @@ namespace FreeTrain.Controllers
         public virtual void onDetached()
         {
             // redraw the entire surface to erase any left-over from this controller
-            World.world.onAllVoxelUpdated();
+            WorldDefinition.world.onAllVoxelUpdated();
         }
         /// <summary>
         /// 

@@ -27,10 +27,10 @@ using SDL.net;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Framework.plugin;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 
-namespace FreeTrain.world.Rail
+namespace FreeTrain.World.Rail
 {
     /// <summary>
     /// 
@@ -150,7 +150,7 @@ namespace FreeTrain.world.Rail
             // there must be at least one water between two locations
             while (true)
             {
-                if (World.world[here] != null)
+                if (WorldDefinition.world[here] != null)
                 {
                     TrafficVoxel v = TrafficVoxel.get(here);
                     if (v == null) return false;	// occupied

@@ -24,7 +24,7 @@ using System.Drawing;
 using FreeTrain.Framework.Graphics;
 using SDL.net;
 
-namespace FreeTrain.world.Land
+namespace FreeTrain.World.Land
 {
     /// <summary>
     /// Player-owned land property.
@@ -73,7 +73,7 @@ namespace FreeTrain.world.Land
         /// </summary>
         public void remove()
         {
-            World.world.remove(this);
+            WorldDefinition.world.remove(this);
             if (onEntityRemoved != null) onEntityRemoved(this, null);
         }
         /// <summary>
