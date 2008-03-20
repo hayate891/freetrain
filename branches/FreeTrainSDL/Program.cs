@@ -39,6 +39,7 @@ using FreeTrain.Controllers.Terrain;
 using FreeTrain.Controllers.Structs;
 using FreeTrain.Framework;
 using FreeTrain.Views;
+using FreeTrain.Util;
 
 namespace FreeTrain
 {
@@ -294,6 +295,9 @@ namespace FreeTrain
 
         private void Go()
         {
+            //set the current language (autodetected)
+            //Application.CurrentCulture = new System.Globalization.CultureInfo("ja-JP");
+
             timer = new System.Windows.Forms.Timer();
             Events.KeyboardDown += new EventHandler<KeyboardEventArgs>(this.KeyDown);
             Events.MouseButtonDown +=
@@ -310,9 +314,18 @@ namespace FreeTrain
             dragStartScrollPosition = new Point(0, 0);
             ScrollPosition = new Point(0, 0);
 
-            SdlDotNet.Graphics.Video.WindowIcon();
-            SdlDotNet.Graphics.Video.WindowCaption = "FreeTrain SDL";
-            SdlDotNet.Graphics.Video.Initialize();
+            try
+            {
+                SdlDotNet.Graphics.Video.WindowIcon();
+                SdlDotNet.Graphics.Video.WindowCaption = Translation.GetString("MAIN_WINDOW_TITLE");
+                SdlDotNet.Graphics.Video.Initialize();
+            }
+            catch
+            {
+                MessageBox.Show(Translation.GetString("SDL_NOT_FOUND"));
+                return;
+            }
+
             Mixer.Initialize();
 
             SdlMixer.MusicFinishedDelegate musicStopped = new SdlMixer.MusicFinishedDelegate(MusicHasStopped);

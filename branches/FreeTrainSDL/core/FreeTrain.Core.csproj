@@ -533,6 +533,7 @@
     <Compile Include="util\Set.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="util\Translation.cs" />
     <Compile Include="util\UrlInvoker.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -829,6 +830,8 @@
       <Link>plugin.xml</Link>
     </Content>
     <Content Include="contributions\readme.txt" />
+    <Content Include="lang\freetrain.en-US.txt" />
+    <Content Include="lang\freetrain.ja-JP.txt" />
     <Content Include="res\Arrows.bmp" />
     <Content Include="res\BridgePier.bmp" />
     <Content Include="res\ConstructionBones.bmp" />
@@ -989,7 +992,10 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>mkdir "$(SolutionDir)bin\Debug\lang"
+"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.en-US.txt" "$(SolutionDir)bin\Debug\lang\freetrain.resources"
+"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.en-US.txt" "$(SolutionDir)bin\Debug\lang\freetrain.en-US.resources"
+"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.en-US.txt" "$(SolutionDir)bin\Debug\lang\freetrain.en-AU.resources"
+"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.ja-JP.txt" "$(SolutionDir)bin\Debug\lang\freetrain.ja-JP.resources"</PostBuildEvent>
   </PropertyGroup>
 </Project>
