@@ -27,7 +27,7 @@ using FreeTrain.Views.Map;
 using FreeTrain.Controllers;
 
 
-namespace FreeTrain.World.Road.DummyCar
+namespace FreeTrain.World.Road.DummyCars
 {
     /// <summary>
     /// ModalController implementation for DummyCar contribution

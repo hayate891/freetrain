@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using FreeTrain.World;
 
-namespace FreeTrain.World.Road.DummyCar
+namespace FreeTrain.World.Road.DummyCars
 {
     /// <summary>
     /// Accessory implementation.

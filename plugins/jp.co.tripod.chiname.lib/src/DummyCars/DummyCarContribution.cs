@@ -32,7 +32,7 @@ using FreeTrain.World;
 using FreeTrain.World.Rail;
 using FreeTrain.Contributions.Common;
 
-namespace FreeTrain.World.Road.DummyCar
+namespace FreeTrain.World.Road.DummyCars
 {
     /// <summary>
     /// 

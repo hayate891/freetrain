@@ -10,14 +10,14 @@
     </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>FreeTrain.HalfVoxelStructure</AssemblyName>
+    <AssemblyName>FreeTrain.World.Structs.HalfVoxelStructure</AssemblyName>
     <AssemblyOriginatorKeyFile>FreeTrainSdl.snk</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
-    <RootNamespace>FreeTrain.HalfVoxelStructure</RootNamespace>
+    <RootNamespace>FreeTrain.World.Structs.HalfVoxelStructure</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
