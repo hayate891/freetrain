@@ -19,7 +19,7 @@
 	<contribution type="land" id="{66B81CAD-8B41-416C-8624-137C2D8110F2}">
 		<group>Greenhouse</group>
 		<class name="FreeTrain.World.Land.VinylHouse.XVinylHouseBuilder"
-			codebase="FreeTrain.VinylHouse.dll"/>
+			codebase="FreeTrain.World.Land.VinylHouse.dll"/>
 		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="0" />
 		<price>20</price>
 		<population>
@@ -31,7 +31,7 @@
 	<contribution type="land" id="{4F97D7DD-749E-4B65-BF13-5733B10D8570}">
 		<group>Greenhouse</group>
 		<class name="FreeTrain.World.Land.VinylHouse.YVinylHouseBuilder"
-			codebase="FreeTrain.VinylHouse.dll"/>
+			codebase="FreeTrain.World.Land.VinylHouse.dll"/>
 		<picture ref="{5981B3EA-5CCF-4DB2-94DC-B7EC854987D7}" offset="32" />
 		<price>20</price>
 		<population>

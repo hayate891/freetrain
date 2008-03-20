@@ -6,14 +6,14 @@
 	
 	<contribution type="menu" id="{8CA8F000-4DC6-4441-8F53-A628C952BD9F}">
 		<class name="FreeTrain.World.Rail.ColorTestTrain.ColorConfigCommand"
-			codebase="FreeTrain.ColorTestTrain.dll" />
+			codebase="FreeTrain.World.Rail.ColorTestTrain.dll" />
 	</contribution>
 	
 	<!-- Test Train -->
 	<contribution type="trainCar" id="{6E5E12DD-69CB-4DF2-B4F0-2BCDA703CBB0}">
 		<class
 			name="FreeTrain.World.Rail.ColorTestTrain.ColorTestTrainCar"
-			codebase="FreeTrain.ColorTestTrain.dll" />
+			codebase="FreeTrain.World.Rail.ColorTestTrain.dll" />
 	</contribution>
 	
 	<contribution type="train" id="{719F0922-EA74-409C-B829-C4950201C226}">

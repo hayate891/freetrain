@@ -36,7 +36,7 @@ using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
 using SDL.net;
 
-namespace FreeTrain.World.Road.DummyCar
+namespace FreeTrain.World.Road.DummyCars
 {
     /// <summary>
     /// Controller that allows the user to
