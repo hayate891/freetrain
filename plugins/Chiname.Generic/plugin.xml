@@ -24,7 +24,7 @@
 
 ]>
 <plug-in>
-	<depend on="org.kohsuke.freetrain.structure.c477"/>
+	<depend on="Kohsuke.Structure"/>
 
   <title>Generic Plugin</title>
   <!--<title>汎用プラグイン</title> -->

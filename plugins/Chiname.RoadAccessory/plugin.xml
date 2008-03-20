@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plug-in>
 	<title>Pedestrian Crossing</title>
-	<title>Parking Area</title>
 	<!--//!<title>横断歩道</title>
 	<title>駐車場</title>-->
 	<author>C477</author>
@@ -21,17 +20,4 @@
 			codebase="FreeTrain.World.Road.Accessory.dll" />
 	</contribution>
 
-	<contribution type="contribution" id="{0A73F9C6-BDCC-43DF-C477-E28B76058E8C}">
-		<name>DummyCar</name>
-		<class name="FreeTrain.Framework.Plugin.FixedClassContributionFactory"/>
-		<implementation name="FreeTrain.World.Road.DummyCars.DummyCarContribution"
-			codebase="FreeTrain.World.Road.DummyCars.dll" />
-	</contribution>
-	
-	<!-- temporary -->
-	<contribution type="menu" id="{BFC035E9-8B0E-41D6-C477-72F99D820290}">
-		<class name="FreeTrain.World.Road.DummyCars.MenuContributionImpl"
-			codebase="FreeTrain.World.Road.DummyCars.dll" />
-	</contribution>
-	
 </plug-in>

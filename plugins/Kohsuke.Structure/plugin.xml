@@ -72,7 +72,7 @@
 	<title>Structure Set</title>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>
 	<author>C477</author>
-	<depend on="org.kohsuke.freetrain.structure.osakaCastle"/>	
+	<depend on="Kohsuke.Structure.OsakaCastle"/>	
 	
 	<contribution type="picture" id="{5E1F4ECE-06AF-4D23-BF80-E9FC47E4B167}">
 		<picture src="store_s01.bmp" >

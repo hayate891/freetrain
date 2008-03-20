@@ -19,7 +19,7 @@
 	<title>Half-tile Houses</title>
 	<author>C477</author>
 	<homepage>http://www.rocket.ne.jp/~nao/</homepage>	
-	<depend on="jp.co.tripod.chiname.lib.halfvoxel" />	
+	<depend on="Chiname.Structure.HalfVoxel" />	
 	
 	<contribution type="picture" id="{170B8A99-4A14-42EE-C477-AA5C3FB3F387}">
 		<picture src="oldhouses_hv.bmp"/>
