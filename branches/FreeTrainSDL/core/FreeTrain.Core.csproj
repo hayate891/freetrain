@@ -465,9 +465,7 @@
     <Compile Include="framework\plugin\FixedClassContributionFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\Plugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="framework\plugin\PluginDefinition.cs" />
     <Compile Include="framework\plugin\PluginListDialog.cs">
       <SubType>Form</SubType>
     </Compile>
