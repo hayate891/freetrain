@@ -28,7 +28,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <PlatformTarget>x86</PlatformTarget>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
@@ -87,19 +87,19 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <ProjectReference Include="..\..\..\..\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
       <Name>FreeTrain.Core</Name>
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\lib\Controls\FreeTrain.Controls.csproj">
+    <ProjectReference Include="..\..\lib\Controls\FreeTrain.Controls.csproj">
       <Name>FreeTrain.Controls</Name>
       <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\lib\SDLGFX.net\SDL.net.csproj">
+    <ProjectReference Include="..\..\lib\SDLGFX.net\SDL.net.csproj">
       <Project>{778C6318-394F-4DE7-B9AF-FCCFA1B68AAE}</Project>
       <Name>SDL.net</Name>
     </ProjectReference>
