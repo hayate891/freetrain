@@ -21,6 +21,8 @@
 using System;
 using System.Diagnostics;
 
+using FreeTrain.Util;
+
 namespace FreeTrain.World
 {
     /// <summary>
@@ -71,10 +73,9 @@ namespace FreeTrain.World
         {
             get
             {
-                return string.Format("Year {0} Month {1} Day {2} ({3}) {4,2:d}:{5,1:d}0",
-                    //! return string.Format("{0}年{1}月{2}日({3}) {4,2:d}時{5,1:d}0分",
+                return string.Format(Translation.GetString("CLOCK_FORMAT"),
                     year, month, day,
-                    dayOfWeekChar(dayOfWeek),
+                    daysOfWeek[dayOfWeek],
                     hour, minutes / 10);
             }
         }
@@ -193,17 +194,14 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="dow"></param>
-        /// <returns></returns>
-        public static char dayOfWeekChar(int dow)
-        {
-            return "7123456"[dow];
-            //! Translator's comment: The string above is a temporary
-            //! solution, since the weekday can only be one character
-            //! long in the current solution.
-            //! return "SunMonTueWedThuFriSat "[dow];
-            //! return "日月火水木金土"[dow];
-        }
+        protected static readonly string[] daysOfWeek = {Translation.GetString("SUNDAY"),
+                                                        Translation.GetString("MONDAY"),
+                                                        Translation.GetString("TUESDAY"),
+                                                        Translation.GetString("WEDNESDAY"),
+                                                        Translation.GetString("THURSDAY"),
+                                                        Translation.GetString("FRIDAY"),
+                                                        Translation.GetString("SATURDAY")};
+
         /// <summary>
         /// 
         /// </summary>

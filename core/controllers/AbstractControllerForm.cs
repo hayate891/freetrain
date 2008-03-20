@@ -27,6 +27,7 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Views;
 using FreeTrain.World;
+using FreeTrain.Util;
 
 namespace FreeTrain.Controllers
 {
@@ -132,7 +133,7 @@ namespace FreeTrain.Controllers
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(39, 15);
             this.lblExit.TabIndex = 1;
-            this.lblExit.Text = "EXIT";
+            this.lblExit.Text = Translation.GetString("CONTROLLER_EXIT_BUTTON");
             this.lblExit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblExit.MouseLeave += new System.EventHandler(this.lblExit_MouseLeave);
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);

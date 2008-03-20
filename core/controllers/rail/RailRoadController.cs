@@ -104,8 +104,8 @@ namespace FreeTrain.Controllers.Rail
         private void updateDialog()
         {
             message.Text = anchor != UNPLACED ?
-                "Select end point" : "Select starting point";
-            //! "終点を選んでください":"始点を選んでください";
+                Translation.GetString("CONTROLLER_RAIL_END_POINT") : 
+                Translation.GetString("CONTROLLER_RAIL_START_POINT");
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace FreeTrain.Controllers.Rail
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(105, 26);
             this.message.TabIndex = 1;
-            this.message.Text = "Click on two points on the map to place tracks";
+            this.message.Text = Translation.GetString("CONTROLLER_RAIL_INITIAL_MESSAGE");
             this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //this.message.MouseDown += new MouseEventHandler(this.AbstractControllerForm_MouseDown);
             //this.message.MouseMove += new MouseEventHandler(this.AbstractControllerForm_MouseMove);
@@ -161,7 +161,7 @@ namespace FreeTrain.Controllers.Rail
             this.buttonPlace.Size = new System.Drawing.Size(46, 26);
             this.buttonPlace.TabIndex = 2;
             this.buttonPlace.TabStop = true;
-            this.buttonPlace.Text = "Place";
+            this.buttonPlace.Text = Translation.GetString("CONTROLLER_PLACE_BUTTON");
             this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.buttonPlace.UseVisualStyleBackColor = false;
             this.buttonPlace.CheckedChanged += new System.EventHandler(this.modeChanged);
@@ -176,7 +176,7 @@ namespace FreeTrain.Controllers.Rail
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(59, 26);
             this.buttonRemove.TabIndex = 3;
-            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.buttonRemove.UseVisualStyleBackColor = false;
             this.buttonRemove.CheckedChanged += new System.EventHandler(this.modeChanged);
@@ -186,7 +186,7 @@ namespace FreeTrain.Controllers.Rail
             this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.costBox.cost = 0;
-            this.costBox.label = "Cost:";
+            this.costBox.label = Translation.GetString("CONTROLLER_COST_LABEL");
             this.costBox.Location = new System.Drawing.Point(12, 84);
             this.costBox.Name = "costBox";
             this.costBox.Size = new System.Drawing.Size(105, 25);
@@ -203,9 +203,9 @@ namespace FreeTrain.Controllers.Rail
             this.Controls.Add(this.buttonPlace);
             this.Controls.Add(this.costBox);
             this.Controls.Add(this.message);
-            this.Name = "RailRoadController";
-            this.Text = "Track construction";
-            this.lblTitle.Text = "RAILROAD";
+            this.Name = "RailRoadController"; //internal, no need for translation.
+            this.Text = Translation.GetString("CONTROLLER_RAIL_TOOLTIP");
+            this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
             this.Resize += new System.EventHandler(this.updateAfterResize);
             this.Load += new System.EventHandler(this.RailRoadController_Load);
             this.Controls.SetChildIndex(this.message, 0);
@@ -238,8 +238,7 @@ namespace FreeTrain.Controllers.Rail
                     {
                         // build new railroads.
                         if (!SingleRailRoad.build(anchor, loc))
-                            MainWindow.showError("There are obstacles");
-                        //! MainWindow.showError("障害物があります");
+                            MainWindow.showError(Translation.GetString("CONTROLLER_RAIL_OBSTACLES"));
                     }
                     else
                         // remove existing ones
@@ -401,7 +400,7 @@ namespace FreeTrain.Controllers.Rail
 
         private void RailRoadController_Load(object sender, EventArgs e)
         {
-            this.lblTitle.Text = "Railroad";
+            this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
         }
     }
 
