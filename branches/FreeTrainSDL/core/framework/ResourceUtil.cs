@@ -52,7 +52,7 @@ namespace FreeTrain.Framework
             path = Path.Combine(Core.installationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine("res", name)))));
             if (File.Exists(path)) return path;
 
-            throw new FileNotFoundException("system resource: " + name);
+            throw new FileNotFoundException("System resource: " + name);
         }
 
         //		private static WebResponse getStream( Uri uri ) {
