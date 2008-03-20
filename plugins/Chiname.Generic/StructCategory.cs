@@ -272,7 +272,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// </summary>
         static public void loadDefaultTree()
         {
-            PluginDefinition p = PluginManager.theInstance.getPlugin("jp.co.tripod.chiname.lib.generic");
+            PluginDefinition p = PluginManager.theInstance.getPlugin("Chiname.Generic");
             _baseDir = p.dirName;
             string filename = Path.Combine(p.dirName, "CategoryTree.xml");
             using (Stream file = p.loadStream(filename))
