@@ -32,7 +32,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\FreeTrain.Core.xml</DocumentationFile>
+    <DocumentationFile>FreeTrain.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -829,9 +829,6 @@
     <Compile Include="world\WorldDefinition.cs" />
     <Content Include="..\plugins\system\plugin.xml">
       <Link>plugin.xml</Link>
-    </Content>
-    <Content Include="..\whatsnew.txt">
-      <Link>whatsnew.txt</Link>
     </Content>
     <Content Include="contributions\readme.txt" />
     <Content Include="res\Arrows.bmp" />

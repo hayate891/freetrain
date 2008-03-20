@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.RoadAccessory", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.VinylHouse", "plugins\org.kohsuke.freetrain.land.477\FreeTrain.VinylHouse.csproj", "{D01D6622-F67B-4EDC-8CA3-4E1A8FCA422B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.ExpandedContributions", "plugins\jp.co.tripod.chiname.lib.generic\FreeTrain.ExpandedContributions.csproj", "{14C6D588-E391-49CE-A1D2-2A8A2A60A540}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.Generic", "plugins\jp.co.tripod.chiname.lib.generic\FreeTrain.Generic.csproj", "{14C6D588-E391-49CE-A1D2-2A8A2A60A540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
