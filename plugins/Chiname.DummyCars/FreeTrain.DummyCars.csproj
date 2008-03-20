@@ -129,6 +129,9 @@
   <ItemGroup>
     <None Include="FreeTrainSdl.snk" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="plugin.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
