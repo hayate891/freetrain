@@ -70,7 +70,7 @@ namespace FreeTrain.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot build object.
+        ///   Looks up a localized string similar to Can&apos;t build object!.
         /// </summary>
         internal static string CONSTRUCTION_CANNOT_BUILD {
             get {
@@ -79,7 +79,16 @@ namespace FreeTrain.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to remove object.
+        ///   Looks up a localized string similar to Can&apos;t place this object!.
+        /// </summary>
+        internal static string CONSTRUCTION_CANNOT_PLACE {
+            get {
+                return ResourceManager.GetString("CONSTRUCTION_CANNOT_PLACE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to remove object!.
         /// </summary>
         internal static string CONSTRUCTION_CANNOT_REMOVE {
             get {
@@ -300,6 +309,123 @@ namespace FreeTrain.Properties {
         internal static string CONTROLLER_STATION_TITLE {
             get {
                 return ResourceManager.GetString("CONTROLLER_STATION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Add new group.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_ADDNEWGROUP {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_ADDNEWGROUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This train has already been placed!.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_ALREADYPLACED {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_ALREADYPLACED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t place without tracks!.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to sell this train?.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_CONFIRMSELL {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_CONFIRMSELL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Diagram:.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_DIAGRAM {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_DIAGRAM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Name:.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_NAME {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no cars!.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_NOCARS {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_NOCARS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no tracks.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_NORAIL {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_NORAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Place Train.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_PLACE {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_PLACE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Sell....
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_SELL {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_SELL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buy/Sell.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_TRADING {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_TRADING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Type:.
+        /// </summary>
+        internal static string CONTROLLER_TRAIN_TYPE {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAIN_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TRAIN PLACEMENT.
+        /// </summary>
+        internal static string CONTROLLER_TRAINPLACE_TITLE {
+            get {
+                return ResourceManager.GetString("CONTROLLER_TRAINPLACE_TITLE", resourceCulture);
             }
         }
         

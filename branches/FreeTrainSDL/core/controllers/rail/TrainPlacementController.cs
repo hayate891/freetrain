@@ -30,6 +30,7 @@ using FreeTrain.World;
 using FreeTrain.World.Rail;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Sound;
+using FreeTrain.Util;
 using FreeTrain.Util.Controls;
 using FreeTrain.Util.Command;
 using SDL.net;
@@ -80,6 +81,17 @@ namespace FreeTrain.Controllers.Rail
         {
             // Windows フォーム デザイナ サポートに必要です。
             InitializeComponent();
+
+            this.lblTitle.Text = Translation.GetString("CONTROLLER_TRAINPLACE_TITLE");
+            this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
+            this.buttonPlace.Text = Translation.GetString("CONTROLLER_BUILD_BUTTON");
+            this.miAddGroup.Text = Translation.GetString("CONTROLLER_TRAIN_ADDNEWGROUP");
+            this.miSell.Text = Translation.GetString("CONTROLLER_TRAIN_SELL");
+            this.cmdTrading.Text = Translation.GetString("CONTROLLER_TRAIN_TRADING");
+            this.label3.Text = Translation.GetString("CONTROLLER_TRAIN_TYPE");
+            this.label2.Text = Translation.GetString("CONTROLLER_TRAIN_DIAGRAM");
+            this.label1.Text = Translation.GetString("CONTROLLER_TRAIN_NAME");
+            this.Text = Translation.GetString("CONTROLLER_TRAIN_PLACE");
 
             controllerCombo.DataSource = WorldDefinition.world.trainControllers;
             tree.ItemMoved = new ItemMovedHandler(onItemDropped);
@@ -468,8 +480,7 @@ namespace FreeTrain.Controllers.Rail
                     }
                     else
                     {
-                        MainWindow.showError("This train is already placed");
-                        //; MainWindow.showError("配置済みです");
+                        MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_ALREADYPLACED"));
                         return;
                     }
                 }
@@ -477,15 +488,13 @@ namespace FreeTrain.Controllers.Rail
                 RailRoad rr = RailRoad.get(loc);
                 if (rr == null)
                 {
-                    MainWindow.showError("Can not place without tracks");
-                    //; MainWindow.showError("線路のないところには配置できません");
+                    MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS"));
                     return;
                 }
 
                 if (!tr.place(loc))
                 {
-                    MainWindow.showError("Can not place");
-                    //! MainWindow.showError("配置できません");
+                    MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_PLACE"));
                 }
                 else
                     playSound();
@@ -497,14 +506,12 @@ namespace FreeTrain.Controllers.Rail
                 RailRoad rr = RailRoad.get(loc);
                 if (rr == null)
                 {
-                    MainWindow.showError("There are no tracks");
-                    //! MainWindow.showError("線路がありません");
+                    MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_NORAIL"));
                     return;
                 }
                 if (!(rr.voxel.car is Train.TrainCar))
                 {
-                    MainWindow.showError("There are no cars");
-                    //! MainWindow.showError("車両がありません");
+                    MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_NOCARS"));
                     return;
                 }
                 ((Train.TrainCar)rr.voxel.car).parent.remove();
@@ -712,8 +719,7 @@ namespace FreeTrain.Controllers.Rail
 
         private void executeSell()
         {
-            if (MessageBox.Show(this, "Do you want to sell this train?", Application.ProductName,
-                //! if( MessageBox.Show(this,"売却しますか？",Application.ProductName,
+            if (MessageBox.Show(this, Translation.GetString("CONTROLLER_TRAIN_CONFIRMSELL"), Application.ProductName,
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {

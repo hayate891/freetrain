@@ -123,6 +123,9 @@
   <data name="CONSTRUCTION_CANNOT_BUILD" xml:space="preserve">
     <value>設置できません</value>
   </data>
+  <data name="CONSTRUCTION_CANNOT_PLACE" xml:space="preserve">
+    <value>配置できません</value>
+  </data>
   <data name="CONSTRUCTION_CANNOT_REMOVE" xml:space="preserve">
     <value>撤去できません</value>
   </data>
@@ -200,6 +203,42 @@
   </data>
   <data name="CONTROLLER_STATION_TITLE" xml:space="preserve">
     <value>駅</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_ADDNEWGROUP" xml:space="preserve">
+    <value>新しいグループの追加(&amp;A)</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_ALREADYPLACED" xml:space="preserve">
+    <value>配置済みです</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS" xml:space="preserve">
+    <value>線路のないところには配置できません</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_CONFIRMSELL" xml:space="preserve">
+    <value>売却しますか？</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_DIAGRAM" xml:space="preserve">
+    <value>ダイヤ(&amp;T)：</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NAME" xml:space="preserve">
+    <value>名前(&amp;N)：</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NOCARS" xml:space="preserve">
+    <value>車両がありません</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NORAIL" xml:space="preserve">
+    <value>線路がありません</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_PLACE" xml:space="preserve">
+    <value>車両の配置</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_SELL" xml:space="preserve">
+    <value>売却(&amp;S)...</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_TRADING" xml:space="preserve">
+    <value>列車　買う・売却</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_TYPE" xml:space="preserve">
+    <value>種類(&amp;T)：</value>
   </data>
   <data name="FRIDAY" xml:space="preserve">
     <value>金</value>
