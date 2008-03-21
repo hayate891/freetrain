@@ -72,6 +72,14 @@ namespace FreeTrain.Controllers.Rail
         private RailRoadController()
         {
             InitializeComponent();
+
+            this.message.Text = Translation.GetString("CONTROLLER_RAIL_INITIAL_MESSAGE");
+            this.buttonPlace.Text = Translation.GetString("CONTROLLER_PLACE_BUTTON");
+            this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
+            this.costBox.label = Translation.GetString("CONTROLLER_COST_LABEL");
+            this.Text = Translation.GetString("CONTROLLER_RAIL_TOOLTIP");
+            this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
+
             updatePreview();
         }
         /// <summary>

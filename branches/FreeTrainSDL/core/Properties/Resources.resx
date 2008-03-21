@@ -120,6 +120,18 @@
   <data name="CLOCK_FORMAT" xml:space="preserve">
     <value>Year {0} Month {1} Day {2} ({3}) {4,2:d}:{5,1:d}0</value>
   </data>
+  <data name="CONSTRUCTION_CANNOT_BUILD" xml:space="preserve">
+    <value>Cannot build object</value>
+  </data>
+  <data name="CONSTRUCTION_CANNOT_REMOVE" xml:space="preserve">
+    <value>Unable to remove object</value>
+  </data>
+  <data name="CONTROLLER_BUILD_BUTTON" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="CONTROLLER_COST_LABEL" xml:space="preserve">
+    <value>Cost:</value>
+  </data>
   <data name="CONTROLLER_EXIT_BUTTON" xml:space="preserve">
     <value>EXIT</value>
   </data>
@@ -140,6 +152,51 @@
   </data>
   <data name="CONTROLLER_REMOVE_BUTTON" xml:space="preserve">
     <value>Remove</value>
+  </data>
+  <data name="CONTROLLER_STATION_COLOUR" xml:space="preserve">
+    <value>Colour:</value>
+  </data>
+  <data name="CONTROLLER_STATION_CONSTRUCTION" xml:space="preserve">
+    <value>Station construction</value>
+  </data>
+  <data name="CONTROLLER_STATION_COST" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="CONTROLLER_STATION_DESIGN" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="CONTROLLER_STATION_DIRECTION" xml:space="preserve">
+    <value>Direction:</value>
+  </data>
+  <data name="CONTROLLER_STATION_LENGTH" xml:space="preserve">
+    <value>&amp;Length:</value>
+  </data>
+  <data name="CONTROLLER_STATION_MAINTENANCE" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="CONTROLLER_STATION_MATERIALCONTROLLER_STATION_MATERIAL" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="CONTROLLER_STATION_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CONTROLLER_STATION_PAGE" xml:space="preserve">
+    <value>Station</value>
+  </data>
+  <data name="CONTROLLER_STATION_PLATFORM" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="CONTROLLER_STATION_SCALE" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="CONTROLLER_STATION_SIZE" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="CONTROLLER_STATION_SLIMPLATFORM" xml:space="preserve">
+    <value>Slim platform</value>
+  </data>
+  <data name="CONTROLLER_STATION_TITLE" xml:space="preserve">
+    <value>STATION</value>
   </data>
   <data name="FRIDAY" xml:space="preserve">
     <value>Fri</value>

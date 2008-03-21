@@ -120,6 +120,15 @@
   <data name="CLOCK_FORMAT" xml:space="preserve">
     <value>{0}年{1}月{2}日({3}) {4,2:d}時{5,1:d}0分</value>
   </data>
+  <data name="CONSTRUCTION_CANNOT_BUILD" xml:space="preserve">
+    <value>設置できません</value>
+  </data>
+  <data name="CONSTRUCTION_CANNOT_REMOVE" xml:space="preserve">
+    <value>撤去できません</value>
+  </data>
+  <data name="CONTROLLER_BUILD_BUTTON" xml:space="preserve">
+    <value>設置</value>
+  </data>
   <data name="CONTROLLER_COST_LABEL" xml:space="preserve">
     <value>費用：</value>
   </data>
@@ -146,6 +155,51 @@
   </data>
   <data name="CONTROLLER_REMOVE_BUTTON" xml:space="preserve">
     <value>撤去</value>
+  </data>
+  <data name="CONTROLLER_STATION_COLOUR" xml:space="preserve">
+    <value>色：</value>
+  </data>
+  <data name="CONTROLLER_STATION_CONSTRUCTION" xml:space="preserve">
+    <value>駅工事</value>
+  </data>
+  <data name="CONTROLLER_STATION_COST" xml:space="preserve">
+    <value>建造費</value>
+  </data>
+  <data name="CONTROLLER_STATION_DESIGN" xml:space="preserve">
+    <value>デザイン：</value>
+  </data>
+  <data name="CONTROLLER_STATION_DIRECTION" xml:space="preserve">
+    <value>方向：</value>
+  </data>
+  <data name="CONTROLLER_STATION_LENGTH" xml:space="preserve">
+    <value>長さ(&amp;L)：</value>
+  </data>
+  <data name="CONTROLLER_STATION_MAINTENANCE" xml:space="preserve">
+    <value>維持費</value>
+  </data>
+  <data name="CONTROLLER_STATION_MATERIAL" xml:space="preserve">
+    <value>材質</value>
+  </data>
+  <data name="CONTROLLER_STATION_NAME" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="CONTROLLER_STATION_PAGE" xml:space="preserve">
+    <value>駅舎</value>
+  </data>
+  <data name="CONTROLLER_STATION_PLATFORM" xml:space="preserve">
+    <value>ホーム</value>
+  </data>
+  <data name="CONTROLLER_STATION_SCALE" xml:space="preserve">
+    <value>規模</value>
+  </data>
+  <data name="CONTROLLER_STATION_SIZE" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="CONTROLLER_STATION_SLIMPLATFORM" xml:space="preserve">
+    <value>スリムなホーム</value>
+  </data>
+  <data name="CONTROLLER_STATION_TITLE" xml:space="preserve">
+    <value>駅</value>
   </data>
   <data name="FRIDAY" xml:space="preserve">
     <value>金</value>

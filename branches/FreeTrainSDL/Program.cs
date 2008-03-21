@@ -295,9 +295,6 @@ namespace FreeTrain
 
         private void Go()
         {
-            //set the current language (autodetected)
-            //Application.CurrentCulture = new System.Globalization.CultureInfo("ja-JP");
-
             timer = new System.Windows.Forms.Timer();
             Events.KeyboardDown += new EventHandler<KeyboardEventArgs>(this.KeyDown);
             Events.MouseButtonDown +=
