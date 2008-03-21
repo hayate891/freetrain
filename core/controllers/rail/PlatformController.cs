@@ -105,6 +105,27 @@ namespace FreeTrain.Controllers.Rail
             ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-ROOF}")
             //			};
 
+            //do translation, if you put this in InitialiseComponent then it will get overridden by the
+            //visual studio when you edit the form in designer view...
+
+            this.lblTitle.Text = Translation.GetString("CONTROLLER_STATION_TITLE");
+            this.stationPage.Text = Translation.GetString("CONTROLLER_STATION_PAGE");
+            this.label3.Text = Translation.GetString("CONTROLLER_STATION_DESIGN");
+            this.columnHeader1.Text = Translation.GetString("CONTROLLER_STATION_NAME");
+            this.columnHeader2.Text = Translation.GetString("CONTROLLER_STATION_SCALE");
+            this.columnHeader3.Text = Translation.GetString("CONTROLLER_STATION_MATERIAL");
+            this.columnHeader4.Text = Translation.GetString("CONTROLLER_STATION_SIZE");
+            this.columnHeader5.Text = Translation.GetString("CONTROLLER_STATION_COST");
+            this.columnHeader6.Text = Translation.GetString("CONTROLLER_STATION_MAINTENANCE");
+            this.label4.Text = Translation.GetString("CONTROLLER_STATION_DIRECTION");
+            this.label5.Text = Translation.GetString("CONTROLLER_STATION_COLOUR");
+            this.platformPage.Text  = Translation.GetString("CONTROLLER_STATION_PLATFORM");
+            this.checkSlim.Text = Translation.GetString("CONTROLLER_STATION_SLIMPLATFORM");
+            this.label1.Text = Translation.GetString("CONTROLLER_STATION_LENGTH");
+            this.Text = Translation.GetString("CONTROLLER_STATION_CONSTRUCTION");
+            this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
+            this.buttonPlace.Text = Translation.GetString("CONTROLLER_BUILD_BUTTON");
+
             dirN.Tag = Direction.NORTH;
             dirE.Tag = Direction.EAST;
             dirS.Tag = Direction.SOUTH;
@@ -249,6 +270,7 @@ namespace FreeTrain.Controllers.Rail
             // lblTitle
             // 
             this.lblTitle.Size = new System.Drawing.Size(187, 15);
+            this.lblTitle.Text = "STATION";
             // 
             // lblExit
             // 
@@ -264,7 +286,6 @@ namespace FreeTrain.Controllers.Rail
             this.buttonRemove.Size = new System.Drawing.Size(76, 26);
             this.buttonRemove.TabIndex = 1;
             this.buttonRemove.Text = "Remove";
-            //! this.buttonRemove.Text = "撤去";
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.buttonRemove.UseVisualStyleBackColor = false;
             // 
@@ -280,7 +301,6 @@ namespace FreeTrain.Controllers.Rail
             this.buttonPlace.TabIndex = 0;
             this.buttonPlace.TabStop = true;
             this.buttonPlace.Text = "Build";
-            //! this.buttonPlace.Text = "設置";
             this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.buttonPlace.UseVisualStyleBackColor = false;
             // 
@@ -297,30 +317,28 @@ namespace FreeTrain.Controllers.Rail
             this.stationPage.Controls.Add(this.label4);
             this.stationPage.Controls.Add(this.indexSelector2);
             this.stationPage.Controls.Add(this.label5);
-            this.stationPage.Location = new System.Drawing.Point(5, 21);
+            this.stationPage.Location = new System.Drawing.Point(4, 21);
             this.stationPage.Margin = new System.Windows.Forms.Padding(0);
             this.stationPage.Name = "stationPage";
-            this.stationPage.Size = new System.Drawing.Size(185, 157);
+            this.stationPage.Size = new System.Drawing.Size(178, 155);
             this.stationPage.TabIndex = 1;
             this.stationPage.Text = "Station";
             this.stationPage.UseVisualStyleBackColor = true;
-            //! this.stationPage.Text = "駅舎";
             // 
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(3, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Design:";
-            //! this.label3.Text = "デザイン：";
+            this.label3.Text = "Design";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(286, 35);
+            this.label2.Location = new System.Drawing.Point(279, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 5;
@@ -330,13 +348,13 @@ namespace FreeTrain.Controllers.Rail
             // 
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-									this.columnHeader1,
-									this.columnHeader2,
-									this.columnHeader3,
-									this.columnHeader4,
-									this.columnHeader5,
-									this.columnHeader6});
-            this.listView1.Location = new System.Drawing.Point(198, 9);
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView1.Location = new System.Drawing.Point(191, 9);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(103, 156);
             this.listView1.TabIndex = 4;
@@ -346,59 +364,53 @@ namespace FreeTrain.Controllers.Rail
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
-            //! this.columnHeader1.Text = "名前";
             this.columnHeader1.Width = 120;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Scale";
-            //! this.columnHeader2.Text = "規模";
             this.columnHeader2.Width = 54;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Material";
-            //! this.columnHeader3.Text = "材質";
             this.columnHeader3.Width = 54;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Size";
-            //! this.columnHeader4.Text = "サイズ";
             this.columnHeader4.Width = 64;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Construction cost";
-            //! this.columnHeader5.Text = "建造費";
+            this.columnHeader5.Text = "Cost";
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Maintenance";
-            //! this.columnHeader6.Text = "維持費";
             // 
             // indexSelector
             // 
             this.indexSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.indexSelector.count = 10;
             this.indexSelector.current = 0;
             this.indexSelector.dataSource = null;
-            this.indexSelector.Location = new System.Drawing.Point(56, 35);
+            this.indexSelector.Location = new System.Drawing.Point(70, 35);
             this.indexSelector.Name = "indexSelector";
-            this.indexSelector.Size = new System.Drawing.Size(124, 17);
+            this.indexSelector.Size = new System.Drawing.Size(103, 17);
             this.indexSelector.TabIndex = 3;
             this.indexSelector.indexChanged += new System.EventHandler(this.onStationChanged);
             // 
             // stationType
             // 
             this.stationType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.stationType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.stationType.ItemHeight = 13;
             this.stationType.Location = new System.Drawing.Point(3, 9);
             this.stationType.Name = "stationType";
-            this.stationType.Size = new System.Drawing.Size(177, 21);
+            this.stationType.Size = new System.Drawing.Size(170, 21);
             this.stationType.Sorted = true;
             this.stationType.TabIndex = 2;
             this.stationType.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
@@ -406,12 +418,12 @@ namespace FreeTrain.Controllers.Rail
             // stationPicture
             // 
             this.stationPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                                    | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.stationPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.stationPicture.Location = new System.Drawing.Point(3, 54);
             this.stationPicture.Name = "stationPicture";
-            this.stationPicture.Size = new System.Drawing.Size(177, 93);
+            this.stationPicture.Size = new System.Drawing.Size(170, 91);
             this.stationPicture.TabIndex = 1;
             this.stationPicture.TabStop = false;
             // 
@@ -421,7 +433,7 @@ namespace FreeTrain.Controllers.Rail
             this.indexSelector1.count = 10;
             this.indexSelector1.current = 0;
             this.indexSelector1.dataSource = null;
-            this.indexSelector1.Location = new System.Drawing.Point(242, 87);
+            this.indexSelector1.Location = new System.Drawing.Point(235, 85);
             this.indexSelector1.Name = "indexSelector1";
             this.indexSelector1.Size = new System.Drawing.Size(96, 17);
             this.indexSelector1.TabIndex = 3;
@@ -429,12 +441,11 @@ namespace FreeTrain.Controllers.Rail
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Location = new System.Drawing.Point(252, 87);
+            this.label4.Location = new System.Drawing.Point(245, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Direction:";
-            //! this.label4.Text = "方向：";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // indexSelector2
@@ -443,7 +454,7 @@ namespace FreeTrain.Controllers.Rail
             this.indexSelector2.count = 10;
             this.indexSelector2.current = 0;
             this.indexSelector2.dataSource = null;
-            this.indexSelector2.Location = new System.Drawing.Point(242, 104);
+            this.indexSelector2.Location = new System.Drawing.Point(235, 102);
             this.indexSelector2.Name = "indexSelector2";
             this.indexSelector2.Size = new System.Drawing.Size(96, 17);
             this.indexSelector2.TabIndex = 3;
@@ -451,12 +462,11 @@ namespace FreeTrain.Controllers.Rail
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Location = new System.Drawing.Point(252, 104);
+            this.label5.Location = new System.Drawing.Point(245, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Color:";
-            //! this.label5.Text = "色：";
+            this.label5.Text = "Colour:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // platformPage
@@ -471,22 +481,20 @@ namespace FreeTrain.Controllers.Rail
             this.platformPage.Controls.Add(this.dirN);
             this.platformPage.Location = new System.Drawing.Point(4, 21);
             this.platformPage.Name = "platformPage";
-            this.platformPage.Size = new System.Drawing.Size(185, 157);
+            this.platformPage.Size = new System.Drawing.Size(178, 155);
             this.platformPage.TabIndex = 0;
             this.platformPage.Text = "Platform";
             this.platformPage.UseVisualStyleBackColor = true;
-            //! this.platformPage.Text = "ホーム";
             // 
             // checkSlim
             // 
             this.checkSlim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkSlim.Location = new System.Drawing.Point(8, 111);
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkSlim.Location = new System.Drawing.Point(8, 109);
             this.checkSlim.Name = "checkSlim";
-            this.checkSlim.Size = new System.Drawing.Size(171, 17);
+            this.checkSlim.Size = new System.Drawing.Size(164, 17);
             this.checkSlim.TabIndex = 7;
             this.checkSlim.Text = "Slim platform";
-            //!this.checkSlim.Text = "スリムなホーム";
             this.checkSlim.CheckedChanged += new System.EventHandler(this.onModeChanged);
             // 
             // dirS
@@ -528,28 +536,27 @@ namespace FreeTrain.Controllers.Rail
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.Location = new System.Drawing.Point(3, 128);
+            this.label1.Location = new System.Drawing.Point(3, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "&Length:";
-            //! this.label1.Text = "長さ(&L)：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lengthBox
             // 
             this.lengthBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
-            this.lengthBox.Location = new System.Drawing.Point(64, 130);
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lengthBox.Location = new System.Drawing.Point(64, 128);
             this.lengthBox.Name = "lengthBox";
-            this.lengthBox.Size = new System.Drawing.Size(115, 20);
+            this.lengthBox.Size = new System.Drawing.Size(108, 20);
             this.lengthBox.TabIndex = 3;
             this.lengthBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lengthBox.Value = new decimal(new int[] {
-									5,
-									0,
-									0,
-									0});
+            5,
+            0,
+            0,
+            0});
             this.lengthBox.Validating += new System.ComponentModel.CancelEventHandler(this.validateLength);
             this.lengthBox.TextChanged += new System.EventHandler(this.onLengthChanged);
             // 
@@ -568,8 +575,8 @@ namespace FreeTrain.Controllers.Rail
             // tabControl
             // 
             this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                                    | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.stationPage);
             this.tabControl.Controls.Add(this.platformPage);
             this.tabControl.ItemSize = new System.Drawing.Size(42, 17);
@@ -590,7 +597,6 @@ namespace FreeTrain.Controllers.Rail
             this.Controls.Add(this.buttonRemove);
             this.Name = "PlatformController";
             this.Text = "Station construction";
-            //! this.Text = "駅工事";
             this.Resize += new System.EventHandler(this.updateAfterResize);
             this.Controls.SetChildIndex(this.buttonRemove, 0);
             this.Controls.SetChildIndex(this.buttonPlace, 0);
@@ -598,7 +604,6 @@ namespace FreeTrain.Controllers.Rail
             this.Controls.SetChildIndex(this.lblTitle, 0);
             this.Controls.SetChildIndex(this.lblExit, 0);
             this.stationPage.ResumeLayout(false);
-            this.lblTitle.Text = "STATION";
             ((System.ComponentModel.ISupportInitialize)(this.stationPicture)).EndInit();
             this.platformPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dirS)).EndInit();
@@ -742,8 +747,7 @@ namespace FreeTrain.Controllers.Rail
                     {
                         if (!selectedStation.canBeBuilt(loc, ControlMode.player))
                         {
-                            MainWindow.showError("Can not build");
-                            //! MainWindow.showError("設置できません");
+                            MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                         }
                         else
                         {
@@ -762,8 +766,7 @@ namespace FreeTrain.Controllers.Rail
                     {
                         if (!FatPlatform.canBeBuilt(loc, direction, length))
                         {
-                            MainWindow.showError("Can not build");
-                            //! MainWindow.showError("設置できません");
+                            MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                             return;
                         }
                         new FatPlatform(loc, direction, length);
@@ -776,8 +779,7 @@ namespace FreeTrain.Controllers.Rail
                             if (p.canRemove)
                                 p.remove();
                             else
-                                MainWindow.showError("Can not remove");
-                            //! MainWindow.showError("撤去できません");
+                                MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_REMOVE"));
                         }
                     }
                     return;
@@ -787,8 +789,7 @@ namespace FreeTrain.Controllers.Rail
                     {
                         if (!ThinPlatform.canBeBuilt(loc, direction, length))
                         {
-                            MainWindow.showError("Can not build");
-                            //! MainWindow.showError("設置できません");
+                            MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                             return;
                         }
                         new ThinPlatform(loc, direction, length);
@@ -801,8 +802,7 @@ namespace FreeTrain.Controllers.Rail
                             if (p.canRemove)
                                 p.remove();
                             else
-                                MainWindow.showError("Can not remove");
-                            //! MainWindow.showError("撤去できません");
+                                MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_REMOVE"));
                         }
                     }
                     return;
