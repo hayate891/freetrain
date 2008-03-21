@@ -14,8 +14,7 @@ namespace FreeTrain.Util
     /// </summary>
     public static class Translation
     {
-        //static readonly Translation instance = new Translation();
-        static ResourceManager resman;
+        static ResourceManager resourceManager;
         static CultureInfo englishCulture = new CultureInfo("en-US");
         static CultureInfo japaneseCulture = new CultureInfo("ja-JP");
 
@@ -23,19 +22,11 @@ namespace FreeTrain.Util
         {
             //Uncomment to test Japanese interface.
             //Thread.CurrentThread.CurrentUICulture = japaneseCulture;
-            resman = new ResourceManager("FreeTrain.Properties.Resources", 
+            resourceManager = new ResourceManager("FreeTrain.Properties.Resources", 
                                     System.Reflection.Assembly.GetExecutingAssembly());
             //uncomment to get a popup right before launch of the current locale.
             //MessageBox.Show(Application.CurrentCulture.DisplayName);
         }
-
-        //private static Translation Instance
-        //{
-        //    get
-        //    {
-        //        return instance;
-        //    }
-        //}
 
         /// <summary>
         /// 
@@ -44,7 +35,7 @@ namespace FreeTrain.Util
         /// <returns></returns>
         public static string GetString(string code)
         {
-            return resman.GetString(code);
+            return resourceManager.GetString(code);
         }
     }
 }
