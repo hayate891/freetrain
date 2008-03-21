@@ -497,6 +497,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ja-JP.resx</DependentUpon>
+    </Compile>
     <Compile Include="util\ArrayEnumerator.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -941,6 +951,16 @@
     <EmbeddedResource Include="framework\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\splash.jpg" />
     <EmbeddedResource Include="util\command\CommandManager.resx">
       <DependentUpon>CommandManager.cs</DependentUpon>
@@ -967,6 +987,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="world\development\DevelopConfigure.resx">
       <DependentUpon>DevelopConfigure.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="world\development\LandValueInspector.resx">
       <DependentUpon>LandValueInspector.cs</DependentUpon>
@@ -992,10 +1013,7 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>mkdir "$(SolutionDir)bin\Debug\lang"
-"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.en-US.txt" "$(SolutionDir)bin\Debug\lang\freetrain.resources"
-"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.en-US.txt" "$(SolutionDir)bin\Debug\lang\freetrain.en-US.resources"
-"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.en-US.txt" "$(SolutionDir)bin\Debug\lang\freetrain.en-AU.resources"
-"$(SolutionDir)resgen.exe" "$(ProjectDir)lang\freetrain.ja-JP.txt" "$(SolutionDir)bin\Debug\lang\freetrain.ja-JP.resources"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

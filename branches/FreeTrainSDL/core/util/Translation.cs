@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Text;
 using System.Resources;
@@ -11,27 +12,29 @@ namespace FreeTrain.Util
     /// <summary>
     /// 
     /// </summary>
-    public sealed class Translation
+    public static class Translation
     {
-        static readonly Translation instance = new Translation();
-        static private ResourceManager resman;
+        //static readonly Translation instance = new Translation();
+        static ResourceManager resman;
+        static CultureInfo englishCulture = new CultureInfo("en-US");
+        static CultureInfo japaneseCulture = new CultureInfo("ja-JP");
 
-        Translation()
+        static Translation()
         {
+            Thread.CurrentThread.CurrentUICulture = japaneseCulture;
+            resman = new ResourceManager("FreeTrain.Properties.Resources", 
+                                    System.Reflection.Assembly.GetExecutingAssembly());
             //uncomment to get a popup right before launch of the current locale.
             //MessageBox.Show(Application.CurrentCulture.DisplayName);
-            resman = ResourceManager.CreateFileBasedResourceManager(
-                        "freetrain", Path.Combine(Application.StartupPath, "lang"),
-                        null);
         }
 
-        private static Translation Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
+        //private static Translation Instance
+        //{
+        //    get
+        //    {
+        //        return instance;
+        //    }
+        //}
 
         /// <summary>
         /// 
@@ -40,7 +43,7 @@ namespace FreeTrain.Util
         /// <returns></returns>
         public static string GetString(string code)
         {
-            return resman.GetString(code, Application.CurrentCulture);
+            return resman.GetString(code);
         }
     }
 }
