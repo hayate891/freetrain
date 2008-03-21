@@ -840,8 +840,6 @@
       <Link>plugin.xml</Link>
     </Content>
     <Content Include="contributions\readme.txt" />
-    <Content Include="lang\freetrain.en-US.txt" />
-    <Content Include="lang\freetrain.ja-JP.txt" />
     <Content Include="res\Arrows.bmp" />
     <Content Include="res\BridgePier.bmp" />
     <Content Include="res\ConstructionBones.bmp" />
