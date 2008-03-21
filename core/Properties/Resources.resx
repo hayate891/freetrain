@@ -121,10 +121,13 @@
     <value>Year {0} Month {1} Day {2} ({3}) {4,2:d}:{5,1:d}0</value>
   </data>
   <data name="CONSTRUCTION_CANNOT_BUILD" xml:space="preserve">
-    <value>Cannot build object</value>
+    <value>Can't build object!</value>
+  </data>
+  <data name="CONSTRUCTION_CANNOT_PLACE" xml:space="preserve">
+    <value>Can't place this object!</value>
   </data>
   <data name="CONSTRUCTION_CANNOT_REMOVE" xml:space="preserve">
-    <value>Unable to remove object</value>
+    <value>Unable to remove object!</value>
   </data>
   <data name="CONTROLLER_BUILD_BUTTON" xml:space="preserve">
     <value>Build</value>
@@ -197,6 +200,45 @@
   </data>
   <data name="CONTROLLER_STATION_TITLE" xml:space="preserve">
     <value>STATION</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_ADDNEWGROUP" xml:space="preserve">
+    <value>&amp;Add new group</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_ALREADYPLACED" xml:space="preserve">
+    <value>This train has already been placed!</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS" xml:space="preserve">
+    <value>Can't place without tracks!</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_CONFIRMSELL" xml:space="preserve">
+    <value>Are you sure you want to sell this train?</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_DIAGRAM" xml:space="preserve">
+    <value>&amp;Diagram:</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NAME" xml:space="preserve">
+    <value>&amp;Name:</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NOCARS" xml:space="preserve">
+    <value>There are no cars!</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NORAIL" xml:space="preserve">
+    <value>There are no tracks</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_PLACE" xml:space="preserve">
+    <value>Place Train</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_SELL" xml:space="preserve">
+    <value>&amp;Sell...</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_TRADING" xml:space="preserve">
+    <value>Buy/Sell</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_TYPE" xml:space="preserve">
+    <value>&amp;Type:</value>
+  </data>
+  <data name="CONTROLLER_TRAINPLACE_TITLE" xml:space="preserve">
+    <value>TRAIN PLACEMENT</value>
   </data>
   <data name="FRIDAY" xml:space="preserve">
     <value>Fri</value>
