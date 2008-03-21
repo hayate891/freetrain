@@ -21,7 +21,8 @@ namespace FreeTrain.Util
 
         static Translation()
         {
-            Thread.CurrentThread.CurrentUICulture = japaneseCulture;
+            //Uncomment to test Japanese interface.
+            //Thread.CurrentThread.CurrentUICulture = japaneseCulture;
             resman = new ResourceManager("FreeTrain.Properties.Resources", 
                                     System.Reflection.Assembly.GetExecutingAssembly());
             //uncomment to get a popup right before launch of the current locale.
