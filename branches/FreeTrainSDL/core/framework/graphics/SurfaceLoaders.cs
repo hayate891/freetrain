@@ -35,11 +35,11 @@ namespace FreeTrain.Framework.Graphics
         /// Fill the surface by the image and return the mask color.
         /// If the surface is null, the callee needs to allocate a new surface
         /// </summary>
-        void load(ref Surface s);
+        void Load(ref Surface s);
         /// <summary>
         /// 
         /// </summary>
-        string fileName { get; }
+        string FileName { get; }
     }
 
     /// <summary>
@@ -52,11 +52,11 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// 
         /// </summary>
-        protected Surface daySurface;
+        protected Surface DaySurface;
         /// <summary>
         /// 
         /// </summary>
-        public string fileName { get { return _fileName; } }
+        public string FileName { get { return _fileName; } }
         /// <summary>
         /// 
         /// </summary>
@@ -70,11 +70,11 @@ namespace FreeTrain.Framework.Graphics
         /// 
         /// </summary>
         /// <param name="surface"></param>
-        public void load(ref Surface surface)
+        public void Load(ref Surface surface)
         {
-            if (this.daySurface == null) this.daySurface = new Surface(fileName);
+            if (this.DaySurface == null) this.DaySurface = new Surface(FileName);
             if (surface != null) surface.Dispose();
-            surface = daySurface;
+            surface = DaySurface;
         }
     }
 
@@ -93,7 +93,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// 
         /// </summary>
-        public string fileName { get { return _fileName; } }
+        public string FileName { get { return _fileName; } }
 
         private string _fileName;
         /// <summary>
@@ -108,13 +108,11 @@ namespace FreeTrain.Framework.Graphics
 
         }
 
-        //[DllImport("DirectDraw.AlphaBlend.dll")]
-        //private static extern int buildNightImage( DxVBLib.DirectDrawSurface7 surface);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
-        public virtual void load(ref Surface surface)
+        public virtual void Load(ref Surface surface)
         {
             if (this.nightSurface == null)
             {

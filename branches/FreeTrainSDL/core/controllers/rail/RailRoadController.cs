@@ -41,7 +41,7 @@ namespace FreeTrain.Controllers.Rail
     /// In one state, we expect the user to select one voxel.
     /// In the other state, we expect the user to select next voxel,
     /// so that we can build railroads.
-    public class RailRoadController : AbstractControllerImpl, MapOverlay
+    public partial class RailRoadController : AbstractControllerImpl, MapOverlay
     {
         #region Singleton instance management
         /// <summary>
@@ -67,8 +67,6 @@ namespace FreeTrain.Controllers.Rail
         }
         #endregion
 
-
-
         private RailRoadController()
         {
             InitializeComponent();
@@ -82,6 +80,7 @@ namespace FreeTrain.Controllers.Rail
 
             updatePreview();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -95,6 +94,7 @@ namespace FreeTrain.Controllers.Rail
                 picture.Image = drawer.createBitmap();
             }*/
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -130,101 +130,6 @@ namespace FreeTrain.Controllers.Rail
 
         private bool isPlacing { get { return buttonPlace.Checked; } }
 
-        #region Windows Form Designer generated code
-        private System.Windows.Forms.RadioButton buttonPlace;
-        private System.Windows.Forms.RadioButton buttonRemove;
-        private FreeTrain.Controls.CostBox costBox;
-        private System.Windows.Forms.Label message;
-        private System.ComponentModel.Container components = null;
-
-        private void InitializeComponent()
-        {
-            this.message = new System.Windows.Forms.Label();
-            this.buttonPlace = new System.Windows.Forms.RadioButton();
-            this.buttonRemove = new System.Windows.Forms.RadioButton();
-            this.costBox = new FreeTrain.Controls.CostBox();
-            this.SuspendLayout();
-            // 
-            // message
-            // 
-            this.message.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.message.Location = new System.Drawing.Point(12, 46);
-            this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(105, 26);
-            this.message.TabIndex = 1;
-            this.message.Text = Translation.GetString("CONTROLLER_RAIL_INITIAL_MESSAGE");
-            this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.message.MouseDown += new MouseEventHandler(this.AbstractControllerForm_MouseDown);
-            //this.message.MouseMove += new MouseEventHandler(this.AbstractControllerForm_MouseMove);
-            // 
-            // buttonPlace
-            // 
-            this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonPlace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
-            this.buttonPlace.Checked = true;
-            this.buttonPlace.Location = new System.Drawing.Point(12, 115);
-            this.buttonPlace.Name = "buttonPlace";
-            this.buttonPlace.Size = new System.Drawing.Size(46, 26);
-            this.buttonPlace.TabIndex = 2;
-            this.buttonPlace.TabStop = true;
-            this.buttonPlace.Text = Translation.GetString("CONTROLLER_PLACE_BUTTON");
-            this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonPlace.UseVisualStyleBackColor = false;
-            this.buttonPlace.CheckedChanged += new System.EventHandler(this.modeChanged);
-            // 
-            // buttonRemove
-            // 
-            this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
-            this.buttonRemove.Location = new System.Drawing.Point(58, 115);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(59, 26);
-            this.buttonRemove.TabIndex = 3;
-            this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
-            this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonRemove.UseVisualStyleBackColor = false;
-            this.buttonRemove.CheckedChanged += new System.EventHandler(this.modeChanged);
-            // 
-            // costBox
-            // 
-            this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.costBox.cost = 0;
-            this.costBox.label = Translation.GetString("CONTROLLER_COST_LABEL");
-            this.costBox.Location = new System.Drawing.Point(12, 84);
-            this.costBox.Name = "costBox";
-            this.costBox.Size = new System.Drawing.Size(105, 25);
-            this.costBox.TabIndex = 4;
-            //this.costBox.MouseDown += new MouseEventHandler(this.AbstractControllerForm_MouseDown);
-            //this.costBox.MouseMove += new MouseEventHandler(this.AbstractControllerForm_MouseMove);
-
-            // 
-            // RailRoadController
-            // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(129, 153);
-            this.Controls.Add(this.buttonRemove);
-            this.Controls.Add(this.buttonPlace);
-            this.Controls.Add(this.costBox);
-            this.Controls.Add(this.message);
-            this.Name = "RailRoadController"; //internal, no need for translation.
-            this.Text = Translation.GetString("CONTROLLER_RAIL_TOOLTIP");
-            this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
-            this.Resize += new System.EventHandler(this.updateAfterResize);
-            this.Load += new System.EventHandler(this.RailRoadController_Load);
-            this.Controls.SetChildIndex(this.message, 0);
-            this.Controls.SetChildIndex(this.costBox, 0);
-            this.Controls.SetChildIndex(this.buttonPlace, 0);
-            this.Controls.SetChildIndex(this.buttonRemove, 0);
-            this.ResumeLayout(false);
-
-        }
-        #endregion
-
         /// <summary>
         /// 
         /// </summary>
@@ -257,6 +162,7 @@ namespace FreeTrain.Controllers.Rail
 
             updateDialog();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -288,6 +194,7 @@ namespace FreeTrain.Controllers.Rail
             //this.buttonRemove.Width = this.buttonPlace.Width;
             //updatePreview();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -321,6 +228,7 @@ namespace FreeTrain.Controllers.Rail
         {
             anchor = UNPLACED;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -336,7 +244,6 @@ namespace FreeTrain.Controllers.Rail
 
         private LocationDisambiguator sameLevelDisambiguator;
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -346,16 +253,12 @@ namespace FreeTrain.Controllers.Rail
             updateDialog();
         }
 
-
-
-
         // "place" or "remove" button was clicked. reset the anchor
         private void modeChanged(object sender, EventArgs e)
         {
             anchor = UNPLACED;
             updateDialog();
         }
-
 
         /// <summary>
         /// 
@@ -372,6 +275,7 @@ namespace FreeTrain.Controllers.Rail
                     Debug.WriteLine(((IDictionary)canvas.tag).Count);
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -397,6 +301,7 @@ namespace FreeTrain.Controllers.Rail
                 }
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -411,5 +316,4 @@ namespace FreeTrain.Controllers.Rail
             this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
         }
     }
-
 }
