@@ -232,7 +232,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator disambiguator
+        public override LocationDisambiguator Disambiguator
         {
             get
             {

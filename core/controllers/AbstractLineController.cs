@@ -280,7 +280,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator disambiguator
+        public override LocationDisambiguator Disambiguator
         {
             get
             {

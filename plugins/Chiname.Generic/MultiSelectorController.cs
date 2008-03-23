@@ -160,7 +160,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public override LocationDisambiguator disambiguator { get { return this; } }
+        public override LocationDisambiguator Disambiguator { get { return this; } }
 
         /// <summary>
         /// 

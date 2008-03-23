@@ -686,7 +686,7 @@ namespace FreeTrain.Views
             // TODO: use height-cut here to force the specified z-level
             if (controller != null)
             {
-                LocationDisambiguator disambiguator = controller.disambiguator;
+                LocationDisambiguator disambiguator = controller.Disambiguator;
                 for (int z = heightCutHeight; z >= 0; z--)
                 {
                     Location loc = new Location(x - z, y + z, z);

@@ -350,7 +350,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public LocationDisambiguator disambiguator
+        public LocationDisambiguator Disambiguator
         {
             get
             {

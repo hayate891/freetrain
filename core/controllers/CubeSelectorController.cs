@@ -114,7 +114,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual LocationDisambiguator disambiguator { get { return GroundDisambiguator.theInstance; } }
+        public virtual LocationDisambiguator Disambiguator { get { return GroundDisambiguator.theInstance; } }
 
         /// <summary>
         /// 
