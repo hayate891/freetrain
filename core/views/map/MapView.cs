@@ -320,7 +320,7 @@ namespace FreeTrain.Views.Map
             dragMode = true;
             dragStartMousePos = getPoint(arg);
             dragStartScrollPos = this.AutoScrollPosition;
-            dragAccel = (Keyboard.isControlKeyPressed ? 2 : 1) * (Keyboard.isShiftKeyPressed ? 2 : 1);
+            dragAccel = ((SdlDotNet.Input.Keyboard.IsKeyPressed(SdlDotNet.Input.Key.LeftControl) || SdlDotNet.Input.Keyboard.IsKeyPressed(SdlDotNet.Input.Key.RightControl)) ? 2 : 1) * ((SdlDotNet.Input.Keyboard.IsKeyPressed(SdlDotNet.Input.Key.LeftShift) || SdlDotNet.Input.Keyboard.IsKeyPressed(SdlDotNet.Input.Key.RightShift)) ? 2 : 1);
             this.Capture = true;
         }
         /// <summary>

@@ -300,6 +300,10 @@
     <Compile Include="controllers\PointSelectorController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="controllers\rail\RailRoadController.Designer.cs">
+      <DependentUpon>RailRoadController.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="controllers\rail\PlatformController.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +356,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="controllers\structs\VarHeightBuildingController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controllers\terrain\MountainController.Designer.cs">
+      <DependentUpon>MountainController.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="controllers\terrain\MountainController.cs">
@@ -529,9 +537,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="util\FontInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="util\Keyboard.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="util\LongTask.cs">

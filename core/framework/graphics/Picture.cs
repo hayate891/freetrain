@@ -183,7 +183,7 @@ namespace FreeTrain.Framework.Graphics
                 else
                 {
                     if (specifiedLoaders[s, 0] != null)
-                        loaders[s, 1] = new NightSurfaceLoader(loaders[s, 0].fileName);
+                        loaders[s, 1] = new NightSurfaceLoader(loaders[s, 0].FileName);
                     else
                         loaders[s, 1] = loaders[0, 1];
                 }
@@ -229,7 +229,7 @@ namespace FreeTrain.Framework.Graphics
                     WorldDefinition world = WorldDefinition.world;
                     // reload the surface
                     Clock c = world.clock;
-                    loaders[(int)c.season, (world.viewOptions.useNightView) ? 1 : 0].load(ref _surface);
+                    loaders[(int)c.season, (world.viewOptions.useNightView) ? 1 : 0].Load(ref _surface);
                     //_surface.sourceColorKey = key;
                     dirty = false;
                 }
