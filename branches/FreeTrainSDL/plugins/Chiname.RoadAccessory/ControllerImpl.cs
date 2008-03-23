@@ -93,7 +93,7 @@ namespace FreeTrain.World.Road.Accessory
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public override LocationDisambiguator disambiguator
+        public override LocationDisambiguator Disambiguator
         {
 			get {
 				return RoadDisambiguator.theInstance;

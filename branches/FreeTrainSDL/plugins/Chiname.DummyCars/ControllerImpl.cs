@@ -109,7 +109,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator disambiguator
+        public override LocationDisambiguator Disambiguator
         {
             get
             {

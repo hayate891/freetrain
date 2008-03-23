@@ -86,7 +86,7 @@ namespace FreeTrain.Controllers.Terrain
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator disambiguator { get { return GroundDisambiguator.theInstance; } }
+        public override LocationDisambiguator Disambiguator { get { return GroundDisambiguator.theInstance; } }
 
         private bool isRaising
         {

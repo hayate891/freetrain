@@ -81,7 +81,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Gets the disambiguator associated with this controller, if any.
         /// </summary>
-        LocationDisambiguator disambiguator { get; }
+        LocationDisambiguator Disambiguator { get; }
 
         /// <summary>
         /// If this controller needs to modify the map view, return non-null value.

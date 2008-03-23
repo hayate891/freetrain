@@ -136,7 +136,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public LocationDisambiguator disambiguator { get { return this; } }
+        public LocationDisambiguator Disambiguator { get { return this; } }
 
         /// <summary> LocationDisambiguator implementation </summary>
         public bool isSelectable(Location loc)

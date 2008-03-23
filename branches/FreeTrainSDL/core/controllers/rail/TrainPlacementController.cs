@@ -541,14 +541,16 @@ namespace FreeTrain.Controllers.Rail
         // when a selected train is changed
         private void onTrainChange(object sender, TreeViewEventArgs e)
         {
-
             // update controls
             if (selectedItem != null)
             {
                 nameBox.Enabled = true;
                 nameBox.Text = selectedItem.name;
                 controllerCombo.Enabled = true;
-                controllerCombo.SelectedItem = selectedItem.controller;
+                if (selectedItem.controller != null)
+                {
+                    controllerCombo.SelectedItem = selectedItem.controller;
+                }
             }
             else
             {
@@ -573,7 +575,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator disambiguator { get { return this; } }
+        public override LocationDisambiguator Disambiguator { get { return this; } }
         /// <summary>
         /// 
         /// </summary>
