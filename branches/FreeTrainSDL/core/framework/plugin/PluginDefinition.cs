@@ -154,8 +154,8 @@ namespace FreeTrain.Framework.Plugin
         public PluginDefinition[] getDependencies()
         {
             ArrayList a = new ArrayList();
-            if (!this.name.Equals("System"))
-                a.Add(PluginManager.theInstance.getPlugin("System"));
+            if (!this.name.Equals("system"))
+                a.Add(PluginManager.theInstance.getPlugin("system"));
 
             foreach (XmlElement depend in doc.DocumentElement.SelectNodes("depend"))
             {
