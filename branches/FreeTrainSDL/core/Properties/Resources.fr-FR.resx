@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CLOCK_FORMAT" xml:space="preserve">
+    <value>Year {0} Month {1} Day {2} ({3}) {4,2:d}:{5,1:d}0</value>
+  </data>
+  <data name="CONSTRUCTION_CANNOT_BUILD" xml:space="preserve">
+    <value>Ne peut pas établir l'objet!</value>
+  </data>
+  <data name="CONSTRUCTION_CANNOT_PLACE" xml:space="preserve">
+    <value>Ne peut pas placer cet objet!</value>
+  </data>
+  <data name="CONSTRUCTION_CANNOT_REMOVE" xml:space="preserve">
+    <value>Incapable d'enlever l'objet!</value>
+  </data>
+  <data name="CONTROLLER_BUILD_BUTTON" xml:space="preserve">
+    <value>Construisez</value>
+  </data>
+  <data name="CONTROLLER_COST_LABEL" xml:space="preserve">
+    <value>Coût:</value>
+  </data>
+  <data name="CONTROLLER_EXIT_BUTTON" xml:space="preserve">
+    <value>Sortie</value>
+  </data>
+  <data name="CONTROLLER_PLACE_BUTTON" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="CONTROLLER_RAIL_INITIAL_MESSAGE" xml:space="preserve">
+    <value>Cliquez deux points sur la carte pour placer des voies</value>
+  </data>
+  <data name="CONTROLLER_RAIL_OBSTACLES" xml:space="preserve">
+    <value>Il y a des obstacles de la manière</value>
+  </data>
+  <data name="CONTROLLER_RAIL_START_POINT" xml:space="preserve">
+    <value>Point de départ choisi</value>
+  </data>
+  <data name="CONTROLLER_RAIL_TITLE" xml:space="preserve">
+    <value>CHEMIN DE FER</value>
+  </data>
+  <data name="CONTROLLER_REMOVE_BUTTON" xml:space="preserve">
+    <value>Enlevez</value>
+  </data>
+  <data name="CONTROLLER_STATION_COLOUR" xml:space="preserve">
+    <value>Couleur:</value>
+  </data>
+  <data name="CONTROLLER_STATION_CONSTRUCTION" xml:space="preserve">
+    <value>Construction de station</value>
+  </data>
+  <data name="CONTROLLER_STATION_COST" xml:space="preserve">
+    <value>Coût</value>
+  </data>
+  <data name="CONTROLLER_STATION_DESIGN" xml:space="preserve">
+    <value>Conception</value>
+  </data>
+  <data name="CONTROLLER_STATION_DIRECTION" xml:space="preserve">
+    <value>Direction:</value>
+  </data>
+  <data name="CONTROLLER_STATION_LENGTH" xml:space="preserve">
+    <value>&amp;Longueur:</value>
+  </data>
+  <data name="CONTROLLER_STATION_MAINTENANCE" xml:space="preserve">
+    <value>Entretien</value>
+  </data>
+  <data name="CONTROLLER_STATION_MATERIALCONTROLLER_STATION_MATERIAL" xml:space="preserve">
+    <value>Matériel</value>
+  </data>
+  <data name="CONTROLLER_STATION_NAME" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="CONTROLLER_STATION_PAGE" xml:space="preserve">
+    <value>Station</value>
+  </data>
+  <data name="CONTROLLER_STATION_PLATFORM" xml:space="preserve">
+    <value>Plateforme</value>
+  </data>
+  <data name="CONTROLLER_STATION_SCALE" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="CONTROLLER_STATION_SIZE" xml:space="preserve">
+    <value>Taille</value>
+  </data>
+  <data name="CONTROLLER_STATION_SLIMPLATFORM" xml:space="preserve">
+    <value>Plateforme mince</value>
+  </data>
+  <data name="CONTROLLER_STATION_TITLE" xml:space="preserve">
+    <value>STATION</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_ADDNEWGROUP" xml:space="preserve">
+    <value>&amp;Ajoutez le nouveau groupe</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_ALREADYPLACED" xml:space="preserve">
+    <value>Ce train a été déjà placé!</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS" xml:space="preserve">
+    <value>Ne peut pas placer sans voies!</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_CONFIRMSELL" xml:space="preserve">
+    <value>Êtes-vous sûr vous voulez-vous vendre ce train?</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_DIAGRAM" xml:space="preserve">
+    <value>&amp;Diagramme:</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NAME" xml:space="preserve">
+    <value>&amp;Nom:</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NOCARS" xml:space="preserve">
+    <value>Il n'y a pas de voiture !</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_NORAIL" xml:space="preserve">
+    <value>Il n'y a pas de voie</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_PLACE" xml:space="preserve">
+    <value>Placez Le Train</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_SELL" xml:space="preserve">
+    <value>&amp;Vente...</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_TRADING" xml:space="preserve">
+    <value>Achat/Vente</value>
+  </data>
+  <data name="CONTROLLER_TRAIN_TYPE" xml:space="preserve">
+    <value>&amp;Type:</value>
+  </data>
+  <data name="CONTROLLER_TRAINPLACE_TITLE" xml:space="preserve">
+    <value>PLACEMENT DE TRAIN</value>
+  </data>
+  <data name="FRIDAY" xml:space="preserve">
+    <value>Vendredi</value>
+  </data>
+  <data name="MAIN_WINDOW_TITLE" xml:space="preserve">
+    <value>FreeTrain SDL</value>
+  </data>
+  <data name="MONDAY" xml:space="preserve">
+    <value>Lundi</value>
+  </data>
+  <data name="SATURDAY" xml:space="preserve">
+    <value>Samedi</value>
+  </data>
+  <data name="SDL_NOT_FOUND" xml:space="preserve">
+    <value>Nous ne pourrions pas trouver le cadre de TAO SDL\nVeuillez le télécharger de  http://www.taoframework.com/\n\nCette application se fermera maintenant.</value>
+  </data>
+  <data name="SUNDAY" xml:space="preserve">
+    <value>Dimanche</value>
+  </data>
+  <data name="THURSDAY" xml:space="preserve">
+    <value>Jeudi</value>
+  </data>
+  <data name="TUESDAY" xml:space="preserve">
+    <value>Mardi</value>
+  </data>
+  <data name="WEDNESDAY" xml:space="preserve">
+    <value>Mercredi</value>
+  </data>
+</root>
