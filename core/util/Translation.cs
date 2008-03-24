@@ -17,11 +17,13 @@ namespace FreeTrain.Util
         static ResourceManager resourceManager;
         static CultureInfo englishCulture = new CultureInfo("en-US");
         static CultureInfo japaneseCulture = new CultureInfo("ja-JP");
+        static CultureInfo frenchCulture = new CultureInfo("fr-FR");
 
         static Translation()
         {
             //Uncomment to test Japanese interface.
             //Thread.CurrentThread.CurrentUICulture = japaneseCulture;
+            Thread.CurrentThread.CurrentUICulture = frenchCulture;
             resourceManager = new ResourceManager("FreeTrain.Properties.Resources", 
                                     System.Reflection.Assembly.GetExecutingAssembly());
             //uncomment to get a popup right before launch of the current locale.
