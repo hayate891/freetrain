@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using System.Collections;
 using SdlDotNet.Audio;
 using SdlDotNet.Core;
-//using SDL.net;
+//using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Framework.Sound
 {

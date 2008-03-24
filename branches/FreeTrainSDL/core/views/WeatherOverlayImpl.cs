@@ -22,7 +22,6 @@ using System;
 using System.Drawing;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
-using SDL.net;
 
 namespace FreeTrain.Views
 {

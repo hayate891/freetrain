@@ -35,7 +35,7 @@ using FreeTrain.World;
 using FreeTrain.World.Rail;
 using FreeTrain.Views;
 using FreeTrain.World.Development;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.World
 {

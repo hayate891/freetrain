@@ -25,7 +25,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Controls;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 
 namespace FreeTrain.Framework

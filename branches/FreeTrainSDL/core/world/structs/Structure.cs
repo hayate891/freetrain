@@ -23,7 +23,7 @@ using System.Drawing;
 using FreeTrain.Framework;
 using FreeTrain.Util;
 using FreeTrain.World.Terrain;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.World.Structs
 {

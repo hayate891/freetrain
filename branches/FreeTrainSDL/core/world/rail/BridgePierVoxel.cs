@@ -20,9 +20,8 @@
 
 using System;
 using System.Drawing;
-using SDL.net;
-using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
+using FreeTrain.Framework;
 using FreeTrain.Util;
 
 namespace FreeTrain.World.Rail

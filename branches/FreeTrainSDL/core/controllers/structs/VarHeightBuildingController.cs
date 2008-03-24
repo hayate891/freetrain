@@ -32,7 +32,6 @@ using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework.Plugin;
 using FreeTrain.Util;
-using SDL.net;
 
 namespace FreeTrain.Controllers.Structs
 {

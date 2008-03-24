@@ -30,7 +30,7 @@ using SdlDotNet.Audio;
 //using SdlDotNet.Graphics;
 using SdlDotNet.Core;
 using SdlDotNet.Input;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 using FreeTrain.World;
 using FreeTrain.Controllers;

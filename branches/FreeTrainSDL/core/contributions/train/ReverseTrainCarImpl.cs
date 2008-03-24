@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 using System.Xml;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.World;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Plugin;

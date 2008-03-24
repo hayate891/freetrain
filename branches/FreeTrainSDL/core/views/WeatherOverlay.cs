@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Views
 {

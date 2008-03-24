@@ -23,7 +23,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Framework;
 
 namespace FreeTrain.World.Rail

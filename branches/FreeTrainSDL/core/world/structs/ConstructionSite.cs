@@ -25,7 +25,6 @@ using FreeTrain.Framework;
 using FreeTrain.Framework.Sound;
 using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
-using SDL.net;
 
 namespace FreeTrain.World.Structs
 {

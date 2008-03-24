@@ -26,7 +26,6 @@ using System.Windows.Forms;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
-using SDL.net;
 
 namespace FreeTrain.World.Rail
 {

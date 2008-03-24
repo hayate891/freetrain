@@ -21,7 +21,6 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using SDL.net;
 using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.World

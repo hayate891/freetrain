@@ -24,7 +24,6 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 //using org.kohsuke.directaudio;
-using SDL.net;
 using SdlDotNet.Audio;
 using FreeTrain.Util;
 using FreeTrain.Framework.Graphics;
