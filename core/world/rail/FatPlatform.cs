@@ -22,9 +22,8 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.Serialization;
-using SDL.net;
-using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
+using FreeTrain.Framework;
 using FreeTrain.Util;
 
 namespace FreeTrain.World.Rail

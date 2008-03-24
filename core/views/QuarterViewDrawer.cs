@@ -23,11 +23,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
 using FreeTrain.World;
 using FreeTrain.Framework;
-using FreeTrain.Framework.Graphics;
 using FreeTrain.Controllers;
 
 namespace FreeTrain.Views

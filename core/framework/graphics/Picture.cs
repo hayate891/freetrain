@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.World;
 using FreeTrain.Framework.Plugin;
 

@@ -21,7 +21,7 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework;
 using FreeTrain.World.Accounting;

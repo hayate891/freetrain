@@ -29,7 +29,6 @@ using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.World;
 using FreeTrain.World.Structs;
-using SDL.net;
 
 namespace FreeTrain.Contributions.Common
 {

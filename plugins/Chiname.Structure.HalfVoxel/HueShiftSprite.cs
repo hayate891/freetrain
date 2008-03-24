@@ -23,10 +23,9 @@ using System.Collections;
 using System.Drawing;
 using System.Xml;
 using System.Runtime.Serialization;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 using FreeTrain.World;
 using FreeTrain.Framework.Plugin;
-using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.World.Structs.HalfVoxelStructure
 {

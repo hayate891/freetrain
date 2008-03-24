@@ -26,9 +26,7 @@ using System.Runtime.Serialization;
 using System.Net;
 using System.Windows.Forms;
 using System.Xml;
-using SDL.net;
 using FreeTrain.Framework.Graphics;
-
 
 namespace FreeTrain.Framework.Plugin
 {

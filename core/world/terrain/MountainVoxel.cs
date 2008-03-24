@@ -22,9 +22,8 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Xml;
-using SDL.net;
-using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
+using FreeTrain.Framework;
 
 namespace FreeTrain.World.Terrain
 {

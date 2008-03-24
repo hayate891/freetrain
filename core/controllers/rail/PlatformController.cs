@@ -33,7 +33,6 @@ using FreeTrain.World;
 using FreeTrain.World.Rail;
 using FreeTrain.Views;
 using FreeTrain.Views.Map;
-using SDL.net;
 using FreeTrain.Controls;
 
 

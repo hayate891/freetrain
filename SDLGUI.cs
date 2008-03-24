@@ -26,7 +26,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
 using Tao.Sdl;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain
 {

@@ -32,7 +32,6 @@ using FreeTrain.World.Land;
 using FreeTrain.Framework;
 using FreeTrain.Framework.Graphics;
 using FreeTrain.Util;
-using SDL.net;
 
 namespace FreeTrain.Controllers.Land
 {

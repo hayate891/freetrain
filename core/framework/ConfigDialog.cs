@@ -24,7 +24,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.World;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Framework
 {

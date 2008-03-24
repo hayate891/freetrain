@@ -21,7 +21,7 @@
 using System;
 using System.Drawing;
 using System.Runtime.Serialization;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Framework.Graphics
 {

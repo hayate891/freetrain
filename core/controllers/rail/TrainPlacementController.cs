@@ -33,7 +33,7 @@ using FreeTrain.Framework.Sound;
 using FreeTrain.Util;
 using FreeTrain.Util.Controls;
 using FreeTrain.Util.Command;
-using SDL.net;
+using FreeTrain.Framework.Graphics;
 
 namespace FreeTrain.Controllers.Rail
 {
