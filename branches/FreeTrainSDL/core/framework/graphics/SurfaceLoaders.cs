@@ -35,7 +35,8 @@ namespace FreeTrain.Framework.Graphics
         /// Fill the surface by the image and return the mask color.
         /// If the surface is null, the callee needs to allocate a new surface
         /// </summary>
-        void Load(ref Surface s);
+        void Load(ref Surface surface);
+
         /// <summary>
         /// 
         /// </summary>
@@ -48,32 +49,47 @@ namespace FreeTrain.Framework.Graphics
     public class BitmapSurfaceLoader : SurfaceLoader
     {
         /// <summary> File name of the bitmap. </summary>
-        private readonly string _fileName;
+        private readonly string fileName;
+
         /// <summary>
         /// 
         /// </summary>
         protected Surface DaySurface;
-        /// <summary>
-        /// 
-        /// </summary>
-        public string FileName { get { return _fileName; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_fileName"></param>
-        public BitmapSurfaceLoader(string _fileName)
-        {
-            this._fileName = _fileName;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public string FileName
+        {
+            get
+            {
+                return fileName;
+            }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="fileName"></param>
+        public BitmapSurfaceLoader(string fileName)
+        {
+            this.fileName = fileName;
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         public void Load(ref Surface surface)
         {
-            if (this.DaySurface == null) this.DaySurface = new Surface(FileName);
-            if (surface != null) surface.Dispose();
+            if (this.DaySurface == null)
+            {
+                this.DaySurface = new Surface(FileName);
+            }
+            if (surface != null)
+            {
+                surface.Dispose();
+            }
             surface = DaySurface;
         }
     }
@@ -90,22 +106,27 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         //private readonly SurfaceLoader coreLoader;
         private Surface nightSurface;
-        /// <summary>
-        /// 
-        /// </summary>
-        public string FileName { get { return _fileName; } }
 
-        private string _fileName;
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_fileName"></param>
-        public NightSurfaceLoader(string _fileName)
+        public string FileName
         {
-            //Debug.Assert(_core!=null);
-            //this.coreLoader = _core;
-            this._fileName = _fileName;
+            get
+            {
+                return fileName;
+            }
+        }
 
+        private string fileName;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="fileName"></param>
+        public NightSurfaceLoader(string fileName)
+        {
+            this.fileName = fileName;
         }
 
         /// <summary>
@@ -116,10 +137,13 @@ namespace FreeTrain.Framework.Graphics
         {
             if (this.nightSurface == null)
             {
-                this.nightSurface = new Surface(_fileName);
+                this.nightSurface = new Surface(fileName);
                 this.nightSurface.buildNightImage();
             }
-            if (surface != null) surface.Dispose();
+            if (surface != null)
+            {
+                surface.Dispose();
+            }
             surface = nightSurface;
         }
     }
