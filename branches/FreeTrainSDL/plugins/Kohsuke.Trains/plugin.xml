@@ -66,7 +66,7 @@
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-h">
 		<class name="FreeTrain.Contributions.Train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
-			<picture src="train485a.bmp" />
+			<picture src="Train485a.bmp" />
 		</sprite>
 		<capacity>65</capacity>
 	</contribution>
@@ -75,7 +75,7 @@
 	<contribution type="trainCar" id="{3983B298-ADB1-4905-94E5-03B7AAE5A221}-m">
 		<class name="FreeTrain.Contributions.Train.SymTrainCarImpl" />
 		<sprite origin="0,0">
-			<picture src="train485b.bmp" />
+			<picture src="Train485b.bmp" />
 		</sprite>
 		<capacity>70</capacity>
 	</contribution>
@@ -117,7 +117,7 @@ Unlike other variants, the 485 Series "Raicho" still uses the original black rol
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-h">
 		<class name="FreeTrain.Contributions.Train.AsymTrainCarImpl" />
 		<sprite origin="0,0">
-			<picture src="trainE3a.bmp" />
+			<picture src="TrainE3a.bmp" />
 		</sprite>
 		<capacity>56</capacity>
 	</contribution>
@@ -126,7 +126,7 @@ Unlike other variants, the 485 Series "Raicho" still uses the original black rol
 	<contribution type="trainCar" id="{F4D54B1E-534E-47b0-9EA7-76CE075423E4}-m">
 		<class name="FreeTrain.Contributions.Train.SymTrainCarImpl" />
 		<sprite origin="0,0">
-			<picture src="trainE3b.bmp" />
+			<picture src="TrainE3b.bmp" />
 		</sprite>
 		<capacity>64</capacity>
 	</contribution>

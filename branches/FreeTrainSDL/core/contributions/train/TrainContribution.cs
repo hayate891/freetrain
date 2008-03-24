@@ -64,6 +64,7 @@ namespace FreeTrain.Contributions.Train
         /// 
         /// </summary>
         public abstract int maxLength { get; }
+
         /// <summary>
         /// 
         /// 
@@ -106,6 +107,7 @@ namespace FreeTrain.Contributions.Train
                 }
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -124,10 +126,14 @@ namespace FreeTrain.Contributions.Train
             //     /~~~~~
             //    /
             for (int x = -10; x < 0; x++)
+            {
                 pd.draw(RailPattern.get(Direction.WEST, Direction.EAST), x, 0);
+            }
             pd.draw(RailPattern.get(Direction.WEST, Direction.SOUTHEAST), 0, 0);
             for (int x = 1; x <= 10; x++)
+            {
                 pd.draw(RailPattern.get(Direction.NORTHWEST, Direction.SOUTHEAST), x, x);
+            }
 
             TrainCarContribution[] cars = create(trainlength);
             /*if( cars==null ) {
@@ -150,7 +156,9 @@ namespace FreeTrain.Contributions.Train
                 for (int i = 7; i >= 0; i--)
                 {
                     if (cars.Length <= i)
+                    {
                         continue;		// no car
+                    }
 
                     Point pt = pd.getPoint(pos[i * 2], pos[i * 2 + 1]);
                     cars[i].draw(pd.surface,
