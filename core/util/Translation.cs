@@ -23,11 +23,11 @@ namespace FreeTrain.Util
         {
             //Uncomment to test Japanese interface.
             //Thread.CurrentThread.CurrentUICulture = japaneseCulture;
-            Thread.CurrentThread.CurrentUICulture = frenchCulture;
+            //Thread.CurrentThread.CurrentUICulture = frenchCulture;
             resourceManager = new ResourceManager("FreeTrain.Properties.Resources", 
                                     System.Reflection.Assembly.GetExecutingAssembly());
             //uncomment to get a popup right before launch of the current locale.
-            //MessageBox.Show(Application.CurrentCulture.DisplayName);
+            //MessageBox.Show(Thread.CurrentThread.CurrentUICulture.DisplayName);
         }
 
         /// <summary>
