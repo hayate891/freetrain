@@ -253,7 +253,7 @@
     <value>土</value>
   </data>
   <data name="SDL_NOT_FOUND" xml:space="preserve">
-    <value>TAOのDLLがありませんから、このApplicationをしまている。\n（http://www.taoframework.com/）このサイトから　TAO　DLLをダウンロードをしてください。</value>
+    <value>TAOのDLLが見つかりませんので、FreeTrainを終了します。\n手に入れるため『http://www.taoframework.com/』を訪問してください。</value>
   </data>
   <data name="SUNDAY" xml:space="preserve">
     <value>日</value>
