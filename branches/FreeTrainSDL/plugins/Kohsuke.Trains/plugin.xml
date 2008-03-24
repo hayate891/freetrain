@@ -11,7 +11,7 @@
 	<contribution type="trainCar" id="{9EE438DE-B766-4b37-A474-9CE6EE73FE75}">
 		<class name="FreeTrain.Contributions.Train.SymTrainCarImpl" />
 		<sprite origin="0,0">
-			<picture src="train.bmp" />
+			<picture src="Train.bmp" />
 		</sprite>
 		<capacity>100</capacity>
 	</contribution>
