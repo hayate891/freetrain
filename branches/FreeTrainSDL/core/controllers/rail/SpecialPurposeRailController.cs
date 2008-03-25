@@ -26,6 +26,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Contributions.Rail;
 using FreeTrain.Framework.Plugin;
+using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using FreeTrain.World;
 using FreeTrain.World.Rail;

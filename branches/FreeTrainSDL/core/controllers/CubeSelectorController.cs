@@ -23,6 +23,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using FreeTrain.World;
+using FreeTrain.Views;
 using FreeTrain.Views.Map;
 
 namespace FreeTrain.Controllers

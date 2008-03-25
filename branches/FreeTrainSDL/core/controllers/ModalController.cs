@@ -21,6 +21,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using FreeTrain.World;
 
