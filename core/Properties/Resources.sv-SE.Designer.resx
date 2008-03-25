@@ -253,7 +253,7 @@
     <value>lördag</value>
   </data>
   <data name="SDL_NOT_FOUND" xml:space="preserve">
-    <value>Det verkar som TAO-DLL:en saknas\nLadda ner från http://www.taoframework.com/\n\nDet här programmer kommer nu avslutas.</value>
+    <value>Det verkar som TAO-DLL:en saknas\nLadda ner från http://www.taoframework.com/\n\nDet här programmet kommer nu avslutas.</value>
   </data>
   <data name="SUNDAY" xml:space="preserve">
     <value>söndag</value>
