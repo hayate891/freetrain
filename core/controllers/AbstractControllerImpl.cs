@@ -25,6 +25,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using FreeTrain.Framework;
+using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using FreeTrain.World;
 

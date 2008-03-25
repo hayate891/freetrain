@@ -24,7 +24,7 @@ using FreeTrain.Views;
 using FreeTrain.World;
 using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.Controllers
+namespace FreeTrain.Views
 {
     /// <summary>
     /// Modifies the image of map view window
