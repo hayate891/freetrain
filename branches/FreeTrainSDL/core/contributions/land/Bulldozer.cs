@@ -54,7 +54,7 @@ namespace FreeTrain.Contributions.Land
         public override void create(int x1, int y1, int x2, int y2, int z, bool owned)
         {
             bulldoze(new Location(x1, y1, z), new Location(x2, y2, z));
-            WorldDefinition.world.onVoxelUpdated(new Cube(x1, y1, z, x2 - x1 + 1, y2 - y1 + 1, 1));
+            WorldDefinition.World.onVoxelUpdated(new Cube(x1, y1, z, x2 - x1 + 1, y2 - y1 + 1, 1));
         }
         /// <summary>
         /// 
@@ -70,14 +70,14 @@ namespace FreeTrain.Contributions.Land
                 {
                     // edited by 477 (04/02/14)
                     //if( World.world.isReusable(x,y,z) && World.world[x,y,z]!=null ) 
-                    Voxel v = WorldDefinition.world[x, y, z];
+                    Voxel v = WorldDefinition.World[x, y, z];
                     if (v != null)
                     {
                         if (v is MountainVoxel)
                         {
                             MountainVoxel mv = v as MountainVoxel;
                             if (mv.isFlattened)
-                                WorldDefinition.world.remove(x, y, z);
+                                WorldDefinition.World.remove(x, y, z);
                             else
                                 mv.removeTrees();
                         }
@@ -87,7 +87,7 @@ namespace FreeTrain.Contributions.Land
                         }
                         else
                         {
-                            WorldDefinition.world.remove(x, y, z);
+                            WorldDefinition.World.remove(x, y, z);
                         }
                     }
                 }

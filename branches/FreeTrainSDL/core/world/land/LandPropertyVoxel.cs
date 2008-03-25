@@ -72,7 +72,7 @@ namespace FreeTrain.World.Land
         /// </summary>
         public void remove()
         {
-            WorldDefinition.world.remove(this);
+            WorldDefinition.World.remove(this);
             if (onEntityRemoved != null) onEntityRemoved(this, null);
         }
         /// <summary>

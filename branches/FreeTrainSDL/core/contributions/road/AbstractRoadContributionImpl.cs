@@ -72,7 +72,7 @@ namespace FreeTrain.Contributions.Road
 
             while (true)
             {
-                if (WorldDefinition.world[here] != null)
+                if (WorldDefinition.World[here] != null)
                 {
                     TrafficVoxel v = TrafficVoxel.get(here);
                     if (v == null) return false;	// occupied
@@ -269,7 +269,7 @@ namespace FreeTrain.Contributions.Road
                     voxel.road = new RoadImpl(contribution, voxel, RoadPattern.get(dirs));
                 }
 
-                WorldDefinition.world.onVoxelUpdated(location);
+                WorldDefinition.World.onVoxelUpdated(location);
             }
             /// <summary>
             /// 

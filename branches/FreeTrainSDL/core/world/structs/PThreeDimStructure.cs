@@ -177,7 +177,7 @@ namespace FreeTrain.World.Structs
         public override void remove()
         {
             // just remove all the voxels
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
             foreach (Voxel v in this.cube.voxels)
                 world.remove(v);
 
@@ -199,7 +199,7 @@ namespace FreeTrain.World.Structs
             // make sure all the voxels are on the ground.
             for (int y = 0; y < size.y; y++)
                 for (int x = 0; x < size.x; x++)
-                    if (WorldDefinition.world.getGroundLevel(loc.x + x, loc.y + y) != loc.z)
+                    if (WorldDefinition.World.getGroundLevel(loc.x + x, loc.y + y) != loc.z)
                         return false;
             return true;
         }

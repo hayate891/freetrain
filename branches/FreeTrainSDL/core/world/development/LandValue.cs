@@ -46,8 +46,8 @@ namespace FreeTrain.World.Development
         {
             w.otherObjects["{51CD7E24-4296-4043-B58D-A654AB71F121}"] = this;
 
-            H = w.size.x;
-            V = w.size.y;
+            H = w.Size.x;
+            V = w.Size.y;
             q = new float[H + 2, V + 2];
             back = new float[H + 2, V + 2];
             rho = new float[H + 2, V + 2];
@@ -82,7 +82,7 @@ namespace FreeTrain.World.Development
         public float Rho(Location loc)
         {
             int h, v;
-            WorldDefinition.world.toHV(loc.x, loc.y, out h, out v);
+            WorldDefinition.World.toHV(loc.x, loc.y, out h, out v);
 
             return rho[h, v];
         }
@@ -106,7 +106,7 @@ namespace FreeTrain.World.Development
             get
             {
                 int h, v;
-                WorldDefinition.world.toHV(loc.x, loc.y, out h, out v);
+                WorldDefinition.World.toHV(loc.x, loc.y, out h, out v);
                 return this[h, v];
             }
         }
@@ -182,7 +182,7 @@ namespace FreeTrain.World.Development
         public void addQ(Location loc, float deltaQ)
         {
             int h, v;
-            WorldDefinition.world.toHV(loc, out h, out v);
+            WorldDefinition.World.toHV(loc, out h, out v);
             q[h, v] += deltaQ * UPDATE_FREQUENCY / 4;
         }
 
@@ -193,15 +193,15 @@ namespace FreeTrain.World.Development
         public void updateRho(Location loc)
         {
             int h, v;
-            WorldDefinition.world.toHV(loc.x, loc.y, out h, out v);
+            WorldDefinition.World.toHV(loc.x, loc.y, out h, out v);
 
             BaseRoad roadFound = null;
             bool hasMountain = false;
 
             // FIXME: this code shouldn't have the knowledge of any particular voxel type.
-            for (int z = 0; z < WorldDefinition.world.size.z; z++)
+            for (int z = 0; z < WorldDefinition.World.Size.z; z++)
             {
-                Voxel vxl = WorldDefinition.world[loc.x, loc.y, z];
+                Voxel vxl = WorldDefinition.World[loc.x, loc.y, z];
                 if (vxl is TrafficVoxel)
                 {
                     roadFound = ((TrafficVoxel)vxl).road;
@@ -210,7 +210,7 @@ namespace FreeTrain.World.Development
                     hasMountain = true;
             }
 
-            bool hasSea = WorldDefinition.world.getGroundLevelFromHV(h, v) < WorldDefinition.world.waterLevel;
+            bool hasSea = WorldDefinition.World.getGroundLevelFromHV(h, v) < WorldDefinition.World.waterLevel;
 
             if (roadFound != null)
             {

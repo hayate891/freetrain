@@ -142,7 +142,7 @@ namespace FreeTrain.World
         {
             get
             {
-                return (int)WorldDefinition.world.landValue[location];
+                return (int)WorldDefinition.World.landValue[location];
             }
         }
 
@@ -181,7 +181,7 @@ namespace FreeTrain.World
         protected AbstractVoxelImpl(Location _loc)
         {
             this.loc = _loc;
-            WorldDefinition.world[loc] = this;
+            WorldDefinition.World[loc] = this;
         }
         /// <summary>
         /// 

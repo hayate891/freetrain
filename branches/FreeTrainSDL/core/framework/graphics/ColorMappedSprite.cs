@@ -91,7 +91,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            int idx = (WorldDefinition.world.viewOptions.useNightView) ? 1 : 0;
+            int idx = (WorldDefinition.World.viewOptions.useNightView) ? 1 : 0;
             surface.bltColorTransform(pt, picture.surface, origin, size,
                 srcColors[idx], dstColors[idx], false);
         }

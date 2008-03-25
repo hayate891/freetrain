@@ -41,8 +41,8 @@ namespace FreeTrain.World.Rail
         public YardRailRoad(TrafficVoxel v, Platform _owner, int _idx)
             : base(v, _owner.direction)
         {
-            Debug.Assert(dir1.isSharp);
-            Debug.Assert(dir2.isSharp);
+            Debug.Assert(Dir1.isSharp);
+            Debug.Assert(Dir2.isSharp);
             this.owner = _owner;
             this.index = _idx;
         }

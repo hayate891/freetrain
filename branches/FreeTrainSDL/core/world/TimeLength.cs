@@ -69,7 +69,7 @@ namespace FreeTrain.World
         /// <returns></returns>
         public static TimeLength untilTomorrow()
         {
-            Clock c = WorldDefinition.world.clock;
+            Clock c = WorldDefinition.World.clock;
             return fromMinutes(ONEDAY.totalMinutes - (c.hour * 60 + c.minutes) % ONEDAY.totalMinutes);
         }
 

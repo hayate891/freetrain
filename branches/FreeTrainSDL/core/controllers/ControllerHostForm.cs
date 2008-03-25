@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers
         public ControllerHostForm()
         {
             InitializeComponent();
-            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
             siteImpl = new ControllerSiteImpl(this);
         }
         /// <summary>
@@ -84,7 +84,7 @@ namespace FreeTrain.Controllers
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);

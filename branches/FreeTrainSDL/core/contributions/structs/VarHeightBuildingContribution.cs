@@ -179,7 +179,7 @@ namespace FreeTrain.Contributions.Structs
         public Structure create(Location baseLoc, int height, bool initiallyOwned)
         {
             Debug.Assert(canBeBuilt(baseLoc, height));
-            return create(new WorldLocator(WorldDefinition.world, baseLoc), height, initiallyOwned);
+            return create(new WorldLocator(WorldDefinition.World, baseLoc), height, initiallyOwned);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace FreeTrain.Contributions.Structs
             for (int z = 0; z < height; z++)
                 for (int y = 0; y < size.y; y++)
                     for (int x = 0; x < size.x; x++)
-                        if (WorldDefinition.world[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
+                        if (WorldDefinition.World[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
                             return false;
 
             return true;
@@ -271,10 +271,10 @@ namespace FreeTrain.Contributions.Structs
         {
             Distance d = new Distance(size.x * 2 + 1, size.y * 2 + 1, maxHeight);
             WorldDefinition w = WorldDefinition.CreatePreviewWorld(minsizePixel, d);
-            int v = w.size.y - size.y - 2;
-            Location l = w.toXYZ((w.size.x - size.x - size.y - 1) / 2, v, 0);
+            int v = w.Size.y - size.y - 2;
+            Location l = w.toXYZ((w.Size.x - size.x - size.y - 1) / 2, v, 0);
             create(new WorldLocator(w, l), maxHeight, false);
-            l = w.toXYZ((w.size.x) / 2, v, 0);
+            l = w.toXYZ((w.Size.x) / 2, v, 0);
             create(new WorldLocator(w, l), minHeight, false);
             return w;
         }

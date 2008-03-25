@@ -45,7 +45,7 @@ namespace FreeTrain.World.Rail
 
             for (; length > 0; length--, loc += dir)
             {
-                if (WorldDefinition.world[loc] == null)
+                if (WorldDefinition.World[loc] == null)
                     continue;		// this voxel is empty.OK.
 
                 TrafficVoxel tv = TrafficVoxel.get(loc);
@@ -55,8 +55,8 @@ namespace FreeTrain.World.Rail
 
                 if (tv.railRoad is SingleRailRoad)
                 {
-                    if (Direction.angle(tv.railRoad.dir1, dir) % 4 == 0
-                    && Direction.angle(tv.railRoad.dir2, dir) % 4 == 0)
+                    if (Direction.angle(tv.railRoad.Dir1, dir) % 4 == 0
+                    && Direction.angle(tv.railRoad.Dir2, dir) % 4 == 0)
                         continue;	// this RR can be converted to a platform
                 }
 
@@ -105,7 +105,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public override void remove()
         {
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
 
             onHostDisconnected();
 
@@ -214,7 +214,7 @@ namespace FreeTrain.World.Rail
                 set
                 {
                     if (value != _outlook)
-                        WorldDefinition.world.onVoxelUpdated(this.voxel);
+                        WorldDefinition.World.onVoxelUpdated(this.Voxel);
                     _outlook = value;
                 }
             }
@@ -228,7 +228,7 @@ namespace FreeTrain.World.Rail
                 set
                 {
                     if (value != _hasRoof)
-                        WorldDefinition.world.onVoxelUpdated(this.voxel);
+                        WorldDefinition.World.onVoxelUpdated(this.Voxel);
                     _hasRoof = value;
                 }
             }
@@ -270,7 +270,7 @@ namespace FreeTrain.World.Rail
             /// 
             /// </summary>
             /// <returns></returns>
-            public override bool onClick()
+            public override bool OnClick()
             {
                 owner.onClick();	// delegate the call to the owner
                 return true;
@@ -294,7 +294,7 @@ namespace FreeTrain.World.Rail
             {
                 get
                 {
-                    Location nloc = this.location + this.direction.left90;
+                    Location nloc = this.Location + this.direction.left90;
                     RailRoadImpl nrr = RailRoadImpl.get(nloc);
                     return (nrr != null) &&
                         (nrr.outlook is PassagewayPlatform) && (nrr.direction == this.direction.opposite);

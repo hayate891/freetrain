@@ -181,9 +181,9 @@ namespace FreeTrain.World
                 {
                     for (int y = y1; y < my; y++)
                     {
-                        if (WorldDefinition.world.getGroundLevel(x, y) != z1)
+                        if (WorldDefinition.World.getGroundLevel(x, y) != z1)
                             return false;
-                        if (WorldDefinition.world[x, y, z1] is MountainVoxel)
+                        if (WorldDefinition.World[x, y, z1] is MountainVoxel)
                             return false;
                     }
                 }
@@ -212,8 +212,8 @@ namespace FreeTrain.World
             get
             {
                 // calculate the correct top left corner.
-                int a1 = WorldDefinition.world.fromXYZToAB(corner).X;
-                int b1 = WorldDefinition.world.fromXYZToAB(x2 - 1, y1, z2 - 1).Y - 16;
+                int a1 = WorldDefinition.World.fromXYZToAB(corner).X;
+                int b1 = WorldDefinition.World.fromXYZToAB(x2 - 1, y1, z2 - 1).Y - 16;
 
                 int xyDiff = sx + sy;
 
@@ -241,7 +241,7 @@ namespace FreeTrain.World
                 {
                     for (int z = corner.z; z < mz; z++)
                     {
-                        Voxel v = WorldDefinition.world[x, y, z];
+                        Voxel v = WorldDefinition.World[x, y, z];
                         if (v != null) r.add(v.entity);
                     }
                 }
@@ -264,7 +264,7 @@ namespace FreeTrain.World
                     {
                         for (int z = 0; z < sz; z++)
                         {
-                            Voxel v = WorldDefinition.world[corner.x + x, corner.y + y, corner.z + z];
+                            Voxel v = WorldDefinition.World[corner.x + x, corner.y + y, corner.z + z];
                             if (v != null) a.Add(v);
                         }
                     }

@@ -41,9 +41,9 @@ namespace FreeTrain.World.Rail
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Direction guide()
+        public override Direction Guide()
         {
-            Train.TrainCar car = (Train.TrainCar)voxel.car;
+            Train.TrainCar car = (Train.TrainCar)Voxel.car;
             CarState.Placed state = car.state.asPlaced();
 
             Direction d = state.asInside().direction;
@@ -131,7 +131,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="newDir"></param>
         /// <returns></returns>
-        public override bool canAttach(Direction newDir)
+        public override bool CanAttach(Direction newDir)
         {
             return hasRail(newDir);	// unless the rail is already there, we can't add.
         }
@@ -140,7 +140,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="newDir"></param>
         /// <returns></returns>
-        public override bool attach(Direction newDir)
+        public override bool Attach(Direction newDir)
         {
             return hasRail(newDir);	// unless the rail is already there, we can't add.
         }
@@ -150,11 +150,11 @@ namespace FreeTrain.World.Rail
         /// remove it completely. If one RR matches, change 
         /// it to a single RR.
         /// </summary>
-        public override void detach(Direction d1, Direction d2)
+        public override void Detach(Direction d1, Direction d2)
         {
             if (hasRail(d1) && hasRail(d2))
             {
-                voxel.railRoad = null;
+                Voxel.railRoad = null;
                 return;
             }
             if (hasRail(d1) || hasRail(d2))
@@ -169,12 +169,12 @@ namespace FreeTrain.World.Rail
                     }
                 Debug.Assert(a != null && b != null);
 
-                Location loc = location;
-                TrafficVoxel v = voxel;			// these references can be lost, so use local variables.
+                Location loc = Location;
+                TrafficVoxel v = Voxel;			// these references can be lost, so use local variables.
 
                 // replace the railroad
                 new SingleRailRoad(v, RailPattern.get(a, b));
-                WorldDefinition.world.onVoxelUpdated(loc);
+                WorldDefinition.World.onVoxelUpdated(loc);
 
                 return;
             }

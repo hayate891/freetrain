@@ -47,7 +47,7 @@ namespace FreeTrain.Controllers
             if (RailRoad.get(loc) != null) return true;
 
             // or if we hit the ground
-            if (WorldDefinition.world.getGroundLevel(loc) >= loc.z) return true;
+            if (WorldDefinition.World.getGroundLevel(loc) >= loc.z) return true;
 
             return false;
         }
@@ -71,7 +71,7 @@ namespace FreeTrain.Controllers
         /// <returns></returns>
         public bool isSelectable(Location loc)
         {
-            return loc.z == WorldDefinition.world.getGroundLevel(loc);
+            return loc.z == WorldDefinition.World.getGroundLevel(loc);
         }
     }
 

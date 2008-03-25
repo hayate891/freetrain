@@ -182,13 +182,13 @@ namespace FreeTrain.World.Subsidiaries
 
         private void registerClock()
         {
-            WorldDefinition.world.clock.registerOneShot(
+            WorldDefinition.World.clock.registerOneShot(
                 new ClockHandler(clockHandler),
                 TimeLength.random(TimeLength.fromDays(14), TimeLength.fromDays(28)));
         }
         private void unregisterClock()
         {
-            WorldDefinition.world.clock.unregister(new ClockHandler(clockHandler));
+            WorldDefinition.World.clock.unregister(new ClockHandler(clockHandler));
         }
 
 

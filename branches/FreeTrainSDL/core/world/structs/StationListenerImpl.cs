@@ -80,8 +80,8 @@ namespace FreeTrain.World.Structs
         /// <returns></returns>
         public int getPopulation(Station s)
         {
-            int v = WorldDefinition.world.landValue[location];
-            int p = population.calcPopulation(WorldDefinition.world.clock);
+            int v = WorldDefinition.World.landValue[location];
+            int p = population.calcPopulation(WorldDefinition.World.clock);
             p /= stations.Count;
             return Math.Min(p, v + 10);
         }
@@ -132,7 +132,7 @@ namespace FreeTrain.World.Structs
         /// </summary>
         private void attachToStation()
         {
-            foreach (Station s in WorldDefinition.world.stations)
+            foreach (Station s in WorldDefinition.World.stations)
             {
                 if (!s.withinReach(location))
                     continue;

@@ -96,17 +96,17 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onAttached()
+        public virtual void OnAttached()
         {
         }
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onDetached()
+        public virtual void OnDetached()
         {
             // clear the remaining image
             if (currentPos != Location.UNPLACED)
-                WorldDefinition.world.onVoxelUpdated(currentPos);
+                WorldDefinition.World.onVoxelUpdated(currentPos);
         }
         /// <summary>
         /// 
@@ -114,12 +114,12 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void onMouseMove(MapViewWindow source, Location loc, Point ab)
+        public virtual void OnMouseMove(MapViewWindow source, Location loc, Point ab)
         {
             if (currentPos != Location.UNPLACED)
-                WorldDefinition.world.onVoxelUpdated(currentPos);
+                WorldDefinition.World.onVoxelUpdated(currentPos);
             currentPos = loc;
-            WorldDefinition.world.onVoxelUpdated(currentPos);
+            WorldDefinition.World.onVoxelUpdated(currentPos);
 
             onSelectionChanged(currentPos);
         }
@@ -129,7 +129,7 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public void onRightClick(MapViewWindow source, Location loc, Point ab)
+        public void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
             close();
         }
@@ -139,7 +139,7 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public void onClick(MapViewWindow source, Location loc, Point ab)
+        public void OnClick(MapViewWindow source, Location loc, Point ab)
         {
             onLocationSelected(loc);
         }
@@ -164,7 +164,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual MapOverlay overlay
+        public virtual MapOverlay Overlay
         {
             get
             {

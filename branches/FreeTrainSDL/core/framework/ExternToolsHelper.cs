@@ -53,8 +53,8 @@ namespace FreeTrain.Framework
                 r.Add(Path.Combine(baseDir, subdir));
             // load plug-ins
             Core.plugins.init(r, progressHandler, errorHandler);
-            if (WorldDefinition.world == null)
-                WorldDefinition.world = new WorldDefinition(new Distance(5, 5, 5), 0);
+            if (WorldDefinition.World == null)
+                WorldDefinition.World = new WorldDefinition(new Distance(5, 5, 5), 0);
             initialized = true;
         }
         /// <summary>

@@ -241,9 +241,9 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
 
             if (isStair)
             {
@@ -267,7 +267,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow view, Location loc, Point ab)
+        public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             if (isStair)
             {
@@ -313,14 +313,14 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onRightClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
             if (anchor == UNPLACED || isStair)
                 Close();	// cancel
             else
             {
                 // cancel the anchor
-                WorldDefinition.world.onAllVoxelUpdated();
+                WorldDefinition.World.onAllVoxelUpdated();
                 anchor = UNPLACED;
             }
         }
@@ -393,7 +393,7 @@ namespace FreeTrain.Controllers.Rail
                 if (loc == loc2)
                 {
                     // TODO: correctly updated voxels
-                    WorldDefinition.world.onAllVoxelUpdated();
+                    WorldDefinition.World.onAllVoxelUpdated();
                     return;
                 }
             }
@@ -412,7 +412,7 @@ namespace FreeTrain.Controllers.Rail
 
                 ThinPlatform.RailRoadImpl rr = ThinPlatform.RailRoadImpl.get(loc1);
 
-                if (WorldDefinition.world[loc1] == null		// unused voxel == can be used in any way
+                if (WorldDefinition.World[loc1] == null		// unused voxel == can be used in any way
                 || (rr != null && Direction.angle(rr.direction, dd) == 2))
                 {	// orthogonal platform.
 

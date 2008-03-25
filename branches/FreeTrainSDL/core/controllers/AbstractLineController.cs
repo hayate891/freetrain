@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public override void updatePreview()
+        public override void UpdatePreview()
         {
             if (this.picture.Image != null)
                 this.picture.Image.Dispose();
@@ -217,14 +217,14 @@ namespace FreeTrain.Controllers
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
             if (anchor != UNPLACED && isPlacing && currentPos != loc)
             {
                 if (currentPos != UNPLACED)
-                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 currentPos = align(loc);
-                WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
             }
         }
         /// <summary>
@@ -233,7 +233,7 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnClick(MapViewWindow source, Location loc, Point ab)
         {
             if (anchor == UNPLACED)
             {
@@ -254,7 +254,7 @@ namespace FreeTrain.Controllers
                     else
                         // remove existing ones
                         type.remove(anchor, loc);
-                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, loc));
+                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, loc));
                 }
                 anchor = UNPLACED;
             }
@@ -265,7 +265,7 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onRightClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
             if (anchor == UNPLACED)
                 Close();	// cancel
@@ -273,7 +273,7 @@ namespace FreeTrain.Controllers
             {
                 // cancel the anchor
                 if (currentPos != UNPLACED)
-                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 anchor = UNPLACED;
             }
         }
@@ -307,7 +307,7 @@ namespace FreeTrain.Controllers
             this.buttonPlace.Width = ((this.picture.Left + this.picture.Width)) / 2;
             this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width);
             this.buttonRemove.Width = this.buttonPlace.Width;
-            updatePreview();
+            UpdatePreview();
         }
 
 

@@ -44,13 +44,13 @@ namespace FreeTrain.World.Rail
         {
             InitializeComponent();
             //handler = new OptionChangedHandler(updatePreview);
-            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
             Bitmap bmp = ResourceUtil.loadSystemBitmap("DayNight.bmp");
             buttonImages.TransparentColor = bmp.GetPixel(0, 0);
             buttonImages.Images.AddStrip(bmp);
 
-            tbDay.Pushed = (WorldDefinition.world.viewOptions.nightSpriteMode == NightSpriteMode.AlwaysDay);
-            tbNight.Pushed = (WorldDefinition.world.viewOptions.nightSpriteMode == NightSpriteMode.AlwaysNight);
+            tbDay.Pushed = (WorldDefinition.World.viewOptions.nightSpriteMode == NightSpriteMode.AlwaysDay);
+            tbNight.Pushed = (WorldDefinition.World.viewOptions.nightSpriteMode == NightSpriteMode.AlwaysNight);
 
             // organize trains into a tree
             IDictionary types = new SortedList();
@@ -215,7 +215,7 @@ namespace FreeTrain.World.Rail
         {
             // buy trains
             for (int i = 0; i < (int)count.Value; i++)
-                new Train(WorldDefinition.world.rootTrainGroup,
+                new Train(WorldDefinition.World.rootTrainGroup,
                     (int)length.Value, selectedTrain);
 
             FreeTrain.Framework.Sound.SoundEffectManager
@@ -234,9 +234,9 @@ namespace FreeTrain.World.Rail
                 if (e.Button == tb)
                 {
                     if (tb.Pushed)
-                        WorldDefinition.world.viewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
+                        WorldDefinition.World.viewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
                     else
-                        WorldDefinition.world.viewOptions.nightSpriteMode = NightSpriteMode.AlignClock;
+                        WorldDefinition.World.viewOptions.nightSpriteMode = NightSpriteMode.AlignClock;
                 }
                 else
                 {
@@ -247,7 +247,7 @@ namespace FreeTrain.World.Rail
 
         private void TrainTradingDialog_Closed(object sender, System.EventArgs e)
         {
-            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
         }
 
         void TrainTradingDialogLoad(object sender, EventArgs e)

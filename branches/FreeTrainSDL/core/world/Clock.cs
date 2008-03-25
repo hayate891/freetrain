@@ -94,7 +94,7 @@ namespace FreeTrain.World
             this.currentTime = t;
             // notify the time change
             PictureManager.reset();
-            WorldDefinition.world.onAllVoxelUpdated();
+            WorldDefinition.World.onAllVoxelUpdated();
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace FreeTrain.World
         /// </summary>
         public void registerOneShot(ClockHandler handler, Time time)
         {
-            registerOneShot(handler, time - WorldDefinition.world.clock);
+            registerOneShot(handler, time - WorldDefinition.World.clock);
         }
 
 
@@ -224,7 +224,7 @@ namespace FreeTrain.World
             if (m == 6 * HOUR_INITIAL || m == 18 * HOUR_INITIAL)
             {
                 PictureManager.reset();
-                WorldDefinition.world.onAllVoxelUpdated();	// time change
+                WorldDefinition.World.onAllVoxelUpdated();	// time change
             }
 
             Debug.Assert((long)queue.minPriority >= currentTime);

@@ -78,12 +78,12 @@ namespace FreeTrain.Controllers.Rail
             pictureW.Tag = Direction.get(6);
 
             update(pictureN, pictureN);	// select N first
-            updatePreview();
+            UpdatePreview();
         }
         /// <summary>
         /// 
         /// </summary>
-        public override void updatePreview()
+        public override void UpdatePreview()
         {
 
             PreviewDrawer drawer;
@@ -322,7 +322,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnClick(MapViewWindow source, Location loc, Point ab)
         {
             if (isPlacing)
             {
@@ -388,7 +388,7 @@ namespace FreeTrain.Controllers.Rail
             else
             {
                 // it is always allowed to place it on or under ground 
-                if (WorldDefinition.world.getGroundLevel(loc) >= loc.z)
+                if (WorldDefinition.World.getGroundLevel(loc) >= loc.z)
                     return true;
 
                 // if the new rail road is at the edge of existing rail,
@@ -418,7 +418,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onMouseMove(MapViewWindow source, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow source, Location loc, Point ab)
         {
             if (lastMouse != loc)
             {
@@ -441,7 +441,7 @@ namespace FreeTrain.Controllers.Rail
             loc2.y += direction.offsetY * 3;
             loc2.z++;
 
-            WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(lastMouse, loc2));
+            WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(lastMouse, loc2));
         }
 
         /// <summary>
@@ -481,7 +481,7 @@ namespace FreeTrain.Controllers.Rail
             {
                 if (i == 2) loc.z++;
 
-                for (int j = WorldDefinition.world.getGroundLevel(loc); j < Z; j++)
+                for (int j = WorldDefinition.World.getGroundLevel(loc); j < Z; j++)
                     // TODO: ground level handling
                     BridgePierVoxel.defaultSprite.drawAlpha(
                         canvas, view.fromXYZToClient(loc.x, loc.y, j));

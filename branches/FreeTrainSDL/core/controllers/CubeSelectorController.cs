@@ -83,7 +83,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual MapOverlay overlay
+        public virtual MapOverlay Overlay
         {
             get
             {
@@ -123,7 +123,7 @@ namespace FreeTrain.Controllers
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void onClick(MapViewWindow view, Location loc, Point ab)
+        public virtual void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             onSelected(Cube.createExclusive(loc, size));
         }
@@ -133,7 +133,7 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void onRightClick(MapViewWindow source, Location loc, Point ab)
+        public virtual void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
             onCanceled();
         }
@@ -143,9 +143,9 @@ namespace FreeTrain.Controllers
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public virtual void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
 
             if (location != loc)
             {
@@ -159,14 +159,14 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onAttached() { }
+        public virtual void OnAttached() { }
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onDetached()
+        public virtual void OnDetached()
         {
             // redraw the entire surface to erase any left-over from this controller
-            WorldDefinition.world.onAllVoxelUpdated();
+            WorldDefinition.World.onAllVoxelUpdated();
         }
         /// <summary>
         /// 

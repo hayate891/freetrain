@@ -111,7 +111,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                     }
                 }
             }
-            WorldDefinition.world.onVoxelUpdated(baseLocation);
+            WorldDefinition.World.onVoxelUpdated(baseLocation);
             return false;
         }
         /// <summary>
@@ -135,7 +135,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 if (back == null)
                     remove();
             }
-            WorldDefinition.world.onVoxelUpdated(baseLocation);
+            WorldDefinition.World.onVoxelUpdated(baseLocation);
             return true;
         }
 
@@ -213,7 +213,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public override void remove()
         {
             // just remove the voxels
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
             world.remove(baseLocation);
 
             if (onEntityRemoved != null)
@@ -288,7 +288,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         public long totalLandPrice
-        { get { return WorldDefinition.world.landValue[baseLocation]; } }
+        { get { return WorldDefinition.World.landValue[baseLocation]; } }
 
         /// <summary>
         /// 

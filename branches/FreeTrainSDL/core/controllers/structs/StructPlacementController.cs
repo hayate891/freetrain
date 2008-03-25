@@ -64,7 +64,7 @@ namespace FreeTrain.Controllers.Structs
         protected StructPlacementController(StructureGroupGroup groupGroup)
         {
             InitializeComponent();
-            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(UpdatePreview);
             previewBitmap = null;
             // load station type list
             structType.DataSource = groupGroup;
@@ -77,7 +77,7 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(UpdatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);
@@ -205,7 +205,7 @@ namespace FreeTrain.Controllers.Structs
             this.buttonPlace.Width = ((this.preview.Left + this.preview.Width) - this.buttonPlace.Left - 5) / 2;
             this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width) + 10;
             this.buttonRemove.Width = this.preview.Width - this.buttonPlace.Width - 10;
-            updatePreview();
+            UpdatePreview();
         }
 
 
@@ -223,9 +223,9 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
 
             if (baseLoc != loc)
             {
@@ -318,12 +318,12 @@ namespace FreeTrain.Controllers.Structs
         /// </summary>
         protected virtual void onTypeChanged(object sender, System.EventArgs e)
         {
-            updatePreview();
+            UpdatePreview();
         }
         /// <summary>
         /// 
         /// </summary>
-        public override void updatePreview()
+        public override void UpdatePreview()
         {
             /*using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) ) 
             {

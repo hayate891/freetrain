@@ -226,7 +226,7 @@ namespace FreeTrain.Framework.Graphics
             {
                 if (dirty)
                 {
-                    WorldDefinition world = WorldDefinition.world;
+                    WorldDefinition world = WorldDefinition.World;
                     // reload the surface
                     Clock c = world.clock;
                     loaders[(int)c.season, (world.viewOptions.useNightView) ? 1 : 0].Load(ref _surface);

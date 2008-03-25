@@ -131,7 +131,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public WorldDefinition world { get { return WorldDefinition.world; } }
+        public WorldDefinition world { get { return WorldDefinition.World; } }
 
         /// <summary>
         /// Computes the distance (in Euclidean sense)

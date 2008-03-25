@@ -97,7 +97,7 @@ namespace FreeTrain.World.Structs
         /// <returns></returns>
 		public static bool canBeBuilt( Location loc, Distance sz, ControlMode mode ) 
 		{
-			if(mode == ControlMode.com)
+			if(mode == ControlMode.Com)
 			{
 				foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
 					if( !v.entity.isOwned )
@@ -122,9 +122,9 @@ namespace FreeTrain.World.Structs
 		public static bool isOnTheGround( Location loc, Distance sz ) {
 			for( int y=0; y<sz.y; y++ )
 				for( int x=0; x<sz.x; x++ ) {
-					if( WorldDefinition.world.getGroundLevel(loc.x+x,loc.y+y)!=loc.z )
+					if( WorldDefinition.World.getGroundLevel(loc.x+x,loc.y+y)!=loc.z )
 						return false;
-					if(WorldDefinition.world[loc.x+x,loc.y+y,loc.z] is MountainVoxel)
+					if(WorldDefinition.World[loc.x+x,loc.y+y,loc.z] is MountainVoxel)
 						return false;
 				}
 			return true;

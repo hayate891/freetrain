@@ -94,7 +94,7 @@ namespace FreeTrain.Views
         {
             this.world = _world;
 
-            _heightCutHeight = world.size.z - 1;
+            _heightCutHeight = world.Size.z - 1;
             //this.directDraw = directDraw;
             //offscreenBuffer = offscreen;
             recreateDrawBuffer(initialView.Size, true);
@@ -284,7 +284,7 @@ namespace FreeTrain.Views
         public bool isVisible(Location loc)
         {
             // find the bounding box in (A,B) axes
-            return WorldDefinition.world.getBoundingBox(loc).IntersectsWith(this.visibleRect);
+            return WorldDefinition.World.getBoundingBox(loc).IntersectsWith(this.visibleRect);
         }
         /// <summary>
         /// 
@@ -352,7 +352,7 @@ namespace FreeTrain.Views
         private bool shouldDrawGround(int h, int v, int z)
         {
             HoleVoxel hva;
-            if (z == world.size.z - 1) hva = null;
+            if (z == world.Size.z - 1) hva = null;
             else hva = world.voxelHVD(h, v, z) as HoleVoxel;
 
             HoleVoxel hvb;
@@ -379,7 +379,7 @@ namespace FreeTrain.Views
             Rectangle rectClient = fromABToClient(rectAB);
 
             int waterLevel = world.waterLevel;
-            bool noHeightCut = (heightCutHeight == world.size.z - 1);
+            bool noHeightCut = (heightCutHeight == world.Size.z - 1);
 
             Color waterSurfaceColor = waterSurfaceDayColor;
             if (world.viewOptions.useNightView)
@@ -397,11 +397,11 @@ namespace FreeTrain.Views
 
             Rectangle rectHV = fromABToHV(rectAB);	// determine the region to draw
 
-            int Hmax = Math.Min(rectHV.Right, world.size.x - 1);
+            int Hmax = Math.Min(rectHV.Right, world.Size.x - 1);
 
             int Zinit = noHeightCut ? (int)waterLevel : 0;	// no need to draw underwater unless in the height cut mode
             int Z = heightCutHeight;
-            int Vmax = Math.Min(rectHV.Bottom + Z * 2, world.size.y - 1);
+            int Vmax = Math.Min(rectHV.Bottom + Z * 2, world.Size.y - 1);
 
             emptyChip = ResourceUtil.getGroundChip(world);
             waterChip = ResourceUtil.underWaterChip;
@@ -510,7 +510,7 @@ namespace FreeTrain.Views
 
             MapOverlay overlay = null;
             ModalController controller = MainWindow.mainWindow.currentController;
-            if (controller != null) overlay = controller.overlay;
+            if (controller != null) overlay = controller.Overlay;
 
             if (overlay != null)
                 overlay.DrawBefore(this, drawContext);
@@ -679,7 +679,7 @@ namespace FreeTrain.Views
             int x = (a - t) >> 5;
             int y = (a + t) >> 5;
 
-            x += (world.size.y - 1) / 2;
+            x += (world.Size.y - 1) / 2;
 
             // (x,y,0) is the base location. disambiguate the location.
             // TODO: use height-cut here to force the specified z-level

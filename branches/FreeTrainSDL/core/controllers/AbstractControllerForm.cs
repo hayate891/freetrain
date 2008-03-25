@@ -36,7 +36,7 @@ namespace FreeTrain.Controllers
     /// </summary>
     public class AbstractControllerForm : Form
     {
-        private Point mouse_offset;
+        private Point mouseOffset;
         /// <summary>
         /// 
         /// </summary>
@@ -45,7 +45,7 @@ namespace FreeTrain.Controllers
             InitializeComponent();
             try
             {
-                WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+                WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(UpdatePreview);
             }
             catch (NullReferenceException nre)
             {
@@ -58,7 +58,7 @@ namespace FreeTrain.Controllers
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(UpdatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);
@@ -87,7 +87,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual void updatePreview() { }
+        public virtual void UpdatePreview() { }
         /// <summary>
         /// 
         /// </summary>
@@ -192,7 +192,7 @@ namespace FreeTrain.Controllers
         /// <param name="e"></param>
         protected void AbstractControllerForm_MouseDown(object sender, MouseEventArgs e)
         {
-            mouse_offset = new Point(-e.X, -e.Y);
+            mouseOffset = new Point(-e.X, -e.Y);
         }
         /// <summary>
         /// 
@@ -204,7 +204,7 @@ namespace FreeTrain.Controllers
             if (e.Button == MouseButtons.Left)
             {
                 Point mousePos = Control.MousePosition;
-                mousePos.Offset(mouse_offset.X, mouse_offset.Y);
+                mousePos.Offset(mouseOffset.X, mouseOffset.Y);
                 this.Location = mousePos;
             }
         }

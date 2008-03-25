@@ -78,13 +78,13 @@ namespace FreeTrain.Controllers.Rail
             this.Text = Translation.GetString("CONTROLLER_RAIL_TOOLTIP");
             this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
 
-            updatePreview();
+            UpdatePreview();
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public override void updatePreview()
+        public override void UpdatePreview()
         {
             /*using( PreviewDrawer drawer = new PreviewDrawer( picture.Size, new Size(1,10), 0 ) ) 
             {
@@ -136,7 +136,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnClick(MapViewWindow source, Location loc, Point ab)
         {
             if (anchor == UNPLACED)
             {
@@ -150,12 +150,12 @@ namespace FreeTrain.Controllers.Rail
                     if (isPlacing)
                     {
                         // build new railroads.
-                        if (!SingleRailRoad.build(anchor, loc))
+                        if (!SingleRailRoad.Build(anchor, loc))
                             MainWindow.showError(Translation.GetString("CONTROLLER_RAIL_OBSTACLES"));
                     }
                     else
                         // remove existing ones
-                        SingleRailRoad.remove(anchor, loc);
+                        SingleRailRoad.Remove(anchor, loc);
                 }
                 anchor = UNPLACED;
             }
@@ -169,7 +169,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onRightClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
             if (anchor == UNPLACED)
                 Close();	// cancel
@@ -177,7 +177,7 @@ namespace FreeTrain.Controllers.Rail
             {
                 // cancel the anchor
                 if (currentPos != UNPLACED)
-                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 anchor = UNPLACED;
                 updateDialog();
             }
@@ -201,30 +201,30 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
             if (anchor != UNPLACED && isPlacing && currentPos != loc)
             {
                 // update the screen
                 if (currentPos != UNPLACED)
-                    WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 currentPos = loc;
-                WorldDefinition.world.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
 
                 int cost;
-                SingleRailRoad.comupteRoute(anchor, currentPos, out cost);
+                SingleRailRoad.ComputeRoute(anchor, currentPos, out cost);
                 costBox.cost = cost;
             }
             if (anchor != UNPLACED && !isPlacing)
             {
-                costBox.cost = SingleRailRoad.calcCostOfRemoving(anchor, loc);
+                costBox.cost = SingleRailRoad.CalcCostOfRemoving(anchor, loc);
             }
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public override void onDetached()
+        public override void OnDetached()
         {
             anchor = UNPLACED;
         }
@@ -270,7 +270,7 @@ namespace FreeTrain.Controllers.Rail
             if (anchor != UNPLACED && isPlacing)
             {
                 int cost;
-                canvas.Tag = SingleRailRoad.comupteRoute(anchor, currentPos, out cost);
+                canvas.Tag = SingleRailRoad.ComputeRoute(anchor, currentPos, out cost);
                 if (canvas.Tag != null)
                     Debug.WriteLine(((IDictionary)canvas.Tag).Count);
             }
@@ -291,7 +291,7 @@ namespace FreeTrain.Controllers.Rail
                 RailPattern rp = (RailPattern)dic[loc];
                 if (rp != null)
                 {
-                    for (int j = WorldDefinition.world.getGroundLevel(loc); j < loc.z; j++)
+                    for (int j = WorldDefinition.World.getGroundLevel(loc); j < loc.z; j++)
                         // TODO: ground level handling
                         BridgePierVoxel.defaultSprite.drawAlpha(
                             canvas.surface,

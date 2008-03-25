@@ -69,7 +69,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public ControllerForm()
         {
             InitializeComponent();
-            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
             rnd = new Random();
 
             callback = new createCallback(randomize);
@@ -104,7 +104,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(updatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);

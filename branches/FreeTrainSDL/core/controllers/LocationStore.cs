@@ -48,10 +48,10 @@ namespace FreeTrain.Controllers
             set
             {
                 if (loc != Location.UNPLACED)
-                    WorldDefinition.world.onVoxelUpdated(loc);
+                    WorldDefinition.World.onVoxelUpdated(loc);
                 loc = value;
                 if (loc != Location.UNPLACED)
-                    WorldDefinition.world.onVoxelUpdated(loc);
+                    WorldDefinition.World.onVoxelUpdated(loc);
             }
         }
     }

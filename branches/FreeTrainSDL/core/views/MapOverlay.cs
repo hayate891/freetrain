@@ -40,7 +40,7 @@ namespace FreeTrain.Views
         /// <summary>
         /// Called for each voxel that the view is trying to draw.
         /// </summary>
-        void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt);
+        void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location location, Point point);
 
         /// <summary>
         /// Called after all the images are drawn by MapView.

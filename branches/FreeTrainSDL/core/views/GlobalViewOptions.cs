@@ -81,7 +81,7 @@ namespace FreeTrain.Views
             {
                 _nightSpriteMode = value;
                 PictureManager.reset();
-                WorldDefinition.world.onAllVoxelUpdated();
+                WorldDefinition.World.onAllVoxelUpdated();
                 if (OnViewOptionChanged != null)
                 {
                     Debug.WriteLine("###" + OnViewOptionChanged.GetInvocationList().Length);
@@ -98,7 +98,7 @@ namespace FreeTrain.Views
             get
             {
                 if (nightSpriteMode == NightSpriteMode.AlignClock)
-                    return WorldDefinition.world.clock.dayOrNight == DayNight.Night;
+                    return WorldDefinition.World.clock.dayOrNight == DayNight.Night;
                 else
                     return nightSpriteMode == NightSpriteMode.AlwaysNight;
             }

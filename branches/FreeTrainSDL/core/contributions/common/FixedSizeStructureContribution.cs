@@ -112,7 +112,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="baseLoc"></param>
         public Structure create(Location baseLoc, bool initiallyOwned)
         {
-            return create(new WorldLocator(WorldDefinition.world, baseLoc), initiallyOwned);
+            return create(new WorldLocator(WorldDefinition.World, baseLoc), initiallyOwned);
         }
         /// <summary>
         /// 
@@ -130,7 +130,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="baseLoc"></param>
         public void create2(Location baseLoc)
         {
-            create(new WorldLocator(WorldDefinition.world, baseLoc), false);
+            create(new WorldLocator(WorldDefinition.World, baseLoc), false);
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace FreeTrain.Contributions.Common
         public WorldDefinition CreatePreviewWorld(Size minsizePixel, IDictionary options)
         {
             WorldDefinition w = WorldDefinition.CreatePreviewWorld(minsizePixel, size);
-            Location l = w.toXYZ((w.size.x - size.x + size.y) / 2, w.size.y - size.y - 2, 0);
+            Location l = w.toXYZ((w.Size.x - size.x + size.y) / 2, w.Size.y - size.y - 2, 0);
             create(new WorldLocator(w, l), false);
             return w;
         }

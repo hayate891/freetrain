@@ -41,9 +41,9 @@ namespace FreeTrain.World.Rail
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Direction guide()
+        public override Direction Guide()
         {
-            Direction d = voxel.car.state.asInside().direction;
+            Direction d = Voxel.car.state.asInside().direction;
             if (hasRail(d)) return d;	// 進路変更なし
 
             Direction l = d.left;
@@ -54,18 +54,19 @@ namespace FreeTrain.World.Rail
         }
 
         private bool is1or3or4(int i) { return i == 1 || i == 3 || i == 4; }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="newDir"></param>
         /// <returns></returns>
-        public override bool canAttach(Direction newDir)
+        public override bool CanAttach(Direction newDir)
         {
             if (hasRail(newDir)) return true;	// already added
 
-            Direction d1 = dir1, d2 = dir2;
+            Direction d1 = Dir1, d2 = Dir2;
 
-            if (isWellConnected)
+            if (IsWellConnected)
             {
                 return is1or3or4(Direction.angle(d1, newDir)) && is1or3or4(Direction.angle(d2, newDir));
             }
@@ -74,24 +75,25 @@ namespace FreeTrain.World.Rail
                 return Direction.angle(d1, newDir) >= 3 || Direction.angle(d2, newDir) >= 3;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="newDir"></param>
         /// <returns></returns>
-        public override bool attach(Direction newDir)
+        public override bool Attach(Direction newDir)
         {
             if (hasRail(newDir)) return true;	// already added
 
-            Direction d1 = dir1, d2 = dir2;
+            Direction d1 = Dir1, d2 = Dir2;
 
-            if (isWellConnected)
+            if (IsWellConnected)
             {
                 Debug.Assert(is1or3or4(Direction.angle(d1, newDir)) && is1or3or4(Direction.angle(d2, newDir)));
                 // if the line is already well connected, make it a junction
-                TrafficVoxel v = voxel;
+                TrafficVoxel v = Voxel;
                 v.railRoad = new JunctionRailRoad(v, RailPattern.getJunction(d1, d2, newDir));
-                WorldDefinition.world.onVoxelUpdated(voxel);
+                WorldDefinition.World.onVoxelUpdated(Voxel);
                 return true;
             }
             else
@@ -101,13 +103,13 @@ namespace FreeTrain.World.Rail
                 if (Direction.angle(d1, newDir) >= 3)
                 {
                     pattern = RailPattern.get(d1, newDir);
-                    WorldDefinition.world.onVoxelUpdated(voxel);
+                    WorldDefinition.World.onVoxelUpdated(Voxel);
                     return true;
                 }
                 if (Direction.angle(d2, newDir) >= 3)
                 {
                     pattern = RailPattern.get(d2, newDir);
-                    WorldDefinition.world.onVoxelUpdated(voxel);
+                    WorldDefinition.World.onVoxelUpdated(Voxel);
                     return true;
                 }
             }
@@ -119,20 +121,17 @@ namespace FreeTrain.World.Rail
         /// If this RR has any rail in the specified direction,
         /// remove the entire RR voxel.
         /// </summary>
-        public override void detach(Direction d1, Direction d2)
+        public override void Detach(Direction d1, Direction d2)
         {
             if (hasRail(d1) || hasRail(d2))
             {
-                voxel.railRoad = null;
+                Voxel.railRoad = null;
             }
             else
             {
                 ;	// noop
             }
         }
-
-
-
 
         /// <summary>
         /// Compute the cost of building rail road with two given directions
@@ -143,8 +142,8 @@ namespace FreeTrain.World.Rail
         /// <param name="loc"></param>
         private static int calcRailRoadCost(Location loc, Direction d1, Direction d2)
         {
-            int waterLevel = WorldDefinition.world.waterLevel;
-            int glevel = WorldDefinition.world.getGroundLevel(loc);
+            int waterLevel = WorldDefinition.World.waterLevel;
+            int glevel = WorldDefinition.World.getGroundLevel(loc);
             //			int multiplier = Math.Max( loc.z-World.world.waterLevel, 1 );
             int multiplier = Math.Abs(loc.z - glevel) + 1;
 
@@ -152,7 +151,7 @@ namespace FreeTrain.World.Rail
             if (glevel <= loc.z && loc.z <= waterLevel && glevel < waterLevel)
                 return 0;	// underwater or on water.
 
-            Voxel v = WorldDefinition.world[loc];
+            Voxel v = WorldDefinition.World[loc];
             if (v == null) return RAILROAD_CONSTRUCTION_UNIT_COST * multiplier;
 
             // TODO: incorrect compuattion
@@ -176,15 +175,14 @@ namespace FreeTrain.World.Rail
                 // can't attach two RR to an existing rail road.
                 if (d1 != null && d2 != null && tv.railRoad != null) return 0;
 
-                if (d1 != null && !tv.railRoad.canAttach(d1)) return 0;
-                if (d2 != null && !tv.railRoad.canAttach(d2)) return 0;
+                if (d1 != null && !tv.railRoad.CanAttach(d1)) return 0;
+                if (d2 != null && !tv.railRoad.CanAttach(d2)) return 0;
             }
 
             // TODO: add a check about auto road.
 
             return RAILROAD_CONSTRUCTION_UNIT_COST * multiplier;
         }
-
 
         /// <summary>
         /// Computes the route of RRs between specified two points.
@@ -196,7 +194,7 @@ namespace FreeTrain.World.Rail
         /// <param name="cost">The total cost of construction will be returned here</param>
         /// <param name="from"></param>
         /// <param name="to"></param>
-        public static IDictionary comupteRoute(Location from, Location to, out int cost)
+        public static IDictionary ComputeRoute(Location from, Location to, out int cost)
         {
             cost = 0;
             int c;
@@ -228,18 +226,17 @@ namespace FreeTrain.World.Rail
             return route;
         }
 
-
         /// <summary>
         /// Builds normal RR between two specified locations
         /// </summary>
         /// <returns>false if the operation was unsuccessful</returns>
-        public static bool build(Location here, Location there)
+        public static bool Build(Location here, Location there)
         {
             // ensure that nothing is on our way between "from" and "to"
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
             int cost;
 
-            if (comupteRoute(here, there, out cost) == null)
+            if (ComputeRoute(here, there, out cost) == null)
                 return false;
 
             Direction d = here.getDirectionTo(there);
@@ -249,7 +246,7 @@ namespace FreeTrain.World.Rail
                 TrafficVoxel v = TrafficVoxel.getOrCreate(here);
                 if (v == null)
                 {
-                    Voxel vv = WorldDefinition.world[here];
+                    Voxel vv = WorldDefinition.World[here];
                     Debug.Assert(vv.entity.isSilentlyReclaimable);
                     vv.entity.remove();
                     v = TrafficVoxel.getOrCreate(here);
@@ -261,8 +258,8 @@ namespace FreeTrain.World.Rail
 
                 if (v.railRoad != null)
                 {
-                    v.railRoad.attach(here == there ? d.opposite : d);
-                    WorldDefinition.world.onVoxelUpdated(here);
+                    v.railRoad.Attach(here == there ? d.opposite : d);
+                    WorldDefinition.World.onVoxelUpdated(here);
                 }
                 else
                 {
@@ -286,12 +283,12 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Compute the cost of removing railroads.
         /// </summary>
-        public static int calcCostOfRemoving(Location here, Location there)
+        public static int CalcCostOfRemoving(Location here, Location there)
         {
 
             if (here == there) return 0;
 
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
             Direction d = here.getDirectionTo(there);
             int cost = 0;
 
@@ -318,13 +315,13 @@ namespace FreeTrain.World.Rail
         /// Removes normal RR between two specified locations
         /// </summary>
         /// <returns>false if the operation was unsuccessful</returns>
-        public static void remove(Location here, Location there)
+        public static void Remove(Location here, Location there)
         {
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
             Direction d = here.getDirectionTo(there);
 
             // charge the cost first. 
-            Accounting.AccountGenre.RailService.Spend(calcCostOfRemoving(here, there));
+            Accounting.AccountGenre.RailService.Spend(CalcCostOfRemoving(here, there));
 
             while (true)
             {
@@ -334,7 +331,7 @@ namespace FreeTrain.World.Rail
 
                 TrafficVoxel v = TrafficVoxel.get(here);
                 if (v != null && v.railRoad != null && !v.isOccupied)
-                    v.railRoad.detach(d.opposite, dd);
+                    v.railRoad.Detach(d.opposite, dd);
 
                 BridgePierVoxel.teardownBridgeSupport(here, v);
 

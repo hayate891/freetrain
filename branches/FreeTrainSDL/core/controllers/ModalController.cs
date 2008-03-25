@@ -42,31 +42,31 @@ namespace FreeTrain.Controllers
         /// <param name="source">sender of the event.</param>
         /// <param name="loc">(X,Y,Z) location that was clicked</param>
         /// <param name="ab">(A,B) location that was clicked.</param>
-        void onClick(MapViewWindow source, Location loc, Point ab);
+        void OnClick(MapViewWindow source, Location loc, Point ab);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        void onRightClick(MapViewWindow source, Location loc, Point ab);
+        void OnRightClick(MapViewWindow source, Location loc, Point ab);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        void onMouseMove(MapViewWindow source, Location loc, Point ab);
+        void OnMouseMove(MapViewWindow source, Location loc, Point ab);
 
         /// <summary>
         /// Called when the controller gets activated.
         /// </summary>
-        void onAttached();
+        void OnAttached();
 
         /// <summary>
         /// Called when the controller gets deactivated.
         /// </summary>
-        void onDetached();
+        void OnDetached();
 
         //		/// <summary>
         //		/// Closes the controller. A host uses this method to close
@@ -87,6 +87,6 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// If this controller needs to modify the map view, return non-null value.
         /// </summary>
-        MapOverlay overlay { get; }
+        MapOverlay Overlay { get; }
     }
 }

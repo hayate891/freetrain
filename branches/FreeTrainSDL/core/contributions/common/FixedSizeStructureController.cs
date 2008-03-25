@@ -60,7 +60,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="cube"></param>
         protected override void onSelected(Cube cube)
         {
-            if (contrib.canBeBuilt(cube.corner, ControlMode.player))
+            if (contrib.canBeBuilt(cube.corner, ControlMode.Player))
             {
                 MainWindow.showError("Can not build");
                 //! MainWindow.showError("設置できません");
@@ -74,7 +74,7 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        public override void onDetached()
+        public override void OnDetached()
         {
             alphaSprites.Dispose();
         }
@@ -153,7 +153,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="cube"></param>
         protected override void onSelected(Cube cube)
         {
-            PThreeDimStructure s = WorldDefinition.world.getEntityAt(cube.corner) as PThreeDimStructure;
+            PThreeDimStructure s = WorldDefinition.World.getEntityAt(cube.corner) as PThreeDimStructure;
             if (s == null || s.type != contrib)
             {
                 MainWindow.showError("Wrong type");

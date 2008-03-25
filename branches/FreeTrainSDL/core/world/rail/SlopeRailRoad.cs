@@ -67,7 +67,7 @@ namespace FreeTrain.World.Rail
             foreach (Voxel v in cube.voxels)
             {
                 if (v.entity == this && !(v is BridgePierVoxel))
-                    WorldDefinition.world.remove(v);
+                    WorldDefinition.World.remove(v);
                 else
                 {
                     TrafficVoxel tv = v as TrafficVoxel;
@@ -117,14 +117,14 @@ namespace FreeTrain.World.Rail
         public override void invalidateVoxel()
         {
             // this voxel and the voxel below/above needs to be updated
-            WorldDefinition.world.onVoxelUpdated(voxel);
+            WorldDefinition.World.onVoxelUpdated(Voxel);
 
-            Location loc = location;
+            Location loc = Location;
             if (pattern.level < 2)	// the voxel above
                 loc.z++;
             else
                 loc.z--;
-            WorldDefinition.world.onVoxelUpdated(loc);
+            WorldDefinition.World.onVoxelUpdated(loc);
         }
         /// <summary>
         /// 
@@ -142,13 +142,13 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="dir"></param>
         /// <returns></returns>
-        public override bool attach(Direction dir) { return hasRail(dir); }
+        public override bool Attach(Direction dir) { return hasRail(dir); }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="dir"></param>
         /// <returns></returns>
-        public override bool canAttach(Direction dir) { return hasRail(dir); }
+        public override bool CanAttach(Direction dir) { return hasRail(dir); }
 
         // similarly, can't detach
         /// <summary>
@@ -156,7 +156,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="d1"></param>
         /// <param name="d2"></param>
-        public override void detach(Direction d1, Direction d2)
+        public override void Detach(Direction d1, Direction d2)
         {
             ;
         }
@@ -164,11 +164,11 @@ namespace FreeTrain.World.Rail
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Direction guide()
+        public override Direction Guide()
         {
             // slop rails don't curve. so a car should be
             // able to go to the same direction
-            Direction d = voxel.car.state.asInside().direction;
+            Direction d = Voxel.car.state.asInside().direction;
             Debug.Assert(hasRail(d));
             return d;
         }
@@ -213,7 +213,7 @@ namespace FreeTrain.World.Rail
 
             for (int i = 0; i < 4; i++)
             {
-                if (_base.z < WorldDefinition.world.getGroundLevel(_base))
+                if (_base.z < WorldDefinition.World.getGroundLevel(_base))
                 {
                     new SlopeRailRoad(entity, TrafficVoxel.getOrCreate(
                         _base.x, _base.y, _base.z + (i / 2)),
@@ -267,7 +267,7 @@ namespace FreeTrain.World.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = WorldDefinition.world.getGroundLevel(location);
+                int glevel = WorldDefinition.World.getGroundLevel(location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
             }
@@ -296,7 +296,7 @@ namespace FreeTrain.World.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = WorldDefinition.world.getGroundLevel(location);
+                int glevel = WorldDefinition.World.getGroundLevel(location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
                 sprite = s;
@@ -350,20 +350,20 @@ namespace FreeTrain.World.Rail
         {
             if (!dir.isSharp) return 0;
 
-            if (_base.z == WorldDefinition.world.size.z - 1)
+            if (_base.z == WorldDefinition.World.Size.z - 1)
                 return 0;	// we can't go above the ceil
 
             // 8 voxels around (depth-4 height-2) must be completely available.
             // it's not even OK to have a TrafficVoxel.
             for (int i = 0; i < 4; i++)
             {
-                if (WorldDefinition.world[_base] != null) return 0;
-                if (WorldDefinition.world[_base.x, _base.y, _base.z + 1] != null) return 0;
+                if (WorldDefinition.World[_base] != null) return 0;
+                if (WorldDefinition.World[_base.x, _base.y, _base.z + 1] != null) return 0;
 
                 _base += dir;
             }
 
-            return SLOPE_CONSTRUCTION_UNIT_COST * Math.Max(1, _base.z - WorldDefinition.world.waterLevel);
+            return SLOPE_CONSTRUCTION_UNIT_COST * Math.Max(1, _base.z - WorldDefinition.World.waterLevel);
         }
         /// <summary>
         /// 
@@ -404,7 +404,7 @@ namespace FreeTrain.World.Rail
             loc += dir;
             if (Car.get(loc) != null) return 0;
 
-            return SLOPE_DESTRUCTION_UNIT_COST * Math.Max(1, loc.z - WorldDefinition.world.waterLevel);
+            return SLOPE_DESTRUCTION_UNIT_COST * Math.Max(1, loc.z - WorldDefinition.World.waterLevel);
         }
 
         /// <summary>
@@ -425,8 +425,8 @@ namespace FreeTrain.World.Rail
 
                 Location l = loc;
                 l.z += -(i / 2) + 1;
-                Debug.Assert(WorldDefinition.world[l] is EmptyVoxel);
-                WorldDefinition.world.remove(l);
+                Debug.Assert(WorldDefinition.World[l] is EmptyVoxel);
+                WorldDefinition.World.remove(l);
 
                 BridgePierVoxel.teardownBridgeSupport(loc, v);
 

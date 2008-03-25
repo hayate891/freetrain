@@ -189,7 +189,7 @@ namespace FreeTrain.World
         public override bool onClick()
         {
             if (car != null && car.onClick()) return true;
-            if (_railRoad != null && _railRoad.onClick()) return true;
+            if (_railRoad != null && _railRoad.OnClick()) return true;
             return false;
         }
 
@@ -228,7 +228,7 @@ namespace FreeTrain.World
             if (_railRoad == null || _road == null) return false;
 
             RailPattern rp = _railRoad.getPattern();
-            Direction rdir1 = _railRoad.dir1;
+            Direction rdir1 = _railRoad.Dir1;
             if (rp.numberOfRails != 2 || !rp.hasRail(rdir1.opposite))
                 return false;	// the rail must be going straight.
             if (!rdir1.isSharp)
@@ -275,7 +275,7 @@ namespace FreeTrain.World
             BridgePierVoxel.teardownBridgeSupport(location, this);
             if (onEntityRemoved != null)
                 onEntityRemoved(this, null);
-            WorldDefinition.world.remove(this);
+            WorldDefinition.World.remove(this);
         }
         /// <summary>
         /// 
@@ -320,7 +320,7 @@ namespace FreeTrain.World
         /// <returns>null if the specified location is already occupied</returns>
         public static TrafficVoxel getOrCreate(Location loc)
         {
-            Voxel v = WorldDefinition.world[loc];
+            Voxel v = WorldDefinition.World[loc];
             if (v != null) return v as TrafficVoxel;
 
             return new TrafficVoxel(loc);
@@ -344,7 +344,7 @@ namespace FreeTrain.World
         /// </summary>
         public static TrafficVoxel get(Location loc)
         {
-            return WorldDefinition.world[loc] as TrafficVoxel;
+            return WorldDefinition.World[loc] as TrafficVoxel;
         }
         /// <summary>
         /// 

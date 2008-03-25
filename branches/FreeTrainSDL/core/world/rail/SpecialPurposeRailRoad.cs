@@ -44,7 +44,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="newDir"></param>
         /// <returns></returns>
-        public override bool canAttach(Direction newDir)
+        public override bool CanAttach(Direction newDir)
         {
             return hasRail(newDir);
         }
@@ -53,7 +53,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="newDir"></param>
         /// <returns></returns>
-        public override bool attach(Direction newDir)
+        public override bool Attach(Direction newDir)
         {
             return hasRail(newDir);
         }
@@ -62,7 +62,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="d1"></param>
         /// <param name="d2"></param>
-        public override void detach(Direction d1, Direction d2)
+        public override void Detach(Direction d1, Direction d2)
         {
             // can't be detached
         }
@@ -71,9 +71,9 @@ namespace FreeTrain.World.Rail
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Direction guide()
+        public override Direction Guide()
         {
-            Direction d = voxel.car.state.asInside().direction;
+            Direction d = Voxel.car.state.asInside().direction;
             // we have straight rails only, so the direction must stay the same
             Debug.Assert(hasRail(d));
             return d;

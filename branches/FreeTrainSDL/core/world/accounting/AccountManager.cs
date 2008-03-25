@@ -53,7 +53,7 @@ namespace FreeTrain.World.Accounting
         {
             get
             {
-                return WorldDefinition.world.account;
+                return WorldDefinition.World.account;
             }
         }
 
