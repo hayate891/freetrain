@@ -149,7 +149,7 @@ namespace FreeTrain.World.Rail
             // there must be at least one water between two locations
             while (true)
             {
-                if (WorldDefinition.world[here] != null)
+                if (WorldDefinition.World[here] != null)
                 {
                     TrafficVoxel v = TrafficVoxel.get(here);
                     if (v == null) return false;	// occupied
@@ -260,7 +260,7 @@ namespace FreeTrain.World.Rail
                 if (brr != null && brr.hasRail(d))
                 {
                     // destroy it
-                    brr.voxel.railRoad = null;
+                    brr.Voxel.railRoad = null;
                     // TODO: delete piers
 
                     BridgePierVoxel.teardownBridgeSupport(here, TrafficVoxel.get(here));

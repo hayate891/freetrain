@@ -115,7 +115,7 @@ namespace FreeTrain.World
             /// <summary>
             /// Voxel that represents the location.
             /// </summary>
-            public TrafficVoxel voxel { get { return (TrafficVoxel)WorldDefinition.world[location]; } }
+            public TrafficVoxel voxel { get { return (TrafficVoxel)WorldDefinition.World[location]; } }
             /// <summary>
             /// 
             /// </summary>

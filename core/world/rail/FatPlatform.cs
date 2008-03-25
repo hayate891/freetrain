@@ -47,7 +47,7 @@ namespace FreeTrain.World.Rail
 
             for (; length > 0; length--)
             {
-                if (WorldDefinition.world[loc] != null)
+                if (WorldDefinition.World[loc] != null)
                     return false;	// already occupied
                 loc += d;
             }
@@ -91,7 +91,7 @@ namespace FreeTrain.World.Rail
                     {
                         foreach (YardRailRoad yrr in yrrs)
                         {
-                            if (yrr.voxel.car != null)
+                            if (yrr.Voxel.car != null)
                                 return false;
                         }
                     }
@@ -105,7 +105,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public override void remove()
         {
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
 
             onHostDisconnected();
 
@@ -117,10 +117,10 @@ namespace FreeTrain.World.Rail
                     foreach (YardRailRoad yrr in yrrs)
                     {
                         // canRemove must be true before this method is called.
-                        Debug.Assert(yrr.voxel.car == null);
+                        Debug.Assert(yrr.Voxel.car == null);
 
-                        Location loc = yrr.location;
-                        yrr.voxel.railRoad = null;
+                        Location loc = yrr.Location;
+                        yrr.Voxel.railRoad = null;
                         new SingleRailRoad(
                             TrafficVoxel.getOrCreate(loc),
                             RailPattern.get(direction, direction.opposite));
@@ -185,7 +185,7 @@ namespace FreeTrain.World.Rail
 
             for (int i = 0; i < length; i++, loc += direction)
             {
-                Voxel v = WorldDefinition.world[loc];
+                Voxel v = WorldDefinition.World[loc];
                 if (v == null) continue;	// OK
                 if (v is TrafficVoxel)
                 {
@@ -195,8 +195,8 @@ namespace FreeTrain.World.Rail
                         return false;	// there is a obstacle
                     if (tv.railRoad is SingleRailRoad)
                     {
-                        if (Direction.angle(tv.railRoad.dir1, direction) % 4 == 0
-                        && Direction.angle(tv.railRoad.dir2, direction) % 4 == 0)
+                        if (Direction.angle(tv.railRoad.Dir1, direction) % 4 == 0
+                        && Direction.angle(tv.railRoad.Dir2, direction) % 4 == 0)
                             continue;	// this RR can be converted to a platform
                     }
                 }
@@ -231,7 +231,7 @@ namespace FreeTrain.World.Rail
             if (!hasLane(idx)) return false;
 
             foreach (YardRailRoad rr in lanes[idx])
-                if (rr.voxel.car != null) return false;
+                if (rr.Voxel.car != null) return false;
 
             return true;
         }
@@ -247,13 +247,13 @@ namespace FreeTrain.World.Rail
             lanes[idx] = null;
             foreach (YardRailRoad rr in rrs)
             {
-                Location loc = rr.location;
-                rr.voxel.railRoad = null;
+                Location loc = rr.Location;
+                rr.Voxel.railRoad = null;
 
                 new SingleRailRoad(
                     TrafficVoxel.getOrCreate(loc),
                     rr.getPattern());
-                WorldDefinition.world.onVoxelUpdated(loc);
+                WorldDefinition.World.onVoxelUpdated(loc);
             }
         }
 
@@ -365,7 +365,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public new static FatPlatform get(Location loc)
         {
-            Voxel v = WorldDefinition.world[loc];
+            Voxel v = WorldDefinition.World[loc];
             if (v is FatPlatformVoxel)
                 return ((FatPlatformVoxel)v).owner;
             else

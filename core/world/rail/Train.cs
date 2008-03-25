@@ -142,18 +142,18 @@ namespace FreeTrain.World.Rail
                 idx--;
 
                 RailRoad rr = RailRoad.get(loc);
-                if (rr == null || rr.voxel.isOccupied)
+                if (rr == null || rr.Voxel.isOccupied)
                 {
                     // can't be placed here
                     return false;
                 }
-                if (d == null) d = rr.dir1;	// set the initial direction
+                if (d == null) d = rr.Dir1;	// set the initial direction
 
                 ds[idx] = d; locs[idx] = loc;
 
                 // determine the next voxel
                 cars[0].place(loc, d);
-                d = rr.guide();
+                d = rr.Guide();
                 loc += d;
                 cars[0].remove();
             } while (idx != 0);
@@ -186,7 +186,7 @@ namespace FreeTrain.World.Rail
                 car.remove();
 
             // make sure that we don't have any pending event
-            WorldDefinition.world.clock.unregister(new ClockHandler(clockHandler));
+            WorldDefinition.World.clock.unregister(new ClockHandler(clockHandler));
             State = TrainStates.Unplaced;
         }
 
@@ -299,7 +299,7 @@ namespace FreeTrain.World.Rail
 
         private void registerTimer(TimeLength time)
         {
-            WorldDefinition.world.clock.registerOneShot(new ClockHandler(clockHandler), time);
+            WorldDefinition.World.clock.registerOneShot(new ClockHandler(clockHandler), time);
         }
 
         /// <summary> Counter that remembers the # of consecutive times this train is told to stop. </summary>
@@ -543,11 +543,11 @@ namespace FreeTrain.World.Rail
                 TrainCar head = owner.head;
                 RailRoad rr = RailRoad.get(state.location);
 
-                Direction go = rr.guide();	// angle to go
+                Direction go = rr.Guide();	// angle to go
                 Location newLoc = state.location + go;
-                newLoc.z += rr.zdiff(state.direction);
+                newLoc.z += rr.ZDiff(state.direction);
 
-                if (WorldDefinition.world.isBorderOfWorld(newLoc))
+                if (WorldDefinition.World.isBorderOfWorld(newLoc))
                 {
                     // go outside the world
                     return new CarState.Outside(newLoc, go, OUTSIDE_COUNTER_INITIAL_VALUE);
@@ -669,7 +669,7 @@ namespace FreeTrain.World.Rail
             /// <returns></returns>
             public object onInside(CarState.Inside state)
             {
-                Direction d = state.voxel.railRoad.guide().opposite;
+                Direction d = state.voxel.railRoad.Guide().opposite;
                 return new CarState.Inside(state.location, d);
             }
             /// <summary>
@@ -842,7 +842,7 @@ namespace FreeTrain.World.Rail
                 else
                 { // level rail road
                     int d1 = s.direction.index;
-                    int d2 = s.voxel.railRoad.guide().index;
+                    int d2 = s.voxel.railRoad.Guide().index;
 
                     int angle;
                     if (d1 == d2)

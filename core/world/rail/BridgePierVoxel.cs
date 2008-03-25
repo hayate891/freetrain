@@ -78,11 +78,11 @@ namespace FreeTrain.World.Rail
             // check if a support is buildable
             // TODO: start from the surface level
             for (int z = 0; z < loc.z; z++)
-                if (WorldDefinition.world[loc.x, loc.y, z] != null)
+                if (WorldDefinition.World[loc.x, loc.y, z] != null)
                     return;
 
             // if we can, do it
-            for (int z = WorldDefinition.world.getGroundLevel(loc); z < loc.z; z++)
+            for (int z = WorldDefinition.World.getGroundLevel(loc); z < loc.z; z++)
             {
                 Activator.CreateInstance(
                     (z == loc.z - 1) ? topBridgeType : otherBridgeType,
@@ -118,9 +118,9 @@ namespace FreeTrain.World.Rail
         {
             for (int z = 0; z < loc.z; z++)
             {
-                BridgePierVoxel v = WorldDefinition.world[loc.x, loc.y, z] as BridgePierVoxel;
+                BridgePierVoxel v = WorldDefinition.World[loc.x, loc.y, z] as BridgePierVoxel;
                 if (v != null)
-                    WorldDefinition.world.remove(loc.x, loc.y, z);
+                    WorldDefinition.World.remove(loc.x, loc.y, z);
             }
         }
 

@@ -127,7 +127,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             // Windows フォーム デザイナ サポートに必要です。
             //
             InitializeComponent();
-            WorldDefinition.world.viewOptions.OnViewOptionChanged += new OptionChangedHandler(this.redrawPreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(this.redrawPreview);
             OnNodeSelected(CategoryTreeWnd.getSelectedCategory(), 0);
             if (typeBox.Items.Count != 0)
                 typeBox_SelectedIndexChanged(this, null);
@@ -183,7 +183,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="loc"></param>
         /// <param name="ab"></param>
         [CLSCompliant(false)]
-        public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
             if (anchor == UNPLACED)
             {
@@ -192,14 +192,14 @@ namespace FreeTrain.Framework.Plugin.Generic
                     // update the screen
                     baseLoc = loc;
                     // TODO: we need to correctly update the screen
-                    WorldDefinition.world.onAllVoxelUpdated();
+                    WorldDefinition.World.onAllVoxelUpdated();
                 }
             }
             else
             {
                 World.Location l = loc.align4To(anchor);
                 mouseDir = anchor.getDirectionTo(l);
-                WorldDefinition.world.onVoxelUpdated(anchor);
+                WorldDefinition.World.onVoxelUpdated(anchor);
             }
         }
 
@@ -210,7 +210,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="loc"></param>
         /// <param name="ab"></param>
         [CLSCompliant(false)]
-        public override void onClick(MapViewWindow view, Location loc, Point ab)
+        public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             if (!canBeBuilt(loc))
                 MainWindow.showError("Can not build");
@@ -258,7 +258,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             for (int z = 0; z < height; z++)
                 for (int y = 0; y < size.y; y++)
                     for (int x = 0; x < size.x; x++)
-                        if (WorldDefinition.world[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
+                        if (WorldDefinition.World[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
                             return false;
 
             return true;
@@ -376,7 +376,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// </summary>
         protected override void Dispose(bool disposing)
         {
-            WorldDefinition.world.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(this.redrawPreview);
+            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(this.redrawPreview);
             if (disposing)
             {
                 if (components != null)

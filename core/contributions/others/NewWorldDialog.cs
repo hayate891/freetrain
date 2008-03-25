@@ -228,9 +228,9 @@ namespace FreeTrain.Contributions.Others
 			int y = int.Parse(sizeY.Text);
 			int z = int.Parse(sizeZ.Text);
 			WorldDefinition w = new WorldDefinition( new Distance(x,y+z*2,z),  z/4 );
-			w.name = this.name.Text;
-			if(w.name==null || w.name.Length==0)
-				w.name = "Terra Incognita";
+			w.Name = this.name.Text;
+			if(w.Name==null || w.Name.Length==0)
+				w.Name = "Terra Incognita";
 				//! w.name = "ななしさん";
 			return w;
 			// TODO: Z dimension

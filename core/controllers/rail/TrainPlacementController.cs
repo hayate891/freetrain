@@ -90,7 +90,7 @@ namespace FreeTrain.Controllers.Rail
             this.label1.Text = Translation.GetString("CONTROLLER_TRAIN_NAME");
             this.Text = Translation.GetString("CONTROLLER_TRAIN_PLACE");
 
-            controllerCombo.DataSource = WorldDefinition.world.trainControllers;
+            controllerCombo.DataSource = WorldDefinition.World.trainControllers;
             tree.ItemMoved = new ItemMovedHandler(onItemDropped);
 
             //this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
@@ -123,9 +123,9 @@ namespace FreeTrain.Controllers.Rail
             tree.BeginUpdate();
             tree.Nodes.Clear();
 
-            TreeNode root = createNode(WorldDefinition.world.rootTrainGroup);
+            TreeNode root = createNode(WorldDefinition.World.rootTrainGroup);
             tree.Nodes.Add(root);
-            populate(WorldDefinition.world.rootTrainGroup, root.Nodes);
+            populate(WorldDefinition.World.rootTrainGroup, root.Nodes);
 
             tree.ExpandAll();
             tree.EndUpdate();
@@ -221,7 +221,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnClick(MapViewWindow source, Location loc, Point ab)
         {
             if (isPlacingMode)
             {
@@ -272,12 +272,12 @@ namespace FreeTrain.Controllers.Rail
                     MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_NORAIL"));
                     return;
                 }
-                if (!(rr.voxel.car is Train.TrainCar))
+                if (!(rr.Voxel.car is Train.TrainCar))
                 {
                     MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_NOCARS"));
                     return;
                 }
-                ((Train.TrainCar)rr.voxel.car).parent.remove();
+                ((Train.TrainCar)rr.Voxel.car).parent.remove();
                 playSound();
                 // successfully removed
             }
@@ -292,7 +292,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override void onAttached()
+        public override void OnAttached()
         {
             reset();
         }
@@ -354,9 +354,9 @@ namespace FreeTrain.Controllers.Rail
 
             if (isPlacingMode)
             {
-                if (rr.voxel.car == null) return true;
+                if (rr.Voxel.car == null) return true;
 
-                Train.TrainCar car = rr.voxel.car as Train.TrainCar;
+                Train.TrainCar car = rr.Voxel.car as Train.TrainCar;
                 if (car != null && car.parent == selectedTrain)
                     // allow selecting the same train to reverse the direction
                     return true;
@@ -365,7 +365,7 @@ namespace FreeTrain.Controllers.Rail
             }
             else
             {
-                return rr.voxel.car != null;
+                return rr.Voxel.car != null;
             }
         }
 

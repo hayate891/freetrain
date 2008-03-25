@@ -1230,12 +1230,12 @@ namespace FreeTrain.Framework
                 detachController();	// deactive the current handler first
 
             controller = newHandler;
-            controller.onAttached();
+            controller.OnAttached();
             //statusBar_Controller.Text = controller.name;
 
             // update all the views
             // TODO: update voxels correctly
-            WorldDefinition.world.onAllVoxelUpdated();
+            WorldDefinition.World.onAllVoxelUpdated();
         }
 
         /// <summary>
@@ -1245,13 +1245,13 @@ namespace FreeTrain.Framework
         {
             if (controller == null) return;
 
-            controller.onDetached();
+            controller.OnDetached();
             controller = null;
             //statusBar_Controller.Text = null;
 
             // update all the views
             // TODO: update voxels correctly
-            WorldDefinition.world.onVoxelUpdated(World.Location.UNPLACED);
+            WorldDefinition.World.onVoxelUpdated(World.Location.UNPLACED);
         }
         #endregion
 

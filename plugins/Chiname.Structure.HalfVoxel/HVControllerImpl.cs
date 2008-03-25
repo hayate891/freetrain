@@ -138,7 +138,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         {
             get
             {
-                HalfDividedVoxel v = WorldDefinition.world[anchor] as HalfDividedVoxel;
+                HalfDividedVoxel v = WorldDefinition.World[anchor] as HalfDividedVoxel;
                 if (v != null)
                 {
                     ContributionReference[] refs = v.getReferences();
@@ -180,7 +180,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 if (currentPos == UNPLACED || currentPos.Equals(anchor))
                     throw new Exception("invalid call");
 
-                HalfDividedVoxel v = WorldDefinition.world[anchor] as HalfDividedVoxel;
+                HalfDividedVoxel v = WorldDefinition.World[anchor] as HalfDividedVoxel;
                 // There is no restriction for empty voxel.
                 if (v == null)
                     return anchor.getDirectionTo(currentPos);
@@ -261,7 +261,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <returns></returns>
         private Direction getSide(Point ab)
         {
-            Point p = WorldDefinition.world.fromXYZToAB(currentPos);
+            Point p = WorldDefinition.World.fromXYZToAB(currentPos);
             int x = ab.X - p.X - 16;
             int y = (ab.Y - p.Y - 8) * 2;
 
@@ -337,7 +337,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public MapOverlay overlay
+        public MapOverlay Overlay
         {
             get
             {
@@ -364,17 +364,17 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onAttached()
+        public virtual void OnAttached()
         {
         }
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onDetached()
+        public virtual void OnDetached()
         {
             // clear the remaining image
             if (currentPos != Location.UNPLACED)
-                WorldDefinition.world.onVoxelUpdated(currentPos);
+                WorldDefinition.World.onVoxelUpdated(currentPos);
         }
 
 
@@ -389,7 +389,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="loc"></param>
         /// <param name="ab"></param>
         [CLSCompliant(false)]
-        public void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
             if (anchor != UNPLACED)
             {
@@ -398,7 +398,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 //if( !currentPos.Equals(anchor) )
                 //onVoxelUpdated(anchor,front,currentSide);
 
-                WorldDefinition.world.onVoxelUpdated(anchor);
+                WorldDefinition.World.onVoxelUpdated(anchor);
             }
         }
 
@@ -409,14 +409,14 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="loc"></param>
         /// <param name="ab"></param>
         [CLSCompliant(false)]
-        public void onClick(MapViewWindow source, Location loc, Point ab)
+        public void OnClick(MapViewWindow source, Location loc, Point ab)
         {
 
             if (anchor == UNPLACED)
             {
                 if (remover)
                 {
-                    if (null == WorldDefinition.world[loc] as HalfDividedVoxel)
+                    if (null == WorldDefinition.World[loc] as HalfDividedVoxel)
                         return;
                 }
                 else
@@ -433,7 +433,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             {
                 if (!currentPos.Equals(anchor))
                     onVoxelSelected(anchor, front, currentSide);
-                WorldDefinition.world.onVoxelUpdated(anchor);
+                WorldDefinition.World.onVoxelUpdated(anchor);
                 anchor = UNPLACED;
             }
         }
@@ -444,13 +444,13 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="loc"></param>
         /// <param name="ab"></param>
         [CLSCompliant(false)]
-        public void onRightClick(MapViewWindow source, Location loc, Point ab)
+        public void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
             if (anchor == UNPLACED)
                 close();	// cancel
             else
             {
-                WorldDefinition.world.onVoxelUpdated(anchor);
+                WorldDefinition.World.onVoxelUpdated(anchor);
                 anchor = UNPLACED;
             }
         }

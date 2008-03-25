@@ -57,7 +57,7 @@ namespace FreeTrain.World.Structs
         {
 
             this.type = _type;
-            if (wloc.world == WorldDefinition.world)
+            if (wloc.world == WorldDefinition.World)
             {
                 this.subsidiary = new SubsidiaryCompany(this, initiallyOwned);
             }
@@ -94,7 +94,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return WorldDefinition.world.landValue[baseLocation + type.size / 2] * type.size.x * type.size.y;
+                return WorldDefinition.World.landValue[baseLocation + type.size / 2] * type.size.x * type.size.y;
             }
         }
         /// <summary>
@@ -148,7 +148,7 @@ namespace FreeTrain.World.Structs
         /// </summary>
         public static Commercial get(Location loc)
         {
-            return WorldDefinition.world.getEntityAt(loc) as Commercial;
+            return WorldDefinition.World.getEntityAt(loc) as Commercial;
         }
         /// <summary>
         /// 

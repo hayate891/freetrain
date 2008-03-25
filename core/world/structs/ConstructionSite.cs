@@ -55,7 +55,7 @@ namespace FreeTrain.World.Structs
                     for (int y = 0; y < size.y; y++)
                     {
                         Location l = new Location(baseLoc.x + x, baseLoc.y + y, baseLoc.z + h);
-                        if (WorldDefinition.world.isInsideWorld(l))
+                        if (WorldDefinition.World.isInsideWorld(l))
                             voxels[x, y, h] = new VoxelImpl(this, l,
                                 new bool[] { y != 0, x != size.x - 1, y != size.y - 1, x != 0 });
                     }
@@ -105,7 +105,7 @@ namespace FreeTrain.World.Structs
 
             // remove all voxels
             foreach (VoxelImpl v in voxels)
-                WorldDefinition.world.remove(v);
+                WorldDefinition.World.remove(v);
 
             // then fire the event
             completionHandler(null, null);
@@ -127,7 +127,7 @@ namespace FreeTrain.World.Structs
         {
             // remove all voxels
             foreach (VoxelImpl v in voxels)
-                WorldDefinition.world.remove(v);
+                WorldDefinition.World.remove(v);
             // then fire the event
             completionHandler = null;
             // TODO: not sure what to do. ConstructionSite is not removable.
@@ -250,14 +250,14 @@ namespace FreeTrain.World.Structs
             /// <summary>
             /// Returns true if this voxel is at the ground level
             /// </summary>
-            private bool isGroundLevel { get { return WorldDefinition.world.getGroundLevel(location) == location.z; } }
+            private bool isGroundLevel { get { return WorldDefinition.World.getGroundLevel(location) == location.z; } }
 
             /// <summary> Construction voxel under this voxel, or null if none. </summary>
             private VoxelImpl below
             {
                 get
                 {
-                    return WorldDefinition.world[location.x, location.y, location.z - 1] as VoxelImpl;
+                    return WorldDefinition.World[location.x, location.y, location.z - 1] as VoxelImpl;
                 }
             }
 
@@ -266,7 +266,7 @@ namespace FreeTrain.World.Structs
             {
                 get
                 {
-                    return WorldDefinition.world[location.x, location.y, location.z + 1] as VoxelImpl;
+                    return WorldDefinition.World[location.x, location.y, location.z + 1] as VoxelImpl;
                 }
             }
 
@@ -280,7 +280,7 @@ namespace FreeTrain.World.Structs
             private bool canProceed()
             {
 
-                Time ct = WorldDefinition.world.clock;
+                Time ct = WorldDefinition.World.clock;
                 if (ct.isWeekend) return false;	// no construction work during the weekends
                 int h = ct.hour;
                 if (h < 9 || 17 < h) return false;	// no work during the night
@@ -339,14 +339,14 @@ namespace FreeTrain.World.Structs
                             }
                             break;
                     }
-                    WorldDefinition.world.onVoxelUpdated(this);
+                    WorldDefinition.World.onVoxelUpdated(this);
                     registerClockHandler();
                     return;
                 }
 
                 // proceed one step
                 state++;
-                WorldDefinition.world.onVoxelUpdated(this);
+                WorldDefinition.World.onVoxelUpdated(this);
                 registerClockHandler();
                 //theSound.play(location);
                 return;
@@ -369,7 +369,7 @@ namespace FreeTrain.World.Structs
                 }
 
                 // TODO: change the time span
-                WorldDefinition.world.clock.registerOneShot(new ClockHandler(clockHandler),
+                WorldDefinition.World.clock.registerOneShot(new ClockHandler(clockHandler),
                     TimeLength.fromMinutes(40 + random.Next(80)));
             }
 

@@ -55,7 +55,7 @@ namespace FreeTrain.Views.Map
         {
             InitializeComponent();
 
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
             AutoScroll = true;
             // ( (X*32+16) -16 -16, Y*8 -8 -(8+16*Z) )
             // the left edge of the world is shaggy, so we need to cut the left-most 16 pixels.
@@ -65,8 +65,8 @@ namespace FreeTrain.Views.Map
             // 16*Z is further cut so that the user won't see the edge of the world
             // even if the bottom edge of the world is fully raised.
             Size sz = new Size(
-                w.size.x * 32 - 16,
-                (w.size.y - 2 * w.size.z - 1) * 8);
+                w.Size.x * 32 - 16,
+                (w.Size.y - 2 * w.Size.z - 1) * 8);
 
             AutoScrollMinSize = sz;
             MaximumSize = sz;
@@ -74,7 +74,7 @@ namespace FreeTrain.Views.Map
             PictureManager.onSurfaceLost += new EventHandler(onSurfaceLost);
 
             // build height-cut MenuItems
-            for (int i = WorldDefinition.world.size.z - 1; i >= 0; i--)
+            for (int i = WorldDefinition.World.Size.z - 1; i >= 0; i--)
                 menuItem_heightCut.MenuItems.Add(new HeightCutMenuItem(this, i));
         }
 
@@ -472,14 +472,14 @@ namespace FreeTrain.Views.Map
 
                 //				this.Checked = ( height==owner.drawer.heightCutHeight );
 
-                if (height == WorldDefinition.world.size.z - 1)
+                if (height == WorldDefinition.World.Size.z - 1)
                 {
                     this.Text = "None";
                     //! this.Text = "なし";
                 }
                 else
                 {
-                    int h = height - WorldDefinition.world.waterLevel;
+                    int h = height - WorldDefinition.World.waterLevel;
                     if (h == 0) this.Text = "Water level";
                     //! if( h==0 )		this.Text = "地表";
                     else this.Text = h.ToString();

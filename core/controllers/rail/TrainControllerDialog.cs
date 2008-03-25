@@ -69,7 +69,7 @@ namespace FreeTrain.Controllers.Rail
             // refresh the list
             list.BeginUpdate();
             list.Items.Clear();
-            foreach (TrainController tc in WorldDefinition.world.trainControllers)
+            foreach (TrainController tc in WorldDefinition.World.trainControllers)
             {
                 if (tc.contribution == null) continue;	// those are system controllers
                 list.Items.Add(createListViewItem(tc));
@@ -276,7 +276,7 @@ namespace FreeTrain.Controllers.Rail
             TrainController tc = contrib.newController(
                 string.Format("New diagram{0}", iota++));
             //! string.Format("新しいダイヤグラム{0}",iota++));
-            WorldDefinition.world.trainControllers.add(tc);
+            WorldDefinition.World.trainControllers.add(tc);
 
             // update GUI
             list.Items.Add(createListViewItem(tc));
@@ -302,7 +302,7 @@ namespace FreeTrain.Controllers.Rail
         {
             // update data structure
             // TODO: what will happen to trains that are controlled by this train controller?
-            WorldDefinition.world.trainControllers.remove(selectedItem);
+            WorldDefinition.World.trainControllers.remove(selectedItem);
 
             // update GUI
             list.Items.Remove(list.SelectedItems[0]);

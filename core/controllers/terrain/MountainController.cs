@@ -102,7 +102,7 @@ namespace FreeTrain.Controllers.Terrain
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
             if (SdlDotNet.Input.Keyboard.IsKeyPressed(SdlDotNet.Input.Key.LeftShift) || SdlDotNet.Input.Keyboard.IsKeyPressed(SdlDotNet.Input.Key.RightShift))
             {
@@ -117,7 +117,7 @@ namespace FreeTrain.Controllers.Terrain
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow view, Location loc, Point ab)
+        public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             loc = selectVoxel(view, loc, ab);
             raiseLowerLand(loc);
@@ -145,7 +145,7 @@ namespace FreeTrain.Controllers.Terrain
         private Location selectVoxel(MapViewWindow view, Location loc, Point ab)
         {
             // top-left corner of the selected location
-            Point vxl = WorldDefinition.world.fromXYZToAB(loc);
+            Point vxl = WorldDefinition.World.fromXYZToAB(loc);
 
             Point offset = new Point(ab.X - vxl.X, ab.Y - vxl.Y);
 
@@ -197,7 +197,7 @@ namespace FreeTrain.Controllers.Terrain
         /// </summary>
         private bool canBeRaised(Location loc)
         {
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
 
             if (!isFourAdjacentCornersMatched(loc)) return false;
 
@@ -208,7 +208,7 @@ namespace FreeTrain.Controllers.Terrain
             if (loc.z != glevel) return false;	//mountain can be placed only at the ground level
 
             // true if this ground level is too close to the roof.
-            bool nearRoof = (glevel == WorldDefinition.world.size.z - 1);
+            bool nearRoof = (glevel == WorldDefinition.World.Size.z - 1);
 
             for (int x = 0; x <= 1; x++)
             {
@@ -243,7 +243,7 @@ namespace FreeTrain.Controllers.Terrain
                 }
             }
 
-            if (WorldDefinition.world.isOutsideWorld(loc))
+            if (WorldDefinition.World.isOutsideWorld(loc))
                 return false;
 
             return true;
@@ -255,7 +255,7 @@ namespace FreeTrain.Controllers.Terrain
         /// <returns>false if the operation was unsuccessful.</returns>
         private bool raise(Location loc)
         {
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
 
             // make sure that four surrounding voxels can be raised,
             // and the ground levels of them are the same
@@ -299,7 +299,7 @@ namespace FreeTrain.Controllers.Terrain
         // clean it up by using MountainVoxel.isCornerMatched
         private bool canBeLowered(ref Location loc)
         {
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
 
             if (!isFourAdjacentCornersMatched(loc)) return false;
 
@@ -330,15 +330,15 @@ namespace FreeTrain.Controllers.Terrain
                         continue;	// if it's mountain, OK.
 
                     // otherwise, make sure that nothing is on it.
-                    if (WorldDefinition.world[l.x, l.y, l.z + 1] != null)
+                    if (WorldDefinition.World[l.x, l.y, l.z + 1] != null)
                         return false;
                     // and nothing is under it
-                    if (WorldDefinition.world[l.x, l.y, l.z] != null)
+                    if (WorldDefinition.World[l.x, l.y, l.z] != null)
                         return false;
                 }
             }
 
-            if (WorldDefinition.world.isOutsideWorld(loc))
+            if (WorldDefinition.World.isOutsideWorld(loc))
                 return false;
 
             return true;
@@ -351,7 +351,7 @@ namespace FreeTrain.Controllers.Terrain
         private bool lower(Location loc)
         {
 
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
 
             if (!canBeLowered(ref loc)) return false;
 
@@ -367,7 +367,7 @@ namespace FreeTrain.Controllers.Terrain
                     MountainVoxel mv = MountainVoxel.get(l);
                     if (mv == null)
                     {
-                        WorldDefinition.world.lowerGround(l);
+                        WorldDefinition.World.lowerGround(l);
                         mv = new MountainVoxel(l, 4, 4, 4, 4);
                     }
 

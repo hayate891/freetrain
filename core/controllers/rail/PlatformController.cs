@@ -241,7 +241,7 @@ namespace FreeTrain.Controllers.Rail
             this.dirS.Left = this.dirE.Left;
             this.dirS.Top = this.dirN.Top + this.dirN.Height + 5;
             this.dirW.Top = this.dirS.Top;
-            updatePreview();
+            UpdatePreview();
         }
 
         private void updatePlatformBox(object sender, PictureBox pic)
@@ -287,9 +287,9 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
 
             if (baseLoc != loc)
             {
@@ -319,7 +319,7 @@ namespace FreeTrain.Controllers.Rail
                     loc2 += direction.right90;	// for the attached rail road, width is two
                 }
             }
-            WorldDefinition.world.onVoxelUpdated(Cube.createExclusive(baseLoc, loc2));
+            WorldDefinition.World.onVoxelUpdated(Cube.createExclusive(baseLoc, loc2));
         }
 
         /// <summary>
@@ -328,14 +328,14 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow view, Location loc, Point ab)
+        public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             switch (currentMode)
             {
                 case Mode.Station:
                     if (isPlacing)
                     {
-                        if (!selectedStation.canBeBuilt(loc, ControlMode.player))
+                        if (!selectedStation.canBeBuilt(loc, ControlMode.Player))
                         {
                             MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                         }
@@ -524,7 +524,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override void updatePreview()
+        public override void UpdatePreview()
         {
             if (this.currentMode == Mode.Station)
                 onStationChanged(null, null);
@@ -546,10 +546,10 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override void onDetached()
+        public override void OnDetached()
         {
             // TODO: update voxels correctly
-            WorldDefinition.world.onAllVoxelUpdated();
+            WorldDefinition.World.onAllVoxelUpdated();
         }
 
         private void onLengthChanged(object sender, EventArgs e)
@@ -629,7 +629,7 @@ namespace FreeTrain.Controllers.Rail
             }
 
             alphaSprites = new AlphaBlendSpriteSet(alphas);
-            WorldDefinition.world.onAllVoxelUpdated();	// completely redraw the window
+            WorldDefinition.World.onAllVoxelUpdated();	// completely redraw the window
         }
 
         private void onModeChanged(object sender, System.EventArgs e)

@@ -116,13 +116,13 @@ namespace FreeTrain
                 controller = MainWindow.mainWindow.currentController;
 
                 qView.updateScreen();
-                if (WorldDefinition.world.satellite == null || 
-                    WorldDefinition.world.satellite.surface.w != 150 || 
-                    WorldDefinition.world.satellite.surface.h != 150)
+                if (WorldDefinition.World.Satellite == null || 
+                    WorldDefinition.World.Satellite.surface.w != 150 || 
+                    WorldDefinition.World.Satellite.surface.h != 150)
                 {
-                    WorldDefinition.world.satellite = new Surface(150, 150, 32);
-                    WorldDefinition.world.satellite.sourceColorKey = Color.Magenta;
-                    WorldDefinition.world.satellite.Fill(Color.FromArgb(222, 195, 132));
+                    WorldDefinition.World.Satellite = new Surface(150, 150, 32);
+                    WorldDefinition.World.Satellite.sourceColorKey = Color.Magenta;
+                    WorldDefinition.World.Satellite.Fill(Color.FromArgb(222, 195, 132));
                 }
             }
             Application.DoEvents();
@@ -186,7 +186,7 @@ namespace FreeTrain
                         Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
                         Location xyz = qView.fromABToXYZ(ab, controller);
 
-                        if (e.Button == MouseButton.PrimaryButton) controller.onClick(null, xyz, ab);
+                        if (e.Button == MouseButton.PrimaryButton) controller.OnClick(null, xyz, ab);
                     }
                 }
             }
@@ -205,7 +205,7 @@ namespace FreeTrain
                 if (controller != null)
                 {
                     Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
-                    controller.onMouseMove(null, qView.fromABToXYZ(ab, controller), ab);
+                    controller.OnMouseMove(null, qView.fromABToXYZ(ab, controller), ab);
                 }
                 oldX = e.X;
                 oldY = e.Y;
@@ -216,8 +216,8 @@ namespace FreeTrain
         {
             if (qView != null)
             {
-                WorldDefinition.world.clock.tick();
-                WorldDefinition.world.clock.tick();
+                WorldDefinition.World.clock.tick();
+                WorldDefinition.World.clock.tick();
 
                 sourceRect = new Sdl.SDL_Rect((short)ScrollPosition.X, (short)ScrollPosition.Y, (short)width, (short)height);
                 dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
@@ -232,7 +232,7 @@ namespace FreeTrain
             if (gui != null)
             {
                 gui.updateGUIElements(width, height);
-                if (WorldDefinition.world != null) gui.clock_text = WorldDefinition.world.clock.displayString;
+                if (WorldDefinition.World != null) gui.clock_text = WorldDefinition.World.clock.displayString;
                 gui.drawGUI(width, height, screen.Handle);
             }
             screen.Update();
@@ -361,20 +361,20 @@ namespace FreeTrain
             finalDraw();
             Core.init(null, null, null, new ProgressHandler(UpdateMessage), true);
             world = new WorldDefinition(new Distance(150, 150, 7), 3);
-            WorldDefinition.world = world;
+            WorldDefinition.World = world;
 
             weatherOverlay = NullWeatherOverlay.theInstance;
 
             UpdateMessage("Creating Map...", 0);
             finalDraw();
-            qView = new QuarterViewDrawer(world, new Rectangle(0, 0, world.size.x * 32 - 16, (world.size.y - 2 * world.size.z - 1) * 8));
-            qView.offscreenBuffer = new Surface(world.size.x * 32 - 16, (world.size.y - 2 * world.size.z - 1) * 8, screen.CreateCompatibleSurface().Pixels);
+            qView = new QuarterViewDrawer(world, new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8));
+            qView.offscreenBuffer = new Surface(world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8, screen.CreateCompatibleSurface().Pixels);
             qView.offscreenBuffer.sourceColorKey = Color.Magenta;
             qView.recreateDrawBuffer(new Size(width, height), true);
             UpdateMessage("Creating Map...", 100);
             finalDraw();
 
-            qView.draw(new Rectangle(0, 0, world.size.x * 32 - 16, (world.size.y - 2 * world.size.z - 1) * 8), null);
+            qView.draw(new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8), null);
             
             gui.SHOW_SPLASH = false;
 

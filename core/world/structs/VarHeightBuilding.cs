@@ -62,7 +62,7 @@ namespace FreeTrain.World.Structs
                         WorldLocator wl = new WorldLocator(wloc.world, baseLocation + new Distance(x, y, z));
                         voxels[x, y, z] = new VoxelImpl(this, (byte)x, (byte)y, (byte)z, wl);
                     }
-            if (wloc.world == WorldDefinition.world)
+            if (wloc.world == WorldDefinition.World)
                 this.subsidiary = new SubsidiaryCompany(this, initiallyOwned);
 
             if (type.population != null)
@@ -115,7 +115,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return WorldDefinition.world.landValue[baseLocation + new Distance(type.size, 0) / 2] * type.size.x * type.size.y;
+                return WorldDefinition.World.landValue[baseLocation + new Distance(type.size, 0) / 2] * type.size.x * type.size.y;
             }
         }
         /// <summary>
@@ -159,7 +159,7 @@ namespace FreeTrain.World.Structs
             if (onEntityRemoved != null)
                 onEntityRemoved(this, null);
 
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
             foreach (VoxelImpl v in voxels)
                 world.remove(v);
         }
@@ -246,7 +246,7 @@ namespace FreeTrain.World.Structs
         /// </summary>
         public static VarHeightBuilding get(Location loc)
         {
-            Voxel v = WorldDefinition.world[loc];
+            Voxel v = WorldDefinition.World[loc];
             if (!(v is VarHeightBuilding.VoxelImpl)) return null;
 
             return ((StructureVoxel)v).owner as VarHeightBuilding;

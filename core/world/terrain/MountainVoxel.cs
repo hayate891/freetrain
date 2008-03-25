@@ -99,7 +99,7 @@ namespace FreeTrain.World.Terrain
                 case 3: heightData = (Int16)((heightData & 0xFFF0) | (h)); break;
                 default: throw new ArgumentOutOfRangeException();
             }
-            WorldDefinition.world.onVoxelUpdated(this); // update this voxel
+            WorldDefinition.World.onVoxelUpdated(this); // update this voxel
         }
 
 
@@ -142,7 +142,7 @@ namespace FreeTrain.World.Terrain
         /// </summary>
         public static int getTotalHeight(Location loc, Direction d)
         {
-            WorldDefinition w = WorldDefinition.world;
+            WorldDefinition w = WorldDefinition.World;
 
             if (w.isOutsideWorld(loc)) return -1;
 
@@ -222,7 +222,7 @@ namespace FreeTrain.World.Terrain
 
         private Color mapColor(Color c)
         {
-            if (WorldDefinition.world.viewOptions.useNightView)
+            if (WorldDefinition.World.viewOptions.useNightView)
                 return ColorMap.getNightColor(c);
             else
                 return c;
@@ -232,7 +232,7 @@ namespace FreeTrain.World.Terrain
         {
             get
             {
-                return mountainColors[(int)WorldDefinition.world.clock.season];
+                return mountainColors[(int)WorldDefinition.World.clock.season];
             }
         }
         /// <summary>
@@ -252,7 +252,7 @@ namespace FreeTrain.World.Terrain
         private void drawGround(DrawContext display, Point pt, int heightCutDiff)
         {
             Point basePt = pt;
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
 
             if (heightCutDiff == 0)
             {
@@ -421,7 +421,7 @@ namespace FreeTrain.World.Terrain
         // it should be big so that integer ops in the selectBrush operation 
         // would run with a small rounding error.
 
-        private bool isUnderWater { get { return location.z < WorldDefinition.world.waterLevel; } }
+        private bool isUnderWater { get { return location.z < WorldDefinition.World.waterLevel; } }
 
         /// <summary>
         /// Returns the brush to draw this voxel.
@@ -483,7 +483,7 @@ namespace FreeTrain.World.Terrain
         /// <returns></returns>
         public static MountainVoxel get(Location loc)
         {
-            return WorldDefinition.world[loc] as MountainVoxel;
+            return WorldDefinition.World[loc] as MountainVoxel;
         }
         /// <summary>
         /// 

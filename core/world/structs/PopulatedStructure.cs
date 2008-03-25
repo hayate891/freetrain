@@ -42,7 +42,7 @@ namespace FreeTrain.World.Structs
 		public PopulatedStructure( FixedSizeStructureContribution type, WorldLocator wloc )
 			: base(type,wloc) {
 
-			if( type.population!=null && wloc.world==WorldDefinition.world)
+			if( type.population!=null && wloc.world==WorldDefinition.World)
 				stationListener = new StationListenerImpl( type.population, wloc.location );
 		}
 

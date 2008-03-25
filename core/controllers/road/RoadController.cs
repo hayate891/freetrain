@@ -164,7 +164,7 @@ namespace FreeTrain.Controllers.Road
             currentPattern++;
             if (currentPattern > 2) currentPattern = 0;
             currentContrib.PreviewPatternIdx = currentPattern;
-            updatePreview();
+            UpdatePreview();
         }
         /// <summary>
         /// 
@@ -180,7 +180,7 @@ namespace FreeTrain.Controllers.Road
             this.level.Width = this.description.Width;
             this.picture.Width = this.description.Width;
             this.picture.Left = this.description.Left;
-            updatePreview();
+            UpdatePreview();
         }
 
         private void makeContribTree()
@@ -248,7 +248,7 @@ namespace FreeTrain.Controllers.Road
             toolTip.SetToolTip(this.description, this.description.Text);
             currentContrib.PreviewPatternIdx = currentPattern;
             this.Text = type.name;
-            updatePreview();
+            UpdatePreview();
         }
 
         static private string ToStyleDescription(RoadStyle style)

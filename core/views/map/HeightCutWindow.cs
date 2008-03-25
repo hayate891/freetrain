@@ -45,7 +45,7 @@ namespace FreeTrain.Views.Map
             InitializeComponent();
 
             trackBar.Minimum = 0;
-            trackBar.Maximum = World.WorldDefinition.world.size.z - 1;
+            trackBar.Maximum = World.WorldDefinition.World.Size.z - 1;
             trackBar.Value = drawer.heightCutHeight;
 
             drawer.OnHeightCutChanged += new EventHandler(onHeightCutChange);

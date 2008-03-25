@@ -62,11 +62,11 @@ namespace FreeTrain.World
 
 		public RRCrossing( TrafficVoxel _owner ) {
 			this.owner = _owner;
-			this.railDirIndex = owner.railRoad.dir1.isParallelToY?0:1;
+			this.railDirIndex = owner.railRoad.Dir1.isParallelToY?0:1;
 			TrafficVoxel.onRailRoadChanged += new TrafficVoxelHandler(onRailRoadChanged);
 
-			neighbor1Location = owner.location + owner.railRoad.dir1;
-			neighbor2Location = owner.location + owner.railRoad.dir2;
+			neighbor1Location = owner.location + owner.railRoad.Dir1;
+			neighbor2Location = owner.location + owner.railRoad.Dir2;
 
 			if( neighbor1!=null )	onRailRoadChanged(neighbor1);
 			if( neighbor2!=null )	onRailRoadChanged(neighbor2);
@@ -135,21 +135,21 @@ namespace FreeTrain.World
 		public void onCarApproaching( TrafficVoxel v ) {
 			// method needs to be public so that the delegate can be serialized
 			// redraw this voxel
-			WorldDefinition.world.onVoxelUpdated(owner);
+			WorldDefinition.World.onVoxelUpdated(owner);
 			registerTimer();
 		}
 
 		private void registerTimer() {
-			int min = FLASH_FREQUENCY-(WorldDefinition.world.clock.minutes%FLASH_FREQUENCY);
+			int min = FLASH_FREQUENCY-(WorldDefinition.World.clock.minutes%FLASH_FREQUENCY);
 			if(min==0)	min=FLASH_FREQUENCY;
 
 			if( currentState!=State.Open )	// register the handler while the Xing is closed.
-				WorldDefinition.world.clock.registerOneShot( new ClockHandler(followUp), TimeLength.fromMinutes(min) );
+				WorldDefinition.World.clock.registerOneShot( new ClockHandler(followUp), TimeLength.fromMinutes(min) );
 		}
 
 		public void followUp() {
 			// method needs to be public so that the delegate can be serialized
-			WorldDefinition.world.onVoxelUpdated(owner);
+			WorldDefinition.World.onVoxelUpdated(owner);
 			registerTimer();
 		}
 
@@ -171,9 +171,9 @@ namespace FreeTrain.World
 			TrafficVoxel n1=neighbor1;
 			TrafficVoxel n2=neighbor2;
 			if(v==n1)
-				setupHandler( n1, owner.railRoad.dir1 );
+				setupHandler( n1, owner.railRoad.Dir1 );
 			if(v==n2)
-				setupHandler( n2, owner.railRoad.dir2 );
+				setupHandler( n2, owner.railRoad.Dir2 );
 		}
 
 		private void setupHandler( TrafficVoxel neighbor, Direction d ) {
@@ -205,7 +205,7 @@ namespace FreeTrain.World
 				if( currentState!=State.Closed )
 					return (int)currentState;
 				else
-					return ((WorldDefinition.world.clock.minutes/FLASH_FREQUENCY)%2==0)?2:3;
+					return ((WorldDefinition.World.clock.minutes/FLASH_FREQUENCY)%2==0)?2:3;
 			}
 		}
 

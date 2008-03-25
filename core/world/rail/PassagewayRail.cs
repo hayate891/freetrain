@@ -49,7 +49,7 @@ namespace FreeTrain.World.Rail
         /// <param name="pt"></param>
         public override void drawAfter(DrawContext display, Point pt)
         {
-            getFloatingSprite(dir1).draw(display.surface, pt);
+            getFloatingSprite(Dir1).draw(display.surface, pt);
         }
 
 

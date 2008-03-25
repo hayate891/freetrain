@@ -50,15 +50,15 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        god,
+        God,
         /// <summary>
         /// 
         /// </summary>
-        player,
+        Player,
         /// <summary>
         /// 
         /// </summary>
-        com
+        Com
     };
 
     /// <summary>
@@ -70,19 +70,55 @@ namespace FreeTrain.World
         /// <summary>
         /// 現在ゲーム中の世界
         /// </summary>
-        public static WorldDefinition world;
+        private static WorldDefinition world;
+
         /// <summary>
         /// 
         /// </summary>
-        public Surface satellite;
+        public static WorldDefinition World
+        {
+            get { return WorldDefinition.world; }
+            set { WorldDefinition.world = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        private Surface satellite;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Surface Satellite
+        {
+            get { return satellite; }
+            set { satellite = value; }
+        }
         /// <summary>
         /// 世界の大きさ (H,V,D)
         /// </summary>
-        public readonly Distance size;
+        private readonly Distance size;
+
         /// <summary>
         /// 
         /// </summary>
-        public DevelopmentAlgorithm devalgo;
+        public Distance Size
+        {
+            get { return size; }
+        } 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private DevelopmentAlgorithm developmentAlgorithm;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DevelopmentAlgorithm DevelopmentAlgorithm
+        {
+            get { return developmentAlgorithm; }
+            set { developmentAlgorithm = value; }
+        }
 
         /// <summary>
         /// Fired after a new world is loaded/created.
@@ -118,8 +154,8 @@ namespace FreeTrain.World
                 // trainControllers.add( DelegationTrainControllerImpl.theInstance );
                 trainControllers.add(SimpleTrainControllerImpl.theInstance);
 
-                devalgo = new DevelopmentAlgorithm();
-                clock.registerRepeated(new ClockHandler(devalgo.handleClock),
+                developmentAlgorithm = new DevelopmentAlgorithm();
+                clock.registerRepeated(new ClockHandler(developmentAlgorithm.handleClock),
                     TimeLength.fromHours(1));
 
                 // for test
@@ -169,7 +205,16 @@ namespace FreeTrain.World
         }
 
         /// <summary>ゲームの名前</summary>
-        public string name;
+        private string name;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
         /// <summary>Clock object that controls the time of this world.</summary>
         public readonly Clock clock = new Clock();

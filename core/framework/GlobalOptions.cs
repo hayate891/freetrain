@@ -93,8 +93,8 @@ namespace FreeTrain.Framework
             }
             set
             {
-                if (_drawStationNames != value && World.WorldDefinition.world != null)
-                    World.WorldDefinition.world.onAllVoxelUpdated();	// redraw
+                if (_drawStationNames != value && World.WorldDefinition.World != null)
+                    World.WorldDefinition.World.onAllVoxelUpdated();	// redraw
                 _drawStationNames = value;
             }
         }
@@ -115,8 +115,8 @@ namespace FreeTrain.Framework
             }
             set
             {
-                if (_hideTrees != value && World.WorldDefinition.world != null)
-                    World.WorldDefinition.world.onAllVoxelUpdated();	// redraw
+                if (_hideTrees != value && World.WorldDefinition.World != null)
+                    World.WorldDefinition.World.onAllVoxelUpdated();	// redraw
                 _hideTrees = value;
             }
         }

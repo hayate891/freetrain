@@ -60,9 +60,9 @@ namespace FreeTrain.World.Accounting
             {
                 if (_history == null)
                 {
-                    _history = (TransactionHistory)WorldDefinition.world.otherObjects[this];
+                    _history = (TransactionHistory)WorldDefinition.World.otherObjects[this];
                     if (_history == null)
-                        WorldDefinition.world.otherObjects.Add(this, _history = new TransactionHistory());
+                        WorldDefinition.World.otherObjects.Add(this, _history = new TransactionHistory());
                 }
 
                 return _history;

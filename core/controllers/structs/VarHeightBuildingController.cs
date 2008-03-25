@@ -93,7 +93,7 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow view, Location loc, Point ab)
+        public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             if (isPlacing)
             {
@@ -196,7 +196,7 @@ namespace FreeTrain.Controllers.Structs
         private void heightBox_ValueChanged(object sender, System.EventArgs e)
         {
             updateAlphaSprites();
-            updatePreview();
+            UpdatePreview();
         }
 
         /// <summary>

@@ -229,7 +229,7 @@ namespace FreeTrain.Controllers.Rail
         private void buttonSelect_Click(object sender, EventArgs e)
         {
             ContextMenu m = new ContextMenu();
-            populateMenu(m.MenuItems, WorldDefinition.world.rootTrainGroup);
+            populateMenu(m.MenuItems, WorldDefinition.World.rootTrainGroup);
             m.Show(buttonSelect, new Point(0, buttonSelect.Height));
         }
 

@@ -41,20 +41,20 @@ namespace FreeTrain.World.Rail
         /// <param name="pattern"></param>
         protected RailRoad(TrafficVoxel tv, RailPattern pattern)
         {
-            this.voxel = tv;
+            this.Voxel = tv;
             this.pattern = pattern;
-            voxel.railRoad = this;
+            Voxel.railRoad = this;
         }
 
         /// <summary>
         /// この線路が占めるVoxel
         /// </summary>
-        public readonly TrafficVoxel voxel;
+        public readonly TrafficVoxel Voxel;
 
         /// <summary>
         /// この線路の位置
         /// </summary>
-        public Location location { get { return voxel.location; } }
+        public Location Location { get { return Voxel.location; } }
 
 
         /// <summary>
@@ -62,13 +62,13 @@ namespace FreeTrain.World.Rail
         /// should go, based solely on the pattern of this voxel, without looking
         /// at any other surrounding voxels.
         /// </summary>
-        public abstract Direction guide();
+        public abstract Direction Guide();
 
         /// <summary>
         /// Gets the difference in z-axis for a car that heads to
         /// the specified direction.
         /// </summary>
-        public int zdiff(Direction d)
+        public int ZDiff(Direction d)
         {
             if (pattern.zangle == d) return pattern.zdiff;
             else return 0;
@@ -79,13 +79,13 @@ namespace FreeTrain.World.Rail
         /// Called when a rail road is clicked.
         /// </summary>
         /// <returns>true if the click is processed and consumed</returns>
-        public virtual bool onClick() { return false; }
+        public virtual bool OnClick() { return false; }
 
         /// <summary>
         /// Returns true if this railroad is connected to
         /// at least two adjacent railroads.
         /// </summary>
-        public bool isWellConnected
+        public bool IsWellConnected
         {
             get
             {
@@ -95,7 +95,7 @@ namespace FreeTrain.World.Rail
                 {
                     if (hasRail(d))
                     {
-                        Voxel v = WorldDefinition.world[location + d];
+                        Voxel v = WorldDefinition.World[Location + d];
                         if (v is TrafficVoxel)
                         {
                             TrafficVoxel tv = (TrafficVoxel)v;
@@ -121,12 +121,12 @@ namespace FreeTrain.World.Rail
         /// false if the operation is impossible. This happens if this
         /// rail road already is a junction, for example.
         /// </returns>
-        public abstract bool attach(Direction newDir);
+        public abstract bool Attach(Direction newDir);
 
         /// <summary>
         /// Returns true if a new RR with the given direction can be attached.
         /// </summary>
-        public abstract bool canAttach(Direction newDir);
+        public abstract bool CanAttach(Direction newDir);
 
         /// <summary>
         /// Detaches two directions from this RR.
@@ -135,12 +135,12 @@ namespace FreeTrain.World.Rail
         /// Thus the caller shouldn't assume that any reference to this RailRoad
         /// object or its parent TrafficVoxel would be valid after the method invocation.
         /// </summary>
-        public abstract void detach(Direction d1, Direction d2);
+        public abstract void Detach(Direction d1, Direction d2);
 
         /// <summary>
         /// hasRail(x)==trueとなるような何らかのxを返す
         /// </summary>
-        public Direction dir1
+        public Direction Dir1
         {
             get
             {
@@ -153,7 +153,7 @@ namespace FreeTrain.World.Rail
         /// hasRail(x)==trueとなるようなxのうち、dir1!=xとなるような
         /// 何らかのxを返す
         /// </summary>
-        public Direction dir2
+        public Direction Dir2
         {
             get
             {
@@ -186,7 +186,7 @@ namespace FreeTrain.World.Rail
         public virtual void invalidateVoxel()
         {
             // by default, the occupied voxel is updated
-            WorldDefinition.world.onVoxelUpdated(voxel);
+            WorldDefinition.World.onVoxelUpdated(Voxel);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public static RailRoad get(Location loc)
         {
-            Voxel v = WorldDefinition.world[loc];
+            Voxel v = WorldDefinition.World[loc];
             if (!(v is TrafficVoxel)) return null;
             return ((TrafficVoxel)v).railRoad;
         }

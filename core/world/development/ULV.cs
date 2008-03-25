@@ -74,7 +74,7 @@ namespace FreeTrain.World.Development
             int z = cube.z1;
 
             int landValue = 0, entityValue = 0;
-            WorldDefinition world = WorldDefinition.world;
+            WorldDefinition world = WorldDefinition.World;
             Set s = new Set();
 
             if (z < world.waterLevel) return null; // underwater

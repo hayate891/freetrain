@@ -67,11 +67,11 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void onClick(MapViewWindow view, Location loc, Point ab)
+        public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             if (isPlacing)
             {
-                if (!selectedType.canBeBuilt(loc, ControlMode.player))
+                if (!selectedType.canBeBuilt(loc, ControlMode.Player))
                 {
                     MainWindow.showError("Can not build");
                     //! MainWindow.showError("設置できません");

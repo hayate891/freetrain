@@ -75,7 +75,7 @@ namespace FreeTrain.World.Rail
             public override void drawBefore(DrawContext display, Point pt)
             {
                 Sprite s = null;
-                switch (dir1.index)
+                switch (Dir1.index)
                 {
                     case 0:
                     case 4: s = sprites[3]; break;
@@ -112,7 +112,7 @@ namespace FreeTrain.World.Rail
 
             while (true)
             {
-                if (WorldDefinition.world[here] != null)
+                if (WorldDefinition.World[here] != null)
                 {
                     TrafficVoxel v = TrafficVoxel.get(here);
                     if (v == null) return false;	// occupied
@@ -122,7 +122,7 @@ namespace FreeTrain.World.Rail
                         return false;	// rail is running 
                 }
 
-                if (WorldDefinition.world.getGroundLevel(here) >= here.z)
+                if (WorldDefinition.World.getGroundLevel(here) >= here.z)
                     return false;	// must be all raised 
 
                 if (here == to) return true;
@@ -176,7 +176,7 @@ namespace FreeTrain.World.Rail
                 if (rr != null && rr.hasRail(d))
                 {
                     // destroy it
-                    rr.voxel.railRoad = null;
+                    rr.Voxel.railRoad = null;
                     // TODO: delete piers
 
                     BridgePierVoxel.teardownBridgeSupport(here, TrafficVoxel.get(here));

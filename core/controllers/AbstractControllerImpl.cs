@@ -42,6 +42,7 @@ namespace FreeTrain.Controllers
         public AbstractControllerImpl()
         {
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -96,19 +97,19 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual MapOverlay overlay { get { return this as MapOverlay; } }
+        public virtual MapOverlay Overlay { get { return this as MapOverlay; } }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onAttached() { }
+        public virtual void OnAttached() { }
         /// <summary>
         /// 
         /// </summary>
-        public virtual void onDetached()
+        public virtual void OnDetached()
         {
             // redraw the entire surface to erase any left-over from this controller
-            WorldDefinition.world.onAllVoxelUpdated();
+            WorldDefinition.World.onAllVoxelUpdated();
         }
 
         /// <summary>
@@ -117,7 +118,7 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void onClick(MapViewWindow source, Location loc, Point ab) { }
+        public virtual void OnClick(MapViewWindow source, Location loc, Point ab) { }
         /// <summary>
         /// 
         /// 
@@ -125,14 +126,14 @@ namespace FreeTrain.Controllers
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void onMouseMove(MapViewWindow view, Location loc, Point ab) { }
+        public virtual void OnMouseMove(MapViewWindow view, Location loc, Point ab) { }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void onRightClick(MapViewWindow source, Location loc, Point ab)
+        public virtual void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
             Close();	// cancel
         }
