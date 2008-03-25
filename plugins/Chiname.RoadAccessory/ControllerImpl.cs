@@ -75,7 +75,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <param name="loc"></param>
         /// <param name="pt"></param>
         [CLSCompliant(false)]
-        public override void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public override void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
         {
 			if( base.currentPos!=loc )		return;
 			if( !contribution.canBeBuilt(loc) )	return;

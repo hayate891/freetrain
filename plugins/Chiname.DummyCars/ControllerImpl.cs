@@ -94,7 +94,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public override void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public override void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
         {
             if (base.currentPos != loc) return;
             if (!contribution.canBeBuilt(loc)) return;

@@ -72,7 +72,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public virtual void drawAfter(QuarterViewDrawer view, DrawContextEx canvas)
+        public virtual void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas)
         {
         }
         /// <summary>
@@ -80,7 +80,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public virtual void drawBefore(QuarterViewDrawer view, DrawContextEx canvas)
+        public virtual void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas)
         {
         }
         /// <summary>
@@ -90,7 +90,7 @@ namespace FreeTrain.Controllers
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public virtual void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public virtual void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
         {
         }
         /// <summary>

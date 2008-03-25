@@ -422,7 +422,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="dc"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void drawVoxel(QuarterViewDrawer view, DrawContextEx dc, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx dc, Location loc, Point pt)
         {
             if (loc.z != baseLoc.z || !isPlacing) return;
 
@@ -487,14 +487,14 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void drawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void drawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
 
         private void onGroupChanged(object sender, System.EventArgs e)
         {

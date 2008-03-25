@@ -84,7 +84,7 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void drawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
         /// <summary>
         /// 
         /// </summary>
@@ -92,7 +92,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
         {
             if (currentCube.contains(loc))
                 alphaSprites.getSprite(loc - this.location).drawAlpha(canvas.surface, pt);
@@ -102,7 +102,7 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void drawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
 
 
         [Serializable]

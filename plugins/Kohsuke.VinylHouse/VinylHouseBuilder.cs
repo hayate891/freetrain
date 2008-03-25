@@ -142,9 +142,9 @@ namespace FreeTrain.World.Land.VinylHouse
                 contrib.create(loc1, loc2, true);
             }
 
-            public void drawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+            public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
 
-            public void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+            public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
             {
                 if (loc.z != currentLoc.z) return;
 
@@ -157,7 +157,7 @@ namespace FreeTrain.World.Land.VinylHouse
                 }
             }
 
-            public void drawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+            public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
         }
     }
 
