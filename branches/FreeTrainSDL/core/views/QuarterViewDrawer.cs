@@ -486,7 +486,7 @@ namespace FreeTrain.Views
                             //Debug.WriteLine("voxel took: " + (DateTime.Now - start).TotalMilliseconds + "ms");
                         }
                         if (overlay != null)
-                            overlay.drawVoxel(this, drawContext, world.toXYZ(h, v, z), pt);
+                            overlay.DrawVoxel(this, drawContext, world.toXYZ(h, v, z), pt);
                     }
                     // Debug.WriteLine("outer loop took: " + (DateTime.Now - start).TotalMilliseconds + "ms");
                 }
@@ -513,7 +513,7 @@ namespace FreeTrain.Views
             if (controller != null) overlay = controller.overlay;
 
             if (overlay != null)
-                overlay.drawBefore(this, drawContext);
+                overlay.DrawBefore(this, drawContext);
 
             // draw the rect
             Rectangle dr = dirtyRect.rect;
@@ -522,7 +522,7 @@ namespace FreeTrain.Views
             dirtyRect.clear();
 
             // allow MapOverlay to do the wrap-up
-            if (overlay != null) overlay.drawAfter(this, drawContext);
+            if (overlay != null) overlay.DrawAfter(this, drawContext);
 
             if (Core.options.drawStationNames)
             {
@@ -543,7 +543,7 @@ namespace FreeTrain.Views
                 }*/
             }
 
-            drawContext.tag = null;		// reset the attached tag
+            drawContext.Tag = null;		// reset the attached tag
 
             Debug.WriteLine("update took " + (DateTime.Now - start).TotalMilliseconds + "ms");
         }

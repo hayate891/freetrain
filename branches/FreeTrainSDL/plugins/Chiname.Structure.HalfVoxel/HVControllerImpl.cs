@@ -464,7 +464,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="view"></param>
         /// <param name="surface"></param>
         [CLSCompliant(false)]
-        public void drawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
         /// <summary>
         /// 
         /// </summary>
@@ -473,7 +473,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="loc"></param>
         /// <param name="pt"></param>
         [CLSCompliant(false)]
-        public void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
         {
             if (loc != anchor) return;
             if (anchor.Equals(currentPos))
@@ -501,7 +501,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="view"></param>
         /// <param name="surface"></param>
         [CLSCompliant(false)]
-        public void drawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
 
         #endregion
     }

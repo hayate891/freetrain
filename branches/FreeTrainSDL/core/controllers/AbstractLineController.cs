@@ -330,10 +330,10 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void drawBefore(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas)
         {
             if (anchor != UNPLACED && isPlacing)
-                canvas.tag = type.canBeBuilt(anchor, currentPos);
+                canvas.Tag = type.canBeBuilt(anchor, currentPos);
         }
         /// <summary>
         /// 
@@ -342,9 +342,9 @@ namespace FreeTrain.Controllers
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
         {
-            object tag = canvas.tag;
+            object tag = canvas.Tag;
 
             if (tag != null && (bool)tag && inBetween(loc, anchor, currentPos))
             {
@@ -357,7 +357,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void drawAfter(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas)
         {
         }
 

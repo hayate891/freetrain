@@ -265,14 +265,14 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void drawBefore(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas)
         {
             if (anchor != UNPLACED && isPlacing)
             {
                 int cost;
-                canvas.tag = SingleRailRoad.comupteRoute(anchor, currentPos, out cost);
-                if (canvas.tag != null)
-                    Debug.WriteLine(((IDictionary)canvas.tag).Count);
+                canvas.Tag = SingleRailRoad.comupteRoute(anchor, currentPos, out cost);
+                if (canvas.Tag != null)
+                    Debug.WriteLine(((IDictionary)canvas.Tag).Count);
             }
         }
 
@@ -283,9 +283,9 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
         {
-            IDictionary dic = (IDictionary)canvas.tag;
+            IDictionary dic = (IDictionary)canvas.Tag;
             if (dic != null)
             {
                 RailPattern rp = (RailPattern)dic[loc];
@@ -307,7 +307,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void drawAfter(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas)
         {
         }
 

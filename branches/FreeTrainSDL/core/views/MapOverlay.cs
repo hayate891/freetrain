@@ -35,19 +35,19 @@ namespace FreeTrain.Views
         /// <summary>
         /// Called before any voxel is drawn.
         /// </summary>
-        void drawBefore(QuarterViewDrawer view, DrawContextEx canvas);
+        void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas);
 
         /// <summary>
         /// Called for each voxel that the view is trying to draw.
         /// </summary>
-        void drawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt);
+        void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt);
 
         /// <summary>
         /// Called after all the images are drawn by MapView.
         /// This can be used to draw things that will never be
         /// hidden by any objects in the World.
         /// </summary>
-        void drawAfter(QuarterViewDrawer view, DrawContextEx canvas);
+        void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas);
     }
     /// <summary>
     /// 
@@ -64,6 +64,6 @@ namespace FreeTrain.Views
         /// MapOverlay can use this property to pass parameters among
         /// various callbacks.
         /// </summary>
-        public object tag;
+        public object Tag;
     }
 }
