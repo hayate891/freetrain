@@ -18,7 +18,7 @@ namespace FreeTrain.Util
         static CultureInfo englishCulture = new CultureInfo("en-US");
         static CultureInfo japaneseCulture = new CultureInfo("ja-JP");
         static CultureInfo frenchCulture = new CultureInfo("fr-FR");
-        static CultureInfo frenchCulture = new CultureInfo("sv-SE");
+        static CultureInfo swedishCulture = new CultureInfo("sv-SE");
 
         static Translation()
         {
