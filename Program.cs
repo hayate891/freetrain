@@ -30,8 +30,8 @@ using SdlDotNet.Audio;
 //using SdlDotNet.Graphics;
 using SdlDotNet.Core;
 using SdlDotNet.Input;
-using FreeTrain.Framework.Graphics;
 
+using FreeTrain.Framework.Graphics;
 using FreeTrain.World;
 using FreeTrain.Controllers;
 using FreeTrain.Controllers.Rail;
@@ -310,6 +310,8 @@ namespace FreeTrain
             dragStartMousePosition = new Point(0, 0);
             dragStartScrollPosition = new Point(0, 0);
             ScrollPosition = new Point(0, 0);
+            this.width = Properties.Settings.Default.RenderWindowWidth;
+            this.height = Properties.Settings.Default.RenderWindowHeight;
 
             try
             {

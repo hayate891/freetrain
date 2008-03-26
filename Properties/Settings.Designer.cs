@@ -22,5 +22,29 @@ namespace FreeTrain.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("600")]
+        public int RenderWindowHeight {
+            get {
+                return ((int)(this["RenderWindowHeight"]));
+            }
+            set {
+                this["RenderWindowHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("800")]
+        public int RenderWindowWidth {
+            get {
+                return ((int)(this["RenderWindowWidth"]));
+            }
+            set {
+                this["RenderWindowWidth"] = value;
+            }
+        }
     }
 }
