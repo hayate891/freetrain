@@ -39,7 +39,12 @@ namespace FreeTrain.Util
         /// <returns></returns>
         public static string GetString(string code)
         {
-            return resourceManager.GetString(code);
+            try {
+                return resourceManager.GetString(code);
+            } catch (Exception e) {
+                System.Console.Out.WriteLine("missing translation code: "+code);
+                return code;
+            }
         }
     }
 }
