@@ -262,7 +262,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="controllers\AbstractControllerImpl.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="controllers\AbstractLineController.cs">
       <SubType>Form</SubType>
