@@ -1,0 +1,1 @@
+macpack -m:2 -o:. -m:cocoa -r:bin/Debug/FreeTrain.dll -r:bin/Debug/FreeTrain.Controls.dll -r:bin/Debug/fr-FR -r:bin/Debug/ja-JP -r:bin/Debug/sv-SE -r:lib/SdlDotNet.dll -r:lib/SdlDotNet.dll.config -r:lib/Tao.Sdl.dll -r:lib/Tao.Sdl.dll.config -r:core/res -r:gui -r:plugins -n:FreeTrain -a:bin/Debug/FreeTrainSDL.exe
