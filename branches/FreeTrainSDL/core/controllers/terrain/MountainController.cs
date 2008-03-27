@@ -52,7 +52,7 @@ namespace FreeTrain.Controllers.Terrain
         private GroupBox groupBox1;
         private FreeTrain.Controls.IndexSelector selSize;
 
-        private static MountainController theInstance;
+        public static MountainController theInstance;
         /// <summary>
         /// 
         /// </summary>

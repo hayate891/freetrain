@@ -77,7 +77,6 @@ namespace FreeTrain.World.Rail
             this.remove.Size = new System.Drawing.Size(88, 26);
             this.remove.TabIndex = 3;
             this.remove.Text = "R&emove";
-            //! this.remove.Text = "撤去(&E)";
             this.remove.Click += new System.EventHandler(this.remove_Click);
             // 
             // cancelButton
@@ -89,7 +88,6 @@ namespace FreeTrain.World.Rail
             this.cancelButton.Size = new System.Drawing.Size(88, 26);
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "&Cancel";
-            //! this.cancelButton.Text = "キャンセル(&C)";
             // 
             // OKbutton
             // 
@@ -109,7 +107,6 @@ namespace FreeTrain.World.Rail
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(262, 20);
             this.nameBox.TabIndex = 2;
-            this.nameBox.Text = "";
             // 
             // label1
             // 
@@ -119,7 +116,6 @@ namespace FreeTrain.World.Rail
             this.label1.TabIndex = 1;
             this.label1.Text = "&Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //! this.label1.Text = "名前(&N):";
             // 
             // label2
             // 
@@ -129,8 +125,6 @@ namespace FreeTrain.World.Rail
             this.label2.Size = new System.Drawing.Size(218, 26);
             this.label2.TabIndex = 6;
             this.label2.Text = "Passengers getting off (today/yesterday):";
-
-            //! this.label2.Text = "降車客数（今日/昨日)：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
@@ -141,7 +135,6 @@ namespace FreeTrain.World.Rail
             this.label3.Size = new System.Drawing.Size(221, 26);
             this.label3.TabIndex = 6;
             this.label3.Text = "Departures and arrivals (today/yesterday):";
-            //! this.label3.Text = "発着数（今日/昨日)：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_unloaded
@@ -182,8 +175,6 @@ namespace FreeTrain.World.Rail
             this.label5.Size = new System.Drawing.Size(209, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Passengers waiting:";
-
-            //! this.label5.Text = "乗車待ち客数：";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // StationPropertyDialog
@@ -202,13 +193,12 @@ namespace FreeTrain.World.Rail
             this.Controls.Add(this.label_trains);
             this.Controls.Add(this.label_waiting);
             this.Controls.Add(this.label5);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StationPropertyDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Station properties";
-            //! this.Text = "駅のプロパティ";
+            this.Text = "Station Properties";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();

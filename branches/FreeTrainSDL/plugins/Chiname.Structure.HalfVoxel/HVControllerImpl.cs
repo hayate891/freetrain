@@ -504,6 +504,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
 
         #endregion
-    }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdatePreview()
+        { }
+    }
 }

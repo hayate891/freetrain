@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers.Structs
             theInstance.Activate();
         }
 
-        private static VarHeightBuildingController theInstance;
+        public static VarHeightBuildingController theInstance;
         /// <summary>
         /// 
         /// </summary>

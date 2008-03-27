@@ -23,6 +23,7 @@ using System.Collections;
 using System.Drawing;
 using System.IO;
 using System.Net;
+using System.Reflection;
 //using org.kohsuke.directaudio;
 using SdlDotNet.Audio;
 using FreeTrain.Util;
@@ -51,7 +52,16 @@ namespace FreeTrain.Framework
             path = Path.Combine(Core.installationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine("res", name)))));
             if (File.Exists(path)) return path;
 
-            throw new FileNotFoundException("System resource: " + name);
+            path = Path.Combine("..", Path.Combine("..", Path.Combine("res", name)));
+            if (File.Exists(path)) return path;
+
+            path = Path.Combine("..", Path.Combine("res", name));
+            if (File.Exists(path)) return path;
+            Assembly assembly = Assembly.GetAssembly(typeof(ResourceUtil));
+            path = Path.Combine(Path.Combine(assembly.Location, ".."), Path.Combine("res", name));
+            if (File.Exists(path)) return path;
+
+            throw new FileNotFoundException("System resource: " + path);
         }
 
         //		private static WebResponse getStream( Uri uri ) {

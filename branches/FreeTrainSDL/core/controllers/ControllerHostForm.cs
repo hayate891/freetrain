@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers
         public ControllerHostForm()
         {
             InitializeComponent();
-            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
+            //WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
             siteImpl = new ControllerSiteImpl(this);
         }
         /// <summary>

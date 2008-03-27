@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers.Land
         }
 
 
-        private static LandPropertyController theInstance;
+        public static LandPropertyController theInstance;
         /// <summary>
         /// 
         /// </summary>

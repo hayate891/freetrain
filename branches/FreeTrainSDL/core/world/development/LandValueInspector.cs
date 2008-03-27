@@ -78,28 +78,26 @@ namespace FreeTrain.World.Development
 		/// このメソッドのコンテンツを変更しないでください。
 		/// </summary>
 		private void InitializeComponent() {
-			this.label1 = new System.Windows.Forms.Label();
-			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(8, 8);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(104, 64);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Move the cursor to display land value";
-			//! this.label1.Text = "カーソルを移動して地価を表示";
-			// 
-			// LandValueInspector
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(120, 75);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.label1});
-			this.Name = "LandValueInspector";
-			this.Text = "Land Value";
-			//! this.Text = "地価の検査";
-			this.ResumeLayout(false);
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(8, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 69);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Move the cursor to display land value";
+            // 
+            // LandValueInspector
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(120, 75);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "LandValueInspector";
+            this.Text = "Land Value";
+            this.ResumeLayout(false);
 
 		}
 		#endregion

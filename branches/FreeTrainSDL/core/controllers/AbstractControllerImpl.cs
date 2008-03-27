@@ -34,7 +34,7 @@ namespace FreeTrain.Controllers
     /// <summary>
     /// 
     /// </summary>
-    public class AbstractControllerImpl : AbstractControllerForm, ModalController
+    public class AbstractControllerImpl : Form, ModalController
     {
         /// <summary>
         /// 
@@ -137,5 +137,11 @@ namespace FreeTrain.Controllers
         {
             Close();	// cancel
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdatePreview()
+        { }
     }
 }

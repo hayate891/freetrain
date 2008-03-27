@@ -87,8 +87,8 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
-      <Name>FreeTrain.Core</Name>
+    <ProjectReference Include="..\..\core\FreeTrain.csproj">
+      <Name>FreeTrain</Name>
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>False</Private>

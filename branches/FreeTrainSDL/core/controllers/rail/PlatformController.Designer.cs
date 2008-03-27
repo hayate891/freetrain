@@ -105,15 +105,6 @@ namespace FreeTrain.Controllers.Rail
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Size = new System.Drawing.Size(187, 15);
-            this.lblTitle.Text = "STATION";
-            // 
-            // lblExit
-            // 
-            this.lblExit.Location = new System.Drawing.Point(153, 5);
-            // 
             // buttonRemove
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -433,14 +424,10 @@ namespace FreeTrain.Controllers.Rail
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.buttonPlace);
             this.Controls.Add(this.buttonRemove);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "PlatformController";
-            this.Text = "Station construction";
+            this.Text = "Station Construction";
             this.Resize += new System.EventHandler(this.updateAfterResize);
-            this.Controls.SetChildIndex(this.buttonRemove, 0);
-            this.Controls.SetChildIndex(this.buttonPlace, 0);
-            this.Controls.SetChildIndex(this.tabControl, 0);
-            this.Controls.SetChildIndex(this.lblTitle, 0);
-            this.Controls.SetChildIndex(this.lblExit, 0);
             this.stationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stationPicture)).EndInit();
             this.platformPage.ResumeLayout(false);
