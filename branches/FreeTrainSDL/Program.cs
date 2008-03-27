@@ -240,51 +240,55 @@ namespace FreeTrain
                 if (WorldDefinition.World != null) gui.clock_text = WorldDefinition.World.clock.displayString;
                 gui.drawGUI(width, height, screen.Handle);
             }
+            if (mainWindowMDI != null)
+            {
+                if (WorldDefinition.World != null) mainWindowMDI.statusStrip.Text = WorldDefinition.World.clock.displayString;
+            }
             screen.Update();
         }
 
-        private void GUIButtonClick(object sender, EventArgs e)
-        {
-            switch ((string)sender)
-            {
-                case "rail":
-                    RailRoadController.create();
-                    RailRoadController.theInstance.Hide();
-                    RailRoadController.theInstance.MdiParent = mainWindowMDI;
-                    //mainWindowMDI.AddOwnedForm(RailRoadController.theInstance);
-                    RailRoadController.theInstance.Show();
-                    break;
-                case "station":
-                    PlatformController.create();
-                    PlatformController.theInstance.Hide();
-                    PlatformController.theInstance.MdiParent = mainWindowMDI;
-                    PlatformController.theInstance.Show();
-                    break;
-                case "train":
-                    TrainPlacementController.create();
-                    TrainPlacementController.theInstance.Hide();
-                    TrainPlacementController.theInstance.MdiParent = mainWindowMDI;
-                    TrainPlacementController.theInstance.Show();
-                    break;
-                case "land":
-                    MountainController.create();
-                    MountainController.theInstance.Hide();
-                    MountainController.theInstance.MdiParent = mainWindowMDI;
-                    MountainController.theInstance.Show();
-                    break;
-                case "struct":
-                    VarHeightBuildingController.create();
-                    VarHeightBuildingController.theInstance.Hide();
-                    VarHeightBuildingController.theInstance.MdiParent = mainWindowMDI;
-                    VarHeightBuildingController.theInstance.Show();
-                    break;
-                case "playlist":
-                    BGMPlaylist bgmplaylist = new BGMPlaylist();
-                    bgmplaylist.MdiParent = mainWindowMDI;
-                    bgmplaylist.Show();
-                    break;
-            }
-        }
+        //private void GUIButtonClick(object sender, EventArgs e)
+        //{
+        //    switch ((string)sender)
+        //    {
+        //        case "rail":
+        //            RailRoadController.create();
+        //            RailRoadController.theInstance.Hide();
+        //            RailRoadController.theInstance.MdiParent = mainWindowMDI;
+        //            //mainWindowMDI.AddOwnedForm(RailRoadController.theInstance);
+        //            RailRoadController.theInstance.Show();
+        //            break;
+        //        case "station":
+        //            PlatformController.create();
+        //            PlatformController.theInstance.Hide();
+        //            PlatformController.theInstance.MdiParent = mainWindowMDI;
+        //            PlatformController.theInstance.Show();
+        //            break;
+        //        case "train":
+        //            TrainPlacementController.create();
+        //            TrainPlacementController.theInstance.Hide();
+        //            TrainPlacementController.theInstance.MdiParent = mainWindowMDI;
+        //            TrainPlacementController.theInstance.Show();
+        //            break;
+        //        case "land":
+        //            MountainController.create();
+        //            MountainController.theInstance.Hide();
+        //            MountainController.theInstance.MdiParent = mainWindowMDI;
+        //            MountainController.theInstance.Show();
+        //            break;
+        //        case "struct":
+        //            VarHeightBuildingController.create();
+        //            VarHeightBuildingController.theInstance.Hide();
+        //            VarHeightBuildingController.theInstance.MdiParent = mainWindowMDI;
+        //            VarHeightBuildingController.theInstance.Show();
+        //            break;
+        //        case "playlist":
+        //            BGMPlaylist bgmplaylist = new BGMPlaylist();
+        //            bgmplaylist.MdiParent = mainWindowMDI;
+        //            bgmplaylist.Show();
+        //            break;
+        //    }
+        //}
 
         private bool scrollByDrag(Point curMousePos)
         {
@@ -364,14 +368,14 @@ namespace FreeTrain
             }
 
             gui = new SDLGUI();
-            gui.ButtonClick += new EventHandler(GUIButtonClick);
+            //gui.ButtonClick += new EventHandler(GUIButtonClick);
             gui.initGUI(width, height, videoInfo.vfmt);
-            gui.addButton("rail", "Railroad Construction");
-            gui.addButton("station", "Station Construction");
-            gui.addButton("train", "Train Stuff");
-            gui.addButton("land", "Modify Terrain");
-            gui.addButton("struct", "Structure Construction");
-            gui.addButton("playlist", "Music Playlist");
+            //gui.addButton("rail", "Railroad Construction");
+            //gui.addButton("station", "Station Construction");
+            //gui.addButton("train", "Train Stuff");
+            //gui.addButton("land", "Modify Terrain");
+            //gui.addButton("struct", "Structure Construction");
+            //gui.addButton("playlist", "Music Playlist");
 
             gui.clock_text = "Initialising...";
 
