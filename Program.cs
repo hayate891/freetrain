@@ -35,8 +35,11 @@ using FreeTrain.Framework.Graphics;
 using FreeTrain.World;
 using FreeTrain.Controllers;
 using FreeTrain.Controllers.Rail;
+using FreeTrain.Controllers.Land;
+using FreeTrain.Controllers.Road;
 using FreeTrain.Controllers.Terrain;
 using FreeTrain.Controllers.Structs;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Framework;
 using FreeTrain.Views;
 using FreeTrain.Util;
@@ -70,6 +73,7 @@ namespace FreeTrain
         short oldX;
         short oldY;
         bool lastMouseState;
+        MainWindowMDI mainWindowMDI;
 
         #endregion
 
@@ -114,10 +118,10 @@ namespace FreeTrain
             if (qView != null)
             {
                 controller = MainWindow.mainWindow.currentController;
-
+                //MainWindow.mainWindow.Show();
                 qView.updateScreen();
-                if (WorldDefinition.World.Satellite == null || 
-                    WorldDefinition.World.Satellite.surface.w != 150 || 
+                if (WorldDefinition.World.Satellite == null ||
+                    WorldDefinition.World.Satellite.surface.w != 150 ||
                     WorldDefinition.World.Satellite.surface.h != 150)
                 {
                     WorldDefinition.World.Satellite = new Surface(150, 150, 32);
@@ -138,6 +142,7 @@ namespace FreeTrain
             {
                 RailRoadController.create();
             }
+            
         }
 
         private void Resize(object sender, SdlDotNet.Graphics.VideoResizeEventArgs e)
@@ -244,21 +249,38 @@ namespace FreeTrain
             {
                 case "rail":
                     RailRoadController.create();
+                    RailRoadController.theInstance.Hide();
+                    RailRoadController.theInstance.MdiParent = mainWindowMDI;
+                    //mainWindowMDI.AddOwnedForm(RailRoadController.theInstance);
+                    RailRoadController.theInstance.Show();
                     break;
                 case "station":
                     PlatformController.create();
+                    PlatformController.theInstance.Hide();
+                    PlatformController.theInstance.MdiParent = mainWindowMDI;
+                    PlatformController.theInstance.Show();
                     break;
                 case "train":
                     TrainPlacementController.create();
+                    TrainPlacementController.theInstance.Hide();
+                    TrainPlacementController.theInstance.MdiParent = mainWindowMDI;
+                    TrainPlacementController.theInstance.Show();
                     break;
                 case "land":
                     MountainController.create();
+                    MountainController.theInstance.Hide();
+                    MountainController.theInstance.MdiParent = mainWindowMDI;
+                    MountainController.theInstance.Show();
                     break;
                 case "struct":
                     VarHeightBuildingController.create();
+                    VarHeightBuildingController.theInstance.Hide();
+                    VarHeightBuildingController.theInstance.MdiParent = mainWindowMDI;
+                    VarHeightBuildingController.theInstance.Show();
                     break;
                 case "playlist":
                     BGMPlaylist bgmplaylist = new BGMPlaylist();
+                    bgmplaylist.MdiParent = mainWindowMDI;
                     bgmplaylist.Show();
                     break;
             }
@@ -329,7 +351,7 @@ namespace FreeTrain
 
             SdlMixer.MusicFinishedDelegate musicStopped = new SdlMixer.MusicFinishedDelegate(MusicHasStopped);
             SdlMixer.Mix_HookMusicFinished(musicStopped);
-            
+
 
             screen = SdlDotNet.Graphics.Video.SetVideoMode(width, height, currentBpp, true);
             screen.SourceColorKey = Color.Magenta;
@@ -377,15 +399,75 @@ namespace FreeTrain
             finalDraw();
 
             qView.draw(new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8), null);
-            
+
             gui.SHOW_SPLASH = false;
 
             timer.Tick += new EventHandler(timerTick);
             timer.Interval = 33;
             timer.Enabled = true;
             timer.Start();
-            //ControlPanel controlPanel = new ControlPanel();
-            //controlPanel.Show();
+            mainWindowMDI = new MainWindowMDI();
+            mainWindowMDI.Show();
+            RailRoadController.create();
+            RailRoadController.theInstance.Hide();
+            RailRoadController.theInstance.MdiParent = mainWindowMDI;
+            RailRoadController.theInstance.WindowState = FormWindowState.Maximized;
+            RailRoadController.theInstance.Show();
+            PlatformController.create();
+            PlatformController.theInstance.Hide();
+            PlatformController.theInstance.MdiParent = mainWindowMDI;
+            PlatformController.theInstance.WindowState = FormWindowState.Maximized;
+            PlatformController.theInstance.Show();
+            TrainPlacementController.create();
+            TrainPlacementController.theInstance.Hide();
+            TrainPlacementController.theInstance.MdiParent = mainWindowMDI;
+            TrainPlacementController.theInstance.WindowState = FormWindowState.Maximized;
+            TrainPlacementController.theInstance.Show();
+            MountainController.create();
+            MountainController.theInstance.Hide();
+            MountainController.theInstance.MdiParent = mainWindowMDI;
+            MountainController.theInstance.WindowState = FormWindowState.Maximized;
+            MountainController.theInstance.Show();
+            VarHeightBuildingController.create();
+            VarHeightBuildingController.theInstance.Hide();
+            VarHeightBuildingController.theInstance.MdiParent = mainWindowMDI;
+            VarHeightBuildingController.theInstance.WindowState = FormWindowState.Maximized;
+            VarHeightBuildingController.theInstance.Show();
+            LandController.create();
+            LandController.theInstance.Hide();
+            LandController.theInstance.MdiParent = mainWindowMDI;
+            LandController.theInstance.WindowState = FormWindowState.Maximized;
+            LandController.theInstance.Show();
+            LandPropertyController.create();
+            LandPropertyController.theInstance.Hide();
+            LandPropertyController.theInstance.MdiParent = mainWindowMDI;
+            LandPropertyController.theInstance.WindowState = FormWindowState.Maximized;
+            LandPropertyController.theInstance.Show();
+            StationPassagewayController.create();
+            StationPassagewayController.theInstance.Hide();
+            StationPassagewayController.theInstance.MdiParent = mainWindowMDI;
+            StationPassagewayController.theInstance.WindowState = FormWindowState.Maximized;
+            StationPassagewayController.theInstance.Show();
+            SlopeRailRoadController.create();
+            SlopeRailRoadController.theInstance.Hide();
+            SlopeRailRoadController.theInstance.MdiParent = mainWindowMDI;
+            SlopeRailRoadController.theInstance.WindowState = FormWindowState.Maximized;
+            SlopeRailRoadController.theInstance.Show();
+            PluginListDialog pluginListDialog = new PluginListDialog();
+            pluginListDialog.MdiParent = mainWindowMDI;
+            pluginListDialog.WindowState = FormWindowState.Maximized;
+            pluginListDialog.Show();
+            //RoadController roadController = new RoadController();
+            //roadController.MdiParent = mainWindowMDI;
+            //roadController.Show();
+            //BulldozeController.create();
+            //BulldozeController.theInstance.Hide();
+            //BulldozeController.theInstance.MdiParent = mainWindowMDI;
+            //BulldozeController.theInstance.Show();
+            BGMPlaylist bgmplaylist = new BGMPlaylist();
+            bgmplaylist.MdiParent = mainWindowMDI;
+            bgmplaylist.Show();
+
 
             Events.Run();
         }

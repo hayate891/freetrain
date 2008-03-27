@@ -136,7 +136,6 @@ namespace FreeTrain.World.Rail
             this.left.Size = new System.Drawing.Size(88, 26);
             this.left.TabIndex = 7;
             this.left.Text = "&Left connect";
-            //! this.left.Text = "左に接続(&L)";
             this.left.Click += new System.EventHandler(this.onLeft);
             // 
             // right
@@ -148,7 +147,6 @@ namespace FreeTrain.World.Rail
             this.right.Size = new System.Drawing.Size(80, 26);
             this.right.TabIndex = 8;
             this.right.Text = "&Right connect";
-            //! this.right.Text = "右に接続(&R)";
             this.right.Click += new System.EventHandler(this.onRight);
             // 
             // label1
@@ -158,7 +156,6 @@ namespace FreeTrain.World.Rail
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "&Name:";
-            //! this.label1.Text = "名前(&N):";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // nameBox
@@ -169,7 +166,6 @@ namespace FreeTrain.World.Rail
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(176, 20);
             this.nameBox.TabIndex = 2;
-            this.nameBox.Text = "";
             // 
             // groupFat
             // 
@@ -183,7 +179,6 @@ namespace FreeTrain.World.Rail
             this.groupFat.TabIndex = 999;
             this.groupFat.TabStop = false;
             this.groupFat.Text = "Connect tracks";
-            //! this.groupFat.Text = "線路との接続工事";
             // 
             // OKbutton
             // 
@@ -207,7 +202,6 @@ namespace FreeTrain.World.Rail
             this.cancelButton.Size = new System.Drawing.Size(80, 26);
             this.cancelButton.TabIndex = 11;
             this.cancelButton.Text = "&Cancel";
-            //! this.cancelButton.Text = "キャンセル(&C)";
             // 
             // label2
             // 
@@ -216,7 +210,6 @@ namespace FreeTrain.World.Rail
             this.label2.Size = new System.Drawing.Size(88, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "&Station:";
-            //! this.label2.Text = "駅(&S):";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // hostList
@@ -238,7 +231,6 @@ namespace FreeTrain.World.Rail
             this.remove.Size = new System.Drawing.Size(88, 26);
             this.remove.TabIndex = 9;
             this.remove.Text = "R&emove";
-            //! this.remove.Text = "撤去(&E)";
             this.remove.Click += new System.EventHandler(this.onRemove);
             // 
             // warning
@@ -267,7 +259,6 @@ namespace FreeTrain.World.Rail
             this.label3.Size = new System.Drawing.Size(88, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "&Bell:";
-            //! this.label3.Text = "ベル(&B):";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // PlatformPropertyDialog
@@ -275,25 +266,23 @@ namespace FreeTrain.World.Rail
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(298, 204);
             this.ControlBox = false;
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.label3,
-																		  this.bell,
-																		  this.warning,
-																		  this.remove,
-																		  this.hostList,
-																		  this.label2,
-																		  this.cancelButton,
-																		  this.OKbutton,
-																		  this.groupFat,
-																		  this.nameBox,
-																		  this.label1});
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.bell);
+            this.Controls.Add(this.warning);
+            this.Controls.Add(this.remove);
+            this.Controls.Add(this.hostList);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.OKbutton);
+            this.Controls.Add(this.groupFat);
+            this.Controls.Add(this.nameBox);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PlatformPropertyDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Platform properties";
-            //! this.Text = "ホームのプロパティ";
             this.groupFat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.warning)).EndInit();
             this.ResumeLayout(false);

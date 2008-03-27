@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrainSDL", "FreeTrainSDL.csproj", "{B43DC0F1-5C4B-490F-8171-C3754A02D605}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.Core", "core\FreeTrain.Core.csproj", "{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain", "core\FreeTrain.csproj", "{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeTrain.Controls", "lib\Controls\FreeTrain.Controls.csproj", "{D3B86CCE-530E-4472-AE8E-3FA5F903C206}"
 EndProject

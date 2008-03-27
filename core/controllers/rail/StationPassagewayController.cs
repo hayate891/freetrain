@@ -49,7 +49,7 @@ namespace FreeTrain.Controllers.Rail
             theInstance.Activate();
         }
 
-        private static StationPassagewayController theInstance;
+        public static StationPassagewayController  theInstance;
         /// <summary>
         /// 
         /// </summary>
@@ -110,14 +110,14 @@ namespace FreeTrain.Controllers.Rail
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Location = new System.Drawing.Point(190, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 165);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Only for thin platforms. If a passageway and a platform are connected at right angles, please build a staircase.";
-            //! this.label1.Text = "薄いホーム専用です。通路をホームと直角に設置してから階段を設置してください。";
+            this.label1.Text = "Only for thin platforms. If a passageway and a platform are connected at right an" +
+                "gles, please build a staircase.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonPlace
@@ -131,26 +131,24 @@ namespace FreeTrain.Controllers.Rail
             this.buttonPlace.TabIndex = 1;
             this.buttonPlace.TabStop = true;
             this.buttonPlace.Text = "Build";
-            //! this.buttonPlace.Text = "設置";
             this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonRemove
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
             this.buttonRemove.Location = new System.Drawing.Point(91, 130);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(89, 26);
             this.buttonRemove.TabIndex = 2;
             this.buttonRemove.Text = "Remove";
-            //! this.buttonRemove.Text = "撤去";
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // typeCombo
             // 
             this.typeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.typeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeCombo.Location = new System.Drawing.Point(8, 9);
             this.typeCombo.Name = "typeCombo";
@@ -160,8 +158,8 @@ namespace FreeTrain.Controllers.Rail
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                                    | System.Windows.Forms.AnchorStyles.Left)
-                                    | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.radioStair);
             this.groupBox1.Controls.Add(this.radioPassage);
             this.groupBox1.Location = new System.Drawing.Point(8, 43);
@@ -170,7 +168,6 @@ namespace FreeTrain.Controllers.Rail
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Section";
-            //! this.groupBox1.Text = "部品";
             // 
             // radioStair
             // 
@@ -179,7 +176,6 @@ namespace FreeTrain.Controllers.Rail
             this.radioStair.Size = new System.Drawing.Size(88, 18);
             this.radioStair.TabIndex = 1;
             this.radioStair.Text = "Staircase";
-            //! this.radioStair.Text = "階段";
             // 
             // radioPassage
             // 
@@ -190,7 +186,6 @@ namespace FreeTrain.Controllers.Rail
             this.radioPassage.TabIndex = 0;
             this.radioPassage.TabStop = true;
             this.radioPassage.Text = "Passageway";
-            //! this.radioPassage.Text = "通路";
             // 
             // StationPassagewayController
             // 
@@ -203,8 +198,7 @@ namespace FreeTrain.Controllers.Rail
             this.Controls.Add(this.buttonRemove);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "StationPassagewayController";
-            this.Text = "Station connecting passageway";
-            //! this.Text = "駅連絡通路";
+            this.Text = "Station Connecting Passageway";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

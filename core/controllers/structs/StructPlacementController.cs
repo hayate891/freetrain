@@ -323,7 +323,7 @@ namespace FreeTrain.Controllers.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override void UpdatePreview()
+        public void UpdatePreview()
         {
             /*using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) ) 
             {

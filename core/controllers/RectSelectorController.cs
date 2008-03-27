@@ -221,5 +221,11 @@ namespace FreeTrain.Controllers
         {
             onCanceled();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdatePreview()
+        { }
     }
 }

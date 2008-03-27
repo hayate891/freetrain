@@ -56,7 +56,7 @@ namespace FreeTrain.Controllers.Land
             theInstance.Activate();
         }
 
-        private static LandController theInstance;
+        public static LandController theInstance;
         /// <summary>
         /// 
         /// </summary>

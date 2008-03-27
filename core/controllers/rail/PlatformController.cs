@@ -70,7 +70,7 @@ namespace FreeTrain.Controllers.Rail
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
 
-        private static PlatformController theInstance;
+        public static PlatformController theInstance;
         /// <summary>
         /// 
         /// </summary>
@@ -106,7 +106,7 @@ namespace FreeTrain.Controllers.Rail
             //do translation, if you put this in InitialiseComponent then it will get overridden by the
             //visual studio when you edit the form in designer view...
 
-            this.lblTitle.Text = Translation.GetString("CONTROLLER_STATION_TITLE");
+            //this.lblTitle.Text = Translation.GetString("CONTROLLER_STATION_TITLE");
             this.stationPage.Text = Translation.GetString("CONTROLLER_STATION_PAGE");
             this.label3.Text = Translation.GetString("CONTROLLER_STATION_DESIGN");
             this.columnHeader1.Text = Translation.GetString("CONTROLLER_STATION_NAME");
@@ -524,7 +524,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override void UpdatePreview()
+        public void UpdatePreview()
         {
             if (this.currentMode == Mode.Station)
                 onStationChanged(null, null);

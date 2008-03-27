@@ -78,6 +78,7 @@ namespace FreeTrain.Views.Map
             // trackBar
             // 
             this.trackBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trackBar.Location = new System.Drawing.Point(0, 0);
             this.trackBar.Name = "trackBar";
             this.trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.trackBar.Size = new System.Drawing.Size(42, 96);
@@ -87,15 +88,15 @@ namespace FreeTrain.Views.Map
             // 
             // HeightCutWindow
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(42, 96);
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.trackBar});
+            this.Controls.Add(this.trackBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "HeightCutWindow";
             this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         #endregion

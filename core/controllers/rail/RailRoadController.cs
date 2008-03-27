@@ -55,7 +55,10 @@ namespace FreeTrain.Controllers.Rail
             theInstance.Activate();
         }
 
-        private static RailRoadController theInstance;
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RailRoadController theInstance;
         /// <summary>
         /// 
         /// </summary>
@@ -75,8 +78,8 @@ namespace FreeTrain.Controllers.Rail
             this.buttonPlace.Text = Translation.GetString("CONTROLLER_PLACE_BUTTON");
             this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
             this.costBox.label = Translation.GetString("CONTROLLER_COST_LABEL");
-            this.Text = Translation.GetString("CONTROLLER_RAIL_TOOLTIP");
-            this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
+            //this.Text = Translation.GetString("CONTROLLER_RAIL_TOOLTIP");
+            //this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
 
             UpdatePreview();
         }
@@ -84,7 +87,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override void UpdatePreview()
+        public void UpdatePreview()
         {
             /*using( PreviewDrawer drawer = new PreviewDrawer( picture.Size, new Size(1,10), 0 ) ) 
             {
@@ -313,7 +316,7 @@ namespace FreeTrain.Controllers.Rail
 
         private void RailRoadController_Load(object sender, EventArgs e)
         {
-            this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
+            //this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
         }
     }
 }

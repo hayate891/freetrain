@@ -87,15 +87,6 @@ namespace FreeTrain.Controllers.Rail
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Size = new System.Drawing.Size(452, 15);
-            this.lblTitle.Text = "TRAIN TRADING";
-            // 
-            // lblExit
-            // 
-            this.lblExit.Location = new System.Drawing.Point(418, 5);
-            // 
             // buttonRemove
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -266,10 +257,6 @@ namespace FreeTrain.Controllers.Rail
             this.MinimumSize = new System.Drawing.Size(416, 195);
             this.Name = "TrainPlacementController";
             this.Text = "Place Train";
-            this.Controls.SetChildIndex(this.panel2, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.lblTitle, 0);
-            this.Controls.SetChildIndex(this.lblExit, 0);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

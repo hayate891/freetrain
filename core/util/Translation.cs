@@ -43,6 +43,7 @@ namespace FreeTrain.Util
                 return resourceManager.GetString(code);
             } catch (Exception e) {
                 System.Console.Out.WriteLine("missing translation code: "+code);
+                System.Console.Out.WriteLine(e.StackTrace);
                 return code;
             }
         }

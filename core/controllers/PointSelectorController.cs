@@ -172,6 +172,10 @@ namespace FreeTrain.Controllers
                 return this as MapOverlay;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdatePreview()
+        { }
     }
 }

@@ -59,7 +59,7 @@ namespace FreeTrain.Controllers.Rail
         private System.Windows.Forms.MenuItem miSell;
         private Button cmdTrading;
 
-        private static TrainPlacementController theInstance;
+        public static TrainPlacementController theInstance;
         /// <summary>
         /// 
         /// </summary>
@@ -79,7 +79,7 @@ namespace FreeTrain.Controllers.Rail
             // Windows フォーム デザイナ サポートに必要です。
             InitializeComponent();
 
-            this.lblTitle.Text = Translation.GetString("CONTROLLER_TRAINPLACE_TITLE");
+            //this.lblTitle.Text = Translation.GetString("CONTROLLER_TRAINPLACE_TITLE");
             this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
             this.buttonPlace.Text = Translation.GetString("CONTROLLER_BUILD_BUTTON");
             this.miAddGroup.Text = Translation.GetString("CONTROLLER_TRAIN_ADDNEWGROUP");

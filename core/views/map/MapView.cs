@@ -143,29 +143,29 @@ namespace FreeTrain.Views.Map
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.mainMenu = new System.Windows.Forms.MainMenu();
+            this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem4 = new System.Windows.Forms.MenuItem();
             this.menuItem_heightCut = new System.Windows.Forms.MenuItem();
             this.menuItem_heightCutWnd = new System.Windows.Forms.MenuItem();
             this.weatherTimer = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
             // 
             // mainMenu
             // 
             this.mainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																					 this.menuItem1});
+            this.menuItem1});
             // 
             // menuItem1
             // 
             this.menuItem1.Index = 0;
             this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																					  this.menuItem4,
-																					  this.menuItem_heightCut,
-																					  this.menuItem_heightCutWnd});
+            this.menuItem4,
+            this.menuItem_heightCut,
+            this.menuItem_heightCutWnd});
             this.menuItem1.MergeOrder = 1;
             this.menuItem1.MergeType = System.Windows.Forms.MenuMerge.MergeItems;
             this.menuItem1.Text = "&View";
-            //! this.menuItem1.Text = "表示(&V)";
             // 
             // menuItem4
             // 
@@ -176,14 +176,12 @@ namespace FreeTrain.Views.Map
             // 
             this.menuItem_heightCut.Index = 1;
             this.menuItem_heightCut.Text = "&Height Cutting";
-            //! this.menuItem_heightCut.Text = "ヘイトカット(&H)";
             this.menuItem_heightCut.Popup += new System.EventHandler(this.menuItem_heightCut_Popup);
             // 
             // menuItem_heightCutWnd
             // 
             this.menuItem_heightCutWnd.Index = 2;
             this.menuItem_heightCutWnd.Text = "Height Cut Window";
-            //! this.menuItem_heightCutWnd.Text = "ヘイトカットウィンドウ";
             this.menuItem_heightCutWnd.Click += new System.EventHandler(this.menuItem_heightCutWnd_Click);
             // 
             // weatherTimer
@@ -193,12 +191,13 @@ namespace FreeTrain.Views.Map
             // 
             // MapViewWindow
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(432, 427);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Menu = this.mainMenu;
             this.Name = "MapViewWindow";
             this.Text = "Map";
-            //! this.Text = "マップ";
+            this.ResumeLayout(false);
 
         }
         #endregion

@@ -88,5 +88,10 @@ namespace FreeTrain.Controllers
         /// If this controller needs to modify the map view, return non-null value.
         /// </summary>
         MapOverlay Overlay { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        void UpdatePreview();
     }
 }

@@ -52,7 +52,7 @@ namespace FreeTrain.Controllers.Rail
 
         private FreeTrain.Controls.CostBox costBox;
 
-        private static SlopeRailRoadController theInstance;
+        public static SlopeRailRoadController theInstance;
         /// <summary>
         /// 
         /// </summary>
@@ -83,7 +83,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override void UpdatePreview()
+        public void UpdatePreview()
         {
 
             PreviewDrawer drawer;
@@ -235,7 +235,6 @@ namespace FreeTrain.Controllers.Rail
             this.buttonPlace.TabIndex = 4;
             this.buttonPlace.TabStop = true;
             this.buttonPlace.Text = "Place";
-            //! this.buttonPlace.Text = "敷設";
             this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonRemove
@@ -248,7 +247,6 @@ namespace FreeTrain.Controllers.Rail
             this.buttonRemove.Size = new System.Drawing.Size(56, 26);
             this.buttonRemove.TabIndex = 5;
             this.buttonRemove.Text = "Remove";
-            //! this.buttonRemove.Text = "撤去";
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // costBox
@@ -258,7 +256,6 @@ namespace FreeTrain.Controllers.Rail
             this.costBox.cost = 0;
             this.costBox.label = "Cost:";
             this.costBox.Location = new System.Drawing.Point(8, 243);
-            //!this.costBox.label = "費用：";
             this.costBox.Name = "costBox";
             this.costBox.Size = new System.Drawing.Size(104, 34);
             this.costBox.TabIndex = 6;
@@ -274,9 +271,9 @@ namespace FreeTrain.Controllers.Rail
             this.Controls.Add(this.pictureS);
             this.Controls.Add(this.pictureE);
             this.Controls.Add(this.pictureN);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "SlopeRailRoadController";
-            this.Text = "Slope tracks";
-            //! this.Text = "勾配線路";
+            this.Text = "Slope Tracks";
             ((System.ComponentModel.ISupportInitialize)(this.pictureN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureS)).EndInit();

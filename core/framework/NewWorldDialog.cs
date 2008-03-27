@@ -93,8 +93,8 @@ namespace FreeTrain.Framework
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.list = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.list = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +105,6 @@ namespace FreeTrain.Framework
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Author:";
-            //! this.label1.Text = "作者：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -115,7 +114,6 @@ namespace FreeTrain.Framework
             this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Description:";
-            //! this.label2.Text = "解説：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // author
@@ -136,7 +134,6 @@ namespace FreeTrain.Framework
             this.description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.description.Size = new System.Drawing.Size(234, 64);
             this.description.TabIndex = 4;
-            this.description.Text = "";
             // 
             // okButton
             // 
@@ -157,7 +154,6 @@ namespace FreeTrain.Framework
             this.cancelButton.Size = new System.Drawing.Size(88, 26);
             this.cancelButton.TabIndex = 6;
             this.cancelButton.Text = "&Cancel";
-            //! this.cancelButton.Text = "ｷｬﾝｾﾙ(&C)";
             // 
             // groupBox1
             // 
@@ -174,14 +170,6 @@ namespace FreeTrain.Framework
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New Game Plug-Ins";
             // 
-            // list
-            // 
-            this.list.Location = new System.Drawing.Point(84, 19);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(234, 69);
-            this.list.TabIndex = 12;
-            // 
-            // 
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(6, 19);
@@ -190,6 +178,13 @@ namespace FreeTrain.Framework
             this.label3.TabIndex = 14;
             this.label3.Text = "Name:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // list
+            // 
+            this.list.Location = new System.Drawing.Point(84, 19);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(234, 69);
+            this.list.TabIndex = 12;
             // 
             // NewWorldDialog
             // 
@@ -200,13 +195,12 @@ namespace FreeTrain.Framework
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NewWorldDialog";
             this.ShowInTaskbar = false;
             this.Text = "New Game";
-            //! this.Text = "新しいゲーム";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

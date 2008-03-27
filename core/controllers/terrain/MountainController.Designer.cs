@@ -58,14 +58,6 @@ namespace FreeTrain.Controllers.Terrain
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Size = new System.Drawing.Size(110, 15);
-            // 
-            // lblExit
-            // 
-            this.lblExit.Location = new System.Drawing.Point(76, 5);
-            // 
             // buttonUp
             // 
             this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -148,15 +140,9 @@ namespace FreeTrain.Controllers.Terrain
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.preview);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "MountainController";
             this.Text = "Modify Terrain";
-            this.Controls.SetChildIndex(this.preview, 0);
-            this.Controls.SetChildIndex(this.buttonDown, 0);
-            this.Controls.SetChildIndex(this.buttonUp, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.lblTitle, 0);
-            this.Controls.SetChildIndex(this.lblExit, 0);
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

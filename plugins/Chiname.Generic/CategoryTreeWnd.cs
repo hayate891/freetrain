@@ -230,13 +230,13 @@ namespace FreeTrain.Framework.Plugin.Generic
             // categoryTree
             // 
             this.categoryTree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.categoryTree.FullRowSelect = true;
             this.categoryTree.HideSelection = false;
             this.categoryTree.Location = new System.Drawing.Point(0, 26);
             this.categoryTree.Name = "categoryTree";
-            this.categoryTree.Size = new System.Drawing.Size(128, 310);
+            this.categoryTree.Size = new System.Drawing.Size(137, 310);
             this.categoryTree.TabIndex = 0;
             this.categoryTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.categoryTree_AfterSelect);
             // 
@@ -250,21 +250,20 @@ namespace FreeTrain.Framework.Plugin.Generic
             this.checkBox1.Size = new System.Drawing.Size(108, 34);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Show All";
-            //! this.checkBox1.Text = "全表示";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // CategoryTreeWnd
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(128, 333);
+            this.ClientSize = new System.Drawing.Size(137, 333);
             this.Controls.Add(this.categoryTree);
             this.Controls.Add(this.checkBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximumSize = new System.Drawing.Size(400, 10832);
             this.MinimumSize = new System.Drawing.Size(100, 108);
             this.Name = "CategoryTreeWnd";
             this.Text = "Structure Type Tree";
-            //! this.Text = "建物類別";
             this.ResumeLayout(false);
 
         }

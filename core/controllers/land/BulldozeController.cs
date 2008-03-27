@@ -56,7 +56,7 @@ namespace FreeTrain.Controllers.Land
             theInstance.Activate();
         }
 
-        private static BulldozeController theInstance;
+        public static BulldozeController theInstance;
         /// <summary>
         /// 
         /// </summary>
@@ -78,7 +78,8 @@ namespace FreeTrain.Controllers.Land
             previewBitmap = ResourceUtil.loadSystemBitmap("bulldozer.bmp");
             preview.Image = previewBitmap;
             LandBuilderContribution builder = (LandBuilderContribution)PluginManager.theInstance.getContribution("{AE43E6DB-39F0-49FE-BE18-EE3FAC248FDE}");
-            currentController = builder.createBuilder(new ControllerSiteImpl(this));
+            //TODO: fix this
+            //currentController = builder.createBuilder(new ControllerSiteImpl(this));
         }
         /// <summary>
         /// 

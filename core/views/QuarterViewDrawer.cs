@@ -689,7 +689,7 @@ namespace FreeTrain.Views
                 for (int z = heightCutHeight; z >= 0; z--)
                 {
                     Location loc = new Location(x - z, y + z, z);
-                    if (disambiguator.isSelectable(loc))
+                    if (disambiguator != null && disambiguator.isSelectable(loc))
                         return loc;
                 }
             }

@@ -206,7 +206,7 @@ namespace FreeTrain.Framework
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.progressBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

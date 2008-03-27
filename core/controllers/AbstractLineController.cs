@@ -36,8 +36,11 @@ namespace FreeTrain.Controllers
     /// <summary>
     /// Controller that places/removes lines, such as roads or rail roads.
     /// </summary>
-    public abstract class AbstractLineController : AbstractControllerImpl, MapOverlay
+    public class AbstractLineController : AbstractControllerImpl, MapOverlay
     {
+        public AbstractLineController()
+            : base()
+        { }
         /// <summary>
         /// 
         /// </summary>
@@ -53,7 +56,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public override void UpdatePreview()
+        public void UpdatePreview()
         {
             if (this.picture.Image != null)
                 this.picture.Image.Dispose();
@@ -364,6 +367,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Draw the preview on the given point.
         /// </summary>
-        protected abstract void draw(Direction d, DrawContextEx canvs, Point pt);
+        protected virtual void draw(Direction d, DrawContextEx canvs, Point pt)
+        { }
     }
 }

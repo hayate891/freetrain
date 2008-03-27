@@ -168,136 +168,134 @@ namespace FreeTrain.World.Subsidiaries
 
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.toolBar = new System.Windows.Forms.ToolBar();
-			this.tbModeSell = new System.Windows.Forms.ToolBarButton();
-			this.tbModeBuy = new System.Windows.Forms.ToolBarButton();
-			this.tbSeparator = new System.Windows.Forms.ToolBarButton();
-			this.tbGo = new System.Windows.Forms.ToolBarButton();
-			this.imageList = new System.Windows.Forms.ImageList(this.components);
-			this.list = new System.Windows.Forms.ListView();
-			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-			this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-			this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-			this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-			this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-			this.tbOK = new System.Windows.Forms.ToolBarButton();
-			this.SuspendLayout();
-			// 
-			// toolBar
-			// 
-			this.toolBar.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
-			this.toolBar.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
-																					   this.tbModeSell,
-																					   this.tbModeBuy,
-																					   this.tbSeparator,
-																					   this.tbGo,
-																					   this.tbOK});
-			this.toolBar.Dock = System.Windows.Forms.DockStyle.Left;
-			this.toolBar.DropDownArrows = true;
-			this.toolBar.ImageList = this.imageList;
-			this.toolBar.Name = "toolBar";
-			this.toolBar.ShowToolTips = true;
-			this.toolBar.Size = new System.Drawing.Size(57, 174);
-			this.toolBar.TabIndex = 0;
-			this.toolBar.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
-			this.toolBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.onButtonClick);
-			// 
-			// tbModeSell
-			// 
-			this.tbModeSell.ImageIndex = 0;
-			this.tbModeSell.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeSell.Text = "My Company";
-			//! this.tbModeSell.Text = "自社";
-			// 
-			// tbModeBuy
-			// 
-			this.tbModeBuy.ImageIndex = 0;
-			this.tbModeBuy.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
-			this.tbModeBuy.Text = "Other Companies";
-			//! this.tbModeBuy.Text = "他社";
-			// 
-			// tbSeparator
-			// 
-			this.tbSeparator.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
-			// 
-			// tbGo
-			// 
-			this.tbGo.ImageIndex = 2;
-			this.tbGo.Text = "Go";
-			//! this.tbGo.Text = "移動";
-			// 
-			// imageList
-			// 
-			this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-			this.imageList.ImageSize = new System.Drawing.Size(16, 16);
-			this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-			// 
-			// list
-			// 
-			this.list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-																				   this.columnHeader1,
-																				   this.columnHeader2,
-																				   this.columnHeader3,
-																				   this.columnHeader4,
-																				   this.columnHeader5});
-			this.list.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.list.FullRowSelect = true;
-			this.list.Location = new System.Drawing.Point(57, 0);
-			this.list.Name = "list";
-			this.list.Size = new System.Drawing.Size(351, 174);
-			this.list.TabIndex = 1;
-			this.list.View = System.Windows.Forms.View.Details;
-			// 
-			// columnHeader1
-			// 
-			this.columnHeader1.Text = "Name";
-			//! this.columnHeader1.Text = "名前";
-			this.columnHeader1.Width = 200;
-			// 
-			// columnHeader2
-			// 
-			this.columnHeader2.Text = "Value";
-			//! this.columnHeader2.Text = "評価額";
-			this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.columnHeader2.Width = 100;
-			// 
-			// columnHeader3
-			// 
-			this.columnHeader3.Text = "Balance";
-			//! this.columnHeader3.Text = "収支";
-			this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// columnHeader4
-			// 
-			this.columnHeader4.Text = "Sales";
-			//! this.columnHeader4.Text = "売上";
-			this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// columnHeader5
-			// 
-			this.columnHeader5.Text = "Expenses";
-			//! this.columnHeader5.Text = "経費";
-			this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// tbOK
-			// 
-			this.tbOK.ImageIndex = 1;
-			this.tbOK.Text = "Buy";
-			//! this.tbOK.Text = "購入";
-			// 
-			// MarketWindow
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.ClientSize = new System.Drawing.Size(408, 174);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.list,
-																		  this.toolBar});
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-			this.Name = "MarketWindow";
-			this.Text = "Subsidiaries";
-			//! this.Text = "子会社取引";
-			this.ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.toolBar = new System.Windows.Forms.ToolBar();
+            this.tbModeSell = new System.Windows.Forms.ToolBarButton();
+            this.tbModeBuy = new System.Windows.Forms.ToolBarButton();
+            this.tbSeparator = new System.Windows.Forms.ToolBarButton();
+            this.tbGo = new System.Windows.Forms.ToolBarButton();
+            this.tbOK = new System.Windows.Forms.ToolBarButton();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.list = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.SuspendLayout();
+            // 
+            // toolBar
+            // 
+            this.toolBar.Appearance = System.Windows.Forms.ToolBarAppearance.Flat;
+            this.toolBar.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
+            this.tbModeSell,
+            this.tbModeBuy,
+            this.tbSeparator,
+            this.tbGo,
+            this.tbOK});
+            this.toolBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.toolBar.DropDownArrows = true;
+            this.toolBar.ImageList = this.imageList;
+            this.toolBar.Location = new System.Drawing.Point(0, 0);
+            this.toolBar.Name = "toolBar";
+            this.toolBar.ShowToolTips = true;
+            this.toolBar.Size = new System.Drawing.Size(121, 174);
+            this.toolBar.TabIndex = 0;
+            this.toolBar.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right;
+            this.toolBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.onButtonClick);
+            // 
+            // tbModeSell
+            // 
+            this.tbModeSell.ImageIndex = 0;
+            this.tbModeSell.Name = "tbModeSell";
+            this.tbModeSell.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+            this.tbModeSell.Text = "My Company";
+            // 
+            // tbModeBuy
+            // 
+            this.tbModeBuy.ImageIndex = 0;
+            this.tbModeBuy.Name = "tbModeBuy";
+            this.tbModeBuy.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton;
+            this.tbModeBuy.Text = "Other Companies";
+            // 
+            // tbSeparator
+            // 
+            this.tbSeparator.Name = "tbSeparator";
+            this.tbSeparator.Style = System.Windows.Forms.ToolBarButtonStyle.Separator;
+            // 
+            // tbGo
+            // 
+            this.tbGo.ImageIndex = 2;
+            this.tbGo.Name = "tbGo";
+            this.tbGo.Text = "Go";
+            // 
+            // tbOK
+            // 
+            this.tbOK.ImageIndex = 1;
+            this.tbOK.Name = "tbOK";
+            this.tbOK.Text = "Buy";
+            // 
+            // imageList
+            // 
+            this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // list
+            // 
+            this.list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.list.FullRowSelect = true;
+            this.list.Location = new System.Drawing.Point(121, 0);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(517, 174);
+            this.list.TabIndex = 1;
+            this.list.UseCompatibleStateImageBehavior = false;
+            this.list.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 200;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Value";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Balance";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Sales";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Expenses";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader5.Width = 69;
+            // 
+            // MarketWindow
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(638, 174);
+            this.Controls.Add(this.list);
+            this.Controls.Add(this.toolBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "MarketWindow";
+            this.Text = "Subsidiaries";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion

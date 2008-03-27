@@ -194,6 +194,7 @@ namespace FreeTrain.Framework
             this.Controls.Add(this.lstBGMs);
             this.Controls.Add(this.lblAvailable);
             this.Controls.Add(this.lblCurrent);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "BGMPlaylist";
             this.Text = "BGMPlaylist";
             this.Load += new System.EventHandler(this.BGMPlaylist_Load);

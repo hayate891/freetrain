@@ -52,78 +52,46 @@ namespace FreeTrain.Controllers.Rail
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RailRoadController));
             this.message = new System.Windows.Forms.Label();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.costBox = new FreeTrain.Controls.CostBox();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Size = new System.Drawing.Size(121, 15);
-            this.lblTitle.Text = "RAILROAD";
-            // 
-            // lblExit
-            // 
-            this.lblExit.Location = new System.Drawing.Point(87, 5);
-            // 
             // message
             // 
-            this.message.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.message.Location = new System.Drawing.Point(12, 46);
+            resources.ApplyResources(this.message, "message");
             this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(107, 26);
-            this.message.TabIndex = 1;
-            this.message.Text = "Click two points on the map to place tracks";
-            this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonPlace
             // 
-            this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
+            resources.ApplyResources(this.buttonPlace, "buttonPlace");
             this.buttonPlace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
             this.buttonPlace.Checked = true;
-            this.buttonPlace.Location = new System.Drawing.Point(12, 115);
             this.buttonPlace.Name = "buttonPlace";
-            this.buttonPlace.Size = new System.Drawing.Size(46, 26);
-            this.buttonPlace.TabIndex = 2;
             this.buttonPlace.TabStop = true;
-            this.buttonPlace.Text = "Place";
-            this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.buttonPlace.UseVisualStyleBackColor = false;
             this.buttonPlace.CheckedChanged += new System.EventHandler(this.modeChanged);
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
+            resources.ApplyResources(this.buttonRemove, "buttonRemove");
             this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
-            this.buttonRemove.Location = new System.Drawing.Point(58, 115);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(61, 26);
-            this.buttonRemove.TabIndex = 3;
-            this.buttonRemove.Text = "Remove";
-            this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.buttonRemove.UseVisualStyleBackColor = false;
             this.buttonRemove.CheckedChanged += new System.EventHandler(this.modeChanged);
             // 
             // costBox
             // 
-            this.costBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.costBox, "costBox");
             this.costBox.cost = 0;
             this.costBox.label = "Cost:";
-            this.costBox.Location = new System.Drawing.Point(12, 84);
             this.costBox.Name = "costBox";
-            this.costBox.Size = new System.Drawing.Size(107, 25);
-            this.costBox.TabIndex = 4;
             // 
             // RailRoadController
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(131, 153);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonPlace);
             this.Controls.Add(this.costBox);
@@ -131,12 +99,6 @@ namespace FreeTrain.Controllers.Rail
             this.Name = "RailRoadController";
             this.Resize += new System.EventHandler(this.updateAfterResize);
             this.Load += new System.EventHandler(this.RailRoadController_Load);
-            this.Controls.SetChildIndex(this.lblTitle, 0);
-            this.Controls.SetChildIndex(this.lblExit, 0);
-            this.Controls.SetChildIndex(this.message, 0);
-            this.Controls.SetChildIndex(this.costBox, 0);
-            this.Controls.SetChildIndex(this.buttonPlace, 0);
-            this.Controls.SetChildIndex(this.buttonRemove, 0);
             this.ResumeLayout(false);
 
         }

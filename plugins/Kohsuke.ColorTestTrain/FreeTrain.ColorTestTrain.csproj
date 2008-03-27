@@ -62,9 +62,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
+    <ProjectReference Include="..\..\core\FreeTrain.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
-      <Name>FreeTrain.Core</Name>
+      <Name>FreeTrain</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

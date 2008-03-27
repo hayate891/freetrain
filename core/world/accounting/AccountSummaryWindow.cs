@@ -230,10 +230,9 @@ namespace FreeTrain.World.Accounting
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-																																								new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Rail", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)))),
-//! "鉄道"
-																																								new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "TODO")}, -1);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Rail",
+            "TODO"}, -1, System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenu = new System.Windows.Forms.ContextMenu();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
@@ -249,51 +248,49 @@ namespace FreeTrain.World.Accounting
             this.colSales = new System.Windows.Forms.ColumnHeader();
             this.colCost = new System.Windows.Forms.ColumnHeader();
             this.colBalance = new System.Windows.Forms.ColumnHeader();
-            this.tabControl = new TabControl();//Crownwood.Magic.Controls.TabControl();
-            this.tabPage1 = new TabPage();//Crownwood.Magic.Controls.TabPage();
-            this.tabPage2 = new TabPage();//Crownwood.Magic.Controls.TabPage();
-            this.tabPage3 = new TabPage();//Crownwood.Magic.Controls.TabPage();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.fontDialog = new System.Windows.Forms.FontDialog();
+            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.ContextMenu = this.contextMenu;
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 24);
+            this.label1.Size = new System.Drawing.Size(56, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Funds:";
-            //! this.label1.Text = "資金：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // contextMenu
             // 
             this.contextMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-																						this.menuItem1,
-																						this.menuItem2,
-																						this.menuItem_Graph,
-																						this.menuItem4,
-																						this.menuItem3});
+            this.menuItem1,
+            this.menuItem2,
+            this.menuItem_Graph,
+            this.menuItem4,
+            this.menuItem3});
             // 
             // menuItem1
             // 
             this.menuItem1.Index = 0;
             this.menuItem1.Text = "Change &Font...";
-            //! this.menuItem1.Text = "フォントの変更(&F)...";
             this.menuItem1.Click += new System.EventHandler(this.onChangeFont);
             // 
             // menuItem2
             // 
             this.menuItem2.Index = 1;
             this.menuItem2.Text = "&Edit Displayed Items...";
-            //! this.menuItem2.Text = "表示項目の編集(&E)...";
             this.menuItem2.Click += new System.EventHandler(this.onCustomizeGenres);
             // 
             // menuItem_Graph
             // 
             this.menuItem_Graph.Index = 2;
             this.menuItem_Graph.Text = "Display &Graph";
-            //! this.menuItem_Graph.Text = "グラフの表示(&G)";
             // 
             // menuItem4
             // 
@@ -304,14 +301,13 @@ namespace FreeTrain.World.Accounting
             // 
             this.menuItem3.Index = 4;
             this.menuItem3.Text = "&Close";
-            //! this.menuItem3.Text = "閉じる(&C)";
             // 
             // liquidAsset
             // 
             this.liquidAsset.ContextMenu = this.contextMenu;
             this.liquidAsset.Location = new System.Drawing.Point(56, 0);
             this.liquidAsset.Name = "liquidAsset";
-            this.liquidAsset.Size = new System.Drawing.Size(112, 24);
+            this.liquidAsset.Size = new System.Drawing.Size(112, 26);
             this.liquidAsset.TabIndex = 1;
             this.liquidAsset.Text = "100,000,000";
             this.liquidAsset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -321,10 +317,9 @@ namespace FreeTrain.World.Accounting
             this.label2.ContextMenu = this.contextMenu;
             this.label2.Location = new System.Drawing.Point(168, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 24);
+            this.label2.Size = new System.Drawing.Size(56, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Loans:";
-            //! this.label2.Text = "借入：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // debts
@@ -332,123 +327,115 @@ namespace FreeTrain.World.Accounting
             this.debts.ContextMenu = this.contextMenu;
             this.debts.Location = new System.Drawing.Point(224, 0);
             this.debts.Name = "debts";
-            this.debts.Size = new System.Drawing.Size(112, 24);
+            this.debts.Size = new System.Drawing.Size(112, 26);
             this.debts.TabIndex = 3;
             this.debts.Text = "100,000,000";
             this.debts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // detailView
             // 
-            this.detailView.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right);
+            this.detailView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.detailView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-																						 this.colCategory,
-																						 this.colSales,
-																						 this.colCost,
-																						 this.colBalance});
+            this.colCategory,
+            this.colSales,
+            this.colCost,
+            this.colBalance});
             this.detailView.ContextMenu = this.contextMenu;
             this.detailView.FullRowSelect = true;
             this.detailView.GridLines = true;
             this.detailView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.detailView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-																					   listViewItem1});
-            this.detailView.Location = new System.Drawing.Point(0, 21);
+            listViewItem1});
+            this.detailView.Location = new System.Drawing.Point(0, 23);
             this.detailView.MultiSelect = false;
             this.detailView.Name = "detailView";
-            this.detailView.Size = new System.Drawing.Size(338, 83);
+            this.detailView.Size = new System.Drawing.Size(338, 79);
             this.detailView.TabIndex = 4;
+            this.detailView.UseCompatibleStateImageBehavior = false;
             this.detailView.View = System.Windows.Forms.View.Details;
             // 
             // colCategory
             // 
             this.colCategory.Text = "Category";
-            //! this.colCategory.Text = "分類";
             this.colCategory.Width = 80;
             // 
             // colSales
             // 
             this.colSales.Text = "Sales";
-            //! this.colSales.Text = "売上";
             this.colSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.colSales.Width = 84;
             // 
             // colCost
             // 
             this.colCost.Text = "Cost";
-            //! this.colCost.Text = "経費";
             this.colCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.colCost.Width = 84;
             // 
             // colBalance
             // 
             this.colBalance.Text = "Balance";
-            //! this.colBalance.Text = "収支";
             this.colBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.colBalance.Width = 84;
             // 
             // tabControl
             // 
-            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right);
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.ContextMenu = this.contextMenu;
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
             this.tabControl.HotTrack = true;
-            this.tabControl.Location = new System.Drawing.Point(0, 104);
+            this.tabControl.Location = new System.Drawing.Point(0, 102);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.SelectedTab = this.tabPage1;
-            this.tabControl.Size = new System.Drawing.Size(322, 24);
+            this.tabControl.Size = new System.Drawing.Size(322, 26);
             this.tabControl.TabIndex = 5;
-            this.tabControl.TabPages.AddRange(new TabPage[] {
-																						 this.tabPage1,
-																						 this.tabPage2,
-																						 this.tabPage3});
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.onSelectorChanged);
             // 
             // tabPage1
             // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(322, 0);
+            this.tabPage1.Size = new System.Drawing.Size(314, 0);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Today";
-            //! this.tabPage1.Title = "今日";
             // 
             // tabPage2
             // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            //this.tabPage2. = false;
-            this.tabPage2.Size = new System.Drawing.Size(322, 0);
+            this.tabPage2.Size = new System.Drawing.Size(314, 0);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "This month";
-            //! this.tabPage2.Title = "今月";
             // 
             // tabPage3
             // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            //this.tabPage3.Selected = false;
-            this.tabPage3.Size = new System.Drawing.Size(322, 0);
+            this.tabPage3.Size = new System.Drawing.Size(314, 0);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "This year";
-            //! this.tabPage3.Title = "今年";
             // 
             // AccountSummaryWindow
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(340, 126);
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.tabControl,
-																		  this.detailView,
-																		  this.debts,
-																		  this.label2,
-																		  this.liquidAsset,
-																		  this.label1});
+            this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.detailView);
+            this.Controls.Add(this.debts);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.liquidAsset);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MinimumSize = new System.Drawing.Size(348, 48);
+            this.MinimumSize = new System.Drawing.Size(348, 52);
             this.Name = "AccountSummaryWindow";
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Sales Report";
-            //! this.Text = "売上レポート";
+            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
