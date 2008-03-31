@@ -273,6 +273,7 @@
     <Compile Include="controllers\IControllerSite.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="controllers\IModalController.cs" />
     <Compile Include="controllers\land\BulldozeController.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,9 +287,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="controllers\LocationStore.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="controllers\ModalController.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="controllers\PointSelectorController.cs">
@@ -593,9 +591,7 @@
     <Compile Include="views\GlobalViewOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\MapOverlay.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="views\IMapOverlay.cs" />
     <Compile Include="views\map\HeightCutWindow.cs">
       <SubType>Form</SubType>
     </Compile>
