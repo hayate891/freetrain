@@ -46,7 +46,7 @@ namespace FreeTrain.World.Subsidiaries
         /// </summary>
 		public MarketWindow() {
 			InitializeComponent();
-			Bitmap bmp = ResourceUtil.loadSystemBitmap("SubsidiaryMarketWindowToolButton.bmp");
+			Bitmap bmp = ResourceUtil.LoadSystemBitmap("SubsidiaryMarketWindowToolButton.bmp");
 			imageList.TransparentColor = bmp.GetPixel(0,0);
 			imageList.Images.AddStrip(bmp);
 			

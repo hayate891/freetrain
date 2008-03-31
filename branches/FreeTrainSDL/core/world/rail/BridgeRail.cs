@@ -114,7 +114,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void drawBefore(DrawContext display, Point pt)
             {
-                backgrounds[pictureIndex].draw(display.surface, pt);
+                backgrounds[pictureIndex].draw(display.Surface, pt);
                 // don't call the base class so that we won't draw the rail road unnecessarily
             }
             /// <summary>
@@ -124,7 +124,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void drawAfter(DrawContext display, Point pt)
             {
-                foregrounds[pictureIndex].draw(display.surface, pt);
+                foregrounds[pictureIndex].draw(display.Surface, pt);
             }
         }
 

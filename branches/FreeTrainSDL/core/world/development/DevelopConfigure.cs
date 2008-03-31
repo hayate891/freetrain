@@ -222,7 +222,7 @@ namespace FreeTrain.World.Development
             // btnApply
             // 
             this.btnApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnApply.Location = new System.Drawing.Point(476, 294);
+            this.btnApply.Location = new System.Drawing.Point(489, 315);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(80, 25);
             this.btnApply.TabIndex = 2;
@@ -232,7 +232,7 @@ namespace FreeTrain.World.Development
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(572, 294);
+            this.btnCancel.Location = new System.Drawing.Point(585, 315);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 25);
             this.btnCancel.TabIndex = 2;
@@ -592,15 +592,15 @@ namespace FreeTrain.World.Development
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(8, 285);
+            this.label5.Location = new System.Drawing.Point(8, 306);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(652, 2);
+            this.label5.Size = new System.Drawing.Size(665, 2);
             this.label5.TabIndex = 3;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.Location = new System.Drawing.Point(16, 294);
+            this.btnSave.Location = new System.Drawing.Point(16, 315);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 25);
             this.btnSave.TabIndex = 2;
@@ -610,7 +610,7 @@ namespace FreeTrain.World.Development
             // btnLoad
             // 
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLoad.Location = new System.Drawing.Point(112, 294);
+            this.btnLoad.Location = new System.Drawing.Point(112, 315);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(80, 25);
             this.btnLoad.TabIndex = 2;
@@ -635,7 +635,7 @@ namespace FreeTrain.World.Development
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.tbQAlpha);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Location = new System.Drawing.Point(0, -18);
+            this.groupBox1.Location = new System.Drawing.Point(0, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(326, 234);
             this.groupBox1.TabIndex = 4;
@@ -654,7 +654,7 @@ namespace FreeTrain.World.Development
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Location = new System.Drawing.Point(332, -18);
+            this.groupBox2.Location = new System.Drawing.Point(332, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(332, 147);
             this.groupBox2.TabIndex = 5;
@@ -673,7 +673,7 @@ namespace FreeTrain.World.Development
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Location = new System.Drawing.Point(332, 129);
+            this.groupBox3.Location = new System.Drawing.Point(332, 150);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(332, 147);
             this.groupBox3.TabIndex = 6;
@@ -696,7 +696,7 @@ namespace FreeTrain.World.Development
             // DevelopConfigure
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(670, 323);
+            this.ClientSize = new System.Drawing.Size(683, 344);
             this.Controls.Add(this.a);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

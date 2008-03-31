@@ -27,7 +27,6 @@ using System.Runtime.InteropServices;
 
 using Tao.Sdl;
 using SdlDotNet.Audio;
-//using SdlDotNet.Graphics;
 using SdlDotNet.Core;
 using SdlDotNet.Input;
 
@@ -54,13 +53,13 @@ namespace FreeTrain
         int height = 480;
         int mapXOffset = 12;
         int mapYOffset = 24;
+        Splash splashscreen;
         System.Windows.Forms.Timer timer;
         SdlDotNet.Graphics.Surface screen;
-        SDLGUI gui;
         Sdl.SDL_VideoInfo videoInfo;
         Sdl.SDL_PixelFormat pixelFormat;
         int currentBpp = 16;
-        ModalController controller = null;
+        IModalController controller = null;
         bool dragMode = false;
         Point dragStartMousePosition;
         Point dragStartScrollPosition;
@@ -96,8 +95,8 @@ namespace FreeTrain
 
         private void UpdateMessage(string msg, float progress)
         {
-            //Console.WriteLine("LOADING: " + msg + "{" + progress + "}");
-            gui.addSplashText(msg.Replace('\n', ' '), progress);
+            splashscreen.status.AppendText(msg);
+            splashscreen.status.AppendText("\n");
         }
 
         private void MusicHasStopped()
@@ -117,15 +116,14 @@ namespace FreeTrain
         {
             if (qView != null)
             {
-                controller = MainWindow.mainWindow.currentController;
-                //MainWindow.mainWindow.Show();
+                controller = MainWindow.mainWindow.CurrentController;
                 qView.updateScreen();
                 if (WorldDefinition.World.Satellite == null ||
                     WorldDefinition.World.Satellite.surface.w != 150 ||
                     WorldDefinition.World.Satellite.surface.h != 150)
                 {
                     WorldDefinition.World.Satellite = new Surface(150, 150, 32);
-                    WorldDefinition.World.Satellite.sourceColorKey = Color.Magenta;
+                    WorldDefinition.World.Satellite.SourceColorKey = Color.Magenta;
                     WorldDefinition.World.Satellite.Fill(Color.FromArgb(222, 195, 132));
                 }
             }
@@ -138,11 +136,6 @@ namespace FreeTrain
             {
                 Events.QuitApplication();
             }
-            if (e.Key == Key.B)
-            {
-                RailRoadController.create();
-            }
-            
         }
 
         private void Resize(object sender, SdlDotNet.Graphics.VideoResizeEventArgs e)
@@ -184,15 +177,12 @@ namespace FreeTrain
 
             if (lastMouseState)
             {
-                if (!gui.checkIfGUIClick(e.EventStruct.button))
+                if (controller != null)
                 {
-                    if (controller != null)
-                    {
-                        Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
-                        Location xyz = qView.fromABToXYZ(ab, controller);
+                    Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
+                    Location xyz = qView.fromABToXYZ(ab, controller);
 
-                        if (e.Button == MouseButton.PrimaryButton) controller.OnClick(null, xyz, ab);
-                    }
+                    if (e.Button == MouseButton.PrimaryButton) controller.OnClick(null, xyz, ab);
                 }
             }
             lastMouseState = e.ButtonPressed;
@@ -206,7 +196,7 @@ namespace FreeTrain
             }
             else
             {
-                gui.checkMouseMovement(e.EventStruct.motion);
+                //gui.checkMouseMovement(e.EventStruct.motion);
                 if (controller != null)
                 {
                     Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
@@ -234,61 +224,12 @@ namespace FreeTrain
 
         private void finalDraw()
         {
-            if (gui != null)
+            if (mainWindowMDI != null && WorldDefinition.World != null)
             {
-                gui.updateGUIElements(width, height);
-                if (WorldDefinition.World != null) gui.clock_text = WorldDefinition.World.clock.displayString;
-                gui.drawGUI(width, height, screen.Handle);
-            }
-            if (mainWindowMDI != null)
-            {
-                if (WorldDefinition.World != null) mainWindowMDI.statusStrip.Text = WorldDefinition.World.clock.displayString;
+                mainWindowMDI.toolStripStatusLabel.Text = WorldDefinition.World.clock.displayString;
             }
             screen.Update();
         }
-
-        //private void GUIButtonClick(object sender, EventArgs e)
-        //{
-        //    switch ((string)sender)
-        //    {
-        //        case "rail":
-        //            RailRoadController.create();
-        //            RailRoadController.theInstance.Hide();
-        //            RailRoadController.theInstance.MdiParent = mainWindowMDI;
-        //            //mainWindowMDI.AddOwnedForm(RailRoadController.theInstance);
-        //            RailRoadController.theInstance.Show();
-        //            break;
-        //        case "station":
-        //            PlatformController.create();
-        //            PlatformController.theInstance.Hide();
-        //            PlatformController.theInstance.MdiParent = mainWindowMDI;
-        //            PlatformController.theInstance.Show();
-        //            break;
-        //        case "train":
-        //            TrainPlacementController.create();
-        //            TrainPlacementController.theInstance.Hide();
-        //            TrainPlacementController.theInstance.MdiParent = mainWindowMDI;
-        //            TrainPlacementController.theInstance.Show();
-        //            break;
-        //        case "land":
-        //            MountainController.create();
-        //            MountainController.theInstance.Hide();
-        //            MountainController.theInstance.MdiParent = mainWindowMDI;
-        //            MountainController.theInstance.Show();
-        //            break;
-        //        case "struct":
-        //            VarHeightBuildingController.create();
-        //            VarHeightBuildingController.theInstance.Hide();
-        //            VarHeightBuildingController.theInstance.MdiParent = mainWindowMDI;
-        //            VarHeightBuildingController.theInstance.Show();
-        //            break;
-        //        case "playlist":
-        //            BGMPlaylist bgmplaylist = new BGMPlaylist();
-        //            bgmplaylist.MdiParent = mainWindowMDI;
-        //            bgmplaylist.Show();
-        //            break;
-        //    }
-        //}
 
         private bool scrollByDrag(Point curMousePos)
         {
@@ -315,12 +256,16 @@ namespace FreeTrain
         [STAThread]
         static void Main()
         {
-            FreeTrainSDL ftsdl = new FreeTrainSDL();
-            ftsdl.Go();
+            FreeTrainSDL freeTrainSDL = new FreeTrainSDL();
+            freeTrainSDL.Go();
         }
 
         private void Go()
         {
+            splashscreen = new Splash();
+            splashscreen.Show();
+            splashscreen.BringToFront();
+            splashscreen.Refresh();
             timer = new System.Windows.Forms.Timer();
             Events.KeyboardDown += new EventHandler<KeyboardEventArgs>(this.KeyDown);
             Events.MouseButtonDown +=
@@ -344,6 +289,7 @@ namespace FreeTrain
                 SdlDotNet.Graphics.Video.WindowIcon();
                 SdlDotNet.Graphics.Video.WindowCaption = Translation.GetString("MAIN_WINDOW_TITLE");
                 SdlDotNet.Graphics.Video.Initialize();
+                splashscreen.BringToFront();
             }
             catch
             {
@@ -366,112 +312,41 @@ namespace FreeTrain
                 videoInfo = (Sdl.SDL_VideoInfo)Marshal.PtrToStructure(videoInfoPointer, typeof(Sdl.SDL_VideoInfo));
                 pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(videoInfo.vfmt, typeof(Sdl.SDL_PixelFormat));
             }
-
-            gui = new SDLGUI();
-            //gui.ButtonClick += new EventHandler(GUIButtonClick);
-            gui.initGUI(width, height, videoInfo.vfmt);
-            //gui.addButton("rail", "Railroad Construction");
-            //gui.addButton("station", "Station Construction");
-            //gui.addButton("train", "Train Stuff");
-            //gui.addButton("land", "Modify Terrain");
-            //gui.addButton("struct", "Structure Construction");
-            //gui.addButton("playlist", "Music Playlist");
-
-            gui.clock_text = "Initialising...";
-
-            UpdateMessage("FreeTrain SDL Starting...", -1);
-            gui.SHOW_SPLASH = true;
+            splashscreen.status.AppendText("FreeTrain SDL Starting...");
+            splashscreen.status.AppendText("\n");
+            splashscreen.Refresh();
 
             finalDraw();
 
             MainWindow.mainWindow = new MainWindow(null, true);
-            UpdateMessage("Loading plugins...", -1);
+            splashscreen.status.AppendText("Loading plugins...");
+            splashscreen.status.AppendText("\n");
+            splashscreen.Refresh();
             finalDraw();
             Core.init(null, null, null, new ProgressHandler(UpdateMessage), true);
             world = new WorldDefinition(new Distance(150, 150, 7), 3);
             WorldDefinition.World = world;
 
             weatherOverlay = NullWeatherOverlay.theInstance;
-
-            UpdateMessage("Creating Map...", 0);
             finalDraw();
             qView = new QuarterViewDrawer(world, new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8));
             qView.offscreenBuffer = new Surface(world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8, screen.CreateCompatibleSurface().Pixels);
-            qView.offscreenBuffer.sourceColorKey = Color.Magenta;
+            qView.offscreenBuffer.SourceColorKey = Color.Magenta;
             qView.recreateDrawBuffer(new Size(width, height), true);
-            UpdateMessage("Creating Map...", 100);
+            splashscreen.status.AppendText("Creating Map...");
+            splashscreen.status.AppendText("\n");
+            splashscreen.Refresh();
             finalDraw();
 
             qView.draw(new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8), null);
-
-            gui.SHOW_SPLASH = false;
-
             timer.Tick += new EventHandler(timerTick);
             timer.Interval = 33;
             timer.Enabled = true;
             timer.Start();
             mainWindowMDI = new MainWindowMDI();
             mainWindowMDI.Show();
-            RailRoadController.create();
-            RailRoadController.theInstance.Hide();
-            RailRoadController.theInstance.MdiParent = mainWindowMDI;
-            RailRoadController.theInstance.WindowState = FormWindowState.Maximized;
-            RailRoadController.theInstance.Show();
-            PlatformController.create();
-            PlatformController.theInstance.Hide();
-            PlatformController.theInstance.MdiParent = mainWindowMDI;
-            PlatformController.theInstance.WindowState = FormWindowState.Maximized;
-            PlatformController.theInstance.Show();
-            TrainPlacementController.create();
-            TrainPlacementController.theInstance.Hide();
-            TrainPlacementController.theInstance.MdiParent = mainWindowMDI;
-            TrainPlacementController.theInstance.WindowState = FormWindowState.Maximized;
-            TrainPlacementController.theInstance.Show();
-            MountainController.create();
-            MountainController.theInstance.Hide();
-            MountainController.theInstance.MdiParent = mainWindowMDI;
-            MountainController.theInstance.WindowState = FormWindowState.Maximized;
-            MountainController.theInstance.Show();
-            VarHeightBuildingController.create();
-            VarHeightBuildingController.theInstance.Hide();
-            VarHeightBuildingController.theInstance.MdiParent = mainWindowMDI;
-            VarHeightBuildingController.theInstance.WindowState = FormWindowState.Maximized;
-            VarHeightBuildingController.theInstance.Show();
-            LandController.create();
-            LandController.theInstance.Hide();
-            LandController.theInstance.MdiParent = mainWindowMDI;
-            LandController.theInstance.WindowState = FormWindowState.Maximized;
-            LandController.theInstance.Show();
-            LandPropertyController.create();
-            LandPropertyController.theInstance.Hide();
-            LandPropertyController.theInstance.MdiParent = mainWindowMDI;
-            LandPropertyController.theInstance.WindowState = FormWindowState.Maximized;
-            LandPropertyController.theInstance.Show();
-            StationPassagewayController.create();
-            StationPassagewayController.theInstance.Hide();
-            StationPassagewayController.theInstance.MdiParent = mainWindowMDI;
-            StationPassagewayController.theInstance.WindowState = FormWindowState.Maximized;
-            StationPassagewayController.theInstance.Show();
-            SlopeRailRoadController.create();
-            SlopeRailRoadController.theInstance.Hide();
-            SlopeRailRoadController.theInstance.MdiParent = mainWindowMDI;
-            SlopeRailRoadController.theInstance.WindowState = FormWindowState.Maximized;
-            SlopeRailRoadController.theInstance.Show();
-            PluginListDialog pluginListDialog = new PluginListDialog();
-            pluginListDialog.MdiParent = mainWindowMDI;
-            pluginListDialog.WindowState = FormWindowState.Maximized;
-            pluginListDialog.Show();
-            //RoadController roadController = new RoadController();
-            //roadController.MdiParent = mainWindowMDI;
-            //roadController.Show();
-            //BulldozeController.create();
-            //BulldozeController.theInstance.Hide();
-            //BulldozeController.theInstance.MdiParent = mainWindowMDI;
-            //BulldozeController.theInstance.Show();
-            BGMPlaylist bgmplaylist = new BGMPlaylist();
-            bgmplaylist.MdiParent = mainWindowMDI;
-            bgmplaylist.Show();
-
+            splashscreen.BringToFront();
+            splashscreen.Close();
 
             Events.Run();
         }

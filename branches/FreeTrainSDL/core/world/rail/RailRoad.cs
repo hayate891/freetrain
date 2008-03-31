@@ -186,7 +186,7 @@ namespace FreeTrain.World.Rail
         public virtual void invalidateVoxel()
         {
             // by default, the occupied voxel is updated
-            WorldDefinition.World.onVoxelUpdated(Voxel);
+            WorldDefinition.World.OnVoxelUpdated(Voxel);
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public virtual void drawBefore(DrawContext display, Point pt)
         {
-            pattern.draw(display.surface, pt);
+            pattern.draw(display.Surface, pt);
         }
         /// <summary>
         /// Draws a railroad. This method is called after the car is drawn.

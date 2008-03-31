@@ -79,7 +79,7 @@ namespace FreeTrain.Framework.Graphics
                         Surface surface = new Surface(sz.Width, sz.Height);// ResourceUtil.directDraw.createOffscreenSurface(sz);
                         surfaces[x, y, z] = surface;
                         surface.Fill(Color.Magenta);
-                        surface.sourceColorKey = Color.Magenta;
+                        surface.SourceColorKey = Color.Magenta;
 
                         Point offset = src[x, y, z].offset;
 

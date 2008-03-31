@@ -34,7 +34,7 @@ namespace FreeTrain.Views
     /// <summary>
     /// Draw quarter view of the map and maintain them properly.
     /// </summary>
-    public class QuarterViewDrawer : IDisposable, VoxelOutlookListener
+    public class QuarterViewDrawer : IDisposable, IVoxelOutlookListener
     {//
         /// <summary>
         /// True to allow MapOverlay to update the surface.
@@ -51,7 +51,7 @@ namespace FreeTrain.Views
         /// <summary>
         /// Drawing context that wraps <code>offscreenBuffer</code>
         /// </summary>
-        private DrawContextEx drawContext;
+        private DrawContext drawContext;
 
         /// <summary>
         /// Maintains the dirty rect that needs to be updated.
@@ -103,7 +103,7 @@ namespace FreeTrain.Views
 
             world.voxelOutlookListeners.Add(this);
 
-            onUpdateAllVoxels();	// initially all the rects are dirty
+            OnUpdateAllVoxels();	// initially all the rects are dirty
             //PictureManager.onSurfaceLost += new EventHandler(onSurfaceLost);
         }
         /// <summary>
@@ -201,7 +201,7 @@ namespace FreeTrain.Views
             {
                 if (_enableOverlay == value) return;
                 _enableOverlay = value;
-                onUpdateAllVoxels();
+                OnUpdateAllVoxels();
             }
         }
 
@@ -237,7 +237,7 @@ namespace FreeTrain.Views
 
                     if (OnHeightCutChanged != null)
                         OnHeightCutChanged(this, null);
-                    onUpdateAllVoxels();
+                    OnUpdateAllVoxels();
                 }
                 else
                     _heightCutHeight = value;
@@ -270,10 +270,10 @@ namespace FreeTrain.Views
             if (size.Width > 0 && size.Height > 0)
             {
                 //offscreenBuffer = directDraw.createOffscreenSurface( size );
-                drawContext = new DrawContextEx(offscreenBuffer);
+                drawContext = new DrawContext(offscreenBuffer);
             }
 
-            onUpdateAllVoxels();
+            OnUpdateAllVoxels();
         }
 
 
@@ -306,7 +306,7 @@ namespace FreeTrain.Views
         /// 
         /// </summary>
         /// <param name="loc"></param>
-        public void onUpdateVoxel(Location loc)
+        public void OnUpdateVoxel(Location loc)
         {
             Rectangle boundingBox = world.getBoundingBox(loc);
             if (boundingBox.IntersectsWith(this.visibleRect))
@@ -319,7 +319,7 @@ namespace FreeTrain.Views
         /// 
         /// </summary>
         /// <param name="cube"></param>
-        public void onUpdateVoxel(Cube cube)
+        public void OnUpdateVoxel(Cube cube)
         {
             Rectangle r = cube.boundingABRect;
             r.Intersect(this.visibleRect);	// cut the rect by the visible rect
@@ -335,7 +335,7 @@ namespace FreeTrain.Views
         /// <summary>
         /// Invalidate the entire visible region.
         /// </summary>
-        public void onUpdateAllVoxels()
+        public void OnUpdateAllVoxels()
         {
             dirtyRect.add(this.visibleRect);
             Console.WriteLine("TIMESHIFT");
@@ -373,7 +373,7 @@ namespace FreeTrain.Views
         /// </summary>
         /// <param name="rectAB">Rectangle in the (A,B) coordinates.</param>
         /// <param name="overlay"></param>
-        public void draw(Rectangle rectAB, MapOverlay overlay)
+        public void draw(Rectangle rectAB, IMapOverlay overlay)
         {
             // the same rectangle in the client coordinates
             Rectangle rectClient = fromABToClient(rectAB);
@@ -438,24 +438,24 @@ namespace FreeTrain.Views
                                     if (waterLevel <= z)
                                     {
                                         //DateTime start = DateTime.Now;
-                                        emptyChip.draw(drawContext.surface, pt);
+                                        emptyChip.draw(drawContext.Surface, pt);
                                         //Debug.WriteLine(z + "[3]: " + (DateTime.Now - start).TotalMilliseconds + "ms, ");
                                     }
                                     else
-                                        waterChip.draw(drawContext.surface, pt);
+                                        waterChip.draw(drawContext.Surface, pt);
                                 }
                             }
                             else
                                 if (z == waterLevel && noHeightCut)
                                 {
-                                    emptyChip.drawShape(drawContext.surface, pt, waterSurfaceColor);
+                                    emptyChip.drawShape(drawContext.Surface, pt, waterSurfaceColor);
                                 }
                                 else
                                     if (z == Z && Z < groundLevel)
                                     {
                                         // if the surface voxel is not drawn, draw the "under group" chip
                                         if (shouldDrawGround(h, v, z))
-                                            ResourceUtil.underGroundChip.draw(drawContext.surface, pt);
+                                            ResourceUtil.underGroundChip.draw(drawContext.Surface, pt);
                                     }
                         }
                         //					}
@@ -508,8 +508,8 @@ namespace FreeTrain.Views
 
             DateTime start = DateTime.Now;
 
-            MapOverlay overlay = null;
-            ModalController controller = MainWindow.mainWindow.currentController;
+            IMapOverlay overlay = null;
+            IModalController controller = MainWindow.mainWindow.CurrentController;
             if (controller != null) overlay = controller.Overlay;
 
             if (overlay != null)
@@ -572,7 +572,7 @@ namespace FreeTrain.Views
             // drawContext will be null if the client size is empty or the window is minimized.
             // no blitting necessary in that case.
             if (drawContext != null)
-                target.blt(pt, drawContext.surface);
+                target.blt(pt, drawContext.Surface);
         }
 
         /// <summary>
@@ -591,7 +591,7 @@ namespace FreeTrain.Views
         public Bitmap createBitmap()
         {
             updateScreen();
-            return drawContext.surface.Bitmap;
+            return drawContext.Surface.Bitmap;
         }
 
         //		/// <summary>
@@ -672,7 +672,7 @@ namespace FreeTrain.Views
         /// <summary>
         /// Converts the (A,B) coordinates to (X,Y,Z) coordinates.
         /// </summary>
-        public Location fromABToXYZ(int a, int b, ModalController controller)
+        public Location fromABToXYZ(int a, int b, IModalController controller)
         {
             int t = 2 * b - 16;
 
@@ -702,7 +702,7 @@ namespace FreeTrain.Views
         /// <param name="pt"></param>
         /// <param name="controller"></param>
         /// <returns></returns>
-        public Location fromABToXYZ(Point pt, ModalController controller)
+        public Location fromABToXYZ(Point pt, IModalController controller)
         {
             return fromABToXYZ(pt.X, pt.Y, controller);
         }
@@ -711,7 +711,7 @@ namespace FreeTrain.Views
         /// Converts the mouse coordinate (which is client coordinate)
         /// to (X,Y) coordinates.
         /// </summary>
-        public Location fromClientToXYZ(MouseEventArgs mea, ModalController controller)
+        public Location fromClientToXYZ(MouseEventArgs mea, IModalController controller)
         {
             return fromABToXYZ(fromClientToAB(mea.X, mea.Y), controller);
         }
@@ -722,7 +722,7 @@ namespace FreeTrain.Views
         /// <param name="cy"></param>
         /// <param name="controller"></param>
         /// <returns></returns>
-        public Location fromClientToXYZ(int cx, int cy, ModalController controller)
+        public Location fromClientToXYZ(int cx, int cy, IModalController controller)
         {
             return fromABToXYZ(fromClientToAB(cx, cy), controller);
         }

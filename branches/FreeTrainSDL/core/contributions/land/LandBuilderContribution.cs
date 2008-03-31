@@ -141,7 +141,7 @@ namespace FreeTrain.Contributions.Land
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override ModalController createRemover(IControllerSite site)
+        public override IModalController createRemover(IControllerSite site)
         {
             return new DefaultControllerImpl(this, site,
                 new DefaultControllerImpl.SpriteBuilder(getSprite));

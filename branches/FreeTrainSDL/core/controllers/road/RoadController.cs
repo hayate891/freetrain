@@ -44,7 +44,7 @@ namespace FreeTrain.Controllers.Road
         /// 
         /// </summary>
         public RoadController()
-            : base(null)
+            : base()
         {
 
         }
@@ -55,7 +55,7 @@ namespace FreeTrain.Controllers.Road
         /// <summary>
         /// 
         /// </summary>
-        protected override LineContribution type
+        protected LineContribution type
         { get { return currentContrib; } }
 
         /// <summary>
@@ -64,9 +64,9 @@ namespace FreeTrain.Controllers.Road
         /// <param name="d"></param>
         /// <param name="canvas"></param>
         /// <param name="pt"></param>
-        protected override void draw(Direction d, DrawContextEx canvas, Point pt)
+        protected void Draw(Direction d, DrawContext canvas, Point pt)
         {
-            ResourceUtil.emptyChip.drawShape(canvas.surface, pt, Color.Blue);
+            ResourceUtil.emptyChip.drawShape(canvas.Surface, pt, Color.Blue);
             //			RoadPattern.getStraight(d).drawAlpha( canvas.surface, pt );
         }
 
@@ -79,7 +79,7 @@ namespace FreeTrain.Controllers.Road
         /// デザイナ サポートに必要なメソッドです。このメソッドの内容を
         /// コード エディタで変更しないでください。
         /// </summary>
-        protected override void InitializeComponent()
+        protected void InitializeComponent()
         {
             base.InitializeComponent();
             this.SuspendLayout();

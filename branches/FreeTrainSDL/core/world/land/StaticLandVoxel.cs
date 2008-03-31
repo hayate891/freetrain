@@ -71,7 +71,7 @@ namespace FreeTrain.World.Land
         public override void draw(DrawContext surface, Point pt, int heightCutDiff)
         {
             // always draw it regardless of the height cut
-            contrib.sprite.draw(surface.surface, pt);
+            contrib.sprite.draw(surface.Surface, pt);
         }
         /// <summary>
         /// 

@@ -34,7 +34,7 @@ namespace FreeTrain.Controllers
     /// on map windows, can modify the image of the map view,
     /// and can affect how mouse clicks are interpreted.
     /// </summary>
-    public interface ModalController
+    public interface IModalController
     {
         /// <summary>
         /// 
@@ -87,7 +87,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// If this controller needs to modify the map view, return non-null value.
         /// </summary>
-        MapOverlay Overlay { get; }
+        IMapOverlay Overlay { get; }
 
         /// <summary>
         /// 

@@ -107,7 +107,7 @@ namespace FreeTrain.Contributions.Land
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override ModalController createBuilder(IControllerSite site)
+        public override IModalController createBuilder(IControllerSite site)
         {
             return new DefaultControllerImpl(this, site, new DefaultControllerImpl.SpriteBuilder(getLandSprite));
         }

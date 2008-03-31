@@ -34,7 +34,7 @@ namespace FreeTrain.Controllers
     /// <summary>
     /// 
     /// </summary>
-    public class AbstractControllerImpl : Form, ModalController
+    public class AbstractControllerImpl : Form, IModalController
     {
         /// <summary>
         /// 
@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers
             // Attach the control when activated.
             try
             {
-                MainWindow.mainWindow.attachController(this);
+                MainWindow.mainWindow.AttachController(this);
             }
             catch (NullReferenceException nre)
             {
@@ -68,8 +68,8 @@ namespace FreeTrain.Controllers
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             // Detach it when it is closed.
-            if (MainWindow.mainWindow.currentController == this)
-                MainWindow.mainWindow.detachController();
+            if (MainWindow.mainWindow.CurrentController == this)
+                MainWindow.mainWindow.DetachController();
         }
 
         //
@@ -97,7 +97,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual MapOverlay Overlay { get { return this as MapOverlay; } }
+        public virtual IMapOverlay Overlay { get { return this as IMapOverlay; } }
 
         /// <summary>
         /// 
@@ -109,7 +109,7 @@ namespace FreeTrain.Controllers
         public virtual void OnDetached()
         {
             // redraw the entire surface to erase any left-over from this controller
-            WorldDefinition.World.onAllVoxelUpdated();
+            WorldDefinition.World.OnAllVoxelUpdated();
         }
 
         /// <summary>

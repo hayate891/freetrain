@@ -35,33 +35,12 @@ namespace FreeTrain.Controllers.Rail
     /// <summary>
     /// StationBridgeController の概要の説明です。
     /// </summary>
-    public class StationPassagewayController : AbstractControllerImpl, MapOverlay, LocationDisambiguator
+    public class StationPassagewayController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new StationPassagewayController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
-        public static StationPassagewayController  theInstance;
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
-
-        private StationPassagewayController()
+        public StationPassagewayController()
         {
             InitializeComponent();
 
@@ -224,7 +203,7 @@ namespace FreeTrain.Controllers.Rail
                 return ThinPlatform.get(loc) != null || GroundDisambiguator.theInstance.isSelectable(loc);
         }
 
-        private static readonly Location UNPLACED = World.Location.UNPLACED;
+        private static readonly Location UNPLACED = World.Location.Unplaced;
 
         /// <summary> Used when we are placing a passageway. </summary>
         private Location anchor = UNPLACED;
@@ -242,7 +221,7 @@ namespace FreeTrain.Controllers.Rail
             if (isStair)
             {
                 location = loc;
-                w.onAllVoxelUpdated();
+                w.OnAllVoxelUpdated();
             }
             else
                 if (anchor != UNPLACED)
@@ -251,7 +230,7 @@ namespace FreeTrain.Controllers.Rail
                     if (loc != location)
                     {
                         location = loc;
-                        w.onAllVoxelUpdated();
+                        w.OnAllVoxelUpdated();
                     }
                 }
         }
@@ -314,7 +293,7 @@ namespace FreeTrain.Controllers.Rail
             else
             {
                 // cancel the anchor
-                WorldDefinition.World.onAllVoxelUpdated();
+                WorldDefinition.World.OnAllVoxelUpdated();
                 anchor = UNPLACED;
             }
         }
@@ -326,7 +305,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
             if (anchor != UNPLACED && isPlacing && isPassage)
                 canvas.Tag = canBuildPassageway(anchor, location);
@@ -338,14 +317,14 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             object tag = canvas.Tag;
 
             if (tag != null && (bool)tag && loc.inBetween(anchor, location))
             {
                 PassagewayRail.getFloatingSprite(anchor.getDirectionTo(location))
-                    .drawAlpha(canvas.surface, pt);
+                    .drawAlpha(canvas.Surface, pt);
             }
         }
         /// <summary>
@@ -353,7 +332,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawAfter(QuarterViewDrawer view, DrawContext canvas)
         {
         }
 
@@ -387,7 +366,7 @@ namespace FreeTrain.Controllers.Rail
                 if (loc == loc2)
                 {
                     // TODO: correctly updated voxels
-                    WorldDefinition.World.onAllVoxelUpdated();
+                    WorldDefinition.World.OnAllVoxelUpdated();
                     return;
                 }
             }

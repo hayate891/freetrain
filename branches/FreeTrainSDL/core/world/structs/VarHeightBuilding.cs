@@ -232,11 +232,11 @@ namespace FreeTrain.World.Structs
                 {
                     Sprite[] sps = o.type.getSprites(x, y, z, o.height);
                     for (int i = 0; i < sps.Length; i++)
-                        sps[i].draw(display.surface, pt);
+                        sps[i].draw(display.Surface, pt);
                 }
                 else
                     if (z == 0)
-                        ResourceUtil.emptyChip.drawShape(display.surface, pt, o.heightCutColor);
+                        ResourceUtil.emptyChip.drawShape(display.Surface, pt, o.heightCutColor);
             }
         }
 

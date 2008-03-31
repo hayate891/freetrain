@@ -54,7 +54,7 @@ namespace FreeTrain.Contributions.Land
         public override void create(int x1, int y1, int x2, int y2, int z, bool owned)
         {
             bulldoze(new Location(x1, y1, z), new Location(x2, y2, z));
-            WorldDefinition.World.onVoxelUpdated(new Cube(x1, y1, z, x2 - x1 + 1, y2 - y1 + 1, 1));
+            WorldDefinition.World.OnVoxelUpdated(new Cube(x1, y1, z, x2 - x1 + 1, y2 - y1 + 1, 1));
         }
         /// <summary>
         /// 
@@ -108,7 +108,7 @@ namespace FreeTrain.Contributions.Land
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override ModalController createBuilder(IControllerSite site)
+        public override IModalController createBuilder(IControllerSite site)
         {
             return createRemover(site);
         }

@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 49</value>
+    <value>12, 11</value>
   </data>
   <data name="message.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 26</value>
+    <value>140, 26</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="message.TabIndex" type="System.Int32, mscorlib">
@@ -157,10 +157,10 @@
     <value>Button</value>
   </data>
   <data name="buttonPlace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 118</value>
+    <value>12, 80</value>
   </data>
   <data name="buttonPlace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 26</value>
+    <value>58, 26</value>
   </data>
   <data name="buttonPlace.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -184,16 +184,16 @@
     <value>1</value>
   </data>
   <data name="buttonRemove.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="buttonRemove.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
   </data>
   <data name="buttonRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 118</value>
+    <value>76, 80</value>
   </data>
   <data name="buttonRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 26</value>
+    <value>59, 26</value>
   </data>
   <data name="buttonRemove.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -220,10 +220,10 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="costBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 87</value>
+    <value>12, 49</value>
   </data>
   <data name="costBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 25</value>
+    <value>140, 25</value>
   </data>
   <data name="costBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -247,7 +247,7 @@
     <value>5, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>158, 156</value>
+    <value>164, 118</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Railroad</value>
@@ -256,6 +256,6 @@
     <value>RailRoadController</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>FreeTrain.Controllers.AbstractControllerImpl, FreeTrain, Version=1.0.3008.15888, Culture=neutral, PublicKeyToken=bcc810b413ef8c1c</value>
+    <value>FreeTrain.Controllers.AbstractControllerImpl, FreeTrain, Version=1.0.3012.24298, Culture=neutral, PublicKeyToken=bcc810b413ef8c1c</value>
   </data>
 </root>

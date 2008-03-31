@@ -32,7 +32,7 @@ namespace FreeTrain.Contributions.Land
     /// ModalController implementation typical for most of the land builder contribution.
     /// This class is here just for the code reuse.
     /// </summary>
-    public class DefaultControllerImpl : RectSelectorController, MapOverlay
+    public class DefaultControllerImpl : RectSelectorController, IMapOverlay
     {
         /// <summary>
         /// 
@@ -70,7 +70,7 @@ namespace FreeTrain.Contributions.Land
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
         /// <summary>
         /// 
         /// </summary>
@@ -78,18 +78,18 @@ namespace FreeTrain.Contributions.Land
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (loc.z != currentLoc.z) return;
 
             if (anchor != UNPLACED && loc.inBetween(anchor, currentLoc))
-                spriteBuilder().drawAlpha(canvas.surface, pt);
+                spriteBuilder().drawAlpha(canvas.Surface, pt);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
     }
 }

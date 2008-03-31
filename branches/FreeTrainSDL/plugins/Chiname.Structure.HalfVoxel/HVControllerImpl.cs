@@ -35,12 +35,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// ModalController that selects the half voxel region
     /// and do something with it.
     /// </summary>
-    public class HVControllerImpl : ModalController, MapOverlay
+    public class HVControllerImpl : IModalController, IMapOverlay
     {
 
         /// <summary>Constant</summary>
         [CLSCompliant(false)]
-        protected static readonly Location UNPLACED = World.Location.UNPLACED;
+        protected static readonly Location UNPLACED = World.Location.Unplaced;
         static private readonly string cur_id = "{HALF-VOXEL-STRUCTURE-CURSOR-IMAGE}";
         /// <summary>
         /// 
@@ -337,12 +337,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public MapOverlay Overlay
+        public IMapOverlay Overlay
         {
             get
             {
                 // return this object if it implements MapOverlay by itself.
-                return this as MapOverlay;
+                return this as IMapOverlay;
             }
         }
 
@@ -373,8 +373,8 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public virtual void OnDetached()
         {
             // clear the remaining image
-            if (currentPos != Location.UNPLACED)
-                WorldDefinition.World.onVoxelUpdated(currentPos);
+            if (currentPos != Location.Unplaced)
+                WorldDefinition.World.OnVoxelUpdated(currentPos);
         }
 
 
@@ -398,7 +398,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 //if( !currentPos.Equals(anchor) )
                 //onVoxelUpdated(anchor,front,currentSide);
 
-                WorldDefinition.World.onVoxelUpdated(anchor);
+                WorldDefinition.World.OnVoxelUpdated(anchor);
             }
         }
 
@@ -433,7 +433,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             {
                 if (!currentPos.Equals(anchor))
                     onVoxelSelected(anchor, front, currentSide);
-                WorldDefinition.World.onVoxelUpdated(anchor);
+                WorldDefinition.World.OnVoxelUpdated(anchor);
                 anchor = UNPLACED;
             }
         }
@@ -450,7 +450,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 close();	// cancel
             else
             {
-                WorldDefinition.World.onVoxelUpdated(anchor);
+                WorldDefinition.World.OnVoxelUpdated(anchor);
                 anchor = UNPLACED;
             }
         }
@@ -464,7 +464,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="view"></param>
         /// <param name="surface"></param>
         [CLSCompliant(false)]
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
         /// <summary>
         /// 
         /// </summary>
@@ -473,11 +473,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="loc"></param>
         /// <param name="pt"></param>
         [CLSCompliant(false)]
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (loc != anchor) return;
             if (anchor.Equals(currentPos))
-                cursors[0].draw(canvas.surface, pt);
+                cursors[0].draw(canvas.Surface, pt);
             else
             {
                 //HalfDividedVoxel v = World.world[loc] as HalfDividedVoxel;
@@ -485,12 +485,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 n = remover ? 5 : 1;
                 m = front.isParallelToX ? 0 : 1;
                 l = (currentSide == PlaceSide.Back) ? 0 : 2;
-                cursors[n + m + l].draw(canvas.surface, pt);
+                cursors[n + m + l].draw(canvas.Surface, pt);
                 if (!remover)
                 {
-                    contrib.getSprite(front, currentSide, contrib.currentColor).drawAlpha(canvas.surface, pt);
+                    contrib.getSprite(front, currentSide, contrib.currentColor).drawAlpha(canvas.Surface, pt);
                     Sprite hls = contrib.getHighLightSprite(front, currentSide, contrib.currentHighlight);
-                    if (hls != null) hls.drawAlpha(canvas.surface, pt);
+                    if (hls != null) hls.drawAlpha(canvas.Surface, pt);
                 }
             }
 
@@ -501,7 +501,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="view"></param>
         /// <param name="surface"></param>
         [CLSCompliant(false)]
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
 
         #endregion
 

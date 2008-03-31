@@ -42,37 +42,13 @@ namespace FreeTrain.Controllers.Land
     /// Controller that allows the user to
     /// place/remove lands.
     /// </summary>
-    public class LandController : ControllerHostForm
+    public class LandController : AbstractControllerImpl
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new LandController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
-        public static LandController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
-
         private Bitmap previewBitmap;
         /// <summary>
         /// 
         /// </summary>
-        protected LandController()
+        public LandController()
         {
             InitializeComponent();
 
@@ -105,62 +81,61 @@ namespace FreeTrain.Controllers.Land
             this.groupBox = new System.Windows.Forms.ComboBox();
             this.preview = new System.Windows.Forms.PictureBox();
             this.indexSelector = new FreeTrain.Controls.IndexSelector();
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox
             // 
+            this.groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.groupBox.Location = new System.Drawing.Point(8, 8);
+            this.groupBox.Location = new System.Drawing.Point(8, 9);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(112, 20);
+            this.groupBox.Size = new System.Drawing.Size(168, 21);
             this.groupBox.Sorted = true;
             this.groupBox.TabIndex = 2;
             this.groupBox.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
-            this.groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)) | System.Windows.Forms.AnchorStyles.Top));
             // 
             // preview
             // 
+            this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.preview.Location = new System.Drawing.Point(8, 64);
+            this.preview.Location = new System.Drawing.Point(8, 69);
             this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(112, 80);
+            this.preview.Size = new System.Drawing.Size(168, 121);
             this.preview.TabIndex = 1;
             this.preview.TabStop = false;
-            this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)) | System.Windows.Forms.AnchorStyles.Bottom));
             // 
             // indexSelector
             // 
+            this.indexSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.indexSelector.count = 10;
             this.indexSelector.current = 0;
             this.indexSelector.dataSource = null;
-            this.indexSelector.Location = new System.Drawing.Point(8, 36);
+            this.indexSelector.Location = new System.Drawing.Point(8, 39);
             this.indexSelector.Name = "indexSelector";
-            this.indexSelector.Size = new System.Drawing.Size(112, 20);
+            this.indexSelector.Size = new System.Drawing.Size(168, 22);
             this.indexSelector.TabIndex = 3;
             this.indexSelector.indexChanged += new System.EventHandler(this.onTypeChanged);
-            this.indexSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // LandController
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-            this.ClientSize = new System.Drawing.Size(128, 155);
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.indexSelector,
-																		  this.groupBox,
-																		  this.preview});
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(184, 202);
+            this.Controls.Add(this.indexSelector);
+            this.Controls.Add(this.groupBox);
+            this.Controls.Add(this.preview);
             this.Name = "LandController";
             this.Text = "Terrain view";
-            //! this.Text = "地表";
-            this.Resize += new EventHandler(this.updateSize);
+            this.Resize += new System.EventHandler(this.updateSize);
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.ResumeLayout(false);
 
         }
         #endregion
-
-
-
-
-
 
         private void onGroupChanged(object sender, System.EventArgs e)
         {
@@ -173,7 +148,7 @@ namespace FreeTrain.Controllers.Land
         /// </summary>
         protected virtual void onTypeChanged(object sender, System.EventArgs e)
         {
-            updatePreview();
+            UpdatePreview();
         }
         /// <summary>
         /// 
@@ -182,12 +157,12 @@ namespace FreeTrain.Controllers.Land
         /// <param name="e"></param>
         protected virtual void updateSize(object sender, System.EventArgs e)
         {
-            updatePreview();
+            UpdatePreview();
         }
         /// <summary>
         /// 
         /// </summary>
-        public override void updatePreview()
+        public void UpdatePreview()
         {
             LandBuilderContribution builder = (LandBuilderContribution)indexSelector.currentItem;
             using (PreviewDrawer drawer = builder.createPreview(preview.Size))
@@ -196,7 +171,7 @@ namespace FreeTrain.Controllers.Land
                 preview.Image = previewBitmap = drawer.createBitmap();
             }
 
-            currentController = builder.createBuilder(new ControllerSiteImpl(this));
+            //currentController = builder.createBuilder(new ControllerSiteImpl(this));
         }
     }
 }

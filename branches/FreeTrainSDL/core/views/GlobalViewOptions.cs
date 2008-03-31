@@ -81,7 +81,7 @@ namespace FreeTrain.Views
             {
                 _nightSpriteMode = value;
                 PictureManager.reset();
-                WorldDefinition.World.onAllVoxelUpdated();
+                WorldDefinition.World.OnAllVoxelUpdated();
                 if (OnViewOptionChanged != null)
                 {
                     Debug.WriteLine("###" + OnViewOptionChanged.GetInvocationList().Length);

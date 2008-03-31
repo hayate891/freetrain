@@ -31,12 +31,12 @@ namespace FreeTrain.Controllers
     /// Partial <c>ModalController</c> implementation that selects
     /// a particular location.
     /// </summary>
-    public abstract class PointSelectorController : ModalController, MapOverlay
+    public abstract class PointSelectorController : IModalController, IMapOverlay
     {
         /// <summary>
         /// 
         /// </summary>
-        protected Location currentPos = Location.UNPLACED;
+        protected Location currentPos = Location.Unplaced;
         /// <summary>
         /// 
         /// </summary>
@@ -72,7 +72,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public virtual void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas)
+        public virtual void DrawAfter(QuarterViewDrawer view, DrawContext canvas)
         {
         }
         /// <summary>
@@ -80,7 +80,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public virtual void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas)
+        public virtual void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
         }
         /// <summary>
@@ -90,7 +90,7 @@ namespace FreeTrain.Controllers
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public virtual void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public virtual void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
         }
         /// <summary>
@@ -105,8 +105,8 @@ namespace FreeTrain.Controllers
         public virtual void OnDetached()
         {
             // clear the remaining image
-            if (currentPos != Location.UNPLACED)
-                WorldDefinition.World.onVoxelUpdated(currentPos);
+            if (currentPos != Location.Unplaced)
+                WorldDefinition.World.OnVoxelUpdated(currentPos);
         }
         /// <summary>
         /// 
@@ -116,10 +116,10 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public virtual void OnMouseMove(MapViewWindow source, Location loc, Point ab)
         {
-            if (currentPos != Location.UNPLACED)
-                WorldDefinition.World.onVoxelUpdated(currentPos);
+            if (currentPos != Location.Unplaced)
+                WorldDefinition.World.OnVoxelUpdated(currentPos);
             currentPos = loc;
-            WorldDefinition.World.onVoxelUpdated(currentPos);
+            WorldDefinition.World.OnVoxelUpdated(currentPos);
 
             onSelectionChanged(currentPos);
         }
@@ -164,12 +164,12 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual MapOverlay Overlay
+        public virtual IMapOverlay Overlay
         {
             get
             {
                 // return this object if it implements MapOverlay by itself.
-                return this as MapOverlay;
+                return this as IMapOverlay;
             }
         }
         /// <summary>

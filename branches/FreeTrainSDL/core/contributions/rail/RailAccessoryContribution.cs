@@ -86,13 +86,13 @@ namespace FreeTrain.Contributions.Rail
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public abstract FreeTrain.Controllers.ModalController createBuilder(FreeTrain.Controllers.IControllerSite site);
+        public abstract FreeTrain.Controllers.IModalController createBuilder(FreeTrain.Controllers.IControllerSite site);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public abstract FreeTrain.Controllers.ModalController createRemover(FreeTrain.Controllers.IControllerSite site);
+        public abstract FreeTrain.Controllers.IModalController createRemover(FreeTrain.Controllers.IControllerSite site);
 
         #endregion
     }

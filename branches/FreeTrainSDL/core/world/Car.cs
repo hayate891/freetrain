@@ -52,7 +52,7 @@ namespace FreeTrain.World
             {
                 Debug.Assert(ss.voxel.car == this);
                 ss.voxel.car = null;
-                WorldDefinition.World.onVoxelUpdated(ss.voxel);
+                WorldDefinition.World.OnVoxelUpdated(ss.voxel);
             }
 
             _state = s;
@@ -62,7 +62,7 @@ namespace FreeTrain.World
             {
                 Debug.Assert(ss.voxel.car == null);
                 ss.voxel.car = this;
-                WorldDefinition.World.onVoxelUpdated(ss.voxel);
+                WorldDefinition.World.OnVoxelUpdated(ss.voxel);
             }
 
             return oldState;

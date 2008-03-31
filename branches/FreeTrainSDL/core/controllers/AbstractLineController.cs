@@ -36,8 +36,11 @@ namespace FreeTrain.Controllers
     /// <summary>
     /// Controller that places/removes lines, such as roads or rail roads.
     /// </summary>
-    public class AbstractLineController : AbstractControllerImpl, MapOverlay
+    public class AbstractLineController : AbstractControllerImpl, IMapOverlay
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public AbstractLineController()
             : base()
         { }
@@ -191,7 +194,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         private Location currentPos = UNPLACED;
 
-        private static Location UNPLACED = FreeTrain.World.Location.UNPLACED;
+        private static Location UNPLACED = FreeTrain.World.Location.Unplaced;
 
         /// <summary>
         /// Aligns the given location to the anchor so that
@@ -225,9 +228,9 @@ namespace FreeTrain.Controllers
             if (anchor != UNPLACED && isPlacing && currentPos != loc)
             {
                 if (currentPos != UNPLACED)
-                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 currentPos = align(loc);
-                WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPos));
             }
         }
         /// <summary>
@@ -257,7 +260,7 @@ namespace FreeTrain.Controllers
                     else
                         // remove existing ones
                         type.remove(anchor, loc);
-                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, loc));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, loc));
                 }
                 anchor = UNPLACED;
             }
@@ -276,7 +279,7 @@ namespace FreeTrain.Controllers
             {
                 // cancel the anchor
                 if (currentPos != UNPLACED)
-                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPos));
                 anchor = UNPLACED;
             }
         }
@@ -333,7 +336,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
             if (anchor != UNPLACED && isPlacing)
                 canvas.Tag = type.canBeBuilt(anchor, currentPos);
@@ -345,7 +348,7 @@ namespace FreeTrain.Controllers
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             object tag = canvas.Tag;
 
@@ -360,14 +363,14 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawAfter(QuarterViewDrawer view, DrawContext canvas)
         {
         }
 
         /// <summary>
         /// Draw the preview on the given point.
         /// </summary>
-        protected virtual void draw(Direction d, DrawContextEx canvs, Point pt)
+        protected virtual void draw(Direction d, DrawContext canvs, Point pt)
         { }
     }
 }

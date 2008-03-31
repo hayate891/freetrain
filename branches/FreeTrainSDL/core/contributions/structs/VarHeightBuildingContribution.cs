@@ -245,7 +245,7 @@ namespace FreeTrain.Contributions.Structs
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override ModalController createBuilder(IControllerSite site)
+        public override IModalController createBuilder(IControllerSite site)
         {
             // TODO
             throw new NotImplementedException();
@@ -255,7 +255,7 @@ namespace FreeTrain.Contributions.Structs
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override ModalController createRemover(IControllerSite site)
+        public override IModalController createRemover(IControllerSite site)
         {
             // TODO
             throw new NotImplementedException();

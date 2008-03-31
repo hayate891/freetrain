@@ -32,10 +32,10 @@ namespace FreeTrain.Controllers
     /// ModalController that selects the rectangular region
     /// and do something with it.
     /// </summary>
-    public abstract class RectSelectorController : ModalController, LocationDisambiguator
+    public abstract class RectSelectorController : IModalController, LocationDisambiguator
     {
         /// <summary>Constant</summary>
-        protected static readonly Location UNPLACED = World.Location.UNPLACED;
+        protected static readonly Location UNPLACED = World.Location.Unplaced;
         /// <summary>
         /// 
         /// </summary>
@@ -87,12 +87,12 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual MapOverlay Overlay
+        public virtual IMapOverlay Overlay
         {
             get
             {
                 // return this object if it implements MapOverlay by itself.
-                return this as MapOverlay;
+                return this as IMapOverlay;
             }
         }
 
@@ -179,7 +179,7 @@ namespace FreeTrain.Controllers
             else
             {
                 // cancel the anchor
-                WorldDefinition.World.onAllVoxelUpdated();
+                WorldDefinition.World.OnAllVoxelUpdated();
                 anchor = UNPLACED;
             }
         }
@@ -199,7 +199,7 @@ namespace FreeTrain.Controllers
                 // update the screen
                 currentLoc = loc;
                 onRectUpdated(this.location1, this.location2);
-                w.onAllVoxelUpdated();
+                w.OnAllVoxelUpdated();
             }
         }
         /// <summary>
@@ -212,7 +212,7 @@ namespace FreeTrain.Controllers
         public virtual void OnDetached()
         {
             // redraw the entire surface to erase any left-over from this controller
-            WorldDefinition.World.onAllVoxelUpdated();
+            WorldDefinition.World.OnAllVoxelUpdated();
         }
         /// <summary>
         /// 

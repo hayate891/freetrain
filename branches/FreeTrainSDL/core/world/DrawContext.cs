@@ -36,31 +36,22 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="s"></param>
-        public DrawContext(Surface s) { this._surface = s; }
+        /// <param name="surface"></param>
+        public DrawContext(Surface surface) 
+        { 
+            this.surface = surface;
+        }
 
-        private readonly Surface _surface;
-        /*private GDIGraphics _graphics=null;*/
-
-        /*public Graphics graphics {
-            get {
-                if( _graphics==null )
-                    _graphics = new GDIGraphics(_surface);
-                return _graphics.graphics;
-            }
-        }*/
+        private Surface surface;
+ 
         /// <summary>
         /// 
         /// </summary>
-        public Surface surface
+        public Surface Surface
         {
             get
             {
-                /*if( _graphics!=null ) {
-                    _graphics.Dispose();
-                    _graphics = null;
-                }*/
-                return _surface;
+                return surface;
             }
         }
 
@@ -70,8 +61,21 @@ namespace FreeTrain.World
         /// </summary>
         public void Dispose()
         {
-            /*if( _graphics!=null )
-                _graphics.Dispose();*/
+        }
+
+        /// <summary>
+        /// MapOverlay can use this property to pass parameters among
+        /// various callbacks.
+        /// </summary>
+        private object tag;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public object Tag
+        {
+            get { return tag; }
+            set { tag = value; }
         }
     }
 }

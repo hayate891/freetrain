@@ -70,8 +70,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SDLGUI.cs" />
-    <Compile Include="SDLGUIButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="core\FreeTrain.csproj">

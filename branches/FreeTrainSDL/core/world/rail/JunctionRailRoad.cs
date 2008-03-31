@@ -174,7 +174,7 @@ namespace FreeTrain.World.Rail
 
                 // replace the railroad
                 new SingleRailRoad(v, RailPattern.get(a, b));
-                WorldDefinition.World.onVoxelUpdated(loc);
+                WorldDefinition.World.OnVoxelUpdated(loc);
 
                 return;
             }

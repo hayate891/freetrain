@@ -41,35 +41,11 @@ namespace FreeTrain.Controllers.Rail
     /// Controller that allows the user to
     /// place/remove trains.
     /// </summary>
-    public partial class TrainPlacementController : AbstractControllerImpl, MapOverlay, LocationDisambiguator
+    public partial class TrainPlacementController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
     {
-        #region singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new TrainPlacementController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
         private System.Windows.Forms.ComboBox controllerCombo;
         private System.Windows.Forms.MenuItem miSell;
         private Button cmdTrading;
-
-        public static TrainPlacementController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
 
         /// <summary>
         /// 
@@ -207,7 +183,7 @@ namespace FreeTrain.Controllers.Rail
             Train tr = this.selectedTrain;
             if (tr == null || !tr.head.state.isInside)
             {
-                arrowLoc.location = World.Location.UNPLACED;
+                arrowLoc.location = World.Location.Unplaced;
             }
             else
             {
@@ -286,7 +262,7 @@ namespace FreeTrain.Controllers.Rail
         private void playSound()
         {
             SoundEffectManager.PlayAsynchronousSound(
-                ResourceUtil.findSystemResource("vehiclePurchase.wav"));
+                ResourceUtil.FindSystemResource("vehiclePurchase.wav"));
         }
 
         /// <summary>
@@ -375,7 +351,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
 
         /// <summary>
         /// 
@@ -384,14 +360,14 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt) { }
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt) { }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="view"></param>
         /// <param name="dc"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx dc)
+        public void DrawAfter(QuarterViewDrawer view, DrawContext dc)
         {
             Train tr = this.selectedTrain;
             if (tr == null || !tr.head.state.isInside) return;
@@ -402,7 +378,7 @@ namespace FreeTrain.Controllers.Rail
             Point pt = view.fromXYZToClient(ci.location);
             pt.Y -= 12;
 
-            ci.direction.drawArrow(dc.surface, pt);
+            ci.direction.drawArrow(dc.Surface, pt);
         }
 
         private void onDoubleClick(object sender, EventArgs e)

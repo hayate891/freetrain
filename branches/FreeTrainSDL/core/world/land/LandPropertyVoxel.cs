@@ -51,7 +51,7 @@ namespace FreeTrain.World.Land
         /// <param name="heightCutDiff"></param>
         public override void draw(DrawContext surface, Point pt, int heightCutDiff)
         {
-            sprite.draw(surface.surface, pt);
+            sprite.draw(surface.Surface, pt);
         }
 
         #region Entity implementation

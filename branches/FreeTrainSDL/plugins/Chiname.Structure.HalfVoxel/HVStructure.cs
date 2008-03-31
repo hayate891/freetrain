@@ -111,7 +111,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                     }
                 }
             }
-            WorldDefinition.World.onVoxelUpdated(baseLocation);
+            WorldDefinition.World.OnVoxelUpdated(baseLocation);
             return false;
         }
         /// <summary>
@@ -135,7 +135,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 if (back == null)
                     remove();
             }
-            WorldDefinition.World.onVoxelUpdated(baseLocation);
+            WorldDefinition.World.OnVoxelUpdated(baseLocation);
             return true;
         }
 
@@ -359,24 +359,24 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public override void draw(DrawContext display, Point pt, int heightCutDiff)
         {
             if (heightCutDiff >= 0)
-                ResourceUtil.emptyChip.drawShape(display.surface, pt, owner.heightCutColor);
+                ResourceUtil.emptyChip.drawShape(display.Surface, pt, owner.heightCutColor);
             else
-                ResourceUtil.emptyChip.draw(display.surface, pt);
+                ResourceUtil.emptyChip.draw(display.Surface, pt);
             // above line is needed when my(=477) patch is applied.
 
             if (owner.backside != null)
                 if (heightCutDiff < 0 || owner.backside.height < heightCutDiff)
                 {
-                    owner.backside.getSprite().draw(display.surface, pt);
+                    owner.backside.getSprite().draw(display.Surface, pt);
                     Sprite hls = owner.backside.getHighlightSprite();
-                    if (hls != null) hls.draw(display.surface, pt);
+                    if (hls != null) hls.draw(display.Surface, pt);
                 }
             if (owner.foreside != null)
                 if (heightCutDiff < 0 || owner.foreside.height < heightCutDiff)
                 {
-                    owner.foreside.getSprite().draw(display.surface, pt);
+                    owner.foreside.getSprite().draw(display.Surface, pt);
                     Sprite hls = owner.foreside.getHighlightSprite();
-                    if (hls != null) hls.draw(display.surface, pt);
+                    if (hls != null) hls.draw(display.Surface, pt);
                 }
         }
 

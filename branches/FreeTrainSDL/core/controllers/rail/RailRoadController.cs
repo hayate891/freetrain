@@ -41,36 +41,12 @@ namespace FreeTrain.Controllers.Rail
     /// In one state, we expect the user to select one voxel.
     /// In the other state, we expect the user to select next voxel,
     /// so that we can build railroads.
-    public partial class RailRoadController : AbstractControllerImpl, MapOverlay
+    public partial class RailRoadController : AbstractControllerImpl, IMapOverlay
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new RailRoadController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
         /// <summary>
         /// 
         /// </summary>
-        public static RailRoadController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
-
-        private RailRoadController()
+        public RailRoadController()
         {
             InitializeComponent();
 
@@ -78,35 +54,6 @@ namespace FreeTrain.Controllers.Rail
             this.buttonPlace.Text = Translation.GetString("CONTROLLER_PLACE_BUTTON");
             this.buttonRemove.Text = Translation.GetString("CONTROLLER_REMOVE_BUTTON");
             this.costBox.label = Translation.GetString("CONTROLLER_COST_LABEL");
-            //this.Text = Translation.GetString("CONTROLLER_RAIL_TOOLTIP");
-            //this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
-
-            UpdatePreview();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void UpdatePreview()
-        {
-            /*using( PreviewDrawer drawer = new PreviewDrawer( picture.Size, new Size(1,10), 0 ) ) 
-            {
-                for( int i=0; i<10; i++ )
-                    drawer.draw( RailPattern.get( Direction.NORTH, Direction.SOUTH ), 0, i );
-                if(picture.Image!=null) picture.Image.Dispose();
-                picture.Image = drawer.createBitmap();
-            }*/
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="disposing"></param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && components != null)
-                components.Dispose();
-            base.Dispose(disposing);
         }
 
         /// <summary>
@@ -114,7 +61,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         private void updateDialog()
         {
-            message.Text = anchor != UNPLACED ?
+            message.Text = anchor != unplaced ?
                 Translation.GetString("CONTROLLER_RAIL_END_POINT") : 
                 Translation.GetString("CONTROLLER_RAIL_START_POINT");
         }
@@ -122,14 +69,14 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// The first location selected by the user.
         /// </summary>
-        private Location anchor = UNPLACED;
+        private Location anchor = unplaced;
 
         /// <summary>
         /// Current mouse position. Used only when anchor!=UNPLACED
         /// </summary>
-        private Location currentPos = UNPLACED;
+        private Location currentPosition = unplaced;
 
-        private static Location UNPLACED = FreeTrain.World.Location.UNPLACED;
+        private static Location unplaced = FreeTrain.World.Location.Unplaced;
 
         private bool isPlacing { get { return buttonPlace.Checked; } }
 
@@ -141,7 +88,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="ab"></param>
         public override void OnClick(MapViewWindow source, Location loc, Point ab)
         {
-            if (anchor == UNPLACED)
+            if (anchor == unplaced)
             {
                 anchor = loc;
                 sameLevelDisambiguator = new SameLevelDisambiguator(anchor.z);
@@ -160,7 +107,7 @@ namespace FreeTrain.Controllers.Rail
                         // remove existing ones
                         SingleRailRoad.Remove(anchor, loc);
                 }
-                anchor = UNPLACED;
+                anchor = unplaced;
             }
 
             updateDialog();
@@ -174,28 +121,16 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="ab"></param>
         public override void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
-            if (anchor == UNPLACED)
+            if (anchor == unplaced)
                 Close();	// cancel
             else
             {
                 // cancel the anchor
-                if (currentPos != UNPLACED)
-                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
-                anchor = UNPLACED;
+                if (currentPosition != unplaced)
+                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
+                anchor = unplaced;
                 updateDialog();
             }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected virtual void updateAfterResize(object sender, System.EventArgs e)
-        {
-            //this.buttonPlace.Width = this.picture.Width / 2;
-            //this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width);
-            //this.buttonRemove.Width = this.buttonPlace.Width;
-            //updatePreview();
         }
 
         /// <summary>
@@ -206,19 +141,19 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="ab"></param>
         public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            if (anchor != UNPLACED && isPlacing && currentPos != loc)
+            if (anchor != unplaced && isPlacing && currentPosition != loc)
             {
                 // update the screen
-                if (currentPos != UNPLACED)
-                    WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
-                currentPos = loc;
-                WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                if (currentPosition != unplaced)
+                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
+                currentPosition = loc;
+                WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
 
                 int cost;
-                SingleRailRoad.ComputeRoute(anchor, currentPos, out cost);
+                SingleRailRoad.ComputeRoute(anchor, currentPosition, out cost);
                 costBox.cost = cost;
             }
-            if (anchor != UNPLACED && !isPlacing)
+            if (anchor != unplaced && !isPlacing)
             {
                 costBox.cost = SingleRailRoad.CalcCostOfRemoving(anchor, loc);
             }
@@ -229,7 +164,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         public override void OnDetached()
         {
-            anchor = UNPLACED;
+            anchor = unplaced;
         }
 
         /// <summary>
@@ -240,26 +175,17 @@ namespace FreeTrain.Controllers.Rail
             get
             {
                 // the 2nd selection must go to the same height as the anchor.
-                if (anchor == UNPLACED) return RailRoadDisambiguator.theInstance;
+                if (anchor == unplaced) return RailRoadDisambiguator.theInstance;
                 else return sameLevelDisambiguator;
             }
         }
 
         private LocationDisambiguator sameLevelDisambiguator;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnVisibleChanged(System.EventArgs e)
-        {
-            updateDialog();
-        }
-
         // "place" or "remove" button was clicked. reset the anchor
         private void modeChanged(object sender, EventArgs e)
         {
-            anchor = UNPLACED;
+            anchor = unplaced;
             updateDialog();
         }
 
@@ -268,12 +194,12 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
-            if (anchor != UNPLACED && isPlacing)
+            if (anchor != unplaced && isPlacing)
             {
                 int cost;
-                canvas.Tag = SingleRailRoad.ComputeRoute(anchor, currentPos, out cost);
+                canvas.Tag = SingleRailRoad.ComputeRoute(anchor, currentPosition, out cost);
                 if (canvas.Tag != null)
                     Debug.WriteLine(((IDictionary)canvas.Tag).Count);
             }
@@ -286,7 +212,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             IDictionary dic = (IDictionary)canvas.Tag;
             if (dic != null)
@@ -297,10 +223,10 @@ namespace FreeTrain.Controllers.Rail
                     for (int j = WorldDefinition.World.getGroundLevel(loc); j < loc.z; j++)
                         // TODO: ground level handling
                         BridgePierVoxel.defaultSprite.drawAlpha(
-                            canvas.surface,
+                            canvas.Surface,
                             view.fromXYZToClient(loc.x, loc.y, j));
 
-                    rp.drawAlpha(canvas.surface, pt);
+                    rp.drawAlpha(canvas.Surface, pt);
                 }
             }
         }
@@ -310,13 +236,8 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas)
+        public void DrawAfter(QuarterViewDrawer view, DrawContext canvas)
         {
-        }
-
-        private void RailRoadController_Load(object sender, EventArgs e)
-        {
-            //this.lblTitle.Text = Translation.GetString("CONTROLLER_RAIL_TITLE");
         }
     }
 }

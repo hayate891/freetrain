@@ -117,14 +117,14 @@ namespace FreeTrain.World.Rail
         public override void invalidateVoxel()
         {
             // this voxel and the voxel below/above needs to be updated
-            WorldDefinition.World.onVoxelUpdated(Voxel);
+            WorldDefinition.World.OnVoxelUpdated(Voxel);
 
             Location loc = Location;
             if (pattern.level < 2)	// the voxel above
                 loc.z++;
             else
                 loc.z--;
-            WorldDefinition.World.onVoxelUpdated(loc);
+            WorldDefinition.World.OnVoxelUpdated(loc);
         }
         /// <summary>
         /// 
@@ -326,7 +326,7 @@ namespace FreeTrain.World.Rail
             /// <param name="heightCutDiff"></param>
             public override void draw(DrawContext surface, Point pt, int heightCutDiff)
             {
-                sprite.draw(surface.surface, pt);
+                sprite.draw(surface.Surface, pt);
             }
         }
 

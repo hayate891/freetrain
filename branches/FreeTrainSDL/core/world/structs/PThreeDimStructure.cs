@@ -156,13 +156,13 @@ namespace FreeTrain.World.Structs
                 if (heightCutDiff < 0 || zdiff < heightCutDiff)
                 {
                     // draw in a normal mode
-                    sprite.draw(display.surface, pt);
+                    sprite.draw(display.Surface, pt);
                 }
                 else
                 {
                     // drawing in the height cut mode
                     if (this.location.z == o.baseLocation.z)
-                        ResourceUtil.emptyChip.drawShape(display.surface, pt, o.heightCutColor);
+                        ResourceUtil.emptyChip.drawShape(display.Surface, pt, o.heightCutColor);
                 }
             }
         }

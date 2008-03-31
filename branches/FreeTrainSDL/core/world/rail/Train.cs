@@ -814,7 +814,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void draw(DrawContext dc, Point pt)
             {
-                Surface display = dc.surface;
+                Surface display = dc.Surface;
 
                 pt.Y -= 9;	// offset
 

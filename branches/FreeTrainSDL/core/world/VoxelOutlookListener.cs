@@ -25,21 +25,21 @@ namespace FreeTrain.World
 	/// <summary>
 	/// Receive notifications of changes in voxel outlook.
 	/// </summary>
-	public interface VoxelOutlookListener
+	public interface IVoxelOutlookListener
 	{
 		/// <summary>
 		/// Called when all the voxels need to be fully updated.
 		/// </summary>
-		void onUpdateAllVoxels();
+		void OnUpdateAllVoxels();
 
 		/// <summary>
 		/// Called when a particular voxel is updated.
 		/// </summary>
-		void onUpdateVoxel( Location loc ); 
+		void OnUpdateVoxel( Location location ); 
 
 		/// <summary>
 		/// Called when a cube of voxels are updated.
 		/// </summary>
-		void onUpdateVoxel( Cube cube );
+		void OnUpdateVoxel( Cube cube );
 	}
 }

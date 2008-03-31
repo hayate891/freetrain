@@ -30,40 +30,23 @@ namespace FreeTrain.Views
     /// Modifies the image of map view window
     /// by overlaying additional data to it.
     /// </summary>
-    public interface MapOverlay
+    public interface IMapOverlay
     {
         /// <summary>
         /// Called before any voxel is drawn.
         /// </summary>
-        void DrawBefore(QuarterViewDrawer view, DrawContextEx canvas);
+        void DrawBefore(QuarterViewDrawer view, DrawContext canvas);
 
         /// <summary>
         /// Called for each voxel that the view is trying to draw.
         /// </summary>
-        void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location location, Point point);
+        void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location location, Point point);
 
         /// <summary>
         /// Called after all the images are drawn by MapView.
         /// This can be used to draw things that will never be
         /// hidden by any objects in the World.
         /// </summary>
-        void DrawAfter(QuarterViewDrawer view, DrawContextEx canvas);
-    }
-    /// <summary>
-    /// 
-    /// </summary>
-    public class DrawContextEx : DrawContext
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="surface"></param>
-        public DrawContextEx(Surface surface) : base(surface) { }
-
-        /// <summary>
-        /// MapOverlay can use this property to pass parameters among
-        /// various callbacks.
-        /// </summary>
-        public object Tag;
+        void DrawAfter(QuarterViewDrawer view, DrawContext canvas);
     }
 }

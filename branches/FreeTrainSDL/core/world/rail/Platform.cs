@@ -130,7 +130,7 @@ namespace FreeTrain.World.Rail
                 }
 
                 // update the warning icon
-                WorldDefinition.World.onVoxelUpdated(location);
+                WorldDefinition.World.OnVoxelUpdated(location);
             }
         }
 

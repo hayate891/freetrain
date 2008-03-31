@@ -124,7 +124,7 @@ namespace FreeTrain.World.Rail
                         new SingleRailRoad(
                             TrafficVoxel.getOrCreate(loc),
                             RailPattern.get(direction, direction.opposite));
-                        world.onVoxelUpdated(loc);
+                        world.OnVoxelUpdated(loc);
                     }
                 }
             }
@@ -133,7 +133,7 @@ namespace FreeTrain.World.Rail
             foreach (FatPlatformVoxel pv in voxels)
             {
                 world.remove(pv.location);
-                world.onVoxelUpdated(pv.location);
+                world.OnVoxelUpdated(pv.location);
             }
 
             base.remove();
@@ -253,7 +253,7 @@ namespace FreeTrain.World.Rail
                 new SingleRailRoad(
                     TrafficVoxel.getOrCreate(loc),
                     rr.getPattern());
-                WorldDefinition.World.onVoxelUpdated(loc);
+                WorldDefinition.World.OnVoxelUpdated(loc);
             }
         }
 
@@ -328,7 +328,7 @@ namespace FreeTrain.World.Rail
             /// <param name="heightCutDiff"></param>
             public override void draw(DrawContext dc, Point pt, int heightCutDiff)
             {
-                Surface display = dc.surface;
+                Surface display = dc.Surface;
 
                 sprite.draw(display, pt);
                 if (owner.host == null && location == owner.location)
@@ -405,7 +405,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void drawBefore(DrawContext display, Point pt)
             {
-                theImage.draw(display.surface, pt);
+                theImage.draw(display.Surface, pt);
                 base.drawBefore(display, pt);
             }
         }

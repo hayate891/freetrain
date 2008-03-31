@@ -87,7 +87,7 @@ namespace FreeTrain.World.Rail
                     case 7: s = sprites[2]; break;
                 }
 
-                s.draw(display.surface, pt);
+                s.draw(display.Surface, pt);
                 // don't call the base class so that we won't draw the rail road unnecessarily
             }
         }

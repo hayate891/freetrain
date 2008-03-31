@@ -93,7 +93,7 @@ namespace FreeTrain.World.Rail
                 // if the line is already well connected, make it a junction
                 TrafficVoxel v = Voxel;
                 v.railRoad = new JunctionRailRoad(v, RailPattern.getJunction(d1, d2, newDir));
-                WorldDefinition.World.onVoxelUpdated(Voxel);
+                WorldDefinition.World.OnVoxelUpdated(Voxel);
                 return true;
             }
             else
@@ -103,13 +103,13 @@ namespace FreeTrain.World.Rail
                 if (Direction.angle(d1, newDir) >= 3)
                 {
                     pattern = RailPattern.get(d1, newDir);
-                    WorldDefinition.World.onVoxelUpdated(Voxel);
+                    WorldDefinition.World.OnVoxelUpdated(Voxel);
                     return true;
                 }
                 if (Direction.angle(d2, newDir) >= 3)
                 {
                     pattern = RailPattern.get(d2, newDir);
-                    WorldDefinition.World.onVoxelUpdated(Voxel);
+                    WorldDefinition.World.OnVoxelUpdated(Voxel);
                     return true;
                 }
             }
@@ -259,7 +259,7 @@ namespace FreeTrain.World.Rail
                 if (v.railRoad != null)
                 {
                     v.railRoad.Attach(here == there ? d.opposite : d);
-                    WorldDefinition.World.onVoxelUpdated(here);
+                    WorldDefinition.World.OnVoxelUpdated(here);
                 }
                 else
                 {

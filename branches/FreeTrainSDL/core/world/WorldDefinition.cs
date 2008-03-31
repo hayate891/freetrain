@@ -174,7 +174,7 @@ namespace FreeTrain.World
 
 
                 // when a voxel is changed, it should be notified to OutlookListeners automatically
-                onVoxelChanged += new VoxelChangeListener(onVoxelUpdated);
+                onVoxelChanged += new VoxelChangeListener(OnVoxelUpdated);
 
                 landValue = new Development.LandValue(this);
             }
@@ -518,8 +518,8 @@ namespace FreeTrain.World
             groundLevels[h, v]++;
 
             // update voxel listeners
-            onVoxelUpdated(new Location(x, y, groundLevels[h, v] - 1));
-            onVoxelUpdated(new Location(x, y, groundLevels[h, v]));
+            OnVoxelUpdated(new Location(x, y, groundLevels[h, v] - 1));
+            OnVoxelUpdated(new Location(x, y, groundLevels[h, v]));
         }
         /// <summary>
         /// 
@@ -543,8 +543,8 @@ namespace FreeTrain.World
             groundLevels[h, v]--;
 
             // update voxel listeners
-            onVoxelUpdated(new Location(x, y, groundLevels[h, v] + 1));
-            onVoxelUpdated(new Location(x, y, groundLevels[h, v]));
+            OnVoxelUpdated(new Location(x, y, groundLevels[h, v] + 1));
+            OnVoxelUpdated(new Location(x, y, groundLevels[h, v]));
         }
 
         /// <summary>
@@ -753,41 +753,41 @@ namespace FreeTrain.World
         /// <summary>
         /// Notifies the voxel outlook listener, if there is any.
         /// </summary>
-        public void onVoxelUpdated(Location loc)
+        public void OnVoxelUpdated(Location location)
         {
-            foreach (VoxelOutlookListener v in voxelOutlookListeners)
-                v.onUpdateVoxel(loc);
+            foreach (IVoxelOutlookListener v in voxelOutlookListeners)
+                v.OnUpdateVoxel(location);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="v"></param>
-        public void onVoxelUpdated(Voxel v)
+        public void OnVoxelUpdated(Voxel voxel)
         {
-            onVoxelUpdated(v.location);
+            OnVoxelUpdated(voxel.location);
             //Point p = new Point((int)(Math.Round(v.location.x * Math.Cos(45) + v.location.y * Math.Sin(45)) - world.size.x / 2),
             //                    (int)(Math.Round(-v.location.x * Math.Sin(45) + v.location.y * Math.Cos(45)) + world.size.y / 2));
-            Point p = new Point(v.location.x, v.location.y);
-            if (satellite != null) satellite.SetPixel(p, v.getColorOfTile());
+            Point p = new Point(voxel.location.x, voxel.location.y);
+            if (satellite != null) satellite.SetPixel(p, voxel.getColorOfTile());
         }
 
         /// <summary>
         /// Notifies all the voxel outlook listeners at once.
         /// </summary>
-        public void onAllVoxelUpdated()
+        public void OnAllVoxelUpdated()
         {
-            foreach (VoxelOutlookListener v in voxelOutlookListeners)
-                v.onUpdateAllVoxels();
+            foreach (IVoxelOutlookListener v in voxelOutlookListeners)
+                v.OnUpdateAllVoxels();
         }
 
         /// <summary>
         /// Notifies all the cubic voxels within the given cube
         /// are updated.
         /// </summary>
-        public void onVoxelUpdated(Cube cube)
+        public void OnVoxelUpdated(Cube cube)
         {
-            foreach (VoxelOutlookListener v in voxelOutlookListeners)
-                v.onUpdateVoxel(cube);
+            foreach (IVoxelOutlookListener v in voxelOutlookListeners)
+                v.OnUpdateVoxel(cube);
         }
 
 

@@ -63,11 +63,11 @@ namespace FreeTrain.World.Development
 //		//
 //		// MapOverlay implementation
 //		//
-//		public void drawVoxel( MapViewWindow view, DrawContextEx context, Location loc, Point pt ) {
+//		public void drawVoxel( MapViewWindow view, DrawContext context, Location loc, Point pt ) {
 //		}
 //
-//		public void drawBefore( MapViewWindow view, DrawContextEx context ) {}
-//		public void drawAfter( MapViewWindow view, DrawContextEx context ) {}
+//		public void drawBefore( MapViewWindow view, DrawContext context ) {}
+//		public void drawAfter( MapViewWindow view, DrawContext context ) {}
 
 		#region Designer generated code
 		private System.ComponentModel.Container components = null;

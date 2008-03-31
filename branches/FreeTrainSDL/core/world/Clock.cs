@@ -94,7 +94,7 @@ namespace FreeTrain.World
             this.currentTime = t;
             // notify the time change
             PictureManager.reset();
-            WorldDefinition.World.onAllVoxelUpdated();
+            WorldDefinition.World.OnAllVoxelUpdated();
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace FreeTrain.World
         /// </summary>
         public void tick()
         {
-            if (MainWindow.mainWindow.currentController != null)
+            if (MainWindow.mainWindow.CurrentController != null)
                 return;	// if a controller is active, stop the timer.
 
             currentTime++;
@@ -224,7 +224,7 @@ namespace FreeTrain.World
             if (m == 6 * HOUR_INITIAL || m == 18 * HOUR_INITIAL)
             {
                 PictureManager.reset();
-                WorldDefinition.World.onAllVoxelUpdated();	// time change
+                WorldDefinition.World.OnAllVoxelUpdated();	// time change
             }
 
             Debug.Assert((long)queue.minPriority >= currentTime);

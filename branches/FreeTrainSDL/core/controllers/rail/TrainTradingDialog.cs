@@ -45,7 +45,7 @@ namespace FreeTrain.World.Rail
             InitializeComponent();
             //handler = new OptionChangedHandler(updatePreview);
             WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(updatePreview);
-            Bitmap bmp = ResourceUtil.loadSystemBitmap("DayNight.bmp");
+            Bitmap bmp = ResourceUtil.LoadSystemBitmap("DayNight.bmp");
             buttonImages.TransparentColor = bmp.GetPixel(0, 0);
             buttonImages.Images.AddStrip(bmp);
 
@@ -219,7 +219,7 @@ namespace FreeTrain.World.Rail
                     (int)length.Value, selectedTrain);
 
             FreeTrain.Framework.Sound.SoundEffectManager
-                .PlaySynchronousSound(ResourceUtil.findSystemResource("vehiclePurchase.wav"));
+                .PlaySynchronousSound(ResourceUtil.FindSystemResource("vehiclePurchase.wav"));
 
             AccountManager.theInstance.spend(getTotalPrice(), AccountGenre.RailService);
 

@@ -236,7 +236,7 @@ namespace FreeTrain.Contributions.Road
             /// <param name="pt"></param>
             public override void drawBefore(DrawContext display, Point pt)
             {
-                contribution.getSprite(pattern.dirs).draw(display.surface, pt);
+                contribution.getSprite(pattern.dirs).draw(display.Surface, pt);
             }
             /// <summary>
             /// 
@@ -269,7 +269,7 @@ namespace FreeTrain.Contributions.Road
                     voxel.road = new RoadImpl(contribution, voxel, RoadPattern.get(dirs));
                 }
 
-                WorldDefinition.World.onVoxelUpdated(location);
+                WorldDefinition.World.OnVoxelUpdated(location);
             }
             /// <summary>
             /// 
