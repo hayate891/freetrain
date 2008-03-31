@@ -339,14 +339,14 @@ namespace FreeTrain.World.Structs
                             }
                             break;
                     }
-                    WorldDefinition.World.onVoxelUpdated(this);
+                    WorldDefinition.World.OnVoxelUpdated(this);
                     registerClockHandler();
                     return;
                 }
 
                 // proceed one step
                 state++;
-                WorldDefinition.World.onVoxelUpdated(this);
+                WorldDefinition.World.OnVoxelUpdated(this);
                 registerClockHandler();
                 //theSound.play(location);
                 return;
@@ -381,7 +381,7 @@ namespace FreeTrain.World.Structs
 
             public override void draw(DrawContext context, Point pt, int heightCutDiff)
             {
-                Surface surface = context.surface;
+                Surface surface = context.Surface;
 
                 if (isGroundLevel)
                 {

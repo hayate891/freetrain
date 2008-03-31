@@ -269,7 +269,7 @@ namespace FreeTrain.World.Development
                         Clock c = WorldDefinition.World.clock;
                         if (c.hour < vie)
                             scaning = pickPlace(4);
-                        if (scaning != Location.UNPLACED && WorldDefinition.World.isInsideWorld(scaning))
+                        if (scaning != Location.Unplaced && WorldDefinition.World.isInsideWorld(scaning))
                             phase++;
                         else
                             strength += strength * (1 - F_StrDiffuse) / 7;
@@ -429,7 +429,7 @@ namespace FreeTrain.World.Development
                 }
                 return loc;
             }
-            return Location.UNPLACED;
+            return Location.Unplaced;
         }
         /// <summary>
         /// 

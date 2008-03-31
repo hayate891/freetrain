@@ -75,7 +75,7 @@ namespace FreeTrain.World.Road
         public virtual void invalidateVoxel()
         {
             // by default, the occupied voxel is updated
-            WorldDefinition.World.onVoxelUpdated(voxel);
+            WorldDefinition.World.OnVoxelUpdated(voxel);
         }
 
         /// <summary>

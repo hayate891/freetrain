@@ -431,7 +431,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override ModalController createBuilder(IControllerSite site)
+        public override IModalController createBuilder(IControllerSite site)
         {
             return new HVControllerImpl(this, site, false);
         }
@@ -442,7 +442,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override ModalController createRemover(IControllerSite site)
+        public override IModalController createRemover(IControllerSite site)
         {
             return new HVControllerImpl(this, site, true);
         }

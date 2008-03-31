@@ -135,7 +135,7 @@ namespace FreeTrain.World
 		public void onCarApproaching( TrafficVoxel v ) {
 			// method needs to be public so that the delegate can be serialized
 			// redraw this voxel
-			WorldDefinition.World.onVoxelUpdated(owner);
+			WorldDefinition.World.OnVoxelUpdated(owner);
 			registerTimer();
 		}
 
@@ -149,7 +149,7 @@ namespace FreeTrain.World
 
 		public void followUp() {
 			// method needs to be public so that the delegate can be serialized
-			WorldDefinition.World.onVoxelUpdated(owner);
+			WorldDefinition.World.OnVoxelUpdated(owner);
 			registerTimer();
 		}
 
@@ -191,12 +191,12 @@ namespace FreeTrain.World
 
 
 		public void drawBefore( DrawContext display, Point pt ) {
-			sprites[railDirIndex,1,stateSpriteIndex].draw( display.surface, pt );
+			sprites[railDirIndex,1,stateSpriteIndex].draw( display.Surface, pt );
 			Trace.WriteLine( string.Format("{0} : {1},1,{2}", owner.location,railDirIndex,stateSpriteIndex) );
 		}
 
 		public void drawAfter( DrawContext display, Point pt ) {
-			sprites[railDirIndex,0,stateSpriteIndex].draw( display.surface, pt );
+			sprites[railDirIndex,0,stateSpriteIndex].draw( display.Surface, pt );
 			Trace.WriteLine( string.Format("{0} : {1},0,{2}", owner.location,railDirIndex,stateSpriteIndex) );
 		}
 

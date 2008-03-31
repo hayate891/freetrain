@@ -41,20 +41,8 @@ namespace FreeTrain.Controllers.Rail
     /// <summary>
     /// 
     /// </summary>
-    public partial class PlatformController : AbstractControllerImpl, MapOverlay, LocationDisambiguator
+    public partial class PlatformController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new PlatformController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
         private FreeTrain.Controls.IndexSelector indexSelector;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
@@ -69,19 +57,6 @@ namespace FreeTrain.Controllers.Rail
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-
-        public static PlatformController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
-
         private Bitmap bitmapN, bitmapS, bitmapE, bitmapW;
         private Bitmap stationPreviewBitmap;
         /// <summary>
@@ -130,18 +105,18 @@ namespace FreeTrain.Controllers.Rail
             dirW.Tag = Direction.WEST;
 
             // load pictures
-            bitmapN = ResourceUtil.loadSystemBitmap("PlatformN.bmp");
+            bitmapN = ResourceUtil.LoadSystemBitmap("PlatformN.bmp");
             dirN.Image = bitmapN;
 
-            bitmapE = ResourceUtil.loadSystemBitmap("PlatformN.bmp");
+            bitmapE = ResourceUtil.LoadSystemBitmap("PlatformN.bmp");
             bitmapE.RotateFlip(RotateFlipType.Rotate90FlipNone);
             dirE.Image = bitmapE;
 
-            bitmapS = ResourceUtil.loadSystemBitmap("PlatformN.bmp");
+            bitmapS = ResourceUtil.LoadSystemBitmap("PlatformN.bmp");
             bitmapS.RotateFlip(RotateFlipType.Rotate180FlipNone);
             dirS.Image = bitmapS;
 
-            bitmapW = ResourceUtil.loadSystemBitmap("PlatformN.bmp");
+            bitmapW = ResourceUtil.LoadSystemBitmap("PlatformN.bmp");
             bitmapW.RotateFlip(RotateFlipType.Rotate270FlipNone);
             dirW.Image = bitmapW;
 
@@ -279,7 +254,7 @@ namespace FreeTrain.Controllers.Rail
             }
         }
 
-        private Location baseLoc = World.Location.UNPLACED;
+        private Location baseLoc = World.Location.Unplaced;
 
         /// <summary>
         /// 
@@ -319,7 +294,7 @@ namespace FreeTrain.Controllers.Rail
                     loc2 += direction.right90;	// for the attached rail road, width is two
                 }
             }
-            WorldDefinition.World.onVoxelUpdated(Cube.createExclusive(baseLoc, loc2));
+            WorldDefinition.World.OnVoxelUpdated(Cube.createExclusive(baseLoc, loc2));
         }
 
         /// <summary>
@@ -422,11 +397,11 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="dc"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx dc, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext dc, Location loc, Point pt)
         {
             if (loc.z != baseLoc.z || !isPlacing) return;
 
-            Surface canvas = dc.surface;
+            Surface canvas = dc.Surface;
 
             switch (this.currentMode)
             {
@@ -487,14 +462,14 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
 
         private void onGroupChanged(object sender, System.EventArgs e)
         {
@@ -549,7 +524,7 @@ namespace FreeTrain.Controllers.Rail
         public override void OnDetached()
         {
             // TODO: update voxels correctly
-            WorldDefinition.World.onAllVoxelUpdated();
+            WorldDefinition.World.OnAllVoxelUpdated();
         }
 
         private void onLengthChanged(object sender, EventArgs e)
@@ -629,7 +604,7 @@ namespace FreeTrain.Controllers.Rail
             }
 
             alphaSprites = new AlphaBlendSpriteSet(alphas);
-            WorldDefinition.World.onAllVoxelUpdated();	// completely redraw the window
+            WorldDefinition.World.OnAllVoxelUpdated();	// completely redraw the window
         }
 
         private void onModeChanged(object sender, System.EventArgs e)

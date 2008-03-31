@@ -208,10 +208,10 @@ namespace FreeTrain.World
             Fence f;
             f = fence[(Direction.SOUTH).index / 2];
             if (f != null)
-                f.drawFence(display.surface, pt, Direction.SOUTH);
+                f.drawFence(display.Surface, pt, Direction.SOUTH);
             f = fence[(Direction.WEST).index / 2];
             if (f != null)
-                f.drawFence(display.surface, pt, Direction.WEST);
+                f.drawFence(display.Surface, pt, Direction.WEST);
         }
         /// <summary>
         /// 
@@ -223,10 +223,10 @@ namespace FreeTrain.World
             Fence f;
             f = fence[(Direction.NORTH).index / 2];
             if (f != null)
-                f.drawFence(display.surface, pt, Direction.NORTH);
+                f.drawFence(display.Surface, pt, Direction.NORTH);
             f = fence[(Direction.EAST).index / 2];
             if (f != null)
-                f.drawFence(display.surface, pt, Direction.EAST);
+                f.drawFence(display.Surface, pt, Direction.EAST);
         }
         /// <summary>
         /// 

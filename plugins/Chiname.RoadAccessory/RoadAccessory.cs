@@ -53,7 +53,7 @@ namespace FreeTrain.World.Road.Accessory
         [CLSCompliant(false)]
         public void drawBefore(DrawContext display, Point pt)
         {
-            contrib.sprites[index, 0].draw(display.surface, pt);
+            contrib.sprites[index, 0].draw(display.Surface, pt);
         }
         /// <summary>
         /// 
@@ -63,7 +63,7 @@ namespace FreeTrain.World.Road.Accessory
         [CLSCompliant(false)]
         public void drawAfter(DrawContext display, Point pt)
         {
-            contrib.sprites[index, 1].draw(display.surface, pt);
+            contrib.sprites[index, 1].draw(display.Surface, pt);
         }
         /// <summary>
         /// 

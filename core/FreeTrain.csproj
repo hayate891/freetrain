@@ -264,9 +264,6 @@
     <Compile Include="controllers\AbstractLineController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\ControllerHostForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="controllers\CubeSelectorController.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -393,6 +390,14 @@
     <Compile Include="framework\ConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="framework\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="framework\Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="framework\Core.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -470,9 +475,6 @@
     </Compile>
     <Compile Include="framework\MainWindowMDI.Designer.cs">
       <DependentUpon>MainWindowMDI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="framework\MenuItemConstants.cs">
-      <SubType>Code</SubType>
     </Compile>
     <Compile Include="framework\NewWorldDialog.cs">
       <SubType>Form</SubType>
@@ -896,9 +898,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\AbstractLineController.resx">
       <DependentUpon>AbstractLineController.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="controllers\ControllerHostForm.resx">
-      <DependentUpon>ControllerHostForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\land\BulldozeController.resx">
       <DependentUpon>BulldozeController.cs</DependentUpon>

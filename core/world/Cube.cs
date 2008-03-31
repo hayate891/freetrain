@@ -120,7 +120,7 @@ namespace FreeTrain.World
         /// <returns></returns>
         public static Cube createInclusive(Location loc1, Location loc2)
         {
-            Debug.Assert(loc1 != Location.UNPLACED && loc2 != Location.UNPLACED);
+            Debug.Assert(loc1 != Location.Unplaced && loc2 != Location.Unplaced);
 
             return new Cube(
                 Math.Min(loc1.x, loc2.x),

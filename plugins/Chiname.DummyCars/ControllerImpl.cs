@@ -94,7 +94,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public override void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public override void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (base.currentPos != loc) return;
             if (!contribution.canBeBuilt(loc)) return;
@@ -104,7 +104,7 @@ namespace FreeTrain.World.Road.DummyCars
             if (rp.hasRoad(Direction.NORTH)) x = 0;
             else x = 1;
 
-            contribution.sprites[color, x].drawAlpha(canvas.surface, pt);
+            contribution.sprites[color, x].drawAlpha(canvas.Surface, pt);
         }
         /// <summary>
         /// 

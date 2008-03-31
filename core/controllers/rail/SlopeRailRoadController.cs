@@ -36,33 +36,9 @@ namespace FreeTrain.Controllers.Rail
     /// <summary>
     /// Controller to place/remove slope RRs.
     /// </summary>
-    public class SlopeRailRoadController : AbstractControllerImpl, LocationDisambiguator, MapOverlay
+    public class SlopeRailRoadController : AbstractControllerImpl, LocationDisambiguator, IMapOverlay
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new SlopeRailRoadController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
         private FreeTrain.Controls.CostBox costBox;
-
-        public static SlopeRailRoadController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
 
         /// <summary>
         /// 
@@ -438,7 +414,7 @@ namespace FreeTrain.Controllers.Rail
             loc2.y += direction.offsetY * 3;
             loc2.z++;
 
-            WorldDefinition.World.onVoxelUpdated(Cube.createInclusive(lastMouse, loc2));
+            WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(lastMouse, loc2));
         }
 
         /// <summary>
@@ -446,7 +422,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
         /// <summary>
         /// 
         /// </summary>
@@ -454,7 +430,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
 
             // TODO: draw using this method.
@@ -464,14 +440,14 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="dc"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx dc)
+        public void DrawAfter(QuarterViewDrawer view, DrawContext dc)
         {
             if (!isPlacing) return;
             Location loc = lastMouse;
-            if (loc == World.Location.UNPLACED) return;
+            if (loc == World.Location.Unplaced) return;
             if (!SlopeRailRoad.canCreateSlope(loc, direction)) return;
 
-            Surface canvas = dc.surface;
+            Surface canvas = dc.Surface;
 
             int Z = loc.z;
             for (int i = 0; i < 4; i++)

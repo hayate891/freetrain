@@ -295,7 +295,7 @@ namespace FreeTrain.World.Rail.ColorTestTrain
             boxLine3.BackColor = colors[3];
             car.picture = picture;
             car.colors = colors;
-            WorldDefinition.World.onAllVoxelUpdated();	// redraw
+            WorldDefinition.World.OnAllVoxelUpdated();	// redraw
         }
 
         private void buttonBase_Click(object sender, EventArgs e)

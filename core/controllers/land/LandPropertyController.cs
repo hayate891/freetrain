@@ -38,46 +38,27 @@ namespace FreeTrain.Controllers.Land
     /// <summary>
     /// Controller that allows the user buy/sell land properties.
     /// </summary>
-    public class LandPropertyController : ControllerHostForm
+    public class LandPropertyController : AbstractControllerImpl, IControllerSite
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new LandPropertyController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
-
-        public static LandPropertyController theInstance;
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
+        public readonly IControllerSite siteImpl;
+
         /// <summary>
         /// 
         /// </summary>
-        protected LandPropertyController()
+        public LandPropertyController()
         {
             InitializeComponent();
             // create preview
-            updatePreview();
-            this.currentController = new Logic(this);
+            UpdatePreview();
+            //this.currentController = new Logic(this);
         }
         /// <summary>
         /// 
         /// </summary>
-        public override void updatePreview()
+        public void UpdatePreview()
         {
             using (PreviewDrawer drawer = new PreviewDrawer(preview.Size, new Size(3, 3), 0))
             {
@@ -114,14 +95,15 @@ namespace FreeTrain.Controllers.Land
             this.costBox = new FreeTrain.Controls.CostBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.SuspendLayout();
             // 
             // preview
             // 
             this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.preview.Location = new System.Drawing.Point(8, 8);
+            this.preview.Location = new System.Drawing.Point(8, 9);
             this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(96, 80);
+            this.preview.Size = new System.Drawing.Size(96, 86);
             this.preview.TabIndex = 1;
             this.preview.TabStop = false;
             // 
@@ -129,48 +111,44 @@ namespace FreeTrain.Controllers.Land
             // 
             this.costBox.cost = 0;
             this.costBox.label = "Cost:";
-            //! this.costBox.label = "費用：";
-            this.costBox.Location = new System.Drawing.Point(8, 88);
+            this.costBox.Location = new System.Drawing.Point(8, 95);
             this.costBox.Name = "costBox";
-            this.costBox.Size = new System.Drawing.Size(96, 32);
+            this.costBox.Size = new System.Drawing.Size(96, 35);
             this.costBox.TabIndex = 7;
             // 
             // buttonRemove
             // 
             this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonRemove.Location = new System.Drawing.Point(56, 120);
+            this.buttonRemove.Location = new System.Drawing.Point(56, 130);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(48, 24);
+            this.buttonRemove.Size = new System.Drawing.Size(48, 26);
             this.buttonRemove.TabIndex = 6;
             this.buttonRemove.Text = "Sell";
-            //; this.buttonRemove.Text = "売却";
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonPlace
             // 
             this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
             this.buttonPlace.Checked = true;
-            this.buttonPlace.Location = new System.Drawing.Point(8, 120);
+            this.buttonPlace.Location = new System.Drawing.Point(8, 130);
             this.buttonPlace.Name = "buttonPlace";
-            this.buttonPlace.Size = new System.Drawing.Size(48, 24);
+            this.buttonPlace.Size = new System.Drawing.Size(48, 26);
             this.buttonPlace.TabIndex = 5;
             this.buttonPlace.TabStop = true;
             this.buttonPlace.Text = "Buy";
-            //! this.buttonPlace.Text = "購入";
             this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LandPropertyController
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-            this.ClientSize = new System.Drawing.Size(115, 150);
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.costBox,
-																		  this.buttonRemove,
-																		  this.buttonPlace,
-																		  this.preview});
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(171, 214);
+            this.Controls.Add(this.costBox);
+            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.buttonPlace);
+            this.Controls.Add(this.preview);
             this.Name = "LandPropertyController";
             this.Text = "Trade Land";
-            //! this.Text = "土地売買";
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,7 +160,7 @@ namespace FreeTrain.Controllers.Land
         /// <summary>
         /// Controller logic
         /// </summary>
-        private class Logic : RectSelectorController, MapOverlay
+        private class Logic : RectSelectorController, IMapOverlay
         {
             protected readonly LandPropertyController owner;
 
@@ -217,7 +195,7 @@ namespace FreeTrain.Controllers.Land
             /// </summary>
             /// <param name="view"></param>
             /// <param name="surface"></param>
-            public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+            public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
             /// <summary>
             /// 
             /// </summary>
@@ -225,20 +203,20 @@ namespace FreeTrain.Controllers.Land
             /// <param name="canvas"></param>
             /// <param name="loc"></param>
             /// <param name="pt"></param>
-            public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+            public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
             {
                 if (loc.z != anchor.z) return;
 
                 if (anchor != UNPLACED && loc.inBetween(anchor, currentLoc))
                 {
                     if (owner.isPlacing)
-                        LandPropertyVoxel.sprite.drawAlpha(canvas.surface, pt);
+                        LandPropertyVoxel.sprite.drawAlpha(canvas.Surface, pt);
                     else
-                        ResourceUtil.emptyChip.drawAlpha(canvas.surface, pt);
+                        ResourceUtil.emptyChip.drawAlpha(canvas.Surface, pt);
                 }
             }
 
-            public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+            public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
         }
 
 

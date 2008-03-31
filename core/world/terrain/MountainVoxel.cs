@@ -99,7 +99,7 @@ namespace FreeTrain.World.Terrain
                 case 3: heightData = (Int16)((heightData & 0xFFF0) | (h)); break;
                 default: throw new ArgumentOutOfRangeException();
             }
-            WorldDefinition.World.onVoxelUpdated(this); // update this voxel
+            WorldDefinition.World.OnVoxelUpdated(this); // update this voxel
         }
 
 
@@ -256,7 +256,7 @@ namespace FreeTrain.World.Terrain
 
             if (heightCutDiff == 0)
             {
-                ResourceUtil.emptyChip.drawShape(display.surface, pt,
+                ResourceUtil.emptyChip.drawShape(display.Surface, pt,
                     isUnderWater ? waterColors[3] : currentMountainColors[3]);
                 return;
             }
@@ -264,7 +264,7 @@ namespace FreeTrain.World.Terrain
             if (isFlattened)
             {
                 if (ground != null)
-                    ground.draw(display.surface, pt);
+                    ground.draw(display.Surface, pt);
                 return;
             }
 
@@ -298,13 +298,13 @@ namespace FreeTrain.World.Terrain
             if (vflip)
             {
                 //flippedImages[tdiff].clipVflip(ref dst, ref src);
-                display.surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
+                display.Surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
             }
             else
             {
                 flippedImages[tdiff].resetClipRect();
                 //flippedImages[tdiff].clipRectangle(ref dst, ref src);
-                display.surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
+                display.Surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
             }
 
 
@@ -314,7 +314,7 @@ namespace FreeTrain.World.Terrain
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(3) > 0
                     && world.getGroundLevel(neighbor) <= world.getGroundLevel(location))
-                    cliff[0, getHeight(3), getHeight(2)].draw(display.surface, basePt);
+                    cliff[0, getHeight(3), getHeight(2)].draw(display.Surface, basePt);
             }
 
 
@@ -336,13 +336,13 @@ namespace FreeTrain.World.Terrain
             if (vflip)
             {
                 ////flippedImages[tdiff].clipVflip(ref dst, ref src);
-                display.surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
+                display.Surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
             }
             else
             {
                 flippedImages[tdiff].resetClipRect();
                 //flippedImages[tdiff].clipRectangle(ref dst, ref src);
-                display.surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
+                display.Surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
             }
 
             {
@@ -352,7 +352,7 @@ namespace FreeTrain.World.Terrain
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(1) > 0
                     && world.getGroundLevel(neighbor) <= world.getGroundLevel(location))
-                    cliff[1, getHeight(2), getHeight(1)].draw(display.surface, basePt);
+                    cliff[1, getHeight(2), getHeight(1)].draw(display.Surface, basePt);
             }
         }
 
@@ -363,13 +363,13 @@ namespace FreeTrain.World.Terrain
             if (h > 0)
             {
                 for (int i = 0; i < indices.Length; i += 3)
-                    patterns[indices[i + 2]].draw(display.surface,
+                    patterns[indices[i + 2]].draw(display.Surface,
                         new Point(pt.X + indices[i + 0], pt.Y + indices[i + 1] * (h + 4) / 4 - 8));
             }
             else
             {
                 for (int i = 0; i < indices.Length; i += 3)
-                    patterns[indices[i + 2]].draw(display.surface,
+                    patterns[indices[i + 2]].draw(display.Surface,
                         new Point(pt.X + indices[i + 0], pt.Y + indices[i + 1] * (h + 4) / 4 + 2));
             }
         }
@@ -555,7 +555,7 @@ namespace FreeTrain.World.Terrain
         {
             // load color palettes
             XmlDocument doc = new XmlDocument();
-            doc.Load(ResourceUtil.findSystemResource("mountainPalette.xml"));
+            doc.Load(ResourceUtil.FindSystemResource("mountainPalette.xml"));
             mountainColors[0] = loadColors((XmlElement)doc.SelectSingleNode("/*/spring"));
             mountainColors[1] = loadColors((XmlElement)doc.SelectSingleNode("/*/summer"));
             mountainColors[2] = loadColors((XmlElement)doc.SelectSingleNode("/*/autumn"));

@@ -57,20 +57,6 @@ namespace FreeTrain.Framework.Graphics
     /// </summary>
     public class Surface
     {
-        //private DirectDrawSurface7 surface;
-        //public Tao.Sdl.Sdl.SDL_Surface surface;
-        //Surface mask;
-        //private static AlphaBlender alpha = new AlphaBlenderClass();
-
-        
-        //private readonly byte widthR,widthB,widthG;
-
-        /// <summary>
-        /// Clipping rect. Even if the client doesn't set any clipping,
-        /// this is initialized to (0,0)-(size)
-        /// </summary>
-        //private Rectangle clip;
-
         private string _filename;
 
         const int TOTAL_SURFACES = 10;
@@ -150,7 +136,7 @@ namespace FreeTrain.Framework.Graphics
                 this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
             }
 
-            this.sourceColorKey = Color.Magenta;
+            this.SourceColorKey = Color.Magenta;
             this.resetClipRect();
             this.currentSurfaceCount++;
         }
@@ -163,7 +149,7 @@ namespace FreeTrain.Framework.Graphics
             this.surfacePtrs[0] = Tao.Sdl.SdlImage.IMG_Load(filename);
             this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
             this.pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(this.surface.format, typeof(Sdl.SDL_PixelFormat));
-            this.sourceColorKey = Color.Magenta;
+            this.SourceColorKey = Color.Magenta;
             this.resetClipRect();
             this.currentSurfaceCount++;
             this._filename = filename;
@@ -173,7 +159,7 @@ namespace FreeTrain.Framework.Graphics
             this.surfacePtrs[0] = surface;
             this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
             this.pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(this.surface.format, typeof(Sdl.SDL_PixelFormat));
-            this.sourceColorKey = Color.Magenta;
+            this.SourceColorKey = Color.Magenta;
             this.resetClipRect();
             this.currentSurfaceCount++;
         }
@@ -192,18 +178,18 @@ namespace FreeTrain.Framework.Graphics
             Sdl.SDL_Rect r = new Sdl.SDL_Rect(0, 0, (short)Size.Width, (short)Size.Height);
             Sdl.SDL_SetClipRect(this.surfacePtr(), ref r);
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        public Sdl.SDL_Rect clipSDLRect
-        {
-            get
-            {
-                Sdl.SDL_Rect r = new Sdl.SDL_Rect();
-                Sdl.SDL_GetClipRect(this.surfacePtr(), ref r);
-                return r;
-            }
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        //public Sdl.SDL_Rect clipSDLRect
+        //{
+        //    get
+        //    {
+        //        Sdl.SDL_Rect r = new Sdl.SDL_Rect();
+        //        Sdl.SDL_GetClipRect(this.surfacePtr(), ref r);
+        //        return r;
+        //    }
+        //}
         /// <summary>
         /// 
         /// </summary>
@@ -308,52 +294,6 @@ namespace FreeTrain.Framework.Graphics
             blt(drect, source, srect);
         }
 
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="dstX1"></param>
-        ///// <param name="dstY1"></param>
-        ///// <param name="dstX2"></param>
-        ///// <param name="dstY2"></param>
-        ///// <param name="source"></param>
-        ///// <param name="srcX1"></param>
-        ///// <param name="srcY1"></param>
-        ///// <param name="srcX2"></param>
-        ///// <param name="srcY2"></param>
-        //public void blt(int dstX1, int dstY1, int dstX2, int dstY2, Surface source,
-        //                 int srcX1, int srcY1, int srcX2, int srcY2)
-        //{
-        //    drect.x = (short)dstX1;
-        //    drect.y = (short)dstY1;
-        //    drect.w = (short)(dstX2 - dstX1);
-        //    drect.h = (short)(dstY2 - dstY1);
-        //    srect.x = (short)srcX1;
-        //    srect.y = (short)srcY1;
-        //    srect.w = (short)(srcX2 - srcX1);
-        //    srect.h = (short)(srcY2 - srcY1);
-        //    blt(drect, source, srect);
-        //}
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="dst"></param>
-        ///// <param name="source"></param>
-        ///// <param name="src"></param>
-        //public void blt(Point dst, Surface source, Rectangle src) { blt(new Rectangle(dst.X, dst.Y, src.Width, src.Height), source, src); }
-        private void blt(Rectangle dst, Surface source, Rectangle src)
-        {
-            drect.x = (short)dst.X;
-            drect.y = (short)dst.Y;
-            drect.w = (short)dst.Width;
-            drect.h = (short)dst.Height;
-            srect.x = (short)src.X;
-            srect.y = (short)src.Y;
-            srect.w = (short)src.Width;
-            srect.h = (short)src.Height;
-            Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr(), ref srect, this.surfacePtr(), ref drect);
-        }
-
         private void blt(Sdl.SDL_Rect dst, Surface source, Sdl.SDL_Rect src)
         {
             Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr(), ref src, this.surfacePtr(), ref dst);
@@ -369,58 +309,7 @@ namespace FreeTrain.Framework.Graphics
             //surface.Alpha = 128;
             Sdl.SDL_SetAlpha(this.surfacePtrs[0], Sdl.SDL_SRCALPHA | Sdl.SDL_SRCCOLORKEY, val);
         }
-        /*
-                public void clipRectangle(ref Rectangle dst, ref Rectangle src)
-                {
-                    int t;
-
-                    // compute new dst.Left
-                    t = Math.Max(dst.Left, clip.Left);
-                    src.X += (t - dst.Left);
-                    dst.X = t;
-
-                    t = Math.Max(dst.Top, clip.Top);
-                    src.Y += (t - dst.Top);
-                    dst.Y = t;
-
-                    t = Math.Min(dst.Right, clip.Right);
-                    //src.Width += (t - dst.Right);
-                    //dst.Width = t - dst.Left;
-
-                    t = Math.Min(dst.Bottom, clip.Bottom);
-                    //src.Height += (t - dst.Bottom);
-                    //dst.Height = t - dst.Top;
-                }
-
-                public void clipVflip(ref Rectangle dst, ref Rectangle src)
-                {
-                    //this.resetClipRect();
-                    int t;
-
-                    // compute new dst.Left
-                    t = Math.Max(dst.Left, clip.Left);
-                    //src.X += (t - dst.Left);
-                    dst.X = t;		// dst.Left += (t-dst.Left)
-
-                    t = Math.Max(dst.Top, clip.Top);
-                    //src.Height -= (t - dst.Top);		// different than the clip method
-                    dst.Y = t;
-
-                    t = Math.Min(dst.Right, clip.Right);
-                    //src.Width += (t - dst.Right);
-                    dst.Width = t - dst.Left;
-
-                    t = Math.Min(dst.Bottom, clip.Bottom);
-                    //src.Y -= (t - dst.Bottom);	// different than the clip method
-                    dst.Height = t - dst.Top;
-                }
-                */
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dstPos"></param>
-        /// <param name="source"></param>
-        public void bltAlpha(Point dstPos, Surface source) { bltAlpha(dstPos, source, new Point(0, 0), source.Size); }
+       
         /// <summary>
         /// 
         /// </summary>
@@ -709,7 +598,7 @@ namespace FreeTrain.Framework.Graphics
                     Sdl.SDL_FreeSurface(mask);
                 }
 
-                this.sourceColorKey = Color.Magenta;
+                this.SourceColorKey = Color.Magenta;
 
                 surfaceSignatures[curIndex] = curSig;
                 currentSurfaceCount++;
@@ -1037,7 +926,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// Source color key. A mask color that will not be copied to other plains.
         /// </summary>
-        public Color sourceColorKey
+        public Color SourceColorKey
         {
             get { return Color.FromArgb(_colKey); }
             set
@@ -1045,14 +934,6 @@ namespace FreeTrain.Framework.Graphics
                 colorKey = Sdl.SDL_MapRGB(this.surface.format, value.R, value.G, value.B);
             }
         }
-
-        // retruns true if the color at the specified pixel is valid (opaque).
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p"></param>
-        /// <returns></returns>
-        public bool HitTest(Point p) { return HitTest(p.X, p.Y); }
 
         // retruns true if the color at the specified pixel is valid (opaque).
         /// <summary>
@@ -1290,13 +1171,13 @@ namespace FreeTrain.Framework.Graphics
             Buffer.BlockCopy(buffer, 0, result, offset, sizeofInt24);
             return result[0];
         }
-        public static void WriteInt24(IntPtr ptr, Int32 value)
-        {
-            Int32[] valueArray = new Int32[1] { value };
-            Byte[] buffer = new Byte[sizeofInt24];
-            Buffer.BlockCopy(valueArray, offset, buffer, 0, sizeofInt24);
-            Marshal.Copy(buffer, 0, ptr, sizeofInt24);
-        }
+        //public static void WriteInt24(IntPtr ptr, Int32 value)
+        //{
+        //    Int32[] valueArray = new Int32[1] { value };
+        //    Byte[] buffer = new Byte[sizeofInt24];
+        //    Buffer.BlockCopy(valueArray, offset, buffer, 0, sizeofInt24);
+        //    Marshal.Copy(buffer, 0, ptr, sizeofInt24);
+        //}
         public static void CopyInt24(Int32[] array, int startIndex, IntPtr destination, int length)
         {
             if (array == null) { throw new ArgumentNullException("array"); }

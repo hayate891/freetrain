@@ -122,12 +122,12 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override ModalController createBuilder(IControllerSite site)
+        public override IModalController createBuilder(IControllerSite site)
         {
             return new Logic(this, site);
         }
 
-        private class Logic : RectSelectorController, MapOverlay
+        private class Logic : RectSelectorController, IMapOverlay
         {
             private readonly VinylHouseBuilder contrib;
 
@@ -142,9 +142,9 @@ namespace FreeTrain.World.Land.VinylHouse
                 contrib.create(loc1, loc2, true);
             }
 
-            public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+            public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
 
-            public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+            public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
             {
                 if (loc.z != currentLoc.z) return;
 
@@ -153,11 +153,11 @@ namespace FreeTrain.World.Land.VinylHouse
                     Location loc1 = base.location1;
                     Location loc2 = base.location2;
                     contrib.sprites[contrib.getSpriteIndex(loc.x, loc.y, loc1.x, loc1.y, loc2.x, loc2.y)]
-                        .drawAlpha(canvas.surface, pt);
+                        .drawAlpha(canvas.Surface, pt);
                 }
             }
 
-            public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+            public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
         }
     }
 

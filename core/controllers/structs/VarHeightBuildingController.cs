@@ -41,34 +41,10 @@ namespace FreeTrain.Controllers.Structs
     /// </summary>
     public partial class VarHeightBuildingController : StructPlacementController
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new VarHeightBuildingController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
-        public static VarHeightBuildingController theInstance;
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
-
-        /// <summary>
-        /// 
-        /// </summary>
-        protected VarHeightBuildingController()
+        public VarHeightBuildingController()
             : base(Core.plugins.varHeightBuildingsGroup)
         {
             InitializeComponent();

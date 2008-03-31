@@ -41,8 +41,21 @@ namespace FreeTrain.Controllers.Rail
     /// In one state, we expect the user to select one voxel.
     /// In the other state, we expect the user to select next voxel,
     /// so that we can build railroads.
-    public partial class RailRoadController : AbstractControllerImpl, MapOverlay
+    public partial class RailRoadController : AbstractControllerImpl, IMapOverlay
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
         #region Windows Form Designer generated code
         private System.Windows.Forms.RadioButton buttonPlace;
         private System.Windows.Forms.RadioButton buttonRemove;
@@ -97,8 +110,6 @@ namespace FreeTrain.Controllers.Rail
             this.Controls.Add(this.costBox);
             this.Controls.Add(this.message);
             this.Name = "RailRoadController";
-            this.Resize += new System.EventHandler(this.updateAfterResize);
-            this.Load += new System.EventHandler(this.RailRoadController_Load);
             this.ResumeLayout(false);
 
         }

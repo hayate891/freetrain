@@ -214,7 +214,7 @@ namespace FreeTrain.World.Rail
                 set
                 {
                     if (value != _outlook)
-                        WorldDefinition.World.onVoxelUpdated(this.Voxel);
+                        WorldDefinition.World.OnVoxelUpdated(this.Voxel);
                     _outlook = value;
                 }
             }
@@ -228,7 +228,7 @@ namespace FreeTrain.World.Rail
                 set
                 {
                     if (value != _hasRoof)
-                        WorldDefinition.World.onVoxelUpdated(this.Voxel);
+                        WorldDefinition.World.OnVoxelUpdated(this.Voxel);
                     _hasRoof = value;
                 }
             }
@@ -263,7 +263,7 @@ namespace FreeTrain.World.Rail
                 if (owner.host == null && index == 0)
                 {
                     pt.X += 8;
-                    display.surface.blt(pt, warningIcon);
+                    display.Surface.blt(pt, warningIcon);
                 }
             }
             /// <summary>
@@ -349,7 +349,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public void draw(RailRoadImpl rr, DrawContext display, Point pt)
             {
-                getSprite(rr.direction, rr.hasRoof).draw(display.surface, pt);
+                getSprite(rr.direction, rr.hasRoof).draw(display.Surface, pt);
             }
             /// <summary>
             /// 
@@ -405,7 +405,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public void draw(RailRoadImpl rr, DrawContext display, Point pt)
             {
-                PassagewayRail.getSprite(rr.direction, hasBridge, rr.isDoubleWidth).draw(display.surface, pt);
+                PassagewayRail.getSprite(rr.direction, hasBridge, rr.isDoubleWidth).draw(display.Surface, pt);
             }
             /// <summary>
             /// 
@@ -417,7 +417,7 @@ namespace FreeTrain.World.Rail
             {
                 Direction d = rr.direction;
                 if (hasBridge && (d == Direction.SOUTH || d == Direction.EAST))
-                    PassagewayRail.getFloatingSprite(d.right90).draw(display.surface, pt);
+                    PassagewayRail.getFloatingSprite(d.right90).draw(display.Surface, pt);
             }
             /// <summary>
             /// 
@@ -450,7 +450,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public void draw(RailRoadImpl rr, DrawContext display, Point pt)
             {
-                PassagewayRail.getStairSprite(rr.direction, upward, rr.hasRoof, rr.isDoubleWidth).draw(display.surface, pt);
+                PassagewayRail.getStairSprite(rr.direction, upward, rr.hasRoof, rr.isDoubleWidth).draw(display.Surface, pt);
             }
             /// <summary>
             /// 

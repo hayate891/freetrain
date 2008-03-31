@@ -75,7 +75,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <param name="loc"></param>
         /// <param name="pt"></param>
         [CLSCompliant(false)]
-        public override void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public override void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
 			if( base.currentPos!=loc )		return;
 			if( !contribution.canBeBuilt(loc) )	return;
@@ -85,8 +85,8 @@ namespace FreeTrain.World.Road.Accessory
 			if( rp.hasRoad(Direction.NORTH) )	x=1;
 			else								x=0;
 
-			contribution.sprites[x,0].drawAlpha( canvas.surface, pt );
-			contribution.sprites[x,1].drawAlpha( canvas.surface, pt );
+			contribution.sprites[x,0].drawAlpha( canvas.Surface, pt );
+			contribution.sprites[x,1].drawAlpha( canvas.Surface, pt );
 		}
 
         /// <summary>

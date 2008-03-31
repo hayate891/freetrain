@@ -42,40 +42,16 @@ namespace FreeTrain.Controllers.Land
     /// Controller that allows the user to
     /// place/remove lands.
     /// </summary>
-    public class BulldozeController : ControllerHostForm
+    public class BulldozeController : AbstractControllerImpl
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new BulldozeController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
-        public static BulldozeController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
-
         private Bitmap previewBitmap;
         /// <summary>
         /// 
         /// </summary>
-        protected BulldozeController()
+        public BulldozeController()
         {
             InitializeComponent();
-            previewBitmap = ResourceUtil.loadSystemBitmap("bulldozer.bmp");
+            previewBitmap = ResourceUtil.LoadSystemBitmap("bulldozer.bmp");
             preview.Image = previewBitmap;
             LandBuilderContribution builder = (LandBuilderContribution)PluginManager.theInstance.getContribution("{AE43E6DB-39F0-49FE-BE18-EE3FAC248FDE}");
             //TODO: fix this
@@ -103,6 +79,7 @@ namespace FreeTrain.Controllers.Land
         private void InitializeComponent()
         {
             this.preview = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.SuspendLayout();
             // 
             // preview
@@ -110,19 +87,18 @@ namespace FreeTrain.Controllers.Land
             this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.preview.Location = new System.Drawing.Point(0, 0);
             this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(112, 80);
+            this.preview.Size = new System.Drawing.Size(112, 87);
             this.preview.TabIndex = 1;
             this.preview.TabStop = false;
             // 
             // BulldozeController
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-            this.ClientSize = new System.Drawing.Size(112, 80);
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.preview});
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(165, 146);
+            this.Controls.Add(this.preview);
             this.Name = "BulldozeController";
             this.Text = "Bulldozer";
-            //! this.Text = "ブルドーザー";
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -312,7 +312,7 @@ namespace FreeTrain.Views.Map
         /// <param name="arg"></param>
         protected override void OnMouseDown(MouseEventArgs arg)
         {
-            ModalController controller = MainWindow.mainWindow.currentController;
+            IModalController controller = MainWindow.mainWindow.CurrentController;
 
             // start the drag mode
             dragMode = true;
@@ -327,7 +327,7 @@ namespace FreeTrain.Views.Map
         /// <param name="arg"></param>
         protected override void OnMouseMove(MouseEventArgs arg)
         {
-            ModalController controller = MainWindow.mainWindow.currentController;
+            IModalController controller = MainWindow.mainWindow.CurrentController;
 
             if (dragMode)
                 scrollByDrag(arg);
@@ -349,7 +349,7 @@ namespace FreeTrain.Views.Map
         /// <param name="arg"></param>
         protected override void OnMouseUp(MouseEventArgs arg)
         {
-            ModalController controller = MainWindow.mainWindow.currentController;
+            IModalController controller = MainWindow.mainWindow.CurrentController;
 
             if (dragMode)
             {

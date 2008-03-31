@@ -33,7 +33,7 @@ namespace FreeTrain.Contributions.Common
     /// <summary>
     /// FixedSizeStructureController
     /// </summary>
-    public class FixedSizeStructurePlacementController : CubeSelectorController, MapOverlay
+    public class FixedSizeStructurePlacementController : CubeSelectorController, IMapOverlay
     {
         /// <summary>
         /// 
@@ -84,7 +84,7 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
         /// <summary>
         /// 
         /// </summary>
@@ -92,17 +92,17 @@ namespace FreeTrain.Contributions.Common
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (currentCube.contains(loc))
-                alphaSprites.getSprite(loc - this.location).drawAlpha(canvas.surface, pt);
+                alphaSprites.getSprite(loc - this.location).drawAlpha(canvas.Surface, pt);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
 
 
         [Serializable]

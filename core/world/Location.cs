@@ -172,7 +172,7 @@ namespace FreeTrain.World
             if (rhs.x <= lhs.x && rhs.y <= lhs.y && rhs.z <= lhs.z)
                 return lhs;
             Debug.Fail("incorrect use of Location.max");
-            return UNPLACED;
+            return Unplaced;
         }
         /// <summary>
         /// 
@@ -187,7 +187,7 @@ namespace FreeTrain.World
             if (rhs.x <= lhs.x && rhs.y <= lhs.y && rhs.z <= lhs.z)
                 return rhs;
             Debug.Fail("incorrect use of Location.min");
-            return UNPLACED;
+            return Unplaced;
         }
 
 
@@ -326,7 +326,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 位置を持たないことを示す特殊な値
         /// </summary>
-        public static readonly Location UNPLACED = new Location(int.MinValue, int.MinValue, int.MinValue);
+        public static readonly Location Unplaced = new Location(int.MinValue, int.MinValue, int.MinValue);
     }
 
     /// <summary>

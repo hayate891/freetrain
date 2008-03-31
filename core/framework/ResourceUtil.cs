@@ -42,7 +42,7 @@ namespace FreeTrain.Framework
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static string findSystemResource(string name)
+        public static string FindSystemResource(string name)
         {
             string path;
 
@@ -78,9 +78,9 @@ namespace FreeTrain.Framework
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static Bitmap loadSystemBitmap(string name)
+        public static Bitmap LoadSystemBitmap(string name)
         {
-            return new Bitmap(findSystemResource(name));
+            return new Bitmap(FindSystemResource(name));
         }
 
         //		public static Icon loadIcon( Uri uri) {
@@ -96,7 +96,7 @@ namespace FreeTrain.Framework
         public static SdlDotNet.Audio.Sound loadSystemSound(String name)
         {
             // can't read from stream
-            return new SdlDotNet.Audio.Sound(findSystemResource(name));
+            return new SdlDotNet.Audio.Sound(FindSystemResource(name));
         }
 
         // using URI is essentially dangerous as Segment only support file names.
@@ -124,7 +124,7 @@ namespace FreeTrain.Framework
                 return PictureManager.get(id);
 
             // otherwise load a new picture
-            return new Picture(id, findSystemResource(name));
+            return new Picture(id, FindSystemResource(name));
         }
         /// <summary>
         /// 
@@ -141,7 +141,7 @@ namespace FreeTrain.Framework
                 return PictureManager.get(id);
 
             // otherwise load a new picture
-            return new Picture(id, findSystemResource(dayname), findSystemResource(nightname));
+            return new Picture(id, FindSystemResource(dayname), FindSystemResource(nightname));
         }
         /// <summary>
         /// 
@@ -152,7 +152,7 @@ namespace FreeTrain.Framework
         {
             //using(Bitmap bmp=loadSystemBitmap(name))
             //	return directDraw.createSprite(bmp);
-            return new Surface(findSystemResource(name));
+            return new Surface(FindSystemResource(name));
         }
 
 

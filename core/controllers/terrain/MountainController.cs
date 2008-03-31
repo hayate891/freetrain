@@ -36,41 +36,18 @@ namespace FreeTrain.Controllers.Terrain
     /// </summary>
     public partial class MountainController : AbstractControllerImpl
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new MountainController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
         private Label label1;
         private GroupBox groupBox1;
         private FreeTrain.Controls.IndexSelector selSize;
-
-        public static MountainController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
         private Bitmap previewBitmap;
+
         /// <summary>
         /// 
         /// </summary>
         public MountainController()
         {
             InitializeComponent();
-            previewBitmap = ResourceUtil.loadSystemBitmap("Terrain.bmp");
+            previewBitmap = ResourceUtil.LoadSystemBitmap("Terrain.bmp");
             preview.Image = previewBitmap;
         }
         /// <summary>

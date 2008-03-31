@@ -1,3 +1,22 @@
+#region LICENSE
+/*
+ * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+#endregion LICENSE
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,15 +25,76 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+using FreeTrain.Controllers.Rail;
+using FreeTrain.Controllers.Terrain;
+using FreeTrain.Controllers.Structs;
+using FreeTrain.Controllers.Land;
+using FreeTrain.Framework.Plugin;
+
 namespace FreeTrain.Framework
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class MainWindowMDI : Form
     {
         private int childFormNumber = 0;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MainWindowMDI()
         {
             InitializeComponent();
+            RailRoadController railRoadController = new RailRoadController();
+            railRoadController.MdiParent = this;
+            railRoadController.WindowState = FormWindowState.Maximized;
+            railRoadController.Show();
+            PlatformController platformController = new PlatformController();
+            platformController.MdiParent = this;
+            platformController.WindowState = FormWindowState.Maximized;
+            platformController.Show();
+            TrainPlacementController trainPlacementController = new TrainPlacementController();
+            trainPlacementController.MdiParent = this;
+            trainPlacementController.WindowState = FormWindowState.Maximized;
+            trainPlacementController.Show();
+            MountainController mountainController = new MountainController();
+            mountainController.MdiParent = this;
+            mountainController.WindowState = FormWindowState.Maximized;
+            mountainController.Show();
+            VarHeightBuildingController varHeightBuildingController = new VarHeightBuildingController();
+            varHeightBuildingController.MdiParent = this;
+            varHeightBuildingController.WindowState = FormWindowState.Maximized;
+            varHeightBuildingController.Show();
+            LandController landController = new LandController();
+            landController.MdiParent = this;
+            landController.WindowState = FormWindowState.Maximized;
+            landController.Show();
+            LandPropertyController landPropertyController = new LandPropertyController();
+            landPropertyController.MdiParent = this;
+            landPropertyController.WindowState = FormWindowState.Maximized;
+            landPropertyController.Show();
+            StationPassagewayController stationPassagewayController = new StationPassagewayController();
+            stationPassagewayController.MdiParent = this;
+            stationPassagewayController.WindowState = FormWindowState.Maximized;
+            stationPassagewayController.Show();
+            SlopeRailRoadController slopeRailRoadController = new SlopeRailRoadController();
+            slopeRailRoadController.MdiParent = this;
+            slopeRailRoadController.WindowState = FormWindowState.Maximized;
+            slopeRailRoadController.Show();
+            PluginListDialog pluginListDialog = new PluginListDialog();
+            pluginListDialog.MdiParent = this;
+            pluginListDialog.WindowState = FormWindowState.Maximized;
+            pluginListDialog.Show();
+            //RoadController roadController = new RoadController();
+            //roadController.MdiParent = mainWindowMDI;
+            //roadController.Show();
+            BulldozeController bulldozeController = new BulldozeController();
+            bulldozeController.MdiParent = this;
+            bulldozeController.Show();
+            BGMPlaylist bgmplaylist = new BGMPlaylist();
+            bgmplaylist.MdiParent = this;
+            bgmplaylist.Show();
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -112,6 +192,12 @@ namespace FreeTrain.Framework
         private void MainWindowMDI_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutDialog aboutDialog = new AboutDialog();
+            aboutDialog.ShowDialog();
         }
     }
 }

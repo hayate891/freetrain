@@ -42,7 +42,7 @@ namespace FreeTrain.World.Road.DummyCars
     /// place/remove cars.
     /// </summary>
     [CLSCompliant(false)]
-    public class ControllerForm : ControllerHostForm
+    public class ControllerForm : AbstractControllerImpl
     {
         private FreeTrain.Controls.CostBox costBox;
         private System.Windows.Forms.RadioButton buttonRemove;
@@ -91,103 +91,110 @@ namespace FreeTrain.World.Road.DummyCars
         {
             this.typeBox = new System.Windows.Forms.ComboBox();
             this.preview = new System.Windows.Forms.PictureBox();
-            //this.costBox = new freetrain.controls.CostBox();
             this.buttonRemove = new System.Windows.Forms.RadioButton();
             this.buttonPlace = new System.Windows.Forms.RadioButton();
             this.colSelector = new FreeTrain.Controls.IndexSelector();
             this.costBox = new FreeTrain.Controls.CostBox();
             this.indexSelector = new FreeTrain.Controls.IndexSelector();
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.SuspendLayout();
             // 
             // typeBox
             // 
-            this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top) | System.Windows.Forms.AnchorStyles.Right) | System.Windows.Forms.AnchorStyles.Left));
+            this.typeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.typeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.typeBox.Location = new System.Drawing.Point(8, 8);
+            this.typeBox.Location = new System.Drawing.Point(8, 9);
             this.typeBox.Name = "typeBox";
-            this.typeBox.Size = new System.Drawing.Size(112, 20);
+            this.typeBox.Size = new System.Drawing.Size(162, 21);
             this.typeBox.Sorted = true;
             this.typeBox.TabIndex = 2;
             this.typeBox.SelectedIndexChanged += new System.EventHandler(this.onTypeChanged);
             // 
+            // preview
+            // 
+            this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.preview.Location = new System.Drawing.Point(8, 69);
+            this.preview.Name = "preview";
+            this.preview.Size = new System.Drawing.Size(162, 98);
+            this.preview.TabIndex = 1;
+            this.preview.TabStop = false;
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
+            this.buttonRemove.Location = new System.Drawing.Point(89, 184);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(56, 26);
+            this.buttonRemove.TabIndex = 9;
+            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.buttonRemove.CheckedChanged += new System.EventHandler(this.onColorChanged);
+            // 
+            // buttonPlace
+            // 
+            this.buttonPlace.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
+            this.buttonPlace.Checked = true;
+            this.buttonPlace.Location = new System.Drawing.Point(33, 184);
+            this.buttonPlace.Name = "buttonPlace";
+            this.buttonPlace.Size = new System.Drawing.Size(56, 26);
+            this.buttonPlace.TabIndex = 8;
+            this.buttonPlace.TabStop = true;
+            this.buttonPlace.Text = "Place";
+            this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.buttonPlace.CheckedChanged += new System.EventHandler(this.onColorChanged);
+            // 
             // colSelector
             // 
-            this.colSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top) | System.Windows.Forms.AnchorStyles.Right) | System.Windows.Forms.AnchorStyles.Left));
+            this.colSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.colSelector.count = 10;
             this.colSelector.current = 0;
             this.colSelector.Cursor = System.Windows.Forms.Cursors.Default;
             this.colSelector.dataSource = null;
-            this.colSelector.Location = new System.Drawing.Point(8, 32);
+            this.colSelector.Location = new System.Drawing.Point(8, 35);
             this.colSelector.Name = "colSelector";
-            this.colSelector.Size = new System.Drawing.Size(112, 20);
+            this.colSelector.Size = new System.Drawing.Size(162, 21);
             this.colSelector.TabIndex = 6;
             this.colSelector.indexChanged += new System.EventHandler(this.onColorChanged);
-            // 
-            // preview
-            // 
-            this.preview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Top) | System.Windows.Forms.AnchorStyles.Right) | System.Windows.Forms.AnchorStyles.Left));
-            this.preview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.preview.Location = new System.Drawing.Point(8, 64);
-            this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(112, 80);
-            this.preview.TabIndex = 1;
-            this.preview.TabStop = false;
-            /*
             // 
             // costBox
             // 
             this.costBox.cost = 0;
             this.costBox.label = "Cost:";
-            //! this.costBox.label = "費用：";
-            this.costBox.Location = new System.Drawing.Point(8, 128);
+            this.costBox.Location = new System.Drawing.Point(0, 0);
             this.costBox.Name = "costBox";
-            this.costBox.Size = new System.Drawing.Size(112, 32);
-            this.costBox.TabIndex = 10;
-            */
+            this.costBox.Size = new System.Drawing.Size(96, 32);
+            this.costBox.TabIndex = 0;
             // 
-            // buttonRemove
+            // indexSelector
             // 
-            this.buttonRemove.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonRemove.Location = new System.Drawing.Point(64, 160);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(56, 24);
-            this.buttonRemove.TabIndex = 9;
-            this.buttonRemove.Text = "Remove";
-            //! this.buttonRemove.Text = "撤去";
-            this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonRemove.CheckedChanged += new System.EventHandler(this.onColorChanged);
-            this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom));
-            // 
-            // buttonPlace
-            // 
-            this.buttonPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom));
-            this.buttonPlace.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonPlace.Checked = true;
-            this.buttonPlace.Location = new System.Drawing.Point(8, 160);
-            this.buttonPlace.Name = "buttonPlace";
-            this.buttonPlace.Size = new System.Drawing.Size(56, 24);
-            this.buttonPlace.TabIndex = 8;
-            this.buttonPlace.TabStop = true;
-            this.buttonPlace.Text = "Place";
-            //! this.buttonPlace.Text = "設置";
-            this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonPlace.CheckedChanged += new System.EventHandler(this.onColorChanged);
+            this.indexSelector.count = 10;
+            this.indexSelector.current = 0;
+            this.indexSelector.dataSource = null;
+            this.indexSelector.Location = new System.Drawing.Point(0, 0);
+            this.indexSelector.Name = "indexSelector";
+            this.indexSelector.Size = new System.Drawing.Size(112, 24);
+            this.indexSelector.TabIndex = 0;
             // 
             // ControllerForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-            this.ClientSize = new System.Drawing.Size(128, 190);
-            this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  /*this.costBox,*/
-																		  this.buttonRemove,
-																		  this.buttonPlace,
-																		  this.typeBox,
-																		  this.colSelector,
-																		  this.preview});
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(178, 217);
+            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.buttonPlace);
+            this.Controls.Add(this.typeBox);
+            this.Controls.Add(this.colSelector);
+            this.Controls.Add(this.preview);
             this.Name = "ControllerForm";
             this.Text = "Automobile";
-            this.Resize += new EventHandler(this.updateAfterResize);
-            //! this.Text = "自動車";
+            this.Resize += new System.EventHandler(this.updateAfterResize);
+            ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +220,7 @@ namespace FreeTrain.World.Road.DummyCars
             this.buttonPlace.Width = ((this.preview.Width)) / 2;
             this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width);
             this.buttonRemove.Width = this.buttonPlace.Width;
-            updatePreview();
+            UpdatePreview();
         }
 
         private int currentColor
@@ -265,10 +272,10 @@ namespace FreeTrain.World.Road.DummyCars
                 if (previewBitmap != null) previewBitmap.Dispose();
                 preview.Image = previewBitmap = drawer.createBitmap();
             }
-            if (isPlacing)
-                currentController = builder.createBuilder(this.siteImpl);
-            else
-                currentController = builder.createRemover(this.siteImpl);
+            //if (isPlacing)
+                //currentController = builder.createBuilder(this.siteImpl);
+            //else
+                //currentController = builder.createRemover(this.siteImpl);
         }
     }
 }

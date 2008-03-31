@@ -148,13 +148,13 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public virtual ModalController createBuilder(IControllerSite site) { return core.createBuilder(site); }
+        public virtual IModalController createBuilder(IControllerSite site) { return core.createBuilder(site); }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public virtual ModalController createRemover(IControllerSite site) { return core.createRemover(site); }
+        public virtual IModalController createRemover(IControllerSite site) { return core.createRemover(site); }
         /// <summary>
         /// 
         /// </summary>
@@ -240,7 +240,7 @@ namespace FreeTrain.Contributions.Common
             /// </summary>
             /// <param name="site"></param>
             /// <returns></returns>
-            public virtual FreeTrain.Controllers.ModalController createBuilder(FreeTrain.Controllers.IControllerSite site)
+            public virtual FreeTrain.Controllers.IModalController createBuilder(FreeTrain.Controllers.IControllerSite site)
             {
                 throw new NotImplementedException();
             }
@@ -249,7 +249,7 @@ namespace FreeTrain.Contributions.Common
             /// </summary>
             /// <param name="site"></param>
             /// <returns></returns>
-            public virtual FreeTrain.Controllers.ModalController createRemover(FreeTrain.Controllers.IControllerSite site)
+            public virtual FreeTrain.Controllers.IModalController createRemover(FreeTrain.Controllers.IControllerSite site)
             {
                 throw new NotImplementedException();
             }

@@ -29,7 +29,7 @@ namespace FreeTrain.Controllers
     /// </summary>
     public class LocationStore
     {
-        private Location loc = Location.UNPLACED;
+        private Location loc = Location.Unplaced;
         /// <summary>
         /// 
         /// </summary>
@@ -47,11 +47,11 @@ namespace FreeTrain.Controllers
             }
             set
             {
-                if (loc != Location.UNPLACED)
-                    WorldDefinition.World.onVoxelUpdated(loc);
+                if (loc != Location.Unplaced)
+                    WorldDefinition.World.OnVoxelUpdated(loc);
                 loc = value;
-                if (loc != Location.UNPLACED)
-                    WorldDefinition.World.onVoxelUpdated(loc);
+                if (loc != Location.Unplaced)
+                    WorldDefinition.World.OnVoxelUpdated(loc);
             }
         }
     }

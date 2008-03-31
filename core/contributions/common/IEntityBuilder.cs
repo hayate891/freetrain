@@ -75,12 +75,12 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        ModalController createBuilder(IControllerSite site);
+        IModalController createBuilder(IControllerSite site);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        ModalController createRemover(IControllerSite site);
+        IModalController createRemover(IControllerSite site);
     }
 }

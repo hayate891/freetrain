@@ -41,7 +41,7 @@ namespace FreeTrain.Controllers.Structs
     /// Controller that allows the user to
     /// place/remove structures.
     /// </summary>
-    public abstract class StructPlacementController : AbstractControllerImpl, MapOverlay, LocationDisambiguator
+    public abstract class StructPlacementController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
     {
         private System.Windows.Forms.ComboBox structType;
         private System.Windows.Forms.PictureBox preview;
@@ -216,7 +216,7 @@ namespace FreeTrain.Controllers.Structs
 
 
 
-        private Location baseLoc = World.Location.UNPLACED;
+        private Location baseLoc = World.Location.Unplaced;
         /// <summary>
         /// 
         /// </summary>
@@ -232,7 +232,7 @@ namespace FreeTrain.Controllers.Structs
                 // update the screen
                 baseLoc = loc;
                 // TODO: we need to correctly update the screen
-                w.onAllVoxelUpdated();
+                w.OnAllVoxelUpdated();
             }
         }
 
@@ -241,7 +241,7 @@ namespace FreeTrain.Controllers.Structs
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawBefore(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
         /// <summary>
         /// 
         /// </summary>
@@ -249,13 +249,13 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContextEx canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (!isPlacing) return;
             if (alphaSprites != null)
             {
                 if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
-                    alphaSprites.getSprite(loc - baseLoc).drawAlpha(canvas.surface, pt);
+                    alphaSprites.getSprite(loc - baseLoc).drawAlpha(canvas.Surface, pt);
             }
         }
         /// <summary>
@@ -263,7 +263,7 @@ namespace FreeTrain.Controllers.Structs
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        public void DrawAfter(QuarterViewDrawer view, DrawContextEx surface) { }
+        public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
 
 
         /// <summary>

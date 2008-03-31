@@ -79,7 +79,7 @@ namespace FreeTrain.World.Accounting
 
             webBrowser.Navigate("about:blank");
             //webBrowser.docHostUIHandler = new DocHostUIHandlerImpl(this);
-            webBrowser.Navigate(ResourceUtil.findSystemResource("balanceSheet.html"));
+            webBrowser.Navigate(ResourceUtil.FindSystemResource("balanceSheet.html"));
         }
         /// <summary>
         /// 
