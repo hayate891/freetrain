@@ -368,14 +368,14 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 if (heightCutDiff < 0 || owner.backside.height < heightCutDiff)
                 {
                     owner.backside.getSprite().draw(display.Surface, pt);
-                    Sprite hls = owner.backside.getHighlightSprite();
+                    ISprite hls = owner.backside.getHighlightSprite();
                     if (hls != null) hls.draw(display.Surface, pt);
                 }
             if (owner.foreside != null)
                 if (heightCutDiff < 0 || owner.foreside.height < heightCutDiff)
                 {
                     owner.foreside.getSprite().draw(display.Surface, pt);
-                    Sprite hls = owner.foreside.getHighlightSprite();
+                    ISprite hls = owner.foreside.getHighlightSprite();
                     if (hls != null) hls.draw(display.Surface, pt);
                 }
         }

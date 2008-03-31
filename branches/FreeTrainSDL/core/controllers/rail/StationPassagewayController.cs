@@ -35,7 +35,7 @@ namespace FreeTrain.Controllers.Rail
     /// <summary>
     /// StationBridgeController の概要の説明です。
     /// </summary>
-    public class StationPassagewayController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
+    public class StationPassagewayController : AbstractControllerImpl, IMapOverlay, ILocationDisambiguator
     {
         /// <summary>
         /// 
@@ -190,17 +190,17 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator { get { return this; } }
+        public override ILocationDisambiguator Disambiguator { get { return this; } }
 
         /// <summary> LocationDisambiguator implementation </summary>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             // align to platforms or the ground
             if (anchor != UNPLACED)
                 // must be the same height with the anchor
                 return loc.z == anchor.z;
             else
-                return ThinPlatform.get(loc) != null || GroundDisambiguator.theInstance.isSelectable(loc);
+                return ThinPlatform.get(loc) != null || GroundDisambiguator.theInstance.IsSelectable(loc);
         }
 
         private static readonly Location UNPLACED = World.Location.Unplaced;

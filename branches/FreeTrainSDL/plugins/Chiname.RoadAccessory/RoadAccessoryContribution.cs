@@ -62,7 +62,7 @@ namespace FreeTrain.World.Road.Accessory
         /// y=0 if a sprite is behind a train and
         /// y=1 if a sprite is in front of a train 
         /// </summary>
-        internal readonly Sprite[,] sprites = new Sprite[2, 2];
+        internal readonly ISprite[,] sprites = new ISprite[2, 2];
         /// <summary>
         /// 
         /// </summary>

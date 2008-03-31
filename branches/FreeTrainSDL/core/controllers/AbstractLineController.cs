@@ -286,7 +286,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator
+        public override ILocationDisambiguator Disambiguator
         {
             get
             {
@@ -295,7 +295,7 @@ namespace FreeTrain.Controllers
                 else return sameLevelDisambiguator;
             }
         }
-        private LocationDisambiguator sameLevelDisambiguator;
+        private ILocationDisambiguator sameLevelDisambiguator;
 
 
         private void modeChanged(object sender, EventArgs e)

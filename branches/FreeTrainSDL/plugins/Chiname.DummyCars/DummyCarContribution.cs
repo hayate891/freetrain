@@ -62,7 +62,7 @@ namespace FreeTrain.World.Road.DummyCars
             colorVariations = 0;
             IEnumerator ienum = splist.ChildNodes.GetEnumerator();
             while (ienum.MoveNext()) colorVariations++;
-            sprites = new Sprite[colorVariations, 2];
+            sprites = new ISprite[colorVariations, 2];
             currentColor = 0;
             ienum.Reset();
             colorVariations = 0;
@@ -88,7 +88,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// y=1 if a pole is for N/S direction
         /// 
         /// </summary>
-        internal readonly Sprite[,] sprites = new Sprite[10, 2];
+        internal readonly ISprite[,] sprites = new ISprite[10, 2];
 
         /// <summary>
         /// 
@@ -104,7 +104,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public Sprite getSprites()
+        public ISprite getSprites()
         {
             if (currentColor >= colorVariations) currentColor = 0;
             return sprites[currentColor, 0];

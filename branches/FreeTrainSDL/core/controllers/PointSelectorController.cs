@@ -154,7 +154,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public abstract LocationDisambiguator Disambiguator { get; }
+        public abstract ILocationDisambiguator Disambiguator { get; }
         /// <summary>
         /// 
         /// </summary>

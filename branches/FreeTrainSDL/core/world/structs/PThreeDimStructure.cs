@@ -126,7 +126,7 @@ namespace FreeTrain.World.Structs
             /// is invisible.
             /// </summary>
             [NonSerialized]	// programatically recreatable.
-            private Sprite sprite;
+            private ISprite sprite;
             /// <summary>
             /// 
             /// </summary>

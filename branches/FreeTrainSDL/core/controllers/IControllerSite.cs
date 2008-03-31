@@ -31,39 +31,10 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Close the host.
         /// </summary>
-        void close();
+        void Close();
         /// <summary>
         /// 
         /// </summary>
         string name { get; } // TODO: fix
-    }
-    /// <summary>
-    /// 
-    /// </summary>
-    public class ControllerSiteImpl : IControllerSite
-    {
-        private readonly Form owner;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_owner"></param>
-        public ControllerSiteImpl(Form _owner) { this.owner = _owner; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public void close()
-        {
-            owner.Close();
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string name
-        {
-            get
-            {
-                return owner.Text;
-            }
-        }
     }
 }

@@ -43,7 +43,7 @@ namespace FreeTrain.Contributions.Road
             // load resource, but don't dispose it as sprites will still refer to this surface.
             Picture picture = getPicture(e);
 
-            sprites = new Sprite[3];
+            sprites = new ISprite[3];
             for (int i = 0; i < 3; i++)
                 sprites[i] = new SimpleSprite(picture, new Point(0, 16), new Point(i * 32, 0), new Size(32, 32));
         }
@@ -51,13 +51,13 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// three sprites (0:E-W, 1:N-S, 2:cross)
         /// </summary>
-        private readonly Sprite[] sprites;
+        private readonly ISprite[] sprites;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="idx"></param>
         /// <returns></returns>
-        protected internal override Sprite getSprite(byte idx)
+        protected internal override ISprite getSprite(byte idx)
         {
             switch (idx)
             {

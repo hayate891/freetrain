@@ -34,12 +34,12 @@ namespace FreeTrain.Controllers
     /// 
     /// This interface does this.
     /// </summary>
-    public interface LocationDisambiguator
+    public interface ILocationDisambiguator
     {
         /// <summary>
         /// Returns true if the callee prefers this location
         /// to be selected.
         /// </summary>
-        bool isSelectable(Location loc);
+        bool IsSelectable(Location loc);
     }
 }

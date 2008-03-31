@@ -122,14 +122,14 @@ namespace FreeTrain.World.Rail
 
 
         /// <summary>Sprites of the platform </summary>
-        private static readonly Sprite[] sprites = new Sprite[8];
+        private static readonly ISprite[] sprites = new ISprite[8];
         /// <summary>
         /// 
         /// </summary>
         /// <param name="d"></param>
         /// <param name="hasRoof"></param>
         /// <returns></returns>
-        public static Sprite getSprite(Direction d, bool hasRoof)
+        public static ISprite getSprite(Direction d, bool hasRoof)
         {
             Debug.Assert(d.isSharp);
             return sprites[d.index + (hasRoof ? 1 : 0)];

@@ -112,7 +112,7 @@ namespace FreeTrain.Contributions.Land
             return new DefaultControllerImpl(this, site, new DefaultControllerImpl.SpriteBuilder(getLandSprite));
         }
 
-        private Sprite getLandSprite()
+        private ISprite getLandSprite()
         {
             return getLand().sprite;
         }

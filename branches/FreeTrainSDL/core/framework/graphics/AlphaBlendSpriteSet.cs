@@ -45,7 +45,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// Sprites built for alpha-blending.
         /// </summary>
-        public readonly Sprite[, ,] sprites;
+        public readonly ISprite[, ,] sprites;
         /// <summary>
         /// 
         /// </summary>
@@ -54,13 +54,13 @@ namespace FreeTrain.Framework.Graphics
         /// 
         /// </summary>
         /// <param name="src"></param>
-        public AlphaBlendSpriteSet(Sprite[, ,] src)
+        public AlphaBlendSpriteSet(ISprite[, ,] src)
         {
             int X = src.GetLength(0);
             int Y = src.GetLength(1);
             int Z = src.GetLength(2);
             surfaces = new Surface[X, Y, Z];
-            sprites = new Sprite[X, Y, Z];
+            sprites = new ISprite[X, Y, Z];
             size = new Distance(X, Y, Z);
 
             for (int z = 0; z < Z; z++)
@@ -122,7 +122,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public Sprite getSprite(Distance d)
+        public ISprite getSprite(Distance d)
         {
             return sprites[d.x, d.y, d.z];
         }

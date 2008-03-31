@@ -27,7 +27,7 @@ namespace FreeTrain.Framework.Graphics
     /// <summary>
     /// Sprite that directly draws from a surface.
     /// </summary>
-    public class DirectSprite : Sprite
+    public class DirectSprite : ISprite
     {
         /// <summary>
         /// 

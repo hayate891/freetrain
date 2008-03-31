@@ -41,7 +41,7 @@ namespace FreeTrain.Controllers.Rail
     /// <summary>
     /// 
     /// </summary>
-    public partial class PlatformController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
+    public partial class PlatformController : AbstractControllerImpl, IMapOverlay, ILocationDisambiguator
     {
         private FreeTrain.Controls.IndexSelector indexSelector;
         private System.Windows.Forms.ListView listView1;
@@ -150,14 +150,14 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator { get { return this; } }
+        public override ILocationDisambiguator Disambiguator { get { return this; } }
 
         /// <summary> LocationDisambiguator implementation </summary>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             if (currentMode == Mode.Station)
             {
-                return GroundDisambiguator.theInstance.isSelectable(loc);
+                return GroundDisambiguator.theInstance.IsSelectable(loc);
             }
 
             if (isPlacing)
@@ -167,7 +167,7 @@ namespace FreeTrain.Controllers.Rail
                 if (currentMode == Mode.FatPlatform)
                     loc += direction.right90;
 
-                if (GroundDisambiguator.theInstance.isSelectable(loc))
+                if (GroundDisambiguator.theInstance.IsSelectable(loc))
                     return true;
 
                 RailRoad rr = RailRoad.get(loc);
@@ -545,7 +545,7 @@ namespace FreeTrain.Controllers.Rail
                 alphaSprites.Dispose();
 
 
-            Sprite[, ,] alphas = null;
+            ISprite[, ,] alphas = null;
 
             switch (this.currentMode)
             {
@@ -555,19 +555,19 @@ namespace FreeTrain.Controllers.Rail
                     break;
 
                 case Mode.ThinPlatform:
-                    Sprite spr = ThinPlatform.getSprite(direction, false);
+                    ISprite spr = ThinPlatform.getSprite(direction, false);
 
                     // build sprite set
                     // TODO: use the correct sprite
                     if (direction == Direction.NORTH || direction == Direction.SOUTH)
                     {
-                        alphas = new Sprite[1, length, 1];
+                        alphas = new ISprite[1, length, 1];
                         for (int i = 0; i < length; i++)
                             alphas[0, i, 0] = spr;
                     }
                     else
                     {
-                        alphas = new Sprite[length, 1, 1];
+                        alphas = new ISprite[length, 1, 1];
                         for (int i = 0; i < length; i++)
                             alphas[i, 0, 0] = spr;
                     }
@@ -582,7 +582,7 @@ namespace FreeTrain.Controllers.Rail
                     // build sprite set
                     if (direction == Direction.NORTH || direction == Direction.SOUTH)
                     {
-                        alphas = new Sprite[2, length, 1];
+                        alphas = new ISprite[2, length, 1];
                         int j = direction == Direction.SOUTH ? 1 : 0;
                         for (int i = 0; i < length; i++)
                         {
@@ -592,7 +592,7 @@ namespace FreeTrain.Controllers.Rail
                     }
                     else
                     {
-                        alphas = new Sprite[length, 2, 1];
+                        alphas = new ISprite[length, 2, 1];
                         int j = direction == Direction.WEST ? 1 : 0;
                         for (int i = 0; i < length; i++)
                         {

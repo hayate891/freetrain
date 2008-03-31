@@ -55,7 +55,7 @@ namespace FreeTrain.Contributions.Road
         /// </summary>
         /// <param name="dirs"></param>
         /// <returns></returns>
-        protected internal abstract Sprite getSprite(byte dirs);
+        protected internal abstract ISprite getSprite(byte dirs);
         /// <summary>
         /// 
         /// </summary>

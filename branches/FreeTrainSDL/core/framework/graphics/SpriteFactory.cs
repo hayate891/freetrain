@@ -40,7 +40,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public abstract Sprite createSprite(Picture picture, Point offset, Point origin, Size size);
+        public abstract ISprite createSprite(Picture picture, Point offset, Point origin, Size size);
 
 
         /// <summary>

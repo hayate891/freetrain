@@ -147,7 +147,7 @@ namespace FreeTrain.Contributions.Land
                 new DefaultControllerImpl.SpriteBuilder(getSprite));
         }
 
-        private static Sprite getSprite()
+        private static ISprite getSprite()
         {
             return ResourceUtil.removerChip;
             //return ResourceUtil.emptyChip;

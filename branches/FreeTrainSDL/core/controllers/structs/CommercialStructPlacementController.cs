@@ -60,12 +60,12 @@ namespace FreeTrain.Controllers.Structs
         private CommercialStructPlacementController() : base(Core.plugins.commercialStructureGroup) { }
 
         /// <summary> LocationDisambiguator implementation </summary>
-        public override bool isSelectable(Location loc)
+        public override bool IsSelectable(Location loc)
         {
             if (isPlacing)
             {
                 // structures can be placed only on the ground
-                return GroundDisambiguator.theInstance.isSelectable(loc);
+                return GroundDisambiguator.theInstance.IsSelectable(loc);
             }
             else
             {

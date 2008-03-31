@@ -28,20 +28,20 @@ namespace FreeTrain.Controllers
     /// LocationDisambiguator implementation that prefers
     /// a location with a railroad.
     /// </summary>
-    public class RailRoadDisambiguator : LocationDisambiguator
+    public class RailRoadDisambiguator : ILocationDisambiguator
     {
         // the singleton instance
         /// <summary>
         /// 
         /// </summary>
-        public static LocationDisambiguator theInstance = new RailRoadDisambiguator();
+        public static ILocationDisambiguator theInstance = new RailRoadDisambiguator();
         private RailRoadDisambiguator() { }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             // if there's any rail roads, fine
             if (RailRoad.get(loc) != null) return true;
@@ -56,20 +56,20 @@ namespace FreeTrain.Controllers
     /// <summary>
     /// LocationDisambiguator that prefers the surface level.
     /// </summary>
-    public class GroundDisambiguator : LocationDisambiguator
+    public class GroundDisambiguator : ILocationDisambiguator
     {
         // the singleton instance
         /// <summary>
         /// 
         /// </summary>
-        public static LocationDisambiguator theInstance = new GroundDisambiguator();
+        public static ILocationDisambiguator theInstance = new GroundDisambiguator();
         private GroundDisambiguator() { }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             return loc.z == WorldDefinition.World.getGroundLevel(loc);
         }
@@ -78,7 +78,7 @@ namespace FreeTrain.Controllers
     /// <summary>
     /// LocationDisambiguator that only allows locations in the same level
     /// </summary>
-    public class SameLevelDisambiguator : LocationDisambiguator
+    public class SameLevelDisambiguator : ILocationDisambiguator
     {
         /// <summary>
         /// 
@@ -91,7 +91,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             return loc.z == height;
         }

@@ -168,7 +168,7 @@ namespace FreeTrain.Framework
         /// <summary>
         /// 
         /// </summary>
-        public static Sprite emptyChip
+        public static ISprite emptyChip
         {
             get
             {
@@ -180,7 +180,7 @@ namespace FreeTrain.Framework
         /// </summary>
         /// <param name="w"></param>
         /// <returns></returns>
-        public static Sprite getGroundChip(WorldDefinition w)
+        public static ISprite getGroundChip(WorldDefinition w)
         {
             if (w.clock.season != Season.Winter)
                 return groundChips[0];
@@ -188,24 +188,24 @@ namespace FreeTrain.Framework
                 return groundChips[1];
         }
 
-        private static Sprite[] groundChips = new Sprite[]{
+        private static ISprite[] groundChips = new ISprite[]{
 			new SimpleSprite(emptyChips,new Point(0,0),new Point( 0,0),new Size(32,16)),
 			new SimpleSprite(emptyChips,new Point(0,0),new Point(32,0),new Size(32,16))
 		};
         /// <summary>
         /// 
         /// </summary>
-        public static Sprite removerChip =
+        public static ISprite removerChip =
             new SimpleSprite(cursorChips, new Point(0, 0), new Point(0, 0), new Size(32, 16));
         /// <summary>
         /// 
         /// </summary>
-        public static Sprite underWaterChip =
+        public static ISprite underWaterChip =
             new SimpleSprite(emptyChips, new Point(0, 0), new Point(64, 0), new Size(32, 16));
         /// <summary>
         /// 
         /// </summary>
-        public static Sprite underGroundChip =
+        public static ISprite underGroundChip =
             new SimpleSprite(emptyChips, new Point(0, 0), new Point(96, 0), new Size(32, 16));
     }
 }

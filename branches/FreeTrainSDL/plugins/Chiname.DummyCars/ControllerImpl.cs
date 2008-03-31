@@ -109,7 +109,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator
+        public override ILocationDisambiguator Disambiguator
         {
             get
             {
@@ -120,14 +120,14 @@ namespace FreeTrain.World.Road.DummyCars
     /// <summary>
     /// 
     /// </summary>
-    public class RoadDisambiguator : LocationDisambiguator
+    public class RoadDisambiguator : ILocationDisambiguator
     {
         // the singleton instance
         /// <summary>
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public static LocationDisambiguator theInstance = new RoadDisambiguator();
+        public static ILocationDisambiguator theInstance = new RoadDisambiguator();
         private RoadDisambiguator() { }
         /// <summary>
         /// 
@@ -135,7 +135,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// <param name="loc"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             // if there's any rail roads, fine
             if (BaseRoad.get(loc) != null) return true;

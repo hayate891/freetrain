@@ -464,20 +464,20 @@ namespace FreeTrain.World.Structs
             //
             //
 
-            private readonly static Sprite[/*direction*/,/*0:no door, 1:door*/] fenceSprites;
+            private readonly static ISprite[/*direction*/,/*0:no door, 1:door*/] fenceSprites;
 
-            private readonly static Sprite[/*Ground*/] groundSprites;
+            private readonly static ISprite[/*Ground*/] groundSprites;
 
-            private readonly static Sprite[/*level*/,/*N*/,/*E*/,/*S*/,/*W*/] boneSprites;
+            private readonly static ISprite[/*level*/,/*N*/,/*E*/,/*S*/,/*W*/] boneSprites;
 
-            private readonly static Sprite[/*direction*/] wallSprites;
+            private readonly static ISprite[/*direction*/] wallSprites;
 
 
             static VoxelImpl()
             {
                 // load fence sprites
                 Picture fence = ResourceUtil.loadSystemPicture("ConstructionFence.bmp");
-                fenceSprites = new Sprite[4/*direction*/, 2/*door or no door*/];
+                fenceSprites = new ISprite[4/*direction*/, 2/*door or no door*/];
                 for (int i = 0; i < 4; i++)
                     fenceSprites[i, 0] = new SimpleSprite(fence, new Point(0, 16), new Point(32 * i, 0), new Size(32, 32));
                 fenceSprites[0, 1] = fenceSprites[0, 0];
@@ -490,7 +490,7 @@ namespace FreeTrain.World.Structs
 
                 // load ground sprites
                 Picture ground = ResourceUtil.loadSystemPicture("ConstructionGround.bmp");
-                groundSprites = new Sprite[7];
+                groundSprites = new ISprite[7];
 
                 groundSprites[0] = new SimpleSprite(// ground
                     ground, new Point(0, 0), new Point(96, 1), new Size(32, 16));
@@ -510,7 +510,7 @@ namespace FreeTrain.World.Structs
 
                 // load bone sprites
                 Picture bone = ResourceUtil.loadSystemPicture("ConstructionBones.bmp");
-                boneSprites = new Sprite[3, 2, 2, 2, 2];
+                boneSprites = new ISprite[3, 2, 2, 2, 2];
 
                 for (int l = 0; l < 3; l++)
                     for (int n = 0; n < 2; n++)
@@ -533,7 +533,7 @@ namespace FreeTrain.World.Structs
 
                 // loa dwall sprites
                 Picture wall = ResourceUtil.loadSystemPicture("ConstructionWall.bmp");
-                wallSprites = new Sprite[4];
+                wallSprites = new ISprite[4];
 
                 wallSprites[0] = new SimpleSprite(wall,
                     new Point(0, 16), new Point(0, 0), new Size(16, 32));

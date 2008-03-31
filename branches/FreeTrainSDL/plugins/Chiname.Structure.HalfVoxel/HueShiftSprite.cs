@@ -77,7 +77,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="size"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override Sprite createSprite(Picture picture, Point offset, Point origin, Size size)
+        public override ISprite createSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new SimpleSprite(picture, offset, origin, size);
         }
@@ -92,11 +92,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="size"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public Sprite[] createSprites(Bitmap bit, Picture picture, Point offset, Point origin, Size size)
+        public ISprite[] createSprites(Bitmap bit, Picture picture, Point offset, Point origin, Size size)
         {
             int sprites = steps;
             int shift = 360 / sprites; // hue shift per step
-            Sprite[] dest = new Sprite[sprites];
+            ISprite[] dest = new ISprite[sprites];
             ArrayList work = new ArrayList();
             for (int y = 0; y < size.Height; y++)
             {

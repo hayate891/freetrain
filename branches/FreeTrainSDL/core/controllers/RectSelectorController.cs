@@ -32,7 +32,7 @@ namespace FreeTrain.Controllers
     /// ModalController that selects the rectangular region
     /// and do something with it.
     /// </summary>
-    public abstract class RectSelectorController : IModalController, LocationDisambiguator
+    public abstract class RectSelectorController : IModalController, ILocationDisambiguator
     {
         /// <summary>Constant</summary>
         protected static readonly Location UNPLACED = World.Location.Unplaced;
@@ -137,16 +137,16 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public LocationDisambiguator Disambiguator { get { return this; } }
+        public ILocationDisambiguator Disambiguator { get { return this; } }
 
         /// <summary> LocationDisambiguator implementation </summary>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             if (anchor != UNPLACED)
                 return loc.z == anchor.z;
             else
                 // lands can be placed only on the ground
-                return GroundDisambiguator.theInstance.isSelectable(loc);
+                return GroundDisambiguator.theInstance.IsSelectable(loc);
         }
         /// <summary>
         /// 

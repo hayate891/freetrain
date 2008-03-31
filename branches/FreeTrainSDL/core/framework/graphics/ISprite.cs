@@ -32,7 +32,7 @@ namespace FreeTrain.Framework.Graphics
     /// 
     /// Sprites are serializable
     /// </summary>
-    public interface Sprite
+    public interface ISprite
     {
         // draw a sprite to the given point.
         /// <summary>

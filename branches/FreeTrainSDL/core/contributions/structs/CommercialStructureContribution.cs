@@ -48,7 +48,7 @@ namespace FreeTrain.Contributions.Structs
         /// <param name="pic"></param>
         /// <param name="main"></param>
         /// <param name="opposite"></param>
-        public CommercialStructureContribution(AbstractExStructure master, XmlElement pic, XmlElement main, bool opposite)
+        public CommercialStructureContribution(IAbstractStructure master, XmlElement pic, XmlElement main, bool opposite)
             : base(master, pic, main, opposite) { }
         /// <summary>
         /// 

@@ -167,7 +167,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public override Sprite createSprite(Picture picture, Point offset, Point origin, Size size)
+        public override ISprite createSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new HueTransformSprite(picture, offset, origin, size, RedTarget, GreenTarget, BlueTarget);
         }

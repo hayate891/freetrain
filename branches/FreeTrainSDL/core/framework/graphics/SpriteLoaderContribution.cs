@@ -49,7 +49,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// Load a single sprite from the given manifest.
         /// </summary>
-        public virtual Sprite load0D(XmlElement sprite)
+        public virtual ISprite load0D(XmlElement sprite)
         {
             throw new NotImplementedException(this.GetType().FullName + ".load0D");
         }
@@ -57,7 +57,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// Load a set of sprites of size (x) from the given manifest.
         /// </summary>
-        public virtual Sprite[] load1D(XmlElement sprite, int x)
+        public virtual ISprite[] load1D(XmlElement sprite, int x)
         {
             throw new NotImplementedException(this.GetType().FullName + ".load1D");
         }
@@ -65,7 +65,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// Load a set of sprites of size (x,y) from the given manifest.
         /// </summary>
-        public virtual Sprite[,] load2D(XmlElement sprite, int x, int y, int height)
+        public virtual ISprite[,] load2D(XmlElement sprite, int x, int y, int height)
         {
             throw new NotImplementedException(this.GetType().FullName + ".load2D");
         }
@@ -76,7 +76,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="sz"></param>
         /// <param name="height"></param>
         /// <returns></returns>
-        public Sprite[,] load2D(XmlElement sprite, Size sz, int height)
+        public ISprite[,] load2D(XmlElement sprite, Size sz, int height)
         {
             return load2D(sprite, sz.Width, sz.Height, height);
         }
@@ -84,7 +84,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// Load a set of sprites of size (x,y,z) from the given manifest.
         /// </summary>
-        public virtual Sprite[, ,] load3D(XmlElement sprite, int x, int y, int z)
+        public virtual ISprite[, ,] load3D(XmlElement sprite, int x, int y, int z)
         {
             throw new NotImplementedException(this.GetType().FullName + ".load3D");
         }

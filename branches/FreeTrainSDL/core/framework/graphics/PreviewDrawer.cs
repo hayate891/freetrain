@@ -88,7 +88,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary> Clears the canvas by tiling empty chips. </summary>
         public void clear()
         {
-            Sprite empty = ResourceUtil.getGroundChip(WorldDefinition.World);
+            ISprite empty = ResourceUtil.getGroundChip(WorldDefinition.World);
             for (int y = (ptOrigin.Y % 8) - 16; y < pixelSize.Height; y += 8)
             {
                 int x = (ptOrigin.X % 32) - 64;
@@ -129,7 +129,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="sprite"></param>
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
-        public void draw(Sprite sprite, int offsetX, int offsetY)
+        public void draw(ISprite sprite, int offsetX, int offsetY)
         {
             sprite.draw(surface, getPoint(offsetX, offsetY));
         }
@@ -138,7 +138,7 @@ namespace FreeTrain.Framework.Graphics
         /// 
         /// </summary>
         /// <param name="sprites"></param>
-        public void drawCenter(Sprite[,] sprites)
+        public void drawCenter(ISprite[,] sprites)
         {
             draw(sprites, 0, 0);
         }
@@ -148,7 +148,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="sprites"></param>
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
-        public void draw(Sprite[,] sprites, int offsetX, int offsetY)
+        public void draw(ISprite[,] sprites, int offsetX, int offsetY)
         {
             draw(sprites, offsetX, offsetY, 0);
         }
@@ -159,7 +159,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
         /// <param name="offsetZ"></param>
-        public void draw(Sprite[,] sprites, int offsetX, int offsetY, int offsetZ)
+        public void draw(ISprite[,] sprites, int offsetX, int offsetY, int offsetZ)
         {
             int X = sprites.GetLength(0);
             int Y = sprites.GetLength(1);
@@ -184,7 +184,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="sprites"></param>
         [CLSCompliant(false)]
-        public void drawCenter(Sprite[, ,] sprites)
+        public void drawCenter(ISprite[, ,] sprites)
         {
             draw(sprites, 0, 0);
         }
@@ -195,7 +195,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
         [CLSCompliant(false)]
-        public void draw(Sprite[, ,] sprites, int offsetX, int offsetY)
+        public void draw(ISprite[, ,] sprites, int offsetX, int offsetY)
         {
             draw(sprites, offsetX, offsetY, 0);
         }
@@ -207,7 +207,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetY"></param>
         /// <param name="offsetZ"></param>
         [CLSCompliant(false)]
-        public void draw(Sprite[, ,] sprites, int offsetX, int offsetY, int offsetZ)
+        public void draw(ISprite[, ,] sprites, int offsetX, int offsetY, int offsetZ)
         {
             int X = sprites.GetLength(0);
             int Y = sprites.GetLength(1);

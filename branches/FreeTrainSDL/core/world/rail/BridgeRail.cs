@@ -84,8 +84,8 @@ namespace FreeTrain.World.Rail
         }
 
         // sprites
-        private static readonly Sprite[] foregrounds = new Sprite[6];
-        private static readonly Sprite[] backgrounds = new Sprite[6];
+        private static readonly ISprite[] foregrounds = new ISprite[6];
+        private static readonly ISprite[] backgrounds = new ISprite[6];
 
 
 
@@ -303,7 +303,7 @@ namespace FreeTrain.World.Rail
 
 
 
-        private static readonly Sprite[,] bridgePierSprites = new Sprite[2, 2];
+        private static readonly ISprite[,] bridgePierSprites = new ISprite[2, 2];
 
 
 
@@ -324,7 +324,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            protected override Sprite sprite { get { return bridgePierSprites[0, 0]; } }
+            protected override ISprite sprite { get { return bridgePierSprites[0, 0]; } }
         }
         /// <summary>
         /// 
@@ -343,7 +343,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            protected override Sprite sprite { get { return bridgePierSprites[0, 1]; } }
+            protected override ISprite sprite { get { return bridgePierSprites[0, 1]; } }
         }
         /// <summary>
         /// 
@@ -363,7 +363,7 @@ namespace FreeTrain.World.Rail
             /// 
             /// 
             /// </summary>
-            protected override Sprite sprite { get { return bridgePierSprites[1, 0]; } }
+            protected override ISprite sprite { get { return bridgePierSprites[1, 0]; } }
         }
         /// <summary>
         /// 
@@ -382,7 +382,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            protected override Sprite sprite { get { return bridgePierSprites[1, 1]; } }
+            protected override ISprite sprite { get { return bridgePierSprites[1, 1]; } }
         }
     }
 }

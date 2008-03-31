@@ -40,7 +40,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="sprite"></param>
         /// <returns></returns>
-        public override Sprite load0D(XmlElement sprite)
+        public override ISprite load0D(XmlElement sprite)
         {
 
             int h = int.Parse(sprite.Attributes["offset"].Value);
@@ -63,12 +63,12 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="Y"></param>
         /// <param name="height"></param>
         /// <returns></returns>
-        public override Sprite[,] load2D(XmlElement sprite, int X, int Y, int height)
+        public override ISprite[,] load2D(XmlElement sprite, int X, int Y, int height)
         {
             Picture picture = getPicture(sprite);
             SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(sprite);
 
-            Sprite[,] sprites = new Sprite[X, Y];
+            ISprite[,] sprites = new ISprite[X, Y];
 
             Point origin = XmlUtil.parsePoint(sprite.Attributes["origin"].Value);
             int h = height;
@@ -104,12 +104,12 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="Y"></param>
         /// <param name="Z"></param>
         /// <returns></returns>
-        public override Sprite[, ,] load3D(XmlElement sprite, int X, int Y, int Z)
+        public override ISprite[, ,] load3D(XmlElement sprite, int X, int Y, int Z)
         {
             Picture picture = getPicture(sprite);
             SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(sprite);
 
-            Sprite[, ,] sprites = new Sprite[X, Y, Z];
+            ISprite[, ,] sprites = new ISprite[X, Y, Z];
 
             Point origin = XmlUtil.parsePoint(sprite.Attributes["origin"].Value);
             int h = ((Z << 1) + (X - 1)) << 3; // calculate default offset

@@ -170,7 +170,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator
+        public override ILocationDisambiguator Disambiguator
         {
             get
             {
@@ -180,7 +180,7 @@ namespace FreeTrain.Controllers.Rail
             }
         }
 
-        private LocationDisambiguator sameLevelDisambiguator;
+        private ILocationDisambiguator sameLevelDisambiguator;
 
         // "place" or "remove" button was clicked. reset the anchor
         private void modeChanged(object sender, EventArgs e)

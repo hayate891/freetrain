@@ -64,7 +64,7 @@ namespace FreeTrain.Framework.Plugin.Generic
     /// </summary>
     [Serializable]
     [CLSCompliant(false)]
-    public class GenericStructureContribution : StructureContribution, AbstractExStructure
+    public class GenericStructureContribution : StructureContribution, IAbstractStructure
     {
         /// <summary>
         /// 
