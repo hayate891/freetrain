@@ -56,7 +56,7 @@ namespace FreeTrain.World.Land.VinylHouse
             Point pt = new Point(0, 8);
             Size sz = new Size(32, 24);
 
-            sprites = new Sprite[3];
+            sprites = new ISprite[3];
             sprites[0] = spriteFactory.createSprite(picture, pt, new Point(offset, 0), sz);
             sprites[1] = spriteFactory.createSprite(picture, pt, new Point(offset, 24), sz);
             sprites[2] = spriteFactory.createSprite(picture, pt, new Point(offset, 48), sz);
@@ -66,7 +66,7 @@ namespace FreeTrain.World.Land.VinylHouse
 
         /// <summary> Sprite of this land contribution. </summary>
         [CLSCompliant(false)]
-        public readonly Sprite[] sprites;
+        public readonly ISprite[] sprites;
 
 
 

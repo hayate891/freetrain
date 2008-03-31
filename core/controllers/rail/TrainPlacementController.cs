@@ -41,7 +41,7 @@ namespace FreeTrain.Controllers.Rail
     /// Controller that allows the user to
     /// place/remove trains.
     /// </summary>
-    public partial class TrainPlacementController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
+    public partial class TrainPlacementController : AbstractControllerImpl, IMapOverlay, ILocationDisambiguator
     {
         private System.Windows.Forms.ComboBox controllerCombo;
         private System.Windows.Forms.MenuItem miSell;
@@ -316,14 +316,14 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator { get { return this; } }
+        public override ILocationDisambiguator Disambiguator { get { return this; } }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             RailRoad rr = RailRoad.get(loc);
             if (rr == null) return false;

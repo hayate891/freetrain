@@ -56,7 +56,7 @@ namespace FreeTrain.World.Development
 		//
 		// Disambiguator implementation
 		//
-		public override LocationDisambiguator Disambiguator { get { return GroundDisambiguator.theInstance; } }
+		public override ILocationDisambiguator Disambiguator { get { return GroundDisambiguator.theInstance; } }
 
 
 

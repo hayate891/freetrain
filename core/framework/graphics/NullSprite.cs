@@ -29,14 +29,14 @@ namespace FreeTrain.Framework.Graphics
     /// Sprite that draws nothing.
     /// </summary>
     [Serializable]
-    public class NullSprite : Sprite, IObjectReference
+    public class NullSprite : ISprite, IObjectReference
     {
         private NullSprite() { }
 
         /// <summary>
         /// 
         /// </summary>
-        public static readonly Sprite theInstance = new NullSprite();
+        public static readonly ISprite theInstance = new NullSprite();
 
         /// <summary>
         /// 

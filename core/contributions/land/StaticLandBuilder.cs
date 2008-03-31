@@ -51,7 +51,7 @@ namespace FreeTrain.Contributions.Land
         }
 
         /// <summary> Sprite of this land contribution. </summary>
-        public readonly Sprite sprite;
+        public readonly ISprite sprite;
 
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace FreeTrain.Contributions.Land
             return new DefaultControllerImpl(this, site, new DefaultControllerImpl.SpriteBuilder(getSprite));
         }
 
-        private Sprite getSprite()
+        private ISprite getSprite()
         {
             return sprite;
         }

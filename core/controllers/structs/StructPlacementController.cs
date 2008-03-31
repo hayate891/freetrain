@@ -41,7 +41,7 @@ namespace FreeTrain.Controllers.Structs
     /// Controller that allows the user to
     /// place/remove structures.
     /// </summary>
-    public abstract class StructPlacementController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
+    public abstract class StructPlacementController : AbstractControllerImpl, IMapOverlay, ILocationDisambiguator
     {
         private System.Windows.Forms.ComboBox structType;
         private System.Windows.Forms.PictureBox preview;
@@ -91,13 +91,13 @@ namespace FreeTrain.Controllers.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator { get { return this; } }
+        public override ILocationDisambiguator Disambiguator { get { return this; } }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public abstract bool isSelectable(Location loc);
+        public abstract bool IsSelectable(Location loc);
 
         #region Designer generated code
         /// <summary>

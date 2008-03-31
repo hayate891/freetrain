@@ -47,10 +47,10 @@ namespace FreeTrain.Contributions.Train
         private Color[] _colors;
 
         /// <summary> Sprites used to draw a car on a level ground. 8-way from dir=0 to 7 </summary>
-        private Sprite[] levelSprites;
+        private ISprite[] levelSprites;
 
         /// <summary> Sprites used to draw a car on a slope. 4 way from dir=0,2,4, and 6 </summary>
-        private Sprite[] slopeSprites;
+        private ISprite[] slopeSprites;
 
 
         /// <summary>
@@ -187,8 +187,8 @@ namespace FreeTrain.Contributions.Train
         /// </summary>
         private void createSprites()
         {
-            levelSprites = new Sprite[8];
-            slopeSprites = new Sprite[4];
+            levelSprites = new ISprite[8];
+            slopeSprites = new ISprite[4];
 
             SpriteFactory factory = new ColorMappedSpriteFactory(dayColorPallete, _colors);
             for (int i = 0; i < 8; i++)

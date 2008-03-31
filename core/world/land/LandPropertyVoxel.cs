@@ -84,7 +84,7 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public static readonly Sprite sprite;
+        public static readonly ISprite sprite;
 
         static LandPropertyVoxel()
         {

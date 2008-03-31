@@ -125,7 +125,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public static readonly Sprite[] slopeWalls = new Sprite[] {
+        public static readonly ISprite[] slopeWalls = new ISprite[] {
 			RailPattern.createSlopeSupport(ugChips, 2),
 			RailPattern.createSlopeSupport(ugChips, 3),
 
@@ -143,7 +143,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public static readonly Sprite[] slopeSupports = new Sprite[] {
+        public static readonly ISprite[] slopeSupports = new ISprite[] {
 			RailPattern.createSlopeSupport(railChips, 2),
 			RailPattern.createSlopeSupport(railChips, 3),
 
@@ -260,7 +260,7 @@ namespace FreeTrain.World.Rail
             return p;
         }
 
-        private static Sprite createSlopeSupport(Picture p, int imageIndexX)
+        private static ISprite createSlopeSupport(Picture p, int imageIndexX)
         {
             return new SimpleSprite(p, new Point(0, 16), new Point(imageIndexX * 32, 32), new Size(32, 32));
         }

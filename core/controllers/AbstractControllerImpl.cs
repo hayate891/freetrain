@@ -92,7 +92,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual LocationDisambiguator Disambiguator { get { return null; } }
+        public virtual ILocationDisambiguator Disambiguator { get { return null; } }
 
         /// <summary>
         /// 

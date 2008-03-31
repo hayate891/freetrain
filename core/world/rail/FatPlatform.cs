@@ -270,19 +270,19 @@ namespace FreeTrain.World.Rail
         }
 
         /// <summary>Sprites of the platform voxel. indexed by the direction</summary>
-        private static readonly Sprite[] sprites;
+        private static readonly ISprite[] sprites;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public static Sprite getSprite(Direction d)
+        public static ISprite getSprite(Direction d)
         {
             return sprites[d.index / 2];
         }
         static FatPlatform()
         {
-            sprites = new Sprite[4];
+            sprites = new ISprite[4];
             Picture bmp = ResourceUtil.loadSystemPicture("FatPlatform.bmp");	// don't dispose this surface
             sprites[0] = sprites[2] = new SimpleSprite(bmp, new Point(0, 16), new Point(0, 0), new Size(32, 32));
             sprites[1] = sprites[3] = new SimpleSprite(bmp, new Point(0, 16), new Point(32, 0), new Size(32, 32));
@@ -295,10 +295,10 @@ namespace FreeTrain.World.Rail
         [Serializable]
         class FatPlatformVoxel : AbstractVoxelImpl, IDeserializationCallback
         {
-            public FatPlatformVoxel(FatPlatform p, int x, int y, int z, Sprite _sprite)
+            public FatPlatformVoxel(FatPlatform p, int x, int y, int z, ISprite _sprite)
                 : this(p, new Location(x, y, z), _sprite) { }
 
-            public FatPlatformVoxel(FatPlatform p, Location loc, Sprite _sprite)
+            public FatPlatformVoxel(FatPlatform p, Location loc, ISprite _sprite)
                 : base(loc)
             {
                 this.owner = p;
@@ -310,7 +310,7 @@ namespace FreeTrain.World.Rail
             public override Entity entity { get { return owner; } }
 
             [NonSerialized]
-            private Sprite sprite;
+            private ISprite sprite;
             /// <summary>
             /// 
             /// </summary>
@@ -395,7 +395,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            private static readonly Sprite theImage =
+            private static readonly ISprite theImage =
                 new SimpleSprite(ResourceUtil.loadSystemPicture("YardChip.bmp"),
                     new Point(0, 0), new Point(0, 0), new Size(32, 16));
             /// <summary>

@@ -33,29 +33,6 @@ using FreeTrain.World.Structs;
 namespace FreeTrain.Contributions.Common
 {
     /// <summary>
-    /// 
-    /// </summary>
-    public interface AbstractExStructure
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        int unitPrice { get; }
-        /// <summary>
-        /// 
-        /// </summary>
-        SIZE size { get; }
-        /// <summary>
-        /// 
-        /// </summary>
-        int minHeight { get; }
-        /// <summary>
-        /// 
-        /// </summary>
-        int maxHeight { get; }
-    }
-
-    /// <summary>
     /// Generic structure contribution.
     /// 
     /// Structure is an object that occupies a cubic area in the World,

@@ -70,7 +70,7 @@ namespace FreeTrain.World.Rail
         /// 12: E-W bridge
         /// 13: N-S bridge
         /// </summary>
-        private static readonly Sprite[] sprites;
+        private static readonly ISprite[] sprites;
 
         /// <summary>
         /// 
@@ -79,7 +79,7 @@ namespace FreeTrain.World.Rail
         /// <param name="bridged">true if a passageway is bridged</param>
         /// <param name="doubleWidth">true if a platform is double-width</param>
         /// <returns></returns>
-        public static Sprite getSprite(Direction d, bool bridged, bool doubleWidth)
+        public static ISprite getSprite(Direction d, bool bridged, bool doubleWidth)
         {
             return sprites[(d.index / 2) * 3 + (doubleWidth ? (bridged ? 2 : 1) : 0)];	// TODO
         }
@@ -88,7 +88,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public static Sprite getFloatingSprite(Direction d)
+        public static ISprite getFloatingSprite(Direction d)
         {
             if (d.isParallelToX) return sprites[12];
             else return sprites[13];
@@ -108,7 +108,7 @@ namespace FreeTrain.World.Rail
         /// (downward -- stairs go downward to the direction of the platform)
         /// 4,5,6,7
         /// </summary>
-        private static readonly Sprite[] stairSprites;
+        private static readonly ISprite[] stairSprites;
         /// <summary>
         /// 
         /// </summary>
@@ -117,7 +117,7 @@ namespace FreeTrain.World.Rail
         /// <param name="hasRoof"></param>
         /// <param name="doubleWidth"></param>
         /// <returns></returns>
-        public static Sprite getStairSprite(Direction d, bool upward, bool hasRoof, bool doubleWidth)
+        public static ISprite getStairSprite(Direction d, bool upward, bool hasRoof, bool doubleWidth)
         {
             return stairSprites[d.index * 4 | (upward ? 0 : 4) | (doubleWidth ? 2 : 0) | (hasRoof ? 1 : 0)];	// TODO
         }
@@ -127,7 +127,7 @@ namespace FreeTrain.World.Rail
             Point offset = new Point(0, 16);
             Size sz = new Size(32, 32);
 
-            sprites = new Sprite[14];
+            sprites = new ISprite[14];
             Picture bmp = PictureManager.get("{3197A63A-89DC-4237-8C9B-045F41F31CDB}");
             for (int i = 0; i < 4; i++)
             {
@@ -138,7 +138,7 @@ namespace FreeTrain.World.Rail
             sprites[12] = new SimpleSprite(bmp, offset, new Point(4 * 32, 8), sz);
             sprites[13] = new SimpleSprite(bmp, offset, new Point(5 * 32, 8), sz);
 
-            stairSprites = new Sprite[32];
+            stairSprites = new ISprite[32];
 
             // NORTH
             stairSprites[0] = new SimpleSprite(bmp, new Point(+6, 16), new Point(16 - 6, 80), sz);

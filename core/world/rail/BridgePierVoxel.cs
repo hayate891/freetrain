@@ -168,7 +168,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        protected abstract Sprite sprite { get; }
+        protected abstract ISprite sprite { get; }
 
         /// <summary>
         /// 
@@ -189,11 +189,11 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public static readonly Sprite defaultSprite;
+        public static readonly ISprite defaultSprite;
         /// <summary>
         /// 
         /// </summary>
-        public static readonly Sprite slopeNESprite;
+        public static readonly ISprite slopeNESprite;
         static BridgePierVoxel()
         {
             defaultSprite = new SimpleSprite(theImage, new Point(0, 16), new Point(0, 0), new Size(32, 32));
@@ -219,7 +219,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            protected override Sprite sprite { get { return defaultSprite; } }
+            protected override ISprite sprite { get { return defaultSprite; } }
         }
         /// <summary>
         /// 
@@ -238,7 +238,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            protected override Sprite sprite { get { return slopeNESprite; } }
+            protected override ISprite sprite { get { return slopeNESprite; } }
         }
     }
 }

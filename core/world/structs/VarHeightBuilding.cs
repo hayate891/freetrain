@@ -230,7 +230,7 @@ namespace FreeTrain.World.Structs
 
                 if (heightCutDiff < 0)
                 {
-                    Sprite[] sps = o.type.getSprites(x, y, z, o.height);
+                    ISprite[] sps = o.type.getSprites(x, y, z, o.height);
                     for (int i = 0; i < sps.Length; i++)
                         sps[i].draw(display.Surface, pt);
                 }

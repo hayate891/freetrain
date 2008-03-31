@@ -33,8 +33,8 @@ namespace FreeTrain.World.Terrain
     [Serializable]
     public class MountainVoxel : AbstractVoxelImpl, Entity
     {
-        private Sprite[] patterns;
-        private Sprite ground;
+        private ISprite[] patterns;
+        private ISprite ground;
         private byte[] indices;
         private int treePrice;
         /// <summary>
@@ -492,7 +492,7 @@ namespace FreeTrain.World.Terrain
         /// <param name="trees"></param>
         /// <param name="indices"></param>
         /// <param name="price"></param>
-        public void setTrees(Sprite ground, Sprite[] trees, byte[] indices, int price)
+        public void setTrees(ISprite ground, ISprite[] trees, byte[] indices, int price)
         {
             this.ground = ground;
             patterns = trees;
@@ -521,7 +521,7 @@ namespace FreeTrain.World.Terrain
         }
 
         #region cliff
-        private static Sprite[, ,] cliff = new Sprite[2/*0:S,1:W*/, 5/*lHeight*/, 5/*rHeight*/];
+        private static ISprite[, ,] cliff = new ISprite[2/*0:S,1:W*/, 5/*lHeight*/, 5/*rHeight*/];
         /// <summary> Load sprites for cliffs. </summary>
         private static void initCliffSprites()
         {

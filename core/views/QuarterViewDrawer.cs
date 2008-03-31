@@ -83,7 +83,7 @@ namespace FreeTrain.Views
 
         private WorldDefinition world;
 
-        Sprite emptyChip, waterChip;
+        ISprite emptyChip, waterChip;
 
         /// <summary></summary>
         /// <param name="initialView">
@@ -685,11 +685,11 @@ namespace FreeTrain.Views
             // TODO: use height-cut here to force the specified z-level
             if (controller != null)
             {
-                LocationDisambiguator disambiguator = controller.Disambiguator;
+                ILocationDisambiguator disambiguator = controller.Disambiguator;
                 for (int z = heightCutHeight; z >= 0; z--)
                 {
                     Location loc = new Location(x - z, y + z, z);
-                    if (disambiguator != null && disambiguator.isSelectable(loc))
+                    if (disambiguator != null && disambiguator.IsSelectable(loc))
                         return loc;
                 }
             }

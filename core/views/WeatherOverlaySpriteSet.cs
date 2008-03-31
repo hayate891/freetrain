@@ -32,7 +32,7 @@ namespace FreeTrain.Views
         /// <summary>
         /// 
         /// </summary>
-        public readonly Sprite[] overlayImages;
+        public readonly ISprite[] overlayImages;
         /// <summary>
         /// 
         /// </summary>
@@ -47,7 +47,7 @@ namespace FreeTrain.Views
         {
             Picture pic = PictureManager.get(pictureId);
             imageSize = sz;
-            overlayImages = new Sprite[frameLength];
+            overlayImages = new ISprite[frameLength];
             for (int i = 0; i < frameLength; i++)
                 overlayImages[i] = new SimpleSprite(pic, new Point(0, 0), new Point(sz.Width * i, 0), sz);
         }

@@ -46,7 +46,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        static protected Sprite[] cursors = new Sprite[]{
+        static protected ISprite[] cursors = new ISprite[]{
 			createCursorSprite(0,0), 
 			createCursorSprite(32, 0), createCursorSprite(64, 0),
 			createCursorSprite(96, 0), createCursorSprite(128, 0),
@@ -54,7 +54,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
 			createCursorSprite(96,16), createCursorSprite(128,16)
 		};
 
-        static private Sprite createCursorSprite(int x, int y)
+        static private ISprite createCursorSprite(int x, int y)
         {
             return new SimpleSprite(PictureManager.get(cur_id), new Point(0, 0), new Point(x, y), new Size(32, 16));
         }
@@ -316,7 +316,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 return loc.z == anchor.z;
             else
                 // lands can be placed only on the ground
-                return GroundDisambiguator.theInstance.isSelectable(loc);
+                return GroundDisambiguator.theInstance.IsSelectable(loc);
         }
         /// <summary>
         /// 
@@ -350,7 +350,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         [CLSCompliant(false)]
-        public LocationDisambiguator Disambiguator
+        public ILocationDisambiguator Disambiguator
         {
             get
             {
@@ -359,7 +359,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 else return sameLevelDisambiguator;
             }
         }
-        private LocationDisambiguator sameLevelDisambiguator;
+        private ILocationDisambiguator sameLevelDisambiguator;
 
         /// <summary>
         /// 
@@ -489,7 +489,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 if (!remover)
                 {
                     contrib.getSprite(front, currentSide, contrib.currentColor).drawAlpha(canvas.Surface, pt);
-                    Sprite hls = contrib.getHighLightSprite(front, currentSide, contrib.currentHighlight);
+                    ISprite hls = contrib.getHighLightSprite(front, currentSide, contrib.currentHighlight);
                     if (hls != null) hls.drawAlpha(canvas.Surface, pt);
                 }
             }

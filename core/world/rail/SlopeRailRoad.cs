@@ -292,7 +292,7 @@ namespace FreeTrain.World.Rail
         [Serializable]
         internal class SlopeSupportVoxel : EmptyVoxel, HoleVoxel
         {
-            internal SlopeSupportVoxel(SlopeEntity entity, int x, int y, int z, int idx, Sprite s)
+            internal SlopeSupportVoxel(SlopeEntity entity, int x, int y, int z, int idx, ISprite s)
                 : base(entity, x, y, z)
             {
 
@@ -308,7 +308,7 @@ namespace FreeTrain.World.Rail
 
             private readonly bool drawSurfaceAbove;
             private readonly bool drawSurfaceBelow;
-            private readonly Sprite sprite;
+            private readonly ISprite sprite;
             /// <summary>
             /// 
             /// </summary>

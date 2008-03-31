@@ -31,7 +31,7 @@ namespace FreeTrain.Framework.Graphics
     /// Draw an image in the picture as-is.
     /// </summary>
     [Serializable]
-    public class SimpleSprite : Sprite
+    public class SimpleSprite : ISprite
     {
         /// <summary>
         /// 
@@ -135,7 +135,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public override Sprite createSprite(Picture picture, Point offset, Point origin, Size size)
+        public override ISprite createSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new SimpleSprite(picture, offset, origin, size);
         }

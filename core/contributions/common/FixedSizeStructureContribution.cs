@@ -62,7 +62,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="pic"></param>
         /// <param name="main"></param>
         /// <param name="opposite"></param>
-        public FixedSizeStructureContribution(AbstractExStructure master, XmlElement pic, XmlElement main, bool opposite)
+        public FixedSizeStructureContribution(IAbstractStructure master, XmlElement pic, XmlElement main, bool opposite)
             : base(main)
         {
             _price = master.unitPrice;
@@ -97,7 +97,7 @@ namespace FreeTrain.Contributions.Common
         /// Sprite set to draw this structure. Indexed as [x,y,z]
         /// and may contain null if there's no need to draw that voxel.
         /// </summary>
-        public readonly Sprite[, ,] sprites;
+        public readonly ISprite[, ,] sprites;
 
         /// <summary> Size of this structure in voxel by voxel. </summary>
         public readonly Distance size;
@@ -143,7 +143,7 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public Sprite getSprite(Distance d)
+        public ISprite getSprite(Distance d)
         {
             return sprites[d.x, d.y, d.z];
         }

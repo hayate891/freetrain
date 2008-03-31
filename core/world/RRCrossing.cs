@@ -58,7 +58,7 @@ namespace FreeTrain.World
 		/// z=state of the Xing
 		/// z=3 for the secondary graphics.
 		/// </summary>
-		private static readonly Sprite[,,] sprites = new Sprite[2,2,4]; 
+		private static readonly ISprite[,,] sprites = new ISprite[2,2,4]; 
 
 		public RRCrossing( TrafficVoxel _owner ) {
 			this.owner = _owner;

@@ -68,7 +68,7 @@ namespace FreeTrain.Contributions.Structs
         /// <param name="pic"></param>
         /// <param name="main"></param>
         /// <param name="opposite"></param>
-        public VarHeightBuildingContribution(AbstractExStructure master, XmlElement pic, XmlElement main, bool opposite)
+        public VarHeightBuildingContribution(IAbstractStructure master, XmlElement pic, XmlElement main, bool opposite)
             : base(main)
         {
             _price = master.unitPrice;
@@ -100,9 +100,9 @@ namespace FreeTrain.Contributions.Structs
             return PluginManager.theInstance.varHeightBuildingsGroup[name];
         }
 
-        private Sprite[][,] loadSpriteSets(XmlNodeList list)
+        private ISprite[][,] loadSpriteSets(XmlNodeList list)
         {
-            Sprite[][,] sprites = new Sprite[list.Count][,];
+            ISprite[][,] sprites = new ISprite[list.Count][,];
 
             int idx = 0;
             foreach (XmlElement e in list)
@@ -130,28 +130,28 @@ namespace FreeTrain.Contributions.Structs
         public override double pricePerArea { get { return _price; } }
 
         /// <summary>Sprite sets.</summary>
-        private readonly Sprite[][,] tops, bottoms;
-        private readonly Sprite[,] middle;
+        private readonly ISprite[][,] tops, bottoms;
+        private readonly ISprite[,] middle;
         private bool overlay = false;
 
         /// <summary> Sprite to draw the structure </summary>
-        public Sprite[] getSprites(int x, int y, int z, int height)
+        public ISprite[] getSprites(int x, int y, int z, int height)
         {
             if (z >= height - tops.Length)
             {
                 if (overlay && z == bottoms.Length - 1)
-                    return new Sprite[] { bottoms[z][x, y], tops[height - z - 1][x, y] };
+                    return new ISprite[] { bottoms[z][x, y], tops[height - z - 1][x, y] };
                 else
-                    return new Sprite[] { tops[height - z - 1][x, y] };
+                    return new ISprite[] { tops[height - z - 1][x, y] };
             }
             if (z < bottoms.Length)
             {
                 if (overlay && z == bottoms.Length - 1)
-                    return new Sprite[] { bottoms[z][x, y], middle[x, y] };
+                    return new ISprite[] { bottoms[z][x, y], middle[x, y] };
                 else
-                    return new Sprite[] { bottoms[z][x, y] };
+                    return new ISprite[] { bottoms[z][x, y] };
             }
-            return new Sprite[] { middle[x, y] };
+            return new ISprite[] { middle[x, y] };
         }
 
         /// <summary> Size of the basement of this structure in voxel by voxel. </summary>

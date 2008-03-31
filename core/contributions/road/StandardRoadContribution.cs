@@ -50,7 +50,7 @@ namespace FreeTrain.Contributions.Road
             Size sz = XmlUtil.parseSize(picture.Attributes["size"].Value);
             int offsetY = int.Parse(picture.Attributes["offset"].Value);
 
-            flatSprites = new Sprite[16];
+            flatSprites = new ISprite[16];
             for (int i = 0; i < 15; i++)
             {
                 flatSprites[i + 1] = new SimpleSprite(
@@ -62,7 +62,7 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// sprites by index
         /// </summary>
-        private readonly Sprite[] flatSprites;
+        private readonly ISprite[] flatSprites;
 
         private static readonly int[] locations = new int[] {
 			2,4, 1,4, 1,1, 1,3, 0,1, 2,0, 0,2, 2,3,
@@ -73,7 +73,7 @@ namespace FreeTrain.Contributions.Road
         /// </summary>
         /// <param name="idx"></param>
         /// <returns></returns>
-        protected internal override Sprite getSprite(byte idx)
+        protected internal override ISprite getSprite(byte idx)
         {
             return flatSprites[idx];
         }

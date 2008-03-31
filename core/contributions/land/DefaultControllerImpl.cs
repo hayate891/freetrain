@@ -38,7 +38,7 @@ namespace FreeTrain.Contributions.Land
         /// 
         /// </summary>
         /// <returns></returns>
-        public delegate Sprite SpriteBuilder();
+        public delegate ISprite SpriteBuilder();
 
         private readonly LandBuilderContribution contrib;
         private readonly SpriteBuilder spriteBuilder;

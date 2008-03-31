@@ -94,12 +94,12 @@ namespace FreeTrain.Controllers.Structs
         }
 
         /// <summary> LocationDisambiguator implementation </summary>
-        public override bool isSelectable(Location loc)
+        public override bool IsSelectable(Location loc)
         {
             if (isPlacing)
             {
                 // structures can be placed only on the ground
-                return GroundDisambiguator.theInstance.isSelectable(loc);
+                return GroundDisambiguator.theInstance.IsSelectable(loc);
             }
             else
             {
@@ -154,7 +154,7 @@ namespace FreeTrain.Controllers.Structs
             // builds a new alpha blended preview
             // TODO: make a proper 3D preview.
             Size sz = selectedType.size;
-            Sprite[, ,] sprites = new Sprite[sz.Width, sz.Height, height];
+            ISprite[, ,] sprites = new ISprite[sz.Width, sz.Height, height];
             for (int z = 0; z < height; z++)
                 for (int y = 0; y < sz.Height; y++)
                     for (int x = 0; x < sz.Width; x++)

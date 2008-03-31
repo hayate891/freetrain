@@ -44,8 +44,8 @@ namespace FreeTrain.Contributions.Train
         /// <param name="e"></param>
 		public SymTrainCarImpl( XmlElement e ) : base(e) {
 
-			levelSprites = new Sprite[8];
-			slopeSprites = new Sprite[4];
+			levelSprites = new ISprite[8];
+			slopeSprites = new ISprite[4];
 
 			XmlElement sprite = (XmlElement)XmlUtil.selectSingleNode(e,"sprite");
 			Picture picture = getPicture(sprite);
@@ -64,10 +64,10 @@ namespace FreeTrain.Contributions.Train
 		}
 
 		/// <summary> Sprites used to draw a car on a level ground. 8-way from dir=0 to 7 </summary>
-		private readonly Sprite[] levelSprites;
+		private readonly ISprite[] levelSprites;
 
 		/// <summary> Sprites used to draw a car on a slope. 4 way from dir=0,2,4, and 6 </summary>
-		private readonly Sprite[] slopeSprites;
+		private readonly ISprite[] slopeSprites;
 
         /// <summary>
         /// 

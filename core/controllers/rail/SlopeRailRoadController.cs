@@ -36,7 +36,7 @@ namespace FreeTrain.Controllers.Rail
     /// <summary>
     /// Controller to place/remove slope RRs.
     /// </summary>
-    public class SlopeRailRoadController : AbstractControllerImpl, LocationDisambiguator, IMapOverlay
+    public class SlopeRailRoadController : AbstractControllerImpl, ILocationDisambiguator, IMapOverlay
     {
         private FreeTrain.Controls.CostBox costBox;
 
@@ -334,7 +334,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override LocationDisambiguator Disambiguator { get { return this; } }
+        public override ILocationDisambiguator Disambiguator { get { return this; } }
 
 
         /// <summary>
@@ -343,7 +343,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
             if (!isPlacing)
             {

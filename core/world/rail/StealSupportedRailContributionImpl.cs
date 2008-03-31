@@ -57,7 +57,7 @@ namespace FreeTrain.World.Rail
         }
 
         // sprites
-        private static readonly Sprite[] sprites = new Sprite[4];
+        private static readonly ISprite[] sprites = new ISprite[4];
 
 
 
@@ -74,7 +74,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void drawBefore(DrawContext display, Point pt)
             {
-                Sprite s = null;
+                ISprite s = null;
                 switch (Dir1.index)
                 {
                     case 0:

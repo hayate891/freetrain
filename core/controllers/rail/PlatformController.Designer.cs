@@ -41,7 +41,7 @@ namespace FreeTrain.Controllers.Rail
     /// <summary>
     /// 
     /// </summary>
-    public partial class PlatformController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
+    public partial class PlatformController : AbstractControllerImpl, IMapOverlay, ILocationDisambiguator
     {
        #region Designer generated code
         private System.Windows.Forms.TabPage stationPage;

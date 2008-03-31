@@ -213,13 +213,13 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                             HueShiftSpriteFactory factory = new HueShiftSpriteFactory(hl_patterns);
                             if ((ss & SideStored.Fore) != 0)
                             {
-                                Sprite[] arr = factory.createSprites(bit, pic, offF, orgn, sz);
+                                ISprite[] arr = factory.createSprites(bit, pic, offF, orgn, sz);
                                 for (int i = 0; i < hl_patterns; i++)
                                     hilights[i][d, PlaceSide.Fore] = arr[i];
                             }
                             if ((ss & SideStored.Back) != 0)
                             {
-                                Sprite[] arr = factory.createSprites(bit, pic, offB, orgn, sz);
+                                ISprite[] arr = factory.createSprites(bit, pic, offB, orgn, sz);
                                 for (int i = 0; i < hl_patterns; i++)
                                     hilights[i][d, PlaceSide.Back] = arr[i];
                             }
@@ -317,7 +317,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="col"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public Sprite getSprite(Direction d, PlaceSide s, int col)
+        public ISprite getSprite(Direction d, PlaceSide s, int col)
         {
             return sprites[col][d, s];
         }
@@ -330,7 +330,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="col"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public Sprite getHighLightSprite(Direction d, PlaceSide s, int col)
+        public ISprite getHighLightSprite(Direction d, PlaceSide s, int col)
         {
             if (hilights != null)
                 return hilights[col][d, s];
@@ -573,7 +573,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public virtual Sprite getSprite()
+        public virtual ISprite getSprite()
         {
             return contrib.sprites[colorIdx][patternIdx];
         }
@@ -583,7 +583,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public virtual Sprite getHighlightSprite()
+        public virtual ISprite getHighlightSprite()
         {
             if (contrib.hilights != null)
                 return contrib.hilights[hilightIdx][patternIdx];
@@ -637,7 +637,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Sprite getSprite() { return null; }
+        public override ISprite getSprite() { return null; }
 
         /// <summary>
         /// 
@@ -666,7 +666,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="size"></param>
         public SpriteSet(int size)
         {
-            sprites = new Sprite[size];
+            sprites = new ISprite[size];
         }
 
         /// <summary>
@@ -683,7 +683,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             return d.index / 2 + (int)s * 4;
         }
 
-        internal Sprite this[int idx]
+        internal ISprite this[int idx]
         {
             get { return sprites[idx]; }
         }
@@ -694,7 +694,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="s"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public Sprite this[Direction d, PlaceSide s]
+        public ISprite this[Direction d, PlaceSide s]
         {
             get
             {
@@ -706,7 +706,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             }
         }
 
-        private Sprite[] sprites;
+        private ISprite[] sprites;
     }
     #endregion
 }

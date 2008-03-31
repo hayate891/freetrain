@@ -41,7 +41,7 @@ namespace FreeTrain.Controllers.Rail
     /// Controller that allows the user to
     /// place/remove trains.
     /// </summary>
-    public partial class TrainPlacementController : AbstractControllerImpl, IMapOverlay, LocationDisambiguator
+    public partial class TrainPlacementController : AbstractControllerImpl, IMapOverlay, ILocationDisambiguator
     {
         #region Windows Form Designer generated code
         private DDTreeView tree;

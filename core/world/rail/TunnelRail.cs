@@ -63,8 +63,8 @@ namespace FreeTrain.World.Rail
         }
 
         // sprites
-        private static readonly Sprite[] foregrounds = new Sprite[2];
-        private static readonly Sprite[] backgrounds = new Sprite[2];
+        private static readonly ISprite[] foregrounds = new ISprite[2];
+        private static readonly ISprite[] backgrounds = new ISprite[2];
 
 
 
