@@ -219,7 +219,7 @@ namespace FreeTrain.Controllers.Rail
                     }
                     else
                     {
-                        MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_ALREADYPLACED"));
+                        MessageBox.Show(Translation.GetString("CONTROLLER_TRAIN_ALREADYPLACED"));
                         return;
                     }
                 }
@@ -227,13 +227,13 @@ namespace FreeTrain.Controllers.Rail
                 RailRoad rr = RailRoad.get(loc);
                 if (rr == null)
                 {
-                    MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS"));
+                    MessageBox.Show(Translation.GetString("CONTROLLER_TRAIN_CANNOTPLACE_NOTRACKS"));
                     return;
                 }
 
                 if (!tr.place(loc))
                 {
-                    MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_PLACE"));
+                    MessageBox.Show(Translation.GetString("CONSTRUCTION_CANNOT_PLACE"));
                 }
                 else
                     playSound();
@@ -245,12 +245,12 @@ namespace FreeTrain.Controllers.Rail
                 RailRoad rr = RailRoad.get(loc);
                 if (rr == null)
                 {
-                    MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_NORAIL"));
+                    MessageBox.Show(Translation.GetString("CONTROLLER_TRAIN_NORAIL"));
                     return;
                 }
                 if (!(rr.Voxel.car is Train.TrainCar))
                 {
-                    MainWindow.showError(Translation.GetString("CONTROLLER_TRAIN_NOCARS"));
+                    MessageBox.Show(Translation.GetString("CONTROLLER_TRAIN_NOCARS"));
                     return;
                 }
                 ((Train.TrainCar)rr.Voxel.car).parent.remove();

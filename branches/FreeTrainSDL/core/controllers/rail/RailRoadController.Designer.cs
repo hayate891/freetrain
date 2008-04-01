@@ -85,7 +85,7 @@ namespace FreeTrain.Controllers.Rail
             this.buttonPlace.Name = "buttonPlace";
             this.buttonPlace.TabStop = true;
             this.buttonPlace.UseVisualStyleBackColor = false;
-            this.buttonPlace.CheckedChanged += new System.EventHandler(this.modeChanged);
+            this.buttonPlace.CheckedChanged += new System.EventHandler(this.ModeChanged);
             // 
             // buttonRemove
             // 
@@ -93,7 +93,7 @@ namespace FreeTrain.Controllers.Rail
             this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(236)))));
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.UseVisualStyleBackColor = false;
-            this.buttonRemove.CheckedChanged += new System.EventHandler(this.modeChanged);
+            this.buttonRemove.CheckedChanged += new System.EventHandler(this.ModeChanged);
             // 
             // costBox
             // 

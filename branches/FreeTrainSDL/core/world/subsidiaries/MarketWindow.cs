@@ -301,7 +301,7 @@ namespace FreeTrain.World.Subsidiaries
 		#endregion
 		
 		private void onGoToClicked() {
-			//MainWindow.primaryMapView.moveTo( selectedProperty.owner.locationClue );
+			//MainWindowMDI.primaryMapView.moveTo( selectedProperty.owner.locationClue );
 		}
 		private void updateGoToButton( Command cmd ) {
 			cmd.Enabled = (selectedProperty!=null);

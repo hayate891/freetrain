@@ -312,7 +312,7 @@ namespace FreeTrain.Views.Map
         /// <param name="arg"></param>
         protected override void OnMouseDown(MouseEventArgs arg)
         {
-            IModalController controller = MainWindow.mainWindow.CurrentController;
+            IModalController controller = MainWindowMDI.mainWindow.CurrentController;
 
             // start the drag mode
             dragMode = true;
@@ -327,7 +327,7 @@ namespace FreeTrain.Views.Map
         /// <param name="arg"></param>
         protected override void OnMouseMove(MouseEventArgs arg)
         {
-            IModalController controller = MainWindow.mainWindow.CurrentController;
+            IModalController controller = MainWindowMDI.mainWindow.CurrentController;
 
             if (dragMode)
                 scrollByDrag(arg);
@@ -349,7 +349,7 @@ namespace FreeTrain.Views.Map
         /// <param name="arg"></param>
         protected override void OnMouseUp(MouseEventArgs arg)
         {
-            IModalController controller = MainWindow.mainWindow.CurrentController;
+            IModalController controller = MainWindowMDI.mainWindow.CurrentController;
 
             if (dragMode)
             {
@@ -421,7 +421,7 @@ namespace FreeTrain.Views.Map
         {
             base.OnGotFocus(e);
             // register this map view as the primary map view
-            //MainWindow.primaryMapView = controller;
+            //MainWindowMDI.primaryMapView = controller;
         }
 
         /// <summary>
@@ -512,7 +512,7 @@ namespace FreeTrain.Views.Map
         {
             //if( heightCutWindow==null ) {
             //	heightCutWindow = new HeightCutWindow(this,drawer);
-            //	MainWindow.mainWindow.AddOwnedForm(heightCutWindow);
+            //	MainWindowMDI.mainWindow.AddOwnedForm(heightCutWindow);
             //}
 
             heightCutWindow.Show();
@@ -566,7 +566,7 @@ namespace FreeTrain.Views.Map
         /// </summary>
         public static bool isVisibleInAny(Location loc)
         {
-            //foreach( IView view in MainWindow.mainWindow.getAllViews() ) {
+            //foreach( IView view in MainWindowMDI.mainWindow.getAllViews() ) {
             //	if( view is MapView && ((MapView)view).form.isVisible(loc) )
             //		return true;
             //}

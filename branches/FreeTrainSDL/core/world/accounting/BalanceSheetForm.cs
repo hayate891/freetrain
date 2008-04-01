@@ -68,7 +68,7 @@ namespace FreeTrain.World.Accounting
 
         private BalanceSheetForm()
         {
-            //			this.MdiParent = MainWindow.mainWindow;
+            //			this.MdiParent = MainWindowMDI.mainWindow;
             InitializeComponent();
 
             //            object flags = 0;

@@ -63,7 +63,7 @@ namespace FreeTrain.Views
             this.canvasSize = sz;
             if (offscreenSurface != null)
                 offscreenSurface.Dispose();
-            //offscreenSurface = MainWindow.mainWindow.directDraw.createOffscreenSurface(sz);
+            //offscreenSurface = MainWindowMDI.mainWindow.directDraw.createOffscreenSurface(sz);
         }
         /// <summary>
         /// 

@@ -184,7 +184,7 @@ namespace FreeTrain.Framework.Plugin
             /// <returns></returns>
             public object GetRealObject(StreamingContext context)
             {
-                object o = Core.plugins.getContribution(id);
+                object o = Core.Plugins.getContribution(id);
                 if (o == null)
                     throw new SerializationException(
                         "Plugin that contains Contribution \"" + id + "\" could not be found");

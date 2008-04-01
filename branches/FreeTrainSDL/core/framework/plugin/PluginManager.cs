@@ -195,10 +195,10 @@ namespace FreeTrain.Framework.Plugin
 
             string name = getModuleName(args.Name);
 
-            if (Core.plugins.plugins == null) return null;
+            if (Core.Plugins.plugins == null) return null;
 
             // try assemblies of plug-ins
-            foreach (Contribution cont in Core.plugins.publicContributions)
+            foreach (Contribution cont in Core.Plugins.publicContributions)
             {
                 Assembly asm = cont.assembly;
 
@@ -415,7 +415,7 @@ namespace FreeTrain.Framework.Plugin
 
             // if we can't find it, try the directory under the executable directory
             pluginDir = Path.GetFullPath(Path.Combine(
-                Core.installationDirectory, @"plugins"));
+                Core.InstallationDirectory, @"plugins"));
             if (Directory.Exists(pluginDir))
                 return pluginDir;
 

@@ -54,15 +54,15 @@ namespace FreeTrain.World.Road.Accessory
 						TrafficVoxel.get(loc).accessory = null;
 				}
 				else
-					MainWindow.showError("Can not remove");
-					//! MainWindow.showError("撤去できません");
+					MessageBox.Show("Cannot remove");
+					//! MessageBox.Show("撤去できません");
 			}
 			else
 			{
 				if( contribution.canBeBuilt(loc) )
 					contribution.create(loc);
 				else
-					MainWindow.showError("Can not place");
+					MessageBox.Show("Cannot place");
 					
 			}
 		}

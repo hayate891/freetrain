@@ -58,7 +58,7 @@ namespace FreeTrain.Controllers.Rail
         }
         #endregion
 
-        private StationaryStructPlacementController() : base(Core.plugins.railStationaryGroup) { }
+        private StationaryStructPlacementController() : base(Core.Plugins.railStationaryGroup) { }
 
         /// <summary> LocationDisambiguator implementation </summary>
         public override bool IsSelectable(Location loc)

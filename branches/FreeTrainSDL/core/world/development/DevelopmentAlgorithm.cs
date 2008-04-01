@@ -45,7 +45,7 @@ namespace FreeTrain.World.Development
 
         static DevelopmentAlgorithm()
         {
-            foreach (Contribution contrib in Core.plugins.allContributions)
+            foreach (Contribution contrib in Core.Plugins.allContributions)
             {
                 if (contrib is IEntityBuilder)
                 {

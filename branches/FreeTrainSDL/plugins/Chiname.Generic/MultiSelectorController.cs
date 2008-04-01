@@ -213,7 +213,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
             if (!canBeBuilt(loc))
-                MainWindow.showError("Can not build");
+                MessageBox.Show("Can not build");
             else
             {
                 if (current.current is VarHeightBuildingContribution)

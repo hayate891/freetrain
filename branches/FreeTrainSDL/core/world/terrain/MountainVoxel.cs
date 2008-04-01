@@ -245,7 +245,7 @@ namespace FreeTrain.World.Terrain
         {
             heightCutDiff--;
             drawGround(display, pt, heightCutDiff);
-            if (patterns != null && !Core.options.hideTrees)
+            if (patterns != null && !Core.Options.hideTrees)
                 drawTrees(display, pt, heightCutDiff);
         }
 

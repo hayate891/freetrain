@@ -161,15 +161,15 @@ namespace FreeTrain.World
                 // for test
                 new Train(rootTrainGroup, "3-Car High-Speed Train", 3,
                     //! new Train( rootTrainGroup, "３両高速編成",3,
-                    (TrainContribution)Core.plugins.getContribution("{3983B298-ADB1-4905-94E5-03B7AAE5A221}"),
+                    (TrainContribution)Core.Plugins.getContribution("{3983B298-ADB1-4905-94E5-03B7AAE5A221}"),
                     SimpleTrainControllerImpl.theInstance);
                 new Train(rootTrainGroup, "5-Car Medium-Speed Train", 5,
                     //! new Train( rootTrainGroup, "５両中速編成",5,
-                    (TrainContribution)Core.plugins.getContribution("{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}"),
+                    (TrainContribution)Core.Plugins.getContribution("{2C6F6C72-FA4B-4941-84C1-57553C8A5C2A}"),
                     SimpleTrainControllerImpl.theInstance);
                 new Train(rootTrainGroup, "7-Car Low-Speed Train", 7,
                     //! new Train( rootTrainGroup, "７両低速編成",7,
-                    (TrainContribution)Core.plugins.getContribution("{F7134C8E-6B63-4780-AF16-90D33131CD07}"),
+                    (TrainContribution)Core.Plugins.getContribution("{F7134C8E-6B63-4780-AF16-90D33131CD07}"),
                     SimpleTrainControllerImpl.theInstance);
 
 
@@ -897,7 +897,7 @@ namespace FreeTrain.World
                 //				SoapFormatter f = new SoapFormatter();
                 //				BinaryFormatter f = new BinaryFormatter();
                 f.Binder = new PluginSerializationBinder();
-                Core.bgmManager.currentBGM = ((BGMContribution[])f.Deserialize(stream))[0];
+                Core.BgmManager.currentBGM = ((BGMContribution[])f.Deserialize(stream))[0];
                 return (WorldDefinition)f.Deserialize(stream);
             }
         }
@@ -912,7 +912,7 @@ namespace FreeTrain.World
             using (new Util.LongTask())
             {
                 // currentBGM can be null, so serialize as an array
-                f.Serialize(stream, new BGMContribution[] { Core.bgmManager.currentBGM });
+                f.Serialize(stream, new BGMContribution[] { Core.BgmManager.currentBGM });
                 f.Serialize(stream, this);
             }
         }

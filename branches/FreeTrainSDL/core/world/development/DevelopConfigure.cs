@@ -752,35 +752,35 @@ namespace FreeTrain.World.Development
         private void btnSave_Click(object sender, System.EventArgs e)
         {
             int i = 0;
-            Core.options.devParams[i++] = double.Parse(tbLandPliceScale.Text);
-            Core.options.devParams[i++] = double.Parse(tbMaxPricePower.Text);
-            Core.options.devParams[i++] = double.Parse(tbStrDiffuse.Text);
-            Core.options.devParams[i++] = double.Parse(tbReplacePriceFactor.Text);
-            Core.options.devParams[i++] = double.Parse(tbPopAmpScale.Text);
-            Core.options.devParams[i++] = double.Parse(tbPopAmpPower.Text);
+            Core.Options.devParams[i++] = double.Parse(tbLandPliceScale.Text);
+            Core.Options.devParams[i++] = double.Parse(tbMaxPricePower.Text);
+            Core.Options.devParams[i++] = double.Parse(tbStrDiffuse.Text);
+            Core.Options.devParams[i++] = double.Parse(tbReplacePriceFactor.Text);
+            Core.Options.devParams[i++] = double.Parse(tbPopAmpScale.Text);
+            Core.Options.devParams[i++] = double.Parse(tbPopAmpPower.Text);
 
-            Core.options.devParams[i++] = float.Parse(tbQAlpha.Text);
-            Core.options.devParams[i++] = int.Parse(tbAddedQScale.Text);
-            Core.options.devParams[i++] = double.Parse(tbLandValuePower.Text);
-            Core.options.devParams[i++] = float.Parse(tbQDiffuse.Text);
-            Core.options.devParams[i++] = float.Parse(tbBaseRho.Text);
+            Core.Options.devParams[i++] = float.Parse(tbQAlpha.Text);
+            Core.Options.devParams[i++] = int.Parse(tbAddedQScale.Text);
+            Core.Options.devParams[i++] = double.Parse(tbLandValuePower.Text);
+            Core.Options.devParams[i++] = float.Parse(tbQDiffuse.Text);
+            Core.Options.devParams[i++] = float.Parse(tbBaseRho.Text);
         }
 
         private void btnLoad_Click(object sender, System.EventArgs e)
         {
             int i = 0;
-            tbLandPliceScale.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
-            tbMaxPricePower.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
-            tbStrDiffuse.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
-            tbReplacePriceFactor.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
-            tbPopAmpScale.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
-            tbPopAmpPower.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
+            tbLandPliceScale.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
+            tbMaxPricePower.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
+            tbStrDiffuse.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
+            tbReplacePriceFactor.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
+            tbPopAmpScale.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
+            tbPopAmpPower.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
 
-            tbQAlpha.Text = string.Format("{0:0.000}", Core.options.devParams[i++]);
-            tbAddedQScale.Text = string.Format("{0}", (int)Core.options.devParams[i++]);
-            tbLandValuePower.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
-            tbQDiffuse.Text = string.Format("{0:0.000}", Core.options.devParams[i++]);
-            tbBaseRho.Text = string.Format("{0:0.00}", Core.options.devParams[i++]);
+            tbQAlpha.Text = string.Format("{0:0.000}", Core.Options.devParams[i++]);
+            tbAddedQScale.Text = string.Format("{0}", (int)Core.Options.devParams[i++]);
+            tbLandValuePower.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
+            tbQDiffuse.Text = string.Format("{0:0.000}", Core.Options.devParams[i++]);
+            tbBaseRho.Text = string.Format("{0:0.00}", Core.Options.devParams[i++]);
         }
     }
 }

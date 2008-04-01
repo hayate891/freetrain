@@ -79,7 +79,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void addSong(string songname)
         {
-            foreach (BGMContribution contrib in Core.plugins.bgms)
+            foreach (BGMContribution contrib in Core.Plugins.bgms)
             {
                 if (contrib.name == songname) currentPlaylist.Add(contrib);
             }
@@ -90,7 +90,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void moveUp(string songname)
         {
-            foreach (BGMContribution contrib in Core.plugins.bgms)
+            foreach (BGMContribution contrib in Core.Plugins.bgms)
             {
                 if (contrib.name == songname)
                 {
@@ -109,7 +109,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void moveDown(string songname)
         {
-            foreach (BGMContribution contrib in Core.plugins.bgms)
+            foreach (BGMContribution contrib in Core.Plugins.bgms)
             {
                 if (contrib.name == songname)
                 {
@@ -128,7 +128,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void removeSong(string songname)
         {
-            foreach (BGMContribution contrib in Core.plugins.bgms)
+            foreach (BGMContribution contrib in Core.Plugins.bgms)
             {
                 if (contrib.name == songname)
                 {
@@ -212,7 +212,7 @@ namespace FreeTrain.Framework
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show(MainWindow.mainWindow,
+                        MessageBox.Show(MainWindowMDI.mainWindow,
                             "Can not play back\n" + e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         //! "再生できません¥n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
                     }
@@ -265,7 +265,7 @@ namespace FreeTrain.Framework
 
             protected override void OnClick(EventArgs e) {
                 using( OpenFileDialog ofd = new OpenFileDialog() ) {
-                    if( ofd.ShowDialog(MainWindow.mainWindow)==DialogResult.OK )
+                    if( ofd.ShowDialog(MainWindowMDI.mainWindow)==DialogResult.OK )
                         owner.currentBGM = new TempBGMContribution(ofd.FileName);
                 }
             }

@@ -109,7 +109,7 @@ namespace FreeTrain.Contributions.Train
             if (idref == null) throw new FormatException("ref attribute is missing");
             //! if(idref==null)	throw new FormatException("ref属性がありません");
 
-            TrainCarContribution contrib = (TrainCarContribution)Core.plugins.getContribution(idref);
+            TrainCarContribution contrib = (TrainCarContribution)Core.Plugins.getContribution(idref);
             if (contrib == null) throw new FormatException(
                  string.Format("id='{0}' is missing TrainCar contribution", idref));
             //! string.Format( "id='{0}'のTrainCarコントリビューションがありません", idref ));

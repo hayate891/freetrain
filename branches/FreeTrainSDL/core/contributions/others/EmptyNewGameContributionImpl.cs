@@ -58,7 +58,7 @@ namespace FreeTrain.Contributions.Others
         {
             using (NewWorldDialog dialog = new NewWorldDialog())
             {
-                if (dialog.ShowDialog(MainWindow.mainWindow) == DialogResult.OK)
+                if (dialog.ShowDialog(MainWindowMDI.mainWindow) == DialogResult.OK)
                     return dialog.createWorld();
                 else
                     return null;

@@ -280,9 +280,9 @@ namespace FreeTrain.Controllers.Rail
         private void onMove()
         {
             //if( train.head.state.isUnplaced )		return;
-            //if( MainWindow.primaryMapView==null )	return;
+            //if( MainWindowMDI.primaryMapView==null )	return;
 
-            //MainWindow.primaryMapView.moveTo( train.head.state.asPlaced().location );
+            //MainWindowMDI.primaryMapView.moveTo( train.head.state.asPlaced().location );
         }
     }
 }

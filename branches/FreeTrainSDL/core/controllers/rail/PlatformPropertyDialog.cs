@@ -324,16 +324,16 @@ namespace FreeTrain.World.Rail
                 if (fp.canRemoveLane(index))
                     fp.removeLane(index);
                 else
-                    MainWindow.showError("Could not be released due to an obstacle");
-                //! MainWindow.showError("障害物があって解放できません");
+                    MessageBox.Show("Could not be released due to an obstacle");
+                //! MessageBox.Show("障害物があって解放できません");
             }
             else
             {
                 if (fp.canAddLane(index))
                     fp.addLane(index);
                 else
-                    MainWindow.showError("Could not be connected due to an obstacle");
-                //! MainWindow.showError("障害物があって接続できません");
+                    MessageBox.Show("Could not be connected due to an obstacle");
+                //! MessageBox.Show("障害物があって接続できません");
             }
             updateDialog();
         }

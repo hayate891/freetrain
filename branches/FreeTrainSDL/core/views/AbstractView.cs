@@ -71,7 +71,7 @@ namespace FreeTrain.Views
         {
             form.Close();
             form.Dispose();
-            //MainWindow.mainWindow.removeView(this);
+            //MainWindowMDI.mainWindow.removeView(this);
         }
     }
 }

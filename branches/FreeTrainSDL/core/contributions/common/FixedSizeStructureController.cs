@@ -62,8 +62,8 @@ namespace FreeTrain.Contributions.Common
         {
             if (contrib.canBeBuilt(cube.corner, ControlMode.Player))
             {
-                MainWindow.showError("Can not build");
-                //! MainWindow.showError("設置できません");
+                MessageBox.Show("Can not build");
+                //! MessageBox.Show("設置できません");
             }
             else
             {
@@ -156,8 +156,8 @@ namespace FreeTrain.Contributions.Common
             PThreeDimStructure s = WorldDefinition.World.getEntityAt(cube.corner) as PThreeDimStructure;
             if (s == null || s.type != contrib)
             {
-                MainWindow.showError("Wrong type");
-                //! MainWindow.showError("種類が違います");
+                MessageBox.Show("Wrong type");
+                //! MessageBox.Show("種類が違います");
                 return;
             }
             s.remove();

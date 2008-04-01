@@ -43,7 +43,7 @@ namespace FreeTrain.Framework.Sound
         //private SDL.net.Audio _audio;
 
         /// <summary>
-        /// A new instance should be created only by the MainWindow class.
+        /// A new instance should be created only by the MainWindowMDI class.
         /// </summary>
         public SoundEffectManager(IWin32Window owner)
         {
@@ -58,7 +58,7 @@ namespace FreeTrain.Framework.Sound
                     //! MessageBox.Show( owner, e.StackTrace, "DirectAudioが初期化できません。サウンドは無効です。",
                     MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 available = false;
-                Core.options.enableSoundEffect = false;
+                Core.Options.enableSoundEffect = false;
             }
         }
 

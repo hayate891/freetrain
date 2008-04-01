@@ -73,8 +73,8 @@ namespace FreeTrain.Controllers.Structs
             {
                 if (!selectedType.canBeBuilt(loc, ControlMode.Player))
                 {
-                    MainWindow.showError("Can not build");
-                    //! MainWindow.showError("設置できません");
+                    MessageBox.Show("Can not build");
+                    //! MessageBox.Show("設置できません");
                 }
                 else
                 {

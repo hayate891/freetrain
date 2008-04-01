@@ -25,6 +25,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+using FreeTrain.World;
+using FreeTrain.Controllers;
 using FreeTrain.Controllers.Rail;
 using FreeTrain.Controllers.Terrain;
 using FreeTrain.Controllers.Structs;
@@ -45,7 +47,9 @@ namespace FreeTrain.Framework
         /// </summary>
         public MainWindowMDI()
         {
+            mainWindow = this;
             InitializeComponent();
+            
             RailRoadController railRoadController = new RailRoadController();
             railRoadController.MdiParent = this;
             railRoadController.WindowState = FormWindowState.Maximized;
@@ -96,6 +100,51 @@ namespace FreeTrain.Framework
             bgmplaylist.MdiParent = this;
             bgmplaylist.Show();
         }
+
+        /// <summary> Reference to the single instance of the main window. </summary>
+        public static MainWindowMDI mainWindow;
+
+        #region Controller management
+        private IModalController controller;
+
+        /// <summary>
+        /// Currently activated controller, if any. Or null.
+        /// </summary>
+        public IModalController CurrentController { get { return controller; } }
+
+        /// <summary>
+        /// Activates a new ModalController.
+        /// </summary>
+        public void AttachController(IModalController newHandler)
+        {
+            if (controller == newHandler)
+                return;	// already activated
+            if (controller != null)
+                DetachController();	// deactive the current handler first
+
+            controller = newHandler;
+            controller.OnAttached();
+
+            // update all the views
+            // TODO: update voxels correctly
+            WorldDefinition.World.OnAllVoxelUpdated();
+        }
+
+        /// <summary>
+        /// Deactivates the current ModalController, if any.
+        /// </summary>
+        public void DetachController()
+        {
+            if (controller == null) return;
+
+            controller.OnDetached();
+            controller = null;
+
+            // update all the views
+            // TODO: update voxels correctly
+            WorldDefinition.World.OnVoxelUpdated(World.Location.Unplaced);
+        }
+        #endregion
 
         private void ShowNewForm(object sender, EventArgs e)
         {

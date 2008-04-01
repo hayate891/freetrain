@@ -303,8 +303,8 @@ namespace FreeTrain.Controllers.Rail
                 if (SlopeRailRoad.canCreateSlope(loc, direction))
                     SlopeRailRoad.createSlope(loc, direction);
                 else
-                    MainWindow.showError("Can not build");
-                //! MainWindow.showError("設置できません");
+                    MessageBox.Show("Can not build");
+                //! MessageBox.Show("設置できません");
             }
             else
             {
@@ -327,8 +327,8 @@ namespace FreeTrain.Controllers.Rail
                         return;
                     }
                 }
-                MainWindow.showError("Can not remove");
-                //! MainWindow.showError("撤去できません");
+                MessageBox.Show("Can not remove");
+                //! MessageBox.Show("撤去できません");
             }
         }
         /// <summary>

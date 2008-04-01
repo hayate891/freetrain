@@ -57,7 +57,7 @@ namespace FreeTrain.Controllers.Structs
         }
         #endregion
 
-        private CommercialStructPlacementController() : base(Core.plugins.commercialStructureGroup) { }
+        private CommercialStructPlacementController() : base(Core.Plugins.commercialStructureGroup) { }
 
         /// <summary> LocationDisambiguator implementation </summary>
         public override bool IsSelectable(Location loc)
@@ -84,8 +84,8 @@ namespace FreeTrain.Controllers.Structs
                 if (c.isOwned)
                     c.remove();
                 else
-                    MainWindow.showError("Can not remove");
-                //! MainWindow.showError("撤去できません");
+                    MessageBox.Show("Can not remove");
+                //! MessageBox.Show("撤去できません");
             }
         }
 
