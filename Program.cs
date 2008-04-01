@@ -117,7 +117,7 @@ namespace FreeTrain
             if (qView != null)
             {
                 controller = MainWindow.mainWindow.CurrentController;
-                qView.updateScreen();
+                qView.UpdateScreen();
                 if (WorldDefinition.World.Satellite == null ||
                     WorldDefinition.World.Satellite.surface.w != 150 ||
                     WorldDefinition.World.Satellite.surface.h != 150)
@@ -145,7 +145,7 @@ namespace FreeTrain
             screen = SdlDotNet.Graphics.Video.SetVideoMode(width, height, currentBpp, true);
             screen.SourceColorKey = Color.Magenta;
             weatherOverlay.setSize(new Size(width, height));
-            qView.size = new Size(e.Width, e.Height);
+            qView.Size = new Size(e.Width, e.Height);
         }
 
         private void MusicFinished(object sender, MusicFinishedEventArgs e)
@@ -192,7 +192,7 @@ namespace FreeTrain
         {
             if (dragMode)
             {
-                scrollByDrag(new Point(e.X, e.Y));
+                ScrollByDrag(new Point(e.X, e.Y));
             }
             else
             {
@@ -207,7 +207,7 @@ namespace FreeTrain
             }
         }
 
-        private void timerTick(object sender, EventArgs e)
+        private void TimerTick(object sender, EventArgs e)
         {
             if (qView != null)
             {
@@ -216,13 +216,13 @@ namespace FreeTrain
 
                 sourceRect = new Sdl.SDL_Rect((short)ScrollPosition.X, (short)ScrollPosition.Y, (short)width, (short)height);
                 dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
-                Tao.Sdl.Sdl.SDL_BlitSurface(qView.offscreenBuffer.surfacePtr(), ref sourceRect, screen.Handle, ref dst);
+                Tao.Sdl.Sdl.SDL_BlitSurface(qView.OffscreenBuffer.surfacePtr(), ref sourceRect, screen.Handle, ref dst);
             }
 
-            finalDraw();
+            FinalDraw();
         }
 
-        private void finalDraw()
+        private void FinalDraw()
         {
             if (mainWindowMDI != null && WorldDefinition.World != null)
             {
@@ -231,18 +231,18 @@ namespace FreeTrain
             screen.Update();
         }
 
-        private bool scrollByDrag(Point curMousePos)
+        private bool ScrollByDrag(Point curMousePos)
         {
             int dragAccel = 1;
             Point pt = this.dragStartScrollPosition;
             pt.X += (curMousePos.X - dragStartMousePosition.X) * dragAccel;
             pt.Y += (curMousePos.Y - dragStartMousePosition.Y) * dragAccel;
             ScrollPosition = pt;
-            qView.origin = ScrollPosition;
+            qView.Origin = ScrollPosition;
             return true;
         }
 
-        private int distance(Point a, Point b)
+        private int Distance(Point a, Point b)
         {
             return (int)Math.Sqrt((a.X - b.X) * (a.X - b.X) + (a.Y - b.Y) * (a.Y - b.Y));
         }
@@ -316,30 +316,30 @@ namespace FreeTrain
             splashscreen.status.AppendText("\n");
             splashscreen.Refresh();
 
-            finalDraw();
+            FinalDraw();
 
             MainWindow.mainWindow = new MainWindow(null, true);
             splashscreen.status.AppendText("Loading plugins...");
             splashscreen.status.AppendText("\n");
             splashscreen.Refresh();
-            finalDraw();
+            FinalDraw();
             Core.init(null, null, null, new ProgressHandler(UpdateMessage), true);
             world = new WorldDefinition(new Distance(150, 150, 7), 3);
             WorldDefinition.World = world;
 
             weatherOverlay = NullWeatherOverlay.theInstance;
-            finalDraw();
+            FinalDraw();
             qView = new QuarterViewDrawer(world, new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8));
-            qView.offscreenBuffer = new Surface(world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8, screen.CreateCompatibleSurface().Pixels);
-            qView.offscreenBuffer.SourceColorKey = Color.Magenta;
-            qView.recreateDrawBuffer(new Size(width, height), true);
+            qView.OffscreenBuffer = new Surface(world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8, screen.CreateCompatibleSurface().Pixels);
+            qView.OffscreenBuffer.SourceColorKey = Color.Magenta;
+            qView.RecreateDrawBuffer(new Size(width, height), true);
             splashscreen.status.AppendText("Creating Map...");
             splashscreen.status.AppendText("\n");
             splashscreen.Refresh();
-            finalDraw();
+            FinalDraw();
 
-            qView.draw(new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8), null);
-            timer.Tick += new EventHandler(timerTick);
+            qView.Draw(new Rectangle(0, 0, world.Size.x * 32 - 16, (world.Size.y - 2 * world.Size.z - 1) * 8), null);
+            timer.Tick += new EventHandler(TimerTick);
             timer.Interval = 33;
             timer.Enabled = true;
             timer.Start();
@@ -381,6 +381,7 @@ namespace FreeTrain
         {
             Dispose(false);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -402,6 +403,5 @@ namespace FreeTrain
         }
 
         #endregion
-
     }
 }

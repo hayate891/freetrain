@@ -35,6 +35,6 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        string name { get; } // TODO: fix
+        string Name { get; set;} // TODO: fix
     }
 }

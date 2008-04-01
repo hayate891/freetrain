@@ -46,7 +46,7 @@ namespace FreeTrain.Views.Map
 
             trackBar.Minimum = 0;
             trackBar.Maximum = World.WorldDefinition.World.Size.z - 1;
-            trackBar.Value = drawer.heightCutHeight;
+            trackBar.Value = drawer.HeightCutHeight;
 
             drawer.OnHeightCutChanged += new EventHandler(onHeightCutChange);
         }
@@ -63,7 +63,7 @@ namespace FreeTrain.Views.Map
 
         private void trackBar_Scroll(object sender, EventArgs e)
         {
-            drawer.heightCutHeight = trackBar.Value;
+            drawer.HeightCutHeight = trackBar.Value;
         }
         #region Windows Form Designer generated code
         private FreeTrain.Controls.TrackBarEx trackBar;
@@ -113,7 +113,7 @@ namespace FreeTrain.Views.Map
 
         private void onHeightCutChange(object sender, EventArgs e)
         {
-            trackBar.Value = drawer.heightCutHeight;
+            trackBar.Value = drawer.HeightCutHeight;
         }
 
     }

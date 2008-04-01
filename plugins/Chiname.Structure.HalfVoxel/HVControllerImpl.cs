@@ -330,7 +330,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// 
         /// </summary>
-        public string name { get { return site.name; } }
+        public string Name { get { return site.Name; } }
 
         // can be overrided by a derived class to return another object.
         /// <summary>

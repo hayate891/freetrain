@@ -77,7 +77,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual string name { get { return site.name; } }
+        public virtual string Name { get { return site.Name; } }
 
         // can be overrided by a derived class to return another object.
         /// <summary>

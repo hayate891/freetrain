@@ -72,22 +72,10 @@ namespace FreeTrain.Controllers
                 MainWindow.mainWindow.DetachController();
         }
 
-        //
-        // default implementation for ModalController
-        //
-        /// <summary>
-        /// 
-        /// </summary>
-        [CLSCompliant(false)]
-        public void close()
-        {
-            base.Close();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string name { get { return Text; } }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        //public string Name { get { return Text; } }
 
         /// <summary>
         /// 
@@ -103,6 +91,7 @@ namespace FreeTrain.Controllers
         /// 
         /// </summary>
         public virtual void OnAttached() { }
+
         /// <summary>
         /// 
         /// </summary>
