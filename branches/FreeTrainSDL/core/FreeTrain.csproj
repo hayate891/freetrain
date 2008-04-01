@@ -95,168 +95,168 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="contributions\common\FixedSizeStructureContribution.cs">
+    <Compile Include="Contributions\common\FixedSizeStructureContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\FixedSizeStructureController.cs">
+    <Compile Include="Contributions\common\FixedSizeStructureController.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\IAbstractStructure.cs" />
-    <Compile Include="contributions\common\IEntityBuilder.cs">
+    <Compile Include="Contributions\common\IAbstractStructure.cs" />
+    <Compile Include="Contributions\common\IEntityBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\IPreviewWorldBuilder.cs">
+    <Compile Include="Contributions\common\IPreviewWorldBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\LineContribution.cs">
+    <Compile Include="Contributions\common\LineContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\PictureContribution.cs">
+    <Compile Include="Contributions\common\PictureContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\StructureContribution.cs">
+    <Compile Include="Contributions\common\StructureContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\StructureGroup.cs">
+    <Compile Include="Contributions\common\StructureGroup.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\common\SubDividedStructureContribution.cs">
+    <Compile Include="Contributions\common\SubDividedStructureContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\land\Bulldozer.cs">
+    <Compile Include="Contributions\land\Bulldozer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\land\DefaultControllerImpl.cs">
+    <Compile Include="Contributions\land\DefaultControllerImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\land\LandBuilderContribution.cs">
+    <Compile Include="Contributions\land\LandBuilderContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\land\LandBuilderGroup.cs">
+    <Compile Include="Contributions\land\LandBuilderGroup.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\land\RandomLandBuilder.cs">
+    <Compile Include="Contributions\land\RandomLandBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\land\StaticLandBuilder.cs">
+    <Compile Include="Contributions\land\StaticLandBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\others\EmptyNewGameContributionImpl.cs">
+    <Compile Include="Contributions\others\EmptyNewGameContributionImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\others\MenuContribution.cs">
+    <Compile Include="Contributions\others\MenuContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\others\NewGameContribution.cs">
+    <Compile Include="Contributions\others\NewGameContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\others\NewWorldDialog.cs">
+    <Compile Include="Contributions\others\NewWorldDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="contributions\population\AgriculturalPopulation.cs">
+    <Compile Include="Contributions\population\AgriculturalPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\BasePopulation.cs" />
-    <Compile Include="contributions\population\CombinationPopulation.cs">
+    <Compile Include="Contributions\population\BasePopulation.cs" />
+    <Compile Include="Contributions\population\CombinationPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\ConstantPopulation.cs">
+    <Compile Include="Contributions\population\ConstantPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\HourlyPopulation.cs">
+    <Compile Include="Contributions\population\HourlyPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\MultiplierPopulation.cs">
+    <Compile Include="Contributions\population\MultiplierPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\OfficePopulation.cs">
+    <Compile Include="Contributions\population\OfficePopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\PersistentPopulation.cs">
+    <Compile Include="Contributions\population\PersistentPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\ResidentialPopulation.cs">
+    <Compile Include="Contributions\population\ResidentialPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\RestaurantPopulation.cs">
+    <Compile Include="Contributions\population\RestaurantPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\population\ShopperPopulation.cs">
+    <Compile Include="Contributions\population\ShopperPopulation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\rail\DepartureBellContribution.cs">
+    <Compile Include="Contributions\rail\DepartureBellContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\rail\RailAccessoryContribution.cs">
+    <Compile Include="Contributions\rail\RailAccessoryContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\rail\RailStationaryContribution.cs">
+    <Compile Include="Contributions\rail\RailStationaryContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\rail\SpecialRailContribution.cs">
+    <Compile Include="Contributions\rail\SpecialRailContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\rail\StationContribution.cs">
+    <Compile Include="Contributions\rail\StationContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\rail\TrainControllerContribution.cs">
+    <Compile Include="Contributions\rail\TrainControllerContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\road\A3RoadContribution.cs">
+    <Compile Include="Contributions\road\A3RoadContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\road\AbstractRoadContributionImpl.cs">
+    <Compile Include="Contributions\road\AbstractRoadContributionImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\road\RoadContribution.cs">
+    <Compile Include="Contributions\road\RoadContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\road\StandardRoadContribution.cs">
+    <Compile Include="Contributions\road\StandardRoadContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\sound\BGMContribution.cs">
+    <Compile Include="Contributions\sound\BGMContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\sound\BGMFactoryContribution.cs">
+    <Compile Include="Contributions\sound\BGMFactoryContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\structs\CommercialStructureContribution.cs">
+    <Compile Include="Contributions\structs\CommercialStructureContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\structs\SpecialStructureContribution.cs">
+    <Compile Include="Contributions\structs\SpecialStructureContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\structs\VarHeightBuildingContribution.cs">
+    <Compile Include="Contributions\structs\VarHeightBuildingContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\AbstractTrainContributionImpl.cs">
+    <Compile Include="Contributions\train\AbstractTrainContributionImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\AsymTrainCarImpl.cs">
+    <Compile Include="Contributions\train\AsymTrainCarImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\ColoredTrainCarImpl.cs">
+    <Compile Include="Contributions\train\ColoredTrainCarImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\ParamTrainImpl.cs">
+    <Compile Include="Contributions\train\ParamTrainImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\PatternTrainImpl.cs">
+    <Compile Include="Contributions\train\PatternTrainImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\ReverseTrainCarImpl.cs">
+    <Compile Include="Contributions\train\ReverseTrainCarImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\SymTrainCarImpl.cs">
+    <Compile Include="Contributions\train\SymTrainCarImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\TrainCarContribution.cs">
+    <Compile Include="Contributions\train\TrainCarContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\TrainContribution.cs">
+    <Compile Include="Contributions\train\TrainContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="contributions\train\TrainContributionFactory.cs">
+    <Compile Include="Contributions\train\TrainContributionFactory.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="controllers\AbstractControllerImpl.cs">
@@ -862,7 +862,7 @@
     <Content Include="..\plugins\system\plugin.xml">
       <Link>plugin.xml</Link>
     </Content>
-    <Content Include="contributions\readme.txt" />
+    <Content Include="Contributions\readme.txt" />
     <Content Include="res\Arrows.bmp" />
     <Content Include="res\BridgePier.bmp" />
     <Content Include="res\ConstructionBones.bmp" />
@@ -876,7 +876,7 @@
     <Content Include="res\Toolbar.bmp" />
     <Content Include="res\ugslope.bmp" />
     <Content Include="res\YardChip.bmp" />
-    <EmbeddedResource Include="contributions\others\NewWorldDialog.resx">
+    <EmbeddedResource Include="Contributions\others\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\AbstractControllerImpl.resx">
