@@ -50,7 +50,7 @@ namespace FreeTrain.Contributions.Sound
         public abstract string title { get; }
     }
 
-    internal class BGMFactoryContributionFactory : ContributionFactory
+    internal class BGMFactoryContributionFactory : IContributionFactory
     {
         /// <summary>
         /// 
@@ -67,7 +67,7 @@ namespace FreeTrain.Contributions.Sound
         /// <param name="owner"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public Contribution load(PluginDefinition owner, XmlElement e)
+        public Contribution Load(PluginDefinition owner, XmlElement e)
         {
             BGMFactoryContribution contrib =
                 (BGMFactoryContribution)PluginUtil.loadObjectFromManifest(e);

@@ -351,13 +351,13 @@ namespace FreeTrain.Views
         /// </summary>
         private bool shouldDrawGround(int h, int v, int z)
         {
-            HoleVoxel hva;
+            IHoleVoxel hva;
             if (z == world.Size.z - 1) hva = null;
-            else hva = world.voxelHVD(h, v, z) as HoleVoxel;
+            else hva = world.voxelHVD(h, v, z) as IHoleVoxel;
 
-            HoleVoxel hvb;
+            IHoleVoxel hvb;
             if (z == 0) hvb = null;
-            else hvb = world.voxelHVD(h, v, z - 1) as HoleVoxel;
+            else hvb = world.voxelHVD(h, v, z - 1) as IHoleVoxel;
 
             if (hva != null && !hva.drawGround(false))
                 return false;

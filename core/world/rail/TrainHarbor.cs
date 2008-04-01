@@ -27,7 +27,7 @@ namespace FreeTrain.World.Rail
     /// to stop.
     /// 
     /// </summary>
-    public interface TrainHarbor
+    public interface ITrainHarbor
     {
         // This interface can be queried from voxels
 

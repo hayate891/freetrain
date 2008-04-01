@@ -52,7 +52,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="loc"></param>
         /// <param name="owner"></param>
-        public static void electBridgeSupport(Location loc, Entity owner)
+        public static void electBridgeSupport(Location loc, IEntity owner)
         {
             electBridgeSupport(loc, typeof(DefaultImpl), owner);
         }
@@ -62,7 +62,7 @@ namespace FreeTrain.World.Rail
         /// <param name="loc"></param>
         /// <param name="bridgeType"></param>
         /// <param name="owner"></param>
-        public static void electBridgeSupport(Location loc, Type bridgeType, Entity owner)
+        public static void electBridgeSupport(Location loc, Type bridgeType, IEntity owner)
         {
             electBridgeSupport(loc, bridgeType, bridgeType, owner);
         }
@@ -73,7 +73,7 @@ namespace FreeTrain.World.Rail
         /// <param name="topBridgeType"></param>
         /// <param name="otherBridgeType"></param>
         /// <param name="owner"></param>
-        public static void electBridgeSupport(Location loc, Type topBridgeType, Type otherBridgeType, Entity owner)
+        public static void electBridgeSupport(Location loc, Type topBridgeType, Type otherBridgeType, IEntity owner)
         {
             // check if a support is buildable
             // TODO: start from the surface level
@@ -114,7 +114,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Tears down a bridge support if any.
         /// </summary>
-        public static void teardownBridgeSupport(Location loc, Entity owner)
+        public static void teardownBridgeSupport(Location loc, IEntity owner)
         {
             for (int z = 0; z < loc.z; z++)
             {
@@ -133,7 +133,7 @@ namespace FreeTrain.World.Rail
         /// <param name="y"></param>
         /// <param name="z"></param>
         /// <param name="owner"></param>
-        protected BridgePierVoxel(int x, int y, int z, Entity owner)
+        protected BridgePierVoxel(int x, int y, int z, IEntity owner)
             : base(x, y, z)
         {
             this.owner = owner;
@@ -141,11 +141,11 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        protected Entity owner;
+        protected IEntity owner;
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return owner; } }
+        public override IEntity entity { get { return owner; } }
         #region Entity implementation
         /*
 		public bool isSilentlyReclaimable { get { return false; } }
@@ -215,7 +215,7 @@ namespace FreeTrain.World.Rail
             /// <param name="y"></param>
             /// <param name="z"></param>
             /// <param name="owner"></param>
-            public DefaultImpl(int x, int y, int z, Entity owner) : base(x, y, z, owner) { }
+            public DefaultImpl(int x, int y, int z, IEntity owner) : base(x, y, z, owner) { }
             /// <summary>
             /// 
             /// </summary>
@@ -234,7 +234,7 @@ namespace FreeTrain.World.Rail
             /// <param name="y"></param>
             /// <param name="z"></param>
             /// <param name="owner"></param>
-            public SlopeNEImpl(int x, int y, int z, Entity owner) : base(x, y, z, owner) { }
+            public SlopeNEImpl(int x, int y, int z, IEntity owner) : base(x, y, z, owner) { }
             /// <summary>
             /// 
             /// </summary>

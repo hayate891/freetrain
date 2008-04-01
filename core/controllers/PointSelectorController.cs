@@ -149,7 +149,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         public virtual void close()
         {
-            site.close();
+            site.Close();
         }
         /// <summary>
         /// 

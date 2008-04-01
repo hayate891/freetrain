@@ -109,7 +109,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             sprite.AppendChild(color.Clone());
             PluginManager manager = PluginManager.theInstance;
-            ContributionFactory factory = manager.getContributionFactory("land");
+            IContributionFactory factory = manager.getContributionFactory("land");
             XmlNode temp = contrib.Clone();
             foreach (XmlNode cn in temp.ChildNodes)
             {
@@ -118,7 +118,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             }
             temp.AppendChild(sprite);
             contrib.AppendChild(temp);
-            return factory.load(parent, (XmlElement)temp);
+            return factory.Load(parent, (XmlElement)temp);
         }
 
     }

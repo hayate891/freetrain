@@ -57,7 +57,7 @@ namespace FreeTrain.World.Structs
         /// <returns></returns>
 		public override object queryInterface( Type aspect ) {
 			// if type.population is null, we don't have any population
-			if( aspect==typeof(Rail.StationListener) )
+			if( aspect==typeof(Rail.IStationListener) )
 				return stationListener;
 			else
 				return base.queryInterface(aspect);

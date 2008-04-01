@@ -27,7 +27,7 @@ namespace FreeTrain.Framework.Plugin
     /// Loads a Contribution from a designated class by passing the XmlElement
     /// to its constructor
     /// </summary>
-    public class FixedClassContributionFactory : ContributionFactory
+    public class FixedClassContributionFactory : IContributionFactory
     {
         /// <param name="concreteType">
         /// Type of the class to be used to load the class.
@@ -51,7 +51,7 @@ namespace FreeTrain.Framework.Plugin
         /// <param name="owner"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public Contribution load(PluginDefinition owner, XmlElement e)
+        public Contribution Load(PluginDefinition owner, XmlElement e)
         {
             return (Contribution)Activator.CreateInstance(concreteType, new object[] { e });
         }

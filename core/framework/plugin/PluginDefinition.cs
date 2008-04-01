@@ -137,8 +137,8 @@ namespace FreeTrain.Framework.Plugin
 
                     string contributionName = XmlUtil.selectSingleNode(contrib, "name").InnerText;
 
-                    ContributionFactory factory =
-                        (ContributionFactory)PluginUtil.loadObjectFromManifest(contrib);
+                    IContributionFactory factory =
+                        (IContributionFactory)PluginUtil.loadObjectFromManifest(contrib);
 
                     // register it
                     PluginManager.theInstance.addContributionFactory(
@@ -248,8 +248,8 @@ namespace FreeTrain.Framework.Plugin
                     string type = contrib.Attributes["type"].Value;
                     if (type == "contribution") continue;	// ignore
 
-                    ContributionFactory factory = PluginManager.theInstance.getContributionFactory(type);
-                    Contribution c = factory.load(this, contrib);
+                    IContributionFactory factory = PluginManager.theInstance.getContributionFactory(type);
+                    Contribution c = factory.Load(this, contrib);
                     contributions.Add(c);
                     PluginManager.theInstance.addContribution(c);
                     c.init(this, baseUri);

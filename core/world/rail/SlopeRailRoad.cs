@@ -34,7 +34,7 @@ namespace FreeTrain.World.Rail
     /// and the other two are SlopeSupport voxels, which are visible.
     /// </summary>
     [Serializable]
-    public class SlopeEntity : Entity
+    public class SlopeEntity : IEntity
     {
         private Cube cube;
         /// <summary>
@@ -261,7 +261,7 @@ namespace FreeTrain.World.Rail
         /// Used for upper two invisible voxels
         /// </summary>
         [Serializable]
-        internal class SlopeFillerVoxel : EmptyVoxel, HoleVoxel
+        internal class SlopeFillerVoxel : EmptyVoxel, IHoleVoxel
         {
             internal SlopeFillerVoxel(SlopeEntity entity, int x, int y, int z, int idx)
                 : base(entity, x, y, z)
@@ -290,7 +290,7 @@ namespace FreeTrain.World.Rail
         /// Used for lower two voxels. Visible but not rail road.
         /// </summary>
         [Serializable]
-        internal class SlopeSupportVoxel : EmptyVoxel, HoleVoxel
+        internal class SlopeSupportVoxel : EmptyVoxel, IHoleVoxel
         {
             internal SlopeSupportVoxel(SlopeEntity entity, int x, int y, int z, int idx, ISprite s)
                 : base(entity, x, y, z)

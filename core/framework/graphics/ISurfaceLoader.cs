@@ -19,42 +19,27 @@
 #endregion LICENSE
 
 using System;
-using System.Xml;
-using FreeTrain.Framework.Plugin;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using FreeTrain.Framework.Graphics;
 
-namespace FreeTrain.Contributions.Train
+namespace FreeTrain.Framework.Graphics
 {
     /// <summary>
-    /// LoadsTrainContributionFactory.
-    /// 
-    /// When a class element is present, it is used. Otherwise
-    /// defaults to ParamTrainImpl
+    /// Function object that can load a picture into the given surface.
     /// </summary>
-    public class TrainContributionFactory : IContributionFactory
+    public interface ISurfaceLoader
     {
         /// <summary>
-        /// 
+        /// Fill the surface by the image and return the mask color.
+        /// If the surface is null, the callee needs to allocate a new surface
         /// </summary>
-        public TrainContributionFactory() { }
+        void Load(ref Surface surface);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="e"></param>
-        public TrainContributionFactory(XmlElement e) { }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="owner"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        public Contribution Load(PluginDefinition owner, XmlElement e)
-        {
-            if (e.SelectSingleNode("class") == null)
-                // default to ParamTrainImpl
-                return new ParamTrainImpl(e);
-            else
-                // use the class element
-                return (Contribution)PluginUtil.loadObjectFromManifest(e);
-        }
+        string FileName { get; }
     }
 }

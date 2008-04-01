@@ -36,7 +36,7 @@ namespace FreeTrain.World.Rail
     /// Station
     /// </summary>
     [Serializable]
-    public class Station : PThreeDimStructure, PlatformHost, TrainHarbor
+    public class Station : PThreeDimStructure, IPlatformHost, ITrainHarbor
     {
         /// <summary>
         /// Creates a new station object with its left-top corner at
@@ -60,9 +60,9 @@ namespace FreeTrain.World.Rail
             Distance r = new Distance(REACH_RANGE, REACH_RANGE, REACH_RANGE);
 
             // advertise listeners in the neighborhood that a new station is available
-            foreach (Entity e in Cube.createInclusive(baseLocation - r, baseLocation + r).getEntities())
+            foreach (IEntity e in Cube.createInclusive(baseLocation - r, baseLocation + r).getEntities())
             {
-                StationListener l = (StationListener)e.queryInterface(typeof(StationListener));
+                IStationListener l = (IStationListener)e.queryInterface(typeof(IStationListener));
                 if (l != null)
                     l.advertiseStation(this);
             }
@@ -140,7 +140,7 @@ namespace FreeTrain.World.Rail
             WorldDefinition.World.stations.remove(this);
 
             // notify listeners
-            foreach (StationListener l in listeners)
+            foreach (IStationListener l in listeners)
                 l.onStationRemoved(this);
 
             // notify nodes that this host is going to be destroyed.
@@ -161,7 +161,7 @@ namespace FreeTrain.World.Rail
         /// <returns></returns>
         public override object queryInterface(Type aspect)
         {
-            if (aspect == typeof(TrainHarbor))
+            if (aspect == typeof(ITrainHarbor))
                 return this;
 
             return base.queryInterface(aspect);
@@ -225,7 +225,7 @@ namespace FreeTrain.World.Rail
             /// 
             /// </summary>
             /// <param name="listener"></param>
-            public void add(StationListener listener)
+            public void add(IStationListener listener)
             {
                 core.add(listener);
             }
@@ -233,7 +233,7 @@ namespace FreeTrain.World.Rail
             /// 
             /// </summary>
             /// <param name="listener"></param>
-            public void remove(StationListener listener)
+            public void remove(IStationListener listener)
             {
                 core.remove(listener);
             }
@@ -258,7 +258,7 @@ namespace FreeTrain.World.Rail
             get
             {
                 int p = 0;
-                foreach (StationListener l in listeners)
+                foreach (IStationListener l in listeners)
                     p += l.getPopulation(this);
                 return p;
             }

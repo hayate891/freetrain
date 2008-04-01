@@ -38,7 +38,7 @@ namespace FreeTrain.World
     /// </summary>
     /// TrafficOccupantには線路・道路・および車（電車もしくは自動車）が入れる
     [Serializable]
-    public sealed class TrafficVoxel : AbstractVoxelImpl, Entity
+    public sealed class TrafficVoxel : AbstractVoxelImpl, IEntity
     {
         private Car _car;
 
@@ -243,7 +243,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return this; } }
+        public override IEntity entity { get { return this; } }
 
         #region Entity implementation
         /// <summary>

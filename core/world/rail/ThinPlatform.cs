@@ -153,7 +153,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Lists available platform hosts for this platform.
         /// </summary>
-        internal protected override PlatformHost[] listHosts()
+        internal protected override IPlatformHost[] listHosts()
         {
             return listHosts(HOST_RANGE);
         }
@@ -193,7 +193,7 @@ namespace FreeTrain.World.Rail
         [Serializable]
         internal class RailRoadImpl : YardRailRoad
         {
-            internal RailRoadImpl(TrafficVoxel voxel, ThinPlatform _owner, int idx, bool _hasRoof, Outlook _outlook)
+            internal RailRoadImpl(TrafficVoxel voxel, ThinPlatform _owner, int idx, bool _hasRoof, IOutlook _outlook)
                 : base(voxel, _owner, idx)
             {
 
@@ -205,10 +205,10 @@ namespace FreeTrain.World.Rail
             /// </summary>
             public Direction direction { get { return owner.direction; } }
 
-            private Outlook _outlook;
+            private IOutlook _outlook;
 
             /// <summary> Outlook of this platform. </summary>
-            public Outlook outlook
+            public IOutlook outlook
             {
                 get { return _outlook; }
                 set
@@ -282,7 +282,7 @@ namespace FreeTrain.World.Rail
             /// <returns></returns>
             public override object queryInterface(Type aspect)
             {
-                if (aspect == typeof(TrainHarbor))
+                if (aspect == typeof(ITrainHarbor))
                     return owner.hostStation;
                 return base.queryInterface(aspect);
             }
@@ -316,7 +316,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Draws the platform.
         /// </summary>
-        internal interface Outlook
+        internal interface IOutlook
         {
             /// <summary>
             /// 
@@ -332,14 +332,14 @@ namespace FreeTrain.World.Rail
             void drawAfter(RailRoadImpl rr, DrawContext display, Point pt);
         }
 
-        internal static readonly Outlook plainPlatform = new PlainPlatform();
+        internal static readonly IOutlook plainPlatform = new PlainPlatform();
 
 
         /// <summary>
         /// Normal platform
         /// </summary>
         [Serializable]
-        internal class PlainPlatform : Outlook, ISerializable
+        internal class PlainPlatform : IOutlook, ISerializable
         {
             /// <summary>
             /// 
@@ -386,7 +386,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         // TODO: fly-weight pattern support
         [Serializable]
-        internal class PassagewayPlatform : Outlook
+        internal class PassagewayPlatform : IOutlook
         {
             /// <summary>
             /// 
@@ -430,7 +430,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         // TODO: fly-weight pattern support
         [Serializable]
-        internal class StairPlatform : Outlook
+        internal class StairPlatform : IOutlook
         {
             /// <summary>
             /// 

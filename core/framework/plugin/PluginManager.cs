@@ -39,7 +39,7 @@ namespace FreeTrain.Framework.Plugin
     /// <summary>
     /// 
     /// </summary>
-    public interface PluginErrorHandler
+    public interface IPluginErrorHandler
     {
         /// <summary>
         /// 
@@ -82,7 +82,7 @@ namespace FreeTrain.Framework.Plugin
     /// <summary>
     /// 
     /// </summary>
-    public class SilentPluginErrorHandler : PluginErrorHandler
+    public class SilentPluginErrorHandler : IPluginErrorHandler
     {
         #region PluginErrorHandler o
         /// <summary>
@@ -220,7 +220,7 @@ namespace FreeTrain.Framework.Plugin
         /// </param>
         /// <param name="errorHandler"></param>
         /// <param name="progressHandler"></param>
-        public void init(ICollection dirs, ProgressHandler progressHandler, PluginErrorHandler errorHandler)
+        public void init(ICollection dirs, ProgressHandler progressHandler, IPluginErrorHandler errorHandler)
         {
 
             Set pluginSet = new Set();
@@ -428,7 +428,7 @@ namespace FreeTrain.Framework.Plugin
         /// Normally, this method is called by <c>Plugin</c> but the caller
         /// can invoke this method before calling the init method.
         /// </summary>
-        public void addContributionFactory(string name, ContributionFactory factory)
+        public void addContributionFactory(string name, IContributionFactory factory)
         {
             if (contributionFactories.Contains(name))
                 throw new Exception(string.Format(
@@ -441,9 +441,9 @@ namespace FreeTrain.Framework.Plugin
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public ContributionFactory getContributionFactory(string name)
+        public IContributionFactory getContributionFactory(string name)
         {
-            ContributionFactory factory = (ContributionFactory)
+            IContributionFactory factory = (IContributionFactory)
                 contributionFactories[name];
 
             if (factory == null)

@@ -33,7 +33,7 @@ namespace FreeTrain.World.Structs
     /// Variable height building
     /// </summary>
     [Serializable]
-    public class VarHeightBuilding : Structure, SubsidiaryEntity
+    public class VarHeightBuilding : Structure, ISubsidiaryEntity
     {
         /// <summary>
         /// 
@@ -176,7 +176,7 @@ namespace FreeTrain.World.Structs
         /// <returns></returns>
         public override object queryInterface(Type aspect)
         {
-            if (aspect == typeof(Rail.StationListener))
+            if (aspect == typeof(Rail.IStationListener))
                 return stationListener;
 
             return base.queryInterface(aspect);

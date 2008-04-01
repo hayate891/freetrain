@@ -44,13 +44,13 @@ namespace FreeTrain.World.Subsidiaries
 
 
         /// <summary>Gets the corresponding entity.</summary>
-        public readonly SubsidiaryEntity owner;
+        public readonly ISubsidiaryEntity owner;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="_owner"></param>
         /// <param name="initiallyOwned"></param>
-        public SubsidiaryCompany(SubsidiaryEntity _owner, bool initiallyOwned)
+        public SubsidiaryCompany(ISubsidiaryEntity _owner, bool initiallyOwned)
         {
             this.owner = _owner;
             this._isOwned = initiallyOwned;

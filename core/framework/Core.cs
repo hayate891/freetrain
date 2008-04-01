@@ -187,7 +187,7 @@ namespace FreeTrain.Framework
     /// <summary>
     /// 
     /// </summary>
-    public class DefaultPluginErrorHandler : PluginErrorHandler
+    public class DefaultPluginErrorHandler : IPluginErrorHandler
     {
         int errCount;
         readonly int errMax;

@@ -35,7 +35,7 @@ namespace FreeTrain.World.Development
 		
 		internal VarHeightBuildingPlan(
 			VarHeightBuildingContribution contrib,
-			ULVFactory factory, Location _loc, int h )
+			IULVFactory factory, Location _loc, int h )
 			: base(factory.create(new Cube(_loc, contrib.size, 0 ))) {
 			
 			this.contrib = contrib;

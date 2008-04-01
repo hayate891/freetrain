@@ -38,7 +38,7 @@ namespace FreeTrain.Framework
         /// <param name="plugindirs"></param>
         /// <param name="progressHandler"></param>
         /// <param name="errorHandler"></param>
-        public static void InitializePlugins(string[] plugindirs, ProgressHandler progressHandler, PluginErrorHandler errorHandler)
+        public static void InitializePlugins(string[] plugindirs, ProgressHandler progressHandler, IPluginErrorHandler errorHandler)
         {
             if (initialized)
                 Clear();

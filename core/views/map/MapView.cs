@@ -46,7 +46,7 @@ namespace FreeTrain.Views.Map
         //private QuarterViewDrawer drawer;
         private System.Windows.Forms.Timer weatherTimer;
 
-        private WeatherOverlay weatherOverlay;
+        private IWeatherOverlay weatherOverlay;
 
         /// <summary>
         /// 

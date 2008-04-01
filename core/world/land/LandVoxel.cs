@@ -28,7 +28,7 @@ namespace FreeTrain.World.Land
     /// Land filler that occupies only one voxel.
     /// </summary>
     [Serializable]
-    public abstract class LandVoxel : AbstractVoxelImpl, Entity
+    public abstract class LandVoxel : AbstractVoxelImpl, IEntity
     {
         /// <summary>
         /// 
@@ -47,7 +47,7 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return this; } }
+        public override IEntity entity { get { return this; } }
 
         #region Entity implementation
         /// <summary>

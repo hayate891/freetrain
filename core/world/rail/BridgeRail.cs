@@ -320,7 +320,7 @@ namespace FreeTrain.World.Rail
             /// <param name="y"></param>
             /// <param name="z"></param>
             /// <param name="e"></param>
-            public PierTop1Impl(int x, int y, int z, Entity e) : base(x, y, z, e) { }
+            public PierTop1Impl(int x, int y, int z, IEntity e) : base(x, y, z, e) { }
             /// <summary>
             /// 
             /// </summary>
@@ -339,7 +339,7 @@ namespace FreeTrain.World.Rail
             /// <param name="y"></param>
             /// <param name="z"></param>
             /// <param name="e"></param>
-            public PierBody1Impl(int x, int y, int z, Entity e) : base(x, y, z, e) { }
+            public PierBody1Impl(int x, int y, int z, IEntity e) : base(x, y, z, e) { }
             /// <summary>
             /// 
             /// </summary>
@@ -358,7 +358,7 @@ namespace FreeTrain.World.Rail
             /// <param name="y"></param>
             /// <param name="z"></param>
             /// <param name="e"></param>
-            public PierTop2Impl(int x, int y, int z, Entity e) : base(x, y, z, e) { }
+            public PierTop2Impl(int x, int y, int z, IEntity e) : base(x, y, z, e) { }
             /// <summary>
             /// 
             /// 
@@ -378,7 +378,7 @@ namespace FreeTrain.World.Rail
             /// <param name="y"></param>
             /// <param name="z"></param>
             /// <param name="e"></param>
-            public PierBody2Impl(int x, int y, int z, Entity e) : base(x, y, z, e) { }
+            public PierBody2Impl(int x, int y, int z, IEntity e) : base(x, y, z, e) { }
             /// <summary>
             /// 
             /// </summary>

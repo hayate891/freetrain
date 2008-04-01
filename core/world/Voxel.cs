@@ -90,13 +90,13 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="d"></param>
         /// <param name="f"></param>
-        public abstract void setFence(Direction d, Fence f);
+        public abstract void setFence(Direction d, IFence f);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public abstract Fence getFence(Direction d);
+        public abstract IFence getFence(Direction d);
         /// <summary>
         /// 
         /// </summary>
@@ -149,7 +149,7 @@ namespace FreeTrain.World
         /// <summary>
         /// Obtains a reference to the entity that includes this voxel.
         /// </summary>
-        public abstract Entity entity { get; }
+        public abstract IEntity entity { get; }
 
     }
 
@@ -162,7 +162,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        protected Fence[] fence = new Fence[4];
+        protected IFence[] fence = new IFence[4];
         /// <summary>
         /// 
         /// 
@@ -205,7 +205,7 @@ namespace FreeTrain.World
         /// <param name="pt"></param>
         protected override void drawFrontFence(DrawContext display, Point pt)
         {
-            Fence f;
+            IFence f;
             f = fence[(Direction.SOUTH).index / 2];
             if (f != null)
                 f.drawFence(display.Surface, pt, Direction.SOUTH);
@@ -220,7 +220,7 @@ namespace FreeTrain.World
         /// <param name="pt"></param>
         protected override void drawBehindFence(DrawContext display, Point pt)
         {
-            Fence f;
+            IFence f;
             f = fence[(Direction.NORTH).index / 2];
             if (f != null)
                 f.drawFence(display.Surface, pt, Direction.NORTH);
@@ -233,7 +233,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="d"></param>
         /// <param name="f"></param>
-        public override void setFence(Direction d, Fence f)
+        public override void setFence(Direction d, IFence f)
         {
             fence[d.index / 2] = f;
         }
@@ -242,7 +242,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public override Fence getFence(Direction d)
+        public override IFence getFence(Direction d)
         {
             return fence[d.index / 2];
 
@@ -268,7 +268,7 @@ namespace FreeTrain.World
     /// The drawing routine queries this interface for voxels
     /// that are directly above and below the surface.
     /// </summary>
-    public interface HoleVoxel
+    public interface IHoleVoxel
     {
         /// <summary>
         /// Returns false to prevent the ground surface to be drawn.
@@ -283,7 +283,7 @@ namespace FreeTrain.World
     /// <summary>
     /// The interface called when the fence should be drawn.
     /// </summary>
-    public interface Fence
+    public interface IFence
     {
         /// <summary>
         /// called when the fehce should be drawn.

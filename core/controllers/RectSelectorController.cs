@@ -76,7 +76,7 @@ namespace FreeTrain.Controllers
         /// </summary>
         protected virtual void onCanceled()
         {
-            site.close();
+            site.Close();
         }
         /// <summary>
         /// 

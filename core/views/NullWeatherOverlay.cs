@@ -27,13 +27,13 @@ namespace FreeTrain.Views
     /// <summary>
     /// NullWeatherOverlay の概要の説明です。
     /// </summary>
-    public sealed class NullWeatherOverlay : WeatherOverlay
+    public sealed class NullWeatherOverlay : IWeatherOverlay
     {
         private NullWeatherOverlay() { }
         /// <summary>
         /// 
         /// </summary>
-        public static readonly WeatherOverlay theInstance = new NullWeatherOverlay();
+        public static readonly IWeatherOverlay theInstance = new NullWeatherOverlay();
         /// <summary>
         /// 
         /// </summary>

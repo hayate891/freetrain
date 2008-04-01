@@ -31,7 +31,7 @@ namespace FreeTrain.World.Terrain
     /// Slopes used for mountains and under-waters.
     /// </summary>
     [Serializable]
-    public class MountainVoxel : AbstractVoxelImpl, Entity
+    public class MountainVoxel : AbstractVoxelImpl, IEntity
     {
         private ISprite[] patterns;
         private ISprite ground;
@@ -179,7 +179,7 @@ namespace FreeTrain.World.Terrain
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return this; } }
+        public override IEntity entity { get { return this; } }
 
         #region Entity implementation
         /// <summary>
