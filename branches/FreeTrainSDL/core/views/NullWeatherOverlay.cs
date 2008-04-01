@@ -47,7 +47,7 @@ namespace FreeTrain.Views
         /// <param name="pt"></param>
         public void draw(QuarterViewDrawer drawer, Surface target, Point pt)
         {
-            drawer.draw(target, pt);
+            drawer.Draw(target, pt);
         }
         /// <summary>
         /// 

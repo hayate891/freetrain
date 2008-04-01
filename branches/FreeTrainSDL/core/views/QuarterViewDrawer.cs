@@ -46,7 +46,16 @@ namespace FreeTrain.Views
         /// <summary>
         /// Off-screen buffer that keeps the image of this window.
         /// </summary>
-        public Surface offscreenBuffer;
+        private Surface offscreenBuffer;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Surface OffscreenBuffer
+        {
+            get { return offscreenBuffer; }
+            set { offscreenBuffer = value; }
+        }
 
         /// <summary>
         /// Drawing context that wraps <code>offscreenBuffer</code>
@@ -70,7 +79,6 @@ namespace FreeTrain.Views
         /// </summary>
         private int _heightCutHeight;
 
-
         /// <summary>
         /// Fired when the height-cut height is changed
         /// </summary>
@@ -83,7 +91,8 @@ namespace FreeTrain.Views
 
         private WorldDefinition world;
 
-        ISprite emptyChip, waterChip;
+        ISprite emptyChip;
+        ISprite waterChip;
 
         /// <summary></summary>
         /// <param name="initialView">
@@ -97,7 +106,7 @@ namespace FreeTrain.Views
             _heightCutHeight = world.Size.z - 1;
             //this.directDraw = directDraw;
             //offscreenBuffer = offscreen;
-            recreateDrawBuffer(initialView.Size, true);
+            RecreateDrawBuffer(initialView.Size, true);
 
             topLeft = new Point(initialView.X, initialView.Y);
 
@@ -109,27 +118,27 @@ namespace FreeTrain.Views
         /// <summary>
         /// 
         /// </summary>
-        public Size view_size;
+        public Size ViewSize;
 
         /// <summary>
         /// Size of the view in pixels.
         /// </summary>
-        public Size size
+        public Size Size
         {
             get
             {
-                if (offscreenBuffer != null) return view_size; //offscreenBuffer.size;
+                if (offscreenBuffer != null) return ViewSize; //offscreenBuffer.size;
                 else return new Size(0, 0);
             }
             set
             {
-                recreateDrawBuffer(value, false);
+                RecreateDrawBuffer(value, false);
             }
         }
         /// <summary>
         /// 
         /// </summary>
-        public Point origin
+        public Point Origin
         {
             get
             {
@@ -188,10 +197,11 @@ namespace FreeTrain.Views
                 updateScreen();*/
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public bool enableOverlay
+        public bool EnableOverlay
         {
             get
             {
@@ -212,7 +222,7 @@ namespace FreeTrain.Views
         {
             get
             {
-                return new Rectangle(topLeft, size);
+                return new Rectangle(topLeft, Size);
             }
         }
 
@@ -223,7 +233,7 @@ namespace FreeTrain.Views
         /// Note that setting <code>world.size.z-1</code> will cause
         /// all the voxels to be drawn.
         /// </summary>
-        public int heightCutHeight
+        public int HeightCutHeight
         {
             get
             {
@@ -253,7 +263,7 @@ namespace FreeTrain.Views
         /// (such as when the current surface is lost)
         /// </param>
         /// <param name="size"></param>
-        public void recreateDrawBuffer(Size size, bool forceRecreate)
+        public void RecreateDrawBuffer(Size size, bool forceRecreate)
         {
             /*if(offscreenBuffer!=null ) 
             {
@@ -265,7 +275,7 @@ namespace FreeTrain.Views
                 offscreenBuffer = null;
             }*/
 
-            view_size = size;
+            ViewSize = size;
 
             if (size.Width > 0 && size.Height > 0)
             {
@@ -276,16 +286,15 @@ namespace FreeTrain.Views
             OnUpdateAllVoxels();
         }
 
-
-
         /// <summary>
         /// Return true if the given voxel is visible.
         /// </summary>
-        public bool isVisible(Location loc)
+        public bool IsVisible(Location loc)
         {
             // find the bounding box in (A,B) axes
             return WorldDefinition.World.getBoundingBox(loc).IntersectsWith(this.visibleRect);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -315,6 +324,7 @@ namespace FreeTrain.Views
                 if (OnUpdated != null) OnUpdated(this, null);
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -341,10 +351,6 @@ namespace FreeTrain.Views
             Console.WriteLine("TIMESHIFT");
             if (OnUpdated != null) OnUpdated(this, null);
         }
-
-
-
-
 
         /// <summary>
         /// Checks if we need to draw a ground surface.
@@ -373,13 +379,13 @@ namespace FreeTrain.Views
         /// </summary>
         /// <param name="rectAB">Rectangle in the (A,B) coordinates.</param>
         /// <param name="overlay"></param>
-        public void draw(Rectangle rectAB, IMapOverlay overlay)
+        public void Draw(Rectangle rectAB, IMapOverlay overlay)
         {
             // the same rectangle in the client coordinates
             Rectangle rectClient = fromABToClient(rectAB);
 
             int waterLevel = world.waterLevel;
-            bool noHeightCut = (heightCutHeight == world.Size.z - 1);
+            bool noHeightCut = (HeightCutHeight == world.Size.z - 1);
 
             Color waterSurfaceColor = waterSurfaceDayColor;
             if (world.viewOptions.useNightView)
@@ -400,7 +406,7 @@ namespace FreeTrain.Views
             int Hmax = Math.Min(rectHV.Right, world.Size.x - 1);
 
             int Zinit = noHeightCut ? (int)waterLevel : 0;	// no need to draw underwater unless in the height cut mode
-            int Z = heightCutHeight;
+            int Z = HeightCutHeight;
             int Vmax = Math.Min(rectHV.Bottom + Z * 2, world.Size.y - 1);
 
             emptyChip = ResourceUtil.getGroundChip(world);
@@ -502,7 +508,7 @@ namespace FreeTrain.Views
         /// <summary>
         /// Update the surface by redrawing necessary parts.
         /// </summary>
-        public void updateScreen()
+        public void UpdateScreen()
         {
             if (dirtyRect.isEmpty || offscreenBuffer == null) return;	// no need for draw.
 
@@ -518,7 +524,7 @@ namespace FreeTrain.Views
             // draw the rect
             Rectangle dr = dirtyRect.rect;
             if (dr.Top < 0) dr.Y = 0;	// clipping. higher voxel on the northen edge could make top<0
-            draw(dr, overlay);
+            Draw(dr, overlay);
             dirtyRect.clear();
 
             // allow MapOverlay to do the wrap-up
@@ -551,11 +557,11 @@ namespace FreeTrain.Views
         /// <summary>
         /// Draw the view to the specified point of the given surface.
         /// </summary>
-        public void draw(Surface target, Point pt)
+        public void Draw(Surface target, Point pt)
         {
             try
             {
-                updateScreen();
+                UpdateScreen();
             }
             catch //( COMException e ) 
             {
@@ -582,15 +588,15 @@ namespace FreeTrain.Views
         private void onSurfaceLost(object sender, EventArgs ea)
         {
             // reallocate the buffer
-            recreateDrawBuffer(size, true);
+            RecreateDrawBuffer(Size, true);
         }
 
         /// <summary>
         /// Obtains the image as a bitmap.
         /// </summary>
-        public Bitmap createBitmap()
+        public Bitmap CreateBitmap()
         {
-            updateScreen();
+            UpdateScreen();
             return drawContext.Surface.Bitmap;
         }
 
@@ -609,14 +615,12 @@ namespace FreeTrain.Views
         //			if(OnUpdated!=null)		OnUpdated(this,null);
         //		}
 
-
         private static Color waterSurfaceDayColor = Color.FromArgb(0, 114, 188);
 
         private static Font drawFont = new Font("MS PGothic", 10);
         //! private static Font drawFont = new Font("ＭＳ Ｐゴシック", 10);
         private static SolidBrush drawBrush1 = new SolidBrush(Color.Black);
         private static SolidBrush drawBrush2 = new SolidBrush(Color.White);
-
 
         #region coordinates conversion methods
         /// <summary>
@@ -686,7 +690,7 @@ namespace FreeTrain.Views
             if (controller != null)
             {
                 ILocationDisambiguator disambiguator = controller.Disambiguator;
-                for (int z = heightCutHeight; z >= 0; z--)
+                for (int z = HeightCutHeight; z >= 0; z--)
                 {
                     Location loc = new Location(x - z, y + z, z);
                     if (disambiguator != null && disambiguator.IsSelectable(loc))

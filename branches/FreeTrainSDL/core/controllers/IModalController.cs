@@ -43,6 +43,7 @@ namespace FreeTrain.Controllers
         /// <param name="loc">(X,Y,Z) location that was clicked</param>
         /// <param name="ab">(A,B) location that was clicked.</param>
         void OnClick(MapViewWindow source, Location loc, Point ab);
+
         /// <summary>
         /// 
         /// </summary>
@@ -50,6 +51,7 @@ namespace FreeTrain.Controllers
         /// <param name="loc"></param>
         /// <param name="ab"></param>
         void OnRightClick(MapViewWindow source, Location loc, Point ab);
+
         /// <summary>
         /// 
         /// </summary>
@@ -77,7 +79,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Gets the display name of this controller.
         /// </summary>
-        string name { get; }
+        string Name { get; }
 
         /// <summary>
         /// Gets the disambiguator associated with this controller, if any.
