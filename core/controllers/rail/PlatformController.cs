@@ -35,7 +35,6 @@ using FreeTrain.Views;
 using FreeTrain.Views.Map;
 using FreeTrain.Controls;
 
-
 namespace FreeTrain.Controllers.Rail
 {
     /// <summary>
@@ -92,7 +91,7 @@ namespace FreeTrain.Controllers.Rail
             this.columnHeader6.Text = Translation.GetString("CONTROLLER_STATION_MAINTENANCE");
             this.label4.Text = Translation.GetString("CONTROLLER_STATION_DIRECTION");
             this.label5.Text = Translation.GetString("CONTROLLER_STATION_COLOUR");
-            this.platformPage.Text  = Translation.GetString("CONTROLLER_STATION_PLATFORM");
+            this.platformPage.Text = Translation.GetString("CONTROLLER_STATION_PLATFORM");
             this.checkSlim.Text = Translation.GetString("CONTROLLER_STATION_SLIMPLATFORM");
             this.label1.Text = Translation.GetString("CONTROLLER_STATION_LENGTH");
             this.Text = Translation.GetString("CONTROLLER_STATION_CONSTRUCTION");
@@ -121,7 +120,7 @@ namespace FreeTrain.Controllers.Rail
             dirW.Image = bitmapW;
 
             // load station type list
-            stationType.DataSource = Core.plugins.stationGroup;
+            stationType.DataSource = Core.Plugins.stationGroup;
             stationType.DisplayMember = "name";
 
             updateAfterResize(null, null);
@@ -312,7 +311,7 @@ namespace FreeTrain.Controllers.Rail
                     {
                         if (!selectedStation.canBeBuilt(loc, ControlMode.Player))
                         {
-                            MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
+                            MessageBox.Show(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                         }
                         else
                         {
@@ -331,7 +330,7 @@ namespace FreeTrain.Controllers.Rail
                     {
                         if (!FatPlatform.canBeBuilt(loc, direction, length))
                         {
-                            MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
+                            MessageBox.Show(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                             return;
                         }
                         new FatPlatform(loc, direction, length);
@@ -344,7 +343,7 @@ namespace FreeTrain.Controllers.Rail
                             if (p.canRemove)
                                 p.remove();
                             else
-                                MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_REMOVE"));
+                                MessageBox.Show(Translation.GetString("CONSTRUCTION_CANNOT_REMOVE"));
                         }
                     }
                     return;
@@ -354,7 +353,7 @@ namespace FreeTrain.Controllers.Rail
                     {
                         if (!ThinPlatform.canBeBuilt(loc, direction, length))
                         {
-                            MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
+                            MessageBox.Show(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                             return;
                         }
                         new ThinPlatform(loc, direction, length);
@@ -367,7 +366,7 @@ namespace FreeTrain.Controllers.Rail
                             if (p.canRemove)
                                 p.remove();
                             else
-                                MainWindow.showError(Translation.GetString("CONSTRUCTION_CANNOT_REMOVE"));
+                                MessageBox.Show(Translation.GetString("CONSTRUCTION_CANNOT_REMOVE"));
                         }
                     }
                     return;
@@ -484,9 +483,15 @@ namespace FreeTrain.Controllers.Rail
         {
             // Builds a new preview bitmap and set it to the picture box
             PreviewDrawer drawer;
-
-            drawer = new PreviewDrawer(stationPicture.ClientSize, selectedStation.size);
-            drawer.drawCenter(selectedStation.sprites);
+            if (selectedStation == null)
+            {
+                drawer = new PreviewDrawer(stationPicture.ClientSize, new Distance());
+            }
+            else
+            {
+                drawer = new PreviewDrawer(stationPicture.ClientSize, selectedStation.size);
+                drawer.drawCenter(selectedStation.sprites);
+            }
 
             if (stationPreviewBitmap != null) stationPreviewBitmap.Dispose();
             stationPicture.Image = stationPreviewBitmap = drawer.createBitmap();

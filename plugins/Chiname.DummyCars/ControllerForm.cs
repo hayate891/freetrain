@@ -59,7 +59,7 @@ namespace FreeTrain.World.Road.DummyCars
             InitializeComponent();
 
             // load list of lands
-            typeBox.DataSource = Core.plugins.listContributions(typeof(DummyCarContribution));
+            typeBox.DataSource = Core.Plugins.listContributions(typeof(DummyCarContribution));
             typeBox.DisplayMember = "name";
             if (typeBox.Items.Count == 0)
             {

@@ -20,6 +20,7 @@
 
 using System;
 using System.Drawing;
+using System.Windows.Forms;
 using System.Xml;
 using FreeTrain.Contributions.Common;
 using FreeTrain.Contributions.Population;
@@ -466,7 +467,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             {
                 if (!v.owner.add(reffer))
                 {
-                    MainWindow.showError("Not enough space or no fit");
+                    MessageBox.Show("Not enough space or no fit");
                 }
                 
                 return v.owner;

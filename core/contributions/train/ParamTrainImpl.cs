@@ -94,7 +94,7 @@ namespace FreeTrain.Contributions.Train
             string idref = e.Attributes["carRef"].Value;
             if (id == null) throw new FormatException("carRef܂");
 
-            TrainCarContribution contrib = (TrainCarContribution)Core.plugins.getContribution(idref);
+            TrainCarContribution contrib = (TrainCarContribution)Core.Plugins.getContribution(idref);
             if (contrib == null) throw new FormatException(
                  string.Format("id='{0}'TrainCarRgr[V܂", idref));
 

@@ -42,8 +42,8 @@ namespace FreeTrain.Framework
         {
             if (initialized)
                 Clear();
-            if (MainWindow.mainWindow == null)
-                MainWindow.mainWindow = new MainWindow(plugindirs, false);
+            if (MainWindowMDI.mainWindow == null)
+                MainWindowMDI.mainWindow = new MainWindowMDI();
             if (progressHandler == null)
                 progressHandler = new ProgressHandler(SilentProgress);
 
@@ -52,7 +52,7 @@ namespace FreeTrain.Framework
             foreach (string subdir in Directory.GetDirectories(baseDir))
                 r.Add(Path.Combine(baseDir, subdir));
             // load plug-ins
-            Core.plugins.init(r, progressHandler, errorHandler);
+            Core.Plugins.init(r, progressHandler, errorHandler);
             if (WorldDefinition.World == null)
                 WorldDefinition.World = new WorldDefinition(new Distance(5, 5, 5), 0);
             initialized = true;

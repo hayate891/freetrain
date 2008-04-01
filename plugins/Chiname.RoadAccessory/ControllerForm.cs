@@ -59,7 +59,7 @@ namespace FreeTrain.World.Road.Accessory
             InitializeComponent();
 
             // load list of lands
-            typeBox.DataSource = Core.plugins.listContributions(typeof(RoadAccessoryContribution));
+            typeBox.DataSource = Core.Plugins.listContributions(typeof(RoadAccessoryContribution));
             typeBox.DisplayMember = "name";
             if (typeBox.Items.Count == 0)
             {

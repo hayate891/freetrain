@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers
             // Attach the control when activated.
             try
             {
-                MainWindow.mainWindow.AttachController(this);
+                MainWindowMDI.mainWindow.AttachController(this);
             }
             catch (NullReferenceException nre)
             {
@@ -68,29 +68,39 @@ namespace FreeTrain.Controllers
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             // Detach it when it is closed.
-            if (MainWindow.mainWindow.CurrentController == this)
-                MainWindow.mainWindow.DetachController();
+            if (MainWindowMDI.mainWindow.CurrentController == this)
+            {
+                MainWindowMDI.mainWindow.DetachController();
+            }
         }
 
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        //public string Name { get { return Text; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual ILocationDisambiguator Disambiguator 
+        { 
+            get 
+            { 
+                return null; 
+            } 
+        }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual ILocationDisambiguator Disambiguator { get { return null; } }
+        public virtual IMapOverlay Overlay 
+        { 
+            get 
+            { 
+                return this as IMapOverlay; 
+            } 
+        }
 
         /// <summary>
         /// 
         /// </summary>
-        public virtual IMapOverlay Overlay { get { return this as IMapOverlay; } }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public virtual void OnAttached() { }
+        public virtual void OnAttached() 
+        { }
 
         /// <summary>
         /// 
@@ -107,7 +117,9 @@ namespace FreeTrain.Controllers
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void OnClick(MapViewWindow source, Location loc, Point ab) { }
+        public virtual void OnClick(MapViewWindow source, Location loc, Point ab) 
+        { }
+
         /// <summary>
         /// 
         /// 
@@ -115,7 +127,9 @@ namespace FreeTrain.Controllers
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public virtual void OnMouseMove(MapViewWindow view, Location loc, Point ab) { }
+        public virtual void OnMouseMove(MapViewWindow view, Location loc, Point ab) 
+        { }
+
         /// <summary>
         /// 
         /// </summary>

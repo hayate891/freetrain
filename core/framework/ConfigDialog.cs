@@ -51,7 +51,7 @@ namespace FreeTrain.Framework
         /// <summary>
         /// 
         /// </summary>
-        public ConfigDialog() : this(Core.options) { }
+        public ConfigDialog() : this(Core.Options) { }
         /// <summary>
         /// 
         /// </summary>

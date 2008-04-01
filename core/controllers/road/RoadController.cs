@@ -185,7 +185,7 @@ namespace FreeTrain.Controllers.Road
 
         private void makeContribTree()
         {
-            RoadContribution[] contribs = Core.plugins.roads;
+            RoadContribution[] contribs = Core.Plugins.roads;
             if (contribs.Length > 0)
             {
                 currentContrib = contribs[0];

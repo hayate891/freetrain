@@ -498,7 +498,7 @@ namespace FreeTrain.Views
                 }
             }
 
-            if (Core.options.drawBoundingBox)
+            if (Core.Options.drawBoundingBox)
             {
                 rectAB.Inflate(-1, -1);
                 offscreenBuffer.drawBox(rectAB);
@@ -515,7 +515,7 @@ namespace FreeTrain.Views
             DateTime start = DateTime.Now;
 
             IMapOverlay overlay = null;
-            IModalController controller = MainWindow.mainWindow.CurrentController;
+            IModalController controller = MainWindowMDI.mainWindow.CurrentController;
             if (controller != null) overlay = controller.Overlay;
 
             if (overlay != null)
@@ -530,7 +530,7 @@ namespace FreeTrain.Views
             // allow MapOverlay to do the wrap-up
             if (overlay != null) overlay.DrawAfter(this, drawContext);
 
-            if (Core.options.drawStationNames)
+            if (Core.Options.drawStationNames)
             {
                 // REVISIT: I don't want these code inside this method.
                 //  it needs to be extensible.

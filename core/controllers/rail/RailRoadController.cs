@@ -59,10 +59,10 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// Updates the message in the dialog box.
         /// </summary>
-        private void updateDialog()
+        private void UpdateDialog()
         {
             message.Text = anchor != unplaced ?
-                Translation.GetString("CONTROLLER_RAIL_END_POINT") : 
+                Translation.GetString("CONTROLLER_RAIL_END_POINT") :
                 Translation.GetString("CONTROLLER_RAIL_START_POINT");
         }
 
@@ -78,39 +78,12 @@ namespace FreeTrain.Controllers.Rail
 
         private static Location unplaced = FreeTrain.World.Location.Unplaced;
 
-        private bool isPlacing { get { return buttonPlace.Checked; } }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="loc"></param>
-        /// <param name="ab"></param>
-        public override void OnClick(MapViewWindow source, Location loc, Point ab)
+        private bool IsPlacing
         {
-            if (anchor == unplaced)
+            get
             {
-                anchor = loc;
-                sameLevelDisambiguator = new SameLevelDisambiguator(anchor.z);
+                return buttonPlace.Checked;
             }
-            else
-            {
-                if (anchor != loc)
-                {
-                    if (isPlacing)
-                    {
-                        // build new railroads.
-                        if (!SingleRailRoad.Build(anchor, loc))
-                            MainWindow.showError(Translation.GetString("CONTROLLER_RAIL_OBSTACLES"));
-                    }
-                    else
-                        // remove existing ones
-                        SingleRailRoad.Remove(anchor, loc);
-                }
-                anchor = unplaced;
-            }
-
-            updateDialog();
         }
 
         /// <summary>
@@ -119,7 +92,44 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void OnRightClick(MapViewWindow source, Location loc, Point ab)
+        public override void OnClick(MapViewWindow source, Location location, Point ab)
+        {
+            if (anchor == unplaced)
+            {      
+                anchor = location;
+                sameLevelDisambiguator = new SameLevelDisambiguator(anchor.z);
+            }
+            else
+            {
+                if (anchor != location)
+                {
+                    if (IsPlacing)
+                    {
+                        // build new railroads.
+                        if (!SingleRailRoad.Build(anchor, location))
+                        {
+                            MessageBox.Show(Translation.GetString("CONTROLLER_RAIL_OBSTACLES"), "Error");
+                        }
+                        
+                    }
+                    else
+                    {
+                        // remove existing ones
+                        SingleRailRoad.Remove(anchor, location);
+                    }
+                }
+                anchor = unplaced;
+            }
+            UpdateDialog();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="loc"></param>
+        /// <param name="ab"></param>
+        public override void OnRightClick(MapViewWindow source, Location location, Point ab)
         {
             if (anchor == unplaced)
                 Close();	// cancel
@@ -129,7 +139,7 @@ namespace FreeTrain.Controllers.Rail
                 if (currentPosition != unplaced)
                     WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
                 anchor = unplaced;
-                updateDialog();
+                UpdateDialog();
             }
         }
 
@@ -139,23 +149,23 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
+        public override void OnMouseMove(MapViewWindow view, Location location, Point ab)
         {
-            if (anchor != unplaced && isPlacing && currentPosition != loc)
+            if (anchor != unplaced && IsPlacing && currentPosition != location)
             {
                 // update the screen
                 if (currentPosition != unplaced)
                     WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
-                currentPosition = loc;
+                currentPosition = location;
                 WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
 
                 int cost;
                 SingleRailRoad.ComputeRoute(anchor, currentPosition, out cost);
                 costBox.cost = cost;
             }
-            if (anchor != unplaced && !isPlacing)
+            if (anchor != unplaced && !IsPlacing)
             {
-                costBox.cost = SingleRailRoad.CalcCostOfRemoving(anchor, loc);
+                costBox.cost = SingleRailRoad.CalcCostOfRemoving(anchor, location);
             }
         }
 
@@ -183,10 +193,10 @@ namespace FreeTrain.Controllers.Rail
         private ILocationDisambiguator sameLevelDisambiguator;
 
         // "place" or "remove" button was clicked. reset the anchor
-        private void modeChanged(object sender, EventArgs e)
+        private void ModeChanged(object sender, EventArgs e)
         {
             anchor = unplaced;
-            updateDialog();
+            UpdateDialog();
         }
 
         /// <summary>
@@ -196,7 +206,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="canvas"></param>
         public void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
-            if (anchor != unplaced && isPlacing)
+            if (anchor != unplaced && IsPlacing)
             {
                 int cost;
                 canvas.Tag = SingleRailRoad.ComputeRoute(anchor, currentPosition, out cost);
@@ -212,21 +222,21 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
+        public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location location, Point point)
         {
             IDictionary dic = (IDictionary)canvas.Tag;
             if (dic != null)
             {
-                RailPattern rp = (RailPattern)dic[loc];
+                RailPattern rp = (RailPattern)dic[location];
                 if (rp != null)
                 {
-                    for (int j = WorldDefinition.World.getGroundLevel(loc); j < loc.z; j++)
+                    for (int j = WorldDefinition.World.getGroundLevel(location); j < location.z; j++)
                         // TODO: ground level handling
                         BridgePierVoxel.defaultSprite.drawAlpha(
                             canvas.Surface,
-                            view.fromXYZToClient(loc.x, loc.y, j));
+                            view.fromXYZToClient(location.x, location.y, j));
 
-                    rp.drawAlpha(canvas.Surface, pt);
+                    rp.drawAlpha(canvas.Surface, point);
                 }
             }
         }

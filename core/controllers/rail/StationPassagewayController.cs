@@ -247,8 +247,8 @@ namespace FreeTrain.Controllers.Rail
                 if (isPlacing)
                 {
                     if (!createStair(loc, false))
-                        MainWindow.showError("Can not build");
-                    //! MainWindow.showError("設置できません");
+                        MessageBox.Show("Can not build");
+                    //! MessageBox.Show("設置できません");
                 }
                 else
                     removeStair(loc);
@@ -269,8 +269,8 @@ namespace FreeTrain.Controllers.Rail
                         if (canBuildPassageway(anchor, loc))
                             buildPassageway(anchor, loc);
                         else
-                            MainWindow.showError("Can not build");
-                        //! MainWindow.showError("設置できません");
+                            MessageBox.Show("Can not build");
+                        //! MessageBox.Show("設置できません");
                     }
                     else
                     {

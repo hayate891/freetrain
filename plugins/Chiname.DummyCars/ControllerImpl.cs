@@ -75,16 +75,16 @@ namespace FreeTrain.World.Road.DummyCars
                         TrafficVoxel.get(loc).accessory = null;
                 }
                 else
-                    MainWindow.showError("Can not remove");
-                //! MainWindow.showError("撤去できません");
+                    MessageBox.Show("Can not remove");
+                //! MessageBox.Show("撤去できません");
             }
             else
             {
                 if (contribution.canBeBuilt(loc))
                     contribution.create(loc);
                 else
-                    MainWindow.showError("Can not place");
-                //! MainWindow.showError("設置できません");
+                    MessageBox.Show("Can not place");
+                //! MessageBox.Show("設置できません");
             }
         }
         /// <summary>

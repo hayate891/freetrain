@@ -46,10 +46,10 @@ namespace FreeTrain.Framework
         {
             string path;
 
-            path = Path.Combine(Core.installationDirectory, Path.Combine("res", name));
+            path = Path.Combine(Core.InstallationDirectory, Path.Combine("res", name));
             if (File.Exists(path)) return path;
 
-            path = Path.Combine(Core.installationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine("res", name)))));
+            path = Path.Combine(Core.InstallationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine("res", name)))));
             if (File.Exists(path)) return path;
 
             path = Path.Combine("..", Path.Combine("..", Path.Combine("res", name)));

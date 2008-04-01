@@ -50,7 +50,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             item.Click += new System.EventHandler(onClick);
 
             containerMenu.MenuItems[4].MenuItems.Add(0, item);
-            //MainWindow.mainWindow.SetToolBarButtonHandler("toolBar1",10,new CommandHandlerNoArg(this.ShowControllerForm));
+            //MainWindowMDI.mainWindow.SetToolBarButtonHandler("toolBar1",10,new CommandHandlerNoArg(this.ShowControllerForm));
         }
 
         private void onClick(object sender, EventArgs args)

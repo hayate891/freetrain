@@ -45,7 +45,7 @@ namespace FreeTrain.Controllers.Structs
         /// 
         /// </summary>
         public VarHeightBuildingController()
-            : base(Core.plugins.varHeightBuildingsGroup)
+            : base(Core.Plugins.varHeightBuildingsGroup)
         {
             InitializeComponent();
             buttonPlace.Top += 24;
@@ -75,8 +75,8 @@ namespace FreeTrain.Controllers.Structs
             {
                 if (!selectedType.canBeBuilt(loc, height))
                 {
-                    MainWindow.showError("Can not build");
-                    //! MainWindow.showError("設置できません");
+                    MessageBox.Show("Can not build");
+                    //! MessageBox.Show("設置できません");
                 }
                 else
                 {

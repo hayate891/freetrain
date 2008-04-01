@@ -101,7 +101,7 @@ namespace FreeTrain
 
         private void MusicHasStopped()
         {
-            Core.bgmManager.nextSong();
+            Core.BgmManager.nextSong();
         }
 
         private void Quit(object sender, QuitEventArgs e)
@@ -116,7 +116,7 @@ namespace FreeTrain
         {
             if (qView != null)
             {
-                controller = MainWindow.mainWindow.CurrentController;
+                controller = MainWindowMDI.mainWindow.CurrentController;
                 qView.UpdateScreen();
                 if (WorldDefinition.World.Satellite == null ||
                     WorldDefinition.World.Satellite.surface.w != 150 ||
@@ -150,7 +150,7 @@ namespace FreeTrain
 
         private void MusicFinished(object sender, MusicFinishedEventArgs e)
         {
-            Core.bgmManager.nextSong();
+            Core.BgmManager.nextSong();
         }
 
         private void MouseButtonDown(object sender, MouseButtonEventArgs e)
@@ -262,10 +262,16 @@ namespace FreeTrain
 
         private void Go()
         {
+            
+            
             splashscreen = new Splash();
             splashscreen.Show();
             splashscreen.BringToFront();
             splashscreen.Refresh();
+            Core.Init(null, null, null, new ProgressHandler(UpdateMessage), true);
+            world = new WorldDefinition(new Distance(150, 150, 7), 3);
+            WorldDefinition.World = world;
+            mainWindowMDI = new MainWindowMDI();
             timer = new System.Windows.Forms.Timer();
             Events.KeyboardDown += new EventHandler<KeyboardEventArgs>(this.KeyDown);
             Events.MouseButtonDown +=
@@ -318,14 +324,11 @@ namespace FreeTrain
 
             FinalDraw();
 
-            MainWindow.mainWindow = new MainWindow(null, true);
             splashscreen.status.AppendText("Loading plugins...");
             splashscreen.status.AppendText("\n");
             splashscreen.Refresh();
             FinalDraw();
-            Core.init(null, null, null, new ProgressHandler(UpdateMessage), true);
-            world = new WorldDefinition(new Distance(150, 150, 7), 3);
-            WorldDefinition.World = world;
+            
 
             weatherOverlay = NullWeatherOverlay.theInstance;
             FinalDraw();
@@ -343,7 +346,7 @@ namespace FreeTrain
             timer.Interval = 33;
             timer.Enabled = true;
             timer.Start();
-            mainWindowMDI = new MainWindowMDI();
+
             mainWindowMDI.Show();
             splashscreen.BringToFront();
             splashscreen.Close();

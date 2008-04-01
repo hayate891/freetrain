@@ -34,27 +34,15 @@ namespace FreeTrain.Framework
     /// <summary>
     /// Entry point to other static instances in the FreeTrain framework.
     /// </summary>
-    public sealed class Core
+    public static class Core
     {
-        private Core() { }		// no instantiation
-
-
-        ///// <summary>
-        ///// Registry key where the per-user application setting
-        ///// should be stored.
-        ///// </summary>
-        //public static RegistryKey userRegistry
-        //{
-        //    get
-        //    {
-        //        return Registry.CurrentUser.CreateSubKey(@"Software\FreeTrain");
-        //    }
-        //}
+        //private Core() 
+        //{ }		// no instantiation
 
         /// <summary>
         /// Installation directory of the FreeTrain framework.
         /// </summary>
-        public static string installationDirectory
+        public static string InstallationDirectory
         {
             get
             {
@@ -69,17 +57,29 @@ namespace FreeTrain.Framework
 
 
         /// <summary> Plug-ins. </summary>
-        public static readonly PluginManager plugins = new PluginManager();
+        private static readonly PluginManager plugins = new PluginManager();
+
+        public static PluginManager Plugins
+        {
+            get { return Core.plugins; }
+        } 
+
 
         /// <summary> Global options. </summary>
-        public static readonly GlobalOptions options = new GlobalOptions().load();
+        private static readonly GlobalOptions options = new GlobalOptions().load();
+
+        public static GlobalOptions Options
+        {
+            get { return Core.options; }
+        } 
+
 
         /// <summary> Game mode </summary>
-        public static bool isConstructionMode
+        public static bool IsConstructionMode
         {
             get
             {
-                return _isConstructionMode;
+                return isConstructionMode;
             }
         }
 
@@ -87,20 +87,17 @@ namespace FreeTrain.Framework
         /// Handles BGM playback.
         /// Should be instanciated by attaching the main window.
         /// </summary>
-        public static BGMManager bgmManager { get { return _bgmManager; } }
+        public static BGMManager BgmManager { get { return bgmManager; } }
 
         /// <summary>
         /// Handles SFX.
         /// Should be instanciated by attaching the main window.
         /// </summary>
-        public static SoundEffectManager soundEffectManager { get { return _soundEffectManager; } }
+        public static SoundEffectManager SoundEffectManager { get { return soundEffectManager; } }
 
-
-        private static SoundEffectManager _soundEffectManager;
-        private static BGMManager _bgmManager;
-        private static bool _isConstructionMode;
-
-
+        private static SoundEffectManager soundEffectManager;
+        private static BGMManager bgmManager;
+        private static bool isConstructionMode;
 
         /// <summary>
         /// Initializes the framework.
@@ -113,15 +110,15 @@ namespace FreeTrain.Framework
         /// <param name="constructionMode"></param>
         /// Receives initializtion progress report. Can be null.
         /// </param>
-        public static void init(string[] args, Control owner, MenuItem bgmMenuItem, ProgressHandler progressHandler, bool constructionMode)
+        public static void Init(string[] args, Control owner, MenuItem bgmMenuItem, ProgressHandler progressHandler, bool constructionMode)
         {
 
-            _isConstructionMode = constructionMode;
+            isConstructionMode = constructionMode;
 
             if (progressHandler == null)
                 progressHandler = new ProgressHandler(silentProgressHandler);
 
-            if (owner != null) _soundEffectManager = new SoundEffectManager(owner);
+            if (owner != null) soundEffectManager = new SoundEffectManager(owner);
 
             if (args == null)
             {
@@ -138,7 +135,7 @@ namespace FreeTrain.Framework
             }
 
             //if (bgmMenuItem != null) _bgmManager = new BGMManager(bgmMenuItem);
-            _bgmManager = new BGMManager();
+            bgmManager = new BGMManager();
         }
 
         private static void silentProgressHandler(string msg, float progress)
@@ -300,14 +297,14 @@ namespace FreeTrain.Framework
         /// <returns></returns>
         public bool OnFinal(IDictionary errorPlugins, int totalErrorCount)
         {
-            DialogResult res = MessageBox.Show(MainWindow.mainWindow, @"Some plugins could not be loaded.
+            DialogResult res = MessageBox.Show(MainWindowMDI.mainWindow, @"Some plugins could not be loaded.
 Some functions may not be available and you might encounter errors.
 In the worst case, game data might be lost, so it is advised that you quit now.
 
 Do you want to quit FreeTrain now?
 
 * Contact plugin authors in the first place to resolve errors.",
-                //! 			DialogResult res = MessageBox.Show(MainWindow.mainWindow, @"正常に読み込めなかったプラグインがあります。
+                //! 			DialogResult res = MessageBox.Show(MainWindowMDI.mainWindow, @"正常に読み込めなかったプラグインがあります。
                 //! 一部の機能が使えなかったり、プレイ中にエラーが発生するおそれがあります。
                 //! 最悪の場合ゲームデータを破壊する可能性もありますので、このまま終了することをお奨めします。
                 //! 

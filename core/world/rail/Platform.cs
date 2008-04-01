@@ -213,7 +213,7 @@ namespace FreeTrain.World.Rail
         /// <summary> Processes a click event. </summary>
         public void onClick()
         {
-            new PlatformPropertyDialog(this).ShowDialog(MainWindow.mainWindow);
+            new PlatformPropertyDialog(this).ShowDialog(MainWindowMDI.mainWindow);
         }
 
 

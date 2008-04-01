@@ -51,20 +51,20 @@ namespace FreeTrain.Framework
 
         private void cmdPlayPause_Click(object sender, EventArgs e)
         {
-            if (Core.bgmManager != null && lstCurrentPlaylist.Items.Count > 0)
+            if (Core.BgmManager != null && lstCurrentPlaylist.Items.Count > 0)
             {
                 if (isPlaying)
                 {
                     cmdPlay.Text = "Play";
                     isPlaying = false;
-                    Core.bgmManager.currentBGM = null;
+                    Core.BgmManager.currentBGM = null;
                 }
                 else
                 {
                     if (lstCurrentPlaylist.SelectedItem == null)
-                        Core.bgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.Items[0];
+                        Core.BgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.Items[0];
                     else
-                        Core.bgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.SelectedItem;
+                        Core.BgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.SelectedItem;
                     isPlaying = true;
                     cmdPlay.Text = "Pause";
                 }
@@ -76,7 +76,7 @@ namespace FreeTrain.Framework
             if (lstCurrentPlaylist.SelectedItem != null)
             {
                 string selected = lstCurrentPlaylist.Text;
-                Core.bgmManager.removeSong(lstCurrentPlaylist.Text);
+                Core.BgmManager.removeSong(lstCurrentPlaylist.Text);
                 refreshPlaylists();
                 lstBGMs.Text = selected;
             }
@@ -87,7 +87,7 @@ namespace FreeTrain.Framework
             if (lstBGMs.SelectedItem != null)
             {
                 string selected = lstBGMs.Text;
-                Core.bgmManager.addSong(lstBGMs.Text);
+                Core.BgmManager.addSong(lstBGMs.Text);
                 refreshPlaylists();
                 lstCurrentPlaylist.Text = selected;
             }
@@ -97,9 +97,9 @@ namespace FreeTrain.Framework
         {
             lstBGMs.Items.Clear();
             lstCurrentPlaylist.Items.Clear();
-            foreach (BGMContribution contrib in Core.plugins.bgms)
-                if (!Core.bgmManager.currentPlaylist.Contains(contrib)) lstBGMs.Items.Add(contrib);
-            foreach (BGMContribution contrib in Core.bgmManager.currentPlaylist)
+            foreach (BGMContribution contrib in Core.Plugins.bgms)
+                if (!Core.BgmManager.currentPlaylist.Contains(contrib)) lstBGMs.Items.Add(contrib);
+            foreach (BGMContribution contrib in Core.BgmManager.currentPlaylist)
             {
                 lstCurrentPlaylist.Items.Add(contrib);
                 /*if (Core.bgmManager.currentBGM == contrib)
@@ -113,7 +113,7 @@ namespace FreeTrain.Framework
         {
             if (lstBGMs.SelectedItem != null)
             {
-                Core.bgmManager.addSong(lstBGMs.Text);
+                Core.BgmManager.addSong(lstBGMs.Text);
                 refreshPlaylists();
             }
         }
@@ -139,7 +139,7 @@ namespace FreeTrain.Framework
                 Brush textBrush = SystemBrushes.ControlText;
                 Font drawFont = e.Font;
 
-                if (Core.bgmManager.currentBGM == lstCurrentPlaylist.Items[e.Index])
+                if (Core.BgmManager.currentBGM == lstCurrentPlaylist.Items[e.Index])
                 {
                     drawFont = new Font(drawFont.FontFamily, drawFont.Size, FontStyle.Bold);
                     cmdPlay.Text = "Pause";
@@ -157,9 +157,9 @@ namespace FreeTrain.Framework
         void lstCurrentPlaylist_DoubleClick(object sender, System.EventArgs e)
         {
             if (lstCurrentPlaylist.SelectedItem == null)
-                Core.bgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.Items[0];
+                Core.BgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.Items[0];
             else
-                Core.bgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.SelectedItem;
+                Core.BgmManager.currentBGM = (BGMContribution)lstCurrentPlaylist.SelectedItem;
             refreshPlaylists();
             isPlaying = true;
             cmdPlay.Text = "Pause";
@@ -167,13 +167,13 @@ namespace FreeTrain.Framework
 
         private void cmdNext_Click(object sender, EventArgs e)
         {
-            Core.bgmManager.nextSong();
+            Core.BgmManager.nextSong();
             refreshPlaylists();
         }
 
         private void cmdPrev_Click(object sender, EventArgs e)
         {
-            Core.bgmManager.previousSong();
+            Core.BgmManager.previousSong();
             refreshPlaylists();
         }
 
@@ -182,7 +182,7 @@ namespace FreeTrain.Framework
             if (lstCurrentPlaylist.SelectedItem != null)
             {
                 string selected = lstCurrentPlaylist.Text;
-                Core.bgmManager.moveDown(lstCurrentPlaylist.Text);
+                Core.BgmManager.moveDown(lstCurrentPlaylist.Text);
                 refreshPlaylists();
                 lstCurrentPlaylist.Text = selected;
             }
@@ -193,7 +193,7 @@ namespace FreeTrain.Framework
             if (lstCurrentPlaylist.SelectedItem != null)
             {
                 string selected = lstCurrentPlaylist.Text;
-                Core.bgmManager.moveUp(lstCurrentPlaylist.Text);
+                Core.BgmManager.moveUp(lstCurrentPlaylist.Text);
                 refreshPlaylists();
                 lstCurrentPlaylist.Text = selected;
             }

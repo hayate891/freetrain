@@ -463,9 +463,6 @@
     <Compile Include="framework\graphics\SpriteLoaderContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\MainWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="framework\MainWindowMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -955,10 +952,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="framework\ErrorMessageBox.resx">
       <DependentUpon>ErrorMessageBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="framework\MainWindow.resx">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\MainWindowMDI.resx">
       <SubType>Designer</SubType>

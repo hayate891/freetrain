@@ -75,7 +75,7 @@ namespace FreeTrain.Framework.Graphics
             ptOrigin.X = (pixelSize.Width - P * 2) / 2;
             ptOrigin.Y = (pixelSize.Height - P - height * 16) / 2 /*top*/ + (8 * objSize.Width + height * 16) - 8;
 
-            clear();
+            Clear();
         }
         /// <summary>
         /// 
@@ -86,7 +86,7 @@ namespace FreeTrain.Framework.Graphics
         }
 
         /// <summary> Clears the canvas by tiling empty chips. </summary>
-        public void clear()
+        public void Clear()
         {
             ISprite empty = ResourceUtil.getGroundChip(WorldDefinition.World);
             for (int y = (ptOrigin.Y % 8) - 16; y < pixelSize.Height; y += 8)
