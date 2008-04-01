@@ -66,7 +66,7 @@ namespace FreeTrain
         Point autoScrollPosition;
         QuarterViewDrawer qView = null;
         WorldDefinition world = null;
-        WeatherOverlay weatherOverlay;
+        IWeatherOverlay weatherOverlay;
         Sdl.SDL_Rect sourceRect;
         Sdl.SDL_Rect dst;
         short oldX;

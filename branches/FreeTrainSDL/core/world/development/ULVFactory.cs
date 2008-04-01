@@ -31,7 +31,7 @@ namespace FreeTrain.World.Development
     /// 
     /// ULVFactory hides the caching detail.
     /// </summary>
-    public interface ULVFactory
+    public interface IULVFactory
     {
         /// <summary>
         /// 

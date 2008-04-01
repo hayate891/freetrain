@@ -31,7 +31,7 @@ namespace FreeTrain.World
     [Serializable]
     public class EmptyVoxel : AbstractVoxelImpl
     {
-        private readonly Entity _entity;
+        private readonly IEntity _entity;
         /// <summary>
         /// 
         /// </summary>
@@ -43,13 +43,13 @@ namespace FreeTrain.World
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <param name="z"></param>
-        public EmptyVoxel(Entity e, int x, int y, int z) : this(e, new Location(x, y, z)) { }
+        public EmptyVoxel(IEntity e, int x, int y, int z) : this(e, new Location(x, y, z)) { }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="e"></param>
         /// <param name="loc"></param>
-        public EmptyVoxel(Entity e, Location loc)
+        public EmptyVoxel(IEntity e, Location loc)
             : base(loc)
         {
             this._entity = e;
@@ -67,6 +67,6 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return _entity; } }
+        public override IEntity entity { get { return _entity; } }
     }
 }

@@ -28,7 +28,7 @@ namespace FreeTrain.World.Rail
     /// Nodes added to this host will be notified when
     /// the host is destroied.
     /// </summary>
-    public interface PlatformHost : Entity
+    public interface IPlatformHost : IEntity
     {
         /// <summary>
         /// 

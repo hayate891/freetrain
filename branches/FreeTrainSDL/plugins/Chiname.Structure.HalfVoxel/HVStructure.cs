@@ -40,7 +40,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// </summary>
     [Serializable]
     [CLSCompliant(false)]
-    public class HVStructure : Structure, SubsidiaryEntity
+    public class HVStructure : Structure, ISubsidiaryEntity
     {
         enum Orientation : int { XAxis, YAxis };
         /// <summary>
@@ -166,7 +166,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public override object queryInterface(Type aspect)
         {
             // if type.population is null, we don't have any population
-            if (aspect == typeof(Rail.StationListener))
+            if (aspect == typeof(Rail.IStationListener))
                 return stationListener;
             else
                 return base.queryInterface(aspect);
@@ -339,7 +339,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return owner; } }
+        public override IEntity entity { get { return owner; } }
 
         /// <summary>
         /// onClick event is delegated to the parent.

@@ -32,7 +32,7 @@ namespace FreeTrain.World.Structs
 	/// that occupies a square-shaped block on the ground.
 	/// </summary>
 	[Serializable]
-	public abstract class Structure : Entity
+	public abstract class Structure : IEntity
 	{
         /// <summary>
         /// 
@@ -166,7 +166,7 @@ namespace FreeTrain.World.Structs
             /// <summary>
             /// 
             /// </summary>
-			public override Entity entity { get { return owner; } }
+			public override IEntity entity { get { return owner; } }
 
 			/// <summary>
 			/// onClick event is delegated to the parent.

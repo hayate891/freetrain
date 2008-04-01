@@ -65,7 +65,7 @@ namespace FreeTrain.World.Rail
             groupFat.Visible = (platform is FatPlatform);
 
             // fill host list
-            foreach (PlatformHost host in platform.listHosts())
+            foreach (IPlatformHost host in platform.listHosts())
                 hostList.Items.Add(host);
             hostList.SelectedItem = platform.host;
 
@@ -341,7 +341,7 @@ namespace FreeTrain.World.Rail
         private void OKbutton_Click(object sender, System.EventArgs e)
         {
             platform.name = nameBox.Text;
-            platform.host = (PlatformHost)hostList.SelectedItem;
+            platform.host = (IPlatformHost)hostList.SelectedItem;
             platform.bellSound = (DepartureBellContribution)bell.SelectedItem;
         }
 

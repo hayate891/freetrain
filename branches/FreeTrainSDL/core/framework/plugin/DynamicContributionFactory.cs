@@ -27,7 +27,7 @@ namespace FreeTrain.Framework.Plugin
     /// Loads a Contribution class by using a &lt;class> element
     /// in the contribution Xml definition.
     /// </summary>
-    public class DynamicContributionFactory : ContributionFactory
+    public class DynamicContributionFactory : IContributionFactory
     {
         /// <param name="baseType">
         /// Type of the contribution to be loaded.
@@ -55,7 +55,7 @@ namespace FreeTrain.Framework.Plugin
         /// <param name="owner"></param>
         /// <param name="e"></param>
         /// <returns></returns>
-        public Contribution load(PluginDefinition owner, XmlElement e)
+        public Contribution Load(PluginDefinition owner, XmlElement e)
         {
             Contribution contrib = (Contribution)PluginUtil.loadObjectFromManifest(e);
             if (baseType.IsInstanceOfType(contrib))

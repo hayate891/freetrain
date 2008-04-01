@@ -28,7 +28,7 @@ namespace FreeTrain.Views
     /// <summary>
     /// WeatherOverlayImpl の概要の説明です。
     /// </summary>
-    public class WeatherOverlayImpl : WeatherOverlay
+    public class WeatherOverlayImpl : IWeatherOverlay
     {
         private readonly WeatherOverlaySpriteSet spriteSet;
         private Size canvasSize;

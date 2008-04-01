@@ -264,7 +264,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Lists available platform hosts for this platform.
         /// </summary>
-        internal protected override PlatformHost[] listHosts()
+        internal protected override IPlatformHost[] listHosts()
         {
             return listHosts(HOST_RANGE);
         }
@@ -307,7 +307,7 @@ namespace FreeTrain.World.Rail
 
             public readonly FatPlatform owner;
 
-            public override Entity entity { get { return owner; } }
+            public override IEntity entity { get { return owner; } }
 
             [NonSerialized]
             private ISprite sprite;
@@ -353,7 +353,7 @@ namespace FreeTrain.World.Rail
             /// <returns></returns>
             public override object queryInterface(Type aspect)
             {
-                if (aspect == typeof(TrainHarbor))
+                if (aspect == typeof(ITrainHarbor))
                     return owner.hostStation;
                 return base.queryInterface(aspect);
             }

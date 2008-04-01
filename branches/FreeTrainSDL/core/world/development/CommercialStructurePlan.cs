@@ -35,7 +35,7 @@ namespace FreeTrain.World.Development
 
 		internal CommercialStructurePlan(
 			CommercialStructureContribution _contrib,
-			ULVFactory factory, Location _loc )
+			IULVFactory factory, Location _loc )
 			: base( factory.create(Cube.createExclusive(_loc, new Distance(_contrib.size.x, _contrib.size.y, 0) )))
 		{
 			this.contrib = _contrib;

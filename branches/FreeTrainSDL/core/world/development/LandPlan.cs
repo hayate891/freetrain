@@ -33,7 +33,7 @@ namespace FreeTrain.World.Development
 		private readonly Location loc;
 		private readonly SIZE size;
 
-		internal LandPlan( LandBuilderContribution _contrib, ULVFactory factory, Location _loc, SIZE _size )
+		internal LandPlan( LandBuilderContribution _contrib, IULVFactory factory, Location _loc, SIZE _size )
 			: base(factory.create(new Cube(_loc,_size.x,_size.y,0))) {
 			this.contrib = _contrib;
 			this.loc = _loc;

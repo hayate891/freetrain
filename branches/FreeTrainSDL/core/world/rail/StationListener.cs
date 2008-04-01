@@ -32,7 +32,7 @@ namespace FreeTrain.World.Rail
     /// 
     /// StationListener interface should be accessible through the queryAspect method.
     /// </summary>
-    public interface StationListener
+    public interface IStationListener
     {
         /// <summary> Obtains the population that uses a station right now. </summary>
         /// <remarks>Usually this value varies depending on the current time.</remarks>

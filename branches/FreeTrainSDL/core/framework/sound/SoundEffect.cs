@@ -26,7 +26,7 @@ namespace FreeTrain.Framework.Sound
     /// <summary>
     /// Sound Effect
     /// </summary>
-    public interface SoundEffect
+    public interface ISoundEffect
     {
         /// <summary>
         /// Requests to play this sound effect, which is conceptually

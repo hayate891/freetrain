@@ -49,7 +49,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// capable of restoring surface images.
         /// </summary>
-        private readonly SurfaceLoader[,] loaders;
+        private readonly ISurfaceLoader[,] loaders;
 
         /// <summary>
         /// Dirty flag. Set true to reload the surface.
@@ -62,7 +62,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="_id"></param>
         /// <param name="_loaders"></param>
-        public Picture(string _id, SurfaceLoader[,] _loaders)
+        public Picture(string _id, ISurfaceLoader[,] _loaders)
         {
             this.id = _id;
             this.loaders = init(_loaders);
@@ -74,7 +74,7 @@ namespace FreeTrain.Framework.Graphics
         public Picture(string _id, string fileName)
         {
             this.id = _id;
-            SurfaceLoader[,] sl = new SurfaceLoader[4, 2];
+            ISurfaceLoader[,] sl = new ISurfaceLoader[4, 2];
             sl[0, 0] = new BitmapSurfaceLoader(fileName);
 
             this.loaders = init(sl);
@@ -88,7 +88,7 @@ namespace FreeTrain.Framework.Graphics
         public Picture(string _id, string dayfileName, string nightfileName)
         {
             this.id = _id;
-            SurfaceLoader[,] sl = new SurfaceLoader[4, 2];
+            ISurfaceLoader[,] sl = new ISurfaceLoader[4, 2];
             sl[0, 0] = new BitmapSurfaceLoader(dayfileName);
             sl[0, 1] = new BitmapSurfaceLoader(nightfileName);
             this.loaders = init(sl);
@@ -111,7 +111,7 @@ namespace FreeTrain.Framework.Graphics
             string baseFileName = XmlUtil.resolve(pic, pic.Attributes["src"].Value).LocalPath;
             //			this.size = getBitmapSize(baseFileName);
 
-            SurfaceLoader[,] specifiedLoaders = new SurfaceLoader[4, 2];
+            ISurfaceLoader[,] specifiedLoaders = new ISurfaceLoader[4, 2];
             specifiedLoaders[0, 0] = new BitmapSurfaceLoader(baseFileName);
 
             specifiedLoaders[0, 1] = getNightOverride(pic);
@@ -137,7 +137,7 @@ namespace FreeTrain.Framework.Graphics
                     XmlAttribute src = ovr.Attributes["src"];
                     if (src != null)
                     {
-                        SurfaceLoader overrideLoader = new BitmapSurfaceLoader(
+                        ISurfaceLoader overrideLoader = new BitmapSurfaceLoader(
                             XmlUtil.resolve(ovr, src.Value).LocalPath);
                         specifiedLoaders[s, 0] = overrideLoader;
                     }
@@ -149,7 +149,7 @@ namespace FreeTrain.Framework.Graphics
         }
 
         // load nested night override (for each seasons).
-        private SurfaceLoader getNightOverride(XmlElement node)
+        private ISurfaceLoader getNightOverride(XmlElement node)
         {
             XmlNode ovr = node.SelectSingleNode("override");
             if (ovr == null) return null;
@@ -166,9 +166,9 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="specifiedLoaders"></param>
         /// <returns></returns>
-        private SurfaceLoader[,] init(SurfaceLoader[,] specifiedLoaders)
+        private ISurfaceLoader[,] init(ISurfaceLoader[,] specifiedLoaders)
         {
-            SurfaceLoader[,] loaders = new SurfaceLoader[4, 2];
+            ISurfaceLoader[,] loaders = new ISurfaceLoader[4, 2];
 
             // Fill-in unspecified SpriteLoaders by the default ones.
             for (int s = 0; s < 4; s++)

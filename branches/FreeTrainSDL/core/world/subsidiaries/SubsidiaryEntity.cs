@@ -25,7 +25,7 @@ namespace FreeTrain.World.Subsidiaries
     /// <summary>
     /// 
     /// </summary>
-    public interface SubsidiaryEntity : Entity
+    public interface ISubsidiaryEntity : IEntity
     {
         /// <summary>
         /// 

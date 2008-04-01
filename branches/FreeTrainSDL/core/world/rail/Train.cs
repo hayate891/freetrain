@@ -68,7 +68,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Sound-effect of a ringing bell. Used when a train leaves a station.
         /// </summary>
-        private static readonly SoundEffect thudSound = new RepeatableSoundEffectImpl(
+        private static readonly ISoundEffect thudSound = new RepeatableSoundEffectImpl(
             ResourceUtil.loadSystemSound("train.wav"), 1, 300);
 
 
@@ -392,7 +392,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Plays a sound effect for this train if necessary.
         /// </summary>
-        public void playSound(SoundEffect se)
+        public void playSound(ISoundEffect se)
         {
             CarState.Inside ins = head.state.asInside();
             if (ins != null)
@@ -513,7 +513,7 @@ namespace FreeTrain.World.Rail
         /// The method returns null if it cannot proceed because there's no
         /// rail road in front of the head car.
         /// </summary>
-        private class CalcNextTrainCarState : CarState.Visitor
+        private class CalcNextTrainCarState : CarState.IVisitor
         {
             private readonly Train owner;
 
@@ -660,7 +660,7 @@ namespace FreeTrain.World.Rail
         /// Reverse the direction of the visiting car state and return it.
         /// </summary>
         private static readonly ReverseCarState reverseCarState = new ReverseCarState();
-        private class ReverseCarState : CarState.Visitor
+        private class ReverseCarState : CarState.IVisitor
         {
             /// <summary>
             /// 
@@ -715,7 +715,7 @@ namespace FreeTrain.World.Rail
         }
 
         private static readonly IsBlocked isBlocked = new IsBlocked();
-        private class IsBlocked : CarState.Visitor
+        private class IsBlocked : CarState.IVisitor
         {
             public object onInside(CarState.Inside state)
             {

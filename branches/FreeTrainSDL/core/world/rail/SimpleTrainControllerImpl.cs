@@ -61,7 +61,7 @@ namespace FreeTrain.World.Rail
         /// <param name="harbor"></param>
         /// <param name="callCount"></param>
         /// <returns></returns>
-        public override TimeLength getStopTimeSpan(Train train, TrainHarbor harbor, int callCount)
+        public override TimeLength getStopTimeSpan(Train train, ITrainHarbor harbor, int callCount)
         {
             // stop 1 hour and go
             if (!(harbor is Station)) return TimeLength.ZERO;	// ignore everything but a station

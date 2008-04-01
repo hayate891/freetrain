@@ -38,7 +38,7 @@ namespace FreeTrain.Framework.Sound
     /// 
     /// This implementation handles this kind of behavior.
     /// </summary>
-    public class RepeatableSoundEffectImpl : SoundEffect
+    public class RepeatableSoundEffectImpl : ISoundEffect
     {
         /// <summary>
         /// </summary>

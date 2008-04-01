@@ -449,7 +449,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public Entity getEntityAt(Location loc)
+        public IEntity getEntityAt(Location loc)
         {
             Voxel v = this[loc];
             if (v == null) return null;
@@ -573,7 +573,7 @@ namespace FreeTrain.World
         /// Used as the invisible wall that fills world outside the world
         /// </summary>
         [Serializable]
-        public class OutOfWorldVoxel : Voxel, Entity
+        public class OutOfWorldVoxel : Voxel, IEntity
         {
             /// <summary>
             /// 
@@ -599,7 +599,7 @@ namespace FreeTrain.World
             /// <summary>
             /// 
             /// </summary>
-            public override Entity entity { get { return this; } }
+            public override IEntity entity { get { return this; } }
 
             #region Entity implementation
             /// <summary>
@@ -653,13 +653,13 @@ namespace FreeTrain.World
             /// </summary>
             /// <param name="d"></param>
             /// <param name="f"></param>
-            public override void setFence(Direction d, Fence f) { }
+            public override void setFence(Direction d, IFence f) { }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="d"></param>
             /// <returns></returns>
-            public override Fence getFence(Direction d) { return null; }
+            public override IFence getFence(Direction d) { return null; }
             /// <summary>
             /// 
             /// </summary>

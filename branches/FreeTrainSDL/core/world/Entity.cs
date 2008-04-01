@@ -42,7 +42,7 @@ namespace FreeTrain.World
 	/// 
 	/// TODO: it's not clear why multiple tunnel voxels don't form one entity, for example.
 	/// </summary>
-	public interface Entity
+	public interface IEntity
 	{
 		/// <summary>
 		/// The monetary value of the entity.

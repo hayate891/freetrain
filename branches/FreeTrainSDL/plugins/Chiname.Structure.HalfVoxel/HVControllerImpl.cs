@@ -240,7 +240,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         protected void onCanceled()
         {
-            site.close();
+            site.Close();
         }
 
         /// <summary>

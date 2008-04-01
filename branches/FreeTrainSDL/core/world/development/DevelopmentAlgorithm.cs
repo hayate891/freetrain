@@ -38,7 +38,7 @@ namespace FreeTrain.World.Development
     /// Receives clock event and build a new structure if appropriate
     /// </summary>
     [Serializable]
-    public class DevelopmentAlgorithm : ULVFactory
+    public class DevelopmentAlgorithm : IULVFactory
     {
         static internal ArrayList structs = new ArrayList();
         static internal ArrayList vhStructs = new ArrayList();
@@ -327,8 +327,8 @@ namespace FreeTrain.World.Development
                             phase = Phase.Start;
                             break;
                         }
-                        Entity[] es = plan.cube.getEntities();
-                        foreach (Entity e in es)
+                        IEntity[] es = plan.cube.getEntities();
+                        foreach (IEntity e in es)
                         {
                             if (!IsReplaceable(e, WorldDefinition.World.landValue[scaning]))
                             {
@@ -337,7 +337,7 @@ namespace FreeTrain.World.Development
                                 return;
                             }
                         }
-                        foreach (Entity e in es)
+                        foreach (IEntity e in es)
                             e.remove();
                         phase++;
                         // 用地確保と建設の間があくと、入れ違いで他のプランが建設される可能性あり
@@ -389,7 +389,7 @@ namespace FreeTrain.World.Development
                 int price = vhbc.price * h;
                 Cube tmp = new Cube(scaning, vhbc.size, h);
                 int cost = 0;
-                foreach (Entity e in tmp.getEntities())
+                foreach (IEntity e in tmp.getEntities())
                     cost += e.entityValue;
                 while (price < cost && h < h2)
                 {
@@ -437,14 +437,14 @@ namespace FreeTrain.World.Development
         /// <param name="e"></param>
         /// <param name="comPrice"></param>
         /// <returns></returns>
-        protected bool IsReplaceable(Entity e, int comPrice)
+        protected bool IsReplaceable(IEntity e, int comPrice)
         {
             comPrice = (int)(comPrice * F_ReplacePriceFactor);
             if (e.isOwned || e is ConstructionSite)
                 return false;
-            if (e is SubsidiaryEntity)
+            if (e is ISubsidiaryEntity)
             {
-                SubsidiaryEntity se = e as SubsidiaryEntity;
+                ISubsidiaryEntity se = e as ISubsidiaryEntity;
                 bool b = (se.structurePrice < comPrice || se.structurePrice < se.totalLandPrice);
                 return b;
             }

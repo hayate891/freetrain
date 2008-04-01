@@ -227,7 +227,7 @@ namespace FreeTrain.World
         /// <summary>
         /// Lists up all the entities whose voxels intersect with this cube.
         /// </summary>
-        public Entity[] getEntities()
+        public IEntity[] getEntities()
         {
             int mx = x2;
             int my = y2;
@@ -247,7 +247,7 @@ namespace FreeTrain.World
                 }
             }
 
-            return (Entity[])r.toArray(typeof(Entity));
+            return (IEntity[])r.toArray(typeof(IEntity));
         }
 
         /// <summary>

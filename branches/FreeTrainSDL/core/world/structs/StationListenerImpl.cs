@@ -32,7 +32,7 @@ namespace FreeTrain.World.Structs
     /// Population object to calculate population.
     /// </summary>
     [Serializable]
-    public class StationListenerImpl : Rail.StationListener
+    public class StationListenerImpl : Rail.IStationListener
     {
         /// <summary>
         /// 

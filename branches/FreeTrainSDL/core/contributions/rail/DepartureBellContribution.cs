@@ -53,7 +53,7 @@ namespace FreeTrain.Contributions.Rail
         public readonly string name;
 
         /// <summary> Bell sound </summary>
-        public readonly SoundEffect sound;
+        public readonly ISoundEffect sound;
         /// <summary>
         /// 
         /// </summary>

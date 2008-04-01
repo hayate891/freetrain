@@ -29,7 +29,7 @@ namespace FreeTrain.World.Land
     /// Player-owned land property.
     /// </summary>
     [Serializable]
-    public class LandPropertyVoxel : AbstractVoxelImpl, Entity
+    public class LandPropertyVoxel : AbstractVoxelImpl, IEntity
     {
         /// <summary>
         /// 
@@ -42,7 +42,7 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return this; } }
+        public override IEntity entity { get { return this; } }
         /// <summary>
         /// 
         /// </summary>

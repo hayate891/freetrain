@@ -37,7 +37,7 @@ namespace FreeTrain.World.Structs
     /// Commercial structure.
     /// </summary>
     [Serializable]
-    public class Commercial : PopulatedStructure, SubsidiaryEntity
+    public class Commercial : PopulatedStructure, ISubsidiaryEntity
     {
         private readonly new CommercialStructureContribution type;
 

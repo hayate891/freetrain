@@ -6,7 +6,7 @@ namespace FreeTrain.Framework.Plugin
 	/// <summary>
 	/// Responsible for loading a contribution from an XML element.
 	/// </summary>
-	public interface ContributionFactory
+	public interface IContributionFactory
 	{
 		/// <summary>
 		/// Loads a contribution from an XML Element "e",
@@ -15,6 +15,6 @@ namespace FreeTrain.Framework.Plugin
 		/// In case of an error, this method must throw an exception
 		/// instead of silently returning null.
 		/// </summary>
-		Contribution load( PluginDefinition owner, XmlElement e );
+		Contribution Load( PluginDefinition owner, XmlElement element );
 	}
 }

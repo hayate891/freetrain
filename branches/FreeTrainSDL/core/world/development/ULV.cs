@@ -90,7 +90,7 @@ namespace FreeTrain.World.Development
                     Voxel v = world[x, y, z];
                     if (v != null)
                     {
-                        Entity e = v.entity;
+                        IEntity e = v.entity;
                         if (e.isOwned)	// cannot reclaim this voxel.
                             return null;
 

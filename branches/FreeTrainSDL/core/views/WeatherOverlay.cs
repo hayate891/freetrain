@@ -28,7 +28,7 @@ namespace FreeTrain.Views
 	/// <summary>
 	/// Draws overlay images to a QuarterViewDrawer.
 	/// </summary>
-	public interface WeatherOverlay : IDisposable
+	public interface IWeatherOverlay : IDisposable
 	{
 		/// <summary>
 		/// Called when the size of the QuarterViewDrawer is changed.

@@ -69,12 +69,12 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="visitor"></param>
         /// <returns></returns>
-        public abstract object accept(Visitor visitor);
+        public abstract object accept(IVisitor visitor);
 
         /// <summary>
         /// 
         /// </summary>
-        public interface Visitor
+        public interface IVisitor
         {
             /// <summary>
             /// 
@@ -145,7 +145,7 @@ namespace FreeTrain.World
             /// </summary>
             /// <param name="visitor"></param>
             /// <returns></returns>
-            public override object accept(Visitor visitor)
+            public override object accept(IVisitor visitor)
             {
                 return visitor.onInside(this);
             }
@@ -173,7 +173,7 @@ namespace FreeTrain.World
             /// </summary>
             /// <param name="visitor"></param>
             /// <returns></returns>
-            public override object accept(Visitor visitor)
+            public override object accept(IVisitor visitor)
             {
                 return visitor.onUnplaced(this);
             }
@@ -213,7 +213,7 @@ namespace FreeTrain.World
             /// </summary>
             /// <param name="visitor"></param>
             /// <returns></returns>
-            public override object accept(Visitor visitor)
+            public override object accept(IVisitor visitor)
             {
                 return visitor.onOutsie(this);
             }

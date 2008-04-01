@@ -64,7 +64,7 @@ namespace FreeTrain.World.Rail
         /// <param name="harbor"></param>
         /// <param name="callCount"></param>
         /// <returns></returns>
-        public override TimeLength getStopTimeSpan(Train train, TrainHarbor harbor, int callCount)
+        public override TimeLength getStopTimeSpan(Train train, ITrainHarbor harbor, int callCount)
         {
             return findController(train).getStopTimeSpan(train, harbor, callCount);
         }

@@ -79,7 +79,7 @@ namespace FreeTrain.World.Rail
         /// </returns>
         /// <param name="platform"></param>
         /// <param name="train"></param>
-        public abstract TimeLength getStopTimeSpan(Train train, TrainHarbor platform, int callCount);
+        public abstract TimeLength getStopTimeSpan(Train train, ITrainHarbor platform, int callCount);
 
         /// <summary>
         /// Opens a configuration dialog if necessary. Or it can

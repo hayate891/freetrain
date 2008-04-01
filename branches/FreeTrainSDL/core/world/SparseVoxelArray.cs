@@ -67,7 +67,7 @@ namespace FreeTrain.World
                 if (old != null)
                 {
                     // removed old ones
-                    Entity e = old.entity;
+                    IEntity e = old.entity;
                     if (e.isSilentlyReclaimable)
                         e.remove();
                 }

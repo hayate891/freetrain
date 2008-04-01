@@ -31,7 +31,7 @@ namespace FreeTrain.World.Land.VinylHouse
     /// </summary>
     [Serializable]
     [CLSCompliant(false)]
-    public class VinylHouseVoxel : LandVoxel, Entity
+    public class VinylHouseVoxel : LandVoxel, IEntity
     {
         /// <summary>
         /// 
@@ -52,7 +52,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <summary>
         /// 
         /// </summary>
-        public override Entity entity { get { return this; } }
+        public override IEntity entity { get { return this; } }
 
         /// <summary>
         /// 
@@ -94,7 +94,7 @@ namespace FreeTrain.World.Land.VinylHouse
         public override object queryInterface(Type aspect)
         {
             // if type.population is null, we don't have any population
-            if (aspect == typeof(StationListener))
+            if (aspect == typeof(IStationListener))
                 return stationListener;
             else
                 return base.queryInterface(aspect);

@@ -33,7 +33,7 @@ namespace FreeTrain.World.Rail
     /// Platform that trains can stop by.
     /// </summary>
     [Serializable]
-    public abstract class Platform : PlatformHost
+    public abstract class Platform : IPlatformHost
     {
         /// <summary>
         /// 
@@ -52,7 +52,7 @@ namespace FreeTrain.World.Rail
             WorldDefinition.World.clock.registerRepeated(new ClockHandler(onClockPerDay), TimeLength.ONEDAY);
 
             // attach to the nearby station.
-            foreach (PlatformHost h in listHosts())
+            foreach (IPlatformHost h in listHosts())
             {
                 if (h is Station)
                 {
@@ -76,7 +76,7 @@ namespace FreeTrain.World.Rail
         public readonly int length;
 
         /// <summary> Parent host of this platform. </summary>
-        private PlatformHost _host = null;
+        private IPlatformHost _host = null;
 
         /// <summary>
         /// Set of child Platforms that are connected to a station through this platform.
@@ -104,7 +104,7 @@ namespace FreeTrain.World.Rail
 
 
         /// <summary> Host of this platform, or null if this is disconnected. </summary>
-        internal protected PlatformHost host
+        internal protected IPlatformHost host
         {
             get { return _host; }
             set
@@ -207,7 +207,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Lists available platform hosts for this platform.
         /// </summary>
-        internal protected abstract PlatformHost[] listHosts();
+        internal protected abstract IPlatformHost[] listHosts();
 
 
         /// <summary> Processes a click event. </summary>
@@ -222,7 +222,7 @@ namespace FreeTrain.World.Rail
         /// Implementation for the listHosts() method.
         /// Lists available platform hosts for this platform.
         /// </summary>
-        protected PlatformHost[] listHosts(int range)
+        protected IPlatformHost[] listHosts(int range)
         {
             Set result = new Set();
 
@@ -265,7 +265,7 @@ namespace FreeTrain.World.Rail
             }
 
 
-            return (PlatformHost[])result.toArray(typeof(PlatformHost));
+            return (IPlatformHost[])result.toArray(typeof(IPlatformHost));
         }
         /// <summary>
         /// 
