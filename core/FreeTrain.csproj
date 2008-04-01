@@ -259,260 +259,260 @@
     <Compile Include="Contributions\train\TrainContributionFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="controllers\AbstractControllerImpl.cs">
+    <Compile Include="Controllers\AbstractControllerImpl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\AbstractLineController.cs">
+    <Compile Include="Controllers\AbstractLineController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\CubeSelectorController.cs">
+    <Compile Include="Controllers\CubeSelectorController.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="controllers\Disambiguators.cs">
+    <Compile Include="Controllers\Disambiguators.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="controllers\IControllerSite.cs">
+    <Compile Include="Controllers\IControllerSite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="controllers\ILocationDisambiguator.cs" />
-    <Compile Include="controllers\IModalController.cs" />
-    <Compile Include="controllers\land\BulldozeController.cs">
+    <Compile Include="Controllers\ILocationDisambiguator.cs" />
+    <Compile Include="Controllers\IModalController.cs" />
+    <Compile Include="Controllers\land\BulldozeController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\land\LandController.cs">
+    <Compile Include="Controllers\land\LandController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\land\LandPropertyController.cs">
+    <Compile Include="Controllers\land\LandPropertyController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\LocationStore.cs">
+    <Compile Include="Controllers\LocationStore.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="controllers\PointSelectorController.cs">
+    <Compile Include="Controllers\PointSelectorController.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="controllers\rail\PlatformController.Designer.cs">
+    <Compile Include="Controllers\rail\PlatformController.Designer.cs">
       <DependentUpon>PlatformController.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\TrainTradingDialog.Designer.cs">
+    <Compile Include="Controllers\rail\TrainTradingDialog.Designer.cs">
       <DependentUpon>TrainTradingDialog.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\TrainPlacementController.Designer.cs">
+    <Compile Include="Controllers\rail\TrainPlacementController.Designer.cs">
       <DependentUpon>TrainPlacementController.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\RailRoadController.Designer.cs">
+    <Compile Include="Controllers\rail\RailRoadController.Designer.cs">
       <DependentUpon>RailRoadController.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\PlatformController.cs">
+    <Compile Include="Controllers\rail\PlatformController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\PlatformPropertyDialog.cs">
+    <Compile Include="Controllers\rail\PlatformPropertyDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\RailRoadController.cs">
+    <Compile Include="Controllers\rail\RailRoadController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\SlopeRailRoadController.cs">
+    <Compile Include="Controllers\rail\SlopeRailRoadController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\SpecialPurposeRailController.cs">
+    <Compile Include="Controllers\rail\SpecialPurposeRailController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\StationaryStructPlacementController.cs">
+    <Compile Include="Controllers\rail\StationaryStructPlacementController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\StationPassagewayController.cs">
+    <Compile Include="Controllers\rail\StationPassagewayController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\StationPropertyDialog.cs">
+    <Compile Include="Controllers\rail\StationPropertyDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\TrainControllerDialog.cs">
+    <Compile Include="Controllers\rail\TrainControllerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\TrainPlacementController.cs">
+    <Compile Include="Controllers\rail\TrainPlacementController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\TrainTrackingWindow.cs">
+    <Compile Include="Controllers\rail\TrainTrackingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\rail\TrainTradingDialog.cs">
+    <Compile Include="Controllers\rail\TrainTradingDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\RectSelectorController.cs">
+    <Compile Include="Controllers\RectSelectorController.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="controllers\road\RoadController.cs">
+    <Compile Include="Controllers\road\RoadController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\structs\CommercialStructPlacementController.cs">
+    <Compile Include="Controllers\structs\CommercialStructPlacementController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\structs\VarHeightBuildingController.Designer.cs">
+    <Compile Include="Controllers\structs\VarHeightBuildingController.Designer.cs">
       <DependentUpon>VarHeightBuildingController.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\structs\FixedSizeStructController.cs">
+    <Compile Include="Controllers\structs\FixedSizeStructController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\structs\StructPlacementController.cs">
+    <Compile Include="Controllers\structs\StructPlacementController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\structs\VarHeightBuildingController.cs">
+    <Compile Include="Controllers\structs\VarHeightBuildingController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\terrain\MountainController.Designer.cs">
+    <Compile Include="Controllers\terrain\MountainController.Designer.cs">
       <DependentUpon>MountainController.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controllers\terrain\MountainController.cs">
+    <Compile Include="Controllers\terrain\MountainController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\AboutDialog.cs">
+    <Compile Include="Framework\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\BGMManager.cs">
+    <Compile Include="Framework\BGMManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\BGMPlaylist.cs">
+    <Compile Include="Framework\BGMPlaylist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\BGMPlaylist.Designer.cs">
+    <Compile Include="Framework\BGMPlaylist.Designer.cs">
       <DependentUpon>BGMPlaylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="framework\ConfigDialog.cs">
+    <Compile Include="Framework\ConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\AboutDialog.Designer.cs">
+    <Compile Include="Framework\AboutDialog.Designer.cs">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\graphics\NightSurfaceLoader.cs" />
-    <Compile Include="framework\graphics\BitmapSurfaceLoader.cs" />
-    <Compile Include="framework\graphics\ISprite.cs" />
-    <Compile Include="framework\graphics\ISurfaceLoader.cs" />
-    <Compile Include="framework\plugin\IContributionFactory.cs" />
-    <Compile Include="framework\Splash.Designer.cs">
+    <Compile Include="Framework\graphics\NightSurfaceLoader.cs" />
+    <Compile Include="Framework\graphics\BitmapSurfaceLoader.cs" />
+    <Compile Include="Framework\graphics\ISprite.cs" />
+    <Compile Include="Framework\graphics\ISurfaceLoader.cs" />
+    <Compile Include="Framework\plugin\IContributionFactory.cs" />
+    <Compile Include="Framework\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\Core.cs">
+    <Compile Include="Framework\Core.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\ErrorMessageBox.cs">
+    <Compile Include="Framework\ErrorMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\ExternToolsHelper.cs">
+    <Compile Include="Framework\ExternToolsHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\GlobalOptions.cs">
+    <Compile Include="Framework\GlobalOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\AlphaBlendSpriteSet.cs">
+    <Compile Include="Framework\graphics\AlphaBlendSpriteSet.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\ColorLibrary.cs">
+    <Compile Include="Framework\graphics\ColorLibrary.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\ColorMap.cs">
+    <Compile Include="Framework\graphics\ColorMap.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\ColorMappedSprite.cs">
+    <Compile Include="Framework\graphics\ColorMappedSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\DefaultSpriteLoaderContributionImpl.cs">
+    <Compile Include="Framework\graphics\DefaultSpriteLoaderContributionImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\DirectSprite.cs">
+    <Compile Include="Framework\graphics\DirectSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\DirtyRect.cs">
+    <Compile Include="Framework\graphics\DirtyRect.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\GraphicsException.cs">
+    <Compile Include="Framework\graphics\GraphicsException.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\HueTransformSprite.cs">
+    <Compile Include="Framework\graphics\HueTransformSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\NullSprite.cs">
+    <Compile Include="Framework\graphics\NullSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\Picture.cs">
+    <Compile Include="Framework\graphics\Picture.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\PictureManager.cs">
+    <Compile Include="Framework\graphics\PictureManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\PreviewDrawer.cs">
+    <Compile Include="Framework\graphics\PreviewDrawer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\SimpleSprite.cs">
+    <Compile Include="Framework\graphics\SimpleSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\SpriteFactory.cs">
+    <Compile Include="Framework\graphics\SpriteFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\SpriteFactoryContribution.cs">
+    <Compile Include="Framework\graphics\SpriteFactoryContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\SpriteLoaderContribution.cs">
+    <Compile Include="Framework\graphics\SpriteLoaderContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\MainWindowMDI.cs">
+    <Compile Include="Framework\MainWindowMDI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\MainWindowMDI.Designer.cs">
+    <Compile Include="Framework\MainWindowMDI.Designer.cs">
       <DependentUpon>MainWindowMDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="framework\NewWorldDialog.cs">
+    <Compile Include="Framework\NewWorldDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\PersistentOptions.cs">
+    <Compile Include="Framework\PersistentOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\Contribution.cs">
+    <Compile Include="Framework\plugin\Contribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\DynamicContributionFactory.cs">
+    <Compile Include="Framework\plugin\DynamicContributionFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\FixedClassContributionFactory.cs">
+    <Compile Include="Framework\plugin\FixedClassContributionFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\PluginDefinition.cs" />
-    <Compile Include="framework\plugin\PluginListDialog.cs">
+    <Compile Include="Framework\plugin\PluginDefinition.cs" />
+    <Compile Include="Framework\plugin\PluginListDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="framework\plugin\PluginManager.cs">
+    <Compile Include="Framework\plugin\PluginManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\PluginSerializationBinder.cs">
+    <Compile Include="Framework\plugin\PluginSerializationBinder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\PluginUtil.cs">
+    <Compile Include="Framework\plugin\PluginUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\plugin\XmlUtil.cs">
+    <Compile Include="Framework\plugin\XmlUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\ResourceUtil.cs">
+    <Compile Include="Framework\ResourceUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\sound\RepeatableSoundEffectImpl.cs">
+    <Compile Include="Framework\sound\RepeatableSoundEffectImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\sound\SoundEffect.cs">
+    <Compile Include="Framework\sound\SoundEffect.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\sound\SoundEffectManager.cs">
+    <Compile Include="Framework\sound\SoundEffectManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\Splash.cs">
+    <Compile Include="Framework\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -536,434 +536,434 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.ja-JP.resx</DependentUpon>
     </Compile>
-    <Compile Include="util\ArrayEnumerator.cs">
+    <Compile Include="Util\ArrayEnumerator.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\command\Command.cs">
+    <Compile Include="Util\command\Command.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\command\CommandExecutor.cs">
+    <Compile Include="Util\command\CommandExecutor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\command\CommandManager.cs">
+    <Compile Include="Util\command\CommandManager.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="util\controls\DDTreeView.cs">
+    <Compile Include="Util\controls\DDTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="util\controls\ToolBarCustomizerUI.cs">
+    <Compile Include="Util\controls\ToolBarCustomizerUI.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\CurrencyUtil.cs">
+    <Compile Include="Util\CurrencyUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\FontInfo.cs">
+    <Compile Include="Util\FontInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\LongTask.cs">
+    <Compile Include="Util\LongTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\PriorityQueue.cs">
+    <Compile Include="Util\PriorityQueue.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\Set.cs">
+    <Compile Include="Util\Set.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="framework\graphics\Surface.cs" />
-    <Compile Include="util\Translation.cs" />
-    <Compile Include="util\UrlInvoker.cs">
+    <Compile Include="Framework\graphics\Surface.cs" />
+    <Compile Include="Util\Translation.cs" />
+    <Compile Include="Util\UrlInvoker.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="util\WindowState.cs">
+    <Compile Include="Util\WindowState.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\AbstractView.cs">
+    <Compile Include="Views\AbstractView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\GlobalViewOptions.cs">
+    <Compile Include="Views\GlobalViewOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\IMapOverlay.cs" />
-    <Compile Include="views\map\HeightCutWindow.cs">
+    <Compile Include="Views\IMapOverlay.cs" />
+    <Compile Include="Views\map\HeightCutWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\map\MapView.cs">
+    <Compile Include="Views\map\MapView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\map\PreviewForm.cs">
+    <Compile Include="Views\map\PreviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\NullWeatherOverlay.cs">
+    <Compile Include="Views\NullWeatherOverlay.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\QuarterViewDrawer.cs">
+    <Compile Include="Views\QuarterViewDrawer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\WeatherOverlay.cs">
+    <Compile Include="Views\WeatherOverlay.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\WeatherOverlayImpl.cs">
+    <Compile Include="Views\WeatherOverlayImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\WeatherOverlaySpriteSet.cs">
+    <Compile Include="Views\WeatherOverlaySpriteSet.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\accounting\AccountGenre.cs">
+    <Compile Include="World\accounting\AccountGenre.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\accounting\AccountManager.cs">
+    <Compile Include="World\accounting\AccountManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\accounting\AccountSummaryWindow.cs">
+    <Compile Include="World\accounting\AccountSummaryWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="world\accounting\BalanceSheetForm.cs">
+    <Compile Include="World\accounting\BalanceSheetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="world\accounting\Debt.cs">
+    <Compile Include="World\accounting\Debt.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\accounting\GenreSelectorDialog.cs">
+    <Compile Include="World\accounting\GenreSelectorDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="world\accounting\TransactionHistory.cs">
+    <Compile Include="World\accounting\TransactionHistory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Car.cs">
+    <Compile Include="World\Car.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\CarState.cs">
+    <Compile Include="World\CarState.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Clock.cs">
+    <Compile Include="World\Clock.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Cube.cs">
+    <Compile Include="World\Cube.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\CommercialStructurePlan.cs">
+    <Compile Include="World\development\CommercialStructurePlan.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\DevelopConfigure.cs">
+    <Compile Include="World\development\DevelopConfigure.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="world\development\DevelopConfigurePlugin.cs">
+    <Compile Include="World\development\DevelopConfigurePlugin.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\DevelopmentAlgorithm.cs">
+    <Compile Include="World\development\DevelopmentAlgorithm.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\LandPlan.cs">
+    <Compile Include="World\development\LandPlan.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\LandValue.cs">
+    <Compile Include="World\development\LandValue.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\LandValueInspector.cs">
+    <Compile Include="World\development\LandValueInspector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="world\development\LandValueInspectorPlugin.cs">
+    <Compile Include="World\development\LandValueInspectorPlugin.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\Plan.cs">
+    <Compile Include="World\development\Plan.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\ULV.cs">
+    <Compile Include="World\development\ULV.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\ULVFactory.cs">
+    <Compile Include="World\development\ULVFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\development\VarHeightBuildingPlan.cs">
+    <Compile Include="World\development\VarHeightBuildingPlan.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Direction.cs">
+    <Compile Include="World\Direction.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\DrawContext.cs">
+    <Compile Include="World\DrawContext.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\EmptyVoxel.cs">
+    <Compile Include="World\EmptyVoxel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Entity.cs">
+    <Compile Include="World\Entity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\IVoxelOutlookListener.cs" />
-    <Compile Include="world\land\LandPropertyVoxel.cs">
+    <Compile Include="World\IVoxelOutlookListener.cs" />
+    <Compile Include="World\land\LandPropertyVoxel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\land\LandVoxel.cs">
+    <Compile Include="World\land\LandVoxel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\land\StaticLandVoxel.cs">
+    <Compile Include="World\land\StaticLandVoxel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Location.cs">
+    <Compile Include="World\Location.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Matrix.cs">
+    <Compile Include="World\Matrix.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\BridgePierVoxel.cs">
+    <Compile Include="World\rail\BridgePierVoxel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\BridgeRail.cs">
+    <Compile Include="World\rail\BridgeRail.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\DelegationTrainControllerImpl.cs">
+    <Compile Include="World\rail\DelegationTrainControllerImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\FatPlatform.cs">
+    <Compile Include="World\rail\FatPlatform.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\GlobalTrafficMonitor.cs">
+    <Compile Include="World\rail\GlobalTrafficMonitor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\JunctionRailRoad.cs">
+    <Compile Include="World\rail\JunctionRailRoad.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\PassagewayRail.cs">
+    <Compile Include="World\rail\PassagewayRail.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\Platform.cs">
+    <Compile Include="World\rail\Platform.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\PlatformHost.cs">
+    <Compile Include="World\rail\PlatformHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\RailPattern.cs">
+    <Compile Include="World\rail\RailPattern.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\RailRoad.cs">
+    <Compile Include="World\rail\RailRoad.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\RailStationaryStructure.cs">
+    <Compile Include="World\rail\RailStationaryStructure.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\SimpleTrainControllerImpl.cs">
+    <Compile Include="World\rail\SimpleTrainControllerImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\SingleRailRoad.cs">
+    <Compile Include="World\rail\SingleRailRoad.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\SlopeRailRoad.cs">
+    <Compile Include="World\rail\SlopeRailRoad.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\SpecialPurposeRailRoad.cs">
+    <Compile Include="World\rail\SpecialPurposeRailRoad.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\Station.cs">
+    <Compile Include="World\rail\Station.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\StationListener.cs">
+    <Compile Include="World\rail\StationListener.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\StealSupportedRailContributionImpl.cs">
+    <Compile Include="World\rail\StealSupportedRailContributionImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\ThinPlatform.cs">
+    <Compile Include="World\rail\ThinPlatform.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\Train.cs">
+    <Compile Include="World\rail\Train.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\TrainController.cs">
+    <Compile Include="World\rail\TrainController.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\TrainGroup.cs">
+    <Compile Include="World\rail\TrainGroup.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\TrainHarbor.cs">
+    <Compile Include="World\rail\TrainHarbor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\TrainItem.cs">
+    <Compile Include="World\rail\TrainItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\TunnelRail.cs">
+    <Compile Include="World\rail\TunnelRail.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\rail\YardRailRoad.cs">
+    <Compile Include="World\rail\YardRailRoad.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\road\Bus.cs">
+    <Compile Include="World\road\Bus.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\road\Road.cs">
+    <Compile Include="World\road\Road.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\road\RoadPattern.cs">
+    <Compile Include="World\road\RoadPattern.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\road\RoadStyle.cs">
+    <Compile Include="World\road\RoadStyle.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\RRCrossing.cs">
+    <Compile Include="World\RRCrossing.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\SIZE.cs">
+    <Compile Include="World\SIZE.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\SparseVoxelArray.cs">
+    <Compile Include="World\SparseVoxelArray.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\structs\Commercial.cs">
+    <Compile Include="World\structs\Commercial.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\structs\ConstructionSite.cs">
+    <Compile Include="World\structs\ConstructionSite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\structs\PopulatedStructure.cs">
+    <Compile Include="World\structs\PopulatedStructure.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\structs\PThreeDimStructure.cs">
+    <Compile Include="World\structs\PThreeDimStructure.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\structs\StationListenerImpl.cs">
+    <Compile Include="World\structs\StationListenerImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\structs\Structure.cs">
+    <Compile Include="World\structs\Structure.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\structs\VarHeightBuilding.cs">
+    <Compile Include="World\structs\VarHeightBuilding.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\subsidiaries\MarketWindow.cs">
+    <Compile Include="World\subsidiaries\MarketWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="world\subsidiaries\Parameters.cs">
+    <Compile Include="World\subsidiaries\Parameters.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\subsidiaries\SubsidiaryCompany.cs">
+    <Compile Include="World\subsidiaries\SubsidiaryCompany.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\subsidiaries\SubsidiaryEntity.cs">
+    <Compile Include="World\subsidiaries\SubsidiaryEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\subsidiaries\SubsidiaryMarket.cs">
+    <Compile Include="World\subsidiaries\SubsidiaryMarket.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\terrain\MountainVoxel.cs">
+    <Compile Include="World\terrain\MountainVoxel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Time.cs">
+    <Compile Include="World\Time.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\TimeLength.cs">
+    <Compile Include="World\TimeLength.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Traffic.cs">
+    <Compile Include="World\Traffic.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\Voxel.cs">
+    <Compile Include="World\Voxel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="world\WorldDefinition.cs" />
+    <Compile Include="World\WorldDefinition.cs" />
     <Content Include="..\plugins\system\plugin.xml">
       <Link>plugin.xml</Link>
     </Content>
     <Content Include="Contributions\readme.txt" />
-    <Content Include="res\Arrows.bmp" />
-    <Content Include="res\BridgePier.bmp" />
-    <Content Include="res\ConstructionBones.bmp" />
-    <Content Include="res\ConstructionFence.bmp" />
-    <Content Include="res\ConstructionGround.bmp" />
-    <Content Include="res\ConstructionWall.bmp" />
-    <Content Include="res\DayNight.bmp" />
-    <Content Include="res\EmptyChip.bmp" />
-    <Content Include="res\Item.bmp" />
-    <Content Include="res\RailRoads.bmp" />
-    <Content Include="res\Toolbar.bmp" />
-    <Content Include="res\ugslope.bmp" />
-    <Content Include="res\YardChip.bmp" />
+    <Content Include="Res\Arrows.bmp" />
+    <Content Include="Res\BridgePier.bmp" />
+    <Content Include="Res\ConstructionBones.bmp" />
+    <Content Include="Res\ConstructionFence.bmp" />
+    <Content Include="Res\ConstructionGround.bmp" />
+    <Content Include="Res\ConstructionWall.bmp" />
+    <Content Include="Res\DayNight.bmp" />
+    <Content Include="Res\EmptyChip.bmp" />
+    <Content Include="Res\Item.bmp" />
+    <Content Include="Res\RailRoads.bmp" />
+    <Content Include="Res\Toolbar.bmp" />
+    <Content Include="Res\ugslope.bmp" />
+    <Content Include="Res\YardChip.bmp" />
     <EmbeddedResource Include="Contributions\others\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\AbstractControllerImpl.resx">
+    <EmbeddedResource Include="Controllers\AbstractControllerImpl.resx">
       <DependentUpon>AbstractControllerImpl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\AbstractLineController.resx">
+    <EmbeddedResource Include="Controllers\AbstractLineController.resx">
       <DependentUpon>AbstractLineController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\land\BulldozeController.resx">
+    <EmbeddedResource Include="Controllers\land\BulldozeController.resx">
       <DependentUpon>BulldozeController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\land\LandController.resx">
+    <EmbeddedResource Include="Controllers\land\LandController.resx">
       <DependentUpon>LandController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\land\LandPropertyController.resx">
+    <EmbeddedResource Include="Controllers\land\LandPropertyController.resx">
       <DependentUpon>LandPropertyController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\PlatformController.resx">
+    <EmbeddedResource Include="Controllers\rail\PlatformController.resx">
       <DependentUpon>PlatformController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\PlatformPropertyDialog.resx">
+    <EmbeddedResource Include="Controllers\rail\PlatformPropertyDialog.resx">
       <DependentUpon>PlatformPropertyDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\RailRoadController.resx">
+    <EmbeddedResource Include="Controllers\rail\RailRoadController.resx">
       <DependentUpon>RailRoadController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\SlopeRailRoadController.resx">
+    <EmbeddedResource Include="Controllers\rail\SlopeRailRoadController.resx">
       <DependentUpon>SlopeRailRoadController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\StationPassagewayController.resx">
+    <EmbeddedResource Include="Controllers\rail\StationPassagewayController.resx">
       <DependentUpon>StationPassagewayController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\StationPropertyDialog.resx">
+    <EmbeddedResource Include="Controllers\rail\StationPropertyDialog.resx">
       <DependentUpon>StationPropertyDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\TrainControllerDialog.resx">
+    <EmbeddedResource Include="Controllers\rail\TrainControllerDialog.resx">
       <DependentUpon>TrainControllerDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\TrainPlacementController.resx">
+    <EmbeddedResource Include="Controllers\rail\TrainPlacementController.resx">
       <DependentUpon>TrainPlacementController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\TrainTrackingWindow.resx">
+    <EmbeddedResource Include="Controllers\rail\TrainTrackingWindow.resx">
       <DependentUpon>TrainTrackingWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\rail\TrainTradingDialog.resx">
+    <EmbeddedResource Include="Controllers\rail\TrainTradingDialog.resx">
       <DependentUpon>TrainTradingDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\road\RoadController.resx">
+    <EmbeddedResource Include="Controllers\road\RoadController.resx">
       <DependentUpon>RoadController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\structs\FixedSizeStructController.resx">
+    <EmbeddedResource Include="Controllers\structs\FixedSizeStructController.resx">
       <DependentUpon>FixedSizeStructController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\structs\StructPlacementController.resx">
+    <EmbeddedResource Include="Controllers\structs\StructPlacementController.resx">
       <DependentUpon>StructPlacementController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\structs\VarHeightBuildingController.resx">
+    <EmbeddedResource Include="Controllers\structs\VarHeightBuildingController.resx">
       <DependentUpon>VarHeightBuildingController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controllers\terrain\MountainController.resx">
+    <EmbeddedResource Include="Controllers\terrain\MountainController.resx">
       <DependentUpon>MountainController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\AboutDialog.resx">
+    <EmbeddedResource Include="Framework\AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\BGMPlaylist.resx">
+    <EmbeddedResource Include="Framework\BGMPlaylist.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BGMPlaylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\ConfigDialog.resx">
+    <EmbeddedResource Include="Framework\ConfigDialog.resx">
       <DependentUpon>ConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\ErrorMessageBox.resx">
+    <EmbeddedResource Include="Framework\ErrorMessageBox.resx">
       <DependentUpon>ErrorMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\MainWindowMDI.resx">
+    <EmbeddedResource Include="Framework\MainWindowMDI.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MainWindowMDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\NewWorldDialog.resx">
+    <EmbeddedResource Include="Framework\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\plugin\PluginListDialog.resx">
+    <EmbeddedResource Include="Framework\plugin\PluginListDialog.resx">
       <DependentUpon>PluginListDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="framework\Splash.resx">
+    <EmbeddedResource Include="Framework\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.sv-SE.resx">
@@ -986,38 +986,38 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="res\splash.jpg" />
-    <EmbeddedResource Include="util\command\CommandManager.resx">
+    <EmbeddedResource Include="Res\splash.jpg" />
+    <EmbeddedResource Include="Util\command\CommandManager.resx">
       <DependentUpon>CommandManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\map\HeightCutWindow.resx">
+    <EmbeddedResource Include="Views\map\HeightCutWindow.resx">
       <DependentUpon>HeightCutWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\map\MapView.resx">
+    <EmbeddedResource Include="Views\map\MapView.resx">
       <DependentUpon>MapView.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\map\PreviewForm.resx">
+    <EmbeddedResource Include="Views\map\PreviewForm.resx">
       <DependentUpon>PreviewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="world\accounting\AccountSummaryWindow.resx">
+    <EmbeddedResource Include="World\accounting\AccountSummaryWindow.resx">
       <DependentUpon>AccountSummaryWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="world\accounting\BalanceSheetForm.resx">
+    <EmbeddedResource Include="World\accounting\BalanceSheetForm.resx">
       <DependentUpon>BalanceSheetForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="world\accounting\GenreSelectorDialog.resx">
+    <EmbeddedResource Include="World\accounting\GenreSelectorDialog.resx">
       <DependentUpon>GenreSelectorDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="world\development\DevelopConfigure.resx">
+    <EmbeddedResource Include="World\development\DevelopConfigure.resx">
       <DependentUpon>DevelopConfigure.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="world\development\LandValueInspector.resx">
+    <EmbeddedResource Include="World\development\LandValueInspector.resx">
       <DependentUpon>LandValueInspector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="world\subsidiaries\MarketWindow.resx">
+    <EmbeddedResource Include="World\subsidiaries\MarketWindow.resx">
       <DependentUpon>MarketWindow.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
