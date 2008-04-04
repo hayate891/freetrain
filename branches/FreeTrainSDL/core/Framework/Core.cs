@@ -59,6 +59,9 @@ namespace FreeTrain.Framework
         /// <summary> Plug-ins. </summary>
         private static readonly PluginManager plugins = new PluginManager();
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static PluginManager Plugins
         {
             get { return Core.plugins; }
@@ -68,6 +71,9 @@ namespace FreeTrain.Framework
         /// <summary> Global options. </summary>
         private static readonly GlobalOptions options = new GlobalOptions().load();
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static GlobalOptions Options
         {
             get { return Core.options; }

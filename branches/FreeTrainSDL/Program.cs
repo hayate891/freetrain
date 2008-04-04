@@ -171,7 +171,6 @@ namespace FreeTrain
             {
                 dragMode = false;
                 Mouse.MousePosition = new Point(oldX, oldY);
-
                 Mouse.ShowCursor = true;
             }
 
@@ -182,7 +181,10 @@ namespace FreeTrain
                     Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
                     Location xyz = qView.fromABToXYZ(ab, controller);
 
-                    if (e.Button == MouseButton.PrimaryButton) controller.OnClick(null, xyz, ab);
+                    if (e.Button == MouseButton.PrimaryButton)
+                    {
+                        controller.OnClick(null, xyz, ab);
+                    }
                 }
             }
             lastMouseState = e.ButtonPressed;
@@ -196,7 +198,6 @@ namespace FreeTrain
             }
             else
             {
-                //gui.checkMouseMovement(e.EventStruct.motion);
                 if (controller != null)
                 {
                     Point ab = qView.fromClientToAB(e.X + ScrollPosition.X, e.Y + ScrollPosition.Y);
@@ -262,8 +263,6 @@ namespace FreeTrain
 
         private void Go()
         {
-            
-            
             splashscreen = new Splash();
             splashscreen.Show();
             splashscreen.BringToFront();

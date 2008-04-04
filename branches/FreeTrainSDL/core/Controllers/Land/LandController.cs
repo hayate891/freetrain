@@ -162,7 +162,7 @@ namespace FreeTrain.Controllers.Land
         /// <summary>
         /// 
         /// </summary>
-        public void UpdatePreview()
+        public override void UpdatePreview()
         {
             LandBuilderContribution builder = (LandBuilderContribution)indexSelector.currentItem;
             using (PreviewDrawer drawer = builder.createPreview(preview.Size))

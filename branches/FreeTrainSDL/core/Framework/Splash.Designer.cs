@@ -46,6 +46,9 @@ namespace FreeTrain.Framework
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.ProgressBar progressBar;
+        /// <summary>
+        /// 
+        /// </summary>
         public TextBox status;
         private System.ComponentModel.IContainer components;
 

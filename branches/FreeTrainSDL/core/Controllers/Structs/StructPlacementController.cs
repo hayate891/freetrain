@@ -323,11 +323,10 @@ namespace FreeTrain.Controllers.Structs
         /// <summary>
         /// 
         /// </summary>
-        public void UpdatePreview()
+        public override void UpdatePreview()
         {
-            /*using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) ) 
+            /*using( PreviewDrawer drawer = selectedType.createPreview(preview.Size) )
             {
-
                 if( previewBitmap!=null )	previewBitmap.Dispose();
                 preview.Image = previewBitmap = drawer.createBitmap();
             }*/

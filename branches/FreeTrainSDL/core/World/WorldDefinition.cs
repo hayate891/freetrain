@@ -761,7 +761,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="v"></param>
+        /// <param name="voxel"></param>
         public void OnVoxelUpdated(Voxel voxel)
         {
             OnVoxelUpdated(voxel.location);

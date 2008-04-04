@@ -41,7 +41,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// Controller that allows the user to
     /// place/remove cars.
     /// </summary>
-    [CLSCompliant(false)]
     public class ControllerForm : AbstractControllerImpl
     {
         private System.Windows.Forms.Label label1;
@@ -366,7 +365,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             this.Controls.Add(this.price);
             this.Name = "ControllerForm";
             this.Text = "Half-tile Construction";
-            this.Resize += new System.EventHandler(this.updateSize);
+            this.Resize += new System.EventHandler(this.UpdateSize);
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.group.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -377,7 +376,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public bool isPlacing
+        public bool IsPlacing
         {
             get
             {
@@ -393,7 +392,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 return idxColor2.current;
             }
         }
-
 
         private int currentColor
         {
@@ -431,7 +429,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         #region Event Handlers
         private void onTypeChanged(object sender, System.EventArgs e)
         {
-            idxDesign.count = currentGroup.size;
+            idxDesign.count = currentGroup.Size;
             onDesignChanged(sender, e);
         }
 
@@ -508,7 +506,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected virtual void updateSize(object sender, System.EventArgs e)
+        protected virtual void UpdateSize(object sender, System.EventArgs e)
         {
             UpdatePreview();
         }
@@ -518,8 +516,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// Called when a selection of the structure has changed.
         /// </summary>
-        [CLSCompliant(false)]
-        public void UpdatePreview()
+        public override void UpdatePreview()
         {
             using (PreviewDrawer drawer = currentContrib.createPreview(preview.Size))
             {
@@ -528,15 +525,20 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             }
         }
 
-
         #region SubGroup
         private class SubGroup : object
         {
-            public readonly string name;
-            private ArrayList arr;
-            public SubGroup(string _name)
+            private readonly string name;
+
+            public string Name
             {
-                name = _name;
+                get { return name; }
+            } 
+
+            private ArrayList arr;
+            public SubGroup(string name)
+            {
+                this.name = name;
                 arr = new ArrayList();
             }
 
@@ -545,7 +547,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 arr.Add(contrib);
             }
 
-            public int size
+            public int Size
             {
                 get { return arr.Count; }
             }

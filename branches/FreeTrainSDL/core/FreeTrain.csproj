@@ -859,8 +859,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="World\WorldDefinition.cs" />
-    <Content Include="..\plugins\system\Plugin.xml">
-      <Link>Plugin.xml</Link>
+    <Content Include="..\plugins\system\plugin.xml">
+      <Link>plugin.xml</Link>
     </Content>
     <Content Include="Contributions\readme.txt" />
     <Content Include="Res\Arrows.bmp" />

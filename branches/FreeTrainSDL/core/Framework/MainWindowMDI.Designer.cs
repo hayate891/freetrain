@@ -102,6 +102,7 @@ namespace FreeTrain.Framework
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.playButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -458,7 +459,8 @@ namespace FreeTrain.Framework
             this.printToolStripButton,
             this.printPreviewToolStripButton,
             this.toolStripSeparator2,
-            this.helpToolStripButton});
+            this.helpToolStripButton,
+            this.playButton});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(525, 25);
@@ -516,6 +518,7 @@ namespace FreeTrain.Framework
             this.printPreviewToolStripButton.Name = "printPreviewToolStripButton";
             this.printPreviewToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.printPreviewToolStripButton.Text = "Print Preview";
+            this.printPreviewToolStripButton.Click += new System.EventHandler(this.printPreviewToolStripButton_Click);
             // 
             // toolStripSeparator2
             // 
@@ -546,6 +549,16 @@ namespace FreeTrain.Framework
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(38, 17);
             this.toolStripStatusLabel.Text = "Status";
+            // 
+            // playButton
+            // 
+            this.playButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.playButton.Image = ((System.Drawing.Image)(resources.GetObject("playButton.Image")));
+            this.playButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(23, 22);
+            this.playButton.Text = "toolStripButton1";
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // MainWindowMDI
             // 
@@ -623,8 +636,15 @@ namespace FreeTrain.Framework
         private System.Windows.Forms.ToolStripButton printPreviewToolStripButton;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip ToolTip;
+        /// <summary>
+        /// 
+        /// </summary>
         public System.Windows.Forms.StatusStrip statusStrip;
+        /// <summary>
+        /// 
+        /// </summary>
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripButton playButton;
     }
 }
 

@@ -144,7 +144,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public void UpdatePreview()
+        public virtual void UpdatePreview()
         { }
     }
 }

@@ -59,7 +59,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public void UpdatePreview()
+        public override void UpdatePreview()
         {
             if (this.picture.Image != null)
                 this.picture.Image.Dispose();
