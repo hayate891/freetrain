@@ -59,7 +59,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public void UpdatePreview()
+        public override void UpdatePreview()
         {
 
             PreviewDrawer drawer;

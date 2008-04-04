@@ -90,7 +90,7 @@ namespace FreeTrain.Controllers.Rail
         /// 
         /// </summary>
         /// <param name="source"></param>
-        /// <param name="loc"></param>
+        /// <param name="location"></param>
         /// <param name="ab"></param>
         public override void OnClick(MapViewWindow source, Location location, Point ab)
         {
@@ -127,17 +127,21 @@ namespace FreeTrain.Controllers.Rail
         /// 
         /// </summary>
         /// <param name="source"></param>
-        /// <param name="loc"></param>
+        /// <param name="location"></param>
         /// <param name="ab"></param>
         public override void OnRightClick(MapViewWindow source, Location location, Point ab)
         {
             if (anchor == unplaced)
+            {
                 Close();	// cancel
+            }
             else
             {
                 // cancel the anchor
                 if (currentPosition != unplaced)
+                {
                     WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
+                }
                 anchor = unplaced;
                 UpdateDialog();
             }
@@ -147,7 +151,7 @@ namespace FreeTrain.Controllers.Rail
         /// 
         /// </summary>
         /// <param name="view"></param>
-        /// <param name="loc"></param>
+        /// <param name="location"></param>
         /// <param name="ab"></param>
         public override void OnMouseMove(MapViewWindow view, Location location, Point ab)
         {
@@ -155,7 +159,9 @@ namespace FreeTrain.Controllers.Rail
             {
                 // update the screen
                 if (currentPosition != unplaced)
+                {
                     WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
+                }
                 currentPosition = location;
                 WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
 
@@ -167,6 +173,16 @@ namespace FreeTrain.Controllers.Rail
             {
                 costBox.cost = SingleRailRoad.CalcCostOfRemoving(anchor, location);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnDeactivate(EventArgs e)
+        {
+            base.OnDeactivate(e);
+            anchor = unplaced;
         }
 
         /// <summary>
@@ -185,8 +201,14 @@ namespace FreeTrain.Controllers.Rail
             get
             {
                 // the 2nd selection must go to the same height as the anchor.
-                if (anchor == unplaced) return RailRoadDisambiguator.theInstance;
-                else return sameLevelDisambiguator;
+                if (anchor == unplaced)
+                {
+                    return RailRoadDisambiguator.theInstance;
+                }
+                else
+                {
+                    return sameLevelDisambiguator;
+                }
             }
         }
 
@@ -211,7 +233,9 @@ namespace FreeTrain.Controllers.Rail
                 int cost;
                 canvas.Tag = SingleRailRoad.ComputeRoute(anchor, currentPosition, out cost);
                 if (canvas.Tag != null)
+                {
                     Debug.WriteLine(((IDictionary)canvas.Tag).Count);
+                }
             }
         }
 
@@ -220,8 +244,8 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="canvas"></param>
-        /// <param name="loc"></param>
-        /// <param name="pt"></param>
+        /// <param name="location"></param>
+        /// <param name="point"></param>
         public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location location, Point point)
         {
             IDictionary dic = (IDictionary)canvas.Tag;
@@ -231,10 +255,12 @@ namespace FreeTrain.Controllers.Rail
                 if (rp != null)
                 {
                     for (int j = WorldDefinition.World.getGroundLevel(location); j < location.z; j++)
+                    {
                         // TODO: ground level handling
                         BridgePierVoxel.defaultSprite.drawAlpha(
                             canvas.Surface,
                             view.fromXYZToClient(location.x, location.y, j));
+                    }
 
                     rp.drawAlpha(canvas.Surface, point);
                 }

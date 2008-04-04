@@ -25,7 +25,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+
 using FreeTrain.Contributions.Sound;
+using FreeTrain.Controllers;
 
 
 namespace FreeTrain.Framework
@@ -33,7 +35,7 @@ namespace FreeTrain.Framework
     /// <summary>
     /// 
     /// </summary>
-    public partial class BGMPlaylist : Form
+    public partial class BGMPlaylist : AbstractControllerImpl
     {
         private bool isPlaying = false;
         /// <summary>

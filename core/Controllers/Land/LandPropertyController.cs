@@ -58,7 +58,7 @@ namespace FreeTrain.Controllers.Land
         /// <summary>
         /// 
         /// </summary>
-        public void UpdatePreview()
+        public override void UpdatePreview()
         {
             using (PreviewDrawer drawer = new PreviewDrawer(preview.Size, new Size(3, 3), 0))
             {

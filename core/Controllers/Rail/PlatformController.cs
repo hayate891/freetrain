@@ -504,7 +504,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary>
         /// 
         /// </summary>
-        public void UpdatePreview()
+        public override void UpdatePreview()
         {
             if (this.currentMode == Mode.Station)
                 onStationChanged(null, null);

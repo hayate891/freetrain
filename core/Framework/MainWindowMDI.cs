@@ -118,9 +118,13 @@ namespace FreeTrain.Framework
         public void AttachController(IModalController newHandler)
         {
             if (controller == newHandler)
+            {
                 return;	// already activated
+            }
             if (controller != null)
+            {
                 DetachController();	// deactive the current handler first
+            }
 
             controller = newHandler;
             controller.OnAttached();
@@ -135,7 +139,10 @@ namespace FreeTrain.Framework
         /// </summary>
         public void DetachController()
         {
-            if (controller == null) return;
+            if (controller == null)
+            {
+                return;
+            }
 
             controller.OnDetached();
             controller = null;
@@ -247,6 +254,16 @@ namespace FreeTrain.Framework
         {
             AboutDialog aboutDialog = new AboutDialog();
             aboutDialog.ShowDialog();
+        }
+
+        private void printPreviewToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            MainWindowMDI.mainWindow.DetachController();
         }
     }
 }
