@@ -142,7 +142,7 @@ namespace FreeTrain.World
         {
             get
             {
-                return (int)WorldDefinition.World.landValue[location];
+                return (int)WorldDefinition.World.LandValue[location];
             }
         }
 

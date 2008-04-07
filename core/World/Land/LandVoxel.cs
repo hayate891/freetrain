@@ -38,7 +38,7 @@ namespace FreeTrain.World.Land
             : base(loc)
         {
             Debug.Assert(canBeBuilt(loc));
-            Debug.Assert(loc.z == WorldDefinition.World.getGroundLevel(loc));
+            Debug.Assert(loc.z == WorldDefinition.World.GetGroundLevel(loc));
         }
         /// <summary>
         /// 
@@ -87,7 +87,7 @@ namespace FreeTrain.World.Land
         /// </summary>
         public static bool canBeBuilt(Location loc)
         {
-            if (WorldDefinition.World.getGroundLevel(loc) != loc.z)
+            if (WorldDefinition.World.GetGroundLevel(loc) != loc.z)
                 return false;	// can only be placed on the ground
             return WorldDefinition.World.isReusable(loc);
         }

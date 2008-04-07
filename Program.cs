@@ -212,8 +212,8 @@ namespace FreeTrain
         {
             if (qView != null)
             {
-                WorldDefinition.World.clock.tick();
-                WorldDefinition.World.clock.tick();
+                WorldDefinition.World.Clock.tick();
+                WorldDefinition.World.Clock.tick();
 
                 sourceRect = new Sdl.SDL_Rect((short)ScrollPosition.X, (short)ScrollPosition.Y, (short)width, (short)height);
                 dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
@@ -227,7 +227,7 @@ namespace FreeTrain
         {
             if (mainWindowMDI != null && WorldDefinition.World != null)
             {
-                mainWindowMDI.toolStripStatusLabel.Text = WorldDefinition.World.clock.displayString;
+                mainWindowMDI.toolStripStatusLabel.Text = WorldDefinition.World.Clock.displayString;
             }
             screen.Update();
         }

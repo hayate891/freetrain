@@ -180,7 +180,7 @@ namespace FreeTrain.Controllers.Terrain
 
 
             Voxel baseVoxel = w[loc];
-            int glevel = w.getGroundLevel(loc);
+            int glevel = w.GetGroundLevel(loc);
 
             if (loc.z != glevel) return false;	//mountain can be placed only at the ground level
 
@@ -194,12 +194,12 @@ namespace FreeTrain.Controllers.Terrain
                     Location l = new Location(loc.x + x, loc.y + y, loc.z);
                     Direction d = Direction.get(1 - x * 2, -y * 2 - 1);	// corner to modify
 
-                    if (w.isOutsideWorld(l))
+                    if (w.IsOutsideWorld(l))
                         continue;	// it's OK if it's beyond the border
 
                     Voxel v = w[l];
 
-                    if (glevel != w.getGroundLevel(l))
+                    if (glevel != w.GetGroundLevel(l))
                         return false;	// different ground level
 
                     if (v == null)
@@ -220,7 +220,7 @@ namespace FreeTrain.Controllers.Terrain
                 }
             }
 
-            if (WorldDefinition.World.isOutsideWorld(loc))
+            if (WorldDefinition.World.IsOutsideWorld(loc))
                 return false;
 
             return true;
@@ -288,7 +288,7 @@ namespace FreeTrain.Controllers.Terrain
             }
             else
             {
-                int glevel = world.getGroundLevel(loc);
+                int glevel = world.GetGroundLevel(loc);
                 if (glevel != loc.z && glevel != loc.z - 1)
                     return false;
                 if (loc.z == 0)
@@ -315,7 +315,7 @@ namespace FreeTrain.Controllers.Terrain
                 }
             }
 
-            if (WorldDefinition.World.isOutsideWorld(loc))
+            if (WorldDefinition.World.IsOutsideWorld(loc))
                 return false;
 
             return true;

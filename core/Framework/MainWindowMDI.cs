@@ -265,5 +265,11 @@ namespace FreeTrain.Framework
         {
             MainWindowMDI.mainWindow.DetachController();
         }
+
+        private void pauseButton_Click(object sender, EventArgs e)
+        {
+            //MainWindowMDI.mainWindow.CurrentController = MainWindowMDI.mainWindow.br 
+            //MainWindowMDI.mainWindow.AttachController(MainWindowMDI.mainWindow.CurrentController);
+        }
     }
 }

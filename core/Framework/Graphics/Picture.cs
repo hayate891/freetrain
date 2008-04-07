@@ -228,8 +228,8 @@ namespace FreeTrain.Framework.Graphics
                 {
                     WorldDefinition world = WorldDefinition.World;
                     // reload the surface
-                    Clock c = world.clock;
-                    loaders[(int)c.season, (world.viewOptions.useNightView) ? 1 : 0].Load(ref _surface);
+                    Clock c = world.Clock;
+                    loaders[(int)c.season, (world.ViewOptions.useNightView) ? 1 : 0].Load(ref _surface);
                     //_surface.sourceColorKey = key;
                     dirty = false;
                 }

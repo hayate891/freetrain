@@ -292,7 +292,7 @@ namespace FreeTrain.Views
         public bool IsVisible(Location loc)
         {
             // find the bounding box in (A,B) axes
-            return WorldDefinition.World.getBoundingBox(loc).IntersectsWith(this.visibleRect);
+            return WorldDefinition.World.GetBoundingBox(loc).IntersectsWith(this.visibleRect);
         }
 
         /// <summary>
@@ -317,7 +317,7 @@ namespace FreeTrain.Views
         /// <param name="loc"></param>
         public void OnUpdateVoxel(Location loc)
         {
-            Rectangle boundingBox = world.getBoundingBox(loc);
+            Rectangle boundingBox = world.GetBoundingBox(loc);
             if (boundingBox.IntersectsWith(this.visibleRect))
             {
                 dirtyRect.add(boundingBox);
@@ -384,11 +384,11 @@ namespace FreeTrain.Views
             // the same rectangle in the client coordinates
             Rectangle rectClient = fromABToClient(rectAB);
 
-            int waterLevel = world.waterLevel;
+            int waterLevel = world.WaterLevel;
             bool noHeightCut = (HeightCutHeight == world.Size.z - 1);
 
             Color waterSurfaceColor = waterSurfaceDayColor;
-            if (world.viewOptions.useNightView)
+            if (world.ViewOptions.useNightView)
                 waterSurfaceColor = ColorMap.getNightColor(waterSurfaceColor);
 
             rectAB.Inflate(20, 20);

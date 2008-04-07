@@ -92,7 +92,7 @@ namespace FreeTrain.Framework.Sound
 
             /*if( countOverlap()+queue < concurrentPlaybackMax )*/
             if (queue++ == 0)
-                WorldDefinition.World.clock.endOfTurnHandlers += new EventHandler(onTurnEnd);
+                WorldDefinition.World.Clock.endOfTurnHandlers += new EventHandler(onTurnEnd);
         }
 
         // called at the end of turn

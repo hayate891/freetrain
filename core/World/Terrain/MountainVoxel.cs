@@ -144,9 +144,9 @@ namespace FreeTrain.World.Terrain
         {
             WorldDefinition w = WorldDefinition.World;
 
-            if (w.isOutsideWorld(loc)) return -1;
+            if (w.IsOutsideWorld(loc)) return -1;
 
-            int z = w.getGroundLevel(loc);
+            int z = w.GetGroundLevel(loc);
             MountainVoxel mv = MountainVoxel.get(new Location(loc.x, loc.y, z));
             if (mv == null) return z * 4;
             else return z * 4 + mv.getHeight(d);
@@ -222,7 +222,7 @@ namespace FreeTrain.World.Terrain
 
         private Color mapColor(Color c)
         {
-            if (WorldDefinition.World.viewOptions.useNightView)
+            if (WorldDefinition.World.ViewOptions.useNightView)
                 return ColorMap.getNightColor(c);
             else
                 return c;
@@ -232,7 +232,7 @@ namespace FreeTrain.World.Terrain
         {
             get
             {
-                return mountainColors[(int)WorldDefinition.World.clock.season];
+                return mountainColors[(int)WorldDefinition.World.Clock.season];
             }
         }
         /// <summary>
@@ -313,7 +313,7 @@ namespace FreeTrain.World.Terrain
                 Location neighbor = location + Direction.WEST;
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(3) > 0
-                    && world.getGroundLevel(neighbor) <= world.getGroundLevel(location))
+                    && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(location))
                     cliff[0, getHeight(3), getHeight(2)].draw(display.Surface, basePt);
             }
 
@@ -351,7 +351,7 @@ namespace FreeTrain.World.Terrain
                 Location neighbor = location + Direction.SOUTH;
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(1) > 0
-                    && world.getGroundLevel(neighbor) <= world.getGroundLevel(location))
+                    && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(location))
                     cliff[1, getHeight(2), getHeight(1)].draw(display.Surface, basePt);
             }
         }
@@ -421,7 +421,7 @@ namespace FreeTrain.World.Terrain
         // it should be big so that integer ops in the selectBrush operation 
         // would run with a small rounding error.
 
-        private bool isUnderWater { get { return location.z < WorldDefinition.World.waterLevel; } }
+        private bool isUnderWater { get { return location.z < WorldDefinition.World.WaterLevel; } }
 
         /// <summary>
         /// Returns the brush to draw this voxel.

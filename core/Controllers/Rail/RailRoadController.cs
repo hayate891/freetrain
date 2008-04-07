@@ -254,7 +254,7 @@ namespace FreeTrain.Controllers.Rail
                 RailPattern rp = (RailPattern)dic[location];
                 if (rp != null)
                 {
-                    for (int j = WorldDefinition.World.getGroundLevel(location); j < location.z; j++)
+                    for (int j = WorldDefinition.World.GetGroundLevel(location); j < location.z; j++)
                     {
                         // TODO: ground level handling
                         BridgePierVoxel.defaultSprite.drawAlpha(

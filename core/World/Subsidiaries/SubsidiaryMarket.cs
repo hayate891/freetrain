@@ -76,9 +76,9 @@ namespace FreeTrain.World.Subsidiaries
         private static SubsidiaryMarket theInstance(string suffix)
         {
             string name = typeof(SubsidiaryMarket).Name + suffix;
-            SubsidiaryMarket r = (SubsidiaryMarket)WorldDefinition.World.otherObjects[name];
+            SubsidiaryMarket r = (SubsidiaryMarket)WorldDefinition.World.OtherObjects[name];
             if (r == null)
-                WorldDefinition.World.otherObjects[name] = r = new SubsidiaryMarket();
+                WorldDefinition.World.OtherObjects[name] = r = new SubsidiaryMarket();
             return r;
         }
 

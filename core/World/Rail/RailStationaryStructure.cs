@@ -79,7 +79,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public static RailStationaryStructure get(Location loc)
         {
-            return WorldDefinition.World.getEntityAt(loc) as RailStationaryStructure;
+            return WorldDefinition.World.GetEntityAt(loc) as RailStationaryStructure;
         }
         /// <summary>
         /// 

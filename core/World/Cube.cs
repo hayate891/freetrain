@@ -181,7 +181,7 @@ namespace FreeTrain.World
                 {
                     for (int y = y1; y < my; y++)
                     {
-                        if (WorldDefinition.World.getGroundLevel(x, y) != z1)
+                        if (WorldDefinition.World.GetGroundLevel(x, y) != z1)
                             return false;
                         if (WorldDefinition.World[x, y, z1] is MountainVoxel)
                             return false;

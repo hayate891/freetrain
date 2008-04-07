@@ -478,7 +478,7 @@ namespace FreeTrain.Views.Map
                 }
                 else
                 {
-                    int h = height - WorldDefinition.World.waterLevel;
+                    int h = height - WorldDefinition.World.WaterLevel;
                     if (h == 0) this.Text = "Water level";
                     //! if( h==0 )		this.Text = "地表";
                     else this.Text = h.ToString();

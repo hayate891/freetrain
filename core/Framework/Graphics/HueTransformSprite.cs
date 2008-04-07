@@ -67,7 +67,7 @@ namespace FreeTrain.Framework.Graphics
             pt.X -= offset.X;
             pt.Y -= offset.Y;
 
-            int idx = (WorldDefinition.World.viewOptions.useNightView) ? 1 : 0;
+            int idx = (WorldDefinition.World.ViewOptions.useNightView) ? 1 : 0;
 
             surface.bltHueTransform(pt, picture.surface, origin, size,
                 RedTarget, GreenTarget, BlueTarget);

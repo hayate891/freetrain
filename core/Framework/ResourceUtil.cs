@@ -182,7 +182,7 @@ namespace FreeTrain.Framework
         /// <returns></returns>
         public static ISprite getGroundChip(WorldDefinition w)
         {
-            if (w.clock.season != Season.Winter)
+            if (w.Clock.season != Season.Winter)
                 return groundChips[0];
             else
                 return groundChips[1];

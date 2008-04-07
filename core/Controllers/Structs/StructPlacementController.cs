@@ -64,7 +64,7 @@ namespace FreeTrain.Controllers.Structs
         protected StructPlacementController(StructureGroupGroup groupGroup)
         {
             InitializeComponent();
-            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(UpdatePreview);
+            WorldDefinition.World.ViewOptions.OnViewOptionChanged += new OptionChangedHandler(UpdatePreview);
             previewBitmap = null;
             // load station type list
             structType.DataSource = groupGroup;
@@ -77,7 +77,7 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
-            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(UpdatePreview);
+            WorldDefinition.World.ViewOptions.OnViewOptionChanged -= new OptionChangedHandler(UpdatePreview);
             if (disposing && components != null)
                 components.Dispose();
             base.Dispose(disposing);

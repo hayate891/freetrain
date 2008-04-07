@@ -98,7 +98,7 @@ namespace FreeTrain.Views
             get
             {
                 if (nightSpriteMode == NightSpriteMode.AlignClock)
-                    return WorldDefinition.World.clock.dayOrNight == DayNight.Night;
+                    return WorldDefinition.World.Clock.dayOrNight == DayNight.Night;
                 else
                     return nightSpriteMode == NightSpriteMode.AlwaysNight;
             }

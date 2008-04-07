@@ -361,7 +361,7 @@ namespace FreeTrain.Controllers.Rail
             else
             {
                 // it is always allowed to place it on or under ground 
-                if (WorldDefinition.World.getGroundLevel(loc) >= loc.z)
+                if (WorldDefinition.World.GetGroundLevel(loc) >= loc.z)
                     return true;
 
                 // if the new rail road is at the edge of existing rail,
@@ -454,7 +454,7 @@ namespace FreeTrain.Controllers.Rail
             {
                 if (i == 2) loc.z++;
 
-                for (int j = WorldDefinition.World.getGroundLevel(loc); j < Z; j++)
+                for (int j = WorldDefinition.World.GetGroundLevel(loc); j < Z; j++)
                     // TODO: ground level handling
                     BridgePierVoxel.defaultSprite.drawAlpha(
                         canvas, view.fromXYZToClient(loc.x, loc.y, j));

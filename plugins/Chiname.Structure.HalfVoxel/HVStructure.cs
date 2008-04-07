@@ -288,7 +288,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         public long totalLandPrice
-        { get { return WorldDefinition.World.landValue[baseLocation]; } }
+        { get { return WorldDefinition.World.LandValue[baseLocation]; } }
 
         /// <summary>
         /// 

@@ -213,7 +213,7 @@ namespace FreeTrain.World.Rail
 
             for (int i = 0; i < 4; i++)
             {
-                if (_base.z < WorldDefinition.World.getGroundLevel(_base))
+                if (_base.z < WorldDefinition.World.GetGroundLevel(_base))
                 {
                     new SlopeRailRoad(entity, TrafficVoxel.getOrCreate(
                         _base.x, _base.y, _base.z + (i / 2)),
@@ -267,7 +267,7 @@ namespace FreeTrain.World.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = WorldDefinition.World.getGroundLevel(location);
+                int glevel = WorldDefinition.World.GetGroundLevel(location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
             }
@@ -296,7 +296,7 @@ namespace FreeTrain.World.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = WorldDefinition.World.getGroundLevel(location);
+                int glevel = WorldDefinition.World.GetGroundLevel(location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
                 sprite = s;
@@ -363,7 +363,7 @@ namespace FreeTrain.World.Rail
                 _base += dir;
             }
 
-            return SLOPE_CONSTRUCTION_UNIT_COST * Math.Max(1, _base.z - WorldDefinition.World.waterLevel);
+            return SLOPE_CONSTRUCTION_UNIT_COST * Math.Max(1, _base.z - WorldDefinition.World.WaterLevel);
         }
         /// <summary>
         /// 
@@ -404,7 +404,7 @@ namespace FreeTrain.World.Rail
             loc += dir;
             if (Car.get(loc) != null) return 0;
 
-            return SLOPE_DESTRUCTION_UNIT_COST * Math.Max(1, loc.z - WorldDefinition.World.waterLevel);
+            return SLOPE_DESTRUCTION_UNIT_COST * Math.Max(1, loc.z - WorldDefinition.World.WaterLevel);
         }
 
         /// <summary>

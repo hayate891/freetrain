@@ -54,7 +54,7 @@ namespace FreeTrain.World.Accounting
             private long _dayTotal;
             private long _monthTotal;
             private long _yearTotal;
-            private readonly Clock clock = WorldDefinition.World.clock;
+            private readonly Clock clock = WorldDefinition.World.Clock;
 
             internal Recorder()
             {

@@ -119,7 +119,7 @@ namespace FreeTrain.World
         /// </summary>
         public void registerOneShot(ClockHandler handler, Time time)
         {
-            registerOneShot(handler, time - WorldDefinition.World.clock);
+            registerOneShot(handler, time - WorldDefinition.World.Clock);
         }
 
 

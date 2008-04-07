@@ -153,7 +153,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="cube"></param>
         protected override void onSelected(Cube cube)
         {
-            PThreeDimStructure s = WorldDefinition.World.getEntityAt(cube.corner) as PThreeDimStructure;
+            PThreeDimStructure s = WorldDefinition.World.GetEntityAt(cube.corner) as PThreeDimStructure;
             if (s == null || s.type != contrib)
             {
                 MessageBox.Show("Wrong type");

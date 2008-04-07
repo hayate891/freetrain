@@ -158,7 +158,7 @@ namespace FreeTrain.World.Rail
         public override bool canBeBuilt(Location from, Location to)
         {
             if (from == to) return false;
-            if (from.z < WorldDefinition.World.waterLevel) return false;	// below the water level
+            if (from.z < WorldDefinition.World.WaterLevel) return false;	// below the water level
 
             Debug.Assert(from.z == to.z);
 

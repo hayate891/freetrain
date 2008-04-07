@@ -126,7 +126,7 @@ namespace FreeTrain.World.Road.Accessory
 			if( BaseRoad.get(loc)!=null )	return true;
 
 			// or if we hit the ground
-			if( WorldDefinition.World.getGroundLevel(loc)>=loc.z )	return true;
+			if( WorldDefinition.World.GetGroundLevel(loc)>=loc.z )	return true;
 
 			return false;
 		}

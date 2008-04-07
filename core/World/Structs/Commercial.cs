@@ -94,7 +94,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return WorldDefinition.World.landValue[baseLocation + type.size / 2] * type.size.x * type.size.y;
+                return WorldDefinition.World.LandValue[baseLocation + type.size / 2] * type.size.x * type.size.y;
             }
         }
         /// <summary>
@@ -148,7 +148,7 @@ namespace FreeTrain.World.Structs
         /// </summary>
         public static Commercial get(Location loc)
         {
-            return WorldDefinition.World.getEntityAt(loc) as Commercial;
+            return WorldDefinition.World.GetEntityAt(loc) as Commercial;
         }
         /// <summary>
         /// 
