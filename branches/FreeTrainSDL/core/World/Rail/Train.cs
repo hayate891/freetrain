@@ -186,7 +186,7 @@ namespace FreeTrain.World.Rail
                 car.remove();
 
             // make sure that we don't have any pending event
-            WorldDefinition.World.clock.unregister(new ClockHandler(clockHandler));
+            WorldDefinition.World.Clock.unregister(new ClockHandler(clockHandler));
             State = TrainStates.Unplaced;
         }
 
@@ -299,7 +299,7 @@ namespace FreeTrain.World.Rail
 
         private void registerTimer(TimeLength time)
         {
-            WorldDefinition.World.clock.registerOneShot(new ClockHandler(clockHandler), time);
+            WorldDefinition.World.Clock.registerOneShot(new ClockHandler(clockHandler), time);
         }
 
         /// <summary> Counter that remembers the # of consecutive times this train is told to stop. </summary>
@@ -547,7 +547,7 @@ namespace FreeTrain.World.Rail
                 Location newLoc = state.location + go;
                 newLoc.z += rr.ZDiff(state.direction);
 
-                if (WorldDefinition.World.isBorderOfWorld(newLoc))
+                if (WorldDefinition.World.IsBorderOfWorld(newLoc))
                 {
                     // go outside the world
                     return new CarState.Outside(newLoc, go, OUTSIDE_COUNTER_INITIAL_VALUE);

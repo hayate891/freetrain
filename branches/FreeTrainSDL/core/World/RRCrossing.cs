@@ -140,11 +140,11 @@ namespace FreeTrain.World
 		}
 
 		private void registerTimer() {
-			int min = FLASH_FREQUENCY-(WorldDefinition.World.clock.minutes%FLASH_FREQUENCY);
+			int min = FLASH_FREQUENCY-(WorldDefinition.World.Clock.minutes%FLASH_FREQUENCY);
 			if(min==0)	min=FLASH_FREQUENCY;
 
 			if( currentState!=State.Open )	// register the handler while the Xing is closed.
-				WorldDefinition.World.clock.registerOneShot( new ClockHandler(followUp), TimeLength.fromMinutes(min) );
+				WorldDefinition.World.Clock.registerOneShot( new ClockHandler(followUp), TimeLength.fromMinutes(min) );
 		}
 
 		public void followUp() {
@@ -205,7 +205,7 @@ namespace FreeTrain.World
 				if( currentState!=State.Closed )
 					return (int)currentState;
 				else
-					return ((WorldDefinition.World.clock.minutes/FLASH_FREQUENCY)%2==0)?2:3;
+					return ((WorldDefinition.World.Clock.minutes/FLASH_FREQUENCY)%2==0)?2:3;
 			}
 		}
 

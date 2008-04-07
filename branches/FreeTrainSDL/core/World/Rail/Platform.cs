@@ -49,7 +49,7 @@ namespace FreeTrain.World.Rail
             this.name = string.Format("Platform {0,2:d}", iota++);
             //! this.name = string.Format("ホーム{0,2:d}",iota++);
             this.bellSound = DepartureBellContribution.DEFAULT;
-            WorldDefinition.World.clock.registerRepeated(new ClockHandler(onClockPerDay), TimeLength.ONEDAY);
+            WorldDefinition.World.Clock.registerRepeated(new ClockHandler(onClockPerDay), TimeLength.ONEDAY);
 
             // attach to the nearby station.
             foreach (IPlatformHost h in listHosts())
@@ -168,7 +168,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public virtual void remove()
         {
-            WorldDefinition.World.clock.unregister(new ClockHandler(onClockPerDay));
+            WorldDefinition.World.Clock.unregister(new ClockHandler(onClockPerDay));
             if (onEntityRemoved != null) onEntityRemoved(this, null);
         }
         /// <summary>

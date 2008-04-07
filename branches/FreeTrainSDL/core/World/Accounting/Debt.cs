@@ -41,7 +41,7 @@ namespace FreeTrain.World.Accounting
             this.genre = genre;
 
             manager.addDebt(this);
-            WorldDefinition.World.clock.registerOneShot(new ClockHandler(onDue), span);
+            WorldDefinition.World.Clock.registerOneShot(new ClockHandler(onDue), span);
         }
 
 
@@ -57,7 +57,7 @@ namespace FreeTrain.World.Accounting
         /// <summary> TimeLength before the due date </summary>
         public TimeLength span
         {
-            get { return due - WorldDefinition.World.clock; }
+            get { return due - WorldDefinition.World.Clock; }
         }
 
         /// <summary>
@@ -70,6 +70,6 @@ namespace FreeTrain.World.Accounting
             manager.removeDebt(this);
         }
 
-        private AccountManager manager { get { return WorldDefinition.World.account; } }
+        private AccountManager manager { get { return WorldDefinition.World.Account; } }
     }
 }

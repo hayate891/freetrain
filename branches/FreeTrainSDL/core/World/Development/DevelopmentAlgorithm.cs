@@ -151,10 +151,10 @@ namespace FreeTrain.World.Development
         /// </summary>
         private void doClock()
         {
-            Clock c = WorldDefinition.World.clock;
+            Clock c = WorldDefinition.World.Clock;
             if (c.hour == 0)
             {
-                foreach (Station s in WorldDefinition.World.stations)
+                foreach (Station s in WorldDefinition.World.Stations)
                 {
                     if (s.ScoreTrains > 0)
                     {
@@ -266,10 +266,10 @@ namespace FreeTrain.World.Development
                     {
                         if (strength <= 0)
                             break;
-                        Clock c = WorldDefinition.World.clock;
+                        Clock c = WorldDefinition.World.Clock;
                         if (c.hour < vie)
                             scaning = pickPlace(4);
-                        if (scaning != Location.Unplaced && WorldDefinition.World.isInsideWorld(scaning))
+                        if (scaning != Location.Unplaced && WorldDefinition.World.IsInsideWorld(scaning))
                             phase++;
                         else
                             strength += strength * (1 - F_StrDiffuse) / 7;
@@ -277,8 +277,8 @@ namespace FreeTrain.World.Development
                     break;
                 case Phase.SelectStruct1:
                     {
-                        Debug.Assert(WorldDefinition.World.isInsideWorld(scaning));
-                        int minVal = (int)(WorldDefinition.World.landValue[scaning] * F_LandPriceScale);
+                        Debug.Assert(WorldDefinition.World.IsInsideWorld(scaning));
+                        int minVal = (int)(WorldDefinition.World.LandValue[scaning] * F_LandPriceScale);
                         int maxVal = Math.Max(minVal + 15, (int)(minVal * 1.2));
                         //maxVal = Math.Max(maxVal,(int)Math.Pow(strength,F_MaxPricePower));
                         Debug.WriteLine(string.Format("target price: {0} to {1}", minVal, maxVal), "devalgo");
@@ -322,7 +322,7 @@ namespace FreeTrain.World.Development
                     {
                         //bool OK = true;
 
-                        if (WorldDefinition.World.isOutsideWorld(plan.cube) || !plan.cube.isOnGround)
+                        if (WorldDefinition.World.IsOutsideWorld(plan.cube) || !plan.cube.isOnGround)
                         {
                             phase = Phase.Start;
                             break;
@@ -330,7 +330,7 @@ namespace FreeTrain.World.Development
                         IEntity[] es = plan.cube.getEntities();
                         foreach (IEntity e in es)
                         {
-                            if (!IsReplaceable(e, WorldDefinition.World.landValue[scaning]))
+                            if (!IsReplaceable(e, WorldDefinition.World.LandValue[scaning]))
                             {
                                 strength += (int)Math.Pow(plan.value, 1.0 / F_MaxPricePower);
                                 phase = Phase.Start;
@@ -417,10 +417,10 @@ namespace FreeTrain.World.Development
                 // then randomly pick nearby voxel
                 loc.x = Rand(loc.x, amp);
                 loc.y = Rand(loc.y, amp);
-                loc.z = w.getGroundLevel(loc);
-                if (w.isOutsideWorld(loc))
+                loc.z = w.GetGroundLevel(loc);
+                if (w.IsOutsideWorld(loc))
                     continue;
-                if (loc.z < w.waterLevel) continue;// below water
+                if (loc.z < w.WaterLevel) continue;// below water
                 Voxel v = w[loc];
                 if (v != null)
                 {

@@ -77,14 +77,14 @@ namespace FreeTrain.World.Development
             WorldDefinition world = WorldDefinition.World;
             Set s = new Set();
 
-            if (z < world.waterLevel) return null; // underwater
+            if (z < world.WaterLevel) return null; // underwater
 
             for (int x = cube.x1; x < mx; x++)
             {
                 for (int y = cube.y1; y < my; y++)
                 {
 
-                    if (world.getGroundLevel(x, y) != z)
+                    if (world.GetGroundLevel(x, y) != z)
                         return null;	// not on the ground
 
                     Voxel v = world[x, y, z];
@@ -101,7 +101,7 @@ namespace FreeTrain.World.Development
                         }
                     }
 
-                    landValue += world.landValue[new Location(x, y, z)];
+                    landValue += world.LandValue[new Location(x, y, z)];
                 }
             }
 

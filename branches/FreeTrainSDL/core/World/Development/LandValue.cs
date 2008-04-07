@@ -44,7 +44,7 @@ namespace FreeTrain.World.Development
         /// <param name="w"></param>
         public LandValue(WorldDefinition w)
         {
-            w.otherObjects["{51CD7E24-4296-4043-B58D-A654AB71F121}"] = this;
+            w.OtherObjects["{51CD7E24-4296-4043-B58D-A654AB71F121}"] = this;
 
             H = w.Size.x;
             V = w.Size.y;
@@ -59,7 +59,7 @@ namespace FreeTrain.World.Development
 
             // register the event notification so that we can update rho correctly
             w.onVoxelChanged += new VoxelChangeListener(updateRho);
-            w.clock.registerRepeated(new ClockHandler(next), TimeLength.fromHours(UPDATE_FREQUENCY));
+            w.Clock.registerRepeated(new ClockHandler(next), TimeLength.fromHours(UPDATE_FREQUENCY));
         }
 
         /// <summary> "tempratures" for each (h,v) </summary>
@@ -210,7 +210,7 @@ namespace FreeTrain.World.Development
                     hasMountain = true;
             }
 
-            bool hasSea = WorldDefinition.World.getGroundLevelFromHV(h, v) < WorldDefinition.World.waterLevel;
+            bool hasSea = WorldDefinition.World.getGroundLevelFromHV(h, v) < WorldDefinition.World.WaterLevel;
 
             if (roadFound != null)
             {

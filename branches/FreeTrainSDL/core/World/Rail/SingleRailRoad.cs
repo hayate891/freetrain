@@ -142,8 +142,8 @@ namespace FreeTrain.World.Rail
         /// <param name="loc"></param>
         private static int calcRailRoadCost(Location loc, Direction d1, Direction d2)
         {
-            int waterLevel = WorldDefinition.World.waterLevel;
-            int glevel = WorldDefinition.World.getGroundLevel(loc);
+            int waterLevel = WorldDefinition.World.WaterLevel;
+            int glevel = WorldDefinition.World.GetGroundLevel(loc);
             //			int multiplier = Math.Max( loc.z-World.world.waterLevel, 1 );
             int multiplier = Math.Abs(loc.z - glevel) + 1;
 
@@ -308,7 +308,7 @@ namespace FreeTrain.World.Rail
                 here = here.toward(there);
             }
 
-            return cost * RAILROAD_DESTRUCTION_UNIT_COST * Math.Max(1, here.z - world.waterLevel);
+            return cost * RAILROAD_DESTRUCTION_UNIT_COST * Math.Max(1, here.z - world.WaterLevel);
         }
 
         /// <summary>

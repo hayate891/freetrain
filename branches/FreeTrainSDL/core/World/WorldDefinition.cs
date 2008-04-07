@@ -217,7 +217,16 @@ namespace FreeTrain.World
         }
 
         /// <summary>Clock object that controls the time of this world.</summary>
-        public readonly Clock clock = new Clock();
+        private readonly Clock clock = new Clock();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Clock Clock
+        {
+            get { return clock; }
+        } 
+
 
         /// <summary> Voxels in this World indexed by its position. </summary>
         private readonly SparseVoxelArray voxels;
@@ -232,27 +241,70 @@ namespace FreeTrain.World
         /// Water level. Voxels whose z axis is smaller than this 
         /// is considered as under-water.
         /// </summary>
-        public readonly byte waterLevel;
+        private readonly byte waterLevel;
+
         /// <summary>
         /// 
         /// </summary>
-        public readonly Accounting.AccountManager account = new Accounting.AccountManager();
+        public byte WaterLevel
+        {
+            get { return waterLevel; }
+        } 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly Accounting.AccountManager account = new Accounting.AccountManager();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Accounting.AccountManager Account
+        {
+            get { return account; }
+        } 
+
 
         /// <summary>
         /// Responsible for computing/maintaining land values for this world.
         /// </summary>
-        public readonly Development.LandValue landValue;
+        private readonly Development.LandValue landValue;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Development.LandValue LandValue
+        {
+            get { return landValue; }
+        } 
+
 
         /// <summary>
         /// Other objects associated to this world.
         /// </summary>
-        public readonly GlobalViewOptions viewOptions = new GlobalViewOptions();
+        private readonly GlobalViewOptions viewOptions = new GlobalViewOptions();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public GlobalViewOptions ViewOptions
+        {
+            get { return viewOptions; }
+        } 
+
 
         /// <summary>
         /// Other objects associated to this world.
         /// </summary>
-        public readonly IDictionary otherObjects = new Hashtable();
+        private readonly IDictionary otherObjects = new Hashtable();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public IDictionary OtherObjects
+        {
+            get { return otherObjects; }
+        } 
 
         #region coordination conversion methods
         /// <summary>
@@ -310,7 +362,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public Rectangle getBoundingBox(Location loc)
+        public Rectangle GetBoundingBox(Location loc)
         {
             Point topLeft = fromXYZToAB(loc);
             topLeft.Y -= 16;
@@ -323,27 +375,28 @@ namespace FreeTrain.World
         /// <param name="y"></param>
         /// <param name="z"></param>
         /// <returns></returns>
-        public Rectangle getBoundingBox(int x, int y, int z)
+        public Rectangle GetBoundingBox(int x, int y, int z)
         {
-            return getBoundingBox(new Location(x, y, z));
+            return GetBoundingBox(new Location(x, y, z));
         }
 
         #endregion
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="cube"></param>
         /// <returns></returns>
-        public bool isOutsideWorld(Cube cube)
+        public bool IsOutsideWorld(Cube cube)
         {
-            if (isOutsideWorld(new Location(cube.x1, cube.y1, cube.z1))) return true;
-            if (isOutsideWorld(new Location(cube.x2, cube.y1, cube.z1))) return true;
-            if (isOutsideWorld(new Location(cube.x1, cube.y2, cube.z1))) return true;
-            if (isOutsideWorld(new Location(cube.x2, cube.y2, cube.z1))) return true;
-            if (isOutsideWorld(new Location(cube.x1, cube.y1, cube.z2))) return true;
-            if (isOutsideWorld(new Location(cube.x2, cube.y1, cube.z2))) return true;
-            if (isOutsideWorld(new Location(cube.x1, cube.y2, cube.z2))) return true;
-            if (isOutsideWorld(new Location(cube.x2, cube.y2, cube.z2))) return true;
+            if (IsOutsideWorld(new Location(cube.x1, cube.y1, cube.z1))) return true;
+            if (IsOutsideWorld(new Location(cube.x2, cube.y1, cube.z1))) return true;
+            if (IsOutsideWorld(new Location(cube.x1, cube.y2, cube.z1))) return true;
+            if (IsOutsideWorld(new Location(cube.x2, cube.y2, cube.z1))) return true;
+            if (IsOutsideWorld(new Location(cube.x1, cube.y1, cube.z2))) return true;
+            if (IsOutsideWorld(new Location(cube.x2, cube.y1, cube.z2))) return true;
+            if (IsOutsideWorld(new Location(cube.x1, cube.y2, cube.z2))) return true;
+            if (IsOutsideWorld(new Location(cube.x2, cube.y2, cube.z2))) return true;
             return false;
         }
         /// <summary>
@@ -351,15 +404,15 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="cube"></param>
         /// <returns></returns>
-        public bool isInsideWorld(Cube cube)
+        public bool IsInsideWorld(Cube cube)
         {
-            return !isOutsideWorld(cube);
+            return !IsOutsideWorld(cube);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public System.Drawing.Size realSize()
+        public System.Drawing.Size RealSize()
         {
             return new Size(this.size.x * 32, this.size.y * 16);
         }
@@ -367,7 +420,7 @@ namespace FreeTrain.World
         /// <summary>
         /// Returns true only when the given location is inside the world.
         /// </summary>
-        public bool isInsideWorld(Location loc)
+        public bool IsInsideWorld(Location loc)
         {
             int h, v;
             toHV(loc.x, loc.y, out h, out v);
@@ -379,15 +432,15 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public bool isOutsideWorld(Location loc)
+        public bool IsOutsideWorld(Location loc)
         {
-            return !isInsideWorld(loc);
+            return !IsInsideWorld(loc);
         }
 
         /// <summary>
         /// Returns true if the given location is outside the visible region.
         /// </summary>
-        public bool isBorderOfWorld(Location loc)
+        public bool IsBorderOfWorld(Location loc)
         {
             int h, v;
             toHV(loc.x, loc.y, out h, out v);
@@ -438,7 +491,7 @@ namespace FreeTrain.World
         /// 
         /// </summary>
         /// <param name="w"></param>
-        public static void setWorld(WorldDefinition w)
+        public static void SetWorld(WorldDefinition w)
         {
             world = w;
             if (onNewWorld != null)
@@ -449,7 +502,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public IEntity getEntityAt(Location loc)
+        public IEntity GetEntityAt(Location loc)
         {
             Voxel v = this[loc];
             if (v == null) return null;
@@ -461,9 +514,9 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        public int getGroundLevel(Location loc)
+        public int GetGroundLevel(Location loc)
         {
-            return getGroundLevel(loc.x, loc.y);
+            return GetGroundLevel(loc.x, loc.y);
         }
         /// <summary>
         /// 
@@ -471,7 +524,7 @@ namespace FreeTrain.World
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public int getGroundLevel(int x, int y)
+        public int GetGroundLevel(int x, int y)
         {
             int xx = x - (size.y - 1) / 2; // move the origin of x-axis
             int h = (xx + y) >> 1;	// note that x>>1 is NOT equal to x/2.
@@ -504,6 +557,7 @@ namespace FreeTrain.World
         {
             raiseGround(loc.x, loc.y);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -521,6 +575,7 @@ namespace FreeTrain.World
             OnVoxelUpdated(new Location(x, y, groundLevels[h, v] - 1));
             OnVoxelUpdated(new Location(x, y, groundLevels[h, v]));
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -629,6 +684,7 @@ namespace FreeTrain.World
             public int entityValue { get { return 0; } }
 
             #endregion
+
             /// <summary>
             /// 
             /// </summary>
@@ -777,7 +833,9 @@ namespace FreeTrain.World
         public void OnAllVoxelUpdated()
         {
             foreach (IVoxelOutlookListener v in voxelOutlookListeners)
+            {
                 v.OnUpdateAllVoxels();
+            }
         }
 
         /// <summary>
@@ -787,23 +845,25 @@ namespace FreeTrain.World
         public void OnVoxelUpdated(Cube cube)
         {
             foreach (IVoxelOutlookListener v in voxelOutlookListeners)
+            {
                 v.OnUpdateVoxel(cube);
+            }
         }
-
-
 
         /// <summary> Fired when a voxel is added/removed.</summary>
         public event VoxelChangeListener onVoxelChanged;
 
-
-
-
-
-
-
-
         /// <summary> Root train group that holds all the trains in its descendants. </summary>
-        public readonly TrainGroup rootTrainGroup = new TrainGroup(null, "My Trains");
+        private readonly TrainGroup rootTrainGroup = new TrainGroup(null, "My Trains");
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TrainGroup RootTrainGroup
+        {
+            get { return rootTrainGroup; }
+        } 
+
         //! public readonly TrainGroup rootTrainGroup = new TrainGroup(null,"保有する列車");
 
         /// <summary>
@@ -832,8 +892,15 @@ namespace FreeTrain.World
         }
 
         /// <summary> All TrainControllers that exist in the World.</summary>
-        public readonly TrainControllerCollection trainControllers = new TrainControllerCollection();
+        private readonly TrainControllerCollection trainControllers = new TrainControllerCollection();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public TrainControllerCollection TrainControllers
+        {
+            get { return trainControllers; }
+        } 
 
 
         /// <summary>
@@ -872,7 +939,15 @@ namespace FreeTrain.World
         }
 
         /// <summary> All stations that exist in this orld. </summary>
-        public readonly StationCollection stations = new StationCollection();
+        private readonly StationCollection stations = new StationCollection();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public StationCollection Stations
+        {
+            get { return stations; }
+        } 
 
         /// <summary>
         /// 
@@ -922,7 +997,6 @@ namespace FreeTrain.World
             // do nothins;
         }
     }
-
 
     /// <summary>
     /// Receives notification of a voxel addition/removal.

@@ -122,7 +122,7 @@ namespace FreeTrain.World.Structs
 		public static bool isOnTheGround( Location loc, Distance sz ) {
 			for( int y=0; y<sz.y; y++ )
 				for( int x=0; x<sz.x; x++ ) {
-					if( WorldDefinition.World.getGroundLevel(loc.x+x,loc.y+y)!=loc.z )
+					if( WorldDefinition.World.GetGroundLevel(loc.x+x,loc.y+y)!=loc.z )
 						return false;
 					if(WorldDefinition.World[loc.x+x,loc.y+y,loc.z] is MountainVoxel)
 						return false;

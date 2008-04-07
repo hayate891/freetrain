@@ -244,7 +244,7 @@ namespace FreeTrain.Controllers.Land
                     if (v == null)
                     {
                         // buy it
-                        AccountGenre.Subsidiaries.Spend(WorldDefinition.World.landValue[new Location(x, y, z)]);
+                        AccountGenre.Subsidiaries.Spend(WorldDefinition.World.LandValue[new Location(x, y, z)]);
                         new LandPropertyVoxel(new Location(x, y, z));
                     }
                 }
@@ -277,7 +277,7 @@ namespace FreeTrain.Controllers.Land
 
                     if (v == null)
                         // cost for the land
-                        r += WorldDefinition.World.landValue[new Location(x, y, z)];
+                        r += WorldDefinition.World.LandValue[new Location(x, y, z)];
                 }
             }
             return r;

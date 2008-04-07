@@ -127,7 +127,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             // Windows フォーム デザイナ サポートに必要です。
             //
             InitializeComponent();
-            WorldDefinition.World.viewOptions.OnViewOptionChanged += new OptionChangedHandler(this.redrawPreview);
+            WorldDefinition.World.ViewOptions.OnViewOptionChanged += new OptionChangedHandler(this.redrawPreview);
             OnNodeSelected(CategoryTreeWnd.getSelectedCategory(), 0);
             if (typeBox.Items.Count != 0)
                 typeBox_SelectedIndexChanged(this, null);
@@ -376,7 +376,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// </summary>
         protected override void Dispose(bool disposing)
         {
-            WorldDefinition.World.viewOptions.OnViewOptionChanged -= new OptionChangedHandler(this.redrawPreview);
+            WorldDefinition.World.ViewOptions.OnViewOptionChanged -= new OptionChangedHandler(this.redrawPreview);
             if (disposing)
             {
                 if (components != null)

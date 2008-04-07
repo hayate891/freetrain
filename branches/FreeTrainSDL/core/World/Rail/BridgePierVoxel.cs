@@ -82,7 +82,7 @@ namespace FreeTrain.World.Rail
                     return;
 
             // if we can, do it
-            for (int z = WorldDefinition.World.getGroundLevel(loc); z < loc.z; z++)
+            for (int z = WorldDefinition.World.GetGroundLevel(loc); z < loc.z; z++)
             {
                 Activator.CreateInstance(
                     (z == loc.z - 1) ? topBridgeType : otherBridgeType,

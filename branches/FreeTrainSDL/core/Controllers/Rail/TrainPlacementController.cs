@@ -66,7 +66,7 @@ namespace FreeTrain.Controllers.Rail
             this.label1.Text = Translation.GetString("CONTROLLER_TRAIN_NAME");
             this.Text = Translation.GetString("CONTROLLER_TRAIN_PLACE");
 
-            controllerCombo.DataSource = WorldDefinition.World.trainControllers;
+            controllerCombo.DataSource = WorldDefinition.World.TrainControllers;
             tree.ItemMoved = new ItemMovedHandler(onItemDropped);
 
             //this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
@@ -99,9 +99,9 @@ namespace FreeTrain.Controllers.Rail
             tree.BeginUpdate();
             tree.Nodes.Clear();
 
-            TreeNode root = createNode(WorldDefinition.World.rootTrainGroup);
+            TreeNode root = createNode(WorldDefinition.World.RootTrainGroup);
             tree.Nodes.Add(root);
-            populate(WorldDefinition.World.rootTrainGroup, root.Nodes);
+            populate(WorldDefinition.World.RootTrainGroup, root.Nodes);
 
             tree.ExpandAll();
             tree.EndUpdate();

@@ -122,7 +122,7 @@ namespace FreeTrain.World.Rail
                         return false;	// rail is running 
                 }
 
-                if (WorldDefinition.World.getGroundLevel(here) >= here.z)
+                if (WorldDefinition.World.GetGroundLevel(here) >= here.z)
                     return false;	// must be all raised 
 
                 if (here == to) return true;
