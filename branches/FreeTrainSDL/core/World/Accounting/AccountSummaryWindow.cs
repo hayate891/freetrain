@@ -536,7 +536,7 @@ namespace FreeTrain.World.Accounting
                 {
                     _genre = new string[value.Length];
                     for (int i = 0; i < value.Length; i++)
-                        _genre[i] = value[i].id;
+                        _genre[i] = value[i].Id;
                     save();
                 }
             }

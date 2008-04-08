@@ -63,7 +63,7 @@ namespace FreeTrain.Contributions.Land
         /// <param name="loc2"></param>
         protected override void onRectSelected(Location loc1, Location loc2)
         {
-            contrib.create(loc1, loc2, true);
+            contrib.Create(loc1, loc2, true);
         }
         /// <summary>
         /// 
@@ -83,7 +83,7 @@ namespace FreeTrain.Contributions.Land
             if (loc.z != currentLoc.z) return;
 
             if (anchor != UNPLACED && loc.inBetween(anchor, currentLoc))
-                spriteBuilder().drawAlpha(canvas.Surface, pt);
+                spriteBuilder().DrawAlpha(canvas.Surface, pt);
         }
         /// <summary>
         /// 

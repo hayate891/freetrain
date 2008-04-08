@@ -279,7 +279,7 @@ namespace FreeTrain.Controllers.Rail
             Location loc2 = baseLoc;
             if (currentMode == Mode.Station)
             {
-                loc2 += selectedStation.size;
+                loc2 += selectedStation.Size;
             }
             else
             {
@@ -309,13 +309,13 @@ namespace FreeTrain.Controllers.Rail
                 case Mode.Station:
                     if (isPlacing)
                     {
-                        if (!selectedStation.canBeBuilt(loc, ControlMode.Player))
+                        if (!selectedStation.CanBeBuilt(loc, ControlMode.Player))
                         {
                             MessageBox.Show(Translation.GetString("CONSTRUCTION_CANNOT_BUILD"));
                         }
                         else
                         {
-                            selectedStation.create(loc, true);
+                            selectedStation.Create(loc, true);
                         }
                     }
                     else
@@ -406,7 +406,7 @@ namespace FreeTrain.Controllers.Rail
             {
                 case Mode.Station:
                     if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
-                        alphaSprites.getSprite(loc - baseLoc).drawAlpha(canvas, pt);
+                        alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas, pt);
                     break;
 
                 case Mode.ThinPlatform:
@@ -415,7 +415,7 @@ namespace FreeTrain.Controllers.Rail
                     if (direction == Direction.WEST) loc.x += length - 1;
 
                     if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
-                        alphaSprites.getSprite(loc - baseLoc).drawAlpha(canvas, pt);
+                        alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas, pt);
                     break;
 
                 case Mode.FatPlatform:
@@ -443,14 +443,14 @@ namespace FreeTrain.Controllers.Rail
                         int y = ptLT.y;
                         if ((loc.y == y || loc.y == y + 1)
                         && ptLT.x <= loc.x && loc.x < ptLT.x + length)
-                            alphaSprites.sprites[loc.x - ptLT.x, loc.y - y, 0].drawAlpha(canvas, pt);
+                            alphaSprites.sprites[loc.x - ptLT.x, loc.y - y, 0].DrawAlpha(canvas, pt);
                     }
                     else
                     {
                         int x = ptLT.x;
                         if ((loc.x == x || loc.x == x + 1)
                         && ptLT.y <= loc.y && loc.y < ptLT.y + length)
-                            alphaSprites.sprites[loc.x - x, loc.y - ptLT.y, 0].drawAlpha(canvas, pt);
+                            alphaSprites.sprites[loc.x - x, loc.y - ptLT.y, 0].DrawAlpha(canvas, pt);
                     }
                     break;
             }
@@ -489,8 +489,8 @@ namespace FreeTrain.Controllers.Rail
             }
             else
             {
-                drawer = new PreviewDrawer(stationPicture.ClientSize, selectedStation.size);
-                drawer.drawCenter(selectedStation.sprites);
+                drawer = new PreviewDrawer(stationPicture.ClientSize, selectedStation.Size);
+                drawer.drawCenter(selectedStation.Sprites);
             }
 
             if (stationPreviewBitmap != null) stationPreviewBitmap.Dispose();
@@ -556,7 +556,7 @@ namespace FreeTrain.Controllers.Rail
             {
                 case Mode.Station:
                     // builds a new alpha blended preview
-                    alphas = selectedStation.sprites;
+                    alphas = selectedStation.Sprites;
                     break;
 
                 case Mode.ThinPlatform:

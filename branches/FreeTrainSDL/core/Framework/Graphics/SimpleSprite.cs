@@ -43,75 +43,85 @@ namespace FreeTrain.Framework.Graphics
         public SimpleSprite(Picture _picture, Point _offset, Point _origin, Size _size)
         {
             this.picture = _picture;
-            this._offset = _offset;
+            this.offset = _offset;
             this.origin = _origin;
             Debug.Assert(_size.Height != 0 && _size.Width != 0);
-            this._size = _size;
+            this.size = _size;
         }
 
 
         /// <summary>
         /// Surface that contains the image.
         /// </summary>
-        public Picture picture;
+        private Picture picture;
 
         /// <summary>
-        /// The point in the image that will be aligned to
-        /// the left-top corner of a voxel.
+        /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected readonly Point _offset;
+        public Picture Picture
+        {
+            get { return picture; }
+            set { picture = value; }
+        }
+
+        Size size;
+        Point offset;
 
         /// <summary>
         /// The area of the image to be drawn.
         /// </summary>
-        protected readonly Point origin;
+        Point origin;
+
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected readonly Size _size;
+        public Point Origin
+        {
+            get { return origin; }
+            set { origin = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
-        public virtual void draw(Surface surface, Point pt)
+        public virtual void Draw(Surface surface, Point pt)
         {
-            pt.X -= _offset.X;
-            pt.Y -= _offset.Y;
-            surface.blt(pt, picture.surface, origin, size);
+            pt.X -= offset.X;
+            pt.Y -= offset.Y;
+            surface.blt(pt, picture.surface, origin, Size);
         }
 
         /// <summary>
         /// Draws the shape of this sprite in the specified color.
         /// </summary>
-        public virtual void drawShape(Surface surface, Point pt, Color color)
+        public virtual void DrawShape(Surface surface, Point pt, Color color)
         {
-            pt.X -= _offset.X;
-            pt.Y -= _offset.Y;
-            surface.bltShape(pt, picture.surface, origin, _size, color);
+            pt.X -= offset.X;
+            pt.Y -= offset.Y;
+            surface.bltShape(pt, picture.surface, origin, size, color);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
-        public virtual void drawAlpha(Surface surface, Point pt)
+        public virtual void DrawAlpha(Surface surface, Point pt)
         {
-            pt.X -= _offset.X;
-            pt.Y -= _offset.Y;
-            surface.bltAlpha(pt, picture.surface, origin, _size);
+            pt.X -= offset.X;
+            pt.Y -= offset.Y;
+            surface.bltAlpha(pt, picture.surface, origin, size);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public Size size { get { return _size; } }
+        public Size Size { get { return size; } }
         /// <summary>
         /// 
         /// </summary>
-        public Point offset { get { return _offset; } }
+        public Point Offset { get { return offset; } }
         /// <summary>
         /// 
         /// </summary>
@@ -135,7 +145,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public override ISprite createSprite(Picture picture, Point offset, Point origin, Size size)
+        public override ISprite CreateSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new SimpleSprite(picture, offset, origin, size);
         }
@@ -157,7 +167,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        public override SpriteFactory createSpriteFactory(XmlElement e)
+        public override SpriteFactory CreateSpriteFactory(XmlElement e)
         {
             return new SimpleSpriteFactory();
         }

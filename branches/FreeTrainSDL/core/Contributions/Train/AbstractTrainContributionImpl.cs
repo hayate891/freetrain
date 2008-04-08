@@ -51,17 +51,17 @@ namespace FreeTrain.Contributions.Train
             switch (speedStr)
             {
                 case "slow":
-                    _minutesPerVoxel = 4; break;
+                    minutesPerVoxel = 4; break;
                 case "medium":
-                    _minutesPerVoxel = 3; break;
+                    minutesPerVoxel = 3; break;
                 case "fast":
-                    _minutesPerVoxel = 2; break;
+                    minutesPerVoxel = 2; break;
                 case "superb":
-                    _minutesPerVoxel = 1; break;
+                    minutesPerVoxel = 1; break;
                 default:
                     try
                     {
-                        _minutesPerVoxel = int.Parse(speedStr);
+                        minutesPerVoxel = int.Parse(speedStr);
                     }
                     catch (Exception)
                     {
@@ -74,37 +74,37 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        public override string name { get { return _typeName + " " + _nickName; } }
+        public override string Name { get { return _typeName + " " + _nickName; } }
 
         private readonly string _nickName;
         /// <summary>
         /// 
         /// </summary>
-        public override string nickName { get { return _nickName; } }
+        public override string NickName { get { return _nickName; } }
 
         private readonly string _typeName;
         /// <summary>
         /// 
         /// </summary>
-        public override string typeName { get { return _typeName; } }
+        public override string TypeName { get { return _typeName; } }
 
         private readonly string _author;
         /// <summary>
         /// 
         /// </summary>
-        public override string author { get { return _author; } }
+        public override string Author { get { return _author; } }
 
         private readonly string _companyName;
         /// <summary>
         /// 
         /// </summary>
-        public override string companyName { get { return _companyName; } }
+        public override string CompanyName { get { return _companyName; } }
 
         private readonly string _description;
         /// <summary>
         /// 
         /// </summary>
-        public override string description { get { return _description; } }
+        public override string Description { get { return _description; } }
 
         private readonly int _price;
         /// <summary>
@@ -112,31 +112,24 @@ namespace FreeTrain.Contributions.Train
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
-        public override int price(int length) { return _price * length; }
+        public override int Price(int length) { return _price * length; }
 
-        private readonly int _minutesPerVoxel;
+        private readonly int minutesPerVoxel;
         /// <summary>
         ///
         /// </summary>
-        public override int minutesPerVoxel { get { return _minutesPerVoxel; } }
-        /// <summary>
-        /// 
-        /// 
-        /// </summary>
-        [CLSCompliant(false)]
-        public readonly int _fare = 600;	// TODO
+        public override int MinutesPerVoxel { get { return minutesPerVoxel; } }
+
+        readonly int fare = 600;	// TODO
         /// <summary>
         /// 
         /// </summary>
-        public override int fare { get { return _fare; } }
+        public override int Fare { get { return fare; } }
+
+        readonly int maxlength = 3;	// TODO
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        public readonly int _maxlength = 3;	// TODO
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int maxLength { get { return _maxlength; } }
+        public override int MaxLength { get { return maxlength; } }
     }
 }

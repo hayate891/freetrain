@@ -37,62 +37,62 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_id"></param>
-        protected TrainContribution(string _id) : base("train", _id) { }
+        /// <param name="id"></param>
+        protected TrainContribution(string id) : base("train", id) { }
 
         /// <summary>Display name of this train type, such as "series 01500 Blue Line"</summary>
-        public abstract string name { get; }
+        public abstract string Name { get; }
 
         /// <summary>nick name of train, such as "Blue Line"</summary>
-        public abstract string nickName { get; }
+        public abstract string NickName { get; }
 
         /// <summary>Author who created this contribution.</summary>
-        public abstract string author { get; }
+        public abstract string Author { get; }
 
         /// <summary>Company name that operates this train, such as "MBTA".</summary>
-        public abstract string companyName { get; }
+        public abstract string CompanyName { get; }
 
         /// <summary>Type name of train, such as "series 01500"</summary>
-        public abstract string typeName { get; }
+        public abstract string TypeName { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public abstract string description { get; }
+        public abstract string Description { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public abstract int maxLength { get; }
+        public abstract int MaxLength { get; }
 
         /// <summary>
         /// 
         /// 
         /// </summary>
-        public abstract int minLength { get; }
+        public abstract int MinLength { get; }
 
         /// <summary>Price of the train .</summary>
-        public abstract int price(int length);
+        public abstract int Price(int length);
 
         /// <summary>Inverse of speed. # of minutes to go for one pixel.</summary>
-        public abstract int minutesPerVoxel { get; }
+        public abstract int MinutesPerVoxel { get; }
 
         /// <summary> Fare of this train. </summary>
-        public abstract int fare { get; }
+        public abstract int Fare { get; }
 
         /// <summary>
         /// Creates a new train by designating TrainCarContributions for each car.
         /// </summary>
-        public abstract TrainCarContribution[] create(int length);
+        public abstract TrainCarContribution[] Create(int length);
 
         /// <summary>
         /// 
         /// </summary>
-        public string speedDisplayName
+        public string SpeedDisplayName
         {
             get
             {
-                switch (minutesPerVoxel)
+                switch (MinutesPerVoxel)
                 {
                     case 1: return "Highest";
                     case 2: return "High";
@@ -112,12 +112,12 @@ namespace FreeTrain.Contributions.Train
         /// 
         /// </summary>
         /// <returns></returns>
-        public override string ToString() { return name; }
+        public override string ToString() { return Name; }
 
         /// <summary>
         /// Builds a nice preview of a train.
         /// </summary>
-        public PreviewDrawer createPreview(Size pixelSize, int trainlength)
+        public PreviewDrawer CreatePreview(Size pixelSize, int trainlength)
         {
             PreviewDrawer pd = new PreviewDrawer(pixelSize, new Size(1, 3), 0);
 
@@ -135,7 +135,7 @@ namespace FreeTrain.Contributions.Train
                 pd.draw(RailPattern.get(Direction.NORTHWEST, Direction.SOUTHEAST), x, x);
             }
 
-            TrainCarContribution[] cars = create(trainlength);
+            TrainCarContribution[] cars = Create(trainlength);
             /*if( cars==null ) {
                 for( int i=6; cars==null && i<15; i++ )
                     cars = create(i);
@@ -161,7 +161,7 @@ namespace FreeTrain.Contributions.Train
                     }
 
                     Point pt = pd.getPoint(pos[i * 2], pos[i * 2 + 1]);
-                    cars[i].draw(pd.surface,
+                    cars[i].Draw(pd.surface,
                         new Point(pt.X + offset[i * 2], pt.Y + offset[i * 2 + 1] - 9), angle[i]);
                 }
             }

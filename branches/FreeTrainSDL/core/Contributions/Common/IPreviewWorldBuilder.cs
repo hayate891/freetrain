@@ -33,9 +33,9 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="minsizePixel"></param>
+        /// <param name="minSizePixel"></param>
         /// <param name="options"></param>
         /// <returns></returns>
-        WorldDefinition CreatePreviewWorld(Size minsizePixel, IDictionary options);
+        WorldDefinition CreatePreviewWorld(Size minSizePixel, IDictionary options);
     }
 }

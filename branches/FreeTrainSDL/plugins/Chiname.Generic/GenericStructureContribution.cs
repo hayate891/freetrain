@@ -305,7 +305,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="name"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        protected override StructureGroup getGroup(string name)
+        protected override StructureGroup GetGroup(string name)
         {
             if (_group == null)
                 _group = new StructureGroup("GenericStructure");
@@ -319,13 +319,13 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             XmlNode xn = e.SelectSingleNode("structure");
             if (xn != null)
-                categories = new StructCategories(xn, this.id);
+                categories = new StructCategories(xn, this.Id);
             else
                 categories = new StructCategories();
 
             if (categories.Count == 0)
             {
-                StructCategory.Root.Entries.Add(this.id);
+                StructCategory.Root.Entries.Add(this.Id);
                 categories.Add(StructCategory.Root);
             }
 
@@ -422,7 +422,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             {
                 for (int j = 0; j < _dirMax; j++)
                 {
-                    e.Attributes["id"].Value = this.id + "-" + i + ":" + j;
+                    e.Attributes["id"].Value = this.Id + "-" + i + ":" + j;
                     XmlNode temp = ((XmlNode)spriteNodes[j]).Clone();
                     if (parseDirection(temp, j) == 0 && defaultDir > j)
                         defaultDir = j;

@@ -77,7 +77,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="size"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override ISprite createSprite(Picture picture, Point offset, Point origin, Size size)
+        public override ISprite CreateSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new SimpleSprite(picture, offset, origin, size);
         }
@@ -158,7 +158,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="e"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override SpriteFactory createSpriteFactory(XmlElement e)
+        public override SpriteFactory CreateSpriteFactory(XmlElement e)
         {
             return new HueShiftSpriteFactory(e);
         }

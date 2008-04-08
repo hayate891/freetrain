@@ -49,39 +49,30 @@ namespace FreeTrain.Contributions.Land
         {
             XmlNode gridNode = e.SelectSingleNode("grid");
             if (gridNode == null)
-                _grid = new Size(1, 1);
+                grid = new Size(1, 1);
             else
-                _grid = XmlUtil.ParseSize(gridNode.InnerText);
+                grid = XmlUtil.ParseSize(gridNode.InnerText);
 
-            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+            this.Price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
         }
 
-        private readonly Size _grid;
-        /// <summary>
-        /// 
-        /// </summary>
-        public Size Grid { get { return _grid; } }
+        private readonly Size grid;
 
-        /// <summary> Price of the land per voxel. </summary>
-        [CLSCompliant(false)]
-        protected readonly int _price;
         /// <summary>
         /// 
         /// </summary>
-        public override int Price { get { return _price; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        public override double PricePerArea { get { return _price; } }
+        public Size Grid { get { return grid; } }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        protected override StructureGroup getGroup(string name)
+        protected override StructureGroup GetGroup(string name)
         {
             return (StructureGroup)PluginManager.theInstance.landBuilderGroup[name];
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -91,12 +82,12 @@ namespace FreeTrain.Contributions.Land
         /// <param name="y2"></param>
         /// <param name="z"></param>
         /// <param name="owned"></param>
-        public abstract void create(int x1, int y1, int x2, int y2, int z, bool owned);
+        public abstract void Create(int x1, int y1, int x2, int y2, int z, bool owned);
 
         /// <summary>
         /// Fills the specified region with lands.
         /// </summary>
-        public void create(Location loc1, Location loc2, bool owned)
+        public void Create(Location loc1, Location loc2, bool owned)
         {
             Debug.Assert(loc1.z == loc2.z);
             int z = loc1.z;
@@ -105,37 +96,38 @@ namespace FreeTrain.Contributions.Land
             int wx, wy;
             if (loc1.x > loc2.x)
             {
-                wx = Math.Max(loc1.x - loc2.x, _grid.Width - 1);
+                wx = Math.Max(loc1.x - loc2.x, grid.Width - 1);
                 maxx = loc1.x;
-                minx = maxx - wx + wx % _grid.Width;
+                minx = maxx - wx + wx % grid.Width;
             }
             else
             {
-                wx = Math.Max(loc2.x - loc1.x, _grid.Width - 1);
+                wx = Math.Max(loc2.x - loc1.x, grid.Width - 1);
                 minx = loc1.x;
-                maxx = minx + wx - wx % _grid.Width;
+                maxx = minx + wx - wx % grid.Width;
             }
             if (loc1.y > loc2.y)
             {
-                wy = Math.Max(loc1.y - loc2.y, _grid.Height - 1);
+                wy = Math.Max(loc1.y - loc2.y, grid.Height - 1);
                 maxy = loc1.y;
-                miny = maxy - wy + wy % _grid.Height;
+                miny = maxy - wy + wy % grid.Height;
             }
             else
             {
-                wy = Math.Max(loc2.y - loc1.y, _grid.Height - 1);
+                wy = Math.Max(loc2.y - loc1.y, grid.Height - 1);
                 miny = loc1.y;
-                maxy = miny + wy - wy % _grid.Height;
+                maxy = miny + wy - wy % grid.Height;
             }
 
-            create(minx, miny, maxx, maxy, z, owned);
+            Create(minx, miny, maxx, maxy, z, owned);
         }
 
         /// <summary> Creates a single patch. </summary>
-        public void create(Location loc, bool owned)
+        public void Create(Location loc, bool owned)
         {
-            create(loc, loc, owned);
+            Create(loc, loc, owned);
         }
+
         /// <summary>
         /// 
         /// </summary>

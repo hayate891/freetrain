@@ -76,7 +76,7 @@ namespace FreeTrain.Views
             drawer.Draw(offscreenSurface, new Point(0, 0));
             for (int x = 0; x < canvasSize.Width; x += spriteSet.imageSize.Width)
                 for (int y = 0; y < canvasSize.Height; y += spriteSet.imageSize.Height)
-                    spriteSet.overlayImages[currentFrame].draw(offscreenSurface, new Point(x, y));
+                    spriteSet.overlayImages[currentFrame].Draw(offscreenSurface, new Point(x, y));
 
             target.blt(pt, offscreenSurface);
         }

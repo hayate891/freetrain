@@ -324,7 +324,7 @@ namespace FreeTrain.Controllers.Rail
             if (tag != null && (bool)tag && loc.inBetween(anchor, location))
             {
                 PassagewayRail.getFloatingSprite(anchor.getDirectionTo(location))
-                    .drawAlpha(canvas.Surface, pt);
+                    .DrawAlpha(canvas.Surface, pt);
             }
         }
         /// <summary>

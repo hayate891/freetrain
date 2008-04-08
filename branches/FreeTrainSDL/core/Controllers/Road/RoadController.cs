@@ -66,7 +66,7 @@ namespace FreeTrain.Controllers.Road
         /// <param name="pt"></param>
         protected void Draw(Direction d, DrawContext canvas, Point pt)
         {
-            ResourceUtil.emptyChip.drawShape(canvas.Surface, pt, Color.Blue);
+            ResourceUtil.emptyChip.DrawShape(canvas.Surface, pt, Color.Blue);
             //			RoadPattern.getStraight(d).drawAlpha( canvas.surface, pt );
         }
 
@@ -128,7 +128,7 @@ namespace FreeTrain.Controllers.Road
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(124, 32);
             this.description.TabIndex = 9;
-            this.description.Text = currentContrib.oneLineDescription;
+            this.description.Text = currentContrib.OneLineDescription;
             this.description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip.SetToolTip(this.description, this.description.Text);
             // 
@@ -194,7 +194,7 @@ namespace FreeTrain.Controllers.Road
                 {
                     RoadContribution rc = contribs[idx];
                     //string[] path = rc.name.Split(new char[]{'(',')','i','j','/','\\'});
-                    string[] path = rc.name.Split(new char[] { '(', ')', '/', '\\' });
+                    string[] path = rc.Name.Split(new char[] { '(', ')', '/', '\\' });
                     TreeNodeCollection parent = contribTree.Nodes;
                     TreeNode node = null;
                     int m = path.Length - 1;
@@ -243,11 +243,11 @@ namespace FreeTrain.Controllers.Road
             if (currentContrib == lastValidNode.Tag)
                 return;
             currentContrib = (RoadContribution)lastValidNode.Tag;
-            description.Text = currentContrib.oneLineDescription;
+            description.Text = currentContrib.OneLineDescription;
             level.Text = ToStyleDescription(currentContrib.style);
             toolTip.SetToolTip(this.description, this.description.Text);
             currentContrib.PreviewPatternIdx = currentPattern;
-            this.Text = type.name;
+            this.Text = type.Name;
             UpdatePreview();
         }
 

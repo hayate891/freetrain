@@ -83,7 +83,7 @@ namespace FreeTrain.World.Land.VinylHouse
         public override void draw(DrawContext surface, Point pt, int heightCutDiff)
         {
             // always draw it regardless of the height cut
-            contrib.sprites[index].draw(surface.Surface, pt);
+            contrib.Sprites[index].Draw(surface.Surface, pt);
         }
 
         /// <summary>

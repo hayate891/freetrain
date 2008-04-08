@@ -62,7 +62,7 @@ namespace FreeTrain.Framework.Plugin.Graphics
             }
 
             // special code for NullLibrary
-            if (id.Equals(null_id))
+            if (Id.Equals(null_id))
                 list.Add(Color.Transparent);
         }
         /// <summary>

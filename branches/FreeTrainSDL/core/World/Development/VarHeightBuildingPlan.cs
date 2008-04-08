@@ -36,7 +36,7 @@ namespace FreeTrain.World.Development
 		internal VarHeightBuildingPlan(
 			VarHeightBuildingContribution contrib,
 			IULVFactory factory, Location _loc, int h )
-			: base(factory.create(new Cube(_loc, contrib.size, 0 ))) {
+			: base(factory.create(new Cube(_loc, contrib.Size, 0 ))) {
 			
 			this.contrib = contrib;
 			this.loc = _loc;
@@ -45,14 +45,14 @@ namespace FreeTrain.World.Development
 
 		public override int value { get { return contrib.Price*h; } }
 
-		public override Cube cube { get { return new Cube(loc,contrib.size,h); } }
+		public override Cube cube { get { return new Cube(loc,contrib.Size,h); } }
 
 		public override void build() {
-			new ConstructionSite( loc, new EventHandler(handle), new Distance(contrib.size,h) );
+			new ConstructionSite( loc, new EventHandler(handle), new Distance(contrib.Size,h) );
 		}
 
 		public void handle( object sender, EventArgs args ) {
-			contrib.create( loc, h, false );
+			contrib.Create( loc, h, false );
 		}
 	}
 }

@@ -69,7 +69,7 @@ namespace FreeTrain.Framework.Graphics
                 {
                     for (int x = 0; x < X; x++)
                     {
-                        Size sz = src[x, y, z].size;
+                        Size sz = src[x, y, z].Size;
                         if (sz.Height <= 0 || sz.Width <= 0)
                         {
                             sprites[x, y, z] = NullSprite.theInstance;
@@ -81,10 +81,10 @@ namespace FreeTrain.Framework.Graphics
                         surface.Fill(Color.Magenta);
                         surface.SourceColorKey = Color.Magenta;
 
-                        Point offset = src[x, y, z].offset;
+                        Point offset = src[x, y, z].Offset;
 
                         // first copy the sprite
-                        src[x, y, z].draw(surface, offset);
+                        src[x, y, z].Draw(surface, offset);
 
                         // then mask areas that will be hidden by other sprites
                         for (int xx = 0; xx <= x; xx++)
@@ -99,7 +99,7 @@ namespace FreeTrain.Framework.Graphics
                                     Point pt = offset;
                                     pt.X += 16 * ((xx - x) + (yy - y));
                                     pt.Y += 8 * (-(xx - x) + (yy - y) - (zz - z) * 2);
-                                    src[xx, yy, zz].drawShape(surface, pt, Color.Magenta);
+                                    src[xx, yy, zz].DrawShape(surface, pt, Color.Magenta);
                                 }
                             }
                         }

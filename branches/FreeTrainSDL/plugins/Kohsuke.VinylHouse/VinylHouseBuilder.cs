@@ -35,7 +35,6 @@ namespace FreeTrain.World.Land.VinylHouse
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public abstract class VinylHouseBuilder : LandBuilderContribution
     {
         /// <summary>
@@ -46,8 +45,8 @@ namespace FreeTrain.World.Land.VinylHouse
             : base(e)
         {
             // pictures
-            Picture picture = getPicture(e);
-            SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(e);
+            Picture picture = GetPicture(e);
+            SpriteFactory spriteFactory = SpriteFactory.GetSpriteFactory(e);
 
 
             XmlElement pic = (XmlElement)XmlUtil.SelectSingleNode(e, "picture");
@@ -57,23 +56,27 @@ namespace FreeTrain.World.Land.VinylHouse
             Size sz = new Size(32, 24);
 
             sprites = new ISprite[3];
-            sprites[0] = spriteFactory.createSprite(picture, pt, new Point(offset, 0), sz);
-            sprites[1] = spriteFactory.createSprite(picture, pt, new Point(offset, 24), sz);
-            sprites[2] = spriteFactory.createSprite(picture, pt, new Point(offset, 48), sz);
+            sprites[0] = spriteFactory.CreateSprite(picture, pt, new Point(offset, 0), sz);
+            sprites[1] = spriteFactory.CreateSprite(picture, pt, new Point(offset, 24), sz);
+            sprites[2] = spriteFactory.CreateSprite(picture, pt, new Point(offset, 48), sz);
 
         }
 
-
         /// <summary> Sprite of this land contribution. </summary>
-        [CLSCompliant(false)]
-        public readonly ISprite[] sprites;
+        private readonly ISprite[] sprites;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        public ISprite[] Sprites
+        {
+            get { return sprites; }
+        } 
 
         /// <summary>
         /// Gets the land that should be used to fill (x,y) within [x1,y1]-[x2,y2] (inclusive).
         /// </summary>
-        public override void create(int x1, int y1, int x2, int y2, int z, bool owned)
+        public override void Create(int x1, int y1, int x2, int y2, int z, bool owned)
         {
             for (int x = x1; x <= x2; x++)
             {
@@ -82,7 +85,7 @@ namespace FreeTrain.World.Land.VinylHouse
                     Location loc = new Location(x, y, z);
                     if (VinylHouseVoxel.canBeBuilt(loc))
                         new VinylHouseVoxel(loc, this,
-                            getSpriteIndex(x, y, x1, y1, x2, y2)).isOwned = owned;
+                            GetSpriteIndex(x, y, x1, y1, x2, y2)).isOwned = owned;
                 }
             }
         }
@@ -97,9 +100,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <param name="x2"></param>
         /// <param name="y2"></param>
         /// <returns></returns>
-        protected abstract int getSpriteIndex(int x, int y, int x1, int y1, int x2, int y2);
-
-
+        protected abstract int GetSpriteIndex(int x, int y, int x1, int y1, int x2, int y2);
 
         /// <summary>
         /// Creates the preview image of the land builder.
@@ -110,7 +111,7 @@ namespace FreeTrain.World.Land.VinylHouse
 
             for (int y = 0; y < 3; y++)
                 for (int x = 2; x >= 0; x--)
-                    drawer.draw(sprites[getSpriteIndex(x, y, 0, 2, 0, 2)], x, y);
+                    drawer.draw(sprites[GetSpriteIndex(x, y, 0, 2, 0, 2)], x, y);
 
             return drawer;
         }
@@ -120,7 +121,6 @@ namespace FreeTrain.World.Land.VinylHouse
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateBuilder(IControllerSite site)
         {
             return new Logic(this, site);
@@ -136,13 +136,30 @@ namespace FreeTrain.World.Land.VinylHouse
                 this.contrib = _contrib;
             }
 
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="loc1"></param>
+            /// <param name="loc2"></param>
             protected override void onRectSelected(Location loc1, Location loc2)
             {
-                contrib.create(loc1, loc2, true);
+                contrib.Create(loc1, loc2, true);
             }
 
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="view"></param>
+            /// <param name="surface"></param>
             public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
 
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="view"></param>
+            /// <param name="canvas"></param>
+            /// <param name="loc"></param>
+            /// <param name="pt"></param>
             public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
             {
                 if (loc.z != currentLoc.z) return;
@@ -151,21 +168,24 @@ namespace FreeTrain.World.Land.VinylHouse
                 {
                     Location loc1 = base.location1;
                     Location loc2 = base.location2;
-                    contrib.sprites[contrib.getSpriteIndex(loc.x, loc.y, loc1.x, loc1.y, loc2.x, loc2.y)]
-                        .drawAlpha(canvas.Surface, pt);
+                    contrib.Sprites[contrib.GetSpriteIndex(loc.x, loc.y, loc1.x, loc1.y, loc2.x, loc2.y)]
+                        .DrawAlpha(canvas.Surface, pt);
                 }
             }
 
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="view"></param>
+            /// <param name="surface"></param>
             public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
         }
     }
-
 
     /// <summary>
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class XVinylHouseBuilder : VinylHouseBuilder
     {
         /// <summary>
@@ -184,7 +204,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <param name="x2"></param>
         /// <param name="y2"></param>
         /// <returns></returns>
-        protected override int getSpriteIndex(int x, int y, int x1, int y1, int x2, int y2)
+        protected override int GetSpriteIndex(int x, int y, int x1, int y1, int x2, int y2)
         {
             if (x == x1) return 2;
             if (x == x2) return 0;
@@ -192,12 +212,10 @@ namespace FreeTrain.World.Land.VinylHouse
         }
     }
 
-
     /// <summary>
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class YVinylHouseBuilder : VinylHouseBuilder
     {
         /// <summary>
@@ -216,7 +234,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <param name="x2"></param>
         /// <param name="y2"></param>
         /// <returns></returns>
-        protected override int getSpriteIndex(int x, int y, int x1, int y1, int x2, int y2)
+        protected override int GetSpriteIndex(int x, int y, int x1, int y1, int x2, int y2)
         {
             if (y == y2) return 2;
             if (y == y1) return 0;

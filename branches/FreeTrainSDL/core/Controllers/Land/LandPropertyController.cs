@@ -210,9 +210,9 @@ namespace FreeTrain.Controllers.Land
                 if (anchor != UNPLACED && loc.inBetween(anchor, currentLoc))
                 {
                     if (owner.isPlacing)
-                        LandPropertyVoxel.sprite.drawAlpha(canvas.Surface, pt);
+                        LandPropertyVoxel.sprite.DrawAlpha(canvas.Surface, pt);
                     else
-                        ResourceUtil.emptyChip.drawAlpha(canvas.Surface, pt);
+                        ResourceUtil.emptyChip.DrawAlpha(canvas.Surface, pt);
                 }
             }
 

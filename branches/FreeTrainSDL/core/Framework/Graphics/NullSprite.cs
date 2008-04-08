@@ -43,29 +43,29 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
-        public void draw(Surface surface, Point pt) { }
+        public void Draw(Surface surface, Point pt) { }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
         /// <param name="color"></param>
-        public void drawShape(Surface surface, Point pt, Color color) { }
+        public void DrawShape(Surface surface, Point pt, Color color) { }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
-        public void drawAlpha(Surface surface, Point pt) { }
+        public void DrawAlpha(Surface surface, Point pt) { }
 
         /// <summary>
         /// 
         /// </summary>
-        public Size size { get { return new Size(0, 0); } }
+        public Size Size { get { return new Size(0, 0); } }
         /// <summary>
         /// 
         /// </summary>
-        public Point offset { get { return new Point(0, 0); } }
+        public Point Offset { get { return new Point(0, 0); } }
         /// <summary>
         /// 
         /// </summary>

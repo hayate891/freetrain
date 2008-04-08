@@ -54,13 +54,13 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        protected internal override void onInitComplete()
+        protected internal override void OnInitComplete()
         {
             core = Core.Plugins.getContribution(baseId) as TrainCarContribution;
             if (core == null)
-                throw new FormatException("'" + id + "' refers to TrainCar contribution '" + baseId + "' that could not be found");
+                throw new FormatException("'" + Id + "' refers to TrainCar contribution '" + baseId + "' that could not be found");
             //! throw new FormatException("'"+id+"'が参照するTrainCarコントリビューション'"+baseId+"'が見つかりません");
-            this._capacity = core.capacity;
+            this.Capacity = core.Capacity;
         }
 
 
@@ -72,10 +72,10 @@ namespace FreeTrain.Contributions.Train
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="angle"></param>
-        public override void draw(Surface display, Point pt, int angle)
+        public override void Draw(Surface display, Point pt, int angle)
         {
             angle ^= 8;
-            core.draw(display, pt, angle);
+            core.Draw(display, pt, angle);
         }
         /// <summary>
         /// 
@@ -84,12 +84,12 @@ namespace FreeTrain.Contributions.Train
         /// <param name="pt"></param>
         /// <param name="angle"></param>
         /// <param name="isClimbing"></param>
-        public override void drawSlope(Surface display, Point pt, Direction angle, bool isClimbing)
+        public override void DrawSlope(Surface display, Point pt, Direction angle, bool isClimbing)
         {
             angle = angle.opposite;
             isClimbing = !isClimbing;
 
-            core.drawSlope(display, pt, angle, isClimbing);
+            core.DrawSlope(display, pt, angle, isClimbing);
         }
 
     }

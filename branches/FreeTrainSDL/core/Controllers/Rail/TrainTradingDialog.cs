@@ -56,15 +56,15 @@ namespace FreeTrain.World.Rail
             IDictionary types = new SortedList();
             foreach (TrainContribution tc in Core.Plugins.trains)
             {
-                IDictionary company = (IDictionary)types[tc.companyName];
+                IDictionary company = (IDictionary)types[tc.CompanyName];
                 if (company == null)
-                    types[tc.companyName] = company = new SortedList();
+                    types[tc.CompanyName] = company = new SortedList();
 
-                IDictionary type = (IDictionary)company[tc.typeName];
+                IDictionary type = (IDictionary)company[tc.TypeName];
                 if (type == null)
-                    company[tc.typeName] = type = new SortedList();
+                    company[tc.TypeName] = type = new SortedList();
 
-                type.Add(tc.nickName, tc);
+                type.Add(tc.NickName, tc);
             }
 
             // build a tree
@@ -99,7 +99,7 @@ namespace FreeTrain.World.Rail
             {
                 TrainContribution t = (TrainContribution)trainEntry.Value;
 
-                TreeNode trainNode = new TreeNode(t.name);
+                TreeNode trainNode = new TreeNode(t.Name);
                 trainNode.Tag = t;
                 parent.Nodes.Add(trainNode);
             }
@@ -127,7 +127,7 @@ namespace FreeTrain.World.Rail
 
         private long getTotalPrice()
         {
-            return (long)(selectedTrain.price(1) * length.Value * count.Value);
+            return (long)(selectedTrain.Price(1) * length.Value * count.Value);
         }
 
         private void onTypeChanged(object sender, System.Windows.Forms.TreeViewEventArgs e)
@@ -151,14 +151,14 @@ namespace FreeTrain.World.Rail
 
             if (selectedTrain != null)
             {
-                name.Text = selectedTrain.name;
-                author.Text = selectedTrain.author;
-                description.Text = selectedTrain.description;
-                speed.Text = selectedTrain.speedDisplayName;
-                length.Maximum = selectedTrain.maxLength;
-                length.Minimum = selectedTrain.minLength;
+                name.Text = selectedTrain.Name;
+                author.Text = selectedTrain.Author;
+                description.Text = selectedTrain.Description;
+                speed.Text = selectedTrain.SpeedDisplayName;
+                length.Maximum = selectedTrain.MaxLength;
+                length.Minimum = selectedTrain.MinLength;
                 //if (length.Value > selectedTrain.maxLength) length.Value = selectedTrain.maxLength;
-                using (PreviewDrawer pd = selectedTrain.createPreview(preview.ClientSize, (int)length.Value))
+                using (PreviewDrawer pd = selectedTrain.CreatePreview(preview.ClientSize, (int)length.Value))
                 {
                     preview.Image = pd.createBitmap();
                 }
@@ -180,7 +180,7 @@ namespace FreeTrain.World.Rail
         {
             if (count.Value != 0 && selectedTrain != null)
             {
-                TrainCarContribution[] cars = selectedTrain.create((int)length.Value);
+                TrainCarContribution[] cars = selectedTrain.Create((int)length.Value);
                 if (cars != null)
                 {
                     buttonOK.Enabled = true;
@@ -190,12 +190,12 @@ namespace FreeTrain.World.Rail
 
                     int p = 0;
                     foreach (TrainCarContribution car in cars)
-                        p += car.capacity;
+                        p += car.Capacity;
 
                     passenger.Text = p.ToString() + " passengers/set";
                     //! passenger.Text = p.ToString()+" 人/編成";
 
-                    using (PreviewDrawer pd = selectedTrain.createPreview(preview.ClientSize, (int)length.Value))
+                    using (PreviewDrawer pd = selectedTrain.CreatePreview(preview.ClientSize, (int)length.Value))
                     {
                         preview.Image = pd.createBitmap();
                     }

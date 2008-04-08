@@ -45,6 +45,7 @@ namespace FreeTrain.Framework.Plugin
         protected Contribution(XmlElement contrib)
             :
             this(contrib.Attributes["type"].Value, contrib.Attributes["id"].Value) { }
+
         /// <summary>
         /// 
         /// </summary>
@@ -71,7 +72,6 @@ namespace FreeTrain.Framework.Plugin
             this._baseUri = _baseUri;
         }
 
-
         /// <summary>
         /// Notifies the end of the initialization.
         /// 
@@ -79,7 +79,7 @@ namespace FreeTrain.Framework.Plugin
         /// into memory. This is a good chance to run additional tasks
         /// that need to access other contributions.
         /// </summary>
-        protected internal virtual void onInitComplete()
+        protected internal virtual void OnInitComplete()
         {
         }
 
@@ -87,7 +87,15 @@ namespace FreeTrain.Framework.Plugin
         /// Type of this contribution.
         /// This is the value of the type attribute.
         /// </summary>
-        public readonly string type;
+        private readonly string type;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Type
+        {
+            get { return type; }
+        } 
 
         /// <summary>
         /// Unique ID of this contribution.
@@ -95,8 +103,15 @@ namespace FreeTrain.Framework.Plugin
         /// Either GUID or URI, but can be anything as long
         /// as it's unique.
         /// </summary>
-        public readonly string id;
+        private readonly string id;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Id
+        {
+            get { return id; }
+        } 
 
         /// <summary>
         /// Base URI for this contribution (which is the same
@@ -104,15 +119,14 @@ namespace FreeTrain.Framework.Plugin
         /// 
         /// This poinst to the plug-in directory.
         /// </summary>
-        public Uri baseUri { get { return _baseUri; } }
+        public Uri BaseUri { get { return _baseUri; } }
         private Uri _baseUri;
 
         /// <summary>
         /// Returns the Plugin object that contains this contribution.
         /// </summary>
-        public PluginDefinition parent { get { return _parent; } }
+        public PluginDefinition Parent { get { return _parent; } }
         private PluginDefinition _parent;
-
 
         /// <summary>
         /// If a plug-in is implemented by using an assembly,
@@ -123,20 +137,17 @@ namespace FreeTrain.Framework.Plugin
         /// Returns null if this contribution doesn't rely on
         /// any assembly.
         /// </summary>
-        public virtual Assembly assembly { get { return this.GetType().Assembly; } }
+        public virtual Assembly Assembly { get { return this.GetType().Assembly; } }
 
-
-
-
-        #region utility methods
+        #region Utility methods
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        protected Picture loadPicture(string name)
+        protected Picture LoadPicture(string name)
         {
-            return new Picture(this.id + ":" + name, new Uri(baseUri, name).LocalPath);
+            return new Picture(this.id + ":" + name, new Uri(BaseUri, name).LocalPath);
         }
 
         /// <summary>
@@ -144,7 +155,7 @@ namespace FreeTrain.Framework.Plugin
         /// </summary>
         /// <param name="sprite">&lt;sprite> element in the manifest.</param>
         /// <returns>non-null valid object.</returns>
-        protected Picture getPicture(XmlElement sprite)
+        protected Picture GetPicture(XmlElement sprite)
         {
             XmlElement pic = (XmlElement)XmlUtil.SelectSingleNode(sprite, "picture");
 
@@ -158,8 +169,6 @@ namespace FreeTrain.Framework.Plugin
                 sprite.SelectSingleNode("ancestor-or-self::contribution/@id").InnerText);
         }
         #endregion
-
-
 
         // serialize this object by reference
         /// <summary>

@@ -156,9 +156,9 @@ namespace FreeTrain.Contributions.Train
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="angle"></param>
-        public override void draw(Surface display, Point pt, int angle)
+        public override void Draw(Surface display, Point pt, int angle)
         {
-            levelSprites[angle & 7].draw(display, pt);
+            levelSprites[angle & 7].Draw(display, pt);
         }
         /// <summary>
         /// 
@@ -167,11 +167,11 @@ namespace FreeTrain.Contributions.Train
         /// <param name="pt"></param>
         /// <param name="angle"></param>
         /// <param name="isClimbing"></param>
-        public override void drawSlope(Surface display, Point pt, Direction angle, bool isClimbing)
+        public override void DrawSlope(Surface display, Point pt, Direction angle, bool isClimbing)
         {
             if (!isClimbing) angle = angle.opposite;
 
-            slopeSprites[angle.index / 2].draw(display, pt);
+            slopeSprites[angle.index / 2].Draw(display, pt);
         }
 
 
@@ -194,12 +194,12 @@ namespace FreeTrain.Contributions.Train
             for (int i = 0; i < 8; i++)
             {
                 Point sprOrigin = new Point(i * 32, 0);
-                levelSprites[i] = factory.createSprite(picture.picture, new Point(0, 0), sprOrigin, new Size(32, 32));
+                levelSprites[i] = factory.CreateSprite(picture.Picture, new Point(0, 0), sprOrigin, new Size(32, 32));
             }
             for (int i = 0; i < 4; i++)
             {
                 Point sprOrigin = new Point(i * 32, 32);
-                slopeSprites[i] = factory.createSprite(picture.picture, new Point(0, 0), sprOrigin, new Size(32, 32));
+                slopeSprites[i] = factory.CreateSprite(picture.Picture, new Point(0, 0), sprOrigin, new Size(32, 32));
             }
         }
 

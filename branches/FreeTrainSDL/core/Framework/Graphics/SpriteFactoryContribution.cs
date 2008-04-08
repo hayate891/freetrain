@@ -38,7 +38,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        public abstract SpriteFactory createSpriteFactory(XmlElement e);
+        public abstract SpriteFactory CreateSpriteFactory(XmlElement e);
 
         /// <summary>
         /// 

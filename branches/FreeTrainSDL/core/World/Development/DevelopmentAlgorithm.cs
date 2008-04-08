@@ -385,10 +385,10 @@ namespace FreeTrain.World.Development
             else if (entity is VarHeightBuildingContribution)
             {
                 VarHeightBuildingContribution vhbc = entity as VarHeightBuildingContribution;
-                int h = vhbc.minHeight;
-                int h2 = vhbc.maxHeight;
+                int h = vhbc.MinHeight;
+                int h2 = vhbc.MaxHeight;
                 int price = vhbc.Price * h;
-                Cube tmp = new Cube(scaning, vhbc.size, h);
+                Cube tmp = new Cube(scaning, vhbc.Size, h);
                 int cost = 0;
                 foreach (IEntity e in tmp.getEntities())
                     cost += e.entityValue;

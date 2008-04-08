@@ -66,7 +66,7 @@ namespace FreeTrain.World.Road.DummyCars
         [CLSCompliant(false)]
         public void drawAfter(DrawContext display, Point pt)
         {
-            contrib.sprites[color, index].draw(display.Surface, pt);
+            contrib.sprites[color, index].Draw(display.Surface, pt);
         }
         /// <summary>
         /// 

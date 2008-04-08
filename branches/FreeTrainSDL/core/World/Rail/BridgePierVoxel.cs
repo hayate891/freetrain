@@ -179,8 +179,8 @@ namespace FreeTrain.World.Rail
         public override void draw(DrawContext display, Point pt, int heightCutDiff)
         {
             // draw the pier in alpha if in the height cut mode
-            if (heightCutDiff == 0) sprite.drawAlpha(display.Surface, pt);
-            else sprite.draw(display.Surface, pt);
+            if (heightCutDiff == 0) sprite.DrawAlpha(display.Surface, pt);
+            else sprite.Draw(display.Surface, pt);
         }
 
 

@@ -67,16 +67,16 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        protected internal override void onInitComplete()
+        protected internal override void OnInitComplete()
         {
-            Picture surface = loadPicture("BridgeRail.bmp");
+            Picture surface = LoadPicture("BridgeRail.bmp");
             for (int i = 0; i < 6; i++)
             {
                 backgrounds[i] = new SimpleSprite(surface, new Point(0, 16), new Point(32 * i, 0), new Size(32, 32));
                 foregrounds[i] = new SimpleSprite(surface, new Point(0, 16), new Point(32 * i, 32), new Size(32, 32));
             }
 
-            Picture bridgePierImages = loadPicture("BridgePier.bmp");
+            Picture bridgePierImages = LoadPicture("BridgePier.bmp");
             for (int i = 0; i < 2; i++)
                 for (int j = 0; j < 2; j++)
                     bridgePierSprites[i, j] = new SimpleSprite(bridgePierImages, new Point(0, 16),
@@ -114,7 +114,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void drawBefore(DrawContext display, Point pt)
             {
-                backgrounds[pictureIndex].draw(display.Surface, pt);
+                backgrounds[pictureIndex].Draw(display.Surface, pt);
                 // don't call the base class so that we won't draw the rail road unnecessarily
             }
             /// <summary>
@@ -124,7 +124,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void drawAfter(DrawContext display, Point pt)
             {
-                foregrounds[pictureIndex].draw(display.Surface, pt);
+                foregrounds[pictureIndex].Draw(display.Surface, pt);
             }
         }
 
@@ -138,7 +138,7 @@ namespace FreeTrain.World.Rail
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <returns></returns>
-        public override bool canBeBuilt(Location from, Location to)
+        public override bool CanBeBuilt(Location from, Location to)
         {
             if (from == to) return false;
 
@@ -171,9 +171,9 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="here"></param>
         /// <param name="to"></param>
-        public override void build(Location here, Location to)
+        public override void Build(Location here, Location to)
         {
-            Debug.Assert(canBeBuilt(here, to));
+            Debug.Assert(CanBeBuilt(here, to));
 
             Direction d = here.getDirectionTo(to);
             bool building = false;
@@ -248,7 +248,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="here"></param>
         /// <param name="to"></param>
-        public override void remove(Location here, Location to)
+        public override void Remove(Location here, Location to)
         {
             if (here == to) return;
 
@@ -276,21 +276,21 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override string name { get { return "Bridge"; } }
+        public override string Name { get { return "Bridge"; } }
         //! public override string name { get { return "鉄橋"; } }
         /// <summary>
         /// 
         /// </summary>
-        public override string oneLineDescription { get { return "Reinforced bridge"; } }
+        public override string OneLineDescription { get { return "Reinforced bridge"; } }
         //! public override string oneLineDescription { get { return "鉄筋の鉄橋"; } }
         /// <summary>
         /// 
         /// </summary>
-        public override Bitmap previewBitmap
+        public override Bitmap PreviewBitmap
         {
             get
             {
-                using (Stream s = parent.loadStream("BridgePreview.bmp"))
+                using (Stream s = Parent.loadStream("BridgePreview.bmp"))
                 {
                     return new Bitmap(s);
                 }

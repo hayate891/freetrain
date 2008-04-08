@@ -62,7 +62,7 @@ namespace FreeTrain.Contributions.Road
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <returns></returns>
-        public override bool canBeBuilt(Location from, Location to)
+        public override bool CanBeBuilt(Location from, Location to)
         {
             if (from == to) return false;
 
@@ -94,9 +94,9 @@ namespace FreeTrain.Contributions.Road
         /// </summary>
         /// <param name="from"></param>
         /// <param name="to"></param>
-        public override void build(Location from, Location to)
+        public override void Build(Location from, Location to)
         {
-            Debug.Assert(canBeBuilt(from, to));
+            Debug.Assert(CanBeBuilt(from, to));
 
             Direction d = from.getDirectionTo(to);
 
@@ -136,7 +136,7 @@ namespace FreeTrain.Contributions.Road
         /// </summary>
         /// <param name="here"></param>
         /// <param name="to"></param>
-        public override void remove(Location here, Location to)
+        public override void Remove(Location here, Location to)
         {
             if (here == to) return;
 
@@ -155,7 +155,7 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// 
         /// </summary>
-        public override string name
+        public override string Name
         {
             get
             {
@@ -165,7 +165,7 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// 
         /// </summary>
-        public override string oneLineDescription
+        public override string OneLineDescription
         {
             get
             {
@@ -176,7 +176,7 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// 
         /// </summary>
-        public override Bitmap previewBitmap
+        public override Bitmap PreviewBitmap
         {
             get
             {
@@ -236,7 +236,7 @@ namespace FreeTrain.Contributions.Road
             /// <param name="pt"></param>
             public override void drawBefore(DrawContext display, Point pt)
             {
-                contribution.getSprite(pattern.dirs).draw(display.Surface, pt);
+                contribution.getSprite(pattern.dirs).Draw(display.Surface, pt);
             }
             /// <summary>
             /// 

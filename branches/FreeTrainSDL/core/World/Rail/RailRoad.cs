@@ -194,7 +194,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public virtual void drawBefore(DrawContext display, Point pt)
         {
-            pattern.draw(display.Surface, pt);
+            pattern.Draw(display.Surface, pt);
         }
         /// <summary>
         /// Draws a railroad. This method is called after the car is drawn.

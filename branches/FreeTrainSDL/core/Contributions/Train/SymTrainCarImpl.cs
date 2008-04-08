@@ -48,18 +48,18 @@ namespace FreeTrain.Contributions.Train
 			slopeSprites = new ISprite[4];
 
 			XmlElement sprite = (XmlElement)XmlUtil.SelectSingleNode(e,"sprite");
-			Picture picture = getPicture(sprite);
-			SpriteFactory factory = SpriteFactory.getSpriteFactory(sprite);
+			Picture picture = GetPicture(sprite);
+			SpriteFactory factory = SpriteFactory.GetSpriteFactory(sprite);
 
 			Point origin = XmlUtil.ParsePoint( sprite.Attributes["origin"].Value );
 
 			for( int i=0; i<8; i++ ) {
 				Point sprOrigin = new Point( i*32 +origin.X, origin.Y );
-				levelSprites[i] = factory.createSprite( picture, new Point(0,0), sprOrigin, new Size(32,32) );
+				levelSprites[i] = factory.CreateSprite( picture, new Point(0,0), sprOrigin, new Size(32,32) );
 			}
 			for( int i=0; i<4; i++ ) {
 				Point sprOrigin = new Point( i*32 +origin.X, 32+origin.Y );
-				slopeSprites[i] = factory.createSprite( picture, new Point(0,0), sprOrigin, new Size(32,32) );
+				slopeSprites[i] = factory.CreateSprite( picture, new Point(0,0), sprOrigin, new Size(32,32) );
 			}
 		}
 
@@ -75,8 +75,8 @@ namespace FreeTrain.Contributions.Train
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="angle"></param>
-		public override void draw( Surface display, Point pt, int angle ) {
-			levelSprites[angle&7].draw( display, pt );
+		public override void Draw( Surface display, Point pt, int angle ) {
+			levelSprites[angle&7].Draw( display, pt );
 		}
         /// <summary>
         /// 
@@ -85,9 +85,9 @@ namespace FreeTrain.Contributions.Train
         /// <param name="pt"></param>
         /// <param name="angle"></param>
         /// <param name="isClimbing"></param>
-		public override void drawSlope( Surface display, Point pt, Direction angle, bool isClimbing ) {
+		public override void DrawSlope( Surface display, Point pt, Direction angle, bool isClimbing ) {
 			if(!isClimbing)		angle = angle.opposite;
-			slopeSprites[ angle.index/2 ].draw( display, pt );
+			slopeSprites[ angle.index/2 ].Draw( display, pt );
 		}
 
 	}
