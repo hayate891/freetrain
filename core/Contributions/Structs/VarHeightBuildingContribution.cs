@@ -46,10 +46,10 @@ namespace FreeTrain.Contributions.Structs
         public VarHeightBuildingContribution(XmlElement e)
             : base(e)
         {
-            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+            this.Price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
 
             size = XmlUtil.ParseSize(XmlUtil.SelectSingleNode(e, "size").InnerText);
-            _ppa = _price / Math.Max(1, size.Width * size.Height);
+            this.PricePerArea = this.Price / Math.Max(1, size.Width * size.Height);
             minHeight = int.Parse(XmlUtil.SelectSingleNode(e, "minHeight").InnerText);
             maxHeight = int.Parse(XmlUtil.SelectSingleNode(e, "maxHeight").InnerText);
 
@@ -61,6 +61,7 @@ namespace FreeTrain.Contributions.Structs
             XmlElement m = (XmlElement)XmlUtil.SelectSingleNode(pics, "middle");
             middle = PluginUtil.getSpriteLoader(m).load2D(m, size, 16);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -71,12 +72,12 @@ namespace FreeTrain.Contributions.Structs
         public VarHeightBuildingContribution(IAbstractStructure master, XmlElement pic, XmlElement main, bool opposite)
             : base(main)
         {
-            _price = master.UnitPrice;
+            this.Price = master.UnitPrice;
             if (opposite)
                 size = new Size(master.Size.Height, master.Size.Width);
             else
                 size = master.Size;
-            _ppa = _price / Math.Max(1, size.Width * size.Height);
+            this.PricePerArea = this.Price / Math.Max(1, size.Width * size.Height);
             minHeight = master.MinHeight;
             maxHeight = master.MaxHeight;
 
@@ -90,12 +91,13 @@ namespace FreeTrain.Contributions.Structs
                 overlay = true;
             middle = PluginUtil.getSpriteLoader(m).load2D(m, size, size.Width * 8);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        protected override StructureGroup getGroup(string name)
+        protected override StructureGroup GetGroup(string name)
         {
             return PluginManager.theInstance.varHeightBuildingsGroup[name];
         }
@@ -112,30 +114,13 @@ namespace FreeTrain.Contributions.Structs
             return sprites;
         }
 
-        /// <summary>Price of this structure per height.</summary>
-        [CLSCompliant(false)]
-        protected readonly int _price;
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int Price { get { return _price; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        [CLSCompliant(false)]
-        protected readonly double _ppa;
-        /// <summary>
-        /// 
-        /// </summary>
-        public override double PricePerArea { get { return _price; } }
-
         /// <summary>Sprite sets.</summary>
         private readonly ISprite[][,] tops, bottoms;
         private readonly ISprite[,] middle;
         private bool overlay = false;
 
         /// <summary> Sprite to draw the structure </summary>
-        public ISprite[] getSprites(int x, int y, int z, int height)
+        public ISprite[] GetSprites(int x, int y, int z, int height)
         {
             if (z >= height - tops.Length)
             {
@@ -155,20 +140,45 @@ namespace FreeTrain.Contributions.Structs
         }
 
         /// <summary> Size of the basement of this structure in voxel by voxel. </summary>
-        public readonly Size size;
+        private readonly Size size;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Size Size
+        {
+            get { return size; }
+        } 
 
         /// <summary> Range of the possible height of the structure in voxel unit. </summary>
-        public readonly int minHeight, maxHeight;
+        private readonly int minHeight;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public int MinHeight
+        {
+            get { return minHeight; }
+        }
 
+        private readonly int maxHeight;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int MaxHeight
+        {
+            get { return maxHeight; }
+        } 
 
         /// <summary>
         /// Creates a new instance of this structure type to the specified location.
         /// </summary>
-        public Structure create(WorldLocator wLoc, int height, bool initiallyOwned)
+        public Structure Create(WorldLocator wLoc, int height, bool initiallyOwned)
         {
             return new VarHeightBuilding(this, wLoc, height, initiallyOwned);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -176,16 +186,16 @@ namespace FreeTrain.Contributions.Structs
         /// <param name="height"></param>
         /// <param name="initiallyOwned"></param>
         /// <returns></returns>
-        public Structure create(Location baseLoc, int height, bool initiallyOwned)
+        public Structure Create(Location baseLoc, int height, bool initiallyOwned)
         {
-            Debug.Assert(canBeBuilt(baseLoc, height));
-            return create(new WorldLocator(WorldDefinition.World, baseLoc), height, initiallyOwned);
+            Debug.Assert(CanBeBuilt(baseLoc, height));
+            return Create(new WorldLocator(WorldDefinition.World, baseLoc), height, initiallyOwned);
         }
 
         /// <summary>
         /// Returns true iff this structure can be built at the specified location.
         /// </summary>
-        public bool canBeBuilt(Location baseLoc, int height)
+        public bool CanBeBuilt(Location baseLoc, int height)
         {
             for (int z = 0; z < height; z++)
                 for (int y = 0; y < size.Height; y++)
@@ -195,6 +205,7 @@ namespace FreeTrain.Contributions.Structs
 
             return true;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -215,13 +226,14 @@ namespace FreeTrain.Contributions.Structs
 
             return drawer;
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <param name="height"></param>
         /// <returns></returns>
-        public PreviewDrawer createPreview(Size pixelSize, int height)
+        public PreviewDrawer CreatePreview(Size pixelSize, int height)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, size, maxHeight/*middle*/ );
             int mh = height - 2;
@@ -240,6 +252,7 @@ namespace FreeTrain.Contributions.Structs
 
             return drawer;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -250,6 +263,7 @@ namespace FreeTrain.Contributions.Structs
             // TODO
             throw new NotImplementedException();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -260,6 +274,7 @@ namespace FreeTrain.Contributions.Structs
             // TODO
             throw new NotImplementedException();
         }
+
         #region IPreviewWorldBuilder o
         /// <summary>
         /// 
@@ -273,9 +288,9 @@ namespace FreeTrain.Contributions.Structs
             WorldDefinition w = WorldDefinition.CreatePreviewWorld(minsizePixel, d);
             int v = w.Size.y - size.Height - 2;
             Location l = w.toXYZ((w.Size.x - size.Width - size.Height - 1) / 2, v, 0);
-            create(new WorldLocator(w, l), maxHeight, false);
+            Create(new WorldLocator(w, l), maxHeight, false);
             l = w.toXYZ((w.Size.x) / 2, v, 0);
-            create(new WorldLocator(w, l), minHeight, false);
+            Create(new WorldLocator(w, l), minHeight, false);
             return w;
         }
 

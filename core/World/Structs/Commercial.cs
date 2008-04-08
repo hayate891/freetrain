@@ -94,7 +94,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return WorldDefinition.World.LandValue[baseLocation + type.size / 2] * type.size.x * type.size.y;
+                return WorldDefinition.World.LandValue[baseLocation + type.Size / 2] * type.Size.x * type.Size.y;
             }
         }
         /// <summary>
@@ -104,7 +104,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return base.baseLocation + type.size / 2;
+                return base.baseLocation + type.Size / 2;
             }
         }
 

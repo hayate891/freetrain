@@ -33,9 +33,9 @@ namespace FreeTrain.Contributions.Land
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_name"></param>
-        public LandBuilderGroup(string _name)
-            : base(_name)
+        /// <param name="name"></param>
+        public LandBuilderGroup(string name)
+            : base(name)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace FreeTrain.Contributions.Land
         /// </summary>
         /// <param name="idx"></param>
         /// <returns></returns>
-        public new LandBuilderContribution get(int idx)
+        public LandBuilderContribution Get(int idx)
         {
             return (LandBuilderContribution)base.List[idx];
         }
@@ -51,7 +51,7 @@ namespace FreeTrain.Contributions.Land
         /// 
         /// </summary>
         /// <param name="sc"></param>
-        public void remove(LandBuilderContribution sc)
+        public void Remove(LandBuilderContribution sc)
         {
             base.List.Remove(sc);
         }
@@ -59,7 +59,7 @@ namespace FreeTrain.Contributions.Land
         /// 
         /// </summary>
         /// <returns></returns>
-        public override string ToString() { return name; }
+        public override string ToString() { return Name; }
     }
 
     /// <summary>

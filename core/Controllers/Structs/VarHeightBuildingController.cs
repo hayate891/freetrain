@@ -73,7 +73,7 @@ namespace FreeTrain.Controllers.Structs
         {
             if (isPlacing)
             {
-                if (!selectedType.canBeBuilt(loc, height))
+                if (!selectedType.CanBeBuilt(loc, height))
                 {
                     MessageBox.Show("Can not build");
                     //! MessageBox.Show("設置できません");
@@ -82,7 +82,7 @@ namespace FreeTrain.Controllers.Structs
                 {
                     CompletionHandler handler = new CompletionHandler(selectedType, loc, height, true);
                     new ConstructionSite(loc, new EventHandler(handler.handle),
-                        new Distance(selectedType.size, height));
+                        new Distance(selectedType.Size, height));
                 }
             }
             else
@@ -125,7 +125,7 @@ namespace FreeTrain.Controllers.Structs
             private readonly bool owned;
             public void handle(object sender, EventArgs args)
             {
-                contribution.create(loc, height, owned);
+                contribution.Create(loc, height, owned);
             }
         }
 
@@ -153,13 +153,13 @@ namespace FreeTrain.Controllers.Structs
 
             // builds a new alpha blended preview
             // TODO: make a proper 3D preview.
-            Size sz = selectedType.size;
+            Size sz = selectedType.Size;
             ISprite[, ,] sprites = new ISprite[sz.Width, sz.Height, height];
             for (int z = 0; z < height; z++)
                 for (int y = 0; y < sz.Height; y++)
                     for (int x = 0; x < sz.Width; x++)
                     {
-                        sprites[x, y, z] = selectedType.getSprites(x, y, z, height)[0];
+                        sprites[x, y, z] = selectedType.GetSprites(x, y, z, height)[0];
                     }
             return new AlphaBlendSpriteSet(sprites);
         }
@@ -186,8 +186,8 @@ namespace FreeTrain.Controllers.Structs
 
             if (heightBox == null) return;	// during initialization
             // update the min/max of the height
-            heightBox.Minimum = selectedType.minHeight * 4;
-            heightBox.Maximum = selectedType.maxHeight * 4;
+            heightBox.Minimum = selectedType.MinHeight * 4;
+            heightBox.Maximum = selectedType.MaxHeight * 4;
         }
     }
 }

@@ -52,7 +52,7 @@ namespace FreeTrain.Controllers
         {
             InitializeComponent();
             this.contrib = _type;
-            this.Text = type.name;
+            this.Text = type.Name;
             updateAfterResize(null, null);
             //updatePreview();
         }
@@ -63,7 +63,7 @@ namespace FreeTrain.Controllers
         {
             if (this.picture.Image != null)
                 this.picture.Image.Dispose();
-            Bitmap bmp = type.previewBitmap;
+            Bitmap bmp = type.PreviewBitmap;
             this.picture.Image = bmp;
             this.picture.BackColor = bmp.GetPixel(0, bmp.Size.Height - 1);
         }
@@ -253,13 +253,13 @@ namespace FreeTrain.Controllers
                 {
                     if (isPlacing)
                     {
-                        if (type.canBeBuilt(anchor, loc))
+                        if (type.CanBeBuilt(anchor, loc))
                             // build new railroads.
-                            type.build(anchor, loc);
+                            type.Build(anchor, loc);
                     }
                     else
                         // remove existing ones
-                        type.remove(anchor, loc);
+                        type.Remove(anchor, loc);
                     WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, loc));
                 }
                 anchor = UNPLACED;
@@ -339,7 +339,7 @@ namespace FreeTrain.Controllers
         public void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
             if (anchor != UNPLACED && isPlacing)
-                canvas.Tag = type.canBeBuilt(anchor, currentPos);
+                canvas.Tag = type.CanBeBuilt(anchor, currentPos);
         }
         /// <summary>
         /// 

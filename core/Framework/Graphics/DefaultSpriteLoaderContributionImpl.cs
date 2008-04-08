@@ -47,8 +47,8 @@ namespace FreeTrain.Framework.Graphics
 
             XmlAttribute size = sprite.Attributes["size"];
 
-            return SpriteFactory.getSpriteFactory(sprite).createSprite(
-                getPicture(sprite),
+            return SpriteFactory.GetSpriteFactory(sprite).CreateSprite(
+                GetPicture(sprite),
                 new Point(0, h),
                 XmlUtil.ParsePoint(XmlUtil.SelectSingleNode(sprite, "@origin").InnerText),
                 size == null ? new Size(32, 32) : XmlUtil.ParseSize(size.Value));
@@ -65,8 +65,8 @@ namespace FreeTrain.Framework.Graphics
         /// <returns></returns>
         public override ISprite[,] load2D(XmlElement sprite, int X, int Y, int height)
         {
-            Picture picture = getPicture(sprite);
-            SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(sprite);
+            Picture picture = GetPicture(sprite);
+            SpriteFactory spriteFactory = SpriteFactory.GetSpriteFactory(sprite);
 
             ISprite[,] sprites = new ISprite[X, Y];
 
@@ -89,7 +89,7 @@ namespace FreeTrain.Framework.Graphics
                     if (sprSize.Height == 0)
                         sprites[x, y] = NullSprite.theInstance;
                     else
-                        sprites[x, y] = spriteFactory.createSprite(
+                        sprites[x, y] = spriteFactory.CreateSprite(
                             picture, new Point(0, h + (y - x) * 8), sprOrigin, sprSize);
                 }
             }
@@ -106,8 +106,8 @@ namespace FreeTrain.Framework.Graphics
         /// <returns></returns>
         public override ISprite[, ,] load3D(XmlElement sprite, int X, int Y, int Z)
         {
-            Picture picture = getPicture(sprite);
-            SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(sprite);
+            Picture picture = GetPicture(sprite);
+            SpriteFactory spriteFactory = SpriteFactory.GetSpriteFactory(sprite);
 
             ISprite[, ,] sprites = new ISprite[X, Y, Z];
 
@@ -158,7 +158,7 @@ namespace FreeTrain.Framework.Graphics
                     if (sprSize.Height == 0)
                         sprites[x, y, Z - 1] = NullSprite.theInstance;
                     else
-                        sprites[x, y, Z - 1] = spriteFactory.createSprite(
+                        sprites[x, y, Z - 1] = spriteFactory.CreateSprite(
                             picture,
                             new Point(voxelOrigin.X - sprOrigin.X,
                                         voxelOrigin.Y - sprOrigin.Y),
@@ -198,7 +198,7 @@ namespace FreeTrain.Framework.Graphics
                                 else
                                     continue;	// invisible
 
-                        sprites[x, y, 0] = spriteFactory.createSprite(
+                        sprites[x, y, 0] = spriteFactory.CreateSprite(
                             picture,
                             new Point(voxelOrigin.X - sprOrigin.X,
                                         voxelOrigin.Y - sprOrigin.Y),

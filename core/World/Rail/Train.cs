@@ -82,7 +82,7 @@ namespace FreeTrain.World.Rail
             this.type = _type;
             this.controller = _controller;
 
-            TrainCarContribution[] carTypes = type.create(length);
+            TrainCarContribution[] carTypes = type.Create(length);
 
             cars = new TrainCar[length];
             for (int i = 0; i < length; i++)
@@ -294,7 +294,7 @@ namespace FreeTrain.World.Rail
 
         private void registerTimer()
         {
-            registerTimer(TimeLength.fromMinutes(type.minutesPerVoxel));
+            registerTimer(TimeLength.fromMinutes(type.MinutesPerVoxel));
         }
 
         private void registerTimer(TimeLength time)
@@ -456,7 +456,7 @@ namespace FreeTrain.World.Rail
             {
                 int c = 0;
                 foreach (TrainCar car in this.cars)
-                    c += car.type.capacity;
+                    c += car.type.Capacity;
                 return c;
             }
         }
@@ -478,7 +478,7 @@ namespace FreeTrain.World.Rail
 
                 // record the sales
                 AccountManager.theInstance.earn(
-                    r * type.fare * dist / 5000,
+                    r * type.Fare * dist / 5000,
                     AccountGenre.RailService);
 
                 passengerSourceState = null;
@@ -835,9 +835,9 @@ namespace FreeTrain.World.Rail
                     }
 
                     if (!parent.isReversed)
-                        type.drawSlope(display, pt, s.direction, s.direction == srr.climbDir);
+                        type.DrawSlope(display, pt, s.direction, s.direction == srr.climbDir);
                     else
-                        type.drawSlope(display, pt, s.direction.opposite, s.direction != srr.climbDir);
+                        type.DrawSlope(display, pt, s.direction.opposite, s.direction != srr.climbDir);
                 }
                 else
                 { // level rail road
@@ -868,7 +868,7 @@ namespace FreeTrain.World.Rail
                     if (parent.isReversed)
                         angle ^= 8;
 
-                    type.draw(display, pt, angle);
+                    type.Draw(display, pt, angle);
                 }
             }
         }

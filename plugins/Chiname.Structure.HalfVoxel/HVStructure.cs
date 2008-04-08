@@ -359,24 +359,24 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public override void draw(DrawContext display, Point pt, int heightCutDiff)
         {
             if (heightCutDiff >= 0)
-                ResourceUtil.emptyChip.drawShape(display.Surface, pt, owner.heightCutColor);
+                ResourceUtil.emptyChip.DrawShape(display.Surface, pt, owner.heightCutColor);
             else
-                ResourceUtil.emptyChip.draw(display.Surface, pt);
+                ResourceUtil.emptyChip.Draw(display.Surface, pt);
             // above line is needed when my(=477) patch is applied.
 
             if (owner.backside != null)
                 if (heightCutDiff < 0 || owner.backside.height < heightCutDiff)
                 {
-                    owner.backside.getSprite().draw(display.Surface, pt);
+                    owner.backside.getSprite().Draw(display.Surface, pt);
                     ISprite hls = owner.backside.getHighlightSprite();
-                    if (hls != null) hls.draw(display.Surface, pt);
+                    if (hls != null) hls.Draw(display.Surface, pt);
                 }
             if (owner.foreside != null)
                 if (heightCutDiff < 0 || owner.foreside.height < heightCutDiff)
                 {
-                    owner.foreside.getSprite().draw(display.Surface, pt);
+                    owner.foreside.getSprite().Draw(display.Surface, pt);
                     ISprite hls = owner.foreside.getHighlightSprite();
-                    if (hls != null) hls.draw(display.Surface, pt);
+                    if (hls != null) hls.Draw(display.Surface, pt);
                 }
         }
 

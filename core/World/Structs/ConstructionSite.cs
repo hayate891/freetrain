@@ -399,7 +399,7 @@ namespace FreeTrain.World.Structs
                     case State.bone2:
                     case State.bone3:
                         if (isGroundLevel)
-                            groundSprites[0].draw(surface, pt);
+                            groundSprites[0].Draw(surface, pt);
                         drawBone(surface, pt, (int)state - 1);
                         break;
                     case State.walled:
@@ -426,13 +426,13 @@ namespace FreeTrain.World.Structs
             /// <summary> Draws a fence </summary>
             private void drawFence(Surface surface, Point pt, int dir)
             {
-                fenceSprites[dir, needsDoor ? 1 : 0].draw(surface, pt);
+                fenceSprites[dir, needsDoor ? 1 : 0].Draw(surface, pt);
             }
 
             /// <summary> Draws a ground object. </summary>
             private void drawGroundObject(Surface surface, Point pt)
             {
-                groundSprites[(int)ground].draw(surface, pt);
+                groundSprites[(int)ground].Draw(surface, pt);
             }
 
             /// <summary> Draws a bone. </summary>
@@ -442,12 +442,12 @@ namespace FreeTrain.World.Structs
                     connection[0] ? 1 : 0,
                     connection[1] ? 1 : 0,
                     connection[2] ? 1 : 0,
-                    connection[3] ? 1 : 0].draw(surface, pt);
+                    connection[3] ? 1 : 0].Draw(surface, pt);
             }
 
             private void drawWall(Surface surface, Point pt, int dir)
             {
-                wallSprites[dir].draw(surface, pt);
+                wallSprites[dir].Draw(surface, pt);
             }
 
 

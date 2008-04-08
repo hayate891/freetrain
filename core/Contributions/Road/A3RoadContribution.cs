@@ -41,7 +41,7 @@ namespace FreeTrain.Contributions.Road
             : base(e)
         {
             // load resource, but don't dispose it as sprites will still refer to this surface.
-            Picture picture = getPicture(e);
+            Picture picture = GetPicture(e);
 
             sprites = new ISprite[3];
             for (int i = 0; i < 3; i++)

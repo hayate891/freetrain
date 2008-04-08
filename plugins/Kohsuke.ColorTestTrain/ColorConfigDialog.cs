@@ -332,7 +332,7 @@ namespace FreeTrain.World.Rail.ColorTestTrain
         {
             Clipboard.SetDataObject(
                 string.Format("<colorMap picture=\"{0}\" base=\"{1}\" line1=\"{2}\" line2=\"{3}\" line3=\"{4}\" />",
-                    picture.id,
+                    picture.Id,
                     displayName(colors[0]),
                     displayName(colors[1]),
                     displayName(colors[2]),

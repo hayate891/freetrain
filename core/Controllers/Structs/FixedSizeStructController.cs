@@ -71,7 +71,7 @@ namespace FreeTrain.Controllers.Structs
         {
             if (isPlacing)
             {
-                if (!selectedType.canBeBuilt(loc, ControlMode.Player))
+                if (!selectedType.CanBeBuilt(loc, ControlMode.Player))
                 {
                     MessageBox.Show("Can not build");
                     //! MessageBox.Show("設置できません");
@@ -79,7 +79,7 @@ namespace FreeTrain.Controllers.Structs
                 else
                 {
                     CompletionHandler handler = new CompletionHandler(selectedType, loc, true);
-                    new ConstructionSite(loc, new EventHandler(handler.handle), selectedType.size);
+                    new ConstructionSite(loc, new EventHandler(handler.handle), selectedType.Size);
                 }
             }
             else
@@ -107,7 +107,7 @@ namespace FreeTrain.Controllers.Structs
             /// <param name="args"></param>
             public void handle(object sender, EventArgs args)
             {
-                Structure s = contribution.create(loc, owned);
+                Structure s = contribution.Create(loc, owned);
             }
         }
 
@@ -117,7 +117,7 @@ namespace FreeTrain.Controllers.Structs
         /// <returns></returns>
         protected override AlphaBlendSpriteSet createAlphaSprites()
         {
-            if (selectedType != null) return new AlphaBlendSpriteSet(selectedType.sprites);
+            if (selectedType != null) return new AlphaBlendSpriteSet(selectedType.Sprites);
             else return null;
         }
     }

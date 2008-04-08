@@ -45,7 +45,7 @@ namespace FreeTrain.World.Rail
         /// <returns></returns>
         protected override StructureVoxel CreateVoxel(WorldLocator wloc)
         {
-            if (type.size.x == 1 && type.size.y == 1)
+            if (type.Size.x == 1 && type.Size.y == 1)
                 return new StationaryVoxel(this, wloc);
             else
                 return base.CreateVoxel(wloc);

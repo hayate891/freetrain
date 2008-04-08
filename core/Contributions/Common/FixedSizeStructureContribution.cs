@@ -45,16 +45,17 @@ namespace FreeTrain.Contributions.Common
         protected FixedSizeStructureContribution(XmlElement e)
             : base(e)
         {
-            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+            this.Price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
 
             Size sz = XmlUtil.ParseSize(XmlUtil.SelectSingleNode(e, "size").InnerText);
             int height = int.Parse(XmlUtil.SelectSingleNode(e, "height").InnerText);
 
             this.size = new Distance(sz, height);
-            _ppa = _price / Math.Max(1, size.x * size.y);
+            this.PricePerArea = this.Price / Math.Max(1, size.x * size.y);
             XmlElement spr = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
             sprites = PluginUtil.getSpriteLoader(spr).load3D(spr, size.x, size.y, height);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -65,42 +66,40 @@ namespace FreeTrain.Contributions.Common
         public FixedSizeStructureContribution(IAbstractStructure master, XmlElement pic, XmlElement main, bool opposite)
             : base(main)
         {
-            _price = master.UnitPrice;
+            this.Price = master.UnitPrice;
             int height = master.MaxHeight;
             if (opposite)
                 size = new Distance(master.Size.Height, master.Size.Width, height);
             else
                 this.size = new Distance(master.Size, height);
-            _ppa = _price / Math.Max(1, size.x * size.y);
+            this.PricePerArea = this.Price / Math.Max(1, size.x * size.y);
             sprites = PluginUtil.getSpriteLoader(pic).load3D(pic, size.x, size.y, height);
         }
-
-        /// <summary>Price of this structure.</summary>
-        [CLSCompliant(false)]
-        protected readonly int _price;			// TODO: should be moved up
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int Price { get { return _price; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        [CLSCompliant(false)]
-        protected readonly double _ppa;
-        /// <summary>
-        /// 
-        /// </summary>
-        public override double PricePerArea { get { return _ppa; } }
-
 
         /// <summary>
         /// Sprite set to draw this structure. Indexed as [x,y,z]
         /// and may contain null if there's no need to draw that voxel.
         /// </summary>
-        public readonly ISprite[, ,] sprites;
+        private readonly ISprite[, ,] sprites;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ISprite[, ,] Sprites
+        {
+            get { return sprites; }
+        } 
 
         /// <summary> Size of this structure in voxel by voxel. </summary>
-        public readonly Distance size;
+        private readonly Distance size;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Distance Size
+        {
+            get { return size; }
+        } 
 
         /// <summary>
         /// Creates a new instance of this structure type to the specified location.
@@ -110,43 +109,45 @@ namespace FreeTrain.Contributions.Common
         /// structure is initially owned or not. Otherwise this flag has no effect.
         /// </param>
         /// <param name="baseLoc"></param>
-        public Structure create(Location baseLoc, bool initiallyOwned)
+        public Structure Create(Location baseLoc, bool initiallyOwned)
         {
-            return create(new WorldLocator(WorldDefinition.World, baseLoc), initiallyOwned);
+            return Create(new WorldLocator(WorldDefinition.World, baseLoc), initiallyOwned);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="wloc"></param>
         /// <param name="initiallyOwned"></param>
         /// <returns></returns>
-        public abstract Structure create(WorldLocator wloc, bool initiallyOwned);
+        public abstract Structure Create(WorldLocator wloc, bool initiallyOwned);
 
-        // this method differs from the create method in its return type.
-        // delegates are so inflexible that we have to do this kind of adjustment.
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="baseLoc"></param>
-        public void create2(Location baseLoc)
-        {
-            create(new WorldLocator(WorldDefinition.World, baseLoc), false);
-        }
+        //// this method differs from the create method in its return type.
+        //// delegates are so inflexible that we have to do this kind of adjustment.
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="baseLoc"></param>
+        //public void create2(Location baseLoc)
+        //{
+        //    Create(new WorldLocator(WorldDefinition.World, baseLoc), false);
+        //}
 
         /// <summary>
         /// Returns true iff this structure can be built at the specified location.
         /// </summary>
-        public abstract bool canBeBuilt(Location baseLoc, ControlMode cm);
+        public abstract bool CanBeBuilt(Location baseLoc, ControlMode cm);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public ISprite getSprite(Distance d)
+        public ISprite GetSprite(Distance d)
         {
             return sprites[d.x, d.y, d.z];
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -158,6 +159,7 @@ namespace FreeTrain.Contributions.Common
             drawer.drawCenter(sprites);
             return drawer;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -167,6 +169,7 @@ namespace FreeTrain.Contributions.Common
         {
             return new FixedSizeStructurePlacementController(this, site);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -176,6 +179,7 @@ namespace FreeTrain.Contributions.Common
         {
             return new FixedSizeStructureRemovalController(this, site);
         }
+
         #region IPreviewWorldBuilder o
         /// <summary>
         /// 
@@ -187,7 +191,7 @@ namespace FreeTrain.Contributions.Common
         {
             WorldDefinition w = WorldDefinition.CreatePreviewWorld(minsizePixel, size);
             Location l = w.toXYZ((w.Size.x - size.x + size.y) / 2, w.Size.y - size.y - 2, 0);
-            create(new WorldLocator(w, l), false);
+            Create(new WorldLocator(w, l), false);
             return w;
         }
 

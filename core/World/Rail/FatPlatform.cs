@@ -330,7 +330,7 @@ namespace FreeTrain.World.Rail
             {
                 Surface display = dc.Surface;
 
-                sprite.draw(display, pt);
+                sprite.Draw(display, pt);
                 if (owner.host == null && location == owner.location)
                 {
                     pt.X += 8;
@@ -405,7 +405,7 @@ namespace FreeTrain.World.Rail
             /// <param name="pt"></param>
             public override void drawBefore(DrawContext display, Point pt)
             {
-                theImage.draw(display.Surface, pt);
+                theImage.Draw(display.Surface, pt);
                 base.drawBefore(display, pt);
             }
         }

@@ -55,7 +55,7 @@ namespace FreeTrain.Contributions.Structs
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        protected override StructureGroup getGroup(string name)
+        protected override StructureGroup GetGroup(string name)
         {
             return PluginManager.theInstance.commercialStructureGroup[name];
         }
@@ -65,7 +65,7 @@ namespace FreeTrain.Contributions.Structs
         /// <param name="wLoc"></param>
         /// <param name="initiallyOwned"></param>
         /// <returns></returns>
-        public override Structure create(WorldLocator wLoc, bool initiallyOwned)
+        public override Structure Create(WorldLocator wLoc, bool initiallyOwned)
         {
             return new Commercial(this, wLoc, initiallyOwned);
         }
@@ -75,9 +75,9 @@ namespace FreeTrain.Contributions.Structs
         /// <param name="baseLoc"></param>
         /// <param name="cm"></param>
         /// <returns></returns>
-        public override bool canBeBuilt(Location baseLoc, ControlMode cm)
+        public override bool CanBeBuilt(Location baseLoc, ControlMode cm)
         {
-            return Commercial.canBeBuilt(baseLoc, size, cm);
+            return Commercial.canBeBuilt(baseLoc, Size, cm);
         }
 
         // TODO: additional parameters, like population and attractiveness.

@@ -200,7 +200,7 @@ namespace FreeTrain.Framework.Plugin
             // try assemblies of plug-ins
             foreach (Contribution cont in Core.Plugins.publicContributions)
             {
-                Assembly asm = cont.assembly;
+                Assembly asm = cont.Assembly;
 
                 if (getModuleName(asm.FullName) == name)
                     return asm;
@@ -345,17 +345,17 @@ namespace FreeTrain.Framework.Plugin
             c_max += publicContributions.Length;
             foreach (Contribution contrib in publicContributions)
             {
-                progressHandler("Initializing contributions...\n" + contrib.baseUri, ++count / c_max);
+                progressHandler("Initializing contributions...\n" + contrib.BaseUri, ++count / c_max);
                 //! progressHandler("コントリビューションを初期化中\n"+contrib.baseUri,++count/c_max);
                 try
                 {
-                    contrib.onInitComplete();
+                    contrib.OnInitComplete();
                 }
                 catch (Exception e)
                 {
                     errCount++;
                     errBreak = errorHandler.OnContributionInitError(contrib, e);
-                    PluginDefinition p = contrib.parent;
+                    PluginDefinition p = contrib.Parent;
                     if (!errorPlugins.ContainsKey(p))
                         errorPlugins.Add(p, e);
                     if (errBreak)
@@ -371,20 +371,20 @@ namespace FreeTrain.Framework.Plugin
                 IDictionary dic = new Hashtable();
                 foreach (Contribution contrib in publicContributions)
                 {
-                    if (dic[contrib.id] != null)
+                    if (dic[contrib.Id] != null)
                     {
                         errCount++;
-                        Exception e = new FormatException("ID:" + contrib.id + " is not unique");
+                        Exception e = new FormatException("ID:" + contrib.Id + " is not unique");
                         //! Exception e = new FormatException("ID:"+contrib.id+"が一意ではありません");
-                        errBreak = errorHandler.OnContribIDDuplicated(dic[contrib.id] as Contribution, contrib, e);
-                        PluginDefinition p = contrib.parent;
+                        errBreak = errorHandler.OnContribIDDuplicated(dic[contrib.Id] as Contribution, contrib, e);
+                        PluginDefinition p = contrib.Parent;
                         if (!errorPlugins.ContainsKey(p))
                             errorPlugins.Add(p, e);
                         if (errBreak)
                             break;
                     }
                     else
-                        dic[contrib.id] = contrib;
+                        dic[contrib.Id] = contrib;
                 }
             }
             if (errBreak)
@@ -675,7 +675,7 @@ namespace FreeTrain.Framework.Plugin
         /// <param name="contrib"></param>
         public void addContribution(Contribution contrib)
         {
-            contributionMap.Add(contrib.id, contrib);
+            contributionMap.Add(contrib.Id, contrib);
         }
 
         /// <summary>

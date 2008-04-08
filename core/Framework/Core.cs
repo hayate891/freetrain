@@ -261,7 +261,7 @@ namespace FreeTrain.Framework
             if (errCount++ < errMax)
             {
                 MessageBox.Show(makeErrorMessage(c, e),
-                    "Contribution contained in plugin " + c.parent.dirName + " can not be initialized");
+                    "Contribution contained in plugin " + c.Parent.dirName + " can not be initialized");
                 //! "プラグイン"+c.parent.dirName+"でコントリビューションの初期化に失敗しました");
                 return false;
             }
@@ -284,7 +284,7 @@ namespace FreeTrain.Framework
             if (errCount++ < errMax)
             {
                 MessageBox.Show(makeErrorMessage(c_2nd, e),
-                    "Contribution ID=" + c_2nd.id + " is defined in more than instance");
+                    "Contribution ID=" + c_2nd.Id + " is defined in more than instance");
                 //! "コントリビューション ID="+c_2nd.id+" が重複定義されています");
                 return false;
             }
@@ -333,8 +333,8 @@ Do you want to quit FreeTrain now?
 
         private static string makeErrorMessage(Contribution c, Exception e)
         {
-            PluginDefinition p = c.parent;
-            return string.Format("Title: {0}\tAuthor: {1}\nID={2}\n\n{3}", p.title, p.author, c.id, e.ToString());
+            PluginDefinition p = c.Parent;
+            return string.Format("Title: {0}\tAuthor: {1}\nID={2}\n\n{3}", p.title, p.author, c.Id, e.ToString());
             //! return string.Format("タイトル： {0}\t作者： {1}\nID={2}\n\n{3}",p.title,p.author,c.id,e.ToString());
         }
     }

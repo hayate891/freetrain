@@ -46,7 +46,7 @@ namespace FreeTrain.World.Development
 		public override Cube cube { get { return new Cube(loc,size.Width,size.Height,1); } }
 
 		public override void build() {
-			contrib.create(loc,loc+new Distance(size.Width-1,size.Height-1,0),false);	// inclusive
+			contrib.Create(loc,loc+new Distance(size.Width-1,size.Height-1,0),false);	// inclusive
 		}
 	}
 

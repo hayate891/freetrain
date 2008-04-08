@@ -302,7 +302,7 @@ namespace FreeTrain.Controllers.Rail
             if (selectedTrain != null)
             {
                 typeBox.Enabled = true;
-                typeBox.Text = selectedTrain.type.name;
+                typeBox.Text = selectedTrain.type.Name;
             }
             else
             {

@@ -191,12 +191,12 @@ namespace FreeTrain.World
 
 
 		public void drawBefore( DrawContext display, Point pt ) {
-			sprites[railDirIndex,1,stateSpriteIndex].draw( display.Surface, pt );
+			sprites[railDirIndex,1,stateSpriteIndex].Draw( display.Surface, pt );
 			Trace.WriteLine( string.Format("{0} : {1},1,{2}", owner.location,railDirIndex,stateSpriteIndex) );
 		}
 
 		public void drawAfter( DrawContext display, Point pt ) {
-			sprites[railDirIndex,0,stateSpriteIndex].draw( display.Surface, pt );
+			sprites[railDirIndex,0,stateSpriteIndex].Draw( display.Surface, pt );
 			Trace.WriteLine( string.Format("{0} : {1},0,{2}", owner.location,railDirIndex,stateSpriteIndex) );
 		}
 

@@ -56,7 +56,7 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        public override int maxLength
+        public override int MaxLength
         {
             get
             {
@@ -69,7 +69,7 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        public override int minLength
+        public override int MinLength
         {
             get
             {
@@ -88,9 +88,9 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        protected internal override void onInitComplete()
+        protected internal override void OnInitComplete()
         {
-            base.onInitComplete();
+            base.OnInitComplete();
 
             XmlNodeList lst = config.SelectNodes("car");
             foreach (XmlElement e in lst)
@@ -145,7 +145,7 @@ namespace FreeTrain.Contributions.Train
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
-        public override TrainCarContribution[] create(int length)
+        public override TrainCarContribution[] Create(int length)
         {
             TrainCarContribution[] r = (TrainCarContribution[])compositions[length];
             if (r == null) return null;

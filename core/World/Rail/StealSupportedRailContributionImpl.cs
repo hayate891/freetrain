@@ -47,9 +47,9 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        protected internal override void onInitComplete()
+        protected internal override void OnInitComplete()
         {
-            Picture picture = loadPicture("StealSupportedRail.bmp");
+            Picture picture = LoadPicture("StealSupportedRail.bmp");
             sprites[0] = new SimpleSprite(picture, new Point(0, 16), new Point(0, 0), new Size(32, 32));
             sprites[1] = new SimpleSprite(picture, new Point(0, 16), new Point(32, 0), new Size(32, 32));
             sprites[2] = new SimpleSprite(picture, new Point(0, 16), new Point(64, 0), new Size(32, 32));
@@ -87,7 +87,7 @@ namespace FreeTrain.World.Rail
                     case 7: s = sprites[2]; break;
                 }
 
-                s.draw(display.Surface, pt);
+                s.Draw(display.Surface, pt);
                 // don't call the base class so that we won't draw the rail road unnecessarily
             }
         }
@@ -102,7 +102,7 @@ namespace FreeTrain.World.Rail
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <returns></returns>
-        public override bool canBeBuilt(Location from, Location to)
+        public override bool CanBeBuilt(Location from, Location to)
         {
             if (from == to) return false;
 
@@ -137,9 +137,9 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="here"></param>
         /// <param name="to"></param>
-        public override void build(Location here, Location to)
+        public override void Build(Location here, Location to)
         {
-            Debug.Assert(canBeBuilt(here, to));
+            Debug.Assert(CanBeBuilt(here, to));
 
             Direction d = here.getDirectionTo(to);
 
@@ -164,7 +164,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="here"></param>
         /// <param name="to"></param>
-        public override void remove(Location here, Location to)
+        public override void Remove(Location here, Location to)
         {
             if (here == to) return;
 
@@ -192,12 +192,12 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override string name { get { return "Girder Viaduct"; } }
+        public override string Name { get { return "Girder Viaduct"; } }
         //! public override string name { get { return "ガード高架"; } }
         /// <summary>
         /// 
         /// </summary>
-        public override string oneLineDescription { get { return "Steel reinforced viaduct"; } }
+        public override string OneLineDescription { get { return "Steel reinforced viaduct"; } }
         //! public override string oneLineDescription { get { return "スチールで強化された高架"; } }
         /// <summary>
         /// 
@@ -206,7 +206,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override Bitmap previewBitmap
+        public override Bitmap PreviewBitmap
         {
             get
             {

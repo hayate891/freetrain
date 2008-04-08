@@ -85,8 +85,8 @@ namespace FreeTrain.World.Road.Accessory
 			if( rp.hasRoad(Direction.NORTH) )	x=1;
 			else								x=0;
 
-			contribution.sprites[x,0].drawAlpha( canvas.Surface, pt );
-			contribution.sprites[x,1].drawAlpha( canvas.Surface, pt );
+			contribution.sprites[x,0].DrawAlpha( canvas.Surface, pt );
+			contribution.sprites[x,1].DrawAlpha( canvas.Surface, pt );
 		}
 
         /// <summary>

@@ -36,7 +36,7 @@ namespace FreeTrain.World.Development
 		internal CommercialStructurePlan(
 			CommercialStructureContribution _contrib,
 			IULVFactory factory, Location _loc )
-			: base( factory.create(Cube.createExclusive(_loc, new Distance(_contrib.size.x, _contrib.size.y, 0) )))
+			: base( factory.create(Cube.createExclusive(_loc, new Distance(_contrib.Size.x, _contrib.Size.y, 0) )))
 		{
 			this.contrib = _contrib;
 			this.loc = _loc;
@@ -44,15 +44,15 @@ namespace FreeTrain.World.Development
 
 		public override int value { get { return contrib.Price; } }
 
-		public override Cube cube { get { return Cube.createExclusive(loc,contrib.size); } }
+		public override Cube cube { get { return Cube.createExclusive(loc,contrib.Size); } }
 
 
 		public override void build() {
-			new ConstructionSite( loc, new EventHandler(handle), contrib.size );
+			new ConstructionSite( loc, new EventHandler(handle), contrib.Size );
 		}
 
 		public void handle( object sender, EventArgs args ) {
-			contrib.create(loc,false);
+			contrib.Create(loc,false);
 		}
 	}
 }

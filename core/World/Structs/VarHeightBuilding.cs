@@ -49,8 +49,8 @@ namespace FreeTrain.World.Structs
             this.type = _type;
             this.height = _height;
 
-            int Y = type.size.Height;
-            int X = type.size.Width;
+            int Y = type.Size.Height;
+            int X = type.Size.Width;
             int Z = height;
             this.baseLocation = wloc.location;
 
@@ -115,7 +115,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return WorldDefinition.World.LandValue[baseLocation + new Distance(type.size, 0) / 2] * type.size.Width * type.size.Height;
+                return WorldDefinition.World.LandValue[baseLocation + new Distance(type.Size, 0) / 2] * type.Size.Width * type.Size.Height;
             }
         }
         /// <summary>
@@ -125,7 +125,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return baseLocation + new Distance(type.size, 0) / 2;
+                return baseLocation + new Distance(type.Size, 0) / 2;
             }
         }
 
@@ -230,13 +230,13 @@ namespace FreeTrain.World.Structs
 
                 if (heightCutDiff < 0)
                 {
-                    ISprite[] sps = o.type.getSprites(x, y, z, o.height);
+                    ISprite[] sps = o.type.GetSprites(x, y, z, o.height);
                     for (int i = 0; i < sps.Length; i++)
-                        sps[i].draw(display.Surface, pt);
+                        sps[i].Draw(display.Surface, pt);
                 }
                 else
                     if (z == 0)
-                        ResourceUtil.emptyChip.drawShape(display.Surface, pt, o.heightCutColor);
+                        ResourceUtil.emptyChip.DrawShape(display.Surface, pt, o.heightCutColor);
             }
         }
 

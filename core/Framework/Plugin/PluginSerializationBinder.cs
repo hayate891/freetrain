@@ -49,7 +49,7 @@ namespace FreeTrain.Framework.Plugin
             // try assemblies of plug-ins
             foreach (Contribution cont in Core.Plugins.publicContributions)
             {
-                Assembly asm = cont.assembly;
+                Assembly asm = cont.Assembly;
                 if (asm != null)
                 {
                     t = asm.GetType(typeName);

@@ -34,7 +34,16 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        public readonly Picture picture;
+        private readonly Picture picture;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Picture Picture
+        {
+            get { return picture; }
+        } 
+
         /// <summary>
         /// 
         /// </summary>
@@ -44,7 +53,7 @@ namespace FreeTrain.Contributions.Common
         {
             picture = new Picture(
                 (XmlElement)XmlUtil.SelectSingleNode(e, "picture"),
-                this.id);
+                this.Id);
             // picture object will register itself to the manager.
         }
     }

@@ -95,10 +95,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contributions\Common\StructureGroupGroup.cs" />
+    <Compile Include="Contributions\Common\FixedSizeStructurePlacementController.cs" />
+    <Compile Include="Contributions\Common\FixedSizeStructureRemovalController.cs" />
     <Compile Include="Contributions\Common\FixedSizeStructureContribution.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Contributions\Common\FixedSizeStructureController.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Contributions\Common\IAbstractStructure.cs" />

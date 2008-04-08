@@ -51,7 +51,7 @@ namespace FreeTrain.Contributions.Rail
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        protected override StructureGroup getGroup(string name)
+        protected override StructureGroup GetGroup(string name)
         {
             return PluginManager.theInstance.stationGroup[name];
         }
@@ -61,7 +61,7 @@ namespace FreeTrain.Contributions.Rail
         /// <param name="wLoc"></param>
         /// <param name="initiallyOwned"></param>
         /// <returns></returns>
-        public override Structure create(WorldLocator wLoc, bool initiallyOwned)
+        public override Structure Create(WorldLocator wLoc, bool initiallyOwned)
         {
             return new Station(this, wLoc);
         }
@@ -71,9 +71,9 @@ namespace FreeTrain.Contributions.Rail
         /// <param name="baseLoc"></param>
         /// <param name="cm"></param>
         /// <returns></returns>
-        public override bool canBeBuilt(Location baseLoc, ControlMode cm)
+        public override bool CanBeBuilt(Location baseLoc, ControlMode cm)
         {
-            return Station.canBeBuilt(baseLoc, size, cm);
+            return Station.canBeBuilt(baseLoc, Size, cm);
         }
     }
 }

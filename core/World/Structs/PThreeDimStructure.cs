@@ -49,9 +49,9 @@ namespace FreeTrain.World.Structs
             this.type = type;
 
             // build voxels
-            for (int z = 0; z < type.size.z; z++)
-                for (int y = 0; y < type.size.y; y++)
-                    for (int x = 0; x < type.size.x; x++)
+            for (int z = 0; z < type.Size.z; z++)
+                for (int y = 0; y < type.Size.y; y++)
+                    for (int x = 0; x < type.Size.x; x++)
                         CreateVoxel(new WorldLocator(wloc.world, baseLocation + new Distance(x, y, z)));
         }
         /// <summary>
@@ -79,7 +79,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public Cube cube { get { return Cube.createExclusive(baseLocation, type.size); } }
+        public Cube cube { get { return Cube.createExclusive(baseLocation, type.Size); } }
 
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace FreeTrain.World.Structs
             private void setSprite()
             {
                 PThreeDimStructure o = owner;
-                sprite = o.type.getSprite(location - o.baseLocation);
+                sprite = o.type.GetSprite(location - o.baseLocation);
             }
             /// <summary>
             /// 
@@ -151,18 +151,18 @@ namespace FreeTrain.World.Structs
             {
                 PThreeDimStructure o = owner;
 
-                int zdiff = o.type.size.z - (this.location.z - o.baseLocation.z);
+                int zdiff = o.type.Size.z - (this.location.z - o.baseLocation.z);
 
                 if (heightCutDiff < 0 || zdiff < heightCutDiff)
                 {
                     // draw in a normal mode
-                    sprite.draw(display.Surface, pt);
+                    sprite.Draw(display.Surface, pt);
                 }
                 else
                 {
                     // drawing in the height cut mode
                     if (this.location.z == o.baseLocation.z)
-                        ResourceUtil.emptyChip.drawShape(display.Surface, pt, o.heightCutColor);
+                        ResourceUtil.emptyChip.DrawShape(display.Surface, pt, o.heightCutColor);
                 }
             }
         }

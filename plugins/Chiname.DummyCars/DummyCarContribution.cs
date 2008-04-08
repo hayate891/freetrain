@@ -51,7 +51,7 @@ namespace FreeTrain.World.Road.DummyCars
         {
             // pictures
             XmlElement sprite = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
-            Picture picture = getPicture(sprite);
+            Picture picture = GetPicture(sprite);
             Point origin = XmlUtil.ParsePoint(sprite.Attributes["origin"].Value);
             int offset = int.Parse(sprite.Attributes["offset"].Value);
             Size sz = new Size(32, 16 + offset);
@@ -71,9 +71,9 @@ namespace FreeTrain.World.Road.DummyCars
                 XmlNode child = (XmlNode)ienum.Current;
                 if (child.Name == "colorVariation")
                 {
-                    SpriteFactory factory = SpriteFactory.getSpriteFactory(child);
-                    sprites[colorVariations, 0] = factory.createSprite(picture, new Point(0, offset), sprOrigin0, sz);
-                    sprites[colorVariations, 1] = factory.createSprite(picture, new Point(0, offset), sprOrigin1, sz);
+                    SpriteFactory factory = SpriteFactory.GetSpriteFactory(child);
+                    sprites[colorVariations, 0] = factory.CreateSprite(picture, new Point(0, offset), sprOrigin0, sz);
+                    sprites[colorVariations, 1] = factory.CreateSprite(picture, new Point(0, offset), sprOrigin1, sz);
                     colorVariations++;
                 }
             }

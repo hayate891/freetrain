@@ -221,15 +221,15 @@ namespace FreeTrain.Framework.Plugin.Generic
                     VarHeightBuildingContribution vhContrib = (VarHeightBuildingContribution)current.current;
                     CompletionHandler handler = new CompletionHandler(vhContrib, loc, (int)numHeight.Value, true);
                     new ConstructionSite(loc, new EventHandler(handler.handle),
-                        new Distance(vhContrib.size, (int)numHeight.Value));
+                        new Distance(vhContrib.Size, (int)numHeight.Value));
                 }
                 else
                 {
                     CommercialStructureContribution csContrib = (CommercialStructureContribution)current.current;
-                    if (csContrib.size.volume > 0) // eliminate dummy contribution
+                    if (csContrib.Size.volume > 0) // eliminate dummy contribution
                     {
                         CompletionHandler handler = new CompletionHandler(csContrib, loc, current.MaxHeight, true);
-                        new ConstructionSite(loc, new EventHandler(handler.handle), csContrib.size);
+                        new ConstructionSite(loc, new EventHandler(handler.handle), csContrib.Size);
                     }
                 }
             }
@@ -246,12 +246,12 @@ namespace FreeTrain.Framework.Plugin.Generic
             Size size;
             if (current.current is VarHeightBuildingContribution)
             {
-                size = ((VarHeightBuildingContribution)current.current).size;
+                size = ((VarHeightBuildingContribution)current.current).Size;
                 height = (int)numHeight.Value;
             }
             else
             {
-                Distance d = ((CommercialStructureContribution)current.current).size;
+                Distance d = ((CommercialStructureContribution)current.current).Size;
                 size = new Size(d.x, d.y);
                 height = current.MaxHeight;
             }
@@ -299,16 +299,16 @@ namespace FreeTrain.Framework.Plugin.Generic
             if (contrib is VarHeightBuildingContribution)
             {
                 VarHeightBuildingContribution vhcontrib = (VarHeightBuildingContribution)contrib;
-                Size sz = vhcontrib.size;
+                Size sz = vhcontrib.Size;
                 int pHeight = 3;
                 temp = new ISprite[sz.Width, sz.Height, pHeight];
                 for (int z = 0; z < pHeight; z++)
                     for (int y = 0; y < sz.Height; y++)
                         for (int x = 0; x < sz.Width; x++)
-                            temp[x, y, z] = vhcontrib.getSprites(x, y, z, pHeight)[0];
+                            temp[x, y, z] = vhcontrib.GetSprites(x, y, z, pHeight)[0];
             }
             else
-                temp = ((CommercialStructureContribution)contrib).sprites;
+                temp = ((CommercialStructureContribution)contrib).Sprites;
             return new AlphaBlendSpriteSet(temp);
         }
 
@@ -330,7 +330,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
-                alphaSprites.getSprite(loc - baseLoc).drawAlpha(canvas.Surface, pt);
+                alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas.Surface, pt);
         }
         /// <summary>
         /// 
@@ -347,7 +347,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             if (current.current is VarHeightBuildingContribution)
             {
-                using (PreviewDrawer drawer = ((VarHeightBuildingContribution)current.current).createPreview(previewBox.Size, (int)numHeight.Value))
+                using (PreviewDrawer drawer = ((VarHeightBuildingContribution)current.current).CreatePreview(previewBox.Size, (int)numHeight.Value))
                 {
                     if (previewBitmap != null) previewBitmap.Dispose();
                     previewBox.Image = previewBitmap = drawer.createBitmap();
@@ -989,8 +989,8 @@ namespace FreeTrain.Framework.Plugin.Generic
             numHeight.Enabled = b;
             if (b)
             {
-                numHeight.Minimum = ((VarHeightBuildingContribution)current.current).minHeight;
-                numHeight.Maximum = ((VarHeightBuildingContribution)current.current).maxHeight;
+                numHeight.Minimum = ((VarHeightBuildingContribution)current.current).MinHeight;
+                numHeight.Maximum = ((VarHeightBuildingContribution)current.current).MaxHeight;
             }
             UpdateHeight();
 
@@ -1063,9 +1063,9 @@ namespace FreeTrain.Framework.Plugin.Generic
             {
                 Debug.WriteLine("called handler");
                 if (contribution is VarHeightBuildingContribution)
-                    ((VarHeightBuildingContribution)contribution).create(loc, height, owned);
+                    ((VarHeightBuildingContribution)contribution).Create(loc, height, owned);
                 else
-                    ((CommercialStructureContribution)contribution).create(loc, owned);
+                    ((CommercialStructureContribution)contribution).Create(loc, owned);
             }
         }
 

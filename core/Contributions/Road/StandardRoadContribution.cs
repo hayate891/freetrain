@@ -44,7 +44,7 @@ namespace FreeTrain.Contributions.Road
             : base(e)
         {
             // load resource, but don't dispose it as sprites will still refer to this surface.
-            Picture pic = getPicture(e);
+            Picture pic = GetPicture(e);
 
             XmlElement picture = (XmlElement)XmlUtil.SelectSingleNode(e, "picture");
             Size sz = XmlUtil.ParseSize(picture.Attributes["size"].Value);

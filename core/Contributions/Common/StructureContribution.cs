@@ -41,7 +41,6 @@ namespace FreeTrain.Contributions.Common
     [Serializable]
     public abstract class StructureContribution : Contribution, IEntityBuilder
     {
-
         /// <summary>
         /// Parses a structure contribution from a DOM node.
         /// </summary>
@@ -49,13 +48,14 @@ namespace FreeTrain.Contributions.Common
         protected StructureContribution(XmlElement e)
             : base(e)
         {
-            core = new EntityBuilderInternal(e, this.id);
+            core = new EntityBuilderInternal(e, this.Id);
             XmlNode groupNode = e.SelectSingleNode("group");
             string groupName = (groupNode != null) ? groupNode.InnerText : core.Name;
-            group = getGroup(groupName);
-            group.add(this);
+            group = GetGroup(groupName);
+            group.Add(this);
 
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -68,10 +68,21 @@ namespace FreeTrain.Contributions.Common
             core = original;
             group = original.group;
         }
+
         /// <summary>
         /// 
         /// </summary>
-        internal protected IEntityBuilder core;
+        private IEntityBuilder core;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected internal IEntityBuilder Core
+        {
+            get { return core; }
+            set { core = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -85,18 +96,18 @@ namespace FreeTrain.Contributions.Common
             get { return group; }
         } 
 
-
         /// <summary>
         /// Implemented by the derived class and
         /// used to determine which group this structure should go.
         /// </summary>
-        protected abstract StructureGroup getGroup(string name);
+        protected abstract StructureGroup GetGroup(string name);
 
         /// <summary>
         /// Name of this entity builder. Primarily used as the display name.
         /// Doesn't need to be unique.
         /// </summary>
         public virtual string Name { get { return core.Name; } }
+
         /// <summary>
         /// 
         /// </summary>
@@ -113,6 +124,7 @@ namespace FreeTrain.Contributions.Common
         /// True if the player is not allowed to build this structure.
         /// </summary>
         public bool PlayerCannotBuild { get { return core.PlayerCannotBuild; } }
+
         /// <summary>
         /// 
         /// </summary>
@@ -149,6 +161,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="pixelSize"></param>
         /// <returns></returns>
         public virtual PreviewDrawer CreatePreview(Size pixelSize) { return core.CreatePreview(pixelSize); }
+
         /// <summary>
         /// 
         /// </summary>
@@ -195,7 +208,6 @@ namespace FreeTrain.Contributions.Common
                     _population = new PersistentPopulation(BasePopulation.load(pop),
                         new PopulationReferenceImpl(ownerId));
             }
-
 
             private readonly BasePopulation _population;
             private readonly bool _computerCannotBuild;
@@ -288,6 +300,7 @@ namespace FreeTrain.Contributions.Common
         {
             internal PopulationReferenceImpl(string id) { this.id = id; }
             private string id;
+
             /// <summary>
             /// 
             /// </summary>

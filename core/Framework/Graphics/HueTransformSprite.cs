@@ -62,14 +62,14 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
-        public override void draw(Surface surface, Point pt)
+        public override void Draw(Surface surface, Point pt)
         {
-            pt.X -= offset.X;
-            pt.Y -= offset.Y;
+            pt.X -= Offset.X;
+            pt.Y -= Offset.Y;
 
             int idx = (WorldDefinition.World.ViewOptions.useNightView) ? 1 : 0;
 
-            surface.bltHueTransform(pt, picture.surface, origin, size,
+            surface.bltHueTransform(pt, Picture.surface, Origin, Size,
                 RedTarget, GreenTarget, BlueTarget);
         }
 
@@ -167,7 +167,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public override ISprite createSprite(Picture picture, Point offset, Point origin, Size size)
+        public override ISprite CreateSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new HueTransformSprite(picture, offset, origin, size, RedTarget, GreenTarget, BlueTarget);
         }
@@ -202,7 +202,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        public override SpriteFactory createSpriteFactory(XmlElement e)
+        public override SpriteFactory CreateSpriteFactory(XmlElement e)
         {
             return new HueTransformSpriteFactory(e);
         }

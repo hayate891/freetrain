@@ -51,7 +51,7 @@ namespace FreeTrain.Controllers.Rail
         /// <param name="pt"></param>
         protected override void draw(Direction d, DrawContext canvas, Point pt)
         {
-            RailPattern.get(d, d.opposite).drawAlpha(canvas.Surface, pt);
+            RailPattern.get(d, d.opposite).DrawAlpha(canvas.Surface, pt);
         }
     }
 }

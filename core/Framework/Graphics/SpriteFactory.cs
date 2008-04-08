@@ -40,7 +40,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public abstract ISprite createSprite(Picture picture, Point offset, Point origin, Size size);
+        public abstract ISprite CreateSprite(Picture picture, Point offset, Point origin, Size size);
 
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="sprite">&lt;sprite> element in the manifest.</param>
         /// <returns>non-null valid object.</returns>
-        public static SpriteFactory getSpriteFactory(XmlNode sprite)
+        public static SpriteFactory GetSpriteFactory(XmlNode sprite)
         {
             XmlElement type = (XmlElement)sprite.SelectSingleNode("spriteType");
             if (type == null)
@@ -64,7 +64,7 @@ namespace FreeTrain.Framework.Graphics
                     PluginManager.theInstance.getContribution("spriteFactory:" + name);
                 if (contrib == null)
                     throw new FormatException("unable to locate spriteFactory:" + name);
-                return contrib.createSpriteFactory(type);
+                return contrib.CreateSpriteFactory(type);
             }
         }
     }

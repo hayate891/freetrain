@@ -44,12 +44,12 @@ namespace FreeTrain.World.Road.Accessory
             : base(e)
         {
             XmlElement sprite = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
-            Picture picture = getPicture(sprite);
-            SpriteFactory factory = SpriteFactory.getSpriteFactory(sprite);
+            Picture picture = GetPicture(sprite);
+            SpriteFactory factory = SpriteFactory.GetSpriteFactory(sprite);
 
             for (int y = 0; y < 2; y++)
                 for (int x = 0; x < 2; x++)
-                    sprites[x, y] = factory.createSprite(picture,
+                    sprites[x, y] = factory.CreateSprite(picture,
                         new Point(0, 16), new Point((y * 2 + x) * 32, 0), new Size(32, 32));
         }
 

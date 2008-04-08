@@ -95,7 +95,7 @@ namespace FreeTrain.Framework.Graphics
                 if ((((y - ptOrigin.Y) / 8) % 2) != 0) x += 16;
 
                 for (; x < pixelSize.Width; x += 32)
-                    empty.draw(surface, new Point(x, y));
+                    empty.Draw(surface, new Point(x, y));
             }
         }
         /// <summary>
@@ -131,7 +131,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetY"></param>
         public void draw(ISprite sprite, int offsetX, int offsetY)
         {
-            sprite.draw(surface, getPoint(offsetX, offsetY));
+            sprite.Draw(surface, getPoint(offsetX, offsetY));
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace FreeTrain.Framework.Graphics
                     pt.X += (x + y) * 16;
                     pt.Y += (-x + y) * 8;
 
-                    sprites[x, y].draw(surface, pt);
+                    sprites[x, y].Draw(surface, pt);
                 }
             }
         }
@@ -225,7 +225,7 @@ namespace FreeTrain.Framework.Graphics
                         pt.X += (x + y) * 16;
                         pt.Y += (-x + y) * 8 - z * 16;
 
-                        sprites[x, y, z].draw(surface, pt);
+                        sprites[x, y, z].Draw(surface, pt);
                     }
                 }
             }

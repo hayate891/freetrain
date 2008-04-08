@@ -162,18 +162,18 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                             variation.Attributes["to"].Value = v;
                             SpriteFactory factory = new HueTransformSpriteFactory(e);
                             if ((ss & SideStored.Fore) != 0)
-                                sprites[i][d, PlaceSide.Fore] = factory.createSprite(pic, offF, orgn, sz);
+                                sprites[i][d, PlaceSide.Fore] = factory.CreateSprite(pic, offF, orgn, sz);
                             if ((ss & SideStored.Back) != 0)
-                                sprites[i][d, PlaceSide.Back] = factory.createSprite(pic, offB, orgn, sz);
+                                sprites[i][d, PlaceSide.Back] = factory.CreateSprite(pic, offB, orgn, sz);
                         }
                     }
                     else
                     {
                         SpriteFactory factory = new SimpleSpriteFactory();
                         if ((ss & SideStored.Fore) != 0)
-                            sprites[0][d, PlaceSide.Fore] = factory.createSprite(pic, offF, orgn, sz);
+                            sprites[0][d, PlaceSide.Fore] = factory.CreateSprite(pic, offF, orgn, sz);
                         if ((ss & SideStored.Back) != 0)
-                            sprites[0][d, PlaceSide.Back] = factory.createSprite(pic, offB, orgn, sz);
+                            sprites[0][d, PlaceSide.Back] = factory.CreateSprite(pic, offB, orgn, sz);
                     }
                 }
                 cn = cn.NextSibling;
@@ -421,7 +421,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="name"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        protected override StructureGroup getGroup(string name)
+        protected override StructureGroup GetGroup(string name)
         {
             return _group;
         }

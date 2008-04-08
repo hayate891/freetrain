@@ -50,7 +50,7 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        public override int maxLength
+        public override int MaxLength
         {
             get
             {
@@ -60,7 +60,7 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        public override int minLength
+        public override int MinLength
         {
             get
             {
@@ -71,9 +71,9 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// 
         /// </summary>
-        protected internal override void onInitComplete()
+        protected internal override void OnInitComplete()
         {
-            base.onInitComplete();
+            base.OnInitComplete();
 
             carHeadType = getCarType(composition, "head");
             carBodyType = getCarType(composition, "body");
@@ -92,7 +92,7 @@ namespace FreeTrain.Contributions.Train
             if (e == null) return null;
 
             string idref = e.Attributes["carRef"].Value;
-            if (id == null) throw new FormatException("carRef܂");
+            if (Id == null) throw new FormatException("carRef܂");
 
             TrainCarContribution contrib = (TrainCarContribution)Core.Plugins.getContribution(idref);
             if (contrib == null) throw new FormatException(
@@ -107,7 +107,7 @@ namespace FreeTrain.Contributions.Train
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
-        public override TrainCarContribution[] create(int length)
+        public override TrainCarContribution[] Create(int length)
         {
             TrainCarContribution[] r = new TrainCarContribution[length];
             for (int i = 0; i < r.Length; i++)

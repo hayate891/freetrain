@@ -456,10 +456,10 @@ namespace FreeTrain.Controllers.Rail
 
                 for (int j = WorldDefinition.World.GetGroundLevel(loc); j < Z; j++)
                     // TODO: ground level handling
-                    BridgePierVoxel.defaultSprite.drawAlpha(
+                    BridgePierVoxel.defaultSprite.DrawAlpha(
                         canvas, view.fromXYZToClient(loc.x, loc.y, j));
 
-                RailPattern.getSlope(direction, i).drawAlpha(
+                RailPattern.getSlope(direction, i).DrawAlpha(
                     canvas, view.fromXYZToClient(loc));
                 loc += direction;
             }

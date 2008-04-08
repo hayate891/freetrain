@@ -104,7 +104,7 @@ namespace FreeTrain.World.Road.DummyCars
             if (rp.hasRoad(Direction.NORTH)) x = 0;
             else x = 1;
 
-            contribution.sprites[color, x].drawAlpha(canvas.Surface, pt);
+            contribution.sprites[color, x].DrawAlpha(canvas.Surface, pt);
         }
         /// <summary>
         /// 

@@ -57,7 +57,7 @@ namespace FreeTrain.Contributions.Land
         /// <summary>
         /// Gets the land that should be used to fill (x,y) within [x1,y1]-[x2,y2] (inclusive).
         /// </summary>
-        public override void create(int x1, int y1, int x2, int y2, int z, bool owned)
+        public override void Create(int x1, int y1, int x2, int y2, int z, bool owned)
         {
             for (int x = x1; x <= x2; x++)
             {

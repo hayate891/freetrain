@@ -62,13 +62,13 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             XmlNode xn = e.SelectSingleNode("structure");
             if (xn != null)
-                Categories = new StructCategories(xn, this.id);
+                Categories = new StructCategories(xn, this.Id);
             else
                 Categories = new StructCategories();
 
             if (Categories.Count == 0)
             {
-                StructCategory.Root.Entries.Add(this.id);
+                StructCategory.Root.Entries.Add(this.Id);
                 Categories.Add(StructCategory.Root);
             }
 
@@ -118,7 +118,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             }
             temp.AppendChild(sprite);
             contrib.AppendChild(temp);
-            return factory.Load(parent, (XmlElement)temp);
+            return factory.Load(Parent, (XmlElement)temp);
         }
 
     }

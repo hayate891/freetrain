@@ -39,9 +39,9 @@ namespace FreeTrain.Framework.Graphics
         public DirectSprite(Surface _surface, Point _offset, Point _origin, Size _size)
         {
             this.surface = _surface;
-            this._offset = _offset;
+            this.offset = _offset;
             this.origin = _origin;
-            this._size = _size;
+            this.size = _size;
         }
         /// <summary>
         /// 
@@ -55,64 +55,83 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// Surface that contains the image.
         /// </summary>
-        protected Surface surface;
+        private Surface surface;
+
+        protected Surface Surface
+        {
+            get { return surface; }
+            set { surface = value; }
+        }
 
         /// <summary>
         /// The point in the image that will be aligned to
         /// the left-top corner of a voxel.
-        /// </summary>
-        [CLSCompliant(false)]
-        protected readonly Point _offset;
+        Point offset;
 
-        /// <summary>
-        /// The area of the image to be drawn.
-        /// </summary>
-        protected readonly Point origin;
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected readonly Size _size;
+        public Point Offset
+        {
+            get { return offset; }
+            set { offset = value; }
+        }
+
+        Point origin;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Point Origin
+        {
+            get { return origin; }
+            set { origin = value; }
+        }
+
+        Size size;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Size Size
+        {
+            get { return size; }
+            set { size = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
-        public virtual void draw(Surface surface, Point pt)
+        public virtual void Draw(Surface surface, Point pt)
         {
-            pt.X -= _offset.X;
-            pt.Y -= _offset.Y;
-            surface.blt(pt, this.surface, origin, _size);
+            pt.X -= offset.X;
+            pt.Y -= offset.Y;
+            surface.blt(pt, this.surface, origin, size);
         }
 
         /// <summary>
         /// Draws the shape of this sprite in the specified color.
         /// </summary>
-        public virtual void drawShape(Surface surface, Point pt, Color color)
+        public virtual void DrawShape(Surface surface, Point pt, Color color)
         {
-            pt.X -= _offset.X;
-            pt.Y -= _offset.Y;
-            surface.bltShape(pt, this.surface, origin, _size, color);
+            pt.X -= offset.X;
+            pt.Y -= offset.Y;
+            surface.bltShape(pt, this.surface, origin, size, color);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
-        public virtual void drawAlpha(Surface surface, Point pt)
+        public virtual void DrawAlpha(Surface surface, Point pt)
         {
-            pt.X -= _offset.X;
-            pt.Y -= _offset.Y;
-            surface.bltAlpha(pt, this.surface, origin, _size);
+            pt.X -= offset.X;
+            pt.Y -= offset.Y;
+            surface.bltAlpha(pt, this.surface, origin, size);
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        public Size size { get { return _size; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        public Point offset { get { return offset; } }
+
         /// <summary>
         /// 
         /// </summary>

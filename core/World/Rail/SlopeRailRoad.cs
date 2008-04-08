@@ -326,7 +326,7 @@ namespace FreeTrain.World.Rail
             /// <param name="heightCutDiff"></param>
             public override void draw(DrawContext surface, Point pt, int heightCutDiff)
             {
-                sprite.draw(surface.Surface, pt);
+                sprite.Draw(surface.Surface, pt);
             }
         }
 

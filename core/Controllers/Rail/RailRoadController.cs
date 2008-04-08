@@ -257,12 +257,12 @@ namespace FreeTrain.Controllers.Rail
                     for (int j = WorldDefinition.World.GetGroundLevel(location); j < location.z; j++)
                     {
                         // TODO: ground level handling
-                        BridgePierVoxel.defaultSprite.drawAlpha(
+                        BridgePierVoxel.defaultSprite.DrawAlpha(
                             canvas.Surface,
                             view.fromXYZToClient(location.x, location.y, j));
                     }
 
-                    rp.drawAlpha(canvas.Surface, point);
+                    rp.DrawAlpha(canvas.Surface, point);
                 }
             }
         }

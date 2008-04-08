@@ -444,24 +444,24 @@ namespace FreeTrain.Views
                                     if (waterLevel <= z)
                                     {
                                         //DateTime start = DateTime.Now;
-                                        emptyChip.draw(drawContext.Surface, pt);
+                                        emptyChip.Draw(drawContext.Surface, pt);
                                         //Debug.WriteLine(z + "[3]: " + (DateTime.Now - start).TotalMilliseconds + "ms, ");
                                     }
                                     else
-                                        waterChip.draw(drawContext.Surface, pt);
+                                        waterChip.Draw(drawContext.Surface, pt);
                                 }
                             }
                             else
                                 if (z == waterLevel && noHeightCut)
                                 {
-                                    emptyChip.drawShape(drawContext.Surface, pt, waterSurfaceColor);
+                                    emptyChip.DrawShape(drawContext.Surface, pt, waterSurfaceColor);
                                 }
                                 else
                                     if (z == Z && Z < groundLevel)
                                     {
                                         // if the surface voxel is not drawn, draw the "under group" chip
                                         if (shouldDrawGround(h, v, z))
-                                            ResourceUtil.underGroundChip.draw(drawContext.Surface, pt);
+                                            ResourceUtil.underGroundChip.Draw(drawContext.Surface, pt);
                                     }
                         }
                         //					}

@@ -65,7 +65,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Called when the selection is completed.
         /// </summary>
-        protected abstract void onSelected(Cube cube);
+        protected abstract void OnSelected(Cube cube);
 
         /// <summary>
         /// Called when the user wants to cancel the modal controller.
@@ -125,7 +125,7 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public virtual void OnClick(MapViewWindow view, Location loc, Point ab)
         {
-            onSelected(Cube.createExclusive(loc, size));
+            OnSelected(Cube.createExclusive(loc, size));
         }
         /// <summary>
         /// 

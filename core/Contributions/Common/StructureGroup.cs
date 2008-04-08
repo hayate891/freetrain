@@ -32,102 +32,56 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_name"></param>
-        public StructureGroup(string _name)
+        /// <param name="name"></param>
+        public StructureGroup(string name)
         {
-            this.name = _name;
+            this.name = name;
         }
 
         /// <summary> Name of this group. </summary>
-        public string name;
+        private string name;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="sc"></param>
-        public void add(StructureContribution sc)
+        public void Add(StructureContribution sc)
         {
             base.List.Add(sc);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="idx"></param>
         /// <returns></returns>
-        public StructureContribution get(int idx)
+        public StructureContribution Get(int idx)
         {
             return (StructureContribution)base.List[idx];
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="sc"></param>
-        public void remove(StructureContribution sc)
+        public void Remove(StructureContribution sc)
         {
             base.List.Remove(sc);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         public override string ToString() { return name; }
-    }
-
-    /// <summary>
-    /// Group of StructureGroups.
-    /// 
-    /// This object implements IListSource to support data-binding.
-    /// </summary>
-    public class StructureGroupGroup : IListSource
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        public StructureGroupGroup() { }
-        /// <summary>
-        /// 
-        /// </summary>
-        protected readonly Hashtable core = new Hashtable();
-        // used for data-binding
-        /// <summary>
-        /// 
-        /// </summary>
-        protected readonly ArrayList list = new ArrayList();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        public StructureGroup this[string name]
-        {
-            get
-            {
-                StructureGroup g = (StructureGroup)core[name];
-                if (g == null)
-                {
-                    core[name] = g = new StructureGroup(name);
-                    list.Add(g);
-                }
-
-                return g;
-            }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerator getEnumerator()
-        {
-            return core.Values.GetEnumerator();
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public IList GetList() { return list; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool ContainsListCollection { get { return true; } }
     }
 }

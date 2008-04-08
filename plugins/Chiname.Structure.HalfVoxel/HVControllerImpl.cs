@@ -477,7 +477,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         {
             if (loc != anchor) return;
             if (anchor.Equals(currentPos))
-                cursors[0].draw(canvas.Surface, pt);
+                cursors[0].Draw(canvas.Surface, pt);
             else
             {
                 //HalfDividedVoxel v = World.world[loc] as HalfDividedVoxel;
@@ -485,12 +485,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 n = remover ? 5 : 1;
                 m = front.isParallelToX ? 0 : 1;
                 l = (currentSide == PlaceSide.Back) ? 0 : 2;
-                cursors[n + m + l].draw(canvas.Surface, pt);
+                cursors[n + m + l].Draw(canvas.Surface, pt);
                 if (!remover)
                 {
-                    contrib.getSprite(front, currentSide, contrib.currentColor).drawAlpha(canvas.Surface, pt);
+                    contrib.getSprite(front, currentSide, contrib.currentColor).DrawAlpha(canvas.Surface, pt);
                     ISprite hls = contrib.getHighLightSprite(front, currentSide, contrib.currentHighlight);
-                    if (hls != null) hls.drawAlpha(canvas.Surface, pt);
+                    if (hls != null) hls.DrawAlpha(canvas.Surface, pt);
                 }
             }
 

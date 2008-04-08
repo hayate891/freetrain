@@ -256,7 +256,7 @@ namespace FreeTrain.World.Terrain
 
             if (heightCutDiff == 0)
             {
-                ResourceUtil.emptyChip.drawShape(display.Surface, pt,
+                ResourceUtil.emptyChip.DrawShape(display.Surface, pt,
                     isUnderWater ? waterColors[3] : currentMountainColors[3]);
                 return;
             }
@@ -264,7 +264,7 @@ namespace FreeTrain.World.Terrain
             if (isFlattened)
             {
                 if (ground != null)
-                    ground.draw(display.Surface, pt);
+                    ground.Draw(display.Surface, pt);
                 return;
             }
 
@@ -314,7 +314,7 @@ namespace FreeTrain.World.Terrain
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(3) > 0
                     && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(location))
-                    cliff[0, getHeight(3), getHeight(2)].draw(display.Surface, basePt);
+                    cliff[0, getHeight(3), getHeight(2)].Draw(display.Surface, basePt);
             }
 
 
@@ -352,7 +352,7 @@ namespace FreeTrain.World.Terrain
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(1) > 0
                     && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(location))
-                    cliff[1, getHeight(2), getHeight(1)].draw(display.Surface, basePt);
+                    cliff[1, getHeight(2), getHeight(1)].Draw(display.Surface, basePt);
             }
         }
 
@@ -363,13 +363,13 @@ namespace FreeTrain.World.Terrain
             if (h > 0)
             {
                 for (int i = 0; i < indices.Length; i += 3)
-                    patterns[indices[i + 2]].draw(display.Surface,
+                    patterns[indices[i + 2]].Draw(display.Surface,
                         new Point(pt.X + indices[i + 0], pt.Y + indices[i + 1] * (h + 4) / 4 - 8));
             }
             else
             {
                 for (int i = 0; i < indices.Length; i += 3)
-                    patterns[indices[i + 2]].draw(display.Surface,
+                    patterns[indices[i + 2]].Draw(display.Surface,
                         new Point(pt.X + indices[i + 0], pt.Y + indices[i + 1] * (h + 4) / 4 + 2));
             }
         }

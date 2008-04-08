@@ -56,12 +56,19 @@ namespace FreeTrain.Contributions.Train
         /// <summary>
         /// Number of passengers this car can hold.
         /// </summary>
-        public int capacity { get { return _capacity; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        [CLSCompliant(false)]
-        protected int _capacity;
+        public int Capacity 
+        { 
+            get 
+            { 
+                return _capacity; 
+            }
+            set
+            {
+                _capacity = value;
+            }
+        }
+
+        int _capacity;
 
         /// <summary>
         /// Draws a car to the specified position.
@@ -69,7 +76,7 @@ namespace FreeTrain.Contributions.Train
         /// <param name="angle">[0,16). Angle of the car. 2*direction.index</param>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        public abstract void draw(Surface display, Point pt, int angle);
+        public abstract void Draw(Surface display, Point pt, int angle);
 
         /// <summary>
         /// Dras a car on a slope.
@@ -78,7 +85,7 @@ namespace FreeTrain.Contributions.Train
         /// <param name="isClimbing">true if the car is climbing</param>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        public abstract void drawSlope(Surface display, Point pt, Direction angle, bool isClimbing);
+        public abstract void DrawSlope(Surface display, Point pt, Direction angle, bool isClimbing);
 
         // TODO: support cargos
     }
