@@ -46,8 +46,8 @@ namespace FreeTrain.Contributions.Road
             // load resource, but don't dispose it as sprites will still refer to this surface.
             Picture pic = getPicture(e);
 
-            XmlElement picture = (XmlElement)XmlUtil.selectSingleNode(e, "picture");
-            Size sz = XmlUtil.parseSize(picture.Attributes["size"].Value);
+            XmlElement picture = (XmlElement)XmlUtil.SelectSingleNode(e, "picture");
+            Size sz = XmlUtil.ParseSize(picture.Attributes["size"].Value);
             int offsetY = int.Parse(picture.Attributes["offset"].Value);
 
             flatSprites = new ISprite[16];

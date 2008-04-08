@@ -47,8 +47,8 @@ namespace FreeTrain.Contributions.Road
         protected AbstractRoadContributionImpl(XmlElement e)
             : base(e)
         {
-            _name = XmlUtil.selectSingleNode(e, "name").InnerText;
-            description = XmlUtil.selectSingleNode(e, "description").InnerText;
+            _name = XmlUtil.SelectSingleNode(e, "name").InnerText;
+            description = XmlUtil.SelectSingleNode(e, "description").InnerText;
         }
         /// <summary>
         /// 

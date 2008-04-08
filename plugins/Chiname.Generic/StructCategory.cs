@@ -96,7 +96,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="xn"></param>
         public StructCategory(XmlNode xn)
         {
-            name = XmlUtil.selectSingleNode(xn, "name").InnerText;
+            name = XmlUtil.SelectSingleNode(xn, "name").InnerText;
             XmlAttribute att = xn.Attributes["id"];
             if (att != null)
                 idnum = int.Parse(att.Value, NumberStyles.HexNumber);

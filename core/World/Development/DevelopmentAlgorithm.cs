@@ -19,6 +19,7 @@
 #endregion LICENSE
 
 using System;
+using System.Drawing;
 using System.Collections;
 using System.Diagnostics;
 using FreeTrain.Contributions.Common;
@@ -371,9 +372,9 @@ namespace FreeTrain.World.Development
             if (entity is LandBuilderContribution)
             {
                 LandBuilderContribution lbc = entity as LandBuilderContribution;
-                SIZE size = new SIZE(Rand(F_LandAveSize, F_LandFlexSize), Rand(F_LandAveSize, F_LandFlexSize));
+                Size size = new Size(Rand(F_LandAveSize, F_LandFlexSize), Rand(F_LandAveSize, F_LandFlexSize));
                 p = new LandPlan(lbc, dev, scaning, size);
-                finalPrice = lbc.price * size.x * size.y;
+                finalPrice = lbc.price * size.Width * size.Height;
             }
             else if (entity is CommercialStructureContribution)
             {

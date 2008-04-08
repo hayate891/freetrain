@@ -50,7 +50,7 @@ namespace FreeTrain.World.Land.VinylHouse
             SpriteFactory spriteFactory = SpriteFactory.getSpriteFactory(e);
 
 
-            XmlElement pic = (XmlElement)XmlUtil.selectSingleNode(e, "picture");
+            XmlElement pic = (XmlElement)XmlUtil.SelectSingleNode(e, "picture");
             int offset = int.Parse(pic.Attributes["offset"].Value);
 
             Point pt = new Point(0, 8);

@@ -50,11 +50,11 @@ namespace FreeTrain.Contributions.Train
             levelSprites = new ISprite[16];
             slopeSprites = new ISprite[8];
 
-            XmlElement sprite = (XmlElement)XmlUtil.selectSingleNode(e, "sprite");
+            XmlElement sprite = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
             Picture picture = getPicture(sprite);
             SpriteFactory factory = SpriteFactory.getSpriteFactory(sprite);
 
-            Point origin = XmlUtil.parsePoint(sprite.Attributes["origin"].Value);
+            Point origin = XmlUtil.ParsePoint(sprite.Attributes["origin"].Value);
 
             for (int i = 0; i < 16; i++)
             {

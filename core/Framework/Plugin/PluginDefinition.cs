@@ -108,13 +108,13 @@ namespace FreeTrain.Framework.Plugin
             doc = loadManifest(dirName);
 
             XmlElement root = doc.DocumentElement;
-            _title = XmlUtil.selectSingleNode(root, "title").InnerText;
-            _homepage = XmlUtil.selectSingleNode(root, "homepage").InnerText;
+            _title = XmlUtil.SelectSingleNode(root, "title").InnerText;
+            _homepage = XmlUtil.SelectSingleNode(root, "homepage").InnerText;
 
             if (root.SelectSingleNode("author") == null)
                 _author = "";
             else
-                _author = XmlUtil.selectSingleNode(root, "author").InnerText;
+                _author = XmlUtil.SelectSingleNode(root, "author").InnerText;
 
             Debug.WriteLine("loading plug-in: " + title);
             Debug.WriteLine("  base dir: " + dirName);
@@ -135,7 +135,7 @@ namespace FreeTrain.Framework.Plugin
                 {
                     // load a contribution factory
 
-                    string contributionName = XmlUtil.selectSingleNode(contrib, "name").InnerText;
+                    string contributionName = XmlUtil.SelectSingleNode(contrib, "name").InnerText;
 
                     IContributionFactory factory =
                         (IContributionFactory)PluginUtil.loadObjectFromManifest(contrib);

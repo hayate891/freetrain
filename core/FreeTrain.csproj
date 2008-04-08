@@ -801,9 +801,6 @@
     <Compile Include="World\RRCrossing.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="World\SIZE.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="World\SparseVoxelArray.cs">
       <SubType>Code</SubType>
     </Compile>

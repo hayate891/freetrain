@@ -50,15 +50,15 @@ namespace FreeTrain.World.Road.DummyCars
             : base(e)
         {
             // pictures
-            XmlElement sprite = (XmlElement)XmlUtil.selectSingleNode(e, "sprite");
+            XmlElement sprite = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
             Picture picture = getPicture(sprite);
-            Point origin = XmlUtil.parsePoint(sprite.Attributes["origin"].Value);
+            Point origin = XmlUtil.ParsePoint(sprite.Attributes["origin"].Value);
             int offset = int.Parse(sprite.Attributes["offset"].Value);
             Size sz = new Size(32, 16 + offset);
             Point sprOrigin0 = new Point(origin.X, origin.Y);
             Point sprOrigin1 = new Point(32 + origin.X, origin.Y);
 
-            XmlElement splist = (XmlElement)XmlUtil.selectSingleNode(sprite, "variations");
+            XmlElement splist = (XmlElement)XmlUtil.SelectSingleNode(sprite, "variations");
             colorVariations = 0;
             IEnumerator ienum = splist.ChildNodes.GetEnumerator();
             while (ienum.MoveNext()) colorVariations++;

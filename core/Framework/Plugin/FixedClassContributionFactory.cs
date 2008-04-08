@@ -42,7 +42,7 @@ namespace FreeTrain.Framework.Plugin
         public FixedClassContributionFactory(XmlElement e)
             :
             this(PluginUtil.loadTypeFromManifest(
-                    (XmlElement)XmlUtil.selectSingleNode(e, "implementation"))) { }
+                    (XmlElement)XmlUtil.SelectSingleNode(e, "implementation"))) { }
 
         private readonly Type concreteType;
         /// <summary>

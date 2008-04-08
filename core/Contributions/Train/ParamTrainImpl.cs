@@ -40,7 +40,7 @@ namespace FreeTrain.Contributions.Train
         public ParamTrainImpl(XmlElement e)
             : base(e)
         {
-            composition = (XmlElement)XmlUtil.selectSingleNode(e, "composition");
+            composition = (XmlElement)XmlUtil.SelectSingleNode(e, "composition");
         }
 
         /// <summary>

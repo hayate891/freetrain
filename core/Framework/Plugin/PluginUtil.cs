@@ -47,7 +47,7 @@ namespace FreeTrain.Framework.Plugin
         /// </summary>
         public static object loadObjectFromManifest(XmlElement contrib)
         {
-            XmlElement el = (XmlElement)XmlUtil.selectSingleNode(contrib, "class");
+            XmlElement el = (XmlElement)XmlUtil.SelectSingleNode(contrib, "class");
             Type t = loadTypeFromManifest(el);
 
             try
@@ -84,7 +84,7 @@ namespace FreeTrain.Framework.Plugin
             else
             {
                 // load the class from the specified assembly
-                Uri codeBase = XmlUtil.resolve(e, e.Attributes["codebase"].Value);
+                Uri codeBase = XmlUtil.Resolve(e, e.Attributes["codebase"].Value);
 
                 if (!codeBase.IsFile)
                     throw new FormatException("Designated codebase is not a filename: " + codeBase);

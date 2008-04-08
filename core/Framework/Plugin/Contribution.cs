@@ -146,7 +146,7 @@ namespace FreeTrain.Framework.Plugin
         /// <returns>non-null valid object.</returns>
         protected Picture getPicture(XmlElement sprite)
         {
-            XmlElement pic = (XmlElement)XmlUtil.selectSingleNode(sprite, "picture");
+            XmlElement pic = (XmlElement)XmlUtil.SelectSingleNode(sprite, "picture");
 
             XmlAttribute r = pic.Attributes["ref"];
             if (r != null)

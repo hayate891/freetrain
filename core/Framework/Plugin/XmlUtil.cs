@@ -36,18 +36,20 @@ namespace FreeTrain.Framework.Plugin
         /// Performs a node selection and throws an exception if it's not found.
         /// </summary>
         /// <exception cref="XmlException"></exception>
-        public static XmlNode selectSingleNode(XmlNode node, string xpath)
+        public static XmlNode SelectSingleNode(XmlNode node, string xpath)
         {
             XmlNode n = node.SelectSingleNode(xpath);
             if (n == null)
+            {
                 throw new XmlException("unable to find " + xpath, null);
+            }
             return n;
         }
 
         /// <summary>
         /// Resolves a relative URI.
         /// </summary>
-        public static Uri resolve(XmlNode context, string relative)
+        public static Uri Resolve(XmlNode context, string relative)
         {
             return new Uri(new Uri(context.BaseURI), relative);
         }
@@ -56,7 +58,7 @@ namespace FreeTrain.Framework.Plugin
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public static Point parsePoint(string text)
+        public static Point ParsePoint(string text)
         {
             try
             {
@@ -73,12 +75,12 @@ namespace FreeTrain.Framework.Plugin
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public static SIZE parseSize(string text)
+        public static Size ParseSize(string text)
         {
             try
             {
                 int idx = text.IndexOf(',');
-                return new SIZE(int.Parse(text.Substring(0, idx)), int.Parse(text.Substring(idx + 1)));
+                return new Size(int.Parse(text.Substring(0, idx)), int.Parse(text.Substring(idx + 1)));
             }
             catch (Exception e)
             {

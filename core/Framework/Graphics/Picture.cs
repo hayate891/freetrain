@@ -108,7 +108,7 @@ namespace FreeTrain.Framework.Graphics
             this.id = _id;
 
             //			// obtain the size of the bitmap
-            string baseFileName = XmlUtil.resolve(pic, pic.Attributes["src"].Value).LocalPath;
+            string baseFileName = XmlUtil.Resolve(pic, pic.Attributes["src"].Value).LocalPath;
             //			this.size = getBitmapSize(baseFileName);
 
             ISurfaceLoader[,] specifiedLoaders = new ISurfaceLoader[4, 2];
@@ -138,7 +138,7 @@ namespace FreeTrain.Framework.Graphics
                     if (src != null)
                     {
                         ISurfaceLoader overrideLoader = new BitmapSurfaceLoader(
-                            XmlUtil.resolve(ovr, src.Value).LocalPath);
+                            XmlUtil.Resolve(ovr, src.Value).LocalPath);
                         specifiedLoaders[s, 0] = overrideLoader;
                     }
                     specifiedLoaders[s, 1] = getNightOverride(ovr);
@@ -156,7 +156,7 @@ namespace FreeTrain.Framework.Graphics
             string when = ovr.Attributes["when"].Value;
             if (when.Equals("night"))
                 return new BitmapSurfaceLoader(
-                XmlUtil.resolve(ovr, ovr.Attributes["src"].Value).LocalPath);
+                XmlUtil.Resolve(ovr, ovr.Attributes["src"].Value).LocalPath);
             else
                 return null;
         }

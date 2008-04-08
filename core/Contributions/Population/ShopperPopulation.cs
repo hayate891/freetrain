@@ -41,7 +41,7 @@ namespace FreeTrain.Contributions.Population
         /// </summary>
         /// <param name="e"></param>
 		public ShopperPopulation( XmlElement e )
-			: this( int.Parse( XmlUtil.selectSingleNode(e,"base").InnerText) ) {}
+			: this( int.Parse( XmlUtil.SelectSingleNode(e,"base").InnerText) ) {}
 
 		private static readonly int[] weekdayDistribution = new int[]{
 			  0,  0,  0,  0,  0,  0,	//  0:00- 5:00

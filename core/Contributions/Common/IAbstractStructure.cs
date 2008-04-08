@@ -40,18 +40,18 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        int unitPrice { get; }
+        int UnitPrice { get; }
         /// <summary>
         /// 
         /// </summary>
-        SIZE size { get; }
+        Size Size { get; set;}
         /// <summary>
         /// 
         /// </summary>
-        int minHeight { get; }
+        int MinHeight { get; }
         /// <summary>
         /// 
         /// </summary>
-        int maxHeight { get; }
+        int MaxHeight { get; }
     }
 }

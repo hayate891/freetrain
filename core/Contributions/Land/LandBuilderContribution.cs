@@ -51,9 +51,9 @@ namespace FreeTrain.Contributions.Land
             if (gridNode == null)
                 _grid = new Size(1, 1);
             else
-                _grid = XmlUtil.parseSize(gridNode.InnerText);
+                _grid = XmlUtil.ParseSize(gridNode.InnerText);
 
-            _price = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
+            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
         }
 
         private readonly Size _grid;

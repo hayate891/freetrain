@@ -37,7 +37,7 @@ namespace FreeTrain.World.Accounting
         public AccountGenre(XmlElement e)
             : base(e)
         {
-            name = XmlUtil.selectSingleNode(e, "name").InnerText;
+            name = XmlUtil.SelectSingleNode(e, "name").InnerText;
             WorldDefinition.onNewWorld += new EventHandler(onNewWorld);
         }
 

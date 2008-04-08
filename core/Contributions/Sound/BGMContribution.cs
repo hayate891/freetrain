@@ -37,10 +37,10 @@ namespace FreeTrain.Contributions.Sound
         public BGMContribution(XmlElement e)
             : base(e)
         {
-            this.name = XmlUtil.selectSingleNode(e, "name").InnerText;
+            this.name = XmlUtil.SelectSingleNode(e, "name").InnerText;
 
-            XmlElement href = (XmlElement)XmlUtil.selectSingleNode(e, "href");
-            fileName = XmlUtil.resolve(href, href.InnerText).LocalPath;
+            XmlElement href = (XmlElement)XmlUtil.SelectSingleNode(e, "href");
+            fileName = XmlUtil.Resolve(href, href.InnerText).LocalPath;
         }
         /// <summary>
         /// 
