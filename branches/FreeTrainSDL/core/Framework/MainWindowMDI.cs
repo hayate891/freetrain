@@ -86,10 +86,7 @@ namespace FreeTrain.Framework
             slopeRailRoadController.MdiParent = this;
             slopeRailRoadController.WindowState = FormWindowState.Maximized;
             slopeRailRoadController.Show();
-            PluginListDialog pluginListDialog = new PluginListDialog();
-            pluginListDialog.MdiParent = this;
-            pluginListDialog.WindowState = FormWindowState.Maximized;
-            pluginListDialog.Show();
+            
             //RoadController roadController = new RoadController();
             //roadController.MdiParent = mainWindowMDI;
             //roadController.Show();
@@ -156,7 +153,7 @@ namespace FreeTrain.Framework
         private void ShowNewForm(object sender, EventArgs e)
         {
             // Create a new instance of the child form.
-            Form childForm = new Form();
+            NewWorldDialog childForm = new NewWorldDialog();
             // Make it a child of this MDI form before showing it.
             childForm.MdiParent = this;
             childForm.Text = "Window " + childFormNumber++;
@@ -270,6 +267,21 @@ namespace FreeTrain.Framework
         {
             //MainWindowMDI.mainWindow.CurrentController = MainWindowMDI.mainWindow.br 
             //MainWindowMDI.mainWindow.AttachController(MainWindowMDI.mainWindow.CurrentController);
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConfigDialog configDialog = new ConfigDialog();
+            configDialog.MdiParent = this;
+            configDialog.Show();
+        }
+
+        private void plugingListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PluginListDialog pluginListDialog = new PluginListDialog();
+            pluginListDialog.MdiParent = this;
+            pluginListDialog.WindowState = FormWindowState.Maximized;
+            pluginListDialog.Show();
         }
     }
 }

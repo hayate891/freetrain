@@ -32,7 +32,7 @@ namespace FreeTrain.Framework.Plugin
     public class PluginListDialog : System.Windows.Forms.Form
     {
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.ListView list;
         private System.Windows.Forms.ColumnHeader titleColumn;
         private System.Windows.Forms.ColumnHeader authorColumn;
@@ -76,7 +76,7 @@ namespace FreeTrain.Framework.Plugin
             "test"}, 0, System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PluginListDialog));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonOk = new System.Windows.Forms.Button();
             this.list = new System.Windows.Forms.ListView();
             this.titleColumn = new System.Windows.Forms.ColumnHeader();
             this.authorColumn = new System.Windows.Forms.ColumnHeader();
@@ -87,23 +87,24 @@ namespace FreeTrain.Framework.Plugin
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonOk);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 232);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(424, 43);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // buttonOk
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(328, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 26);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "&OK";
+            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonOk.Location = new System.Drawing.Point(328, 9);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(88, 26);
+            this.buttonOk.TabIndex = 0;
+            this.buttonOk.Text = "&OK";
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // list
             // 
@@ -170,6 +171,11 @@ namespace FreeTrain.Framework.Plugin
                 list.Items.Add(new ListViewItem(
                     new string[] { p.title, p.author, p.homepage }, 0));
             }
+        }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
