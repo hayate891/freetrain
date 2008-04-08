@@ -46,19 +46,19 @@ namespace FreeTrain.Framework
         {
             string path;
 
-            path = Path.Combine(Core.InstallationDirectory, Path.Combine("res", name));
+            path = Path.Combine(Core.InstallationDirectory, Path.Combine("Res", name));
             if (File.Exists(path)) return path;
 
-            path = Path.Combine(Core.InstallationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine("res", name)))));
+            path = Path.Combine(Core.InstallationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine("Res", name)))));
             if (File.Exists(path)) return path;
 
-            path = Path.Combine("..", Path.Combine("..", Path.Combine("res", name)));
+            path = Path.Combine("..", Path.Combine("..", Path.Combine("Res", name)));
             if (File.Exists(path)) return path;
 
-            path = Path.Combine("..", Path.Combine("res", name));
+            path = Path.Combine("..", Path.Combine("Res", name));
             if (File.Exists(path)) return path;
             Assembly assembly = Assembly.GetAssembly(typeof(ResourceUtil));
-            path = Path.Combine(Path.Combine(assembly.Location, ".."), Path.Combine("res", name));
+            path = Path.Combine(Path.Combine(assembly.Location, ".."), Path.Combine("Res", name));
             if (File.Exists(path)) return path;
 
             throw new FileNotFoundException("System resource: " + path);
