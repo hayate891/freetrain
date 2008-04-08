@@ -157,7 +157,7 @@ namespace FreeTrain.Contributions.Common
                 _name = (nameNode != null) ? nameNode.InnerText : (groupNode != null ? groupNode.InnerText : null);
                 if (name == null)
                     throw new FormatException("<name> and <group> are both missing");
-                _price = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
+                _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
                 _computerCannotBuild = (e.SelectSingleNode("computerCannotBuild") != null);
                 _playerCannotBuild = (e.SelectSingleNode("playerCannotBuild") != null);
 

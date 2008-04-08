@@ -45,7 +45,7 @@ namespace FreeTrain.Contributions.Land
             : base(e)
         {
             ArrayList array = new ArrayList();
-            string[] guids = XmlUtil.selectSingleNode(e, "lands").InnerText.Split(' ', '\t', '\r', '\n');
+            string[] guids = XmlUtil.SelectSingleNode(e, "lands").InnerText.Split(' ', '\t', '\r', '\n');
             for (int i = 0; i < guids.Length; i++)
             {
                 if (guids[i].Length != 0)

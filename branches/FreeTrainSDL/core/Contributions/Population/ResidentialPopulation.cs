@@ -41,7 +41,7 @@ namespace FreeTrain.Contributions.Population
         /// </summary>
         /// <param name="e"></param>
         public ResidentialPopulation(XmlElement e)
-            : this(int.Parse(XmlUtil.selectSingleNode(e, "base").InnerText)) { }
+            : this(int.Parse(XmlUtil.SelectSingleNode(e, "base").InnerText)) { }
 
         private static readonly int[] weekdayDistribution = new int[]{
 			 10,  5,  5,  5,  5,  5,	//  0:00- 5:00

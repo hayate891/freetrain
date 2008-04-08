@@ -43,20 +43,20 @@ namespace FreeTrain.Framework.Plugin.Generic
     /// 
     /// </summary>
     [Serializable]
-    public enum SpriteTableType : int 
-    { 
+    public enum SpriteTableType : int
+    {
         /// <summary>
         /// 
         /// </summary>
-        UNKNOWN, 
+        UNKNOWN,
         /// <summary>
         /// 
         /// </summary>
-        BASIC, 
+        BASIC,
         /// <summary>
         /// 
         /// </summary>
-        VARHEIGHT 
+        VARHEIGHT
     };
 
     /// <summary>
@@ -89,7 +89,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <summary>
         /// 
         /// </summary>
-        public int unitPrice { get { return _unitPrice; } }
+        public int UnitPrice { get { return _unitPrice; } }
         /// <summary>
         /// 
         /// </summary>
@@ -103,27 +103,36 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// </summary>
         public override double pricePerArea { get { return _areaPrice; } }
 
-        /// <summary> size of this structur. </summary>
-        [CLSCompliant(false)]
-        protected SIZE _size;
+        private Size size;
+
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        public SIZE size { get { return _size; } }
+        public Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+            }
+        }
+
         /// <summary> valid for variable height structure only. </summary>
         [CLSCompliant(false)]
         protected int _minHeight;
         /// <summary>
         /// 
         /// </summary>
-        public int minHeight { get { return _minHeight; } }
+        public int MinHeight { get { return _minHeight; } }
         /// <summary> used as well as fixed height structure. </summary>
         protected int _maxHeight;
         /// <summary>
         /// 
         /// </summary>
-        public int maxHeight { get { return _maxHeight; } }
+        public int MaxHeight { get { return _maxHeight; } }
         /// <summary> sprite table type of this structure. </summary>
         protected SpriteTableType stType = SpriteTableType.UNKNOWN;
         /// <summary>
@@ -266,9 +275,9 @@ namespace FreeTrain.Framework.Plugin.Generic
                 _design = "default";
             }
 
-            _unitPrice = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
-            _size = XmlUtil.parseSize(XmlUtil.selectSingleNode(e, "size").InnerText);
-            _areaPrice = _unitPrice / Math.Max(1, size.x * size.y);
+            _unitPrice = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+            size = XmlUtil.ParseSize(XmlUtil.SelectSingleNode(e, "size").InnerText);
+            _areaPrice = _unitPrice / Math.Max(1, size.Width * size.Height);
 
             _minHeight = 2;
             try
@@ -284,7 +293,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             catch
             {
                 // if maxHeight tag is nod find, height tag must be exist.
-                _maxHeight = int.Parse(XmlUtil.selectSingleNode(e, "height").InnerText);
+                _maxHeight = int.Parse(XmlUtil.SelectSingleNode(e, "height").InnerText);
             }
         }
         /// <summary>

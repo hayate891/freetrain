@@ -46,7 +46,7 @@ namespace FreeTrain.Contributions.Population
         /// <param name="e"></param>
         public ConstantPopulation(XmlElement e)
         {
-            this.population = int.Parse(XmlUtil.selectSingleNode(e, "base").InnerText);
+            this.population = int.Parse(XmlUtil.SelectSingleNode(e, "base").InnerText);
         }
 
         private readonly int population;

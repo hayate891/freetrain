@@ -60,7 +60,7 @@ namespace FreeTrain.Contributions.Train
         public ColoredTrainCarImpl(XmlElement e)
             : base(e)
         {
-            XmlElement colorMap = (XmlElement)XmlUtil.selectSingleNode(e, "colorMap");
+            XmlElement colorMap = (XmlElement)XmlUtil.SelectSingleNode(e, "colorMap");
 
             Color cb = getColor(colorMap, "base");
             Color cl1 = getColor(colorMap, "line1");	// used to be "stripe"
@@ -137,7 +137,7 @@ namespace FreeTrain.Contributions.Train
         private static Color getColor(XmlElement e, string name)
         {
             // TODO: better error handling
-            string value = ((XmlAttribute)XmlUtil.selectSingleNode(e, '@' + name)).Value;
+            string value = ((XmlAttribute)XmlUtil.SelectSingleNode(e, '@' + name)).Value;
             string[] cmp = value.Split(',');
             return Color.FromArgb(int.Parse(cmp[0]), int.Parse(cmp[1]), int.Parse(cmp[2]));
         }
@@ -240,7 +240,7 @@ namespace FreeTrain.Contributions.Train
         public ColoredTrainPictureContribution(XmlElement e)
             : base(e)
         {
-            this.name = XmlUtil.selectSingleNode(e, "name").InnerText;
+            this.name = XmlUtil.SelectSingleNode(e, "name").InnerText;
         }
         /// <summary>
         /// 

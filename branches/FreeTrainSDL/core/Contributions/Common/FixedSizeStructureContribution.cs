@@ -45,14 +45,14 @@ namespace FreeTrain.Contributions.Common
         protected FixedSizeStructureContribution(XmlElement e)
             : base(e)
         {
-            _price = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
+            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
 
-            SIZE sz = XmlUtil.parseSize(XmlUtil.selectSingleNode(e, "size").InnerText);
-            int height = int.Parse(XmlUtil.selectSingleNode(e, "height").InnerText);
+            Size sz = XmlUtil.ParseSize(XmlUtil.SelectSingleNode(e, "size").InnerText);
+            int height = int.Parse(XmlUtil.SelectSingleNode(e, "height").InnerText);
 
             this.size = new Distance(sz, height);
             _ppa = _price / Math.Max(1, size.x * size.y);
-            XmlElement spr = (XmlElement)XmlUtil.selectSingleNode(e, "sprite");
+            XmlElement spr = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
             sprites = PluginUtil.getSpriteLoader(spr).load3D(spr, size.x, size.y, height);
         }
         /// <summary>
@@ -65,12 +65,12 @@ namespace FreeTrain.Contributions.Common
         public FixedSizeStructureContribution(IAbstractStructure master, XmlElement pic, XmlElement main, bool opposite)
             : base(main)
         {
-            _price = master.unitPrice;
-            int height = master.maxHeight;
+            _price = master.UnitPrice;
+            int height = master.MaxHeight;
             if (opposite)
-                size = new Distance(master.size.y, master.size.x, height);
+                size = new Distance(master.Size.Height, master.Size.Width, height);
             else
-                this.size = new Distance(master.size, height);
+                this.size = new Distance(master.Size, height);
             _ppa = _price / Math.Max(1, size.x * size.y);
             sprites = PluginUtil.getSpriteLoader(pic).load3D(pic, size.x, size.y, height);
         }

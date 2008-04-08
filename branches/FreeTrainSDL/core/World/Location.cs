@@ -347,7 +347,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="sz"></param>
         /// <param name="_z"></param>
-        public Distance(SIZE sz, int _z) { x = sz.x; y = sz.y; z = _z; }
+        public Distance(Size sz, int _z) { x = sz.Width; y = sz.Height; z = _z; }
 
         /// <summary>
         /// 

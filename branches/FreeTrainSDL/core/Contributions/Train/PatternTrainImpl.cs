@@ -41,7 +41,7 @@ namespace FreeTrain.Contributions.Train
         public PatternTrainImpl(XmlElement e)
             : base(e)
         {
-            config = (XmlElement)XmlUtil.selectSingleNode(e, "config");
+            config = (XmlElement)XmlUtil.SelectSingleNode(e, "config");
         }
 
         /// <summary>

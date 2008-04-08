@@ -41,7 +41,7 @@ namespace FreeTrain.Contributions.Rail
         public StationContribution(XmlElement e)
             : base(e)
         {
-            operationCost = int.Parse(XmlUtil.selectSingleNode(e, "operationCost").InnerText);
+            operationCost = int.Parse(XmlUtil.SelectSingleNode(e, "operationCost").InnerText);
         }
 
         /// <summary> Operation cost of this station per day. </summary>

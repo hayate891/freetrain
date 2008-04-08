@@ -40,7 +40,7 @@ namespace FreeTrain.Contributions.Train
         public TrainCarContribution(XmlElement e)
             : base(e)
         {
-            _capacity = int.Parse(XmlUtil.selectSingleNode(e, "capacity").InnerText);
+            _capacity = int.Parse(XmlUtil.SelectSingleNode(e, "capacity").InnerText);
         }
         /// <summary>
         /// 

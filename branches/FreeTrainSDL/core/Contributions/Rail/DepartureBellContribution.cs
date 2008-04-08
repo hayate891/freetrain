@@ -42,11 +42,11 @@ namespace FreeTrain.Contributions.Rail
             : base(e)
         {
 
-            name = XmlUtil.selectSingleNode(e, "name").InnerText;
+            name = XmlUtil.SelectSingleNode(e, "name").InnerText;
 
-            string href = XmlUtil.selectSingleNode(e, "sound/@href").InnerText;
+            string href = XmlUtil.SelectSingleNode(e, "sound/@href").InnerText;
             sound = new RepeatableSoundEffectImpl(
-                ResourceUtil.loadSound(XmlUtil.resolve(e, href)));
+                ResourceUtil.loadSound(XmlUtil.Resolve(e, href)));
         }
 
         /// <summary> name of this sound </summary>

@@ -50,8 +50,8 @@ namespace FreeTrain.Framework.Graphics
             return SpriteFactory.getSpriteFactory(sprite).createSprite(
                 getPicture(sprite),
                 new Point(0, h),
-                XmlUtil.parsePoint(XmlUtil.selectSingleNode(sprite, "@origin").InnerText),
-                size == null ? new Size(32, 32) : XmlUtil.parseSize(size.Value));
+                XmlUtil.ParsePoint(XmlUtil.SelectSingleNode(sprite, "@origin").InnerText),
+                size == null ? new Size(32, 32) : XmlUtil.ParseSize(size.Value));
         }
 
 
@@ -70,7 +70,7 @@ namespace FreeTrain.Framework.Graphics
 
             ISprite[,] sprites = new ISprite[X, Y];
 
-            Point origin = XmlUtil.parsePoint(sprite.Attributes["origin"].Value);
+            Point origin = XmlUtil.ParsePoint(sprite.Attributes["origin"].Value);
             int h = height;
             XmlAttribute att = sprite.Attributes["offset"];
             if (att != null)
@@ -111,7 +111,7 @@ namespace FreeTrain.Framework.Graphics
 
             ISprite[, ,] sprites = new ISprite[X, Y, Z];
 
-            Point origin = XmlUtil.parsePoint(sprite.Attributes["origin"].Value);
+            Point origin = XmlUtil.ParsePoint(sprite.Attributes["origin"].Value);
             int h = ((Z << 1) + (X - 1)) << 3; // calculate default offset
             XmlAttribute att = sprite.Attributes["offset"];
             if (att != null)

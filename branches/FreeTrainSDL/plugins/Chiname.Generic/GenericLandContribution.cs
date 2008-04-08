@@ -84,14 +84,14 @@ namespace FreeTrain.Framework.Plugin.Generic
 
             try
             {
-                _unitPrice = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
+                _unitPrice = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
             }
             catch
             {
                 _unitPrice = 0;
             }
 
-            _size = new SIZE(1, 1);
+            Size = new Size(1, 1);
 
             _minHeight = 2;
             _maxHeight = 0;

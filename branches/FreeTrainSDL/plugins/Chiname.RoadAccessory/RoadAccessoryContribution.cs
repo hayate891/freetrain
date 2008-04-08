@@ -43,7 +43,7 @@ namespace FreeTrain.World.Road.Accessory
         public RoadAccessoryContribution(XmlElement e)
             : base(e)
         {
-            XmlElement sprite = (XmlElement)XmlUtil.selectSingleNode(e, "sprite");
+            XmlElement sprite = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
             Picture picture = getPicture(sprite);
             SpriteFactory factory = SpriteFactory.getSpriteFactory(sprite);
 

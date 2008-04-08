@@ -102,11 +102,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public HalfVoxelContribution(XmlElement e)
             : base(e)
         {
-            _price = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
-            height = int.Parse(XmlUtil.selectSingleNode(e, "height").InnerText);
-            subgroup = XmlUtil.selectSingleNode(e, "subgroup").InnerText;
-            XmlElement spr = (XmlElement)XmlUtil.selectSingleNode(e, "sprite");
-            XmlElement pic = (XmlElement)XmlUtil.selectSingleNode(spr, "picture");
+            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+            height = int.Parse(XmlUtil.SelectSingleNode(e, "height").InnerText);
+            subgroup = XmlUtil.SelectSingleNode(e, "subgroup").InnerText;
+            XmlElement spr = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
+            XmlElement pic = (XmlElement)XmlUtil.SelectSingleNode(spr, "picture");
             variation = spr.SelectSingleNode("map");
             if (variation != null)
             {
@@ -149,7 +149,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 {
                     SideStored ss = parseSide(cn);
                     Direction d = parseDirection(cn);
-                    Point orgn = XmlUtil.parsePoint(cn.Attributes["origin"].Value);
+                    Point orgn = XmlUtil.ParsePoint(cn.Attributes["origin"].Value);
                     Point offF = getOffset(d, PlaceSide.Fore);
                     Point offB = getOffset(d, PlaceSide.Back);
                     Size sz = new Size(24, 8 + height * 16);
@@ -189,7 +189,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             Picture pic = getPicture(hle, "HL");
             if (pic == null || hle.Attributes["src"] == null)
                 throw new FormatException("highlight picture not found.");
-            string baseFileName = XmlUtil.resolve(hle, hle.Attributes["src"].Value).LocalPath;
+            string baseFileName = XmlUtil.Resolve(hle, hle.Attributes["src"].Value).LocalPath;
             using (Bitmap bit = new Bitmap(baseFileName))
             {
                 for (int i = 0; i < hl_patterns; i++)
@@ -202,7 +202,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                     {
                         SideStored ss = parseSide(cn);
                         Direction d = parseDirection(cn);
-                        Point orgn = XmlUtil.parsePoint(cn.Attributes["origin"].Value);
+                        Point orgn = XmlUtil.ParsePoint(cn.Attributes["origin"].Value);
                         Point offF = getOffset(d, PlaceSide.Fore);
                         Point offB = getOffset(d, PlaceSide.Back);
                         Size sz = new Size(24, 8 + height * 16);

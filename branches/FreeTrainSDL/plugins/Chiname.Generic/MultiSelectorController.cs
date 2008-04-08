@@ -228,7 +228,7 @@ namespace FreeTrain.Framework.Plugin.Generic
                     CommercialStructureContribution csContrib = (CommercialStructureContribution)current.current;
                     if (csContrib.size.volume > 0) // eliminate dummy contribution
                     {
-                        CompletionHandler handler = new CompletionHandler(csContrib, loc, current.maxHeight, true);
+                        CompletionHandler handler = new CompletionHandler(csContrib, loc, current.MaxHeight, true);
                         new ConstructionSite(loc, new EventHandler(handler.handle), csContrib.size);
                     }
                 }
@@ -243,7 +243,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         public bool canBeBuilt(Location baseLoc)
         {
             int height;
-            SIZE size;
+            Size size;
             if (current.current is VarHeightBuildingContribution)
             {
                 size = ((VarHeightBuildingContribution)current.current).size;
@@ -252,12 +252,12 @@ namespace FreeTrain.Framework.Plugin.Generic
             else
             {
                 Distance d = ((CommercialStructureContribution)current.current).size;
-                size = new SIZE(d.x, d.y);
-                height = current.maxHeight;
+                size = new Size(d.x, d.y);
+                height = current.MaxHeight;
             }
             for (int z = 0; z < height; z++)
-                for (int y = 0; y < size.y; y++)
-                    for (int x = 0; x < size.x; x++)
+                for (int y = 0; y < size.Height; y++)
+                    for (int x = 0; x < size.Width; x++)
                         if (WorldDefinition.World[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
                             return false;
 
@@ -883,7 +883,7 @@ namespace FreeTrain.Framework.Plugin.Generic
                 p = vhb.price * (int)numHeight.Value;
             }
             else
-                p = current.unitPrice;
+                p = current.UnitPrice;
             costBox.cost = p;
         }
 

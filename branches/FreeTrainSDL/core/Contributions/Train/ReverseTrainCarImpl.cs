@@ -45,7 +45,7 @@ namespace FreeTrain.Contributions.Train
             : base(e.Attributes["id"].Value, 0)
         {
 
-            XmlElement b = (XmlElement)XmlUtil.selectSingleNode(e, "base");
+            XmlElement b = (XmlElement)XmlUtil.SelectSingleNode(e, "base");
 
             baseId = b.Attributes["carRef"].Value;
         }

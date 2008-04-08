@@ -43,7 +43,7 @@ namespace FreeTrain.Contributions.Rail
         public RailAccessoryContribution(XmlElement e)
             : base(e)
         {
-            _name = XmlUtil.selectSingleNode(e, "name").InnerText;
+            _name = XmlUtil.SelectSingleNode(e, "name").InnerText;
         }
 
 

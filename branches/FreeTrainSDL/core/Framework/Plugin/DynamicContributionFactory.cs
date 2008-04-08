@@ -45,7 +45,7 @@ namespace FreeTrain.Framework.Plugin
         public DynamicContributionFactory(XmlElement e)
             :
             this(PluginUtil.loadTypeFromManifest(
-                    (XmlElement)XmlUtil.selectSingleNode(e, "implementation"))) { }
+                    (XmlElement)XmlUtil.SelectSingleNode(e, "implementation"))) { }
 
 
         private readonly Type baseType;

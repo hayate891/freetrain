@@ -46,7 +46,7 @@ namespace FreeTrain.Contributions.Land
             : base(e)
         {
             // picture
-            XmlElement spr = (XmlElement)XmlUtil.selectSingleNode(e, "sprite");
+            XmlElement spr = (XmlElement)XmlUtil.SelectSingleNode(e, "sprite");
             sprite = PluginUtil.getSpriteLoader(spr).load2D(spr, 1, 1, 0)[0, 0];
         }
 

@@ -38,16 +38,16 @@ namespace FreeTrain.Contributions.Train
         protected AbstractTrainContributionImpl(XmlElement e)
             : base(e.Attributes["id"].Value)
         {
-            _companyName = XmlUtil.selectSingleNode(e, "company").InnerText;
-            _typeName = XmlUtil.selectSingleNode(e, "type").InnerText;
-            _nickName = XmlUtil.selectSingleNode(e, "name").InnerText;
-            _description = XmlUtil.selectSingleNode(e, "description").InnerText;
-            _author = XmlUtil.selectSingleNode(e, "author").InnerText;
+            _companyName = XmlUtil.SelectSingleNode(e, "company").InnerText;
+            _typeName = XmlUtil.SelectSingleNode(e, "type").InnerText;
+            _nickName = XmlUtil.SelectSingleNode(e, "name").InnerText;
+            _description = XmlUtil.SelectSingleNode(e, "description").InnerText;
+            _author = XmlUtil.SelectSingleNode(e, "author").InnerText;
 
-            _price = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
+            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
             // TODO: pictures
 
-            string speedStr = XmlUtil.selectSingleNode(e, "speed").InnerText.ToLower();
+            string speedStr = XmlUtil.SelectSingleNode(e, "speed").InnerText.ToLower();
             switch (speedStr)
             {
                 case "slow":

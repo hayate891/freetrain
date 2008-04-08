@@ -43,7 +43,7 @@ namespace FreeTrain.Contributions.Common
             : base(e)
         {
             picture = new Picture(
-                (XmlElement)XmlUtil.selectSingleNode(e, "picture"),
+                (XmlElement)XmlUtil.SelectSingleNode(e, "picture"),
                 this.id);
             // picture object will register itself to the manager.
         }

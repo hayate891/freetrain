@@ -46,19 +46,19 @@ namespace FreeTrain.Contributions.Structs
         public VarHeightBuildingContribution(XmlElement e)
             : base(e)
         {
-            _price = int.Parse(XmlUtil.selectSingleNode(e, "price").InnerText);
+            _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
 
-            size = XmlUtil.parseSize(XmlUtil.selectSingleNode(e, "size").InnerText);
-            _ppa = _price / Math.Max(1, size.x * size.y);
-            minHeight = int.Parse(XmlUtil.selectSingleNode(e, "minHeight").InnerText);
-            maxHeight = int.Parse(XmlUtil.selectSingleNode(e, "maxHeight").InnerText);
+            size = XmlUtil.ParseSize(XmlUtil.SelectSingleNode(e, "size").InnerText);
+            _ppa = _price / Math.Max(1, size.Width * size.Height);
+            minHeight = int.Parse(XmlUtil.SelectSingleNode(e, "minHeight").InnerText);
+            maxHeight = int.Parse(XmlUtil.SelectSingleNode(e, "maxHeight").InnerText);
 
-            XmlElement pics = (XmlElement)XmlUtil.selectSingleNode(e, "pictures");
+            XmlElement pics = (XmlElement)XmlUtil.SelectSingleNode(e, "pictures");
 
             tops = loadSpriteSets(pics.SelectNodes("top"));
             bottoms = loadSpriteSets(pics.SelectNodes("bottom"));
 
-            XmlElement m = (XmlElement)XmlUtil.selectSingleNode(pics, "middle");
+            XmlElement m = (XmlElement)XmlUtil.SelectSingleNode(pics, "middle");
             middle = PluginUtil.getSpriteLoader(m).load2D(m, size, 16);
         }
         /// <summary>
@@ -71,24 +71,24 @@ namespace FreeTrain.Contributions.Structs
         public VarHeightBuildingContribution(IAbstractStructure master, XmlElement pic, XmlElement main, bool opposite)
             : base(main)
         {
-            _price = master.unitPrice;
+            _price = master.UnitPrice;
             if (opposite)
-                size = new SIZE(master.size.y, master.size.x);
+                size = new Size(master.Size.Height, master.Size.Width);
             else
-                size = master.size;
-            _ppa = _price / Math.Max(1, size.x * size.y);
-            minHeight = master.minHeight;
-            maxHeight = master.maxHeight;
+                size = master.Size;
+            _ppa = _price / Math.Max(1, size.Width * size.Height);
+            minHeight = master.MinHeight;
+            maxHeight = master.MaxHeight;
 
 
             tops = loadSpriteSets(pic.SelectNodes("top"));
             bottoms = loadSpriteSets(pic.SelectNodes("bottom"));
 
-            XmlElement m = (XmlElement)XmlUtil.selectSingleNode(pic, "middle");
+            XmlElement m = (XmlElement)XmlUtil.SelectSingleNode(pic, "middle");
             XmlAttribute a = m.Attributes["overlay"];
             if (a != null && a.InnerText.Equals("true"))
                 overlay = true;
-            middle = PluginUtil.getSpriteLoader(m).load2D(m, size, size.x * 8);
+            middle = PluginUtil.getSpriteLoader(m).load2D(m, size, size.Width * 8);
         }
         /// <summary>
         /// 
@@ -107,7 +107,7 @@ namespace FreeTrain.Contributions.Structs
             int idx = 0;
             foreach (XmlElement e in list)
             {
-                sprites[idx++] = PluginUtil.getSpriteLoader(e).load2D(e, size, size.x * 8);
+                sprites[idx++] = PluginUtil.getSpriteLoader(e).load2D(e, size, size.Width * 8);
             }
             return sprites;
         }
@@ -155,7 +155,7 @@ namespace FreeTrain.Contributions.Structs
         }
 
         /// <summary> Size of the basement of this structure in voxel by voxel. </summary>
-        public readonly SIZE size;
+        public readonly Size size;
 
         /// <summary> Range of the possible height of the structure in voxel unit. </summary>
         public readonly int minHeight, maxHeight;
@@ -188,8 +188,8 @@ namespace FreeTrain.Contributions.Structs
         public bool canBeBuilt(Location baseLoc, int height)
         {
             for (int z = 0; z < height; z++)
-                for (int y = 0; y < size.y; y++)
-                    for (int x = 0; x < size.x; x++)
+                for (int y = 0; y < size.Height; y++)
+                    for (int x = 0; x < size.Width; x++)
                         if (WorldDefinition.World[baseLoc.x + x, baseLoc.y + y, baseLoc.z + z] != null)
                             return false;
 
@@ -269,10 +269,10 @@ namespace FreeTrain.Contributions.Structs
         /// <returns></returns>
         public WorldDefinition CreatePreviewWorld(Size minsizePixel, IDictionary options)
         {
-            Distance d = new Distance(size.x * 2 + 1, size.y * 2 + 1, maxHeight);
+            Distance d = new Distance(size.Width * 2 + 1, size.Height * 2 + 1, maxHeight);
             WorldDefinition w = WorldDefinition.CreatePreviewWorld(minsizePixel, d);
-            int v = w.Size.y - size.y - 2;
-            Location l = w.toXYZ((w.Size.x - size.x - size.y - 1) / 2, v, 0);
+            int v = w.Size.y - size.Height - 2;
+            Location l = w.toXYZ((w.Size.x - size.Width - size.Height - 1) / 2, v, 0);
             create(new WorldLocator(w, l), maxHeight, false);
             l = w.toXYZ((w.Size.x) / 2, v, 0);
             create(new WorldLocator(w, l), minHeight, false);

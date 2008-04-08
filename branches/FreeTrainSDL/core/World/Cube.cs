@@ -73,8 +73,8 @@ namespace FreeTrain.World
         /// <param name="_corner"></param>
         /// <param name="sz"></param>
         /// <param name="z"></param>
-        public Cube(Location _corner, SIZE sz, int z)
-            : this(_corner, sz.x, sz.y, z) { }
+        public Cube(Location _corner, Size sz, int z)
+            : this(_corner, sz.Width, sz.Height, z) { }
 
         #region factory methods
         /// <summary>

@@ -49,8 +49,8 @@ namespace FreeTrain.World.Structs
             this.type = _type;
             this.height = _height;
 
-            int Y = type.size.y;
-            int X = type.size.x;
+            int Y = type.size.Height;
+            int X = type.size.Width;
             int Z = height;
             this.baseLocation = wloc.location;
 
@@ -115,7 +115,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return WorldDefinition.World.LandValue[baseLocation + new Distance(type.size, 0) / 2] * type.size.x * type.size.y;
+                return WorldDefinition.World.LandValue[baseLocation + new Distance(type.size, 0) / 2] * type.size.Width * type.size.Height;
             }
         }
         /// <summary>
