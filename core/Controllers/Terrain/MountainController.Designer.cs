@@ -48,6 +48,7 @@ namespace FreeTrain.Controllers.Terrain
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MountainController));
             this.buttonUp = new System.Windows.Forms.RadioButton();
             this.buttonDown = new System.Windows.Forms.RadioButton();
             this.preview = new System.Windows.Forms.PictureBox();
@@ -63,7 +64,7 @@ namespace FreeTrain.Controllers.Terrain
             this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonUp.Appearance = System.Windows.Forms.Appearance.Button;
             this.buttonUp.Checked = true;
-            this.buttonUp.Location = new System.Drawing.Point(4, 215);
+            this.buttonUp.Location = new System.Drawing.Point(4, 258);
             this.buttonUp.Name = "buttonUp";
             this.buttonUp.Size = new System.Drawing.Size(56, 26);
             this.buttonUp.TabIndex = 2;
@@ -75,7 +76,7 @@ namespace FreeTrain.Controllers.Terrain
             // 
             this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDown.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonDown.Location = new System.Drawing.Point(60, 215);
+            this.buttonDown.Location = new System.Drawing.Point(153, 258);
             this.buttonDown.Name = "buttonDown";
             this.buttonDown.Size = new System.Drawing.Size(56, 26);
             this.buttonDown.TabIndex = 4;
@@ -90,7 +91,7 @@ namespace FreeTrain.Controllers.Terrain
             this.preview.InitialImage = null;
             this.preview.Location = new System.Drawing.Point(4, 5);
             this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(112, 81);
+            this.preview.Size = new System.Drawing.Size(205, 81);
             this.preview.TabIndex = 3;
             this.preview.TabStop = false;
             // 
@@ -102,7 +103,7 @@ namespace FreeTrain.Controllers.Terrain
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Location = new System.Drawing.Point(4, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 74);
+            this.label1.Size = new System.Drawing.Size(205, 117);
             this.label1.TabIndex = 6;
             this.label1.Text = "Press SHIFT and move mouse to quickly modify terrain.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,9 +114,9 @@ namespace FreeTrain.Controllers.Terrain
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.selSize);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(4, 171);
+            this.groupBox1.Location = new System.Drawing.Point(4, 214);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(112, 38);
+            this.groupBox1.Size = new System.Drawing.Size(205, 38);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Target Size";
@@ -128,19 +129,19 @@ namespace FreeTrain.Controllers.Terrain
             this.selSize.dataSource = null;
             this.selSize.Location = new System.Drawing.Point(6, 14);
             this.selSize.Name = "selSize";
-            this.selSize.Size = new System.Drawing.Size(96, 17);
+            this.selSize.Size = new System.Drawing.Size(189, 17);
             this.selSize.TabIndex = 6;
             // 
             // MountainController
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(120, 245);
+            this.ClientSize = new System.Drawing.Size(213, 288);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.preview);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MountainController";
             this.Text = "Modify Terrain";
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
