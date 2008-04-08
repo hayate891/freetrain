@@ -62,39 +62,39 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             XmlNode xn = e.SelectSingleNode("structure");
             if (xn != null)
-                _categories = new StructCategories(xn, this.id);
+                Categories = new StructCategories(xn, this.id);
             else
-                _categories = new StructCategories();
+                Categories = new StructCategories();
 
-            if (_categories.Count == 0)
+            if (Categories.Count == 0)
             {
                 StructCategory.Root.Entries.Add(this.id);
-                _categories.Add(StructCategory.Root);
+                Categories.Add(StructCategory.Root);
             }
 
             try
             {
-                _design = e.SelectSingleNode("design").InnerText;
+                Design = e.SelectSingleNode("design").InnerText;
             }
             catch
             {
                 //! _design = "標準";
-                _design = "default";
+                Design = "default";
             }
 
             try
             {
-                _unitPrice = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+                UnitPrice = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
             }
             catch
             {
-                _unitPrice = 0;
+                UnitPrice = 0;
             }
 
             Size = new Size(1, 1);
 
-            _minHeight = 2;
-            _maxHeight = 0;
+            MinHeight = 2;
+            MaxHeight = 0;
         }
 
         /// <summary>

@@ -118,7 +118,7 @@ namespace FreeTrain.Contributions.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override int price { get { return _price; } }
+        public override int Price { get { return _price; } }
         /// <summary>
         /// 
         /// </summary>
@@ -127,7 +127,7 @@ namespace FreeTrain.Contributions.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override double pricePerArea { get { return _price; } }
+        public override double PricePerArea { get { return _price; } }
 
         /// <summary>Sprite sets.</summary>
         private readonly ISprite[][,] tops, bottoms;
@@ -200,7 +200,7 @@ namespace FreeTrain.Contributions.Structs
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        public override PreviewDrawer createPreview(Size pixelSize)
+        public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, size, tops.Length + bottoms.Length + 1/*middle*/ );
 
@@ -245,7 +245,7 @@ namespace FreeTrain.Contributions.Structs
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override IModalController createBuilder(IControllerSite site)
+        public override IModalController CreateBuilder(IControllerSite site)
         {
             // TODO
             throw new NotImplementedException();
@@ -255,7 +255,7 @@ namespace FreeTrain.Contributions.Structs
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override IModalController createRemover(IControllerSite site)
+        public override IModalController CreateRemover(IControllerSite site)
         {
             // TODO
             throw new NotImplementedException();

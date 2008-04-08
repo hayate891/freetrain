@@ -355,7 +355,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             }
             else
             {
-                using (PreviewDrawer drawer = current.current.createPreview(previewBox.Size))
+                using (PreviewDrawer drawer = current.current.CreatePreview(previewBox.Size))
                 {
 
                     if (previewBitmap != null) previewBitmap.Dispose();
@@ -832,7 +832,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             {
                 GenericStructureContribution contrib
                     = (GenericStructureContribution)PluginManager.theInstance.getContribution((string)cat.Entries[i]);
-                string key = contrib.name;
+                string key = contrib.Name;
                 if (!worktable.ContainsKey(key))
                 {
                     typeBox.Items.Add(contrib);
@@ -858,7 +858,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             for (int i = 0; i < n; i++)
             {
                 GenericStructureContribution contrib = arrCont[i];
-                string key = contrib.name;
+                string key = contrib.Name;
                 if (!typeMap.ContainsKey(key))
                 {
                     typeBox.Items.Add(contrib);
@@ -880,7 +880,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             if (current.current is VarHeightBuildingContribution)
             {
                 VarHeightBuildingContribution vhb = (VarHeightBuildingContribution)current.current;
-                p = vhb.price * (int)numHeight.Value;
+                p = vhb.Price * (int)numHeight.Value;
             }
             else
                 p = current.UnitPrice;
@@ -895,20 +895,20 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             string buf = "";
 
-            int n = current.categories.Count;
-            buf += current.categories[0].name;
+            int n = current.Categories.Count;
+            buf += current.Categories[0].name;
             for (int i = 1; i < n; i++)
-                buf += ";" + current.categories[i].name;
+                buf += ";" + current.Categories[i].name;
             buf += "\nMax population:";
             //! buf += "\n最大人口:";
-            if (current.population == null)
+            if (current.Population == null)
                 buf += "N/A";
             else
             {
                 if (current.current is VarHeightBuildingContribution)
-                    buf += current.population.residents * (int)numHeight.Value;
+                    buf += current.Population.residents * (int)numHeight.Value;
                 else
-                    buf += current.population.residents;
+                    buf += current.Population.residents;
             }
 
             return buf;
@@ -928,7 +928,7 @@ namespace FreeTrain.Framework.Plugin.Generic
                 IEnumerator ie = designMap.GetEnumerator();
                 int i = 0;
                 while (ie.MoveNext())
-                    subNames[i++] = ((GenericStructureContribution)ie.Current).design;
+                    subNames[i++] = ((GenericStructureContribution)ie.Current).Design;
 
                 selectorDesign.count = designMap.Count;
                 bool b = (selectorDesign.count > 1);

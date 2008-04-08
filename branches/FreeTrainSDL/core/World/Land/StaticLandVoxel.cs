@@ -43,8 +43,8 @@ namespace FreeTrain.World.Land
         {
             this.contrib = contrib;
 
-            if (contrib.population != null)
-                this.stationListener = new StationListenerImpl(contrib.population, loc);
+            if (contrib.Population != null)
+                this.stationListener = new StationListenerImpl(contrib.Population, loc);
         }
         /// <summary>
         /// 
@@ -57,7 +57,7 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return contrib.price; } }
+        public override int entityValue { get { return contrib.Price; } }
 
         private readonly StationListenerImpl stationListener;
 

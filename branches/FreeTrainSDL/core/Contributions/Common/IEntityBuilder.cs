@@ -35,52 +35,52 @@ namespace FreeTrain.Contributions.Common
         /// <summary> 
         /// Population of this structure, or null if this structure is not populated. 
         /// </summary>
-        BasePopulation population { get; }
+        BasePopulation Population { get; }
 
         /// <summary>
         /// True if the computer (the development algorithm) is not allowed to
         /// build this structure.
         /// </summary>
         // TODO: make IEntityBuilder responsible for creating a new Plan object.
-        bool computerCannotBuild { get; }
+        bool ComputerCannotBuild { get; }
 
         /// <summary>
         /// True if the player is not allowed to build this structure.
         /// </summary>
-        bool playerCannotBuild { get; }
+        bool PlayerCannotBuild { get; }
 
         /// <summary>
         /// Name of this entity builder. Primarily used as the display name.
         /// Doesn't need to be unique.
         /// </summary>
-        string name { get; }
+        string Name { get; }
         /// <summary>
         /// 
         /// </summary>
-        int price { get; }
+        int Price { get; set;}
 
         /// <summary>
         /// price par area (minimum).
         /// </summary>
-        double pricePerArea { get; }
+        double PricePerArea { get; set;}
 
         /// <summary>
         /// Creates a preview
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        PreviewDrawer createPreview(Size pixelSize);
+        PreviewDrawer CreatePreview(Size pixelSize);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        IModalController createBuilder(IControllerSite site);
+        IModalController CreateBuilder(IControllerSite site);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        IModalController createRemover(IControllerSite site);
+        IModalController CreateRemover(IControllerSite site);
     }
 }

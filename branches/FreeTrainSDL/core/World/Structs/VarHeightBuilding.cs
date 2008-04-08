@@ -65,9 +65,9 @@ namespace FreeTrain.World.Structs
             if (wloc.world == WorldDefinition.World)
                 this.subsidiary = new SubsidiaryCompany(this, initiallyOwned);
 
-            if (type.population != null)
+            if (type.Population != null)
                 stationListener = new StationListenerImpl(
-                    new MultiplierPopulation(height, type.population), baseLocation);
+                    new MultiplierPopulation(height, type.Population), baseLocation);
         }
 
         /// <summary> Voxels that form this structure </summary>
@@ -97,7 +97,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override string name { get { return type.name; } }
+        public override string name { get { return type.Name; } }
         /// <summary>
         /// 
         /// </summary>
@@ -105,7 +105,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return type.price * height;
+                return type.Price * height;
             }
         }
         /// <summary>
@@ -146,7 +146,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return height * type.price;
+                return height * type.Price;
             }
         }
         /// <summary>

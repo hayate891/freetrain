@@ -220,7 +220,7 @@ namespace FreeTrain.World.Road.Accessory
             RoadAccessoryContribution builder = (RoadAccessoryContribution)typeBox.SelectedItem;
             if (builder != null)
             {
-                using (PreviewDrawer drawer = builder.createPreview(preview.Size))
+                using (PreviewDrawer drawer = builder.CreatePreview(preview.Size))
                 {
                     if (previewBitmap != null) previewBitmap.Dispose();
                     preview.Image = previewBitmap = drawer.createBitmap();

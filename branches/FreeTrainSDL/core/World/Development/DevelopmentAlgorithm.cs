@@ -50,7 +50,7 @@ namespace FreeTrain.World.Development
             {
                 if (contrib is IEntityBuilder)
                 {
-                    if (((IEntityBuilder)contrib).computerCannotBuild)
+                    if (((IEntityBuilder)contrib).ComputerCannotBuild)
                         continue;
                     else
                     {
@@ -102,13 +102,13 @@ namespace FreeTrain.World.Development
             do
             {
                 n = (n + 1) >> 1;
-                int ppa = (int)((IEntityBuilder)array[p]).pricePerArea;
+                int ppa = (int)((IEntityBuilder)array[p]).PricePerArea;
                 if (ppa >= price)
                     p = Math.Max(0, p - n);
                 else
                     p = Math.Min(array.Count - 1, p + n);
             } while (n > 1);
-            if (price > (int)((IEntityBuilder)array[p]).pricePerArea)
+            if (price > (int)((IEntityBuilder)array[p]).PricePerArea)
                 p++;
             //			Debug.Write(string.Format("First for {0} is at {1} ;",price,p));
             //			Debug.WriteLine(string.Format("which is {0} -> {1} <- {2}",((IEntityBuilder)array[Math.Max(0,p-1)]).pricePerArea,((IEntityBuilder)array[p]).pricePerArea,((IEntityBuilder)array[Math.Min(array.Count-1,p+1)]).pricePerArea));
@@ -127,14 +127,14 @@ namespace FreeTrain.World.Development
             do
             {
                 n = (n + 1) >> 1;
-                int ppa = (int)((IEntityBuilder)array[p]).pricePerArea;
+                int ppa = (int)((IEntityBuilder)array[p]).PricePerArea;
                 if (ppa <= price)
                     p = Math.Min(array.Count - 1, p + n);
                 else
                     p = Math.Max(0, p - n);
             } while (n > 1);
             int p1 = Math.Min(array.Count - 1, p + 1);
-            if (price == (int)((IEntityBuilder)array[p1]).pricePerArea)
+            if (price == (int)((IEntityBuilder)array[p1]).PricePerArea)
                 p = p1;
             //			Debug.Write(string.Format("Last for {0} is at {1} ;",price,p));
             //			Debug.WriteLine(string.Format("which is {0} -> {1} <- {2}",((IEntityBuilder)array[Math.Max(0,p-1)]).pricePerArea,((IEntityBuilder)array[p]).pricePerArea,((IEntityBuilder)array[Math.Min(array.Count-1,p+1)]).pricePerArea));
@@ -374,20 +374,20 @@ namespace FreeTrain.World.Development
                 LandBuilderContribution lbc = entity as LandBuilderContribution;
                 Size size = new Size(Rand(F_LandAveSize, F_LandFlexSize), Rand(F_LandAveSize, F_LandFlexSize));
                 p = new LandPlan(lbc, dev, scaning, size);
-                finalPrice = lbc.price * size.Width * size.Height;
+                finalPrice = lbc.Price * size.Width * size.Height;
             }
             else if (entity is CommercialStructureContribution)
             {
                 CommercialStructureContribution csb = entity as CommercialStructureContribution;
                 p = new CommercialStructurePlan(csb, dev, scaning);
-                finalPrice = entity.price;
+                finalPrice = entity.Price;
             }
             else if (entity is VarHeightBuildingContribution)
             {
                 VarHeightBuildingContribution vhbc = entity as VarHeightBuildingContribution;
                 int h = vhbc.minHeight;
                 int h2 = vhbc.maxHeight;
-                int price = vhbc.price * h;
+                int price = vhbc.Price * h;
                 Cube tmp = new Cube(scaning, vhbc.size, h);
                 int cost = 0;
                 foreach (IEntity e in tmp.getEntities())
@@ -395,7 +395,7 @@ namespace FreeTrain.World.Development
                 while (price < cost && h < h2)
                 {
                     if (price < cost)
-                        price += vhbc.price;
+                        price += vhbc.Price;
                     h++;
                 }
                 p = new VarHeightBuildingPlan(vhbc, dev, scaning, h);
@@ -477,7 +477,7 @@ namespace FreeTrain.World.Development
                 IEntityBuilder e2 = y as IEntityBuilder;
                 if (e1 != null && e2 != null)
                 {
-                    return Math.Sign(e1.pricePerArea - e2.pricePerArea);
+                    return Math.Sign(e1.PricePerArea - e2.PricePerArea);
                 }
             }
             catch (Exception e)

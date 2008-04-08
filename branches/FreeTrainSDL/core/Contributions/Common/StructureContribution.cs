@@ -51,7 +51,7 @@ namespace FreeTrain.Contributions.Common
         {
             core = new EntityBuilderInternal(e, this.id);
             XmlNode groupNode = e.SelectSingleNode("group");
-            string groupName = (groupNode != null) ? groupNode.InnerText : core.name;
+            string groupName = (groupNode != null) ? groupNode.InnerText : core.Name;
             group = getGroup(groupName);
             group.add(this);
 
@@ -75,7 +75,16 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        public readonly StructureGroup group;
+        private readonly StructureGroup group;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public StructureGroup Group
+        {
+            get { return group; }
+        } 
+
 
         /// <summary>
         /// Implemented by the derived class and
@@ -87,56 +96,76 @@ namespace FreeTrain.Contributions.Common
         /// Name of this entity builder. Primarily used as the display name.
         /// Doesn't need to be unique.
         /// </summary>
-        public virtual string name { get { return core.name; } }
+        public virtual string Name { get { return core.Name; } }
         /// <summary>
         /// 
         /// </summary>
-        public virtual BasePopulation population { get { return core.population; } }
+        public virtual BasePopulation Population { get { return core.Population; } }
 
         /// <summary>
         /// True if the computer (the development algorithm) is not allowed to
         /// build this structure.
         /// </summary>
         // TODO: make EntityBuilderContribution responsible for creating a new Plan object.
-        public bool computerCannotBuild { get { return core.computerCannotBuild; } }
+        public bool ComputerCannotBuild { get { return core.ComputerCannotBuild; } }
 
         /// <summary>
         /// True if the player is not allowed to build this structure.
         /// </summary>
-        public bool playerCannotBuild { get { return core.playerCannotBuild; } }
+        public bool PlayerCannotBuild { get { return core.PlayerCannotBuild; } }
         /// <summary>
         /// 
         /// </summary>
-        public virtual int price { get { return core.price; } }
+        public virtual int Price 
+        { 
+            get 
+            { 
+                return core.Price; 
+            }
+            set
+            {
+                core.Price = value;
+            }
+        }
 
         /// <summary>
         /// price par area (minimum).
         /// </summary>
-        public virtual double pricePerArea { get { return core.pricePerArea; } }
+        public virtual double PricePerArea 
+        { 
+            get 
+            { 
+                return core.PricePerArea; 
+            }
+            set
+            {
+                core.PricePerArea = value;
+            }
+        }
 
         /// <summary>
         /// Creates a preview
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        public virtual PreviewDrawer createPreview(Size pixelSize) { return core.createPreview(pixelSize); }
+        public virtual PreviewDrawer CreatePreview(Size pixelSize) { return core.CreatePreview(pixelSize); }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public virtual IModalController createBuilder(IControllerSite site) { return core.createBuilder(site); }
+        public virtual IModalController CreateBuilder(IControllerSite site) { return core.CreateBuilder(site); }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public virtual IModalController createRemover(IControllerSite site) { return core.createRemover(site); }
+        public virtual IModalController CreateRemover(IControllerSite site) { return core.CreateRemover(site); }
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public override string ToString() { return core.name; }
+        public override string ToString() { return core.Name; }
 
         /// <summary>
         /// 
@@ -155,9 +184,9 @@ namespace FreeTrain.Contributions.Common
                 XmlNode groupNode = e.SelectSingleNode("group");
 
                 _name = (nameNode != null) ? nameNode.InnerText : (groupNode != null ? groupNode.InnerText : null);
-                if (name == null)
+                if (Name == null)
                     throw new FormatException("<name> and <group> are both missing");
-                _price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+                price = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
                 _computerCannotBuild = (e.SelectSingleNode("computerCannotBuild") != null);
                 _playerCannotBuild = (e.SelectSingleNode("playerCannotBuild") != null);
 
@@ -172,43 +201,60 @@ namespace FreeTrain.Contributions.Common
             private readonly bool _computerCannotBuild;
             private readonly bool _playerCannotBuild;
             private readonly string _name;
-            /// <summary>
-            /// 
-            /// </summary>
-            [CLSCompliant(false)]
-            protected readonly int _price;
+            int price;
 
             #region IEntityBuilder o
             /// <summary>
             /// 
             /// </summary>
-            public BasePopulation population { get { return _population; } }
+            public BasePopulation Population { get { return _population; } }
             /// <summary>
             /// 
             /// </summary>
-            public bool computerCannotBuild { get { return _computerCannotBuild; } }
+            public bool ComputerCannotBuild { get { return _computerCannotBuild; } }
             /// <summary>
             /// 
             /// </summary>
-            public bool playerCannotBuild { get { return _playerCannotBuild; } }
+            public bool PlayerCannotBuild { get { return _playerCannotBuild; } }
             /// <summary>
             /// 
             /// </summary>
-            public string name { get { return _name; } }
+            public string Name { get { return _name; } }
             /// <summary>
             /// 
             /// </summary>
-            public int price { get { return _price; } }
+            public int Price 
+            { 
+                get 
+            { 
+                    return price; 
+                }
+
+                set
+                {
+                    price = value;
+                }
+            }
             /// <summary>
             /// 
             /// </summary>
-            public virtual double pricePerArea { get { return _price; } }
+            public virtual double PricePerArea 
+            { 
+                get 
+                { 
+                    return price; 
+                }
+                set
+                {
+                    double price = value;
+                }
+            }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="pixelSize"></param>
             /// <returns></returns>
-            public virtual FreeTrain.Framework.Graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize)
+            public virtual FreeTrain.Framework.Graphics.PreviewDrawer CreatePreview(System.Drawing.Size pixelSize)
             {
                 throw new NotImplementedException();
             }
@@ -217,7 +263,7 @@ namespace FreeTrain.Contributions.Common
             /// </summary>
             /// <param name="site"></param>
             /// <returns></returns>
-            public virtual FreeTrain.Controllers.IModalController createBuilder(FreeTrain.Controllers.IControllerSite site)
+            public virtual FreeTrain.Controllers.IModalController CreateBuilder(FreeTrain.Controllers.IControllerSite site)
             {
                 throw new NotImplementedException();
             }
@@ -226,7 +272,7 @@ namespace FreeTrain.Contributions.Common
             /// </summary>
             /// <param name="site"></param>
             /// <returns></returns>
-            public virtual FreeTrain.Controllers.IModalController createRemover(FreeTrain.Controllers.IControllerSite site)
+            public virtual FreeTrain.Controllers.IModalController CreateRemover(FreeTrain.Controllers.IControllerSite site)
             {
                 throw new NotImplementedException();
             }
@@ -249,7 +295,7 @@ namespace FreeTrain.Contributions.Common
             /// <returns></returns>
             public object GetRealObject(StreamingContext context)
             {
-                return ((StructureContribution)PluginManager.theInstance.getContribution(id)).population;
+                return ((StructureContribution)PluginManager.theInstance.getContribution(id)).Population;
             }
         }
     }

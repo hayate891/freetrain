@@ -104,8 +104,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <summary>
         /// Creates the preview image of the land builder.
         /// </summary>
-        [CLSCompliant(false)]
-        public override PreviewDrawer createPreview(Size pixelSize)
+        public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, new Size(3, 3), 0);
 
@@ -122,7 +121,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override IModalController createBuilder(IControllerSite site)
+        public override IModalController CreateBuilder(IControllerSite site)
         {
             return new Logic(this, site);
         }

@@ -68,11 +68,11 @@ namespace FreeTrain.Contributions.Land
         /// <summary>
         /// 
         /// </summary>
-        public override int price { get { return _price; } }
+        public override int Price { get { return _price; } }
         /// <summary>
         /// 
         /// </summary>
-        public override double pricePerArea { get { return _price; } }
+        public override double PricePerArea { get { return _price; } }
         /// <summary>
         /// 
         /// </summary>
@@ -141,7 +141,7 @@ namespace FreeTrain.Contributions.Land
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override IModalController createRemover(IControllerSite site)
+        public override IModalController CreateRemover(IControllerSite site)
         {
             return new DefaultControllerImpl(this, site,
                 new DefaultControllerImpl.SpriteBuilder(getSprite));

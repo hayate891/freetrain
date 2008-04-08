@@ -437,8 +437,8 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         {
             idxColor.count = currentContrib.colors.size;
             idxColor2.count = currentContrib.getHighlihtPatternCount();
-            namelabel.Text = currentContrib.name;
-            price.cost = currentContrib.price;
+            namelabel.Text = currentContrib.Name;
+            price.cost = currentContrib.Price;
             onButtonClicked(sender, e);
             onColorChanged(sender, e);
             onColor2Changed(sender, e);
@@ -518,7 +518,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         public override void UpdatePreview()
         {
-            using (PreviewDrawer drawer = currentContrib.createPreview(preview.Size))
+            using (PreviewDrawer drawer = currentContrib.CreatePreview(preview.Size))
             {
                 if (previewBitmap != null) previewBitmap.Dispose();
                 preview.Image = previewBitmap = drawer.createBitmap();

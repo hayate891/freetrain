@@ -81,7 +81,7 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        public override int price { get { return _price; } }
+        public override int Price { get { return _price; } }
         /// <summary>
         /// 
         /// </summary>
@@ -90,7 +90,7 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        public override double pricePerArea { get { return _ppa; } }
+        public override double PricePerArea { get { return _ppa; } }
 
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        public override PreviewDrawer createPreview(Size pixelSize)
+        public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, size);
             drawer.drawCenter(sprites);
@@ -163,7 +163,7 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override IModalController createBuilder(IControllerSite site)
+        public override IModalController CreateBuilder(IControllerSite site)
         {
             return new FixedSizeStructurePlacementController(this, site);
         }
@@ -172,7 +172,7 @@ namespace FreeTrain.Contributions.Common
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override IModalController createRemover(IControllerSite site)
+        public override IModalController CreateRemover(IControllerSite site)
         {
             return new FixedSizeStructureRemovalController(this, site);
         }

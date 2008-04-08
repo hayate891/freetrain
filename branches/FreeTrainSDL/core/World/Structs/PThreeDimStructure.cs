@@ -75,7 +75,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return type.price; } }
+        public override int entityValue { get { return type.Price; } }
         /// <summary>
         /// 
         /// </summary>
@@ -98,7 +98,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override string name { get { return type.name; } }
+        public override string name { get { return type.Name; } }
 
         /// <summary>
         /// 

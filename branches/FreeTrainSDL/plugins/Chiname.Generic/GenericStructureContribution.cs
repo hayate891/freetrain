@@ -48,15 +48,15 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <summary>
         /// 
         /// </summary>
-        UNKNOWN,
+        Unknown,
         /// <summary>
         /// 
         /// </summary>
-        BASIC,
+        Basic,
         /// <summary>
         /// 
         /// </summary>
-        VARHEIGHT
+        VarHeight
     };
 
     /// <summary>
@@ -69,39 +69,83 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <summary>
         /// 
         /// </summary>
-        protected static readonly Char[] spliter = new Char[] { '|' };
-        /// <summary> sub type of this structure. </summary>
-        [CLSCompliant(false)]
-        protected StructCategories _categories;
+        private static readonly Char[] splitter = new Char[] { '|' };
+
         /// <summary>
         /// 
         /// </summary>
-        public StructCategories categories { get { return _categories; } }
+        protected static Char[] Splitter
+        {
+            get { return GenericStructureContribution.splitter; }
+        } 
+
         /// <summary> sub type of this structure. </summary>
-        [CLSCompliant(false)]
-        protected string _design;
+        private StructCategories categories;
         /// <summary>
         /// 
         /// </summary>
-        public string design { get { return _design; } }
+        public StructCategories Categories 
+        { 
+            get 
+            { 
+                return categories; 
+            }
+            set
+            {
+                categories = value;
+            }
+        }
+        /// <summary> sub type of this structure. </summary>
+        private string design;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Design 
+        { 
+            get 
+        { 
+            return design; 
+            }
+            set
+            {
+                design = value;
+            }
+        }
         /// <summary> unit price of this structure. equals to whole price for fixed height. </summary>
-        protected int _unitPrice;
+        int unitPrice;
         /// <summary>
         /// 
         /// </summary>
-        public int UnitPrice { get { return _unitPrice; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int price { get { return _unitPrice; } }
-        /// <summary>
-        /// 
-        /// </summary>
-        protected int _areaPrice;
-        /// <summary>
-        /// 
-        /// </summary>
-        public override double pricePerArea { get { return _areaPrice; } }
+        public int UnitPrice 
+        { 
+            get 
+            { 
+                return unitPrice; 
+            }
+            set
+            {
+                unitPrice = value;
+            }
+        }
+
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        //int pricePerArea;
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        //public override double PricePerArea 
+        //{ 
+        //    get 
+        //    { 
+        //        return pricePerArea; 
+        //    }
+        //    set
+        //    {
+        //        pricePerArea = value;
+        //    }
+        //}
 
         private Size size;
 
@@ -121,24 +165,44 @@ namespace FreeTrain.Framework.Plugin.Generic
         }
 
         /// <summary> valid for variable height structure only. </summary>
-        [CLSCompliant(false)]
-        protected int _minHeight;
+        int minHeight;
         /// <summary>
         /// 
         /// </summary>
-        public int MinHeight { get { return _minHeight; } }
+        public int MinHeight 
+        { 
+            get 
+            { 
+                return minHeight; 
+            }
+            set
+            {
+                minHeight = value;
+            }
+        }
         /// <summary> used as well as fixed height structure. </summary>
-        protected int _maxHeight;
+        private int maxHeight;
         /// <summary>
         /// 
         /// </summary>
-        public int MaxHeight { get { return _maxHeight; } }
+        public int MaxHeight 
+        { 
+            get 
+            { 
+                return maxHeight; 
+            }
+            set
+            {
+                maxHeight = value;
+            }
+        }
+
         /// <summary> sprite table type of this structure. </summary>
-        protected SpriteTableType stType = SpriteTableType.UNKNOWN;
+        SpriteTableType stType = SpriteTableType.Unknown;
         /// <summary>
         /// 
         /// </summary>
-        public SpriteTableType patternType { get { return stType; } }
+        public SpriteTableType PatternType { get { return stType; } }
 
         internal Contribution[,] contribs;
         /// <summary>
@@ -232,7 +296,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <returns></returns>
         public override string ToString()
         {
-            return name;
+            return Name;
         }
 
         /// <summary>
@@ -255,45 +319,45 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             XmlNode xn = e.SelectSingleNode("structure");
             if (xn != null)
-                _categories = new StructCategories(xn, this.id);
+                categories = new StructCategories(xn, this.id);
             else
-                _categories = new StructCategories();
+                categories = new StructCategories();
 
-            if (_categories.Count == 0)
+            if (categories.Count == 0)
             {
                 StructCategory.Root.Entries.Add(this.id);
-                _categories.Add(StructCategory.Root);
+                categories.Add(StructCategory.Root);
             }
 
             try
             {
-                _design = e.SelectSingleNode("design").InnerText;
+                design = e.SelectSingleNode("design").InnerText;
             }
             catch
             {
                 //! _design = "標準";
-                _design = "default";
+                design = "default";
             }
 
-            _unitPrice = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
+            unitPrice = int.Parse(XmlUtil.SelectSingleNode(e, "price").InnerText);
             size = XmlUtil.ParseSize(XmlUtil.SelectSingleNode(e, "size").InnerText);
-            _areaPrice = _unitPrice / Math.Max(1, size.Width * size.Height);
+            PricePerArea = unitPrice / Math.Max(1, size.Width * size.Height);
 
-            _minHeight = 2;
+            minHeight = 2;
             try
             {
-                _maxHeight = int.Parse(e.SelectSingleNode("maxHeight").InnerText);
+                maxHeight = int.Parse(e.SelectSingleNode("maxHeight").InnerText);
                 try
                 {
                     // if minHeight is not defined, use default.
-                    _minHeight = int.Parse(e.SelectSingleNode("minHeight").InnerText);
+                    minHeight = int.Parse(e.SelectSingleNode("minHeight").InnerText);
                 }
                 catch { }
             }
             catch
             {
                 // if maxHeight tag is nod find, height tag must be exist.
-                _maxHeight = int.Parse(XmlUtil.SelectSingleNode(e, "height").InnerText);
+                maxHeight = int.Parse(XmlUtil.SelectSingleNode(e, "height").InnerText);
             }
         }
         /// <summary>
@@ -321,10 +385,10 @@ namespace FreeTrain.Framework.Plugin.Generic
                 {
                     switch (stType)
                     {
-                        case SpriteTableType.UNKNOWN:
-                            stType = SpriteTableType.BASIC;
+                        case SpriteTableType.Unknown:
+                            stType = SpriteTableType.Basic;
                             break;
-                        case SpriteTableType.BASIC:
+                        case SpriteTableType.Basic:
                             break;
                         default:
                             throw new FormatException("<sprite> tag is not available together with <pictures> or <sprites> tags.");
@@ -335,10 +399,10 @@ namespace FreeTrain.Framework.Plugin.Generic
                 {
                     switch (stType)
                     {
-                        case SpriteTableType.UNKNOWN:
-                            stType = SpriteTableType.VARHEIGHT;
+                        case SpriteTableType.Unknown:
+                            stType = SpriteTableType.VarHeight;
                             break;
-                        case SpriteTableType.VARHEIGHT:
+                        case SpriteTableType.VarHeight:
                             break;
                         default:
                             throw new FormatException("<" + child.Name + "> tag is not available together with <sprite> tag.");
@@ -388,7 +452,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             bool opposite = (sprite.Attributes["opposite"] != null && sprite.Attributes["opposite"].Value.Equals("true"));
             Contribution newContrib;
-            if (stType == SpriteTableType.VARHEIGHT)
+            if (stType == SpriteTableType.VarHeight)
             {
                 foreach (XmlNode child in sprite.ChildNodes)
                     child.AppendChild(color.Clone());
@@ -415,7 +479,7 @@ namespace FreeTrain.Framework.Plugin.Generic
                 if (cn.Name.Equals("direction"))
                 {
                     string front = cn.Attributes["front"].Value;
-                    string[] dirs = front.ToUpper().Split(spliter);
+                    string[] dirs = front.ToUpper().Split(splitter);
                     for (int i = 0; i < dirs.Length; i++)
                     {
                         c++;
@@ -467,9 +531,9 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="pixelSize"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override PreviewDrawer createPreview(Size pixelSize)
+        public override PreviewDrawer CreatePreview(Size pixelSize)
         {
-            return current.createPreview(pixelSize);
+            return current.CreatePreview(pixelSize);
         }
         /// <summary>
         /// 
@@ -477,9 +541,9 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override IModalController createBuilder(IControllerSite site)
+        public override IModalController CreateBuilder(IControllerSite site)
         {
-            return current.createBuilder(site);
+            return current.CreateBuilder(site);
         }
         /// <summary>
         /// 
@@ -487,9 +551,9 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override IModalController createRemover(IControllerSite site)
+        public override IModalController CreateRemover(IControllerSite site)
         {
-            return current.createRemover(site);
+            return current.CreateRemover(site);
         }
 
     }
