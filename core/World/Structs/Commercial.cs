@@ -84,7 +84,7 @@ namespace FreeTrain.World.Structs
         {
             get
             {
-                return type.price;
+                return type.Price;
             }
         }
         /// <summary>
@@ -136,7 +136,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override string name { get { return type.name; } }
+        public override string name { get { return type.Name; } }
         /// <summary>
         /// 
         /// </summary>

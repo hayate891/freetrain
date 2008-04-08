@@ -46,7 +46,7 @@ namespace FreeTrain.World.Land.VinylHouse
             this.contrib = contrib;
             this.index = index;
 
-            this.stationListener = new StationListenerImpl(contrib.population, loc);
+            this.stationListener = new StationListenerImpl(contrib.Population, loc);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return contrib.price; } }
+        public override int entityValue { get { return contrib.Price; } }
 
         /// <summary>
         /// 

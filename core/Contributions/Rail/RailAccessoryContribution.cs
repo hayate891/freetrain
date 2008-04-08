@@ -35,7 +35,7 @@ namespace FreeTrain.Contributions.Rail
     [Serializable]
     public abstract class RailAccessoryContribution : Contribution, IEntityBuilder
     {
-        private readonly string _name;
+        private readonly string name;
         /// <summary>
         /// 
         /// </summary>
@@ -43,7 +43,7 @@ namespace FreeTrain.Contributions.Rail
         public RailAccessoryContribution(XmlElement e)
             : base(e)
         {
-            _name = XmlUtil.SelectSingleNode(e, "name").InnerText;
+            name = XmlUtil.SelectSingleNode(e, "name").InnerText;
         }
 
 
@@ -54,45 +54,65 @@ namespace FreeTrain.Contributions.Rail
         /// <summary>
         /// 
         /// </summary>
-        public virtual string name { get { return _name; } }
+        public virtual string Name { get { return name; } }
         /// <summary>
         /// 
         /// </summary>
-        public virtual BasePopulation population { get { return null; } }
+        public virtual BasePopulation Population { get { return null; } }
         /// <summary>
         /// 
         /// </summary>
-        public virtual int price { get { return 0; } }
+        public virtual int Price 
+        { 
+            get 
+        { 
+            return 0; 
+        }
+        set
+        {
+            int price = value;
+        }
+        }
         /// <summary>
         /// 
         /// </summary>
-        public virtual double pricePerArea { get { return 0; } }
+        public virtual double PricePerArea 
+        {
+            get 
+        { 
+            return 0; 
+        }
+        set
+        {
+            double price = value;
+        }
+        }
         /// <summary>
         /// 
         /// </summary>
-        public bool computerCannotBuild { get { return false; } }
+        public bool ComputerCannotBuild { get { return false; } }
         /// <summary>
         /// 
         /// </summary>
-        public bool playerCannotBuild { get { return true; } }
+        public bool PlayerCannotBuild { get { return true; } }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        public abstract FreeTrain.Framework.Graphics.PreviewDrawer createPreview(System.Drawing.Size pixelSize);
+        public abstract FreeTrain.Framework.Graphics.PreviewDrawer CreatePreview(System.Drawing.Size pixelSize);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public abstract FreeTrain.Controllers.IModalController createBuilder(FreeTrain.Controllers.IControllerSite site);
+        public abstract FreeTrain.Controllers.IModalController CreateBuilder(FreeTrain.Controllers.IControllerSite site);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public abstract FreeTrain.Controllers.IModalController createRemover(FreeTrain.Controllers.IControllerSite site);
+        public abstract FreeTrain.Controllers.IModalController CreateRemover(FreeTrain.Controllers.IControllerSite site);
 
         #endregion
     }

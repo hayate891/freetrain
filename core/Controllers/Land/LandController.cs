@@ -165,7 +165,7 @@ namespace FreeTrain.Controllers.Land
         public override void UpdatePreview()
         {
             LandBuilderContribution builder = (LandBuilderContribution)indexSelector.currentItem;
-            using (PreviewDrawer drawer = builder.createPreview(preview.Size))
+            using (PreviewDrawer drawer = builder.CreatePreview(preview.Size))
             {
                 if (previewBitmap != null) previewBitmap.Dispose();
                 preview.Image = previewBitmap = drawer.createBitmap();

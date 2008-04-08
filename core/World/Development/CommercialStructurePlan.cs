@@ -42,7 +42,7 @@ namespace FreeTrain.World.Development
 			this.loc = _loc;
 		}
 
-		public override int value { get { return contrib.price; } }
+		public override int value { get { return contrib.Price; } }
 
 		public override Cube cube { get { return Cube.createExclusive(loc,contrib.size); } }
 

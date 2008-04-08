@@ -40,7 +40,7 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        int UnitPrice { get; }
+        int UnitPrice { get; set;}
         /// <summary>
         /// 
         /// </summary>
@@ -48,10 +48,10 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        int MinHeight { get; }
+        int MinHeight { get; set;}
         /// <summary>
         /// 
         /// </summary>
-        int MaxHeight { get; }
+        int MaxHeight { get; set;}
     }
 }

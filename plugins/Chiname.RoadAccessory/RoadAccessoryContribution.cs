@@ -69,7 +69,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <param name="pixelSize"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override PreviewDrawer createPreview(Size pixelSize)
+        public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, new Size(10, 1), 0);
             for (int x = 9; x >= 0; x--)
@@ -86,7 +86,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override IModalController createBuilder(IControllerSite site)
+        public override IModalController CreateBuilder(IControllerSite site)
         {
             return new ControllerImpl(this, site, false);
         }
@@ -96,7 +96,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override IModalController createRemover(IControllerSite site)
+        public override IModalController CreateRemover(IControllerSite site)
         {
             return new ControllerImpl(this, site, true);
         }

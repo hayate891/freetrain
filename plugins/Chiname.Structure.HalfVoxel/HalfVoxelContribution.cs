@@ -350,11 +350,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public override int price { get { return _price; } }
+        public override int Price { get { return _price; } }
         /// <summary>
         /// 
         /// </summary>
-        public override double pricePerArea { get { return _price << 1; } }
+        public override double PricePerArea { get { return _price << 1; } }
 
         /// <summary>
         /// 
@@ -432,7 +432,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override IModalController createBuilder(IControllerSite site)
+        public override IModalController CreateBuilder(IControllerSite site)
         {
             return new HVControllerImpl(this, site, false);
         }
@@ -443,7 +443,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="site"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override IModalController createRemover(IControllerSite site)
+        public override IModalController CreateRemover(IControllerSite site)
         {
             return new HVControllerImpl(this, site, true);
         }
@@ -516,7 +516,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="pixelSize"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public override PreviewDrawer createPreview(Size pixelSize)
+        public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, new Size(7, 1), 1);
             drawer.draw(sprites[currentColor][Direction.WEST, PlaceSide.Fore], 3, 1);
@@ -603,7 +603,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         public virtual int price
         {
-            get { return contrib.price; }
+            get { return contrib.Price; }
         }
         /// <summary>
         /// 
@@ -611,7 +611,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         [CLSCompliant(false)]
         public virtual BasePopulation population
         {
-            get { return contrib.population; }
+            get { return contrib.Population; }
         }
         /// <summary>
         /// 

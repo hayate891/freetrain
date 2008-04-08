@@ -41,7 +41,7 @@ namespace FreeTrain.World.Development
 			this.size = _size;
 		}
 
-		public override int value { get { return contrib.price*4; } }
+		public override int value { get { return contrib.Price*4; } }
 
 		public override Cube cube { get { return new Cube(loc,size.Width,size.Height,1); } }
 

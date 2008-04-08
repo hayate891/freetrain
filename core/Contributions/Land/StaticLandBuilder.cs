@@ -75,7 +75,7 @@ namespace FreeTrain.Contributions.Land
         /// <summary>
         /// Creates the preview image of the land builder.
         /// </summary>
-        public override PreviewDrawer createPreview(Size pixelSize)
+        public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, new Size(10, 10), 0);
 
@@ -90,7 +90,7 @@ namespace FreeTrain.Contributions.Land
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        public override IModalController createBuilder(IControllerSite site)
+        public override IModalController CreateBuilder(IControllerSite site)
         {
             return new DefaultControllerImpl(this, site, new DefaultControllerImpl.SpriteBuilder(getSprite));
         }
