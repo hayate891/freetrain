@@ -860,19 +860,45 @@
       <Link>plugin.xml</Link>
     </Content>
     <Content Include="Contributions\readme.txt" />
-    <Content Include="Res\Arrows.bmp" />
-    <Content Include="Res\BridgePier.bmp" />
-    <Content Include="Res\ConstructionBones.bmp" />
-    <Content Include="Res\ConstructionFence.bmp" />
-    <Content Include="Res\ConstructionGround.bmp" />
-    <Content Include="Res\ConstructionWall.bmp" />
-    <Content Include="Res\DayNight.bmp" />
-    <Content Include="Res\EmptyChip.bmp" />
-    <Content Include="Res\Item.bmp" />
-    <Content Include="Res\RailRoads.bmp" />
-    <Content Include="Res\Toolbar.bmp" />
-    <Content Include="Res\ugslope.bmp" />
-    <Content Include="Res\YardChip.bmp" />
+    <Content Include="Res\Arrows.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\BridgePier.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\ConstructionBones.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\ConstructionFence.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\ConstructionGround.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\ConstructionWall.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\DayNight.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\EmptyChip.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\Item.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\RailRoads.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\Toolbar.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\ugslope.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\YardChip.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Contributions\Others\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -983,7 +1009,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Res\splash.jpg" />
+    <EmbeddedResource Include="Res\splash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Util\Command\CommandManager.resx">
       <DependentUpon>CommandManager.cs</DependentUpon>
     </EmbeddedResource>
