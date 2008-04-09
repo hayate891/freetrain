@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers
             // Attach the control when activated.
             try
             {
-                MainWindowMDI.mainWindow.AttachController(this);
+                MainWindow.mainWindow.AttachController(this);
             }
             catch (NullReferenceException nre)
             {
@@ -68,9 +68,9 @@ namespace FreeTrain.Controllers
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             // Detach it when it is closed.
-            if (MainWindowMDI.mainWindow.CurrentController == this)
+            if (MainWindow.mainWindow.CurrentController == this)
             {
-                MainWindowMDI.mainWindow.DetachController();
+                MainWindow.mainWindow.DetachController();
             }
         }
 

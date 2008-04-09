@@ -55,7 +55,7 @@ namespace FreeTrain.Controllers.Road
         /// <summary>
         /// 
         /// </summary>
-        protected LineContribution type
+        protected override LineContribution Type
         { get { return currentContrib; } }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace FreeTrain.Controllers.Road
         /// <param name="d"></param>
         /// <param name="canvas"></param>
         /// <param name="pt"></param>
-        protected void Draw(Direction d, DrawContext canvas, Point pt)
+        protected override void Draw(Direction d, DrawContext canvas, Point pt)
         {
             ResourceUtil.emptyChip.DrawShape(canvas.Surface, pt, Color.Blue);
             //			RoadPattern.getStraight(d).drawAlpha( canvas.surface, pt );
@@ -247,7 +247,7 @@ namespace FreeTrain.Controllers.Road
             level.Text = ToStyleDescription(currentContrib.style);
             toolTip.SetToolTip(this.description, this.description.Text);
             currentContrib.PreviewPatternIdx = currentPattern;
-            this.Text = type.Name;
+            this.Text = this.Type.Name;
             UpdatePreview();
         }
 

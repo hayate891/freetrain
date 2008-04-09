@@ -104,7 +104,7 @@ namespace FreeTrain.World.Accounting
             if (_liquidAssets < 0)
             {
                 // TODO: go bunkrupt
-                MessageBox.Show(MainWindowMDI.mainWindow, "You are bankrupt. Proceeding with more funds.");
+                MessageBox.Show(MainWindow.mainWindow, "You are bankrupt. Proceeding with more funds.");
                 //! MessageBox.Show( MainWindowMDI.mainWindow, "破産しました。お金を増やして続行します" );
                 _liquidAssets += 100000000;
             }

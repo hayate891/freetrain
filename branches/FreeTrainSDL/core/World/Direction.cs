@@ -174,13 +174,13 @@ namespace FreeTrain.World
         /// <summary> Draws an arrow on the given surface. </summary>
         public void drawArrow(Surface display, Point pt)
         {
-            display.blt(pt, arrowImage, new Point(32 * index, 0), new Size(32, 16));
+            display.Blit(pt, arrowImage, new Point(32 * index, 0), new Size(32, 16));
         }
 
         /// <summary> Draws a dark arrow on the given surface. </summary>
         public void drawDarkArrow(Surface display, Point pt)
         {
-            display.blt(pt, darkArrowImage, new Point(32 * index, 0), new Size(32, 16));
+            display.Blit(pt, darkArrowImage, new Point(32 * index, 0), new Size(32, 16));
         }
 
 

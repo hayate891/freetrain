@@ -90,7 +90,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            surface.blt(pt, picture.surface, origin, Size);
+            surface.Blit(pt, picture.surface, origin, Size);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            surface.bltShape(pt, picture.surface, origin, size, color);
+            surface.BlitShape(pt, picture.surface, origin, size, color);
         }
         /// <summary>
         /// 
@@ -111,7 +111,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            surface.bltAlpha(pt, picture.surface, origin, size);
+            surface.BlitAlpha(pt, picture.surface, origin, size);
         }
 
         /// <summary>

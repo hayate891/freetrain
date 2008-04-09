@@ -263,7 +263,7 @@ namespace FreeTrain.World.Rail
                 if (owner.host == null && index == 0)
                 {
                     pt.X += 8;
-                    display.Surface.blt(pt, warningIcon);
+                    display.Surface.Blit(pt, warningIcon);
                 }
             }
             /// <summary>

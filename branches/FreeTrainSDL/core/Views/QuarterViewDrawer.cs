@@ -399,7 +399,7 @@ namespace FreeTrain.Views
 
             //if (rectClient. > offscreenBuffer.clipRect)
             //dirtyRect.add(rectClient);
-            offscreenBuffer.clipRect = rectAB;	// set clipping
+            offscreenBuffer.ClipRect = rectAB;	// set clipping
 
             Rectangle rectHV = fromABToHV(rectAB);	// determine the region to draw
 
@@ -501,7 +501,7 @@ namespace FreeTrain.Views
             if (Core.Options.drawBoundingBox)
             {
                 rectAB.Inflate(-1, -1);
-                offscreenBuffer.drawBox(rectAB);
+                offscreenBuffer.DrawBox(rectAB);
             }
         }
 
@@ -515,7 +515,7 @@ namespace FreeTrain.Views
             DateTime start = DateTime.Now;
 
             IMapOverlay overlay = null;
-            IModalController controller = MainWindowMDI.mainWindow.CurrentController;
+            IModalController controller = MainWindow.mainWindow.CurrentController;
             if (controller != null) overlay = controller.Overlay;
 
             if (overlay != null)
@@ -578,7 +578,7 @@ namespace FreeTrain.Views
             // drawContext will be null if the client size is empty or the window is minimized.
             // no blitting necessary in that case.
             if (drawContext != null)
-                target.blt(pt, drawContext.Surface);
+                target.Blit(pt, drawContext.Surface);
         }
 
         /// <summary>

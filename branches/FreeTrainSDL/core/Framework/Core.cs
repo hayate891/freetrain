@@ -303,7 +303,7 @@ namespace FreeTrain.Framework
         /// <returns></returns>
         public bool OnFinal(IDictionary errorPlugins, int totalErrorCount)
         {
-            DialogResult res = MessageBox.Show(MainWindowMDI.mainWindow, @"Some plugins could not be loaded.
+            DialogResult res = MessageBox.Show(MainWindow.mainWindow, @"Some plugins could not be loaded.
 Some functions may not be available and you might encounter errors.
 In the worst case, game data might be lost, so it is advised that you quit now.
 

@@ -52,8 +52,8 @@ namespace FreeTrain.Controllers
         {
             InitializeComponent();
             this.contrib = _type;
-            this.Text = type.Name;
-            updateAfterResize(null, null);
+            this.Text = Type.Name;
+            UpdateAfterResize(null, null);
             //updatePreview();
         }
         /// <summary>
@@ -63,16 +63,18 @@ namespace FreeTrain.Controllers
         {
             if (this.picture.Image != null)
                 this.picture.Image.Dispose();
-            Bitmap bmp = type.PreviewBitmap;
+            Bitmap bmp = Type.PreviewBitmap;
             this.picture.Image = bmp;
             this.picture.BackColor = bmp.GetPixel(0, bmp.Size.Height - 1);
         }
 
         private LineContribution contrib;
+
         /// <summary>
         /// 
         /// </summary>
-        protected virtual LineContribution type { get { return contrib; } }
+        protected virtual LineContribution Type { get { return contrib; } }
+
         /// <summary>
         /// 
         /// </summary>
@@ -181,9 +183,6 @@ namespace FreeTrain.Controllers
 
         private bool isPlacing { get { return buttonPlace.Checked; } }
 
-
-
-
         /// <summary>
         /// The first location selected by the user.
         /// </summary>
@@ -204,18 +203,15 @@ namespace FreeTrain.Controllers
         {
             loc.z = anchor.z;
 
-            if (type.DirectionMode == SpecialRailContribution.DirectionModes.FourWay)
+            if (Type.DirectionMode == SpecialRailContribution.DirectionModes.FourWay)
                 return loc.align4To(anchor);
 
-            if (type.DirectionMode == SpecialRailContribution.DirectionModes.EightWay)
+            if (Type.DirectionMode == SpecialRailContribution.DirectionModes.EightWay)
                 return loc.align8To(anchor);
 
             Debug.Assert(false);
             return UNPLACED;
         }
-
-
-
 
         /// <summary>
         /// 
@@ -233,6 +229,7 @@ namespace FreeTrain.Controllers
                 WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPos));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -253,18 +250,19 @@ namespace FreeTrain.Controllers
                 {
                     if (isPlacing)
                     {
-                        if (type.CanBeBuilt(anchor, loc))
+                        if (Type.CanBeBuilt(anchor, loc))
                             // build new railroads.
-                            type.Build(anchor, loc);
+                            Type.Build(anchor, loc);
                     }
                     else
                         // remove existing ones
-                        type.Remove(anchor, loc);
+                        Type.Remove(anchor, loc);
                     WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, loc));
                 }
                 anchor = UNPLACED;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -283,6 +281,7 @@ namespace FreeTrain.Controllers
                 anchor = UNPLACED;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -295,19 +294,20 @@ namespace FreeTrain.Controllers
                 else return sameLevelDisambiguator;
             }
         }
-        private ILocationDisambiguator sameLevelDisambiguator;
 
+        private ILocationDisambiguator sameLevelDisambiguator;
 
         private void modeChanged(object sender, EventArgs e)
         {
             anchor = UNPLACED;
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected virtual void updateAfterResize(object sender, System.EventArgs e)
+        protected virtual void UpdateAfterResize(object sender, System.EventArgs e)
         {
             this.buttonPlace.Left = this.picture.Left;
             this.buttonPlace.Width = ((this.picture.Left + this.picture.Width)) / 2;
@@ -315,9 +315,6 @@ namespace FreeTrain.Controllers
             this.buttonRemove.Width = this.buttonPlace.Width;
             UpdatePreview();
         }
-
-
-
 
         private bool inBetween(Location loc, Location lhs, Location rhs)
         {
@@ -339,8 +336,9 @@ namespace FreeTrain.Controllers
         public void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
             if (anchor != UNPLACED && isPlacing)
-                canvas.Tag = type.CanBeBuilt(anchor, currentPos);
+                canvas.Tag = Type.CanBeBuilt(anchor, currentPos);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -355,9 +353,10 @@ namespace FreeTrain.Controllers
             if (tag != null && (bool)tag && inBetween(loc, anchor, currentPos))
             {
                 Direction d = anchor.getDirectionTo(currentPos);
-                draw(d, canvas, pt);
+                Draw(d, canvas, pt);
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -370,7 +369,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Draw the preview on the given point.
         /// </summary>
-        protected virtual void draw(Direction d, DrawContext canvs, Point pt)
+        protected virtual void Draw(Direction d, DrawContext canvs, Point pt)
         { }
     }
 }

@@ -57,7 +57,7 @@ namespace FreeTrain.World.Rail.ColorTestTrain
         private void onClick(object sender, EventArgs args)
         {
             Form form = new ColorConfigDialog(ColorTestTrainCar.theInstance);
-            MainWindowMDI.mainWindow.AddOwnedForm(form);
+            MainWindow.mainWindow.AddOwnedForm(form);
             form.Show();
         }
     }
