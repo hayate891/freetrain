@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAHBUAAAEAGABgBwAAFgAAACgAAAAcAAAAKgAAAAEAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAB3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3
-        mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB3mZt3mZv///93mZt3
-        mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3
-        mZt3mZt3mZsAAAB3mZt3mZv///+qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3mZt3mZv///+qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3
-        mZt3mZv///+qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3mZt3mZv///93mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3
-        mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZuqzM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3mZt3mZv///8AAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB3mZt3mZuqzM6qzM6qzM6q
-        zM6qzM53mZsAAAB3mZt3mZv///+qzM4AAABEmUBEmUBmu2NEmUBmu2NEmUBEmUBmu2NEmUBEmUBmu2NE
-        mUBEmUBEmUAAAAB3mZt3mZuqzM6qzM6qzM6qzM53mZsAAAB3mZt3mZv///+qzM6qzM4AAABEmUBEmUBm
-        u2NEmUBmu2NEmUBEmUBEmUBmu2Nmu2NEmUBmu2NEmUBEmUAAAAB3mZt3mZuqzM6qzM6qzM53mZsAAAB3
-        mZt3mZv///+qzM6qzM6qzM4AAABmu2Nmu2Nmu2Nmu2NEmUBmu2NEmUBEmUBmu2Nmu2NEmUBmu2NEmUBE
-        mUAAAAB3mZt3mZuqzM6qzM53mZsAAAB3mZt3mZv///+qzM6qzM6qzM6qzM4AAABEmUBEmUBmu2Nmu2NE
-        mUBmu2NEmUBEmUBmu2Nmu2NEmUBEmUBmu2NEmUAAAAB3mZt3mZuqzM53mZsAAAB3mZt3mZv///+qzM6q
-        zM6qzM6qzM6qzM4AAABmu2NEmUBmu2Nmu2NEmUBEmUBmu2NEmUBmu2Nmu2Nmu2NEmUBEmUBEmUAAAAB3
-        mZt3mZt3mZsAAAB3mZt3mZv///+qzM6qzM6qzM6qzM6qzM6qzM4AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqzM53mZsAAAB3mZt3mZv///+qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3
-        mZt3mZv///+qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3mZt3mZv///+qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3mZt3mZv///+qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM53mZsAAAB3mZt3mZv///+qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6q
-        zM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM6qzM53mZsAAAB3mZt3mZv/////////////////////////
-        //////////////////////////////////////////////////////////////////////////8AAAB3
-        mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZt3
-        mZt3mZt3mZt3mZt3mZt3mZt3mZt3mZuqzM4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
-</value>
-  </data>
 </root>
