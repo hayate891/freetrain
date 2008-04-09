@@ -228,11 +228,10 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        protected int paletteSize = 8;
+        int paletteSize = 8;
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public int PaletteSize
         {
             get { return paletteSize; }
@@ -246,11 +245,10 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        protected int palettesInRow = 8;
+        int palettesInRow = 8;
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public int PalettesInRow
         {
             get { return palettesInRow; }

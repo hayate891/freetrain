@@ -1010,7 +1010,6 @@ namespace FreeTrain.Framework.Graphics
         ///// </summary>
         ///// <param name="colorValue"></param>
         ///// <returns></returns>
-        //[CLSCompliant(false)]
         //public System.Drawing.Color GetColor(int colorValue)
         //{
         //    byte r, g, b, a;

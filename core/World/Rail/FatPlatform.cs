@@ -132,8 +132,8 @@ namespace FreeTrain.World.Rail
             // remove the platform itself
             foreach (FatPlatformVoxel pv in voxels)
             {
-                world.remove(pv.location);
-                world.OnVoxelUpdated(pv.location);
+                world.remove(pv.Location);
+                world.OnVoxelUpdated(pv.Location);
             }
 
             base.remove();
@@ -307,7 +307,7 @@ namespace FreeTrain.World.Rail
 
             public readonly FatPlatform owner;
 
-            public override IEntity entity { get { return owner; } }
+            public override IEntity Entity { get { return owner; } }
 
             [NonSerialized]
             private ISprite sprite;
@@ -326,12 +326,12 @@ namespace FreeTrain.World.Rail
             /// <param name="dc"></param>
             /// <param name="pt"></param>
             /// <param name="heightCutDiff"></param>
-            public override void draw(DrawContext dc, Point pt, int heightCutDiff)
+            public override void Draw(DrawContext dc, Point pt, int heightCutDiff)
             {
                 Surface display = dc.Surface;
 
                 sprite.Draw(display, pt);
-                if (owner.host == null && location == owner.location)
+                if (owner.host == null && Location == owner.location)
                 {
                     pt.X += 8;
                     display.Blit(pt, warningIcon);
@@ -341,7 +341,7 @@ namespace FreeTrain.World.Rail
             /// 
             /// </summary>
             /// <returns></returns>
-            public override bool onClick()
+            public override bool OnClick()
             {
                 owner.onClick();
                 return true;
@@ -351,11 +351,11 @@ namespace FreeTrain.World.Rail
             /// </summary>
             /// <param name="aspect"></param>
             /// <returns></returns>
-            public override object queryInterface(Type aspect)
+            public override object QueryInterface(Type aspect)
             {
                 if (aspect == typeof(ITrainHarbor))
                     return owner.hostStation;
-                return base.queryInterface(aspect);
+                return base.QueryInterface(aspect);
             }
         }
 

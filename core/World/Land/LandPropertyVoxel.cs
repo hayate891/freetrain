@@ -42,14 +42,14 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return this; } }
+        public override IEntity Entity { get { return this; } }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="surface"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public override void draw(DrawContext surface, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext surface, Point pt, int heightCutDiff)
         {
             sprite.Draw(surface.Surface, pt);
         }
@@ -66,7 +66,7 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public int entityValue { get { return 0; } }
+        public int EntityValue { get { return 0; } }
         /// <summary>
         /// 
         /// </summary>

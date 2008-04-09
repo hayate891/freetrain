@@ -37,7 +37,6 @@ namespace FreeTrain.World.Road.Accessory
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class RoadAccessoryContribution : RailAccessoryContribution
     {///
         public RoadAccessoryContribution(XmlElement e)
@@ -68,15 +67,14 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, new Size(10, 1), 0);
             for (int x = 9; x >= 0; x--)
             {
-                if (x == 5) drawer.draw(sprites[0, 0], x, 0);
+                if (x == 5) drawer.Draw(sprites[0, 0], x, 0);
                 //drawer.draw( RoadPattern.get((byte)Direction.EAST), x,0 );
-                if (x == 5) drawer.draw(sprites[0, 1], x, 0);
+                if (x == 5) drawer.Draw(sprites[0, 1], x, 0);
             }
             return drawer;
         }
@@ -85,7 +83,6 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateBuilder(IControllerSite site)
         {
             return new ControllerImpl(this, site, false);
@@ -95,7 +92,6 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateRemover(IControllerSite site)
         {
             return new ControllerImpl(this, site, true);
@@ -105,8 +101,7 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public bool canBeBuilt(Location loc)
+        public bool CanBeBuilt(Location loc)
         {
             TrafficVoxel voxel = TrafficVoxel.get(loc);
             if (voxel == null) return false;
@@ -123,7 +118,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <param name="loc"></param>
         public void create(Location loc)
         {
-            Debug.Assert(canBeBuilt(loc));
+            Debug.Assert(CanBeBuilt(loc));
 
             int x;
             RoadPattern rp = TrafficVoxel.get(loc).road.pattern;

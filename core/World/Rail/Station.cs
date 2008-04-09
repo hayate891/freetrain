@@ -62,7 +62,7 @@ namespace FreeTrain.World.Rail
             // advertise listeners in the neighborhood that a new station is available
             foreach (IEntity e in Cube.createInclusive(baseLocation - r, baseLocation + r).getEntities())
             {
-                IStationListener l = (IStationListener)e.queryInterface(typeof(IStationListener));
+                IStationListener l = (IStationListener)e.QueryInterface(typeof(IStationListener));
                 if (l != null)
                     l.advertiseStation(this);
             }
@@ -124,7 +124,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return 0; } }
+        public override int EntityValue { get { return 0; } }
         /// <summary>
         /// 
         /// </summary>
@@ -159,12 +159,12 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public override object queryInterface(Type aspect)
+        public override object QueryInterface(Type aspect)
         {
             if (aspect == typeof(ITrainHarbor))
                 return this;
 
-            return base.queryInterface(aspect);
+            return base.QueryInterface(aspect);
         }
 
 
@@ -259,7 +259,7 @@ namespace FreeTrain.World.Rail
             {
                 int p = 0;
                 foreach (IStationListener l in listeners)
-                    p += l.getPopulation(this);
+                    p += l.GetPopulation(this);
                 return p;
             }
         }

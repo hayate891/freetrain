@@ -127,12 +127,12 @@ namespace FreeTrain.Contributions.Train
             //    /
             for (int x = -10; x < 0; x++)
             {
-                pd.draw(RailPattern.get(Direction.WEST, Direction.EAST), x, 0);
+                pd.Draw(RailPattern.get(Direction.WEST, Direction.EAST), x, 0);
             }
-            pd.draw(RailPattern.get(Direction.WEST, Direction.SOUTHEAST), 0, 0);
+            pd.Draw(RailPattern.get(Direction.WEST, Direction.SOUTHEAST), 0, 0);
             for (int x = 1; x <= 10; x++)
             {
-                pd.draw(RailPattern.get(Direction.NORTHWEST, Direction.SOUTHEAST), x, x);
+                pd.Draw(RailPattern.get(Direction.NORTHWEST, Direction.SOUTHEAST), x, x);
             }
 
             TrainCarContribution[] cars = Create(trainlength);
@@ -151,7 +151,7 @@ namespace FreeTrain.Contributions.Train
             int[] angle = new int[] { 12, 12, 13, 14, 14, 14, 14, 14 };
             int[] offset = new int[] { 0, 0, 0, 0, 4, +2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-            using (DrawContext dc = new DrawContext(pd.surface))
+            using (DrawContext dc = new DrawContext(pd.Surface))
             {
                 for (int i = 7; i >= 0; i--)
                 {
@@ -160,8 +160,8 @@ namespace FreeTrain.Contributions.Train
                         continue;		// no car
                     }
 
-                    Point pt = pd.getPoint(pos[i * 2], pos[i * 2 + 1]);
-                    cars[i].Draw(pd.surface,
+                    Point pt = pd.GetPoint(pos[i * 2], pos[i * 2 + 1]);
+                    cars[i].Draw(pd.Surface,
                         new Point(pt.X + offset[i * 2], pt.Y + offset[i * 2 + 1] - 9), angle[i]);
                 }
             }

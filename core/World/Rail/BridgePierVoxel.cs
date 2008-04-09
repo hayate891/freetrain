@@ -38,7 +38,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override bool transparent { get { return true; } }
+        public override bool Transparent { get { return true; } }
 
         //		public static void electBridgeSupport( Location loc ) {
         //			electBridgeSupport( loc, typeof(DefaultImpl) );
@@ -145,7 +145,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return owner; } }
+        public override IEntity Entity { get { return owner; } }
         #region Entity implementation
         /*
 		public bool isSilentlyReclaimable { get { return false; } }
@@ -176,7 +176,7 @@ namespace FreeTrain.World.Rail
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public override void draw(DrawContext display, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext display, Point pt, int heightCutDiff)
         {
             // draw the pier in alpha if in the height cut mode
             if (heightCutDiff == 0) sprite.DrawAlpha(display.Surface, pt);

@@ -36,6 +36,7 @@ namespace FreeTrain.Framework.Plugin
         {
             this.concreteType = concreteType;
         }
+
         /// <summary>
         /// Constructor for the use in plugin.xml
         /// </summary>
@@ -45,6 +46,7 @@ namespace FreeTrain.Framework.Plugin
                     (XmlElement)XmlUtil.SelectSingleNode(e, "implementation"))) { }
 
         private readonly Type concreteType;
+
         /// <summary>
         /// 
         /// </summary>

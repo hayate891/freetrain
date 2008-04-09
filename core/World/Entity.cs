@@ -47,7 +47,7 @@ namespace FreeTrain.World
 		/// <summary>
 		/// The monetary value of the entity.
 		/// </summary>
-		int entityValue { get; }
+		int EntityValue { get; }
 		// TODO: not sure what this means.
 		// this is certainly not a cash value when you buy/sell the property
 
@@ -104,6 +104,6 @@ namespace FreeTrain.World
 		/// 
 		/// <returns>null if the given aspect is not supported.</returns>
         /// </summary>
-		object queryInterface( Type aspect );
+		object QueryInterface( Type aspect );
 	}
 }

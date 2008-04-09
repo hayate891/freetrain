@@ -91,7 +91,7 @@ namespace FreeTrain.Contributions.Common
         /// <summary>
         /// 
         /// </summary>
-        public StructureGroup Group
+        public virtual StructureGroup Group
         {
             get { return group; }
         } 

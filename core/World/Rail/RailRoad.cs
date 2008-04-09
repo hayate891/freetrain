@@ -54,7 +54,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// この線路の位置
         /// </summary>
-        public Location Location { get { return Voxel.location; } }
+        public Location Location { get { return Voxel.Location; } }
 
 
         /// <summary>

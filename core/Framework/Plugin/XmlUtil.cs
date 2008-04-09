@@ -36,12 +36,12 @@ namespace FreeTrain.Framework.Plugin
         /// Performs a node selection and throws an exception if it's not found.
         /// </summary>
         /// <exception cref="XmlException"></exception>
-        public static XmlNode SelectSingleNode(XmlNode node, string xpath)
+        public static XmlNode SelectSingleNode(XmlNode node, string xPath)
         {
-            XmlNode n = node.SelectSingleNode(xpath);
+            XmlNode n = node.SelectSingleNode(xPath);
             if (n == null)
             {
-                throw new XmlException("unable to find " + xpath, null);
+                throw new XmlException("unable to find " + xPath, null);
             }
             return n;
         }
@@ -53,6 +53,7 @@ namespace FreeTrain.Framework.Plugin
         {
             return new Uri(new Uri(context.BaseURI), relative);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -70,6 +71,7 @@ namespace FreeTrain.Framework.Plugin
                 throw new FormatException("Unable to parse " + text + " as point", e);
             }
         }
+
         /// <summary>
         /// 
         /// </summary>

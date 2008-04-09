@@ -11,44 +11,58 @@ namespace FreeTrain.World.Road.Accessory
 	/// <summary>
 	/// ModalController implementation for road accessory contribution
 	/// </summary>
-    [CLSCompliant(false)]
     public class ControllerImpl : PointSelectorController
 	{
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected readonly RoadAccessoryContribution contribution;
-        /// <summary>
-        /// 
-        /// 
-        /// </summary>
-		protected readonly bool remove;
+        private readonly RoadAccessoryContribution contribution;
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_contrib"></param>
-        /// <param name="_site"></param>
-        /// <param name="_remover"></param>
-        [CLSCompliant(false)]
-        public ControllerImpl(RoadAccessoryContribution _contrib, IControllerSite _site, bool _remover)
-            : base(_site)
+        protected RoadAccessoryContribution Contribution
         {
-			this.contribution = _contrib;
-			this.remove = _remover;
+            get { return contribution; }
+        } 
+
+        /// <summary>
+        /// 
+        /// 
+        /// </summary>
+        private readonly bool remove;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected bool Remove
+        {
+            get { return remove; }
+        } 
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="contrib"></param>
+        /// <param name="site"></param>
+        /// <param name="remover"></param>
+        public ControllerImpl(RoadAccessoryContribution contrib, IControllerSite site, bool remover)
+            : base(site)
+        {
+			this.contribution = contrib;
+			this.remove = remover;
 		}
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="loc"></param>
-        [CLSCompliant(false)]
-        protected override void onLocationSelected(Location loc)
+        protected override void OnLocationSelected(Location loc)
         {
 			if( remove )
 			{
-				if( contribution.canBeBuilt(loc))
+				if( contribution.CanBeBuilt(loc))
 				{
 					if( TrafficVoxel.get(loc).accessory != null )
 						TrafficVoxel.get(loc).accessory = null;
@@ -59,7 +73,7 @@ namespace FreeTrain.World.Road.Accessory
 			}
 			else
 			{
-				if( contribution.canBeBuilt(loc) )
+				if( contribution.CanBeBuilt(loc) )
 					contribution.create(loc);
 				else
 					MessageBox.Show("Cannot place");
@@ -74,11 +88,10 @@ namespace FreeTrain.World.Road.Accessory
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        [CLSCompliant(false)]
         public override void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
 			if( base.currentPos!=loc )		return;
-			if( !contribution.canBeBuilt(loc) )	return;
+			if( !contribution.CanBeBuilt(loc) )	return;
 			
 			int x;
 			RoadPattern rp = TrafficVoxel.get(loc).road.pattern;
@@ -92,7 +105,6 @@ namespace FreeTrain.World.Road.Accessory
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public override ILocationDisambiguator Disambiguator
         {
 			get {
@@ -110,7 +122,6 @@ namespace FreeTrain.World.Road.Accessory
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public static ILocationDisambiguator theInstance = new RoadDisambiguator();
 		private RoadDisambiguator() {}
 
@@ -119,7 +130,6 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public bool IsSelectable(Location loc) 
 		{
 			// if there's any rail roads, fine

@@ -37,7 +37,15 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// 
         /// </summary>
-        public readonly Surface surface;
+        private readonly Surface surface;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Surface Surface
+        {
+            get { return surface; }
+        } 
 
         /// <summary>
         /// pixelSize of the canvas.
@@ -48,6 +56,7 @@ namespace FreeTrain.Framework.Graphics
         /// The point in the surface of (X,Y)=(0,0).
         /// </summary>
         private readonly Point ptOrigin = new Point();
+
         /// <summary>
         /// 
         /// </summary>
@@ -77,6 +86,7 @@ namespace FreeTrain.Framework.Graphics
 
             Clear();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -98,16 +108,18 @@ namespace FreeTrain.Framework.Graphics
                     empty.Draw(surface, new Point(x, y));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
         /// <returns></returns>
-        public Point getPoint(int offsetX, int offsetY)
+        public Point GetPoint(int offsetX, int offsetY)
         {
-            return getPoint(offsetX, offsetY, 0);
+            return GetPoint(offsetX, offsetY, 0);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -115,7 +127,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetY"></param>
         /// <param name="offsetZ"></param>
         /// <returns></returns>
-        public Point getPoint(int offsetX, int offsetY, int offsetZ)
+        public Point GetPoint(int offsetX, int offsetY, int offsetZ)
         {
             Point o = ptOrigin;
             o.X += (offsetX + offsetY) * 16;
@@ -123,35 +135,38 @@ namespace FreeTrain.Framework.Graphics
             o.Y -= offsetZ * 16;
             return o;
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="sprite"></param>
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
-        public void draw(ISprite sprite, int offsetX, int offsetY)
+        public void Draw(ISprite sprite, int offsetX, int offsetY)
         {
-            sprite.Draw(surface, getPoint(offsetX, offsetY));
+            sprite.Draw(surface, GetPoint(offsetX, offsetY));
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="sprites"></param>
-        public void drawCenter(ISprite[,] sprites)
+        public void DrawCenter(ISprite[,] sprites)
         {
-            draw(sprites, 0, 0);
+            Draw(sprites, 0, 0);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="sprites"></param>
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
-        public void draw(ISprite[,] sprites, int offsetX, int offsetY)
+        public void Draw(ISprite[,] sprites, int offsetX, int offsetY)
         {
-            draw(sprites, offsetX, offsetY, 0);
+            Draw(sprites, offsetX, offsetY, 0);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -159,12 +174,12 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
         /// <param name="offsetZ"></param>
-        public void draw(ISprite[,] sprites, int offsetX, int offsetY, int offsetZ)
+        public void Draw(ISprite[,] sprites, int offsetX, int offsetY, int offsetZ)
         {
             int X = sprites.GetLength(0);
             int Y = sprites.GetLength(1);
 
-            Point o = getPoint(offsetX, offsetY, offsetZ);
+            Point o = GetPoint(offsetX, offsetY, offsetZ);
 
             for (int y = 0; y < Y; y++)
             {
@@ -184,10 +199,11 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="sprites"></param>
         [CLSCompliant(false)]
-        public void drawCenter(ISprite[, ,] sprites)
+        public void DrawCenter(ISprite[, ,] sprites)
         {
-            draw(sprites, 0, 0);
+            Draw(sprites, 0, 0);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -195,10 +211,11 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetX"></param>
         /// <param name="offsetY"></param>
         [CLSCompliant(false)]
-        public void draw(ISprite[, ,] sprites, int offsetX, int offsetY)
+        public void Draw(ISprite[, ,] sprites, int offsetX, int offsetY)
         {
-            draw(sprites, offsetX, offsetY, 0);
+            Draw(sprites, offsetX, offsetY, 0);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -207,13 +224,13 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="offsetY"></param>
         /// <param name="offsetZ"></param>
         [CLSCompliant(false)]
-        public void draw(ISprite[, ,] sprites, int offsetX, int offsetY, int offsetZ)
+        public void Draw(ISprite[, ,] sprites, int offsetX, int offsetY, int offsetZ)
         {
             int X = sprites.GetLength(0);
             int Y = sprites.GetLength(1);
             int Z = sprites.GetLength(2);
 
-            Point o = getPoint(offsetX, offsetY, offsetZ);
+            Point o = GetPoint(offsetX, offsetY, offsetZ);
 
             for (int z = 0; z < Z; z++)
             {
@@ -254,7 +271,7 @@ namespace FreeTrain.Framework.Graphics
         /// 
         /// The caller needs to dispose the bitmap.
         /// </summary>
-        public Bitmap createBitmap()
+        public Bitmap CreateBitmap()
         {
             return surface.Bitmap;
         }

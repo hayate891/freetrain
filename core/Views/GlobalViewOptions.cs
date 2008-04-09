@@ -65,16 +65,13 @@ namespace FreeTrain.Views
         /// </summary>
         [NonSerialized]
         public OptionChangedHandler OnViewOptionChanged;
-        /// <summary>
-        /// 
-        /// 
-        /// </summary>
-        [CLSCompliant(false)]
-        protected NightSpriteMode _nightSpriteMode = NightSpriteMode.AlignClock;
+
+        NightSpriteMode _nightSpriteMode = NightSpriteMode.AlignClock;
+
         /// <summary>
         /// 
         /// </summary>
-        public NightSpriteMode nightSpriteMode
+        public NightSpriteMode NightSpriteMode
         {
             get { return _nightSpriteMode; }
             set
@@ -93,14 +90,14 @@ namespace FreeTrain.Views
         /// <summary>
         /// 
         /// </summary>
-        public bool useNightView
+        public bool UseNightView
         {
             get
             {
-                if (nightSpriteMode == NightSpriteMode.AlignClock)
+                if (NightSpriteMode == NightSpriteMode.AlignClock)
                     return WorldDefinition.World.Clock.dayOrNight == DayNight.Night;
                 else
-                    return nightSpriteMode == NightSpriteMode.AlwaysNight;
+                    return NightSpriteMode == NightSpriteMode.AlwaysNight;
             }
         }
     }

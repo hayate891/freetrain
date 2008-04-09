@@ -49,15 +49,15 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public override void onRemoved()
+        public override void OnRemoved()
         {
             if (stationListener != null)
-                stationListener.onRemoved();
+                stationListener.OnRemoved();
         }
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return contrib.Price; } }
+        public override int EntityValue { get { return contrib.Price; } }
 
         private readonly StationListenerImpl stationListener;
 
@@ -68,7 +68,7 @@ namespace FreeTrain.World.Land
         /// <param name="surface"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public override void draw(DrawContext surface, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext surface, Point pt, int heightCutDiff)
         {
             // always draw it regardless of the height cut
             contrib.sprite.Draw(surface.Surface, pt);
@@ -78,13 +78,13 @@ namespace FreeTrain.World.Land
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public override object queryInterface(Type aspect)
+        public override object QueryInterface(Type aspect)
         {
             // if type.population is null, we don't have any population
             if (aspect == typeof(IStationListener))
                 return stationListener;
             else
-                return base.queryInterface(aspect);
+                return base.QueryInterface(aspect);
         }
     }
 }

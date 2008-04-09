@@ -29,7 +29,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// <summary>
     /// Adds "half voxel" menu to the main window
     /// </summary>
-    [CLSCompliant(false)]
     public class MenuContributionImpl : MenuContribution
     {
         /// <summary>
@@ -43,7 +42,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         /// <param name="containerMenu"></param>
-        public override void mergeMenu(MainMenu containerMenu)
+        public override void MergeMenu(MainMenu containerMenu)
         {
             MenuItem item = new MenuItem("&Half-tile Construction...");
             item.Click += new System.EventHandler(onClick);

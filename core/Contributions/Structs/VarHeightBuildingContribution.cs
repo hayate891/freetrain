@@ -217,12 +217,12 @@ namespace FreeTrain.Contributions.Structs
 
             int z = 0;
             for (int i = bottoms.Length - 1; i >= 0; i--)
-                drawer.draw(bottoms[i], 0, 0, z++);
+                drawer.Draw(bottoms[i], 0, 0, z++);
             if (overlay)
-                drawer.draw(middle, 0, 0, z - 1);
-            drawer.draw(middle, 0, 0, z++);
+                drawer.Draw(middle, 0, 0, z - 1);
+            drawer.Draw(middle, 0, 0, z++);
             for (int i = tops.Length - 1; i >= 0; i--)
-                drawer.draw(tops[i], 0, 0, z++);
+                drawer.Draw(tops[i], 0, 0, z++);
 
             return drawer;
         }
@@ -239,16 +239,16 @@ namespace FreeTrain.Contributions.Structs
             int mh = height - 2;
             int z = 0;
             for (int i = bottoms.Length - 1; i >= 0; i--)
-                drawer.draw(bottoms[i], 0, 0, z++);
+                drawer.Draw(bottoms[i], 0, 0, z++);
             if (overlay)
             {
                 z--;
                 mh++;
             }
             for (int i = 0; i < mh; i++)
-                drawer.draw(middle, 0, 0, z++);
+                drawer.Draw(middle, 0, 0, z++);
             for (int i = tops.Length - 1; i >= 0; i--)
-                drawer.draw(tops[i], 0, 0, z++);
+                drawer.Draw(tops[i], 0, 0, z++);
 
             return drawer;
         }

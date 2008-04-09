@@ -41,7 +41,6 @@ namespace FreeTrain.World.Road.Accessory
     /// Controller that allows the user to
     /// place/remove road accessories.
     /// </summary>
-    [CLSCompliant(false)]
     public class ControllerForm : AbstractControllerImpl
     {
         private FreeTrain.Controls.CostBox costBox;
@@ -223,7 +222,7 @@ namespace FreeTrain.World.Road.Accessory
                 using (PreviewDrawer drawer = builder.CreatePreview(preview.Size))
                 {
                     if (previewBitmap != null) previewBitmap.Dispose();
-                    preview.Image = previewBitmap = drawer.createBitmap();
+                    preview.Image = previewBitmap = drawer.CreateBitmap();
                 }
                 //if (isPlacing)
                 //    currentController = builder.createBuilder(this.siteImpl);

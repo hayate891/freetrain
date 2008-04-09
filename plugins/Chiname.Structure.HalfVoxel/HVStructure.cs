@@ -39,7 +39,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// Consist of Back part and Fore part.
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class HVStructure : Structure, ISubsidiaryEntity
     {
         enum Orientation : int { XAxis, YAxis };
@@ -49,7 +48,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public HVStructure(ContributionReference type, Location loc)
         {
             this.baseLocation = loc;
-            if (type.placeSide == PlaceSide.Back)
+            if (type.PlaceSide == PlaceSide.Back)
                 this.back = type;
             else
                 this.fore = type;
@@ -57,8 +56,8 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             // build voxels
             new HalfDividedVoxel(this, loc);
             subsidiary = new SubsidiaryCompany(this, false);
-            if (type.population != null)
-                stationListener = new StationListenerImpl(type.population, loc);
+            if (type.Population != null)
+                stationListener = new StationListenerImpl(type.Population, loc);
         }
 
         #region add or remove half voxel.
@@ -69,13 +68,13 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <returns></returns>
         public bool add(ContributionReference type)
         {
-            if (type.placeSide == PlaceSide.Back)
+            if (type.PlaceSide == PlaceSide.Back)
             {
                 if (back != null) return false; // already occupied!
 
-                if (type.frontface.isParallelToX)
+                if (type.Frontface.isParallelToX)
                 {
-                    if (fore.frontface.isParallelToX)
+                    if (fore.Frontface.isParallelToX)
                     {
                         back = type;
                         return true;
@@ -83,7 +82,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 }
                 else // parallel to Y
                 {
-                    if (fore.frontface.isParallelToY)
+                    if (fore.Frontface.isParallelToY)
                     {
                         back = type;
                         return true;
@@ -94,9 +93,9 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             {
                 if (fore != null) return false; // already occupied!
 
-                if (type.frontface.isParallelToX)
+                if (type.Frontface.isParallelToX)
                 {
-                    if (back.frontface.isParallelToX)
+                    if (back.Frontface.isParallelToX)
                     {
                         fore = type;
                         return true;
@@ -104,7 +103,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 }
                 else // parallel to Y
                 {
-                    if (back.frontface.isParallelToY)
+                    if (back.Frontface.isParallelToY)
                     {
                         fore = type;
                         return true;
@@ -163,21 +162,29 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public override object queryInterface(Type aspect)
+        public override object QueryInterface(Type aspect)
         {
             // if type.population is null, we don't have any population
             if (aspect == typeof(Rail.IStationListener))
                 return stationListener;
             else
-                return base.queryInterface(aspect);
+                return base.QueryInterface(aspect);
         }
         #endregion
 
         /// <summary>
         /// north-west bottom corner of this structure.
         /// </summary>
-        [CLSCompliant(false)]
-        public readonly Location baseLocation;
+        readonly Location baseLocation;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Location BaseLocation
+        {
+            get { return baseLocation; }
+        } 
+
 
         /// <summary>
         /// Obtains the color that will be used to draw when in the height-cut mode.
@@ -187,8 +194,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// Gets the distance to this location from the base location of this structure.
         /// </summary>
-        [CLSCompliant(false)]
-        protected int distanceTo(Location loc)
+        protected int DistanceTo(Location loc)
         {
             return baseLocation.distanceTo(loc);
         }
@@ -220,7 +226,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 onEntityRemoved(this, null);
 
             if (stationListener != null)
-                stationListener.onRemoved();
+                stationListener.OnRemoved();
         }
 
         //		public static new bool canBeBuilt( Location loc, Distance size ) 
@@ -248,7 +254,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return (int)subsidiary.currentMarketPrice; } }
+        public override int EntityValue { get { return (int)subsidiary.currentMarketPrice; } }
         #endregion
 
         #region SubsideryEntity implementation
@@ -263,11 +269,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         {
             get
             {
-                if (fore == null) return back.name;
-                if (back == null) return fore.name;
-                if (fore.name.Equals(back.name))
-                    return fore.name;
-                return fore.name + "/" + back.name;
+                if (fore == null) return back.Name;
+                if (back == null) return fore.Name;
+                if (fore.Name.Equals(back.Name))
+                    return fore.Name;
+                return fore.Name + "/" + back.Name;
             }
         }
 
@@ -279,8 +285,8 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             get
             {
                 long p = 0;
-                if (fore != null) p += fore.price;
-                if (back != null) p += back.price;
+                if (fore != null) p += fore.Price;
+                if (back != null) p += back.Price;
                 return p;
             }
         }
@@ -305,30 +311,27 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class HalfDividedVoxel : AbstractVoxelImpl
     {
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_owner"></param>
-        /// <param name="_loc"></param>
-        [CLSCompliant(false)]
-        public HalfDividedVoxel(HVStructure _owner, Location _loc)
-            : base(_loc)
+        /// <param name="owner"></param>
+        /// <param name="loc"></param>
+        public HalfDividedVoxel(HVStructure owner, Location loc)
+            : base(loc)
         {
-            this.owner = _owner;
+            this.owner = owner;
         }
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_owner"></param>
+        /// <param name="owner"></param>
         /// <param name="wloc"></param>
-        [CLSCompliant(false)]
-        internal protected HalfDividedVoxel(HVStructure _owner, WorldLocator wloc)
+        internal protected HalfDividedVoxel(HVStructure owner, WorldLocator wloc)
             : base(wloc)
         {
-            this.owner = _owner;
+            this.owner = owner;
         }
 
         /// <summary>
@@ -339,12 +342,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return owner; } }
+        public override IEntity Entity { get { return owner; } }
 
         /// <summary>
         /// onClick event is delegated to the parent.
         /// </summary>
-        public override bool onClick()
+        public override bool OnClick()
         {
             return owner.onClick();
         }
@@ -355,8 +358,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        [CLSCompliant(false)]
-        public override void draw(DrawContext display, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext display, Point pt, int heightCutDiff)
         {
             if (heightCutDiff >= 0)
                 ResourceUtil.EmptyChip.DrawShape(display.Surface, pt, owner.heightCutColor);
@@ -365,17 +367,17 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             // above line is needed when my(=477) patch is applied.
 
             if (owner.backside != null)
-                if (heightCutDiff < 0 || owner.backside.height < heightCutDiff)
+                if (heightCutDiff < 0 || owner.backside.Height < heightCutDiff)
                 {
-                    owner.backside.getSprite().Draw(display.Surface, pt);
-                    ISprite hls = owner.backside.getHighlightSprite();
+                    owner.backside.GetSprite().Draw(display.Surface, pt);
+                    ISprite hls = owner.backside.GetHighlightSprite();
                     if (hls != null) hls.Draw(display.Surface, pt);
                 }
             if (owner.foreside != null)
-                if (heightCutDiff < 0 || owner.foreside.height < heightCutDiff)
+                if (heightCutDiff < 0 || owner.foreside.Height < heightCutDiff)
                 {
-                    owner.foreside.getSprite().Draw(display.Surface, pt);
-                    ISprite hls = owner.foreside.getHighlightSprite();
+                    owner.foreside.GetSprite().Draw(display.Surface, pt);
+                    ISprite hls = owner.foreside.GetHighlightSprite();
                     if (hls != null) hls.Draw(display.Surface, pt);
                 }
         }

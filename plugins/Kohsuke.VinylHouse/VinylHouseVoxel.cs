@@ -30,7 +30,6 @@ namespace FreeTrain.World.Land.VinylHouse
     /// Land voxel with a fixed graphics and its population.
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class VinylHouseVoxel : LandVoxel, IEntity
     {
         /// <summary>
@@ -39,7 +38,6 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <param name="loc"></param>
         /// <param name="contrib"></param>
         /// <param name="index"></param>
-        [CLSCompliant(false)]
         public VinylHouseVoxel(Location loc, VinylHouseBuilder contrib, int index)
             : base(loc)
         {
@@ -52,19 +50,19 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return this; } }
+        public override IEntity Entity { get { return this; } }
 
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return contrib.Price; } }
+        public override int EntityValue { get { return contrib.Price; } }
 
         /// <summary>
         /// 
         /// </summary>
-        public override void onRemoved()
+        public override void OnRemoved()
         {
-            stationListener.onRemoved();
+            stationListener.OnRemoved();
         }
 
 
@@ -80,7 +78,7 @@ namespace FreeTrain.World.Land.VinylHouse
         /// <param name="surface"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public override void draw(DrawContext surface, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext surface, Point pt, int heightCutDiff)
         {
             // always draw it regardless of the height cut
             contrib.Sprites[index].Draw(surface.Surface, pt);
@@ -91,13 +89,13 @@ namespace FreeTrain.World.Land.VinylHouse
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public override object queryInterface(Type aspect)
+        public override object QueryInterface(Type aspect)
         {
             // if type.population is null, we don't have any population
             if (aspect == typeof(IStationListener))
                 return stationListener;
             else
-                return base.queryInterface(aspect);
+                return base.QueryInterface(aspect);
         }
 
     }

@@ -241,21 +241,15 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        static protected StructCategoryTree _theInstance;
+        static public StructCategoryTree theInstance;
         /// <summary>
         /// 
         /// </summary>
-        static public StructCategoryTree theInstance { get { return _theInstance; } }
+        static string baseDir;
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        static protected string _baseDir;
-        /// <summary>
-        /// 
-        /// </summary>
-        static public string BaseDir { get { return _baseDir; } }
+        static public string BaseDir { get { return baseDir; } }
         static private StructCategory hidden = new StructCategory(-1, "--N/A--", 0);
 
         /// <summary>
@@ -273,7 +267,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         static public void loadDefaultTree()
         {
             PluginDefinition p = PluginManager.GetPlugin("Chiname.Generic");
-            _baseDir = p.dirName;
+            baseDir = p.dirName;
             string filename = Path.Combine(p.dirName, "CategoryTree.xml");
             using (Stream file = p.loadStream(filename))
             {
@@ -289,7 +283,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="e"></param>
         public StructCategoryTree(XmlDocument e)//:base(e)
         {
-            _theInstance = this;
+            theInstance = this;
             XmlNode root = e.SelectSingleNode("tree");
             makeRoot(e);
             if (root != null)

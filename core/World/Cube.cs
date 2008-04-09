@@ -242,7 +242,7 @@ namespace FreeTrain.World
                     for (int z = corner.z; z < mz; z++)
                     {
                         Voxel v = WorldDefinition.World[x, y, z];
-                        if (v != null) r.add(v.entity);
+                        if (v != null) r.add(v.Entity);
                     }
                 }
             }

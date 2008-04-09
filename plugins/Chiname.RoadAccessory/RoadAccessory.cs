@@ -36,13 +36,12 @@ namespace FreeTrain.World.Road.Accessory
         /// 
         /// </summary>
         /// <param name="target"></param>
-        /// <param name="_contrib"></param>
-        /// <param name="_index"></param>
-        [CLSCompliant(false)]
-        public RoadAccessory(TrafficVoxel target, RoadAccessoryContribution _contrib, int _index)
+        /// <param name="contrib"></param>
+        /// <param name="index"></param>
+        public RoadAccessory(TrafficVoxel target, RoadAccessoryContribution contrib, int index)
         {
-            this.index = (byte)_index;
-            this.contrib = _contrib;
+            this.index = (byte)index;
+            this.contrib = contrib;
             target.accessory = this;
         }
         /// <summary>
@@ -50,8 +49,7 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        [CLSCompliant(false)]
-        public void drawBefore(DrawContext display, Point pt)
+        public void DrawBefore(DrawContext display, Point pt)
         {
             contrib.sprites[index, 0].Draw(display.Surface, pt);
         }
@@ -60,14 +58,13 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        [CLSCompliant(false)]
-        public void drawAfter(DrawContext display, Point pt)
+        public void DrawAfter(DrawContext display, Point pt)
         {
             contrib.sprites[index, 1].Draw(display.Surface, pt);
         }
         /// <summary>
         /// 
         /// </summary>
-        public void onRemoved() { }
+        public void OnRemoved() { }
     }
 }

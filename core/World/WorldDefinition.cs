@@ -506,7 +506,7 @@ namespace FreeTrain.World
         {
             Voxel v = this[loc];
             if (v == null) return null;
-            else return v.entity;
+            else return v.Entity;
         }
 
         /// <summary>
@@ -609,7 +609,7 @@ namespace FreeTrain.World
         public bool isReusable(Location loc)
         {
             Voxel v = this[loc];
-            return v == null || v.entity.isSilentlyReclaimable;
+            return v == null || v.Entity.isSilentlyReclaimable;
         }
         /// <summary>
         /// 
@@ -650,11 +650,11 @@ namespace FreeTrain.World
             /// <summary>
             /// 
             /// </summary>
-            public override Location location { get { return loc; } }
+            public override Location Location { get { return loc; } }
             /// <summary>
             /// 
             /// </summary>
-            public override IEntity entity { get { return this; } }
+            public override IEntity Entity { get { return this; } }
 
             #region Entity implementation
             /// <summary>
@@ -681,7 +681,7 @@ namespace FreeTrain.World
             /// <summary>
             /// 
             /// </summary>
-            public int entityValue { get { return 0; } }
+            public int EntityValue { get { return 0; } }
 
             #endregion
 
@@ -691,36 +691,36 @@ namespace FreeTrain.World
             /// <param name="dc"></param>
             /// <param name="pt"></param>
             /// <param name="heightCutDiff"></param>
-            public override void draw(DrawContext dc, Point pt, int heightCutDiff) { }
+            public override void Draw(DrawContext dc, Point pt, int heightCutDiff) { }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="display"></param>
             /// <param name="pt"></param>
-            protected override void drawFrontFence(DrawContext display, Point pt) { }
+            protected override void DrawFrontFence(DrawContext display, Point pt) { }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="display"></param>
             /// <param name="pt"></param>
-            protected override void drawBehindFence(DrawContext display, Point pt) { }
+            protected override void DrawBehindFence(DrawContext display, Point pt) { }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="d"></param>
             /// <param name="f"></param>
-            public override void setFence(Direction d, IFence f) { }
+            public override void SetFence(Direction d, IFence f) { }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="d"></param>
             /// <returns></returns>
-            public override IFence getFence(Direction d) { return null; }
+            public override IFence GetFence(Direction d) { return null; }
             /// <summary>
             /// 
             /// </summary>
             /// <returns></returns>
-            public override Color getColorOfTile() { return Color.Red; }
+            public override Color GetColorOfTile() { return Color.Red; }
 
         }
 
@@ -746,7 +746,7 @@ namespace FreeTrain.World
         /// 
         /// </summary>
         /// <param name="v"></param>
-        public void remove(Voxel v) { remove(v.location); }
+        public void remove(Voxel v) { remove(v.Location); }
 
         // deprecated?
         /// <summary>
@@ -764,7 +764,7 @@ namespace FreeTrain.World
             Voxel vx = voxels[h, v, z];
             Debug.Assert(vx != null);
             voxels.remove(h, v, z);
-            vx.onRemoved();
+            vx.OnRemoved();
             onVoxelChanged(new Location(x, y, z));
         }
 
@@ -820,11 +820,11 @@ namespace FreeTrain.World
         /// <param name="voxel"></param>
         public void OnVoxelUpdated(Voxel voxel)
         {
-            OnVoxelUpdated(voxel.location);
+            OnVoxelUpdated(voxel.Location);
             //Point p = new Point((int)(Math.Round(v.location.x * Math.Cos(45) + v.location.y * Math.Sin(45)) - world.size.x / 2),
             //                    (int)(Math.Round(-v.location.x * Math.Sin(45) + v.location.y * Math.Cos(45)) + world.size.y / 2));
-            Point p = new Point(voxel.location.x, voxel.location.y);
-            if (satellite != null) satellite.SetPixel(p, voxel.getColorOfTile());
+            Point p = new Point(voxel.Location.x, voxel.Location.y);
+            if (satellite != null) satellite.SetPixel(p, voxel.GetColorOfTile());
         }
 
         /// <summary>

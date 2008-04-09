@@ -29,7 +29,6 @@ namespace FreeTrain.World.Road.DummyCars
     /// <summary>
     /// Adds "automobile" menu to the main window
     /// </summary>
-    [CLSCompliant(false)]
     public class MenuContributionImpl : MenuContribution
     {
         /// <summary>
@@ -41,7 +40,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// 
         /// </summary>
         /// <param name="containerMenu"></param>
-        public override void mergeMenu(MainMenu containerMenu)
+        public override void MergeMenu(MainMenu containerMenu)
         {
             MenuItem item = new MenuItem("&Automobiles...");
             //! MenuItem item = new MenuItem("自動車(&A)...");

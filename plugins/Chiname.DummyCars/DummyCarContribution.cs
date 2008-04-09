@@ -39,7 +39,6 @@ namespace FreeTrain.World.Road.DummyCars
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class DummyCarContribution : RailAccessoryContribution
     {
         /// <summary>
@@ -103,8 +102,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// 
         /// </summary>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public ISprite getSprites()
+        public ISprite GetSprites()
         {
             if (currentColor >= colorVariations) currentColor = 0;
             return sprites[currentColor, 0];
@@ -115,13 +113,12 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, new Size(10, 1), 0);
             for (int x = 9; x >= 0; x--)
             {
-                if (x == 5) drawer.draw(sprites[currentColor, 0], x, 0);
+                if (x == 5) drawer.Draw(sprites[currentColor, 0], x, 0);
                 //drawer.draw( RoadPattern.get((byte)Direction.EAST), x,0 );
             }
             return drawer;
@@ -132,7 +129,6 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateBuilder(IControllerSite site)
         {
             return new ControllerImpl(this, site, false);
@@ -142,7 +138,6 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateRemover(IControllerSite site)
         {
             return new ControllerImpl(this, site, true);
@@ -153,8 +148,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public bool canBeBuilt(Location loc)
+        public bool CanBeBuilt(Location loc)
         {
             TrafficVoxel voxel = TrafficVoxel.get(loc);
             if (voxel == null) return false;
@@ -170,10 +164,9 @@ namespace FreeTrain.World.Road.DummyCars
         /// dir = 0 or 1
         /// </summary>
         /// <param name="loc"></param>
-        [CLSCompliant(false)]
-        public void create(Location loc)
+        public void Create(Location loc)
         {
-            Debug.Assert(canBeBuilt(loc));
+            Debug.Assert(CanBeBuilt(loc));
 
             int x;
             RoadPattern rp = TrafficVoxel.get(loc).road.pattern;

@@ -70,7 +70,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return 0; } }
+        public override int EntityValue { get { return 0; } }
 
         #endregion
 
@@ -104,7 +104,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            public override bool transparent { get { return true; } }
+            public override bool Transparent { get { return true; } }
         }
     }
 }

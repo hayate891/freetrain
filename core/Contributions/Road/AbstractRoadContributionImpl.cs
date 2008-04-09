@@ -198,12 +198,12 @@ namespace FreeTrain.Contributions.Road
                         while (y >= 0 && x < 10)
                         {
                             if (previewPattern[PreviewPatternIdx, x, y] > 0)
-                                drawer.draw(getSprite(previewPattern[PreviewPatternIdx, x, y]), 9 - x, y - 5);
+                                drawer.Draw(getSprite(previewPattern[PreviewPatternIdx, x, y]), 9 - x, y - 5);
                             x++;
                             y--;
                         }
                     }
-                    return drawer.createBitmap();
+                    return drawer.CreateBitmap();
                 }
             }
         }
@@ -247,7 +247,7 @@ namespace FreeTrain.Contributions.Road
             {
                 byte dirs = pattern.dirs;
                 dirs |= (byte)(1 << (d.index / 2));
-                voxel.road = new RoadImpl(contribution, voxel, RoadPattern.get(dirs));
+                Voxel.road = new RoadImpl(contribution, Voxel, RoadPattern.get(dirs));
                 return true;
             }
             /// <summary>
@@ -263,13 +263,13 @@ namespace FreeTrain.Contributions.Road
 
                 if (dirs == 0)
                     // destroy this road
-                    voxel.road = null;
+                    Voxel.road = null;
                 else
                 {
-                    voxel.road = new RoadImpl(contribution, voxel, RoadPattern.get(dirs));
+                    Voxel.road = new RoadImpl(contribution, Voxel, RoadPattern.get(dirs));
                 }
 
-                WorldDefinition.World.OnVoxelUpdated(location);
+                WorldDefinition.World.OnVoxelUpdated(Location);
             }
             /// <summary>
             /// 

@@ -214,8 +214,8 @@ namespace FreeTrain.World.Development
 
             if (roadFound != null)
             {
-                if (roadFound.style.Type >= MajorRoadType.street)
-                    if (roadFound.style.Sidewalk == SidewalkType.pavement)
+                if (roadFound.Style.Type >= MajorRoadType.street)
+                    if (roadFound.Style.Sidewalk == SidewalkType.pavement)
                         rho[h, v] = RHO_ROAD;
                     else
                         rho[h, v] = (RHO_ROAD + RHO_BARE_LAND) / 2;

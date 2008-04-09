@@ -81,7 +81,7 @@ namespace FreeTrain.Contributions.Land
 
             for (int y = 0; y < 10; y++)
                 for (int x = 0; x < 10; x++)
-                    drawer.draw(sprite, x, y);
+                    drawer.Draw(sprite, x, y);
 
             return drawer;
         }

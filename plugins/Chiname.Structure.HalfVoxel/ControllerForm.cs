@@ -87,7 +87,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             Hashtable h = new Hashtable();
             foreach (HalfVoxelContribution c in src)
             {
-                string key = c.subgroup;
+                string key = c.Subgroup;
                 if (!h.ContainsKey(key))
                     h.Add(key, new SubGroup(key));
                 ((SubGroup)h[key]).Add(c);
@@ -435,8 +435,8 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
 
         private void onDesignChanged(object sender, System.EventArgs e)
         {
-            idxColor.count = currentContrib.colors.size;
-            idxColor2.count = currentContrib.getHighlihtPatternCount();
+            idxColor.count = currentContrib.Colors.size;
+            idxColor2.count = currentContrib.GetHighlightPatternCount();
             namelabel.Text = currentContrib.Name;
             price.cost = currentContrib.Price;
             onButtonClicked(sender, e);
@@ -469,7 +469,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             if (cbRndDesign.Checked)
             {
                 idxDesign.current = rnd.Next(idxDesign.count);
-                idxColor.count = currentContrib.colors.size;
+                idxColor.count = currentContrib.Colors.size;
             }
             if (cbRndColor.Checked)
                 idxColor.current = rnd.Next(idxColor.count);
@@ -521,7 +521,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             using (PreviewDrawer drawer = currentContrib.CreatePreview(preview.Size))
             {
                 if (previewBitmap != null) previewBitmap.Dispose();
-                preview.Image = previewBitmap = drawer.createBitmap();
+                preview.Image = previewBitmap = drawer.CreateBitmap();
             }
         }
 

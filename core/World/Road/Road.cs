@@ -43,28 +43,36 @@ namespace FreeTrain.World.Road
             voxel.road = this;
             // voxel.roadを設定してからOnVoxelChangedイベントを投げないと
             // 地価の係数計算が正しくできない。(477)
-            WorldDefinition.World.fireOnVoxelChanged(tv.location);
+            WorldDefinition.World.fireOnVoxelChanged(tv.Location);
         }
 
         /// <summary>
         /// Detailed Attribute of road
         /// </summary>
-        [CLSCompliant(false)]
-        internal protected RoadStyle _style;
+        RoadStyle _style;
         /// <summary>
         /// 
         /// </summary>
-        public RoadStyle style { get { return _style; } }
+        public RoadStyle Style { get { return _style; } }
 
         /// <summary>
         /// Occupied voxel 
         /// </summary>
-        public readonly TrafficVoxel voxel;
+        private readonly TrafficVoxel voxel;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TrafficVoxel Voxel
+        {
+            get { return voxel; }
+        } 
+
 
         /// <summary>
         /// Location of this road
         /// </summary>
-        public Location location { get { return voxel.location; } }
+        public Location Location { get { return voxel.Location; } }
 
 
 
@@ -72,7 +80,7 @@ namespace FreeTrain.World.Road
         /// Called by the <c>TrafficVoxel</c> to invalidate
         /// voxels.
         /// </summary>
-        public virtual void invalidateVoxel()
+        public virtual void InvalidateVoxel()
         {
             // by default, the occupied voxel is updated
             WorldDefinition.World.OnVoxelUpdated(voxel);

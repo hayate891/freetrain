@@ -391,7 +391,7 @@ namespace FreeTrain.World.Development
                 Cube tmp = new Cube(scaning, vhbc.Size, h);
                 int cost = 0;
                 foreach (IEntity e in tmp.getEntities())
-                    cost += e.entityValue;
+                    cost += e.EntityValue;
                 while (price < cost && h < h2)
                 {
                     if (price < cost)
@@ -414,7 +414,7 @@ namespace FreeTrain.World.Development
             {
                 Location loc = target.baseLocation;
                 WorldDefinition w = WorldDefinition.World;
-                int amp = F_PopAmpBase + (int)(Math.Pow(w[loc].landPrice, F_PopAmpPower) * F_PopAmpScale);
+                int amp = F_PopAmpBase + (int)(Math.Pow(w[loc].LandPrice, F_PopAmpPower) * F_PopAmpScale);
                 // then randomly pick nearby voxel
                 loc.x = Rand(loc.x, amp);
                 loc.y = Rand(loc.y, amp);
@@ -425,7 +425,7 @@ namespace FreeTrain.World.Development
                 Voxel v = w[loc];
                 if (v != null)
                 {
-                    if (!IsReplaceable(v.entity, v.landPrice))
+                    if (!IsReplaceable(v.Entity, v.LandPrice))
                         continue;
                 }
                 return loc;
@@ -451,8 +451,8 @@ namespace FreeTrain.World.Development
             }
             else if (e is LandVoxel)
             {
-                Debug.WriteLine("LandPrice:" + e.entityValue + " (>" + comPrice);
-                if (e.entityValue > comPrice)
+                Debug.WriteLine("LandPrice:" + e.EntityValue + " (>" + comPrice);
+                if (e.EntityValue > comPrice)
                     return false;
             }
             return true;

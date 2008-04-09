@@ -36,7 +36,7 @@ namespace FreeTrain.World.Rail
     {
         /// <summary> Obtains the population that uses a station right now. </summary>
         /// <remarks>Usually this value varies depending on the current time.</remarks>
-        int getPopulation(Station s);
+        int GetPopulation(Station s);
 
         /// <summary>
         /// Notifies the removal of the station.

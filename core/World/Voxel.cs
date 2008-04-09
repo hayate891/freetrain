@@ -37,15 +37,24 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public abstract Location location { get; }
+        public abstract Location Location { get; }
         /// <summary>
         /// 
         /// </summary>
-        protected bool showFence = true;
+        private bool showFence = true;
+
         /// <summary>
         /// 
         /// </summary>
-        public virtual bool transparent { get { return false; } }
+        protected bool ShowFence
+        {
+            get { return showFence; }
+            set { showFence = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual bool Transparent { get { return false; } }
 
         /// <summary>
         /// Draws this voxel
@@ -60,61 +69,61 @@ namespace FreeTrain.World
         /// </param>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        public abstract void draw(DrawContext display, Point pt, int heightCutDiff);
+        public abstract void Draw(DrawContext display, Point pt, int heightCutDiff);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public void drawVoxel(DrawContext display, Point pt, int heightCutDiff)
+        public void DrawVoxel(DrawContext display, Point pt, int heightCutDiff)
         {
             if (showFence)
             {
                 // draw behind fence 
-                drawBehindFence(display, pt);
-                draw(display, pt, heightCutDiff);
-                drawFrontFence(display, pt);
+                DrawBehindFence(display, pt);
+                Draw(display, pt, heightCutDiff);
+                DrawFrontFence(display, pt);
                 //draw front fence 
             }
             else
-                draw(display, pt, heightCutDiff);
+                Draw(display, pt, heightCutDiff);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public abstract Color getColorOfTile();
+        public abstract Color GetColorOfTile();
         /// <summary>
         /// 
         /// </summary>
         /// <param name="d"></param>
         /// <param name="f"></param>
-        public abstract void setFence(Direction d, IFence f);
+        public abstract void SetFence(Direction d, IFence f);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public abstract IFence getFence(Direction d);
+        public abstract IFence GetFence(Direction d);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        protected abstract void drawFrontFence(DrawContext display, Point pt);
+        protected abstract void DrawFrontFence(DrawContext display, Point pt);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        protected abstract void drawBehindFence(DrawContext display, Point pt);
+        protected abstract void DrawBehindFence(DrawContext display, Point pt);
 
         /// <summary>
         /// Processes a mouse click.
         /// </summary>
         /// <returns>true if a mouse click event is "consumed"</returns>
-        public virtual bool onClick() { return false; }
+        public virtual bool OnClick() { return false; }
 
         /// <summary>
         /// Query this voxel to return some "aspect" of it.
@@ -126,30 +135,30 @@ namespace FreeTrain.World
         /// the queryInterface method of entities.
         /// </summary>
         /// <returns>null if the given aspect is not supported.</returns>
-        public virtual object queryInterface(Type aspect) { return null; }
+        public virtual object QueryInterface(Type aspect) { return null; }
 
         /// <summary>
         /// Calls immediately after the voxel is removed from the world.
         /// </summary>
-        public virtual void onRemoved() { }
+        public virtual void OnRemoved() { }
         // TODO: is this method necessary
 
 
         /// <summary>
         /// Short-cut to call the getLandPrice method of the World class.
         /// </summary>
-        public int landPrice
+        public int LandPrice
         {
             get
             {
-                return (int)WorldDefinition.World.LandValue[location];
+                return (int)WorldDefinition.World.LandValue[Location];
             }
         }
 
         /// <summary>
         /// Obtains a reference to the entity that includes this voxel.
         /// </summary>
-        public abstract IEntity entity { get; }
+        public abstract IEntity Entity { get; }
 
     }
 
@@ -177,10 +186,10 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_loc"></param>
-        protected AbstractVoxelImpl(Location _loc)
+        /// <param name="loc"></param>
+        protected AbstractVoxelImpl(Location loc)
         {
-            this.loc = _loc;
+            this.loc = loc;
             WorldDefinition.World[loc] = this;
         }
         /// <summary>
@@ -197,43 +206,43 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public override Location location { get { return loc; } }
+        public override Location Location { get { return loc; } }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        protected override void drawFrontFence(DrawContext display, Point pt)
+        protected override void DrawFrontFence(DrawContext display, Point pt)
         {
             IFence f;
             f = fence[(Direction.SOUTH).index / 2];
             if (f != null)
-                f.drawFence(display.Surface, pt, Direction.SOUTH);
+                f.DrawFence(display.Surface, pt, Direction.SOUTH);
             f = fence[(Direction.WEST).index / 2];
             if (f != null)
-                f.drawFence(display.Surface, pt, Direction.WEST);
+                f.DrawFence(display.Surface, pt, Direction.WEST);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        protected override void drawBehindFence(DrawContext display, Point pt)
+        protected override void DrawBehindFence(DrawContext display, Point pt)
         {
             IFence f;
             f = fence[(Direction.NORTH).index / 2];
             if (f != null)
-                f.drawFence(display.Surface, pt, Direction.NORTH);
+                f.DrawFence(display.Surface, pt, Direction.NORTH);
             f = fence[(Direction.EAST).index / 2];
             if (f != null)
-                f.drawFence(display.Surface, pt, Direction.EAST);
+                f.DrawFence(display.Surface, pt, Direction.EAST);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="d"></param>
         /// <param name="f"></param>
-        public override void setFence(Direction d, IFence f)
+        public override void SetFence(Direction d, IFence f)
         {
             fence[d.index / 2] = f;
         }
@@ -242,7 +251,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public override IFence getFence(Direction d)
+        public override IFence GetFence(Direction d)
         {
             return fence[d.index / 2];
 
@@ -251,7 +260,7 @@ namespace FreeTrain.World
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Color getColorOfTile()
+        public override Color GetColorOfTile()
         {
             //return Color.Beige;   
             if (this.GetType().Name == "VoxelImpl") return Color.AliceBlue;
@@ -277,7 +286,7 @@ namespace FreeTrain.World
         /// True if the callee is located directly above the ground,
         /// false if directly below the ground.
         /// </param>
-        bool drawGround(bool above);
+        bool DrawGround(bool above);
     }
 
     /// <summary>
@@ -291,11 +300,11 @@ namespace FreeTrain.World
         /// <param name="d">one of the 4 directions (N,E,W,S)</param>
         /// <param name="pt"></param>
         /// <param name="surface"></param>
-        void drawFence(Surface surface, Point pt, Direction d);
+        void DrawFence(Surface surface, Point pt, Direction d);
 
         /// <summary>
         /// 
         /// </summary>
-        string fence_id { get; }
+        string FenceId { get; }
     }
 }

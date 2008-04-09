@@ -50,7 +50,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public override bool transparent { get { return true; } }
+        public override bool Transparent { get { return true; } }
 
         /// <summary>
         /// Fired when a car enters/leaves this traffic voxel
@@ -76,17 +76,17 @@ namespace FreeTrain.World
             /// </summary>
             /// <param name="display"></param>
             /// <param name="pt"></param>
-            void drawBefore(DrawContext display, Point pt);
+            void DrawBefore(DrawContext display, Point pt);
             /// <summary>
             /// 
             /// </summary>
             /// <param name="display"></param>
             /// <param name="pt"></param>
-            void drawAfter(DrawContext display, Point pt);
+            void DrawAfter(DrawContext display, Point pt);
             /// <summary>
             /// Called right after the accessory is removed.
             /// </summary>
-            void onRemoved();
+            void OnRemoved();
         }
 
 
@@ -154,7 +154,7 @@ namespace FreeTrain.World
             }
             set
             {
-                if (value == null && _accessory != null) _accessory.onRemoved();
+                if (value == null && _accessory != null) _accessory.OnRemoved();
                 _accessory = value;
                 onModified();
             }
@@ -171,7 +171,7 @@ namespace FreeTrain.World
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public override object queryInterface(Type aspect)
+        public override object QueryInterface(Type aspect)
         {
             object o;
 
@@ -186,7 +186,7 @@ namespace FreeTrain.World
         /// 
         /// </summary>
         /// <returns></returns>
-        public override bool onClick()
+        public override bool OnClick()
         {
             if (car != null && car.onClick()) return true;
             if (_railRoad != null && _railRoad.OnClick()) return true;
@@ -203,7 +203,7 @@ namespace FreeTrain.World
             if (_railRoad != null)
                 _railRoad.invalidateVoxel();
             if (_road != null)
-                _road.invalidateVoxel();
+                _road.InvalidateVoxel();
 
             // create/remove crossing.
             bool b = shouldHaveCrossing();
@@ -243,7 +243,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return this; } }
+        public override IEntity Entity { get { return this; } }
 
         #region Entity implementation
         /// <summary>
@@ -259,7 +259,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public int entityValue { get { return 0; } }
+        public int EntityValue { get { return 0; } }
         /// <summary>
         /// 
         /// </summary>
@@ -272,7 +272,7 @@ namespace FreeTrain.World
                 else
                     car.remove();
             }
-            BridgePierVoxel.teardownBridgeSupport(location, this);
+            BridgePierVoxel.teardownBridgeSupport(Location, this);
             if (onEntityRemoved != null)
                 onEntityRemoved(this, null);
             WorldDefinition.World.remove(this);
@@ -290,20 +290,20 @@ namespace FreeTrain.World
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public override void draw(DrawContext display, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext display, Point pt, int heightCutDiff)
         {
             if (_road != null) _road.drawBefore(display, pt);
-            if (_accessory != null) _accessory.drawBefore(display, pt);
+            if (_accessory != null) _accessory.DrawBefore(display, pt);
             if (_railRoad != null) _railRoad.drawBefore(display, pt);
             if (_car != null) _car.draw(display, pt);
             if (_railRoad != null) _railRoad.drawAfter(display, pt);
-            if (_accessory != null) _accessory.drawAfter(display, pt);
+            if (_accessory != null) _accessory.DrawAfter(display, pt);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Color getColorOfTile()
+        public override Color GetColorOfTile()
         {
             if (_car != null) return Color.White;
             if (_railRoad != null) return Color.Black;

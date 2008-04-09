@@ -75,25 +75,51 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class HalfVoxelContribution : StructureContribution
     {
         /// <summary>
         /// 
         /// </summary>
-        static protected readonly int hl_patterns = 6;
+        static private readonly int hl_patterns = 6;
+
         /// <summary>
         /// 
         /// </summary>
-        static protected StructureGroup _group = new StructureGroup("HalfVoxel");
+        protected static int HighlightPatterns
+        {
+            get { return HalfVoxelContribution.hl_patterns; }
+        } 
+
         /// <summary>
         /// 
         /// </summary>
-        static protected readonly Point[] offsets = new Point[]
+        private StructureGroup _group = new StructureGroup("HalfVoxel");
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override StructureGroup Group
+        {
+            get { return _group; }
+            //set { _group = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        static private readonly Point[] offsets = new Point[]
 		{
 			new Point(0,-8), new Point(-8,-8),new Point(0,-8),new Point(-8,-8),
 			new Point(-8,-4), new Point(0,-4),new Point(-8,-4),new Point(0,-4)
 		};
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        protected static Point[] Offsets
+        {
+            get { return HalfVoxelContribution.offsets; }
+        } 
+
 
         /// <summary>
         /// Parses a commercial structure contribution from a DOM node.
@@ -122,12 +148,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 sprites = new SpriteSet[1];
                 sprites[0] = new SpriteSet(8);
             }
-            loadSprites(spr, pic);
+            LoadSprites(spr, pic);
             XmlElement hle = (XmlElement)spr.SelectSingleNode("highlight");
             if (hle != null)
             {
                 hilights = new SpriteSet[hl_patterns];
-                loadHighSprites(spr, hle);
+                LoadHighSprites(spr, hle);
             }
             else
                 hilights = null;
@@ -139,19 +165,19 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="e"></param>
         /// <param name="ep"></param>
-        protected virtual void loadSprites(XmlElement e, XmlElement ep)
+        protected virtual void LoadSprites(XmlElement e, XmlElement ep)
         {
-            Picture pic = getPicture(ep, null);
+            Picture pic = GetPicture(ep, null);
             XmlNode cn = e.FirstChild;
             while (cn != null)
             {
                 if (cn.Name.Equals("pattern"))
                 {
-                    SideStored ss = parseSide(cn);
-                    Direction d = parseDirection(cn);
+                    SideStored ss = ParseSide(cn);
+                    Direction d = ParseDirection(cn);
                     Point orgn = XmlUtil.ParsePoint(cn.Attributes["origin"].Value);
-                    Point offF = getOffset(d, PlaceSide.Fore);
-                    Point offB = getOffset(d, PlaceSide.Back);
+                    Point offF = GetOffset(d, PlaceSide.Fore);
+                    Point offB = GetOffset(d, PlaceSide.Back);
                     Size sz = new Size(24, 8 + height * 16);
                     if (variation != null)
                     {
@@ -184,9 +210,9 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="e"></param>
         /// <param name="hle"></param>
-        protected virtual void loadHighSprites(XmlElement e, XmlElement hle)
+        protected virtual void LoadHighSprites(XmlElement e, XmlElement hle)
         {
-            Picture pic = getPicture(hle, "HL");
+            Picture pic = GetPicture(hle, "HL");
             if (pic == null || hle.Attributes["src"] == null)
                 throw new FormatException("highlight picture not found.");
             string baseFileName = XmlUtil.Resolve(hle, hle.Attributes["src"].Value).LocalPath;
@@ -200,11 +226,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 {
                     if (cn.Name.Equals("pattern"))
                     {
-                        SideStored ss = parseSide(cn);
-                        Direction d = parseDirection(cn);
+                        SideStored ss = ParseSide(cn);
+                        Direction d = ParseDirection(cn);
                         Point orgn = XmlUtil.ParsePoint(cn.Attributes["origin"].Value);
-                        Point offF = getOffset(d, PlaceSide.Fore);
-                        Point offB = getOffset(d, PlaceSide.Back);
+                        Point offF = GetOffset(d, PlaceSide.Fore);
+                        Point offB = GetOffset(d, PlaceSide.Back);
                         Size sz = new Size(24, 8 + height * 16);
 
                         // create highlight patterns
@@ -214,13 +240,13 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                             HueShiftSpriteFactory factory = new HueShiftSpriteFactory(hl_patterns);
                             if ((ss & SideStored.Fore) != 0)
                             {
-                                ISprite[] arr = factory.createSprites(bit, pic, offF, orgn, sz);
+                                ISprite[] arr = factory.CreateSprites(bit, pic, offF, orgn, sz);
                                 for (int i = 0; i < hl_patterns; i++)
                                     hilights[i][d, PlaceSide.Fore] = arr[i];
                             }
                             if ((ss & SideStored.Back) != 0)
                             {
-                                ISprite[] arr = factory.createSprites(bit, pic, offB, orgn, sz);
+                                ISprite[] arr = factory.CreateSprites(bit, pic, offB, orgn, sz);
                                 for (int i = 0; i < hl_patterns; i++)
                                     hilights[i][d, PlaceSide.Back] = arr[i];
                             }
@@ -236,7 +262,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="d"></param>
         /// <param name="s"></param>
         /// <returns></returns>
-        protected Point getOffset(Direction d, PlaceSide s)
+        protected Point GetOffset(Direction d, PlaceSide s)
         {
             Point o = offsets[d.index / 2 + (int)s * 4];
             return new Point(o.X, o.Y + height * 16);
@@ -246,7 +272,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
-        protected SideStored parseSide(XmlNode n)
+        protected SideStored ParseSide(XmlNode n)
         {
             String s = n.Attributes["side"].Value;
             if (s == null || s.Equals("either"))
@@ -262,7 +288,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
-        protected Direction parseDirection(XmlNode n)
+        protected Direction ParseDirection(XmlNode n)
         {
             String s = n.Attributes["direction"].Value;
             if (s == null)
@@ -279,7 +305,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             //return null;
         }
 
-        internal static Picture getPicture(XmlElement pic, string suffix)
+        internal static Picture GetPicture(XmlElement pic, string suffix)
         {
             //XmlElement pic = (XmlElement)XmlUtil.selectSingleNode(sprite,suffix);			
             XmlAttribute r = pic.Attributes["ref"];
@@ -304,7 +330,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         /// <returns></returns>
-        public int getHighlihtPatternCount()
+        public int GetHighlightPatternCount()
         {
             if (hilights == null) return 1;
             else return hl_patterns;
@@ -317,8 +343,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="s"></param>
         /// <param name="col"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public ISprite getSprite(Direction d, PlaceSide s, int col)
+        public ISprite GetSprite(Direction d, PlaceSide s, int col)
         {
             return sprites[col][d, s];
         }
@@ -330,8 +355,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="s"></param>
         /// <param name="col"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public ISprite getHighLightSprite(Direction d, PlaceSide s, int col)
+        public ISprite GetHighLightSprite(Direction d, PlaceSide s, int col)
         {
             if (hilights != null)
                 return hilights[col][d, s];
@@ -342,11 +366,8 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
 
         internal SpriteSet[] sprites;
         internal SpriteSet[] hilights;
-        /// <summary>
-        /// 
-        /// </summary>
-        [CLSCompliant(false)]
-        protected readonly int _price;
+
+        readonly int _price;
         /// <summary>
         /// 
         /// </summary>
@@ -359,31 +380,57 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public readonly int height;
+        private readonly int height;
 
         /// <summary>
         /// 
         /// </summary>
-        [NonSerialized]
-        public readonly string subgroup;
+        public int Height
+        {
+            get { return height; }
+        } 
+
+        readonly string subgroup;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Subgroup
+        {
+            get { return subgroup; }
+        } 
+
         /// <summary>
         /// 
         /// 
         /// </summary>
-        [NonSerialized]
-        [CLSCompliant(false)]
-        public readonly ColorLibrary colors;
+        readonly ColorLibrary colors;
+
         /// <summary>
         /// 
         /// </summary>
-        [NonSerialized]
-        protected readonly XmlNode variation;
+        public ColorLibrary Colors
+        {
+            get { return colors; }
+        } 
+
         /// <summary>
         /// 
         /// </summary>
-        [NonSerialized]
-        [CLSCompliant(false)]
-        protected int _currentCol;
+        readonly XmlNode variation;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected XmlNode Variation
+        {
+            get { return variation; }
+        } 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        int _currentCol;
         /// <summary>
         /// 
         /// </summary>
@@ -399,9 +446,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        [NonSerialized]
-        [CLSCompliant(false)]
-        protected int _currentHLIdx;
+        int _currentHLIdx;
         /// <summary>
         /// 
         /// </summary>
@@ -419,8 +464,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         /// <param name="name"></param>
-        /// <returns></returns>
-        [CLSCompliant(false)]
+        /// <returns></returns>]
         protected override StructureGroup GetGroup(string name)
         {
             return _group;
@@ -431,7 +475,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateBuilder(IControllerSite site)
         {
             return new HVControllerImpl(this, site, false);
@@ -442,7 +485,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateRemover(IControllerSite site)
         {
             return new HVControllerImpl(this, site, true);
@@ -456,8 +498,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="front"></param>
         /// <param name="side"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public Structure create(Location baseLoc, Direction front, PlaceSide side)
+        public Structure Create(Location baseLoc, Direction front, PlaceSide side)
         {
             ContributionReference reffer = new ContributionReference(this, currentColor, currentHighlight, front, side);
             HalfDividedVoxel v = WorldDefinition.World[baseLoc] as HalfDividedVoxel;
@@ -480,8 +521,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="baseLoc"></param>
         /// <param name="front"></param>
         /// <param name="side"></param>
-        [CLSCompliant(false)]
-        public void destroy(Location baseLoc, Direction front, PlaceSide side)
+        public void Destroy(Location baseLoc, Direction front, PlaceSide side)
         {
             HalfDividedVoxel v = WorldDefinition.World[baseLoc] as HalfDividedVoxel;
             if (v != null)
@@ -493,8 +533,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="baseLoc"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public static bool canBeBuilt(Location baseLoc)
+        public static bool CanBeBuilt(Location baseLoc)
         {
             Voxel v = WorldDefinition.World[baseLoc];
             if (v != null)
@@ -515,16 +554,15 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, new Size(7, 1), 1);
-            drawer.draw(sprites[currentColor][Direction.WEST, PlaceSide.Fore], 3, 1);
-            drawer.draw(sprites[currentColor][Direction.EAST, PlaceSide.Back], 2, 0);
+            drawer.Draw(sprites[currentColor][Direction.WEST, PlaceSide.Fore], 3, 1);
+            drawer.Draw(sprites[currentColor][Direction.EAST, PlaceSide.Back], 2, 0);
             if (hilights != null)
             {
-                drawer.draw(hilights[currentHighlight][Direction.WEST, PlaceSide.Fore], 3, 1);
-                drawer.draw(hilights[currentHighlight][Direction.EAST, PlaceSide.Back], 2, 0);
+                drawer.Draw(hilights[currentHighlight][Direction.WEST, PlaceSide.Fore], 3, 1);
+                drawer.Draw(hilights[currentHighlight][Direction.EAST, PlaceSide.Back], 2, 0);
             }
             return drawer;
         }
@@ -544,12 +582,29 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public readonly PlaceSide placeSide;
+        private readonly PlaceSide placeSide;
+
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        public readonly Direction frontface;
+        public PlaceSide PlaceSide
+        {
+            get { return placeSide; }
+        } 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        readonly Direction frontface;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Direction Frontface
+        {
+            get { return frontface; }
+        } 
+
 
         /// <summary>
         /// 
@@ -559,7 +614,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="hilight"></param>
         /// <param name="front"></param>
         /// <param name="side"></param>
-        [CLSCompliant(false)]
         public ContributionReference(HalfVoxelContribution hvc, int color, int hilight, Direction front, PlaceSide side)
         {
             this.contrib = hvc;
@@ -573,8 +627,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public virtual ISprite getSprite()
+        public virtual ISprite GetSprite()
         {
             return contrib.sprites[colorIdx][patternIdx];
         }
@@ -583,8 +636,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public virtual ISprite getHighlightSprite()
+        public virtual ISprite GetHighlightSprite()
         {
             if (contrib.hilights != null)
                 return contrib.hilights[hilightIdx][patternIdx];
@@ -594,31 +646,30 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        public virtual int height
+        public virtual int Height
         {
-            get { return contrib.height; }
+            get { return contrib.Height; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public virtual int price
+        public virtual int Price
         {
             get { return contrib.Price; }
         }
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        public virtual BasePopulation population
+        public virtual BasePopulation Population
         {
             get { return contrib.Population; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public virtual string name
+        public virtual string Name
         {
-            get { return contrib.subgroup; }
+            get { return contrib.Subgroup; }
         }
     }
 
@@ -638,20 +689,20 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// 
         /// </summary>
         /// <returns></returns>
-        public override ISprite getSprite() { return null; }
+        public override ISprite GetSprite() { return null; }
 
         /// <summary>
         /// 
         /// </summary>
-        public override int height { get { return 0; } }
+        public override int Height { get { return 0; } }
         /// <summary>
         /// 
         /// </summary>
-        public override int price { get { return 0; } }
+        public override int Price { get { return 0; } }
         /// <summary>
         /// 
         /// </summary>
-        public override BasePopulation population { get { return null; } }
+        public override BasePopulation Population { get { return null; } }
     }
     #endregion
     #region SpriteSet
@@ -694,7 +745,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="d"></param>
         /// <param name="s"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public ISprite this[Direction d, PlaceSide s]
         {
             get

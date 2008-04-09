@@ -38,23 +38,41 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        protected MenuItem recentFileMenuItem;
+        private MenuItem recentFileMenuItem;
+
         /// <summary>
         /// 
         /// </summary>
-        public String registryKeyName;
+        protected MenuItem RecentFileMenuItem
+        {
+            get { return recentFileMenuItem; }
+            set { recentFileMenuItem = value; }
+        }
         /// <summary>
         /// 
         /// </summary>
-        protected int numEntries = 0;
+        private String registryKeyName;
+
         /// <summary>
         /// 
         /// </summary>
-        protected int maxEntries = 4;
+        public String RegistryKeyName
+        {
+            get { return registryKeyName; }
+            set { registryKeyName = value; }
+        }
         /// <summary>
         /// 
         /// </summary>
-        protected int maxShortenPathLength = 48;
+        int numEntries = 0;
+        /// <summary>
+        /// 
+        /// </summary>
+        int maxEntries = 4;
+        /// <summary>
+        /// 
+        /// </summary>
+        int maxShortenPathLength = 48;
 
         /// <summary>
         /// 
@@ -251,7 +269,6 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public int NumEntries
         {
             get
@@ -263,7 +280,6 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public int MaxEntries
         {
             get
@@ -293,7 +309,6 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public int MaxShortenPathLength
         {
             get
@@ -889,7 +904,7 @@ namespace FreeTrain.Controls
         public MruMenuInline(MenuItem _recentFileMenuItem, ClickHandler _clickedHandler)
             : base(_recentFileMenuItem, _clickedHandler, null, false, 4)
         {
-            maxShortenPathLength = 128;
+            MaxShortenPathLength = 128;
             firstMenuItem = _recentFileMenuItem;
         }
 
@@ -902,7 +917,7 @@ namespace FreeTrain.Controls
         public MruMenuInline(MenuItem _recentFileMenuItem, ClickHandler _clickedHandler, int _maxEntries)
             : base(_recentFileMenuItem, _clickedHandler, null, false, _maxEntries)
         {
-            maxShortenPathLength = 128;
+            MaxShortenPathLength = 128;
             firstMenuItem = _recentFileMenuItem;
         }
 
@@ -915,7 +930,7 @@ namespace FreeTrain.Controls
         public MruMenuInline(MenuItem _recentFileMenuItem, ClickHandler _clickedHandler, String _registryKeyName)
             : base(_recentFileMenuItem, _clickedHandler, _registryKeyName, true, 4)
         {
-            maxShortenPathLength = 128;
+            MaxShortenPathLength = 128;
             firstMenuItem = _recentFileMenuItem;
         }
 
@@ -929,7 +944,7 @@ namespace FreeTrain.Controls
         public MruMenuInline(MenuItem _recentFileMenuItem, ClickHandler _clickedHandler, String _registryKeyName, int _maxEntries)
             : base(_recentFileMenuItem, _clickedHandler, _registryKeyName, true, _maxEntries)
         {
-            maxShortenPathLength = 128;
+            MaxShortenPathLength = 128;
             firstMenuItem = _recentFileMenuItem;
         }
 
@@ -943,7 +958,7 @@ namespace FreeTrain.Controls
         public MruMenuInline(MenuItem _recentFileMenuItem, ClickHandler _clickedHandler, String _registryKeyName, bool loadFromRegistry)
             : base(_recentFileMenuItem, _clickedHandler, _registryKeyName, loadFromRegistry, 4)
         {
-            maxShortenPathLength = 128;
+            MaxShortenPathLength = 128;
             firstMenuItem = _recentFileMenuItem;
         }
 
@@ -958,7 +973,7 @@ namespace FreeTrain.Controls
         public MruMenuInline(MenuItem _recentFileMenuItem, ClickHandler _clickedHandler, String _registryKeyName, bool loadFromRegistry, int _maxEntries)
             : base(_recentFileMenuItem, _clickedHandler, _registryKeyName, loadFromRegistry, _maxEntries)
         {
-            maxShortenPathLength = 128;
+            MaxShortenPathLength = 128;
             firstMenuItem = _recentFileMenuItem;
         }
         #endregion
@@ -993,7 +1008,7 @@ namespace FreeTrain.Controls
         {
             get
             {
-                return StartIndex + numEntries;
+                return StartIndex + NumEntries;
             }
         }
         #endregion
@@ -1005,7 +1020,7 @@ namespace FreeTrain.Controls
         /// </summary>
         protected override void Enable()
         {
-            MenuItems.Remove(recentFileMenuItem);
+            MenuItems.Remove(RecentFileMenuItem);
         }
 
         /// <summary>
@@ -1022,9 +1037,9 @@ namespace FreeTrain.Controls
         /// </summary>
         protected override void Disable()
         {
-            MenuItems.Add(firstMenuItem.Index, recentFileMenuItem);
+            MenuItems.Add(firstMenuItem.Index, RecentFileMenuItem);
             MenuItems.Remove(firstMenuItem);
-            firstMenuItem = recentFileMenuItem;
+            firstMenuItem = RecentFileMenuItem;
         }
         #endregion
     }

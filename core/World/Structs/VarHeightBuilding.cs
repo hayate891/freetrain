@@ -142,7 +142,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue
+        public override int EntityValue
         {
             get
             {
@@ -155,7 +155,7 @@ namespace FreeTrain.World.Structs
         public override void remove()
         {
             if (stationListener != null)
-                stationListener.onRemoved();
+                stationListener.OnRemoved();
             if (onEntityRemoved != null)
                 onEntityRemoved(this, null);
 
@@ -174,12 +174,12 @@ namespace FreeTrain.World.Structs
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public override object queryInterface(Type aspect)
+        public override object QueryInterface(Type aspect)
         {
             if (aspect == typeof(Rail.IStationListener))
                 return stationListener;
 
-            return base.queryInterface(aspect);
+            return base.QueryInterface(aspect);
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace FreeTrain.World.Structs
             /// <param name="display"></param>
             /// <param name="pt"></param>
             /// <param name="heightCutDiff"></param>
-            public override void draw(DrawContext display, Point pt, int heightCutDiff)
+            public override void Draw(DrawContext display, Point pt, int heightCutDiff)
             {
                 VarHeightBuilding o = owner;
 

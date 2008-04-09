@@ -43,11 +43,11 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public override bool transparent { get { return true; } }
+        public override bool Transparent { get { return true; } }
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return this; } }
+        public override IEntity Entity { get { return this; } }
 
         #region Entity implementation
         /// <summary>
@@ -65,7 +65,7 @@ namespace FreeTrain.World.Land
         /// <summary>
         /// 
         /// </summary>
-        public abstract int entityValue { get; }
+        public abstract int EntityValue { get; }
         /// <summary>
         /// 
         /// </summary>

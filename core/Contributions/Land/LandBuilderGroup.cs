@@ -38,15 +38,15 @@ namespace FreeTrain.Contributions.Land
             : base(name)
         {
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="idx"></param>
-        /// <returns></returns>
-        public LandBuilderContribution Get(int idx)
-        {
-            return (LandBuilderContribution)base.List[idx];
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="idx"></param>
+        ///// <returns></returns>
+        //public LandBuilderContribution Get(int idx)
+        //{
+        //    return (LandBuilderContribution)base.List[idx];
+        //}
         /// <summary>
         /// 
         /// </summary>

@@ -81,7 +81,7 @@ namespace FreeTrain.Controllers.Road
         /// </summary>
         protected void InitializeComponent()
         {
-            base.InitializeComponent();
+            //base.InitializeComponent();
             this.SuspendLayout();
             this.buttonRemove.Location = new System.Drawing.Point(194, 132);
             this.buttonPlace.Location = new System.Drawing.Point(136, 132);

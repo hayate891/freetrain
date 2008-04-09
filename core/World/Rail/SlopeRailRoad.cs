@@ -50,7 +50,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public int entityValue { get { return 0; } }
+        public int EntityValue { get { return 0; } }
         /// <summary>
         /// 
         /// </summary>
@@ -66,7 +66,7 @@ namespace FreeTrain.World.Rail
         {
             foreach (Voxel v in cube.voxels)
             {
-                if (v.entity == this && !(v is BridgePierVoxel))
+                if (v.Entity == this && !(v is BridgePierVoxel))
                     WorldDefinition.World.remove(v);
                 else
                 {
@@ -89,7 +89,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public object queryInterface(Type aspect) { return null; }
+        public object QueryInterface(Type aspect) { return null; }
         /// <summary>
         /// 
         /// </summary>
@@ -267,7 +267,7 @@ namespace FreeTrain.World.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = WorldDefinition.World.GetGroundLevel(location);
+                int glevel = WorldDefinition.World.GetGroundLevel(Location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
             }
@@ -280,7 +280,7 @@ namespace FreeTrain.World.Rail
             /// </summary>
             /// <param name="above"></param>
             /// <returns></returns>
-            public bool drawGround(bool above)
+            public bool DrawGround(bool above)
             {
                 return above ? drawSurfaceAbove : drawSurfaceBelow;
             }
@@ -296,7 +296,7 @@ namespace FreeTrain.World.Rail
                 : base(entity, x, y, z)
             {
 
-                int glevel = WorldDefinition.World.GetGroundLevel(location);
+                int glevel = WorldDefinition.World.GetGroundLevel(Location);
                 drawSurfaceBelow = !(idx < 2 && glevel >= z);
                 drawSurfaceAbove = !(idx >= 2 && glevel >= z + 1);
                 sprite = s;
@@ -304,7 +304,7 @@ namespace FreeTrain.World.Rail
             /// <summary>
             /// 
             /// </summary>
-            public override bool transparent { get { return true; } }
+            public override bool Transparent { get { return true; } }
 
             private readonly bool drawSurfaceAbove;
             private readonly bool drawSurfaceBelow;
@@ -314,7 +314,7 @@ namespace FreeTrain.World.Rail
             /// </summary>
             /// <param name="above"></param>
             /// <returns></returns>
-            public bool drawGround(bool above)
+            public bool DrawGround(bool above)
             {
                 return above ? drawSurfaceAbove : drawSurfaceBelow;
             }
@@ -324,7 +324,7 @@ namespace FreeTrain.World.Rail
             /// <param name="surface"></param>
             /// <param name="pt"></param>
             /// <param name="heightCutDiff"></param>
-            public override void draw(DrawContext surface, Point pt, int heightCutDiff)
+            public override void Draw(DrawContext surface, Point pt, int heightCutDiff)
             {
                 sprite.Draw(surface.Surface, pt);
             }
