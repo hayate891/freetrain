@@ -24,7 +24,7 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Reflection;
-//using org.kohsuke.directaudio;
+
 using SdlDotNet.Audio;
 using FreeTrain.Util;
 using FreeTrain.Framework.Graphics;
@@ -48,32 +48,38 @@ namespace FreeTrain.Framework
             string resourcesDirectory = "Resources";
 
             path = Path.Combine(Core.InstallationDirectory, Path.Combine(resourcesDirectory, name));
-            if (File.Exists(path)) return path;
+            if (File.Exists(path))
+            {
+                return path;
+            }
 
             path = Path.Combine(Core.InstallationDirectory, Path.Combine("..", Path.Combine("..", Path.Combine("core", Path.Combine(resourcesDirectory, name)))));
-            if (File.Exists(path)) return path;
+            if (File.Exists(path))
+            {
+                return path;
+            }
 
             path = Path.Combine("..", Path.Combine("..", Path.Combine(resourcesDirectory, name)));
-            if (File.Exists(path)) return path;
+            if (File.Exists(path))
+            {
+                return path;
+            }
 
             path = Path.Combine("..", Path.Combine(resourcesDirectory, name));
-            if (File.Exists(path)) return path;
+            if (File.Exists(path))
+            {
+                return path;
+            }
             Assembly assembly = Assembly.GetAssembly(typeof(ResourceUtil));
             path = Path.Combine(Path.Combine(assembly.Location, ".."), Path.Combine(resourcesDirectory, name));
-            if (File.Exists(path)) return path;
+            if (File.Exists(path))
+            {
+                return path;
+            }
 
             throw new FileNotFoundException("System resource: " + path);
         }
 
-        //		private static WebResponse getStream( Uri uri ) {
-        //			return WebRequest.Create(uri).GetResponse();
-        //		}
-
-        //		public static Bitmap loadBitmap( string location ) {
-        //			using(WebResponse res = getStream(uri)) {
-        //				return new Bitmap(res.GetResponseStream());
-        //			}
-        //		}
         /// <summary>
         /// 
         /// </summary>
@@ -84,17 +90,12 @@ namespace FreeTrain.Framework
             return new Bitmap(FindSystemResource(name));
         }
 
-        //		public static Icon loadIcon( Uri uri) {
-        //			using(WebResponse res = getStream(uri)) {
-        //				return new Icon(res.GetResponseStream());
-        //			}
-        //		}
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static SdlDotNet.Audio.Sound loadSystemSound(String name)
+        public static SdlDotNet.Audio.Sound LoadSystemSound(String name)
         {
             // can't read from stream
             return new SdlDotNet.Audio.Sound(FindSystemResource(name));
@@ -107,106 +108,146 @@ namespace FreeTrain.Framework
         /// </summary>
         /// <param name="uri"></param>
         /// <returns></returns>
-        public static SdlDotNet.Audio.Sound loadSound(Uri uri)
+        public static SdlDotNet.Audio.Sound LoadSound(Uri uri)
         {
             return new SdlDotNet.Audio.Sound(uri.LocalPath);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static Picture loadSystemPicture(string name)
+        public static Picture LoadSystemPicture(string name)
         {
             string id = "{8AD4EF28-CBEF-4C73-A8FF-5772B87EF005}:" + name;
 
             // check if it has already been loaded
             if (PictureManager.contains(id))
+            {
                 return PictureManager.get(id);
+            }
 
             // otherwise load a new picture
             return new Picture(id, FindSystemResource(name));
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="dayname"></param>
         /// <param name="nightname"></param>
         /// <returns></returns>
-        public static Picture loadSystemPicture(string dayname, string nightname)
+        public static Picture LoadSystemPicture(string dayName, string nightName)
         {
-            string id = "{8AD4EF28-CBEF-4C73-A8FF-5772B87EF005}:" + dayname;
+            string id = "{8AD4EF28-CBEF-4C73-A8FF-5772B87EF005}:" + dayName;
 
             // check if it has already been loaded
             if (PictureManager.contains(id))
+            {
                 return PictureManager.get(id);
+            }
 
             // otherwise load a new picture
-            return new Picture(id, FindSystemResource(dayname), FindSystemResource(nightname));
+            return new Picture(id, FindSystemResource(dayName), FindSystemResource(nightName));
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static Surface loadTimeIndependentSystemSurface(string name)
+        public static Surface LoadTimeIndependentSystemSurface(string name)
         {
             //using(Bitmap bmp=loadSystemBitmap(name))
             //	return directDraw.createSprite(bmp);
             return new Surface(FindSystemResource(name));
         }
 
-
-
         /// <summary>
         /// DirectDraw instance for loading surface objects.
         /// </summary>
         //public static readonly DirectDraw directDraw = new DirectDraw();
 
-        private static Picture emptyChips = loadSystemPicture("EmptyChip.bmp", "EmptyChip_n.bmp");
-        private static Picture cursorChips = loadSystemPicture("cursorChip.bmp", "cursorChip.bmp");
+        private static Picture emptyChips = LoadSystemPicture("EmptyChip.bmp", "EmptyChip_n.bmp");
+        private static Picture cursorChips = LoadSystemPicture("cursorChip.bmp", "cursorChip.bmp");
 
         /// <summary>
         /// 
         /// </summary>
-        public static ISprite emptyChip
+        public static ISprite EmptyChip
         {
             get
             {
                 return groundChips[0];
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="w"></param>
         /// <returns></returns>
-        public static ISprite getGroundChip(WorldDefinition w)
+        public static ISprite GetGroundChip(WorldDefinition world)
         {
-            if (w.Clock.season != Season.Winter)
+            if (world.Clock.season != Season.Winter)
+            {
                 return groundChips[0];
+            }
             else
+            {
                 return groundChips[1];
+            }
         }
 
         private static ISprite[] groundChips = new ISprite[]{
 			new SimpleSprite(emptyChips,new Point(0,0),new Point( 0,0),new Size(32,16)),
 			new SimpleSprite(emptyChips,new Point(0,0),new Point(32,0),new Size(32,16))
 		};
+
         /// <summary>
         /// 
         /// </summary>
-        public static ISprite removerChip =
+        private static ISprite removerChip =
             new SimpleSprite(cursorChips, new Point(0, 0), new Point(0, 0), new Size(32, 16));
+
         /// <summary>
         /// 
         /// </summary>
-        public static ISprite underWaterChip =
+        public static ISprite RemoverChip
+        {
+            get { return ResourceUtil.removerChip; }
+            set { ResourceUtil.removerChip = value; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static ISprite underWaterChip =
             new SimpleSprite(emptyChips, new Point(0, 0), new Point(64, 0), new Size(32, 16));
+
         /// <summary>
         /// 
         /// </summary>
-        public static ISprite underGroundChip =
+        public static ISprite UnderWaterChip
+        {
+            get { return ResourceUtil.underWaterChip; }
+            set { ResourceUtil.underWaterChip = value; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static ISprite underGroundChip =
             new SimpleSprite(emptyChips, new Point(0, 0), new Point(96, 0), new Size(32, 16));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ISprite UnderGroundChip
+        {
+            get { return ResourceUtil.underGroundChip; }
+            set { ResourceUtil.underGroundChip = value; }
+        }
     }
 }

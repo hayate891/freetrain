@@ -88,7 +88,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary> Clears the canvas by tiling empty chips. </summary>
         public void Clear()
         {
-            ISprite empty = ResourceUtil.getGroundChip(WorldDefinition.World);
+            ISprite empty = ResourceUtil.GetGroundChip(WorldDefinition.World);
             for (int y = (ptOrigin.Y % 8) - 16; y < pixelSize.Height; y += 8)
             {
                 int x = (ptOrigin.X % 32) - 64;

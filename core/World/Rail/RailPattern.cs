@@ -38,8 +38,8 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// Sprite that contains the images of all patterns.
         /// </summary>
-        private static readonly Picture railChips = ResourceUtil.loadSystemPicture("RailRoads.bmp", "RailRoads_n.bmp");
-        private static readonly Picture ugChips = ResourceUtil.loadSystemPicture("ugslope.bmp");
+        private static readonly Picture railChips = ResourceUtil.LoadSystemPicture("RailRoads.bmp", "RailRoads_n.bmp");
+        private static readonly Picture ugChips = ResourceUtil.LoadSystemPicture("ugslope.bmp");
 
         // single rail road
         private static readonly RailPattern[] singlePatterns = new RailPattern[] {

@@ -66,7 +66,7 @@ namespace FreeTrain.Controllers.Road
         /// <param name="pt"></param>
         protected override void Draw(Direction d, DrawContext canvas, Point pt)
         {
-            ResourceUtil.emptyChip.DrawShape(canvas.Surface, pt, Color.Blue);
+            ResourceUtil.EmptyChip.DrawShape(canvas.Surface, pt, Color.Blue);
             //			RoadPattern.getStraight(d).drawAlpha( canvas.surface, pt );
         }
 

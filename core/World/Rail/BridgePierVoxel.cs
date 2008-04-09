@@ -185,7 +185,7 @@ namespace FreeTrain.World.Rail
 
 
 
-        private static readonly Picture theImage = ResourceUtil.loadSystemPicture("BridgePier.bmp");
+        private static readonly Picture theImage = ResourceUtil.LoadSystemPicture("BridgePier.bmp");
         /// <summary>
         /// 
         /// </summary>

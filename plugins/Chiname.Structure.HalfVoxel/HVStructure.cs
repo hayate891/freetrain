@@ -359,9 +359,9 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public override void draw(DrawContext display, Point pt, int heightCutDiff)
         {
             if (heightCutDiff >= 0)
-                ResourceUtil.emptyChip.DrawShape(display.Surface, pt, owner.heightCutColor);
+                ResourceUtil.EmptyChip.DrawShape(display.Surface, pt, owner.heightCutColor);
             else
-                ResourceUtil.emptyChip.Draw(display.Surface, pt);
+                ResourceUtil.EmptyChip.Draw(display.Surface, pt);
             // above line is needed when my(=477) patch is applied.
 
             if (owner.backside != null)

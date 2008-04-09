@@ -141,7 +141,7 @@ namespace FreeTrain.Contributions.Land
 
         private static ISprite getSprite()
         {
-            return ResourceUtil.removerChip;
+            return ResourceUtil.RemoverChip;
             //return ResourceUtil.emptyChip;
         }
     }

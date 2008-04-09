@@ -236,7 +236,7 @@ namespace FreeTrain.World.Structs
                 }
                 else
                     if (z == 0)
-                        ResourceUtil.emptyChip.DrawShape(display.Surface, pt, o.heightCutColor);
+                        ResourceUtil.EmptyChip.DrawShape(display.Surface, pt, o.heightCutColor);
             }
         }
 

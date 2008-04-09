@@ -69,7 +69,7 @@ namespace FreeTrain.World.Rail
         /// Sound-effect of a ringing bell. Used when a train leaves a station.
         /// </summary>
         private static readonly ISoundEffect thudSound = new RepeatableSoundEffectImpl(
-            ResourceUtil.loadSystemSound("train.wav"), 1, 300);
+            ResourceUtil.LoadSystemSound("train.wav"), 1, 300);
 
 
 

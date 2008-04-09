@@ -161,8 +161,8 @@ namespace FreeTrain.World
         }
 
 
-        private static readonly Surface arrowImage = ResourceUtil.loadTimeIndependentSystemSurface("Arrows.bmp");
-        private static readonly Surface darkArrowImage = ResourceUtil.loadTimeIndependentSystemSurface("Arrows.dark.bmp");
+        private static readonly Surface arrowImage = ResourceUtil.LoadTimeIndependentSystemSurface("Arrows.bmp");
+        private static readonly Surface darkArrowImage = ResourceUtil.LoadTimeIndependentSystemSurface("Arrows.dark.bmp");
 
         /// <summary> Draws an arrow on the given surface. </summary>
         public void drawArrow(Surface display, Point pt, bool isDark)

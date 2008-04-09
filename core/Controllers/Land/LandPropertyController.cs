@@ -212,7 +212,7 @@ namespace FreeTrain.Controllers.Land
                     if (owner.isPlacing)
                         LandPropertyVoxel.sprite.DrawAlpha(canvas.Surface, pt);
                     else
-                        ResourceUtil.emptyChip.DrawAlpha(canvas.Surface, pt);
+                        ResourceUtil.EmptyChip.DrawAlpha(canvas.Surface, pt);
                 }
             }
 

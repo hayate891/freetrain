@@ -162,7 +162,7 @@ namespace FreeTrain.World.Structs
                 {
                     // drawing in the height cut mode
                     if (this.location.z == o.baseLocation.z)
-                        ResourceUtil.emptyChip.DrawShape(display.Surface, pt, o.heightCutColor);
+                        ResourceUtil.EmptyChip.DrawShape(display.Surface, pt, o.heightCutColor);
                 }
             }
         }

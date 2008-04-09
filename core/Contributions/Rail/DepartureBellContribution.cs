@@ -46,7 +46,7 @@ namespace FreeTrain.Contributions.Rail
 
             string href = XmlUtil.SelectSingleNode(e, "sound/@href").InnerText;
             sound = new RepeatableSoundEffectImpl(
-                ResourceUtil.loadSound(XmlUtil.Resolve(e, href)));
+                ResourceUtil.LoadSound(XmlUtil.Resolve(e, href)));
         }
 
         /// <summary> name of this sound </summary>
