@@ -48,7 +48,6 @@ namespace FreeTrain.Controllers.Terrain
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MountainController));
             this.buttonUp = new System.Windows.Forms.RadioButton();
             this.buttonDown = new System.Windows.Forms.RadioButton();
             this.preview = new System.Windows.Forms.PictureBox();
@@ -141,7 +140,6 @@ namespace FreeTrain.Controllers.Terrain
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.preview);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MountainController";
             this.Text = "Modify Terrain";
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
