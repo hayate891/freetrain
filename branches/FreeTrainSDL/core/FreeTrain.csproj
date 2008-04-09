@@ -861,45 +861,44 @@
     </Content>
     <Content Include="Contributions\readme.txt" />
     <None Include="Resources\play.png" />
-    <Content Include="Res\Arrows.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\BridgePier.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\ConstructionBones.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\ConstructionFence.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\ConstructionGround.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\ConstructionWall.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\DayNight.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\EmptyChip.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\Item.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\RailRoads.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\Toolbar.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\ugslope.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Res\YardChip.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Resources\about.html" />
+    <Content Include="Resources\Arrows.bmp" />
+    <Content Include="Resources\Arrows.dark.bmp" />
+    <Content Include="Resources\balanceSheet.html" />
+    <Content Include="Resources\BridgePier.bmp" />
+    <Content Include="Resources\bulldozer.bmp" />
+    <Content Include="Resources\caution.bmp" />
+    <Content Include="Resources\caution.gif" />
+    <Content Include="Resources\cliff.bmp" />
+    <Content Include="Resources\construction.wav" />
+    <Content Include="Resources\ConstructionBones.bmp" />
+    <Content Include="Resources\ConstructionFence.bmp" />
+    <Content Include="Resources\ConstructionGround.bmp" />
+    <Content Include="Resources\ConstructionWall.bmp" />
+    <Content Include="Resources\cursorChip.bmp" />
+    <Content Include="Resources\DayNight.bmp" />
+    <Content Include="Resources\EmptyChip.bmp" />
+    <Content Include="Resources\EmptyChip_n.bmp" />
+    <Content Include="Resources\error.ico" />
+    <Content Include="Resources\ex.png" />
+    <Content Include="Resources\FatPlatform.bmp" />
+    <Content Include="Resources\FTicon.gif" />
+    <Content Include="Resources\Item.bmp" />
+    <Content Include="Resources\mountainPalette.xml" />
+    <Content Include="Resources\mountainPalette.xsl" />
+    <Content Include="Resources\PlatformN.bmp" />
+    <Content Include="Resources\PrivateHouse.bmp" />
+    <Content Include="Resources\RailRoads.bmp" />
+    <Content Include="Resources\RailRoads_n.bmp" />
+    <Content Include="Resources\SignalN.bmp" />
+    <Content Include="Resources\splash.jpg" />
+    <Content Include="Resources\SubsidiaryMarketWindowToolButton.bmp" />
+    <Content Include="Resources\Terrain.bmp" />
+    <Content Include="Resources\Toolbar.bmp" />
+    <Content Include="Resources\train.wav" />
+    <Content Include="Resources\ugslope.bmp" />
+    <Content Include="Resources\vehiclePurchase.wav" />
+    <Content Include="Resources\YardChip.bmp" />
     <EmbeddedResource Include="Contributions\Others\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -1009,9 +1008,6 @@
       <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Res\splash.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Util\Command\CommandManager.resx">
       <DependentUpon>CommandManager.cs</DependentUpon>
