@@ -212,7 +212,7 @@ namespace FreeTrain.Framework
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show(MainWindowMDI.mainWindow,
+                        MessageBox.Show(MainWindow.mainWindow,
                             "Can not play back\n" + e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         //! "再生できません¥n"+e.StackTrace, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error );
                     }

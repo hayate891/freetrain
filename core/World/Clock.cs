@@ -215,7 +215,7 @@ namespace FreeTrain.World
         /// </summary>
         public void tick()
         {
-            if (MainWindowMDI.mainWindow.CurrentController != null)
+            if (MainWindow.mainWindow.CurrentController != null)
                 return;	// if a controller is active, stop the timer.
 
             currentTime++;

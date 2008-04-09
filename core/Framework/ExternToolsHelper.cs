@@ -42,8 +42,8 @@ namespace FreeTrain.Framework
         {
             if (initialized)
                 Clear();
-            if (MainWindowMDI.mainWindow == null)
-                MainWindowMDI.mainWindow = new MainWindowMDI();
+            if (MainWindow.mainWindow == null)
+                MainWindow.mainWindow = new MainWindow();
             if (progressHandler == null)
                 progressHandler = new ProgressHandler(SilentProgress);
 

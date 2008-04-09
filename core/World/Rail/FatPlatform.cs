@@ -334,7 +334,7 @@ namespace FreeTrain.World.Rail
                 if (owner.host == null && location == owner.location)
                 {
                     pt.X += 8;
-                    display.blt(pt, warningIcon);
+                    display.Blit(pt, warningIcon);
                 }
             }
             /// <summary>

@@ -100,7 +100,7 @@ namespace FreeTrain.World.Rail
         /// <returns></returns>
         public override bool onClick()
         {
-            new StationPropertyDialog(this).ShowDialog(MainWindowMDI.mainWindow);
+            new StationPropertyDialog(this).ShowDialog(MainWindow.mainWindow);
             return true;
         }
         /// <summary>

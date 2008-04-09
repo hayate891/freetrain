@@ -70,7 +70,7 @@ namespace FreeTrain.Framework.Graphics
             if (this.nightSurface == null)
             {
                 this.nightSurface = new Surface(fileName);
-                this.nightSurface.buildNightImage();
+                this.nightSurface.BuildNightImage();
             }
             if (surface != null)
             {

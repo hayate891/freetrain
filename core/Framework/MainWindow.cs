@@ -38,14 +38,14 @@ namespace FreeTrain.Framework
     /// <summary>
     /// 
     /// </summary>
-    public partial class MainWindowMDI : Form
+    public partial class MainWindow : Form
     {
         private int childFormNumber = 0;
 
         /// <summary>
         /// 
         /// </summary>
-        public MainWindowMDI()
+        public MainWindow()
         {
             mainWindow = this;
             InitializeComponent();
@@ -99,7 +99,7 @@ namespace FreeTrain.Framework
         }
 
         /// <summary> Reference to the single instance of the main window. </summary>
-        public static MainWindowMDI mainWindow;
+        public static MainWindow mainWindow;
 
         #region Controller management
         private IModalController controller;
@@ -260,7 +260,7 @@ namespace FreeTrain.Framework
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            MainWindowMDI.mainWindow.DetachController();
+            MainWindow.mainWindow.DetachController();
         }
 
         private void pauseButton_Click(object sender, EventArgs e)

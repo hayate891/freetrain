@@ -62,7 +62,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// </summary>
         static public void ShowForm()
         {
-            MenuItem parent = MainWindowMDI.mainWindow.Menu.MenuItems["VIEW"];//MenuItemConstants.VIEW.menuItem;
+            MenuItem parent = MainWindow.mainWindow.Menu.MenuItems["VIEW"];//MenuItemConstants.VIEW.menuItem;
             MenuItem target = null;
             int n = parent.MenuItems.Count;
             for (int i = 0; i < n; i++)

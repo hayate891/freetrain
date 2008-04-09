@@ -66,13 +66,33 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// 
         /// </summary>
-        public IntPtr[] surfacePtrs = new IntPtr[TOTAL_SURFACES];
+        private IntPtr[] surfacePtrs = new IntPtr[TOTAL_SURFACES];
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public IntPtr[] SurfacePtrs
+        {
+            get { return surfacePtrs; }
+            set { surfacePtrs = value; }
+        }
+
         private String[] surfaceSignatures = new String[TOTAL_SURFACES];
 
         /// <summary>
         /// 
         /// </summary>
-        public IntPtr mask;//, dupSurface;
+        private IntPtr mask;//, dupSurface;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public IntPtr Mask
+        {
+            get { return mask; }
+            set { mask = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -103,9 +123,9 @@ namespace FreeTrain.Framework.Graphics
         {
             bpp = newbpp;
             this.surfacePtrs[0] = Sdl.SDL_CreateRGBSurface(flags, w, h, bpp, 0, 0, 0, 0);
-            this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
+            this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.SurfacePtr(), typeof(Sdl.SDL_Surface));
             pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(this.surface.format, typeof(Sdl.SDL_PixelFormat));
-            this.resetClipRect();
+            this.ResetClipRect();
             this.currentSurfaceCount++;
         }
 
@@ -115,6 +135,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="w"></param>
         /// <param name="h"></param>
         public Surface(int w, int h) : this(w, h, IntPtr.Zero) { }
+
         /// <summary>
         /// 
         /// </summary>
@@ -126,20 +147,21 @@ namespace FreeTrain.Framework.Graphics
             if (pf == IntPtr.Zero)
             {
                 this.surfacePtrs[0] = Sdl.SDL_CreateRGBSurface(flags, w, h, bpp, 0, 0, 0, 0);
-                this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
+                this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.SurfacePtr(), typeof(Sdl.SDL_Surface));
                 pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(this.surface.format, typeof(Sdl.SDL_PixelFormat));
             }
             else
             {
                 pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(pf, typeof(Sdl.SDL_PixelFormat));
                 this.surfacePtrs[0] = Sdl.SDL_CreateRGBSurface(flags, w, h, bpp, pixelFormat.Rmask, pixelFormat.Gmask, pixelFormat.Bmask, pixelFormat.Amask);
-                this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
+                this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.SurfacePtr(), typeof(Sdl.SDL_Surface));
             }
 
             this.SourceColorKey = Color.Magenta;
-            this.resetClipRect();
+            this.ResetClipRect();
             this.currentSurfaceCount++;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -147,20 +169,21 @@ namespace FreeTrain.Framework.Graphics
         public Surface(string filename)
         {
             this.surfacePtrs[0] = Tao.Sdl.SdlImage.IMG_Load(filename);
-            this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
+            this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.SurfacePtr(), typeof(Sdl.SDL_Surface));
             this.pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(this.surface.format, typeof(Sdl.SDL_PixelFormat));
             this.SourceColorKey = Color.Magenta;
-            this.resetClipRect();
+            this.ResetClipRect();
             this.currentSurfaceCount++;
             this._filename = filename;
         }
+
         internal Surface(IntPtr surface)
         {
             this.surfacePtrs[0] = surface;
-            this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.surfacePtr(), typeof(Sdl.SDL_Surface));
+            this.surface = (Sdl.SDL_Surface)Marshal.PtrToStructure(this.SurfacePtr(), typeof(Sdl.SDL_Surface));
             this.pixelFormat = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(this.surface.format, typeof(Sdl.SDL_PixelFormat));
             this.SourceColorKey = Color.Magenta;
-            this.resetClipRect();
+            this.ResetClipRect();
             this.currentSurfaceCount++;
         }
 
@@ -168,16 +191,17 @@ namespace FreeTrain.Framework.Graphics
         /// 
         /// </summary>
         /// <returns></returns>
-        public IntPtr surfacePtr() { return this.surfacePtrs[0]; }
+        public IntPtr SurfacePtr() { return this.surfacePtrs[0]; }
 
         /// <summary>
         /// 
         /// </summary>
-        public void resetClipRect()
+        public void ResetClipRect()
         {
             Sdl.SDL_Rect r = new Sdl.SDL_Rect(0, 0, (short)Size.Width, (short)Size.Height);
-            Sdl.SDL_SetClipRect(this.surfacePtr(), ref r);
+            Sdl.SDL_SetClipRect(this.SurfacePtr(), ref r);
         }
+
         ///// <summary>
         ///// 
         ///// </summary>
@@ -193,12 +217,12 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// 
         /// </summary>
-        public Rectangle clipRect
+        public Rectangle ClipRect
         {
             get
             {
                 Sdl.SDL_Rect r = new Sdl.SDL_Rect();
-                Sdl.SDL_GetClipRect(this.surfacePtr(), ref r);
+                Sdl.SDL_GetClipRect(this.SurfacePtr(), ref r);
                 return new Rectangle(r.x, r.y, r.w, r.h);
             }
             set
@@ -208,7 +232,7 @@ namespace FreeTrain.Framework.Graphics
                 srect.y = (short)value.Y;
                 srect.w = (short)value.Width;
                 srect.h = (short)value.Height;
-                Sdl.SDL_SetClipRect(this.surfacePtr(), ref srect);
+                Sdl.SDL_SetClipRect(this.SurfacePtr(), ref srect);
             }
         }
 
@@ -263,7 +287,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="source"></param>
         /// <param name="srcPos"></param>
         /// <param name="sz"></param>
-        public void blt(Point dstPos, Surface source, Point srcPos, Size sz)
+        public void Blit(Point dstPos, Surface source, Point srcPos, Size sz)
         {
             drect.x = (short)dstPos.X;
             drect.y = (short)dstPos.Y;
@@ -273,7 +297,7 @@ namespace FreeTrain.Framework.Graphics
             srect.y = (short)srcPos.Y;
             srect.w = (short)sz.Width;
             srect.h = (short)sz.Height;
-            blt(drect, source, srect);
+            Blit(drect, source, srect);
         }
 
         /// <summary>
@@ -281,7 +305,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="dstPos"></param>
         /// <param name="source"></param>
-        public void blt(Point dstPos, Surface source)
+        public void Blit(Point dstPos, Surface source)
         {
             drect.x = (short)dstPos.X;
             drect.y = (short)dstPos.Y;
@@ -291,19 +315,19 @@ namespace FreeTrain.Framework.Graphics
             srect.y = 0;
             srect.w = (short)source.Size.Width;
             srect.h = (short)source.Size.Height;
-            blt(drect, source, srect);
+            Blit(drect, source, srect);
         }
 
-        private void blt(Sdl.SDL_Rect dst, Surface source, Sdl.SDL_Rect src)
+        private void Blit(Sdl.SDL_Rect dst, Surface source, Sdl.SDL_Rect src)
         {
-            Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr(), ref src, this.surfacePtr(), ref dst);
+            Tao.Sdl.Sdl.SDL_BlitSurface(source.SurfacePtr(), ref src, this.SurfacePtr(), ref dst);
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="val"></param>
-        public void setAlpha(byte val)
+        public void SetAlpha(byte val)
         {
             //surface.AlphaBlending = true;
             //surface.Alpha = 128;
@@ -317,7 +341,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="source"></param>
         /// <param name="srcPos"></param>
         /// <param name="sz"></param>
-        public void bltAlpha(Point dstPos, Surface source, Point srcPos, Size sz)
+        public void BlitAlpha(Point dstPos, Surface source, Point srcPos, Size sz)
         {
             //Rectangle dst = new Rectangle( dstPos.X,dstPos.Y,sz.Width,sz.Height );
             //Rectangle src = new Rectangle( srcPos.X,srcPos.Y,sz.Width,sz.Height );
@@ -327,7 +351,7 @@ namespace FreeTrain.Framework.Graphics
                 src.Left, src.Top, src.Right, src.Bottom,
                 source.colorKey );*/
             //source.handle.Transparent = false;
-            source.setAlpha(128);
+            source.SetAlpha(128);
 
             //this.sourceColorKey = Color.Magenta;
 
@@ -340,8 +364,8 @@ namespace FreeTrain.Framework.Graphics
             srect.w = (short)sz.Width;
             srect.h = (short)sz.Height;
             //Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtr, ref nsrc, this.surfacePtr, ref ndst);
-            blt(drect, source, srect);
-            source.setAlpha(255);
+            Blit(drect, source, srect);
+            source.SetAlpha(255);
         }
 
         /// <summary>
@@ -352,7 +376,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="srcPos"></param>
         /// <param name="sz"></param>
         /// <param name="fill"></param>
-        public void bltShape(Point dstPos, Surface source, Point srcPos, Size sz, Color fill)
+        public void BlitShape(Point dstPos, Surface source, Point srcPos, Size sz, Color fill)
         {
             drect.x = (short)dstPos.X;
             drect.y = (short)dstPos.Y;
@@ -379,7 +403,7 @@ namespace FreeTrain.Framework.Graphics
 
             //srect.x = 0;
             //srect.y = 0;
-            Tao.Sdl.Sdl.SDL_BlitSurface(this.surfacePtrs[index], ref srect, this.surfacePtr(), ref drect);
+            Tao.Sdl.Sdl.SDL_BlitSurface(this.surfacePtrs[index], ref srect, this.SurfacePtr(), ref drect);
         }
 
         private int checkMask(Surface source, Sdl.SDL_Rect r, Color fill)
@@ -410,7 +434,7 @@ namespace FreeTrain.Framework.Graphics
                     {
                         drect.x = (short)xx;
                         drect.y = (short)yy;
-                        if (this.GetIntPixel(source.surfacePtr(), xx, yy) != pink1) Sdl.SDL_FillRect(surfacePtrs[curIndex], ref drect, col);
+                        if (this.GetIntPixel(source.SurfacePtr(), xx, yy) != pink1) Sdl.SDL_FillRect(surfacePtrs[curIndex], ref drect, col);
                         else Sdl.SDL_FillRect(surfacePtrs[curIndex], ref drect, pink2);
                     }
                 }
@@ -428,7 +452,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public Color GetPixel(int x, int y) { return GetPixel(this.surfacePtr(), x, y); }
+        public Color GetPixel(int x, int y) { return GetPixel(this.SurfacePtr(), x, y); }
         /// <summary>
         /// 
         /// </summary>
@@ -449,7 +473,7 @@ namespace FreeTrain.Framework.Graphics
         {
             Sdl.SDL_Surface s;
             Sdl.SDL_PixelFormat pf;
-            if (surf != this.surfacePtr())
+            if (surf != this.SurfacePtr())
             {
                 s = (Sdl.SDL_Surface)Marshal.PtrToStructure(surf, typeof(Sdl.SDL_Surface));
                 pf = (Sdl.SDL_PixelFormat)Marshal.PtrToStructure(s.format, typeof(Sdl.SDL_PixelFormat));
@@ -496,7 +520,6 @@ namespace FreeTrain.Framework.Graphics
             return value;
         }
 
-
         ///// <summary>
         ///// 
         ///// </summary>
@@ -512,9 +535,9 @@ namespace FreeTrain.Framework.Graphics
         /// 
         /// </summary>
         /// <returns></returns>
-        public Surface createFlippedVerticalSurface()
+        public Surface CreateFlippedVerticalSurface()
         {
-            return new Surface(SdlGfx.rotozoomSurfaceXY(this.surfacePtr(), 0, 1, -1, SdlGfx.SMOOTHING_OFF));
+            return new Surface(SdlGfx.rotozoomSurfaceXY(this.SurfacePtr(), 0, 1, -1, SdlGfx.SMOOTHING_OFF));
         }
 
         //public Tao.Sdl.Sdl.SDL_Surface createFlippedHorizontalSurface() { return null; }
@@ -529,10 +552,10 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="_srcColors"></param>
         /// <param name="_dstColors"></param>
         /// <param name="vflip"></param>
-        public void bltColorTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color[] _srcColors, Color[] _dstColors, bool vflip)
+        public void BlitColorTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color[] _srcColors, Color[] _dstColors, bool vflip)
         {
             if (vflip) Console.WriteLine("VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! VFLIP ! ");
-            int index = source.reColor(_srcColors, _dstColors);
+            int index = source.ReColor(_srcColors, _dstColors);
             //blt(dstPos, source, srcPos,sz);
             drect.x = (short)dstPos.X;
             drect.y = (short)dstPos.Y;
@@ -542,7 +565,7 @@ namespace FreeTrain.Framework.Graphics
             srect.y = (short)srcPos.Y;
             srect.w = (short)sz.Width;
             srect.h = (short)sz.Height;
-            Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtrs[index], ref srect, this.surfacePtr(), ref drect);
+            Tao.Sdl.Sdl.SDL_BlitSurface(source.surfacePtrs[index], ref srect, this.SurfacePtr(), ref drect);
         }
 
         /// <summary>
@@ -551,7 +574,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="_srcColors"></param>
         /// <param name="_dstColors"></param>
         /// <returns></returns>
-        public int reColor(Color[] _srcColors, Color[] _dstColors)
+        public int ReColor(Color[] _srcColors, Color[] _dstColors)
         {
             String curSig = "recolor";
             for (int curCol = 0; curCol < 4; curCol++)
@@ -617,7 +640,7 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="R_dest"></param>
         /// <param name="G_dest"></param>
         /// <param name="B_dest"></param>
-        public void bltHueTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color R_dest, Color G_dest, Color B_dest)
+        public void BlitHueTransform(Point dstPos, Surface source, Point srcPos, Size sz, Color R_dest, Color G_dest, Color B_dest)
         {
             /*RECT dst = Util.toRECT( dstPos, sz );
             RECT src = Util.toRECT( srcPos, sz );
@@ -748,7 +771,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// 
         /// </summary>
-        public void buildNightImage()
+        public void BuildNightImage()
         {
             /*byte[] src = new byte[16],src2 = new byte[16], dst = new byte[16];
             for (int i = 0; i < 16; i++)
@@ -896,7 +919,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         public void Fill(Color c)
         {
-            Fill(clipRect, c);
+            Fill(ClipRect, c);
         }
 
 
@@ -913,14 +936,14 @@ namespace FreeTrain.Framework.Graphics
             srect.y = (short)rect.Y;
             srect.w = (short)rect.Width;
             srect.h = (short)rect.Height;
-            Tao.Sdl.Sdl.SDL_FillRect(this.surfacePtr(), ref srect, Sdl.SDL_MapRGB(this.surface.format, c.R, c.G, c.B));
+            Tao.Sdl.Sdl.SDL_FillRect(this.SurfacePtr(), ref srect, Sdl.SDL_MapRGB(this.surface.format, c.R, c.G, c.B));
         }
 
         private int _colKey;
         private int colorKey
         {
             get { return _colKey; }
-            set { _colKey = value; Tao.Sdl.Sdl.SDL_SetColorKey(this.surfacePtr(), Sdl.SDL_SRCCOLORKEY | Sdl.SDL_RLEACCEL, _colKey); }
+            set { _colKey = value; Tao.Sdl.Sdl.SDL_SetColorKey(this.SurfacePtr(), Sdl.SDL_SRCCOLORKEY | Sdl.SDL_RLEACCEL, _colKey); }
         }
 
         /// <summary>
@@ -1001,7 +1024,6 @@ namespace FreeTrain.Framework.Graphics
         /// <param name="surf"></param>
         /// <param name="colorValue"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public System.Drawing.Color GetColor(IntPtr surf, int colorValue)
         {
             byte r, g, b, a;
@@ -1013,20 +1035,21 @@ namespace FreeTrain.Framework.Graphics
         /// 
         /// </summary>
         /// <param name="r"></param>
-        public void drawBox(Rectangle r) { drawBox(r, Color.CornflowerBlue); }
+        public void DrawBox(Rectangle r) { DrawBox(r, Color.CornflowerBlue); }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="r"></param>
         /// <param name="c"></param>
-        public void drawBox(Rectangle r, Color c)
+        public void DrawBox(Rectangle r, Color c)
         {
             /*surface.Draw(new SdlDotNet.Graphics.Primitives.Box((short)r.Left,
                                                             (short)r.Top,
                                                             (short)r.Right,
                                                             (short)r.Bottom), c);*/
             //SdlGfx.boxColor(this.surfacePtr(),(short)r.X,(short)r.Y,(short)(r.X+r.Width),(short)(r.Y+r.Height),Sdl.SDL_MapRGB(this.surface.format,c.R,c.G,c.B));
-            SdlGfx.rectangleRGBA(this.surfacePtr(), (short)r.X, (short)r.Y, (short)(r.X + r.Width), (short)(r.Y + r.Height), c.R, c.G, c.B, 255);
+            SdlGfx.rectangleRGBA(this.SurfacePtr(), (short)r.X, (short)r.Y, (short)(r.X + r.Width), (short)(r.Y + r.Height), c.R, c.G, c.B, 255);
         }
 
         ///// <summary>
@@ -1052,7 +1075,7 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         /// <param name="col"></param>
         /// <param name="pts"></param>
-        public void fillPolygon(Color col, Point[] pts)
+        public void FillPolygon(Color col, Point[] pts)
         {
             //Surface tx = new Surface(Video.CreateRgbSurface(20,20));
             //tx.fill(col);
@@ -1064,17 +1087,18 @@ namespace FreeTrain.Framework.Graphics
                 ptX[i] = (short)pts[i].X;
                 ptY[i] = (short)pts[i].Y;
             }
-            Tao.Sdl.SdlGfx.filledPolygonRGBA(this.surfacePtr(), ptX, ptY, pts.GetLength(0), col.R, col.G, col.B, 255);
+            Tao.Sdl.SdlGfx.filledPolygonRGBA(this.SurfacePtr(), ptX, ptY, pts.GetLength(0), col.R, col.G, col.B, 255);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="col"></param>
         /// <param name="pts"></param>
-        public void drawLines(Color col, Point[] pts)
+        public void DrawLines(Color col, Point[] pts)
         {
             for (int curPoint = 0; curPoint <= (pts.GetLength(0) - 2); curPoint++)
-                Tao.Sdl.SdlGfx.lineRGBA(this.surfacePtr(), (short)pts[curPoint].X, (short)pts[curPoint].Y, (short)pts[curPoint + 1].X, (short)pts[curPoint + 1].Y, col.R, col.G, col.B, 255);
+                Tao.Sdl.SdlGfx.lineRGBA(this.SurfacePtr(), (short)pts[curPoint].X, (short)pts[curPoint].Y, (short)pts[curPoint + 1].X, (short)pts[curPoint + 1].Y, col.R, col.G, col.B, 255);
             //    surface.Draw(new SdlDotNet.Graphics.Primitives.Line((Point)pts[curPoint], (Point)pts[curPoint + 1]), col,false,false);
         }
 
@@ -1104,7 +1128,7 @@ namespace FreeTrain.Framework.Graphics
                     try
                     {
                         Marshal.Copy(arr, 0, i, arr.Length);
-                        Sdl.SDL_SaveBMP_RW(this.surfacePtr(), Sdl.SDL_RWFromMem(i, arr.Length), 1);
+                        Sdl.SDL_SaveBMP_RW(this.SurfacePtr(), Sdl.SDL_RWFromMem(i, arr.Length), 1);
                         Marshal.Copy(i, arr, 0, arr.Length);
                     }
                     catch (AccessViolationException e)

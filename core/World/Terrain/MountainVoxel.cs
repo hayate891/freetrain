@@ -298,13 +298,13 @@ namespace FreeTrain.World.Terrain
             if (vflip)
             {
                 //flippedImages[tdiff].clipVflip(ref dst, ref src);
-                display.Surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
+                display.Surface.Blit(dst.Location, flippedImages[tdiff], src.Location, src.Size);
             }
             else
             {
-                flippedImages[tdiff].resetClipRect();
+                flippedImages[tdiff].ResetClipRect();
                 //flippedImages[tdiff].clipRectangle(ref dst, ref src);
-                display.Surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
+                display.Surface.Blit(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
             }
 
 
@@ -336,13 +336,13 @@ namespace FreeTrain.World.Terrain
             if (vflip)
             {
                 ////flippedImages[tdiff].clipVflip(ref dst, ref src);
-                display.Surface.blt(dst.Location, flippedImages[tdiff], src.Location, src.Size);
+                display.Surface.Blit(dst.Location, flippedImages[tdiff], src.Location, src.Size);
             }
             else
             {
-                flippedImages[tdiff].resetClipRect();
+                flippedImages[tdiff].ResetClipRect();
                 //flippedImages[tdiff].clipRectangle(ref dst, ref src);
-                display.Surface.blt(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
+                display.Surface.Blit(new Point(pt.X, pt.Y), images[tdiff], src.Location, src.Size);
             }
 
             {
@@ -588,10 +588,10 @@ namespace FreeTrain.World.Terrain
 												 new Point(offset   , u    *4),
 												 new Point(offset+16,   0)};
 
-                    images[tdiff].fillPolygon(mountainColors[0][4], pts);
-                    images[tdiff].drawLines(Color.Black, pts);
+                    images[tdiff].FillPolygon(mountainColors[0][4], pts);
+                    images[tdiff].DrawLines(Color.Black, pts);
                 }
-                flippedImages[tdiff] = images[tdiff].createFlippedVerticalSurface();
+                flippedImages[tdiff] = images[tdiff].CreateFlippedVerticalSurface();
 
                 //flippedImages[tdiff].blt(new Point(0,0),tmpSurface);
                 //flippedImages[tdiff].sourceColorKey = Color.Magenta;

@@ -57,6 +57,9 @@ namespace FreeTrain.Framework.Graphics
         /// </summary>
         private Surface surface;
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected Surface Surface
         {
             get { return surface; }
@@ -66,6 +69,7 @@ namespace FreeTrain.Framework.Graphics
         /// <summary>
         /// The point in the image that will be aligned to
         /// the left-top corner of a voxel.
+        /// </summary>
         Point offset;
 
         /// <summary>
@@ -108,7 +112,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            surface.blt(pt, this.surface, origin, size);
+            surface.Blit(pt, this.surface, origin, size);
         }
 
         /// <summary>
@@ -118,7 +122,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            surface.bltShape(pt, this.surface, origin, size, color);
+            surface.BlitShape(pt, this.surface, origin, size, color);
         }
         /// <summary>
         /// 
@@ -129,7 +133,7 @@ namespace FreeTrain.Framework.Graphics
         {
             pt.X -= offset.X;
             pt.Y -= offset.Y;
-            surface.bltAlpha(pt, this.surface, origin, size);
+            surface.BlitAlpha(pt, this.surface, origin, size);
         }
 
         /// <summary>

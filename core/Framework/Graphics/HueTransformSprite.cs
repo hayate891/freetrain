@@ -69,7 +69,7 @@ namespace FreeTrain.Framework.Graphics
 
             int idx = (WorldDefinition.World.ViewOptions.useNightView) ? 1 : 0;
 
-            surface.bltHueTransform(pt, Picture.surface, Origin, Size,
+            surface.BlitHueTransform(pt, Picture.surface, Origin, Size,
                 RedTarget, GreenTarget, BlueTarget);
         }
 

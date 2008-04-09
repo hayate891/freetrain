@@ -72,7 +72,7 @@ namespace FreeTrain
         short oldX;
         short oldY;
         bool lastMouseState;
-        MainWindowMDI mainWindowMDI;
+        MainWindow mainWindowMDI;
 
         #endregion
 
@@ -116,7 +116,7 @@ namespace FreeTrain
         {
             if (qView != null)
             {
-                controller = MainWindowMDI.mainWindow.CurrentController;
+                controller = MainWindow.mainWindow.CurrentController;
                 qView.UpdateScreen();
                 if (WorldDefinition.World.Satellite == null ||
                     WorldDefinition.World.Satellite.surface.w != 150 ||
@@ -217,7 +217,7 @@ namespace FreeTrain
 
                 sourceRect = new Sdl.SDL_Rect((short)ScrollPosition.X, (short)ScrollPosition.Y, (short)width, (short)height);
                 dst = new Sdl.SDL_Rect(0, 0, (short)width, (short)height);
-                Tao.Sdl.Sdl.SDL_BlitSurface(qView.OffscreenBuffer.surfacePtr(), ref sourceRect, screen.Handle, ref dst);
+                Tao.Sdl.Sdl.SDL_BlitSurface(qView.OffscreenBuffer.SurfacePtr(), ref sourceRect, screen.Handle, ref dst);
             }
 
             FinalDraw();
@@ -270,7 +270,7 @@ namespace FreeTrain
             Core.Init(null, null, null, new ProgressHandler(UpdateMessage), true);
             world = new WorldDefinition(new Distance(150, 150, 7), 3);
             WorldDefinition.World = world;
-            mainWindowMDI = new MainWindowMDI();
+            mainWindowMDI = new MainWindow();
             timer = new System.Windows.Forms.Timer();
             Events.KeyboardDown += new EventHandler<KeyboardEventArgs>(this.KeyDown);
             Events.MouseButtonDown +=
