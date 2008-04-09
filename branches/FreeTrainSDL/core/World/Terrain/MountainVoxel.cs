@@ -256,7 +256,7 @@ namespace FreeTrain.World.Terrain
 
             if (heightCutDiff == 0)
             {
-                ResourceUtil.emptyChip.DrawShape(display.Surface, pt,
+                ResourceUtil.EmptyChip.DrawShape(display.Surface, pt,
                     isUnderWater ? waterColors[3] : currentMountainColors[3]);
                 return;
             }
@@ -525,7 +525,7 @@ namespace FreeTrain.World.Terrain
         /// <summary> Load sprites for cliffs. </summary>
         private static void initCliffSprites()
         {
-            Picture picture = ResourceUtil.loadSystemPicture("cliff.bmp");
+            Picture picture = ResourceUtil.LoadSystemPicture("cliff.bmp");
             for (int side = 0; side < 2; side++)
             {
                 for (int l = 0; l <= 4; l++)

@@ -476,7 +476,7 @@ namespace FreeTrain.World.Structs
             static VoxelImpl()
             {
                 // load fence sprites
-                Picture fence = ResourceUtil.loadSystemPicture("ConstructionFence.bmp");
+                Picture fence = ResourceUtil.LoadSystemPicture("ConstructionFence.bmp");
                 fenceSprites = new ISprite[4/*direction*/, 2/*door or no door*/];
                 for (int i = 0; i < 4; i++)
                     fenceSprites[i, 0] = new SimpleSprite(fence, new Point(0, 16), new Point(32 * i, 0), new Size(32, 32));
@@ -489,7 +489,7 @@ namespace FreeTrain.World.Structs
 
 
                 // load ground sprites
-                Picture ground = ResourceUtil.loadSystemPicture("ConstructionGround.bmp");
+                Picture ground = ResourceUtil.LoadSystemPicture("ConstructionGround.bmp");
                 groundSprites = new ISprite[7];
 
                 groundSprites[0] = new SimpleSprite(// ground
@@ -509,7 +509,7 @@ namespace FreeTrain.World.Structs
 
 
                 // load bone sprites
-                Picture bone = ResourceUtil.loadSystemPicture("ConstructionBones.bmp");
+                Picture bone = ResourceUtil.LoadSystemPicture("ConstructionBones.bmp");
                 boneSprites = new ISprite[3, 2, 2, 2, 2];
 
                 for (int l = 0; l < 3; l++)
@@ -532,7 +532,7 @@ namespace FreeTrain.World.Structs
                                 }
 
                 // loa dwall sprites
-                Picture wall = ResourceUtil.loadSystemPicture("ConstructionWall.bmp");
+                Picture wall = ResourceUtil.LoadSystemPicture("ConstructionWall.bmp");
                 wallSprites = new ISprite[4];
 
                 wallSprites[0] = new SimpleSprite(wall,

@@ -303,7 +303,7 @@ namespace FreeTrain.World.Rail
 
         /// <summary> Warning icon. </summary>
         protected static readonly Surface warningIcon =
-            ResourceUtil.loadTimeIndependentSystemSurface("caution.bmp");
+            ResourceUtil.LoadTimeIndependentSystemSurface("caution.bmp");
 
         /// <summary>
         /// 

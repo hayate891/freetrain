@@ -409,8 +409,8 @@ namespace FreeTrain.Views
             int Z = HeightCutHeight;
             int Vmax = Math.Min(rectHV.Bottom + Z * 2, world.Size.y - 1);
 
-            emptyChip = ResourceUtil.getGroundChip(world);
-            waterChip = ResourceUtil.underWaterChip;
+            emptyChip = ResourceUtil.GetGroundChip(world);
+            waterChip = ResourceUtil.UnderWaterChip;
 
             for (int v = Math.Max(0, rectHV.Top); v <= Vmax; v++)
             {
@@ -461,7 +461,7 @@ namespace FreeTrain.Views
                                     {
                                         // if the surface voxel is not drawn, draw the "under group" chip
                                         if (shouldDrawGround(h, v, z))
-                                            ResourceUtil.underGroundChip.Draw(drawContext.Surface, pt);
+                                            ResourceUtil.UnderGroundChip.Draw(drawContext.Surface, pt);
                                     }
                         }
                         //					}

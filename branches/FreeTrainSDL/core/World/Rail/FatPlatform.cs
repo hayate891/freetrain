@@ -283,7 +283,7 @@ namespace FreeTrain.World.Rail
         static FatPlatform()
         {
             sprites = new ISprite[4];
-            Picture bmp = ResourceUtil.loadSystemPicture("FatPlatform.bmp");	// don't dispose this surface
+            Picture bmp = ResourceUtil.LoadSystemPicture("FatPlatform.bmp");	// don't dispose this surface
             sprites[0] = sprites[2] = new SimpleSprite(bmp, new Point(0, 16), new Point(0, 0), new Size(32, 32));
             sprites[1] = sprites[3] = new SimpleSprite(bmp, new Point(0, 16), new Point(32, 0), new Size(32, 32));
         }
@@ -396,7 +396,7 @@ namespace FreeTrain.World.Rail
             /// 
             /// </summary>
             private static readonly ISprite theImage =
-                new SimpleSprite(ResourceUtil.loadSystemPicture("YardChip.bmp"),
+                new SimpleSprite(ResourceUtil.LoadSystemPicture("YardChip.bmp"),
                     new Point(0, 0), new Point(0, 0), new Size(32, 16));
             /// <summary>
             /// 
