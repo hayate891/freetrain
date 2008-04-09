@@ -166,7 +166,7 @@ namespace FreeTrain.Framework.Plugin
         {
             // populate the list
             list.Items.Clear();
-            foreach (PluginDefinition p in Core.Plugins)
+            foreach (PluginDefinition p in PluginManager.Plugins)
             {
                 list.Items.Add(new ListViewItem(
                     new string[] { p.title, p.author, p.homepage }, 0));

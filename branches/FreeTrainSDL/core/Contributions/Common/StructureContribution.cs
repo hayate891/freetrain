@@ -308,7 +308,7 @@ namespace FreeTrain.Contributions.Common
             /// <returns></returns>
             public object GetRealObject(StreamingContext context)
             {
-                return ((StructureContribution)PluginManager.theInstance.getContribution(id)).Population;
+                return ((StructureContribution)PluginManager.GetContribution(id)).Population;
             }
         }
     }

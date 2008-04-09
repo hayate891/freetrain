@@ -47,7 +47,7 @@ namespace FreeTrain.Framework.Plugin
             Trace.WriteLine("binding " + typeName);
 
             // try assemblies of plug-ins
-            foreach (Contribution cont in Core.Plugins.publicContributions)
+            foreach (Contribution cont in PluginManager.PublicContributions)
             {
                 Assembly asm = cont.Assembly;
                 if (asm != null)

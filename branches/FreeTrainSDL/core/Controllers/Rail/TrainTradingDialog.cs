@@ -54,7 +54,7 @@ namespace FreeTrain.World.Rail
 
             // organize trains into a tree
             IDictionary types = new SortedList();
-            foreach (TrainContribution tc in Core.Plugins.trains)
+            foreach (TrainContribution tc in PluginManager.Trains)
             {
                 IDictionary company = (IDictionary)types[tc.CompanyName];
                 if (company == null)

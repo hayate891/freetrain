@@ -110,7 +110,7 @@ namespace FreeTrain.Framework.Plugin
                 loader = "default";
 
             SpriteLoaderContribution contrib = (SpriteLoaderContribution)
-                PluginManager.theInstance.getContribution("spriteLoader:" + loader);
+                PluginManager.GetContribution("spriteLoader:" + loader);
             if (contrib == null)
                 throw new Exception("unable to find spriteLoader:" + loader);
             return contrib;

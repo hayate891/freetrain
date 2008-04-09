@@ -372,147 +372,149 @@
     <Compile Include="Controllers\Terrain\MountainController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\AboutDialog.cs">
+    <Compile Include="Framework\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\BGMManager.cs">
+    <Compile Include="Framework\BGMManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\BGMPlaylist.cs">
+    <Compile Include="Framework\BGMPlaylist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\BGMPlaylist.Designer.cs">
+    <Compile Include="Framework\BGMPlaylist.Designer.cs">
       <DependentUpon>BGMPlaylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Framework\ConfigDialog.cs">
+    <Compile Include="Framework\ConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\AboutDialog.Designer.cs">
+    <Compile Include="Framework\AboutDialog.Designer.cs">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\NightSurfaceLoader.cs" />
-    <Compile Include="Controllers\Framework\Graphics\BitmapSurfaceLoader.cs" />
-    <Compile Include="Controllers\Framework\Graphics\ISprite.cs" />
-    <Compile Include="Controllers\Framework\Graphics\ISurfaceLoader.cs" />
-    <Compile Include="Controllers\Framework\Plugin\IContributionFactory.cs" />
-    <Compile Include="Controllers\Framework\Splash.Designer.cs">
+    <Compile Include="Framework\Graphics\NightSurfaceLoader.cs" />
+    <Compile Include="Framework\Graphics\BitmapSurfaceLoader.cs" />
+    <Compile Include="Framework\Graphics\ISprite.cs" />
+    <Compile Include="Framework\Graphics\ISurfaceLoader.cs" />
+    <Compile Include="Framework\Plugin\SilentPluginErrorHandler.cs" />
+    <Compile Include="Framework\Plugin\IPluginErrorHandler.cs" />
+    <Compile Include="Framework\Plugin\IContributionFactory.cs" />
+    <Compile Include="Framework\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Core.cs">
+    <Compile Include="Framework\Core.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\ErrorMessageBox.cs">
+    <Compile Include="Framework\ErrorMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\ExternToolsHelper.cs">
+    <Compile Include="Framework\ExternToolsHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\GlobalOptions.cs">
+    <Compile Include="Framework\GlobalOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\AlphaBlendSpriteSet.cs">
+    <Compile Include="Framework\Graphics\AlphaBlendSpriteSet.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\ColorLibrary.cs">
+    <Compile Include="Framework\Graphics\ColorLibrary.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\ColorMap.cs">
+    <Compile Include="Framework\Graphics\ColorMap.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\ColorMappedSprite.cs">
+    <Compile Include="Framework\Graphics\ColorMappedSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\DefaultSpriteLoaderContributionImpl.cs">
+    <Compile Include="Framework\Graphics\DefaultSpriteLoaderContributionImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\DirectSprite.cs">
+    <Compile Include="Framework\Graphics\DirectSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\DirtyRect.cs">
+    <Compile Include="Framework\Graphics\DirtyRect.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\GraphicsException.cs">
+    <Compile Include="Framework\Graphics\GraphicsException.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\HueTransformSprite.cs">
+    <Compile Include="Framework\Graphics\HueTransformSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\NullSprite.cs">
+    <Compile Include="Framework\Graphics\NullSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\Picture.cs">
+    <Compile Include="Framework\Graphics\Picture.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\PictureManager.cs">
+    <Compile Include="Framework\Graphics\PictureManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\PreviewDrawer.cs">
+    <Compile Include="Framework\Graphics\PreviewDrawer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\SimpleSprite.cs">
+    <Compile Include="Framework\Graphics\SimpleSprite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\SpriteFactory.cs">
+    <Compile Include="Framework\Graphics\SpriteFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\SpriteFactoryContribution.cs">
+    <Compile Include="Framework\Graphics\SpriteFactoryContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\SpriteLoaderContribution.cs">
+    <Compile Include="Framework\Graphics\SpriteLoaderContribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\MainWindow.cs">
+    <Compile Include="Framework\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\MainWindow.Designer.cs">
+    <Compile Include="Framework\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Framework\NewWorldDialog.cs">
+    <Compile Include="Framework\NewWorldDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\PersistentOptions.cs">
+    <Compile Include="Framework\PersistentOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\Contribution.cs">
+    <Compile Include="Framework\Plugin\Contribution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\DynamicContributionFactory.cs">
+    <Compile Include="Framework\Plugin\DynamicContributionFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\FixedClassContributionFactory.cs">
+    <Compile Include="Framework\Plugin\FixedClassContributionFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\PluginDefinition.cs" />
-    <Compile Include="Controllers\Framework\Plugin\PluginListDialog.cs">
+    <Compile Include="Framework\Plugin\PluginDefinition.cs" />
+    <Compile Include="Framework\Plugin\PluginListDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\PluginManager.cs">
+    <Compile Include="Framework\Plugin\PluginManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\PluginSerializationBinder.cs">
+    <Compile Include="Framework\Plugin\PluginSerializationBinder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\PluginUtil.cs">
+    <Compile Include="Framework\Plugin\PluginUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Plugin\XmlUtil.cs">
+    <Compile Include="Framework\Plugin\XmlUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\ResourceUtil.cs">
+    <Compile Include="Framework\ResourceUtil.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Sound\RepeatableSoundEffectImpl.cs">
+    <Compile Include="Framework\Sound\RepeatableSoundEffectImpl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Sound\SoundEffect.cs">
+    <Compile Include="Framework\Sound\SoundEffect.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Sound\SoundEffectManager.cs">
+    <Compile Include="Framework\Sound\SoundEffectManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Splash.cs">
+    <Compile Include="Framework\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -569,7 +571,7 @@
     <Compile Include="Util\Set.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\Framework\Graphics\Surface.cs" />
+    <Compile Include="Framework\Graphics\Surface.cs" />
     <Compile Include="Util\Translation.cs" />
     <Compile Include="Util\UrlInvoker.cs">
       <SubType>Code</SubType>
@@ -962,31 +964,31 @@
     <EmbeddedResource Include="Controllers\Terrain\MountainController.resx">
       <DependentUpon>MountainController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\AboutDialog.resx">
+    <EmbeddedResource Include="Framework\AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\BGMPlaylist.resx">
+    <EmbeddedResource Include="Framework\BGMPlaylist.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BGMPlaylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\ConfigDialog.resx">
+    <EmbeddedResource Include="Framework\ConfigDialog.resx">
       <DependentUpon>ConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\ErrorMessageBox.resx">
+    <EmbeddedResource Include="Framework\ErrorMessageBox.resx">
       <DependentUpon>ErrorMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\MainWindow.resx">
+    <EmbeddedResource Include="Framework\MainWindow.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\NewWorldDialog.resx">
+    <EmbeddedResource Include="Framework\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\Plugin\PluginListDialog.resx">
+    <EmbeddedResource Include="Framework\Plugin\PluginListDialog.resx">
       <DependentUpon>PluginListDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Framework\Splash.resx">
+    <EmbeddedResource Include="Framework\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.sv-SE.resx">

@@ -111,7 +111,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             if (variation != null)
             {
                 String idc = variation.Attributes["to"].Value;
-                colors = PluginManager.theInstance.getContribution(idc) as ColorLibrary;
+                colors = PluginManager.GetContribution(idc) as ColorLibrary;
                 sprites = new SpriteSet[colors.size];
                 for (int i = 0; i < colors.size; i++)
                     sprites[i] = new SpriteSet(8);

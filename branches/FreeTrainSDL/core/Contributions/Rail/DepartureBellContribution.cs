@@ -72,7 +72,7 @@ namespace FreeTrain.Contributions.Rail
             get
             {
                 return (DepartureBellContribution[])
-                    PluginManager.theInstance.listContributions(typeof(DepartureBellContribution));
+                    PluginManager.ListContributions(typeof(DepartureBellContribution));
             }
         }
 
@@ -81,8 +81,8 @@ namespace FreeTrain.Contributions.Rail
         {
             get
             {
-                return (DepartureBellContribution)PluginManager.theInstance
-                    .getContribution("{9B087AEA-6E9C-48cd-A1F3-1B774500752E}");
+                return (DepartureBellContribution)PluginManager
+                    .GetContribution("{9B087AEA-6E9C-48cd-A1F3-1B774500752E}");
             }
         }
     }

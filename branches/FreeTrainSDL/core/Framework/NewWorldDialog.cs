@@ -42,7 +42,7 @@ namespace FreeTrain.Framework
             InitializeComponent();
 
             NewGameContribution[] contribs = (NewGameContribution[])
-                PluginManager.theInstance.listContributions(typeof(NewGameContribution));
+                PluginManager.ListContributions(typeof(NewGameContribution));
 
             // list view doesn't support databinding. We have to live with
             // listbox for now.

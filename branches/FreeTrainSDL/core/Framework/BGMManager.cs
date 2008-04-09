@@ -56,7 +56,7 @@ namespace FreeTrain.Framework
             musicMenu.Popup += new EventHandler(silence.update);
 
             // populate BGM contributions
-            foreach( BGMContribution contrib in Core.plugins.bgms ) {
+            foreach( BGMContribution contrib in PluginManager.bgms ) {
                 MusicMenuItem child = new MusicMenuItem(this,contrib);
                 musicMenu.MenuItems.Add( child );
                 musicMenu.Popup += new EventHandler(child.update);
@@ -79,7 +79,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void addSong(string songname)
         {
-            foreach (BGMContribution contrib in Core.Plugins.bgms)
+            foreach (BGMContribution contrib in PluginManager.Bgms)
             {
                 if (contrib.name == songname) currentPlaylist.Add(contrib);
             }
@@ -90,7 +90,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void moveUp(string songname)
         {
-            foreach (BGMContribution contrib in Core.Plugins.bgms)
+            foreach (BGMContribution contrib in PluginManager.Bgms)
             {
                 if (contrib.name == songname)
                 {
@@ -109,7 +109,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void moveDown(string songname)
         {
-            foreach (BGMContribution contrib in Core.Plugins.bgms)
+            foreach (BGMContribution contrib in PluginManager.Bgms)
             {
                 if (contrib.name == songname)
                 {
@@ -128,7 +128,7 @@ namespace FreeTrain.Framework
         /// <param name="songname"></param>
         public void removeSong(string songname)
         {
-            foreach (BGMContribution contrib in Core.Plugins.bgms)
+            foreach (BGMContribution contrib in PluginManager.Bgms)
             {
                 if (contrib.name == songname)
                 {

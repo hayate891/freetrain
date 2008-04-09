@@ -59,7 +59,7 @@ namespace FreeTrain.Contributions.Land
         private StaticLandBuilder getLand()
         {
             return (StaticLandBuilder)
-                PluginManager.theInstance.getContribution(lands[random.Next(lands.Length)]);
+                PluginManager.GetContribution(lands[random.Next(lands.Length)]);
         }
 
         /// <summary>

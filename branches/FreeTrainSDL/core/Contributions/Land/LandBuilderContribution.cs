@@ -70,7 +70,7 @@ namespace FreeTrain.Contributions.Land
         /// <returns></returns>
         protected override StructureGroup GetGroup(string name)
         {
-            return (StructureGroup)PluginManager.theInstance.landBuilderGroup[name];
+            return (StructureGroup)PluginManager.LandBuilderGroup[name];
         }
 
         /// <summary>

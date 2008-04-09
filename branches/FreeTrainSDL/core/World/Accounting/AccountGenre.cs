@@ -108,8 +108,8 @@ namespace FreeTrain.World.Accounting
         {
             get
             {
-                return (AccountGenre)PluginManager.theInstance
-                    .getContribution("{AC30BB0B-044C-4784-A83D-FCB1F60B3CF2}");
+                return (AccountGenre)PluginManager
+                    .GetContribution("{AC30BB0B-044C-4784-A83D-FCB1F60B3CF2}");
             }
         }
         /// <summary>
@@ -120,8 +120,8 @@ namespace FreeTrain.World.Accounting
         {
             get
             {
-                return (AccountGenre)PluginManager.theInstance
-                    .getContribution("{CC00A6D1-D078-4D3C-AFB2-EDC6CB9F4CB3}");
+                return (AccountGenre)PluginManager
+                    .GetContribution("{CC00A6D1-D078-4D3C-AFB2-EDC6CB9F4CB3}");
             }
         }
         /// <summary>
@@ -131,8 +131,8 @@ namespace FreeTrain.World.Accounting
         {
             get
             {
-                return (AccountGenre)PluginManager.theInstance
-                    .getContribution("{2A666F1A-9F40-4F67-98F4-DEAC1E55296D}");
+                return (AccountGenre)PluginManager
+                    .GetContribution("{2A666F1A-9F40-4F67-98F4-DEAC1E55296D}");
             }
         }
         /// <summary>
@@ -142,8 +142,8 @@ namespace FreeTrain.World.Accounting
         {
             get
             {
-                return (AccountGenre)PluginManager.theInstance
-                    .getContribution("{C0A9ABA5-801F-4AA6-93EA-6FF563C2B407}");
+                return (AccountGenre)PluginManager
+                    .GetContribution("{C0A9ABA5-801F-4AA6-93EA-6FF563C2B407}");
             }
         }
     }

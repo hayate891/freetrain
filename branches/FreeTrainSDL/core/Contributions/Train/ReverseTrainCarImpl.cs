@@ -56,7 +56,7 @@ namespace FreeTrain.Contributions.Train
         /// </summary>
         protected internal override void OnInitComplete()
         {
-            core = Core.Plugins.getContribution(baseId) as TrainCarContribution;
+            core = PluginManager.GetContribution(baseId) as TrainCarContribution;
             if (core == null)
                 throw new FormatException("'" + Id + "' refers to TrainCar contribution '" + baseId + "' that could not be found");
             //! throw new FormatException("'"+id+"'が参照するTrainCarコントリビューション'"+baseId+"'が見つかりません");

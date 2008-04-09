@@ -108,12 +108,12 @@ namespace FreeTrain.Framework.Plugin.Generic
         protected override Contribution createPrimitiveContrib(XmlElement sprite, XmlNode color, XmlElement contrib)
         {
             sprite.AppendChild(color.Clone());
-            PluginManager manager = PluginManager.theInstance;
-            IContributionFactory factory = manager.getContributionFactory("land");
+            //PluginManager manager = PluginManager;
+            IContributionFactory factory = PluginManager.GetContributionFactory("land");
             XmlNode temp = contrib.Clone();
             foreach (XmlNode cn in temp.ChildNodes)
             {
-                if (cn.Name.Equals("sptite") || cn.Name.Equals("picture"))
+                if (cn.Name.Equals("sprite") || cn.Name.Equals("picture"))
                     temp.RemoveChild(cn);
             }
             temp.AppendChild(sprite);

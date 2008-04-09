@@ -428,7 +428,7 @@ namespace FreeTrain.Framework.Plugin.Generic
                         defaultDir = j;
                     Contribution newContrib
                         = createPrimitiveContrib((XmlElement)temp, (XmlNode)colors[i], e);
-                    PluginManager.theInstance.addContribution(newContrib);
+                    PluginManager.AddContribution(newContrib);
                     contribs[j, i] = newContrib;
                 }
             }
@@ -507,7 +507,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         //		protected SpriteFactory createFactory( XmlNode node, string name )
         //		{
         //			SpriteFactoryContribution contrib = (SpriteFactoryContribution)
-        //				PluginManager.theInstance.getContribution( "spriteFactory:"+name );
+        //				PluginManager.getContribution( "spriteFactory:"+name );
         //			if(contrib==null)
         //				throw new FormatException("unable to locate spriteFactory:"+ name);
         //			return contrib.createSpriteFactory((XmlElement)node); 

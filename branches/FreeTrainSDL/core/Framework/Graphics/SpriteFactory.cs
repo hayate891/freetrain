@@ -61,7 +61,7 @@ namespace FreeTrain.Framework.Graphics
                 string name = type.Attributes["name"].Value;
                 // otherwise load from the spriteType element.
                 SpriteFactoryContribution contrib = (SpriteFactoryContribution)
-                    PluginManager.theInstance.getContribution("spriteFactory:" + name);
+                    PluginManager.GetContribution("spriteFactory:" + name);
                 if (contrib == null)
                     throw new FormatException("unable to locate spriteFactory:" + name);
                 return contrib.CreateSpriteFactory(type);
