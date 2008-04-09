@@ -28,7 +28,7 @@ using System.Windows.Forms;
 
 using FreeTrain.Contributions.Sound;
 using FreeTrain.Controllers;
-
+using FreeTrain.Framework.Plugin;
 
 namespace FreeTrain.Framework
 {
@@ -99,8 +99,10 @@ namespace FreeTrain.Framework
         {
             lstBGMs.Items.Clear();
             lstCurrentPlaylist.Items.Clear();
-            foreach (BGMContribution contrib in Core.Plugins.bgms)
+            foreach (BGMContribution contrib in PluginManager.Bgms)
+            {
                 if (!Core.BgmManager.currentPlaylist.Contains(contrib)) lstBGMs.Items.Add(contrib);
+            }
             foreach (BGMContribution contrib in Core.BgmManager.currentPlaylist)
             {
                 lstCurrentPlaylist.Items.Add(contrib);

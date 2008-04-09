@@ -37,176 +37,82 @@ using FreeTrain.Contributions.Road;
 namespace FreeTrain.Framework.Plugin
 {
     /// <summary>
-    /// 
-    /// </summary>
-    public interface IPluginErrorHandler
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p_1st"></param>
-        /// <param name="p_2nd"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        bool OnNameDuplicated(PluginDefinition p_1st, PluginDefinition p_2nd, Exception e);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        bool OnPluginLoadError(PluginDefinition p, Exception e);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="c"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        bool OnContributionInitError(Contribution c, Exception e);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="c_1st"></param>
-        /// <param name="c_2nd"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        bool OnContribIDDuplicated(Contribution c_1st, Contribution c_2nd, Exception e);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="errorPlugins"></param>
-        /// <param name="totalErrorCount"></param>
-        /// <returns></returns>
-        bool OnFinal(IDictionary errorPlugins, int totalErrorCount);
-    }
-    /// <summary>
-    /// 
-    /// </summary>
-    public class SilentPluginErrorHandler : IPluginErrorHandler
-    {
-        #region PluginErrorHandler o
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p_1st"></param>
-        /// <param name="p_2nd"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        public bool OnNameDuplicated(PluginDefinition p_1st, PluginDefinition p_2nd, Exception e)
-        {
-            return false;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        public bool OnPluginLoadError(PluginDefinition p, Exception e)
-        {
-            return false;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="c"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        public bool OnContributionInitError(Contribution c, Exception e)
-        {
-            return false;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="c_1st"></param>
-        /// <param name="c_2nd"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        public bool OnContribIDDuplicated(Contribution c_1st, Contribution c_2nd, Exception e)
-        {
-            return false;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="errorPlugins"></param>
-        /// <param name="totalErrorCount"></param>
-        /// <returns></returns>
-        public bool OnFinal(IDictionary errorPlugins, int totalErrorCount)
-        {
-            return true;
-        }
-        #endregion
-
-    }
-
-
-    /// <summary>
     /// Loads plug-ins.
     /// </summary>
-    public class PluginManager
+    public static class PluginManager
     {
-
-        /// <summary> The singleton instance. </summary>
-        public static PluginManager theInstance;
+        ///// <summary> The singleton instance. </summary>
+        //public static PluginManager theInstance;
 
         /// <summary>
         /// All loaded plug-ins.
         /// </summary>
-        private PluginDefinition[] plugins;
-
-        /// <summary>
-        /// Plugins keyed by their names.
-        /// </summary>
-        private readonly IDictionary pluginMap = new Hashtable();
-
-        /// <summary>
-        /// Contribution factories that are used to load contributions.
-        /// </summary>
-        private readonly IDictionary contributionFactories = new Hashtable();
-
-        /// <summary>
-        /// Contributions keyed by their IDs.
-        /// </summary>
-        private readonly IDictionary contributionMap = new Hashtable();
-
+        private static PluginDefinition[] plugins;
 
         /// <summary>
         /// 
         /// </summary>
-        public PluginManager()
+        public static PluginDefinition[] Plugins
         {
-            theInstance = this;
-
-            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(onAssemblyResolve);
+            get { return PluginManager.plugins; }
+            set { PluginManager.plugins = value; }
         }
 
-        private static string getModuleName(string name)
+        /// <summary>
+        /// Plugins keyed by their names.
+        /// </summary>
+        private static readonly IDictionary pluginMap = new Hashtable();
+
+        /// <summary>
+        /// Contribution factories that are used to load contributions.
+        /// </summary>
+        private static readonly IDictionary contributionFactories = new Hashtable();
+
+        /// <summary>
+        /// Contributions keyed by their IDs.
+        /// </summary>
+        private static readonly IDictionary contributionMap = new Hashtable();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        static PluginManager()
+        {
+            //theInstance = this;
+
+            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(OnAssemblyResolve);
+        }
+
+        private static string GetModuleName(string name)
         {
             return name.Substring(0, name.IndexOf(','));
         }
 
-        private static Assembly onAssemblyResolve(object sender, ResolveEventArgs args)
+        private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args)
         {
             // TODO: improve performance by having a dictionary from name to Assemblies.
             // TODO: what is the correct way to use an application specific logic to resolve assemblies
             Trace.WriteLine("onAssemblyResolve resolving " + args.Name);
 
-            string name = getModuleName(args.Name);
+            string name = GetModuleName(args.Name);
 
-            if (Core.Plugins.plugins == null) return null;
+            if (PluginManager.plugins == null)
+            {
+                return null;
+            }
 
             // try assemblies of plug-ins
-            foreach (Contribution cont in Core.Plugins.publicContributions)
+            foreach (Contribution cont in PluginManager.PublicContributions)
             {
                 Assembly asm = cont.Assembly;
 
-                if (getModuleName(asm.FullName) == name)
+                if (GetModuleName(asm.FullName) == name)
+                {
                     return asm;
+                }
             }
 
-            Trace.WriteLine("onAssemblyResolve failed");
+            Trace.WriteLine("OnAssemblyResolve failed");
             return null;
         }
 
@@ -220,7 +126,7 @@ namespace FreeTrain.Framework.Plugin
         /// </param>
         /// <param name="errorHandler"></param>
         /// <param name="progressHandler"></param>
-        public void init(ICollection dirs, ProgressHandler progressHandler, IPluginErrorHandler errorHandler)
+        public static void Init(ICollection dirs, ProgressHandler progressHandler, IPluginErrorHandler errorHandler)
         {
 
             Set pluginSet = new Set();
@@ -230,7 +136,9 @@ namespace FreeTrain.Framework.Plugin
             float c_max = dirs.Count * 4;
             bool errBreak = false;
             if (errorHandler == null)
+            {
                 errorHandler = new SilentPluginErrorHandler();
+            }
 
             // locate plugins
             foreach (string dir in dirs)
@@ -239,7 +147,9 @@ namespace FreeTrain.Framework.Plugin
                 //! progressHandler("プラグインを検索中\n"+Path.GetFileName(dir),++count/c_max);
 
                 if (!File.Exists(Path.Combine(dir, "plugin.xml")))
+                {
                     continue;	// this directory doesn't have the plugin.xml file.
+                }
                 PluginDefinition p = null;
                 try
                 {
@@ -253,9 +163,13 @@ namespace FreeTrain.Framework.Plugin
                     errorPlugins.Add(p, e);
                     errBreak = errorHandler.OnPluginLoadError(p, e);
                     if (errBreak)
+                    {
                         break;
+                    }
                     else
+                    {
                         continue;
+                    }
                 }
                 if (pluginMap.Contains(p.name))
                 {
@@ -268,18 +182,24 @@ namespace FreeTrain.Framework.Plugin
                     errBreak = errorHandler.OnNameDuplicated(pluginMap[p.name] as PluginDefinition, p, e);
                     errorPlugins.Add(p, e);
                     if (errBreak)
+                    {
                         break;
+                    }
                     else
+                    {
                         continue;
+                    }
                 }
                 pluginMap.Add(p.name, p);
                 pluginSet.add(p);
             }
             if (errBreak)
+            {
                 Environment.Exit(-1);
+            }
 
             {// convert it to an array by sorting them in the order of dependency
-                this.plugins = new PluginDefinition[pluginSet.Count];
+                plugins = new PluginDefinition[pluginSet.Count];
                 int ptr = 0;
                 PluginDefinition p = null;
                 while (!pluginSet.isEmpty)
@@ -294,12 +214,20 @@ namespace FreeTrain.Framework.Plugin
                             PluginDefinition[] deps = p.getDependencies();
                             int i;
                             for (i = 0; i < deps.Length; i++)
+                            {
                                 if (pluginSet.contains(deps[i]))
+                                {
                                     break;
+                                }
+                            }
                             if (i == deps.Length)
+                            {
                                 break;
+                            }
                             else
+                            {
                                 p = deps[i];
+                            }
                         }
                     }
                     catch (Exception e)
@@ -307,16 +235,22 @@ namespace FreeTrain.Framework.Plugin
                         errCount++;
                         errBreak = errorHandler.OnPluginLoadError(p, e);
                         if (!errorPlugins.ContainsKey(p))
+                        {
                             errorPlugins.Add(p, e);
+                        }
                         if (errBreak)
+                        {
                             break;
+                        }
                     }
                     pluginSet.remove(p);
                     plugins[ptr++] = p;
                 }
             }
             if (errBreak)
+            {
                 Environment.Exit(-2);
+            }
 
             //	 load all the contributions			
             foreach (PluginDefinition p in plugins)
@@ -332,9 +266,13 @@ namespace FreeTrain.Framework.Plugin
                     errCount++;
                     errBreak = errorHandler.OnPluginLoadError(p, e);
                     if (!errorPlugins.ContainsKey(p))
+                    {
                         errorPlugins.Add(p, e);
+                    }
                     if (errBreak)
+                    {
                         break;
+                    }
                 }
             }
             if (errBreak)
@@ -342,8 +280,8 @@ namespace FreeTrain.Framework.Plugin
 
             // initialize contributions
             count = (int)c_max;
-            c_max += publicContributions.Length;
-            foreach (Contribution contrib in publicContributions)
+            c_max += PublicContributions.Length;
+            foreach (Contribution contrib in PublicContributions)
             {
                 progressHandler("Initializing contributions...\n" + contrib.BaseUri, ++count / c_max);
                 //! progressHandler("コントリビューションを初期化中\n"+contrib.baseUri,++count/c_max);
@@ -357,19 +295,25 @@ namespace FreeTrain.Framework.Plugin
                     errBreak = errorHandler.OnContributionInitError(contrib, e);
                     PluginDefinition p = contrib.Parent;
                     if (!errorPlugins.ContainsKey(p))
+                    {
                         errorPlugins.Add(p, e);
+                    }
                     if (errBreak)
+                    {
                         break;
+                    }
                 }
             }
             if (errBreak)
+            {
                 Environment.Exit(-4);
+            }
 
             {// make sure there's no duplicate id
                 progressHandler("Checking for duplicate IDs...", 1.0f);
                 //! progressHandler("重複IDのチェック中",1.0f);
                 IDictionary dic = new Hashtable();
-                foreach (Contribution contrib in publicContributions)
+                foreach (Contribution contrib in PublicContributions)
                 {
                     if (dic[contrib.Id] != null)
                     {
@@ -379,47 +323,62 @@ namespace FreeTrain.Framework.Plugin
                         errBreak = errorHandler.OnContribIDDuplicated(dic[contrib.Id] as Contribution, contrib, e);
                         PluginDefinition p = contrib.Parent;
                         if (!errorPlugins.ContainsKey(p))
+                        {
                             errorPlugins.Add(p, e);
+                        }
                         if (errBreak)
+                        {
                             break;
+                        }
                     }
                     else
+                    {
                         dic[contrib.Id] = contrib;
+                    }
                 }
             }
             if (errBreak)
+            {
                 Environment.Exit(-5);
+            }
             if (errCount > 0)
             {
                 if (errorHandler.OnFinal(errorPlugins, errCount))
+                {
                     Environment.Exit(errCount);
+                }
             }
         }
-
 
         /// <summary>
         /// Gets the default plug-in directory.
         /// </summary>
         /// <returns></returns>
-        public static string getDefaultPluginDirectory()
+        public static string GetDefaultPluginDirectory()
         {
             // try the IDE directory first
             //string pluginDir = Path.GetFullPath(Path.Combine(Core.installationDirectory, @"..\..\plugins" ));
             string pluginDir = Path.Combine(Application.StartupPath,"plugins");
             if (Directory.Exists(pluginDir))
+            {
                 return pluginDir;
+            }
 
             pluginDir = Path.Combine(Application.StartupPath, Path.Combine(Path.Combine("..",".."),"plugins"));
             if (Directory.Exists(pluginDir))
+            {
                 return pluginDir;
+            }
 
             // if we can't find it, try the directory under the executable directory
             pluginDir = Path.GetFullPath(Path.Combine(
                 Core.InstallationDirectory, @"plugins"));
             if (Directory.Exists(pluginDir))
+            {
                 return pluginDir;
+            }
 
-            throw new IOException("unable to find the plug-in directory: " + pluginDir);
+            throw new IOException("Unable to find the plug-in directory: " + pluginDir);
         }
 
         /// <summary>
@@ -428,203 +387,239 @@ namespace FreeTrain.Framework.Plugin
         /// Normally, this method is called by <c>Plugin</c> but the caller
         /// can invoke this method before calling the init method.
         /// </summary>
-        public void addContributionFactory(string name, IContributionFactory factory)
+        public static void AddContributionFactory(string name, IContributionFactory factory)
         {
             if (contributionFactories.Contains(name))
+            {
                 throw new Exception(string.Format(
                     "contribution type \"{0}\" is already registered.", name));
+            }
 
             contributionFactories.Add(name, factory);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public IContributionFactory getContributionFactory(string name)
+        public static IContributionFactory GetContributionFactory(string name)
         {
             IContributionFactory factory = (IContributionFactory)
                 contributionFactories[name];
 
             if (factory == null)
+            {
                 throw new Exception(name + " is an unknown contribution");
+            }
             //! throw new Exception(name+"は未知のコントリビューションです");
             else
+            {
                 return factory;
+            }
         }
-
 
         /// <summary>
         /// Enumerates all plug-in objects.
         /// </summary>
-        public IEnumerator GetEnumerator()
+        public static IEnumerator GetEnumerator()
         {
             return new ArrayEnumerator(plugins);
         }
 
-
-
-
-
         /// <summary>
         /// Gets all the station contributions.
         /// </summary>
-        public StationContribution[] stations
+        public static StationContribution[] Stations
         {
             get
             {
-                return (StationContribution[])listContributions(typeof(StationContribution));
+                return (StationContribution[])ListContributions(typeof(StationContribution));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public readonly StructureGroupGroup stationGroup = new StructureGroupGroup();
+        private static readonly StructureGroupGroup stationGroup = new StructureGroupGroup();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static StructureGroupGroup StationGroup
+        {
+            get { return stationGroup; }
+        } 
 
         /// <summary>
         /// Gets all the special rail contributions.
         /// </summary>
-        public SpecialRailContribution[] specialRails
+        public static SpecialRailContribution[] SpecialRails
         {
             get
             {
-                return (SpecialRailContribution[])listContributions(typeof(SpecialRailContribution));
+                return (SpecialRailContribution[])ListContributions(typeof(SpecialRailContribution));
             }
         }
 
         /// <summary>
         /// Gets all the rail stationary contributions
         /// </summary>
-        public RailStationaryContribution[] railStationaryStructures
+        public static RailStationaryContribution[] RailStationaryStructures
         {
             get
             {
-                return (RailStationaryContribution[])listContributions(typeof(RailStationaryContribution));
+                return (RailStationaryContribution[])ListContributions(typeof(RailStationaryContribution));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public readonly StructureGroupGroup railStationaryGroup = new StructureGroupGroup();
+        private static readonly StructureGroupGroup railStationaryGroup = new StructureGroupGroup();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static StructureGroupGroup RailStationaryGroup
+        {
+            get { return railStationaryGroup; }
+        } 
 
         /// <summary>
         /// Gets all the commercial structure contributions.
         /// </summary>
-        public CommercialStructureContribution[] commercialStructures
+        public static CommercialStructureContribution[] CommercialStructures
         {
             get
             {
-                return (CommercialStructureContribution[])listContributions(typeof(CommercialStructureContribution));
+                return (CommercialStructureContribution[])ListContributions(typeof(CommercialStructureContribution));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public readonly StructureGroupGroup commercialStructureGroup = new StructureGroupGroup();
+        private static readonly StructureGroupGroup commercialStructureGroup = new StructureGroupGroup();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static StructureGroupGroup CommercialStructureGroup
+        {
+            get { return commercialStructureGroup; }
+        } 
 
         /// <summary>
         /// Gets all the special structure contributions.
         /// </summary>
-        public SpecialStructureContribution[] specialStructures
+        public static SpecialStructureContribution[] SpecialStructures
         {
             get
             {
-                return (SpecialStructureContribution[])listContributions(typeof(SpecialStructureContribution));
+                return (SpecialStructureContribution[])ListContributions(typeof(SpecialStructureContribution));
             }
         }
 
         /// <summary>
         /// Gets all the road contributions.
         /// </summary>
-        public RoadContribution[] roads
+        public static RoadContribution[] Roads
         {
             get
             {
-                return (RoadContribution[])listContributions(typeof(RoadContribution));
+                return (RoadContribution[])ListContributions(typeof(RoadContribution));
             }
         }
-
 
         /// <summary>
         /// Gets all the BGM contributions.
         /// </summary>
-        public BGMContribution[] bgms
+        public static BGMContribution[] Bgms
         {
             get
             {
-                return (BGMContribution[])listContributions(typeof(BGMContribution));
+                return (BGMContribution[])ListContributions(typeof(BGMContribution));
             }
         }
 
         /// <summary>
         /// Gets all the menu item contributions.
         /// </summary>
-        public MenuContribution[] menus
+        public static MenuContribution[] Menus
         {
             get
             {
-                return (MenuContribution[])listContributions(typeof(MenuContribution));
+                return (MenuContribution[])ListContributions(typeof(MenuContribution));
             }
         }
 
         /// <summary>
         /// Gets all the train contributions.
         /// </summary>
-        public TrainContribution[] trains
+        public static TrainContribution[] Trains
         {
             get
             {
-                return (TrainContribution[])listContributions(typeof(TrainContribution));
+                return (TrainContribution[])ListContributions(typeof(TrainContribution));
             }
         }
 
         /// <summary>
         /// Gets all the train controller contributions.
         /// </summary>
-        public TrainControllerContribution[] trainControllers
+        public static TrainControllerContribution[] TrainControllers
         {
             get
             {
-                return (TrainControllerContribution[])listContributions(typeof(TrainControllerContribution));
+                return (TrainControllerContribution[])ListContributions(typeof(TrainControllerContribution));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public VarHeightBuildingContribution[] varHeightBuildings
+        public static VarHeightBuildingContribution[] VarHeightBuildings
         {
             get
             {
-                return (VarHeightBuildingContribution[])listContributions(typeof(VarHeightBuildingContribution));
+                return (VarHeightBuildingContribution[])ListContributions(typeof(VarHeightBuildingContribution));
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        public readonly StructureGroupGroup varHeightBuildingsGroup = new StructureGroupGroup();
-
 
         /// <summary>
         /// 
         /// </summary>
-        public LandBuilderContribution[] landBuilders
+        public static readonly StructureGroupGroup varHeightBuildingsGroup = new StructureGroupGroup();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static LandBuilderContribution[] LandBuilders
         {
             get
             {
-                return (LandBuilderContribution[])listContributions(typeof(LandBuilderContribution));
+                return (LandBuilderContribution[])ListContributions(typeof(LandBuilderContribution));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public readonly LandBuilderGroupGroup landBuilderGroup = new LandBuilderGroupGroup();
+        private static readonly LandBuilderGroupGroup landBuilderGroup = new LandBuilderGroupGroup();
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        public static LandBuilderGroupGroup LandBuilderGroup
+        {
+            get { return landBuilderGroup; }
+        } 
 
         /// <summary>
         /// Lists up contributions of the given type.
         /// </summary>
-        public Array listContributions(Type contributionType)
+        public static Array ListContributions(Type contributionType)
         {
             ArrayList list = new ArrayList();
             foreach (PluginDefinition p in plugins)
@@ -632,25 +627,30 @@ namespace FreeTrain.Framework.Plugin
                 foreach (Contribution contrib in p.contributions)
                 {
                     if (contributionType.IsInstanceOfType(contrib))
+                    {
                         list.Add(contrib);
+                    }
                 }
             }
 
             return list.ToArray(contributionType);
         }
 
-
         /// <summary>
         /// Gets all contributions. except for runtime generated ones.
         /// </summary>
-        public Contribution[] publicContributions
+        public static Contribution[] PublicContributions
         {
             get
             {
                 ArrayList list = new ArrayList();
                 foreach (PluginDefinition p in plugins)
+                {
                     foreach (Contribution contrib in p.contributions)
+                    {
                         list.Add(contrib);
+                    }
+                }
 
                 return (Contribution[])list.ToArray(typeof(Contribution));
             }
@@ -659,21 +659,24 @@ namespace FreeTrain.Framework.Plugin
         /// <summary>
         /// Gets all contributions including runtime generat.
         /// </summary>
-        public Contribution[] allContributions
+        public static Contribution[] AllContributions
         {
             get
             {
                 ArrayList list = new ArrayList();
                 foreach (Contribution contrib in contributionMap.Values)
+                {
                     list.Add(contrib);
+                }
                 return (Contribution[])list.ToArray(typeof(Contribution));
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="contrib"></param>
-        public void addContribution(Contribution contrib)
+        public static void AddContribution(Contribution contrib)
         {
             contributionMap.Add(contrib.Id, contrib);
         }
@@ -681,7 +684,7 @@ namespace FreeTrain.Framework.Plugin
         /// <summary>
         /// Gets the contribution with a given ID, or null if not found.
         /// </summary>
-        public Contribution getContribution(string id)
+        public static Contribution GetContribution(string id)
         {
             return (Contribution)contributionMap[id];
         }
@@ -689,10 +692,9 @@ namespace FreeTrain.Framework.Plugin
         /// <summary>
         /// Get the plug-in of the specified name, or null if not found.
         /// </summary>
-        public PluginDefinition getPlugin(string name)
+        public static PluginDefinition GetPlugin(string name)
         {
             return (PluginDefinition)pluginMap[name];
         }
     }
-
 }

@@ -66,15 +66,15 @@ namespace FreeTrain.Controllers.Rail
             // この呼び出しは Windows フォーム デザイナで必要です。
             InitializeComponent();
             //			colorPickButton1.colorLibraries = new IColorLibrary[]{
-            //				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-RAINBOW}"),
-            //				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-STONES}")//,
-            ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-WOODS}"),
-            ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-METALS}"),
-            ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-BRICKS}"),
-            ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-DIRTS}"),
-            ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-PASTEL}"),
-            ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-COLPLATE}"),
-            ////				(IColorLibrary)PluginManager.theInstance.getContribution("{COLORLIB-ROOF}")
+            //				(IColorLibrary)PluginManager.getContribution("{COLORLIB-RAINBOW}"),
+            //				(IColorLibrary)PluginManager.getContribution("{COLORLIB-STONES}")//,
+            ////				(IColorLibrary)PluginManager.getContribution("{COLORLIB-WOODS}"),
+            ////				(IColorLibrary)PluginManager.getContribution("{COLORLIB-METALS}"),
+            ////				(IColorLibrary)PluginManager.getContribution("{COLORLIB-BRICKS}"),
+            ////				(IColorLibrary)PluginManager.getContribution("{COLORLIB-DIRTS}"),
+            ////				(IColorLibrary)PluginManager.getContribution("{COLORLIB-PASTEL}"),
+            ////				(IColorLibrary)PluginManager.getContribution("{COLORLIB-COLPLATE}"),
+            ////				(IColorLibrary)PluginManager.getContribution("{COLORLIB-ROOF}")
             //			};
 
             //do translation, if you put this in InitialiseComponent then it will get overridden by the
@@ -120,7 +120,7 @@ namespace FreeTrain.Controllers.Rail
             dirW.Image = bitmapW;
 
             // load station type list
-            stationType.DataSource = Core.Plugins.stationGroup;
+            stationType.DataSource = PluginManager.StationGroup;
             stationType.DisplayMember = "name";
 
             updateAfterResize(null, null);

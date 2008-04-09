@@ -122,7 +122,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         {
             CategoryTreeWnd.ShowForm();
             CategoryTreeWnd.OnNodeSelected += new NodeSelectedEvent(OnNodeSelected);
-            dummy = (GenericStructureContribution)PluginManager.theInstance.getContribution("null-contrib");
+            dummy = (GenericStructureContribution)PluginManager.GetContribution("null-contrib");
             //
             // Windows フォーム デザイナ サポートに必要です。
             //
@@ -831,7 +831,7 @@ namespace FreeTrain.Framework.Plugin.Generic
             for (int i = 0; i < n; i++)
             {
                 GenericStructureContribution contrib
-                    = (GenericStructureContribution)PluginManager.theInstance.getContribution((string)cat.Entries[i]);
+                    = (GenericStructureContribution)PluginManager.GetContribution((string)cat.Entries[i]);
                 string key = contrib.Name;
                 if (!worktable.ContainsKey(key))
                 {
@@ -852,7 +852,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         protected void SetAllCategories()
         {
             GenericStructureContribution[] arrCont = (GenericStructureContribution[])
-                PluginManager.theInstance.listContributions(typeof(GenericStructureContribution));
+                PluginManager.ListContributions(typeof(GenericStructureContribution));
             int n = arrCont.Length;
             typeMap.Clear();
             for (int i = 0; i < n; i++)

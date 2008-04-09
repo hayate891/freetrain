@@ -237,7 +237,7 @@ namespace FreeTrain.Controllers.Rail
         {
             // reset menu items
             newTCMenu.MenuItems.Clear();
-            foreach (TrainControllerContribution contrib in Core.Plugins.trainControllers)
+            foreach (TrainControllerContribution contrib in PluginManager.TrainControllers)
             {
                 MenuItem mi = new MenuItem(contrib.name);
                 mi.Click += new EventHandler(new TCCreator(this, contrib).onMenuSelected);

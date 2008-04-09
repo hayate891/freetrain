@@ -56,16 +56,16 @@ namespace FreeTrain.Framework
         }
 
 
-        /// <summary> Plug-ins. </summary>
-        private static readonly PluginManager plugins = new PluginManager();
+        ///// <summary> Plug-ins. </summary>
+        //private static readonly PluginManager plugins = new PluginManager();
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public static PluginManager Plugins
-        {
-            get { return Core.plugins; }
-        } 
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        //public static PluginManager Plugins
+        //{
+        //    get { return PluginManager; }
+        //} 
 
 
         /// <summary> Global options. </summary>
@@ -128,14 +128,14 @@ namespace FreeTrain.Framework
 
             if (args == null)
             {
-                Core.plugins.init(getDefaultProfile(),
+                PluginManager.Init(getDefaultProfile(),
                     progressHandler, new DefaultPluginErrorHandler(5));
             }
             else
             {
 
                 // load plug-ins
-                Core.plugins.init(
+                PluginManager.Init(
                     args.Length == 0 ? getDefaultProfile() : parseProfile(args[0]),
                     progressHandler, new DefaultPluginErrorHandler(5));
             }
@@ -175,7 +175,7 @@ namespace FreeTrain.Framework
         {
             IList r = new ArrayList();
 
-            string baseDir = PluginManager.getDefaultPluginDirectory();
+            string baseDir = PluginManager.GetDefaultPluginDirectory();
             foreach (string subdir in Directory.GetDirectories(baseDir))
                 r.Add(Path.Combine(baseDir, subdir));
 

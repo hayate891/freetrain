@@ -83,7 +83,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <returns></returns>
         private ArrayList loadContributions()
         {
-            Array src = PluginManager.theInstance.listContributions(typeof(HalfVoxelContribution));
+            Array src = PluginManager.ListContributions(typeof(HalfVoxelContribution));
             Hashtable h = new Hashtable();
             foreach (HalfVoxelContribution c in src)
             {

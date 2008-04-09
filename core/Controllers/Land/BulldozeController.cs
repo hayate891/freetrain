@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers.Land
             InitializeComponent();
             previewBitmap = ResourceUtil.LoadSystemBitmap("bulldozer.bmp");
             preview.Image = previewBitmap;
-            LandBuilderContribution builder = (LandBuilderContribution)PluginManager.theInstance.getContribution("{AE43E6DB-39F0-49FE-BE18-EE3FAC248FDE}");
+            LandBuilderContribution builder = (LandBuilderContribution)PluginManager.GetContribution("{AE43E6DB-39F0-49FE-BE18-EE3FAC248FDE}");
             //TODO: fix this
             //currentController = builder.createBuilder(new ControllerSiteImpl(this));
         }

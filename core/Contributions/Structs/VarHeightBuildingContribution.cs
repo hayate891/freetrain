@@ -99,7 +99,7 @@ namespace FreeTrain.Contributions.Structs
         /// <returns></returns>
         protected override StructureGroup GetGroup(string name)
         {
-            return PluginManager.theInstance.varHeightBuildingsGroup[name];
+            return PluginManager.varHeightBuildingsGroup[name];
         }
 
         private ISprite[][,] loadSpriteSets(XmlNodeList list)

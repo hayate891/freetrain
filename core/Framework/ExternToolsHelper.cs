@@ -48,11 +48,11 @@ namespace FreeTrain.Framework
                 progressHandler = new ProgressHandler(SilentProgress);
 
             IList r = new ArrayList();
-            string baseDir = PluginManager.getDefaultPluginDirectory();
+            string baseDir = PluginManager.GetDefaultPluginDirectory();
             foreach (string subdir in Directory.GetDirectories(baseDir))
                 r.Add(Path.Combine(baseDir, subdir));
             // load plug-ins
-            Core.Plugins.init(r, progressHandler, errorHandler);
+            PluginManager.Init(r, progressHandler, errorHandler);
             if (WorldDefinition.World == null)
                 WorldDefinition.World = new WorldDefinition(new Distance(5, 5, 5), 0);
             initialized = true;
@@ -63,7 +63,7 @@ namespace FreeTrain.Framework
         public static void Clear()
         {
             // TODO:
-            //Core.plugins.
+            //PluginManager.
             initialized = false;
         }
 

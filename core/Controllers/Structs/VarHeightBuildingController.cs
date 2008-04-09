@@ -45,7 +45,7 @@ namespace FreeTrain.Controllers.Structs
         /// 
         /// </summary>
         public VarHeightBuildingController()
-            : base(Core.Plugins.varHeightBuildingsGroup)
+            : base(PluginManager.varHeightBuildingsGroup)
         {
             InitializeComponent();
             buttonPlace.Top += 24;

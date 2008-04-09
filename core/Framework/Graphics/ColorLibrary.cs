@@ -70,7 +70,7 @@ namespace FreeTrain.Framework.Plugin.Graphics
         /// </summary>
         static public ColorLibrary NullLibrary
         {
-            get { return (ColorLibrary)PluginManager.theInstance.getContribution(null_id); }
+            get { return (ColorLibrary)PluginManager.GetContribution(null_id); }
         }
         /// <summary>
         /// 

@@ -135,8 +135,8 @@ namespace FreeTrain.Framework
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="dayname"></param>
-        /// <param name="nightname"></param>
+        /// <param name="dayName"></param>
+        /// <param name="nightName"></param>
         /// <returns></returns>
         public static Picture LoadSystemPicture(string dayName, string nightName)
         {
@@ -186,7 +186,7 @@ namespace FreeTrain.Framework
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="w"></param>
+        /// <param name="world"></param>
         /// <returns></returns>
         public static ISprite GetGroundChip(WorldDefinition world)
         {

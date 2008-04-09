@@ -53,7 +53,7 @@ namespace FreeTrain.Controllers.Land
             InitializeComponent();
 
             // load list of lands
-            groupBox.DataSource = Core.Plugins.landBuilderGroup;
+            groupBox.DataSource = PluginManager.LandBuilderGroup;
             groupBox.DisplayMember = "name";
         }
         /// <summary>

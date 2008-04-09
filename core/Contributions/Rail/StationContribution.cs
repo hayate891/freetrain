@@ -53,7 +53,7 @@ namespace FreeTrain.Contributions.Rail
         /// <returns></returns>
         protected override StructureGroup GetGroup(string name)
         {
-            return PluginManager.theInstance.stationGroup[name];
+            return PluginManager.StationGroup[name];
         }
         /// <summary>
         /// 

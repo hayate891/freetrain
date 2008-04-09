@@ -57,7 +57,7 @@ namespace FreeTrain.Controllers.Structs
         }
         #endregion
 
-        private CommercialStructPlacementController() : base(Core.Plugins.commercialStructureGroup) { }
+        private CommercialStructPlacementController() : base(PluginManager.CommercialStructureGroup) { }
 
         /// <summary> LocationDisambiguator implementation </summary>
         public override bool IsSelectable(Location loc)

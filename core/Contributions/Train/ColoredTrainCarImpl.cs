@@ -257,7 +257,7 @@ namespace FreeTrain.Contributions.Train
         public static ColoredTrainPictureContribution get(string id)
         {
             return (ColoredTrainPictureContribution)
-                PluginManager.theInstance.getContribution(id);
+                PluginManager.GetContribution(id);
         }
 
         /// <summary>
@@ -266,7 +266,7 @@ namespace FreeTrain.Contributions.Train
         public static ColoredTrainPictureContribution[] list()
         {
             return (ColoredTrainPictureContribution[])
-                PluginManager.theInstance.listContributions(typeof(ColoredTrainPictureContribution));
+                PluginManager.ListContributions(typeof(ColoredTrainPictureContribution));
         }
     }
 

@@ -41,7 +41,7 @@ namespace FreeTrain.World.Accounting
             InitializeComponent();
 
             selector.availables =
-                PluginManager.theInstance.listContributions(typeof(AccountGenre));
+                PluginManager.ListContributions(typeof(AccountGenre));
             selector.selected = current;
         }
 

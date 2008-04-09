@@ -141,7 +141,7 @@ namespace FreeTrain.Framework.Plugin
                         (IContributionFactory)PluginUtil.loadObjectFromManifest(contrib);
 
                     // register it
-                    PluginManager.theInstance.addContributionFactory(
+                    PluginManager.AddContributionFactory(
                         contributionName,
                         factory);
                 }
@@ -155,12 +155,12 @@ namespace FreeTrain.Framework.Plugin
         {
             ArrayList a = new ArrayList();
             if (!this.name.Equals("system"))
-                a.Add(PluginManager.theInstance.getPlugin("system"));
+                a.Add(PluginManager.GetPlugin("system"));
 
             foreach (XmlElement depend in doc.DocumentElement.SelectNodes("depend"))
             {
                 string name = depend.Attributes["on"].Value;
-                PluginDefinition p = PluginManager.theInstance.getPlugin(name);
+                PluginDefinition p = PluginManager.GetPlugin(name);
                 if (p == null)
                     throw new Exception(String.Format(
                         "Plugin {1} that is needed for plugin {0} could not be found", this.name, name));
@@ -248,10 +248,10 @@ namespace FreeTrain.Framework.Plugin
                     string type = contrib.Attributes["type"].Value;
                     if (type == "contribution") continue;	// ignore
 
-                    IContributionFactory factory = PluginManager.theInstance.getContributionFactory(type);
+                    IContributionFactory factory = PluginManager.GetContributionFactory(type);
                     Contribution c = factory.Load(this, contrib);
                     contributions.Add(c);
-                    PluginManager.theInstance.addContribution(c);
+                    PluginManager.AddContribution(c);
                     c.init(this, baseUri);
                 }
                 catch (Exception e)

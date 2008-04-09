@@ -518,7 +518,7 @@ namespace FreeTrain.World.Accounting
                     {
                         AccountGenre[] r = new AccountGenre[_genre.Length];
                         for (int i = 0; i < r.Length; i++)
-                            r[i] = (AccountGenre)PluginManager.theInstance.getContribution(_genre[i]);
+                            r[i] = (AccountGenre)PluginManager.GetContribution(_genre[i]);
                         return r;
                     }
                     catch (Exception e)

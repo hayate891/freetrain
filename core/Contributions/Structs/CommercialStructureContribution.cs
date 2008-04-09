@@ -57,7 +57,7 @@ namespace FreeTrain.Contributions.Structs
         /// <returns></returns>
         protected override StructureGroup GetGroup(string name)
         {
-            return PluginManager.theInstance.commercialStructureGroup[name];
+            return PluginManager.CommercialStructureGroup[name];
         }
         /// <summary>
         /// 
