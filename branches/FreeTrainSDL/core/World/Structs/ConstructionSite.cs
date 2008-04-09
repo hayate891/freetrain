@@ -142,7 +142,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return 0; } }
+        public override int EntityValue { get { return 0; } }
         #endregion
 
 
@@ -171,7 +171,7 @@ namespace FreeTrain.World.Structs
                 registerClockHandler();	// start receiving clocks
             }
 
-            public override void onRemoved()
+            public override void OnRemoved()
             {
                 state = State.abandoned;
             }
@@ -250,14 +250,14 @@ namespace FreeTrain.World.Structs
             /// <summary>
             /// Returns true if this voxel is at the ground level
             /// </summary>
-            private bool isGroundLevel { get { return WorldDefinition.World.GetGroundLevel(location) == location.z; } }
+            private bool isGroundLevel { get { return WorldDefinition.World.GetGroundLevel(Location) == Location.z; } }
 
             /// <summary> Construction voxel under this voxel, or null if none. </summary>
             private VoxelImpl below
             {
                 get
                 {
-                    return WorldDefinition.World[location.x, location.y, location.z - 1] as VoxelImpl;
+                    return WorldDefinition.World[Location.x, Location.y, Location.z - 1] as VoxelImpl;
                 }
             }
 
@@ -266,7 +266,7 @@ namespace FreeTrain.World.Structs
             {
                 get
                 {
-                    return WorldDefinition.World[location.x, location.y, location.z + 1] as VoxelImpl;
+                    return WorldDefinition.World[Location.x, Location.y, Location.z + 1] as VoxelImpl;
                 }
             }
 
@@ -289,8 +289,8 @@ namespace FreeTrain.World.Structs
                 VoxelImpl a = this.above;
 
                 State sa = 0, sb = 0;
-                if (b != null) sb = getMinFloorState(location.z - 1);
-                if (a != null) sa = getMinFloorState(location.z + 1);
+                if (b != null) sb = getMinFloorState(Location.z - 1);
+                if (a != null) sa = getMinFloorState(Location.z + 1);
 
                 if (b != null && b.state < State.bone2)
                     // can't construct this voxel unless the voxel below is done to a certain degree.
@@ -379,7 +379,7 @@ namespace FreeTrain.World.Structs
             //
             //
 
-            public override void draw(DrawContext context, Point pt, int heightCutDiff)
+            public override void Draw(DrawContext context, Point pt, int heightCutDiff)
             {
                 Surface surface = context.Surface;
 

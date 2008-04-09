@@ -64,7 +64,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// Should be called when the owner is removed.
         /// </summary>
-        public void onRemoved()
+        public void OnRemoved()
         {
             // remove from the currently attached station
             foreach (Station station in stations)
@@ -78,7 +78,7 @@ namespace FreeTrain.World.Structs
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
-        public int getPopulation(Station s)
+        public int GetPopulation(Station s)
         {
             int v = WorldDefinition.World.LandValue[location];
             int p = population.calcPopulation(WorldDefinition.World.Clock);

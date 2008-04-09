@@ -503,9 +503,18 @@ namespace FreeTrain.World.Accounting
             /// List of displayed genre ids.
             /// Public only for XmlSerializer.
             /// </summary>
+            /// 
+            string[] genre;
+
+            /// <summary>
+            /// 
+            /// </summary>
             [XmlElement("genre")]
-            [CLSCompliant(false)]
-            public string[] _genre;
+            public string[] Genre
+            {
+                get { return genre; }
+                set { genre = value; }
+            }
             /// <summary>
             /// 
             /// </summary>
@@ -516,9 +525,9 @@ namespace FreeTrain.World.Accounting
                 {
                     try
                     {
-                        AccountGenre[] r = new AccountGenre[_genre.Length];
+                        AccountGenre[] r = new AccountGenre[genre.Length];
                         for (int i = 0; i < r.Length; i++)
-                            r[i] = (AccountGenre)PluginManager.GetContribution(_genre[i]);
+                            r[i] = (AccountGenre)PluginManager.GetContribution(genre[i]);
                         return r;
                     }
                     catch (Exception e)
@@ -534,9 +543,9 @@ namespace FreeTrain.World.Accounting
                 }
                 set
                 {
-                    _genre = new string[value.Length];
+                    genre = new string[value.Length];
                     for (int i = 0; i < value.Length; i++)
-                        _genre[i] = value[i].Id;
+                        genre[i] = value[i].Id;
                     save();
                 }
             }

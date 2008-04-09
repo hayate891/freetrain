@@ -42,7 +42,6 @@ namespace FreeTrain.Framework.Plugin.Generic
     /// <summary>
     /// GenericLandContribution
     /// </summary>
-    [CLSCompliant(false)]
     public class GenericLandContribution : GenericStructureContribution
     {
         /// <summary>
@@ -104,8 +103,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="color"></param>
         /// <param name="contrib"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        protected override Contribution createPrimitiveContrib(XmlElement sprite, XmlNode color, XmlElement contrib)
+        protected override Contribution CreatePrimitiveContrib(XmlElement sprite, XmlNode color, XmlElement contrib)
         {
             sprite.AppendChild(color.Clone());
             //PluginManager manager = PluginManager;

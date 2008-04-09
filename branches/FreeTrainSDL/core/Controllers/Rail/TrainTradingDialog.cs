@@ -49,8 +49,8 @@ namespace FreeTrain.World.Rail
             buttonImages.TransparentColor = bmp.GetPixel(0, 0);
             buttonImages.Images.AddStrip(bmp);
 
-            tbDay.Pushed = (WorldDefinition.World.ViewOptions.nightSpriteMode == NightSpriteMode.AlwaysDay);
-            tbNight.Pushed = (WorldDefinition.World.ViewOptions.nightSpriteMode == NightSpriteMode.AlwaysNight);
+            tbDay.Pushed = (WorldDefinition.World.ViewOptions.NightSpriteMode == NightSpriteMode.AlwaysDay);
+            tbNight.Pushed = (WorldDefinition.World.ViewOptions.NightSpriteMode == NightSpriteMode.AlwaysNight);
 
             // organize trains into a tree
             IDictionary types = new SortedList();
@@ -160,7 +160,7 @@ namespace FreeTrain.World.Rail
                 //if (length.Value > selectedTrain.maxLength) length.Value = selectedTrain.maxLength;
                 using (PreviewDrawer pd = selectedTrain.CreatePreview(preview.ClientSize, (int)length.Value))
                 {
-                    preview.Image = pd.createBitmap();
+                    preview.Image = pd.CreateBitmap();
                 }
 
                 if (count.Value == 0)
@@ -197,7 +197,7 @@ namespace FreeTrain.World.Rail
 
                     using (PreviewDrawer pd = selectedTrain.CreatePreview(preview.ClientSize, (int)length.Value))
                     {
-                        preview.Image = pd.createBitmap();
+                        preview.Image = pd.CreateBitmap();
                     }
 
                     return;
@@ -234,9 +234,9 @@ namespace FreeTrain.World.Rail
                 if (e.Button == tb)
                 {
                     if (tb.Pushed)
-                        WorldDefinition.World.ViewOptions.nightSpriteMode = (NightSpriteMode)tb.Tag;
+                        WorldDefinition.World.ViewOptions.NightSpriteMode = (NightSpriteMode)tb.Tag;
                     else
-                        WorldDefinition.World.ViewOptions.nightSpriteMode = NightSpriteMode.AlignClock;
+                        WorldDefinition.World.ViewOptions.NightSpriteMode = NightSpriteMode.AlignClock;
                 }
                 else
                 {

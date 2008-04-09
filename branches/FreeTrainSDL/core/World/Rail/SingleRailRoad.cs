@@ -158,9 +158,9 @@ namespace FreeTrain.World.Rail
             if (!(v is TrafficVoxel))
             {
                 // something else is occupying the voxel
-                if (v.entity.isSilentlyReclaimable)
+                if (v.Entity.isSilentlyReclaimable)
                     // we can reclaim this voxel and build a road.
-                    return RAILROAD_CONSTRUCTION_UNIT_COST * multiplier + v.entity.entityValue;
+                    return RAILROAD_CONSTRUCTION_UNIT_COST * multiplier + v.Entity.EntityValue;
                 else
                     return 0;	// obstacle.
             }
@@ -247,8 +247,8 @@ namespace FreeTrain.World.Rail
                 if (v == null)
                 {
                     Voxel vv = WorldDefinition.World[here];
-                    Debug.Assert(vv.entity.isSilentlyReclaimable);
-                    vv.entity.remove();
+                    Debug.Assert(vv.Entity.isSilentlyReclaimable);
+                    vv.Entity.remove();
                     v = TrafficVoxel.getOrCreate(here);
                 }
 

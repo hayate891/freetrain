@@ -59,7 +59,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-		public abstract int entityValue { get; }
+		public abstract int EntityValue { get; }
         /// <summary>
         /// 
         /// </summary>
@@ -100,14 +100,14 @@ namespace FreeTrain.World.Structs
 			if(mode == ControlMode.Com)
 			{
 				foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
-					if( !v.entity.isOwned )
+					if( !v.Entity.isOwned )
 						return false;
 				return true;
 			}
 			else
 			{
 				foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
-					if( !v.entity.isSilentlyReclaimable )
+					if( !v.Entity.isSilentlyReclaimable )
 						return false;
 				return true;
 			}
@@ -134,7 +134,7 @@ namespace FreeTrain.World.Structs
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-		public virtual object queryInterface( Type aspect ) { return null; }
+		public virtual object QueryInterface( Type aspect ) { return null; }
 
 
 		/// <summary>
@@ -166,12 +166,12 @@ namespace FreeTrain.World.Structs
             /// <summary>
             /// 
             /// </summary>
-			public override IEntity entity { get { return owner; } }
+			public override IEntity Entity { get { return owner; } }
 
 			/// <summary>
 			/// onClick event is delegated to the parent.
 			/// </summary>
-			public override bool onClick() {
+			public override bool OnClick() {
 				return owner.onClick();
 			}
 		}

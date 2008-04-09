@@ -214,11 +214,11 @@ namespace FreeTrain.World.Rail
                 {
                     for (int i = 6; i >= -2; i--)
                     {
-                        d.draw(BridgePierVoxel.defaultSprite, i, 0);
-                        d.draw(sprites[0], i + 1, -1);
+                        d.Draw(BridgePierVoxel.defaultSprite, i, 0);
+                        d.Draw(sprites[0], i + 1, -1);
                     }
 
-                    return d.createBitmap();
+                    return d.CreateBitmap();
                 }
             }
         }

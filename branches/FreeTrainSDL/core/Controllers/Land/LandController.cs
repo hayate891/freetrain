@@ -168,7 +168,7 @@ namespace FreeTrain.Controllers.Land
             using (PreviewDrawer drawer = builder.CreatePreview(preview.Size))
             {
                 if (previewBitmap != null) previewBitmap.Dispose();
-                preview.Image = previewBitmap = drawer.createBitmap();
+                preview.Image = previewBitmap = drawer.CreateBitmap();
             }
 
             //currentController = builder.createBuilder(new ControllerSiteImpl(this));

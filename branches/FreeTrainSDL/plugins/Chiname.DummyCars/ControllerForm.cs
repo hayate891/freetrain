@@ -41,7 +41,6 @@ namespace FreeTrain.World.Road.DummyCars
     /// Controller that allows the user to
     /// place/remove cars.
     /// </summary>
-    [CLSCompliant(false)]
     public class ControllerForm : AbstractControllerImpl
     {
         private FreeTrain.Controls.CostBox costBox;
@@ -109,7 +108,7 @@ namespace FreeTrain.World.Road.DummyCars
             this.typeBox.Size = new System.Drawing.Size(162, 21);
             this.typeBox.Sorted = true;
             this.typeBox.TabIndex = 2;
-            this.typeBox.SelectedIndexChanged += new System.EventHandler(this.onTypeChanged);
+            this.typeBox.SelectedIndexChanged += new System.EventHandler(this.OnTypeChanged);
             // 
             // preview
             // 
@@ -133,7 +132,7 @@ namespace FreeTrain.World.Road.DummyCars
             this.buttonRemove.TabIndex = 9;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonRemove.CheckedChanged += new System.EventHandler(this.onColorChanged);
+            this.buttonRemove.CheckedChanged += new System.EventHandler(this.OnColorChanged);
             // 
             // buttonPlace
             // 
@@ -147,7 +146,7 @@ namespace FreeTrain.World.Road.DummyCars
             this.buttonPlace.TabStop = true;
             this.buttonPlace.Text = "Place";
             this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonPlace.CheckedChanged += new System.EventHandler(this.onColorChanged);
+            this.buttonPlace.CheckedChanged += new System.EventHandler(this.OnColorChanged);
             // 
             // colSelector
             // 
@@ -161,7 +160,7 @@ namespace FreeTrain.World.Road.DummyCars
             this.colSelector.Name = "colSelector";
             this.colSelector.Size = new System.Drawing.Size(162, 21);
             this.colSelector.TabIndex = 6;
-            this.colSelector.indexChanged += new System.EventHandler(this.onColorChanged);
+            this.colSelector.indexChanged += new System.EventHandler(this.OnColorChanged);
             // 
             // costBox
             // 
@@ -193,7 +192,7 @@ namespace FreeTrain.World.Road.DummyCars
             this.Controls.Add(this.preview);
             this.Name = "ControllerForm";
             this.Text = "Automobile";
-            this.Resize += new System.EventHandler(this.updateAfterResize);
+            this.Resize += new System.EventHandler(this.UpdateAfterResize);
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.ResumeLayout(false);
 
@@ -202,7 +201,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// <summary>
         /// 
         /// </summary>
-        public bool isPlacing
+        public bool IsPlacing
         {
             get
             {
@@ -214,7 +213,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected virtual void updateAfterResize(object sender, System.EventArgs e)
+        protected virtual void UpdateAfterResize(object sender, System.EventArgs e)
         {
             this.buttonPlace.Left = this.preview.Left;
             this.buttonPlace.Width = ((this.preview.Width)) / 2;
@@ -223,7 +222,7 @@ namespace FreeTrain.World.Road.DummyCars
             UpdatePreview();
         }
 
-        private int currentColor
+        private int CurrentColor
         {
             get
             {
@@ -231,7 +230,7 @@ namespace FreeTrain.World.Road.DummyCars
             }
         }
 
-        private void onTypeChanged(object sender, System.EventArgs e)
+        private void OnTypeChanged(object sender, System.EventArgs e)
         {
             DummyCarContribution builder = (DummyCarContribution)typeBox.SelectedItem;
             if (builder != null)
@@ -240,7 +239,7 @@ namespace FreeTrain.World.Road.DummyCars
                 if (this.colSelector.current > colors) this.colSelector.current = colors;
                 this.colSelector.count = colors;
                 builder.currentColor = colors;
-                updatePreview(builder);
+                UpdatePreview(builder);
             }
         }
         /// <summary>
@@ -248,29 +247,29 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected virtual void onColorChanged(object sender, System.EventArgs e)
+        protected virtual void OnColorChanged(object sender, System.EventArgs e)
         {
             DummyCarContribution builder = (DummyCarContribution)typeBox.SelectedItem;
             if (builder != null)
             {
-                builder.currentColor = this.currentColor;
-                updatePreview(builder);
+                builder.currentColor = this.CurrentColor;
+                UpdatePreview(builder);
             }
         }
 
         /// <summary>
         /// Called when a selection of the structure has changed.
         /// </summary>
-        protected virtual void updatePreview(DummyCarContribution builder)
+        protected virtual void UpdatePreview(DummyCarContribution builder)
         {
             //DummyCarContribution builder = (DummyCarContribution)typeBox.SelectedItem;
             using (PreviewDrawer drawer = new PreviewDrawer(preview.Size, new Size(10, 1), 0))
             {
 
-                drawer.draw(builder.getSprites(), 5, 0);
+                drawer.Draw(builder.GetSprites(), 5, 0);
 
                 if (previewBitmap != null) previewBitmap.Dispose();
-                preview.Image = previewBitmap = drawer.createBitmap();
+                preview.Image = previewBitmap = drawer.CreateBitmap();
             }
             //if (isPlacing)
                 //currentController = builder.createBuilder(this.siteImpl);

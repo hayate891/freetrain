@@ -36,7 +36,6 @@ namespace FreeTrain.World.Rail.ColorTestTrain
         /// 
         /// </summary>
         /// <param name="car"></param>
-        [CLSCompliant(false)]
         public ColorConfigDialog(ColorTestTrainCar car)
         {
             InitializeComponent();

@@ -162,7 +162,7 @@ namespace FreeTrain.World.Rail
         /// <summary>
         /// 
         /// </summary>
-        public int entityValue { get { return 0; } }
+        public int EntityValue { get { return 0; } }
         /// <summary>
         /// 
         /// </summary>
@@ -180,7 +180,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         /// <param name="aspect"></param>
         /// <returns></returns>
-        public virtual object queryInterface(Type aspect)
+        public virtual object QueryInterface(Type aspect)
         {
             return null;
         }

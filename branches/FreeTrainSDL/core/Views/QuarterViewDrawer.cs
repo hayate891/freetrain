@@ -365,9 +365,9 @@ namespace FreeTrain.Views
             if (z == 0) hvb = null;
             else hvb = world.voxelHVD(h, v, z - 1) as IHoleVoxel;
 
-            if (hva != null && !hva.drawGround(false))
+            if (hva != null && !hva.DrawGround(false))
                 return false;
-            if (hvb != null && !hvb.drawGround(true))
+            if (hvb != null && !hvb.DrawGround(true))
                 return false;
 
             return true;
@@ -388,7 +388,7 @@ namespace FreeTrain.Views
             bool noHeightCut = (HeightCutHeight == world.Size.z - 1);
 
             Color waterSurfaceColor = waterSurfaceDayColor;
-            if (world.ViewOptions.useNightView)
+            if (world.ViewOptions.UseNightView)
                 waterSurfaceColor = ColorMap.getNightColor(waterSurfaceColor);
 
             rectAB.Inflate(20, 20);
@@ -435,7 +435,7 @@ namespace FreeTrain.Views
                         Point pt = fromHVZToClient(h, v, z);
                         // draw the surface anyway.
 
-                        if (voxel == null || voxel.transparent)
+                        if (voxel == null || voxel.Transparent)
                         {
                             if (z == groundLevel)
                             {
@@ -488,7 +488,7 @@ namespace FreeTrain.Views
                         if (voxel != null)
                         {
                             //DateTime start = DateTime.Now;
-                            voxel.drawVoxel(drawContext, pt, noHeightCut ? -1 : (Z - z + 1));
+                            voxel.DrawVoxel(drawContext, pt, noHeightCut ? -1 : (Z - z + 1));
                             //Debug.WriteLine("voxel took: " + (DateTime.Now - start).TotalMilliseconds + "ms");
                         }
                         if (overlay != null)

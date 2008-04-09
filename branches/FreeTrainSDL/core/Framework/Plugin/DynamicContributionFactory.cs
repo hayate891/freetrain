@@ -38,6 +38,7 @@ namespace FreeTrain.Framework.Plugin
         {
             this.baseType = baseType;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -49,6 +50,7 @@ namespace FreeTrain.Framework.Plugin
 
 
         private readonly Type baseType;
+
         /// <summary>
         /// 
         /// </summary>

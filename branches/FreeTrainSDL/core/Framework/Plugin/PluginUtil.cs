@@ -95,6 +95,7 @@ namespace FreeTrain.Framework.Plugin
 
             return a.GetType(typeName, true);
         }
+
         /// <summary>
         /// 
         /// </summary>

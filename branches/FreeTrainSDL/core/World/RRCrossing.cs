@@ -65,8 +65,8 @@ namespace FreeTrain.World
 			this.railDirIndex = owner.railRoad.Dir1.isParallelToY?0:1;
 			TrafficVoxel.onRailRoadChanged += new TrafficVoxelHandler(onRailRoadChanged);
 
-			neighbor1Location = owner.location + owner.railRoad.Dir1;
-			neighbor2Location = owner.location + owner.railRoad.Dir2;
+			neighbor1Location = owner.Location + owner.railRoad.Dir1;
+			neighbor2Location = owner.Location + owner.railRoad.Dir2;
 
 			if( neighbor1!=null )	onRailRoadChanged(neighbor1);
 			if( neighbor2!=null )	onRailRoadChanged(neighbor2);
@@ -153,7 +153,7 @@ namespace FreeTrain.World
 			registerTimer();
 		}
 
-		public void onRemoved() {
+		public void OnRemoved() {
 			// unregister all handlers.
 			TrafficVoxel v;
 			v = neighbor1;
@@ -190,14 +190,14 @@ namespace FreeTrain.World
 		
 
 
-		public void drawBefore( DrawContext display, Point pt ) {
+		public void DrawBefore( DrawContext display, Point pt ) {
 			sprites[railDirIndex,1,stateSpriteIndex].Draw( display.Surface, pt );
-			Trace.WriteLine( string.Format("{0} : {1},1,{2}", owner.location,railDirIndex,stateSpriteIndex) );
+			Trace.WriteLine( string.Format("{0} : {1},1,{2}", owner.Location,railDirIndex,stateSpriteIndex) );
 		}
 
-		public void drawAfter( DrawContext display, Point pt ) {
+		public void DrawAfter( DrawContext display, Point pt ) {
 			sprites[railDirIndex,0,stateSpriteIndex].Draw( display.Surface, pt );
-			Trace.WriteLine( string.Format("{0} : {1},0,{2}", owner.location,railDirIndex,stateSpriteIndex) );
+			Trace.WriteLine( string.Format("{0} : {1},0,{2}", owner.Location,railDirIndex,stateSpriteIndex) );
 		}
 
 		private int stateSpriteIndex {

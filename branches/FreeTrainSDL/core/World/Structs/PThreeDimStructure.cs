@@ -75,7 +75,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return type.Price; } }
+        public override int EntityValue { get { return type.Price; } }
         /// <summary>
         /// 
         /// </summary>
@@ -139,7 +139,7 @@ namespace FreeTrain.World.Structs
             private void setSprite()
             {
                 PThreeDimStructure o = owner;
-                sprite = o.type.GetSprite(location - o.baseLocation);
+                sprite = o.type.GetSprite(Location - o.baseLocation);
             }
             /// <summary>
             /// 
@@ -147,11 +147,11 @@ namespace FreeTrain.World.Structs
             /// <param name="display"></param>
             /// <param name="pt"></param>
             /// <param name="heightCutDiff"></param>
-            public override void draw(DrawContext display, Point pt, int heightCutDiff)
+            public override void Draw(DrawContext display, Point pt, int heightCutDiff)
             {
                 PThreeDimStructure o = owner;
 
-                int zdiff = o.type.Size.z - (this.location.z - o.baseLocation.z);
+                int zdiff = o.type.Size.z - (this.Location.z - o.baseLocation.z);
 
                 if (heightCutDiff < 0 || zdiff < heightCutDiff)
                 {
@@ -161,7 +161,7 @@ namespace FreeTrain.World.Structs
                 else
                 {
                     // drawing in the height cut mode
-                    if (this.location.z == o.baseLocation.z)
+                    if (this.Location.z == o.baseLocation.z)
                         ResourceUtil.EmptyChip.DrawShape(display.Surface, pt, o.heightCutColor);
                 }
             }

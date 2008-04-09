@@ -33,7 +33,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// <summary>
     /// SpriteFactory for ColorMappedSprite.
     /// </summary>
-    [CLSCompliant(false)]
     public class HueShiftSpriteFactory : SpriteFactory
     {
         private int steps;
@@ -76,7 +75,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override ISprite CreateSprite(Picture picture, Point offset, Point origin, Size size)
         {
             return new SimpleSprite(picture, offset, origin, size);
@@ -91,8 +89,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="origin"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        public ISprite[] createSprites(Bitmap bit, Picture picture, Point offset, Point origin, Size size)
+        public ISprite[] CreateSprites(Bitmap bit, Picture picture, Point offset, Point origin, Size size)
         {
             int sprites = steps;
             int shift = 360 / sprites; // hue shift per step
@@ -143,7 +140,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     /// 
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class HueShiftSpriteFactoryContributionImpl : SpriteFactoryContribution
     {
         /// <summary>
@@ -157,7 +153,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override SpriteFactory CreateSpriteFactory(XmlElement e)
         {
             return new HueShiftSpriteFactory(e);
@@ -172,19 +167,16 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected double _H;
+        double _H;
         /// <summary>
         /// 
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected double _S;
+        double _S;
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected double _V;
+        double _V;
         /// <summary>
         /// 
         /// </summary>

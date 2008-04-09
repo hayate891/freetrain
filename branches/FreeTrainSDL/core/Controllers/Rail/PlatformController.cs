@@ -490,11 +490,11 @@ namespace FreeTrain.Controllers.Rail
             else
             {
                 drawer = new PreviewDrawer(stationPicture.ClientSize, selectedStation.Size);
-                drawer.drawCenter(selectedStation.Sprites);
+                drawer.DrawCenter(selectedStation.Sprites);
             }
 
             if (stationPreviewBitmap != null) stationPreviewBitmap.Dispose();
-            stationPicture.Image = stationPreviewBitmap = drawer.createBitmap();
+            stationPicture.Image = stationPreviewBitmap = drawer.CreateBitmap();
 
             drawer.Dispose();
 

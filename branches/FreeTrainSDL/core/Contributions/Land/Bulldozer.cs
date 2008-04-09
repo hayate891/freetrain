@@ -81,9 +81,9 @@ namespace FreeTrain.Contributions.Land
                             else
                                 mv.removeTrees();
                         }
-                        else if (v.entity != null)
+                        else if (v.Entity != null)
                         {
-                            v.entity.remove();
+                            v.Entity.remove();
                         }
                         else
                         {

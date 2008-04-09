@@ -62,7 +62,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Called when the player selects a location.
         /// </summary>
-        protected abstract void onLocationSelected(Location loc);
+        protected abstract void OnLocationSelected(Location loc);
 
 
 
@@ -141,7 +141,7 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public void OnClick(MapViewWindow source, Location loc, Point ab)
         {
-            onLocationSelected(loc);
+            OnLocationSelected(loc);
         }
 
         /// <summary>

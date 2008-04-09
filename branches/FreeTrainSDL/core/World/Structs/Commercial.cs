@@ -75,7 +75,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public override int entityValue { get { return (int)subsidiary.currentMarketPrice; } }
+        public override int EntityValue { get { return (int)subsidiary.currentMarketPrice; } }
         #endregion
         /// <summary>
         /// 

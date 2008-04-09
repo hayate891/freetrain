@@ -30,7 +30,6 @@ namespace FreeTrain.Framework.Plugin.Generic
     /// <summary>
     /// Adds "signal" menu to the main window
     /// </summary>
-    [CLSCompliant(false)]
     public class MenuContributionImpl : MenuContribution
     {
         /// <summary>
@@ -43,7 +42,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// 
         /// </summary>
         /// <param name="containerMenu"></param>
-        public override void mergeMenu(MainMenu containerMenu)
+        public override void MergeMenu(MainMenu containerMenu)
         {
             //! MenuItem item = new MenuItem("(&S)...");
             MenuItem item = new MenuItem("&Structure Type Tree...");

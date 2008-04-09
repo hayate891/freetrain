@@ -37,15 +37,14 @@ namespace FreeTrain.World.Road.DummyCars
         /// 
         /// </summary>
         /// <param name="target"></param>
-        /// <param name="_contrib"></param>
-        /// <param name="_color"></param>
-        /// <param name="_index"></param>
-        [CLSCompliant(false)]
-        public DummyCar(TrafficVoxel target, DummyCarContribution _contrib, int _color, int _index)
+        /// <param name="contrib"></param>
+        /// <param name="color"></param>
+        /// <param name="index"></param>
+        public DummyCar(TrafficVoxel target, DummyCarContribution contrib, int color, int index)
         {
-            this.index = (byte)_index;
-            this.contrib = _contrib;
-            this.color = _color;
+            this.index = (byte)index;
+            this.contrib = contrib;
+            this.color = color;
             target.accessory = this;
         }
         /// <summary>
@@ -53,8 +52,7 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        [CLSCompliant(false)]
-        public void drawBefore(DrawContext display, Point pt)
+        public void DrawBefore(DrawContext display, Point pt)
         {
             //contrib.sprites[index].draw( display.surface, pt );
         }
@@ -63,14 +61,13 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        [CLSCompliant(false)]
-        public void drawAfter(DrawContext display, Point pt)
+        public void DrawAfter(DrawContext display, Point pt)
         {
             contrib.sprites[color, index].Draw(display.Surface, pt);
         }
         /// <summary>
         /// 
         /// </summary>
-        public void onRemoved() { }
+        public void OnRemoved() { }
     }
 }

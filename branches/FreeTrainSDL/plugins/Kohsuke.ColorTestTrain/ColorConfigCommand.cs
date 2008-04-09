@@ -32,7 +32,6 @@ namespace FreeTrain.World.Rail.ColorTestTrain
     /// Menu item contribution that allows an user to
     /// open a color config dialog.
     /// </summary>
-    [CLSCompliant(false)]
     public class ColorConfigCommand : MenuContribution
     {
         /// <summary>
@@ -45,7 +44,7 @@ namespace FreeTrain.World.Rail.ColorTestTrain
         /// 
         /// </summary>
         /// <param name="containerMenu"></param>
-        public override void mergeMenu(MainMenu containerMenu)
+        public override void MergeMenu(MainMenu containerMenu)
         {
             MenuItem item = new MenuItem();
             item.Text = "Color Test Train Settings";

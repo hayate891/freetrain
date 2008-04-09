@@ -40,7 +40,7 @@ namespace FreeTrain.World.Terrain
         /// <summary>
         /// 
         /// </summary>
-        public override bool transparent { get { return heightData == 0; } }
+        public override bool Transparent { get { return heightData == 0; } }
         /// <summary>
         /// 
         /// </summary>
@@ -179,7 +179,7 @@ namespace FreeTrain.World.Terrain
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return this; } }
+        public override IEntity Entity { get { return this; } }
 
         #region Entity implementation
         /// <summary>
@@ -214,7 +214,7 @@ namespace FreeTrain.World.Terrain
         /// <summary>
         /// 
         /// </summary>
-        public int entityValue { get { return 0 + treePrice; } }
+        public int EntityValue { get { return 0 + treePrice; } }
 
         #endregion
 
@@ -222,7 +222,7 @@ namespace FreeTrain.World.Terrain
 
         private Color mapColor(Color c)
         {
-            if (WorldDefinition.World.ViewOptions.useNightView)
+            if (WorldDefinition.World.ViewOptions.UseNightView)
                 return ColorMap.getNightColor(c);
             else
                 return c;
@@ -241,7 +241,7 @@ namespace FreeTrain.World.Terrain
         /// <param name="display"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public override void draw(DrawContext display, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext display, Point pt, int heightCutDiff)
         {
             heightCutDiff--;
             drawGround(display, pt, heightCutDiff);
@@ -310,10 +310,10 @@ namespace FreeTrain.World.Terrain
 
             {
                 // left cliff
-                Location neighbor = location + Direction.WEST;
+                Location neighbor = Location + Direction.WEST;
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(3) > 0
-                    && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(location))
+                    && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(Location))
                     cliff[0, getHeight(3), getHeight(2)].Draw(display.Surface, basePt);
             }
 
@@ -348,10 +348,10 @@ namespace FreeTrain.World.Terrain
             {
                 basePt.X += 16;
                 // right cliff
-                Location neighbor = location + Direction.SOUTH;
+                Location neighbor = Location + Direction.SOUTH;
                 if (!(world[neighbor] is MountainVoxel)
                     && getHeight(2) + getHeight(1) > 0
-                    && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(location))
+                    && world.GetGroundLevel(neighbor) <= world.GetGroundLevel(Location))
                     cliff[1, getHeight(2), getHeight(1)].Draw(display.Surface, basePt);
             }
         }
@@ -421,7 +421,7 @@ namespace FreeTrain.World.Terrain
         // it should be big so that integer ops in the selectBrush operation 
         // would run with a small rounding error.
 
-        private bool isUnderWater { get { return location.z < WorldDefinition.World.WaterLevel; } }
+        private bool isUnderWater { get { return Location.z < WorldDefinition.World.WaterLevel; } }
 
         /// <summary>
         /// Returns the brush to draw this voxel.
@@ -514,7 +514,7 @@ namespace FreeTrain.World.Terrain
         /// 
         /// </summary>
         /// <returns></returns>
-        public override Color getColorOfTile()
+        public override Color GetColorOfTile()
         {
             if (this.isUnderWater) return Color.RoyalBlue;
             else return Color.Green;

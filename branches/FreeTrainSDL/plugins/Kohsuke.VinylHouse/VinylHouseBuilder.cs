@@ -111,7 +111,7 @@ namespace FreeTrain.World.Land.VinylHouse
 
             for (int y = 0; y < 3; y++)
                 for (int x = 2; x >= 0; x--)
-                    drawer.draw(sprites[GetSpriteIndex(x, y, 0, 2, 0, 2)], x, y);
+                    drawer.Draw(sprites[GetSpriteIndex(x, y, 0, 2, 0, 2)], x, y);
 
             return drawer;
         }

@@ -64,9 +64,9 @@ namespace FreeTrain.Controllers.Land
             {
                 for (int x = 0; x < 3; x++)
                     for (int y = 0; y < 3; y++)
-                        drawer.draw(LandPropertyVoxel.sprite, x, y);
+                        drawer.Draw(LandPropertyVoxel.sprite, x, y);
                 if (preview.Image != null) preview.Image.Dispose();
-                preview.Image = drawer.createBitmap();
+                preview.Image = drawer.CreateBitmap();
             }
         }
         /// <summary>
@@ -233,11 +233,11 @@ namespace FreeTrain.Controllers.Land
                 for (int y = loc1.y; y <= loc2.y; y++)
                 {
                     Voxel v = WorldDefinition.World[x, y, z];
-                    if (v != null && !v.entity.isOwned && v.entity.isSilentlyReclaimable)
+                    if (v != null && !v.Entity.isOwned && v.Entity.isSilentlyReclaimable)
                     {
                         // remove the old structure if possible
-                        AccountGenre.Subsidiaries.Spend(v.entity.entityValue);
-                        v.entity.remove();
+                        AccountGenre.Subsidiaries.Spend(v.Entity.EntityValue);
+                        v.Entity.remove();
                     }
                     v = WorldDefinition.World[x, y, z];
 
@@ -267,11 +267,11 @@ namespace FreeTrain.Controllers.Land
                 for (int y = loc1.y; y <= loc2.y; y++)
                 {
                     Voxel v = WorldDefinition.World[x, y, z];
-                    if (v != null && !v.entity.isOwned && v.entity.isSilentlyReclaimable)
+                    if (v != null && !v.Entity.isOwned && v.Entity.isSilentlyReclaimable)
                     {
                         // cost for removing this structure
-                        if (s.add(v.entity))
-                            r += v.entity.entityValue;
+                        if (s.add(v.Entity))
+                            r += v.Entity.EntityValue;
                     }
                     v = WorldDefinition.World[x, y, z];
 
@@ -298,7 +298,7 @@ namespace FreeTrain.Controllers.Land
                     LandPropertyVoxel v = WorldDefinition.World[x, y, z] as LandPropertyVoxel;
                     if (v != null)
                     {
-                        AccountGenre.Subsidiaries.Earn(v.landPrice);
+                        AccountGenre.Subsidiaries.Earn(v.LandPrice);
                         v.remove();
                     }
                 }
@@ -321,7 +321,7 @@ namespace FreeTrain.Controllers.Land
                 {
                     LandPropertyVoxel v = WorldDefinition.World[x, y, z] as LandPropertyVoxel;
                     if (v != null)
-                        r += v.landPrice;
+                        r += v.LandPrice;
                 }
             }
             return r;

@@ -41,6 +41,6 @@ namespace FreeTrain.Contributions.Others
         /// <summary>
         /// The callee can merge menu items into container at this timing.
         /// </summary>
-        public abstract void mergeMenu(MainMenu containerMenu);
+        public abstract void MergeMenu(MainMenu containerMenu);
     }
 }

@@ -30,7 +30,6 @@ namespace FreeTrain.World.Rail.ColorTestTrain
     /// TrainCar contribution implementation for ColorTestTrain.
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class ColorTestTrainCar : ColoredTrainCarImpl
     {
         /// <summary>

@@ -63,7 +63,6 @@ namespace FreeTrain.Framework.Plugin.Generic
     /// Contribution of rail signal.
     /// </summary>
     [Serializable]
-    [CLSCompliant(false)]
     public class GenericStructureContribution : StructureContribution, IAbstractStructure
     {
         /// <summary>
@@ -208,31 +207,59 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <summary>
         /// 
         /// </summary>
-        protected int[] dirTable = new int[8];
+        private int[] dirTable = new int[8];
 
-        /// <summary> counts of color variations. </summary>
-        protected int _colorMax;
         /// <summary>
         /// 
         /// </summary>
-        public int colorVariations { get { return _colorMax; } }
+        protected int[] DirTable
+        {
+            get { return dirTable; }
+            set { dirTable = value; }
+        }
+
+        /// <summary> counts of color variations. </summary>
+        private int _colorMax;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected int ColorMax
+        {
+            get { return _colorMax; }
+            set { _colorMax = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int ColorVariations { get { return _colorMax; } }
         /// <summary> 
         /// counts of direction variations. 
         /// </summary>
-        protected int _dirMax;
-        /// <summary>
-        /// 
-        /// </summary>
-        public int directionVariations { get { return _dirMax; } }
+        private int _dirMax;
 
         /// <summary>
         /// 
         /// </summary>
-        protected int _colorIndex = 0;
+        protected int DirMax
+        {
+            get { return _dirMax; }
+            set { _dirMax = value; }
+        }
         /// <summary>
         /// 
         /// </summary>
-        public int colorIndex
+        public int DirectionVariations { get { return _dirMax; } }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private int _colorIndex = 0;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int ColorIndex
         {
             get { return _colorIndex; }
             set
@@ -245,11 +272,11 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <summary>
         /// 
         /// </summary>
-        protected int _dirIndex = 0;
+        int _dirIndex = 0;
         /// <summary>
         /// 
         /// </summary>
-        public int dirIndex
+        public int DirIndex
         {
             get { return _dirIndex; }
             set
@@ -262,7 +289,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <summary>
         /// 
         /// </summary>
-        public IEntityBuilder current
+        public IEntityBuilder Current
         {
             get { return (IEntityBuilder)contribs[_dirIndex, _colorIndex]; }
         }
@@ -304,7 +331,6 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         protected override StructureGroup GetGroup(string name)
         {
             if (_group == null)
@@ -427,7 +453,7 @@ namespace FreeTrain.Framework.Plugin.Generic
                     if (parseDirection(temp, j) == 0 && defaultDir > j)
                         defaultDir = j;
                     Contribution newContrib
-                        = createPrimitiveContrib((XmlElement)temp, (XmlNode)colors[i], e);
+                        = CreatePrimitiveContrib((XmlElement)temp, (XmlNode)colors[i], e);
                     PluginManager.AddContribution(newContrib);
                     contribs[j, i] = newContrib;
                 }
@@ -447,8 +473,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="color"></param>
         /// <param name="contrib"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
-        protected virtual Contribution createPrimitiveContrib(XmlElement sprite, XmlNode color, XmlElement contrib)
+        protected virtual Contribution CreatePrimitiveContrib(XmlElement sprite, XmlNode color, XmlElement contrib)
         {
             bool opposite = (sprite.Attributes["opposite"] != null && sprite.Attributes["opposite"].Value.Equals("true"));
             Contribution newContrib;
@@ -519,7 +544,6 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="dir"></param>
         /// <param name="color"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public Contribution GetPrimitiveContrib(Direction dir, int color)
         {
             return contribs[dirTable[dir.index], color];
@@ -530,30 +554,27 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// </summary>
         /// <param name="pixelSize"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override PreviewDrawer CreatePreview(Size pixelSize)
         {
-            return current.CreatePreview(pixelSize);
+            return Current.CreatePreview(pixelSize);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateBuilder(IControllerSite site)
         {
-            return current.CreateBuilder(site);
+            return Current.CreateBuilder(site);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="site"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public override IModalController CreateRemover(IControllerSite site)
         {
-            return current.CreateRemover(site);
+            return Current.CreateRemover(site);
         }
 
     }

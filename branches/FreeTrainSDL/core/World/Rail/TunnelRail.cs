@@ -290,14 +290,14 @@ namespace FreeTrain.World.Rail
                 {
                     for (int i = 5; i >= 2; i--)
                     {
-                        d.draw(backgrounds[0], i, 0);
-                        d.draw(foregrounds[0], i, 0);
+                        d.Draw(backgrounds[0], i, 0);
+                        d.Draw(foregrounds[0], i, 0);
                     }
                     for (int i = 1; i >= -5; i--)
                     {
-                        d.draw(RailPattern.get(Direction.EAST, Direction.WEST), i, 0);
+                        d.Draw(RailPattern.get(Direction.EAST, Direction.WEST), i, 0);
                     }
-                    return d.createBitmap();
+                    return d.CreateBitmap();
                 }
             }
         }

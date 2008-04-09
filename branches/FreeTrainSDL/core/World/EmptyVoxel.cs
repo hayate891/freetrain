@@ -35,7 +35,7 @@ namespace FreeTrain.World
         /// <summary>
         /// 
         /// </summary>
-        public override bool transparent { get { return true; } }
+        public override bool Transparent { get { return true; } }
         /// <summary>
         /// 
         /// </summary>
@@ -60,13 +60,13 @@ namespace FreeTrain.World
         /// <param name="surface"></param>
         /// <param name="pt"></param>
         /// <param name="heightCutDiff"></param>
-        public override void draw(DrawContext surface, Point pt, int heightCutDiff)
+        public override void Draw(DrawContext surface, Point pt, int heightCutDiff)
         {
             // draw nothing
         }
         /// <summary>
         /// 
         /// </summary>
-        public override IEntity entity { get { return _entity; } }
+        public override IEntity Entity { get { return _entity; } }
     }
 }

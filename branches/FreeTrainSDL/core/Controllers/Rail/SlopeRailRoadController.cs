@@ -69,45 +69,45 @@ namespace FreeTrain.Controllers.Rail
             // direction N
             using (drawer = new PreviewDrawer(pictureN.ClientSize, new Size(2, 4), 0))
             {
-                drawer.draw(RailPattern.getSlope(Direction.NORTH, 3), 1, -1);
-                drawer.draw(RailPattern.getSlope(Direction.NORTH, 2), 1, 0);
-                drawer.draw(RailPattern.getSlope(Direction.NORTH, 1), 0, 2);
-                drawer.draw(RailPattern.getSlope(Direction.NORTH, 0), 0, 3);
+                drawer.Draw(RailPattern.getSlope(Direction.NORTH, 3), 1, -1);
+                drawer.Draw(RailPattern.getSlope(Direction.NORTH, 2), 1, 0);
+                drawer.Draw(RailPattern.getSlope(Direction.NORTH, 1), 0, 2);
+                drawer.Draw(RailPattern.getSlope(Direction.NORTH, 0), 0, 3);
                 if (pictureN.Image != null) pictureN.Image.Dispose();
-                pictureN.Image = drawer.createBitmap();
+                pictureN.Image = drawer.CreateBitmap();
             }
 
             // direction S
             using (drawer = new PreviewDrawer(pictureS.ClientSize, new Size(2, 4), 0))
             {
-                drawer.draw(RailPattern.getSlope(Direction.SOUTH, 0), 0, 0);
-                drawer.draw(RailPattern.getSlope(Direction.SOUTH, 1), 0, 1);
-                drawer.draw(RailPattern.getSlope(Direction.SOUTH, 2), 1, 1);
-                drawer.draw(RailPattern.getSlope(Direction.SOUTH, 3), 1, 2);
+                drawer.Draw(RailPattern.getSlope(Direction.SOUTH, 0), 0, 0);
+                drawer.Draw(RailPattern.getSlope(Direction.SOUTH, 1), 0, 1);
+                drawer.Draw(RailPattern.getSlope(Direction.SOUTH, 2), 1, 1);
+                drawer.Draw(RailPattern.getSlope(Direction.SOUTH, 3), 1, 2);
                 if (pictureS.Image != null) pictureS.Image.Dispose();
-                pictureS.Image = drawer.createBitmap();
+                pictureS.Image = drawer.CreateBitmap();
             }
 
             // direction E
             using (drawer = new PreviewDrawer(pictureE.ClientSize, new Size(4, 2), 0))
             {
-                drawer.draw(RailPattern.getSlope(Direction.EAST, 3), 3, 0);
-                drawer.draw(RailPattern.getSlope(Direction.EAST, 2), 2, 0);
-                drawer.draw(RailPattern.getSlope(Direction.EAST, 1), 0, 1);
-                drawer.draw(RailPattern.getSlope(Direction.EAST, 0), -1, 1);
+                drawer.Draw(RailPattern.getSlope(Direction.EAST, 3), 3, 0);
+                drawer.Draw(RailPattern.getSlope(Direction.EAST, 2), 2, 0);
+                drawer.Draw(RailPattern.getSlope(Direction.EAST, 1), 0, 1);
+                drawer.Draw(RailPattern.getSlope(Direction.EAST, 0), -1, 1);
                 if (pictureE.Image != null) pictureE.Image.Dispose();
-                pictureE.Image = drawer.createBitmap();
+                pictureE.Image = drawer.CreateBitmap();
             }
 
             // direction W
             using (drawer = new PreviewDrawer(pictureW.ClientSize, new Size(4, 2), 0))
             {
-                drawer.draw(RailPattern.getSlope(Direction.WEST, 3), 1, 0);
-                drawer.draw(RailPattern.getSlope(Direction.WEST, 2), 2, 0);
-                drawer.draw(RailPattern.getSlope(Direction.WEST, 1), 2, 1);
-                drawer.draw(RailPattern.getSlope(Direction.WEST, 0), 3, 1);
+                drawer.Draw(RailPattern.getSlope(Direction.WEST, 3), 1, 0);
+                drawer.Draw(RailPattern.getSlope(Direction.WEST, 2), 2, 0);
+                drawer.Draw(RailPattern.getSlope(Direction.WEST, 1), 2, 1);
+                drawer.Draw(RailPattern.getSlope(Direction.WEST, 0), 3, 1);
                 if (pictureW.Image != null) pictureW.Image.Dispose();
-                pictureW.Image = drawer.createBitmap();
+                pictureW.Image = drawer.CreateBitmap();
             }
         }
         /// <summary>

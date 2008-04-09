@@ -156,7 +156,7 @@ namespace FreeTrain.Contributions.Common
         public override PreviewDrawer CreatePreview(Size pixelSize)
         {
             PreviewDrawer drawer = new PreviewDrawer(pixelSize, size);
-            drawer.drawCenter(sprites);
+            drawer.DrawCenter(sprites);
             return drawer;
         }
 

@@ -40,7 +40,7 @@ namespace FreeTrain.World.Development
         /// 
         /// </summary>
         /// <param name="containerMenu"></param>
-        public override void mergeMenu(MainMenu containerMenu)
+        public override void MergeMenu(MainMenu containerMenu)
         {
             MenuItem item = new MenuItem();
             item.Text = "Inspect Land Value";

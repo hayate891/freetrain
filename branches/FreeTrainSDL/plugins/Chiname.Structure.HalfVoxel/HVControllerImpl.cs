@@ -39,20 +39,27 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
     {
 
         /// <summary>Constant</summary>
-        [CLSCompliant(false)]
-        protected static readonly Location UNPLACED = World.Location.Unplaced;
+        protected static readonly Location Unplaced = World.Location.Unplaced;
         static private readonly string cur_id = "{HALF-VOXEL-STRUCTURE-CURSOR-IMAGE}";
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        static protected ISprite[] cursors = new ISprite[]{
+        static ISprite[] cursors = new ISprite[]{
 			createCursorSprite(0,0), 
 			createCursorSprite(32, 0), createCursorSprite(64, 0),
 			createCursorSprite(96, 0), createCursorSprite(128, 0),
 			createCursorSprite(32,16), createCursorSprite(64,16), 
 			createCursorSprite(96,16), createCursorSprite(128,16)
 		};
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected static ISprite[] Cursors
+        {
+            get { return HVControllerImpl.cursors; }
+            set { HVControllerImpl.cursors = value; }
+        }
 
         static private ISprite createCursorSprite(int x, int y)
         {
@@ -62,41 +69,72 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected Location anchor = UNPLACED;
+        private Location anchor = Unplaced;
+
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected Location currentPos = UNPLACED;
+        protected Location Anchor
+        {
+            get { return anchor; }
+            set { anchor = value; }
+        }
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected Direction curSide;
+        private Location currentPos = Unplaced;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Location CurrentPos
+        {
+            get { return currentPos; }
+            set { currentPos = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        Direction curSide;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Direction CurSide
+        {
+            get { return curSide; }
+            set { curSide = value; }
+        }
 
         internal createCallback onCreated = null;
 
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
-        protected readonly IControllerSite site;
+        readonly IControllerSite site;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected IControllerSite Site
+        {
+            get { return site; }
+        } 
+
         private readonly HalfVoxelContribution contrib;
         private readonly bool remover;
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_contrib"></param>
-        /// <param name="_site"></param>
-        /// <param name="_remove"></param>
-        [CLSCompliant(false)]
-        public HVControllerImpl(HalfVoxelContribution _contrib, IControllerSite _site, bool _remove)
+        /// <param name="contrib"></param>
+        /// <param name="site"></param>
+        /// <param name="remove"></param>
+        public HVControllerImpl(HalfVoxelContribution contrib, IControllerSite site, bool remove)
         {
-            this.contrib = _contrib;
-            this.site = _site;
-            this.remover = _remove;
+            this.contrib = contrib;
+            this.site = site;
+            this.remover = remove;
 
         }
 
@@ -146,13 +184,13 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                     {
                         // On remover mode, if the voxel has only one side occupied, select it.
                         if (refs.Length == 1)
-                            return refs[0].placeSide;
+                            return refs[0].PlaceSide;
                         // Otherwise, select side in order to the cursor (in following code).
                     }
                     else
                     {
                         // On builder mode, there should be only one side remains empty.
-                        return (PlaceSide)(1 - (int)refs[0].placeSide);
+                        return (PlaceSide)(1 - (int)refs[0].PlaceSide);
                     }
                 }
 
@@ -177,7 +215,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             get
             {
                 // Check if the front direction can be determined.
-                if (currentPos == UNPLACED || currentPos.Equals(anchor))
+                if (currentPos == Unplaced || currentPos.Equals(anchor))
                     throw new Exception("invalid call");
 
                 HalfDividedVoxel v = WorldDefinition.World[anchor] as HalfDividedVoxel;
@@ -187,7 +225,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
 
                 //The X/Y alignment should be parallel to another side.
                 ContributionReference[] refs = v.getReferences();
-                if (refs[0].frontface.isParallelToY)
+                if (refs[0].Frontface.isParallelToY)
                 {
                     int dy = currentPos.y - anchor.y;
                     if (dy < 0)
@@ -213,16 +251,15 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// Called when the selection is completed.
         /// </summary>
-        [CLSCompliant(false)]
-        protected void onVoxelSelected(Location loc, Direction front, PlaceSide side)
+        protected void OnVoxelSelected(Location loc, Direction front, PlaceSide side)
         {
             if (remover)
             {
-                contrib.destroy(loc, front, side);
+                contrib.Destroy(loc, front, side);
             }
             else
             {
-                contrib.create(loc, front, side);
+                contrib.Create(loc, front, side);
                 onCreated();
             }
         }
@@ -230,8 +267,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// Called when the selection is changed.
         /// </summary>
-        [CLSCompliant(false)]
-        protected void onVoxelUpdated(Location loc, Direction front, PlaceSide side)
+        protected void OnVoxelUpdated(Location loc, Direction front, PlaceSide side)
         {
         }
 
@@ -309,10 +345,9 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         #region public methods
 
         /// <summary> LocationDisambiguator implementation </summary>
-        [CLSCompliant(false)]
-        public bool isSelectable(Location loc)
+        public bool IsSelectable(Location loc)
         {
-            if (anchor != UNPLACED)
+            if (anchor != Unplaced)
                 return loc.z == anchor.z;
             else
                 // lands can be placed only on the ground
@@ -336,7 +371,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public IMapOverlay Overlay
         {
             get
@@ -349,13 +383,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public ILocationDisambiguator Disambiguator
         {
             get
             {
                 // the 2nd selection must go to the same height as the anchor.
-                if (anchor == UNPLACED) return GroundDisambiguator.theInstance;
+                if (anchor == Unplaced) return GroundDisambiguator.theInstance;
                 else return sameLevelDisambiguator;
             }
         }
@@ -388,10 +421,9 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="view"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        [CLSCompliant(false)]
         public void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            if (anchor != UNPLACED)
+            if (anchor != Unplaced)
             {
                 currentPos = align(loc);
                 curSide = getSide(ab);
@@ -408,11 +440,10 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        [CLSCompliant(false)]
         public void OnClick(MapViewWindow source, Location loc, Point ab)
         {
 
-            if (anchor == UNPLACED)
+            if (anchor == Unplaced)
             {
                 if (remover)
                 {
@@ -421,7 +452,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 }
                 else
                 {
-                    if (!HalfVoxelContribution.canBeBuilt(loc))
+                    if (!HalfVoxelContribution.CanBeBuilt(loc))
                         return;
                 }
                 anchor = loc;
@@ -432,9 +463,9 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             else
             {
                 if (!currentPos.Equals(anchor))
-                    onVoxelSelected(anchor, front, currentSide);
+                    OnVoxelSelected(anchor, front, currentSide);
                 WorldDefinition.World.OnVoxelUpdated(anchor);
-                anchor = UNPLACED;
+                anchor = Unplaced;
             }
         }
         /// <summary>
@@ -443,15 +474,14 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="source"></param>
         /// <param name="loc"></param>
         /// <param name="ab"></param>
-        [CLSCompliant(false)]
         public void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
-            if (anchor == UNPLACED)
+            if (anchor == Unplaced)
                 close();	// cancel
             else
             {
                 WorldDefinition.World.OnVoxelUpdated(anchor);
-                anchor = UNPLACED;
+                anchor = Unplaced;
             }
         }
 
@@ -463,7 +493,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        [CLSCompliant(false)]
         public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
         /// <summary>
         /// 
@@ -472,7 +501,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// <param name="canvas"></param>
         /// <param name="loc"></param>
         /// <param name="pt"></param>
-        [CLSCompliant(false)]
         public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (loc != anchor) return;
@@ -488,8 +516,8 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
                 cursors[n + m + l].Draw(canvas.Surface, pt);
                 if (!remover)
                 {
-                    contrib.getSprite(front, currentSide, contrib.currentColor).DrawAlpha(canvas.Surface, pt);
-                    ISprite hls = contrib.getHighLightSprite(front, currentSide, contrib.currentHighlight);
+                    contrib.GetSprite(front, currentSide, contrib.currentColor).DrawAlpha(canvas.Surface, pt);
+                    ISprite hls = contrib.GetHighLightSprite(front, currentSide, contrib.currentHighlight);
                     if (hls != null) hls.DrawAlpha(canvas.Surface, pt);
                 }
             }
@@ -500,7 +528,6 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         /// </summary>
         /// <param name="view"></param>
         /// <param name="surface"></param>
-        [CLSCompliant(false)]
         public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
 
         #endregion

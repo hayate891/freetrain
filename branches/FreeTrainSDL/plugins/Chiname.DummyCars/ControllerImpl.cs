@@ -32,7 +32,6 @@ namespace FreeTrain.World.Road.DummyCars
     /// <summary>
     /// ModalController implementation for DummyCar contribution
     /// </summary>
-    [CLSCompliant(false)]
     public class ControllerImpl : PointSelectorController
     {
         /// <summary>
@@ -50,26 +49,25 @@ namespace FreeTrain.World.Road.DummyCars
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_contrib"></param>
-        /// <param name="_site"></param>
-        /// <param name="_remover"></param>
-        [CLSCompliant(false)]
-        public ControllerImpl(DummyCarContribution _contrib, IControllerSite _site, bool _remover)
-            : base(_site)
+        /// <param name="contrib"></param>
+        /// <param name="site"></param>
+        /// <param name="remover"></param>
+        public ControllerImpl(DummyCarContribution contrib, IControllerSite site, bool remover)
+            : base(site)
         {
-            this.remove = _remover;
-            this.contribution = _contrib;
-            this.color = _contrib.currentColor;
+            this.remove = remover;
+            this.contribution = contrib;
+            this.color = contrib.currentColor;
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="loc"></param>
-        protected override void onLocationSelected(Location loc)
+        protected override void OnLocationSelected(Location loc)
         {
             if (remove)
             {
-                if (contribution.canBeBuilt(loc))
+                if (contribution.CanBeBuilt(loc))
                 {
                     if (TrafficVoxel.get(loc).accessory != null)
                         TrafficVoxel.get(loc).accessory = null;
@@ -80,8 +78,8 @@ namespace FreeTrain.World.Road.DummyCars
             }
             else
             {
-                if (contribution.canBeBuilt(loc))
-                    contribution.create(loc);
+                if (contribution.CanBeBuilt(loc))
+                    contribution.Create(loc);
                 else
                     MessageBox.Show("Can not place");
                 //! MessageBox.Show("設置できません");
@@ -97,7 +95,7 @@ namespace FreeTrain.World.Road.DummyCars
         public override void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
             if (base.currentPos != loc) return;
-            if (!contribution.canBeBuilt(loc)) return;
+            if (!contribution.CanBeBuilt(loc)) return;
 
             int x;
             RoadPattern rp = TrafficVoxel.get(loc).road.pattern;
@@ -126,7 +124,6 @@ namespace FreeTrain.World.Road.DummyCars
         /// <summary>
         /// 
         /// </summary>
-        [CLSCompliant(false)]
         public static ILocationDisambiguator theInstance = new RoadDisambiguator();
         private RoadDisambiguator() { }
         /// <summary>
@@ -134,7 +131,6 @@ namespace FreeTrain.World.Road.DummyCars
         /// </summary>
         /// <param name="loc"></param>
         /// <returns></returns>
-        [CLSCompliant(false)]
         public bool IsSelectable(Location loc)
         {
             // if there's any rail roads, fine
