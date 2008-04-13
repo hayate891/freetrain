@@ -38,12 +38,50 @@ namespace FreeTrain.World
         /// The location of the voxel that has the smallest (x,y,z)
         /// value in the cube.
         /// </summary>
-        public Location corner;
+        private Location corner;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Location Corner
+        {
+            get { return corner; }
+            set { corner = value; }
+        }
 
         /// <summary>
         /// Size of the cube.
         /// </summary>
-        public int sx, sy, sz;
+        private int sx;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int SizeX
+        {
+            get { return sx; }
+            set { sx = value; }
+        }
+
+        private int sy;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int SizeY
+        {
+            get { return sy; }
+            set { sy = value; }
+        }
+
+        private int sz;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int SizeZ
+        {
+            get { return sz; }
+            set { sz = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -55,6 +93,7 @@ namespace FreeTrain.World
         /// <param name="_sz"></param>
         public Cube(int x, int y, int z, int _sx, int _sy, int _sz)
             : this(new Location(x, y, z), _sx, _sy, _sz) { }
+
         /// <summary>
         /// 
         /// </summary>
@@ -67,6 +106,7 @@ namespace FreeTrain.World
             this.corner = _corner;
             this.sx = _sx; this.sy = _sy; this.sz = _sz;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -83,9 +123,9 @@ namespace FreeTrain.World
         /// <param name="loc"></param>
         /// <param name="d"></param>
         /// <returns></returns>
-        public static Cube createExclusive(Location loc, Distance d)
+        public static Cube CreateExclusive(Location loc, Distance d)
         {
-            return createExclusive(loc, loc + d);
+            return CreateExclusive(loc, loc + d);
         }
 
         /// <summary>
@@ -93,7 +133,7 @@ namespace FreeTrain.World
         /// The voxel pointed by loc1 is inside the cube but that by loc2
         /// is not. (Hence the name "exclusive")
         /// </summary>
-        public static Cube createExclusive(Location loc1, Location loc2)
+        public static Cube CreateExclusive(Location loc1, Location loc2)
         {
             int x, y, z;
 
@@ -118,7 +158,7 @@ namespace FreeTrain.World
         /// <param name="loc1"></param>
         /// <param name="loc2"></param>
         /// <returns></returns>
-        public static Cube createInclusive(Location loc1, Location loc2)
+        public static Cube CreateInclusive(Location loc1, Location loc2)
         {
             Debug.Assert(loc1 != Location.Unplaced && loc2 != Location.Unplaced);
 
@@ -132,46 +172,54 @@ namespace FreeTrain.World
                 Math.Abs(loc2.z - loc1.z) + 1);
         }
         #endregion
+
         /// <summary>
         /// 
         /// </summary>
         public int x1 { get { return corner.x; } }
+
         /// <summary>
         /// 
         /// </summary>
         public int y1 { get { return corner.y; } }
+
         /// <summary>
         /// 
         /// </summary>
         public int z1 { get { return corner.z; } }
+
         /// <summary>
         /// 
         /// </summary>
         public int x2 { get { return corner.x + sx; } }
+
         /// <summary>
         /// 
         /// </summary>
         public int y2 { get { return corner.y + sy; } }
+
         /// <summary>
         /// 
         /// 
         /// </summary>
         public int z2 { get { return corner.z + sz; } }
+
         /// <summary>
         /// 
         /// </summary>
-        public Distance size { get { return new Distance(sx, sy, sz); } }
+        public Distance Size { get { return new Distance(sx, sy, sz); } }
+
         /// <summary>
         /// 
         /// </summary>
-        public int volume { get { return sx * sy * sz; } }
+        public int Volume { get { return sx * sy * sz; } }
 
         /// <summary>
         /// Return true if this cube is on the ground.
         /// This property can be used to check if a structure can be built
         /// in this cube.
         /// </summary>
-        public bool isOnGround
+        public bool IsOnGround
         {
             get
             {
@@ -191,23 +239,21 @@ namespace FreeTrain.World
             }
         }
 
-
         /// <summary>
         /// Checks if this cube contains the given location.
         /// </summary>
-        public bool contains(Location loc)
+        public bool Contains(Location loc)
         {
             return corner.x <= loc.x && loc.x < corner.x + sx
                 && corner.y <= loc.y && loc.y < corner.y + sy
                 && corner.z <= loc.z && loc.z < corner.z + sz;
         }
 
-
         /// <summary>
         /// Computes the rectangle in the (A,B) axis that completely contains
         /// all the voxels in this cube.
         /// </summary>
-        public Rectangle boundingABRect
+        public Rectangle BoundingABRect
         {
             get
             {
@@ -227,7 +273,7 @@ namespace FreeTrain.World
         /// <summary>
         /// Lists up all the entities whose voxels intersect with this cube.
         /// </summary>
-        public IEntity[] getEntities()
+        public IEntity[] GetEntities()
         {
             int mx = x2;
             int my = y2;
@@ -253,11 +299,11 @@ namespace FreeTrain.World
         /// <summary>
         /// Enumerates all the voxels inside a cube.
         /// </summary>
-        public ICollection voxels
+        public ICollection Voxels
         {
             get
             {
-                ArrayList a = new ArrayList(this.volume);
+                ArrayList a = new ArrayList(this.Volume);
                 for (int x = 0; x < sx; x++)
                 {
                     for (int y = 0; y < sy; y++)
@@ -288,8 +334,9 @@ namespace FreeTrain.World
         /// <returns></returns>
         public override int GetHashCode()
         {
-            return corner.GetHashCode() ^ size.GetHashCode();
+            return corner.GetHashCode() ^ Size.GetHashCode();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -300,7 +347,7 @@ namespace FreeTrain.World
             if (!(o is Cube)) return false;
             Cube rhs = (Cube)o;
             return this.corner == rhs.corner
-                && this.size == rhs.size;
+                && this.Size == rhs.Size;
         }
     }
 }

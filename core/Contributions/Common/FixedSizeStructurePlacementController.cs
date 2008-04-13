@@ -68,15 +68,15 @@ namespace FreeTrain.Contributions.Common
         /// <param name="cube"></param>
         protected override void OnSelected(Cube cube)
         {
-            if (contrib.CanBeBuilt(cube.corner, ControlMode.Player))
+            if (contrib.CanBeBuilt(cube.Corner, ControlMode.Player))
             {
                 MessageBox.Show("Can not build");
                 //! MessageBox.Show("設置できません");
             }
             else
             {
-                CompletionHandler handler = new CompletionHandler(contrib, cube.corner, true);
-                new ConstructionSite(cube.corner, new EventHandler(handler.handle), contrib.Size);
+                CompletionHandler handler = new CompletionHandler(contrib, cube.Corner, true);
+                new ConstructionSite(cube.Corner, new EventHandler(handler.handle), contrib.Size);
             }
         }
 
@@ -104,7 +104,7 @@ namespace FreeTrain.Contributions.Common
         /// <param name="pt"></param>
         public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
-            if (currentCube.contains(loc))
+            if (CurrentCube.Contains(loc))
                 alphaSprites.getSprite(loc - this.location).DrawAlpha(canvas.Surface, pt);
         }
 

@@ -104,12 +104,12 @@ namespace FreeTrain.World.Road
         /// If necessary, this method will create a junction.
         /// The caller needs to make sure <code>canAttach(newDir)==true</code>
         /// </summary>
-        public abstract bool attach(Direction newDir);
+        public abstract bool Attach(Direction newDir);
 
         /// <summary>
         /// Returns true if a new road with the given direction can be attached.
         /// </summary>
-        public abstract bool canAttach(Direction newDir);
+        public abstract bool CanAttach(Direction newDir);
 
         /// <summary>
         /// Detaches two directions from this RR.
@@ -118,7 +118,7 @@ namespace FreeTrain.World.Road
         /// Thus the caller shouldn't assume that any reference to this
         /// object or its parent TrafficVoxel would be valid after the method invocation.
         /// </summary>
-        public abstract void detach(Direction d1, Direction d2);
+        public abstract void Detach(Direction d1, Direction d2);
 
         private RoadPattern _pattern;
         /// <summary>
@@ -143,7 +143,7 @@ namespace FreeTrain.World.Road
         /// <summary>
         /// Draws a road. This method is called before the car is drawn.
         /// </summary>
-        public virtual void drawBefore(DrawContext display, Point pt)
+        public virtual void DrawBefore(DrawContext display, Point pt)
         {
         }
         /// <summary>

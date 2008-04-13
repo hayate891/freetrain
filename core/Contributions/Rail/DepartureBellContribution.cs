@@ -50,10 +50,28 @@ namespace FreeTrain.Contributions.Rail
         }
 
         /// <summary> name of this sound </summary>
-        public readonly string name;
+        private readonly string name;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Name
+        {
+            get { return name; }
+        } 
+
 
         /// <summary> Bell sound </summary>
-        public readonly ISoundEffect sound;
+        private readonly ISoundEffect sound;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ISoundEffect Sound
+        {
+            get { return sound; }
+        } 
+
         /// <summary>
         /// 
         /// </summary>
@@ -63,11 +81,8 @@ namespace FreeTrain.Contributions.Rail
             return name;
         }
 
-
-
-
         /// <summary> Gets all the departure bell contributions in the system. </summary>
-        public static DepartureBellContribution[] all
+        public static DepartureBellContribution[] All
         {
             get
             {
@@ -77,7 +92,7 @@ namespace FreeTrain.Contributions.Rail
         }
 
         /// <summary> Default bell sound. </summary>
-        public static DepartureBellContribution DEFAULT
+        public static DepartureBellContribution Default
         {
             get
             {

@@ -92,10 +92,10 @@ namespace FreeTrain.Contributions.Land
         /// <returns></returns>
         public override IModalController CreateBuilder(IControllerSite site)
         {
-            return new DefaultControllerImpl(this, site, new DefaultControllerImpl.SpriteBuilder(getSprite));
+            return new DefaultControllerImpl(this, site, new DefaultControllerImpl.SpriteBuilder(GetSprite));
         }
 
-        private ISprite getSprite()
+        private ISprite GetSprite()
         {
             return sprite;
         }

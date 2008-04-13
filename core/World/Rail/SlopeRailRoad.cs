@@ -45,7 +45,7 @@ namespace FreeTrain.World.Rail
         public SlopeEntity(Location start, Direction dir)
         {
             Location end = new Location(start.x + dir.offsetX * 3, start.y + dir.offsetY * 3, start.z + 1);
-            cube = Cube.createInclusive(start, end);
+            cube = Cube.CreateInclusive(start, end);
         }
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public void remove()
         {
-            foreach (Voxel v in cube.voxels)
+            foreach (Voxel v in cube.Voxels)
             {
                 if (v.Entity == this && !(v is BridgePierVoxel))
                     WorldDefinition.World.remove(v);

@@ -67,7 +67,7 @@ namespace FreeTrain.World.Development
         /// </returns>
         public static ULV create(Cube cube)
         {
-            Debug.Assert(cube.sz == 0);
+            Debug.Assert(cube.SizeZ == 0);
 
             int mx = cube.x2;
             int my = cube.y2;

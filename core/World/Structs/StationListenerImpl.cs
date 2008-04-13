@@ -81,7 +81,7 @@ namespace FreeTrain.World.Structs
         public int GetPopulation(Station s)
         {
             int v = WorldDefinition.World.LandValue[location];
-            int p = population.calcPopulation(WorldDefinition.World.Clock);
+            int p = population.CalcPopulation(WorldDefinition.World.Clock);
             p /= stations.Count;
             return Math.Min(p, v + 10);
         }

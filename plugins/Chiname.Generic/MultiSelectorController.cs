@@ -319,7 +319,7 @@ namespace FreeTrain.Framework.Plugin.Generic
         /// <param name="pt"></param>
         public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
-            if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
+            if (Cube.CreateExclusive(baseLoc, alphaSprites.size).Contains(loc))
                 alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas.Surface, pt);
         }
         /// <summary>
@@ -895,9 +895,9 @@ namespace FreeTrain.Framework.Plugin.Generic
             else
             {
                 if (current.Current is VarHeightBuildingContribution)
-                    buf += current.Population.residents * (int)numHeight.Value;
+                    buf += current.Population.Residents * (int)numHeight.Value;
                 else
-                    buf += current.Population.residents;
+                    buf += current.Population.Residents;
             }
 
             return buf;

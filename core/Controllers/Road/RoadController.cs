@@ -244,7 +244,7 @@ namespace FreeTrain.Controllers.Road
                 return;
             currentContrib = (RoadContribution)lastValidNode.Tag;
             description.Text = currentContrib.OneLineDescription;
-            level.Text = ToStyleDescription(currentContrib.style);
+            level.Text = ToStyleDescription(currentContrib.Style);
             toolTip.SetToolTip(this.description, this.description.Text);
             currentContrib.PreviewPatternIdx = currentPattern;
             this.Text = this.Type.Name;

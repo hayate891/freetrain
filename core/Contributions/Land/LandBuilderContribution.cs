@@ -136,10 +136,10 @@ namespace FreeTrain.Contributions.Land
         public override IModalController CreateRemover(IControllerSite site)
         {
             return new DefaultControllerImpl(this, site,
-                new DefaultControllerImpl.SpriteBuilder(getSprite));
+                new DefaultControllerImpl.SpriteBuilder(GetSprite));
         }
 
-        private static ISprite getSprite()
+        private static ISprite GetSprite()
         {
             return ResourceUtil.RemoverChip;
             //return ResourceUtil.emptyChip;

@@ -42,12 +42,12 @@ namespace FreeTrain.Contributions.Sound
         /// into the set of BGMs.
         /// </summary>
         /// <returns></returns>
-        public abstract BGMContribution[] listContributions();
+        public abstract BGMContribution[] ListContributions();
 
         /// <summary>
         /// Gets the group name of these BGMContributions.
         /// </summary>
-        public abstract string title { get; }
+        public abstract string Title { get; }
     }
 
     internal class BGMFactoryContributionFactory : IContributionFactory
@@ -73,7 +73,7 @@ namespace FreeTrain.Contributions.Sound
                 (BGMFactoryContribution)PluginUtil.loadObjectFromManifest(e);
 
             // let the factory load BGMs
-            foreach (BGMContribution bgm in contrib.listContributions())
+            foreach (BGMContribution bgm in contrib.ListContributions())
             {
                 owner.contributions.Add(bgm);
                 bgm.init(owner, new Uri(owner.dirName));

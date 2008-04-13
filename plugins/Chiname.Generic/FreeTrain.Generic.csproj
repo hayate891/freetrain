@@ -108,6 +108,8 @@
     <Compile Include="CategoryTreeWnd.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StructCategoryTree.cs" />
+    <Compile Include="StructCategories.cs" />
     <Compile Include="GenericLandContribution.cs">
       <SubType>Code</SubType>
     </Compile>

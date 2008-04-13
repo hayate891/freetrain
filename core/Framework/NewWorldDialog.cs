@@ -68,7 +68,7 @@ namespace FreeTrain.Framework
         public WorldDefinition createWorld()
         {
             NewGameContribution contrib = (NewGameContribution)list.SelectedItem;
-            return contrib.createNewGame();
+            return contrib.CreateNewGame();
         }
 
         #region Windows Form Designer generated code

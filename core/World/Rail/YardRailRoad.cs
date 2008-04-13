@@ -106,7 +106,7 @@ namespace FreeTrain.World.Rail
                 // if the train departs, load passengers
                 owner.hostStation.loadPassengers(tr);
                 // ring the bell, here we go!
-                tr.playSound(owner.bellSound.sound);
+                tr.playSound(owner.bellSound.Sound);
             }
 
             return ts;

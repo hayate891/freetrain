@@ -140,7 +140,7 @@ namespace FreeTrain.Controllers.Rail
                 // cancel the anchor
                 if (currentPosition != unplaced)
                 {
-                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPosition));
                 }
                 anchor = unplaced;
                 UpdateDialog();
@@ -160,10 +160,10 @@ namespace FreeTrain.Controllers.Rail
                 // update the screen
                 if (currentPosition != unplaced)
                 {
-                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPosition));
                 }
                 currentPosition = location;
-                WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPosition));
+                WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPosition));
 
                 int cost;
                 SingleRailRoad.ComputeRoute(anchor, currentPosition, out cost);

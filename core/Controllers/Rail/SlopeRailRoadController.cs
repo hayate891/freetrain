@@ -414,7 +414,7 @@ namespace FreeTrain.Controllers.Rail
             loc2.y += direction.offsetY * 3;
             loc2.z++;
 
-            WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(lastMouse, loc2));
+            WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(lastMouse, loc2));
         }
 
         /// <summary>

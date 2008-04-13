@@ -66,7 +66,15 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// 
         /// </summary>
-        public readonly RoadStyle style;
+        private readonly RoadStyle style;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public RoadStyle Style
+        {
+            get { return style; }
+        } 
 
         private int previewPatternIdx = 0;
         /// <summary>
@@ -80,7 +88,7 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// 
         /// </summary>
-        public static readonly byte[, ,] previewPattern = 
+        private static readonly byte[, ,] previewPattern = 
 		{
 			{
 				{00,00,00,10,00,00,00,00,00,00},
@@ -119,6 +127,15 @@ namespace FreeTrain.Contributions.Road
 				{00,00,00,00,00,00,00,00,00,00}
 			}
 		};		// roads are always 4-way.
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static byte[, ,] PreviewPattern
+        {
+            get { return RoadContribution.previewPattern; }
+        } 
+
         /// <summary>
         /// 
         /// </summary>

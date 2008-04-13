@@ -56,13 +56,13 @@ namespace FreeTrain.Contributions.Population
         /// <summary>
         /// 
         /// </summary>
-        public override int residents { get { return population; } }
+        public override int Residents { get { return population; } }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="currentTime"></param>
         /// <returns></returns>
-        public override int calcPopulation(Time currentTime)
+        public override int CalcPopulation(Time currentTime)
         {
             if (currentTime.isWeekend)
                 return population * weekendHourTable[currentTime.hour] / 100;

@@ -81,7 +81,7 @@ namespace FreeTrain.Framework
         {
             foreach (BGMContribution contrib in PluginManager.Bgms)
             {
-                if (contrib.name == songname) currentPlaylist.Add(contrib);
+                if (contrib.Name == songname) currentPlaylist.Add(contrib);
             }
         }
         /// <summary>
@@ -92,7 +92,7 @@ namespace FreeTrain.Framework
         {
             foreach (BGMContribution contrib in PluginManager.Bgms)
             {
-                if (contrib.name == songname)
+                if (contrib.Name == songname)
                 {
                     int index = currentPlaylist.IndexOf(contrib);
                     if (index > 0)
@@ -111,7 +111,7 @@ namespace FreeTrain.Framework
         {
             foreach (BGMContribution contrib in PluginManager.Bgms)
             {
-                if (contrib.name == songname)
+                if (contrib.Name == songname)
                 {
                     int index = currentPlaylist.IndexOf(contrib);
                     if (index < currentPlaylist.Count - 1)
@@ -130,7 +130,7 @@ namespace FreeTrain.Framework
         {
             foreach (BGMContribution contrib in PluginManager.Bgms)
             {
-                if (contrib.name == songname)
+                if (contrib.Name == songname)
                 {
                     if (contrib == currentBGM)
                     {
@@ -205,7 +205,7 @@ namespace FreeTrain.Framework
                 {
                     try
                     {
-                        bgm = new SdlDotNet.Audio.Music(current.fileName);
+                        bgm = new SdlDotNet.Audio.Music(current.FileName);
                         bgm.Play();
                         //SdlDotNet.Audio.MusicPlayer.Play();
                         //bgm.run();
@@ -293,7 +293,7 @@ namespace FreeTrain.Framework
             public override void GetObjectData(SerializationInfo info, StreamingContext context)
             {
                 info.SetType(typeof(ReferenceImpl));
-                info.AddValue("fileName", fileName);
+                info.AddValue("fileName", FileName);
             }
             [Serializable]
             internal new sealed class ReferenceImpl : IObjectReference

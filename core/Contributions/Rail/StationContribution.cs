@@ -45,7 +45,16 @@ namespace FreeTrain.Contributions.Rail
         }
 
         /// <summary> Operation cost of this station per day. </summary>
-        public readonly int operationCost;
+        private readonly int operationCost;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int OperationCost
+        {
+            get { return operationCost; }
+        } 
+
         /// <summary>
         /// 
         /// </summary>

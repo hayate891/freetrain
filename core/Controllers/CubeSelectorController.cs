@@ -98,12 +98,12 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// North-west corner of the selected region.
         /// </summary>
-        protected Cube currentCube
+        protected Cube CurrentCube
         {
             get
             {
                 Debug.Assert(location != UNPLACED);
-                return Cube.createExclusive(location, size);
+                return Cube.CreateExclusive(location, size);
             }
         }
 
@@ -125,7 +125,7 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public virtual void OnClick(MapViewWindow view, Location loc, Point ab)
         {
-            OnSelected(Cube.createExclusive(loc, size));
+            OnSelected(Cube.CreateExclusive(loc, size));
         }
         /// <summary>
         /// 
@@ -151,9 +151,9 @@ namespace FreeTrain.Controllers
             {
                 // the current location is moved.
                 // update the screen
-                w.OnVoxelUpdated(currentCube);
+                w.OnVoxelUpdated(CurrentCube);
                 location = loc;
-                w.OnVoxelUpdated(currentCube);
+                w.OnVoxelUpdated(CurrentCube);
             }
         }
         /// <summary>
@@ -171,7 +171,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public virtual void close()
+        public virtual void Close()
         {
             onCanceled();
         }

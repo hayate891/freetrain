@@ -106,6 +106,7 @@
     <Compile Include="ControllerImpl.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RoadDisambiguator.cs" />
     <Compile Include="MenuContributionImpl.cs">
       <SubType>Code</SubType>
     </Compile>

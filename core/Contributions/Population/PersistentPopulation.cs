@@ -44,29 +44,29 @@ namespace FreeTrain.Contributions.Population
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_core"></param>
-        /// <param name="_ref">
+        /// <param name="core"></param>
+        /// <param name="reference">
         /// Object that returns a reference to the existing same object.
         /// This object needs to be serializable, and will be used to
         /// restore reference correctly.
         /// </param>
-        public PersistentPopulation(BasePopulation _core, IObjectReference _ref)
+        public PersistentPopulation(BasePopulation core, IObjectReference reference)
         {
-            this.core = _core;
-            this.resolver = _ref;
+            this.core = core;
+            this.resolver = reference;
         }
         /// <summary>
         /// 
         /// </summary>
-        public override int residents { get { return core.residents; } }
+        public override int Residents { get { return core.Residents; } }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="currentTime"></param>
         /// <returns></returns>
-        public override int calcPopulation(Time currentTime)
+        public override int CalcPopulation(Time currentTime)
         {
-            return core.calcPopulation(currentTime);
+            return core.CalcPopulation(currentTime);
         }
 
         //

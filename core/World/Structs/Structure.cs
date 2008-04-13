@@ -99,14 +99,14 @@ namespace FreeTrain.World.Structs
 		{
 			if(mode == ControlMode.Com)
 			{
-				foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
+				foreach( Voxel v in Cube.CreateExclusive(loc,sz).Voxels )
 					if( !v.Entity.isOwned )
 						return false;
 				return true;
 			}
 			else
 			{
-				foreach( Voxel v in Cube.createExclusive(loc,sz).voxels )
+				foreach( Voxel v in Cube.CreateExclusive(loc,sz).Voxels )
 					if( !v.Entity.isSilentlyReclaimable )
 						return false;
 				return true;

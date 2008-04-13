@@ -79,7 +79,7 @@ namespace FreeTrain.World.Structs
         /// <summary>
         /// 
         /// </summary>
-        public Cube cube { get { return Cube.createExclusive(baseLocation, type.Size); } }
+        public Cube cube { get { return Cube.CreateExclusive(baseLocation, type.Size); } }
 
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace FreeTrain.World.Structs
         {
             // just remove all the voxels
             WorldDefinition world = WorldDefinition.World;
-            foreach (Voxel v in this.cube.voxels)
+            foreach (Voxel v in this.cube.Voxels)
                 world.remove(v);
 
             if (onEntityRemoved != null)

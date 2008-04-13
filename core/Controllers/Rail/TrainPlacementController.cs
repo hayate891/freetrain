@@ -183,11 +183,11 @@ namespace FreeTrain.Controllers.Rail
             Train tr = this.selectedTrain;
             if (tr == null || !tr.head.state.isInside)
             {
-                arrowLoc.location = World.Location.Unplaced;
+                arrowLoc.Location = World.Location.Unplaced;
             }
             else
             {
-                arrowLoc.location = tr.head.state.asInside().location;
+                arrowLoc.Location = tr.head.state.asInside().location;
             }
         }
 

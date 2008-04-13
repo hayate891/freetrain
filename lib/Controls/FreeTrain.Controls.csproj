@@ -96,6 +96,8 @@
     <Compile Include="ColorPicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="MruMenuInline.cs" />
+    <Compile Include="IColorLibrary.cs" />
     <Compile Include="CostBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

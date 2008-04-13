@@ -141,7 +141,7 @@ namespace FreeTrain.World.Land.VinylHouse
             /// </summary>
             /// <param name="loc1"></param>
             /// <param name="loc2"></param>
-            protected override void onRectSelected(Location loc1, Location loc2)
+            protected override void OnRectSelected(Location loc1, Location loc2)
             {
                 contrib.Create(loc1, loc2, true);
             }
@@ -162,12 +162,12 @@ namespace FreeTrain.World.Land.VinylHouse
             /// <param name="pt"></param>
             public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
             {
-                if (loc.z != currentLoc.z) return;
+                if (loc.z != CurrentLocation.z) return;
 
-                if (anchor != UNPLACED && loc.inBetween(anchor, currentLoc))
+                if (Anchor != Unplaced && loc.inBetween(Anchor, CurrentLocation))
                 {
-                    Location loc1 = base.location1;
-                    Location loc2 = base.location2;
+                    Location loc1 = base.LocationNW;
+                    Location loc2 = base.LocationSE;
                     contrib.Sprites[contrib.GetSpriteIndex(loc.x, loc.y, loc1.x, loc1.y, loc2.x, loc2.y)]
                         .DrawAlpha(canvas.Surface, pt);
                 }
@@ -179,66 +179,6 @@ namespace FreeTrain.World.Land.VinylHouse
             /// <param name="view"></param>
             /// <param name="surface"></param>
             public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
-        }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    [Serializable]
-    public class XVinylHouseBuilder : VinylHouseBuilder
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        public XVinylHouseBuilder(XmlElement e) : base(e) { }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="x2"></param>
-        /// <param name="y2"></param>
-        /// <returns></returns>
-        protected override int GetSpriteIndex(int x, int y, int x1, int y1, int x2, int y2)
-        {
-            if (x == x1) return 2;
-            if (x == x2) return 0;
-            return 1;
-        }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    [Serializable]
-    public class YVinylHouseBuilder : VinylHouseBuilder
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        public YVinylHouseBuilder(XmlElement e) : base(e) { }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="x2"></param>
-        /// <param name="y2"></param>
-        /// <returns></returns>
-        protected override int GetSpriteIndex(int x, int y, int x1, int y1, int x2, int y2)
-        {
-            if (y == y2) return 2;
-            if (y == y1) return 0;
-            return 1;
         }
     }
 }

@@ -292,7 +292,7 @@ namespace FreeTrain.World
         /// <param name="heightCutDiff"></param>
         public override void Draw(DrawContext display, Point pt, int heightCutDiff)
         {
-            if (_road != null) _road.drawBefore(display, pt);
+            if (_road != null) _road.DrawBefore(display, pt);
             if (_accessory != null) _accessory.DrawBefore(display, pt);
             if (_railRoad != null) _railRoad.drawBefore(display, pt);
             if (_car != null) _car.draw(display, pt);

@@ -38,7 +38,7 @@ namespace FreeTrain.Contributions.Road
     [Serializable]
     public abstract class AbstractRoadContributionImpl : RoadContribution
     {
-        private readonly string _name;
+        private readonly string name;
         private readonly string description;
         /// <summary>
         /// 
@@ -47,7 +47,7 @@ namespace FreeTrain.Contributions.Road
         protected AbstractRoadContributionImpl(XmlElement e)
             : base(e)
         {
-            _name = XmlUtil.SelectSingleNode(e, "name").InnerText;
+            name = XmlUtil.SelectSingleNode(e, "name").InnerText;
             description = XmlUtil.SelectSingleNode(e, "description").InnerText;
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace FreeTrain.Contributions.Road
         /// </summary>
         /// <param name="dirs"></param>
         /// <returns></returns>
-        protected internal abstract ISprite getSprite(byte dirs);
+        protected internal abstract ISprite GetSprite(byte dirs);
         /// <summary>
         /// 
         /// </summary>
@@ -78,8 +78,8 @@ namespace FreeTrain.Contributions.Road
                     if (v == null) return false;	// occupied
                     if (v.road != null)
                     {
-                        if (!v.road.canAttach(d) && here != to) return false;
-                        if (!v.road.canAttach(d.opposite) && here != from) return false;
+                        if (!v.road.CanAttach(d) && here != to) return false;
+                        if (!v.road.CanAttach(d.opposite) && here != from) return false;
                     }
                     if (v.car != null) return false;	// car is in place
                     // TODO: check v.railRoad
@@ -110,12 +110,12 @@ namespace FreeTrain.Contributions.Road
                     if (here == from) p = RoadPattern.get((byte)(1 << (d.index / 2)));
                     if (here == to) p = RoadPattern.get((byte)(1 << (d.opposite.index / 2)));
 
-                    create(TrafficVoxel.getOrCreate(here), p);
+                    Create(TrafficVoxel.getOrCreate(here), p);
                 }
                 else
                 {
-                    if (here != from) r.attach(d.opposite);
-                    if (here != to) r.attach(d);
+                    if (here != from) r.Attach(d.opposite);
+                    if (here != to) r.Attach(d);
                 }
 
                 if (here == to) return;
@@ -126,7 +126,7 @@ namespace FreeTrain.Contributions.Road
         /// <summary>
         /// Creates a new road with a given pattern.
         /// </summary>
-        protected virtual BaseRoad create(TrafficVoxel voxel, RoadPattern pattern)
+        protected virtual BaseRoad Create(TrafficVoxel voxel, RoadPattern pattern)
         {
             return new RoadImpl(this, voxel, pattern);
         }
@@ -146,7 +146,7 @@ namespace FreeTrain.Contributions.Road
             {
                 BaseRoad r = BaseRoad.get(here);
                 if (r != null)
-                    r.detach(d, d.opposite);
+                    r.Detach(d, d.opposite);
 
                 if (here == to) return;
                 here = here.toward(to);
@@ -159,7 +159,7 @@ namespace FreeTrain.Contributions.Road
         {
             get
             {
-                return _name;
+                return name;
             }
         }
         /// <summary>
@@ -197,8 +197,8 @@ namespace FreeTrain.Contributions.Road
                         }
                         while (y >= 0 && x < 10)
                         {
-                            if (previewPattern[PreviewPatternIdx, x, y] > 0)
-                                drawer.Draw(getSprite(previewPattern[PreviewPatternIdx, x, y]), 9 - x, y - 5);
+                            if (PreviewPattern[PreviewPatternIdx, x, y] > 0)
+                                drawer.Draw(GetSprite(PreviewPattern[PreviewPatternIdx, x, y]), 9 - x, y - 5);
                             x++;
                             y--;
                         }
@@ -222,7 +222,7 @@ namespace FreeTrain.Contributions.Road
             /// <param name="pattern"></param>
             internal protected RoadImpl(AbstractRoadContributionImpl contrib, TrafficVoxel tv, RoadPattern pattern)
                 :
-                base(tv, pattern, contrib.style)
+                base(tv, pattern, contrib.Style)
             {
 
                 this.contribution = contrib;
@@ -234,16 +234,16 @@ namespace FreeTrain.Contributions.Road
             /// </summary>
             /// <param name="display"></param>
             /// <param name="pt"></param>
-            public override void drawBefore(DrawContext display, Point pt)
+            public override void DrawBefore(DrawContext display, Point pt)
             {
-                contribution.getSprite(pattern.dirs).Draw(display.Surface, pt);
+                contribution.GetSprite(pattern.dirs).Draw(display.Surface, pt);
             }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="d"></param>
             /// <returns></returns>
-            public override bool attach(Direction d)
+            public override bool Attach(Direction d)
             {
                 byte dirs = pattern.dirs;
                 dirs |= (byte)(1 << (d.index / 2));
@@ -255,7 +255,7 @@ namespace FreeTrain.Contributions.Road
             /// </summary>
             /// <param name="d1"></param>
             /// <param name="d2"></param>
-            public override void detach(Direction d1, Direction d2)
+            public override void Detach(Direction d1, Direction d2)
             {
                 byte dirs = pattern.dirs;
                 dirs &= (byte)~(1 << (d1.index / 2));
@@ -276,7 +276,7 @@ namespace FreeTrain.Contributions.Road
             /// </summary>
             /// <param name="d"></param>
             /// <returns></returns>
-            public override bool canAttach(Direction d)
+            public override bool CanAttach(Direction d)
             {
                 return true;
             }

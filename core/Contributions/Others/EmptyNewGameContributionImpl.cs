@@ -39,22 +39,22 @@ namespace FreeTrain.Contributions.Others
         /// <summary>
         /// 
         /// </summary>
-        public override string author { get { return "-"; } }
+        public override string Author { get { return "-"; } }
         /// <summary>
         /// 
         /// </summary>
-        public override string name { get { return "Empty map"; } }
+        public override string Name { get { return "Empty map"; } }
         //! public override string name { get { return "空マップ"; } }
         /// <summary>
         /// 
         /// </summary>
-        public override string description { get { return "Create a completely empty map"; } }
+        public override string Description { get { return "Create a completely empty map"; } }
         //! public override string description { get { return "何もない空のマップを作成します"; } }
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public override WorldDefinition createNewGame()
+        public override WorldDefinition CreateNewGame()
         {
             using (NewWorldDialog dialog = new NewWorldDialog())
             {

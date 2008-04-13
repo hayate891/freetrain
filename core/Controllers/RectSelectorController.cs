@@ -35,26 +35,64 @@ namespace FreeTrain.Controllers
     public abstract class RectSelectorController : IModalController, ILocationDisambiguator
     {
         /// <summary>Constant</summary>
-        protected static readonly Location UNPLACED = World.Location.Unplaced;
+        private static readonly Location unplaced = World.Location.Unplaced;
+
         /// <summary>
         /// 
         /// </summary>
-        protected Location anchor = UNPLACED;
-        /// <summary>
-        /// 
-        /// </summary>
-        protected Location currentLoc = UNPLACED;
-        /// <summary>
-        /// 
-        /// </summary>
-        protected readonly IControllerSite site;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_site"></param>
-        public RectSelectorController(IControllerSite _site)
+        protected static Location Unplaced
         {
-            this.site = _site;
+            get { return RectSelectorController.unplaced; }
+        } 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private Location anchor = unplaced;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Location Anchor
+        {
+            get { return anchor; }
+            set { anchor = value; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private Location currentLoc = unplaced;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Location CurrentLocation
+        {
+            get { return currentLoc; }
+            set { currentLoc = value; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly IControllerSite site;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected IControllerSite Site
+        {
+            get { return site; }
+        } 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="site"></param>
+        public RectSelectorController(IControllerSite site)
+        {
+            this.site = site;
         }
 
         //
@@ -64,20 +102,21 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// Called when the selection is completed.
         /// </summary>
-        protected abstract void onRectSelected(Location loc1, Location loc2);
+        protected abstract void OnRectSelected(Location loc1, Location loc2);
 
         /// <summary>
         /// Called when the selection is changed.
         /// </summary>
-        protected virtual void onRectUpdated(Location loc1, Location loc2) { }
+        protected virtual void OnRectUpdated(Location loc1, Location loc2) { }
 
         /// <summary>
         /// Called when the user wants to cancel the modal controller.
         /// </summary>
-        protected virtual void onCanceled()
+        protected virtual void OnCanceled()
         {
             site.Close();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -96,17 +135,14 @@ namespace FreeTrain.Controllers
             }
         }
 
-
-        //
-        // convenience methods
         /// <summary>
         /// North-west corner of the selected region.
         /// </summary>
-        protected Location location1
+        protected Location LocationNW
         {
             get
             {
-                Debug.Assert(currentLoc != UNPLACED);
+                Debug.Assert(currentLoc != unplaced);
                 return new Location(
                     Math.Min(currentLoc.x, anchor.x),
                     Math.Min(currentLoc.y, anchor.y),
@@ -117,11 +153,11 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// South-east corner of the selected region.
         /// </summary>
-        protected Location location2
+        protected Location LocationSE
         {
             get
             {
-                Debug.Assert(currentLoc != UNPLACED);
+                Debug.Assert(currentLoc != unplaced);
                 return new Location(
                     Math.Max(currentLoc.x, anchor.x),
                     Math.Max(currentLoc.y, anchor.y),
@@ -129,25 +165,23 @@ namespace FreeTrain.Controllers
             }
         }
 
-
-        //
-        // internal logic
-        //
-
         /// <summary>
         /// 
         /// </summary>
         public ILocationDisambiguator Disambiguator { get { return this; } }
 
-        /// <summary> LocationDisambiguator implementation </summary>
+        /// <summary> 
+        /// LocationDisambiguator implementation 
+        /// </summary>
         public bool IsSelectable(Location loc)
         {
-            if (anchor != UNPLACED)
+            if (anchor != unplaced)
                 return loc.z == anchor.z;
             else
                 // lands can be placed only on the ground
                 return GroundDisambiguator.theInstance.IsSelectable(loc);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -156,16 +190,17 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public virtual void OnClick(MapViewWindow view, Location loc, Point ab)
         {
-            if (anchor == UNPLACED)
+            if (anchor == unplaced)
             {
                 anchor = loc;
             }
             else
             {
-                onRectSelected(this.location1, this.location2);
-                anchor = UNPLACED;
+                OnRectSelected(this.LocationNW, this.LocationSE);
+                anchor = unplaced;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -174,15 +209,16 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public virtual void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
-            if (anchor == UNPLACED)
-                onCanceled();
+            if (anchor == unplaced)
+                OnCanceled();
             else
             {
                 // cancel the anchor
                 WorldDefinition.World.OnAllVoxelUpdated();
-                anchor = UNPLACED;
+                anchor = unplaced;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -193,19 +229,21 @@ namespace FreeTrain.Controllers
         {
             WorldDefinition w = WorldDefinition.World;
 
-            if (anchor != UNPLACED && currentLoc != loc)
+            if (anchor != unplaced && currentLoc != loc)
             {
                 // the current location is moved.
                 // update the screen
                 currentLoc = loc;
-                onRectUpdated(this.location1, this.location2);
+                OnRectUpdated(this.LocationNW, this.LocationSE);
                 w.OnAllVoxelUpdated();
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
         public virtual void OnAttached() { }
+
         /// <summary>
         /// 
         /// </summary>
@@ -214,12 +252,13 @@ namespace FreeTrain.Controllers
             // redraw the entire surface to erase any left-over from this controller
             WorldDefinition.World.OnAllVoxelUpdated();
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public virtual void close()
+        public virtual void Close()
         {
-            onCanceled();
+            OnCanceled();
         }
 
         /// <summary>

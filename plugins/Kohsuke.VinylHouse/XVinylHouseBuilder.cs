@@ -1,4 +1,4 @@
-﻿#region LICENSE
+#region LICENSE
 /*
  * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
  *
@@ -20,51 +20,44 @@
 
 using System;
 using System.Drawing;
-using System.Windows.Forms;
-using FreeTrain.Controllers;
-using FreeTrain.Framework;
+using System.Runtime.Serialization;
+using System.Xml;
 using FreeTrain.Framework.Graphics;
+using FreeTrain.Contributions.Land;
+using FreeTrain.Contributions.Population;
+using FreeTrain.Controllers;
+using FreeTrain.Framework.Plugin;
 using FreeTrain.Views;
-using FreeTrain.World;
-using FreeTrain.World.Structs;
 
-namespace FreeTrain.Contributions.Common
+namespace FreeTrain.World.Land.VinylHouse
 {
     /// <summary>
     /// 
     /// </summary>
-    public class FixedSizeStructureRemovalController : CubeSelectorController
+    [Serializable]
+    public class XVinylHouseBuilder : VinylHouseBuilder
     {
         /// <summary>
         /// 
         /// </summary>
-        protected readonly FixedSizeStructureContribution contrib;
+        /// <param name="e"></param>
+        public XVinylHouseBuilder(XmlElement e) : base(e) { }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="contrib"></param>
-        /// <param name="site"></param>
-        public FixedSizeStructureRemovalController(FixedSizeStructureContribution contrib, IControllerSite site)
-            : base(contrib.Size, site)
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="x1"></param>
+        /// <param name="y1"></param>
+        /// <param name="x2"></param>
+        /// <param name="y2"></param>
+        /// <returns></returns>
+        protected override int GetSpriteIndex(int x, int y, int x1, int y1, int x2, int y2)
         {
-            this.contrib = contrib;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="cube"></param>
-        protected override void OnSelected(Cube cube)
-        {
-            PThreeDimStructure s = WorldDefinition.World.GetEntityAt(cube.Corner) as PThreeDimStructure;
-            if (s == null || s.type != contrib)
-            {
-                MessageBox.Show("Wrong type");
-                //! MessageBox.Show("種類が違います");
-                return;
-            }
-            s.remove();
+            if (x == x1) return 2;
+            if (x == x2) return 0;
+            return 1;
         }
     }
 }

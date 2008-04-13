@@ -39,7 +39,7 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public Location location
+        public Location Location
         {
             get
             {

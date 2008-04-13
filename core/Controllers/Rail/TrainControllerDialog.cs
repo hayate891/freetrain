@@ -239,7 +239,7 @@ namespace FreeTrain.Controllers.Rail
             newTCMenu.MenuItems.Clear();
             foreach (TrainControllerContribution contrib in PluginManager.TrainControllers)
             {
-                MenuItem mi = new MenuItem(contrib.name);
+                MenuItem mi = new MenuItem(contrib.Name);
                 mi.Click += new EventHandler(new TCCreator(this, contrib).onMenuSelected);
                 newTCMenu.MenuItems.Add(mi);
             }
@@ -273,7 +273,7 @@ namespace FreeTrain.Controllers.Rail
         private void createNewTrainController(TrainControllerContribution contrib)
         {
             // update data structure
-            TrainController tc = contrib.newController(
+            TrainController tc = contrib.NewController(
                 string.Format("New diagram{0}", iota++));
             //! string.Format("新しいダイヤグラム{0}",iota++));
             WorldDefinition.World.TrainControllers.add(tc);
@@ -288,7 +288,7 @@ namespace FreeTrain.Controllers.Rail
         private ListViewItem createListViewItem(TrainController tc)
         {
             ListViewItem lvi = new ListViewItem(new string[]{
-				tc.name, tc.contribution.name });
+				tc.name, tc.contribution.Name });
             lvi.Tag = tc;
             return lvi;
         }
