@@ -205,7 +205,7 @@ namespace FreeTrain.Contributions.Common
 
                 XmlElement pop = (XmlElement)e.SelectSingleNode("population");
                 if (pop != null)
-                    _population = new PersistentPopulation(BasePopulation.load(pop),
+                    _population = new PersistentPopulation(BasePopulation.Load(pop),
                         new PopulationReferenceImpl(ownerId));
             }
 

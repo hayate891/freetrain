@@ -224,9 +224,9 @@ namespace FreeTrain.Controllers
             if (anchor != UNPLACED && isPlacing && currentPos != loc)
             {
                 if (currentPos != UNPLACED)
-                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPos));
                 currentPos = align(loc);
-                WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPos));
             }
         }
 
@@ -257,7 +257,7 @@ namespace FreeTrain.Controllers
                     else
                         // remove existing ones
                         Type.Remove(anchor, loc);
-                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, loc));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, loc));
                 }
                 anchor = UNPLACED;
             }
@@ -277,7 +277,7 @@ namespace FreeTrain.Controllers
             {
                 // cancel the anchor
                 if (currentPos != UNPLACED)
-                    WorldDefinition.World.OnVoxelUpdated(Cube.createInclusive(anchor, currentPos));
+                    WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPos));
                 anchor = UNPLACED;
             }
         }

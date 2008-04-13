@@ -293,7 +293,7 @@ namespace FreeTrain.Controllers.Rail
                     loc2 += direction.right90;	// for the attached rail road, width is two
                 }
             }
-            WorldDefinition.World.OnVoxelUpdated(Cube.createExclusive(baseLoc, loc2));
+            WorldDefinition.World.OnVoxelUpdated(Cube.CreateExclusive(baseLoc, loc2));
         }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace FreeTrain.Controllers.Rail
             switch (this.currentMode)
             {
                 case Mode.Station:
-                    if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
+                    if (Cube.CreateExclusive(baseLoc, alphaSprites.size).Contains(loc))
                         alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas, pt);
                     break;
 
@@ -414,7 +414,7 @@ namespace FreeTrain.Controllers.Rail
                     if (direction == Direction.NORTH) loc.y += length - 1;
                     if (direction == Direction.WEST) loc.x += length - 1;
 
-                    if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
+                    if (Cube.CreateExclusive(baseLoc, alphaSprites.size).Contains(loc))
                         alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas, pt);
                     break;
 

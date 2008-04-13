@@ -52,18 +52,18 @@ namespace FreeTrain.Contributions.Population
             XmlNodeList nl = e.SelectNodes("population");
             children = new BasePopulation[nl.Count];
             for (int i = 0; i < nl.Count; i++)
-                children[i] = BasePopulation.load((XmlElement)nl[i]);
+                children[i] = BasePopulation.Load((XmlElement)nl[i]);
         }
         /// <summary>
         /// 
         /// </summary>
-        public override int residents
+        public override int Residents
         {
             get
             {
                 int r = 0;
                 foreach (BasePopulation p in children)
-                    r += p.residents;
+                    r += p.Residents;
                 return r;
             }
         }
@@ -72,11 +72,11 @@ namespace FreeTrain.Contributions.Population
         /// </summary>
         /// <param name="currentTime"></param>
         /// <returns></returns>
-        public override int calcPopulation(Time currentTime)
+        public override int CalcPopulation(Time currentTime)
         {
             int r = 0;
             foreach (BasePopulation p in children)
-                r += p.calcPopulation(currentTime);
+                r += p.CalcPopulation(currentTime);
             return r;
         }
     }

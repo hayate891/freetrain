@@ -73,7 +73,7 @@ namespace FreeTrain.Contributions.Road
         /// </summary>
         /// <param name="idx"></param>
         /// <returns></returns>
-        protected internal override ISprite getSprite(byte idx)
+        protected internal override ISprite GetSprite(byte idx)
         {
             return flatSprites[idx];
         }

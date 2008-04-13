@@ -331,7 +331,7 @@ namespace FreeTrain.Views
         /// <param name="cube"></param>
         public void OnUpdateVoxel(Cube cube)
         {
-            Rectangle r = cube.boundingABRect;
+            Rectangle r = cube.BoundingABRect;
             r.Intersect(this.visibleRect);	// cut the rect by the visible rect
             if (!r.IsEmpty)
             {

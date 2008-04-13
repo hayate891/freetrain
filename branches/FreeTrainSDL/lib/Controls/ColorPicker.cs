@@ -28,23 +28,6 @@ using System.Windows.Forms;
 namespace FreeTrain.Controls
 {
     /// <summary>
-    /// 
-    /// </summary>
-    public interface IColorLibrary : IEnumerable
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        int size { get; }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
-        Color this[int index] { get; }
-    }
-
-    /// <summary>
     /// ColorPicker
     /// </summary>
     public class ColorPicker : System.Windows.Forms.UserControl

@@ -48,7 +48,7 @@ namespace FreeTrain.World.Rail
             this.length = len;
             this.name = string.Format("Platform {0,2:d}", iota++);
             //! this.name = string.Format("ホーム{0,2:d}",iota++);
-            this.bellSound = DepartureBellContribution.DEFAULT;
+            this.bellSound = DepartureBellContribution.Default;
             WorldDefinition.World.Clock.registerRepeated(new ClockHandler(onClockPerDay), TimeLength.ONEDAY);
 
             // attach to the nearby station.

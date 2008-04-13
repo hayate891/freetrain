@@ -70,7 +70,7 @@ namespace FreeTrain.World.Rail
             hostList.SelectedItem = platform.host;
 
             // bell sound list
-            bell.DataSource = DepartureBellContribution.all;
+            bell.DataSource = DepartureBellContribution.All;
             bell.SelectedItem = platform.bellSound;
         }
 

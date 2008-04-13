@@ -1,4 +1,4 @@
-﻿#region LICENSE
+#region LICENSE
 /*
  * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
  *
@@ -21,50 +21,73 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using FreeTrain.Controllers;
+using System.Xml;
+using FreeTrain.Contributions.Common;
+using FreeTrain.Contributions.Population;
 using FreeTrain.Framework;
+using FreeTrain.Framework.Plugin;
+using FreeTrain.Framework.Plugin.Graphics;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Views;
 using FreeTrain.World;
 using FreeTrain.World.Structs;
+using FreeTrain.Controllers;
+using FreeTrain.Contributions.Structs;
 
-namespace FreeTrain.Contributions.Common
+namespace FreeTrain.World.Structs.HalfVoxelStructure
 {
+    #region SpriteSet
     /// <summary>
     /// 
     /// </summary>
-    public class FixedSizeStructureRemovalController : CubeSelectorController
+    [Serializable]
+    public class SpriteSet
     {
         /// <summary>
         /// 
         /// </summary>
-        protected readonly FixedSizeStructureContribution contrib;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="contrib"></param>
-        /// <param name="site"></param>
-        public FixedSizeStructureRemovalController(FixedSizeStructureContribution contrib, IControllerSite site)
-            : base(contrib.Size, site)
+        /// <param name="size"></param>
+        public SpriteSet(int size)
         {
-            this.contrib = contrib;
+            sprites = new ISprite[size];
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="cube"></param>
-        protected override void OnSelected(Cube cube)
+        /// <param name="org"></param>
+        /// <param name="variation"></param>
+        public SpriteSet(SpriteSet org, Color variation)
         {
-            PThreeDimStructure s = WorldDefinition.World.GetEntityAt(cube.Corner) as PThreeDimStructure;
-            if (s == null || s.type != contrib)
+        }
+
+        static internal int getIndexOf(Direction d, PlaceSide s)
+        {
+            return d.index / 2 + (int)s * 4;
+        }
+
+        internal ISprite this[int idx]
+        {
+            get { return sprites[idx]; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public ISprite this[Direction d, PlaceSide s]
+        {
+            get
             {
-                MessageBox.Show("Wrong type");
-                //! MessageBox.Show("種類が違います");
-                return;
+                return sprites[getIndexOf(d, s)];
             }
-            s.remove();
+            set
+            {
+                sprites[getIndexOf(d, s)] = value;
+            }
         }
+
+        private ISprite[] sprites;
     }
+    #endregion
 }

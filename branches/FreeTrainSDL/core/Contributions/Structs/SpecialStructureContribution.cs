@@ -39,16 +39,16 @@ namespace FreeTrain.Contributions.Structs
         /// <summary>
         /// Gets the name used for the menu item.
         /// </summary>
-        public abstract string name { get; }
+        public abstract string Name { get; }
 
         /// <summary>
         /// Gets a one line description of this rail.
         /// </summary>
-        public abstract string oneLineDescription { get; }
+        public abstract string OneLineDescription { get; }
 
         /// <summary>
         /// This method is called when the menu item is selected by the user.
         /// </summary>
-        public abstract void showDialog();
+        public abstract void ShowDialog();
     }
 }

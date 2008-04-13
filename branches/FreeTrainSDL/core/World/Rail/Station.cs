@@ -60,7 +60,7 @@ namespace FreeTrain.World.Rail
             Distance r = new Distance(REACH_RANGE, REACH_RANGE, REACH_RANGE);
 
             // advertise listeners in the neighborhood that a new station is available
-            foreach (IEntity e in Cube.createInclusive(baseLocation - r, baseLocation + r).getEntities())
+            foreach (IEntity e in Cube.CreateInclusive(baseLocation - r, baseLocation + r).GetEntities())
             {
                 IStationListener l = (IStationListener)e.QueryInterface(typeof(IStationListener));
                 if (l != null)
@@ -204,7 +204,7 @@ namespace FreeTrain.World.Rail
         private void onDayClock()
         {
             // called once a day. charge the operation cost
-            AccountManager.theInstance.spend(type.operationCost, AccountGenre.RailService);
+            AccountManager.theInstance.spend(type.OperationCost, AccountGenre.RailService);
         }
 
 
@@ -420,7 +420,7 @@ namespace FreeTrain.World.Rail
         public void clockHandlerDay()
         {
             // called once a day. charge the operation cost
-            AccountManager.theInstance.spend(type.operationCost, AccountGenre.RailService);
+            AccountManager.theInstance.spend(type.OperationCost, AccountGenre.RailService);
             import.DailyReset();
             export.DailyReset();
             trains.DailyReset();

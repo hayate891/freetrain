@@ -56,7 +56,16 @@ namespace FreeTrain.Contributions.Sound
         }
 
         /// <summary> Title of the music. </summary>
-        public readonly string name;
+        private readonly string name;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Name
+        {
+            get { return name; }
+        } 
+
         /// <summary>
         /// 
         /// </summary>
@@ -67,6 +76,15 @@ namespace FreeTrain.Contributions.Sound
         }
 
         /// <summary> File name of the music. </summary>
-        public readonly string fileName;
+        private readonly string fileName;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string FileName
+        {
+            get { return fileName; }
+        } 
+
     }
 }

@@ -46,22 +46,22 @@ namespace FreeTrain.Contributions.Land
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_contrib"></param>
-        /// <param name="_site"></param>
-        /// <param name="_spriteBuilder"></param>
-        public DefaultControllerImpl(LandBuilderContribution _contrib, IControllerSite _site,
-            SpriteBuilder _spriteBuilder)
-            : base(_site)
+        /// <param name="contrib"></param>
+        /// <param name="site"></param>
+        /// <param name="spriteBuilder"></param>
+        public DefaultControllerImpl(LandBuilderContribution contrib, IControllerSite site,
+            SpriteBuilder spriteBuilder)
+            : base(site)
         {
-            this.contrib = _contrib;
-            this.spriteBuilder = _spriteBuilder;
+            this.contrib = contrib;
+            this.spriteBuilder = spriteBuilder;
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="loc1"></param>
         /// <param name="loc2"></param>
-        protected override void onRectSelected(Location loc1, Location loc2)
+        protected override void OnRectSelected(Location loc1, Location loc2)
         {
             contrib.Create(loc1, loc2, true);
         }
@@ -80,9 +80,9 @@ namespace FreeTrain.Contributions.Land
         /// <param name="pt"></param>
         public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
-            if (loc.z != currentLoc.z) return;
+            if (loc.z != CurrentLocation.z) return;
 
-            if (anchor != UNPLACED && loc.inBetween(anchor, currentLoc))
+            if (Anchor != Unplaced && loc.inBetween(Anchor, CurrentLocation))
                 spriteBuilder().DrawAlpha(canvas.Surface, pt);
         }
         /// <summary>

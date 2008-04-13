@@ -126,6 +126,7 @@
     <Compile Include="Contributions\Land\Bulldozer.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Contributions\Land\LandBuilderGroupGroup.cs" />
     <Compile Include="Contributions\Land\DefaultControllerImpl.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -26,7 +26,6 @@ namespace FreeTrain.Controls
     /// <summary> Delegate that received dropped files. </summary>
     public delegate void FileDropEventHandler(string fileName);
 
-
     /// <summary>
     /// Encapsulates DragNDrop logic for Windows Forms.
     /// </summary>

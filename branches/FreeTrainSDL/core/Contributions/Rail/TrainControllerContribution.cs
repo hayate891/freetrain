@@ -42,16 +42,16 @@ namespace FreeTrain.Contributions.Rail
         /// <summary>
         /// Creates a new instance of TrainController.
         /// </summary>
-        public abstract TrainController newController(string name);
+        public abstract TrainController NewController(string name);
 
         /// <summary>
         /// Gets the name of this train controller type.
         /// </summary>
-        public abstract string name { get; }
+        public abstract string Name { get; }
 
         /// <summary>
         /// Gets the description of this train controller type.
         /// </summary>
-        public abstract string description { get; }
+        public abstract string Description { get; }
     }
 }

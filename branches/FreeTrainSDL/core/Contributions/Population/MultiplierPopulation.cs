@@ -38,21 +38,21 @@ namespace FreeTrain.Contributions.Population
         /// 
         /// </summary>
         /// <param name="f"></param>
-        /// <param name="_core"></param>
-        public MultiplierPopulation(int f, BasePopulation _core)
+        /// <param name="core"></param>
+        public MultiplierPopulation(int f, BasePopulation core)
         {
             this.factor = f;
-            this.core = _core;
+            this.core = core;
 
         }
         /// <summary>
         /// 
         /// </summary>
-        public override int residents
+        public override int Residents
         {
             get
             {
-                return core.residents * factor;
+                return core.Residents * factor;
             }
         }
         /// <summary>
@@ -60,9 +60,9 @@ namespace FreeTrain.Contributions.Population
         /// </summary>
         /// <param name="currentTime"></param>
         /// <returns></returns>
-        public override int calcPopulation(Time currentTime)
+        public override int CalcPopulation(Time currentTime)
         {
-            return core.calcPopulation(currentTime) * factor;
+            return core.CalcPopulation(currentTime) * factor;
         }
     }
 }

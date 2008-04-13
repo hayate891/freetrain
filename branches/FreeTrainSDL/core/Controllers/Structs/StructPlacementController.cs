@@ -254,7 +254,7 @@ namespace FreeTrain.Controllers.Structs
             if (!isPlacing) return;
             if (alphaSprites != null)
             {
-                if (Cube.createExclusive(baseLoc, alphaSprites.size).contains(loc))
+                if (Cube.CreateExclusive(baseLoc, alphaSprites.size).Contains(loc))
                     alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas.Surface, pt);
             }
         }

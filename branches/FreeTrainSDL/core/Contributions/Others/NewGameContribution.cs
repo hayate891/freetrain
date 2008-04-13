@@ -39,22 +39,22 @@ namespace FreeTrain.Contributions.Others
         /// <summary>
         /// Name of the new game.
         /// </summary>
-        public abstract string name { get; }
+        public abstract string Name { get; }
 
         /// <summary>
         /// Author of the new game.
         /// </summary>
-        public abstract string author { get; }
+        public abstract string Author { get; }
 
         /// <summary>
         /// Human-readable description of the new game.
         /// </summary>
-        public abstract string description { get; }
+        public abstract string Description { get; }
 
         /// <summary>
         /// Creates a new game by creating a new instance of the World object.
         /// </summary>
         /// <returns>null to indicate that the operation was cancelled.</returns>
-        public abstract WorldDefinition createNewGame();
+        public abstract WorldDefinition CreateNewGame();
     }
 }

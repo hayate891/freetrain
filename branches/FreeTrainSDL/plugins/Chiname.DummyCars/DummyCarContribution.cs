@@ -177,5 +177,4 @@ namespace FreeTrain.World.Road.DummyCars
         }
 
     }
-
 }

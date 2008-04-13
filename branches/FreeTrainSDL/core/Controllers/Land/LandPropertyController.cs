@@ -171,7 +171,7 @@ namespace FreeTrain.Controllers.Land
             }
 
 
-            protected override void onRectSelected(Location loc1, Location loc2)
+            protected override void OnRectSelected(Location loc1, Location loc2)
             {
                 if (owner.isPlacing)
                     buy(loc1, loc2);
@@ -183,7 +183,7 @@ namespace FreeTrain.Controllers.Land
             /// </summary>
             /// <param name="loc1"></param>
             /// <param name="loc2"></param>
-            protected override void onRectUpdated(Location loc1, Location loc2)
+            protected override void OnRectUpdated(Location loc1, Location loc2)
             {
                 if (owner.isPlacing)
                     owner.costBox.cost = computePriceForBuy(loc1, loc2);
@@ -205,9 +205,9 @@ namespace FreeTrain.Controllers.Land
             /// <param name="pt"></param>
             public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
             {
-                if (loc.z != anchor.z) return;
+                if (loc.z != Anchor.z) return;
 
-                if (anchor != UNPLACED && loc.inBetween(anchor, currentLoc))
+                if (Anchor != Unplaced && loc.inBetween(Anchor, CurrentLocation))
                 {
                     if (owner.isPlacing)
                         LandPropertyVoxel.sprite.DrawAlpha(canvas.Surface, pt);

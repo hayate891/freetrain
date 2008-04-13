@@ -1,4 +1,4 @@
-﻿#region LICENSE
+#region LICENSE
 /*
  * Copyright (C) 2007 - 2008 FreeTrain Team (http://freetrain.sourceforge.net)
  *
@@ -19,52 +19,36 @@
 #endregion LICENSE
 
 using System;
+using System.Collections;
 using System.Drawing;
-using System.Windows.Forms;
-using FreeTrain.Controllers;
-using FreeTrain.Framework;
+using System.Xml;
+using System.Runtime.Serialization;
 using FreeTrain.Framework.Graphics;
-using FreeTrain.Views;
 using FreeTrain.World;
-using FreeTrain.World.Structs;
+using FreeTrain.Framework.Plugin;
 
-namespace FreeTrain.Contributions.Common
+namespace FreeTrain.World.Structs.HalfVoxelStructure
 {
     /// <summary>
     /// 
     /// </summary>
-    public class FixedSizeStructureRemovalController : CubeSelectorController
+    [Serializable]
+    public class HueShiftSpriteFactoryContributionImpl : SpriteFactoryContribution
     {
         /// <summary>
         /// 
         /// </summary>
-        protected readonly FixedSizeStructureContribution contrib;
+        /// <param name="e"></param>
+        public HueShiftSpriteFactoryContributionImpl(XmlElement e) : base(e) { }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="contrib"></param>
-        /// <param name="site"></param>
-        public FixedSizeStructureRemovalController(FixedSizeStructureContribution contrib, IControllerSite site)
-            : base(contrib.Size, site)
+        /// <param name="e"></param>
+        /// <returns></returns>
+        public override SpriteFactory CreateSpriteFactory(XmlElement e)
         {
-            this.contrib = contrib;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="cube"></param>
-        protected override void OnSelected(Cube cube)
-        {
-            PThreeDimStructure s = WorldDefinition.World.GetEntityAt(cube.Corner) as PThreeDimStructure;
-            if (s == null || s.type != contrib)
-            {
-                MessageBox.Show("Wrong type");
-                //! MessageBox.Show("種類が違います");
-                return;
-            }
-            s.remove();
+            return new HueShiftSpriteFactory(e);
         }
     }
 }

@@ -323,12 +323,12 @@ namespace FreeTrain.World.Development
                     {
                         //bool OK = true;
 
-                        if (WorldDefinition.World.IsOutsideWorld(plan.cube) || !plan.cube.isOnGround)
+                        if (WorldDefinition.World.IsOutsideWorld(plan.cube) || !plan.cube.IsOnGround)
                         {
                             phase = Phase.Start;
                             break;
                         }
-                        IEntity[] es = plan.cube.getEntities();
+                        IEntity[] es = plan.cube.GetEntities();
                         foreach (IEntity e in es)
                         {
                             if (!IsReplaceable(e, WorldDefinition.World.LandValue[scaning]))
@@ -390,7 +390,7 @@ namespace FreeTrain.World.Development
                 int price = vhbc.Price * h;
                 Cube tmp = new Cube(scaning, vhbc.Size, h);
                 int cost = 0;
-                foreach (IEntity e in tmp.getEntities())
+                foreach (IEntity e in tmp.GetEntities())
                     cost += e.EntityValue;
                 while (price < cost && h < h2)
                 {

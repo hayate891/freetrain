@@ -48,17 +48,17 @@ namespace FreeTrain.Contributions.Population
         /// <summary>
         /// Number of population that is counted toward the total population of the world.
         /// </summary>
-        public abstract int residents { get; }
+        public abstract int Residents { get; }
 
         /// <summary>
         /// Computes the population of the given structure at the given time.
         /// </summary>
-        public abstract int calcPopulation(Time currentTime);
+        public abstract int CalcPopulation(Time currentTime);
 
         /// <summary>
         /// Loads a population from the plug-in manifest file.
         /// </summary>
-        public static BasePopulation load(XmlElement e)
+        public static BasePopulation Load(XmlElement e)
         {
             return (BasePopulation)PluginUtil.loadObjectFromManifest(e);
         }

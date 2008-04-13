@@ -61,36 +61,4 @@ namespace FreeTrain.Contributions.Land
         /// <returns></returns>
         public override string ToString() { return Name; }
     }
-
-    /// <summary>
-    /// Group of LandGroup.
-    /// 
-    /// This object implements IListSource to support data-binding.
-    /// </summary>
-    public class LandBuilderGroupGroup : StructureGroupGroup
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        public LandBuilderGroupGroup() { }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        public new LandBuilderGroup this[string name]
-        {
-            get
-            {
-                LandBuilderGroup g = (LandBuilderGroup)core[name];
-                if (g == null)
-                {
-                    core[name] = g = new LandBuilderGroup(name);
-                    list.Add(g);
-                }
-
-                return g;
-            }
-        }
-    }
 }
