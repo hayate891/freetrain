@@ -72,7 +72,7 @@ namespace FreeTrain.World.Rail
             // calculate the position where the train should stop.
             int pos;
 
-            CarState.Inside ins = tr.head.state.asInside();
+            CarState.Inside ins = tr.head.State.asInside();
 
             if (owner.direction == ins.direction)
             {

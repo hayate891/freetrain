@@ -44,7 +44,7 @@ namespace FreeTrain.World.Rail
         public override Direction Guide()
         {
             Train.TrainCar car = (Train.TrainCar)Voxel.car;
-            CarState.Placed state = car.state.asPlaced();
+            CarState.Placed state = car.State.asPlaced();
 
             Direction d = state.asInside().direction;
             if (hasRail(d))
@@ -65,7 +65,7 @@ namespace FreeTrain.World.Rail
                 else
                 {
                     // otherwise follow the previous car
-                    if (previous.state.asPlaced().location == state.location + d)
+                    if (previous.State.asPlaced().location == state.location + d)
                         return d;
                 }
 

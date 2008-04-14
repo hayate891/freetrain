@@ -102,7 +102,7 @@ namespace FreeTrain.Framework
             this.ClientSize = new System.Drawing.Size(339, 215);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.okButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

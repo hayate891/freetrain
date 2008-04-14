@@ -152,10 +152,10 @@ namespace FreeTrain.World.Rail
                 ds[idx] = d; locs[idx] = loc;
 
                 // determine the next voxel
-                cars[0].place(loc, d);
+                cars[0].Place(loc, d);
                 d = rr.Guide();
                 loc += d;
-                cars[0].remove();
+                cars[0].Remove();
             } while (idx != 0);
 
             // make sure we are not forming cycles
@@ -166,7 +166,7 @@ namespace FreeTrain.World.Rail
 
             // can be placed. place all
             for (int i = 0; i < length; i++)
-                cars[i].place(locs[i], ds[i]);
+                cars[i].Place(locs[i], ds[i]);
 
             stopCallCount = 0;
             registerTimer();
@@ -183,7 +183,7 @@ namespace FreeTrain.World.Rail
             Debug.Assert(isPlaced);
 
             foreach (TrainCar car in cars)
-                car.remove();
+                car.Remove();
 
             // make sure that we don't have any pending event
             WorldDefinition.World.Clock.unregister(new ClockHandler(clockHandler));
@@ -312,7 +312,7 @@ namespace FreeTrain.World.Rail
         {
             Debug.Assert(isPlaced);	// we should have unregistered the handler when the train was removed.
 
-            CarState.Inside ins = head.state.asInside();
+            CarState.Inside ins = head.State.asInside();
             if (ins != null)
             { // this car might need to stop
                 TimeLength time = ins.voxel.railRoad.getStopTimeSpan(this, stopCallCount);
@@ -337,7 +337,7 @@ namespace FreeTrain.World.Rail
             TrainStates s = TrainStates.Moving;
 
             // determine the next head car state
-            CarState next = calcNextTrainCarState[head.state];
+            CarState next = calcNextTrainCarState[head.State];
             if (next != null)
             {	// if it can move forward
                 if (!isBlocked[next])
@@ -350,7 +350,7 @@ namespace FreeTrain.World.Rail
             {
                 // we can't go forward. turn around
                 reverse();
-                next = calcNextTrainCarState[head.state];
+                next = calcNextTrainCarState[head.State];
 
                 if (next != null && !isBlocked[next])
                     move(next);
@@ -394,7 +394,7 @@ namespace FreeTrain.World.Rail
         /// </summary>
         public void playSound(ISoundEffect se)
         {
-            CarState.Inside ins = head.state.asInside();
+            CarState.Inside ins = head.State.asInside();
             if (ins != null)
                 se.play(ins.location);	// play the sound
         }
@@ -474,7 +474,7 @@ namespace FreeTrain.World.Rail
             {
                 // compute the distance between the source state and the current state
                 int dist = passengerSourceState.location.
-                    getDistanceTo(this.head.state.asPlaced().location);
+                    getDistanceTo(this.head.State.asPlaced().location);
 
                 // record the sales
                 AccountManager.theInstance.earn(
@@ -498,7 +498,7 @@ namespace FreeTrain.World.Rail
             Debug.Assert(n <= passengerCapacity);
             _passenger = n;
             // memorize the location where passengers are loaded
-            passengerSourceState = this.head.state.asPlaced();
+            passengerSourceState = this.head.State.asPlaced();
             notifyListeners();
         }
 
@@ -797,7 +797,7 @@ namespace FreeTrain.World.Rail
 
             internal CarState moveTo(CarState newState)
             {
-                return base.setState(newState);
+                return base.SetState(newState);
             }
 
             /// <summary>
@@ -805,20 +805,20 @@ namespace FreeTrain.World.Rail
             /// </summary>
             public void reverse()
             {
-                setState(reverseCarState[this.state]);
+                SetState(reverseCarState[this.State]);
             }
             /// <summary>
             /// 
             /// </summary>
             /// <param name="dc"></param>
             /// <param name="pt"></param>
-            public override void draw(DrawContext dc, Point pt)
+            public override void Draw(DrawContext dc, Point pt)
             {
                 Surface display = dc.Surface;
 
                 pt.Y -= 9;	// offset
 
-                CarState.Inside s = state.asInside();
+                CarState.Inside s = State.asInside();
                 Debug.Assert(s != null);
 
                 RailRoad rr = s.voxel.railRoad;

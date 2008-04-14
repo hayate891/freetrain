@@ -40,7 +40,7 @@ namespace FreeTrain.World.Road
         /// </summary>
         /// <param name="display"></param>
         /// <param name="pt"></param>
-        public override void draw(DrawContext display, Point pt)
+        public override void Draw(DrawContext display, Point pt)
         {
             throw new NotImplementedException();
         }

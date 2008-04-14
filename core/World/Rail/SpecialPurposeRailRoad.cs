@@ -73,7 +73,7 @@ namespace FreeTrain.World.Rail
         /// <returns></returns>
         public override Direction Guide()
         {
-            Direction d = Voxel.car.state.asInside().direction;
+            Direction d = Voxel.car.State.asInside().direction;
             // we have straight rails only, so the direction must stay the same
             Debug.Assert(hasRail(d));
             return d;
