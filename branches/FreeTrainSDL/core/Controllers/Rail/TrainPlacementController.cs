@@ -181,13 +181,13 @@ namespace FreeTrain.Controllers.Rail
         private void resetArrowLocation()
         {
             Train tr = this.selectedTrain;
-            if (tr == null || !tr.head.state.isInside)
+            if (tr == null || !tr.head.State.isInside)
             {
                 arrowLoc.Location = World.Location.Unplaced;
             }
             else
             {
-                arrowLoc.Location = tr.head.state.asInside().location;
+                arrowLoc.Location = tr.head.State.asInside().location;
             }
         }
 
@@ -208,7 +208,7 @@ namespace FreeTrain.Controllers.Rail
                 if (tr.isPlaced)
                 {
                     // see if the user has clicked the same train
-                    Car c = Car.get(loc);
+                    Car c = Car.Get(loc);
                     if (c is Train.TrainCar && ((Train.TrainCar)c).parent == tr)
                     {
                         // clicking the same train will be considered to reverse its direction
@@ -370,10 +370,10 @@ namespace FreeTrain.Controllers.Rail
         public void DrawAfter(QuarterViewDrawer view, DrawContext dc)
         {
             Train tr = this.selectedTrain;
-            if (tr == null || !tr.head.state.isInside) return;
+            if (tr == null || !tr.head.State.isInside) return;
 
             // draw an arrow that indicates the direction of the train
-            CarState.Inside ci = tr.head.state.asInside();
+            CarState.Inside ci = tr.head.State.asInside();
 
             Point pt = view.fromXYZToClient(ci.location);
             pt.Y -= 12;

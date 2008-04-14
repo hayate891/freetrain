@@ -168,7 +168,7 @@ namespace FreeTrain.World.Rail
         {
             // slop rails don't curve. so a car should be
             // able to go to the same direction
-            Direction d = Voxel.car.state.asInside().direction;
+            Direction d = Voxel.car.State.asInside().direction;
             Debug.Assert(hasRail(d));
             return d;
         }
@@ -383,7 +383,7 @@ namespace FreeTrain.World.Rail
         public static int calcCostOfTearDownSlope(Location loc, Direction dir)
         {
             // make sure the first voxel is not occupied by a car
-            if (Car.get(loc) != null) return 0;
+            if (Car.Get(loc) != null) return 0;
 
             // the 2nd block has a distinctive zangle and zdiff. check it.
             loc += dir;
@@ -395,14 +395,14 @@ namespace FreeTrain.World.Rail
                 return 0;
 
             // make sure the 2nd rail is not occupied by a car
-            if (Car.get(loc) != null) return 0;
+            if (Car.Get(loc) != null) return 0;
 
             // check 3rd and 4th rails.
             loc += dir;
             loc.z++;
-            if (Car.get(loc) != null) return 0;
+            if (Car.Get(loc) != null) return 0;
             loc += dir;
-            if (Car.get(loc) != null) return 0;
+            if (Car.Get(loc) != null) return 0;
 
             return SLOPE_DESTRUCTION_UNIT_COST * Math.Max(1, loc.z - WorldDefinition.World.WaterLevel);
         }

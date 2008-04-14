@@ -188,7 +188,7 @@ namespace FreeTrain.World
         /// <returns></returns>
         public override bool OnClick()
         {
-            if (car != null && car.onClick()) return true;
+            if (car != null && car.OnClick()) return true;
             if (_railRoad != null && _railRoad.OnClick()) return true;
             return false;
         }
@@ -270,7 +270,7 @@ namespace FreeTrain.World
                 if (car is Train.TrainCar)
                     ((Train.TrainCar)car).parent.remove();
                 else
-                    car.remove();
+                    car.Remove();
             }
             BridgePierVoxel.teardownBridgeSupport(Location, this);
             if (onEntityRemoved != null)
@@ -295,7 +295,7 @@ namespace FreeTrain.World
             if (_road != null) _road.DrawBefore(display, pt);
             if (_accessory != null) _accessory.DrawBefore(display, pt);
             if (_railRoad != null) _railRoad.drawBefore(display, pt);
-            if (_car != null) _car.draw(display, pt);
+            if (_car != null) _car.Draw(display, pt);
             if (_railRoad != null) _railRoad.drawAfter(display, pt);
             if (_accessory != null) _accessory.DrawAfter(display, pt);
         }
