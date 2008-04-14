@@ -30,18 +30,20 @@ namespace FreeTrain.Util
     public sealed class Set : ICollection
     {
         private readonly Hashtable core = new Hashtable();
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="o"></param>
         /// <returns></returns>
-        public bool contains(object o) { return core.Contains(o); }
+        public bool Contains(object o) { return core.Contains(o); }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="o"></param>
         /// <returns></returns>
-        public bool add(object o)
+        public bool Add(object o)
         {
             if (!core.ContainsKey(o))
             {
@@ -49,34 +51,43 @@ namespace FreeTrain.Util
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="o"></param>
-        public void remove(object o) { core.Remove(o); }
+        public void Remove(object o) { core.Remove(o); }
+
         /// <summary>
         /// 
         /// </summary>
-        public void clear() { core.Clear(); }
+        public void Clear() { core.Clear(); }
+
         /// <summary>
         /// 
         /// </summary>
         public int Count { get { return core.Count; } }
+
         /// <summary>
         /// 
         /// </summary>
         public bool IsSynchronized { get { return false; } }
+
         /// <summary>
         /// 
         /// </summary>
         public object SyncRoot { get { return this; } }
+
         /// <summary>
         /// 
         /// 
         /// </summary>
-        public bool isEmpty { get { return Count == 0; } }
+        public bool IsEmpty { get { return Count == 0; } }
+
         /// <summary>
         /// 
         /// </summary>
@@ -85,30 +96,35 @@ namespace FreeTrain.Util
         {
             return core.Keys.GetEnumerator();
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public object getOne()
+        public object GetOne()
         {
             IEnumerator e = GetEnumerator();
             e.MoveNext();
             return e.Current;
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public Array toArray(Type type)
+        public Array ToArray(Type type)
         {
             Array r = Array.CreateInstance(type, Count);
             int idx = 0;
 
             foreach (object o in this)
+            {
                 r.SetValue(o, idx++);
+            }
             return r;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -117,7 +133,9 @@ namespace FreeTrain.Util
         public void CopyTo(Array array, int index)
         {
             foreach (object o in this)
+            {
                 array.SetValue(o, index++);
+            }
         }
     }
 }

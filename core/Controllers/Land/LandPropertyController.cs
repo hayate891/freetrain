@@ -270,7 +270,7 @@ namespace FreeTrain.Controllers.Land
                     if (v != null && !v.Entity.isOwned && v.Entity.isSilentlyReclaimable)
                     {
                         // cost for removing this structure
-                        if (s.add(v.Entity))
+                        if (s.Add(v.Entity))
                             r += v.Entity.EntityValue;
                     }
                     v = WorldDefinition.World[x, y, z];

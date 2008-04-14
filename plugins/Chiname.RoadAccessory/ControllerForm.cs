@@ -107,7 +107,7 @@ namespace FreeTrain.World.Road.Accessory
             this.typeBox.Size = new System.Drawing.Size(197, 21);
             this.typeBox.Sorted = true;
             this.typeBox.TabIndex = 2;
-            this.typeBox.SelectedIndexChanged += new System.EventHandler(this.onTypeChanged);
+            this.typeBox.SelectedIndexChanged += new System.EventHandler(this.OnTypeChanged);
             // 
             // preview
             // 
@@ -141,7 +141,7 @@ namespace FreeTrain.World.Road.Accessory
             this.buttonRemove.TabIndex = 9;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonRemove.CheckedChanged += new System.EventHandler(this.onTypeChanged);
+            this.buttonRemove.CheckedChanged += new System.EventHandler(this.OnTypeChanged);
             // 
             // buttonPlace
             // 
@@ -154,7 +154,7 @@ namespace FreeTrain.World.Road.Accessory
             this.buttonPlace.TabStop = true;
             this.buttonPlace.Text = "Build";
             this.buttonPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonPlace.CheckedChanged += new System.EventHandler(this.onTypeChanged);
+            this.buttonPlace.CheckedChanged += new System.EventHandler(this.OnTypeChanged);
             // 
             // indexSelector
             // 
@@ -177,7 +177,7 @@ namespace FreeTrain.World.Road.Accessory
             this.Controls.Add(this.preview);
             this.Name = "ControllerForm";
             this.Text = "Road Accessories";
-            this.Resize += new System.EventHandler(this.updateAfterResize);
+            this.Resize += new System.EventHandler(this.UpdateAfterResize);
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.ResumeLayout(false);
 
@@ -187,7 +187,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <summary>
         /// 
         /// </summary>
-        protected bool isPlacing
+        protected bool IsPlacing
         {
             get
             {
@@ -200,7 +200,7 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected virtual void updateAfterResize(object sender, System.EventArgs e)
+        protected virtual void UpdateAfterResize(object sender, System.EventArgs e)
         {
             this.buttonPlace.Left = this.preview.Left;
             this.buttonPlace.Width = ((this.preview.Width)) / 2;
@@ -214,7 +214,7 @@ namespace FreeTrain.World.Road.Accessory
         /// <summary>
         /// Called when a selection of the structure has changed.
         /// </summary>
-        protected virtual void onTypeChanged(object sender, System.EventArgs e)
+        protected virtual void OnTypeChanged(object sender, System.EventArgs e)
         {
             RoadAccessoryContribution builder = (RoadAccessoryContribution)typeBox.SelectedItem;
             if (builder != null)
