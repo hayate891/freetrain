@@ -130,10 +130,10 @@ namespace FreeTrain.World.Land.VinylHouse
         {
             private readonly VinylHouseBuilder contrib;
 
-            public Logic(VinylHouseBuilder _contrib, IControllerSite site)
+            public Logic(VinylHouseBuilder contrib, IControllerSite site)
                 : base(site)
             {
-                this.contrib = _contrib;
+                this.contrib = contrib;
             }
 
             /// <summary>

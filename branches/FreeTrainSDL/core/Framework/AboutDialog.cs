@@ -51,7 +51,7 @@ namespace FreeTrain.Framework
 
         private void linkLabel1_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
         {
-            UrlInvoker.openUrl(((LinkLabel)sender).Text);
+            UrlInvoker.OpenUrl(((LinkLabel)sender).Text);
         }
 
     }

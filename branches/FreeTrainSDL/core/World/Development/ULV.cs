@@ -94,9 +94,9 @@ namespace FreeTrain.World.Development
                         if (e.isOwned)	// cannot reclaim this voxel.
                             return null;
 
-                        if (!s.contains(e))
+                        if (!s.Contains(e))
                         { // new entity
-                            s.add(e);
+                            s.Add(e);
                             entityValue += e.EntityValue;
                         }
                     }

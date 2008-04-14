@@ -136,13 +136,13 @@ namespace FreeTrain.World.Accounting
 
         internal void addDebt(Debt debt)
         {
-            debts.add(debt);
+            debts.Add(debt);
             updateTotalDebts();
         }
 
         internal void removeDebt(Debt debt)
         {
-            debts.remove(debt);
+            debts.Remove(debt);
             updateTotalDebts();
         }
 

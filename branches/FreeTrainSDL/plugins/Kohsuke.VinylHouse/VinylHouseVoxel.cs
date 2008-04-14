@@ -65,7 +65,6 @@ namespace FreeTrain.World.Land.VinylHouse
             stationListener.OnRemoved();
         }
 
-
         private readonly StationListenerImpl stationListener;
 
         private readonly VinylHouseBuilder contrib;

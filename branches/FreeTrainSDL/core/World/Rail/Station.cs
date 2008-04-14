@@ -146,9 +146,9 @@ namespace FreeTrain.World.Rail
             // notify nodes that this host is going to be destroyed.
             // we need to copy it into array because nodes will be updated
             // as we notify children
-            foreach (Platform p in nodes.toArray(typeof(Platform)))
+            foreach (Platform p in nodes.ToArray(typeof(Platform)))
                 p.onHostDisconnected();
-            Debug.Assert(nodes.isEmpty);
+            Debug.Assert(nodes.IsEmpty);
 
             base.remove();
         }
@@ -175,7 +175,7 @@ namespace FreeTrain.World.Rail
         /// <param name="child"></param>
         public void addNode(Platform child)
         {
-            nodes.add(child);
+            nodes.Add(child);
         }
         /// <summary>
         /// 
@@ -183,7 +183,7 @@ namespace FreeTrain.World.Rail
         /// <param name="child"></param>
         public void removeNode(Platform child)
         {
-            nodes.remove(child);
+            nodes.Remove(child);
         }
         /// <summary>
         /// 
@@ -227,7 +227,7 @@ namespace FreeTrain.World.Rail
             /// <param name="listener"></param>
             public void add(IStationListener listener)
             {
-                core.add(listener);
+                core.Add(listener);
             }
             /// <summary>
             /// 
@@ -235,7 +235,7 @@ namespace FreeTrain.World.Rail
             /// <param name="listener"></param>
             public void remove(IStationListener listener)
             {
-                core.remove(listener);
+                core.Remove(listener);
             }
             /// <summary>
             /// 

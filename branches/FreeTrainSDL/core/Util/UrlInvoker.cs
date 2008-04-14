@@ -34,7 +34,7 @@ namespace FreeTrain.Util
         /// 
         /// </summary>
         /// <param name="targetUrl"></param>
-        static public void openUrl(String targetUrl)
+        static public void OpenUrl(String targetUrl)
         {
             ProcessStartInfo info = new ProcessStartInfo();
             // URLに関連づけられたアプリケーションを探す

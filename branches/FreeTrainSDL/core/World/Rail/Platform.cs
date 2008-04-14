@@ -118,9 +118,9 @@ namespace FreeTrain.World.Rail
                 // notify nodes that this host is going to be destroyed.
                 // we need to copy it into array because nodes will be updated
                 // as we notify children
-                foreach (Platform p in nodes.toArray(typeof(Platform)))
+                foreach (Platform p in nodes.ToArray(typeof(Platform)))
                     p.onHostDisconnected();
-                Debug.Assert(nodes.isEmpty);
+                Debug.Assert(nodes.IsEmpty);
 
                 // see if we can add to the new host.
                 if (value != null && value.hostStation != null)
@@ -242,10 +242,10 @@ namespace FreeTrain.World.Rail
                     for (int x = loc1.x; x <= loc2.x; x++)
                     {
                         Station st = Station.get(x, y, z);
-                        if (st != null) result.add(st);
+                        if (st != null) result.Add(st);
                         Platform pt = Platform.get(x, y, z);
                         if (pt != null && pt != this && pt.hostStation != null)
-                            result.add(pt);
+                            result.Add(pt);
                     }
                 }
             }
@@ -257,15 +257,15 @@ namespace FreeTrain.World.Rail
                 for (int z = 0; z < WorldDefinition.World.Size.z; z++)
                 {
                     Station st = Station.get(loc.x, loc.y, z);
-                    if (st != null) result.add(st);
+                    if (st != null) result.Add(st);
                     Platform pt = Platform.get(loc.x, loc.y, z);
                     if (pt != null && pt != this && pt.hostStation != null)
-                        result.add(pt);
+                        result.Add(pt);
                 }
             }
 
 
-            return (IPlatformHost[])result.toArray(typeof(IPlatformHost));
+            return (IPlatformHost[])result.ToArray(typeof(IPlatformHost));
         }
         /// <summary>
         /// 
@@ -273,7 +273,7 @@ namespace FreeTrain.World.Rail
         /// <param name="child"></param>
         public void addNode(Platform child)
         {
-            nodes.add(child);
+            nodes.Add(child);
         }
         /// <summary>
         /// 
@@ -281,7 +281,7 @@ namespace FreeTrain.World.Rail
         /// <param name="child"></param>
         public void removeNode(Platform child)
         {
-            nodes.remove(child);
+            nodes.Remove(child);
         }
         /// <summary>
         /// 

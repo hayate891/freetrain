@@ -288,12 +288,12 @@ namespace FreeTrain.World
                     for (int z = corner.z; z < mz; z++)
                     {
                         Voxel v = WorldDefinition.World[x, y, z];
-                        if (v != null) r.add(v.Entity);
+                        if (v != null) r.Add(v.Entity);
                     }
                 }
             }
 
-            return (IEntity[])r.toArray(typeof(IEntity));
+            return (IEntity[])r.ToArray(typeof(IEntity));
         }
 
         /// <summary>

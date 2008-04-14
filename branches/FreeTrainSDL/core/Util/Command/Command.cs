@@ -67,7 +67,7 @@ namespace FreeTrain.Util.Command
             this.manager = manager;
             this.commandInstances = new CommandInstanceList(this);
 
-            manager.commands.add(this);
+            manager.commands.Add(this);
         }
 
         // Methods to trigger events

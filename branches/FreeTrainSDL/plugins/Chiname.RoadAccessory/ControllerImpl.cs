@@ -74,7 +74,7 @@ namespace FreeTrain.World.Road.Accessory
 			else
 			{
 				if( contribution.CanBeBuilt(loc) )
-					contribution.create(loc);
+					contribution.Create(loc);
 				else
 					MessageBox.Show("Cannot place");
 					

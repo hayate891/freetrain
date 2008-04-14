@@ -116,7 +116,7 @@ namespace FreeTrain.World.Road.Accessory
         /// Create a new road accessory at the specified location.
         /// </summary>
         /// <param name="loc"></param>
-        public void create(Location loc)
+        public void Create(Location loc)
         {
             Debug.Assert(CanBeBuilt(loc));
 

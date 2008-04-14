@@ -191,7 +191,7 @@ namespace FreeTrain.Framework.Plugin
                     }
                 }
                 pluginMap.Add(p.name, p);
-                pluginSet.add(p);
+                pluginSet.Add(p);
             }
             if (errBreak)
             {
@@ -202,11 +202,11 @@ namespace FreeTrain.Framework.Plugin
                 plugins = new PluginDefinition[pluginSet.Count];
                 int ptr = 0;
                 PluginDefinition p = null;
-                while (!pluginSet.isEmpty)
+                while (!pluginSet.IsEmpty)
                 {
                     progressHandler("Sorting dependencies...", ++count / c_max);
                     //! progressHandler("依存関係を整理中",++count/c_max);
-                    p = (PluginDefinition)pluginSet.getOne();
+                    p = (PluginDefinition)pluginSet.GetOne();
                     try
                     {
                         while (true)
@@ -215,7 +215,7 @@ namespace FreeTrain.Framework.Plugin
                             int i;
                             for (i = 0; i < deps.Length; i++)
                             {
-                                if (pluginSet.contains(deps[i]))
+                                if (pluginSet.Contains(deps[i]))
                                 {
                                     break;
                                 }
@@ -243,7 +243,7 @@ namespace FreeTrain.Framework.Plugin
                             break;
                         }
                     }
-                    pluginSet.remove(p);
+                    pluginSet.Remove(p);
                     plugins[ptr++] = p;
                 }
             }

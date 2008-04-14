@@ -44,12 +44,12 @@ namespace FreeTrain.World.Road.Accessory
         {
             MenuItem item = new MenuItem("&Accessories...");
           
-            item.Click += new System.EventHandler(onClick);
+            item.Click += new System.EventHandler(OnClick);
 
             containerMenu.MenuItems[3].MenuItems.Add(item);
         }
 
-        private void onClick(object sender, EventArgs e)
+        private void OnClick(object sender, EventArgs e)
         {
             new ControllerForm().Show();
         }

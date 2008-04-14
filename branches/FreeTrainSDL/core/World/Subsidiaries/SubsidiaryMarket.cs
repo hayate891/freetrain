@@ -122,7 +122,7 @@ namespace FreeTrain.World.Subsidiaries
         {
             get
             {
-                return (SubsidiaryCompany[])onSale.toArray(typeof(SubsidiaryCompany));
+                return (SubsidiaryCompany[])onSale.ToArray(typeof(SubsidiaryCompany));
             }
         }
 
@@ -131,7 +131,7 @@ namespace FreeTrain.World.Subsidiaries
         /// </summary>
         internal void add(SubsidiaryCompany company)
         {
-            onSale.add(company);
+            onSale.Add(company);
             if (persistentEvents.onAdded != null)
                 persistentEvents.onAdded(this, company);
             if (volatileEvents.onAdded != null)
@@ -143,7 +143,7 @@ namespace FreeTrain.World.Subsidiaries
         /// </summary>
         internal void remove(SubsidiaryCompany company)
         {
-            onSale.remove(company);
+            onSale.Remove(company);
             if (persistentEvents.onRemoved != null)
                 persistentEvents.onRemoved(this, company);
             if (volatileEvents.onRemoved != null)
@@ -155,7 +155,7 @@ namespace FreeTrain.World.Subsidiaries
         /// </summary>
         internal bool contains(SubsidiaryCompany company)
         {
-            return onSale.contains(company);
+            return onSale.Contains(company);
         }
     }
 }
