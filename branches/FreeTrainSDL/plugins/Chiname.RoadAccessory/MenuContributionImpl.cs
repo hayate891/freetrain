@@ -36,6 +36,7 @@ namespace FreeTrain.World.Road.Accessory
         /// </summary>
         /// <param name="e"></param>
         public MenuContributionImpl(XmlElement e) : base(e) { }
+
         /// <summary>
         /// 
         /// </summary>

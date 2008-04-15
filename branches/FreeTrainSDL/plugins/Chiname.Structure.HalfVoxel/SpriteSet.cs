@@ -60,7 +60,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         {
         }
 
-        static internal int getIndexOf(Direction d, PlaceSide s)
+        static internal int GetIndexOf(Direction d, PlaceSide s)
         {
             return d.index / 2 + (int)s * 4;
         }
@@ -69,6 +69,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         {
             get { return sprites[idx]; }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -79,11 +80,11 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         {
             get
             {
-                return sprites[getIndexOf(d, s)];
+                return sprites[GetIndexOf(d, s)];
             }
             set
             {
-                sprites[getIndexOf(d, s)] = value;
+                sprites[GetIndexOf(d, s)] = value;
             }
         }
 

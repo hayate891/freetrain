@@ -33,36 +33,12 @@ namespace FreeTrain.Controllers.Structs
     /// </summary>
     public class CommercialStructPlacementController : FixedSizeStructController
     {
-        #region Singleton instance management
-        /// <summary>
-        /// Creates a new controller window, or active the existing one.
-        /// </summary>
-        public static void create()
-        {
-            if (theInstance == null)
-                theInstance = new CommercialStructPlacementController();
-            theInstance.Show();
-            theInstance.Activate();
-        }
-
-        private static CommercialStructPlacementController theInstance;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            theInstance = null;
-        }
-        #endregion
-
         private CommercialStructPlacementController() : base(PluginManager.CommercialStructureGroup) { }
 
         /// <summary> LocationDisambiguator implementation </summary>
         public override bool IsSelectable(Location loc)
         {
-            if (isPlacing)
+            if (IsPlacing)
             {
                 // structures can be placed only on the ground
                 return GroundDisambiguator.theInstance.IsSelectable(loc);
@@ -76,7 +52,7 @@ namespace FreeTrain.Controllers.Structs
         /// <summary>
         /// Removes the structure from given location, if any.
         /// </summary>
-        public override void remove(MapViewWindow view, Location loc)
+        public override void Remove(MapViewWindow view, Location loc)
         {
             Commercial c = Commercial.get(loc);
             if (c != null)

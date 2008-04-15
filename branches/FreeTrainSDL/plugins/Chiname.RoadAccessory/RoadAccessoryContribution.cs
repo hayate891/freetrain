@@ -62,6 +62,7 @@ namespace FreeTrain.World.Road.Accessory
         /// y=1 if a sprite is in front of a train 
         /// </summary>
         internal readonly ISprite[,] sprites = new ISprite[2, 2];
+
         /// <summary>
         /// 
         /// </summary>
@@ -78,6 +79,7 @@ namespace FreeTrain.World.Road.Accessory
             }
             return drawer;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -87,6 +89,7 @@ namespace FreeTrain.World.Road.Accessory
         {
             return new ControllerImpl(this, site, false);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -96,6 +99,7 @@ namespace FreeTrain.World.Road.Accessory
         {
             return new ControllerImpl(this, site, true);
         }
+
         /// <summary>
         /// 
         /// </summary>

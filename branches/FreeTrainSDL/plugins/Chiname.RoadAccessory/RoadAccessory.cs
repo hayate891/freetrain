@@ -32,6 +32,7 @@ namespace FreeTrain.World.Road.Accessory
     {
         private readonly byte index;
         private readonly RoadAccessoryContribution contrib;
+
         /// <summary>
         /// 
         /// </summary>
@@ -44,6 +45,7 @@ namespace FreeTrain.World.Road.Accessory
             this.contrib = contrib;
             target.accessory = this;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -53,6 +55,7 @@ namespace FreeTrain.World.Road.Accessory
         {
             contrib.sprites[index, 0].Draw(display.Surface, pt);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -62,6 +65,7 @@ namespace FreeTrain.World.Road.Accessory
         {
             contrib.sprites[index, 1].Draw(display.Surface, pt);
         }
+
         /// <summary>
         /// 
         /// </summary>

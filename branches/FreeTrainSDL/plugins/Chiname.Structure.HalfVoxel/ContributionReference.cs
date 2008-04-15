@@ -88,7 +88,7 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
             this.hilightIdx = hilight;
             this.placeSide = side;
             this.frontface = front;
-            this.patternIdx = SpriteSet.getIndexOf(front, side);
+            this.patternIdx = SpriteSet.GetIndexOf(front, side);
         }
         /// <summary>
         /// 

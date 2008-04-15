@@ -57,6 +57,7 @@ namespace FreeTrain.Controllers.Structs
         private FreeTrain.Controls.IndexSelector indexSelector;
 
         private Bitmap previewBitmap;
+
         /// <summary>
         /// 
         /// </summary>
@@ -69,8 +70,9 @@ namespace FreeTrain.Controllers.Structs
             // load station type list
             structType.DataSource = groupGroup;
             structType.DisplayMember = "name";
-            updateAfterResize(null, null);
+            UpdateAfterResize(null, null);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -88,10 +90,12 @@ namespace FreeTrain.Controllers.Structs
             if (alphaSprites != null)
                 alphaSprites.Dispose();
         }
+
         /// <summary>
         /// 
         /// </summary>
         public override ILocationDisambiguator Disambiguator { get { return this; } }
+
         /// <summary>
         /// 
         /// </summary>
@@ -124,7 +128,7 @@ namespace FreeTrain.Controllers.Structs
             this.structType.Size = new System.Drawing.Size(130, 21);
             this.structType.Sorted = true;
             this.structType.TabIndex = 2;
-            this.structType.SelectedIndexChanged += new System.EventHandler(this.onGroupChanged);
+            this.structType.SelectedIndexChanged += new System.EventHandler(this.OnGroupChanged);
             // 
             // preview
             // 
@@ -175,7 +179,7 @@ namespace FreeTrain.Controllers.Structs
             this.indexSelector.Name = "indexSelector";
             this.indexSelector.Size = new System.Drawing.Size(130, 22);
             this.indexSelector.TabIndex = 3;
-            this.indexSelector.indexChanged += new System.EventHandler(this.onTypeChanged);
+            this.indexSelector.indexChanged += new System.EventHandler(this.OnTypeChanged);
             // 
             // StructPlacementController
             // 
@@ -190,17 +194,18 @@ namespace FreeTrain.Controllers.Structs
             this.Name = "StructPlacementController";
             this.Text = "Building construction";
             //! this.Text = "建物の工事(仮)";
-            this.Resize += new System.EventHandler(this.updateAfterResize);
+            this.Resize += new System.EventHandler(this.UpdateAfterResize);
             ((System.ComponentModel.ISupportInitialize)(this.preview)).EndInit();
             this.ResumeLayout(false);
         }
         #endregion
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected virtual void updateAfterResize(object sender, System.EventArgs e)
+        protected virtual void UpdateAfterResize(object sender, System.EventArgs e)
         {
             this.buttonPlace.Width = ((this.preview.Left + this.preview.Width) - this.buttonPlace.Left - 5) / 2;
             this.buttonRemove.Left = (this.buttonPlace.Left + this.buttonPlace.Width) + 10;
@@ -208,15 +213,13 @@ namespace FreeTrain.Controllers.Structs
             UpdatePreview();
         }
 
-
         /// <summary>
         /// 
         /// </summary>
-        protected bool isPlacing { get { return buttonPlace.Checked; } }
-
-
+        protected bool IsPlacing { get { return buttonPlace.Checked; } }
 
         private Location baseLoc = World.Location.Unplaced;
+
         /// <summary>
         /// 
         /// </summary>
@@ -242,6 +245,7 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="view"></param>
         /// <param name="surface"></param>
         public void DrawBefore(QuarterViewDrawer view, DrawContext surface) { }
+
         /// <summary>
         /// 
         /// </summary>
@@ -251,13 +255,14 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="pt"></param>
         public void DrawVoxel(QuarterViewDrawer view, DrawContext canvas, Location loc, Point pt)
         {
-            if (!isPlacing) return;
+            if (!IsPlacing) return;
             if (alphaSprites != null)
             {
                 if (Cube.CreateExclusive(baseLoc, alphaSprites.size).Contains(loc))
                     alphaSprites.getSprite(loc - baseLoc).DrawAlpha(canvas.Surface, pt);
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -265,17 +270,17 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="surface"></param>
         public void DrawAfter(QuarterViewDrawer view, DrawContext surface) { }
 
-
         /// <summary>
         /// Currently selected structure contribution.
         /// </summary>
-        protected StructureContribution selectedType
+        protected virtual StructureContribution SelectedType
         {
             get
             {
                 return (StructureContribution)indexSelector.currentItem;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -283,7 +288,7 @@ namespace FreeTrain.Controllers.Structs
         protected override void OnLoad(System.EventArgs e)
         {
             base.OnLoad(e);
-            updateAlphaSprites();
+            UpdateAlphaSprites();
         }
 
         private AlphaBlendSpriteSet alphaSprites;
@@ -291,35 +296,35 @@ namespace FreeTrain.Controllers.Structs
         /// <summary>
         /// Re-builds an alpha-blending preview.
         /// </summary>
-        protected void updateAlphaSprites()
+        protected void UpdateAlphaSprites()
         {
             if (alphaSprites != null)
                 alphaSprites.Dispose();
 
             // builds a new alpha blended preview
-            alphaSprites = createAlphaSprites();
+            alphaSprites = CreateAlphaSprites();
         }
 
         /// <summary>
         /// Implemented by the derived class to provide a sprite set used
         /// to draw a preview of this structure on MapView.
         /// </summary>
-        protected abstract AlphaBlendSpriteSet createAlphaSprites();
+        protected abstract AlphaBlendSpriteSet CreateAlphaSprites();
 
-        private void onGroupChanged(object sender, System.EventArgs e)
+        private void OnGroupChanged(object sender, System.EventArgs e)
         {
             indexSelector.dataSource = (StructureGroup)structType.SelectedItem;
-            onTypeChanged(null, null);
+            OnTypeChanged(null, null);
         }
-
 
         /// <summary>
         /// Called when a selection of the structure has changed.
         /// </summary>
-        protected virtual void onTypeChanged(object sender, System.EventArgs e)
+        protected virtual void OnTypeChanged(object sender, System.EventArgs e)
         {
             UpdatePreview();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -331,7 +336,7 @@ namespace FreeTrain.Controllers.Structs
                 preview.Image = previewBitmap = drawer.createBitmap();
             }*/
 
-            if (selectedType != null) updateAlphaSprites();
+            if (SelectedType != null) UpdateAlphaSprites();
         }
     }
 }

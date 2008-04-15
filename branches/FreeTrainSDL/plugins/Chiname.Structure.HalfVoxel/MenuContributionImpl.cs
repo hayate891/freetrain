@@ -45,12 +45,12 @@ namespace FreeTrain.World.Structs.HalfVoxelStructure
         public override void MergeMenu(MainMenu containerMenu)
         {
             MenuItem item = new MenuItem("&Half-tile Construction...");
-            item.Click += new System.EventHandler(onClick);
+            item.Click += new System.EventHandler(OnClick);
 
             containerMenu.MenuItems[4].MenuItems.Add(item);
         }
 
-        private void onClick(object sender, EventArgs e)
+        private void OnClick(object sender, EventArgs e)
         {
             new ControllerForm().Show();
         }

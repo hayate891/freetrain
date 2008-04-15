@@ -40,7 +40,6 @@ namespace FreeTrain.World.Road.Accessory
             get { return remove; }
         } 
 
-
         /// <summary>
         /// 
         /// </summary>

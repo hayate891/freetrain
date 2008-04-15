@@ -151,7 +151,7 @@ namespace FreeTrain.Controllers.Road
             this.Controls.Add(this.description);
             this.Controls.Add(this.level);
             this.Controls.Add(this.contribTree);
-            this.Resize += new EventHandler(this.updateSize);
+            this.Resize += new EventHandler(this.UpdateSize);
             this.Text = "Road construction";
             //! this.Text = "道路工事";
             this.ResumeLayout(false);
@@ -171,7 +171,7 @@ namespace FreeTrain.Controllers.Road
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected virtual void updateSize(object sender, System.EventArgs e)
+        protected virtual void UpdateSize(object sender, System.EventArgs e)
         {
             this.contribTree.Width = (this.Width - 5) / 2;
             this.description.Width = this.contribTree.Width - 10;
