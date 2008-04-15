@@ -38,7 +38,16 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        protected MenuItem firstMenuItem;
+        private MenuItem firstMenuItem;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected MenuItem FirstMenuItem
+        {
+            get { return firstMenuItem; }
+            set { firstMenuItem = value; }
+        }
 
         #region Construction
 
@@ -109,16 +118,16 @@ namespace FreeTrain.Controls
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_recentFileMenuItem"></param>
-        /// <param name="_clickedHandler"></param>
-        /// <param name="_registryKeyName"></param>
+        /// <param name="recentFileMenuItem"></param>
+        /// <param name="clickedHandler"></param>
+        /// <param name="registryKeyName"></param>
         /// <param name="loadFromRegistry"></param>
-        /// <param name="_maxEntries"></param>
-        public MruMenuInline(MenuItem _recentFileMenuItem, ClickHandler _clickedHandler, String _registryKeyName, bool loadFromRegistry, int _maxEntries)
-            : base(_recentFileMenuItem, _clickedHandler, _registryKeyName, loadFromRegistry, _maxEntries)
+        /// <param name="maxEntries"></param>
+        public MruMenuInline(MenuItem recentFileMenuItem, ClickHandler clickedHandler, String registryKeyName, bool loadFromRegistry, int maxEntries)
+            : base(recentFileMenuItem, clickedHandler, registryKeyName, loadFromRegistry, maxEntries)
         {
             MaxShortenPathLength = 128;
-            firstMenuItem = _recentFileMenuItem;
+            this.firstMenuItem = recentFileMenuItem;
         }
         #endregion
 

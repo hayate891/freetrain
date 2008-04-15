@@ -43,24 +43,27 @@ namespace FreeTrain.Controllers.Structs
         /// </summary>
         /// <param name="groupGroup"></param>
         protected FixedSizeStructController(StructureGroupGroup groupGroup) : base(groupGroup) { }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="view"></param>
         /// <param name="loc"></param>
-        public abstract void remove(MapViewWindow view, Location loc);
+        public abstract void Remove(MapViewWindow view, Location loc);
+
         // TODO: extend StructureContribution and Structure so that 
         // the this method can be implemented here.
         /// <summary>
         /// 
         /// </summary>
-        protected new FixedSizeStructureContribution selectedType
+        protected new FixedSizeStructureContribution SelectedType
         {
             get
             {
-                return (FixedSizeStructureContribution)base.selectedType;
+                return (FixedSizeStructureContribution)base.SelectedType;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -69,22 +72,22 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="ab"></param>
         public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
-            if (isPlacing)
+            if (IsPlacing)
             {
-                if (!selectedType.CanBeBuilt(loc, ControlMode.Player))
+                if (!SelectedType.CanBeBuilt(loc, ControlMode.Player))
                 {
                     MessageBox.Show("Can not build");
                     //! MessageBox.Show("設置できません");
                 }
                 else
                 {
-                    CompletionHandler handler = new CompletionHandler(selectedType, loc, true);
-                    new ConstructionSite(loc, new EventHandler(handler.handle), selectedType.Size);
+                    CompletionHandler handler = new CompletionHandler(SelectedType, loc, true);
+                    new ConstructionSite(loc, new EventHandler(handler.Handle), SelectedType.Size);
                 }
             }
             else
             {
-                remove(view, loc);
+                Remove(view, loc);
             }
         }
 
@@ -100,12 +103,13 @@ namespace FreeTrain.Controllers.Structs
             private readonly FixedSizeStructureContribution contribution;
             private readonly Location loc;
             private readonly bool owned;
+
             /// <summary>
             /// 
             /// </summary>
             /// <param name="sender"></param>
             /// <param name="args"></param>
-            public void handle(object sender, EventArgs args)
+            public void Handle(object sender, EventArgs args)
             {
                 Structure s = contribution.Create(loc, owned);
             }
@@ -115,9 +119,9 @@ namespace FreeTrain.Controllers.Structs
         /// 
         /// </summary>
         /// <returns></returns>
-        protected override AlphaBlendSpriteSet createAlphaSprites()
+        protected override AlphaBlendSpriteSet CreateAlphaSprites()
         {
-            if (selectedType != null) return new AlphaBlendSpriteSet(selectedType.Sprites);
+            if (SelectedType != null) return new AlphaBlendSpriteSet(SelectedType.Sprites);
             else return null;
         }
     }

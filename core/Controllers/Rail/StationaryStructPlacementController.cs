@@ -63,7 +63,7 @@ namespace FreeTrain.Controllers.Rail
         /// <summary> LocationDisambiguator implementation </summary>
         public override bool IsSelectable(Location loc)
         {
-            if (isPlacing)
+            if (IsPlacing)
             {
                 // structures can be placed only on the ground
                 return GroundDisambiguator.theInstance.IsSelectable(loc);
@@ -78,7 +78,7 @@ namespace FreeTrain.Controllers.Rail
         /// </summary>
         /// <param name="view"></param>
         /// <param name="loc"></param>
-        public override void remove(MapViewWindow view, Location loc)
+        public override void Remove(MapViewWindow view, Location loc)
         {
             RailStationaryStructure s = RailStationaryStructure.get(loc);
             if (s != null)

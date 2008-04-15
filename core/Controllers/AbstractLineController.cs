@@ -186,14 +186,14 @@ namespace FreeTrain.Controllers
         /// <summary>
         /// The first location selected by the user.
         /// </summary>
-        private Location anchor = UNPLACED;
+        private Location anchor = Unplaced;
 
         /// <summary>
         /// Current mouse position. Used only when anchor!=UNPLACED
         /// </summary>
-        private Location currentPos = UNPLACED;
+        private Location currentPos = Unplaced;
 
-        private static Location UNPLACED = FreeTrain.World.Location.Unplaced;
+        private static Location Unplaced = FreeTrain.World.Location.Unplaced;
 
         /// <summary>
         /// Aligns the given location to the anchor so that
@@ -210,7 +210,7 @@ namespace FreeTrain.Controllers
                 return loc.align8To(anchor);
 
             Debug.Assert(false);
-            return UNPLACED;
+            return Unplaced;
         }
 
         /// <summary>
@@ -221,9 +221,9 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public override void OnMouseMove(MapViewWindow view, Location loc, Point ab)
         {
-            if (anchor != UNPLACED && isPlacing && currentPos != loc)
+            if (anchor != Unplaced && isPlacing && currentPos != loc)
             {
-                if (currentPos != UNPLACED)
+                if (currentPos != Unplaced)
                     WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPos));
                 currentPos = align(loc);
                 WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPos));
@@ -238,7 +238,7 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public override void OnClick(MapViewWindow source, Location loc, Point ab)
         {
-            if (anchor == UNPLACED)
+            if (anchor == Unplaced)
             {
                 anchor = loc;
                 sameLevelDisambiguator = new SameLevelDisambiguator(anchor.z);
@@ -259,7 +259,7 @@ namespace FreeTrain.Controllers
                         Type.Remove(anchor, loc);
                     WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, loc));
                 }
-                anchor = UNPLACED;
+                anchor = Unplaced;
             }
         }
 
@@ -271,14 +271,14 @@ namespace FreeTrain.Controllers
         /// <param name="ab"></param>
         public override void OnRightClick(MapViewWindow source, Location loc, Point ab)
         {
-            if (anchor == UNPLACED)
+            if (anchor == Unplaced)
                 Close();	// cancel
             else
             {
                 // cancel the anchor
-                if (currentPos != UNPLACED)
+                if (currentPos != Unplaced)
                     WorldDefinition.World.OnVoxelUpdated(Cube.CreateInclusive(anchor, currentPos));
-                anchor = UNPLACED;
+                anchor = Unplaced;
             }
         }
 
@@ -290,7 +290,7 @@ namespace FreeTrain.Controllers
             get
             {
                 // the 2nd selection must go to the same height as the anchor.
-                if (anchor == UNPLACED) return RailRoadDisambiguator.theInstance;
+                if (anchor == Unplaced) return RailRoadDisambiguator.theInstance;
                 else return sameLevelDisambiguator;
             }
         }
@@ -299,7 +299,7 @@ namespace FreeTrain.Controllers
 
         private void modeChanged(object sender, EventArgs e)
         {
-            anchor = UNPLACED;
+            anchor = Unplaced;
         }
 
         /// <summary>
@@ -335,7 +335,7 @@ namespace FreeTrain.Controllers
         /// <param name="canvas"></param>
         public void DrawBefore(QuarterViewDrawer view, DrawContext canvas)
         {
-            if (anchor != UNPLACED && isPlacing)
+            if (anchor != Unplaced && isPlacing)
                 canvas.Tag = Type.CanBeBuilt(anchor, currentPos);
         }
 

@@ -71,7 +71,7 @@ namespace FreeTrain.Controllers.Structs
         /// <param name="ab"></param>
         public override void OnClick(MapViewWindow view, Location loc, Point ab)
         {
-            if (isPlacing)
+            if (IsPlacing)
             {
                 if (!selectedType.CanBeBuilt(loc, height))
                 {
@@ -96,7 +96,7 @@ namespace FreeTrain.Controllers.Structs
         /// <summary> LocationDisambiguator implementation </summary>
         public override bool IsSelectable(Location loc)
         {
-            if (isPlacing)
+            if (IsPlacing)
             {
                 // structures can be placed only on the ground
                 return GroundDisambiguator.theInstance.IsSelectable(loc);
@@ -133,7 +133,7 @@ namespace FreeTrain.Controllers.Structs
         {
             get
             {
-                return (VarHeightBuildingContribution)base.selectedType;
+                return (VarHeightBuildingContribution)base.SelectedType;
             }
         }
         private int height
@@ -148,7 +148,7 @@ namespace FreeTrain.Controllers.Structs
         /// <summary>
         /// Re-builds an alpha-blending preview.
         /// </summary>
-        protected override AlphaBlendSpriteSet createAlphaSprites()
+        protected override AlphaBlendSpriteSet CreateAlphaSprites()
         {
 
             // builds a new alpha blended preview
@@ -171,7 +171,7 @@ namespace FreeTrain.Controllers.Structs
 
         private void heightBox_ValueChanged(object sender, System.EventArgs e)
         {
-            updateAlphaSprites();
+            UpdateAlphaSprites();
             UpdatePreview();
         }
 
@@ -180,9 +180,9 @@ namespace FreeTrain.Controllers.Structs
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected override void onTypeChanged(object sender, System.EventArgs e)
+        protected override void OnTypeChanged(object sender, System.EventArgs e)
         {
-            base.onTypeChanged(sender, e);
+            base.OnTypeChanged(sender, e);
 
             if (heightBox == null) return;	// during initialization
             // update the min/max of the height

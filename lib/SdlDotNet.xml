@@ -7402,26 +7402,6 @@
             Equivalent to SDL_SRCALPHA
             </summary>
         </member>
-        <member name="T:SdlDotNet.Graphics.ColorMask">
-            <summary>
-            Color mask.
-            </summary>
-        </member>
-        <member name="F:SdlDotNet.Graphics.ColorMask.R">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:SdlDotNet.Graphics.ColorMask.G">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:SdlDotNet.Graphics.ColorMask.B">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:SdlDotNet.Graphics.Surface">
             <summary>
             Represents an Sdl drawing surface.
@@ -7863,30 +7843,6 @@
             </summary>
             <param name="file">The filename to save to</param>
         </member>
-        <member name="M:SdlDotNet.Graphics.Surface.BlitAlpha(System.Drawing.Point,SdlDotNet.Graphics.Surface,System.Drawing.Point,System.Drawing.Size)">
-            <summary>
-            
-            </summary>
-            <param name="dstPos"></param>
-            <param name="source"></param>
-            <param name="srcPos"></param>
-            <param name="sz"></param>
-        </member>
-        <member name="M:SdlDotNet.Graphics.Surface.HitTest(System.Drawing.Point)">
-            <summary>
-            
-            </summary>
-            <param name="p"></param>
-            <returns></returns>
-        </member>
-        <member name="M:SdlDotNet.Graphics.Surface.HitTest(System.Int32,System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="x"></param>
-            <param name="y"></param>
-            <returns></returns>
-        </member>
         <member name="M:SdlDotNet.Graphics.Surface.Draw(System.Drawing.Point,System.Int32)">
             <summary>
             Draws a pixel to this surface using the color value to speed things up - uses 1,2 or 4 BytesPerPixel modes.
@@ -8176,7 +8132,7 @@
         </member>
         <member name="P:SdlDotNet.Graphics.Surface.SourceColorKey">
             <summary>
-            Source color key. A mask color that will not be copied to other plains.
+            Source color key. A mask color that will not be copied to other Surfaces.
             </summary>
         </member>
         <member name="P:SdlDotNet.Graphics.Surface.ClipRectangle">
