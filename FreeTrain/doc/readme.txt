@@ -12,6 +12,17 @@ http://www.kohsuke.org/freetrain/
 
 
 
+* Installation
+
+To install the game, put the FreeTrain catalog in a convenient place.
+Then make sure you have the .NET framework 2.0 installed. If you don't,
+get it from Microsoft:
+
+http://www.microsoft.com/downloads/details.aspx?familyid=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&displaylang=en
+
+
+
+
 * Acknowledgments
 
 This game was created by the members of the "A-Train" community at 2ch.
