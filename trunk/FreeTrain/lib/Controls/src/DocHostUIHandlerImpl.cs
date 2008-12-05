@@ -1,3 +1,4 @@
+#if use_removed
 using System;
 using System.Runtime.InteropServices;
 using MsHtmlHost;
@@ -69,3 +70,4 @@ namespace freetrain.controls
         }
 	}
 }
+#endif

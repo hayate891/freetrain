@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.Core</AssemblyName>
+    <RootNamespace>freetrain</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>Release\</OutputPath>
@@ -68,13 +71,11 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.Core</AssemblyName>
+    <RootNamespace>freetrain</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxSHDocVw">
-      <Name>AxSHDocVw</Name>
-      <HintPath>..\extlib\AxSHDocVw.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MagicLibrary">
       <Name>MagicLibrary</Name>
       <HintPath>..\extlib\MagicLibrary.DLL</HintPath>
@@ -86,11 +87,6 @@
     </Reference>
     <Reference Include="Microsoft.Vsa">
       <Name>Microsoft.Vsa</Name>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MsHtmlHost">
-      <Name>MsHtmlHost</Name>
-      <HintPath>..\extlib\MsHtmlHost.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SharpZipLib">
@@ -1054,6 +1050,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\" />
     <Folder Include="util\video\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -1061,5 +1058,7 @@
     <PreBuildEvent>rem del $(ProjectDir)\obj\Debug\*.PDB</PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</ProjectGuid>
+    <RootNamespace>freetrain</RootNamespace>
   </PropertyGroup>
 </Project>
