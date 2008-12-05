@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.VinylHouse</AssemblyName>
+    <RootNamespace>VinylHouse</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.VinylHouse</AssemblyName>
+    <RootNamespace>VinylHouse</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -119,5 +125,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{D01D6622-F67B-4EDC-8CA3-4E1A8FCA422B}</ProjectGuid>
+    <RootNamespace>VinylHouse</RootNamespace>
   </PropertyGroup>
 </Project>

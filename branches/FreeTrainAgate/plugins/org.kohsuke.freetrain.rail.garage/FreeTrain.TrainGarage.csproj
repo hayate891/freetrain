@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.TrainGarage</AssemblyName>
+    <RootNamespace>freetrain.world.rail.garage</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.TrainGarage</AssemblyName>
+    <RootNamespace>freetrain.world.rail.garage</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -113,5 +119,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{E388A2ED-7487-4BFC-AF79-F8C827B39346}</ProjectGuid>
+    <RootNamespace>freetrain.world.rail.garage</RootNamespace>
   </PropertyGroup>
 </Project>

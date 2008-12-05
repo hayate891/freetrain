@@ -1,0 +1,115 @@
+﻿<UserCombinePreferences version="1.0" filename="/home/charles/Projects/Personal/freetrain/FreeTrain.sln">
+  <Files>
+    <File name="Welcome" />
+    <File name="core/contributions/common/FixedSizeStructureContribution.cs" line="19" column="65" />
+    <File name="core/contributions/common/StructureContribution.cs" line="11" column="31" />
+    <File name="core/contributions/land/LandBuilderContribution.cs" line="4" column="7" />
+    <File name="core/contributions/structs/VarHeightBuildingContribution.cs" line="12" column="31" />
+    <File name="core/contributions/train/ColoredTrainCarImpl.cs" line="8" column="23" />
+    <File name="core/contributions/train/TrainCarContribution.cs" line="3" column="18" />
+    <File name="core/framework/BGMManager.cs" line="5" column="34" />
+    <File name="core/framework/graphics/AlphaBlendSpriteSet.cs" line="7" column="24" />
+    <File name="core/framework/graphics/NullSprite.cs" line="3" column="36" />
+    <File name="core/framework/graphics/Picture.cs" line="4" column="18" />
+    <File name="core/framework/graphics/PreviewDrawer.cs" line="4" column="23" />
+    <File name="core/framework/graphics/SimpleSprite.cs" line="5" column="23" />
+    <File name="core/framework/MainWindow.cs" line="35" column="30" />
+    <File name="core/framework/plugin/Contribution.cs" line="8" column="18" />
+    <File name="core/views/map/MapView.cs" line="11" column="36" />
+    <File name="core/views/map/PreviewMapWindow.cs" line="11" column="36" />
+    <File name="core/views/MapOverlay.cs" line="4" column="23" />
+    <File name="core/views/QuarterViewDrawer.cs" line="5" column="28" />
+    <File name="core/views/WeatherOverlay.cs" line="3" column="7" />
+    <File name="core/world/development/LandValueInspector.cs" line="7" column="28" />
+    <File name="core/world/Direction.cs" line="4" column="36" />
+    <File name="core/world/DrawContext.cs" line="2" column="22" />
+    <File name="core/world/EmptyVoxel.cs" line="2" column="22" />
+    <File name="core/world/rail/BridgePierVoxel.cs" line="2" column="22" />
+    <File name="core/world/rail/BridgeRail.cs" line="5" column="18" />
+    <File name="core/world/rail/FatPlatform.cs" line="4" column="36" />
+    <File name="core/world/rail/Platform.cs" line="3" column="22" />
+    <File name="core/world/rail/RailPattern.cs" line="8" column="22" />
+    <File name="core/world/rail/RailRoad.cs" line="5" column="28" />
+    <File name="core/world/rail/StealSupportedRailContributionImpl.cs" line="5" column="18" />
+    <File name="core/world/rail/ThinPlatform.cs" line="5" column="18" />
+    <File name="core/world/rail/Train.cs" line="4" column="28" />
+    <File name="core/world/rail/TunnelRail.cs" line="5" column="18" />
+    <File name="core/world/rail/YardRailRoad.cs" line="3" column="22" />
+    <File name="core/world/structs/PThreeDimStructure.cs" line="8" column="22" />
+    <File name="core/world/structs/Structure.cs" line="5" column="31" />
+    <File name="core/world/Voxel.cs" line="3" column="22" />
+    <File name="core/world/World.cs" line="17" column="35" />
+    <File name="core/contributions/land/Bulldozer.cs" line="4" column="7" />
+    <File name="core/contributions/land/RandomLandBuilder.cs" line="4" column="7" />
+    <File name="core/contributions/land/StaticLandBuilder.cs" line="4" column="7" />
+    <File name="core/contributions/train/AsymTrainCarImpl.cs" line="7" column="23" />
+    <File name="core/framework/graphics/Surface.cs" line="9" column="25" />
+    <File name="core/world/Traffic.cs" line="4" column="7" />
+    <File name="core/world/terrain/MountainVoxel.cs" line="6" column="7" />
+    <File name="core/world/structs/ConstructionSite.cs" line="7" column="7" />
+    <File name="core/world/Location.cs" line="5" column="7" />
+    <File name="core/world/land/LandPropertyVoxel.cs" line="6" column="7" />
+    <File name="core/contributions/train/ReverseTrainCarImpl.cs" line="3" column="18" />
+    <File name="core/contributions/train/SymTrainCarImpl.cs" line="7" column="7" />
+    <File name="core/controllers/land/BulldozeController.cs" line="17" column="7" />
+    <File name="core/controllers/land/LandController.cs" line="17" column="7" />
+    <File name="core/controllers/land/LandPropertyController.cs" line="14" column="22" />
+    <File name="core/controllers/rail/PlatformController.cs" line="15" column="27" />
+    <File name="core/controllers/rail/SlopeRailRoadController.cs" line="12" column="27" />
+    <File name="core/controllers/rail/TrainPlacementController.cs" line="14" column="30" />
+    <File name="core/controllers/structs/StructPlacementController.cs" line="16" column="22" />
+    <File name="core/controllers/structs/VarHeightBuildingController.cs" line="14" column="22" />
+    <File name="core/framework/AboutDialog.cs" line="7" column="26" />
+    <File name="core/framework/ConfigDialog.cs" line="6" column="23" />
+    <File name="core/framework/GlobalOptions.cs" line="9" column="22" />
+    <File name="core/framework/graphics/ColorMappedSprite.cs" line="3" column="18" />
+    <File name="core/framework/graphics/DirectSprite.cs" line="2" column="22" />
+    <File name="core/framework/graphics/HueTransformSprite.cs" line="43" column="42" />
+  </Files>
+  <Views>
+    <ViewMemento id="ProjectPad">
+      <Node expanded="True">
+        <Node name="FreeTrain.Core" expanded="True">
+          <Node name="References" expanded="True" />
+          <Node name="contributions" expanded="True">
+            <Node name="common" expanded="True" />
+            <Node name="land" expanded="True" />
+            <Node name="structs" expanded="True" />
+            <Node name="train" expanded="True" />
+          </Node>
+          <Node name="controllers" expanded="True">
+            <Node name="land" expanded="True" />
+            <Node name="rail" expanded="True" />
+            <Node name="structs" expanded="True" />
+          </Node>
+          <Node name="framework" expanded="True">
+            <Node name="graphics" expanded="True">
+              <Node name="HueTransformSprite.cs" selected="True" />
+            </Node>
+            <Node name="plugin" expanded="True" />
+          </Node>
+          <Node name="views" expanded="True">
+            <Node name="map" expanded="True" />
+          </Node>
+          <Node name="world" expanded="True">
+            <Node name="development" expanded="True" />
+            <Node name="land" expanded="True" />
+            <Node name="rail" expanded="True" />
+            <Node name="structs" expanded="True" />
+            <Node name="terrain" expanded="True" />
+          </Node>
+        </Node>
+      </Node>
+    </ViewMemento>
+    <ViewMemento id="ClassPad">
+      <Node expanded="True" />
+    </ViewMemento>
+    <ViewMemento id="MonoDevelop.NUnit.TestPad">
+      <Node expanded="True" />
+    </ViewMemento>
+  </Views>
+  <Properties>
+    <Property key="ActiveWindow" value="/home/charles/Projects/Personal/freetrain/core/framework/graphics/HueTransformSprite.cs" />
+    <Property key="ActiveConfiguration" value="Debug|Any CPU" />
+  </Properties>
+</UserCombinePreferences>

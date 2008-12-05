@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Fence</AssemblyName>
+    <RootNamespace>Fence</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Fence</AssemblyName>
+    <RootNamespace>Fence</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -123,5 +129,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{DB6C03D1-4F10-42F3-A475-232234487085}</ProjectGuid>
+    <RootNamespace>Fence</RootNamespace>
   </PropertyGroup>
 </Project>

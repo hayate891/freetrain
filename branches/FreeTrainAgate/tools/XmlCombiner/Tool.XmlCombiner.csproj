@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>XmlCombiner</AssemblyName>
+    <RootNamespace>XmlCombiner</RootNamespace>
+    <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -71,6 +75,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>XmlCombiner</AssemblyName>
+    <RootNamespace>XmlCombiner</RootNamespace>
+    <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -98,5 +106,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{24E010BF-3085-42D2-812C-FD01D2AB446E}</ProjectGuid>
+    <RootNamespace>XmlCombiner</RootNamespace>
   </PropertyGroup>
 </Project>

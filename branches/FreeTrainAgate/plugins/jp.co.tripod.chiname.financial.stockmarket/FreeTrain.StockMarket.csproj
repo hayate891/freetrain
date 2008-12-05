@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>StockMarket</AssemblyName>
+    <RootNamespace>freetrain.finance.stock</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>StockMarket</AssemblyName>
+    <RootNamespace>freetrain.finance.stock</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
@@ -185,5 +191,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{9213F69B-447F-4B92-A046-BE7506871F47}</ProjectGuid>
+    <RootNamespace>freetrain.finance.stock</RootNamespace>
   </PropertyGroup>
 </Project>

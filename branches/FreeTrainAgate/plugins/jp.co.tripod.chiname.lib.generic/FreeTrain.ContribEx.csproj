@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.ContribEx</AssemblyName>
+    <RootNamespace>ExpandedContributions</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,12 +75,16 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.ContribEx</AssemblyName>
+    <RootNamespace>ExpandedContributions</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MagicLibrary">
+    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
       <Name>MagicLibrary</Name>
       <HintPath>..\..\extlib\MagicLibrary.DLL</HintPath>
       <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -151,5 +158,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{14C6D588-E391-49CE-A1D2-2A8A2A60A540}</ProjectGuid>
+    <RootNamespace>ExpandedContributions</RootNamespace>
   </PropertyGroup>
 </Project>

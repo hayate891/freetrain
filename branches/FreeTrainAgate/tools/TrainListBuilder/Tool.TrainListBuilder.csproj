@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>TrainListBuilder</AssemblyName>
+    <RootNamespace>TrainListBuilder</RootNamespace>
+    <ApplicationIcon>src\App.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -71,6 +75,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>TrainListBuilder</AssemblyName>
+    <RootNamespace>TrainListBuilder</RootNamespace>
+    <ApplicationIcon>src\App.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -119,5 +127,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{45E5B5B6-274B-46D2-9F29-45D953D59728}</ProjectGuid>
+    <RootNamespace>TrainListBuilder</RootNamespace>
   </PropertyGroup>
 </Project>

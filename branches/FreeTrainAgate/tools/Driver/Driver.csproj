@@ -47,6 +47,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>FreeTrain</AssemblyName>
+    <RootNamespace>Driver</RootNamespace>
+    <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>..\..\bin\Release\</OutputPath>
@@ -70,6 +74,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>FreeTrain</AssemblyName>
+    <RootNamespace>Driver</RootNamespace>
+    <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -112,5 +120,7 @@
     </PreBuildEvent>
     <PostBuildEvent>cd $(SolutionDir)
 copyresources.bat $(ProjectDir)$(OutDir)</PostBuildEvent>
+    <ProjectGuid>{17B6AE46-0110-4C40-98EB-5F7E4E16C050}</ProjectGuid>
+    <RootNamespace>Driver</RootNamespace>
   </PropertyGroup>
 </Project>

@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.TerrainLoader</AssemblyName>
+    <RootNamespace>TerrainLoader</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.TerrainLoader</AssemblyName>
+    <RootNamespace>TerrainLoader</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -122,5 +128,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{21F3202B-B5D1-41B2-9808-9FB4E87D848A}</ProjectGuid>
+    <RootNamespace>TerrainLoader</RootNamespace>
   </PropertyGroup>
 </Project>

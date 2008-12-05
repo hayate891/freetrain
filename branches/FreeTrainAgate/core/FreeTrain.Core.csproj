@@ -76,10 +76,11 @@
     <RootNamespace>freetrain</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MagicLibrary">
+    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
       <Name>MagicLibrary</Name>
       <HintPath>..\extlib\MagicLibrary.DLL</HintPath>
       <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Microsoft.JScript">
       <Name>Microsoft.JScript</Name>
@@ -89,15 +90,11 @@
       <Name>Microsoft.Vsa</Name>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SharpZipLib">
+    <Reference Include="SharpZipLib, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null">
       <Name>SharpZipLib</Name>
       <HintPath>..\extlib\SharpZipLib.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="SHDocVw">
-      <Name>SHDocVw</Name>
-      <HintPath>..\extlib\SHDocVw.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -126,18 +123,6 @@
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\lib\DirectAudio.net\DirectAudio.net.csproj">
-      <Name>DirectAudio.net</Name>
-      <Project>{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\lib\DirectDraw.net\DirectDraw.net.csproj">
-      <Name>DirectDraw.net</Name>
-      <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-      <Private>True</Private>
-    </ProjectReference>
     <COMReference Include="DxVBLib">
       <Guid>{E1211242-8E94-11D1-8808-00C04FC2C602}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -146,6 +131,34 @@
       <WrapperTool>tlbimp</WrapperTool>
       <Private>True</Private>
     </COMReference>
+    <Reference Include="AgateDrawing, Version=0.2.5.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\extlib\AgateDrawing.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="AgateFMOD, Version=0.2.5.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\extlib\AgateFMOD.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="AgateLib, Version=0.2.5.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\extlib\AgateLib.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="AgateMDX, Version=0.2.5.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\extlib\AgateMDX.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="AgateOTK, Version=0.2.5.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\extlib\AgateOTK.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <ProjectReference Include="..\lib\DirectAudio.net\DirectAudio.net.csproj">
+      <Project>{0616A314-BDF0-466D-AB4B-9FA1B071A8A2}</Project>
+      <Name>DirectAudio.net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\DirectDraw.net\DirectDraw.net.csproj">
+      <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
+      <Name>DirectDraw.net</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs">

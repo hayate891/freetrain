@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>FreeTrain.MapConstruction</AssemblyName>
+    <RootNamespace>MapConstructionDriver</RootNamespace>
+    <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -64,6 +68,10 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>FreeTrain.MapConstruction</AssemblyName>
+    <RootNamespace>MapConstructionDriver</RootNamespace>
+    <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -78,7 +86,7 @@
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
-    <Reference Include="System.XML">
+    <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
     <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
@@ -103,5 +111,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{0D2DD0C1-2AD5-44AB-A1E9-583232F4D099}</ProjectGuid>
+    <RootNamespace>MapConstructionDriver</RootNamespace>
   </PropertyGroup>
 </Project>

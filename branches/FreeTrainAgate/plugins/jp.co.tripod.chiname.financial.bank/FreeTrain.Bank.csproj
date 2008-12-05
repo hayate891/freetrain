@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Bank</AssemblyName>
+    <RootNamespace>Bank</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Bank</AssemblyName>
+    <RootNamespace>Bank</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -141,5 +147,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{4C35BAD5-CAEE-498F-9BA7-8771FBEA4979}</ProjectGuid>
+    <RootNamespace>Bank</RootNamespace>
   </PropertyGroup>
 </Project>
