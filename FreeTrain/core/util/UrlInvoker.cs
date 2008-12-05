@@ -11,7 +11,7 @@ namespace freetrain.util
 	public class UrlInvoker
 	{
 		// 指定のURLを標準ブラウザで開く
-		static public void openUrl(String targetUrl) {　
+        static public void openUrl(String targetUrl) {
 			ProcessStartInfo info = new ProcessStartInfo();
 			// URLに関連づけられたアプリケーションを探す
 			RegistryKey rkey = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command");
