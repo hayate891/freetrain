@@ -12,6 +12,7 @@ namespace freetrain.framework
 {
 	/// <summary>
 	/// AboutDialog の概要の説明です。
+	/// (summary for AboutDialog)
 	/// </summary>
 	public class AboutDialog : System.Windows.Forms.Form
 	{
@@ -24,7 +25,6 @@ namespace freetrain.framework
 			InitializeComponent();
 
 			browser.navigate("about:blank");
-			browser.docHostUIHandler = new DocHostUIHandlerImpl(this);
 			browser.navigate(ResourceUtil.findSystemResource("about.html"));
 		}
 
@@ -144,10 +144,8 @@ namespace freetrain.framework
 			// 
 			// browser
 			// 
-			this.browser.ContainingControl = this;
 			this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.browser.Enabled = true;
-			this.browser.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("browser.OcxState")));
 			this.browser.Size = new System.Drawing.Size(320, 192);
 			this.browser.TabIndex = 0;
 			// 
@@ -168,14 +166,16 @@ namespace freetrain.framework
 			this.AcceptButton = this.okButton;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
 			this.ClientSize = new System.Drawing.Size(338, 223);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.panel1,
-																		  this.displayMode,
-																		  this.label4,
-																		  this.size,
-																		  this.okButton,
-																		  this.label3,
-																		  this.progressBar});
+			this.Controls.AddRange(
+				new System.Windows.Forms.Control[] {
+					this.panel1,
+					this.displayMode,
+					this.label4,
+					this.size,
+					this.okButton,
+					this.label3,
+					this.progressBar
+				});
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;

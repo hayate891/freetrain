@@ -161,7 +161,7 @@ namespace freetrain.world.structs
 			Voxel v = World.world[loc];
 			if(!(v is VarHeightBuilding.VoxelImpl))	return null;
 
-			return ((VarHeightBuilding.VoxelImpl)v).owner as VarHeightBuilding;
+			return ((StructureVoxel)v).owner as VarHeightBuilding;
 		}
 
 		public static VarHeightBuilding get( int x, int y, int z ) { return get(new Location(x,y,z)); }

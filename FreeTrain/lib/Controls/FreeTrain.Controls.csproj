@@ -74,16 +74,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxSHDocVw">
-      <Name>AxSHDocVw</Name>
-      <HintPath>..\..\extlib\AxSHDocVw.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MsHtmlHost">
-      <Name>MsHtmlHost</Name>
-      <HintPath>..\..\extlib\MsHtmlHost.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>

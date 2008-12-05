@@ -3,8 +3,6 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using AxSHDocVw;
-using MsHtmlHost;
 using freetrain.controls;
 using freetrain.framework;
 using freetrain.framework.plugin;
@@ -48,7 +46,6 @@ namespace freetrain.world.accounting
 //            webBrowser.Navigate("about:hello", ref flags, ref targetFrame, ref postData, ref headers);
 
 			webBrowser.navigate("about:blank");
-			webBrowser.docHostUIHandler = new DocHostUIHandlerImpl(this);
 			webBrowser.navigate(ResourceUtil.findSystemResource("balanceSheet.html"));
 		}
 
@@ -69,7 +66,6 @@ namespace freetrain.world.accounting
 			// 
 			this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.webBrowser.Enabled = true;
-			this.webBrowser.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("webBrowser.OcxState")));
 			this.webBrowser.Size = new System.Drawing.Size(592, 206);
 			this.webBrowser.TabIndex = 0;
 			// 
