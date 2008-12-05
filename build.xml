@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<project basedir='.' default='all' name='freetrain'>
+	<property name='nant.settings.currentframework' value='mono-2.0'/>
+	<property name='build' value='bin'/>
+	<property name='src' value='core'/>
+	<property name='src' value='plugins'/>
+	<target name='all'/>
+	<!-- we need something like this:
+    <target depends='WebClientSample' name='all'/>
+    <target name='WebClientSample'>
+    <csc debug='true' optimize='true' output='${build}/WebClientSample.exe' target='exe' 
+                warninglevel='4'>
+      <sources>
+        <include name='**/*.cs'/>
+      </sources>
+      <resources dynamicprefix="true">
+        <include name='**/*.resx'/>
+        <include name='${src}/Resources/*.bmp'/>
+      </resources>
+      <references>
+        <include name='System.dll'/>
+        <include name='System.Data.dll'/>
+          <include name='System.XML.dll'/>
+        </references>
+    </csc>
+    </target>
+    -->
+</project>

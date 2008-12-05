@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.Creek.Eikichiya</AssemblyName>
+    <RootNamespace>freetrain.world.land.creek.eikichiya</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.Creek.Eikichiya</AssemblyName>
+    <RootNamespace>freetrain.world.land.creek.eikichiya</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -121,5 +127,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{FD37B5F1-A12B-42F5-B768-4FA21DF5E1D6}</ProjectGuid>
+    <RootNamespace>freetrain.world.land.creek.eikichiya</RootNamespace>
   </PropertyGroup>
 </Project>

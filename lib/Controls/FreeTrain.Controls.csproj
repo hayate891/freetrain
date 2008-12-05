@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.Controls</AssemblyName>
+    <RootNamespace>freetrain.controls</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.Controls</AssemblyName>
+    <RootNamespace>freetrain.controls</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -148,5 +154,7 @@
     <PreBuildEvent>
     </PreBuildEvent>
     <PostBuildEvent>copy $(ProjectDir)bin\Debug\*.* $(SolutionDir)core\Debug\</PostBuildEvent>
+    <ProjectGuid>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</ProjectGuid>
+    <RootNamespace>freetrain.controls</RootNamespace>
   </PropertyGroup>
 </Project>

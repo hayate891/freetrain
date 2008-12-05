@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.A4MemBGM</AssemblyName>
+    <RootNamespace>freetrain.plugins.a4membgm</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.A4MemBGM</AssemblyName>
+    <RootNamespace>freetrain.plugins.a4membgm</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -104,5 +110,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{058250A9-3BD8-418A-A3C3-6BD38F564520}</ProjectGuid>
+    <RootNamespace>freetrain.plugins.a4membgm</RootNamespace>
   </PropertyGroup>
 </Project>

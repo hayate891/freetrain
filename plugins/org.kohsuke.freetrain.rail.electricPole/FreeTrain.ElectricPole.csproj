@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.ElectricPole</AssemblyName>
+    <RootNamespace>FreeTrain.ElectricPole</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +75,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.ElectricPole</AssemblyName>
+    <RootNamespace>FreeTrain.ElectricPole</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -140,5 +146,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
+    <ProjectGuid>{AD3CD7FE-3E36-40D3-AA25-F635D73B3C7C}</ProjectGuid>
+    <RootNamespace>FreeTrain.ElectricPole</RootNamespace>
   </PropertyGroup>
 </Project>

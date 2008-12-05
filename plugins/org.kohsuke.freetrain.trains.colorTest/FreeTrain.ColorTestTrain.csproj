@@ -24,6 +24,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <OutputPath>bin\Debug\</OutputPath>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.ColorTestTrain</AssemblyName>
+    <RootNamespace>freetrain.world.rail.cttrain</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <NoStdLib>false</NoStdLib>
@@ -36,6 +39,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <OutputPath>bin\Release\</OutputPath>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.ColorTestTrain</AssemblyName>
+    <RootNamespace>freetrain.world.rail.cttrain</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,7 +61,6 @@
     </EmbeddedResource>
     <Compile Include="src\ColorTestTrainCar.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\core\FreeTrain.Core.csproj">
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
