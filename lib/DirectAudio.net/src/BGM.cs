@@ -2,7 +2,9 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+#if windows
 using QuartzTypeLib;
+#endif
 
 namespace org.kohsuke.directaudio
 {
@@ -27,6 +29,7 @@ namespace org.kohsuke.directaudio
 		}
 
 		private void releaseObjects() {
+#if windows
 			if( filter!=null ) {
 				Marshal.ReleaseComObject(filter);
 				Marshal.ReleaseComObject(mediaPos);
@@ -35,38 +38,62 @@ namespace org.kohsuke.directaudio
 			filter = null;
 			mediaPos = null;
 			mediaEvent = null;
+#else
+#warning STUB
+#endif
 		}
 		private void createObjects() {
+#if windows
 			filter = new FilgraphManagerClass();
 			mediaPos = (IMediaPosition)filter;
 			mediaEvent = (IMediaEventEx)filter;
 
 			mediaEvent.SetNotifyWindow( wnd.Handle.ToInt32(), WM_DS_NOTIFY, DS_NOTIFY_CODE );
+#else
+#warning STUB
+#endif
 		}
 
+#if windows
 		private FilgraphManager filter;
 		private IMediaPosition mediaPos;
 		private IMediaEventEx mediaEvent;
+#else
+#warning STUB
+#endif
 		/// <summary> Window that receives notification. </summary>
 		private Control wnd;
 
 		public string fileName {
 			set {
+#if windows
 				releaseObjects();
 				createObjects();
 				filter.RenderFile(value);
+#else
+#warning STUB
+#endif
 			}
 		}
 
 		public void run() {
+#if windows
 			filter.Run();
+#else
+#warning STUB
+#endif
 		}
 
 		public void pause() {
+#if windows
 			filter.Pause();
+#else
+#warning STUB
+#endif
 		}
 		
 		public void stop() {
+#if windows
 			filter.Stop();
 //			int pfs;
 //			try {
@@ -75,6 +102,9 @@ namespace org.kohsuke.directaudio
 //			} catch( COMException ) {
 //				Debug.WriteLine("unable to stop the music properly");
 //			}
+#else
+#warning STUB
+#endif
 		}
 
 		/// <summary>
@@ -82,15 +112,24 @@ namespace org.kohsuke.directaudio
 		/// </summary>
 		public int volume {
 			get {
+#if windows
 				double db = ((IBasicAudio)filter).Volume/100.0;
 				// 10^(db/20))*100
 				return (int)(Math.Pow(10,db/20)*100);
+#else
+#warning STUB
+				return 0;
+#endif
 			}
 			set {
+#if windows
 				// log10(V/100)*20 = (log10(V)-2)*20
 				int v = value;
 				if(v<=0)	v=1;
 				((IBasicAudio)filter).Volume = (int)((Math.Log10(v)-2)*20*100);
+#else
+#warning STUB
+#endif
 			}
 		}
 
@@ -101,6 +140,7 @@ namespace org.kohsuke.directaudio
 		public bool loop = true;
 
 		internal void notify() {
+#if windows
 			int code,param1,param2;
 
 			while(true) {
@@ -118,6 +158,9 @@ namespace org.kohsuke.directaudio
 					mediaPos.CurrentPosition = 0;
 				}
 			}
+#else
+#warning STUB
+#endif
 		}
 
 

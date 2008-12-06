@@ -1,5 +1,9 @@
 using System;
+#if windows
 using DxVBLibA;
+#else
+using ERY.AgateLib;
+#endif
 
 namespace org.kohsuke.directaudio
 {
@@ -8,21 +12,32 @@ namespace org.kohsuke.directaudio
 	/// </summary>
 	public class SegmentState
 	{
+#if windows
 		internal SegmentState( Performance perf, DirectMusicSegmentState8 state, int endTime ) {
 			this.performance = perf;
 			this.state = state;
 			this.estimatedEndTime = endTime;
 		}
+#else
+		internal SegmentState( Performance perf, int state, int endTime ) {
+#warning STUB
+		}
+#endif
 
+#if windows
 		private readonly Performance performance;
 		private readonly DirectMusicSegmentState8 state;
 		private readonly int estimatedEndTime;
+#else
+#warning STUB
+#endif
 
 		/// <summary>
 		/// Returns true if this segment is still being played.
 		/// </summary>
 		public bool isPlaying {
 			get {
+#if windows
 				if( performance.handle.IsPlaying(null,state) )
 					return true;
 
@@ -36,6 +51,10 @@ namespace org.kohsuke.directaudio
 //					return true;	// this will be played in a future
 				
 				return false;
+#else
+#warning STUB
+				return false;
+#endif
 			}
 		}
 	}

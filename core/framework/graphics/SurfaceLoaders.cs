@@ -61,12 +61,23 @@ namespace freetrain.framework.graphics
 			this.coreLoader = _core;
 		}
 
+#if windows
 		[DllImport("DirectDraw.AlphaBlend.dll")]
 		private static extern int buildNightImage( DxVBLib.DirectDrawSurface7 surface);
-
+#else
+		[DllImport("DirectDraw.AlphaBlend.dll")]
+		private static extern int buildNightImage( );
+#warning STUB
+#endif
+		
 		public virtual Color load(ref Surface surface) {
 			Color c = coreLoader.load(ref surface);
+#if windows
 			buildNightImage(surface.handle);
+#else
+			buildNightImage();
+#warning STUB
+#endif
 			return ColorMap.getNightColor(c);
 		}
 	}
