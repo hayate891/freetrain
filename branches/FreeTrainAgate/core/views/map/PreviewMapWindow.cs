@@ -105,8 +105,10 @@ namespace freetrain.views.map
 
 			weatherOverlay.setSize(this.ClientSize);
 
+#if windows
 			if( ddraw.primarySurface.handle.isLost()!=0 )	// surface is lost
 				PictureManager.onSurfaceLost(this,null);
+#endif
 
 			//			drawer.draw( ddraw.primarySurface, PointToScreen(new Point(0,0)) );
 			weatherOverlay.draw( drawer, ddraw.primarySurface, PointToScreen(new Point(0,0)) );

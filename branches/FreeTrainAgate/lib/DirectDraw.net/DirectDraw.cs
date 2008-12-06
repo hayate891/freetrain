@@ -2,7 +2,11 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using DxVBLib;
+#if windows
+using DxVBLibA;
+#else
+using ERY.AgateLib;
+#endif
 using System.Diagnostics;
 
 namespace org.kohsuke.directdraw
@@ -13,18 +17,28 @@ namespace org.kohsuke.directdraw
 	/// </summary>
 	public class DirectDraw : IDisposable
 	{
+#if windows
 		private static CONST_DDSURFACECAPSFLAGS memoryPlace = CONST_DDSURFACECAPSFLAGS.DDSCAPS_SYSTEMMEMORY;
+#else
+#warning STUB
+#endif
 		public static DDSurfaceAllocation SurfeceAllocation
 		{
 			get {
+#if windows
 				if((memoryPlace&CONST_DDSURFACECAPSFLAGS.DDSCAPS_VIDEOMEMORY)!=0)
 					return DDSurfaceAllocation.ForceVideoMem;
 				else if((memoryPlace&CONST_DDSURFACECAPSFLAGS.DDSCAPS_SYSTEMMEMORY)!=0)
 					return DDSurfaceAllocation.ForceSystemMem;
 				else
 					return DDSurfaceAllocation.Auto;
+#else
+#warning STUB
+				return DDSurfaceAllocation.Auto;
+#endif
 			}
 			set {
+#if windows
 				switch(value)
 				{
 					case DDSurfaceAllocation.ForceSystemMem:
@@ -37,47 +51,81 @@ namespace org.kohsuke.directdraw
 						memoryPlace &= CONST_DDSURFACECAPSFLAGS.DDSCAPS_OFFSCREENPLAIN;
 						break;
 				}
+#else
+#warning STUB
+#endif
 			}
 		}
 
+#if windows
 		protected DirectDraw7 handle;
+#else
+#warning STUB
+#endif
 
 		public DirectDraw() {
+#if windows
 			// initialize DirectDraw
 			DirectX7 dxc = new DirectX7Class();
 			handle = dxc.DirectDrawCreate("");
 
 			handle.SetCooperativeLevel( 0, CONST_DDSCLFLAGS.DDSCL_NORMAL );	// window mode
+#else
+#warning STUB
+#endif
 		}
 
 		public int totalVideoMemory {
 			get {
+#if windows
 				DDSCAPS2 ddcaps = new DDSCAPS2();
 				ddcaps.lCaps = CONST_DDSURFACECAPSFLAGS.DDSCAPS_VIDEOMEMORY;
 				return handle.GetAvailableTotalMem(ref ddcaps);
+#else
+#warning STUB
+				return 0;
+#endif
 			}
 		}
 
 		public int availableVideoMemory {
 			get {
+#if windows
 				DDSCAPS2 ddcaps = new DDSCAPS2();
 				ddcaps.lCaps = CONST_DDSURFACECAPSFLAGS.DDSCAPS_VIDEOMEMORY;
 				return handle.GetFreeMem(ref ddcaps);
+#else
+#warning STUB
+				return 0;
+#endif
 			}
 		}
 
 		public string displayModeName {
 			get {
+#if windows
 				return GetDisplayModeName();
+#else
+#warning STUB
+				return "";
+#endif
 			}
 		}
 
+#if windows
 		[DllImport("DirectDraw.AlphaBlend.dll")]
 		private static extern string GetDisplayModeName();
+#else
+#warning STUB
+#endif
 
 
 		public virtual void Dispose() {
+#if windows
 			handle=null;
+#else
+#warning STUB
+#endif
 		}
 
 
@@ -85,6 +133,7 @@ namespace org.kohsuke.directdraw
 		/// Creates a blank off-screen surface with the specified size.
 		/// </summary>
 		public Surface createOffscreenSurface( int width, int height ) {
+#if windows
 			DDSURFACEDESC2 sd = new DDSURFACEDESC2();
 			sd.lSize = Marshal.SizeOf(sd);
 			sd.lFlags =	CONST_DDSURFACEDESCFLAGS.DDSD_CAPS |
@@ -105,6 +154,10 @@ namespace org.kohsuke.directdraw
 				sd.ddsCaps.lCaps |= CONST_DDSURFACECAPSFLAGS.DDSCAPS_SYSTEMMEMORY;
 				return new Surface(handle.CreateSurface( ref sd ));
 			}
+#else
+#warning STUB
+			return new Surface();
+#endif
 		}
 
 		public Surface createOffscreenSurface( Size sz ) {
@@ -115,12 +168,18 @@ namespace org.kohsuke.directdraw
 		/// Creates an off-screen surface from an image.
 		/// </summary>
 		public Surface createFromImage( Image img ) {
+#if windows
 			Surface s = createOffscreenSurface( img.Size );
 			using(GDIGraphics g=new GDIGraphics(s)) {
 				// without the size parameter, it doesn't work well with non-standard DPIs.
 				g.graphics.DrawImage( img, new Rectangle( new Point(0,0), img.Size ) );
 			}
 			return s;
+#else
+#warning STUB
+			Surface s = createOffscreenSurface( img.Size );
+			return s;
+#endif
 		}
 
 		/// <summary>
@@ -154,19 +213,23 @@ namespace org.kohsuke.directdraw
 		public Surface primarySurface { get { return primary; } }
 
 		public WindowedDirectDraw( Control control ) {
-
 			primary = createPrimarySurface();
+#if windows
 			// attach window clipper
 			DirectDrawClipper cp = handle.CreateClipper(0);
 			cp.SetHWnd( control.Handle.ToInt32() );
 			primary.handle.SetClipper(cp);
 			primary.clipRect = new Rectangle( int.MinValue/2, int.MinValue/2, int.MaxValue, int.MaxValue );
+#else
+#warning STUB
+#endif
 		}
 
 		/// <summary>
 		/// Creates the primary surface.
 		/// </summary>
 		private Surface createPrimarySurface() {
+#if windows
 			DDSURFACEDESC2 sd= new DDSURFACEDESC2();
 
 
@@ -174,6 +237,10 @@ namespace org.kohsuke.directdraw
 			sd.ddsCaps.lCaps = CONST_DDSURFACECAPSFLAGS.DDSCAPS_PRIMARYSURFACE;
 
 			return new Surface(handle.CreateSurface(ref sd ));
+#else
+#warning STUB
+			return new Surface();
+#endif
 		}
 
 		public override void Dispose() {

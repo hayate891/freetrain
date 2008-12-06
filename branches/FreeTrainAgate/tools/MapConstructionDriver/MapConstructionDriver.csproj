@@ -94,6 +94,10 @@
       <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
+    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\extlib\MagicLibrary.DLL</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />

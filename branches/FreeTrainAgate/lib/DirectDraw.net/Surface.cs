@@ -2,8 +2,24 @@ using System;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Diagnostics;
-using DxVBLib;
+#if windows
+using DxVBLibA;
+#else
+using ERY.AgateLib;
+#endif
 using DirectDrawAlphaBlendLib;
+
+#if window
+#else
+public class RECT
+{
+#warning STUB
+	public int Left;
+	public int Top;
+	public int Right;
+	public int Bottom;
+};
+#endif
 
 namespace org.kohsuke.directdraw
 {
@@ -23,8 +39,12 @@ namespace org.kohsuke.directdraw
 	/// </summary>
 	public class Surface : IDisposable
 	{
+#if windows
 		private DirectDrawSurface7 surface;
 		private static AlphaBlender alpha = new AlphaBlenderClass();
+#else
+#warning STUB
+#endif
 
 		/// <summary> Bit-width. </summary>
 		private readonly byte widthR,widthB,widthG;
@@ -47,8 +67,13 @@ namespace org.kohsuke.directdraw
 		/// Obtain the wrapped DirectDraw interface.
 		/// For advanced use only.
 		/// </summary>
+#if windows
 		public DirectDrawSurface7 handle { get { return surface; } }
+#else
+#warning STUB
+#endif
 
+#if windows
 		internal Surface(DirectDrawSurface7 _handle) {
 			this.surface = _handle;
 
@@ -65,6 +90,11 @@ namespace org.kohsuke.directdraw
 			widthG = countBitWidth(pixelFormat.lGBitMask);
 			widthB = countBitWidth(pixelFormat.lBBitMask);
 		}
+#else
+		internal Surface() {
+#warning STUB
+		}
+#endif
 
 		public string displayModeName {
 			get {
@@ -122,10 +152,14 @@ namespace org.kohsuke.directdraw
 
 
 		public void Dispose() {
+#if windows
 			// explicitly release a reference
 			if(surface!=null)
 				System.Runtime.InteropServices.Marshal.ReleaseComObject(surface);
 			surface=null;
+#else
+#warning STUB
+#endif
 		}
 
 		/// <summary>
@@ -135,12 +169,16 @@ namespace org.kohsuke.directdraw
 		/// </summary>
 		/// 
 		public void bltFast( int destX, int destY, Surface source, Rectangle srcRect ) {
+#if windows
 			RECT srect = Util.toRECT(srcRect);
 			// TODO: clip
 
 			surface.BltFast( destX, destY, source.handle, ref srect,
 				CONST_DDBLTFASTFLAGS.DDBLTFAST_WAIT |
 				CONST_DDBLTFASTFLAGS.DDBLTFAST_SRCCOLORKEY );
+#else
+#warning STUB
+#endif
 		}
 
 		/// <summary>
@@ -160,6 +198,7 @@ namespace org.kohsuke.directdraw
 		}
 
 		private void blt( RECT dst, Surface source, RECT src ) {
+#if windows
 			CONST_DDBLTFLAGS flag;
 			flag = CONST_DDBLTFLAGS.DDBLT_WAIT;
 			if( source.hasSourceColorKey )
@@ -168,9 +207,13 @@ namespace org.kohsuke.directdraw
 			Util.clip( ref dst, ref src, clip );
 
 			surface.Blt( ref dst, source.handle, ref src, flag );
+#else
+#warning STUB
+#endif
 		}
 
 		public void bltAlpha( Point dstPos, Surface source, Point srcPos, Size sz ) {
+#if windows
 			RECT dst = Util.toRECT( dstPos, sz );
 			RECT src = Util.toRECT( srcPos, sz );
 			Util.clip( ref dst, ref src, clip );
@@ -178,6 +221,9 @@ namespace org.kohsuke.directdraw
 				dst.Left, dst.Top,
 				src.Left, src.Top, src.Right, src.Bottom,
 				source.colorKey );
+#else
+#warning STUB
+#endif
 		}
 
 		public void bltAlpha( Point dstPos, Surface source ) {
@@ -185,6 +231,7 @@ namespace org.kohsuke.directdraw
 		}
 
 		public void bltShape( Point dstPos, Surface source, Point srcPos, Size sz, Color fill ) {
+#if windows
 			RECT dst = Util.toRECT( dstPos, sz );
 			RECT src = Util.toRECT( srcPos, sz );
 			Util.clip( ref dst, ref src, clip );
@@ -194,6 +241,9 @@ namespace org.kohsuke.directdraw
 				src.Left, src.Top, src.Right, src.Bottom,
 				(int)colorToFill(fill),
 				source.colorKey );
+#else
+#warning STUB
+#endif
 		}
 
 		public void bltShape( Point dstPos, Surface source, Color fill ) {
@@ -216,6 +266,7 @@ namespace org.kohsuke.directdraw
 			Point srcPos, Size sz,
 			Color[] _srcColors, Color[] _dstColors, bool vflip ) {
 
+#if windows
 			RECT dst = Util.toRECT( dstPos, sz );
 			RECT src = Util.toRECT( srcPos, sz );
 
@@ -241,10 +292,14 @@ namespace org.kohsuke.directdraw
 				srcColors.Length,
 				source.colorKey,
 				vflip?-1:0 );
+#else
+#warning STUB
+#endif
 		}
 
 		public void bltHueTransform( Point dstPos, Surface source, Point srcPos, Size sz,
 			Color R_dest, Color G_dest, Color B_dest ) {
+#if windows
 			RECT dst = Util.toRECT( dstPos, sz );
 			RECT src = Util.toRECT( srcPos, sz );
 			Util.clip( ref dst, ref src, clip );
@@ -255,6 +310,9 @@ namespace org.kohsuke.directdraw
 				src.Left, src.Top, src.Right, src.Bottom,				
 				R_dest.ToArgb(), G_dest.ToArgb(), B_dest.ToArgb(),
 				source.colorKey );
+#else
+#warning STUB
+#endif
 		}
 
 
@@ -263,12 +321,20 @@ namespace org.kohsuke.directdraw
 		/// Fills the surface.
 		/// </summary>
 		public void fill( Color c ) {
+#if windows
 			surface.BltColorFill( ref clip, (int)colorToFill(c) );
+#else
+#warning STUB
+#endif
 		}
 
 		public void fill( Rectangle rect, Color c ) {
+#if windows
 			RECT r = Util.intersect( Util.toRECT(rect), clip );
 			surface.BltColorFill( ref r, (int)colorToFill(c) );
+#else
+#warning STUB
+#endif
 		}
 
 
@@ -279,6 +345,7 @@ namespace org.kohsuke.directdraw
 		/// </summary>
 		public Color sourceColorKey {
 			set {
+#if windows
 				DDCOLORKEY key = new DDCOLORKEY();
 				// TODO: how shall I convert Color to this structure?
 				key.high = key.low = colorKey = (int)colorToFill(value);
@@ -286,6 +353,9 @@ namespace org.kohsuke.directdraw
 				hasSourceColorKey = true;
 
 				// TODO: how to remove color key?
+#else
+#warning STUB
+#endif
 			}
 		}
 
@@ -308,6 +378,7 @@ namespace org.kohsuke.directdraw
 		// outrange point will raise an error.
 		int getColorAt( int x, int y )
 		{
+#if windows
 			RECT r = new RECT();
 			r.Left = x;
 			r.Top = y;
@@ -319,26 +390,42 @@ namespace org.kohsuke.directdraw
 			int c = surface.GetLockedPixel(x,y);
 			surface.Unlock(ref r);
 			return c;
+#else
+#warning STUB
+			return 0;
+#endif
 		}
 
 		public void drawPolygon( Point p1, Point p2, Point p3, Point p4 ) {
+#if windows
 			int hdc = handle.GetDC();
 			Polygon( hdc, new Point[]{p1,p2,p3,p4}, 4 );
 			handle.ReleaseDC(hdc);
+#else
+#warning STUB
+#endif
 		}
 
 		public void drawBox( Rectangle r ) {
+#if windows
 			handle.DrawBox( r.Left, r.Top, r.Right, r.Bottom );
+#else
+#warning STUB
+#endif
 		}
 
 		/// <summary>
 		/// Tries to recover a lost surface.
 		/// </summary>
 		public void restore() {
+#if windows
 			handle.restore();
+#else
+#warning STUB
+#endif
 		}
 
-
+#if windows
 		#region importing external functions
 		[DllImport("gdi32.dll")]
 		private static extern bool Polygon( int hdc, Point[] pts, int nCount );
@@ -351,6 +438,9 @@ namespace org.kohsuke.directdraw
 			int sourceX1, int sourceY1, int sourceX2, int sourceY2,
 			int targetR, int targetG, int targetB, int keyCol );
 		#endregion
+#else
+#warning STUB
+#endif
 
 
 
@@ -370,6 +460,7 @@ namespace org.kohsuke.directdraw
 		/// The caller needs to dispose the bitmap.
 		/// </summary>
 		public Bitmap createBitmap() {
+#if windows
 			Bitmap bmp = new Bitmap( size.Width, size.Height );
 			using( GDIGraphics src = new GDIGraphics(this) ) {
 				using( Graphics dst = Graphics.FromImage(bmp) ) {
@@ -381,9 +472,15 @@ namespace org.kohsuke.directdraw
 				}
 			}
 			return bmp;
+#else
+#warning STUB
+			Bitmap bmp = new Bitmap( size.Width, size.Height );
+			return bmp;
+#endif
 		}
 
 		public void GDICopyBits(Graphics g, Rectangle dst, Rectangle src){
+#if windows
 			using( GDIGraphics gg = new GDIGraphics(this) ) {
 				IntPtr dstHDC = g.GetHdc();
 				IntPtr srcHDC = gg.graphics.GetHdc();
@@ -392,9 +489,13 @@ namespace org.kohsuke.directdraw
 				g.ReleaseHdc(dstHDC);
 				gg.graphics.ReleaseHdc(srcHDC);
 			}
+#else
+#warning STUB
+#endif
 		}
 
 		public void GDICopyBits(Graphics g, Rectangle dst, Point src){
+#if windows
 			using( GDIGraphics gg = new GDIGraphics(this) ) {
 				IntPtr dstHDC = g.GetHdc();
 				IntPtr srcHDC = gg.graphics.GetHdc();
@@ -402,8 +503,12 @@ namespace org.kohsuke.directdraw
 				g.ReleaseHdc(dstHDC);
 				gg.graphics.ReleaseHdc(srcHDC);
 			}
+#else
+#warning STUB
+#endif
 		}
 
+#if windows
 		[DllImport("gdi32.dll")]
 		private static extern bool BitBlt(
 			IntPtr hdcDest,
@@ -431,6 +536,9 @@ namespace org.kohsuke.directdraw
 			int nHeightSrc,   // コピー元長方形の高さ
 			long dwRop       // ラスタオペレーションコード
 		);
+#else
+#warning STUB
+#endif
 
 	}
 
@@ -441,18 +549,30 @@ namespace org.kohsuke.directdraw
 	public sealed class GDIGraphics : IDisposable {
 		public readonly Graphics graphics;
 
+#if windows
 		private readonly Surface surface;
 		private readonly int hdc;
+#else
+#warning STUB
+#endif
 
 		public GDIGraphics( Surface _surface ) {
+#if windows
 			this.surface = _surface;
 			this.hdc = surface.handle.GetDC();
 			graphics = Graphics.FromHdc( new IntPtr(hdc) );
+#else
+#warning STUB
+#endif
 		}
 
 		public void Dispose() {
+#if windows
 			graphics.Dispose();
 			surface.handle.ReleaseDC(hdc);
+#else
+#warning STUB
+#endif
 		}
 	}
 }
