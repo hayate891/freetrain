@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>8.0.50727</ProductVersion>
@@ -28,7 +29,7 @@
     </UpgradeBackupLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\</OutputPath>
+    <OutputPath>..\..\Debug</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -50,11 +51,10 @@
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <OutputType>Library</OutputType>
-    <AssemblyName>DummyCars</AssemblyName>
     <RootNamespace>DummyCars</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\</OutputPath>
+    <OutputPath>..\..\Release</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -76,67 +76,41 @@
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <OutputType>Library</OutputType>
-    <AssemblyName>DummyCars</AssemblyName>
     <RootNamespace>DummyCars</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\extlib\MagicLibrary.DLL</HintPath>
     </Reference>
     <ProjectReference Include="..\..\..\..\core\FreeTrain.Core.csproj">
+      <Project>{733996EC-7260-4A94-B118-D1E957F0474D}</Project>
       <Name>FreeTrain.Core</Name>
-      <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\lib\Controls\FreeTrain.Controls.csproj">
+      <Project>{733996EC-7260-4A94-B118-D1E957F0474D}</Project>
       <Name>FreeTrain.Controls</Name>
-      <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\lib\DirectDraw.net\DirectDraw.net.csproj">
+      <Project>{733996EC-7260-4A94-B118-D1E957F0474D}</Project>
       <Name>DirectDraw.net</Name>
-      <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>False</Private>
     </ProjectReference>
-    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\..\extlib\MagicLibrary.DLL</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ControllerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ControllerImpl.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DummyCar.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DummyCarContribution.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MenuContributionImpl.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ControllerForm.cs" />
+    <Compile Include="ControllerImpl.cs" />
+    <Compile Include="DummyCar.cs" />
+    <Compile Include="DummyCarContribution.cs" />
+    <Compile Include="MenuContributionImpl.cs" />
     <EmbeddedResource Include="ControllerForm.resx">
       <DependentUpon>ControllerForm.cs</DependentUpon>
     </EmbeddedResource>
