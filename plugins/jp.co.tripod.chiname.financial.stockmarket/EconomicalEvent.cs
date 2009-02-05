@@ -848,9 +848,7 @@ namespace freetrain.finance.stock
 						return tArray;
 				default:
 					throw new FormatException("Invalid type attribute in the randomized tag");
-					break;
 			}
-			return null;
 		}
 
 		public void add( object obj, int weight ) 

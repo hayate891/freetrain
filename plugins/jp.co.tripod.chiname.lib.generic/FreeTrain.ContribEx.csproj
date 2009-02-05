@@ -80,12 +80,6 @@
     <RootNamespace>ExpandedContributions</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
-      <Name>MagicLibrary</Name>
-      <HintPath>..\..\extlib\MagicLibrary.DLL</HintPath>
-      <Private>False</Private>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>

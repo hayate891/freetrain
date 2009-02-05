@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
@@ -29,7 +29,7 @@
     </UpgradeBackupLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\Debug</OutputPath>
+    <OutputPath>..\..\Debug\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -52,9 +52,10 @@
     <ErrorReport>prompt</ErrorReport>
     <OutputType>Library</OutputType>
     <RootNamespace>RoadAccessory</RootNamespace>
+    <AssemblyName>RoadAccessory</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\Release</OutputPath>
+    <OutputPath>..\..\Release\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -77,6 +78,7 @@
     <ErrorReport>prompt</ErrorReport>
     <OutputType>Library</OutputType>
     <RootNamespace>RoadAccessory</RootNamespace>
+    <AssemblyName>RoadAccessory</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -84,22 +86,18 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\extlib\MagicLibrary.DLL</HintPath>
-    </Reference>
     <ProjectReference Include="..\..\..\..\core\FreeTrain.Core.csproj">
-      <Project>{7264D32E-75DB-4C13-9EE4-E6263FD5B652}</Project>
+      <Project>{7746CF50-D84E-4E7B-83FB-AB43DB854DA8}</Project>
       <Name>FreeTrain.Core</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\lib\Controls\FreeTrain.Controls.csproj">
-      <Project>{7264D32E-75DB-4C13-9EE4-E6263FD5B652}</Project>
+      <Project>{D3B86CCE-530E-4472-AE8E-3FA5F903C206}</Project>
       <Name>FreeTrain.Controls</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\lib\DirectDraw.net\DirectDraw.net.csproj">
-      <Project>{7264D32E-75DB-4C13-9EE4-E6263FD5B652}</Project>
+      <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
       <Name>DirectDraw.net</Name>
       <Private>False</Private>
     </ProjectReference>
