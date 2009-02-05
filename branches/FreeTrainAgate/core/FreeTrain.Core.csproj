@@ -76,12 +76,6 @@
     <RootNamespace>freetrain</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
-      <Name>MagicLibrary</Name>
-      <HintPath>..\extlib\MagicLibrary.DLL</HintPath>
-      <Private>True</Private>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="Microsoft.JScript">
       <Name>Microsoft.JScript</Name>
       <Private>True</Private>
@@ -159,6 +153,14 @@
       <Project>{C7DA6E56-7BB2-43BC-871C-3B33F0DE038C}</Project>
       <Name>DirectDraw.net</Name>
     </ProjectReference>
+    <Reference Include="MsHtmlHost, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\extlib\MsHtmlHost.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\extlib\MagicLibrary.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs">

@@ -19,7 +19,7 @@
 		<name>ColorLibrary</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.world.structs.hv.ColorLibrary"
-			codebase="bin/Debug/HalfVoxelStructure.DLL" />
+			codebase="bin/Debug/HalfVoxelStructure.dll" />
 	</contribution>
 
 	<contribution type="ColorLibrary" id="{COLORLIB-NULL}">
@@ -38,13 +38,13 @@
 		<name>HalfVoxelStructure</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.world.structs.hv.HalfVoxelContribution"
-			codebase="bin/Debug/HalfVoxelStructure.DLL" />
+			codebase="bin/Debug/HalfVoxelStructure.dll" />
 	</contribution>
 	
 	<!-- temporary -->
 	<contribution type="menu" id="{01AA051B-6112-4C00-C477-DE82E240F19F}">
 		<class name="freetrain.world.structs.hv.MenuContributionImpl"
-			codebase="bin/Debug/HalfVoxelStructure.DLL" />
+			codebase="bin/Debug/HalfVoxelStructure.dll" />
 	</contribution>	
 	<!--ここまでの順序は大切-->
 	

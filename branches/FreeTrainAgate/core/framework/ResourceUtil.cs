@@ -19,10 +19,18 @@ namespace freetrain.framework
 		public static string findSystemResource( string name ) {
 			string path;
 			
+#if windows
 			path = Path.Combine( Core.installationDirectory, @"res\"+name );
+#else
+			path = Path.Combine( Core.installationDirectory, @"res/"+name );
+#endif
 			if( File.Exists(path) )	return path;
 
+#if windows
 			path = Path.Combine( Core.installationDirectory, @"..\..\core\res\"+name );
+#else
+			path = Path.Combine( Core.installationDirectory, @"../../core/res/"+name );
+#endif
 			if( File.Exists(path) )	return path;
 
 			throw new FileNotFoundException("system resource: "+name);
