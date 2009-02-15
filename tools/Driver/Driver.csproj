@@ -101,6 +101,10 @@
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
       <Private>True</Private>
     </ProjectReference>
+    <Reference Include="AgateLib, Version=0.2.5.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\extlib\AgateLib.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />

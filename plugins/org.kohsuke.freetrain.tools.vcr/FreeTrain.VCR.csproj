@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.VCR</AssemblyName>
+    <RootNamespace>freetrain.tools.vcr</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,17 +75,22 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FreeTrain.VCR</AssemblyName>
+    <RootNamespace>freetrain.tools.vcr</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BitmapWriterTypeLib">
+    <Reference Include="BitmapWriterTypeLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <Name>BitmapWriterTypeLib</Name>
       <HintPath>..\..\lib\DirectShow.VideoRecorder\lib\BitmapWriter.TypeLib\BitmapWriterTypeLib.dll</HintPath>
       <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DirectShowLib">
+    <Reference Include="DirectShowLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <Name>DirectShowLib</Name>
       <HintPath>..\..\lib\DirectShow.TypeLib\DirectShowLib.dll</HintPath>
       <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -164,5 +172,7 @@
     <PreBuildEvent>
     </PreBuildEvent>
     <PostBuildEvent>xcopy $(SolutionDir)lib\DirectShow.VideoRecorder\Debug\*.dll $(OutDir) /D /E /I /Q /Y</PostBuildEvent>
+    <ProjectGuid>{D600BE69-53F2-49FE-B79B-7043F0F0D4D1}</ProjectGuid>
+    <RootNamespace>freetrain.tools.vcr</RootNamespace>
   </PropertyGroup>
 </Project>
