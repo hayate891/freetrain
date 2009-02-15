@@ -15,6 +15,7 @@ namespace org.kohsuke.directaudio
 #if windows
 		internal DirectMusicSegment8 handle;
 #else
+		internal SoundBuffer handle;
 #warning STUB
 #endif
 
@@ -24,7 +25,8 @@ namespace org.kohsuke.directaudio
 			this.handle = handle;
 		}
 #else
-		private Segment() {
+		private Segment(SoundBuffer handle) {
+			this.handle = handle;
 #warning STUB
 		}
 #endif
@@ -38,7 +40,12 @@ namespace org.kohsuke.directaudio
 			}
 #else
 #warning STUB
-			throw new Exception("unable to load music file: "+fileName);
+			Console.WriteLine("LINUXDEBUG: fromfile segment {0}", fileName);
+			try {
+				return new Segment( new SoundBuffer(fileName) );
+			} catch( Exception e ) {
+				throw new Exception("unable to load music file: "+fileName,e);
+			}
 #endif
 		}
 
@@ -49,7 +56,9 @@ namespace org.kohsuke.directaudio
 			return seg;
 #else
 #warning STUB
-			throw new Exception("unable to load music file: "+fileName);
+			Console.WriteLine("LINUXDEBUG: frommidifile segment {0}", fileName);
+			Segment seg = fromFile(fileName);
+			return seg;
 #endif
 		}
 
@@ -61,6 +70,13 @@ namespace org.kohsuke.directaudio
 			}
 			handle = null;
 #else
+			if(handle!=null)
+			{
+				Console.WriteLine("LINUXDEBUG: dispose segment {0}", handle.Filename);
+				handle.Dispose();
+				handle = null;
+			}
+			
 #warning STUB
 #endif
 		}
@@ -94,7 +110,8 @@ namespace org.kohsuke.directaudio
 			return new Segment( handle.Clone(0,0) );
 #else
 #warning STUB
-			return new Segment();
+			Console.WriteLine("LINUXDEBUG: clone segment {0}", handle.Filename);
+			return new Segment(new SoundBuffer(handle.Filename));
 #endif
 		}
 

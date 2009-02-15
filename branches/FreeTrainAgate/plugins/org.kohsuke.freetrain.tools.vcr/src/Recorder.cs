@@ -3,7 +3,11 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using DirectShowLib;
+#if windows
 using QuartzTypeLib;
+#else
+#warning STUB
+#endif
 using BitmapWriterTypeLib;
 using freetrain.views;
 using freetrain.world;
@@ -32,10 +36,14 @@ namespace freetrain.tools.vcr
 
 		private State _currentState = State.Stopping;
 
+#if windows
 		private readonly IMediaControl mediaControl;
+#else
+#warning STUB
+#endif
 		private readonly IBitmapWriter writer;
 		private readonly IGraphBuilder graph;
-		
+	
 		/// <summary>
 		/// Used to draw the map.
 		/// </summary>
@@ -75,7 +83,11 @@ namespace freetrain.tools.vcr
 			// connect components
 			builder.RenderStream( IntPtr.Zero, IntPtr.Zero, writer, compressor, pMux );
 
+#if windows
 			mediaControl = (IMediaControl)graph;
+#else
+#warning STUB
+#endif
 
 			// explicitly release local objects
 //			Marshal.ReleaseComObject(builder);
@@ -90,7 +102,11 @@ namespace freetrain.tools.vcr
 		public void Dispose() {
 			stop();		// stop recording just in case the client forgets
 			Marshal.ReleaseComObject(writer);
+#if windows
 			Marshal.ReleaseComObject(mediaControl);
+#else
+#warning STUB
+#endif
 			Marshal.ReleaseComObject(graph);
 		}
 
@@ -112,8 +128,12 @@ namespace freetrain.tools.vcr
 
 		public void start() {
 			try {
+#if windows
 				if( currentState==State.Stopping )
 					mediaControl.Run();	// start the process
+#else
+#warning STUB
+#endif
 				_currentState = State.Recording;
 			} catch( Exception e ) {
 				Debug.WriteLine(e);
@@ -128,8 +148,12 @@ namespace freetrain.tools.vcr
 		}
 
 		public void stop() {
+#if windows
 			if( currentState!=State.Stopping )
 				mediaControl.Stop();	// stop the recording
+#else
+#warning STUB
+#endif
 			_currentState = State.Stopping;
 		}
 

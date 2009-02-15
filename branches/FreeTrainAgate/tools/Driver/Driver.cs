@@ -19,6 +19,16 @@ namespace Driver
 		[STAThread]
 		static void Main( string[] args ) 
 		{
+#if windows
+#else
+			using(ERY.AgateLib.AgateSetup setup = new ERY.AgateLib.AgateSetup("FreeTrain", args))
+			{
+				setup.InitializeAll();
+				if (setup.Cancel)
+					return;
+#warning Initialize window here already?
+//				ERY.AgateLib.DisplayWindow window = new ERY.AgateLib.DisplayWindow("TreeTrain", 640, 480);
+#endif
 			// record the installation directory
 			Core.installationDirectory =
 				Directory.GetParent(Application.ExecutablePath).FullName;
@@ -32,6 +42,10 @@ namespace Driver
 					ErrorMessageBox.show(null,"An error has occurred",e);
 					//! ErrorMessageBox.show(null,"エラーが発生しました",e);
 				}
+#if windows
+#else
+			}
+#endif
 		}
 
 		private static void run( string[] args ) {
