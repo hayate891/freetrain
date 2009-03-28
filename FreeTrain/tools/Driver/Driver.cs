@@ -31,7 +31,9 @@ namespace Driver
 		}
 
 		private static void run( string[] args ) {
-			// register alpha blending DLL
+			// On 64-bit systems ensure that this project is build specifically for x86, otherwise
+            // windows with attempt to register the dll using regsrv64.
+            // register alpha blending DLL
 			regsvr();
 
 			// start the game
