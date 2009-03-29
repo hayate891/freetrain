@@ -204,19 +204,24 @@
     </Compile>
     <EmbeddedResource Include="ChartControl.resx">
       <DependentUpon>ChartControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NumberEditEx.resx">
       <DependentUpon>NumberEditEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SEC_icon.bmp" />
     <EmbeddedResource Include="StockMarketForm.resx">
       <DependentUpon>StockMarketForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StocksWindow.resx">
       <DependentUpon>StocksWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TimeVariedChart.resx">
       <DependentUpon>TimeVariedChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Content Include="companies.xml" />
     <Content Include="events.xml" />

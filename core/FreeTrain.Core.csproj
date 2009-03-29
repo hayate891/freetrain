@@ -1004,132 +1004,169 @@
     <Content Include="res\YardChip.bmp" />
     <EmbeddedResource Include="contributions\others\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\AbstractControllerForm.resx">
       <DependentUpon>AbstractControllerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\AbstractControllerImpl.resx">
       <DependentUpon>AbstractControllerImpl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\AbstractLineController.resx">
       <DependentUpon>AbstractLineController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\ControllerHostForm.resx">
       <DependentUpon>ControllerHostForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\land\BulldozeController.resx">
       <DependentUpon>BulldozeController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\land\LandController.resx">
       <DependentUpon>LandController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\land\LandPropertyController.resx">
       <DependentUpon>LandPropertyController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\PlatformController.resx">
       <DependentUpon>PlatformController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\PlatformPropertyDialog.resx">
       <DependentUpon>PlatformPropertyDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\RailRoadController.resx">
       <DependentUpon>RailRoadController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\SlopeRailRoadController.resx">
       <DependentUpon>SlopeRailRoadController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\StationPassagewayController.resx">
       <DependentUpon>StationPassagewayController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\StationPropertyDialog.resx">
       <DependentUpon>StationPropertyDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\TrainControllerDialog.resx">
       <DependentUpon>TrainControllerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\TrainPlacementController.resx">
       <DependentUpon>TrainPlacementController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\TrainTrackingWindow.resx">
       <DependentUpon>TrainTrackingWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\rail\TrainTradingDialog.resx">
       <DependentUpon>TrainTradingDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\road\RoadController.resx">
       <DependentUpon>RoadController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\structs\FixedSizeStructController.resx">
       <DependentUpon>FixedSizeStructController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\structs\StructPlacementController.resx">
       <DependentUpon>StructPlacementController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\structs\VarHeightBuildingController.resx">
       <DependentUpon>VarHeightBuildingController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="controllers\terrain\MountainController.resx">
       <DependentUpon>MountainController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\ConfigDialog.resx">
       <DependentUpon>ConfigDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\ErrorMessageBox.resx">
       <DependentUpon>ErrorMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\NewWorldDialog.resx">
       <DependentUpon>NewWorldDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\plugin\PluginListDialog.resx">
       <DependentUpon>PluginListDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="framework\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="res\splash.jpg" />
     <EmbeddedResource Include="util\command\CommandManager.resx">
       <DependentUpon>CommandManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="views\map\HeightCutWindow.resx">
       <DependentUpon>HeightCutWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="views\map\MapView.resx">
       <DependentUpon>MapView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="views\map\PreviewForm.resx">
       <DependentUpon>PreviewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="views\map\PreviewMapWindow.resx">
       <DependentUpon>PreviewMapWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="world\accounting\AccountSummaryWindow.resx">
       <DependentUpon>AccountSummaryWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="world\accounting\BalanceSheetForm.resx">
       <DependentUpon>BalanceSheetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="world\accounting\GenreSelectorDialog.resx">
       <DependentUpon>GenreSelectorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="world\development\DevelopConfigure.resx">
       <DependentUpon>DevelopConfigure.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="world\development\LandValueInspector.resx">
       <DependentUpon>LandValueInspector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="world\subsidiaries\MarketWindow.resx">
       <DependentUpon>MarketWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-    <Folder Include="util\video\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -1147,6 +1184,10 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="util\video\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

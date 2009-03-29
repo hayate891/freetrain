@@ -159,6 +159,7 @@
     </Compile>
     <EmbeddedResource Include="src\LoadDialog.resx">
       <DependentUpon>LoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

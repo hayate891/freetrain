@@ -182,6 +182,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MultiSelectorController.resx">
       <DependentUpon>MultiSelectorController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="plugin.xml" />
   </ItemGroup>
