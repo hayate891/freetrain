@@ -180,6 +180,7 @@
     </Compile>
     <EmbeddedResource Include="src\TerraceController.resx">
       <DependentUpon>TerraceController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

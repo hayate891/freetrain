@@ -146,6 +146,7 @@
     </Compile>
     <EmbeddedResource Include="GUIDGen.resx">
       <DependentUpon>GUIDGen.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

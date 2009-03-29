@@ -187,18 +187,23 @@
     </Compile>
     <EmbeddedResource Include="src\JunctionAdvancedDialog.resx">
       <DependentUpon>JunctionAdvancedDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="src\JunctionConfigDialog.resx">
       <DependentUpon>JunctionConfigDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="src\StationAdvancedDialog.resx">
       <DependentUpon>StationAdvancedDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="src\StationConfigDialog.resx">
       <DependentUpon>StationConfigDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="src\TATModalController.resx">
       <DependentUpon>TATModalController.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

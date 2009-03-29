@@ -171,9 +171,11 @@
     <EmbeddedResource Include="resource\icons.bmp" />
     <EmbeddedResource Include="src\ConfigDialog.resx">
       <DependentUpon>ConfigDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="src\VCRConsole.resx">
       <DependentUpon>VCRConsole.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="src\AssemblyInfo.cs">
       <SubType>Code</SubType>
