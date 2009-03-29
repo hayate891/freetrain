@@ -23,7 +23,12 @@ namespace Driver
 #else
 			using(ERY.AgateLib.AgateSetup setup = new ERY.AgateLib.AgateSetup("FreeTrain", args))
 			{
-				setup.InitializeAll();
+				// TODO: InitialzeVideo called by InitializeAll is blowing up currently because it can't
+                // find a video assembly to load.  Need to fix this after updating to the next version of agate.
+                //setup.InitializeAll();
+                setup.InitializeAudio();
+                setup.InitializeInput();
+                
 				if (setup.Cancel)
 					return;
 #warning Initialize window here already?
