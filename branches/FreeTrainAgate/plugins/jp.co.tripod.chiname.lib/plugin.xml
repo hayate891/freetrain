@@ -12,26 +12,26 @@
 		<name>roadAccessory</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.world.road.accessory.RoadAccessoryContribution"
-			codebase="RoadAccessory.dll" />
+			codebase="bin\Debug\RoadAccessory.dll" />
 	</contribution>
 	
 	<!-- temporary -->
 	<contribution type="menu" id="{3773CA2C-11B5-4DCC-C477-2296E9EBEBA7}">
 		<class name="freetrain.world.road.accessory.MenuContributionImpl"
-			codebase="RoadAccessory.dll" />
+			codebase="bin\Debug\RoadAccessory.dll" />
 	</contribution>
 
 	<contribution type="contribution" id="{0A73F9C6-BDCC-43DF-C477-E28B76058E8C}">
 		<name>DummyCar</name>
 		<class name="freetrain.framework.plugin.FixedClassContributionFactory"/>
 		<implementation name="freetrain.world.road.dummycar.DummyCarContribution"
-			codebase="DummyCars.dll" />
+			codebase="bin\Debug\DummyCars.dll" />
 	</contribution>
 	
 	<!-- temporary -->
 	<contribution type="menu" id="{BFC035E9-8B0E-41D6-C477-72F99D820290}">
 		<class name="freetrain.world.road.dummycar.MenuContributionImpl"
-			codebase="DummyCars.dll" />
+			codebase="bin\Debug\DummyCars.dll" />
 	</contribution>
 	
 </plug-in>
