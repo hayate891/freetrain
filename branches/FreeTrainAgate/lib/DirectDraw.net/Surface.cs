@@ -2,12 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Diagnostics;
-#if windows
-using DxVBLibA;
-#else
 using ERY.AgateLib;
-#endif
-using DirectDrawAlphaBlendLib;
 
 #if window
 #else

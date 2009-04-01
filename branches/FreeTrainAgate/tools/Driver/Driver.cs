@@ -8,61 +8,68 @@ using freetrain.framework;
 namespace Driver
 {
 	public class Driver
-	{
-#if windows
-		[DllImport("DirectDraw.AlphaBlend.dll",EntryPoint="DllRegisterServer")]
-		private static extern void regsvr();
-#else
-#warning STUB
-#endif
-		
+	{		
+        /// <summary>
+        /// Main Entry point
+        /// </summary>
+        /// <param name="args"></param>
 		[STAThread]
-		static void Main( string[] args ) 
+		static void Main( string[] inArguments ) 
 		{
-#if windows
-#else
-			using(ERY.AgateLib.AgateSetup setup = new ERY.AgateLib.AgateSetup("FreeTrain", args))
-			{
-				// TODO: InitialzeVideo called by InitializeAll is blowing up currently because it can't
+            // Create the agatesetup object passing in args to allow the user to select a driver (for debug purposes only)
+            using( ERY.AgateLib.AgateSetup theAgateSetupObject = new ERY.AgateLib.AgateSetup( "FreeTrain", inArguments ) )
+            {
+                // TODO: InitialzeVideo called by InitializeAll is blowing up currently because it can't
                 // find a video assembly to load.  Need to fix this after updating to the next version of agate.
                 //setup.InitializeAll();
-                setup.InitializeAudio();
-                setup.InitializeInput();
-                
-				if (setup.Cancel)
-					return;
-#warning Initialize window here already?
-//				ERY.AgateLib.DisplayWindow window = new ERY.AgateLib.DisplayWindow("TreeTrain", 640, 480);
-#endif
-			// record the installation directory
-			Core.installationDirectory =
-				Directory.GetParent(Application.ExecutablePath).FullName;
-			
-			if( Debugger.IsAttached )
-				run(args);
-			else
-				try {
-					run(args);
-				} catch( Exception e ) {
-					ErrorMessageBox.show(null,"An error has occurred",e);
-					//! ErrorMessageBox.show(null,"エラーが発生しました",e);
-				}
-#if windows
-#else
-			}
-#endif
+                theAgateSetupObject.InitializeAudio();
+                theAgateSetupObject.InitializeInput();
+
+                // If the user cancels the driver select dialog
+                if( theAgateSetupObject.Cancel )
+                {
+                    // TODO: Generally bad coding practice to have returns/breaks in these situations
+                    return;
+                }
+
+                #warning Initialize window here already?
+
+                // Create the window
+                //ERY.AgateLib.DisplayWindow window = new ERY.AgateLib.DisplayWindow("TreeTrain", 640, 480);
+
+                // record the installation directory
+                Core.installationDirectory = Directory.GetParent( Application.ExecutablePath ).FullName;
+
+                // When exceptions are thrown let the IDE take us to it
+                // TODO: Should be removed when all is said and done
+                if( Debugger.IsAttached )
+                {
+                    run( inArguments );
+                }
+                else
+                {
+                    try
+                    {
+                        run( inArguments );
+                    }
+                    catch( Exception inException )
+                    {
+                        ErrorMessageBox.show( null, "An error has occurred", inException );
+                        //! ErrorMessageBox.show(null,"エラーが発生しました",e);
+                    }
+                }
+            }
 		}
 
-		private static void run( string[] args ) {
-#if windows
-			// register alpha blending DLL
-			regsvr();
-#else
-#warning STUB
-#endif
-
+        /// <summary>
+        /// Responsible for running the application.
+        /// </summary>
+        /// <param name="args"></param>
+		private static void run( string[] inArguments ) 
+        {
+            #warning STUB
 			// start the game
-			Application.Run(new MainWindow(args,false));
+			Application.Run( new MainWindow(inArguments, false) );
 		}
 	}
 }
