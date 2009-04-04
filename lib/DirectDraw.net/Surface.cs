@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Diagnostics;
-using ERY.AgateLib;
+using AgateLib;
 
 #if window
 #else

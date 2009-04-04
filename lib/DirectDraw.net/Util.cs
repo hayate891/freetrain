@@ -1,10 +1,6 @@
 using System;
 using System.Drawing;
-#if windows
-using DxVBLibA;
-#else
-using ERY.AgateLib;
-#endif
+using AgateLib;
 
 namespace org.kohsuke.directdraw
 {

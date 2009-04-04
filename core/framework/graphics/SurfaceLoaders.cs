@@ -9,7 +9,8 @@ namespace freetrain.framework.graphics
 	/// <summary>
 	/// Function object that can load a picture into the given surface.
 	/// </summary>
-	public interface SurfaceLoader {
+	public interface SurfaceLoader
+    {
 		/// <summary>
 		/// Fill the surface by the image and return the mask color.
 		/// If the surface is null, the callee needs to allocate a new surface
@@ -25,19 +26,32 @@ namespace freetrain.framework.graphics
 		/// <summary> File name of the bitmap. </summary>
 		private readonly string fileName;
 		
-		public BitmapSurfaceLoader( string _fileName) {
+		public BitmapSurfaceLoader( string _fileName) 
+        {
 			this.fileName = _fileName;
 		}
 
-		public Color load(ref Surface surface) {
-			using( Bitmap bmp = new Bitmap(fileName) ) {
-				if(surface==null) {
+		public Color load(ref Surface surface) 
+        {
+			using( Bitmap bmp = new Bitmap(fileName) ) 
+            {
+				if(surface==null) 
+                {
 					surface = ResourceUtil.directDraw.createOffscreenSurface( bmp.Size );
 				}
 
-				using( GDIGraphics g = new GDIGraphics(surface) ) {
-					// without the size parameter, it doesn't work well with non-standard DPIs.
-					g.graphics.DrawImage( bmp, new Rectangle( new Point(0,0), bmp.Size ) );
+                
+				using( GDIGraphics g = new GDIGraphics(surface) ) 
+                {
+                    try
+                    {
+                        // without the size parameter, it doesn't work well with non-standard DPIs.
+                        g.graphics.DrawImage( bmp, new Rectangle( new Point( 0, 0 ), bmp.Size ) );
+                    }
+                    catch( Exception )
+                    {
+                        throw new Exception( "TODO: Fix me!" );
+                    }
 				}
 				return bmp.GetPixel(0,0);
 			}

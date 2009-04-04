@@ -2,11 +2,7 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-#if windows
-using DxVBLibA;
-#else
-using ERY.AgateLib;
-#endif
+using AgateLib;
 using System.Diagnostics;
 
 namespace org.kohsuke.directdraw
