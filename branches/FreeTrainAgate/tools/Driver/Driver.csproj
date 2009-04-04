@@ -67,6 +67,7 @@
     <AssemblyName>FreeTrain</AssemblyName>
     <RootNamespace>Driver</RootNamespace>
     <ApplicationIcon>App.ico</ApplicationIcon>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>..\..\bin\Release\</OutputPath>
@@ -179,8 +180,14 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>cd $(SolutionDir)
-copyresources.bat $(ProjectDir)$(OutDir)</PostBuildEvent>
+    <PostBuildEvent>"cd $(SolutionDir)"
+copyresources.bat "$(ProjectDir)$(OutDir)"
+cd "$(SolutionDir)\extlib"
+copy AgateSDL.dll "$(TargetDir)"
+copy SDL* "$(TargetDir)"
+copy Tao.* "$(TargetDir)"
+copy AgateLib.Winforms.dll "$(TargetDir)"
+copy AgateDrawing.dll "$(TargetDir)"</PostBuildEvent>
     <ProjectGuid>{17B6AE46-0110-4C40-98EB-5F7E4E16C050}</ProjectGuid>
     <RootNamespace>Driver</RootNamespace>
   </PropertyGroup>

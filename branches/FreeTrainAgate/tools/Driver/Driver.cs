@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using freetrain.framework;
+using AgateLib.DisplayLib;
 
 namespace Driver
 {
@@ -17,25 +18,21 @@ namespace Driver
 		static void Main( string[] inArguments ) 
 		{
             // Create the agatesetup object passing in args to allow the user to select a driver (for debug purposes only)
-            using( ERY.AgateLib.AgateSetup theAgateSetupObject = new ERY.AgateLib.AgateSetup( "FreeTrain", inArguments ) )
+            using( AgateLib.AgateSetup theAgateSetupObject = new AgateLib.AgateSetup( "FreeTrain", inArguments ) )
             {
-                // TODO: InitialzeVideo called by InitializeAll is blowing up currently because it can't
-                // find a video assembly to load.  Need to fix this after updating to the next version of agate.
-                //setup.InitializeAll();
-                theAgateSetupObject.InitializeAudio();
-                theAgateSetupObject.InitializeInput();
+                // Scans the directory where the .exe is and loads Display, Audio, Input, and Desktop drivers.
+                // Display driver: AdgateDrawning.
+                // TODO: AdgateDrawing is for debug builds only. DO NOT DISTRIBUTE WITH RELEASE BUILDS. 
+                // Input and Audio driver: AdgateSDL
+                // Desktop: Adgate.WinForms <-- Not sure if we want to use this yet...
+                theAgateSetupObject.InitializeAll();
 
                 // If the user cancels the driver select dialog
-                if( theAgateSetupObject.Cancel )
+                if( theAgateSetupObject.WasCanceled )
                 {
                     // TODO: Generally bad coding practice to have returns/breaks in these situations
                     return;
                 }
-
-                #warning Initialize window here already?
-
-                // Create the window
-                //ERY.AgateLib.DisplayWindow window = new ERY.AgateLib.DisplayWindow("TreeTrain", 640, 480);
 
                 // record the installation directory
                 Core.installationDirectory = Directory.GetParent( Application.ExecutablePath ).FullName;

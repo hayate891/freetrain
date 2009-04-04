@@ -1,9 +1,5 @@
 using System;
-#if windows
-using DxVBLibA;
-#else
-using ERY.AgateLib;
-#endif
+using AgateLib.AudioLib;
 
 namespace org.kohsuke.directaudio
 {
