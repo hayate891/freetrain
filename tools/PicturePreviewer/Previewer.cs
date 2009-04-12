@@ -94,7 +94,7 @@ namespace PicturePreviewer
 
 		protected override void OnPaint(PaintEventArgs e) {
 			// do the double buffering to properly honor clipping
-			using( Surface s = directDraw.createOffscreenSurface(this.ClientSize) ) {
+			using( AgateSurface s = directDraw.createOffscreenSurface(this.ClientSize) ) {
 				// fill them by the background color
 				s.fill( backgroundColor );
 				if( sprite!=null )
@@ -482,7 +482,7 @@ namespace PicturePreviewer
 			// recreate sprites
 			sprite = spriteFactory.createSprite( picture,
 				new Point(0,0), new Point(0,0),
-				picture.surface.size );
+				picture.AgateSurface.size );
 
 			// invalid the window to repaint
 			Invalidate();
@@ -490,7 +490,7 @@ namespace PicturePreviewer
 
 
 		// load picture into this surface.
-		public Color load(ref Surface surface) {
+		public Color load(ref AgateSurface surface) {
 			using( Bitmap bmp = new Bitmap(fileName) ) {
 				if(surface!=null)
 					surface.Dispose();

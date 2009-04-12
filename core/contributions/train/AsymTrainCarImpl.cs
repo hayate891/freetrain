@@ -48,11 +48,11 @@ namespace freetrain.contributions.train
 		private readonly Sprite[] slopeSprites;
 
 
-		public override void draw( Surface display, Point pt, int angle ) {
+		public override void draw( AgateSurface display, Point pt, int angle ) {
 			levelSprites[angle].draw( display, pt );
 		}
 
-		public override void drawSlope( Surface display, Point pt, Direction angle, bool isClimbing ) {
+		public override void drawSlope( AgateSurface display, Point pt, Direction angle, bool isClimbing ) {
 			slopeSprites[ angle.index + (isClimbing?0:1) ].draw( display, pt );
 		}
 

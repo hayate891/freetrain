@@ -13,7 +13,7 @@ namespace freetrain.views
 	{
 		private readonly WeatherOverlaySpriteSet spriteSet;
 		private Size canvasSize;
-		private Surface offscreenSurface;
+		private AgateSurface offscreenSurface;
 		private int currentFrame=0;
 
 		public WeatherOverlayImpl( WeatherOverlaySpriteSet _spriteSet ) {
@@ -35,7 +35,7 @@ namespace freetrain.views
 			offscreenSurface = MainWindow.mainWindow.directDraw.createOffscreenSurface(sz);
 		}
 
-		public void draw( QuarterViewDrawer drawer, Surface target, Point pt ) {
+		public void draw( QuarterViewDrawer drawer, AgateSurface target, Point pt ) {
 			drawer.draw( offscreenSurface, new Point(0,0) );
 			for( int x=0; x<canvasSize.Width; x+=spriteSet.imageSize.Width )
 				for( int y=0; y<canvasSize.Height; y+=spriteSet.imageSize.Height )

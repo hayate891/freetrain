@@ -46,11 +46,11 @@ namespace freetrain.framework.graphics
 			}
 		}
 
-		public override void draw( Surface surface, Point pt ) {
+		public override void draw( AgateSurface surface, Point pt ) {
 			pt.X -= offset.X;
 			pt.Y -= offset.Y;
 			int idx = (World.world.viewOptions.useNightView)?1:0;
-			surface.bltColorTransform( pt, picture.surface, origin, size,
+			surface.bltColorTransform( pt, picture.AgateSurface, origin, size,
 				srcColors[idx], dstColors[idx], false );
 		}
 	}

@@ -20,7 +20,7 @@ namespace freetrain.framework.graphics
 		/// <summary>
 		/// DirectDraw surface.
 		/// </summary>
-		private Surface[,,] surfaces;
+		private AgateSurface[,,] surfaces;
 
 		/// <summary>
 		/// Sprites built for alpha-blending.
@@ -33,7 +33,7 @@ namespace freetrain.framework.graphics
 			int X = src.GetLength(0);
 			int Y = src.GetLength(1);
 			int Z = src.GetLength(2);
-			surfaces = new Surface[X,Y,Z];
+			surfaces = new AgateSurface[X,Y,Z];
 			sprites = new Sprite[X,Y,Z];
 			size = new Distance(X,Y,Z);
 
@@ -46,7 +46,7 @@ namespace freetrain.framework.graphics
 							continue;	// this voxel is invisible
 						}
 
-						Surface surface = ResourceUtil.directDraw.createOffscreenSurface(sz);
+						AgateSurface surface = ResourceUtil.directDraw.createOffscreenSurface(sz);
 						surfaces[x,y,z] = surface;
 						surface.fill( Color.Magenta );
 						surface.sourceColorKey = Color.Magenta;
@@ -78,7 +78,7 @@ namespace freetrain.framework.graphics
 		}
 
 		public void Dispose() {
-			foreach( Surface s in surfaces )
+			foreach( AgateSurface s in surfaces )
 				if(s!=null)		s.Dispose();
 		}
 

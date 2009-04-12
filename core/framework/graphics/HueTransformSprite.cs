@@ -27,13 +27,13 @@ namespace freetrain.framework.graphics
 			SetColorMap(ColorMask.B, B_target);
 		}
 
-		public override void draw( Surface surface, Point pt ) {
+		public override void draw( AgateSurface surface, Point pt ) {
 			pt.X -= offset.X;
 			pt.Y -= offset.Y;
 
 			int idx	= (World.world.viewOptions.useNightView)?1:0;
 			
-			surface.bltHueTransform( pt, picture.surface, origin, size,
+			surface.bltHueTransform( pt, picture.AgateSurface, origin, size,
 				RedTarget, GreenTarget, BlueTarget );
 		}
 

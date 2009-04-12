@@ -38,12 +38,12 @@ namespace freetrain.contributions.train
 		private TrainCarContribution core;
 
 
-		public override void draw( Surface display, Point pt, int angle ) {
+		public override void draw( AgateSurface display, Point pt, int angle ) {
 			angle ^= 8;
 			core.draw(display,pt,angle);
 		}
 
-		public override void drawSlope( Surface display, Point pt, Direction angle, bool isClimbing ) {
+		public override void drawSlope( AgateSurface display, Point pt, Direction angle, bool isClimbing ) {
 			angle = angle.opposite;
 			isClimbing = !isClimbing;
 

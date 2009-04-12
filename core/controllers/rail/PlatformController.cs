@@ -713,7 +713,7 @@ namespace freetrain.controllers.rail
 		public void drawVoxel( QuarterViewDrawer view, DrawContextEx dc, Location loc, Point pt ) {
 			if( loc.z != baseLoc.z || !isPlacing)	return;
 
-			Surface canvas = dc.surface;
+			AgateSurface canvas = dc.surface;
 			
 			switch( this.currentMode ) {
 			case Mode.Station:

@@ -12,9 +12,9 @@ namespace freetrain.world
 	/// between GDI DC and DirectDraw.
 	/// </summary>
 	public class DrawContext : IDisposable {
-		public DrawContext( Surface s ) { this._surface=s; }
+		public DrawContext( AgateSurface s ) { this._surface=s; }
 
-		private readonly Surface _surface;
+		private readonly AgateSurface _surface;
 		private GDIGraphics _graphics=null;
 		
 		public Graphics graphics {
@@ -24,7 +24,7 @@ namespace freetrain.world
 				return _graphics.graphics;
 			}
 		}
-		public Surface surface {
+		public AgateSurface surface {
 			get {
 				if( _graphics!=null ) {
 					_graphics.Dispose();

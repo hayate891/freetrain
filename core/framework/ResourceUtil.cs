@@ -88,7 +88,7 @@ namespace freetrain.framework
 			return new Picture( id, findSystemResource(dayname), findSystemResource(nightname) );
 		}
 
-		public static Surface loadTimeIndependentSystemSurface( string name ) {
+		public static AgateSurface loadTimeIndependentSystemSurface( string name ) {
 			using(Bitmap bmp=loadSystemBitmap(name))
 				return directDraw.createSprite(bmp);
 		}

@@ -19,7 +19,7 @@ namespace freetrain.views
 		/// Draws the contents of the given drawer with the overlay
 		/// to the target image.
 		/// </summary>
-		void draw( QuarterViewDrawer drawer, Surface target, Point pt );
+		void draw( QuarterViewDrawer drawer, AgateSurface target, Point pt );
 
 		/// <summary>
 		/// TBD: Periodical timer notification.

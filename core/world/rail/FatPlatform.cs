@@ -248,7 +248,7 @@ namespace freetrain.world.rail
 			}
 
 			public override void draw(DrawContext dc, Point pt, int heightCutDiff) {
-				Surface display = dc.surface;
+				AgateSurface display = dc.surface;
 
 				sprite.draw(display,pt);
 				if(owner.host==null && location==owner.location) {

@@ -107,22 +107,22 @@ namespace freetrain.world
 		}
 
 
-		private static readonly Surface arrowImage = ResourceUtil.loadTimeIndependentSystemSurface("Arrows.bmp");
-		private static readonly Surface darkArrowImage = ResourceUtil.loadTimeIndependentSystemSurface("Arrows.dark.bmp");
+		private static readonly AgateSurface arrowImage = ResourceUtil.loadTimeIndependentSystemSurface("Arrows.bmp");
+		private static readonly AgateSurface darkArrowImage = ResourceUtil.loadTimeIndependentSystemSurface("Arrows.dark.bmp");
 
 		/// <summary> Draws an arrow on the given surface. </summary>
-		public void drawArrow( Surface display, Point pt, bool isDark ) {
+		public void drawArrow( AgateSurface display, Point pt, bool isDark ) {
 			if( isDark )	drawDarkArrow(display,pt);
 			else			drawArrow(display,pt);
 		}
 
 		/// <summary> Draws an arrow on the given surface. </summary>
-		public void drawArrow( Surface display, Point pt ) {
+		public void drawArrow( AgateSurface display, Point pt ) {
 			display.blt( pt, arrowImage, new Point(32*index,0), new Size(32,16) );
 		}
 
 		/// <summary> Draws a dark arrow on the given surface. </summary>
-		public void drawDarkArrow( Surface display, Point pt ) {
+		public void drawDarkArrow( AgateSurface display, Point pt ) {
 			display.blt( pt, darkArrowImage, new Point(32*index,0), new Size(32,16) );
 		}
 

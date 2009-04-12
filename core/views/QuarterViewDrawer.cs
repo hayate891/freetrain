@@ -27,7 +27,7 @@ namespace freetrain.views
 		/// <summary>
 		/// Off-screen buffer that keeps the image of this window.
 		/// </summary>
-		private Surface offscreenBuffer;
+		private AgateSurface offscreenBuffer;
 		
 		/// <summary>
 		/// Drawing context that wraps <code>offscreenBuffer</code>
@@ -423,7 +423,7 @@ namespace freetrain.views
 			if( Core.options.drawBoundingBox ) 
 			{
 				rectClient.Inflate(-1,-1);
-				offscreenBuffer.drawBox(rectClient);
+				offscreenBuffer.DrawBoxNew(rectClient);
 			}
 		}
 
@@ -482,7 +482,7 @@ namespace freetrain.views
 		/// <summary>
 		/// Draw the view to the specified point of the given surface.
 		/// </summary>
-		public void draw( Surface target, Point pt ) 
+		public void draw( AgateSurface target, Point pt ) 
 		{
 			try 
 			{
