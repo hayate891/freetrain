@@ -14,7 +14,7 @@ namespace freetrain.framework.graphics
 	/// </summary>
 	public class PreviewDrawer : IDisposable
 	{
-		public readonly Surface surface;
+		public readonly AgateSurface surface;
 
 		/// <summary>
 		/// pixelSize of the canvas.
@@ -37,7 +37,8 @@ namespace freetrain.framework.graphics
 		///		Chip size of the object that we'd like to draw.
 		///		All the successive method calls will use this size as offset.
 		/// </param>
-		public PreviewDrawer( Size pixelSize, Size objSize, int height ) {
+		public PreviewDrawer( Size pixelSize, Size objSize, int height ) 
+        {
 			surface = ResourceUtil.directDraw.createOffscreenSurface(pixelSize);
 			this.pixelSize = pixelSize;
 
@@ -157,7 +158,8 @@ namespace freetrain.framework.graphics
 		/// 
 		/// The caller needs to dispose the bitmap.
 		/// </summary>
-		public Bitmap createBitmap() {
+		public Bitmap createBitmap() 
+        {
 			return surface.createBitmap();
 		}
 	}

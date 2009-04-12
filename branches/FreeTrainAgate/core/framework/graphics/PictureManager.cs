@@ -53,9 +53,9 @@ namespace freetrain.framework.graphics
 		/// Add a new picture.
 		/// </summary>
 		public static void add( Picture pic ) {
-			if( dic[pic.id]!=null )
-				throw new GraphicsException("picture "+pic.id+" is already registered");
-			dic.Add(pic.id,pic);
+			if( dic[pic.m_PictureID]!=null )
+				throw new GraphicsException("picture "+pic.m_PictureID+" is already registered");
+			dic.Add(pic.m_PictureID,pic);
 		}
 
 		/// <summary>

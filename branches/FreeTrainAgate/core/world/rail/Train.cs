@@ -635,7 +635,7 @@ namespace freetrain.world.rail
 			}
 
 			public override void draw( DrawContext dc, Point pt ) {
-				Surface display = dc.surface;
+				AgateSurface display = dc.surface;
 
 				pt.Y -= 9;	// offset
 

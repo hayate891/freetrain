@@ -128,7 +128,7 @@ namespace org.kohsuke.directdraw
 		/// <summary>
 		/// Creates a blank off-screen surface with the specified size.
 		/// </summary>
-		public Surface createOffscreenSurface( int width, int height ) {
+		public AgateSurface createOffscreenSurface( int width, int height ) {
 #if windows
 			DDSURFACEDESC2 sd = new DDSURFACEDESC2();
 			sd.lSize = Marshal.SizeOf(sd);
@@ -152,18 +152,21 @@ namespace org.kohsuke.directdraw
 			}
 #else
 #warning STUB
-			return new Surface();
+            // TODO: fixme
+            return new AgateSurface();
+            //return new AgateSurface( new AgateLib.DisplayLib.Surface( width, height ) );
 #endif
 		}
 
-		public Surface createOffscreenSurface( Size sz ) {
+		public AgateSurface createOffscreenSurface( Size sz ) 
+        {
 			return createOffscreenSurface( sz.Width, sz.Height );
 		}
 
 		/// <summary>
 		/// Creates an off-screen surface from an image.
 		/// </summary>
-		public Surface createFromImage( Image img ) {
+		public AgateSurface createFromImage( Image img ) {
 #if windows
 			Surface s = createOffscreenSurface( img.Size );
 			using(GDIGraphics g=new GDIGraphics(s)) {
@@ -173,7 +176,7 @@ namespace org.kohsuke.directdraw
 			return s;
 #else
 #warning STUB
-			Surface s = createOffscreenSurface( img.Size );
+			AgateSurface s = createOffscreenSurface( img.Size );
 			return s;
 #endif
 		}
@@ -183,8 +186,8 @@ namespace org.kohsuke.directdraw
 		/// and set the source key color to the color of the
 		/// top-left corner of the image.
 		/// </summary>
-		public Surface createSprite( Bitmap img ) {
-			Surface surface = createFromImage(img);
+		public AgateSurface createSprite( Bitmap img ) {
+			AgateSurface surface = createFromImage(img);
 			surface.sourceColorKey = img.GetPixel(0,0);
 			return surface;
 		}
@@ -205,8 +208,8 @@ namespace org.kohsuke.directdraw
 	/// the specified control.
 	/// </summary>
 	public class WindowedDirectDraw : DirectDraw {
-		private Surface primary;
-		public Surface primarySurface { get { return primary; } }
+		private AgateSurface primary;
+		public AgateSurface primarySurface { get { return primary; } }
 
 		public WindowedDirectDraw( Control control ) {
 			primary = createPrimarySurface();
@@ -224,7 +227,7 @@ namespace org.kohsuke.directdraw
 		/// <summary>
 		/// Creates the primary surface.
 		/// </summary>
-		private Surface createPrimarySurface() {
+		private AgateSurface createPrimarySurface() {
 #if windows
 			DDSURFACEDESC2 sd= new DDSURFACEDESC2();
 
@@ -235,7 +238,7 @@ namespace org.kohsuke.directdraw
 			return new Surface(handle.CreateSurface(ref sd ));
 #else
 #warning STUB
-			return new Surface();
+			return new AgateSurface();
 #endif
 		}
 

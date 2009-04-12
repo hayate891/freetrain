@@ -31,7 +31,7 @@ namespace freetrain.controllers
 	}
 
 	public class DrawContextEx : DrawContext {
-		public DrawContextEx( Surface surface ) : base(surface) {}
+		public DrawContextEx( AgateSurface surface ) : base(surface) {}
 
 		/// <summary>
 		/// MapOverlay can use this property to pass parameters among

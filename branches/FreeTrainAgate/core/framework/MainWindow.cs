@@ -143,7 +143,8 @@ namespace freetrain.framework
 
 		private readonly MruHelper mruMenu;
 
-		public MainWindow( string[] args, bool constructionMode ) {
+		public MainWindow( string[] args, bool constructionMode ) 
+        {
 //			this.additionalPluginDirectories = args;
 
 			// set the singleton reference

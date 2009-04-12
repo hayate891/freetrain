@@ -185,7 +185,7 @@ namespace freetrain.world
 		/// called when the fehce should be drawn.
 		/// </summary>
 		/// <param name="d">one of the 4 directions (N,E,W,S)</param>
-		void drawFence( Surface surface, Point pt, Direction d );
+		void drawFence( AgateSurface surface, Point pt, Direction d );
 
 		string fence_id { get; }
 	}

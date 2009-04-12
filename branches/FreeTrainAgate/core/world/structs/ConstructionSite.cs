@@ -316,7 +316,7 @@ namespace freetrain.world.structs
 			//
 
 			public override void draw( DrawContext context, Point pt, int heightCutDiff ) {
-				Surface surface = context.surface;
+				AgateSurface surface = context.surface;
 
 				if( isGroundLevel ) {
 					if(!connection[0])	drawFence(surface,pt,0);
@@ -356,17 +356,17 @@ namespace freetrain.world.structs
 
 
 			/// <summary> Draws a fence </summary>
-			private void drawFence( Surface surface, Point pt, int dir ) {
+			private void drawFence( AgateSurface surface, Point pt, int dir ) {
 				fenceSprites[dir,needsDoor?1:0].draw( surface, pt );
 			}
 
 			/// <summary> Draws a ground object. </summary>
-			private void drawGroundObject( Surface surface, Point pt ) {
+			private void drawGroundObject( AgateSurface surface, Point pt ) {
 				groundSprites[(int)ground].draw( surface, pt );
 			}
 
 			/// <summary> Draws a bone. </summary>
-			private void drawBone( Surface surface, Point pt, int level ) {
+			private void drawBone( AgateSurface surface, Point pt, int level ) {
 				boneSprites[level,
 					connection[0]?1:0,
 					connection[1]?1:0,
@@ -374,7 +374,7 @@ namespace freetrain.world.structs
 					connection[3]?1:0 ].draw( surface, pt );
 			}
 
-			private void drawWall( Surface surface, Point pt, int dir ) {
+			private void drawWall( AgateSurface surface, Point pt, int dir ) {
 				wallSprites[dir].draw( surface,pt);
 			}
 

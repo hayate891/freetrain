@@ -14,9 +14,9 @@ namespace Driver
         /// Main Entry point
         /// </summary>
         /// <param name="args"></param>
-		[STAThread]
-		static void Main( string[] inArguments ) 
-		{
+        [STAThread]
+        static void Main( string[] inArguments )
+        {
             // Create the agatesetup object passing in args to allow the user to select a driver (for debug purposes only)
             using( AgateLib.AgateSetup theAgateSetupObject = new AgateLib.AgateSetup( "FreeTrain", inArguments ) )
             {
@@ -56,7 +56,7 @@ namespace Driver
                     }
                 }
             }
-		}
+        }
 
         /// <summary>
         /// Responsible for running the application.

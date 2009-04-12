@@ -30,14 +30,14 @@ namespace freetrain.contributions.train
 		/// Draws a car to the specified position.
 		/// </summary>
 		/// <param name="angle">[0,16). Angle of the car. 2*direction.index</param>
-		public abstract void draw( Surface display, Point pt, int angle );
+		public abstract void draw( AgateSurface display, Point pt, int angle );
 
 		/// <summary>
 		/// Dras a car on a slope.
 		/// </summary>
 		/// <param name="angle">one of 4 directions</param>
 		/// <param name="isClimbing">true if the car is climbing</param>
-		public abstract void drawSlope( Surface display, Point pt, Direction angle, bool isClimbing );
+		public abstract void drawSlope( AgateSurface display, Point pt, Direction angle, bool isClimbing );
 
 		// TODO: support cargos
 	}

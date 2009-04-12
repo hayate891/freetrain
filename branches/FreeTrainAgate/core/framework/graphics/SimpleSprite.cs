@@ -38,30 +38,30 @@ namespace freetrain.framework.graphics
 		protected readonly Point origin;
 		protected readonly Size _size;
 
-		public virtual void draw( Surface surface, Point pt ) {
+		public virtual void draw( AgateSurface surface, Point pt ) {
 			pt.X -= _offset.X;
 			pt.Y -= _offset.Y;
-			surface.blt( pt, picture.surface, origin, size );
+			surface.blt( pt, picture.AgateSurface, origin, size );
 		}
 
 		/// <summary>
 		/// Draws the shape of this sprite in the specified color.
 		/// </summary>
-		public virtual void drawShape( Surface surface, Point pt, Color color ) {
+		public virtual void drawShape( AgateSurface surface, Point pt, Color color ) {
 			pt.X -= _offset.X;
 			pt.Y -= _offset.Y;
-			surface.bltShape( pt, picture.surface, origin, _size, color );
+			surface.bltShape( pt, picture.AgateSurface, origin, _size, color );
 		}
 
-		public virtual void drawAlpha( Surface surface, Point pt ) {
+		public virtual void drawAlpha( AgateSurface surface, Point pt ) {
 			pt.X -= _offset.X;
 			pt.Y -= _offset.Y;
-			surface.bltAlpha( pt, picture.surface, origin, _size );
+			surface.bltAlpha( pt, picture.AgateSurface, origin, _size );
 		}
 
 		public Size size { get { return _size; } }
 		public Point offset { get { return _offset; } }
-		public bool HitTest( int x, int y) { return picture.surface.HitTest(x,y); }
+		public bool HitTest( int x, int y) { return picture.AgateSurface.HitTest(x,y); }
 	}
 
 

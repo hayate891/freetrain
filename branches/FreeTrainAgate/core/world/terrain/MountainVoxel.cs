@@ -441,7 +441,7 @@ namespace freetrain.world.terrain
 		#endregion
 
 		#region drawing
-		private static Surface[] images = new Surface[9];
+		private static AgateSurface[] images = new AgateSurface[9];
 		static MountainVoxel() 
 		{
 			initCliffSprites();

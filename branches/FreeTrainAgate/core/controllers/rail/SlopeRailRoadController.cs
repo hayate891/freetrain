@@ -62,12 +62,17 @@ namespace freetrain.controllers.rail
 			// TODO: locations of the previews are uttely incorrect. fix them
 
 			// direction N
-			using(drawer = new PreviewDrawer( pictureN.ClientSize, new Size(2,4), 0 )) {
+			using(drawer = new PreviewDrawer( pictureN.ClientSize, new Size(2,4), 0 )) 
+            {
 				drawer.draw( RailPattern.getSlope( Direction.NORTH, 3 ), 1, -1 );
 				drawer.draw( RailPattern.getSlope( Direction.NORTH, 2 ), 1, 0 );
 				drawer.draw( RailPattern.getSlope( Direction.NORTH, 1 ), 0, 2 );
 				drawer.draw( RailPattern.getSlope( Direction.NORTH, 0 ), 0, 3 );
-				if(pictureN.Image!=null) pictureN.Image.Dispose();
+                if( pictureN.Image != null )
+                {
+                    pictureN.Image.Dispose();
+                }
+                
 				pictureN.Image = drawer.createBitmap();
 			}
 
@@ -386,7 +391,7 @@ namespace freetrain.controllers.rail
 			if(loc==world.Location.UNPLACED) return;
 			if(!SlopeRailRoad.canCreateSlope(loc,direction))	return;
 
-			Surface canvas = dc.surface;
+			AgateSurface canvas = dc.surface;
 
 			int Z = loc.z;
 			for( int i=0; i<4; i++ ) {

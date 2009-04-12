@@ -222,7 +222,7 @@ namespace freetrain.world.rail
 		private static int iota=1;
 
 		/// <summary> Warning icon. </summary>
-		protected static readonly Surface warningIcon =
+		protected static readonly AgateSurface warningIcon =
 			ResourceUtil.loadTimeIndependentSystemSurface("caution.bmp");
 
 

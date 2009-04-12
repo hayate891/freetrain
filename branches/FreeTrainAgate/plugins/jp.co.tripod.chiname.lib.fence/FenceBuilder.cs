@@ -128,7 +128,7 @@ namespace freetrain.contributions.fence
 		}
 
 		// draw fence
-		public void drawFence( Surface surface, Point pt, Direction d ) 
+		public void drawFence( AgateSurface surface, Point pt, Direction d ) 
 		{
 			sprites[d.index/2].draw(surface,pt);
 		}

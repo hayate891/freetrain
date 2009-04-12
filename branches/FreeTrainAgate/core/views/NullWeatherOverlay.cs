@@ -15,7 +15,7 @@ namespace freetrain.views
 
 		public void setSize( Size sz ) {}
 
-		public void draw( QuarterViewDrawer drawer, Surface target, Point pt ) {
+		public void draw( QuarterViewDrawer drawer, AgateSurface target, Point pt ) {
 			drawer.draw( target, pt );
 		}
 

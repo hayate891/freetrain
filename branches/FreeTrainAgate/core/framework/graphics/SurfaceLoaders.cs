@@ -15,7 +15,7 @@ namespace freetrain.framework.graphics
 		/// Fill the surface by the image and return the mask color.
 		/// If the surface is null, the callee needs to allocate a new surface
 		/// </summary>
-		Color load(ref Surface s);
+		Color load(ref AgateSurface inAgateSurface);
 	}
 
 	/// <summary>
@@ -24,35 +24,26 @@ namespace freetrain.framework.graphics
 	public class BitmapSurfaceLoader : SurfaceLoader
 	{
 		/// <summary> File name of the bitmap. </summary>
-		private readonly string fileName;
+		private readonly string m_FileName;
 		
-		public BitmapSurfaceLoader( string _fileName) 
+		public BitmapSurfaceLoader( string inFileName) 
         {
-			this.fileName = _fileName;
+			this.m_FileName = inFileName;
 		}
 
-		public Color load(ref Surface surface) 
+		public Color load(ref AgateSurface inAgateSurface)
         {
-			using( Bitmap bmp = new Bitmap(fileName) ) 
+			using( Bitmap bmp = new Bitmap(m_FileName) ) 
             {
-				if(surface==null) 
+               
+				if(inAgateSurface==null) 
                 {
-					surface = ResourceUtil.directDraw.createOffscreenSurface( bmp.Size );
+					//inAgateSurface = ResourceUtil.directDraw.createOffscreenSurface( bmp.Size );
+                    inAgateSurface = new AgateSurface( new AgateLib.DisplayLib.Surface(m_FileName) );
 				}
 
-                
-				using( GDIGraphics g = new GDIGraphics(surface) ) 
-                {
-                    try
-                    {
-                        // without the size parameter, it doesn't work well with non-standard DPIs.
-                        g.graphics.DrawImage( bmp, new Rectangle( new Point( 0, 0 ), bmp.Size ) );
-                    }
-                    catch( Exception )
-                    {
-                        throw new Exception( "TODO: Fix me!" );
-                    }
-				}
+                inAgateSurface.Draw( new Rectangle( new Point( 0, 0 ),bmp.Size ));
+ 
 				return bmp.GetPixel(0,0);
 			}
 		}
@@ -70,7 +61,8 @@ namespace freetrain.framework.graphics
 		/// </summary>
 		private readonly SurfaceLoader coreLoader;
 
-		public NightSurfaceLoader( SurfaceLoader _core ) {
+		public NightSurfaceLoader( SurfaceLoader _core ) 
+        {
 			Debug.Assert(_core!=null);
 			this.coreLoader = _core;
 		}
@@ -84,15 +76,19 @@ namespace freetrain.framework.graphics
 #warning STUB
 #endif
 		
-		public virtual Color load(ref Surface surface) {
+		public virtual Color load(ref AgateSurface surface) 
+        {
+            /*
 			Color c = coreLoader.load(ref surface);
-#if windows
+
 			buildNightImage(surface.handle);
-#else
+
 			buildNightImage();
 #warning STUB
-#endif
 			return ColorMap.getNightColor(c);
+             *
+             */
+            return new Color();
 		}
 	}
 }

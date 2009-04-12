@@ -108,11 +108,11 @@ namespace freetrain.contributions.train
 		
 
 
-		public override void draw( Surface display, Point pt, int angle ) {
+		public override void draw( AgateSurface display, Point pt, int angle ) {
 			levelSprites[angle&7].draw( display, pt );
 		}
 
-		public override void drawSlope( Surface display, Point pt, Direction angle, bool isClimbing ) {
+		public override void drawSlope( AgateSurface display, Point pt, Direction angle, bool isClimbing ) {
 			if(!isClimbing)		angle = angle.opposite;
 
 			slopeSprites[ angle.index/2 ].draw( display, pt );

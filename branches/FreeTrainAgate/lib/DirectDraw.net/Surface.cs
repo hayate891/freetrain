@@ -1,8 +1,5 @@
 using System;
-using System.Runtime.InteropServices;
 using System.Drawing;
-using System.Diagnostics;
-using AgateLib;
 
 #if window
 #else
@@ -32,8 +29,13 @@ namespace org.kohsuke.directdraw
 	/// Since I couldn't figure out how to create a CLR binding for
 	/// clipper, this class implements a clipping support by itself.
 	/// </summary>
-	public class Surface : IDisposable
+	public class AgateSurface : IDisposable
 	{
+        /// <summary>
+        /// Surface object that is being wrapped up
+        /// </summary>
+        private AgateLib.DisplayLib.Surface m_Surface;
+
 #if windows
 		private DirectDrawSurface7 surface;
 		private static AlphaBlender alpha = new AlphaBlenderClass();
@@ -68,10 +70,37 @@ namespace org.kohsuke.directdraw
 #warning STUB
 #endif
 
-#if windows
-		internal Surface(DirectDrawSurface7 _handle) {
-			this.surface = _handle;
+        public AgateLib.DisplayLib.Surface Surface
+        {
+            get { return m_Surface; }
+            set { m_Surface = value; }
+        }
 
+        /// <summary>
+        /// Draws the surface
+        /// </summary>
+        public void Draw(Rectangle inRectangle)
+        {
+           AgateLib.DisplayLib.DisplayWindow.CreateWindowed("", inRectangle.Width,inRectangle.Height);
+            //while( !AgateLib.DisplayLib.Display.CurrentWindow.IsClosed )
+            {
+                AgateLib.DisplayLib.Display.BeginFrame();
+                AgateLib.DisplayLib.Display.Clear( AgateLib.Geometry.Color.Red);
+                Surface.Draw( new AgateLib.Geometry.Rectangle( inRectangle ) );
+                AgateLib.DisplayLib.Display.EndFrame();
+               //AgateLib.Core.KeepAlive();
+            }
+        }
+
+        public void DrawBoxNew( Rectangle inRectangle )
+        {
+            Surface.Draw( new AgateLib.Geometry.Rectangle( inRectangle ) );
+        }
+
+		public AgateSurface(AgateLib.DisplayLib.Surface inSurface) 
+        {
+			this.Surface = inSurface;
+ /*
 			// compute the size of this surface
 			DDSURFACEDESC2 desc = new DDSURFACEDESC2();
 			surface.GetSurfaceDesc( ref desc );
@@ -84,12 +113,16 @@ namespace org.kohsuke.directdraw
 			widthR = countBitWidth(pixelFormat.lRBitMask);
 			widthG = countBitWidth(pixelFormat.lGBitMask);
 			widthB = countBitWidth(pixelFormat.lBBitMask);
+            */
+            
 		}
-#else
-		internal Surface() {
+
+		public AgateSurface() 
+        {
+            
 #warning STUB
 		}
-#endif
+
 
 		public string displayModeName {
 			get {
@@ -163,7 +196,7 @@ namespace org.kohsuke.directdraw
 		/// This can't be used with a surface with a clipper.
 		/// </summary>
 		/// 
-		public void bltFast( int destX, int destY, Surface source, Rectangle srcRect ) {
+		public void bltFast( int destX, int destY, AgateSurface source, Rectangle srcRect ) {
 #if windows
 			RECT srect = Util.toRECT(srcRect);
 			// TODO: clip
@@ -179,7 +212,7 @@ namespace org.kohsuke.directdraw
 		/// <summary>
 		/// Copies an image from another surface.
 		/// </summary>
-		public void blt( int dstX1, int dstY1, int dstX2, int dstY2, Surface source,
+		public void blt( int dstX1, int dstY1, int dstX2, int dstY2, AgateSurface source,
 						 int srcX1, int srcY1, int srcX2, int srcY2 ) {
 			
 			RECT drect = Util.toRECT(dstX1,dstY1,dstX2,dstY2);
@@ -188,11 +221,11 @@ namespace org.kohsuke.directdraw
 			blt( drect, source, srect );
 		}
 
-		public void blt( Point dst, Surface source, Rectangle src ) {
+		public void blt( Point dst, AgateSurface source, Rectangle src ) {
 			blt( Util.toRECT( dst, src.Size ), source, Util.toRECT(src) );
 		}
 
-		private void blt( RECT dst, Surface source, RECT src ) {
+		private void blt( RECT dst, AgateSurface source, RECT src ) {
 #if windows
 			CONST_DDBLTFLAGS flag;
 			flag = CONST_DDBLTFLAGS.DDBLT_WAIT;
@@ -207,7 +240,7 @@ namespace org.kohsuke.directdraw
 #endif
 		}
 
-		public void bltAlpha( Point dstPos, Surface source, Point srcPos, Size sz ) {
+		public void bltAlpha( Point dstPos, AgateSurface source, Point srcPos, Size sz ) {
 #if windows
 			RECT dst = Util.toRECT( dstPos, sz );
 			RECT src = Util.toRECT( srcPos, sz );
@@ -221,11 +254,11 @@ namespace org.kohsuke.directdraw
 #endif
 		}
 
-		public void bltAlpha( Point dstPos, Surface source ) {
+		public void bltAlpha( Point dstPos, AgateSurface source ) {
 			bltAlpha( dstPos, source, new Point(0,0), source.size );
 		}
 
-		public void bltShape( Point dstPos, Surface source, Point srcPos, Size sz, Color fill ) {
+		public void bltShape( Point dstPos, AgateSurface source, Point srcPos, Size sz, Color fill ) {
 #if windows
 			RECT dst = Util.toRECT( dstPos, sz );
 			RECT src = Util.toRECT( srcPos, sz );
@@ -241,23 +274,23 @@ namespace org.kohsuke.directdraw
 #endif
 		}
 
-		public void bltShape( Point dstPos, Surface source, Color fill ) {
+		public void bltShape( Point dstPos, AgateSurface source, Color fill ) {
 			bltShape( dstPos, source, new Point(0,0), source.size, fill );
 		}
 
-		public void blt( Point dstPos, Surface source, Point srcPos, Size sz ) {
+		public void blt( Point dstPos, AgateSurface source, Point srcPos, Size sz ) {
 			RECT drect = Util.toRECT(dstPos,sz);
 			RECT srect = Util.toRECT(srcPos,sz);
 			blt( drect, source, srect );
 		}
 
-		public void blt( Point dstPos, Surface source ) {
+		public void blt( Point dstPos, AgateSurface source ) {
 			RECT drect = Util.toRECT(dstPos, source.size );
 			RECT srect = Util.toRECT(new Point(0,0),source.size);	// use the mpety rect
 			blt( drect, source, srect );
 		}
 
-		public void bltColorTransform( Point dstPos, Surface source,
+		public void bltColorTransform( Point dstPos, AgateSurface source,
 			Point srcPos, Size sz,
 			Color[] _srcColors, Color[] _dstColors, bool vflip ) {
 
@@ -292,7 +325,7 @@ namespace org.kohsuke.directdraw
 #endif
 		}
 
-		public void bltHueTransform( Point dstPos, Surface source, Point srcPos, Size sz,
+		public void bltHueTransform( Point dstPos, AgateSurface source, Point srcPos, Size sz,
 			Color R_dest, Color G_dest, Color B_dest ) {
 #if windows
 			RECT dst = Util.toRECT( dstPos, sz );
@@ -338,7 +371,8 @@ namespace org.kohsuke.directdraw
 		/// <summary>
 		/// Source color key. A mask color that will not be copied to other plains.
 		/// </summary>
-		public Color sourceColorKey {
+		public Color sourceColorKey 
+        {
 			set {
 #if windows
 				DDCOLORKEY key = new DDCOLORKEY();
@@ -351,6 +385,11 @@ namespace org.kohsuke.directdraw
 #else
 #warning STUB
 #endif
+                colorKey = (int)colorToFill( value );
+                hasSourceColorKey = true;
+               
+                // TODO: fixme... what's a source color key...
+                
 			}
 		}
 
@@ -390,6 +429,7 @@ namespace org.kohsuke.directdraw
 			return 0;
 #endif
 		}
+
 
 		public void drawPolygon( Point p1, Point p2, Point p3, Point p4 ) {
 #if windows
@@ -449,7 +489,27 @@ namespace org.kohsuke.directdraw
 //			handle.Unlock( ref r );
 //		}
 
+        public Bitmap CreateBitmapNew()
+        {
+			Bitmap theBitmap = new Bitmap( size.Width, size.Height );
 
+            /* TODO: fixme Not sure what this is doing...
+			using( GDIGraphics src = new GDIGraphics(this) )
+            {
+				using( Graphics dst = Graphics.FromImage(theBitmap) ) 
+                {
+					IntPtr dstHDC = dst.GetHdc();
+					IntPtr srcHDC = src.graphics.GetHdc();
+					BitBlt( dstHDC, 0, 0, size.Width, size.Height, srcHDC, 0, 0, 0x00CC0020 );
+					dst.ReleaseHdc(dstHDC);
+					src.graphics.ReleaseHdc(srcHDC);
+				}
+			}
+            */
+#warning STUB
+            return theBitmap;
+
+        }
 		/// <summary>
 		/// Makes the bitmap of this surface.
 		/// The caller needs to dispose the bitmap.
@@ -469,7 +529,9 @@ namespace org.kohsuke.directdraw
 			return bmp;
 #else
 #warning STUB
-			Bitmap bmp = new Bitmap( size.Width, size.Height );
+			// TODO: fixme
+            //Bitmap bmp = new Bitmap( size.Width, size.Height );
+            Bitmap bmp = new Bitmap( 60,60  );
 			return bmp;
 #endif
 		}
@@ -540,28 +602,23 @@ namespace org.kohsuke.directdraw
 	/// <summary>
 	/// Wraps a Surface object and provides GDI+ functionality
 	/// via the graphics property.
+    /// TODO: fixme Will this go away??
 	/// </summary>
-	public sealed class GDIGraphics : IDisposable {
+	public sealed class GDIGraphics : IDisposable
+    {
 		public readonly Graphics graphics;
 
-#if windows
-		private readonly Surface surface;
+        private readonly AgateSurface Surface;
 		private readonly int hdc;
-#else
-#warning STUB
-#endif
 
-		public GDIGraphics( Surface _surface ) {
-#if windows
-			this.surface = _surface;
-			this.hdc = surface.handle.GetDC();
-			graphics = Graphics.FromHdc( new IntPtr(hdc) );
-#else
-#warning STUB
-#endif
+
+		public GDIGraphics( AgateSurface inSurface ) 
+        {
+			//
 		}
 
-		public void Dispose() {
+		public void Dispose() 
+        {
 #if windows
 			graphics.Dispose();
 			surface.handle.ReleaseDC(hdc);

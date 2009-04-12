@@ -14,9 +14,9 @@ namespace freetrain.framework.graphics
 	/// </summary>
 	public interface Sprite {
 		// draw a sprite to the given point.
-		void draw( Surface surface, Point pt );
-		void drawShape( Surface surface, Point pt, Color color );
-		void drawAlpha( Surface surface, Point pt );
+		void draw( AgateSurface surface, Point pt );
+		void drawShape( AgateSurface surface, Point pt, Color color );
+		void drawAlpha( AgateSurface surface, Point pt );
 
 		Size size { get; }
 		Point offset { get; }
